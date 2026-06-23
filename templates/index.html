@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📊 投资观察面板 | {{ update_time }}</title>
+    <style>
+        /* ===== 全局样式 ===== */
+        :root {
+            --bg-primary: #0f1117;
+            --bg-secondary: #1a1d2e;
+            --bg-card: #1e2133;
+            --bg-hover: #262a3d;
+            --text-primary: #e8e9f0;
+            --text-secondary: #9a9db8;
+            --text-muted: #636784;
+            --accent-green: #00d4a8;
+            --accent-red: #ff4757;
+            --accent-blue: #4a90d9;
+            --accent-yellow: #f0b90b;
+            --accent-purple: #8b5cf6;
+            --border: #2a2d42;
+            --border-light: #353855;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* ===== 顶部导航栏 ===== */
+        .header {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        .header-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .header-info {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        .header-info .update-badge {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        .market-status {
+            display: flex;
+            gap: 8px;
+        }
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .status-dot.open { background: var(--accent-green); box-shadow: 0 0 6px var(--accent-green); }
+        .status-dot.closed { background: var(--text-muted); }
+
+        /* ===== 主内容区 ===== */
+        .main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        /* ===== 摘要卡片 ===== */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .summary-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.2s;
+        }
+        .summary-card:hover {
+            border-color: var(--border-light);
+            background: var(--bg-hover);
+        }
+        .summary-card .card-label {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        .summary-card .card-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        .summary-card .card-sub {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+        .up { color: var(--accent-green); }
+        .down { color: var(--accent-red); }
+
+        /* ===== 市场分区 ===== */
+        .market-section {
+            margin-bottom: 32px;
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+        }
+        .section-header h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        .section-badge {
+            font-size: 0.72rem;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+        .badge-a { background: rgba(255,71,87,0.15); color: var(--accent-red); }
+        .badge-hk { background: rgba(74,144,217,0.15); color: var(--accent-blue); }
+        .badge-us { background: rgba(0,212,168,0.15); color: var(--accent-green); }
+        .badge-crypto { background: rgba(240,185,11,0.15); color: var(--accent-yellow); }
+
+        /* ===== 数据表格 ===== */
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            min-width: 900px;
+        }
+        thead {
+            background: var(--bg-secondary);
+        }
+        th {
+            padding: 12px 14px;
+            text-align: right;
+            font-weight: 600;
+            color: var(--text-secondary);
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            border-bottom: 1px solid var(--border);
+        }
+        th:first-child { text-align: left; }
+        td {
+            padding: 12px 14px;
+            text-align: right;
+            border-bottom: 1px solid rgba(42,45,66,0.5);
+            white-space: nowrap;
+        }
+        td:first-child { text-align: left; }
+        tbody tr {
+            transition: background 0.15s;
+        }
+        tbody tr:hover {
+            background: rgba(255,255,255,0.02);
+        }
+        .stock-name {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .stock-code {
+            font-size: 0.76rem;
+            color: var(--text-muted);
+            margin-left: 6px;
+        }
+        .stock-industry {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            display: block;
+        }
+        .price {
+            font-weight: 600;
+            font-variant-numeric: tabular-nums;
+        }
+        .change-badge {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 0.84rem;
+            min-width: 70px;
+            text-align: center;
+        }
+        .change-badge.positive {
+            background: rgba(0,212,168,0.12);
+            color: var(--accent-green);
+        }
+        .change-badge.negative {
+            background: rgba(255,71,87,0.12);
+            color: var(--accent-red);
+        }
+        .indicator {
+            font-variant-numeric: tabular-nums;
+            font-size: 0.82rem;
+        }
+        .indicator.bullish { color: var(--accent-green); }
+        .indicator.bearish { color: var(--accent-red); }
+        .indicator.neutral { color: var(--text-secondary); }
+
+        /* ===== 新闻区 ===== */
+        .news-section {
+            margin-bottom: 32px;
+        }
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 12px;
+        }
+        .news-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .news-card:hover {
+            border-color: var(--border-light);
+            background: var(--bg-hover);
+        }
+        .news-card a {
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        .news-title {
+            font-weight: 600;
+            font-size: 0.92rem;
+            margin-bottom: 6px;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .news-summary {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .news-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+        .news-source {
+            padding: 2px 8px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 6px;
+        }
+
+        /* ===== 页脚 ===== */
+        .footer {
+            text-align: center;
+            padding: 24px;
+            color: var(--text-muted);
+            font-size: 0.78rem;
+            border-top: 1px solid var(--border);
+        }
+
+        /* ===== 错误状态 ===== */
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px dashed var(--border);
+        }
+
+        /* ===== 响应式 ===== */
+        @media (max-width: 768px) {
+            .header-inner { flex-direction: column; gap: 8px; }
+            .summary-grid { grid-template-columns: repeat(2, 1fr); }
+            .news-grid { grid-template-columns: 1fr; }
+            .main { padding: 12px; }
+        }
+
+        /* ===== 加密货币链上数据区 ===== */
+        .onchain-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            margin-top: 8px;
+            font-size: 0.75rem;
+        }
+        .onchain-item {
+            background: rgba(255,255,255,0.02);
+            border-radius: 6px;
+            padding: 6px 8px;
+            text-align: center;
+        }
+        .onchain-label {
+            color: var(--text-muted);
+            font-size: 0.68rem;
+        }
+        .onchain-value {
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部栏 -->
+    <header class="header">
+        <div class="header-inner">
+            <h1>📊 投资观察面板</h1>
+            <div class="header-info">
+                <div class="market-status">
+                    <span>A股 <span class="status-dot {{ 'open' if markets_open else 'closed' }}"></span></span>
+                    <span>港股 <span class="status-dot {{ 'open' if markets_open else 'closed' }}"></span></span>
+                    <span>美股 <span class="status-dot {{ 'open' if markets_open else 'closed' }}"></span></span>
+                </div>
+                <span class="update-badge">🕐 更新: {{ update_time }}</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- 市场概览 -->
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="card-label">📈 总跟踪标的</div>
+                <div class="card-value">{{ total_count }}</div>
+                <div class="card-sub">A股 {{ a_count }} · 港股 {{ hk_count }} · 美股 {{ us_count }} · 加密 {{ crypto_count }}</div>
+            </div>
+            <div class="summary-card">
+                <div class="card-label">🟢 今日上涨</div>
+                <div class="card-value up">{{ up_count }}</div>
+                <div class="card-sub">占比 {{ up_pct }}%</div>
+            </div>
+            <div class="summary-card">
+                <div class="card-label">🔴 今日下跌</div>
+                <div class="card-value down">{{ down_count }}</div>
+                <div class="card-sub">占比 {{ down_pct }}%</div>
+            </div>
+            <div class="summary-card">
+                <div class="card-label">📰 市场新闻</div>
+                <div class="card-value" style="font-size:1.4rem">{{ news_count }} 条</div>
+                <div class="card-sub">最近24h内</div>
+            </div>
+        </div>
+
+        <!-- A股表格 -->
+        {% if a_stocks %}
+        <section class="market-section">
+            <div class="section-header">
+                <h2>🇨🇳 A股</h2>
+                <span class="section-badge badge-a">沪深京</span>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>名称/代码</th>
+                            <th>行业</th>
+                            <th>收盘价</th>
+                            <th>涨跌幅</th>
+                            <th>市值(亿)</th>
+                            <th>PE</th>
+                            <th>MACD</th>
+                            <th>RSI</th>
+                            <th>MA5</th>
+                            <th>MA20</th>
+                            <th>主力净流入(亿)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for s in a_stocks %}
+                        <tr>
+                            <td>
+                                <span class="stock-name">{{ s.name }}</span>
+                                <span class="stock-code">{{ s.code }}</span>
+                            </td>
+                            <td><span class="stock-industry">{{ s.industry or '-' }}</span></td>
+                            <td class="price">¥{{ s.price }}</td>
+                            <td>
+                                <span class="change-badge {{ 'positive' if s.change_pct >= 0 else 'negative' }}">
+                                    {{ '+' if s.change_pct >= 0 else '' }}{{ s.change_pct }}%
+                                </span>
+                            </td>
+                            <td>{{ s.market_cap or '-' }}</td>
+                            <td>{{ s.pe or '-' }}</td>
+                            <td class="indicator {{ 'bullish' if s.macd and s.macd > 0 else 'bearish' if s.macd and s.macd < 0 else 'neutral' }}">
+                                {{ s.macd if s.macd is not none else '-' }}
+                            </td>
+                            <td class="indicator {{ 'bullish' if s.rsi and s.rsi > 50 else 'bearish' if s.rsi and s.rsi < 50 else 'neutral' }}">
+                                {{ s.rsi if s.rsi is not none else '-' }}
+                            </td>
+                            <td>{{ s.ma.get('MA5', '-') if s.ma else '-' }}</td>
+                            <td>{{ s.ma.get('MA20', '-') if s.ma else '-' }}</td>
+                            <td class="{{ 'up' if s.main_net_flow and s.main_net_flow > 0 else 'down' if s.main_net_flow and s.main_net_flow < 0 else '' }}">
+                                {{ (s.main_net_flow|string + '亿') if s.main_net_flow is not none else '-' }}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        {% else %}
+        <section class="market-section">
+            <div class="section-header"><h2>🇨🇳 A股</h2></div>
+            <div class="empty-state">尚未配置A股标的，请在 config.py 中添加</div>
+        </section>
+        {% endif %}
+
+        <!-- 港股表格 -->
+        {% if hk_stocks %}
+        <section class="market-section">
+            <div class="section-header">
+                <h2>🇭🇰 港股</h2>
+                <span class="section-badge badge-hk">港交所</span>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>名称/代码</th>
+                            <th>行业</th>
+                            <th>收盘价</th>
+                            <th>涨跌幅</th>
+                            <th>市值(亿)</th>
+                            <th>PE</th>
+                            <th>MACD</th>
+                            <th>RSI</th>
+                            <th>MA5</th>
+                            <th>MA20</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for s in hk_stocks %}
+                        <tr>
+                            <td>
+                                <span class="stock-name">{{ s.name }}</span>
+                                <span class="stock-code">{{ s.code }}</span>
+                            </td>
+                            <td><span class="stock-industry">{{ s.industry or '-' }}</span></td>
+                            <td class="price">HK${{ s.price }}</td>
+                            <td>
+                                <span class="change-badge {{ 'positive' if s.change_pct >= 0 else 'negative' }}">
+                                    {{ '+' if s.change_pct >= 0 else '' }}{{ s.change_pct }}%
+                                </span>
+                            </td>
+                            <td>{{ s.market_cap or '-' }}</td>
+                            <td>{{ s.pe or '-' }}</td>
+                            <td class="indicator {{ 'bullish' if s.macd and s.macd > 0 else 'bearish' if s.macd and s.macd < 0 else 'neutral' }}">
+                                {{ s.macd if s.macd is not none else '-' }}
+                            </td>
+                            <td class="indicator {{ 'bullish' if s.rsi and s.rsi > 50 else 'bearish' if s.rsi and s.rsi < 50 else 'neutral' }}">
+                                {{ s.rsi if s.rsi is not none else '-' }}
+                            </td>
+                            <td>{{ s.ma.get('MA5', '-') if s.ma else '-' }}</td>
+                            <td>{{ s.ma.get('MA20', '-') if s.ma else '-' }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        {% else %}
+        <section class="market-section">
+            <div class="section-header"><h2>🇭🇰 港股</h2></div>
+            <div class="empty-state">尚未配置港股标的，请在 config.py 中添加</div>
+        </section>
+        {% endif %}
+
+        <!-- 美股表格 -->
+        {% if us_stocks %}
+        <section class="market-section">
+            <div class="section-header">
+                <h2>🇺🇸 美股</h2>
+                <span class="section-badge badge-us">NASDAQ/NYSE</span>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>名称/代码</th>
+                            <th>行业</th>
+                            <th>收盘价</th>
+                            <th>涨跌幅</th>
+                            <th>市值(亿)</th>
+                            <th>PE</th>
+                            <th>MACD</th>
+                            <th>RSI</th>
+                            <th>MA5</th>
+                            <th>MA20</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for s in us_stocks %}
+                        <tr>
+                            <td>
+                                <span class="stock-name">{{ s.name }}</span>
+                                <span class="stock-code">{{ s.code }}</span>
+                            </td>
+                            <td><span class="stock-industry">{{ s.industry or '-' }}</span></td>
+                            <td class="price">${{ s.price }}</td>
+                            <td>
+                                <span class="change-badge {{ 'positive' if s.change_pct >= 0 else 'negative' }}">
+                                    {{ '+' if s.change_pct >= 0 else '' }}{{ s.change_pct }}%
+                                </span>
+                            </td>
+                            <td>{{ s.market_cap or '-' }}</td>
+                            <td>{{ s.pe or '-' }}</td>
+                            <td class="indicator {{ 'bullish' if s.macd and s.macd > 0 else 'bearish' if s.macd and s.macd < 0 else 'neutral' }}">
+                                {{ s.macd if s.macd is not none else '-' }}
+                            </td>
+                            <td class="indicator {{ 'bullish' if s.rsi and s.rsi > 50 else 'bearish' if s.rsi and s.rsi < 50 else 'neutral' }}">
+                                {{ s.rsi if s.rsi is not none else '-' }}
+                            </td>
+                            <td>{{ s.ma.get('MA5', '-') if s.ma else '-' }}</td>
+                            <td>{{ s.ma.get('MA20', '-') if s.ma else '-' }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        {% else %}
+        <section class="market-section">
+            <div class="section-header"><h2>🇺🇸 美股</h2></div>
+            <div class="empty-state">尚未配置美股标的，请在 config.py 中添加</div>
+        </section>
+        {% endif %}
+
+        <!-- 加密货币表格 -->
+        {% if crypto_list %}
+        <section class="market-section">
+            <div class="section-header">
+                <h2>🪙 加密货币</h2>
+                <span class="section-badge badge-crypto">24h</span>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>名称/简称</th>
+                            <th>类型</th>
+                            <th>价格</th>
+                            <th>24h涨跌</th>
+                            <th>市值(亿$)</th>
+                            <th>排名</th>
+                            <th>MACD</th>
+                            <th>RSI</th>
+                            <th>7日涨跌</th>
+                            <th>30日涨跌</th>
+                            <th>距ATH</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for s in crypto_list %}
+                        <tr>
+                            <td>
+                                <span class="stock-name">{{ s.name }}</span>
+                                <span class="stock-code">{{ s.symbol }}</span>
+                            </td>
+                            <td><span class="stock-industry">{{ s.industry or '-' }}</span></td>
+                            <td class="price">${{ s.price }}</td>
+                            <td>
+                                <span class="change-badge {{ 'positive' if s.change_pct >= 0 else 'negative' }}">
+                                    {{ '+' if s.change_pct >= 0 else '' }}{{ s.change_pct }}%
+                                </span>
+                            </td>
+                            <td>{{ s.market_cap or '-' }}</td>
+                            <td>#{{ s.market_cap_rank or '-' }}</td>
+                            <td class="indicator {{ 'bullish' if s.macd and s.macd > 0 else 'bearish' if s.macd and s.macd < 0 else 'neutral' }}">
+                                {{ s.macd if s.macd is not none else '-' }}
+                            </td>
+                            <td class="indicator {{ 'bullish' if s.rsi and s.rsi > 50 else 'bearish' if s.rsi and s.rsi < 50 else 'neutral' }}">
+                                {{ s.rsi if s.rsi is not none else '-' }}
+                            </td>
+                            <td class="{{ 'up' if s.onchain.price_change_7d and s.onchain.price_change_7d > 0 else 'down' if s.onchain.price_change_7d and s.onchain.price_change_7d < 0 else '' }}">
+                                {{ ('+' if s.onchain.price_change_7d and s.onchain.price_change_7d > 0 else '') }}{{ ('%.1f'|format(s.onchain.price_change_7d)) if s.onchain.price_change_7d is not none else '-' }}%
+                            </td>
+                            <td class="{{ 'up' if s.onchain.price_change_30d and s.onchain.price_change_30d > 0 else 'down' if s.onchain.price_change_30d and s.onchain.price_change_30d < 0 else '' }}">
+                                {{ ('+' if s.onchain.price_change_30d and s.onchain.price_change_30d > 0 else '') }}{{ ('%.1f'|format(s.onchain.price_change_30d)) if s.onchain.price_change_30d is not none else '-' }}%
+                            </td>
+                            <td class="{{ 'down' if s.onchain.ath_pct and s.onchain.ath_pct < 0 else '' }}">
+                                {{ ('%.1f'|format(s.onchain.ath_pct)) if s.onchain.ath_pct is not none else '-' }}%
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <!-- 链上数据详情 -->
+            {% for s in crypto_list %}
+            {% if s.onchain.circ_ratio or s.onchain.github_commits_4w %}
+            <div style="margin-top: 4px; font-size: 0.72rem; color: var(--text-muted); padding: 4px 14px;">
+                <strong>{{ s.symbol }}</strong>:
+                {% if s.onchain.circ_ratio %}流通占比 {{ s.onchain.circ_ratio }}% · {% endif %}
+                {% if s.onchain.categories %}赛道: {{ s.onchain.categories[:2]|join(', ') }} · {% endif %}
+                {% if s.onchain.github_commits_4w %}GitHub提交(4w): {{ s.onchain.github_commits_4w }}{% endif %}
+            </div>
+            {% endif %}
+            {% endfor %}
+        </section>
+        {% else %}
+        <section class="market-section">
+            <div class="section-header"><h2>🪙 加密货币</h2></div>
+            <div class="empty-state">尚未配置加密货币标的，请在 config.py 中添加</div>
+        </section>
+        {% endif %}
+
+        <!-- 新闻区 -->
+        {% if news %}
+        <section class="news-section">
+            <div class="section-header">
+                <h2>📰 市场新闻</h2>
+                <span class="section-badge" style="background: rgba(139,92,246,0.15); color: var(--accent-purple);">{{ news|length }} 条</span>
+            </div>
+            <div class="news-grid">
+                {% for n in news %}
+                <div class="news-card">
+                    <a href="{{ n.link }}" target="_blank" rel="noopener">
+                        <div class="news-title">{{ n.title }}</div>
+                        <div class="news-summary">{{ n.summary }}</div>
+                        <div class="news-meta">
+                            <span class="news-source">{{ n.source }}</span>
+                            <span>{{ n.published }}</span>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+    </main>
+
+    <footer class="footer">
+        📊 投资观察面板 · 数据每日自动更新 · 数据来源: akshare / Yahoo Finance / CoinGecko
+    </footer>
+</body>
+</html>
