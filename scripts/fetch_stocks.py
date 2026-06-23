@@ -1,18 +1,18 @@
 """
 A股数据抓取模块
-数据源：akshare（东方财富/新浪财经）
+数据源：baostock（主）+ akshare（备用）
 """
-import akshare as ak
 import pandas as pd
 import numpy as np
+import baostock as bs
 from datetime import datetime, timedelta
 import json
 import os
 import sys
+import time
 import warnings
 warnings.filterwarnings('ignore')
 
-# 添加父目录以导入 config
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scripts.config import A_STOCKS, MACD_FAST, MACD_SLOW, MACD_SIGNAL, RSI_PERIOD, MA_PERIODS
 
@@ -23,16 +23,18 @@ def calc_macd(close_series):
     ema_slow = close_series.ewm(span=MACD_SLOW, adjust=False).mean()
     macd_line = ema_fast - ema_slow
     signal_line = macd_line.ewm(span=MACD_SIGNAL, adjust=False).mean()
-    histogram = (macd_line - signal_line) * 2  # 柱状图（乘以2是常见做法）
+    histogram = (macd_line - signal_line) * 2
     return {
-        "macd": round(macd_line.iloc[-1], 4),
-        "signal": round(signal_line.iloc[-1], 4),
-        "histogram": round(histogram.iloc[-1], 4),
+        "macd": round(macd_line.iloc[-1], 4) if len(macd_line) > 0 else None,
+        "signal": round(signal_line.iloc[-1], 4) if len(signal_line) > 0 else None,
+        "histogram": round(histogram.iloc[-1], 4) if len(histogram) > 0 else None,
     }
 
 
 def calc_rsi(close_series):
     """计算 RSI"""
+    if len(close_series) < RSI_PERIOD + 1:
+        return None
     delta = close_series.diff()
     gain = delta.where(delta > 0, 0.0)
     loss = -delta.where(delta < 0, 0.0)
@@ -48,14 +50,14 @@ def calc_ma(close_series):
     ma_values = {}
     for period in MA_PERIODS:
         ma = close_series.rolling(window=period).mean()
-        ma_values[f"MA{period}"] = round(ma.iloc[-1], 2) if not pd.isna(ma.iloc[-1]) else None
+        ma_values[f"MA{period}"] = round(ma.iloc[-1], 2) if len(ma) > 0 and not pd.isna(ma.iloc[-1]) else None
     return ma_values
 
 
 def fetch_a_stock_data():
     """
     获取所有A股标的数据
-    返回 list of dict
+    优先使用 baostock，失败时回退到 akshare
     """
     if not A_STOCKS:
         print("[A股] 未配置A股标的，跳过")
@@ -64,124 +66,258 @@ def fetch_a_stock_data():
     print(f"[A股] 开始获取 {len(A_STOCKS)} 只股票数据...")
     results = []
 
+    # 方法1: baostock
+    bs_results = _fetch_via_baostock()
+    if bs_results:
+        results.extend(bs_results)
+
+    # 方法2: 对 baostock 失败的标的使用 akshare 重试
+    bs_codes = {r["code"] for r in bs_results}
     for stock in A_STOCKS:
-        code = stock["code"]
-        name = stock["name"]
-        print(f"  → 正在处理 {name}({code})...")
-
-        try:
-            # 确定市场前缀
-            if code.startswith("6") or code.startswith("688") or code.startswith("689"):
-                symbol = f"sh{code}"
-            elif code.startswith("0") or code.startswith("3"):
-                symbol = f"sz{code}"
-            elif code.startswith("8") or code.startswith("4"):
-                symbol = f"bj{code}"
+        if stock["code"] not in bs_codes:
+            print(f"  → {stock['name']}({stock['code']}) baostock 失败，尝试 akshare...")
+            result = _fetch_via_akshare(stock["code"], stock["name"])
+            if result:
+                results.append(result)
+                print(f"    ✓ akshare: ¥{result['price']}, {result['change_pct']:+.2f}%")
             else:
-                symbol = f"sz{code}"
-
-            # 获取历史K线（日线，最近120天用于计算指标）
-            end_date = datetime.now().strftime("%Y%m%d")
-            start_date = (datetime.now() - timedelta(days=180)).strftime("%Y%m%d")
-
-            hist_df = ak.stock_zh_a_hist(
-                symbol=code,
-                period="daily",
-                start_date=start_date,
-                end_date=end_date,
-                adjust="qfq"  # 前复权
-            )
-
-            if hist_df.empty:
-                print(f"    ⚠ {name} 无历史数据，跳过")
-                continue
-
-            close_prices = hist_df["收盘"]
-            latest = hist_df.iloc[-1]
-            prev = hist_df.iloc[-2] if len(hist_df) > 1 else latest
-
-            # 涨跌幅
-            change_pct = round(((latest["收盘"] - prev["收盘"]) / prev["收盘"]) * 100, 2)
-
-            # 技术指标
-            macd_data = calc_macd(close_prices)
-            rsi = calc_rsi(close_prices)
-            ma_data = calc_ma(close_prices)
-
-            # 获取实时行情（市值、PE、行业）
-            try:
-                realtime = ak.stock_zh_a_spot_em()
-                stock_row = realtime[realtime["代码"] == code]
-                if not stock_row.empty:
-                    row = stock_row.iloc[0]
-                    market_cap = row.get("总市值", None)
-                    pe = row.get("市盈率-动态", None)
-                    volume = row.get("成交量", None)
-                    turnover = row.get("成交额", None)
-                    high = row.get("最高", None)
-                    low = row.get("最低", None)
-                    open_price = row.get("今开", None)
-                else:
-                    market_cap = pe = volume = turnover = high = low = open_price = None
-            except Exception:
-                market_cap = pe = volume = turnover = high = low = open_price = None
-
-            # 获取行业信息
-            try:
-                industry_info = ak.stock_individual_info_em(symbol=code)
-                industry = None
-                if not industry_info.empty:
-                    ind_row = industry_info[industry_info["item"] == "行业"]
-                    if not ind_row.empty:
-                        industry = ind_row.iloc[0]["value"]
-            except Exception:
-                industry = None
-
-            # 获取资金流向
-            try:
-                fund_flow_df = ak.stock_individual_fund_flow(stock=code, market="sh" if symbol.startswith("sh") else "sz")
-                if not fund_flow_df.empty:
-                    latest_flow = fund_flow_df.iloc[-1]
-                    main_net_flow = latest_flow.get("主力净流入", None)
-                    # 单位转换：万元 → 亿元
-                    if main_net_flow is not None:
-                        main_net_flow = round(main_net_flow / 10000, 2)  # 转为亿元
-                else:
-                    main_net_flow = None
-            except Exception:
-                main_net_flow = None
-
-            stock_data = {
-                "market": "A股",
-                "code": code,
-                "name": name,
-                "symbol": symbol,
-                "industry": industry,
-                "price": round(float(latest["收盘"]), 2),
-                "open": round(float(open_price), 2) if open_price is not None else None,
-                "high": round(float(high), 2) if high is not None else None,
-                "low": round(float(low), 2) if low is not None else None,
-                "change_pct": change_pct,
-                "volume": int(volume) if volume is not None else None,
-                "turnover": round(float(turnover) / 1e8, 2) if turnover is not None else None,  # 转为亿元
-                "market_cap": round(float(market_cap) / 1e8, 2) if market_cap is not None else None,  # 转为亿元
-                "pe": round(float(pe), 2) if pe is not None else None,
-                "macd": macd_data["macd"],
-                "macd_signal": macd_data["signal"],
-                "macd_histogram": macd_data["histogram"],
-                "rsi": rsi,
-                "ma": ma_data,
-                "main_net_flow": main_net_flow,  # 主力资金净流入（亿元）
-            }
-            results.append(stock_data)
-            print(f"    ✓ {name}: ¥{stock_data['price']}, {change_pct:+.2f}%")
-
-        except Exception as e:
-            print(f"    ✗ {name}({code}) 数据获取失败: {str(e)[:100]}")
-            continue
+                print(f"    ✗ 所有数据源均失败")
+            time.sleep(1)
 
     print(f"[A股] 完成，成功获取 {len(results)}/{len(A_STOCKS)} 只股票数据")
     return results
+
+
+def _fetch_via_baostock():
+    """使用 baostock 批量获取A股数据"""
+    results = []
+    try:
+        lg = bs.login()
+        if lg.error_code != '0':
+            print(f"  ⚠ baostock 登录失败: {lg.error_msg}")
+            return results
+
+        for stock in A_STOCKS:
+            code = stock["code"]
+            name = stock["name"]
+            print(f"  → {name}({code}) [baostock]")
+
+            try:
+                # 确定市场前缀
+                if code.startswith("6") or code.startswith("688") or code.startswith("689"):
+                    bs_code = f"sh.{code}"
+                    market = "sh"
+                elif code.startswith("0") or code.startswith("3"):
+                    bs_code = f"sz.{code}"
+                    market = "sz"
+                elif code.startswith("8") or code.startswith("4"):
+                    bs_code = f"bj.{code}"
+                    market = "bj"
+                else:
+                    bs_code = f"sz.{code}"
+                    market = "sz"
+
+                # 计算日期范围（180天）
+                end_date = datetime.now().strftime("%Y-%m-%d")
+                start_date = (datetime.now() - timedelta(days=250)).strftime("%Y-%m-%d")
+
+                # 获取历史K线
+                rs = bs.query_history_k_data_plus(
+                    bs_code,
+                    "date,open,high,low,close,volume,amount,turn",
+                    start_date=start_date,
+                    end_date=end_date,
+                    frequency="d",
+                    adjustflag="2",  # 前复权
+                )
+                if rs.error_code != '0':
+                    print(f"    ⚠ baostock 查询失败: {rs.error_msg}")
+                    continue
+
+                rows = []
+                while rs.next():
+                    rows.append(rs.get_row_data())
+
+                if len(rows) < 30:
+                    print(f"    ⚠ {name} 历史数据不足 ({len(rows)} 条)")
+                    continue
+
+                df = pd.DataFrame(rows, columns=["date", "open", "high", "low", "close", "volume", "amount", "turn"])
+                df["close"] = pd.to_numeric(df["close"], errors="coerce")
+                df["open"] = pd.to_numeric(df["open"], errors="coerce")
+                df["high"] = pd.to_numeric(df["high"], errors="coerce")
+                df["low"] = pd.to_numeric(df["low"], errors="coerce")
+                df["volume"] = pd.to_numeric(df["volume"], errors="coerce")
+                df["amount"] = pd.to_numeric(df["amount"], errors="coerce")
+                df["turn"] = pd.to_numeric(df["turn"], errors="coerce")
+                df = df.dropna(subset=["close"])
+
+                if len(df) < 2:
+                    continue
+
+                close_prices = df["close"]
+                latest = df.iloc[-1]
+                prev = df.iloc[-2]
+
+                change_pct = round(((latest["close"] - prev["close"]) / prev["close"]) * 100, 2)
+                macd_data = calc_macd(close_prices)
+                rsi = calc_rsi(close_prices)
+                ma_data = calc_ma(close_prices)
+
+                # 获取行业分类
+                industry = _get_baostock_industry(bs, code, market)
+
+                # 获取市值和PE（通过股票基本信息）
+                mcap, pe = _get_baostock_finance(bs, bs_code)
+
+                stock_data = {
+                    "market": "A股",
+                    "code": code,
+                    "name": name,
+                    "symbol": bs_code,
+                    "industry": industry,
+                    "price": round(float(latest["close"]), 2),
+                    "open": round(float(latest["open"]), 2) if not pd.isna(latest["open"]) else None,
+                    "high": round(float(latest["high"]), 2) if not pd.isna(latest["high"]) else None,
+                    "low": round(float(latest["low"]), 2) if not pd.isna(latest["low"]) else None,
+                    "change_pct": change_pct,
+                    "volume": int(latest["volume"]) if not pd.isna(latest["volume"]) else None,
+                    "turnover": round(float(latest["amount"]) / 1e8, 2) if not pd.isna(latest["amount"]) else None,
+                    "market_cap": mcap,
+                    "pe": pe,
+                    "macd": macd_data["macd"],
+                    "macd_signal": macd_data["signal"],
+                    "macd_histogram": macd_data["histogram"],
+                    "rsi": rsi,
+                    "ma": ma_data,
+                    "main_net_flow": None,  # baostock 不提供资金流向
+                }
+                results.append(stock_data)
+                print(f"    ✓ ¥{stock_data['price']}, {change_pct:+.2f}%")
+
+            except Exception as e:
+                print(f"    ✗ baostock 处理失败: {str(e)[:80]}")
+
+        bs.logout()
+    except Exception as e:
+        print(f"  ⚠ baostock 整体失败: {str(e)[:80]}")
+        try:
+            bs.logout()
+        except:
+            pass
+
+    return results
+
+
+def _get_baostock_industry(bs, code, market):
+    """获取行业信息"""
+    try:
+        rs = bs.query_stock_industry()
+        while rs.next():
+            row = rs.get_row_data()
+            if row[1] == code:
+                return row[3]  # 行业名称
+    except:
+        pass
+    return None
+
+
+def _get_baostock_finance(bs, bs_code):
+    """获取市值和PE"""
+    mcap, pe = None, None
+    try:
+        # 获取估值数据
+        today = datetime.now().strftime("%Y-%m-%d")
+        rs = bs.query_history_k_data_plus(
+            bs_code, "date,peTTM", start_date=(datetime.now() - timedelta(days=5)).strftime("%Y-%m-%d"),
+            end_date=today, frequency="d", adjustflag="2"
+        )
+        if rs.error_code == '0':
+            data = []
+            while rs.next():
+                data.append(rs.get_row_data())
+            if data:
+                pe_val = data[-1][1]
+                if pe_val and pe_val != '' and pe_val != '0.000000':
+                    pe = round(float(pe_val), 2)
+    except:
+        pass
+    return mcap, pe
+
+
+def _fetch_via_akshare(code, name):
+    """使用 akshare 作为备用数据源"""
+    try:
+        import akshare as ak
+
+        if code.startswith("6") or code.startswith("688") or code.startswith("689"):
+            market = "sh"
+        elif code.startswith("0") or code.startswith("3"):
+            market = "sz"
+        else:
+            market = "sz"
+
+        end_date = datetime.now().strftime("%Y%m%d")
+        start_date = (datetime.now() - timedelta(days=180)).strftime("%Y%m%d")
+
+        hist_df = ak.stock_zh_a_hist(symbol=code, period="daily", start_date=start_date, end_date=end_date, adjust="qfq")
+        if hist_df.empty:
+            return None
+
+        close_prices = hist_df["收盘"]
+        latest = hist_df.iloc[-1]
+        prev = hist_df.iloc[-2] if len(hist_df) > 1 else latest
+
+        change_pct = round(((latest["收盘"] - prev["收盘"]) / prev["收盘"]) * 100, 2)
+        macd_data = calc_macd(close_prices)
+        rsi = calc_rsi(close_prices)
+        ma_data = calc_ma(close_prices)
+
+        market_cap = pe = volume = turnover = high = low = open_price = industry = None
+        main_net_flow = None
+        try:
+            realtime = ak.stock_zh_a_spot_em()
+            stock_row = realtime[realtime["代码"] == code]
+            if not stock_row.empty:
+                row = stock_row.iloc[0]
+                market_cap = row.get("总市值", None)
+                pe = row.get("市盈率-动态", None)
+                volume = row.get("成交量", None)
+                turnover = row.get("成交额", None)
+                high = row.get("最高", None)
+                low = row.get("最低", None)
+                open_price = row.get("今开", None)
+            info = ak.stock_individual_info_em(symbol=code)
+            ind_row = info[info["item"] == "行业"]
+            if not ind_row.empty:
+                industry = ind_row.iloc[0]["value"]
+            flow_df = ak.stock_individual_fund_flow(stock=code, market=market)
+            if not flow_df.empty:
+                lf = flow_df.iloc[-1]
+                mf = lf.get("主力净流入", None)
+                if mf is not None:
+                    main_net_flow = round(mf / 10000, 2)
+        except:
+            pass
+
+        return {
+            "market": "A股", "code": code, "name": name,
+            "symbol": f"{market}{code}", "industry": industry,
+            "price": round(float(latest["收盘"]), 2),
+            "open": round(float(open_price), 2) if open_price is not None else None,
+            "high": round(float(high), 2) if high is not None else None,
+            "low": round(float(low), 2) if low is not None else None,
+            "change_pct": change_pct,
+            "volume": int(volume) if volume is not None else None,
+            "turnover": round(float(turnover) / 1e8, 2) if turnover is not None else None,
+            "market_cap": round(float(market_cap) / 1e8, 2) if market_cap is not None else None,
+            "pe": round(float(pe), 2) if pe is not None else None,
+            "macd": macd_data["macd"], "macd_signal": macd_data["signal"],
+            "macd_histogram": macd_data["histogram"], "rsi": rsi, "ma": ma_data,
+            "main_net_flow": main_net_flow,
+        }
+    except Exception:
+        return None
 
 
 if __name__ == "__main__":

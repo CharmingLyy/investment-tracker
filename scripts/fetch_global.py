@@ -1,14 +1,15 @@
 """
 港股 + 美股数据抓取模块
-数据源：yfinance
+数据源：Yahoo Finance API（直接调用，绕过 yfinance 库限流）
 """
-import yfinance as yf
+import requests
 import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
 import json
 import os
 import sys
+import time
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -16,149 +17,192 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scripts.config import HK_STOCKS, US_STOCKS, MACD_FAST, MACD_SLOW, MACD_SIGNAL, RSI_PERIOD, MA_PERIODS
 from scripts.fetch_stocks import calc_macd, calc_rsi, calc_ma
 
+SESSION = requests.Session()
+SESSION.headers.update({
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "application/json",
+})
 
-def fetch_hk_stock_data():
-    """获取港股数据"""
-    if not HK_STOCKS:
-        print("[港股] 未配置港股标的，跳过")
+
+def _yahoo_chart(ticker_symbol, period="6mo", interval="1d"):
+    """
+    直接调用 Yahoo Finance chart API
+    返回 (history_df, meta_info)
+    """
+    # period 转换为 Yahoo API 参数
+    period_map = {"6mo": "6mo", "1y": "1y"}
+    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker_symbol}"
+    params = {
+        "range": period_map.get(period, "6mo"),
+        "interval": interval,
+        "includePrePost": "false",
+    }
+
+    for attempt in range(3):
+        try:
+            resp = SESSION.get(url, params=params, timeout=20)
+            if resp.status_code == 429:
+                wait = (attempt + 1) * 15
+                print(f"    ⏳ 限流, 等待 {wait}s...")
+                time.sleep(wait)
+                continue
+            resp.raise_for_status()
+            data = resp.json()
+            result = data["chart"]["result"][0]
+
+            # 解析K线数据
+            timestamps = result["timestamp"]
+            quote = result["indicators"]["quote"][0]
+            opens = quote.get("open", [])
+            highs = quote.get("high", [])
+            lows = quote.get("low", [])
+            closes = quote.get("close", [])
+            volumes = quote.get("volume", [])
+
+            # 构建 DataFrame
+            df = pd.DataFrame({
+                "Date": pd.to_datetime(timestamps, unit="s"),
+                "Open": opens,
+                "High": highs,
+                "Low": lows,
+                "Close": closes,
+                "Volume": volumes,
+            })
+            df = df.set_index("Date")
+            df = df.dropna(subset=["Close"])
+
+            # meta 信息
+            meta = result.get("meta", {})
+            return df, meta
+        except Exception as e:
+            if attempt == 2:
+                raise e
+            time.sleep(5)
+
+    return pd.DataFrame(), {}
+
+
+def _yahoo_quote(ticker_symbol):
+    """获取实时报价和基本面"""
+    url = f"https://query1.finance.yahoo.com/v6/finance/quote?symbols={ticker_symbol}"
+    try:
+        resp = SESSION.get(url, timeout=10)
+        if resp.status_code == 200:
+            data = resp.json()
+            result = data.get("quoteResponse", {}).get("result", [])
+            if result:
+                return result[0]
+    except:
+        pass
+    return {}
+
+
+def _process_stock(hist_df, quote_info, code, name, market):
+    """处理单只股票数据"""
+    if hist_df.empty or len(hist_df) < 2:
+        return None
+
+    close_prices = hist_df["Close"]
+    latest = hist_df.iloc[-1]
+    prev = hist_df.iloc[-2]
+
+    change_pct = round(((latest["Close"] - prev["Close"]) / prev["Close"]) * 100, 2)
+    macd_data = calc_macd(close_prices)
+    rsi = calc_rsi(close_prices)
+    ma_data = calc_ma(close_prices)
+
+    market_cap = quote_info.get("marketCap", None)
+    pe = quote_info.get("trailingPE", None) or quote_info.get("forwardPE", None)
+    industry = quote_info.get("industry", None) or quote_info.get("sector", None)
+    volume = int(latest["Volume"]) if "Volume" in latest.index and not pd.isna(latest["Volume"]) else None
+
+    return {
+        "market": market,
+        "code": code,
+        "name": name,
+        "symbol": code,
+        "industry": industry,
+        "price": round(float(latest["Close"]), 2),
+        "open": round(float(latest["Open"]), 2) if "Open" in latest.index and not pd.isna(latest["Open"]) else None,
+        "high": round(float(latest["High"]), 2) if "High" in latest.index and not pd.isna(latest["High"]) else None,
+        "low": round(float(latest["Low"]), 2) if "Low" in latest.index and not pd.isna(latest["Low"]) else None,
+        "change_pct": change_pct,
+        "volume": volume,
+        "turnover": None,
+        "market_cap": round(float(market_cap) / 1e8, 2) if market_cap else None,
+        "pe": round(float(pe), 2) if pe else None,
+        "macd": macd_data["macd"],
+        "macd_signal": macd_data["signal"],
+        "macd_histogram": macd_data["histogram"],
+        "rsi": rsi,
+        "ma": ma_data,
+        "main_net_flow": None,
+    }
+
+
+def fetch_global_stocks(market_type):
+    """通用全球股票数据抓取"""
+    if market_type == "hk":
+        stocks, suffix, market_name = HK_STOCKS, ".HK", "港股"
+    else:
+        stocks, suffix, market_name = US_STOCKS, "", "美股"
+
+    if not stocks:
+        print(f"[{market_name}] 未配置标的，跳过")
         return []
 
-    print(f"[港股] 开始获取 {len(HK_STOCKS)} 只股票数据...")
+    print(f"[{market_name}] 开始获取 {len(stocks)} 只股票数据...")
     results = []
 
-    for stock in HK_STOCKS:
+    for i, stock in enumerate(stocks):
         code = stock["code"]
         name = stock["name"]
-        print(f"  → 正在处理 {name}({code})...")
+        ticker = f"{str(int(code)).zfill(4)}{suffix}" if suffix else code
+        print(f"  → {name}({ticker})")
 
         try:
-            # 港股代码补零到4位 + .HK
-            ticker_code = f"{code.zfill(4)}.HK"
-            ticker = yf.Ticker(ticker_code)
-
-            # 获取历史数据（180天）
-            hist = ticker.history(period="6mo")
-            if hist.empty:
-                print(f"    ⚠ {name} 无历史数据，跳过")
+            # 获取K线
+            hist_df, meta = _yahoo_chart(ticker)
+            if hist_df.empty:
+                print(f"    ⚠ K线数据为空")
                 continue
 
-            close_prices = hist["Close"]
-            latest = hist.iloc[-1]
-            prev = hist.iloc[-2] if len(hist) > 1 else latest
+            # 获取报价/基本面
+            time.sleep(2)
+            quote = _yahoo_quote(ticker)
+            if not quote:
+                # 从 meta 中提取价格
+                quote = {
+                    "regularMarketPrice": meta.get("regularMarketPrice"),
+                    "marketCap": meta.get("marketCap"),
+                    "trailingPE": meta.get("trailingPE"),
+                }
 
-            change_pct = round(((latest["Close"] - prev["Close"]) / prev["Close"]) * 100, 2)
-            macd_data = calc_macd(close_prices)
-            rsi = calc_rsi(close_prices)
-            ma_data = calc_ma(close_prices)
-
-            # 基本面信息
-            info = ticker.info
-            market_cap = info.get("marketCap", None)
-            pe = info.get("trailingPE", None) or info.get("forwardPE", None)
-            industry = info.get("industry", None) or info.get("sector", None)
-            volume = int(latest["Volume"]) if "Volume" in latest.index else None
-
-            stock_data = {
-                "market": "港股",
-                "code": code,
-                "name": name,
-                "symbol": ticker_code,
-                "industry": industry,
-                "price": round(float(latest["Close"]), 2),
-                "open": round(float(latest["Open"]), 2),
-                "high": round(float(latest["High"]), 2),
-                "low": round(float(latest["Low"]), 2),
-                "change_pct": change_pct,
-                "volume": volume,
-                "turnover": None,
-                "market_cap": round(float(market_cap) / 1e8, 2) if market_cap else None,
-                "pe": round(float(pe), 2) if pe else None,
-                "macd": macd_data["macd"],
-                "macd_signal": macd_data["signal"],
-                "macd_histogram": macd_data["histogram"],
-                "rsi": rsi,
-                "ma": ma_data,
-                "main_net_flow": None,  # 港股无此数据
-            }
-            results.append(stock_data)
-            print(f"    ✓ {name}: HK${stock_data['price']}, {change_pct:+.2f}%")
+            result = _process_stock(hist_df, quote, code, name, market_name)
+            if result:
+                results.append(result)
+                currency = "HK$" if market_type == "hk" else "$"
+                print(f"    ✓ {currency}{result['price']}, {result['change_pct']:+.2f}%")
+            else:
+                print(f"    ⚠ 数据处理失败")
 
         except Exception as e:
-            print(f"    ✗ {name}({code}) 数据获取失败: {str(e)[:100]}")
-            continue
+            print(f"    ✗ 失败: {str(e)[:100]}")
 
-    print(f"[港股] 完成，成功获取 {len(results)}/{len(HK_STOCKS)} 只股票数据")
+        # 间隔避免限流（每个请求等3秒）
+        if i < len(stocks) - 1:
+            time.sleep(3)
+
+    print(f"[{market_name}] 完成，成功获取 {len(results)}/{len(stocks)} 只股票数据")
     return results
+
+
+def fetch_hk_stock_data():
+    return fetch_global_stocks("hk")
 
 
 def fetch_us_stock_data():
-    """获取美股数据"""
-    if not US_STOCKS:
-        print("[美股] 未配置美股标的，跳过")
-        return []
-
-    print(f"[美股] 开始获取 {len(US_STOCKS)} 只股票数据...")
-    results = []
-
-    for stock in US_STOCKS:
-        code = stock["code"]
-        name = stock["name"]
-        print(f"  → 正在处理 {name}({code})...")
-
-        try:
-            ticker = yf.Ticker(code)
-            hist = ticker.history(period="6mo")
-
-            if hist.empty:
-                print(f"    ⚠ {name} 无历史数据，跳过")
-                continue
-
-            close_prices = hist["Close"]
-            latest = hist.iloc[-1]
-            prev = hist.iloc[-2] if len(hist) > 1 else latest
-
-            change_pct = round(((latest["Close"] - prev["Close"]) / prev["Close"]) * 100, 2)
-            macd_data = calc_macd(close_prices)
-            rsi = calc_rsi(close_prices)
-            ma_data = calc_ma(close_prices)
-
-            info = ticker.info
-            market_cap = info.get("marketCap", None)
-            pe = info.get("trailingPE", None) or info.get("forwardPE", None)
-            industry = info.get("industry", None) or info.get("sector", None)
-            volume = int(latest["Volume"]) if "Volume" in latest.index else None
-
-            stock_data = {
-                "market": "美股",
-                "code": code,
-                "name": name,
-                "symbol": code,
-                "industry": industry,
-                "price": round(float(latest["Close"]), 2),
-                "open": round(float(latest["Open"]), 2),
-                "high": round(float(latest["High"]), 2),
-                "low": round(float(latest["Low"]), 2),
-                "change_pct": change_pct,
-                "volume": volume,
-                "turnover": None,
-                "market_cap": round(float(market_cap) / 1e8, 2) if market_cap else None,
-                "pe": round(float(pe), 2) if pe else None,
-                "macd": macd_data["macd"],
-                "macd_signal": macd_data["signal"],
-                "macd_histogram": macd_data["histogram"],
-                "rsi": rsi,
-                "ma": ma_data,
-                "main_net_flow": None,
-            }
-            results.append(stock_data)
-            print(f"    ✓ {name}: ${stock_data['price']}, {change_pct:+.2f}%")
-
-        except Exception as e:
-            print(f"    ✗ {name}({code}) 数据获取失败: {str(e)[:100]}")
-            continue
-
-    print(f"[美股] 完成，成功获取 {len(results)}/{len(US_STOCKS)} 只股票数据")
-    return results
+    return fetch_global_stocks("us")
 
 
 if __name__ == "__main__":

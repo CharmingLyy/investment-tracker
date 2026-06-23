@@ -2,6 +2,14 @@
 主入口脚本
 每天运行一次，抓取所有市场数据并生成HTML页面
 """
+import sys
+import io
+
+# 修复 Windows 下 emoji 编码问题
+if sys.platform == "win32":
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
+
 import json
 import os
 import sys

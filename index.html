@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📊 投资观察面板 | 2026-06-24 02:05 UTC+8 (北京时间)</title>
+    <style>
+        /* ===== 全局样式 ===== */
+        :root {
+            --bg-primary: #0f1117;
+            --bg-secondary: #1a1d2e;
+            --bg-card: #1e2133;
+            --bg-hover: #262a3d;
+            --text-primary: #e8e9f0;
+            --text-secondary: #9a9db8;
+            --text-muted: #636784;
+            --accent-green: #00d4a8;
+            --accent-red: #ff4757;
+            --accent-blue: #4a90d9;
+            --accent-yellow: #f0b90b;
+            --accent-purple: #8b5cf6;
+            --border: #2a2d42;
+            --border-light: #353855;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* ===== 顶部导航栏 ===== */
+        .header {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        .header-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .header-info {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        .header-info .update-badge {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        .market-status {
+            display: flex;
+            gap: 8px;
+        }
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .status-dot.open { background: var(--accent-green); box-shadow: 0 0 6px var(--accent-green); }
+        .status-dot.closed { background: var(--text-muted); }
+
+        /* ===== 主内容区 ===== */
+        .main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        /* ===== 摘要卡片 ===== */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .summary-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.2s;
+        }
+        .summary-card:hover {
+            border-color: var(--border-light);
+            background: var(--bg-hover);
+        }
+        .summary-card .card-label {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        .summary-card .card-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        .summary-card .card-sub {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+        .up { color: var(--accent-green); }
+        .down { color: var(--accent-red); }
+
+        /* ===== 市场分区 ===== */
+        .market-section {
+            margin-bottom: 32px;
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+        }
+        .section-header h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        .section-badge {
+            font-size: 0.72rem;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+        .badge-a { background: rgba(255,71,87,0.15); color: var(--accent-red); }
+        .badge-hk { background: rgba(74,144,217,0.15); color: var(--accent-blue); }
+        .badge-us { background: rgba(0,212,168,0.15); color: var(--accent-green); }
+        .badge-crypto { background: rgba(240,185,11,0.15); color: var(--accent-yellow); }
+
+        /* ===== 数据表格 ===== */
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            min-width: 900px;
+        }
+        thead {
+            background: var(--bg-secondary);
+        }
+        th {
+            padding: 12px 14px;
+            text-align: right;
+            font-weight: 600;
+            color: var(--text-secondary);
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            border-bottom: 1px solid var(--border);
+        }
+        th:first-child { text-align: left; }
+        td {
+            padding: 12px 14px;
+            text-align: right;
+            border-bottom: 1px solid rgba(42,45,66,0.5);
+            white-space: nowrap;
+        }
+        td:first-child { text-align: left; }
+        tbody tr {
+            transition: background 0.15s;
+        }
+        tbody tr:hover {
+            background: rgba(255,255,255,0.02);
+        }
+        .stock-name {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .stock-code {
+            font-size: 0.76rem;
+            color: var(--text-muted);
+            margin-left: 6px;
+        }
+        .stock-industry {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            display: block;
+        }
+        .price {
+            font-weight: 600;
+            font-variant-numeric: tabular-nums;
+        }
+        .change-badge {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 0.84rem;
+            min-width: 70px;
+            text-align: center;
+        }
+        .change-badge.positive {
+            background: rgba(0,212,168,0.12);
+            color: var(--accent-green);
+        }
+        .change-badge.negative {
+            background: rgba(255,71,87,0.12);
+            color: var(--accent-red);
+        }
+        .indicator {
+            font-variant-numeric: tabular-nums;
+            font-size: 0.82rem;
+        }
+        .indicator.bullish { color: var(--accent-green); }
+        .indicator.bearish { color: var(--accent-red); }
+        .indicator.neutral { color: var(--text-secondary); }
+
+        /* ===== 新闻区 ===== */
+        .news-section {
+            margin-bottom: 32px;
+        }
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 12px;
+        }
+        .news-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .news-card:hover {
+            border-color: var(--border-light);
+            background: var(--bg-hover);
+        }
+        .news-card a {
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        .news-title {
+            font-weight: 600;
+            font-size: 0.92rem;
+            margin-bottom: 6px;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .news-summary {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .news-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+        .news-source {
+            padding: 2px 8px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 6px;
+        }
+
+        /* ===== 页脚 ===== */
+        .footer {
+            text-align: center;
+            padding: 24px;
+            color: var(--text-muted);
+            font-size: 0.78rem;
+            border-top: 1px solid var(--border);
+        }
+
+        /* ===== 错误状态 ===== */
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px dashed var(--border);
+        }
+
+        /* ===== 响应式 ===== */
+        @media (max-width: 768px) {
+            .header-inner { flex-direction: column; gap: 8px; }
+            .summary-grid { grid-template-columns: repeat(2, 1fr); }
+            .news-grid { grid-template-columns: 1fr; }
+            .main { padding: 12px; }
+        }
+
+        /* ===== 加密货币链上数据区 ===== */
+        .onchain-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            margin-top: 8px;
+            font-size: 0.75rem;
+        }
+        .onchain-item {
+            background: rgba(255,255,255,0.02);
+            border-radius: 6px;
+            padding: 6px 8px;
+            text-align: center;
+        }
+        .onchain-label {
+            color: var(--text-muted);
+            font-size: 0.68rem;
+        }
+        .onchain-value {
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部栏 -->
+    <header class="header">
+        <div class="header-inner">
+            <h1>📊 投资观察面板</h1>
+            <div class="header-info">
+                <div class="market-status">
+                    <span>A股 <span class="status-dot open"></span></span>
+                    <span>港股 <span class="status-dot open"></span></span>
+                    <span>美股 <span class="status-dot open"></span></span>
+                </div>
+                <span class="update-badge">🕐 更新: 2026-06-24 02:05 UTC+8 (北京时间)</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- 市场概览 -->
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="card-label">📈 总跟踪标的</div>
+                <div class="card-value">23</div>
+                <div class="card-sub">A股 2 · 港股 2 · 美股 11 · 加密 8</div>
+            </div>
+            <div class="summary-card">
+                <div class="card-label">🟢 今日上涨</div>
+                <div class="card-value up">2</div>
+                <div class="card-sub">占比 8.7%</div>
+            </div>
+            <div class="summary-card">
+                <div class="card-label">🔴 今日下跌</div>
+                <div class="card-value down">21</div>
+                <div class="card-sub">占比 91.3%</div>
+            </div>
+            <div class="summary-card">
+                <div class="card-label">📰 市场新闻</div>
+                <div class="card-value" style="font-size:1.4rem">21 条</div>
+                <div class="card-sub">最近24h内</div>
+            </div>
+        </div>
+
+        <!-- A股表格 -->
+        
+        <section class="market-section">
+            <div class="section-header">
+                <h2>🇨🇳 A股</h2>
+                <span class="section-badge badge-a">沪深京</span>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>名称/代码</th>
+                            <th>行业</th>
+                            <th>收盘价</th>
+                            <th>涨跌幅</th>
+                            <th>市值(亿)</th>
+                            <th>PE</th>
+                            <th>MACD</th>
+                            <th>RSI</th>
+                            <th>MA5</th>
+                            <th>MA20</th>
+                            <th>主力净流入(亿)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">上海电气</span>
+                                <span class="stock-code">601727</span>
+                            </td>
+                            <td><span class="stock-industry">-</span></td>
+                            <td class="price">¥7.23</td>
+                            <td>
+                                <span class="change-badge negative">
+                                    -2.82%
+                                </span>
+                            </td>
+                            <td>-</td>
+                            <td>86.8</td>
+                            <td class="indicator bearish">
+                                -0.2925
+                            </td>
+                            <td class="indicator bearish">
+                                36.22
+                            </td>
+                            <td>7.35</td>
+                            <td>7.7</td>
+                            <td class="">
+                                -
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">三花智控</span>
+                                <span class="stock-code">002050</span>
+                            </td>
+                            <td><span class="stock-industry">-</span></td>
+                            <td class="price">¥43.19</td>
+                            <td>
+                                <span class="change-badge negative">
+                                    -4.51%
+                                </span>
+                            </td>
+                            <td>-</td>
+                            <td>44.47</td>
+                            <td class="indicator bearish">
+                                -1.1382
+                            </td>
+                            <td class="indicator bearish">
+                                37.2
+                            </td>
+                            <td>44.78</td>
+                            <td>46.51</td>
+                            <td class="">
+                                -
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+
+        <!-- 港股表格 -->
+        
+        <section class="market-section">
+            <div class="section-header">
+                <h2>🇭🇰 港股</h2>
+                <span class="section-badge badge-hk">港交所</span>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>名称/代码</th>
+                            <th>行业</th>
+                            <th>收盘价</th>
+                            <th>涨跌幅</th>
+                            <th>市值(亿)</th>
+                            <th>PE</th>
+                            <th>MACD</th>
+                            <th>RSI</th>
+                            <th>MA5</th>
+                            <th>MA20</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">腾讯控股</span>
+                                <span class="stock-code">00700</span>
+                            </td>
+                            <td><span class="stock-industry">-</span></td>
+                            <td class="price">HK$433.0</td>
+                            <td>
+                                <span class="change-badge negative">
+                                    -1.64%
+                                </span>
+                            </td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td class="indicator bearish">
+                                -5.727
+                            </td>
+                            <td class="indicator bearish">
+                                39.77
+                            </td>
+                            <td>445.12</td>
+                            <td>448.74</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">小米集团-W</span>
+                                <span class="stock-code">01810</span>
+                            </td>
+                            <td><span class="stock-industry">-</span></td>
+                            <td class="price">HK$23.72</td>
+                            <td>
+                                <span class="change-badge negative">
+                                    -3.5%
+                                </span>
+                            </td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td class="indicator bearish">
+                                -1.5089
+                            </td>
+                            <td class="indicator bearish">
+                                21.33
+                            </td>
+                            <td>25.13</td>
+                            <td>27.32</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+
+        <!-- 美股表格 -->
+        
+        <section class="market-section">
+            <div class="section-header">
+                <h2>🇺🇸 美股</h2>
+                <span class="section-badge badge-us">NASDAQ/NYSE</span>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>名称/代码</th>
+                            <th>行业</th>
+                            <th>收盘价</th>
+                            <th>涨跌幅</th>
+                            <th>市值(亿)</th>
+                            <th>PE</th>
+                            <th>MACD</th>
+                            <th>RSI</th>
+                            <th>MA5</th>
+                            <th>MA20</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">NVIDIA</span>
+                                <span class="stock-code">NVDA</span>
+                            </td>
+                            <td><span class="stock-industry">-</span></td>
+                            <td class="price">$201.77</td>
+                            <td>
+                                <span class="change-badge negative">
+                                    -3.3%
+                                </span>
+                            </td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td class="indicator bearish">
+                                -1.5467
+                            </td>
+                            <td class="indicator bearish">
+                                43.6
+                            </td>
+                            <td>206.63</td>
+                            <td>210.57</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">Tesla</span>
+                                <span class="stock-code">TSLA</span>
+                            </td>
+                            <td><span class="stock-industry">-</span></td>
+                            <td class="price">$381.97</td>
+                            <td>
+                                <span class="change-badge negative">
+                                    -5.7%
+                                </span>
+                            </td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td class="indicator bearish">
+                                -4.2801
+                            </td>
+                            <td class="indicator bearish">
+                                40.96
+                            </td>
+                            <td>397.71</td>
+                            <td>410.86</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">Alphabet (Google)</span>
+                                <span class="stock-code">GOOGL</span>
+                            </td>
+                            <td><span class="stock-industry">-</span></td>
+                            <td class="price">$346.67</td>
+                            <td>
+                                <span class="change-badge negative">
+                                    -0.86%
+                                </span>
+                            </td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td class="indicator bearish">
+                                -4.3577
+                            </td>
+                            <td class="indicator bearish">
+                                37.6
+                            </td>
+                            <td>360.28</td>
+                            <td>367.91</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">Micron Technology</span>
+                                <span class="stock-code">MU</span>
+                            </td>
+                            <td><span class="stock-industry">-</span></td>
+                            <td class="price">$1059.69</td>
+                            <td>
+                                <span class="change-badge negative">
+                                    -12.52%
+                                </span>
+                            </td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td class="indicator bullish">
+                                96.3559
+                            </td>
+                            <td class="indicator bullish">
+                                57.56
+                            </td>
+                            <td>1093.8</td>
+                            <td>1003.48</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">Circle</span>
+                                <span class="stock-code">CRCL</span>
+                            </td>
+                            <td><span class="stock-industry">-</span></td>
+                            <td class="price">$76.04</td>
+                            <td>
+                                <span class="change-badge negative">
+                                    -4.89%
+                                </span>
+                            </td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td class="indicator bearish">
+                                -7.5694
+                            </td>
+                            <td class="indicator bearish">
+                                35.2
+                            </td>
+                            <td>79.31</td>
+                            <td>88.89</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">Bitmine</span>
+                                <span class="stock-code">BMNR</span>
+                            </td>
+                            <td><span class="stock-industry">-</span></td>
+                            <td class="price">$15.2</td>
+                            <td>
+                                <span class="change-badge negative">
+                                    -4.13%
+                                </span>
+                            </td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td class="indicator bearish">
+                                -1.1628
+                            </td>
+                            <td class="indicator bearish">
+                                36.71
+                            </td>
+                            <td>15.82</td>
+                            <td>17.08</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">MP Materials</span>
+                                <span class="stock-code">MP</span>
+                            </td>
+                            <td><span class="stock-industry">-</span></td>
+                            <td class="price">$59.75</td>
+                            <td>
+                                <span class="change-badge negative">
+                                    -0.9%
+                                </span>
+                            </td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td class="indicator bearish">
+                                -1.0043
+                            </td>
+                            <td class="indicator bearish">
+                                47.94
+                            </td>
+                            <td>59.76</td>
+                            <td>61.78</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">Lumentum</span>
+                                <span class="stock-code">LITE</span>
+                            </td>
+                            <td><span class="stock-industry">-</span></td>
+                            <td class="price">$823.37</td>
+                            <td>
+                                <span class="change-badge negative">
+                                    -7.89%
+                                </span>
+                            </td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td class="indicator bearish">
+                                -11.4641
+                            </td>
+                            <td class="indicator bearish">
+                                44.16
+                            </td>
+                            <td>862.53</td>
+                            <td>893.05</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">Corning</span>
+                                <span class="stock-code">GLW</span>
+                            </td>
+                            <td><span class="stock-industry">-</span></td>
+                            <td class="price">$192.51</td>
+                            <td>
+                                <span class="change-badge negative">
+                                    -8.25%
+                                </span>
+                            </td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td class="indicator bullish">
+                                3.0454
+                            </td>
+                            <td class="indicator bullish">
+                                53.15
+                            </td>
+                            <td>190.02</td>
+                            <td>186.38</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">Microsoft</span>
+                                <span class="stock-code">MSFT</span>
+                            </td>
+                            <td><span class="stock-industry">-</span></td>
+                            <td class="price">$373.76</td>
+                            <td>
+                                <span class="change-badge positive">
+                                    +1.75%
+                                </span>
+                            </td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td class="indicator bearish">
+                                -11.2654
+                            </td>
+                            <td class="indicator bearish">
+                                35.17
+                            </td>
+                            <td>378.65</td>
+                            <td>408.32</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">Apple</span>
+                                <span class="stock-code">AAPL</span>
+                            </td>
+                            <td><span class="stock-industry">-</span></td>
+                            <td class="price">$298.98</td>
+                            <td>
+                                <span class="change-badge positive">
+                                    +0.66%
+                                </span>
+                            </td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td class="indicator bullish">
+                                0.9512
+                            </td>
+                            <td class="indicator bullish">
+                                51.99
+                            </td>
+                            <td>297.84</td>
+                            <td>302.51</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+
+        <!-- 加密货币表格 -->
+        
+        <section class="market-section">
+            <div class="section-header">
+                <h2>🪙 加密货币</h2>
+                <span class="section-badge badge-crypto">24h</span>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>名称/简称</th>
+                            <th>类型</th>
+                            <th>价格</th>
+                            <th>24h涨跌</th>
+                            <th>市值(亿$)</th>
+                            <th>排名</th>
+                            <th>MACD</th>
+                            <th>RSI</th>
+                            <th>7日涨跌</th>
+                            <th>30日涨跌</th>
+                            <th>距ATH</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">Bitcoin</span>
+                                <span class="stock-code">BTC</span>
+                            </td>
+                            <td><span class="stock-industry">Smart Contract Platform</span></td>
+                            <td class="price">$62342</td>
+                            <td>
+                                <span class="change-badge negative">
+                                    -3.52%
+                                </span>
+                            </td>
+                            <td>12490.8</td>
+                            <td>#1</td>
+                            <td class="indicator bearish">
+                                -2002.6429
+                            </td>
+                            <td class="indicator bearish">
+                                36.52
+                            </td>
+                            <td class="down">
+                                -5.1%
+                            </td>
+                            <td class="down">
+                                -18.6%
+                            </td>
+                            <td class="down">
+                                -50.5%
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">Ethereum</span>
+                                <span class="stock-code">ETH</span>
+                            </td>
+                            <td><span class="stock-industry">Smart Contract Platform</span></td>
+                            <td class="price">$1657.67</td>
+                            <td>
+                                <span class="change-badge negative">
+                                    -4.85%
+                                </span>
+                            </td>
+                            <td>1997.85</td>
+                            <td>#2</td>
+                            <td class="indicator bearish">
+                                -66.2373
+                            </td>
+                            <td class="indicator bearish">
+                                36.65
+                            </td>
+                            <td class="down">
+                                -6.7%
+                            </td>
+                            <td class="down">
+                                -21.1%
+                            </td>
+                            <td class="down">
+                                -66.5%
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">Cardano</span>
+                                <span class="stock-code">ADA</span>
+                            </td>
+                            <td><span class="stock-industry">-</span></td>
+                            <td class="price">$0.1501</td>
+                            <td>
+                                <span class="change-badge negative">
+                                    -5.92%
+                                </span>
+                            </td>
+                            <td>55.88</td>
+                            <td>#21</td>
+                            <td class="indicator neutral">
+                                -
+                            </td>
+                            <td class="indicator neutral">
+                                -
+                            </td>
+                            <td class="">
+                                -%
+                            </td>
+                            <td class="">
+                                -%
+                            </td>
+                            <td class="">
+                                -%
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">Hyperliquid</span>
+                                <span class="stock-code">HYPE</span>
+                            </td>
+                            <td><span class="stock-industry">-</span></td>
+                            <td class="price">$62.21</td>
+                            <td>
+                                <span class="change-badge negative">
+                                    -8.56%
+                                </span>
+                            </td>
+                            <td>138.29</td>
+                            <td>#10</td>
+                            <td class="indicator neutral">
+                                -
+                            </td>
+                            <td class="indicator neutral">
+                                -
+                            </td>
+                            <td class="">
+                                -%
+                            </td>
+                            <td class="">
+                                -%
+                            </td>
+                            <td class="">
+                                -%
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">OKB</span>
+                                <span class="stock-code">OKB</span>
+                            </td>
+                            <td><span class="stock-industry">-</span></td>
+                            <td class="price">$76.58</td>
+                            <td>
+                                <span class="change-badge negative">
+                                    -5.64%
+                                </span>
+                            </td>
+                            <td>16.07</td>
+                            <td>#50</td>
+                            <td class="indicator neutral">
+                                -
+                            </td>
+                            <td class="indicator neutral">
+                                -
+                            </td>
+                            <td class="">
+                                -%
+                            </td>
+                            <td class="">
+                                -%
+                            </td>
+                            <td class="">
+                                -%
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">Basic Attention Token</span>
+                                <span class="stock-code">BAT</span>
+                            </td>
+                            <td><span class="stock-industry">-</span></td>
+                            <td class="price">$0.0892</td>
+                            <td>
+                                <span class="change-badge negative">
+                                    -2.34%
+                                </span>
+                            </td>
+                            <td>1.33</td>
+                            <td>#219</td>
+                            <td class="indicator neutral">
+                                -
+                            </td>
+                            <td class="indicator neutral">
+                                -
+                            </td>
+                            <td class="">
+                                -%
+                            </td>
+                            <td class="">
+                                -%
+                            </td>
+                            <td class="">
+                                -%
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">XRP</span>
+                                <span class="stock-code">XRP</span>
+                            </td>
+                            <td><span class="stock-industry">-</span></td>
+                            <td class="price">$1.098</td>
+                            <td>
+                                <span class="change-badge negative">
+                                    -3.64%
+                                </span>
+                            </td>
+                            <td>680.6</td>
+                            <td>#6</td>
+                            <td class="indicator neutral">
+                                -
+                            </td>
+                            <td class="indicator neutral">
+                                -
+                            </td>
+                            <td class="">
+                                -%
+                            </td>
+                            <td class="">
+                                -%
+                            </td>
+                            <td class="">
+                                -%
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">Chainlink</span>
+                                <span class="stock-code">LINK</span>
+                            </td>
+                            <td><span class="stock-industry">-</span></td>
+                            <td class="price">$7.57</td>
+                            <td>
+                                <span class="change-badge negative">
+                                    -4.76%
+                                </span>
+                            </td>
+                            <td>56.63</td>
+                            <td>#20</td>
+                            <td class="indicator neutral">
+                                -
+                            </td>
+                            <td class="indicator neutral">
+                                -
+                            </td>
+                            <td class="">
+                                -%
+                            </td>
+                            <td class="">
+                                -%
+                            </td>
+                            <td class="">
+                                -%
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            <!-- 链上数据详情 -->
+            
+            
+            <div style="margin-top: 4px; font-size: 0.72rem; color: var(--text-muted); padding: 4px 14px;">
+                <strong>BTC</strong>:
+                流通占比 100.0% · 
+                赛道: Smart Contract Platform, Layer 1 (L1) · 
+                GitHub提交(4w): 108
+            </div>
+            
+            
+            
+            <div style="margin-top: 4px; font-size: 0.72rem; color: var(--text-muted); padding: 4px 14px;">
+                <strong>ETH</strong>:
+                流通占比 100.0% · 
+                赛道: Smart Contract Platform, Layer 1 (L1) · 
+                GitHub提交(4w): 41
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </section>
+        
+
+        <!-- 新闻区 -->
+        
+        <section class="news-section">
+            <div class="section-header">
+                <h2>📰 市场新闻</h2>
+                <span class="section-badge" style="background: rgba(139,92,246,0.15); color: var(--accent-purple);">21 条</span>
+            </div>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <a href="http://go.rss.sina.com.cn/redirect.php?url=http://you.video.sina.com.cn/b/16972162-1239095354.html" target="_blank" rel="noopener">
+                        <div class="news-title">[播客]独家实拍：我那永远跪着的母亲(11/07 22:10)</div>
+                        <div class="news-summary">独家实拍：我那永远跪着的母亲</div>
+                        <div class="news-meta">
+                            <span class="news-source">rss.sina.com.cn</span>
+                            <span></span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.marketwatch.com/story/americans-401-k-balances-hit-record-levels-last-year-see-how-you-compare-facd32c4?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">Americans’ 401(k) balances hit record levels last year. See how you compare.</div>
+                        <div class="news-summary">It was a very good year for most workplace retirement savers, according to Vanguard’s latest “How America Saves” report</div>
+                        <div class="news-meta">
+                            <span class="news-source">feeds.marketwatch.com</span>
+                            <span>Tue, 23 Jun 2026 17:53:00 GMT</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.marketwatch.com/story/how-to-work-in-retirement-without-seeing-your-social-security-checks-slashed-05d6c830?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">How to work in retirement without seeing your Social Security checks slashed</div>
+                        <div class="news-summary">Claiming benefits before full retirement age while keeping a job can trigger unexpected withholdings — but the money isn’t lost forever.</div>
+                        <div class="news-meta">
+                            <span class="news-source">feeds.marketwatch.com</span>
+                            <span>Tue, 23 Jun 2026 17:49:00 GMT</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.marketwatch.com/story/your-index-fund-is-hiding-a-looming-tech-stock-risk-here-is-how-to-protect-your-portfolio-f4dd1c20?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">Your index fund is hiding a looming tech-stock risk — here is how to protect your portfolio</div>
+                        <div class="news-summary">The S&amp;amp;P 500’s top 10 stocks dominate like never before. Here is a better way to invest.</div>
+                        <div class="news-meta">
+                            <span class="news-source">feeds.marketwatch.com</span>
+                            <span>Tue, 23 Jun 2026 17:45:00 GMT</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.marketwatch.com/story/i-want-to-leave-everything-to-my-sons-but-im-terrified-theyll-give-it-to-my-ex-husband-how-do-i-prevent-this-8cfc752c?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">I want to leave everything to my sons, but I’m terrified they’ll give it to my ex-husband. How do I prevent this?</div>
+                        <div class="news-summary">“I would not like my money to fall into the hands of my former spouse.”</div>
+                        <div class="news-meta">
+                            <span class="news-source">feeds.marketwatch.com</span>
+                            <span>Tue, 23 Jun 2026 17:30:00 GMT</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.marketwatch.com/story/trump-admits-selling-ibms-stock-was-a-mistake-now-hes-cheering-its-quantum-future-095592d6?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">Trump admits selling IBM’s stock was a mistake. Now he’s cheering its quantum future.</div>
+                        <div class="news-summary">IBM looks like a focal point as the U.S. further backs domestic quantum-computing initiatives.</div>
+                        <div class="news-meta">
+                            <span class="news-source">feeds.marketwatch.com</span>
+                            <span>Tue, 23 Jun 2026 17:04:00 GMT</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.marketwatch.com/story/i-gave-my-homeexchange-guest-a-5-star-review-then-i-found-heat-marks-all-over-my-dining-table-do-i-call-her-out-855d3836?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">My houseguest left heat marks all over my table. I didn’t notice them until she was gone. Do I ask her to pay to remove them?</div>
+                        <div class="news-summary">“What drives me crazy is that she didn’t mention it.”</div>
+                        <div class="news-meta">
+                            <span class="news-source">feeds.marketwatch.com</span>
+                            <span>Tue, 23 Jun 2026 16:45:00 GMT</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.marketwatch.com/story/are-falling-tech-stocks-the-start-of-an-overdue-selloff-or-a-well-deserved-pause-44bc5391?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">Are falling tech stocks the start of an overdue selloff — or a well-deserved pause?</div>
+                        <div class="news-summary">After weeks of large-scale alarms that turned out to be false starts, equities finally found a real problem — the one they spent two years celebrating.</div>
+                        <div class="news-meta">
+                            <span class="news-source">feeds.marketwatch.com</span>
+                            <span>Tue, 23 Jun 2026 16:19:00 GMT</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.marketwatch.com/story/trump-accounts-for-newborns-are-nothing-but-a-diversion-8fbf612a?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">‘Trump accounts’ for newborns are nothing but a diversion</div>
+                        <div class="news-summary">Take a look at this state to see what a serious effort looks like.</div>
+                        <div class="news-meta">
+                            <span class="news-source">feeds.marketwatch.com</span>
+                            <span>Tue, 23 Jun 2026 16:17:00 GMT</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.marketwatch.com/story/spacex-succumbs-to-gravity-as-its-stock-price-briefly-dips-below-its-ipo-trading-debut-a06e4321?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">SpaceX succumbs to gravity as the stock briefly dips below its debut price on Nasdaq</div>
+                        <div class="news-summary">The stock hit a new low before recovering to trade in positive territory.</div>
+                        <div class="news-meta">
+                            <span class="news-source">feeds.marketwatch.com</span>
+                            <span>Tue, 23 Jun 2026 15:59:00 GMT</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.marketwatch.com/story/im-70-a-relative-offered-me-a-25-000-home-loan-secured-by-a-lien-that-must-be-repaid-within-a-year-should-i-agree-27d44725?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">I’m 70. A relative offered me a $25,000 home loan secured by a lien that must be repaid within a year. Is that fair?</div>
+                        <div class="news-summary">“He also wants me to downsize and move.”</div>
+                        <div class="news-meta">
+                            <span class="news-source">feeds.marketwatch.com</span>
+                            <span>Tue, 23 Jun 2026 15:54:00 GMT</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.investing.com/news/stock-market-news/sandisk-micron-among-market-cap-stock-movers-on-tuesday-93CH-4756241" target="_blank" rel="noopener">
+                        <div class="news-title">SanDisk, Micron among market cap stock movers on Tuesday</div>
+                        <div class="news-summary"></div>
+                        <div class="news-meta">
+                            <span class="news-source">www.investing.com</span>
+                            <span>2026-06-23 18:01:44</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.investing.com/news/stock-market-news/building-permits-new-home-sales-and-oil-inventories-due-wednesday-93CH-4756240" target="_blank" rel="noopener">
+                        <div class="news-title">Building permits, new home sales, and oil inventories due Wednesday</div>
+                        <div class="news-summary"></div>
+                        <div class="news-meta">
+                            <span class="news-source">www.investing.com</span>
+                            <span>2026-06-23 18:00:40</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.investing.com/news/economy-news/italys-treasury-to-issue-new-bonds-in-third-quarter-93CH-4756239" target="_blank" rel="noopener">
+                        <div class="news-title">Italy’s Treasury to issue new bonds in third quarter</div>
+                        <div class="news-summary"></div>
+                        <div class="news-meta">
+                            <span class="news-source">www.investing.com</span>
+                            <span>2026-06-23 17:59:12</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.investing.com/news/filings/form-4-ciena-corp-for-23-june-93CH-4756238" target="_blank" rel="noopener">
+                        <div class="news-title">Form 4 Ciena Corp For: 23 June</div>
+                        <div class="news-summary"></div>
+                        <div class="news-meta">
+                            <span class="news-source">www.investing.com</span>
+                            <span>2026-06-23 17:58:30</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.investing.com/news/filings/form-144-terex-corp-for-23-june-93CH-4756237" target="_blank" rel="noopener">
+                        <div class="news-title">Form 144 TEREX CORP For: 23 June</div>
+                        <div class="news-summary"></div>
+                        <div class="news-meta">
+                            <span class="news-source">www.investing.com</span>
+                            <span>2026-06-23 17:58:30</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.investing.com/news/company-news/cme-group-stock-hits-52week-low-at-24453-usd-93CH-4756236" target="_blank" rel="noopener">
+                        <div class="news-title">CME Group stock hits 52-week low at 244.53 USD</div>
+                        <div class="news-summary"></div>
+                        <div class="news-meta">
+                            <span class="news-source">www.investing.com</span>
+                            <span>2026-06-23 17:58:15</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.investing.com/news/forex-news/barclays-maintains-bullish-view-on-australian-dollar-93CH-4756235" target="_blank" rel="noopener">
+                        <div class="news-title">Barclays maintains bullish view on Australian dollar</div>
+                        <div class="news-summary"></div>
+                        <div class="news-meta">
+                            <span class="news-source">www.investing.com</span>
+                            <span>2026-06-23 17:57:53</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.investing.com/news/forex-news/barclays-sees-canadian-dollar-weakness-amid-trade-and-energy-headwinds-93CH-4756234" target="_blank" rel="noopener">
+                        <div class="news-title">Barclays sees Canadian dollar weakness amid trade and energy headwinds</div>
+                        <div class="news-summary"></div>
+                        <div class="news-meta">
+                            <span class="news-source">www.investing.com</span>
+                            <span>2026-06-23 17:55:15</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.investing.com/news/forex-news/barclays-sees-swiss-franc-rising-to-090-against-euro-93CH-4756233" target="_blank" rel="noopener">
+                        <div class="news-title">Barclays sees Swiss franc rising to 0.90 against euro</div>
+                        <div class="news-summary"></div>
+                        <div class="news-meta">
+                            <span class="news-source">www.investing.com</span>
+                            <span>2026-06-23 17:55:05</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.investing.com/news/filings/form-4-ciena-corp-for-23-june-93CH-4756232" target="_blank" rel="noopener">
+                        <div class="news-title">Form 4 Ciena Corp For: 23 June</div>
+                        <div class="news-summary"></div>
+                        <div class="news-meta">
+                            <span class="news-source">www.investing.com</span>
+                            <span>2026-06-23 17:55:04</span>
+                        </div>
+                    </a>
+                </div>
+                
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="footer">
+        📊 投资观察面板 · 数据每日自动更新 · 数据来源: akshare / Yahoo Finance / CoinGecko
+    </footer>
+</body>
+</html>
