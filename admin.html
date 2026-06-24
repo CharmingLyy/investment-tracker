@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚙️ 标的管理 | 投资观察面板</title>
+    <style>
+        :root {
+            --bg-primary: #0f1117;
+            --bg-secondary: #1a1d2e;
+            --bg-card: #1e2133;
+            --bg-hover: #262a3d;
+            --text-primary: #e8e9f0;
+            --text-secondary: #9a9db8;
+            --text-muted: #636784;
+            --accent-green: #00d4a8;
+            --accent-red: #ff4757;
+            --accent-blue: #4a90d9;
+            --accent-yellow: #f0b90b;
+            --accent-purple: #8b5cf6;
+            --border: #2a2d42;
+            --border-light: #353855;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        .header {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 { font-size: 1.3rem; }
+        .header a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; }
+        .header a:hover { color: var(--accent-blue); }
+        .main { max-width: 1000px; margin: 0 auto; padding: 24px; }
+
+        .tab-bar { display: flex; gap: 4px; margin-bottom: 20px; }
+        .tab-btn {
+            padding: 10px 20px;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            color: var(--text-secondary);
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+            font-size: 0.88rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .tab-btn.active {
+            background: var(--bg-hover);
+            color: var(--text-primary);
+            border-bottom-color: var(--bg-hover);
+        }
+        .tab-btn:hover { color: var(--text-primary); }
+
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+        .card h3 {
+            font-size: 1rem;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+        th {
+            padding: 10px 12px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid var(--border);
+        }
+        td { padding: 8px 12px; border-bottom: 1px solid rgba(42,45,66,0.5); }
+        .btn {
+            padding: 6px 14px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            color: var(--text-primary);
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.15s;
+        }
+        .btn:hover { background: var(--bg-hover); border-color: var(--border-light); }
+        .btn-danger { color: var(--accent-red); }
+        .btn-danger:hover { background: rgba(255,71,87,0.1); }
+        .btn-primary { background: var(--accent-blue); border-color: var(--accent-blue); color: #fff; }
+        .btn-primary:hover { opacity: 0.9; }
+        .btn-green { background: var(--accent-green); border-color: var(--accent-green); color: #000; }
+
+        .form-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 16px;
+            align-items: flex-end;
+            flex-wrap: wrap;
+        }
+        .form-group { flex: 1; min-width: 120px; }
+        .form-group label {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-size: 0.85rem;
+            font-family: inherit;
+        }
+        .form-group input:focus { outline: none; border-color: var(--accent-blue); }
+
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: var(--accent-green);
+            color: #000;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+            z-index: 999;
+        }
+        .toast.show { opacity: 1; }
+        .toast.error { background: var(--accent-red); color: #fff; }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .badge {
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 10px;
+            background: rgba(74,144,217,0.15);
+            color: var(--accent-blue);
+        }
+        .empty-state {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .info-box {
+            background: rgba(74,144,217,0.08);
+            border: 1px solid rgba(74,144,217,0.2);
+            border-radius: 8px;
+            padding: 14px 18px;
+            margin-top: 20px;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+        }
+        .info-box strong { color: var(--accent-blue); }
+        .info-box code {
+            background: var(--bg-secondary);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>⚙️ 投资标的管理</h1>
+        <div>
+            <a href="index.html">← 返回面板</a>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- 标签栏 -->
+        <div class="tab-bar">
+            <button class="tab-btn active" onclick="switchTab('a-stock')">🇨🇳 A股</button>
+            <button class="tab-btn" onclick="switchTab('hk-stock')">🇭🇰 港股</button>
+            <button class="tab-btn" onclick="switchTab('us-stock')">🇺🇸 美股</button>
+            <button class="tab-btn" onclick="switchTab('crypto')">🪙 加密货币</button>
+        </div>
+
+        <!-- A股 -->
+        <div id="tab-a-stock" class="tab-content active">
+            <div class="card">
+                <div class="section-header">
+                    <h3>🇨🇳 A股标的 <span class="badge" id="a-count">0</span></h3>
+                </div>
+                <div class="form-row">
+                    <div class="form-group"><label>股票代码 (6位)</label><input id="a-code" placeholder="例: 600519"></div>
+                    <div class="form-group"><label>股票名称</label><input id="a-name" placeholder="例: 贵州茅台"></div>
+                    <div class="form-group" style="flex:0 0 auto"><label>&nbsp;</label><button class="btn btn-primary" onclick="addItem('a-stock')">+ 添加</button></div>
+                </div>
+                <table><thead><tr><th>代码</th><th>名称</th><th>操作</th></tr></thead><tbody id="a-list"></tbody></table>
+                <div class="empty-state" id="a-empty">暂无标的，请添加</div>
+            </div>
+        </div>
+
+        <!-- 港股 -->
+        <div id="tab-hk-stock" class="tab-content">
+            <div class="card">
+                <div class="section-header">
+                    <h3>🇭🇰 港股标的 <span class="badge" id="hk-count">0</span></h3>
+                </div>
+                <div class="form-row">
+                    <div class="form-group"><label>股票代码 (4-5位)</label><input id="hk-code" placeholder="例: 00700"></div>
+                    <div class="form-group"><label>股票名称</label><input id="hk-name" placeholder="例: 腾讯控股"></div>
+                    <div class="form-group" style="flex:0 0 auto"><label>&nbsp;</label><button class="btn btn-primary" onclick="addItem('hk-stock')">+ 添加</button></div>
+                </div>
+                <table><thead><tr><th>代码</th><th>名称</th><th>操作</th></tr></thead><tbody id="hk-list"></tbody></table>
+                <div class="empty-state" id="hk-empty">暂无标的，请添加</div>
+            </div>
+        </div>
+
+        <!-- 美股 -->
+        <div id="tab-us-stock" class="tab-content">
+            <div class="card">
+                <div class="section-header">
+                    <h3>🇺🇸 美股标的 <span class="badge" id="us-count">0</span></h3>
+                </div>
+                <div class="form-row">
+                    <div class="form-group"><label>Ticker</label><input id="us-code" placeholder="例: AAPL"></div>
+                    <div class="form-group"><label>公司名称</label><input id="us-name" placeholder="例: Apple"></div>
+                    <div class="form-group" style="flex:0 0 auto"><label>&nbsp;</label><button class="btn btn-primary" onclick="addItem('us-stock')">+ 添加</button></div>
+                </div>
+                <table><thead><tr><th>代码</th><th>名称</th><th>操作</th></tr></thead><tbody id="us-list"></tbody></table>
+                <div class="empty-state" id="us-empty">暂无标的，请添加</div>
+            </div>
+        </div>
+
+        <!-- 加密货币 -->
+        <div id="tab-crypto" class="tab-content">
+            <div class="card">
+                <div class="section-header">
+                    <h3>🪙 加密货币标的 <span class="badge" id="crypto-count">0</span></h3>
+                </div>
+                <div class="form-row">
+                    <div class="form-group"><label>CoinGecko ID</label><input id="crypto-id" placeholder="例: bitcoin"></div>
+                    <div class="form-group"><label>币种名称</label><input id="crypto-name" placeholder="例: Bitcoin"></div>
+                    <div class="form-group"><label>简称</label><input id="crypto-symbol" placeholder="例: BTC"></div>
+                    <div class="form-group" style="flex:0 0 auto"><label>&nbsp;</label><button class="btn btn-primary" onclick="addItem('crypto')">+ 添加</button></div>
+                </div>
+                <table><thead><tr><th>CoinGecko ID</th><th>名称</th><th>简称</th><th>操作</th></tr></thead><tbody id="crypto-list"></tbody></table>
+                <div class="empty-state" id="crypto-empty">暂无标的，请添加</div>
+            </div>
+        </div>
+
+        <!-- 操作区 -->
+        <div class="card">
+            <h3>💾 保存变更</h3>
+            <p style="font-size:0.82rem;color:var(--text-secondary);margin-bottom:14px;">
+                修改后的标的列表会保存到浏览器本地存储。如需让 GitHub Actions 使用新配置，请下载 <code>watchlist.json</code> 文件并放入项目的 <code>data/</code> 目录，然后提交到仓库。
+            </p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;">
+                <button class="btn btn-primary" onclick="saveToLocal()">💾 保存到本地</button>
+                <button class="btn" onclick="downloadConfig()">📥 下载 watchlist.json</button>
+                <button class="btn btn-green" onclick="loadFromCurrent()">🔄 从当前页面加载</button>
+                <button class="btn btn-danger" onclick="resetAll()">🗑 全部重置</button>
+            </div>
+        </div>
+
+        <!-- GitHub 同步信息 -->
+        <div class="card" id="github-card">
+            <h3>🔄 GitHub Actions 手动刷新</h3>
+            <p style="font-size:0.82rem;color:var(--text-secondary);margin-bottom:14px;">
+                当前仓库：<code>CharmingLyy/investment-tracker</code><br>
+                部署地址：<a href="https://charminglyy.github.io/investment-tracker/" target="_blank" style="color:var(--accent-blue)">https://charminglyy.github.io/investment-tracker/</a>
+            </p>
+            <div class="form-group" style="margin-bottom:12px;">
+                <label>GitHub Personal Access Token (需 repo 权限)</label>
+                <input id="gh-token" type="password" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" style="max-width:400px;">
+            </div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;">
+                <button class="btn btn-primary" onclick="triggerWorkflow()">🚀 触发刷新工作流</button>
+                <button class="btn" onclick="window.open('https://github.com/CharmingLyy/investment-tracker/actions/workflows/update.yml', '_blank')">
+                    🔗 手动触发 (GitHub网页)
+                </button>
+            </div>
+            <div id="trigger-status" style="margin-top:12px;font-size:0.82rem;"></div>
+        </div>
+
+        <div class="info-box">
+            <strong>💡 使用说明：</strong><br>
+            1. 在对应标签页添加/删除标的<br>
+            2. 点击 <strong>💾 保存到本地</strong> — 浏览器会记住你的配置<br>
+            3. 点击 <strong>📥 下载 watchlist.json</strong>，放入 <code>data/</code> 目录<br>
+            4. 提交到 GitHub 仓库，等待 Actions 自动更新后刷新页面<br>
+            5. 或者点击 <strong>🚀 触发刷新工作流</strong> 直接在线触发更新（需设置 Token）
+        </div>
+    </main>
+
+    <div class="toast" id="toast"></div>
+
+    <script>
+        const DEFAULT_CONFIG = {
+            'a-stock': [
+                {code: '601727', name: '上海电气'},
+                {code: '002050', name: '三花智控'},
+            ],
+            'hk-stock': [
+                {code: '00700', name: '腾讯控股'},
+                {code: '01810', name: '小米集团-W'},
+            ],
+            'us-stock': [
+                {code: 'NVDA', name: 'NVIDIA'},
+                {code: 'TSLA', name: 'Tesla'},
+                {code: 'GOOGL', name: 'Alphabet (Google)'},
+                {code: 'MU', name: 'Micron Technology'},
+                {code: 'CRCL', name: 'Circle'},
+                {code: 'BMNR', name: 'Bitmine'},
+                {code: 'MP', name: 'MP Materials'},
+                {code: 'LITE', name: 'Lumentum'},
+                {code: 'GLW', name: 'Corning'},
+                {code: 'MSFT', name: 'Microsoft'},
+                {code: 'AAPL', name: 'Apple'},
+            ],
+            'crypto': [
+                {id: 'bitcoin', name: 'Bitcoin', symbol: 'BTC'},
+                {id: 'ethereum', name: 'Ethereum', symbol: 'ETH'},
+                {id: 'cardano', name: 'Cardano', symbol: 'ADA'},
+                {id: 'hyperliquid', name: 'Hyperliquid', symbol: 'HYPE'},
+                {id: 'okb', name: 'OKB', symbol: 'OKB'},
+                {id: 'basic-attention-token', name: 'Basic Attention Token', symbol: 'BAT'},
+                {id: 'ripple', name: 'XRP', symbol: 'XRP'},
+                {id: 'chainlink', name: 'Chainlink', symbol: 'LINK'},
+            ],
+        };
+
+        let config = {};
+
+        // 初始化
+        function init() {
+            const saved = localStorage.getItem('watchlist-config');
+            config = saved ? JSON.parse(saved) : JSON.parse(JSON.stringify(DEFAULT_CONFIG));
+            // 同时从 URL 加载 GH token
+            const savedToken = localStorage.getItem('gh-token');
+            if (savedToken) document.getElementById('gh-token').value = savedToken;
+            renderAll();
+        }
+
+        // 切换标签
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.querySelector(`.tab-btn[onclick*="${tab}"]`).classList.add('active');
+            document.getElementById(`tab-${tab}`).classList.add('active');
+        }
+
+        // 渲染所有列表
+        function renderAll() {
+            ['a-stock', 'hk-stock', 'us-stock', 'crypto'].forEach(renderList);
+        }
+
+        function renderList(type) {
+            const items = config[type] || [];
+            const listEl = document.getElementById(type === 'crypto' ? 'crypto-list' :
+                type === 'a-stock' ? 'a-list' : type === 'hk-stock' ? 'hk-list' : 'us-list');
+            const emptyEl = document.getElementById(type === 'crypto' ? 'crypto-empty' :
+                type === 'a-stock' ? 'a-empty' : type === 'hk-stock' ? 'hk-empty' : 'us-empty');
+            const countEl = document.getElementById(type === 'crypto' ? 'crypto-count' :
+                type === 'a-stock' ? 'a-count' : type === 'hk-stock' ? 'hk-count' : 'us-count');
+
+            countEl.textContent = items.length;
+
+            if (items.length === 0) {
+                listEl.innerHTML = '';
+                emptyEl.style.display = 'block';
+                return;
+            }
+            emptyEl.style.display = 'none';
+
+            listEl.innerHTML = items.map((item, i) => {
+                if (type === 'crypto') {
+                    return `<tr>
+                        <td><code>${esc(item.id)}</code></td>
+                        <td>${esc(item.name)}</td>
+                        <td>${esc(item.symbol)}</td>
+                        <td><button class="btn btn-danger" onclick="removeItem('${type}', ${i})">删除</button></td>
+                    </tr>`;
+                }
+                return `<tr>
+                    <td><code>${esc(item.code)}</code></td>
+                    <td>${esc(item.name)}</td>
+                    <td><button class="btn btn-danger" onclick="removeItem('${type}', ${i})">删除</button></td>
+                </tr>`;
+            }).join('');
+        }
+
+        function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+        // 添加标的
+        function addItem(type) {
+            if (type === 'crypto') {
+                const id = document.getElementById('crypto-id').value.trim();
+                const name = document.getElementById('crypto-name').value.trim();
+                const symbol = document.getElementById('crypto-symbol').value.trim();
+                if (!id || !name || !symbol) { toast('请填写所有字段', true); return; }
+                if (!config[type]) config[type] = [];
+                config[type].push({ id, name, symbol });
+                document.getElementById('crypto-id').value = '';
+                document.getElementById('crypto-name').value = '';
+                document.getElementById('crypto-symbol').value = '';
+            } else {
+                const code = document.getElementById(type === 'a-stock' ? 'a-code' : type === 'hk-stock' ? 'hk-code' : 'us-code').value.trim();
+                const name = document.getElementById(type === 'a-stock' ? 'a-name' : type === 'hk-stock' ? 'hk-name' : 'us-name').value.trim();
+                if (!code || !name) { toast('请填写代码和名称', true); return; }
+                if (!config[type]) config[type] = [];
+                config[type].push({ code, name });
+                document.getElementById(type === 'a-stock' ? 'a-code' : type === 'hk-stock' ? 'hk-code' : 'us-code').value = '';
+                document.getElementById(type === 'a-stock' ? 'a-name' : type === 'hk-stock' ? 'hk-name' : 'us-name').value = '';
+            }
+            saveToLocal();
+            renderList(type);
+            toast('✅ 已添加');
+        }
+
+        // 删除标的
+        function removeItem(type, index) {
+            config[type].splice(index, 1);
+            saveToLocal();
+            renderList(type);
+            toast('🗑 已删除');
+        }
+
+        // 保存到 localStorage
+        function saveToLocal() {
+            localStorage.setItem('watchlist-config', JSON.stringify(config));
+            const token = document.getElementById('gh-token').value.trim();
+            if (token) localStorage.setItem('gh-token', token);
+            toast('💾 已保存到本地存储');
+        }
+
+        // 下载 watchlist.json
+        function downloadConfig() {
+            const watchlist = {
+                A_STOCKS: (config['a-stock'] || []).map(i => ({ code: i.code, name: i.name })),
+                HK_STOCKS: (config['hk-stock'] || []).map(i => ({ code: i.code, name: i.name })),
+                US_STOCKS: (config['us-stock'] || []).map(i => ({ code: i.code, name: i.name })),
+                CRYPTO: (config['crypto'] || []).map(i => ({ id: i.id, name: i.name, symbol: i.symbol })),
+            };
+            const blob = new Blob([JSON.stringify(watchlist, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'watchlist.json';
+            a.click();
+            URL.revokeObjectURL(url);
+            toast('📥 下载中...请将文件放入 data/ 目录');
+        }
+
+        // 从当前 index.html 加载
+        function loadFromCurrent() {
+            if (confirm('将从默认配置恢复。确定继续？')) {
+                config = JSON.parse(JSON.stringify(DEFAULT_CONFIG));
+                localStorage.removeItem('watchlist-config');
+                renderAll();
+                toast('🔄 已恢复默认配置');
+            }
+        }
+
+        function resetAll() {
+            if (confirm('确定要清空所有标的吗？此操作不可撤销！')) {
+                config = { 'a-stock': [], 'hk-stock': [], 'us-stock': [], 'crypto': [] };
+                saveToLocal();
+                renderAll();
+                toast('🗑 已全部清空');
+            }
+        }
+
+        // 触发 GitHub Actions 工作流
+        async function triggerWorkflow() {
+            const token = document.getElementById('gh-token').value.trim();
+            if (!token) {
+                toast('请先输入 GitHub Personal Access Token', true);
+                return;
+            }
+            const statusEl = document.getElementById('trigger-status');
+            statusEl.innerHTML = '<span style="color:var(--accent-yellow)">⏳ 正在触发工作流...</span>';
+
+            try {
+                const resp = await fetch('https://api.github.com/repos/CharmingLyy/investment-tracker/actions/workflows/update.yml/dispatches', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Accept': 'application/vnd.github+json',
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ ref: 'main' }),
+                });
+                if (resp.status === 204) {
+                    statusEl.innerHTML = '<span style="color:var(--accent-green)">✅ 工作流已触发！几分钟后刷新页面即可看到更新数据。</span>';
+                    toast('✅ 工作流已触发');
+                } else {
+                    const err = await resp.json();
+                    statusEl.innerHTML = `<span style="color:var(--accent-red)">❌ 触发失败: ${esc(err.message || '未知错误')}</span>`;
+                    toast('❌ 触发失败: ' + (err.message || '请检查 Token'), true);
+                }
+            } catch (e) {
+                statusEl.innerHTML = `<span style="color:var(--accent-red)">❌ 网络错误: ${esc(e.message)}</span>`;
+                toast('❌ 网络错误', true);
+            }
+        }
+
+        function toast(msg, isError) {
+            const el = document.getElementById('toast');
+            el.textContent = msg;
+            el.className = 'toast' + (isError ? ' error' : '');
+            setTimeout(() => { el.className = 'toast'; }, 2500);
+        }
+
+        // 页面加载
+        init();
+
+        // 监听 token 输入
+        document.getElementById('gh-token').addEventListener('change', function() {
+            if (this.value.trim()) localStorage.setItem('gh-token', this.value.trim());
+        });
+    </script>
+</body>
+</html>

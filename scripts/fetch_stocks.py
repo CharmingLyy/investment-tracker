@@ -54,6 +54,63 @@ def calc_ma(close_series):
     return ma_values
 
 
+def _enrich_a_stock(results):
+    """补充A股数据：业务描述和现金流（使用 akshare）"""
+    import akshare as ak
+    for r in results:
+        code = r["code"]
+        name = r["name"]
+        # 预设默认值
+        r["business"] = None
+        r["cash_flow"] = None
+
+        # 获取主营业务（使用 cninfo 源，不走 Eastmoney 代理）
+        try:
+            profile = ak.stock_profile_cninfo(symbol=code)
+            if not profile.empty:
+                row = profile.iloc[0]
+                biz = row.get("主营业务", "") or row.get("经营范围", "")
+                if biz and str(biz) != "nan" and str(biz).strip():
+                    biz_str = str(biz).strip()
+                    r["business"] = biz_str[:80] + "..." if len(biz_str) > 80 else biz_str
+        except Exception:
+            pass
+
+        # 获取现金流数据（使用同花顺财务摘要）
+        try:
+            fin = ak.stock_financial_abstract_ths(symbol=code, indicator="按年度")
+            if not fin.empty:
+                # 使用最新年份（最后一行）
+                latest_row = fin.iloc[-1]
+                # 获取每股经营现金流
+                for col in fin.columns:
+                    col_str = str(col)
+                    if "经营" in col_str and "现金流" in col_str:
+                        cf_val = latest_row[col]
+                        if cf_val is not None and str(cf_val) != "nan":
+                            per_share_cf = float(cf_val)
+                            # 尝试获取注册资金来估算总现金流（万元）
+                            try:
+                                reg_cap_raw = profile.iloc[0].get("注册资金", 0)
+                                reg_cap = float(reg_cap_raw) if reg_cap_raw else 0
+                                if reg_cap > 0:
+                                    # 总现金流(亿) = 每股现金流 × 注册资本(万元) / 10000
+                                    r["cash_flow"] = round(per_share_cf * reg_cap / 10000, 2)
+                                else:
+                                    r["cash_flow"] = None
+                            except Exception:
+                                r["cash_flow"] = None
+                        break
+        except Exception:
+            pass
+
+        if r.get("business"):
+            print(f"    📋 {name}: 业务={r['business'][:40]}...")
+        if r.get("cash_flow") is not None:
+            print(f"    💰 {name}: 经营现金流={r['cash_flow']}亿")
+        time.sleep(0.8)
+
+
 def fetch_a_stock_data():
     """
     获取所有A股标的数据
@@ -83,6 +140,11 @@ def fetch_a_stock_data():
             else:
                 print(f"    ✗ 所有数据源均失败")
             time.sleep(1)
+
+    # 补充业务描述和现金流数据
+    if results:
+        print(f"\n[A股] 补充业务描述和现金流数据...")
+        _enrich_a_stock(results)
 
     print(f"[A股] 完成，成功获取 {len(results)}/{len(A_STOCKS)} 只股票数据")
     return results
@@ -176,6 +238,7 @@ def _fetch_via_baostock():
                     "name": name,
                     "symbol": bs_code,
                     "industry": industry,
+                    "business": None,
                     "price": round(float(latest["close"]), 2),
                     "open": round(float(latest["open"]), 2) if not pd.isna(latest["open"]) else None,
                     "high": round(float(latest["high"]), 2) if not pd.isna(latest["high"]) else None,
@@ -185,6 +248,7 @@ def _fetch_via_baostock():
                     "turnover": round(float(latest["amount"]) / 1e8, 2) if not pd.isna(latest["amount"]) else None,
                     "market_cap": mcap,
                     "pe": pe,
+                    "cash_flow": None,
                     "macd": macd_data["macd"],
                     "macd_signal": macd_data["signal"],
                     "macd_histogram": macd_data["histogram"],
@@ -303,6 +367,7 @@ def _fetch_via_akshare(code, name):
         return {
             "market": "A股", "code": code, "name": name,
             "symbol": f"{market}{code}", "industry": industry,
+            "business": None,
             "price": round(float(latest["收盘"]), 2),
             "open": round(float(open_price), 2) if open_price is not None else None,
             "high": round(float(high), 2) if high is not None else None,
@@ -312,6 +377,7 @@ def _fetch_via_akshare(code, name):
             "turnover": round(float(turnover) / 1e8, 2) if turnover is not None else None,
             "market_cap": round(float(market_cap) / 1e8, 2) if market_cap is not None else None,
             "pe": round(float(pe), 2) if pe is not None else None,
+            "cash_flow": None,
             "macd": macd_data["macd"], "macd_signal": macd_data["signal"],
             "macd_histogram": macd_data["histogram"], "rsi": rsi, "ma": ma_data,
             "main_net_flow": main_net_flow,

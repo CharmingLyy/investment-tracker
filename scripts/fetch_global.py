@@ -97,7 +97,55 @@ def _yahoo_quote(ticker_symbol):
     return {}
 
 
-def _process_stock(hist_df, quote_info, code, name, market):
+_YAHOO_CRUMB = None
+
+
+def _get_yahoo_crumb():
+    """获取 Yahoo Finance API crumb（会话级缓存）"""
+    global _YAHOO_CRUMB
+    if _YAHOO_CRUMB:
+        return _YAHOO_CRUMB
+    try:
+        SESSION.get("https://fc.yahoo.com/", timeout=10)
+        resp = SESSION.get("https://query2.finance.yahoo.com/v1/test/getcrumb", timeout=10)
+        if resp.status_code == 200 and resp.text.strip():
+            _YAHOO_CRUMB = resp.text.strip()
+            return _YAHOO_CRUMB
+    except Exception:
+        pass
+    return None
+
+
+def _yahoo_profile(ticker_symbol):
+    """获取公司业务描述和财务数据（v10 API + crumb）"""
+    crumb = _get_yahoo_crumb()
+    if not crumb:
+        return {}
+    url = "https://query2.finance.yahoo.com/v10/finance/quoteSummary/" + ticker_symbol
+    params = {"modules": "assetProfile,financialData", "crumb": crumb}
+    try:
+        resp = SESSION.get(url, params=params, timeout=15)
+        if resp.status_code == 200:
+            data = resp.json()
+            result = data.get("quoteSummary", {}).get("result", [])
+            if result:
+                profile = result[0].get("assetProfile", {}) or {}
+                financial = result[0].get("financialData", {}) or {}
+                fcf = financial.get("freeCashflow", {}) or {}
+                ocf = financial.get("operatingCashflow", {}) or {}
+                return {
+                    "business": profile.get("longBusinessSummary", ""),
+                    "free_cash_flow": fcf.get("raw") if fcf else None,
+                    "operating_cash_flow": ocf.get("raw") if ocf else None,
+                    "total_cash": (financial.get("totalCash", {}) or {}).get("raw"),
+                    "total_debt": (financial.get("totalDebt", {}) or {}).get("raw"),
+                }
+    except Exception:
+        pass
+    return {}
+
+
+def _process_stock(hist_df, quote_info, profile_info, code, name, market):
     """处理单只股票数据"""
     if hist_df.empty or len(hist_df) < 2:
         return None
@@ -116,12 +164,24 @@ def _process_stock(hist_df, quote_info, code, name, market):
     industry = quote_info.get("industry", None) or quote_info.get("sector", None)
     volume = int(latest["Volume"]) if "Volume" in latest.index and not pd.isna(latest["Volume"]) else None
 
+    # 业务描述
+    business = profile_info.get("business", "") if profile_info else ""
+    if business and len(business) > 80:
+        business = business[:80] + "..."
+
+    # 现金流（优先自由现金流，取绝对值并转亿）
+    raw_cf = None
+    if profile_info:
+        raw_cf = profile_info.get("free_cash_flow") or profile_info.get("operating_cash_flow")
+    cash_flow = round(abs(float(raw_cf)) / 1e8, 2) if raw_cf is not None else None
+
     return {
         "market": market,
         "code": code,
         "name": name,
         "symbol": code,
         "industry": industry,
+        "business": business or None,
         "price": round(float(latest["Close"]), 2),
         "open": round(float(latest["Open"]), 2) if "Open" in latest.index and not pd.isna(latest["Open"]) else None,
         "high": round(float(latest["High"]), 2) if "High" in latest.index and not pd.isna(latest["High"]) else None,
@@ -131,6 +191,7 @@ def _process_stock(hist_df, quote_info, code, name, market):
         "turnover": None,
         "market_cap": round(float(market_cap) / 1e8, 2) if market_cap else None,
         "pe": round(float(pe), 2) if pe else None,
+        "cash_flow": cash_flow,
         "macd": macd_data["macd"],
         "macd_signal": macd_data["signal"],
         "macd_histogram": macd_data["histogram"],
@@ -168,7 +229,7 @@ def fetch_global_stocks(market_type):
                 continue
 
             # 获取报价/基本面
-            time.sleep(2)
+            time.sleep(0.8)
             quote = _yahoo_quote(ticker)
             if not quote:
                 # 从 meta 中提取价格
@@ -178,7 +239,11 @@ def fetch_global_stocks(market_type):
                     "trailingPE": meta.get("trailingPE"),
                 }
 
-            result = _process_stock(hist_df, quote, code, name, market_name)
+            # 获取公司业务描述和财务数据
+            time.sleep(0.5)
+            profile = _yahoo_profile(ticker)
+
+            result = _process_stock(hist_df, quote, profile, code, name, market_name)
             if result:
                 results.append(result)
                 currency = "HK$" if market_type == "hk" else "$"
@@ -189,9 +254,9 @@ def fetch_global_stocks(market_type):
         except Exception as e:
             print(f"    ✗ 失败: {str(e)[:100]}")
 
-        # 间隔避免限流（每个请求等3秒）
+        # 间隔避免限流
         if i < len(stocks) - 1:
-            time.sleep(3)
+            time.sleep(1.5)
 
     print(f"[{market_name}] 完成，成功获取 {len(results)}/{len(stocks)} 只股票数据")
     return results

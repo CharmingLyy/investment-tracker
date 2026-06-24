@@ -19,6 +19,82 @@ from scripts.fetch_stocks import calc_macd, calc_rsi, calc_ma
 
 COINGECKO_API = "https://api.coingecko.com/api/v3"
 
+# ETF 流动数据映射：CoinGecko ID → Farside slug
+ETF_FLOW_SYMBOLS = {
+    "bitcoin": "btc",
+    "solana": "sol",
+    "hyperliquid": "hyp",
+}
+
+
+def _fetch_etf_flows():
+    """获取 BTC/ETH 现货 ETF 流入/流出数据（来源：Farside WordPress API + 解析）"""
+    import re as _re
+    etf_data = {}
+    for cg_id, fs_slug in ETF_FLOW_SYMBOLS.items():
+        try:
+            # 使用 WordPress REST API 获取页面内容
+            wp_url = f"https://farside.co.uk/wp-json/wp/v2/pages?slug={fs_slug}"
+            resp = requests.get(wp_url, headers={
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+                "Accept": "application/json",
+            }, timeout=15)
+            if resp.status_code != 200:
+                continue
+            pages = resp.json()
+            if not pages:
+                continue
+            content = pages[0].get("content", {}).get("rendered", "")
+
+            # 提取所有表格行
+            rows = _re.findall(r"<tr[^>]*>(.*?)</tr>", content, _re.DOTALL)
+
+            # 取最后一行的 Total 行（累积总流动）
+            total_cells = None
+            for row in reversed(rows):
+                if "otal" in row and "<td" in row:
+                    cells = _re.findall(r"<td[^>]*>(.*?)</td>", row, _re.DOTALL)
+                    clean = [_re.sub(r"<[^>]+>", "", c).strip().replace(",", "").replace("$", "") for c in cells]
+                    # 第一个是 'Total' 标签，用最后一列作为累计净流动
+                    total_cells = [c for c in clean if c and c != "Total"]
+                    break
+
+            # 提取最新一天的数据行（Total 行之前的那行）
+            daily_cells = None
+            rows_before_total = 0
+            for row in reversed(rows):
+                if "otal" in row:
+                    continue
+                if rows_before_total == 0 and "<td" in row:
+                    cells = _re.findall(r"<td[^>]*>(.*?)</td>", row, _re.DOTALL)
+                    clean = [_re.sub(r"<[^>]+>", "", c).strip().replace(",", "").replace("$", "") for c in cells]
+                    daily_cells = [c for c in clean if c]
+                    break
+
+            # 从每日数据行计算净流动
+            daily_net = None
+            if daily_cells and len(daily_cells) >= 2:
+                # 尝试将每个值转为数字并求和（排除日期列）
+                nums = []
+                for val in daily_cells[1:]:  # 跳过日期/第一列
+                    try:
+                        val_clean = val.replace("(", "-").replace(")", "")
+                        nums.append(float(val_clean))
+                    except ValueError:
+                        pass
+                if nums:
+                    daily_net = round(sum(nums) / 100, 2)  # 百万美元 → 亿美元
+
+            if daily_net is not None:
+                etf_data[cg_id] = {
+                    "etf_net_flow": daily_net,
+                    "etf_inflow": round(daily_net, 2) if daily_net > 0 else None,
+                    "etf_outflow": round(abs(daily_net), 2) if daily_net < 0 else None,
+                }
+        except Exception:
+            pass
+    return etf_data
+
 
 def fetch_crypto_data():
     """获取加密货币数据"""
@@ -28,6 +104,11 @@ def fetch_crypto_data():
 
     print(f"[加密货币] 开始获取 {len(CRYPTO)} 个币种数据...")
     results = []
+
+    # 获取 ETF 流动数据
+    etf_flows = _fetch_etf_flows()
+    if etf_flows:
+        print(f"  📊 ETF 流动数据: {len(etf_flows)} 个币种")
 
     # CoinGecko 免费API限速：每分钟10-30次
     ids = ",".join([c["id"] for c in CRYPTO])
@@ -154,6 +235,8 @@ def fetch_crypto_data():
                 except Exception:
                     onchain_data = {}
 
+                # ETF 流动数据
+                etf = etf_flows.get(cid, {})
                 crypto_data = {
                     "market": "加密货币",
                     "code": cid,
@@ -170,6 +253,9 @@ def fetch_crypto_data():
                     "market_cap": round(market_cap / 1e8, 2) if market_cap else None,  # 转为亿美元
                     "market_cap_rank": market_cap_rank,
                     "pe": None,  # 加密货币无PE
+                    "etf_inflow": etf.get("etf_inflow"),
+                    "etf_outflow": etf.get("etf_outflow"),
+                    "etf_net_flow": etf.get("etf_net_flow"),
                     "macd": macd_data.get("macd"),
                     "macd_signal": macd_data.get("signal"),
                     "macd_histogram": macd_data.get("histogram"),

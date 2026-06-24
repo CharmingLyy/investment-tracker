@@ -165,7 +165,7 @@
             width: 100%;
             border-collapse: collapse;
             font-size: 0.88rem;
-            min-width: 900px;
+            min-width: 1100px;
         }
         thead {
             background: var(--bg-secondary);
@@ -208,6 +208,16 @@
             font-size: 0.72rem;
             color: var(--text-muted);
             display: block;
+        }
+        .stock-business {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            display: block;
+            max-width: 180px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            cursor: default;
         }
         .price {
             font-weight: 600;
@@ -346,6 +356,58 @@
             font-weight: 600;
             color: var(--text-secondary);
         }
+
+        /* ===== 管理工具栏 ===== */
+        .toolbar {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            padding: 8px 24px;
+        }
+        .toolbar-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .btn-tool {
+            padding: 5px 14px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 0.78rem;
+            transition: all 0.15s;
+            text-decoration: none;
+            display: inline-block;
+            font-family: inherit;
+        }
+        .btn-tool:hover {
+            background: var(--bg-hover);
+            color: var(--text-primary);
+            border-color: var(--border-light);
+        }
+        .btn-tool.accent {
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+        }
+        .btn-tool.accent:hover {
+            background: rgba(74,144,217,0.12);
+        }
+        .sync-status {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            margin-left: auto;
+        }
+        .sync-status a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+        .sync-status a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -363,6 +425,19 @@
             </div>
         </div>
     </header>
+
+    <!-- 管理工具栏 -->
+    <div class="toolbar">
+        <div class="toolbar-inner">
+            <a href="admin.html" class="btn-tool">⚙️ 编辑标的</a>
+            <button class="btn-tool accent" onclick="triggerRefresh()" title="触发 GitHub Actions 工作流刷新数据">🔄 手动刷新</button>
+            <button class="btn-tool" onclick="window.open('https://github.com/CharmingLyy/investment-tracker/actions', '_blank')">🔗 Actions</button>
+            <span class="sync-status">
+                🌐 <a href="https://charminglyy.github.io/investment-tracker/" target="_blank">在线面板</a>
+                · <span id="sync-indicator">已同步</span>
+            </span>
+        </div>
+    </div>
 
     <main class="main">
         <!-- 市场概览 -->
@@ -402,10 +477,12 @@
                         <tr>
                             <th>名称/代码</th>
                             <th>行业</th>
+                            <th>主营业务</th>
                             <th>收盘价</th>
                             <th>涨跌幅</th>
                             <th>市值(亿)</th>
                             <th>PE</th>
+                            <th>现金流(亿)</th>
                             <th>MACD</th>
                             <th>RSI</th>
                             <th>MA5</th>
@@ -419,8 +496,10 @@
                             <td>
                                 <span class="stock-name">{{ s.name }}</span>
                                 <span class="stock-code">{{ s.code }}</span>
+                                {% if s.business %}<span class="stock-industry" style="font-size:0.68rem">{{ s.industry or '' }}</span>{% endif %}
                             </td>
                             <td><span class="stock-industry">{{ s.industry or '-' }}</span></td>
+                            <td><span class="stock-business" title="{{ s.business or '' }}">{{ s.business or '-' }}</span></td>
                             <td class="price">¥{{ s.price }}</td>
                             <td>
                                 <span class="change-badge {{ 'positive' if s.change_pct >= 0 else 'negative' }}">
@@ -429,6 +508,9 @@
                             </td>
                             <td>{{ s.market_cap or '-' }}</td>
                             <td>{{ s.pe or '-' }}</td>
+                            <td class="{{ 'up' if s.cash_flow and s.cash_flow > 0 else 'down' if s.cash_flow and s.cash_flow < 0 else '' }}">
+                                {{ s.cash_flow if s.cash_flow is not none else '-' }}
+                            </td>
                             <td class="indicator {{ 'bullish' if s.macd and s.macd > 0 else 'bearish' if s.macd and s.macd < 0 else 'neutral' }}">
                                 {{ s.macd if s.macd is not none else '-' }}
                             </td>
@@ -466,10 +548,12 @@
                         <tr>
                             <th>名称/代码</th>
                             <th>行业</th>
+                            <th>主营业务</th>
                             <th>收盘价</th>
                             <th>涨跌幅</th>
                             <th>市值(亿)</th>
                             <th>PE</th>
+                            <th>现金流(亿)</th>
                             <th>MACD</th>
                             <th>RSI</th>
                             <th>MA5</th>
@@ -484,6 +568,7 @@
                                 <span class="stock-code">{{ s.code }}</span>
                             </td>
                             <td><span class="stock-industry">{{ s.industry or '-' }}</span></td>
+                            <td><span class="stock-business" title="{{ s.business or '' }}">{{ s.business or '-' }}</span></td>
                             <td class="price">HK${{ s.price }}</td>
                             <td>
                                 <span class="change-badge {{ 'positive' if s.change_pct >= 0 else 'negative' }}">
@@ -492,6 +577,9 @@
                             </td>
                             <td>{{ s.market_cap or '-' }}</td>
                             <td>{{ s.pe or '-' }}</td>
+                            <td class="{{ 'up' if s.cash_flow and s.cash_flow > 0 else 'down' if s.cash_flow and s.cash_flow < 0 else '' }}">
+                                {{ s.cash_flow if s.cash_flow is not none else '-' }}
+                            </td>
                             <td class="indicator {{ 'bullish' if s.macd and s.macd > 0 else 'bearish' if s.macd and s.macd < 0 else 'neutral' }}">
                                 {{ s.macd if s.macd is not none else '-' }}
                             </td>
@@ -526,10 +614,12 @@
                         <tr>
                             <th>名称/代码</th>
                             <th>行业</th>
+                            <th>主营业务</th>
                             <th>收盘价</th>
                             <th>涨跌幅</th>
                             <th>市值(亿)</th>
                             <th>PE</th>
+                            <th>现金流(亿)</th>
                             <th>MACD</th>
                             <th>RSI</th>
                             <th>MA5</th>
@@ -544,6 +634,7 @@
                                 <span class="stock-code">{{ s.code }}</span>
                             </td>
                             <td><span class="stock-industry">{{ s.industry or '-' }}</span></td>
+                            <td><span class="stock-business" title="{{ s.business or '' }}">{{ s.business or '-' }}</span></td>
                             <td class="price">${{ s.price }}</td>
                             <td>
                                 <span class="change-badge {{ 'positive' if s.change_pct >= 0 else 'negative' }}">
@@ -552,6 +643,9 @@
                             </td>
                             <td>{{ s.market_cap or '-' }}</td>
                             <td>{{ s.pe or '-' }}</td>
+                            <td class="{{ 'up' if s.cash_flow and s.cash_flow > 0 else 'down' if s.cash_flow and s.cash_flow < 0 else '' }}">
+                                {{ s.cash_flow if s.cash_flow is not none else '-' }}
+                            </td>
                             <td class="indicator {{ 'bullish' if s.macd and s.macd > 0 else 'bearish' if s.macd and s.macd < 0 else 'neutral' }}">
                                 {{ s.macd if s.macd is not none else '-' }}
                             </td>
@@ -590,6 +684,9 @@
                             <th>24h涨跌</th>
                             <th>市值(亿$)</th>
                             <th>排名</th>
+                            <th>ETF流入(亿$)</th>
+                            <th>ETF流出(亿$)</th>
+                            <th>ETF净流动</th>
                             <th>MACD</th>
                             <th>RSI</th>
                             <th>7日涨跌</th>
@@ -613,6 +710,11 @@
                             </td>
                             <td>{{ s.market_cap or '-' }}</td>
                             <td>#{{ s.market_cap_rank or '-' }}</td>
+                            <td class="up">{{ s.etf_inflow if s.etf_inflow is not none else '-' }}</td>
+                            <td class="down">{{ s.etf_outflow if s.etf_outflow is not none else '-' }}</td>
+                            <td class="{{ 'up' if s.etf_net_flow and s.etf_net_flow > 0 else 'down' if s.etf_net_flow and s.etf_net_flow < 0 else '' }}">
+                                {{ ('+' if s.etf_net_flow and s.etf_net_flow > 0 else '') }}{{ s.etf_net_flow if s.etf_net_flow is not none else '-' }}
+                            </td>
                             <td class="indicator {{ 'bullish' if s.macd and s.macd > 0 else 'bearish' if s.macd and s.macd < 0 else 'neutral' }}">
                                 {{ s.macd if s.macd is not none else '-' }}
                             </td>
@@ -633,11 +735,12 @@
                     </tbody>
                 </table>
             </div>
-            <!-- 链上数据详情 -->
+            <!-- 链上数据 + ETF 流动详情 -->
             {% for s in crypto_list %}
-            {% if s.onchain.circ_ratio or s.onchain.github_commits_4w %}
+            {% if s.onchain.circ_ratio or s.onchain.github_commits_4w or s.etf_net_flow is not none %}
             <div style="margin-top: 4px; font-size: 0.72rem; color: var(--text-muted); padding: 4px 14px;">
                 <strong>{{ s.symbol }}</strong>:
+                {% if s.etf_net_flow is not none %}ETF净流动: {{ '+' if s.etf_net_flow > 0 else '' }}{{ s.etf_net_flow }}亿$ · {% endif %}
                 {% if s.onchain.circ_ratio %}流通占比 {{ s.onchain.circ_ratio }}% · {% endif %}
                 {% if s.onchain.categories %}赛道: {{ s.onchain.categories[:2]|join(', ') }} · {% endif %}
                 {% if s.onchain.github_commits_4w %}GitHub提交(4w): {{ s.onchain.github_commits_4w }}{% endif %}
@@ -680,5 +783,65 @@
     <footer class="footer">
         📊 投资观察面板 · 数据每日自动更新 · 数据来源: akshare / Yahoo Finance / CoinGecko
     </footer>
+
+    <!-- 管理功能脚本 -->
+    <script>
+    (function() {
+        // 检查 GitHub Pages 同步状态
+        var syncEl = document.getElementById('sync-indicator');
+        if (syncEl && window.location.protocol === 'https:') {
+            syncEl.textContent = '✓ 在线版';
+            syncEl.style.color = 'var(--accent-green)';
+        } else if (syncEl) {
+            syncEl.textContent = '本地预览';
+            syncEl.style.color = 'var(--accent-yellow)';
+        }
+
+        // 手动刷新：触发 GitHub Actions
+        window.triggerRefresh = function() {
+            var token = localStorage.getItem('gh-token');
+            if (!token) {
+                token = prompt(
+                    '请输入 GitHub Personal Access Token (需要 repo 权限):\n\n' +
+                    '获取方式: GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic)\n' +
+                    '勾选 repo 权限后生成。\n\n' +
+                    'Token 将保存在浏览器本地存储中。直接点取消可跳转到 Actions 页面手动触发。'
+                );
+                if (token && token.trim()) {
+                    localStorage.setItem('gh-token', token.trim());
+                } else {
+                    window.open('https://github.com/CharmingLyy/investment-tracker/actions/workflows/update.yml', '_blank');
+                    return;
+                }
+            }
+
+            var statusEl = document.getElementById('sync-indicator');
+            if (statusEl) { statusEl.textContent = '触发中...'; statusEl.style.color = 'var(--accent-yellow)'; }
+
+            fetch('https://api.github.com/repos/CharmingLyy/investment-tracker/actions/workflows/update.yml/dispatches', {
+                method: 'POST',
+                headers: {
+                    'Authorization': 'Bearer ' + token,
+                    'Accept': 'application/vnd.github+json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ ref: 'main' }),
+            }).then(function(resp) {
+                if (resp.status === 204) {
+                    if (statusEl) { statusEl.textContent = '✓ 已触发，等待更新...'; statusEl.style.color = 'var(--accent-green)'; }
+                    alert('✅ 刷新工作流已触发！\n\nGitHub Actions 约 3-5 分钟后完成，届时刷新页面即可看到最新数据。');
+                } else {
+                    return resp.json().then(function(err) {
+                        if (statusEl) { statusEl.textContent = '触发失败'; statusEl.style.color = 'var(--accent-red)'; }
+                        alert('❌ 触发失败: ' + (err.message || '未知错误') + '\n\n可点击 "Actions" 按钮在 GitHub 网页手动触发。');
+                    });
+                }
+            }).catch(function(e) {
+                if (statusEl) { statusEl.textContent = '网络错误'; statusEl.style.color = 'var(--accent-red)'; }
+                alert('❌ 网络错误: ' + e.message + '\n\n可点击 "Actions" 按钮在 GitHub 网页手动触发。');
+            });
+        };
+    })();
+    </script>
 </body>
 </html>

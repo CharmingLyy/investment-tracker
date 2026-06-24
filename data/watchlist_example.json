@@ -1,0 +1,22 @@
+{
+  "A_STOCKS": [
+    {"code": "601727", "name": "上海电气"},
+    {"code": "002050", "name": "三花智控"}
+  ],
+  "HK_STOCKS": [
+    {"code": "00700", "name": "腾讯控股"},
+    {"code": "01810", "name": "小米集团-W"}
+  ],
+  "US_STOCKS": [
+    {"code": "NVDA", "name": "NVIDIA"},
+    {"code": "TSLA", "name": "Tesla"},
+    {"code": "GOOGL", "name": "Alphabet (Google)"},
+    {"code": "MSFT", "name": "Microsoft"},
+    {"code": "AAPL", "name": "Apple"}
+  ],
+  "CRYPTO": [
+    {"id": "bitcoin", "name": "Bitcoin", "symbol": "BTC"},
+    {"id": "ethereum", "name": "Ethereum", "symbol": "ETH"},
+    {"id": "ripple", "name": "XRP", "symbol": "XRP"}
+  ]
+}
