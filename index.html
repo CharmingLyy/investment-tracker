@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📊 投资观察面板 | 2026-06-30 18:25 UTC+8 (北京时间)</title>
+    <title>📊 投资观察面板 | 2026-07-01 16:45 UTC+8 (北京时间)</title>
     <style>
         /* ===== 全局样式 ===== */
         :root {
@@ -421,7 +421,7 @@
                     <span>港股 <span class="status-dot open"></span></span>
                     <span>美股 <span class="status-dot open"></span></span>
                 </div>
-                <span class="update-badge">🕐 更新: 2026-06-30 18:25 UTC+8 (北京时间)</span>
+                <span class="update-badge">🕐 更新: 2026-07-01 16:45 UTC+8 (北京时间)</span>
             </div>
         </div>
     </header>
@@ -444,18 +444,18 @@
         <div class="summary-grid">
             <div class="summary-card">
                 <div class="card-label">📈 总跟踪标的</div>
-                <div class="card-value">21</div>
-                <div class="card-sub">A股 0 · 港股 2 · 美股 11 · 加密 8</div>
+                <div class="card-value">23</div>
+                <div class="card-sub">A股 2 · 港股 2 · 美股 11 · 加密 8</div>
             </div>
             <div class="summary-card">
                 <div class="card-label">🟢 今日上涨</div>
-                <div class="card-value up">8</div>
-                <div class="card-sub">占比 38.1%</div>
+                <div class="card-value up">18</div>
+                <div class="card-sub">占比 78.3%</div>
             </div>
             <div class="summary-card">
                 <div class="card-label">🔴 今日下跌</div>
-                <div class="card-value down">12</div>
-                <div class="card-sub">占比 57.1%</div>
+                <div class="card-value down">5</div>
+                <div class="card-sub">占比 21.7%</div>
             </div>
             <div class="summary-card">
                 <div class="card-label">📰 市场新闻</div>
@@ -467,8 +467,98 @@
         <!-- A股表格 -->
         
         <section class="market-section">
-            <div class="section-header"><h2>🇨🇳 A股</h2></div>
-            <div class="empty-state">尚未配置A股标的，请在 config.py 中添加</div>
+            <div class="section-header">
+                <h2>🇨🇳 A股</h2>
+                <span class="section-badge badge-a">沪深京</span>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>名称/代码</th>
+                            <th>行业</th>
+                            <th>主营业务</th>
+                            <th>收盘价</th>
+                            <th>涨跌幅</th>
+                            <th>市值(亿)</th>
+                            <th>PE</th>
+                            <th>现金流(亿)</th>
+                            <th>MACD</th>
+                            <th>RSI</th>
+                            <th>MA5</th>
+                            <th>MA20</th>
+                            <th>主力净流入(亿)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">上海电气</span>
+                                <span class="stock-code">601727</span>
+                                <span class="stock-industry" style="font-size:0.68rem"></span>
+                            </td>
+                            <td><span class="stock-industry">-</span></td>
+                            <td><span class="stock-business" title="新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。">新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。</span></td>
+                            <td class="price">¥7.01</td>
+                            <td>
+                                <span class="change-badge positive">
+                                    +0.14%
+                                </span>
+                            </td>
+                            <td>-</td>
+                            <td>84.16</td>
+                            <td class="up">
+                                105.67
+                            </td>
+                            <td class="indicator bearish">
+                                -0.3049
+                            </td>
+                            <td class="indicator bearish">
+                                36.43
+                            </td>
+                            <td>7.0</td>
+                            <td>7.32</td>
+                            <td class="">
+                                -
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">三花智控</span>
+                                <span class="stock-code">002050</span>
+                                <span class="stock-industry" style="font-size:0.68rem"></span>
+                            </td>
+                            <td><span class="stock-industry">-</span></td>
+                            <td><span class="stock-business" title="冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。">冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。</span></td>
+                            <td class="price">¥44.21</td>
+                            <td>
+                                <span class="change-badge positive">
+                                    +0.87%
+                                </span>
+                            </td>
+                            <td>-</td>
+                            <td>45.52</td>
+                            <td class="up">
+                                50.92
+                            </td>
+                            <td class="indicator bearish">
+                                -1.3317
+                            </td>
+                            <td class="indicator bearish">
+                                45.61
+                            </td>
+                            <td>42.95</td>
+                            <td>44.93</td>
+                            <td class="">
+                                -
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
         </section>
         
 
@@ -595,10 +685,10 @@
                             </td>
                             <td><span class="stock-industry">-</span></td>
                             <td><span class="stock-business" title="">-</span></td>
-                            <td class="price">$199.22</td>
+                            <td class="price">$197.11</td>
                             <td>
-                                <span class="change-badge positive">
-                                    +2.18%
+                                <span class="change-badge negative">
+                                    -1.49%
                                 </span>
                             </td>
                             <td>-</td>
@@ -607,13 +697,13 @@
                                 -
                             </td>
                             <td class="indicator bearish">
-                                -3.9487
+                                -3.9358
                             </td>
                             <td class="indicator bearish">
-                                44.4
+                                42.91
                             </td>
-                            <td>196.29</td>
-                            <td>205.7</td>
+                            <td>196.09</td>
+                            <td>204.46</td>
                         </tr>
                         
                         <tr>
@@ -623,10 +713,10 @@
                             </td>
                             <td><span class="stock-industry">-</span></td>
                             <td><span class="stock-business" title="">-</span></td>
-                            <td class="price">$419.14</td>
+                            <td class="price">$427.34</td>
                             <td>
                                 <span class="change-badge positive">
-                                    +1.77%
+                                    +1.6%
                                 </span>
                             </td>
                             <td>-</td>
@@ -635,13 +725,13 @@
                                 -
                             </td>
                             <td class="indicator bearish">
-                                -3.423
+                                -0.7865
                             </td>
                             <td class="indicator bullish">
-                                56.34
+                                58.84
                             </td>
-                            <td>392.27</td>
-                            <td>400.52</td>
+                            <td>402.92</td>
+                            <td>400.77</td>
                         </tr>
                         
                         <tr>
@@ -651,10 +741,10 @@
                             </td>
                             <td><span class="stock-industry">-</span></td>
                             <td><span class="stock-business" title="">-</span></td>
-                            <td class="price">$357.14</td>
+                            <td class="price">$358.01</td>
                             <td>
                                 <span class="change-badge positive">
-                                    +0.99%
+                                    +0.18%
                                 </span>
                             </td>
                             <td>-</td>
@@ -663,13 +753,13 @@
                                 -
                             </td>
                             <td class="indicator bearish">
-                                -6.0701
+                                -5.3197
                             </td>
                             <td class="indicator bearish">
-                                47.79
+                                48.34
                             </td>
-                            <td>347.44</td>
-                            <td>358.52</td>
+                            <td>350.03</td>
+                            <td>358.34</td>
                         </tr>
                         
                         <tr>
@@ -679,10 +769,10 @@
                             </td>
                             <td><span class="stock-industry">-</span></td>
                             <td><span class="stock-business" title="">-</span></td>
-                            <td class="price">$1145.24</td>
+                            <td class="price">$1050.36</td>
                             <td>
-                                <span class="change-badge positive">
-                                    +-0.0%
+                                <span class="change-badge negative">
+                                    -9.0%
                                 </span>
                             </td>
                             <td>-</td>
@@ -691,13 +781,13 @@
                                 -
                             </td>
                             <td class="indicator bullish">
-                                90.6196
+                                80.7638
                             </td>
                             <td class="indicator bullish">
-                                59.55
+                                52.86
                             </td>
-                            <td>1136.99</td>
-                            <td>1049.61</td>
+                            <td>1139.16</td>
+                            <td>1049.38</td>
                         </tr>
                         
                         <tr>
@@ -707,10 +797,10 @@
                             </td>
                             <td><span class="stock-industry">-</span></td>
                             <td><span class="stock-business" title="">-</span></td>
-                            <td class="price">$63.35</td>
+                            <td class="price">$65.81</td>
                             <td>
-                                <span class="change-badge negative">
-                                    -16.61%
+                                <span class="change-badge positive">
+                                    +5.08%
                                 </span>
                             </td>
                             <td>-</td>
@@ -719,13 +809,13 @@
                                 -
                             </td>
                             <td class="indicator bearish">
-                                -8.3582
+                                -8.5713
                             </td>
                             <td class="indicator bearish">
-                                31.51
+                                34.73
                             </td>
-                            <td>70.53</td>
-                            <td>79.85</td>
+                            <td>69.36</td>
+                            <td>78.06</td>
                         </tr>
                         
                         <tr>
@@ -735,10 +825,10 @@
                             </td>
                             <td><span class="stock-industry">-</span></td>
                             <td><span class="stock-business" title="">-</span></td>
-                            <td class="price">$13.27</td>
+                            <td class="price">$14.48</td>
                             <td>
-                                <span class="change-badge negative">
-                                    -3.84%
+                                <span class="change-badge positive">
+                                    +8.79%
                                 </span>
                             </td>
                             <td>-</td>
@@ -747,13 +837,13 @@
                                 -
                             </td>
                             <td class="indicator bearish">
-                                -1.4886
+                                -1.3992
                             </td>
                             <td class="indicator bearish">
-                                31.75
+                                40.22
                             </td>
-                            <td>13.59</td>
-                            <td>15.71</td>
+                            <td>13.69</td>
+                            <td>15.53</td>
                         </tr>
                         
                         <tr>
@@ -763,10 +853,10 @@
                             </td>
                             <td><span class="stock-industry">-</span></td>
                             <td><span class="stock-business" title="">-</span></td>
-                            <td class="price">$55.67</td>
+                            <td class="price">$56.13</td>
                             <td>
                                 <span class="change-badge positive">
-                                    +1.69%
+                                    +0.21%
                                 </span>
                             </td>
                             <td>-</td>
@@ -775,13 +865,13 @@
                                 -
                             </td>
                             <td class="indicator bearish">
-                                -1.8432
+                                -1.768
                             </td>
                             <td class="indicator bearish">
-                                43.01
+                                44.01
                             </td>
-                            <td>55.29</td>
-                            <td>58.91</td>
+                            <td>55.28</td>
+                            <td>58.12</td>
                         </tr>
                         
                         <tr>
@@ -791,10 +881,10 @@
                             </td>
                             <td><span class="stock-industry">-</span></td>
                             <td><span class="stock-business" title="">-</span></td>
-                            <td class="price">$866.84</td>
+                            <td class="price">$803.3</td>
                             <td>
-                                <span class="change-badge positive">
-                                    +1.81%
+                                <span class="change-badge negative">
+                                    -6.38%
                                 </span>
                             </td>
                             <td>-</td>
@@ -803,13 +893,13 @@
                                 -
                             </td>
                             <td class="indicator bearish">
-                                -15.0785
+                                -19.2728
                             </td>
                             <td class="indicator bearish">
-                                48.84
+                                43.24
                             </td>
-                            <td>847.94</td>
-                            <td>883.58</td>
+                            <td>838.34</td>
+                            <td>871.85</td>
                         </tr>
                         
                         <tr>
@@ -819,10 +909,10 @@
                             </td>
                             <td><span class="stock-industry">-</span></td>
                             <td><span class="stock-business" title="">-</span></td>
-                            <td class="price">$253.25</td>
+                            <td class="price">$220.09</td>
                             <td>
                                 <span class="change-badge negative">
-                                    -0.95%
+                                    -13.84%
                                 </span>
                             </td>
                             <td>-</td>
@@ -831,13 +921,13 @@
                                 -
                             </td>
                             <td class="indicator bullish">
-                                14.8089
+                                14.1916
                             </td>
                             <td class="indicator bullish">
-                                68.14
+                                55.48
                             </td>
-                            <td>232.77</td>
-                            <td>198.26</td>
+                            <td>236.05</td>
+                            <td>199.35</td>
                         </tr>
                         
                         <tr>
@@ -847,10 +937,10 @@
                             </td>
                             <td><span class="stock-industry">-</span></td>
                             <td><span class="stock-business" title="">-</span></td>
-                            <td class="price">$371.08</td>
+                            <td class="price">$386.08</td>
                             <td>
                                 <span class="change-badge positive">
-                                    +0.68%
+                                    +3.5%
                                 </span>
                             </td>
                             <td>-</td>
@@ -859,13 +949,13 @@
                                 -
                             </td>
                             <td class="indicator bearish">
-                                -13.353
+                                -11.5486
                             </td>
                             <td class="indicator bearish">
-                                40.29
+                                47.74
                             </td>
-                            <td>366.18</td>
-                            <td>391.55</td>
+                            <td>370.69</td>
+                            <td>388.89</td>
                         </tr>
                         
                         <tr>
@@ -875,10 +965,10 @@
                             </td>
                             <td><span class="stock-industry">-</span></td>
                             <td><span class="stock-business" title="">-</span></td>
-                            <td class="price">$288.76</td>
+                            <td class="price">$294.45</td>
                             <td>
                                 <span class="change-badge positive">
-                                    +2.49%
+                                    +1.76%
                                 </span>
                             </td>
                             <td>-</td>
@@ -887,13 +977,13 @@
                                 -
                             </td>
                             <td class="indicator bearish">
-                                -2.8402
+                                -2.2574
                             </td>
-                            <td class="indicator bearish">
-                                46.42
+                            <td class="indicator bullish">
+                                51.02
                             </td>
-                            <td>284.5</td>
-                            <td>295.9</td>
+                            <td>284.9</td>
+                            <td>294.89</td>
                         </tr>
                         
                     </tbody>
@@ -937,13 +1027,13 @@
                                 <span class="stock-code">BTC</span>
                             </td>
                             <td><span class="stock-industry">Smart Contract Platform</span></td>
-                            <td class="price">$58485</td>
+                            <td class="price">$59983</td>
                             <td>
-                                <span class="change-badge negative">
-                                    -3.11%
+                                <span class="change-badge positive">
+                                    +2.86%
                                 </span>
                             </td>
-                            <td>11729.34</td>
+                            <td>12025.09</td>
                             <td>#1</td>
                             <td class="up">-</td>
                             <td class="down">-</td>
@@ -951,19 +1041,19 @@
                                 -
                             </td>
                             <td class="indicator bearish">
-                                -2369.7405
+                                -2272.369
                             </td>
                             <td class="indicator bearish">
-                                29.61
+                                37.06
                             </td>
                             <td class="down">
-                                -6.1%
+                                -0.4%
                             </td>
                             <td class="down">
-                                -20.5%
+                                -15.5%
                             </td>
                             <td class="down">
-                                -53.6%
+                                -52.4%
                             </td>
                         </tr>
                         
@@ -973,13 +1063,13 @@
                                 <span class="stock-code">ETH</span>
                             </td>
                             <td><span class="stock-industry">Smart Contract Platform</span></td>
-                            <td class="price">$1574.79</td>
+                            <td class="price">$1617.09</td>
                             <td>
-                                <span class="change-badge negative">
-                                    -3.11%
+                                <span class="change-badge positive">
+                                    +3.22%
                                 </span>
                             </td>
-                            <td>1900.79</td>
+                            <td>1951.39</td>
                             <td>#2</td>
                             <td class="up">-</td>
                             <td class="down">-</td>
@@ -987,19 +1077,19 @@
                                 -
                             </td>
                             <td class="indicator bearish">
-                                -75.5376
+                                -70.8887
                             </td>
                             <td class="indicator bearish">
-                                34.61
+                                40.72
                             </td>
                             <td class="down">
-                                -4.8%
+                                -1.6%
                             </td>
                             <td class="down">
-                                -21.4%
+                                -17.6%
                             </td>
                             <td class="down">
-                                -68.2%
+                                -67.3%
                             </td>
                         </tr>
                         
@@ -1009,14 +1099,14 @@
                                 <span class="stock-code">ADA</span>
                             </td>
                             <td><span class="stock-industry">-</span></td>
-                            <td class="price">$0.1453</td>
+                            <td class="price">$0.1551</td>
                             <td>
-                                <span class="change-badge negative">
-                                    -1.52%
+                                <span class="change-badge positive">
+                                    +7.5%
                                 </span>
                             </td>
-                            <td>54.14</td>
-                            <td>#20</td>
+                            <td>57.8</td>
+                            <td>#18</td>
                             <td class="up">-</td>
                             <td class="down">-</td>
                             <td class="">
@@ -1045,13 +1135,13 @@
                                 <span class="stock-code">HYPE</span>
                             </td>
                             <td><span class="stock-industry">-</span></td>
-                            <td class="price">$64.88</td>
+                            <td class="price">$64.61</td>
                             <td>
-                                <span class="change-badge negative">
-                                    -1.72%
+                                <span class="change-badge positive">
+                                    +0.45%
                                 </span>
                             </td>
-                            <td>144.32</td>
+                            <td>143.74</td>
                             <td>#10</td>
                             <td class="up">-</td>
                             <td class="down">-</td>
@@ -1081,13 +1171,13 @@
                                 <span class="stock-code">OKB</span>
                             </td>
                             <td><span class="stock-industry">-</span></td>
-                            <td class="price">$78.53</td>
+                            <td class="price">$80.55</td>
                             <td>
-                                <span class="change-badge negative">
-                                    -0.97%
+                                <span class="change-badge positive">
+                                    +2.7%
                                 </span>
                             </td>
-                            <td>16.49</td>
+                            <td>16.92</td>
                             <td>#46</td>
                             <td class="up">-</td>
                             <td class="down">-</td>
@@ -1117,14 +1207,14 @@
                                 <span class="stock-code">BAT</span>
                             </td>
                             <td><span class="stock-industry">-</span></td>
-                            <td class="price">$0.0782</td>
+                            <td class="price">$0.0795</td>
                             <td>
-                                <span class="change-badge negative">
-                                    -5.33%
+                                <span class="change-badge positive">
+                                    +1.4%
                                 </span>
                             </td>
-                            <td>1.17</td>
-                            <td>#232</td>
+                            <td>1.19</td>
+                            <td>#226</td>
                             <td class="up">-</td>
                             <td class="down">-</td>
                             <td class="">
@@ -1153,13 +1243,13 @@
                                 <span class="stock-code">XRP</span>
                             </td>
                             <td><span class="stock-industry">-</span></td>
-                            <td class="price">$1.043</td>
+                            <td class="price">$1.059</td>
                             <td>
-                                <span class="change-badge negative">
-                                    -2.19%
+                                <span class="change-badge positive">
+                                    +2.27%
                                 </span>
                             </td>
-                            <td>649.25</td>
+                            <td>658.89</td>
                             <td>#6</td>
                             <td class="up">-</td>
                             <td class="down">-</td>
@@ -1189,13 +1279,13 @@
                                 <span class="stock-code">LINK</span>
                             </td>
                             <td><span class="stock-industry">-</span></td>
-                            <td class="price">$7.2</td>
+                            <td class="price">$7.4</td>
                             <td>
-                                <span class="change-badge negative">
-                                    -3.42%
+                                <span class="change-badge positive">
+                                    +3.57%
                                 </span>
                             </td>
-                            <td>53.86</td>
+                            <td>55.38</td>
                             <td>#21</td>
                             <td class="up">-</td>
                             <td class="down">-</td>
@@ -1280,67 +1370,78 @@
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.marketwatch.com/story/i-want-to-pay-off-20-000-of-credit-card-debt-in-one-year-should-i-hire-someone-to-negotiate-my-bill-fd0e42f7?mod=mw_rss_topstories" target="_blank" rel="noopener">
-                        <div class="news-title">I want to pay off $20,000 of credit-card debt in one year. Should I hire someone to negotiate my bill?</div>
-                        <div class="news-summary">“I used to have $60,000 and I’ve been able to knock it down.”</div>
+                    <a href="https://www.marketwatch.com/story/trump-discloses-expanding-financial-empire-including-apple-stock-celebration-coins-and-crypto-8786ef64?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">Trump just disclosed his finances for last year. He made over $2 billion on crypto, stocks, licensing and other deals.</div>
+                        <div class="news-summary">The president’s new annual filing is nearly four times as lengthy as last year’s disclosure and shows crypto income in the hundreds of millions</div>
                         <div class="news-meta">
                             <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Tue, 30 Jun 2026 18:22:00 GMT</span>
+                            <span>Wed, 01 Jul 2026 16:43:00 GMT</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.marketwatch.com/story/amazon-is-laying-out-1-billion-to-follow-palantirs-ai-playbook-7d9ff6e4?mod=mw_rss_topstories" target="_blank" rel="noopener">
-                        <div class="news-title">Amazon is laying out $1 billion to follow Palantir’s AI playbook</div>
-                        <div class="news-summary">Packages aren’t the only thing Amazon.com is delivering: The company is now sending engineers directly to clients in order to bolster artificial-intelligence adoption.</div>
+                    <a href="https://www.marketwatch.com/story/u-s-manufacturers-keep-on-trucking-despite-a-road-littered-with-obstacles-bc09d82f?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">U.S. manufacturers keep on trucking despite a road littered with obstacles</div>
+                        <div class="news-summary">High U.S. tariffs, war with Iran, a spike in oil prices, rising inflation — no matter. American manufacturers grew in June for the sixth month in a row to mark the longest streak in four years.</div>
                         <div class="news-meta">
                             <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Tue, 30 Jun 2026 17:41:00 GMT</span>
+                            <span>Wed, 01 Jul 2026 16:22:00 GMT</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.marketwatch.com/story/your-aging-parent-has-a-new-romance-heres-how-to-protect-your-inheritance-without-looking-greedy-cbc219ab?mod=mw_rss_topstories" target="_blank" rel="noopener">
-                        <div class="news-title">Your aging parent has a new romance. Here’s how to protect your inheritance — without looking greedy.</div>
-                        <div class="news-summary">Before your single mom or dad remarries, talk with them about estate-planning issues.</div>
+                    <a href="https://www.marketwatch.com/story/nvidia-is-betting-on-a-trillion-dollar-robotics-boom-here-is-the-hidden-way-to-trade-it-c5b10c4e?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">Nvidia is betting on a trillion-dollar robotics boom. Here is the hidden way to trade it.</div>
+                        <div class="news-summary">CEO Jensen Huang has called humanoid robots a “multitrillion-dollar economic opportunity.”</div>
                         <div class="news-meta">
                             <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Tue, 30 Jun 2026 17:32:00 GMT</span>
+                            <span>Wed, 01 Jul 2026 16:13:00 GMT</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.marketwatch.com/story/she-wants-him-gone-my-friend-took-in-a-homeless-man-as-a-caretaker-after-10-years-how-can-she-evict-him-01672de2?mod=mw_rss_topstories" target="_blank" rel="noopener">
-                        <div class="news-title">‘She wants him gone’: My friend took in a homeless man as a caretaker. After 10 years, how can she evict him?</div>
-                        <div class="news-summary">“He lived rent-free, helping her with health-related issues and other tasks.”</div>
+                    <a href="https://www.marketwatch.com/story/14-value-stocks-of-companies-primed-for-rapid-growth-through-2028-ea754ffa?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">14 value stocks of companies primed for rapid growth through 2028</div>
+                        <div class="news-summary">Value stocks tend to outperform growth stocks during periods of high inflation. These companies in the Russell 1000 Value Index have high revenue growth estimates for the next two years.</div>
                         <div class="news-meta">
                             <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Tue, 30 Jun 2026 17:30:00 GMT</span>
+                            <span>Wed, 01 Jul 2026 16:10:00 GMT</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.marketwatch.com/story/your-fourth-of-july-hamburger-meat-was-likely-imported-and-youre-right-to-have-a-beef-with-that-c25d7c31?mod=mw_rss_topstories" target="_blank" rel="noopener">
-                        <div class="news-title">Record beef imports are flooding the U.S. — so why is your Fourth of July BBQ so expensive?</div>
-                        <div class="news-summary">Beef prices are sizzling and Washington’s recipe for high costs — import more meat — only grills your wallet.</div>
+                    <a href="https://www.marketwatch.com/story/millions-of-americans-can-get-medicare-to-cover-glp-1s-for-weight-loss-starting-this-week-heres-how-much-it-costs-805f86e1?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">Millions of Americans can get Medicare to cover GLP-1s for weight loss starting this week. Here’s how much it costs.</div>
+                        <div class="news-summary">Until this week, Medicare only covered GLP-1 drugs for conditions like Type 2 diabetes, sleep apnea, and stroke or heart-attack risk.</div>
                         <div class="news-meta">
                             <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Tue, 30 Jun 2026 17:07:00 GMT</span>
+                            <span>Wed, 01 Jul 2026 16:00:00 GMT</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.marketwatch.com/story/gold-is-on-the-verge-of-a-death-cross-that-could-surprisingly-foreshadow-gains-2605e99d?mod=mw_rss_topstories" target="_blank" rel="noopener">
-                        <div class="news-title">Gold is on the verge of a ‘death cross’ that could surprisingly foreshadow gains</div>
-                        <div class="news-summary">Here’s what 45 years of data on death crosses in gold can tell us about the path ahead.</div>
+                    <a href="https://www.marketwatch.com/story/trumps-energy-secretary-says-global-warming-is-no-big-deal-meanwhile-a-heat-emergency-is-striking-the-u-s-5f9674c3?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">Trump’s energy secretary says global warming is ‘no big deal.’ Meanwhile, a heat emergency is striking the U.S.</div>
+                        <div class="news-summary">Government scientists warn people to stay indoors this weekend as temperatures in many areas could reach triple digits</div>
                         <div class="news-meta">
                             <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Tue, 30 Jun 2026 17:03:00 GMT</span>
+                            <span>Wed, 01 Jul 2026 15:59:00 GMT</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.marketwatch.com/story/coreweave-nebius-shares-tumble-as-meta-stands-to-become-a-fresh-threat-in-the-cloud-a47c3616?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">CoreWeave, Nebius shares tumble as Meta stands to become a fresh threat in the cloud</div>
+                        <div class="news-summary">Meta’s reported interest in monetizing its AI infrastructure is leading investors to question the sustainability of neocloud business models.</div>
+                        <div class="news-meta">
+                            <span class="news-source">feeds.marketwatch.com</span>
+                            <span>Wed, 01 Jul 2026 15:55:00 GMT</span>
                         </div>
                     </a>
                 </div>
@@ -1351,150 +1452,139 @@
                         <div class="news-summary">“I’m torn between these two options.”</div>
                         <div class="news-meta">
                             <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Tue, 30 Jun 2026 17:00:00 GMT</span>
+                            <span>Wed, 01 Jul 2026 15:30:00 GMT</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.marketwatch.com/story/we-are-more-likely-to-be-living-in-poverty-social-security-is-a-lifeline-for-women-so-why-are-we-ignored-5d4d4eb7?mod=mw_rss_topstories" target="_blank" rel="noopener">
-                        <div class="news-title">‘We are more likely to be living in poverty’: Social Security is a lifeline for women, so why are we ignored?</div>
-                        <div class="news-summary">“We are more likely to live longer, to live alone and to be caregivers.”</div>
+                    <a href="https://www.marketwatch.com/story/opening-a-trump-account-for-your-children-here-is-the-risk-you-need-to-recognize-first-fe206bc0?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">Opening a ‘Trump account’ for your children? Here is the risk you need to recognize first.</div>
+                        <div class="news-summary">The new accounts ban bonds and international stocks, forcing parents to bet their children’s financial future entirely on U.S. equities.</div>
                         <div class="news-meta">
                             <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Tue, 30 Jun 2026 17:00:00 GMT</span>
+                            <span>Wed, 01 Jul 2026 15:29:00 GMT</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.marketwatch.com/story/sandisks-stock-could-follow-record-breaking-quarter-with-another-big-jump-analysts-say-433bbbef?mod=mw_rss_topstories" target="_blank" rel="noopener">
-                        <div class="news-title">Sandisk’s stock could follow record-breaking quarter with another big jump, analysts say</div>
-                        <div class="news-summary">As investors get more discerning in separating potential artificial-intelligence winners from losers, memory stocks have become a standout trade.</div>
+                    <a href="https://www.marketwatch.com/story/this-is-the-best-time-in-a-generation-to-buy-space-and-defense-stocks-analysts-say-df4a85a4?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">This is the best time ‘in a generation’ to buy space and defense stocks, analysts say</div>
+                        <div class="news-summary">Wedbush analysts are taking a bullish view of the  space sector, initiating coverage of SpaceX and other stocks.</div>
                         <div class="news-meta">
                             <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Tue, 30 Jun 2026 16:16:00 GMT</span>
+                            <span>Wed, 01 Jul 2026 15:21:00 GMT</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.marketwatch.com/story/she-is-retired-do-i-dip-into-my-401-k-to-pay-my-mothers-30-000-credit-card-debt-dc97569b?mod=mw_rss_topstories" target="_blank" rel="noopener">
-                        <div class="news-title">‘She is retired’: Do I dip into my 401(k) to pay my mother’s $30,000 credit-card debt?</div>
-                        <div class="news-summary">“I want her to live on her Social Security instead of using it to pay off her credit-card debt.”</div>
-                        <div class="news-meta">
-                            <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Tue, 30 Jun 2026 16:00:00 GMT</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="news-card">
-                    <a href="https://www.investing.com/news/filings/form-4-aura-minerals-inc-for-30-june-93CH-4768535" target="_blank" rel="noopener">
-                        <div class="news-title">Form 4 Aura Minerals Inc For: 30 June</div>
+                    <a href="https://www.investing.com/news/company-news/franklin-resources-stock-hits-52week-high-at-3449-93CH-4771058" target="_blank" rel="noopener">
+                        <div class="news-title">Franklin Resources stock hits 52-week high at $34.49</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-06-30 18:21:10</span>
+                            <span>2026-07-01 16:19:26</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.investing.com/news/filings/form-4-principal-financial-group-inc-for-30-june-93CH-4768534" target="_blank" rel="noopener">
-                        <div class="news-title">Form 4 Principal Financial Group Inc For: 30 June</div>
+                    <a href="https://www.investing.com/news/insider-trading-news/world-acceptance-director-charles-way-sells-187425-in-stock-93CH-4771057" target="_blank" rel="noopener">
+                        <div class="news-title">World acceptance director Charles Way sells $187,425 in stock</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-06-30 18:21:10</span>
+                            <span>2026-07-01 16:18:49</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.investing.com/news/filings/form-4-principal-financial-group-inc-for-30-june-93CH-4768533" target="_blank" rel="noopener">
-                        <div class="news-title">Form 4 Principal Financial Group Inc For: 30 June</div>
+                    <a href="https://www.investing.com/news/economy-news/european-shares-pause-after-rally-doubts-linger-over-iran-peace-deal-4769546" target="_blank" rel="noopener">
+                        <div class="news-title">European shares pause after rally as concerns over Fed rates, Iran peace deal linger</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-06-30 18:21:09</span>
+                            <span>2026-07-01 16:18:47</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.investing.com/news/filings/form-4-principal-financial-group-inc-for-30-june-93CH-4768532" target="_blank" rel="noopener">
-                        <div class="news-title">Form 4 Principal Financial Group Inc For: 30 June</div>
+                    <a href="https://www.investing.com/news/world-news/peru-inflation-unexpectedly-rises-on-food-costs-93CH-4771056" target="_blank" rel="noopener">
+                        <div class="news-title">Peru inflation unexpectedly rises on food costs</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-06-30 18:21:09</span>
+                            <span>2026-07-01 16:18:35</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.investing.com/news/economy-news/colombias-central-bank-increases-rates-by-75-basis-points-93CH-4768531" target="_blank" rel="noopener">
-                        <div class="news-title">Colombia’s central bank increases rates by 75 basis points</div>
+                    <a href="https://www.investing.com/news/stock-market-news/uberbacked-limes-shares-rise-in-nasdaq-debut-4771030" target="_blank" rel="noopener">
+                        <div class="news-title">Uber-backed Lime rides IPO wave to $1.73 billion valuation in Nasdaq debut</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-06-30 18:20:59</span>
+                            <span>2026-07-01 16:18:32</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.investing.com/news/company-news/francisco-partners-completes-blackline-safety-acquisition-93CH-4768530" target="_blank" rel="noopener">
-                        <div class="news-title">Francisco Partners completes Blackline Safety acquisition</div>
+                    <a href="https://www.investing.com/news/company-news/matson-stock-hits-alltime-high-at-20333-usd-93CH-4771055" target="_blank" rel="noopener">
+                        <div class="news-title">Matson stock hits all-time high at 203.33 USD</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-06-30 18:20:50</span>
+                            <span>2026-07-01 16:17:26</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.investing.com/news/general-news/fda-staff-question-peptides-backed-by-kennedy-ahead-of-advisory-panel-review-4768529" target="_blank" rel="noopener">
-                        <div class="news-title">FDA staff question peptides backed by Kennedy ahead of advisory panel review</div>
+                    <a href="https://www.investing.com/news/company-news/tenon-medical-closes-42m-public-offering-of-securities-93CH-4771054" target="_blank" rel="noopener">
+                        <div class="news-title">Tenon Medical closes $4.2m public offering of securities</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-06-30 18:19:38</span>
+                            <span>2026-07-01 16:17:03</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.investing.com/news/economy-news/us-job-openings-tick-up-in-may-hiring-still-soft-4768219" target="_blank" rel="noopener">
-                        <div class="news-title">US job openings rise to two-year high, but hiring still struggling</div>
+                    <a href="https://www.investing.com/news/stock-market-news/meta-platforms-stock-surges-8-on-cloud-business-plans-4770483" target="_blank" rel="noopener">
+                        <div class="news-title">Meta Platforms stock surges 10% on cloud business plans</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-06-30 18:18:58</span>
+                            <span>2026-07-01 16:15:55</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.investing.com/news/transcripts/lyell-at-hc-wainwright-cell-therapy-conference-data-and-catalysts-93CH-4768528" target="_blank" rel="noopener">
-                        <div class="news-title">Lyell at H.C. Wainwright cell therapy conference: data and catalysts</div>
+                    <a href="https://www.investing.com/news/filings/form-4-bank-first-national-corp-for-1-july-93CH-4771053" target="_blank" rel="noopener">
+                        <div class="news-title">Form 4 Bank First National Corp For: 1 July</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-06-30 18:18:33</span>
+                            <span>2026-07-01 16:15:06</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.investing.com/news/stock-market-news/nike-options-trading-surges-to-199431-contracts-93CH-4768527" target="_blank" rel="noopener">
-                        <div class="news-title">Nike options trading surges to 199,431 contracts</div>
+                    <a href="https://www.investing.com/news/transcripts/earnings-call-transcript-cake-box-lifts-fy-2026-profit-on-record-sales-93CH-4771052" target="_blank" rel="noopener">
+                        <div class="news-title">Earnings call transcript: Cake Box lifts FY 2026 profit on record sales</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-06-30 18:18:28</span>
+                            <span>2026-07-01 16:14:09</span>
                         </div>
                     </a>
                 </div>
