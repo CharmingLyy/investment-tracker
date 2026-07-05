@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-07-05 15:49:39",
+  "update_time": "2026-07-05 16:41:27",
   "stocks": {
     "a_stocks": [
       {
@@ -17,7 +17,7 @@
         "volume": 321530078,
         "turnover": 153.71,
         "market_cap": null,
-        "pe": null,
+        "pe": 50.44,
         "cash_flow": 50.92,
         "macd": -0.6911,
         "macd_signal": -1.1189,
@@ -28,6 +28,35 @@
           "MA10": 44.1,
           "MA20": 45.02,
           "MA60": 46.93
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
+        "price": 6.96,
+        "open": 6.9,
+        "high": 7.0,
+        "low": 6.87,
+        "change_pct": 1.16,
+        "volume": 93465819,
+        "turnover": 6.5,
+        "market_cap": null,
+        "pe": 83.56,
+        "cash_flow": 105.67,
+        "macd": -0.2972,
+        "macd_signal": -0.3007,
+        "macd_histogram": 0.0069,
+        "rsi": 36.8,
+        "ma": {
+          "MA5": 6.99,
+          "MA10": 7.06,
+          "MA20": 7.21,
+          "MA60": 7.94
         },
         "main_net_flow": null
       }
@@ -275,14 +304,14 @@
         "name": "Bitcoin",
         "symbol": "BTC",
         "industry": "Smart Contract Platform",
-        "price": 62663,
+        "price": 62582,
         "open": null,
         "high": 63383,
         "low": 62462,
-        "change_pct": -0.42,
-        "volume": 17256336264,
+        "change_pct": -0.45,
+        "volume": 17181543900,
         "turnover": null,
-        "market_cap": 12565.41,
+        "market_cap": 12548.43,
         "market_cap_rank": 1,
         "pe": null,
         "funding_rate": null,
@@ -290,24 +319,24 @@
         "etf_inflow": null,
         "etf_outflow": null,
         "etf_net_flow": null,
-        "macd": -1288.8901,
-        "macd_signal": -1881.0155,
-        "macd_histogram": 1184.2507,
-        "rsi": 48.29,
+        "macd": -1295.3586,
+        "macd_signal": -1882.3091,
+        "macd_histogram": 1173.9012,
+        "rsi": 48.0,
         "ma": {
-          "MA5": 61952.41,
-          "MA10": 60800.97,
-          "MA20": 61957.4,
-          "MA60": 68992.59
+          "MA5": 61936.2,
+          "MA10": 60792.86,
+          "MA20": 61953.34,
+          "MA60": 68991.23
         },
         "main_net_flow": null,
         "onchain": {
           "circulating_supply": 20052484.0,
           "total_supply": 20052484.0,
           "circ_ratio": 100.0,
-          "price_change_7d": 4.51027,
-          "price_change_30d": 3.08567,
-          "ath_pct": -50.3,
+          "price_change_7d": 4.65191,
+          "price_change_30d": 3.49319,
+          "ath_pct": -50.36,
           "ath_date": null,
           "categories": [
             "Smart Contract Platform",
@@ -328,14 +357,14 @@
         "name": "Ethereum",
         "symbol": "ETH",
         "industry": "Smart Contract Platform",
-        "price": 1770.85,
+        "price": 1770.07,
         "open": null,
         "high": 1801.59,
         "low": 1751.18,
-        "change_pct": -1.22,
-        "volume": 11039317405,
+        "change_pct": -0.99,
+        "volume": 11381247354,
         "turnover": null,
-        "market_cap": 2136.93,
+        "market_cap": 2136.42,
         "market_cap_rank": 2,
         "pe": null,
         "funding_rate": null,
@@ -343,24 +372,24 @@
         "etf_inflow": null,
         "etf_outflow": null,
         "etf_net_flow": null,
-        "macd": -22.2247,
-        "macd_signal": -53.0542,
-        "macd_histogram": 61.6591,
-        "rsi": 56.2,
+        "macd": -22.2867,
+        "macd_signal": -53.0667,
+        "macd_histogram": 61.5598,
+        "rsi": 56.11,
         "ma": {
-          "MA5": 1722.54,
-          "MA10": 1651.17,
-          "MA20": 1674.22,
-          "MA60": 1887.46
+          "MA5": 1722.39,
+          "MA10": 1651.1,
+          "MA20": 1674.18,
+          "MA60": 1887.44
         },
         "main_net_flow": null,
         "onchain": {
           "circulating_supply": 120683221.1871914,
           "total_supply": 120683221.1871914,
           "circ_ratio": 100.0,
-          "price_change_7d": 12.08706,
-          "price_change_30d": 10.72964,
-          "ath_pct": -64.2,
+          "price_change_7d": 12.03653,
+          "price_change_30d": 11.8312,
+          "ath_pct": -64.21,
           "ath_date": null,
           "categories": [
             "Smart Contract Platform",
@@ -467,6 +496,22 @@
       "published": "Sat, 04 Jul 2026 18:19:00 GMT"
     },
     {
+      "id": "1436ab2afb",
+      "title": "Uber pauses Europe food delivery expansion as it pursues Delivery Hero deal, FT reports",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/uber-pauses-europe-food-delivery-expansion-as-it-pursues-delivery-hero-deal-ft-reports-4775399",
+      "source": "www.investing.com",
+      "published": "2026-07-05 15:54:25"
+    },
+    {
+      "id": "dbdb1e8f05",
+      "title": "Three sons of Iran’s slain leader Khamenei appear at funeral, not his successor",
+      "summary": "",
+      "link": "https://www.investing.com/news/world-news/three-sons-of-irans-slain-leader-khamenei-appear-at-funeral-not-his-successor-4775406",
+      "source": "www.investing.com",
+      "published": "2026-07-05 15:42:30"
+    },
+    {
       "id": "11438eabb2",
       "title": "OPEC+ adds 188,000 bpd to August quota amid cooling oil market",
       "summary": "",
@@ -507,14 +552,6 @@
       "published": "2026-07-05 12:39:29"
     },
     {
-      "id": "dbdb1e8f05",
-      "title": "Three sons of Iran’s slain leader Khamenei appear at funeral, not his successor",
-      "summary": "",
-      "link": "https://www.investing.com/news/world-news/three-sons-of-irans-slain-leader-khamenei-appear-at-funeral-not-his-successor-4775406",
-      "source": "www.investing.com",
-      "published": "2026-07-05 12:00:32"
-    },
-    {
       "id": "69d84bd12f",
       "title": "Trump gives campaign-style July 4 speech on National Mall for US 250th anniversary",
       "summary": "",
@@ -537,14 +574,6 @@
       "link": "https://www.investing.com/news/investment-ideas/ihs-holding-validates-fair-value-analysis-with-84-return-in-29-months-93CH-4775425",
       "source": "www.investing.com",
       "published": "2026-07-05 11:10:21"
-    },
-    {
-      "id": "6935dc4227",
-      "title": "Standard Lithium falls 48% after InvestingPro overvaluation warning",
-      "summary": "",
-      "link": "https://www.investing.com/news/investment-ideas/standard-lithium-falls-48-after-investingpro-overvaluation-warning-93CH-4775424",
-      "source": "www.investing.com",
-      "published": "2026-07-05 11:02:18"
     }
   ]
 }
