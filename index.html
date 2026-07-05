@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📊 投资观察面板 | 2026-07-05 15:27 UTC+8 (北京时间)</title>
+    <title>📊 投资观察面板 | 2026-07-05 15:33 UTC+8 (北京时间)</title>
     <style>
         /* ===== 全局样式 ===== */
         :root {
@@ -421,7 +421,7 @@
                     <span>港股 <span class="status-dot closed"></span></span>
                     <span>美股 <span class="status-dot closed"></span></span>
                 </div>
-                <span class="update-badge">🕐 更新: 2026-07-05 15:27 UTC+8 (北京时间)</span>
+                <span class="update-badge">🕐 更新: 2026-07-05 15:33 UTC+8 (北京时间)</span>
             </div>
         </div>
     </header>
@@ -887,13 +887,13 @@
                                 <span class="stock-code">BTC</span>
                             </td>
                             <td><span class="stock-industry">Smart Contract Platform</span></td>
-                            <td class="price">$62717</td>
+                            <td class="price">$62754</td>
                             <td>
                                 <span class="change-badge negative">
-                                    -0.19%
+                                    -0.13%
                                 </span>
                             </td>
-                            <td>12575.66</td>
+                            <td>12580.87</td>
                             <td>#1</td>
                             <td class="">
                                 -
@@ -902,10 +902,10 @@
                                 -
                             </td>
                             <td class="indicator bearish">
-                                -1284.5746
+                                -1281.5961
                             </td>
                             <td class="indicator bearish">
-                                48.49
+                                48.63
                             </td>
                             <td class="up">
                                 +4.6%
@@ -914,7 +914,7 @@
                                 +3.2%
                             </td>
                             <td class="down">
-                                -50.3%
+                                -50.2%
                             </td>
                         </tr>
                         
@@ -923,14 +923,14 @@
                                 <span class="stock-name">Ethereum</span>
                                 <span class="stock-code">ETH</span>
                             </td>
-                            <td><span class="stock-industry">Smart Contract Platform</span></td>
-                            <td class="price">$1772.61</td>
+                            <td><span class="stock-industry">-</span></td>
+                            <td class="price">$1775.1</td>
                             <td>
                                 <span class="change-badge negative">
-                                    -1.11%
+                                    -0.97%
                                 </span>
                             </td>
-                            <td>2139.12</td>
+                            <td>2141.3</td>
                             <td>#2</td>
                             <td class="">
                                 -
@@ -938,20 +938,20 @@
                             <td class="">
                                 -
                             </td>
-                            <td class="indicator bearish">
-                                -22.0845
+                            <td class="indicator neutral">
+                                -
                             </td>
-                            <td class="indicator bullish">
-                                56.4
+                            <td class="indicator neutral">
+                                -
                             </td>
-                            <td class="up">
-                                +12.2%
+                            <td class="">
+                                -%
                             </td>
-                            <td class="up">
-                                +10.8%
+                            <td class="">
+                                -%
                             </td>
-                            <td class="down">
-                                -64.2%
+                            <td class="">
+                                -%
                             </td>
                         </tr>
                         
@@ -966,6 +966,8 @@
                 <span style="font-size: 0.8rem; color: var(--text-secondary); margin-left: 8px;">链上指标</span>
                 <div style="display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 8px; font-size: 0.78rem; color: var(--text-secondary);">
                     
+                    
+                    <span data-oi="BTCUSDT">📊 持仓量(OI): -</span>
                     
                     
                     
@@ -989,6 +991,7 @@
                 <div style="display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 8px; font-size: 0.78rem; color: var(--text-secondary);">
                     
                     
+                    <span data-oi="ETHUSDT">📊 持仓量(OI): -</span>
                     
                     
                     
@@ -997,10 +1000,7 @@
                     
                     
                     
-                    <span>🔄 流通占比: 100.0%</span>
                     
-                    
-                    <span>🏷️ 赛道: Smart Contract Platform, Layer 1 (L1), Ethereum Ecosystem</span>
                     
                 </div>
             </div>
@@ -1269,7 +1269,7 @@
 
         // ===== 状态 =====
         var autoRefreshEnabled = localStorage.getItem('auto-refresh') !== 'false';
-        var pageUpdateTime = '2026-07-05 15:27 UTC+8 (北京时间)';  // 页面生成时间
+        var pageUpdateTime = '2026-07-05 15:33 UTC+8 (北京时间)';  // 页面生成时间
         var countdownSeconds = REFRESH_INTERVAL;
         var dataCheckTimer = null;
         var countdownTimer = null;
@@ -1281,45 +1281,39 @@
         var btnAutoRefresh = document.getElementById('btn-auto-refresh');
         var updateBadge = document.querySelector('.update-badge');
 
-        // ===== 实时加密货币价格 (Binance API) =====
+        // ===== 实时加密货币价格 + 资金费率 (Binance API) =====
         function fetchLiveCryptoPrices() {
-            // Binance API 公开免费，无需 key，国内也能访问
-            var symbols = [];
             var cryptoTbody = document.getElementById('crypto-table-body');
             if (!cryptoTbody) return;
 
-            // 从当前页面解析需要哪些币种
             var rows = cryptoTbody.querySelectorAll('tr');
-            var cryptoMap = {};
+            var cryptoSymbols = [];
+            var rowMap = {};
             rows.forEach(function(row) {
                 var symbolEl = row.querySelector('.stock-code');
-                var priceEl = row.querySelector('.price');
-                if (symbolEl && priceEl) {
+                if (symbolEl) {
                     var sym = symbolEl.textContent.trim();
-                    if (sym === 'BTC') cryptoMap['BTCUSDT'] = {el: priceEl, row: row};
-                    if (sym === 'ETH') cryptoMap['ETHUSDT'] = {el: priceEl, row: row};
+                    if (sym === 'BTC') { cryptoSymbols.push('BTCUSDT'); rowMap['BTCUSDT'] = row; }
+                    if (sym === 'ETH') { cryptoSymbols.push('ETHUSDT'); rowMap['ETHUSDT'] = row; }
                 }
             });
+            if (cryptoSymbols.length === 0) return;
 
-            if (Object.keys(cryptoMap).length === 0) return;
-
-            // Binance 公开 ticker API
-            fetch('https://api.binance.com/api/v3/ticker/24hr?symbols=' + JSON.stringify(Object.keys(cryptoMap)))
-                .then(function(resp) {
-                    if (!resp.ok) throw new Error('HTTP ' + resp.status);
-                    return resp.json();
-                })
+            // 1. 获取现货价格和24h涨跌
+            fetch('https://api.binance.com/api/v3/ticker/24hr?symbols=' + JSON.stringify(cryptoSymbols))
+                .then(function(resp) { return resp.ok ? resp.json() : Promise.reject('spot fail'); })
                 .then(function(data) {
                     data.forEach(function(ticker) {
-                        var info = cryptoMap[ticker.symbol];
-                        if (!info) return;
+                        var row = rowMap[ticker.symbol];
+                        if (!row) return;
                         var price = parseFloat(ticker.lastPrice);
                         var changePct = parseFloat(ticker.priceChangePercent);
-                        // 更新价格
-                        info.el.textContent = '$' + (price >= 1 ? price.toFixed(2) : price.toFixed(4));
-                        info.el.style.color = 'var(--accent-green)';
-                        // 更新涨跌幅
-                        var changeEl = info.row.querySelector('.change-badge');
+                        var priceEl = row.querySelector('.price');
+                        if (priceEl) {
+                            priceEl.textContent = '$' + (price >= 1 ? price.toFixed(2) : price.toFixed(4));
+                            priceEl.style.color = 'var(--accent-green)';
+                        }
+                        var changeEl = row.querySelector('.change-badge');
                         if (changeEl) {
                             var cls = changePct >= 0 ? 'positive' : 'negative';
                             var sign = changePct >= 0 ? '+' : '';
@@ -1327,17 +1321,47 @@
                             changeEl.className = 'change-badge ' + cls;
                         }
                     });
-                    if (updateBadge) {
-                        updateBadge.textContent = '🟢 实时价格已更新 | 更新: ' + pageUpdateTime;
-                        updateBadge.style.borderColor = 'var(--accent-green)';
-                        setTimeout(function() {
-                            if (updateBadge) updateBadge.style.borderColor = 'var(--border)';
-                        }, 3000);
-                    }
-                })
-                .catch(function(err) {
-                    console.log('[live-crypto] Binance API 获取失败: ' + err.message);
-                });
+                }).catch(function(){});
+
+            // 2. 获取资金费率和OI（币安永续合约API）
+            cryptoSymbols.forEach(function(sym) {
+                fetch('https://fapi.binance.com/fapi/v1/premiumIndex?symbol=' + sym)
+                    .then(function(resp) { return resp.ok ? resp.json() : Promise.reject(); })
+                    .then(function(data) {
+                        var rate = parseFloat(data.lastFundingRate) * 100;
+                        var row = rowMap[sym];
+                        if (!row) return;
+                        // 更新资金费率列（第7列，0-indexed = 6）
+                        var cells = row.querySelectorAll('td');
+                        if (cells.length >= 7) {
+                            var frCell = cells[6]; // 资金费率
+                            var frCls = rate > 0 ? 'up' : (rate < 0 ? 'down' : '');
+                            frCell.textContent = rate.toFixed(4) + '%';
+                            frCell.className = frCls;
+                        }
+                    }).catch(function(){});
+
+                // 获取OI
+                fetch('https://fapi.binance.com/fapi/v1/openInterest?symbol=' + sym)
+                    .then(function(resp) { return resp.ok ? resp.json() : Promise.reject(); })
+                    .then(function(data) {
+                        var oi = parseFloat(data.openInterest);
+                        var row = rowMap[sym];
+                        if (!row) return;
+                        // 更新链上数据区域的OI
+                        var onchainContainer = document.getElementById('crypto-onchain-info');
+                        if (onchainContainer) {
+                            var oiSpan = onchainContainer.querySelector('[data-oi="' + sym + '"]');
+                            if (oiSpan) oiSpan.textContent = '📊 持仓量(OI): ' + oi.toFixed(2);
+                        }
+                    }).catch(function(){});
+            });
+
+            if (updateBadge) {
+                updateBadge.textContent = '🟢 实时 | 更新: ' + pageUpdateTime;
+                updateBadge.style.borderColor = 'var(--accent-green)';
+                setTimeout(function() { if (updateBadge) updateBadge.style.borderColor = 'var(--border)'; }, 3000);
+            }
         }
 
         function startLiveCrypto() {
@@ -1642,7 +1666,8 @@
                     var frCls = s.funding_rate > 0 ? 'up' : (s.funding_rate < 0 ? 'down' : '');
                     html += '<span>💰 资金费率: <span class="' + frCls + '">' + s.funding_rate.toFixed(4) + '%</span></span>';
                 }
-                if (s.open_interest != null) html += '<span>📊 持仓量(OI): ' + s.open_interest + '</span>';
+                if (s.open_interest != null) html += '<span data-oi="' + escHtml(s.symbol) + 'USDT">📊 持仓量(OI): ' + s.open_interest + '</span>';
+                else html += '<span data-oi="' + escHtml(s.symbol) + 'USDT">📊 持仓量(OI): -</span>';
                 if (s.etf_net_flow != null) {
                     var etfCls = s.etf_net_flow > 0 ? 'up' : (s.etf_net_flow < 0 ? 'down' : '');
                     var etfSign = s.etf_net_flow > 0 ? '+' : '';
