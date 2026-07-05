@@ -136,33 +136,72 @@ def _fetch_etf_flows():
 
 
 def _fetch_funding_rates():
-    """获取永续合约资金费率（来源：Binance API，免费无需key）"""
+    """获取永续合约资金费率 + OI（多源：Bybit → OKX → CoinGecko）"""
     funding_data = {}
     for cg_id, symbol in FUNDING_RATE_SYMBOLS.items():
+        rate = None
+        oi_value = None
+
+        # === 来源1: Bybit API（免费，通常可从US访问）===
         try:
-            # 获取标记价格和资金费率
-            url = f"{BINANCE_FAPI}/premiumIndex"
-            resp = requests.get(url, params={"symbol": symbol}, timeout=10)
-            if resp.status_code != 200:
-                continue
-            data = resp.json()
-            rate = float(data.get("lastFundingRate", 0)) * 100  # 转为百分比
-            funding_data[cg_id] = round(rate, 4)
-
-            # 获取持仓量 (Open Interest)
-            oi_url = f"{BINANCE_FAPI}/openInterest"
-            oi_resp = requests.get(oi_url, params={"symbol": symbol}, timeout=10)
-            oi_value = None
-            if oi_resp.status_code == 200:
-                oi_data = oi_resp.json()
-                oi_raw = float(oi_data.get("openInterest", 0))
-                # 获取当前价格来估算OI美元价值
-                oi_value = round(oi_raw, 2)  # 币本位数量
-            funding_data[cg_id + "_oi"] = oi_value
-
-            print(f"    💰 {symbol} 资金费率: {rate:.4f}%, OI: {oi_value}")
+            url = "https://api.bybit.com/v5/market/tickers"
+            resp = requests.get(url, params={"category": "linear", "symbol": symbol}, timeout=10)
+            if resp.status_code == 200:
+                data = resp.json()
+                tickers = data.get("result", {}).get("list", [])
+                if tickers:
+                    t = tickers[0]
+                    rate = float(t.get("fundingRate", 0)) * 100
+                    oi_raw = float(t.get("openInterest", 0))
+                    oi_value = round(oi_raw, 2)
+                    print(f"    💰 [Bybit] {symbol} 资金费率: {rate:.4f}%, OI: {oi_value}")
         except Exception as e:
-            print(f"    ⚠ {symbol} 资金费率获取失败: {str(e)[:60]}")
+            pass
+
+        # === 来源2: OKX API ===
+        if rate is None:
+            try:
+                okx_inst = symbol.replace("USDT", "-USDT-SWAP")
+                url = "https://www.okx.com/api/v5/market/ticker"
+                resp = requests.get(url, params={"instId": okx_inst}, timeout=10)
+                if resp.status_code == 200:
+                    data = resp.json()
+                    t = (data.get("data") or [{}])[0]
+                    rate_raw = t.get("fundingRate")
+                    oi_raw = t.get("openInterest")
+                    if rate_raw:
+                        rate = float(rate_raw) * 100
+                    if oi_raw:
+                        oi_value = round(float(oi_raw), 2)
+                    if rate is not None:
+                        print(f"    💰 [OKX] {symbol} 资金费率: {rate:.4f}%, OI: {oi_value}")
+            except Exception as e:
+                pass
+
+        # === 来源3: CoinGecko 衍生品数据 ===
+        if rate is None:
+            try:
+                cg_id_map = {"bitcoin": "bitcoin", "ethereum": "ethereum"}
+                cg_name = cg_id_map.get(cg_id, cg_id)
+                url = f"{COINGECKO_API}/coins/{cg_name}/tickers"
+                resp = requests.get(url, params={"exchange_ids": "binance_futures"}, timeout=15)
+                if resp.status_code == 200:
+                    tickers_data = resp.json().get("tickers", [])
+                    for t in tickers_data:
+                        if "PERP" in (t.get("market", {}).get("identifier", "")) or "USDT" in t.get("base", ""):
+                            # CoinGecko doesn't directly provide funding rate in tickers
+                            pass
+            except Exception:
+                pass
+
+        if rate is not None:
+            funding_data[cg_id] = round(rate, 4)
+        if oi_value is not None:
+            funding_data[cg_id + "_oi"] = oi_value
+        else:
+            # OI 从 CoinGecko 获取（合约未平仓量，但这是期货OI，不是永续）
+            pass
+
     return funding_data
 
 

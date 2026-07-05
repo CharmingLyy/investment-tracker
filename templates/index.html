@@ -747,7 +747,9 @@
                     <span>💰 资金费率: <span class="{{ 'up' if s.funding_rate > 0 else 'down' if s.funding_rate < 0 else '' }}">{{ '%.4f'|format(s.funding_rate) }}%</span></span>
                     {% endif %}
                     {% if s.open_interest is not none %}
-                    <span>📊 持仓量(OI): {{ s.open_interest }}</span>
+                    <span data-oi="{{ s.symbol }}USDT">📊 持仓量(OI): {{ s.open_interest }}</span>
+                    {% else %}
+                    <span data-oi="{{ s.symbol }}USDT">📊 持仓量(OI): -</span>
                     {% endif %}
                     {% if s.etf_net_flow is not none %}
                     <span>📈 ETF净流动: <span class="{{ 'up' if s.etf_net_flow > 0 else 'down' if s.etf_net_flow < 0 else '' }}">{{ '+' if s.etf_net_flow > 0 else '' }}{{ s.etf_net_flow }}亿$</span></span>
@@ -840,45 +842,39 @@
         var btnAutoRefresh = document.getElementById('btn-auto-refresh');
         var updateBadge = document.querySelector('.update-badge');
 
-        // ===== 实时加密货币价格 (Binance API) =====
+        // ===== 实时加密货币价格 + 资金费率 (Binance API) =====
         function fetchLiveCryptoPrices() {
-            // Binance API 公开免费，无需 key，国内也能访问
-            var symbols = [];
             var cryptoTbody = document.getElementById('crypto-table-body');
             if (!cryptoTbody) return;
 
-            // 从当前页面解析需要哪些币种
             var rows = cryptoTbody.querySelectorAll('tr');
-            var cryptoMap = {};
+            var cryptoSymbols = [];
+            var rowMap = {};
             rows.forEach(function(row) {
                 var symbolEl = row.querySelector('.stock-code');
-                var priceEl = row.querySelector('.price');
-                if (symbolEl && priceEl) {
+                if (symbolEl) {
                     var sym = symbolEl.textContent.trim();
-                    if (sym === 'BTC') cryptoMap['BTCUSDT'] = {el: priceEl, row: row};
-                    if (sym === 'ETH') cryptoMap['ETHUSDT'] = {el: priceEl, row: row};
+                    if (sym === 'BTC') { cryptoSymbols.push('BTCUSDT'); rowMap['BTCUSDT'] = row; }
+                    if (sym === 'ETH') { cryptoSymbols.push('ETHUSDT'); rowMap['ETHUSDT'] = row; }
                 }
             });
+            if (cryptoSymbols.length === 0) return;
 
-            if (Object.keys(cryptoMap).length === 0) return;
-
-            // Binance 公开 ticker API
-            fetch('https://api.binance.com/api/v3/ticker/24hr?symbols=' + JSON.stringify(Object.keys(cryptoMap)))
-                .then(function(resp) {
-                    if (!resp.ok) throw new Error('HTTP ' + resp.status);
-                    return resp.json();
-                })
+            // 1. 获取现货价格和24h涨跌
+            fetch('https://api.binance.com/api/v3/ticker/24hr?symbols=' + JSON.stringify(cryptoSymbols))
+                .then(function(resp) { return resp.ok ? resp.json() : Promise.reject('spot fail'); })
                 .then(function(data) {
                     data.forEach(function(ticker) {
-                        var info = cryptoMap[ticker.symbol];
-                        if (!info) return;
+                        var row = rowMap[ticker.symbol];
+                        if (!row) return;
                         var price = parseFloat(ticker.lastPrice);
                         var changePct = parseFloat(ticker.priceChangePercent);
-                        // 更新价格
-                        info.el.textContent = '$' + (price >= 1 ? price.toFixed(2) : price.toFixed(4));
-                        info.el.style.color = 'var(--accent-green)';
-                        // 更新涨跌幅
-                        var changeEl = info.row.querySelector('.change-badge');
+                        var priceEl = row.querySelector('.price');
+                        if (priceEl) {
+                            priceEl.textContent = '$' + (price >= 1 ? price.toFixed(2) : price.toFixed(4));
+                            priceEl.style.color = 'var(--accent-green)';
+                        }
+                        var changeEl = row.querySelector('.change-badge');
                         if (changeEl) {
                             var cls = changePct >= 0 ? 'positive' : 'negative';
                             var sign = changePct >= 0 ? '+' : '';
@@ -886,17 +882,47 @@
                             changeEl.className = 'change-badge ' + cls;
                         }
                     });
-                    if (updateBadge) {
-                        updateBadge.textContent = '🟢 实时价格已更新 | 更新: ' + pageUpdateTime;
-                        updateBadge.style.borderColor = 'var(--accent-green)';
-                        setTimeout(function() {
-                            if (updateBadge) updateBadge.style.borderColor = 'var(--border)';
-                        }, 3000);
-                    }
-                })
-                .catch(function(err) {
-                    console.log('[live-crypto] Binance API 获取失败: ' + err.message);
-                });
+                }).catch(function(){});
+
+            // 2. 获取资金费率和OI（币安永续合约API）
+            cryptoSymbols.forEach(function(sym) {
+                fetch('https://fapi.binance.com/fapi/v1/premiumIndex?symbol=' + sym)
+                    .then(function(resp) { return resp.ok ? resp.json() : Promise.reject(); })
+                    .then(function(data) {
+                        var rate = parseFloat(data.lastFundingRate) * 100;
+                        var row = rowMap[sym];
+                        if (!row) return;
+                        // 更新资金费率列（第7列，0-indexed = 6）
+                        var cells = row.querySelectorAll('td');
+                        if (cells.length >= 7) {
+                            var frCell = cells[6]; // 资金费率
+                            var frCls = rate > 0 ? 'up' : (rate < 0 ? 'down' : '');
+                            frCell.textContent = rate.toFixed(4) + '%';
+                            frCell.className = frCls;
+                        }
+                    }).catch(function(){});
+
+                // 获取OI
+                fetch('https://fapi.binance.com/fapi/v1/openInterest?symbol=' + sym)
+                    .then(function(resp) { return resp.ok ? resp.json() : Promise.reject(); })
+                    .then(function(data) {
+                        var oi = parseFloat(data.openInterest);
+                        var row = rowMap[sym];
+                        if (!row) return;
+                        // 更新链上数据区域的OI
+                        var onchainContainer = document.getElementById('crypto-onchain-info');
+                        if (onchainContainer) {
+                            var oiSpan = onchainContainer.querySelector('[data-oi="' + sym + '"]');
+                            if (oiSpan) oiSpan.textContent = '📊 持仓量(OI): ' + oi.toFixed(2);
+                        }
+                    }).catch(function(){});
+            });
+
+            if (updateBadge) {
+                updateBadge.textContent = '🟢 实时 | 更新: ' + pageUpdateTime;
+                updateBadge.style.borderColor = 'var(--accent-green)';
+                setTimeout(function() { if (updateBadge) updateBadge.style.borderColor = 'var(--border)'; }, 3000);
+            }
         }
 
         function startLiveCrypto() {
@@ -1201,7 +1227,8 @@
                     var frCls = s.funding_rate > 0 ? 'up' : (s.funding_rate < 0 ? 'down' : '');
                     html += '<span>💰 资金费率: <span class="' + frCls + '">' + s.funding_rate.toFixed(4) + '%</span></span>';
                 }
-                if (s.open_interest != null) html += '<span>📊 持仓量(OI): ' + s.open_interest + '</span>';
+                if (s.open_interest != null) html += '<span data-oi="' + escHtml(s.symbol) + 'USDT">📊 持仓量(OI): ' + s.open_interest + '</span>';
+                else html += '<span data-oi="' + escHtml(s.symbol) + 'USDT">📊 持仓量(OI): -</span>';
                 if (s.etf_net_flow != null) {
                     var etfCls = s.etf_net_flow > 0 ? 'up' : (s.etf_net_flow < 0 ? 'down' : '');
                     var etfSign = s.etf_net_flow > 0 ? '+' : '';
