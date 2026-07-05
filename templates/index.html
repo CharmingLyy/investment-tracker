@@ -685,9 +685,8 @@
                             <th>24h涨跌</th>
                             <th>市值(亿$)</th>
                             <th>排名</th>
-                            <th>ETF流入(亿$)</th>
-                            <th>ETF流出(亿$)</th>
-                            <th>ETF净流动</th>
+                            <th>资金费率</th>
+                            <th>ETF净流动(亿$)</th>
                             <th>MACD</th>
                             <th>RSI</th>
                             <th>7日涨跌</th>
@@ -711,8 +710,9 @@
                             </td>
                             <td>{{ s.market_cap or '-' }}</td>
                             <td>#{{ s.market_cap_rank or '-' }}</td>
-                            <td class="up">{{ s.etf_inflow if s.etf_inflow is not none else '-' }}</td>
-                            <td class="down">{{ s.etf_outflow if s.etf_outflow is not none else '-' }}</td>
+                            <td class="{{ 'up' if s.funding_rate and s.funding_rate > 0 else 'down' if s.funding_rate and s.funding_rate < 0 else '' }}">
+                                {{ ('%.4f'|format(s.funding_rate) + '%') if s.funding_rate is not none else '-' }}
+                            </td>
                             <td class="{{ 'up' if s.etf_net_flow and s.etf_net_flow > 0 else 'down' if s.etf_net_flow and s.etf_net_flow < 0 else '' }}">
                                 {{ ('+' if s.etf_net_flow and s.etf_net_flow > 0 else '') }}{{ s.etf_net_flow if s.etf_net_flow is not none else '-' }}
                             </td>
@@ -736,18 +736,48 @@
                     </tbody>
                 </table>
             </div>
-            <!-- 链上数据 + ETF 流动详情 -->
-            <div id="crypto-onchain-info">
+            <!-- 链上数据详情 -->
+            <div id="crypto-onchain-info" style="margin-top: 12px;">
             {% for s in crypto_list %}
-            {% if s.onchain.circ_ratio or s.onchain.github_commits_4w or s.etf_net_flow is not none %}
-            <div style="margin-top: 4px; font-size: 0.72rem; color: var(--text-muted); padding: 4px 14px;">
-                <strong>{{ s.symbol }}</strong>:
-                {% if s.etf_net_flow is not none %}ETF净流动: {{ '+' if s.etf_net_flow > 0 else '' }}{{ s.etf_net_flow }}亿$ · {% endif %}
-                {% if s.onchain.circ_ratio %}流通占比 {{ s.onchain.circ_ratio }}% · {% endif %}
-                {% if s.onchain.categories %}赛道: {{ s.onchain.categories[:2]|join(', ') }} · {% endif %}
-                {% if s.onchain.github_commits_4w %}GitHub提交(4w): {{ s.onchain.github_commits_4w }}{% endif %}
+            <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 12px 16px; margin-bottom: 8px;">
+                <strong style="color: var(--text-primary);">{{ s.symbol }}</strong>
+                <span style="font-size: 0.8rem; color: var(--text-secondary); margin-left: 8px;">链上指标</span>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 8px; font-size: 0.78rem; color: var(--text-secondary);">
+                    {% if s.funding_rate is not none %}
+                    <span>💰 资金费率: <span class="{{ 'up' if s.funding_rate > 0 else 'down' if s.funding_rate < 0 else '' }}">{{ '%.4f'|format(s.funding_rate) }}%</span></span>
+                    {% endif %}
+                    {% if s.open_interest is not none %}
+                    <span>📊 持仓量(OI): {{ s.open_interest }}</span>
+                    {% endif %}
+                    {% if s.etf_net_flow is not none %}
+                    <span>📈 ETF净流动: <span class="{{ 'up' if s.etf_net_flow > 0 else 'down' if s.etf_net_flow < 0 else '' }}">{{ '+' if s.etf_net_flow > 0 else '' }}{{ s.etf_net_flow }}亿$</span></span>
+                    {% endif %}
+                    {% if s.onchain.hash_rate %}
+                    <span>⛏️ 哈希率: {{ s.onchain.hash_rate }} TH/s</span>
+                    {% endif %}
+                    {% if s.onchain.active_addresses %}
+                    <span>👥 活跃地址: {{ '{:,}'.format(s.onchain.active_addresses) }}</span>
+                    {% endif %}
+                    {% if s.onchain.tx_fee_usd %}
+                    <span>💸 平均手续费: ${{ s.onchain.tx_fee_usd }}</span>
+                    {% endif %}
+                    {% if s.onchain.gas_gwei %}
+                    <span>⛽ Gas: {{ s.onchain.gas_gwei }} gwei</span>
+                    {% endif %}
+                    {% if s.onchain.staking_apr %}
+                    <span>🥩 质押APR: {{ s.onchain.staking_apr }}%</span>
+                    {% endif %}
+                    {% if s.onchain.validators %}
+                    <span>🔒 验证者: {{ '{:,}'.format(s.onchain.validators|int) }}</span>
+                    {% endif %}
+                    {% if s.onchain.circ_ratio %}
+                    <span>🔄 流通占比: {{ s.onchain.circ_ratio }}%</span>
+                    {% endif %}
+                    {% if s.onchain.categories %}
+                    <span>🏷️ 赛道: {{ s.onchain.categories[:3]|join(', ') }}</span>
+                    {% endif %}
+                </div>
             </div>
-            {% endif %}
             {% endfor %}
             </div>
         </section>
@@ -1130,6 +1160,7 @@
                 var rsiClass = s.rsi > 50 ? 'bullish' : (s.rsi < 50 ? 'bearish' : 'neutral');
                 var etfClass = s.etf_net_flow > 0 ? 'up' : (s.etf_net_flow < 0 ? 'down' : '');
                 var etfSign = s.etf_net_flow > 0 ? '+' : '';
+                var frClass = s.funding_rate > 0 ? 'up' : (s.funding_rate < 0 ? 'down' : '');
                 var onchain = s.onchain || {};
                 var d7class = onchain.price_change_7d > 0 ? 'up' : (onchain.price_change_7d < 0 ? 'down' : '');
                 var d7sign = onchain.price_change_7d > 0 ? '+' : '';
@@ -1143,8 +1174,7 @@
                 html += '<td><span class="change-badge ' + changeClass + '">' + changeSign + s.change_pct + '%</span></td>';
                 html += '<td>' + (s.market_cap != null ? s.market_cap : '-') + '</td>';
                 html += '<td>#' + (s.market_cap_rank != null ? s.market_cap_rank : '-') + '</td>';
-                html += '<td class="up">' + (s.etf_inflow != null ? s.etf_inflow : '-') + '</td>';
-                html += '<td class="down">' + (s.etf_outflow != null ? s.etf_outflow : '-') + '</td>';
+                html += '<td class="' + frClass + '">' + (s.funding_rate != null ? s.funding_rate.toFixed(4) + '%' : '-') + '</td>';
                 html += '<td class="' + etfClass + '">' + (s.etf_net_flow != null ? etfSign + s.etf_net_flow : '-') + '</td>';
                 html += '<td class="indicator ' + macdClass + '">' + (s.macd != null ? s.macd : '-') + '</td>';
                 html += '<td class="indicator ' + rsiClass + '">' + (s.rsi != null ? s.rsi : '-') + '</td>';
@@ -1157,21 +1187,35 @@
         }
 
         function updateCryptoOnchain(cryptoList) {
-            // 更新链上数据摘要行
             var container = document.getElementById('crypto-onchain-info');
             if (!container || !cryptoList) return;
             var html = '';
             for (var i = 0; i < cryptoList.length; i++) {
                 var s = cryptoList[i];
                 var onchain = s.onchain || {};
-                if (!onchain.circ_ratio && !onchain.github_commits_4w && s.etf_net_flow == null) continue;
-                html += '<div style="margin-top:4px;font-size:0.72rem;color:var(--text-muted);padding:4px 14px;">';
-                html += '<strong>' + escHtml(s.symbol) + '</strong>: ';
-                if (s.etf_net_flow != null) html += 'ETF净流动: ' + (s.etf_net_flow > 0 ? '+' : '') + s.etf_net_flow + '亿$ · ';
-                if (onchain.circ_ratio) html += '流通占比 ' + onchain.circ_ratio + '% · ';
-                if (onchain.categories && onchain.categories.length) html += '赛道: ' + onchain.categories.slice(0,2).join(', ') + ' · ';
-                if (onchain.github_commits_4w) html += 'GitHub提交(4w): ' + onchain.github_commits_4w;
-                html += '</div>';
+                html += '<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:12px 16px;margin-bottom:8px;">';
+                html += '<strong style="color:var(--text-primary);">' + escHtml(s.symbol) + '</strong>';
+                html += '<span style="font-size:0.8rem;color:var(--text-secondary);margin-left:8px;">链上指标</span>';
+                html += '<div style="display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:8px;font-size:0.78rem;color:var(--text-secondary);">';
+                if (s.funding_rate != null) {
+                    var frCls = s.funding_rate > 0 ? 'up' : (s.funding_rate < 0 ? 'down' : '');
+                    html += '<span>💰 资金费率: <span class="' + frCls + '">' + s.funding_rate.toFixed(4) + '%</span></span>';
+                }
+                if (s.open_interest != null) html += '<span>📊 持仓量(OI): ' + s.open_interest + '</span>';
+                if (s.etf_net_flow != null) {
+                    var etfCls = s.etf_net_flow > 0 ? 'up' : (s.etf_net_flow < 0 ? 'down' : '');
+                    var etfSign = s.etf_net_flow > 0 ? '+' : '';
+                    html += '<span>📈 ETF净流动: <span class="' + etfCls + '">' + etfSign + s.etf_net_flow + '亿$</span></span>';
+                }
+                if (onchain.hash_rate) html += '<span>⛏️ 哈希率: ' + onchain.hash_rate + ' TH/s</span>';
+                if (onchain.active_addresses) html += '<span>👥 活跃地址: ' + onchain.active_addresses.toLocaleString() + '</span>';
+                if (onchain.tx_fee_usd) html += '<span>💸 平均手续费: $' + onchain.tx_fee_usd + '</span>';
+                if (onchain.gas_gwei) html += '<span>⛽ Gas: ' + onchain.gas_gwei + ' gwei</span>';
+                if (onchain.staking_apr) html += '<span>🥩 质押APR: ' + onchain.staking_apr + '%</span>';
+                if (onchain.validators) html += '<span>🔒 验证者: ' + parseInt(onchain.validators).toLocaleString() + '</span>';
+                if (onchain.circ_ratio) html += '<span>🔄 流通占比: ' + onchain.circ_ratio + '%</span>';
+                if (onchain.categories && onchain.categories.length) html += '<span>🏷️ 赛道: ' + onchain.categories.slice(0,3).join(', ') + '</span>';
+                html += '</div></div>';
             }
             container.innerHTML = html;
         }
