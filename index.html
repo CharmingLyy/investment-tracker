@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📊 投资观察面板 | 2026-07-05 15:15 UTC+8 (北京时间)</title>
+    <title>📊 投资观察面板 | 2026-07-05 15:27 UTC+8 (北京时间)</title>
     <style>
         /* ===== 全局样式 ===== */
         :root {
@@ -421,7 +421,7 @@
                     <span>港股 <span class="status-dot closed"></span></span>
                     <span>美股 <span class="status-dot closed"></span></span>
                 </div>
-                <span class="update-badge">🕐 更新: 2026-07-05 15:15 UTC+8 (北京时间)</span>
+                <span class="update-badge">🕐 更新: 2026-07-05 15:27 UTC+8 (北京时间)</span>
             </div>
         </div>
     </header>
@@ -450,13 +450,13 @@
             </div>
             <div class="summary-card">
                 <div class="card-label">🟢 今日上涨</div>
-                <div class="card-value up">7</div>
-                <div class="card-sub">占比 58.3%</div>
+                <div class="card-value up">6</div>
+                <div class="card-sub">占比 50.0%</div>
             </div>
             <div class="summary-card">
                 <div class="card-label">🔴 今日下跌</div>
-                <div class="card-value down">5</div>
-                <div class="card-sub">占比 41.7%</div>
+                <div class="card-value down">6</div>
+                <div class="card-sub">占比 50.0%</div>
             </div>
             <div class="summary-card">
                 <div class="card-label">📰 市场新闻</div>
@@ -870,9 +870,8 @@
                             <th>24h涨跌</th>
                             <th>市值(亿$)</th>
                             <th>排名</th>
-                            <th>ETF流入(亿$)</th>
-                            <th>ETF流出(亿$)</th>
-                            <th>ETF净流动</th>
+                            <th>资金费率</th>
+                            <th>ETF净流动(亿$)</th>
                             <th>MACD</th>
                             <th>RSI</th>
                             <th>7日涨跌</th>
@@ -888,33 +887,34 @@
                                 <span class="stock-code">BTC</span>
                             </td>
                             <td><span class="stock-industry">Smart Contract Platform</span></td>
-                            <td class="price">$62780</td>
+                            <td class="price">$62717</td>
                             <td>
-                                <span class="change-badge positive">
-                                    +0.03%
+                                <span class="change-badge negative">
+                                    -0.19%
                                 </span>
                             </td>
-                            <td>12591.88</td>
+                            <td>12575.66</td>
                             <td>#1</td>
-                            <td class="up">-</td>
-                            <td class="down">-</td>
+                            <td class="">
+                                -
+                            </td>
                             <td class="">
                                 -
                             </td>
                             <td class="indicator bearish">
-                                -1279.0129
+                                -1284.5746
                             </td>
                             <td class="indicator bearish">
-                                48.75
+                                48.49
                             </td>
                             <td class="up">
-                                +4.7%
+                                +4.6%
                             </td>
                             <td class="up">
-                                +3.3%
+                                +3.2%
                             </td>
                             <td class="down">
-                                -50.2%
+                                -50.3%
                             </td>
                         </tr>
                         
@@ -924,30 +924,31 @@
                                 <span class="stock-code">ETH</span>
                             </td>
                             <td><span class="stock-industry">Smart Contract Platform</span></td>
-                            <td class="price">$1773.08</td>
+                            <td class="price">$1772.61</td>
                             <td>
                                 <span class="change-badge negative">
-                                    -0.64%
+                                    -1.11%
                                 </span>
                             </td>
-                            <td>2140.19</td>
+                            <td>2139.12</td>
                             <td>#2</td>
-                            <td class="up">-</td>
-                            <td class="down">-</td>
+                            <td class="">
+                                -
+                            </td>
                             <td class="">
                                 -
                             </td>
                             <td class="indicator bearish">
-                                -22.0497
+                                -22.0845
                             </td>
                             <td class="indicator bullish">
-                                56.45
+                                56.4
                             </td>
                             <td class="up">
                                 +12.2%
                             </td>
                             <td class="up">
-                                +10.9%
+                                +10.8%
                             </td>
                             <td class="down">
                                 -64.2%
@@ -957,28 +958,52 @@
                     </tbody>
                 </table>
             </div>
-            <!-- 链上数据 + ETF 流动详情 -->
-            <div id="crypto-onchain-info">
+            <!-- 链上数据详情 -->
+            <div id="crypto-onchain-info" style="margin-top: 12px;">
             
-            
-            <div style="margin-top: 4px; font-size: 0.72rem; color: var(--text-muted); padding: 4px 14px;">
-                <strong>BTC</strong>:
-                
-                流通占比 100.0% · 
-                赛道: Smart Contract Platform, Layer 1 (L1) · 
-                GitHub提交(4w): 108
+            <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 12px 16px; margin-bottom: 8px;">
+                <strong style="color: var(--text-primary);">BTC</strong>
+                <span style="font-size: 0.8rem; color: var(--text-secondary); margin-left: 8px;">链上指标</span>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 8px; font-size: 0.78rem; color: var(--text-secondary);">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <span>🔄 流通占比: 100.0%</span>
+                    
+                    
+                    <span>🏷️ 赛道: Smart Contract Platform, Layer 1 (L1), FTX Holdings</span>
+                    
+                </div>
             </div>
             
-            
-            
-            <div style="margin-top: 4px; font-size: 0.72rem; color: var(--text-muted); padding: 4px 14px;">
-                <strong>ETH</strong>:
-                
-                流通占比 100.0% · 
-                赛道: Smart Contract Platform, Layer 1 (L1) · 
-                GitHub提交(4w): 41
+            <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 12px 16px; margin-bottom: 8px;">
+                <strong style="color: var(--text-primary);">ETH</strong>
+                <span style="font-size: 0.8rem; color: var(--text-secondary); margin-left: 8px;">链上指标</span>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 8px; font-size: 0.78rem; color: var(--text-secondary);">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <span>🔄 流通占比: 100.0%</span>
+                    
+                    
+                    <span>🏷️ 赛道: Smart Contract Platform, Layer 1 (L1), Ethereum Ecosystem</span>
+                    
+                </div>
             </div>
-            
             
             </div>
         </section>
@@ -1244,7 +1269,7 @@
 
         // ===== 状态 =====
         var autoRefreshEnabled = localStorage.getItem('auto-refresh') !== 'false';
-        var pageUpdateTime = '2026-07-05 15:15 UTC+8 (北京时间)';  // 页面生成时间
+        var pageUpdateTime = '2026-07-05 15:27 UTC+8 (北京时间)';  // 页面生成时间
         var countdownSeconds = REFRESH_INTERVAL;
         var dataCheckTimer = null;
         var countdownTimer = null;
@@ -1576,6 +1601,7 @@
                 var rsiClass = s.rsi > 50 ? 'bullish' : (s.rsi < 50 ? 'bearish' : 'neutral');
                 var etfClass = s.etf_net_flow > 0 ? 'up' : (s.etf_net_flow < 0 ? 'down' : '');
                 var etfSign = s.etf_net_flow > 0 ? '+' : '';
+                var frClass = s.funding_rate > 0 ? 'up' : (s.funding_rate < 0 ? 'down' : '');
                 var onchain = s.onchain || {};
                 var d7class = onchain.price_change_7d > 0 ? 'up' : (onchain.price_change_7d < 0 ? 'down' : '');
                 var d7sign = onchain.price_change_7d > 0 ? '+' : '';
@@ -1589,8 +1615,7 @@
                 html += '<td><span class="change-badge ' + changeClass + '">' + changeSign + s.change_pct + '%</span></td>';
                 html += '<td>' + (s.market_cap != null ? s.market_cap : '-') + '</td>';
                 html += '<td>#' + (s.market_cap_rank != null ? s.market_cap_rank : '-') + '</td>';
-                html += '<td class="up">' + (s.etf_inflow != null ? s.etf_inflow : '-') + '</td>';
-                html += '<td class="down">' + (s.etf_outflow != null ? s.etf_outflow : '-') + '</td>';
+                html += '<td class="' + frClass + '">' + (s.funding_rate != null ? s.funding_rate.toFixed(4) + '%' : '-') + '</td>';
                 html += '<td class="' + etfClass + '">' + (s.etf_net_flow != null ? etfSign + s.etf_net_flow : '-') + '</td>';
                 html += '<td class="indicator ' + macdClass + '">' + (s.macd != null ? s.macd : '-') + '</td>';
                 html += '<td class="indicator ' + rsiClass + '">' + (s.rsi != null ? s.rsi : '-') + '</td>';
@@ -1603,21 +1628,35 @@
         }
 
         function updateCryptoOnchain(cryptoList) {
-            // 更新链上数据摘要行
             var container = document.getElementById('crypto-onchain-info');
             if (!container || !cryptoList) return;
             var html = '';
             for (var i = 0; i < cryptoList.length; i++) {
                 var s = cryptoList[i];
                 var onchain = s.onchain || {};
-                if (!onchain.circ_ratio && !onchain.github_commits_4w && s.etf_net_flow == null) continue;
-                html += '<div style="margin-top:4px;font-size:0.72rem;color:var(--text-muted);padding:4px 14px;">';
-                html += '<strong>' + escHtml(s.symbol) + '</strong>: ';
-                if (s.etf_net_flow != null) html += 'ETF净流动: ' + (s.etf_net_flow > 0 ? '+' : '') + s.etf_net_flow + '亿$ · ';
-                if (onchain.circ_ratio) html += '流通占比 ' + onchain.circ_ratio + '% · ';
-                if (onchain.categories && onchain.categories.length) html += '赛道: ' + onchain.categories.slice(0,2).join(', ') + ' · ';
-                if (onchain.github_commits_4w) html += 'GitHub提交(4w): ' + onchain.github_commits_4w;
-                html += '</div>';
+                html += '<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:12px 16px;margin-bottom:8px;">';
+                html += '<strong style="color:var(--text-primary);">' + escHtml(s.symbol) + '</strong>';
+                html += '<span style="font-size:0.8rem;color:var(--text-secondary);margin-left:8px;">链上指标</span>';
+                html += '<div style="display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:8px;font-size:0.78rem;color:var(--text-secondary);">';
+                if (s.funding_rate != null) {
+                    var frCls = s.funding_rate > 0 ? 'up' : (s.funding_rate < 0 ? 'down' : '');
+                    html += '<span>💰 资金费率: <span class="' + frCls + '">' + s.funding_rate.toFixed(4) + '%</span></span>';
+                }
+                if (s.open_interest != null) html += '<span>📊 持仓量(OI): ' + s.open_interest + '</span>';
+                if (s.etf_net_flow != null) {
+                    var etfCls = s.etf_net_flow > 0 ? 'up' : (s.etf_net_flow < 0 ? 'down' : '');
+                    var etfSign = s.etf_net_flow > 0 ? '+' : '';
+                    html += '<span>📈 ETF净流动: <span class="' + etfCls + '">' + etfSign + s.etf_net_flow + '亿$</span></span>';
+                }
+                if (onchain.hash_rate) html += '<span>⛏️ 哈希率: ' + onchain.hash_rate + ' TH/s</span>';
+                if (onchain.active_addresses) html += '<span>👥 活跃地址: ' + onchain.active_addresses.toLocaleString() + '</span>';
+                if (onchain.tx_fee_usd) html += '<span>💸 平均手续费: $' + onchain.tx_fee_usd + '</span>';
+                if (onchain.gas_gwei) html += '<span>⛽ Gas: ' + onchain.gas_gwei + ' gwei</span>';
+                if (onchain.staking_apr) html += '<span>🥩 质押APR: ' + onchain.staking_apr + '%</span>';
+                if (onchain.validators) html += '<span>🔒 验证者: ' + parseInt(onchain.validators).toLocaleString() + '</span>';
+                if (onchain.circ_ratio) html += '<span>🔄 流通占比: ' + onchain.circ_ratio + '%</span>';
+                if (onchain.categories && onchain.categories.length) html += '<span>🏷️ 赛道: ' + onchain.categories.slice(0,3).join(', ') + '</span>';
+                html += '</div></div>';
             }
             container.innerHTML = html;
         }
