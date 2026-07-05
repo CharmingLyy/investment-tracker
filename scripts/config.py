@@ -37,7 +37,10 @@ if os.path.exists(_watchlist_path):
 # A股（格式：代码 + 名称）
 # 代码格式：6位数字
 # ============================================================
-A_STOCKS = _loaded_a if _loaded_a is not None else []
+A_STOCKS = _loaded_a if _loaded_a is not None else [
+    {"code": "002050", "name": "三花智控"},
+    {"code": "601727", "name": "上海电气"},
+]
 
 # ============================================================
 # 港股（格式：代码 + 名称）
