@@ -2,14 +2,6 @@
 主入口脚本
 每天运行一次，抓取所有市场数据并生成HTML页面
 """
-import sys
-import io
-
-# 修复 Windows 下 emoji 编码问题
-if sys.platform == "win32":
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
-    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
-
 import json
 import os
 import sys
@@ -24,6 +16,7 @@ from scripts.fetch_stocks import fetch_a_stock_data
 from scripts.fetch_global import fetch_hk_stock_data, fetch_us_stock_data
 from scripts.fetch_crypto import fetch_crypto_data
 from scripts.fetch_news import fetch_market_news, find_relevant_news
+from scripts.generate_report import generate_report
 
 
 def generate_html(all_data, news_data, update_time):
@@ -133,7 +126,12 @@ def main():
     print()
     save_data_json(all_data, news_data)
 
-    # 7. 生成HTML
+    # 7. 生成 Markdown 日报
+    print()
+    print("[报告] 正在生成 Markdown 投资日报...")
+    generate_report()
+
+    # 9. 生成HTML
     print()
     print("[生成] 正在生成HTML页面...")
     update_time = datetime.now().strftime("%Y-%m-%d %H:%M UTC+8 (北京时间)")
@@ -143,7 +141,7 @@ def main():
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(html_content)
 
-    # 8. 汇总
+    # 10. 汇总
     total = (
         len(all_data["a_stocks"])
         + len(all_data["hk_stocks"])

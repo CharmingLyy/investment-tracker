@@ -110,11 +110,10 @@ def fetch_crypto_data():
     if etf_flows:
         print(f"  📊 ETF 流动数据: {len(etf_flows)} 个币种")
 
-    # CoinGecko 免费API限速：每分钟10-30次
     ids = ",".join([c["id"] for c in CRYPTO])
 
     try:
-        # 批量获取行情
+        # 尝试 CoinGecko 免费 API
         url = f"{COINGECKO_API}/coins/markets"
         params = {
             "vs_currency": "usd",
@@ -125,15 +124,22 @@ def fetch_crypto_data():
             "sparkline": "false",
             "price_change_percentage": "24h",
         }
-        resp = requests.get(url, params=params, timeout=30)
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "Accept": "application/json",
+        }
+        resp = requests.get(url, params=params, timeout=30, headers=headers)
         resp.raise_for_status()
         market_data = resp.json()
 
         if not market_data:
-            print("    ⚠ CoinGecko 返回空数据")
+            print("    ⚠ CoinGecko 返回空数据，尝试备用API...")
+            market_data = _fetch_crypto_fallback()
+
+        if not market_data:
+            print("[加密货币] 所有数据源均失败")
             return []
 
-        # 建立 id → 数据 映射
         market_map = {item["id"]: item for item in market_data}
 
         for crypto in CRYPTO:
@@ -158,15 +164,16 @@ def fetch_crypto_data():
                 total_supply = item.get("total_supply", None)
                 market_cap_rank = item.get("market_cap_rank", None)
 
-                # 获取历史K线数据（用于计算技术指标）
+                # 获取历史K线数据
+                macd_data = {"macd": None, "signal": None, "histogram": None}
+                rsi = None
+                ma_data = {}
+
                 try:
-                    time.sleep(1.5)  # 尊重API限速
+                    time.sleep(1.5)
                     hist_url = f"{COINGECKO_API}/coins/{cid}/market_chart"
-                    hist_params = {
-                        "vs_currency": "usd",
-                        "days": "180",
-                    }
-                    hist_resp = requests.get(hist_url, params=hist_params, timeout=30)
+                    hist_params = {"vs_currency": "usd", "days": "180"}
+                    hist_resp = requests.get(hist_url, params=hist_params, timeout=30, headers=headers)
                     if hist_resp.status_code == 200:
                         hist_data = hist_resp.json()
                         prices = hist_data.get("prices", [])
@@ -175,67 +182,34 @@ def fetch_crypto_data():
                             macd_data = calc_macd(close_prices)
                             rsi = calc_rsi(close_prices)
                             ma_data = calc_ma(close_prices)
-                        else:
-                            macd_data = {"macd": None, "signal": None, "histogram": None}
-                            rsi = None
-                            ma_data = {}
-                    else:
-                        macd_data = {"macd": None, "signal": None, "histogram": None}
-                        rsi = None
-                        ma_data = {}
                 except Exception:
-                    macd_data = {"macd": None, "signal": None, "histogram": None}
-                    rsi = None
-                    ma_data = {}
+                    pass
 
-                # 获取链上数据（大额转账、交易所余额等） - Whale Alert API
+                # 链上数据（简化版）
                 onchain_data = {}
                 try:
-                    # 使用 CoinGecko 的开发者数据作为链上指标
-                    dev_url = f"{COINGECKO_API}/coins/{cid}"
-                    dev_params = {
-                        "localization": "false",
-                        "tickers": "false",
-                        "community_data": "false",
-                        "developer_data": "true",
-                    }
                     time.sleep(1.5)
-                    dev_resp = requests.get(dev_url, params=dev_params, timeout=30)
+                    dev_url = f"{COINGECKO_API}/coins/{cid}"
+                    dev_params = {"localization": "false", "tickers": "false", "community_data": "false", "developer_data": "true"}
+                    dev_resp = requests.get(dev_url, params=dev_params, timeout=30, headers=headers)
                     if dev_resp.status_code == 200:
                         coin_info = dev_resp.json()
-                        market_data_detail = coin_info.get("market_data", {})
-                        dev_data = coin_info.get("developer_data", {})
-
-                        # 价格变动
-                        onchain_data["price_change_7d"] = market_data_detail.get("price_change_percentage_7d")
-                        onchain_data["price_change_30d"] = market_data_detail.get("price_change_percentage_30d")
-
-                        # 市值占比
-                        mcap_data = market_data_detail.get("market_cap", {})
-                        onchain_data["market_cap_change_24h"] = round(mcap_data.get("market_cap_change_percentage_24h", 0), 2) if mcap_data else None
-
-                        # 开发者活跃度（可作为基本面参考）
-                        onchain_data["github_commits_4w"] = dev_data.get("commit_count_4_weeks")
-
-                        # 流通/总量占比
-                        if circulating_supply and total_supply and total_supply > 0:
-                            onchain_data["circ_ratio"] = round((circulating_supply / total_supply) * 100, 2)
-
-                        # 类别/赛道
-                        categories = coin_info.get("categories", [])
-                        onchain_data["categories"] = categories[:3] if categories else []
-
-                        # ATH 距离
-                        ath = market_data_detail.get("ath", {})
-                        ath_price = ath.get("usd", None)
+                        mkt = coin_info.get("market_data", {})
+                        dev = coin_info.get("developer_data", {})
+                        onchain_data["price_change_7d"] = mkt.get("price_change_percentage_7d")
+                        onchain_data["price_change_30d"] = mkt.get("price_change_percentage_30d")
+                        onchain_data["categories"] = coin_info.get("categories", [])[:3]
+                        ath = mkt.get("ath", {})
+                        ath_price = ath.get("usd")
                         if ath_price and current_price:
                             onchain_data["ath_pct"] = round(((current_price - ath_price) / ath_price) * 100, 2)
-                            onchain_data["ath_date"] = ath.get("usd_date", "")[:10] if ath.get("usd_date") else None
-
+                            onchain_data["ath_date"] = ath.get("usd_date", "")[:10]
+                        if circulating_supply and total_supply and total_supply > 0:
+                            onchain_data["circ_ratio"] = round((circulating_supply / total_supply) * 100, 2)
+                        onchain_data["github_commits_4w"] = dev.get("commit_count_4_weeks")
                 except Exception:
-                    onchain_data = {}
+                    pass
 
-                # ETF 流动数据
                 etf = etf_flows.get(cid, {})
                 crypto_data = {
                     "market": "加密货币",
@@ -250,9 +224,9 @@ def fetch_crypto_data():
                     "change_pct": change_pct,
                     "volume": round(total_volume, 2) if total_volume else None,
                     "turnover": None,
-                    "market_cap": round(market_cap / 1e8, 2) if market_cap else None,  # 转为亿美元
+                    "market_cap": round(market_cap / 1e8, 2) if market_cap else None,
                     "market_cap_rank": market_cap_rank,
-                    "pe": None,  # 加密货币无PE
+                    "pe": None,
                     "etf_inflow": etf.get("etf_inflow"),
                     "etf_outflow": etf.get("etf_outflow"),
                     "etf_net_flow": etf.get("etf_net_flow"),
@@ -283,9 +257,86 @@ def fetch_crypto_data():
 
     except Exception as e:
         print(f"[加密货币] CoinGecko API 请求失败: {str(e)[:100]}")
+        # 尝试备用数据源
+        market_data = _fetch_crypto_fallback()
+        if market_data:
+            # 简单处理备用数据
+            for crypto in CRYPTO:
+                cid = crypto["id"]
+                for item in market_data:
+                    if item.get("id") == cid:
+                        name = crypto["name"]
+                        symbol = crypto["symbol"]
+                        etf = etf_flows.get(cid, {})
+                        results.append({
+                            "market": "加密货币",
+                            "code": cid,
+                            "name": name,
+                            "symbol": symbol.upper(),
+                            "industry": None,
+                            "price": round(item.get("current_price", 0), 4),
+                            "open": None,
+                            "high": None,
+                            "low": None,
+                            "change_pct": round(item.get("price_change_percentage_24h", 0), 2),
+                            "volume": round(item.get("total_volume", 0), 2),
+                            "turnover": None,
+                            "market_cap": round(item.get("market_cap", 0) / 1e8, 2),
+                            "market_cap_rank": item.get("market_cap_rank"),
+                            "pe": None,
+                            "etf_inflow": etf.get("etf_inflow"),
+                            "etf_outflow": etf.get("etf_outflow"),
+                            "etf_net_flow": etf.get("etf_net_flow"),
+                            "macd": None, "macd_signal": None, "macd_histogram": None,
+                            "rsi": None, "ma": {},
+                            "main_net_flow": None,
+                            "onchain": {},
+                        })
+                        print(f"    ✓ {name}({symbol}): ${item.get('current_price', 0)} (备用源)")
+                        break
 
     print(f"[加密货币] 完成，成功获取 {len(results)}/{len(CRYPTO)} 个币种数据")
     return results
+
+
+def _fetch_crypto_fallback():
+    """备用数据源：使用 CoinGecko 的公共免费 API（无需 key）"""
+    try:
+        # 使用 CoinGecko 的简易 API 端点
+        ids = ",".join([c["id"] for c in CRYPTO])
+        url = "https://api.coingecko.com/api/v3/simple/price"
+        params = {
+            "ids": ids,
+            "vs_currencies": "usd",
+            "include_market_cap": "true",
+            "include_24hr_vol": "true",
+            "include_24hr_change": "true",
+            "include_market_cap_rank": "true",
+        }
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+            "Accept": "application/json",
+        }
+        resp = requests.get(url, params=params, timeout=30, headers=headers)
+        if resp.status_code == 200:
+            data = resp.json()
+            # 转换为 coins/markets 格式
+            result = []
+            for cid, vals in data.items():
+                result.append({
+                    "id": cid,
+                    "current_price": vals.get("usd"),
+                    "market_cap": vals.get("usd_market_cap"),
+                    "total_volume": vals.get("usd_24h_vol"),
+                    "price_change_percentage_24h": vals.get("usd_24h_change"),
+                    "market_cap_rank": vals.get("usd_market_cap_rank"),
+                })
+            if result:
+                print(f"    📡 备用API成功获取 {len(result)} 个币种")
+                return result
+    except Exception as e:
+        print(f"    ⚠ 备用API也失败了: {str(e)[:80]}")
+    return None
 
 
 if __name__ == "__main__":

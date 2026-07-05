@@ -37,17 +37,13 @@ if os.path.exists(_watchlist_path):
 # A股（格式：代码 + 名称）
 # 代码格式：6位数字
 # ============================================================
-A_STOCKS = _loaded_a if _loaded_a is not None else [
-    {"code": "601727", "name": "上海电气"},
-    {"code": "002050", "name": "三花智控"},
-]
+A_STOCKS = _loaded_a if _loaded_a is not None else []
 
 # ============================================================
 # 港股（格式：代码 + 名称）
 # 代码格式：4-5位数字
 # ============================================================
 HK_STOCKS = _loaded_hk if _loaded_hk is not None else [
-    {"code": "00700", "name": "腾讯控股"},
     {"code": "01810", "name": "小米集团-W"},
 ]
 
@@ -56,16 +52,12 @@ HK_STOCKS = _loaded_hk if _loaded_hk is not None else [
 # ============================================================
 US_STOCKS = _loaded_us if _loaded_us is not None else [
     {"code": "NVDA", "name": "NVIDIA"},
-    {"code": "TSLA", "name": "Tesla"},
-    {"code": "GOOGL", "name": "Alphabet (Google)"},
-    {"code": "MU", "name": "Micron Technology"},
+    {"code": "GOOG", "name": "Alphabet (Google)"},
     {"code": "CRCL", "name": "Circle"},
-    {"code": "BMNR", "name": "Bitmine"},
     {"code": "MP", "name": "MP Materials"},
-    {"code": "LITE", "name": "Lumentum"},
-    {"code": "GLW", "name": "Corning"},
-    {"code": "MSFT", "name": "Microsoft"},
-    {"code": "AAPL", "name": "Apple"},
+    {"code": "PLTR", "name": "Palantir"},
+    {"code": "NOW", "name": "ServiceNow"},
+    {"code": "DDOG", "name": "Datadog"},
 ]
 
 # ============================================================
@@ -75,12 +67,6 @@ US_STOCKS = _loaded_us if _loaded_us is not None else [
 CRYPTO = _loaded_crypto if _loaded_crypto is not None else [
     {"id": "bitcoin", "name": "Bitcoin", "symbol": "BTC"},
     {"id": "ethereum", "name": "Ethereum", "symbol": "ETH"},
-    {"id": "cardano", "name": "Cardano", "symbol": "ADA"},
-    {"id": "hyperliquid", "name": "Hyperliquid", "symbol": "HYPE"},
-    {"id": "okb", "name": "OKB", "symbol": "OKB"},
-    {"id": "basic-attention-token", "name": "Basic Attention Token", "symbol": "BAT"},
-    {"id": "ripple", "name": "XRP", "symbol": "XRP"},
-    {"id": "chainlink", "name": "Chainlink", "symbol": "LINK"},
 ]
 
 # ============================================================

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📊 投资观察面板 | 2026-07-05 14:46 UTC+8 (北京时间)</title>
+    <title>📊 投资观察面板 | 2026-07-05 22:51:41</title>
     <style>
         /* ===== 全局样式 ===== */
         :root {
@@ -421,7 +421,7 @@
                     <span>港股 <span class="status-dot closed"></span></span>
                     <span>美股 <span class="status-dot closed"></span></span>
                 </div>
-                <span class="update-badge">🕐 更新: 2026-07-05 14:46 UTC+8 (北京时间)</span>
+                <span class="update-badge">🕐 更新: 2026-07-05 22:51:41</span>
             </div>
         </div>
     </header>
@@ -432,6 +432,7 @@
             <a href="admin.html" class="btn-tool">⚙️ 编辑标的</a>
             <button class="btn-tool accent" onclick="triggerRefresh()" title="触发 GitHub Actions 工作流刷新数据">🔄 手动刷新</button>
             <button class="btn-tool" onclick="window.open('https://github.com/CharmingLyy/investment-tracker/actions', '_blank')">🔗 Actions</button>
+            <button id="btn-auto-refresh" class="btn-tool accent" onclick="toggleAutoRefresh()" title="切换自动刷新">⏱️ 自动刷新: 开</button>
             <span class="sync-status">
                 🌐 <a href="https://charminglyy.github.io/investment-tracker/" target="_blank">在线面板</a>
                 · <span id="sync-indicator">已同步</span>
@@ -444,22 +445,22 @@
         <div class="summary-grid">
             <div class="summary-card">
                 <div class="card-label">📈 总跟踪标的</div>
-                <div class="card-value">23</div>
-                <div class="card-sub">A股 2 · 港股 2 · 美股 11 · 加密 8</div>
+                <div class="card-value">0</div>
+                <div class="card-sub">A股 0 · 港股 0 · 美股 0 · 加密 0</div>
             </div>
             <div class="summary-card">
                 <div class="card-label">🟢 今日上涨</div>
-                <div class="card-value up">11</div>
-                <div class="card-sub">占比 47.8%</div>
+                <div class="card-value up">0</div>
+                <div class="card-sub">占比 0%</div>
             </div>
             <div class="summary-card">
                 <div class="card-label">🔴 今日下跌</div>
-                <div class="card-value down">12</div>
-                <div class="card-sub">占比 52.2%</div>
+                <div class="card-value down">0</div>
+                <div class="card-sub">占比 0%</div>
             </div>
             <div class="summary-card">
                 <div class="card-label">📰 市场新闻</div>
-                <div class="card-value" style="font-size:1.4rem">21 条</div>
+                <div class="card-value" style="font-size:1.4rem">11 条</div>
                 <div class="card-sub">最近24h内</div>
             </div>
         </div>
@@ -467,885 +468,32 @@
         <!-- A股表格 -->
         
         <section class="market-section">
-            <div class="section-header">
-                <h2>🇨🇳 A股</h2>
-                <span class="section-badge badge-a">沪深京</span>
-            </div>
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>名称/代码</th>
-                            <th>行业</th>
-                            <th>主营业务</th>
-                            <th>收盘价</th>
-                            <th>涨跌幅</th>
-                            <th>市值(亿)</th>
-                            <th>PE</th>
-                            <th>现金流(亿)</th>
-                            <th>MACD</th>
-                            <th>RSI</th>
-                            <th>MA5</th>
-                            <th>MA20</th>
-                            <th>主力净流入(亿)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">上海电气</span>
-                                <span class="stock-code">601727</span>
-                                <span class="stock-industry" style="font-size:0.68rem"></span>
-                            </td>
-                            <td><span class="stock-industry">-</span></td>
-                            <td><span class="stock-business" title="新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。">新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。</span></td>
-                            <td class="price">¥6.96</td>
-                            <td>
-                                <span class="change-badge positive">
-                                    +1.16%
-                                </span>
-                            </td>
-                            <td>-</td>
-                            <td>83.56</td>
-                            <td class="up">
-                                105.67
-                            </td>
-                            <td class="indicator bearish">
-                                -0.2972
-                            </td>
-                            <td class="indicator bearish">
-                                36.8
-                            </td>
-                            <td>6.99</td>
-                            <td>7.21</td>
-                            <td class="">
-                                -
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">三花智控</span>
-                                <span class="stock-code">002050</span>
-                                <span class="stock-industry" style="font-size:0.68rem"></span>
-                            </td>
-                            <td><span class="stock-industry">-</span></td>
-                            <td><span class="stock-business" title="冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。">冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。</span></td>
-                            <td class="price">¥48.99</td>
-                            <td>
-                                <span class="change-badge positive">
-                                    +9.06%
-                                </span>
-                            </td>
-                            <td>-</td>
-                            <td>50.44</td>
-                            <td class="up">
-                                50.92
-                            </td>
-                            <td class="indicator bearish">
-                                -0.6911
-                            </td>
-                            <td class="indicator bullish">
-                                60.22
-                            </td>
-                            <td>44.64</td>
-                            <td>45.02</td>
-                            <td class="">
-                                -
-                            </td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
+            <div class="section-header"><h2>🇨🇳 A股</h2></div>
+            <div class="empty-state">尚未配置A股标的，请在 config.py 中添加</div>
         </section>
         
 
         <!-- 港股表格 -->
         
         <section class="market-section">
-            <div class="section-header">
-                <h2>🇭🇰 港股</h2>
-                <span class="section-badge badge-hk">港交所</span>
-            </div>
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>名称/代码</th>
-                            <th>行业</th>
-                            <th>主营业务</th>
-                            <th>收盘价</th>
-                            <th>涨跌幅</th>
-                            <th>市值(亿)</th>
-                            <th>PE</th>
-                            <th>现金流(亿)</th>
-                            <th>MACD</th>
-                            <th>RSI</th>
-                            <th>MA5</th>
-                            <th>MA20</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">腾讯控股</span>
-                                <span class="stock-code">00700</span>
-                            </td>
-                            <td><span class="stock-industry">-</span></td>
-                            <td><span class="stock-business" title="">-</span></td>
-                            <td class="price">HK$431.2</td>
-                            <td>
-                                <span class="change-badge positive">
-                                    +0.23%
-                                </span>
-                            </td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td class="">
-                                -
-                            </td>
-                            <td class="indicator bearish">
-                                -9.1844
-                            </td>
-                            <td class="indicator bearish">
-                                45.2
-                            </td>
-                            <td>424.64</td>
-                            <td>440.6</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">小米集团-W</span>
-                                <span class="stock-code">01810</span>
-                            </td>
-                            <td><span class="stock-industry">-</span></td>
-                            <td><span class="stock-business" title="">-</span></td>
-                            <td class="price">HK$22.96</td>
-                            <td>
-                                <span class="change-badge positive">
-                                    +1.59%
-                                </span>
-                            </td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td class="">
-                                -
-                            </td>
-                            <td class="indicator bearish">
-                                -1.8492
-                            </td>
-                            <td class="indicator bearish">
-                                34.24
-                            </td>
-                            <td>22.1</td>
-                            <td>24.66</td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
+            <div class="section-header"><h2>🇭🇰 港股</h2></div>
+            <div class="empty-state">尚未配置港股标的，请在 config.py 中添加</div>
         </section>
         
 
         <!-- 美股表格 -->
         
         <section class="market-section">
-            <div class="section-header">
-                <h2>🇺🇸 美股</h2>
-                <span class="section-badge badge-us">NASDAQ/NYSE</span>
-            </div>
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>名称/代码</th>
-                            <th>行业</th>
-                            <th>主营业务</th>
-                            <th>收盘价</th>
-                            <th>涨跌幅</th>
-                            <th>市值(亿)</th>
-                            <th>PE</th>
-                            <th>现金流(亿)</th>
-                            <th>MACD</th>
-                            <th>RSI</th>
-                            <th>MA5</th>
-                            <th>MA20</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">NVIDIA</span>
-                                <span class="stock-code">NVDA</span>
-                            </td>
-                            <td><span class="stock-industry">-</span></td>
-                            <td><span class="stock-business" title="">-</span></td>
-                            <td class="price">$194.83</td>
-                            <td>
-                                <span class="change-badge negative">
-                                    -1.39%
-                                </span>
-                            </td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td class="">
-                                -
-                            </td>
-                            <td class="indicator bearish">
-                                -4.0879
-                            </td>
-                            <td class="indicator bearish">
-                                41.16
-                            </td>
-                            <td>196.0</td>
-                            <td>203.48</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">Tesla</span>
-                                <span class="stock-code">TSLA</span>
-                            </td>
-                            <td><span class="stock-industry">-</span></td>
-                            <td><span class="stock-business" title="">-</span></td>
-                            <td class="price">$393.45</td>
-                            <td>
-                                <span class="change-badge negative">
-                                    -7.49%
-                                </span>
-                            </td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td class="">
-                                -
-                            </td>
-                            <td class="indicator bearish">
-                                -1.6346
-                            </td>
-                            <td class="indicator bearish">
-                                46.77
-                            </td>
-                            <td>406.18</td>
-                            <td>399.16</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">Alphabet (Google)</span>
-                                <span class="stock-code">GOOGL</span>
-                            </td>
-                            <td><span class="stock-industry">-</span></td>
-                            <td><span class="stock-business" title="">-</span></td>
-                            <td class="price">$359.91</td>
-                            <td>
-                                <span class="change-badge negative">
-                                    -0.36%
-                                </span>
-                            </td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td class="">
-                                -
-                            </td>
-                            <td class="indicator bearish">
-                                -4.3366
-                            </td>
-                            <td class="indicator bearish">
-                                49.5
-                            </td>
-                            <td>353.91</td>
-                            <td>358.54</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">Micron Technology</span>
-                                <span class="stock-code">MU</span>
-                            </td>
-                            <td><span class="stock-industry">-</span></td>
-                            <td><span class="stock-business" title="">-</span></td>
-                            <td class="price">$975.56</td>
-                            <td>
-                                <span class="change-badge negative">
-                                    -5.49%
-                                </span>
-                            </td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td class="">
-                                -
-                            </td>
-                            <td class="indicator bullish">
-                                64.4775
-                            </td>
-                            <td class="indicator bearish">
-                                48.47
-                            </td>
-                            <td>1087.95</td>
-                            <td>1043.27</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">Circle</span>
-                                <span class="stock-code">CRCL</span>
-                            </td>
-                            <td><span class="stock-industry">-</span></td>
-                            <td><span class="stock-business" title="">-</span></td>
-                            <td class="price">$64.62</td>
-                            <td>
-                                <span class="change-badge positive">
-                                    +4.31%
-                                </span>
-                            </td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td class="">
-                                -
-                            </td>
-                            <td class="indicator bearish">
-                                -8.9285
-                            </td>
-                            <td class="indicator bearish">
-                                34.03
-                            </td>
-                            <td>67.75</td>
-                            <td>76.6</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">Bitmine</span>
-                                <span class="stock-code">BMNR</span>
-                            </td>
-                            <td><span class="stock-industry">-</span></td>
-                            <td><span class="stock-business" title="">-</span></td>
-                            <td class="price">$14.36</td>
-                            <td>
-                                <span class="change-badge positive">
-                                    +1.48%
-                                </span>
-                            </td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td class="">
-                                -
-                            </td>
-                            <td class="indicator bearish">
-                                -1.3455
-                            </td>
-                            <td class="indicator bearish">
-                                39.56
-                            </td>
-                            <td>13.84</td>
-                            <td>15.39</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">MP Materials</span>
-                                <span class="stock-code">MP</span>
-                            </td>
-                            <td><span class="stock-industry">-</span></td>
-                            <td><span class="stock-business" title="">-</span></td>
-                            <td class="price">$53.31</td>
-                            <td>
-                                <span class="change-badge negative">
-                                    -1.79%
-                                </span>
-                            </td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td class="">
-                                -
-                            </td>
-                            <td class="indicator bearish">
-                                -2.0491
-                            </td>
-                            <td class="indicator bearish">
-                                39.34
-                            </td>
-                            <td>54.45</td>
-                            <td>57.26</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">Lumentum</span>
-                                <span class="stock-code">LITE</span>
-                            </td>
-                            <td><span class="stock-industry">-</span></td>
-                            <td><span class="stock-business" title="">-</span></td>
-                            <td class="price">$728.32</td>
-                            <td>
-                                <span class="change-badge negative">
-                                    -9.09%
-                                </span>
-                            </td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td class="">
-                                -
-                            </td>
-                            <td class="indicator bearish">
-                                -27.9011
-                            </td>
-                            <td class="indicator bearish">
-                                37.73
-                            </td>
-                            <td>811.18</td>
-                            <td>861.26</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">Corning</span>
-                                <span class="stock-code">GLW</span>
-                            </td>
-                            <td><span class="stock-industry">-</span></td>
-                            <td><span class="stock-business" title="">-</span></td>
-                            <td class="price">$196.79</td>
-                            <td>
-                                <span class="change-badge negative">
-                                    -10.81%
-                                </span>
-                            </td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td class="">
-                                -
-                            </td>
-                            <td class="indicator bullish">
-                                11.5847
-                            </td>
-                            <td class="indicator bearish">
-                                48.66
-                            </td>
-                            <td>229.92</td>
-                            <td>199.18</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">Microsoft</span>
-                                <span class="stock-code">MSFT</span>
-                            </td>
-                            <td><span class="stock-industry">-</span></td>
-                            <td><span class="stock-business" title="">-</span></td>
-                            <td class="price">$390.49</td>
-                            <td>
-                                <span class="change-badge positive">
-                                    +1.62%
-                                </span>
-                            </td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td class="">
-                                -
-                            </td>
-                            <td class="indicator bearish">
-                                -9.8837
-                            </td>
-                            <td class="indicator bearish">
-                                49.8
-                            </td>
-                            <td>377.87</td>
-                            <td>386.96</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">Apple</span>
-                                <span class="stock-code">AAPL</span>
-                            </td>
-                            <td><span class="stock-industry">-</span></td>
-                            <td><span class="stock-business" title="">-</span></td>
-                            <td class="price">$308.63</td>
-                            <td>
-                                <span class="change-badge positive">
-                                    +4.84%
-                                </span>
-                            </td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td class="">
-                                -
-                            </td>
-                            <td class="indicator bearish">
-                                -0.6856
-                            </td>
-                            <td class="indicator bullish">
-                                60.26
-                            </td>
-                            <td>291.58</td>
-                            <td>294.8</td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
+            <div class="section-header"><h2>🇺🇸 美股</h2></div>
+            <div class="empty-state">尚未配置美股标的，请在 config.py 中添加</div>
         </section>
         
 
         <!-- 加密货币表格 -->
         
         <section class="market-section">
-            <div class="section-header">
-                <h2>🪙 加密货币</h2>
-                <span class="section-badge badge-crypto">24h</span>
-            </div>
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>名称/简称</th>
-                            <th>类型</th>
-                            <th>价格</th>
-                            <th>24h涨跌</th>
-                            <th>市值(亿$)</th>
-                            <th>排名</th>
-                            <th>ETF流入(亿$)</th>
-                            <th>ETF流出(亿$)</th>
-                            <th>ETF净流动</th>
-                            <th>MACD</th>
-                            <th>RSI</th>
-                            <th>7日涨跌</th>
-                            <th>30日涨跌</th>
-                            <th>距ATH</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">Bitcoin</span>
-                                <span class="stock-code">BTC</span>
-                            </td>
-                            <td><span class="stock-industry">Smart Contract Platform</span></td>
-                            <td class="price">$62690</td>
-                            <td>
-                                <span class="change-badge positive">
-                                    +0.09%
-                                </span>
-                            </td>
-                            <td>12571.29</td>
-                            <td>#1</td>
-                            <td class="up">-</td>
-                            <td class="down">-</td>
-                            <td class="">
-                                -
-                            </td>
-                            <td class="indicator bearish">
-                                -1286.5927
-                            </td>
-                            <td class="indicator bearish">
-                                48.4
-                            </td>
-                            <td class="up">
-                                +4.5%
-                            </td>
-                            <td class="up">
-                                +1.3%
-                            </td>
-                            <td class="down">
-                                -50.3%
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">Ethereum</span>
-                                <span class="stock-code">ETH</span>
-                            </td>
-                            <td><span class="stock-industry">Smart Contract Platform</span></td>
-                            <td class="price">$1767.2</td>
-                            <td>
-                                <span class="change-badge negative">
-                                    -0.11%
-                                </span>
-                            </td>
-                            <td>2132.8</td>
-                            <td>#2</td>
-                            <td class="up">-</td>
-                            <td class="down">-</td>
-                            <td class="">
-                                -
-                            </td>
-                            <td class="indicator bearish">
-                                -22.5104
-                            </td>
-                            <td class="indicator bullish">
-                                55.8
-                            </td>
-                            <td class="up">
-                                +12.0%
-                            </td>
-                            <td class="up">
-                                +6.7%
-                            </td>
-                            <td class="down">
-                                -64.3%
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">Cardano</span>
-                                <span class="stock-code">ADA</span>
-                            </td>
-                            <td><span class="stock-industry">-</span></td>
-                            <td class="price">$0.1894</td>
-                            <td>
-                                <span class="change-badge positive">
-                                    +4.25%
-                                </span>
-                            </td>
-                            <td>70.55</td>
-                            <td>#16</td>
-                            <td class="up">-</td>
-                            <td class="down">-</td>
-                            <td class="">
-                                -
-                            </td>
-                            <td class="indicator neutral">
-                                -
-                            </td>
-                            <td class="indicator neutral">
-                                -
-                            </td>
-                            <td class="">
-                                -%
-                            </td>
-                            <td class="">
-                                -%
-                            </td>
-                            <td class="">
-                                -%
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">Hyperliquid</span>
-                                <span class="stock-code">HYPE</span>
-                            </td>
-                            <td><span class="stock-industry">-</span></td>
-                            <td class="price">$69.24</td>
-                            <td>
-                                <span class="change-badge negative">
-                                    -2.05%
-                                </span>
-                            </td>
-                            <td>154.03</td>
-                            <td>#10</td>
-                            <td class="up">-</td>
-                            <td class="down">-</td>
-                            <td class="">
-                                -
-                            </td>
-                            <td class="indicator neutral">
-                                -
-                            </td>
-                            <td class="indicator neutral">
-                                -
-                            </td>
-                            <td class="">
-                                -%
-                            </td>
-                            <td class="">
-                                -%
-                            </td>
-                            <td class="">
-                                -%
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">OKB</span>
-                                <span class="stock-code">OKB</span>
-                            </td>
-                            <td><span class="stock-industry">-</span></td>
-                            <td class="price">$79.87</td>
-                            <td>
-                                <span class="change-badge negative">
-                                    -1.52%
-                                </span>
-                            </td>
-                            <td>16.77</td>
-                            <td>#47</td>
-                            <td class="up">-</td>
-                            <td class="down">-</td>
-                            <td class="">
-                                -
-                            </td>
-                            <td class="indicator neutral">
-                                -
-                            </td>
-                            <td class="indicator neutral">
-                                -
-                            </td>
-                            <td class="">
-                                -%
-                            </td>
-                            <td class="">
-                                -%
-                            </td>
-                            <td class="">
-                                -%
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">Basic Attention Token</span>
-                                <span class="stock-code">BAT</span>
-                            </td>
-                            <td><span class="stock-industry">-</span></td>
-                            <td class="price">$0.0861</td>
-                            <td>
-                                <span class="change-badge positive">
-                                    +1.0%
-                                </span>
-                            </td>
-                            <td>1.29</td>
-                            <td>#223</td>
-                            <td class="up">-</td>
-                            <td class="down">-</td>
-                            <td class="">
-                                -
-                            </td>
-                            <td class="indicator neutral">
-                                -
-                            </td>
-                            <td class="indicator neutral">
-                                -
-                            </td>
-                            <td class="">
-                                -%
-                            </td>
-                            <td class="">
-                                -%
-                            </td>
-                            <td class="">
-                                -%
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">XRP</span>
-                                <span class="stock-code">XRP</span>
-                            </td>
-                            <td><span class="stock-industry">-</span></td>
-                            <td class="price">$1.14</td>
-                            <td>
-                                <span class="change-badge negative">
-                                    -2.75%
-                                </span>
-                            </td>
-                            <td>706.68</td>
-                            <td>#6</td>
-                            <td class="up">-</td>
-                            <td class="down">-</td>
-                            <td class="">
-                                -
-                            </td>
-                            <td class="indicator neutral">
-                                -
-                            </td>
-                            <td class="indicator neutral">
-                                -
-                            </td>
-                            <td class="">
-                                -%
-                            </td>
-                            <td class="">
-                                -%
-                            </td>
-                            <td class="">
-                                -%
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">Chainlink</span>
-                                <span class="stock-code">LINK</span>
-                            </td>
-                            <td><span class="stock-industry">-</span></td>
-                            <td class="price">$7.95</td>
-                            <td>
-                                <span class="change-badge negative">
-                                    -0.42%
-                                </span>
-                            </td>
-                            <td>59.45</td>
-                            <td>#20</td>
-                            <td class="up">-</td>
-                            <td class="down">-</td>
-                            <td class="">
-                                -
-                            </td>
-                            <td class="indicator neutral">
-                                -
-                            </td>
-                            <td class="indicator neutral">
-                                -
-                            </td>
-                            <td class="">
-                                -%
-                            </td>
-                            <td class="">
-                                -%
-                            </td>
-                            <td class="">
-                                -%
-                            </td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
-            <!-- 链上数据 + ETF 流动详情 -->
-            
-            
-            <div style="margin-top: 4px; font-size: 0.72rem; color: var(--text-muted); padding: 4px 14px;">
-                <strong>BTC</strong>:
-                
-                流通占比 100.0% · 
-                赛道: Smart Contract Platform, Layer 1 (L1) · 
-                GitHub提交(4w): 108
-            </div>
-            
-            
-            
-            <div style="margin-top: 4px; font-size: 0.72rem; color: var(--text-muted); padding: 4px 14px;">
-                <strong>ETH</strong>:
-                
-                流通占比 100.0% · 
-                赛道: Smart Contract Platform, Layer 1 (L1) · 
-                GitHub提交(4w): 41
-            </div>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            <div class="section-header"><h2>🪙 加密货币</h2></div>
+            <div class="empty-state">尚未配置加密货币标的，请在 config.py 中添加</div>
         </section>
         
 
@@ -1354,7 +502,7 @@
         <section class="news-section">
             <div class="section-header">
                 <h2>📰 市场新闻</h2>
-                <span class="section-badge" style="background: rgba(139,92,246,0.15); color: var(--accent-purple);">21 条</span>
+                <span class="section-badge" style="background: rgba(139,92,246,0.15); color: var(--accent-purple);">11 条</span>
             </div>
             <div class="news-grid">
                 
@@ -1479,116 +627,6 @@
                     </a>
                 </div>
                 
-                <div class="news-card">
-                    <a href="https://www.investing.com/news/economy-news/what-are-the-implications-of-a-kshaped-economy-4775429" target="_blank" rel="noopener">
-                        <div class="news-title">What are the implications of a K-shaped economy?</div>
-                        <div class="news-summary"></div>
-                        <div class="news-meta">
-                            <span class="news-source">www.investing.com</span>
-                            <span>2026-07-05 13:57:56</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="news-card">
-                    <a href="https://www.investing.com/news/economy-news/investors-look-for-fed-clues-earnings-signs-as-tech-wobbles-4775428" target="_blank" rel="noopener">
-                        <div class="news-title">Investors look for Fed clues, earnings signs as tech wobbles</div>
-                        <div class="news-summary"></div>
-                        <div class="news-meta">
-                            <span class="news-source">www.investing.com</span>
-                            <span>2026-07-05 13:06:23</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="news-card">
-                    <a href="https://www.investing.com/news/stock-market-news/saudi-arabia-stocks-lower-at-close-of-trade-tadawul-all-share-down-026-4775427" target="_blank" rel="noopener">
-                        <div class="news-title">Saudi Arabia stocks lower at close of trade; Tadawul All Share down 0.26%</div>
-                        <div class="news-summary"></div>
-                        <div class="news-meta">
-                            <span class="news-source">www.investing.com</span>
-                            <span>2026-07-05 12:45:03</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="news-card">
-                    <a href="https://www.investing.com/news/economy-news/what-are-the-most-powerful-forces-shaping-wealth-creation-today-4775426" target="_blank" rel="noopener">
-                        <div class="news-title">What are the most powerful forces shaping wealth creation today?</div>
-                        <div class="news-summary"></div>
-                        <div class="news-meta">
-                            <span class="news-source">www.investing.com</span>
-                            <span>2026-07-05 12:39:29</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="news-card">
-                    <a href="https://www.investing.com/news/world-news/three-sons-of-irans-slain-leader-khamenei-appear-at-funeral-not-his-successor-4775406" target="_blank" rel="noopener">
-                        <div class="news-title">Three sons of Iran’s slain leader Khamenei appear at funeral, not his successor</div>
-                        <div class="news-summary"></div>
-                        <div class="news-meta">
-                            <span class="news-source">www.investing.com</span>
-                            <span>2026-07-05 12:00:32</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="news-card">
-                    <a href="https://www.investing.com/news/politics-news/trump-to-mark-us-250th-anniversary-with-campaignstyle-rally-on-national-mall-4775359" target="_blank" rel="noopener">
-                        <div class="news-title">Trump gives campaign-style July 4 speech on National Mall for US 250th anniversary</div>
-                        <div class="news-summary"></div>
-                        <div class="news-meta">
-                            <span class="news-source">www.investing.com</span>
-                            <span>2026-07-05 11:42:50</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="news-card">
-                    <a href="https://www.investing.com/news/commodities-news/opec-set-to-approve-another-oil-output-increase-sources-say-4775414" target="_blank" rel="noopener">
-                        <div class="news-title">OPEC+ approves further oil output increase as Hormuz exports start to recover</div>
-                        <div class="news-summary"></div>
-                        <div class="news-meta">
-                            <span class="news-source">www.investing.com</span>
-                            <span>2026-07-05 11:30:28</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="news-card">
-                    <a href="https://www.investing.com/news/investment-ideas/ihs-holding-validates-fair-value-analysis-with-84-return-in-29-months-93CH-4775425" target="_blank" rel="noopener">
-                        <div class="news-title">IHS Holding validates Fair Value analysis with 84% return in 29 months</div>
-                        <div class="news-summary"></div>
-                        <div class="news-meta">
-                            <span class="news-source">www.investing.com</span>
-                            <span>2026-07-05 11:10:21</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="news-card">
-                    <a href="https://www.investing.com/news/investment-ideas/standard-lithium-falls-48-after-investingpro-overvaluation-warning-93CH-4775424" target="_blank" rel="noopener">
-                        <div class="news-title">Standard Lithium falls 48% after InvestingPro overvaluation warning</div>
-                        <div class="news-summary"></div>
-                        <div class="news-meta">
-                            <span class="news-source">www.investing.com</span>
-                            <span>2026-07-05 11:02:18</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="news-card">
-                    <a href="https://www.investing.com/news/stock-market-news/us-supreme-court-to-hear-gun-lgbt-voting-rights-cases-in-next-term-4775416" target="_blank" rel="noopener">
-                        <div class="news-title">US Supreme Court to hear gun, LGBT, voting rights cases in next term</div>
-                        <div class="news-summary"></div>
-                        <div class="news-meta">
-                            <span class="news-source">www.investing.com</span>
-                            <span>2026-07-05 10:48:23</span>
-                        </div>
-                    </a>
-                </div>
-                
             </div>
         </section>
         
@@ -1598,20 +636,438 @@
         📊 投资观察面板 · 数据每日自动更新 · 数据来源: akshare / Yahoo Finance / CoinGecko
     </footer>
 
-    <!-- 管理功能脚本 -->
+    <!-- 自动刷新 + 动态数据加载脚本 -->
     <script>
     (function() {
-        // 检查 GitHub Pages 同步状态
+        // ===== 配置 =====
+        var REFRESH_INTERVAL = 5 * 60;       // 自动刷新间隔（秒），默认5分钟
+        var DATA_CHECK_INTERVAL = 2 * 60;     // 数据文件检查间隔（秒），默认2分钟
+        var PAGE_RELOAD_INTERVAL = 15 * 60;   // 强制页面重载间隔（秒），默认15分钟
+        var LIVE_CRYPTO_INTERVAL = 30;        // 实时加密货币价格刷新（秒）
+
+        // ===== 状态 =====
+        var autoRefreshEnabled = localStorage.getItem('auto-refresh') !== 'false';
+        var pageUpdateTime = '2026-07-05 22:51:41';  // 页面生成时间
+        var countdownSeconds = REFRESH_INTERVAL;
+        var dataCheckTimer = null;
+        var countdownTimer = null;
+        var reloadTimer = null;
+        var liveCryptoTimer = null;
+
+        // ===== DOM 元素 =====
         var syncEl = document.getElementById('sync-indicator');
-        if (syncEl && window.location.protocol === 'https:') {
-            syncEl.textContent = '✓ 在线版';
-            syncEl.style.color = 'var(--accent-green)';
-        } else if (syncEl) {
-            syncEl.textContent = '本地预览';
-            syncEl.style.color = 'var(--accent-yellow)';
+        var btnAutoRefresh = document.getElementById('btn-auto-refresh');
+        var updateBadge = document.querySelector('.update-badge');
+
+        // ===== 实时加密货币价格 (Binance API) =====
+        function fetchLiveCryptoPrices() {
+            // Binance API 公开免费，无需 key，国内也能访问
+            var symbols = [];
+            var cryptoTbody = document.getElementById('crypto-table-body');
+            if (!cryptoTbody) return;
+
+            // 从当前页面解析需要哪些币种
+            var rows = cryptoTbody.querySelectorAll('tr');
+            var cryptoMap = {};
+            rows.forEach(function(row) {
+                var symbolEl = row.querySelector('.stock-code');
+                var priceEl = row.querySelector('.price');
+                if (symbolEl && priceEl) {
+                    var sym = symbolEl.textContent.trim();
+                    if (sym === 'BTC') cryptoMap['BTCUSDT'] = {el: priceEl, row: row};
+                    if (sym === 'ETH') cryptoMap['ETHUSDT'] = {el: priceEl, row: row};
+                }
+            });
+
+            if (Object.keys(cryptoMap).length === 0) return;
+
+            // Binance 公开 ticker API
+            fetch('https://api.binance.com/api/v3/ticker/24hr?symbols=' + JSON.stringify(Object.keys(cryptoMap)))
+                .then(function(resp) {
+                    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+                    return resp.json();
+                })
+                .then(function(data) {
+                    data.forEach(function(ticker) {
+                        var info = cryptoMap[ticker.symbol];
+                        if (!info) return;
+                        var price = parseFloat(ticker.lastPrice);
+                        var changePct = parseFloat(ticker.priceChangePercent);
+                        // 更新价格
+                        info.el.textContent = '$' + (price >= 1 ? price.toFixed(2) : price.toFixed(4));
+                        info.el.style.color = 'var(--accent-green)';
+                        // 更新涨跌幅
+                        var changeEl = info.row.querySelector('.change-badge');
+                        if (changeEl) {
+                            var cls = changePct >= 0 ? 'positive' : 'negative';
+                            var sign = changePct >= 0 ? '+' : '';
+                            changeEl.textContent = sign + changePct.toFixed(2) + '%';
+                            changeEl.className = 'change-badge ' + cls;
+                        }
+                    });
+                    if (updateBadge) {
+                        updateBadge.textContent = '🟢 实时价格已更新 | 更新: ' + pageUpdateTime;
+                        updateBadge.style.borderColor = 'var(--accent-green)';
+                        setTimeout(function() {
+                            if (updateBadge) updateBadge.style.borderColor = 'var(--border)';
+                        }, 3000);
+                    }
+                })
+                .catch(function(err) {
+                    console.log('[live-crypto] Binance API 获取失败: ' + err.message);
+                });
         }
 
-        // 手动刷新：触发 GitHub Actions
+        function startLiveCrypto() {
+            fetchLiveCryptoPrices();
+            liveCryptoTimer = setInterval(fetchLiveCryptoPrices, LIVE_CRYPTO_INTERVAL * 1000);
+        }
+
+        // ===== 初始化 =====
+        function init() {
+            // 检查在线状态
+            if (syncEl && window.location.protocol === 'https:') {
+                syncEl.textContent = '✓ 在线版';
+                syncEl.style.color = 'var(--accent-green)';
+            } else if (syncEl) {
+                syncEl.textContent = '本地预览';
+                syncEl.style.color = 'var(--accent-yellow)';
+            }
+
+            // 更新按钮状态
+            updateAutoRefreshButton();
+
+            // 启动实时加密货币价格
+            startLiveCrypto();
+
+            if (autoRefreshEnabled) {
+                startAutoRefresh();
+            }
+        }
+
+        // ===== 自动刷新控制 =====
+        function updateAutoRefreshButton() {
+            if (btnAutoRefresh) {
+                if (autoRefreshEnabled) {
+                    btnAutoRefresh.textContent = '⏱️ 自动刷新: 开';
+                    btnAutoRefresh.classList.add('accent');
+                } else {
+                    btnAutoRefresh.textContent = '⏱️ 自动刷新: 关';
+                    btnAutoRefresh.classList.remove('accent');
+                }
+            }
+        }
+
+        window.toggleAutoRefresh = function() {
+            autoRefreshEnabled = !autoRefreshEnabled;
+            localStorage.setItem('auto-refresh', autoRefreshEnabled ? 'true' : 'false');
+            updateAutoRefreshButton();
+
+            if (autoRefreshEnabled) {
+                startAutoRefresh();
+                showToast('✅ 自动刷新已开启，每 ' + (REFRESH_INTERVAL/60) + ' 分钟刷新');
+            } else {
+                stopAutoRefresh();
+                showToast('⏸️ 自动刷新已关闭');
+            }
+        };
+
+        function startAutoRefresh() {
+            stopAutoRefresh(); // 先清除旧的
+
+            countdownSeconds = REFRESH_INTERVAL;
+            updateCountdownDisplay();
+
+            // 倒计时每秒更新
+            countdownTimer = setInterval(function() {
+                countdownSeconds--;
+                updateCountdownDisplay();
+
+                if (countdownSeconds <= 0) {
+                    // 先尝试软刷新（从 JSON 更新数据）
+                    softRefresh();
+                    countdownSeconds = REFRESH_INTERVAL;
+                }
+            }, 1000);
+
+            // 定期检查 data/latest.json 是否有新数据
+            dataCheckTimer = setInterval(function() {
+                checkForNewData();
+            }, DATA_CHECK_INTERVAL * 1000);
+
+            // 定期强制页面重载（保底机制）
+            reloadTimer = setInterval(function() {
+                console.log('[auto-refresh] 触发定时页面重载');
+                window.location.reload(true);
+            }, PAGE_RELOAD_INTERVAL * 1000);
+
+            console.log('[auto-refresh] 已启动，刷新间隔: ' + REFRESH_INTERVAL + 's, 数据检查: ' + DATA_CHECK_INTERVAL + 's');
+        }
+
+        function stopAutoRefresh() {
+            if (countdownTimer) { clearInterval(countdownTimer); countdownTimer = null; }
+            if (dataCheckTimer) { clearInterval(dataCheckTimer); dataCheckTimer = null; }
+            if (reloadTimer) { clearInterval(reloadTimer); reloadTimer = null; }
+            if (liveCryptoTimer) { clearInterval(liveCryptoTimer); liveCryptoTimer = null; }
+            if (updateBadge) {
+                updateBadge.textContent = '🕐 更新: ' + pageUpdateTime;
+            }
+            console.log('[auto-refresh] 已停止');
+        }
+
+        // ===== 倒计时显示 =====
+        function updateCountdownDisplay() {
+            if (!updateBadge) return;
+            var min = Math.floor(Math.abs(countdownSeconds) / 60);
+            var sec = Math.abs(countdownSeconds) % 60;
+            var prefix = countdownSeconds <= 60 ? '🔄 即将刷新' : '🕐 下次刷新';
+            updateBadge.textContent = prefix + ' ' + min + ':' + (sec < 10 ? '0' : '') + sec + ' | 更新: ' + pageUpdateTime;
+        }
+
+        // ===== 检查新数据 =====
+        function checkForNewData() {
+            fetch('data/latest.json?t=' + Date.now())
+                .then(function(resp) {
+                    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+                    return resp.json();
+                })
+                .then(function(data) {
+                    var remoteTime = data.update_time || '';
+                    if (remoteTime && remoteTime !== pageUpdateTime) {
+                        console.log('[auto-refresh] 发现新数据: ' + remoteTime + ' (页面: ' + pageUpdateTime + ')');
+                        if (updateBadge) {
+                            updateBadge.textContent = '🆕 发现新数据，正在更新...';
+                            updateBadge.style.borderColor = 'var(--accent-green)';
+                        }
+                        // 有新数据，执行软刷新
+                        applyDataRefresh(data);
+                        pageUpdateTime = remoteTime;
+                        countdownSeconds = REFRESH_INTERVAL;
+                    } else {
+                        console.log('[auto-refresh] 数据未变化 (' + remoteTime + ')');
+                    }
+                })
+                .catch(function(err) {
+                    console.log('[auto-refresh] 检查数据失败: ' + err.message);
+                });
+        }
+
+        // ===== 软刷新：用 JSON 数据更新页面 =====
+        function softRefresh() {
+            fetch('data/latest.json?t=' + Date.now())
+                .then(function(resp) {
+                    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+                    return resp.json();
+                })
+                .then(function(data) {
+                    applyDataRefresh(data);
+                    pageUpdateTime = data.update_time || pageUpdateTime;
+                    console.log('[auto-refresh] 软刷新完成: ' + pageUpdateTime);
+                })
+                .catch(function(err) {
+                    console.log('[auto-refresh] 软刷新失败，执行硬刷新: ' + err.message);
+                    window.location.reload(true);
+                });
+        }
+
+        function applyDataRefresh(data) {
+            var stocks = data.stocks || {};
+            var news = data.news || [];
+
+            // 更新摘要卡片
+            var allItems = (stocks.a_stocks || []).concat(stocks.hk_stocks || [], stocks.us_stocks || [], stocks.crypto || []);
+            var upCount = allItems.filter(function(s) { return s.change_pct > 0; }).length;
+            var downCount = allItems.filter(function(s) { return s.change_pct < 0; }).length;
+            var totalCount = allItems.length;
+            var upPct = totalCount > 0 ? Math.round(upCount / totalCount * 1000) / 10 : 0;
+            var downPct = totalCount > 0 ? Math.round(downCount / totalCount * 1000) / 10 : 0;
+
+            updateSummaryCards(totalCount, upCount, downCount, upPct, downPct, stocks, news.length);
+
+            // 更新各市场表格
+            updateStockTable('a-stock-table-body', stocks.a_stocks || [], 'A');
+            updateStockTable('hk-stock-table-body', stocks.hk_stocks || [], 'HK');
+            updateStockTable('us-stock-table-body', stocks.us_stocks || [], 'US');
+            updateCryptoTable('crypto-table-body', stocks.crypto || []);
+            updateCryptoOnchain(stocks.crypto || []);
+
+            // 更新新闻
+            updateNewsSection(news);
+
+            // 更新顶部时间
+            if (updateBadge) {
+                updateBadge.textContent = '🕐 更新: ' + (data.update_time || pageUpdateTime);
+                updateBadge.style.borderColor = 'var(--border)';
+            }
+        }
+
+        function updateSummaryCards(total, up, down, upPct, downPct, stocks, newsCount) {
+            var cards = document.querySelectorAll('.summary-card .card-value');
+            var subs = document.querySelectorAll('.summary-card .card-sub');
+            if (cards.length >= 4) {
+                cards[0].textContent = total;
+                cards[1].textContent = up;
+                cards[1].className = 'card-value up';
+                cards[2].textContent = down;
+                cards[2].className = 'card-value down';
+                cards[3].textContent = newsCount + ' 条';
+                cards[3].style.fontSize = '1.4rem';
+            }
+            if (subs.length >= 4) {
+                subs[0].textContent = 'A股 ' + (stocks.a_stocks || []).length + ' · 港股 ' + (stocks.hk_stocks || []).length + ' · 美股 ' + (stocks.us_stocks || []).length + ' · 加密 ' + (stocks.crypto || []).length;
+                subs[1].textContent = '占比 ' + upPct + '%';
+                subs[2].textContent = '占比 ' + downPct + '%';
+            }
+        }
+
+        function buildStockRow(s, market) {
+            var currencySymbol = market === 'HK' ? 'HK$' : (market === 'US' ? '$' : '¥');
+            var changeClass = s.change_pct >= 0 ? 'positive' : 'negative';
+            var changeSign = s.change_pct >= 0 ? '+' : '';
+            var macdClass = s.macd > 0 ? 'bullish' : (s.macd < 0 ? 'bearish' : 'neutral');
+            var rsiClass = s.rsi > 50 ? 'bullish' : (s.rsi < 50 ? 'bearish' : 'neutral');
+            var cfClass = s.cash_flow > 0 ? 'up' : (s.cash_flow < 0 ? 'down' : '');
+            var flowClass = s.main_net_flow > 0 ? 'up' : (s.main_net_flow < 0 ? 'down' : '');
+            var ma = s.ma || {};
+
+            var html = '<tr>';
+            html += '<td><span class="stock-name">' + escHtml(s.name) + '</span><span class="stock-code">' + escHtml(s.code) + '</span>';
+            if (s.business) html += '<span class="stock-industry" style="font-size:0.68rem">' + escHtml(s.industry || '') + '</span>';
+            html += '</td>';
+            html += '<td><span class="stock-industry">' + escHtml(s.industry || '-') + '</span></td>';
+            html += '<td><span class="stock-business" title="' + escAttr(s.business || '') + '">' + escHtml(s.business || '-') + '</span></td>';
+            html += '<td class="price">' + currencySymbol + formatNum(s.price, market === 'US' ? 2 : 2) + '</td>';
+            html += '<td><span class="change-badge ' + changeClass + '">' + changeSign + s.change_pct + '%</span></td>';
+            html += '<td>' + (s.market_cap != null ? s.market_cap : '-') + '</td>';
+            html += '<td>' + (s.pe != null ? s.pe : '-') + '</td>';
+            html += '<td class="' + cfClass + '">' + (s.cash_flow != null ? s.cash_flow : '-') + '</td>';
+            html += '<td class="indicator ' + macdClass + '">' + (s.macd != null ? s.macd : '-') + '</td>';
+            html += '<td class="indicator ' + rsiClass + '">' + (s.rsi != null ? s.rsi : '-') + '</td>';
+            html += '<td>' + (ma.MA5 != null ? ma.MA5 : '-') + '</td>';
+            html += '<td>' + (ma.MA20 != null ? ma.MA20 : '-') + '</td>';
+            if (market === 'A') {
+                html += '<td class="' + flowClass + '">' + (s.main_net_flow != null ? s.main_net_flow + '亿' : '-') + '</td>';
+            }
+            html += '</tr>';
+            return html;
+        }
+
+        function updateStockTable(tbodyId, stocks, market) {
+            var tbody = document.getElementById(tbodyId);
+            if (!tbody) return;
+            if (!stocks || stocks.length === 0) {
+                // 如果数据为空，保持原有内容（可能是空状态提示）
+                return;
+            }
+            var html = '';
+            for (var i = 0; i < stocks.length; i++) {
+                html += buildStockRow(stocks[i], market);
+            }
+            tbody.innerHTML = html;
+        }
+
+        function updateCryptoTable(tbodyId, cryptoList) {
+            var tbody = document.getElementById(tbodyId);
+            if (!tbody || !cryptoList || cryptoList.length === 0) return;
+
+            var html = '';
+            for (var i = 0; i < cryptoList.length; i++) {
+                var s = cryptoList[i];
+                var changeClass = s.change_pct >= 0 ? 'positive' : 'negative';
+                var changeSign = s.change_pct >= 0 ? '+' : '';
+                var macdClass = s.macd > 0 ? 'bullish' : (s.macd < 0 ? 'bearish' : 'neutral');
+                var rsiClass = s.rsi > 50 ? 'bullish' : (s.rsi < 50 ? 'bearish' : 'neutral');
+                var etfClass = s.etf_net_flow > 0 ? 'up' : (s.etf_net_flow < 0 ? 'down' : '');
+                var etfSign = s.etf_net_flow > 0 ? '+' : '';
+                var onchain = s.onchain || {};
+                var d7class = onchain.price_change_7d > 0 ? 'up' : (onchain.price_change_7d < 0 ? 'down' : '');
+                var d7sign = onchain.price_change_7d > 0 ? '+' : '';
+                var d30class = onchain.price_change_30d > 0 ? 'up' : (onchain.price_change_30d < 0 ? 'down' : '');
+                var d30sign = onchain.price_change_30d > 0 ? '+' : '';
+
+                html += '<tr>';
+                html += '<td><span class="stock-name">' + escHtml(s.name) + '</span><span class="stock-code">' + escHtml(s.symbol) + '</span></td>';
+                html += '<td><span class="stock-industry">' + escHtml(s.industry || '-') + '</span></td>';
+                html += '<td class="price">$' + formatNum(s.price, 4) + '</td>';
+                html += '<td><span class="change-badge ' + changeClass + '">' + changeSign + s.change_pct + '%</span></td>';
+                html += '<td>' + (s.market_cap != null ? s.market_cap : '-') + '</td>';
+                html += '<td>#' + (s.market_cap_rank != null ? s.market_cap_rank : '-') + '</td>';
+                html += '<td class="up">' + (s.etf_inflow != null ? s.etf_inflow : '-') + '</td>';
+                html += '<td class="down">' + (s.etf_outflow != null ? s.etf_outflow : '-') + '</td>';
+                html += '<td class="' + etfClass + '">' + (s.etf_net_flow != null ? etfSign + s.etf_net_flow : '-') + '</td>';
+                html += '<td class="indicator ' + macdClass + '">' + (s.macd != null ? s.macd : '-') + '</td>';
+                html += '<td class="indicator ' + rsiClass + '">' + (s.rsi != null ? s.rsi : '-') + '</td>';
+                html += '<td class="' + d7class + '">' + (onchain.price_change_7d != null ? d7sign + onchain.price_change_7d.toFixed(1) + '%' : '-') + '</td>';
+                html += '<td class="' + d30class + '">' + (onchain.price_change_30d != null ? d30sign + onchain.price_change_30d.toFixed(1) + '%' : '-') + '</td>';
+                html += '<td class="' + (onchain.ath_pct < 0 ? 'down' : '') + '">' + (onchain.ath_pct != null ? onchain.ath_pct.toFixed(1) + '%' : '-') + '</td>';
+                html += '</tr>';
+            }
+            tbody.innerHTML = html;
+        }
+
+        function updateCryptoOnchain(cryptoList) {
+            // 更新链上数据摘要行
+            var container = document.getElementById('crypto-onchain-info');
+            if (!container || !cryptoList) return;
+            var html = '';
+            for (var i = 0; i < cryptoList.length; i++) {
+                var s = cryptoList[i];
+                var onchain = s.onchain || {};
+                if (!onchain.circ_ratio && !onchain.github_commits_4w && s.etf_net_flow == null) continue;
+                html += '<div style="margin-top:4px;font-size:0.72rem;color:var(--text-muted);padding:4px 14px;">';
+                html += '<strong>' + escHtml(s.symbol) + '</strong>: ';
+                if (s.etf_net_flow != null) html += 'ETF净流动: ' + (s.etf_net_flow > 0 ? '+' : '') + s.etf_net_flow + '亿$ · ';
+                if (onchain.circ_ratio) html += '流通占比 ' + onchain.circ_ratio + '% · ';
+                if (onchain.categories && onchain.categories.length) html += '赛道: ' + onchain.categories.slice(0,2).join(', ') + ' · ';
+                if (onchain.github_commits_4w) html += 'GitHub提交(4w): ' + onchain.github_commits_4w;
+                html += '</div>';
+            }
+            container.innerHTML = html;
+        }
+
+        function updateNewsSection(news) {
+            var grid = document.querySelector('.news-grid');
+            if (!grid || !news || news.length === 0) return;
+            var html = '';
+            for (var i = 0; i < news.length; i++) {
+                var n = news[i];
+                html += '<div class="news-card"><a href="' + escAttr(n.link) + '" target="_blank" rel="noopener">';
+                html += '<div class="news-title">' + escHtml(n.title) + '</div>';
+                html += '<div class="news-summary">' + escHtml(n.summary || '') + '</div>';
+                html += '<div class="news-meta"><span class="news-source">' + escHtml(n.source || '') + '</span><span>' + escHtml(n.published || '') + '</span></div>';
+                html += '</a></div>';
+            }
+            grid.innerHTML = html;
+        }
+
+        // ===== 工具函数 =====
+        function escHtml(str) {
+            if (str == null) return '';
+            return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        }
+
+        function escAttr(str) {
+            if (str == null) return '';
+            return String(str).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        }
+
+        function formatNum(num, decimals) {
+            if (num == null) return '-';
+            return Number(num).toFixed(decimals || 2);
+        }
+
+        function showToast(msg) {
+            var toast = document.createElement('div');
+            toast.style.cssText = 'position:fixed;bottom:24px;right:24px;background:var(--bg-card);color:var(--text-primary);padding:12px 20px;border-radius:8px;border:1px solid var(--border);z-index:9999;font-size:0.85rem;box-shadow:0 4px 16px rgba(0,0,0,0.4);transition:opacity 0.3s;';
+            toast.textContent = msg;
+            document.body.appendChild(toast);
+            setTimeout(function() {
+                toast.style.opacity = '0';
+                setTimeout(function() { document.body.removeChild(toast); }, 300);
+            }, 2500);
+        }
+
+        // ===== 手动刷新：触发 GitHub Actions =====
         window.triggerRefresh = function() {
             var token = localStorage.getItem('gh-token');
             if (!token) {
@@ -1643,18 +1099,21 @@
             }).then(function(resp) {
                 if (resp.status === 204) {
                     if (statusEl) { statusEl.textContent = '✓ 已触发，等待更新...'; statusEl.style.color = 'var(--accent-green)'; }
-                    alert('✅ 刷新工作流已触发！\n\nGitHub Actions 约 3-5 分钟后完成，届时刷新页面即可看到最新数据。');
+                    showToast('✅ GitHub Actions 已触发，约3-5分钟后更新');
                 } else {
                     return resp.json().then(function(err) {
                         if (statusEl) { statusEl.textContent = '触发失败'; statusEl.style.color = 'var(--accent-red)'; }
-                        alert('❌ 触发失败: ' + (err.message || '未知错误') + '\n\n可点击 "Actions" 按钮在 GitHub 网页手动触发。');
+                        showToast('❌ 触发失败: ' + (err.message || '未知错误'));
                     });
                 }
             }).catch(function(e) {
                 if (statusEl) { statusEl.textContent = '网络错误'; statusEl.style.color = 'var(--accent-red)'; }
-                alert('❌ 网络错误: ' + e.message + '\n\n可点击 "Actions" 按钮在 GitHub 网页手动触发。');
+                showToast('❌ 网络错误: ' + e.message);
             });
         };
+
+        // ===== 启动 =====
+        init();
     })();
     </script>
 </body>

@@ -1,6 +1,6 @@
 """
 港股 + 美股数据抓取模块
-数据源：Yahoo Finance API（直接调用，绕过 yfinance 库限流）
+数据源：yfinance（主）+ Yahoo Finance API（备用）
 """
 import requests
 import pandas as pd
@@ -17,137 +17,51 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scripts.config import HK_STOCKS, US_STOCKS, MACD_FAST, MACD_SLOW, MACD_SIGNAL, RSI_PERIOD, MA_PERIODS
 from scripts.fetch_stocks import calc_macd, calc_rsi, calc_ma
 
-SESSION = requests.Session()
-SESSION.headers.update({
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Accept": "application/json",
-})
 
-
-def _yahoo_chart(ticker_symbol, period="6mo", interval="1d"):
-    """
-    直接调用 Yahoo Finance chart API
-    返回 (history_df, meta_info)
-    """
-    # period 转换为 Yahoo API 参数
-    period_map = {"6mo": "6mo", "1y": "1y"}
-    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker_symbol}"
-    params = {
-        "range": period_map.get(period, "6mo"),
-        "interval": interval,
-        "includePrePost": "false",
-    }
-
-    for attempt in range(3):
-        try:
-            resp = SESSION.get(url, params=params, timeout=20)
-            if resp.status_code == 429:
-                wait = (attempt + 1) * 15
-                print(f"    ⏳ 限流, 等待 {wait}s...")
-                time.sleep(wait)
-                continue
-            resp.raise_for_status()
-            data = resp.json()
-            result = data["chart"]["result"][0]
-
-            # 解析K线数据
-            timestamps = result["timestamp"]
-            quote = result["indicators"]["quote"][0]
-            opens = quote.get("open", [])
-            highs = quote.get("high", [])
-            lows = quote.get("low", [])
-            closes = quote.get("close", [])
-            volumes = quote.get("volume", [])
-
-            # 构建 DataFrame
-            df = pd.DataFrame({
-                "Date": pd.to_datetime(timestamps, unit="s"),
-                "Open": opens,
-                "High": highs,
-                "Low": lows,
-                "Close": closes,
-                "Volume": volumes,
-            })
-            df = df.set_index("Date")
-            df = df.dropna(subset=["Close"])
-
-            # meta 信息
-            meta = result.get("meta", {})
-            return df, meta
-        except Exception as e:
-            if attempt == 2:
-                raise e
-            time.sleep(5)
-
-    return pd.DataFrame(), {}
-
-
-def _yahoo_quote(ticker_symbol):
-    """获取实时报价和基本面"""
-    url = f"https://query1.finance.yahoo.com/v6/finance/quote?symbols={ticker_symbol}"
+def _fetch_via_yfinance(ticker_symbol):
+    """使用 yfinance 库获取数据（处理 cookie/crumb 认证）"""
+    import yfinance as yf
     try:
-        resp = SESSION.get(url, timeout=10)
-        if resp.status_code == 200:
-            data = resp.json()
-            result = data.get("quoteResponse", {}).get("result", [])
-            if result:
-                return result[0]
-    except:
-        pass
-    return {}
+        stock = yf.Ticker(ticker_symbol)
+        hist = stock.history(period="6mo")
+        if hist.empty:
+            return None, None, None
 
+        info = stock.info or {}
 
-_YAHOO_CRUMB = None
+        # 获取业务描述和财务数据
+        business = info.get('longBusinessSummary', '')
+        if business and len(business) > 80:
+            business = business[:80] + '...'
 
+        raw_cf = info.get('freeCashflow') or info.get('operatingCashflow')
+        cash_flow = round(abs(float(raw_cf)) / 1e8, 2) if raw_cf else None
 
-def _get_yahoo_crumb():
-    """获取 Yahoo Finance API crumb（会话级缓存）"""
-    global _YAHOO_CRUMB
-    if _YAHOO_CRUMB:
-        return _YAHOO_CRUMB
-    try:
-        SESSION.get("https://fc.yahoo.com/", timeout=10)
-        resp = SESSION.get("https://query2.finance.yahoo.com/v1/test/getcrumb", timeout=10)
-        if resp.status_code == 200 and resp.text.strip():
-            _YAHOO_CRUMB = resp.text.strip()
-            return _YAHOO_CRUMB
-    except Exception:
-        pass
-    return None
+        profile = {
+            "business": business,
+            "free_cash_flow": info.get('freeCashflow'),
+            "operating_cash_flow": info.get('operatingCashflow'),
+            "total_cash": info.get('totalCash'),
+            "total_debt": info.get('totalDebt'),
+        }
 
+        quote = {
+            "marketCap": info.get('marketCap'),
+            "trailingPE": info.get('trailingPE'),
+            "forwardPE": info.get('forwardPE'),
+            "industry": info.get('industry') or info.get('sector'),
+            "regularMarketPrice": info.get('regularMarketPrice') or info.get('currentPrice'),
+        }
 
-def _yahoo_profile(ticker_symbol):
-    """获取公司业务描述和财务数据（v10 API + crumb）"""
-    crumb = _get_yahoo_crumb()
-    if not crumb:
-        return {}
-    url = "https://query2.finance.yahoo.com/v10/finance/quoteSummary/" + ticker_symbol
-    params = {"modules": "assetProfile,financialData", "crumb": crumb}
-    try:
-        resp = SESSION.get(url, params=params, timeout=15)
-        if resp.status_code == 200:
-            data = resp.json()
-            result = data.get("quoteSummary", {}).get("result", [])
-            if result:
-                profile = result[0].get("assetProfile", {}) or {}
-                financial = result[0].get("financialData", {}) or {}
-                fcf = financial.get("freeCashflow", {}) or {}
-                ocf = financial.get("operatingCashflow", {}) or {}
-                return {
-                    "business": profile.get("longBusinessSummary", ""),
-                    "free_cash_flow": fcf.get("raw") if fcf else None,
-                    "operating_cash_flow": ocf.get("raw") if ocf else None,
-                    "total_cash": (financial.get("totalCash", {}) or {}).get("raw"),
-                    "total_debt": (financial.get("totalDebt", {}) or {}).get("raw"),
-                }
-    except Exception:
-        pass
-    return {}
+        return hist, quote, profile
+    except Exception as e:
+        print(f"    ⚠ yfinance 失败: {str(e)[:80]}")
+        return None, None, None
 
 
 def _process_stock(hist_df, quote_info, profile_info, code, name, market):
     """处理单只股票数据"""
-    if hist_df.empty or len(hist_df) < 2:
+    if hist_df is None or hist_df.empty or len(hist_df) < 2:
         return None
 
     close_prices = hist_df["Close"]
@@ -159,21 +73,21 @@ def _process_stock(hist_df, quote_info, profile_info, code, name, market):
     rsi = calc_rsi(close_prices)
     ma_data = calc_ma(close_prices)
 
-    market_cap = quote_info.get("marketCap", None)
-    pe = quote_info.get("trailingPE", None) or quote_info.get("forwardPE", None)
-    industry = quote_info.get("industry", None) or quote_info.get("sector", None)
+    market_cap = quote_info.get("marketCap", None) if quote_info else None
+    pe = (quote_info.get("trailingPE") or quote_info.get("forwardPE")) if quote_info else None
+    industry = quote_info.get("industry") if quote_info else None
     volume = int(latest["Volume"]) if "Volume" in latest.index and not pd.isna(latest["Volume"]) else None
 
-    # 业务描述
     business = profile_info.get("business", "") if profile_info else ""
-    if business and len(business) > 80:
-        business = business[:80] + "..."
-
-    # 现金流（优先自由现金流，取绝对值并转亿）
     raw_cf = None
     if profile_info:
         raw_cf = profile_info.get("free_cash_flow") or profile_info.get("operating_cash_flow")
     cash_flow = round(abs(float(raw_cf)) / 1e8, 2) if raw_cf is not None else None
+
+    price_val = float(latest["Close"])
+    open_val = float(latest["Open"]) if "Open" in latest.index and not pd.isna(latest["Open"]) else None
+    high_val = float(latest["High"]) if "High" in latest.index and not pd.isna(latest["High"]) else None
+    low_val = float(latest["Low"]) if "Low" in latest.index and not pd.isna(latest["Low"]) else None
 
     return {
         "market": market,
@@ -182,10 +96,10 @@ def _process_stock(hist_df, quote_info, profile_info, code, name, market):
         "symbol": code,
         "industry": industry,
         "business": business or None,
-        "price": round(float(latest["Close"]), 2),
-        "open": round(float(latest["Open"]), 2) if "Open" in latest.index and not pd.isna(latest["Open"]) else None,
-        "high": round(float(latest["High"]), 2) if "High" in latest.index and not pd.isna(latest["High"]) else None,
-        "low": round(float(latest["Low"]), 2) if "Low" in latest.index and not pd.isna(latest["Low"]) else None,
+        "price": round(price_val, 2),
+        "open": round(open_val, 2) if open_val is not None else None,
+        "high": round(high_val, 2) if high_val is not None else None,
+        "low": round(low_val, 2) if low_val is not None else None,
         "change_pct": change_pct,
         "volume": volume,
         "turnover": None,
@@ -222,26 +136,12 @@ def fetch_global_stocks(market_type):
         print(f"  → {name}({ticker})")
 
         try:
-            # 获取K线
-            hist_df, meta = _yahoo_chart(ticker)
-            if hist_df.empty:
-                print(f"    ⚠ K线数据为空")
+            # 主要方法：yfinance
+            hist_df, quote, profile = _fetch_via_yfinance(ticker)
+
+            if hist_df is None or hist_df.empty:
+                print(f"    ⚠ {name} 无法获取数据（API可能被限制）")
                 continue
-
-            # 获取报价/基本面
-            time.sleep(0.8)
-            quote = _yahoo_quote(ticker)
-            if not quote:
-                # 从 meta 中提取价格
-                quote = {
-                    "regularMarketPrice": meta.get("regularMarketPrice"),
-                    "marketCap": meta.get("marketCap"),
-                    "trailingPE": meta.get("trailingPE"),
-                }
-
-            # 获取公司业务描述和财务数据
-            time.sleep(0.5)
-            profile = _yahoo_profile(ticker)
 
             result = _process_stock(hist_df, quote, profile, code, name, market_name)
             if result:
@@ -254,9 +154,8 @@ def fetch_global_stocks(market_type):
         except Exception as e:
             print(f"    ✗ 失败: {str(e)[:100]}")
 
-        # 间隔避免限流
         if i < len(stocks) - 1:
-            time.sleep(1.5)
+            time.sleep(1.0)
 
     print(f"[{market_name}] 完成，成功获取 {len(results)}/{len(stocks)} 只股票数据")
     return results

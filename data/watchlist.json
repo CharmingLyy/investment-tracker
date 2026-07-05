@@ -1,0 +1,51 @@
+{
+  "A_STOCKS": [],
+  "HK_STOCKS": [
+    {
+      "code": "01810",
+      "name": "小米集团-W"
+    }
+  ],
+  "US_STOCKS": [
+    {
+      "code": "NVDA",
+      "name": "NVIDIA"
+    },
+    {
+      "code": "GOOG",
+      "name": "Alphabet (Google)"
+    },
+    {
+      "code": "CRCL",
+      "name": "Circle"
+    },
+    {
+      "code": "MP",
+      "name": "MP Materials"
+    },
+    {
+      "code": "PLTR",
+      "name": "Palantir"
+    },
+    {
+      "code": "NOW",
+      "name": "ServiceNow"
+    },
+    {
+      "code": "DDOG",
+      "name": "Datadog"
+    }
+  ],
+  "CRYPTO": [
+    {
+      "id": "bitcoin",
+      "name": "Bitcoin",
+      "symbol": "BTC"
+    },
+    {
+      "id": "ethereum",
+      "name": "Ethereum",
+      "symbol": "ETH"
+    }
+  ]
+}

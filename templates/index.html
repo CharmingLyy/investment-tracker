@@ -432,6 +432,7 @@
             <a href="admin.html" class="btn-tool">⚙️ 编辑标的</a>
             <button class="btn-tool accent" onclick="triggerRefresh()" title="触发 GitHub Actions 工作流刷新数据">🔄 手动刷新</button>
             <button class="btn-tool" onclick="window.open('https://github.com/CharmingLyy/investment-tracker/actions', '_blank')">🔗 Actions</button>
+            <button id="btn-auto-refresh" class="btn-tool accent" onclick="toggleAutoRefresh()" title="切换自动刷新">⏱️ 自动刷新: 开</button>
             <span class="sync-status">
                 🌐 <a href="https://charminglyy.github.io/investment-tracker/" target="_blank">在线面板</a>
                 · <span id="sync-indicator">已同步</span>
@@ -490,7 +491,7 @@
                             <th>主力净流入(亿)</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="a-stock-table-body">
                         {% for s in a_stocks %}
                         <tr>
                             <td>
@@ -560,7 +561,7 @@
                             <th>MA20</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="hk-stock-table-body">
                         {% for s in hk_stocks %}
                         <tr>
                             <td>
@@ -626,7 +627,7 @@
                             <th>MA20</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="us-stock-table-body">
                         {% for s in us_stocks %}
                         <tr>
                             <td>
@@ -694,7 +695,7 @@
                             <th>距ATH</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="crypto-table-body">
                         {% for s in crypto_list %}
                         <tr>
                             <td>
@@ -736,6 +737,7 @@
                 </table>
             </div>
             <!-- 链上数据 + ETF 流动详情 -->
+            <div id="crypto-onchain-info">
             {% for s in crypto_list %}
             {% if s.onchain.circ_ratio or s.onchain.github_commits_4w or s.etf_net_flow is not none %}
             <div style="margin-top: 4px; font-size: 0.72rem; color: var(--text-muted); padding: 4px 14px;">
@@ -747,6 +749,7 @@
             </div>
             {% endif %}
             {% endfor %}
+            </div>
         </section>
         {% else %}
         <section class="market-section">
@@ -784,20 +787,438 @@
         📊 投资观察面板 · 数据每日自动更新 · 数据来源: akshare / Yahoo Finance / CoinGecko
     </footer>
 
-    <!-- 管理功能脚本 -->
+    <!-- 自动刷新 + 动态数据加载脚本 -->
     <script>
     (function() {
-        // 检查 GitHub Pages 同步状态
+        // ===== 配置 =====
+        var REFRESH_INTERVAL = 5 * 60;       // 自动刷新间隔（秒），默认5分钟
+        var DATA_CHECK_INTERVAL = 2 * 60;     // 数据文件检查间隔（秒），默认2分钟
+        var PAGE_RELOAD_INTERVAL = 15 * 60;   // 强制页面重载间隔（秒），默认15分钟
+        var LIVE_CRYPTO_INTERVAL = 30;        // 实时加密货币价格刷新（秒）
+
+        // ===== 状态 =====
+        var autoRefreshEnabled = localStorage.getItem('auto-refresh') !== 'false';
+        var pageUpdateTime = '{{ update_time }}';  // 页面生成时间
+        var countdownSeconds = REFRESH_INTERVAL;
+        var dataCheckTimer = null;
+        var countdownTimer = null;
+        var reloadTimer = null;
+        var liveCryptoTimer = null;
+
+        // ===== DOM 元素 =====
         var syncEl = document.getElementById('sync-indicator');
-        if (syncEl && window.location.protocol === 'https:') {
-            syncEl.textContent = '✓ 在线版';
-            syncEl.style.color = 'var(--accent-green)';
-        } else if (syncEl) {
-            syncEl.textContent = '本地预览';
-            syncEl.style.color = 'var(--accent-yellow)';
+        var btnAutoRefresh = document.getElementById('btn-auto-refresh');
+        var updateBadge = document.querySelector('.update-badge');
+
+        // ===== 实时加密货币价格 (Binance API) =====
+        function fetchLiveCryptoPrices() {
+            // Binance API 公开免费，无需 key，国内也能访问
+            var symbols = [];
+            var cryptoTbody = document.getElementById('crypto-table-body');
+            if (!cryptoTbody) return;
+
+            // 从当前页面解析需要哪些币种
+            var rows = cryptoTbody.querySelectorAll('tr');
+            var cryptoMap = {};
+            rows.forEach(function(row) {
+                var symbolEl = row.querySelector('.stock-code');
+                var priceEl = row.querySelector('.price');
+                if (symbolEl && priceEl) {
+                    var sym = symbolEl.textContent.trim();
+                    if (sym === 'BTC') cryptoMap['BTCUSDT'] = {el: priceEl, row: row};
+                    if (sym === 'ETH') cryptoMap['ETHUSDT'] = {el: priceEl, row: row};
+                }
+            });
+
+            if (Object.keys(cryptoMap).length === 0) return;
+
+            // Binance 公开 ticker API
+            fetch('https://api.binance.com/api/v3/ticker/24hr?symbols=' + JSON.stringify(Object.keys(cryptoMap)))
+                .then(function(resp) {
+                    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+                    return resp.json();
+                })
+                .then(function(data) {
+                    data.forEach(function(ticker) {
+                        var info = cryptoMap[ticker.symbol];
+                        if (!info) return;
+                        var price = parseFloat(ticker.lastPrice);
+                        var changePct = parseFloat(ticker.priceChangePercent);
+                        // 更新价格
+                        info.el.textContent = '$' + (price >= 1 ? price.toFixed(2) : price.toFixed(4));
+                        info.el.style.color = 'var(--accent-green)';
+                        // 更新涨跌幅
+                        var changeEl = info.row.querySelector('.change-badge');
+                        if (changeEl) {
+                            var cls = changePct >= 0 ? 'positive' : 'negative';
+                            var sign = changePct >= 0 ? '+' : '';
+                            changeEl.textContent = sign + changePct.toFixed(2) + '%';
+                            changeEl.className = 'change-badge ' + cls;
+                        }
+                    });
+                    if (updateBadge) {
+                        updateBadge.textContent = '🟢 实时价格已更新 | 更新: ' + pageUpdateTime;
+                        updateBadge.style.borderColor = 'var(--accent-green)';
+                        setTimeout(function() {
+                            if (updateBadge) updateBadge.style.borderColor = 'var(--border)';
+                        }, 3000);
+                    }
+                })
+                .catch(function(err) {
+                    console.log('[live-crypto] Binance API 获取失败: ' + err.message);
+                });
         }
 
-        // 手动刷新：触发 GitHub Actions
+        function startLiveCrypto() {
+            fetchLiveCryptoPrices();
+            liveCryptoTimer = setInterval(fetchLiveCryptoPrices, LIVE_CRYPTO_INTERVAL * 1000);
+        }
+
+        // ===== 初始化 =====
+        function init() {
+            // 检查在线状态
+            if (syncEl && window.location.protocol === 'https:') {
+                syncEl.textContent = '✓ 在线版';
+                syncEl.style.color = 'var(--accent-green)';
+            } else if (syncEl) {
+                syncEl.textContent = '本地预览';
+                syncEl.style.color = 'var(--accent-yellow)';
+            }
+
+            // 更新按钮状态
+            updateAutoRefreshButton();
+
+            // 启动实时加密货币价格
+            startLiveCrypto();
+
+            if (autoRefreshEnabled) {
+                startAutoRefresh();
+            }
+        }
+
+        // ===== 自动刷新控制 =====
+        function updateAutoRefreshButton() {
+            if (btnAutoRefresh) {
+                if (autoRefreshEnabled) {
+                    btnAutoRefresh.textContent = '⏱️ 自动刷新: 开';
+                    btnAutoRefresh.classList.add('accent');
+                } else {
+                    btnAutoRefresh.textContent = '⏱️ 自动刷新: 关';
+                    btnAutoRefresh.classList.remove('accent');
+                }
+            }
+        }
+
+        window.toggleAutoRefresh = function() {
+            autoRefreshEnabled = !autoRefreshEnabled;
+            localStorage.setItem('auto-refresh', autoRefreshEnabled ? 'true' : 'false');
+            updateAutoRefreshButton();
+
+            if (autoRefreshEnabled) {
+                startAutoRefresh();
+                showToast('✅ 自动刷新已开启，每 ' + (REFRESH_INTERVAL/60) + ' 分钟刷新');
+            } else {
+                stopAutoRefresh();
+                showToast('⏸️ 自动刷新已关闭');
+            }
+        };
+
+        function startAutoRefresh() {
+            stopAutoRefresh(); // 先清除旧的
+
+            countdownSeconds = REFRESH_INTERVAL;
+            updateCountdownDisplay();
+
+            // 倒计时每秒更新
+            countdownTimer = setInterval(function() {
+                countdownSeconds--;
+                updateCountdownDisplay();
+
+                if (countdownSeconds <= 0) {
+                    // 先尝试软刷新（从 JSON 更新数据）
+                    softRefresh();
+                    countdownSeconds = REFRESH_INTERVAL;
+                }
+            }, 1000);
+
+            // 定期检查 data/latest.json 是否有新数据
+            dataCheckTimer = setInterval(function() {
+                checkForNewData();
+            }, DATA_CHECK_INTERVAL * 1000);
+
+            // 定期强制页面重载（保底机制）
+            reloadTimer = setInterval(function() {
+                console.log('[auto-refresh] 触发定时页面重载');
+                window.location.reload(true);
+            }, PAGE_RELOAD_INTERVAL * 1000);
+
+            console.log('[auto-refresh] 已启动，刷新间隔: ' + REFRESH_INTERVAL + 's, 数据检查: ' + DATA_CHECK_INTERVAL + 's');
+        }
+
+        function stopAutoRefresh() {
+            if (countdownTimer) { clearInterval(countdownTimer); countdownTimer = null; }
+            if (dataCheckTimer) { clearInterval(dataCheckTimer); dataCheckTimer = null; }
+            if (reloadTimer) { clearInterval(reloadTimer); reloadTimer = null; }
+            if (liveCryptoTimer) { clearInterval(liveCryptoTimer); liveCryptoTimer = null; }
+            if (updateBadge) {
+                updateBadge.textContent = '🕐 更新: ' + pageUpdateTime;
+            }
+            console.log('[auto-refresh] 已停止');
+        }
+
+        // ===== 倒计时显示 =====
+        function updateCountdownDisplay() {
+            if (!updateBadge) return;
+            var min = Math.floor(Math.abs(countdownSeconds) / 60);
+            var sec = Math.abs(countdownSeconds) % 60;
+            var prefix = countdownSeconds <= 60 ? '🔄 即将刷新' : '🕐 下次刷新';
+            updateBadge.textContent = prefix + ' ' + min + ':' + (sec < 10 ? '0' : '') + sec + ' | 更新: ' + pageUpdateTime;
+        }
+
+        // ===== 检查新数据 =====
+        function checkForNewData() {
+            fetch('data/latest.json?t=' + Date.now())
+                .then(function(resp) {
+                    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+                    return resp.json();
+                })
+                .then(function(data) {
+                    var remoteTime = data.update_time || '';
+                    if (remoteTime && remoteTime !== pageUpdateTime) {
+                        console.log('[auto-refresh] 发现新数据: ' + remoteTime + ' (页面: ' + pageUpdateTime + ')');
+                        if (updateBadge) {
+                            updateBadge.textContent = '🆕 发现新数据，正在更新...';
+                            updateBadge.style.borderColor = 'var(--accent-green)';
+                        }
+                        // 有新数据，执行软刷新
+                        applyDataRefresh(data);
+                        pageUpdateTime = remoteTime;
+                        countdownSeconds = REFRESH_INTERVAL;
+                    } else {
+                        console.log('[auto-refresh] 数据未变化 (' + remoteTime + ')');
+                    }
+                })
+                .catch(function(err) {
+                    console.log('[auto-refresh] 检查数据失败: ' + err.message);
+                });
+        }
+
+        // ===== 软刷新：用 JSON 数据更新页面 =====
+        function softRefresh() {
+            fetch('data/latest.json?t=' + Date.now())
+                .then(function(resp) {
+                    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+                    return resp.json();
+                })
+                .then(function(data) {
+                    applyDataRefresh(data);
+                    pageUpdateTime = data.update_time || pageUpdateTime;
+                    console.log('[auto-refresh] 软刷新完成: ' + pageUpdateTime);
+                })
+                .catch(function(err) {
+                    console.log('[auto-refresh] 软刷新失败，执行硬刷新: ' + err.message);
+                    window.location.reload(true);
+                });
+        }
+
+        function applyDataRefresh(data) {
+            var stocks = data.stocks || {};
+            var news = data.news || [];
+
+            // 更新摘要卡片
+            var allItems = (stocks.a_stocks || []).concat(stocks.hk_stocks || [], stocks.us_stocks || [], stocks.crypto || []);
+            var upCount = allItems.filter(function(s) { return s.change_pct > 0; }).length;
+            var downCount = allItems.filter(function(s) { return s.change_pct < 0; }).length;
+            var totalCount = allItems.length;
+            var upPct = totalCount > 0 ? Math.round(upCount / totalCount * 1000) / 10 : 0;
+            var downPct = totalCount > 0 ? Math.round(downCount / totalCount * 1000) / 10 : 0;
+
+            updateSummaryCards(totalCount, upCount, downCount, upPct, downPct, stocks, news.length);
+
+            // 更新各市场表格
+            updateStockTable('a-stock-table-body', stocks.a_stocks || [], 'A');
+            updateStockTable('hk-stock-table-body', stocks.hk_stocks || [], 'HK');
+            updateStockTable('us-stock-table-body', stocks.us_stocks || [], 'US');
+            updateCryptoTable('crypto-table-body', stocks.crypto || []);
+            updateCryptoOnchain(stocks.crypto || []);
+
+            // 更新新闻
+            updateNewsSection(news);
+
+            // 更新顶部时间
+            if (updateBadge) {
+                updateBadge.textContent = '🕐 更新: ' + (data.update_time || pageUpdateTime);
+                updateBadge.style.borderColor = 'var(--border)';
+            }
+        }
+
+        function updateSummaryCards(total, up, down, upPct, downPct, stocks, newsCount) {
+            var cards = document.querySelectorAll('.summary-card .card-value');
+            var subs = document.querySelectorAll('.summary-card .card-sub');
+            if (cards.length >= 4) {
+                cards[0].textContent = total;
+                cards[1].textContent = up;
+                cards[1].className = 'card-value up';
+                cards[2].textContent = down;
+                cards[2].className = 'card-value down';
+                cards[3].textContent = newsCount + ' 条';
+                cards[3].style.fontSize = '1.4rem';
+            }
+            if (subs.length >= 4) {
+                subs[0].textContent = 'A股 ' + (stocks.a_stocks || []).length + ' · 港股 ' + (stocks.hk_stocks || []).length + ' · 美股 ' + (stocks.us_stocks || []).length + ' · 加密 ' + (stocks.crypto || []).length;
+                subs[1].textContent = '占比 ' + upPct + '%';
+                subs[2].textContent = '占比 ' + downPct + '%';
+            }
+        }
+
+        function buildStockRow(s, market) {
+            var currencySymbol = market === 'HK' ? 'HK$' : (market === 'US' ? '$' : '¥');
+            var changeClass = s.change_pct >= 0 ? 'positive' : 'negative';
+            var changeSign = s.change_pct >= 0 ? '+' : '';
+            var macdClass = s.macd > 0 ? 'bullish' : (s.macd < 0 ? 'bearish' : 'neutral');
+            var rsiClass = s.rsi > 50 ? 'bullish' : (s.rsi < 50 ? 'bearish' : 'neutral');
+            var cfClass = s.cash_flow > 0 ? 'up' : (s.cash_flow < 0 ? 'down' : '');
+            var flowClass = s.main_net_flow > 0 ? 'up' : (s.main_net_flow < 0 ? 'down' : '');
+            var ma = s.ma || {};
+
+            var html = '<tr>';
+            html += '<td><span class="stock-name">' + escHtml(s.name) + '</span><span class="stock-code">' + escHtml(s.code) + '</span>';
+            if (s.business) html += '<span class="stock-industry" style="font-size:0.68rem">' + escHtml(s.industry || '') + '</span>';
+            html += '</td>';
+            html += '<td><span class="stock-industry">' + escHtml(s.industry || '-') + '</span></td>';
+            html += '<td><span class="stock-business" title="' + escAttr(s.business || '') + '">' + escHtml(s.business || '-') + '</span></td>';
+            html += '<td class="price">' + currencySymbol + formatNum(s.price, market === 'US' ? 2 : 2) + '</td>';
+            html += '<td><span class="change-badge ' + changeClass + '">' + changeSign + s.change_pct + '%</span></td>';
+            html += '<td>' + (s.market_cap != null ? s.market_cap : '-') + '</td>';
+            html += '<td>' + (s.pe != null ? s.pe : '-') + '</td>';
+            html += '<td class="' + cfClass + '">' + (s.cash_flow != null ? s.cash_flow : '-') + '</td>';
+            html += '<td class="indicator ' + macdClass + '">' + (s.macd != null ? s.macd : '-') + '</td>';
+            html += '<td class="indicator ' + rsiClass + '">' + (s.rsi != null ? s.rsi : '-') + '</td>';
+            html += '<td>' + (ma.MA5 != null ? ma.MA5 : '-') + '</td>';
+            html += '<td>' + (ma.MA20 != null ? ma.MA20 : '-') + '</td>';
+            if (market === 'A') {
+                html += '<td class="' + flowClass + '">' + (s.main_net_flow != null ? s.main_net_flow + '亿' : '-') + '</td>';
+            }
+            html += '</tr>';
+            return html;
+        }
+
+        function updateStockTable(tbodyId, stocks, market) {
+            var tbody = document.getElementById(tbodyId);
+            if (!tbody) return;
+            if (!stocks || stocks.length === 0) {
+                // 如果数据为空，保持原有内容（可能是空状态提示）
+                return;
+            }
+            var html = '';
+            for (var i = 0; i < stocks.length; i++) {
+                html += buildStockRow(stocks[i], market);
+            }
+            tbody.innerHTML = html;
+        }
+
+        function updateCryptoTable(tbodyId, cryptoList) {
+            var tbody = document.getElementById(tbodyId);
+            if (!tbody || !cryptoList || cryptoList.length === 0) return;
+
+            var html = '';
+            for (var i = 0; i < cryptoList.length; i++) {
+                var s = cryptoList[i];
+                var changeClass = s.change_pct >= 0 ? 'positive' : 'negative';
+                var changeSign = s.change_pct >= 0 ? '+' : '';
+                var macdClass = s.macd > 0 ? 'bullish' : (s.macd < 0 ? 'bearish' : 'neutral');
+                var rsiClass = s.rsi > 50 ? 'bullish' : (s.rsi < 50 ? 'bearish' : 'neutral');
+                var etfClass = s.etf_net_flow > 0 ? 'up' : (s.etf_net_flow < 0 ? 'down' : '');
+                var etfSign = s.etf_net_flow > 0 ? '+' : '';
+                var onchain = s.onchain || {};
+                var d7class = onchain.price_change_7d > 0 ? 'up' : (onchain.price_change_7d < 0 ? 'down' : '');
+                var d7sign = onchain.price_change_7d > 0 ? '+' : '';
+                var d30class = onchain.price_change_30d > 0 ? 'up' : (onchain.price_change_30d < 0 ? 'down' : '');
+                var d30sign = onchain.price_change_30d > 0 ? '+' : '';
+
+                html += '<tr>';
+                html += '<td><span class="stock-name">' + escHtml(s.name) + '</span><span class="stock-code">' + escHtml(s.symbol) + '</span></td>';
+                html += '<td><span class="stock-industry">' + escHtml(s.industry || '-') + '</span></td>';
+                html += '<td class="price">$' + formatNum(s.price, 4) + '</td>';
+                html += '<td><span class="change-badge ' + changeClass + '">' + changeSign + s.change_pct + '%</span></td>';
+                html += '<td>' + (s.market_cap != null ? s.market_cap : '-') + '</td>';
+                html += '<td>#' + (s.market_cap_rank != null ? s.market_cap_rank : '-') + '</td>';
+                html += '<td class="up">' + (s.etf_inflow != null ? s.etf_inflow : '-') + '</td>';
+                html += '<td class="down">' + (s.etf_outflow != null ? s.etf_outflow : '-') + '</td>';
+                html += '<td class="' + etfClass + '">' + (s.etf_net_flow != null ? etfSign + s.etf_net_flow : '-') + '</td>';
+                html += '<td class="indicator ' + macdClass + '">' + (s.macd != null ? s.macd : '-') + '</td>';
+                html += '<td class="indicator ' + rsiClass + '">' + (s.rsi != null ? s.rsi : '-') + '</td>';
+                html += '<td class="' + d7class + '">' + (onchain.price_change_7d != null ? d7sign + onchain.price_change_7d.toFixed(1) + '%' : '-') + '</td>';
+                html += '<td class="' + d30class + '">' + (onchain.price_change_30d != null ? d30sign + onchain.price_change_30d.toFixed(1) + '%' : '-') + '</td>';
+                html += '<td class="' + (onchain.ath_pct < 0 ? 'down' : '') + '">' + (onchain.ath_pct != null ? onchain.ath_pct.toFixed(1) + '%' : '-') + '</td>';
+                html += '</tr>';
+            }
+            tbody.innerHTML = html;
+        }
+
+        function updateCryptoOnchain(cryptoList) {
+            // 更新链上数据摘要行
+            var container = document.getElementById('crypto-onchain-info');
+            if (!container || !cryptoList) return;
+            var html = '';
+            for (var i = 0; i < cryptoList.length; i++) {
+                var s = cryptoList[i];
+                var onchain = s.onchain || {};
+                if (!onchain.circ_ratio && !onchain.github_commits_4w && s.etf_net_flow == null) continue;
+                html += '<div style="margin-top:4px;font-size:0.72rem;color:var(--text-muted);padding:4px 14px;">';
+                html += '<strong>' + escHtml(s.symbol) + '</strong>: ';
+                if (s.etf_net_flow != null) html += 'ETF净流动: ' + (s.etf_net_flow > 0 ? '+' : '') + s.etf_net_flow + '亿$ · ';
+                if (onchain.circ_ratio) html += '流通占比 ' + onchain.circ_ratio + '% · ';
+                if (onchain.categories && onchain.categories.length) html += '赛道: ' + onchain.categories.slice(0,2).join(', ') + ' · ';
+                if (onchain.github_commits_4w) html += 'GitHub提交(4w): ' + onchain.github_commits_4w;
+                html += '</div>';
+            }
+            container.innerHTML = html;
+        }
+
+        function updateNewsSection(news) {
+            var grid = document.querySelector('.news-grid');
+            if (!grid || !news || news.length === 0) return;
+            var html = '';
+            for (var i = 0; i < news.length; i++) {
+                var n = news[i];
+                html += '<div class="news-card"><a href="' + escAttr(n.link) + '" target="_blank" rel="noopener">';
+                html += '<div class="news-title">' + escHtml(n.title) + '</div>';
+                html += '<div class="news-summary">' + escHtml(n.summary || '') + '</div>';
+                html += '<div class="news-meta"><span class="news-source">' + escHtml(n.source || '') + '</span><span>' + escHtml(n.published || '') + '</span></div>';
+                html += '</a></div>';
+            }
+            grid.innerHTML = html;
+        }
+
+        // ===== 工具函数 =====
+        function escHtml(str) {
+            if (str == null) return '';
+            return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        }
+
+        function escAttr(str) {
+            if (str == null) return '';
+            return String(str).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        }
+
+        function formatNum(num, decimals) {
+            if (num == null) return '-';
+            return Number(num).toFixed(decimals || 2);
+        }
+
+        function showToast(msg) {
+            var toast = document.createElement('div');
+            toast.style.cssText = 'position:fixed;bottom:24px;right:24px;background:var(--bg-card);color:var(--text-primary);padding:12px 20px;border-radius:8px;border:1px solid var(--border);z-index:9999;font-size:0.85rem;box-shadow:0 4px 16px rgba(0,0,0,0.4);transition:opacity 0.3s;';
+            toast.textContent = msg;
+            document.body.appendChild(toast);
+            setTimeout(function() {
+                toast.style.opacity = '0';
+                setTimeout(function() { document.body.removeChild(toast); }, 300);
+            }, 2500);
+        }
+
+        // ===== 手动刷新：触发 GitHub Actions =====
         window.triggerRefresh = function() {
             var token = localStorage.getItem('gh-token');
             if (!token) {
@@ -829,18 +1250,21 @@
             }).then(function(resp) {
                 if (resp.status === 204) {
                     if (statusEl) { statusEl.textContent = '✓ 已触发，等待更新...'; statusEl.style.color = 'var(--accent-green)'; }
-                    alert('✅ 刷新工作流已触发！\n\nGitHub Actions 约 3-5 分钟后完成，届时刷新页面即可看到最新数据。');
+                    showToast('✅ GitHub Actions 已触发，约3-5分钟后更新');
                 } else {
                     return resp.json().then(function(err) {
                         if (statusEl) { statusEl.textContent = '触发失败'; statusEl.style.color = 'var(--accent-red)'; }
-                        alert('❌ 触发失败: ' + (err.message || '未知错误') + '\n\n可点击 "Actions" 按钮在 GitHub 网页手动触发。');
+                        showToast('❌ 触发失败: ' + (err.message || '未知错误'));
                     });
                 }
             }).catch(function(e) {
                 if (statusEl) { statusEl.textContent = '网络错误'; statusEl.style.color = 'var(--accent-red)'; }
-                alert('❌ 网络错误: ' + e.message + '\n\n可点击 "Actions" 按钮在 GitHub 网页手动触发。');
+                showToast('❌ 网络错误: ' + e.message);
             });
         };
+
+        // ===== 启动 =====
+        init();
     })();
     </script>
 </body>
