@@ -128,9 +128,9 @@ def _fetch_etf_flows():
                     "etf_inflow": round(net_billion, 2) if net_billion > 0 else None,
                     "etf_outflow": round(abs(net_billion), 2) if net_billion < 0 else None,
                 }
-                print(f"    📊 {fs_slug.upper()} ETF 净流动: {net_billion:+.2f}亿$")
+                print(f"    [ETF] {fs_slug.upper()} net flow: {net_billion:+.2f}B$")
         except Exception as e:
-            print(f"    ⚠ ETF {fs_slug} 数据获取失败: {str(e)[:60]}")
+            print(f"    [ETF] {fs_slug} error: {str(e)[:80]}")
 
     return etf_data
 
@@ -142,7 +142,7 @@ def _fetch_funding_rates():
         rate = None
         oi_value = None
 
-        # === 来源1: Bybit API（免费，通常可从US访问）===
+        # === 来源1: Bybit API（免费，全球可用）===
         try:
             url = "https://api.bybit.com/v5/market/tickers"
             resp = requests.get(url, params={"category": "linear", "symbol": symbol}, timeout=10)
@@ -154,9 +154,9 @@ def _fetch_funding_rates():
                     rate = float(t.get("fundingRate", 0)) * 100
                     oi_raw = float(t.get("openInterest", 0))
                     oi_value = round(oi_raw, 2)
-                    print(f"    💰 [Bybit] {symbol} 资金费率: {rate:.4f}%, OI: {oi_value}")
+                    print(f"    [Bybit] {symbol} funding: {rate:.4f}%, OI: {oi_value}")
         except Exception as e:
-            pass
+            print(f"    [Bybit] {symbol} error: {str(e)[:80]}")
 
         # === 来源2: OKX API ===
         if rate is None:
@@ -167,32 +167,16 @@ def _fetch_funding_rates():
                 if resp.status_code == 200:
                     data = resp.json()
                     t = (data.get("data") or [{}])[0]
-                    rate_raw = t.get("fundingRate")
-                    oi_raw = t.get("openInterest")
+                    rate_raw = t.get("fundingRate") or t.get("funding_rate")
+                    oi_raw = t.get("openInterest") or t.get("open_interest") or t.get("oi")
                     if rate_raw:
                         rate = float(rate_raw) * 100
                     if oi_raw:
                         oi_value = round(float(oi_raw), 2)
                     if rate is not None:
-                        print(f"    💰 [OKX] {symbol} 资金费率: {rate:.4f}%, OI: {oi_value}")
+                        print(f"    [OKX] {symbol} funding: {rate:.4f}%, OI: {oi_value}")
             except Exception as e:
-                pass
-
-        # === 来源3: CoinGecko 衍生品数据 ===
-        if rate is None:
-            try:
-                cg_id_map = {"bitcoin": "bitcoin", "ethereum": "ethereum"}
-                cg_name = cg_id_map.get(cg_id, cg_id)
-                url = f"{COINGECKO_API}/coins/{cg_name}/tickers"
-                resp = requests.get(url, params={"exchange_ids": "binance_futures"}, timeout=15)
-                if resp.status_code == 200:
-                    tickers_data = resp.json().get("tickers", [])
-                    for t in tickers_data:
-                        if "PERP" in (t.get("market", {}).get("identifier", "")) or "USDT" in t.get("base", ""):
-                            # CoinGecko doesn't directly provide funding rate in tickers
-                            pass
-            except Exception:
-                pass
+                print(f"    [OKX] {symbol} error: {str(e)[:80]}")
 
         if rate is not None:
             funding_data[cg_id] = round(rate, 4)
@@ -233,7 +217,7 @@ def _fetch_onchain_btc():
             if pts:
                 onchain["tx_fee_usd"] = round(pts[-1]["y"], 2)
     except Exception as e:
-        print(f"    ⚠ BTC链上数据获取失败: {str(e)[:60]}")
+        print(f"    [Onchain-BTC] error: {str(e)[:80]}")
 
     return onchain
 
@@ -265,7 +249,7 @@ def _fetch_onchain_eth():
                 onchain["staking_apr"] = ethstore.get("apr")  # 质押年化收益率
                 onchain["validators"] = ethstore.get("validatorscount")  # 验证者数量
     except Exception as e:
-        print(f"    ⚠ ETH链上数据获取失败: {str(e)[:60]}")
+        print(f"    [Onchain-ETH] error: {str(e)[:80]}")
 
     return onchain
 
@@ -281,19 +265,19 @@ def fetch_crypto_data():
     # 并行获取各类数据
     etf_flows = _fetch_etf_flows()
     if etf_flows:
-        print(f"  📊 ETF 流动: {len(etf_flows)} 个币种")
+        print(f"  [ETF] flows: {len(etf_flows)} coins")
 
     funding_rates = _fetch_funding_rates()
     if funding_rates:
-        print(f"  💰 资金费率+OI: {len([k for k in funding_rates if not k.endswith('_oi')])} 个币种")
+        print(f"  [Funding] rates+OI: {len([k for k in funding_rates if not k.endswith('_oi')])} coins")
 
     btc_onchain = _fetch_onchain_btc()
     if btc_onchain:
-        print(f"  ⛓️ BTC链上: 哈希率={btc_onchain.get('hash_rate', '?')}TH/s, 活跃地址={btc_onchain.get('active_addresses', '?')}")
+        print(f"  [Onchain-BTC] hash_rate={btc_onchain.get('hash_rate', '?')}TH/s, active_addr={btc_onchain.get('active_addresses', '?')}")
 
     eth_onchain = _fetch_onchain_eth()
     if eth_onchain:
-        print(f"  ⛓️ ETH链上: Gas={eth_onchain.get('gas_gwei', '?')}gwei, 质押APR={eth_onchain.get('staking_apr', '?')}%")
+        print(f"  [Onchain-ETH] gas={eth_onchain.get('gas_gwei', '?')}gwei, staking_APR={eth_onchain.get('staking_apr', '?')}%")
 
     results = []
     ids = ",".join([c["id"] for c in CRYPTO])
@@ -458,11 +442,11 @@ def fetch_crypto_data():
                 results.append(crypto_data)
                 extra = []
                 if funding_rate is not None:
-                    extra.append(f"费率={funding_rate:.4f}%")
+                    extra.append(f"funding={funding_rate:.4f}%")
                 if etf.get("etf_net_flow") is not None:
-                    extra.append(f"ETF={etf['etf_net_flow']:+.2f}亿")
+                    extra.append(f"ETF={etf['etf_net_flow']:+.2f}B")
                 extra_str = ", ".join(extra)
-                print(f"    ✓ {name}: ${crypto_data['price']}, {change_pct:+.2f}%{' | ' + extra_str if extra_str else ''}")
+                print(f"    OK {name}: ${crypto_data['price']}, {change_pct:+.2f}%{' | ' + extra_str if extra_str else ''}")
 
             except Exception as e:
                 print(f"    ✗ {name}({symbol}) 数据获取失败: {str(e)[:100]}")
