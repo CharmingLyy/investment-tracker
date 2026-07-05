@@ -16,7 +16,10 @@ from scripts.fetch_stocks import fetch_a_stock_data
 from scripts.fetch_global import fetch_hk_stock_data, fetch_us_stock_data
 from scripts.fetch_crypto import fetch_crypto_data
 from scripts.fetch_news import fetch_market_news, find_relevant_news
-from scripts.generate_report import generate_report
+try:
+    from scripts.generate_report import generate_report
+except ImportError:
+    generate_report = None
 
 
 def generate_html(all_data, news_data, update_time):
@@ -126,10 +129,11 @@ def main():
     print()
     save_data_json(all_data, news_data)
 
-    # 7. 生成 Markdown 日报
-    print()
-    print("[报告] 正在生成 Markdown 投资日报...")
-    generate_report()
+    # 7. 生成 Markdown 日报（可选）
+    if generate_report:
+        print()
+        print("[报告] 正在生成 Markdown 投资日报...")
+        generate_report()
 
     # 9. 生成HTML
     print()
