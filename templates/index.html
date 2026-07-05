@@ -743,14 +743,12 @@
                 <strong style="color: var(--text-primary);">{{ s.symbol }}</strong>
                 <span style="font-size: 0.8rem; color: var(--text-secondary); margin-left: 8px;">链上指标</span>
                 <div style="display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 8px; font-size: 0.78rem; color: var(--text-secondary);">
-                    {% if s.funding_rate is not none %}
-                    <span>💰 资金费率: <span class="{{ 'up' if s.funding_rate > 0 else 'down' if s.funding_rate < 0 else '' }}">{{ '%.4f'|format(s.funding_rate) }}%</span></span>
-                    {% endif %}
-                    {% if s.open_interest is not none %}
-                    <span data-oi="{{ s.symbol }}USDT">📊 持仓量(OI): {{ s.open_interest }}</span>
-                    {% else %}
-                    <span data-oi="{{ s.symbol }}USDT">📊 持仓量(OI): -</span>
-                    {% endif %}
+                    <span data-symbol="{{ s.symbol }}USDT" data-field="funding">
+                        💰 资金费率: <span class="{{ 'up' if s.funding_rate and s.funding_rate > 0 else 'down' if s.funding_rate and s.funding_rate < 0 else '' }}">{{ ('%.4f'|format(s.funding_rate) + '%') if s.funding_rate is not none else '-' }}</span>
+                    </span>
+                    <span data-symbol="{{ s.symbol }}USDT" data-field="oi">
+                        📊 持仓量(OI): <span>{{ s.open_interest if s.open_interest is not none else '-' }}</span>
+                    </span>
                     {% if s.etf_net_flow is not none %}
                     <span>📈 ETF净流动: <span class="{{ 'up' if s.etf_net_flow > 0 else 'down' if s.etf_net_flow < 0 else '' }}">{{ '+' if s.etf_net_flow > 0 else '' }}{{ s.etf_net_flow }}亿$</span></span>
                     {% endif %}
@@ -842,7 +840,10 @@
         var btnAutoRefresh = document.getElementById('btn-auto-refresh');
         var updateBadge = document.querySelector('.update-badge');
 
-        // ===== 实时加密货币价格 + 资金费率 (Binance API) =====
+        // ===== 实时加密货币价格 + 资金费率 + OI (Binance API, 国内可直连) =====
+        var BINANCE_SPOT = 'https://api.binance.com/api/v3';
+        var BINANCE_FUTURES = 'https://fapi.binance.com/fapi/v1';
+
         function fetchLiveCryptoPrices() {
             var cryptoTbody = document.getElementById('crypto-table-body');
             if (!cryptoTbody) return;
@@ -860,9 +861,9 @@
             });
             if (cryptoSymbols.length === 0) return;
 
-            // 1. 获取现货价格和24h涨跌
-            fetch('https://api.binance.com/api/v3/ticker/24hr?symbols=' + JSON.stringify(cryptoSymbols))
-                .then(function(resp) { return resp.ok ? resp.json() : Promise.reject('spot fail'); })
+            // 1. 现货价格 + 24h涨跌
+            fetch(BINANCE_SPOT + '/ticker/24hr?symbols=' + JSON.stringify(cryptoSymbols))
+                .then(function(resp) { return resp.ok ? resp.json() : Promise.reject(); })
                 .then(function(data) {
                     data.forEach(function(ticker) {
                         var row = rowMap[ticker.symbol];
@@ -882,47 +883,68 @@
                             changeEl.className = 'change-badge ' + cls;
                         }
                     });
-                }).catch(function(){});
+                }).catch(function(err) { console.log('[live] spot fail: ' + err); });
 
-            // 2. 获取资金费率和OI（币安永续合约API）
+            // 2. 永续合约资金费率 + 标记价格
             cryptoSymbols.forEach(function(sym) {
-                fetch('https://fapi.binance.com/fapi/v1/premiumIndex?symbol=' + sym)
+                fetch(BINANCE_FUTURES + '/premiumIndex?symbol=' + sym)
                     .then(function(resp) { return resp.ok ? resp.json() : Promise.reject(); })
                     .then(function(data) {
                         var rate = parseFloat(data.lastFundingRate) * 100;
+                        var markPrice = parseFloat(data.markPrice);
                         var row = rowMap[sym];
                         if (!row) return;
-                        // 更新资金费率列（第7列，0-indexed = 6）
+
+                        // 更新资金费率列 (第7列)
                         var cells = row.querySelectorAll('td');
                         if (cells.length >= 7) {
-                            var frCell = cells[6]; // 资金费率
+                            var frCell = cells[6];
                             var frCls = rate > 0 ? 'up' : (rate < 0 ? 'down' : '');
                             frCell.textContent = rate.toFixed(4) + '%';
                             frCell.className = frCls;
                         }
-                    }).catch(function(){});
 
-                // 获取OI
-                fetch('https://fapi.binance.com/fapi/v1/openInterest?symbol=' + sym)
+                        // 更新链上卡片里的资金费率
+                        updateOnchainField(sym, 'funding', rate.toFixed(4) + '%');
+
+                        // 用标记价格作为实时参考（永续价格更接近现货）
+                        var priceEl = row.querySelector('.price');
+                        if (priceEl && markPrice) {
+                            priceEl.setAttribute('data-mark', markPrice);
+                        }
+                    }).catch(function(err) { console.log('[live] funding fail for ' + sym + ': ' + err); });
+
+                // 3. 持仓量 OI
+                fetch(BINANCE_FUTURES + '/openInterest?symbol=' + sym)
                     .then(function(resp) { return resp.ok ? resp.json() : Promise.reject(); })
                     .then(function(data) {
                         var oi = parseFloat(data.openInterest);
-                        var row = rowMap[sym];
-                        if (!row) return;
-                        // 更新链上数据区域的OI
-                        var onchainContainer = document.getElementById('crypto-onchain-info');
-                        if (onchainContainer) {
-                            var oiSpan = onchainContainer.querySelector('[data-oi="' + sym + '"]');
-                            if (oiSpan) oiSpan.textContent = '📊 持仓量(OI): ' + oi.toFixed(2);
-                        }
-                    }).catch(function(){});
+                        updateOnchainField(sym, 'oi', oi.toFixed(2) + ' BTC' + (sym === 'ETHUSDT' ? '/ETH' : ''));
+                    }).catch(function(err) { console.log('[live] OI fail for ' + sym + ': ' + err); });
             });
 
             if (updateBadge) {
                 updateBadge.textContent = '🟢 实时 | 更新: ' + pageUpdateTime;
                 updateBadge.style.borderColor = 'var(--accent-green)';
-                setTimeout(function() { if (updateBadge) updateBadge.style.borderColor = 'var(--border)'; }, 3000);
+                setTimeout(function() { if (updateBadge) updateBadge.style.borderColor = 'var(--border)'; }, 4000);
             }
+        }
+
+        // 更新链上信息卡片中的字段
+        function updateOnchainField(symbol, field, value) {
+            var container = document.getElementById('crypto-onchain-info');
+            if (!container) return;
+            var spans = container.querySelectorAll('span[data-field]');
+            spans.forEach(function(span) {
+                if (span.getAttribute('data-symbol') === symbol && span.getAttribute('data-field') === field) {
+                    var innerSpan = span.querySelector('span');
+                    if (innerSpan) {
+                        innerSpan.textContent = value;
+                    } else {
+                        span.textContent = span.textContent.split(':')[0] + ': ' + value;
+                    }
+                }
+            });
         }
 
         function startLiveCrypto() {
@@ -1219,16 +1241,22 @@
             for (var i = 0; i < cryptoList.length; i++) {
                 var s = cryptoList[i];
                 var onchain = s.onchain || {};
+                var sym = escHtml(s.symbol) + 'USDT';
+                var frDisplay = '-';
+                var frCls = '';
+                if (s.funding_rate != null) {
+                    frDisplay = s.funding_rate.toFixed(4) + '%';
+                    frCls = s.funding_rate > 0 ? 'up' : (s.funding_rate < 0 ? 'down' : '');
+                }
+                var oiDisplay = s.open_interest != null ? s.open_interest : '-';
+
                 html += '<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:12px 16px;margin-bottom:8px;">';
                 html += '<strong style="color:var(--text-primary);">' + escHtml(s.symbol) + '</strong>';
                 html += '<span style="font-size:0.8rem;color:var(--text-secondary);margin-left:8px;">链上指标</span>';
                 html += '<div style="display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:8px;font-size:0.78rem;color:var(--text-secondary);">';
-                if (s.funding_rate != null) {
-                    var frCls = s.funding_rate > 0 ? 'up' : (s.funding_rate < 0 ? 'down' : '');
-                    html += '<span>💰 资金费率: <span class="' + frCls + '">' + s.funding_rate.toFixed(4) + '%</span></span>';
-                }
-                if (s.open_interest != null) html += '<span data-oi="' + escHtml(s.symbol) + 'USDT">📊 持仓量(OI): ' + s.open_interest + '</span>';
-                else html += '<span data-oi="' + escHtml(s.symbol) + 'USDT">📊 持仓量(OI): -</span>';
+                // Funding rate with data attrs for live updates
+                html += '<span data-symbol="' + sym + '" data-field="funding">💰 资金费率: <span class="' + frCls + '">' + frDisplay + '</span></span>';
+                html += '<span data-symbol="' + sym + '" data-field="oi">📊 持仓量(OI): <span>' + oiDisplay + '</span></span>';
                 if (s.etf_net_flow != null) {
                     var etfCls = s.etf_net_flow > 0 ? 'up' : (s.etf_net_flow < 0 ? 'down' : '');
                     var etfSign = s.etf_net_flow > 0 ? '+' : '';
