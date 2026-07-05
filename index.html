@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📊 投资观察面板 | 2026-07-05 22:51:41</title>
+    <title>📊 投资观察面板 | 2026-07-05 15:02 UTC+8 (北京时间)</title>
     <style>
         /* ===== 全局样式 ===== */
         :root {
@@ -421,7 +421,7 @@
                     <span>港股 <span class="status-dot closed"></span></span>
                     <span>美股 <span class="status-dot closed"></span></span>
                 </div>
-                <span class="update-badge">🕐 更新: 2026-07-05 22:51:41</span>
+                <span class="update-badge">🕐 更新: 2026-07-05 15:02 UTC+8 (北京时间)</span>
             </div>
         </div>
     </header>
@@ -445,22 +445,22 @@
         <div class="summary-grid">
             <div class="summary-card">
                 <div class="card-label">📈 总跟踪标的</div>
-                <div class="card-value">0</div>
-                <div class="card-sub">A股 0 · 港股 0 · 美股 0 · 加密 0</div>
+                <div class="card-value">10</div>
+                <div class="card-sub">A股 0 · 港股 1 · 美股 7 · 加密 2</div>
             </div>
             <div class="summary-card">
                 <div class="card-label">🟢 今日上涨</div>
-                <div class="card-value up">0</div>
-                <div class="card-sub">占比 0%</div>
+                <div class="card-value up">5</div>
+                <div class="card-sub">占比 50.0%</div>
             </div>
             <div class="summary-card">
                 <div class="card-label">🔴 今日下跌</div>
-                <div class="card-value down">0</div>
-                <div class="card-sub">占比 0%</div>
+                <div class="card-value down">5</div>
+                <div class="card-sub">占比 50.0%</div>
             </div>
             <div class="summary-card">
                 <div class="card-label">📰 市场新闻</div>
-                <div class="card-value" style="font-size:1.4rem">11 条</div>
+                <div class="card-value" style="font-size:1.4rem">21 条</div>
                 <div class="card-sub">最近24h内</div>
             </div>
         </div>
@@ -476,24 +476,421 @@
         <!-- 港股表格 -->
         
         <section class="market-section">
-            <div class="section-header"><h2>🇭🇰 港股</h2></div>
-            <div class="empty-state">尚未配置港股标的，请在 config.py 中添加</div>
+            <div class="section-header">
+                <h2>🇭🇰 港股</h2>
+                <span class="section-badge badge-hk">港交所</span>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>名称/代码</th>
+                            <th>行业</th>
+                            <th>主营业务</th>
+                            <th>收盘价</th>
+                            <th>涨跌幅</th>
+                            <th>市值(亿)</th>
+                            <th>PE</th>
+                            <th>现金流(亿)</th>
+                            <th>MACD</th>
+                            <th>RSI</th>
+                            <th>MA5</th>
+                            <th>MA20</th>
+                        </tr>
+                    </thead>
+                    <tbody id="hk-stock-table-body">
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">小米集团-W</span>
+                                <span class="stock-code">01810</span>
+                            </td>
+                            <td><span class="stock-industry">Consumer Electronics</span></td>
+                            <td><span class="stock-business" title="Xiaomi Corporation, an investment holding company, engages in the development an...">Xiaomi Corporation, an investment holding company, engages in the development an...</span></td>
+                            <td class="price">HK$22.96</td>
+                            <td>
+                                <span class="change-badge positive">
+                                    +1.59%
+                                </span>
+                            </td>
+                            <td>5909.8</td>
+                            <td>12.76</td>
+                            <td class="up">
+                                77.67
+                            </td>
+                            <td class="indicator bearish">
+                                -1.8492
+                            </td>
+                            <td class="indicator bearish">
+                                34.24
+                            </td>
+                            <td>22.1</td>
+                            <td>24.66</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
         </section>
         
 
         <!-- 美股表格 -->
         
         <section class="market-section">
-            <div class="section-header"><h2>🇺🇸 美股</h2></div>
-            <div class="empty-state">尚未配置美股标的，请在 config.py 中添加</div>
+            <div class="section-header">
+                <h2>🇺🇸 美股</h2>
+                <span class="section-badge badge-us">NASDAQ/NYSE</span>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>名称/代码</th>
+                            <th>行业</th>
+                            <th>主营业务</th>
+                            <th>收盘价</th>
+                            <th>涨跌幅</th>
+                            <th>市值(亿)</th>
+                            <th>PE</th>
+                            <th>现金流(亿)</th>
+                            <th>MACD</th>
+                            <th>RSI</th>
+                            <th>MA5</th>
+                            <th>MA20</th>
+                        </tr>
+                    </thead>
+                    <tbody id="us-stock-table-body">
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">NVIDIA</span>
+                                <span class="stock-code">NVDA</span>
+                            </td>
+                            <td><span class="stock-industry">Semiconductors</span></td>
+                            <td><span class="stock-business" title="NVIDIA Corporation operates as a data center scale AI infrastructure company in ...">NVIDIA Corporation operates as a data center scale AI infrastructure company in ...</span></td>
+                            <td class="price">$194.83</td>
+                            <td>
+                                <span class="change-badge negative">
+                                    -1.39%
+                                </span>
+                            </td>
+                            <td>47189.77</td>
+                            <td>29.84</td>
+                            <td class="up">
+                                463.36
+                            </td>
+                            <td class="indicator bearish">
+                                -4.0435
+                            </td>
+                            <td class="indicator bearish">
+                                41.22
+                            </td>
+                            <td>196.0</td>
+                            <td>203.48</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">Alphabet (Google)</span>
+                                <span class="stock-code">GOOG</span>
+                            </td>
+                            <td><span class="stock-industry">Internet Content &amp; Information</span></td>
+                            <td><span class="stock-business" title="Alphabet Inc. offers various products and platforms in the United States, Europe...">Alphabet Inc. offers various products and platforms in the United States, Europe...</span></td>
+                            <td class="price">$356.18</td>
+                            <td>
+                                <span class="change-badge negative">
+                                    -0.48%
+                                </span>
+                            </td>
+                            <td>43463.12</td>
+                            <td>27.17</td>
+                            <td class="up">
+                                279.22
+                            </td>
+                            <td class="indicator bearish">
+                                -4.361
+                            </td>
+                            <td class="indicator bearish">
+                                48.68
+                            </td>
+                            <td>350.67</td>
+                            <td>356.47</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">Circle</span>
+                                <span class="stock-code">CRCL</span>
+                            </td>
+                            <td><span class="stock-industry">Capital Markets</span></td>
+                            <td><span class="stock-business" title="Circle Internet Group, Inc. operates as a platform, network, and market infrastr...">Circle Internet Group, Inc. operates as a platform, network, and market infrastr...</span></td>
+                            <td class="price">$64.62</td>
+                            <td>
+                                <span class="change-badge positive">
+                                    +4.31%
+                                </span>
+                            </td>
+                            <td>172.72</td>
+                            <td>28.84</td>
+                            <td class="up">
+                                1.41
+                            </td>
+                            <td class="indicator bearish">
+                                -8.9285
+                            </td>
+                            <td class="indicator bearish">
+                                34.03
+                            </td>
+                            <td>67.75</td>
+                            <td>76.6</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">MP Materials</span>
+                                <span class="stock-code">MP</span>
+                            </td>
+                            <td><span class="stock-industry">Other Industrial Metals &amp; Mining</span></td>
+                            <td><span class="stock-business" title="MP Materials Corp., together with its subsidiaries, produces rare earth material...">MP Materials Corp., together with its subsidiaries, produces rare earth material...</span></td>
+                            <td class="price">$53.31</td>
+                            <td>
+                                <span class="change-badge negative">
+                                    -1.79%
+                                </span>
+                            </td>
+                            <td>94.9</td>
+                            <td>51.43</td>
+                            <td class="up">
+                                1.75
+                            </td>
+                            <td class="indicator bearish">
+                                -2.0491
+                            </td>
+                            <td class="indicator bearish">
+                                39.34
+                            </td>
+                            <td>54.45</td>
+                            <td>57.26</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">Palantir</span>
+                                <span class="stock-code">PLTR</span>
+                            </td>
+                            <td><span class="stock-industry">Software - Infrastructure</span></td>
+                            <td><span class="stock-business" title="Palantir Technologies Inc. builds and deploys software platforms for the intelli...">Palantir Technologies Inc. builds and deploys software platforms for the intelli...</span></td>
+                            <td class="price">$129.3</td>
+                            <td>
+                                <span class="change-badge positive">
+                                    +2.84%
+                                </span>
+                            </td>
+                            <td>3099.72</td>
+                            <td>145.28</td>
+                            <td class="up">
+                                17.53
+                            </td>
+                            <td class="indicator bearish">
+                                -4.8449
+                            </td>
+                            <td class="indicator bullish">
+                                51.55
+                            </td>
+                            <td>120.07</td>
+                            <td>125.97</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">ServiceNow</span>
+                                <span class="stock-code">NOW</span>
+                            </td>
+                            <td><span class="stock-industry">Software - Application</span></td>
+                            <td><span class="stock-business" title="ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...">ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...</span></td>
+                            <td class="price">$106.32</td>
+                            <td>
+                                <span class="change-badge positive">
+                                    +0.49%
+                                </span>
+                            </td>
+                            <td>1096.49</td>
+                            <td>63.29</td>
+                            <td class="up">
+                                51.08
+                            </td>
+                            <td class="indicator bearish">
+                                -0.8505
+                            </td>
+                            <td class="indicator bullish">
+                                54.93
+                            </td>
+                            <td>101.94</td>
+                            <td>102.11</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">Datadog</span>
+                                <span class="stock-code">DDOG</span>
+                            </td>
+                            <td><span class="stock-industry">Software - Application</span></td>
+                            <td><span class="stock-business" title="Datadog, Inc. operates an observability and security platform for cloud applicat...">Datadog, Inc. operates an observability and security platform for cloud applicat...</span></td>
+                            <td class="price">$260.36</td>
+                            <td>
+                                <span class="change-badge negative">
+                                    -1.56%
+                                </span>
+                            </td>
+                            <td>926.78</td>
+                            <td>667.59</td>
+                            <td class="up">
+                                9.37
+                            </td>
+                            <td class="indicator bullish">
+                                11.5303
+                            </td>
+                            <td class="indicator bullish">
+                                68.41
+                            </td>
+                            <td>254.71</td>
+                            <td>235.07</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
         </section>
         
 
         <!-- 加密货币表格 -->
         
         <section class="market-section">
-            <div class="section-header"><h2>🪙 加密货币</h2></div>
-            <div class="empty-state">尚未配置加密货币标的，请在 config.py 中添加</div>
+            <div class="section-header">
+                <h2>🪙 加密货币</h2>
+                <span class="section-badge badge-crypto">24h</span>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>名称/简称</th>
+                            <th>类型</th>
+                            <th>价格</th>
+                            <th>24h涨跌</th>
+                            <th>市值(亿$)</th>
+                            <th>排名</th>
+                            <th>ETF流入(亿$)</th>
+                            <th>ETF流出(亿$)</th>
+                            <th>ETF净流动</th>
+                            <th>MACD</th>
+                            <th>RSI</th>
+                            <th>7日涨跌</th>
+                            <th>30日涨跌</th>
+                            <th>距ATH</th>
+                        </tr>
+                    </thead>
+                    <tbody id="crypto-table-body">
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">Bitcoin</span>
+                                <span class="stock-code">BTC</span>
+                            </td>
+                            <td><span class="stock-industry">Smart Contract Platform</span></td>
+                            <td class="price">$62746</td>
+                            <td>
+                                <span class="change-badge positive">
+                                    +0.18%
+                                </span>
+                            </td>
+                            <td>12581.91</td>
+                            <td>#1</td>
+                            <td class="up">-</td>
+                            <td class="down">-</td>
+                            <td class="">
+                                -
+                            </td>
+                            <td class="indicator bearish">
+                                -1282.3634
+                            </td>
+                            <td class="indicator bearish">
+                                48.59
+                            </td>
+                            <td class="up">
+                                +4.6%
+                            </td>
+                            <td class="up">
+                                +3.2%
+                            </td>
+                            <td class="down">
+                                -50.2%
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <span class="stock-name">Ethereum</span>
+                                <span class="stock-code">ETH</span>
+                            </td>
+                            <td><span class="stock-industry">Smart Contract Platform</span></td>
+                            <td class="price">$1770.04</td>
+                            <td>
+                                <span class="change-badge negative">
+                                    -0.01%
+                                </span>
+                            </td>
+                            <td>2136.15</td>
+                            <td>#2</td>
+                            <td class="up">-</td>
+                            <td class="down">-</td>
+                            <td class="">
+                                -
+                            </td>
+                            <td class="indicator bearish">
+                                -22.2816
+                            </td>
+                            <td class="indicator bullish">
+                                56.12
+                            </td>
+                            <td class="up">
+                                +12.0%
+                            </td>
+                            <td class="up">
+                                +10.7%
+                            </td>
+                            <td class="down">
+                                -64.2%
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            <!-- 链上数据 + ETF 流动详情 -->
+            <div id="crypto-onchain-info">
+            
+            
+            <div style="margin-top: 4px; font-size: 0.72rem; color: var(--text-muted); padding: 4px 14px;">
+                <strong>BTC</strong>:
+                
+                流通占比 100.0% · 
+                赛道: Smart Contract Platform, Layer 1 (L1) · 
+                GitHub提交(4w): 108
+            </div>
+            
+            
+            
+            <div style="margin-top: 4px; font-size: 0.72rem; color: var(--text-muted); padding: 4px 14px;">
+                <strong>ETH</strong>:
+                
+                流通占比 100.0% · 
+                赛道: Smart Contract Platform, Layer 1 (L1) · 
+                GitHub提交(4w): 41
+            </div>
+            
+            
+            </div>
         </section>
         
 
@@ -502,7 +899,7 @@
         <section class="news-section">
             <div class="section-header">
                 <h2>📰 市场新闻</h2>
-                <span class="section-badge" style="background: rgba(139,92,246,0.15); color: var(--accent-purple);">11 条</span>
+                <span class="section-badge" style="background: rgba(139,92,246,0.15); color: var(--accent-purple);">21 条</span>
             </div>
             <div class="news-grid">
                 
@@ -627,6 +1024,116 @@
                     </a>
                 </div>
                 
+                <div class="news-card">
+                    <a href="https://www.investing.com/news/commodities-news/opec-adds-188000-bpd-to-august-quota-as-gulf-flows-resume-4775453" target="_blank" rel="noopener">
+                        <div class="news-title">OPEC+ adds 188,000 bpd to August quota amid cooling oil market</div>
+                        <div class="news-summary"></div>
+                        <div class="news-meta">
+                            <span class="news-source">www.investing.com</span>
+                            <span>2026-07-05 14:37:00</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.investing.com/news/economy-news/what-are-the-implications-of-a-kshaped-economy-4775429" target="_blank" rel="noopener">
+                        <div class="news-title">What are the implications of a K-shaped economy?</div>
+                        <div class="news-summary"></div>
+                        <div class="news-meta">
+                            <span class="news-source">www.investing.com</span>
+                            <span>2026-07-05 13:57:56</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.investing.com/news/economy-news/investors-look-for-fed-clues-earnings-signs-as-tech-wobbles-4775428" target="_blank" rel="noopener">
+                        <div class="news-title">Investors look for Fed clues, earnings signs as tech wobbles</div>
+                        <div class="news-summary"></div>
+                        <div class="news-meta">
+                            <span class="news-source">www.investing.com</span>
+                            <span>2026-07-05 13:06:23</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.investing.com/news/stock-market-news/saudi-arabia-stocks-lower-at-close-of-trade-tadawul-all-share-down-026-4775427" target="_blank" rel="noopener">
+                        <div class="news-title">Saudi Arabia stocks lower at close of trade; Tadawul All Share down 0.26%</div>
+                        <div class="news-summary"></div>
+                        <div class="news-meta">
+                            <span class="news-source">www.investing.com</span>
+                            <span>2026-07-05 12:45:03</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.investing.com/news/economy-news/what-are-the-most-powerful-forces-shaping-wealth-creation-today-4775426" target="_blank" rel="noopener">
+                        <div class="news-title">What are the most powerful forces shaping wealth creation today?</div>
+                        <div class="news-summary"></div>
+                        <div class="news-meta">
+                            <span class="news-source">www.investing.com</span>
+                            <span>2026-07-05 12:39:29</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.investing.com/news/world-news/three-sons-of-irans-slain-leader-khamenei-appear-at-funeral-not-his-successor-4775406" target="_blank" rel="noopener">
+                        <div class="news-title">Three sons of Iran’s slain leader Khamenei appear at funeral, not his successor</div>
+                        <div class="news-summary"></div>
+                        <div class="news-meta">
+                            <span class="news-source">www.investing.com</span>
+                            <span>2026-07-05 12:00:32</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.investing.com/news/politics-news/trump-to-mark-us-250th-anniversary-with-campaignstyle-rally-on-national-mall-4775359" target="_blank" rel="noopener">
+                        <div class="news-title">Trump gives campaign-style July 4 speech on National Mall for US 250th anniversary</div>
+                        <div class="news-summary"></div>
+                        <div class="news-meta">
+                            <span class="news-source">www.investing.com</span>
+                            <span>2026-07-05 11:42:50</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.investing.com/news/commodities-news/opec-set-to-approve-another-oil-output-increase-sources-say-4775414" target="_blank" rel="noopener">
+                        <div class="news-title">OPEC+ approves further oil output increase as Hormuz exports start to recover</div>
+                        <div class="news-summary"></div>
+                        <div class="news-meta">
+                            <span class="news-source">www.investing.com</span>
+                            <span>2026-07-05 11:30:28</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.investing.com/news/investment-ideas/ihs-holding-validates-fair-value-analysis-with-84-return-in-29-months-93CH-4775425" target="_blank" rel="noopener">
+                        <div class="news-title">IHS Holding validates Fair Value analysis with 84% return in 29 months</div>
+                        <div class="news-summary"></div>
+                        <div class="news-meta">
+                            <span class="news-source">www.investing.com</span>
+                            <span>2026-07-05 11:10:21</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.investing.com/news/investment-ideas/standard-lithium-falls-48-after-investingpro-overvaluation-warning-93CH-4775424" target="_blank" rel="noopener">
+                        <div class="news-title">Standard Lithium falls 48% after InvestingPro overvaluation warning</div>
+                        <div class="news-summary"></div>
+                        <div class="news-meta">
+                            <span class="news-source">www.investing.com</span>
+                            <span>2026-07-05 11:02:18</span>
+                        </div>
+                    </a>
+                </div>
+                
             </div>
         </section>
         
@@ -647,7 +1154,7 @@
 
         // ===== 状态 =====
         var autoRefreshEnabled = localStorage.getItem('auto-refresh') !== 'false';
-        var pageUpdateTime = '2026-07-05 22:51:41';  // 页面生成时间
+        var pageUpdateTime = '2026-07-05 15:02 UTC+8 (北京时间)';  // 页面生成时间
         var countdownSeconds = REFRESH_INTERVAL;
         var dataCheckTimer = null;
         var countdownTimer = null;

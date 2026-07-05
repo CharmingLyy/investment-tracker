@@ -1,10 +1,337 @@
 {
-  "update_time": "2026-07-05 22:51:41",
+  "update_time": "2026-07-05 15:02:52",
   "stocks": {
     "a_stocks": [],
-    "hk_stocks": [],
-    "us_stocks": [],
-    "crypto": []
+    "hk_stocks": [
+      {
+        "market": "港股",
+        "code": "01810",
+        "name": "小米集团-W",
+        "symbol": "01810",
+        "industry": "Consumer Electronics",
+        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
+        "price": 22.96,
+        "open": 22.98,
+        "high": 24.1,
+        "low": 22.8,
+        "change_pct": 1.59,
+        "volume": 268232162,
+        "turnover": null,
+        "market_cap": 5909.8,
+        "pe": 12.76,
+        "cash_flow": 77.67,
+        "macd": -1.8492,
+        "macd_signal": -1.8044,
+        "macd_histogram": -0.0898,
+        "rsi": 34.24,
+        "ma": {
+          "MA5": 22.1,
+          "MA10": 22.67,
+          "MA20": 24.66,
+          "MA60": 28.66
+        },
+        "main_net_flow": null
+      }
+    ],
+    "us_stocks": [
+      {
+        "market": "美股",
+        "code": "NVDA",
+        "name": "NVIDIA",
+        "symbol": "NVDA",
+        "industry": "Semiconductors",
+        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
+        "price": 194.83,
+        "open": 197.14,
+        "high": 200.06,
+        "low": 192.35,
+        "change_pct": -1.39,
+        "volume": 142068700,
+        "turnover": null,
+        "market_cap": 47189.77,
+        "pe": 29.84,
+        "cash_flow": 463.36,
+        "macd": -4.0435,
+        "macd_signal": -3.0355,
+        "macd_histogram": -2.0159,
+        "rsi": 41.22,
+        "ma": {
+          "MA5": 196.0,
+          "MA10": 199.41,
+          "MA20": 203.48,
+          "MA60": 207.02
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "GOOG",
+        "name": "Alphabet (Google)",
+        "symbol": "GOOG",
+        "industry": "Internet Content & Information",
+        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
+        "price": 356.18,
+        "open": 356.15,
+        "high": 360.99,
+        "low": 350.32,
+        "change_pct": -0.48,
+        "volume": 15532900,
+        "turnover": null,
+        "market_cap": 43463.12,
+        "pe": 27.17,
+        "cash_flow": 279.22,
+        "macd": -4.361,
+        "macd_signal": -4.549,
+        "macd_histogram": 0.3759,
+        "rsi": 48.68,
+        "ma": {
+          "MA5": 350.67,
+          "MA10": 350.29,
+          "MA20": 356.47,
+          "MA60": 361.2
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "CRCL",
+        "name": "Circle",
+        "symbol": "CRCL",
+        "industry": "Capital Markets",
+        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
+        "price": 64.62,
+        "open": 63.81,
+        "high": 69.25,
+        "low": 63.66,
+        "change_pct": 4.31,
+        "volume": 17683500,
+        "turnover": null,
+        "market_cap": 172.72,
+        "pe": 28.84,
+        "cash_flow": 1.41,
+        "macd": -8.9285,
+        "macd_signal": -8.1802,
+        "macd_histogram": -1.4966,
+        "rsi": 34.03,
+        "ma": {
+          "MA5": 67.75,
+          "MA10": 71.44,
+          "MA20": 76.6,
+          "MA60": 96.55
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "MP",
+        "name": "MP Materials",
+        "symbol": "MP",
+        "industry": "Other Industrial Metals & Mining",
+        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
+        "price": 53.31,
+        "open": 54.47,
+        "high": 57.46,
+        "low": 52.97,
+        "change_pct": -1.79,
+        "volume": 4681600,
+        "turnover": null,
+        "market_cap": 94.9,
+        "pe": 51.43,
+        "cash_flow": 1.75,
+        "macd": -2.0491,
+        "macd_signal": -1.6515,
+        "macd_histogram": -0.7951,
+        "rsi": 39.34,
+        "ma": {
+          "MA5": 54.45,
+          "MA10": 56.44,
+          "MA20": 57.26,
+          "MA60": 61.36
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "PLTR",
+        "name": "Palantir",
+        "symbol": "PLTR",
+        "industry": "Software - Infrastructure",
+        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
+        "price": 129.3,
+        "open": 128.99,
+        "high": 132.88,
+        "low": 127.95,
+        "change_pct": 2.84,
+        "volume": 60641000,
+        "turnover": null,
+        "market_cap": 3099.72,
+        "pe": 145.28,
+        "cash_flow": 17.53,
+        "macd": -4.8449,
+        "macd_signal": -5.3472,
+        "macd_histogram": 1.0045,
+        "rsi": 51.55,
+        "ma": {
+          "MA5": 120.07,
+          "MA10": 118.58,
+          "MA20": 125.97,
+          "MA60": 135.33
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "NOW",
+        "name": "ServiceNow",
+        "symbol": "NOW",
+        "industry": "Software - Application",
+        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
+        "price": 106.32,
+        "open": 106.22,
+        "high": 107.68,
+        "low": 103.84,
+        "change_pct": 0.49,
+        "volume": 20227500,
+        "turnover": null,
+        "market_cap": 1096.49,
+        "pe": 63.29,
+        "cash_flow": 51.08,
+        "macd": -0.8505,
+        "macd_signal": -1.3365,
+        "macd_histogram": 0.972,
+        "rsi": 54.93,
+        "ma": {
+          "MA5": 101.94,
+          "MA10": 97.7,
+          "MA20": 102.11,
+          "MA60": 99.03
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "DDOG",
+        "name": "Datadog",
+        "symbol": "DDOG",
+        "industry": "Software - Application",
+        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
+        "price": 260.36,
+        "open": 261.74,
+        "high": 266.13,
+        "low": 257.29,
+        "change_pct": -1.56,
+        "volume": 3036700,
+        "turnover": null,
+        "market_cap": 926.78,
+        "pe": 667.59,
+        "cash_flow": 9.37,
+        "macd": 11.5303,
+        "macd_signal": 9.7739,
+        "macd_histogram": 3.5128,
+        "rsi": 68.41,
+        "ma": {
+          "MA5": 254.71,
+          "MA10": 238.21,
+          "MA20": 235.07,
+          "MA60": 192.97
+        },
+        "main_net_flow": null
+      }
+    ],
+    "crypto": [
+      {
+        "market": "加密货币",
+        "code": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "industry": "Smart Contract Platform",
+        "price": 62746,
+        "open": null,
+        "high": 63383,
+        "low": 62462,
+        "change_pct": 0.18,
+        "volume": 18565022924,
+        "turnover": null,
+        "market_cap": 12581.91,
+        "market_cap_rank": 1,
+        "pe": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -1282.3634,
+        "macd_signal": -1879.7101,
+        "macd_histogram": 1194.6934,
+        "rsi": 48.59,
+        "ma": {
+          "MA5": 61968.78,
+          "MA10": 60809.15,
+          "MA20": 61961.49,
+          "MA60": 68993.95
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 20052475.0,
+          "total_supply": 20052475.0,
+          "circ_ratio": 100.0,
+          "price_change_7d": 4.64653,
+          "price_change_30d": 3.22007,
+          "ath_pct": -50.23,
+          "ath_date": "",
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings"
+          ],
+          "github_commits_4w": 108
+        }
+      },
+      {
+        "market": "加密货币",
+        "code": "ethereum",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "industry": "Smart Contract Platform",
+        "price": 1770.04,
+        "open": null,
+        "high": 1801.59,
+        "low": 1751.18,
+        "change_pct": -0.01,
+        "volume": 11479084730,
+        "turnover": null,
+        "market_cap": 2136.15,
+        "market_cap_rank": 2,
+        "pe": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -22.2816,
+        "macd_signal": -53.0656,
+        "macd_histogram": 61.5681,
+        "rsi": 56.12,
+        "ma": {
+          "MA5": 1722.4,
+          "MA10": 1651.1,
+          "MA20": 1674.18,
+          "MA60": 1887.45
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 120683221.1871914,
+          "total_supply": 120683221.1871914,
+          "circ_ratio": 100.0,
+          "price_change_7d": 12.02591,
+          "price_change_30d": 10.66923,
+          "ath_pct": -64.21,
+          "ath_date": "",
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem"
+          ],
+          "github_commits_4w": 41
+        }
+      }
+    ]
   },
   "news": [
     {
@@ -94,6 +421,86 @@
       "link": "https://www.marketwatch.com/story/insurers-shifted-roof-replacement-costs-onto-homeowners-thanks-to-a-new-federal-rule-just-in-time-for-hail-and-hurricane-season-e86068df?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
       "published": "Sat, 04 Jul 2026 18:19:00 GMT"
+    },
+    {
+      "id": "11438eabb2",
+      "title": "OPEC+ adds 188,000 bpd to August quota amid cooling oil market",
+      "summary": "",
+      "link": "https://www.investing.com/news/commodities-news/opec-adds-188000-bpd-to-august-quota-as-gulf-flows-resume-4775453",
+      "source": "www.investing.com",
+      "published": "2026-07-05 14:37:00"
+    },
+    {
+      "id": "2247852022",
+      "title": "What are the implications of a K-shaped economy?",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/what-are-the-implications-of-a-kshaped-economy-4775429",
+      "source": "www.investing.com",
+      "published": "2026-07-05 13:57:56"
+    },
+    {
+      "id": "6caac63c1f",
+      "title": "Investors look for Fed clues, earnings signs as tech wobbles",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/investors-look-for-fed-clues-earnings-signs-as-tech-wobbles-4775428",
+      "source": "www.investing.com",
+      "published": "2026-07-05 13:06:23"
+    },
+    {
+      "id": "4c4698b1f2",
+      "title": "Saudi Arabia stocks lower at close of trade; Tadawul All Share down 0.26%",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/saudi-arabia-stocks-lower-at-close-of-trade-tadawul-all-share-down-026-4775427",
+      "source": "www.investing.com",
+      "published": "2026-07-05 12:45:03"
+    },
+    {
+      "id": "d4ac493f1c",
+      "title": "What are the most powerful forces shaping wealth creation today?",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/what-are-the-most-powerful-forces-shaping-wealth-creation-today-4775426",
+      "source": "www.investing.com",
+      "published": "2026-07-05 12:39:29"
+    },
+    {
+      "id": "dbdb1e8f05",
+      "title": "Three sons of Iran’s slain leader Khamenei appear at funeral, not his successor",
+      "summary": "",
+      "link": "https://www.investing.com/news/world-news/three-sons-of-irans-slain-leader-khamenei-appear-at-funeral-not-his-successor-4775406",
+      "source": "www.investing.com",
+      "published": "2026-07-05 12:00:32"
+    },
+    {
+      "id": "69d84bd12f",
+      "title": "Trump gives campaign-style July 4 speech on National Mall for US 250th anniversary",
+      "summary": "",
+      "link": "https://www.investing.com/news/politics-news/trump-to-mark-us-250th-anniversary-with-campaignstyle-rally-on-national-mall-4775359",
+      "source": "www.investing.com",
+      "published": "2026-07-05 11:42:50"
+    },
+    {
+      "id": "41ef35e835",
+      "title": "OPEC+ approves further oil output increase as Hormuz exports start to recover",
+      "summary": "",
+      "link": "https://www.investing.com/news/commodities-news/opec-set-to-approve-another-oil-output-increase-sources-say-4775414",
+      "source": "www.investing.com",
+      "published": "2026-07-05 11:30:28"
+    },
+    {
+      "id": "06ff02da7d",
+      "title": "IHS Holding validates Fair Value analysis with 84% return in 29 months",
+      "summary": "",
+      "link": "https://www.investing.com/news/investment-ideas/ihs-holding-validates-fair-value-analysis-with-84-return-in-29-months-93CH-4775425",
+      "source": "www.investing.com",
+      "published": "2026-07-05 11:10:21"
+    },
+    {
+      "id": "6935dc4227",
+      "title": "Standard Lithium falls 48% after InvestingPro overvaluation warning",
+      "summary": "",
+      "link": "https://www.investing.com/news/investment-ideas/standard-lithium-falls-48-after-investingpro-overvaluation-warning-93CH-4775424",
+      "source": "www.investing.com",
+      "published": "2026-07-05 11:02:18"
     }
   ]
 }
