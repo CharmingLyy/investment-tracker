@@ -868,19 +868,23 @@ def run_detection(send_email=True):
 
         print(f"    ✓ {len(hourly['closes'])} 根 1H K线 (数据源: {data_source})")
 
-        # 2. 获取 24h ticker（用于基本面评分，添加短暂延迟避免限速）
+        # 2. 获取 24h ticker（基本面评分），Binance 失败则用 CoinGecko 备选
         time.sleep(0.5)
         ticker = fetch_24h_ticker(symbol)
 
-        # 如果 Binance ticker 也失败但用了 CoinGecko k线，尝试 CoinGecko ticker
-        if not ticker and data_source == "CoinGecko":
+        if not ticker:
+            # Binance ticker 不可用，尝试 CoinGecko（不管 k 线来自哪个数据源）
             cg_id = COINGECKO_IDS.get(asset, "")
             if cg_id:
                 ticker = fetch_ticker_coingecko(cg_id)
                 if ticker:
                     print(f"    ✓ 24h 行情 (CoinGecko): 涨跌 {float(ticker.get('priceChangePercent',0)):.2f}%")
-        elif ticker:
-            print(f"    ✓ 24h 行情: 涨跌 {float(ticker.get('priceChangePercent',0)):.2f}%, "
+                else:
+                    print(f"    ⚠️ 24h 行情不可用，基本面评分为默认值")
+            else:
+                print(f"    ⚠️ 24h 行情不可用，基本面评分为默认值")
+        else:
+            print(f"    ✓ 24h 行情 (Binance): 涨跌 {float(ticker.get('priceChangePercent',0)):.2f}%, "
                   f"成交量 ${float(ticker.get('quoteVolume',0)):,.0f}")
 
         # 3. 推导时间框架
