@@ -7,5 +7,6 @@ venv/
 .env
 .DS_Store
 *.log
+!logs/monitor.log
 .cache/
 .claude/

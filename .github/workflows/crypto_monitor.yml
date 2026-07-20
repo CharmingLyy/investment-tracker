@@ -2,7 +2,8 @@ name: 🤖 Crypto Signal Monitor
 
 on:
   schedule:
-    # 每 15 分钟检测一次，24/7（加密货币不休市）
+    # 每 15 分钟检测一次 (UTC 时间)
+    # GitHub 调度可能有几分钟延迟，这是正常的
     - cron: '*/15 * * * *'
   # 支持手动触发
   workflow_dispatch:
@@ -28,6 +29,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: 📋 诊断信息
+        run: |
+          echo "🕐 当前 UTC 时间: $(date -u +'%Y-%m-%d %H:%M:%S')"
+          echo "🕐 北京时间: $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')"
+          echo "📊 信号状态文件:"
+          cat logs/signal_state.json 2>/dev/null || echo "  (空/不存在)"
+          echo "📝 最近 5 条日志:"
+          tail -5 logs/monitor.log 2>/dev/null || echo "  (空/不存在)"
+
       - name: Run crypto signal detection
         env:
           AI_MONITOR_EMAIL_FROM: ${{ secrets.AI_MONITOR_EMAIL_FROM }}
@@ -35,10 +45,11 @@ jobs:
           AI_MONITOR_EMAIL_TO: ${{ secrets.AI_MONITOR_EMAIL_TO }}
         run: python scripts/monitor_crypto.py --once
 
-      - name: Commit signal state
+      - name: Commit signal state & log
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add logs/signal_state.json
-          git diff --staged --quiet || git commit -m "🤖 Crypto signal update - $(date +'%Y-%m-%d %H:%M UTC')"
-          git push
+          git add logs/signal_state.json logs/monitor.log
+          git diff --staged --quiet || git commit -m "🤖 Crypto signal update - $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M CST')"
+          git pull --rebase origin main 2>/dev/null || true
+          git push origin main

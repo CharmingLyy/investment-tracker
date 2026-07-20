@@ -12,6 +12,7 @@
 import smtplib
 import os
 import sys
+import time
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from datetime import datetime
@@ -146,25 +147,41 @@ def send_signal_email(asset, signal, direction, score, entry_price, stop_loss,
     </html>
     """
 
-    # ── 发送 ──
-    try:
-        msg = MIMEMultipart("alternative")
-        msg["Subject"] = subject
-        msg["From"] = EMAIL_FROM
-        msg["To"] = EMAIL_TO
-        msg.attach(MIMEText(html_body, "html", "utf-8"))
+    # ── 发送（带重试） ──
+    last_error = None
+    for attempt in range(3):
+        try:
+            msg = MIMEMultipart("alternative")
+            msg["Subject"] = subject
+            msg["From"] = EMAIL_FROM
+            msg["To"] = EMAIL_TO
+            msg.attach(MIMEText(html_body, "html", "utf-8"))
 
-        with smtplib.SMTP_SSL(SMTP_SERVER, SMTP_PORT) as server:
-            server.login(EMAIL_FROM, EMAIL_PASSWORD)
-            server.sendmail(EMAIL_FROM, [EMAIL_TO], msg.as_string())
+            with smtplib.SMTP_SSL(SMTP_SERVER, SMTP_PORT, timeout=15) as server:
+                server.login(EMAIL_FROM, EMAIL_PASSWORD)
+                server.sendmail(EMAIL_FROM, [EMAIL_TO], msg.as_string())
 
-        print(f"[邮件] ✅ 已发送 → {EMAIL_TO}")
-        return True
+            print(f"[邮件] ✅ 已发送 → {EMAIL_TO}")
+            return True
 
-    except smtplib.SMTPAuthenticationError:
-        print(f"[邮件] ❌ QQ 邮箱认证失败！请检查授权码是否正确（不是 QQ 密码）")
-        print(f"[邮件]    获取授权码: QQ邮箱 → 设置 → 账户 → POP3/SMTP服务 → 生成授权码")
-        return False
-    except Exception as e:
-        print(f"[邮件] ❌ 发送失败: {e}")
-        return False
+        except smtplib.SMTPAuthenticationError as e:
+            print(f"[邮件] ❌ QQ 邮箱认证失败！请检查授权码是否正确（不是 QQ 密码）")
+            print(f"[邮件]    获取授权码: QQ邮箱 → 设置 → 账户 → POP3/SMTP服务 → 生成授权码")
+            print(f"[邮件]    ⚠️ 如果授权码正确但仍失败，可能是 QQ 邮箱拦截了异地 IP（GitHub 服务器在美国）")
+            print(f"[邮件]    解决方法: QQ邮箱 → 设置 → 账户 → 安全设置 → 开启「允许异地登录」")
+            return False  # 认证错误不重试
+        except smtplib.SMTPException as e:
+            last_error = e
+            if attempt < 2:
+                wait = (attempt + 1) * 3
+                print(f"[邮件] ⚠️ SMTP 错误 (第{attempt+1}次): {e}，{wait}秒后重试...")
+                time.sleep(wait)
+        except Exception as e:
+            last_error = e
+            if attempt < 2:
+                wait = (attempt + 1) * 3
+                print(f"[邮件] ⚠️ 临时错误 (第{attempt+1}次): {e}，{wait}秒后重试...")
+                time.sleep(wait)
+
+    print(f"[邮件] ❌ 发送失败（3次重试后仍失败）: {last_error}")
+    return False
