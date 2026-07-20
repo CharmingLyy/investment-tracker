@@ -529,6 +529,48 @@ def generate_signal(data_1h, data_4h, data_1d, asset="BTC", ticker_info=None):
 
 
 # ============================================================
+# CoinGecko 备选数据源（Binance 不可用时自动切换）
+# ============================================================
+
+COINGECKO_IDS = {"BTC": "bitcoin", "ETH": "ethereum"}
+
+def fetch_klines_coingecko(coin_id, hours=336):
+    """从 CoinGecko 获取历史价格数据（备选方案）"""
+    days = max(14, hours // 24 + 1)
+    url = f"https://api.coingecko.com/api/v3/coins/{coin_id}/market_chart"
+    params = {"vs_currency": "usd", "days": days}
+    for attempt in range(3):
+        try:
+            resp = requests.get(url, params=params, timeout=30)
+            if resp.status_code == 429:
+                time.sleep(5)
+                continue
+            resp.raise_for_status()
+            data = resp.json()
+            prices = data.get("prices", [])
+            if len(prices) < 60:
+                raise Exception(f"数据不足 ({len(prices)} 条)")
+
+            # CoinGecko only provides closing prices; approximate OHLC
+            closes = [p[1] for p in prices]
+
+            # Approximate highs/lows from nearby window (same as website)
+            highs = []
+            lows = []
+            for i in range(len(closes)):
+                window = closes[max(0, i - 6):i + 1]
+                highs.append(max(window))
+                lows.append(min(window))
+
+            timestamps = [p[0] / 1000 for p in prices]
+            return {"closes": closes, "highs": highs, "lows": lows, "timestamps": timestamps}
+        except Exception as e:
+            if attempt < 2:
+                time.sleep(2)
+    return None
+
+
+# ============================================================
 # Binance 数据获取
 # ============================================================
 
@@ -696,6 +738,19 @@ def log_signal(asset, sig):
     print(line)
 
 
+def log_fetch_error(asset, error_msg):
+    """记录数据获取错误到日志"""
+    log_file = os.path.join(LOG_DIR, "monitor.log")
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    line = f"[{timestamp}] ❌ {asset:4s} | 数据错误 | {error_msg}\n"
+    print(line.strip())
+    try:
+        with open(log_file, "a", encoding="utf-8") as f:
+            f.write(line)
+    except Exception:
+        pass
+
+
 # ============================================================
 # 主流程
 # ============================================================
@@ -718,13 +773,27 @@ def run_detection(send_email=True):
     for asset, symbol in SYMBOL_MAP.items():
         print(f"\n  📡 获取 {asset} ({symbol}) 1H K线数据...")
 
-        # 1. 获取 1H 数据
+        # 1. 获取 1H 数据（Binance 优先，CoinGecko 备选）
         hourly = fetch_klines_binance(symbol, "1h", 1000)
+        data_source = "Binance"
+
         if not hourly:
-            print(f"    ❌ {asset} 数据获取失败")
+            print(f"    ⚠️ Binance 不可用，尝试 CoinGecko 备选...")
+            cg_id = COINGECKO_IDS.get(asset, "")
+            if cg_id:
+                hourly = fetch_klines_coingecko(cg_id)
+                if hourly:
+                    data_source = "CoinGecko"
+                    print(f"    ✓ CoinGecko 备选成功")
+                else:
+                    print(f"    ❌ CoinGecko 也失败了")
+
+        if not hourly:
+            print(f"    ❌ {asset} 所有数据源均获取失败（Binance + CoinGecko）")
+            log_fetch_error(asset, "所有数据源获取失败")
             continue
 
-        print(f"    ✓ {len(hourly['closes'])} 根 1H K线")
+        print(f"    ✓ {len(hourly['closes'])} 根 1H K线 (数据源: {data_source})")
 
         # 2. 获取 24h ticker（用于基本面评分，添加短暂延迟避免限速）
         time.sleep(0.5)

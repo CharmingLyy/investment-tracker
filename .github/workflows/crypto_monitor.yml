@@ -3,9 +3,7 @@ name: 🤖 Crypto Signal Monitor
 on:
   schedule:
     # 每 15 分钟检测一次 (UTC 时间)
-    # GitHub 调度可能有几分钟延迟，这是正常的
     - cron: '*/15 * * * *'
-  # 支持手动触发
   workflow_dispatch:
 
 permissions:
@@ -34,22 +32,29 @@ jobs:
           echo "🕐 当前 UTC 时间: $(date -u +'%Y-%m-%d %H:%M:%S')"
           echo "🕐 北京时间: $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')"
           echo "📊 信号状态文件:"
-          cat logs/signal_state.json 2>/dev/null || echo "  (空/不存在)"
+          cat logs/signal_state.json 2>/dev/null || echo "  (空)"
           echo "📝 最近 5 条日志:"
-          tail -5 logs/monitor.log 2>/dev/null || echo "  (空/不存在)"
+          tail -5 logs/monitor.log 2>/dev/null || echo "  (空)"
 
       - name: Run crypto signal detection
+        id: monitor
         env:
           AI_MONITOR_EMAIL_FROM: ${{ secrets.AI_MONITOR_EMAIL_FROM }}
           AI_MONITOR_EMAIL_PASSWORD: ${{ secrets.AI_MONITOR_EMAIL_PASSWORD }}
           AI_MONITOR_EMAIL_TO: ${{ secrets.AI_MONITOR_EMAIL_TO }}
-        run: python scripts/monitor_crypto.py --once
+        run: |
+          python scripts/monitor_crypto.py --once 2>&1 | tee logs/workflow_output.log
+          echo "EXIT_CODE=${PIPESTATUS[0]}" >> $GITHUB_ENV
 
-      - name: Commit signal state & log
+      - name: Commit signal state & logs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add logs/signal_state.json logs/monitor.log
-          git diff --staged --quiet || git commit -m "🤖 Crypto signal update - $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M CST')"
-          git pull --rebase origin main 2>/dev/null || true
-          git push origin main
+          git add logs/signal_state.json logs/monitor.log logs/workflow_output.log
+          if ! git diff --staged --quiet; then
+            git commit -m "🤖 Crypto signal update - $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M CST')"
+            git pull --rebase origin main 2>/dev/null || true
+            git push origin main
+          else
+            echo "📭 无变化，跳过提交"
+          fi

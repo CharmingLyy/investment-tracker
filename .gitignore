@@ -8,5 +8,6 @@ venv/
 .DS_Store
 *.log
 !logs/monitor.log
+!logs/workflow_output.log
 .cache/
 .claude/
