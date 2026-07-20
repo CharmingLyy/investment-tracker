@@ -1,0 +1,44 @@
+name: 🤖 Crypto Signal Monitor
+
+on:
+  schedule:
+    # 每 15 分钟检测一次，24/7（加密货币不休市）
+    - cron: '*/15 * * * *'
+  # 支持手动触发
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run crypto signal detection
+        env:
+          AI_MONITOR_EMAIL_FROM: ${{ secrets.AI_MONITOR_EMAIL_FROM }}
+          AI_MONITOR_EMAIL_PASSWORD: ${{ secrets.AI_MONITOR_EMAIL_PASSWORD }}
+          AI_MONITOR_EMAIL_TO: ${{ secrets.AI_MONITOR_EMAIL_TO }}
+        run: python scripts/monitor_crypto.py --once
+
+      - name: Commit signal state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add logs/signal_state.json
+          git diff --staged --quiet || git commit -m "🤖 Crypto signal update - $(date +'%Y-%m-%d %H:%M UTC')"
+          git push

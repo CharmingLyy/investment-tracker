@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 加密货币短线交易信号 — BTC & ETH</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script>window.Chart||document.write('<script src="https://unpkg.com/chart.js@4.4.7/dist/chart.umd.min.js"><\/script>');</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0e14;--card:#131820;--card2:#181f2a;--border:#1e293b;
+  --text:#e6edf3;--t2:#8b949e;--t3:#555d68;
+  --accent:#58a6ff;--green:#3fb950;--red:#f85149;--yellow:#d2991d;
+  --g-bg:rgba(63,185,80,.1);--r-bg:rgba(248,81,73,.1);--y-bg:rgba(210,153,29,.1);
+  --r:10px;--rs:6px;
+}
+html{font-size:15px}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);min-height:100vh;line-height:1.5;
+}
+.app{max-width:1600px;margin:0 auto;padding:12px 16px}
+
+/* Header */
+.header{
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  padding:10px 16px;background:var(--card);border:1px solid var(--border);
+  border-radius:var(--r);margin-bottom:12px;
+}
+.logo{font-size:1.25rem;font-weight:800;display:flex;align-items:center;gap:6px}
+.logo span{color:var(--accent)}
+.header-info{display:flex;align-items:center;gap:18px;margin-left:auto;flex-wrap:wrap;font-size:.82rem}
+.hi-item{color:var(--t2)}
+.hi-val{color:var(--text);font-weight:700;font-variant-numeric:tabular-nums}
+.countdown{color:var(--accent);font-weight:700;font-variant-numeric:tabular-nums;min-width:50px}
+.pulse{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;margin-right:4px}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+.btn{
+  padding:6px 14px;border-radius:var(--rs);font-size:.8rem;font-weight:600;
+  cursor:pointer;border:none;transition:.2s;display:inline-flex;align-items:center;gap:5px
+}
+.btn-p{background:var(--accent);color:#fff}
+.btn-p:hover{filter:brightness(1.15)}
+.btn-o{background:transparent;border:1px solid var(--border);color:var(--text)}
+.btn-o:hover{background:var(--card2)}
+.btn-o.on{background:var(--green);border-color:var(--green);color:#000}
+
+/* Two column grid */
+.main-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:1100px){.main-grid{grid-template-columns:1fr}}
+
+/* Cards */
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:14px;margin-bottom:12px}
+.ch{margin-bottom:10px;font-size:.78rem;font-weight:700;color:var(--t2);text-transform:uppercase;letter-spacing:.5px;display:flex;align-items:center;gap:6px}
+
+/* Signal Header - the big decision */
+.signal-hero{
+  display:flex;align-items:center;gap:14px;padding:16px;border-radius:var(--r);
+  border:2px solid var(--border);margin-bottom:12px;
+}
+.signal-hero.long{border-color:var(--green);background:linear-gradient(135deg,rgba(63,185,80,.08),rgba(63,185,80,.02))}
+.signal-hero.short{border-color:var(--red);background:linear-gradient(135deg,rgba(248,81,73,.08),rgba(248,81,73,.02))}
+.signal-hero.wait{border-color:var(--yellow);background:linear-gradient(135deg,rgba(210,153,29,.08),rgba(210,153,29,.02))}
+
+.sig-decision{
+  font-size:2.2rem;font-weight:900;min-width:90px;text-align:center;line-height:1.1;
+}
+.sig-decision.long{color:var(--green)}
+.sig-decision.short{color:var(--red)}
+.sig-decision.wait{color:var(--yellow)}
+
+.sig-details{flex:1}
+.sig-score{font-size:2rem;font-weight:800}
+.sig-score.high{color:var(--green)}.sig-score.mid{color:var(--yellow)}.sig-score.low{color:var(--red)}
+.sig-sub{font-size:.8rem;color:var(--t2);margin-top:2px}
+.sig-conf{display:flex;gap:12px;margin-top:4px}
+.sig-conf-item{font-size:.78rem;color:var(--t2);display:flex;align-items:center;gap:4px}
+.sig-conf-item .dot{width:6px;height:6px;border-radius:50%}
+.sig-conf-item .dot.g{background:var(--green)}.sig-conf-item .dot.r{background:var(--red)}.sig-conf-item .dot.y{background:var(--yellow)}
+
+/* Trade Plan */
+.plan-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.plan-it{background:var(--card2);border-radius:var(--rs);padding:10px;text-align:center}
+.plan-it.highlight{background:var(--g-bg);border:1px solid rgba(63,185,80,.3)}
+.plan-it.danger{background:var(--r-bg);border:1px solid rgba(248,81,73,.3)}
+.plan-lbl{font-size:.68rem;color:var(--t2);text-transform:uppercase;margin-bottom:3px;letter-spacing:.3px}
+.plan-val{font-size:1.15rem;font-weight:800}
+.plan-val.e{color:var(--accent)}.plan-val.s{color:var(--red)}.plan-val.t{color:var(--green)}.plan-val.r{color:var(--yellow)}
+.plan-sub{font-size:.7rem;color:var(--t3);margin-top:1px}
+
+/* Leverage badge */
+.lev-badge{
+  display:inline-block;padding:2px 8px;border-radius:10px;font-size:.7rem;font-weight:700
+}
+.lev-badge.l1{background:var(--g-bg);color:var(--green)}
+.lev-badge.l2{background:var(--y-bg);color:var(--yellow)}
+.lev-badge.l3{background:var(--r-bg);color:var(--red)}
+
+/* Tech Indicators Grid */
+.tech-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.tech-it{
+  background:var(--card2);border-radius:var(--rs);padding:8px;text-align:center;
+  border:1px solid transparent;transition:.2s
+}
+.tech-it.bull{border-color:var(--green);background:var(--g-bg)}
+.tech-it.bear{border-color:var(--red);background:var(--r-bg)}
+.tech-it.neut{border-color:rgba(210,153,29,.25);background:var(--y-bg)}
+.tech-tf{font-size:.6rem;color:var(--t3);margin-bottom:2px}
+.tech-lbl{font-size:.68rem;color:var(--t2);text-transform:uppercase;margin-bottom:2px}
+.tech-val{font-size:.9rem;font-weight:700}
+.tech-sig{font-size:.65rem;font-weight:600;margin-top:1px}
+.tech-sig.bull{color:var(--green)}.tech-sig.bear{color:var(--red)}.tech-sig.neut{color:var(--yellow)}
+
+/* Fundamentals */
+.f-row{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(30,41,59,.5);font-size:.8rem}
+.f-row:last-child{border-bottom:none}
+.f-lbl{color:var(--t2)}.f-val{font-weight:600}
+.f-val.g{color:var(--green)}.f-val.r{color:var(--red)}.f-val.y{color:var(--yellow)}
+
+/* News */
+.news-list{max-height:260px;overflow-y:auto}
+.news-it{
+  display:block;padding:8px;border-radius:var(--rs);text-decoration:none;
+  color:var(--text);border-bottom:1px solid rgba(30,41,59,.3);transition:.2s;font-size:.78rem
+}
+.news-it:hover{background:var(--card2)}
+.news-tl{font-weight:600;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.news-meta{font-size:.68rem;color:var(--t3);display:flex;gap:6px;margin-top:2px}
+.sent{font-size:.62rem;padding:1px 5px;border-radius:3px;font-weight:600}
+.sent.p{background:var(--g-bg);color:var(--green)}.sent.n{background:var(--r-bg);color:var(--red)}.sent.x{background:rgba(139,148,158,.12);color:var(--t2)}
+
+/* Charts */
+.chart-wrap{position:relative;width:100%}
+.chart-wrap canvas{width:100%!important}
+.tf-bar{display:flex;gap:3px;margin-bottom:8px}
+.tf-btn{
+  padding:2px 8px;border-radius:3px;font-size:.68rem;font-weight:600;cursor:pointer;
+  border:1px solid transparent;background:transparent;color:var(--t2);transition:.2s
+}
+.tf-btn:hover{background:var(--card2);color:var(--text)}
+.tf-btn.on{background:var(--accent);color:#fff}
+
+/* Toast */
+.toast{
+  position:fixed;top:16px;right:16px;z-index:100;padding:10px 16px;
+  border-radius:var(--rs);font-weight:600;font-size:.82rem;
+  box-shadow:0 4px 12px rgba(0,0,0,.5);animation:slide .3s ease;max-width:380px
+}
+.toast.e{background:var(--red);color:#fff}.toast.i{background:var(--accent);color:#fff}
+@keyframes slide{from{transform:translateX(120%);opacity:0}to{transform:translateX(0);opacity:1}}
+
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
+
+.loading{text-align:center;padding:30px;color:var(--t3)}
+.loading .spinner{display:inline-block;width:28px;height:28px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Backtest */
+.bt-table{width:100%;border-collapse:collapse;font-size:.82rem;margin-top:8px}
+.bt-table th{background:var(--card2);padding:8px 10px;text-align:center;font-size:.7rem;font-weight:600;color:var(--t2);text-transform:uppercase;border-bottom:2px solid var(--border)}
+.bt-table td{padding:8px 10px;text-align:center;border-bottom:1px solid rgba(30,41,59,.4);font-weight:600;font-variant-numeric:tabular-nums}
+.bt-table .asset-name{text-align:left;font-weight:700}
+.bt-table .win{color:var(--green)}.bt-table .lose{color:var(--red)}.bt-table .neutral{color:var(--yellow)}
+.bt-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}
+@media(max-width:768px){.bt-summary{grid-template-columns:repeat(2,1fr)}}
+.bt-stat{background:var(--card2);border-radius:var(--rs);padding:12px;text-align:center}
+.bt-stat-lbl{font-size:.68rem;color:var(--t2);text-transform:uppercase;margin-bottom:4px}
+.bt-stat-val{font-size:1.3rem;font-weight:800}
+.bt-stat-val.g{color:var(--green)}.bt-stat-val.r{color:var(--red)}.bt-stat-val.y{color:var(--yellow)}
+.bt-note{font-size:.72rem;color:var(--t3);margin-top:10px;line-height:1.6}
+</style>
+</head>
+<body>
+
+<div class="app">
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">🤖 AI<span>加密货币</span> · 短线交易信号</div>
+    <div class="header-info">
+      <span class="hi-item">更新: <span class="hi-val" id="updateTime">--</span></span>
+      <span class="hi-item">下次: <span class="countdown" id="countdown">--</span></span>
+      <span id="liveInd" style="display:none"><span class="pulse"></span>实时</span>
+      <button class="btn btn-o" id="btnRefresh" onclick="refreshAll()">🔄 刷新</button>
+      <button class="btn btn-o on" id="btnAuto" onclick="toggleAuto()">⏱ 自动刷新</button>
+      <button class="btn btn-o" id="btnBacktest" onclick="toggleBacktest()">📊 策略回测</button>
+    </div>
+  </header>
+
+  <!-- Two Columns: BTC | ETH -->
+  <div class="main-grid">
+    <div id="colBTC"><div class="loading"><div class="spinner"></div><p style="margin-top:8px">BTC 分析中...</p></div></div>
+    <div id="colETH"><div class="loading"><div class="spinner"></div><p style="margin-top:8px">ETH 分析中...</p></div></div>
+  </div>
+
+  <!-- Backtest Panel -->
+  <div id="backtestPanel" style="display:none">
+    <div class="card" style="margin-top:12px">
+      <div class="ch">📊 策略回测 <span style="font-weight:400;font-size:.7rem;color:var(--t3)">基于日线数据模拟短线策略</span></div>
+      <div id="backtestContent"><div class="loading"><div class="spinner"></div><p style="margin-top:8px">回测计算中...</p></div></div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ========================================================================
+   AI Crypto Short-Term Trading Signals — BTC & ETH
+   短线交易：做多/做空/观望 + 入场/止损/止盈 + 盈亏比 + 杠杆建议
+   ======================================================================== */
+
+const ASSETS = [
+  { id: 'bitcoin', s: 'BTC', n: 'Bitcoin', icon: '🪙' },
+  { id: 'ethereum', s: 'ETH', n: 'Ethereum', icon: '💎' },
+];
+
+// ── State ──
+let autoRefresh = true;
+let countdownTimer = null;
+let refreshInterval = null;
+let assetData = {}; // { btc: { tf1h, tf4h, tf1d, info, news, signal }, eth: {...} }
+let charts = {}; // { btc_price: Chart, btc_macd: Chart, eth_price: Chart, eth_macd: Chart }
+
+// ── Robust Fetch with timeout, proxy fallback, and retry ──
+const FETCH_TIMEOUT = 15000;
+
+async function fetchSafe(url, options = {}) {
+  const proxies = [
+    { name: 'direct', fn: u => u },
+    { name: 'corsproxy', fn: u => `https://corsproxy.io/?${encodeURIComponent(u)}` },
+    { name: 'allorigins', fn: u => `https://api.allorigins.win/raw?url=${encodeURIComponent(u)}` },
+    { name: 'codetabs', fn: u => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(u)}` },
+  ];
+
+  let lastErr = null;
+  for (const proxy of proxies) {
+    try {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), FETCH_TIMEOUT);
+      const resp = await fetch(proxy.fn(url), {
+        signal: ctrl.signal,
+        headers: { 'Accept': 'application/json', ...(options.headers || {}) },
+      });
+      clearTimeout(timer);
+      if (!resp.ok) {
+        if (resp.status === 429) { lastErr = new Error('API 请求过于频繁(429)，等待后重试...'); continue; }
+        throw new Error(`HTTP ${resp.status}`);
+      }
+      return resp.json();
+    } catch (e) {
+      lastErr = e;
+      if (e.name === 'AbortError') lastErr = new Error(`请求超时 (${FETCH_TIMEOUT/1000}s)`);
+      continue;
+    }
+  }
+  throw lastErr || new Error('所有数据源均无法连接');
+}
+
+// ── Data Fetching (simplified: 1 price call per asset, derived timeframes) ──
+async function fetchPriceData(id) {
+  // Single call: 14 days of hourly data → derive 1H, 4H, 1D
+  const raw = await fetchSafe(
+    `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=14`
+  );
+  if (!raw?.prices?.length) throw new Error('价格数据为空');
+  return raw;
+}
+
+async function fetchCoinInfo(id) {
+  try {
+    return await fetchSafe(
+      `https://api.coingecko.com/api/v3/coins/${id}?localization=false&tickers=false&community_data=false&developer_data=false`
+    );
+  } catch { return null; }
+}
+
+// News: try RSS proxies, return empty on failure (non-critical)
+async function fetchNewsSafe(query) {
+  const results = [];
+  const rssUrl = `https://news.google.com/rss/search?q=${encodeURIComponent(query + ' crypto')}&hl=en-US&gl=US&ceid=US:en`;
+  const proxies = [
+    u => `https://api.allorigins.win/raw?url=${encodeURIComponent(u)}`,
+    u => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(u)}`,
+    u => `https://corsproxy.io/?${encodeURIComponent(u)}`,
+  ];
+  for (const fn of proxies) {
+    try {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 10000);
+      const r = await fetch(fn(rssUrl), { signal: ctrl.signal });
+      clearTimeout(timer);
+      if (!r.ok) continue;
+      const t = await r.text();
+      const xml = new DOMParser().parseFromString(t, 'text/xml');
+      xml.querySelectorAll('item').forEach(it => {
+        const title = it.querySelector('title')?.textContent?.replace(/<\/?[^>]+(>|$)/g, '') || '';
+        const link = it.querySelector('link')?.textContent || '';
+        const d = it.querySelector('pubDate')?.textContent || '';
+        if (title) results.push({ title, link, date: d, src: 'Google News' });
+      });
+      if (results.length) break;
+    } catch { continue; }
+  }
+  return results.slice(0, 10);
+}
+
+// ── Technical Indicators ──
+function SMA(d,p){const r=[];for(let i=0;i<d.length;i++){if(i<p-1){r.push(null);continue}let s=0;for(let j=i-p+1;j<=i;j++)s+=d[j];r.push(s/p)}return r}
+function EMA(d,p){const r=[d[0]];const k=2/(p+1);for(let i=1;i<d.length;i++)r.push(d[i]*k+r[i-1]*(1-k));return r}
+function RSI(c,p=14){if(c.length<p+1)return c.map(()=>null);const g=[],l=[];for(let i=1;i<c.length;i++){const d=c[i]-c[i-1];g.push(d>0?d:0);l.push(d<0?-d:0)}const r=Array(p).fill(null);let ag=g.slice(0,p).reduce((a,b)=>a+b,0)/p,al=l.slice(0,p).reduce((a,b)=>a+b,0)/p;r.push(al===0?100:100-100/(1+ag/al));for(let i=p;i<g.length;i++){ag=(ag*(p-1)+g[i])/p;al=(al*(p-1)+l[i])/p;r.push(al===0?100:100-100/(1+ag/al))}return r}
+function MACD(c,fa=12,sl=26,sig=9){const ef=EMA(c,fa),es=EMA(c,sl);const ml=ef.map((v,i)=>v!=null&&es[i]!=null?v-es[i]:null);const vd=ml.filter(v=>v!==null);const esr=EMA(vd,sig);const ln=Array(ml.length).fill(null);let si=0;for(let i=0;i<ml.length;i++){if(ml[i]!==null)ln[i]=esr[si++]||null}const hist=ml.map((v,i)=>v!=null&&ln[i]!=null?v-ln[i]:null);return{macdLine:ml,signalLine:ln,histogram:hist}}
+function BB(c,p=20,sd=2){const m=SMA(c,p);const u=[],l=[];for(let i=0;i<c.length;i++){if(m[i]===null){u.push(null);l.push(null);continue}let ss=0;for(let j=i-p+1;j<=i;j++)ss+=(c[j]-m[i])**2;const std=Math.sqrt(ss/p);u.push(m[i]+sd*std);l.push(m[i]-sd*std)}return{middle:m,upper:u,lower:l}}
+function ATR(h,l,c,p=14){const tr=[];for(let i=1;i<c.length;i++)tr.push(Math.max(h[i]-l[i],Math.abs(h[i]-c[i-1]),Math.abs(l[i]-c[i-1])));const r=Array(p).fill(null);let a=tr.slice(0,p).reduce((x,y)=>x+y,0)/p;r.push(a);for(let i=p;i<tr.length;i++){a=(a*(p-1)+tr[i])/p;r.push(a)}return r}
+
+// ── Support / Resistance Detection ──
+function findSRLines(closes, highs, lows, n = 5) {
+  // Find local swing highs and lows
+  const swingsHigh = [], swingsLow = [];
+  const lookback = 5;
+  for (let i = lookback; i < closes.length - lookback; i++) {
+    let isHigh = true, isLow = true;
+    for (let j = i - lookback; j <= i + lookback; j++) {
+      if (j === i) continue;
+      if (highs[j] >= highs[i]) isHigh = false;
+      if (lows[j] <= lows[i]) isLow = false;
+    }
+    if (isHigh) swingsHigh.push(highs[i]);
+    if (isLow) swingsLow.push(lows[i]);
+  }
+
+  // Cluster nearby levels
+  const cluster = (arr, threshold) => {
+    if (!arr.length) return [];
+    const sorted = [...arr].sort((a, b) => a - b);
+    const clusters = [];
+    let cur = [sorted[0]];
+    for (let i = 1; i < sorted.length; i++) {
+      if (Math.abs(sorted[i] - cur[cur.length - 1]) / cur[cur.length - 1] < threshold) {
+        cur.push(sorted[i]);
+      } else {
+        clusters.push(cur.reduce((a, b) => a + b, 0) / cur.length);
+        cur = [sorted[i]];
+      }
+    }
+    clusters.push(cur.reduce((a, b) => a + b, 0) / cur.length);
+    return clusters;
+  };
+
+  const price = closes[closes.length - 1];
+  const supports = cluster(swingsLow.filter(v => v < price), 0.01).sort((a, b) => b - a).slice(0, n);
+  const resistances = cluster(swingsHigh.filter(v => v > price), 0.01).sort((a, b) => a - b).slice(0, n);
+
+  // Add EMA levels as dynamic S/R
+  const ema50 = EMA(closes, 50);
+  const ema200 = closes.length >= 200 ? EMA(closes, 200) : null;
+  const e50 = ema50[ema50.length - 1];
+  const e200 = ema200 ? ema200[ema200.length - 1] : null;
+
+  if (e50 < price) supports.push(e50); else resistances.push(e50);
+  if (e200 && e200 < price) supports.push(e200); else if (e200) resistances.push(e200);
+
+  // Round number levels
+  const magnitude = Math.pow(10, Math.floor(Math.log10(price)));
+  for (let m = -3; m <= 3; m++) {
+    const level = Math.round(price / magnitude) * magnitude + m * magnitude;
+    if (level < price * 0.995) supports.push(level);
+    if (level > price * 1.005) resistances.push(level);
+  }
+
+  return {
+    supports: [...new Set(supports)].sort((a, b) => b - a).slice(0, n),
+    resistances: [...new Set(resistances)].sort((a, b) => a - b).slice(0, n),
+  };
+}
+
+// ── Signal Engine ──
+function generateSignal(data1h, data4h, data1d, info, newsItems) {
+  const c1 = data1h.closes, h1 = data1h.highs, l1 = data1h.lows;
+  const c4 = data4h.closes, h4 = data4h.highs, l4 = data4h.lows;
+  const cd = data1d.closes;
+  const curPrice = c1[c1.length - 1];
+
+  // ── 1H Indicators ──
+  const rsi1h = RSI(c1, 14), curRSI1h = rsi1h[rsi1h.length - 1];
+  const macd1h = MACD(c1), cm1 = macd1h.macdLine[macd1h.macdLine.length - 1], cs1 = macd1h.signalLine[macd1h.signalLine.length - 1];
+  const pm1 = macd1h.macdLine[macd1h.macdLine.length - 2], ps1 = macd1h.signalLine[macd1h.signalLine.length - 2];
+  const ema9_1h = EMA(c1, 9), ema21_1h = EMA(c1, 21), ema50_1h = EMA(c1, 50);
+  const ce9 = ema9_1h[ema9_1h.length - 1], ce21 = ema21_1h[ema21_1h.length - 1], ce50 = ema50_1h[ema50_1h.length - 1];
+  const bb1h = BB(c1, 20, 2), bu = bb1h.upper[bb1h.upper.length - 1], bl = bb1h.lower[bb1h.lower.length - 1];
+  const atr1h = ATR(h1, l1, c1, 14), curATR = atr1h[atr1h.length - 1] || curPrice * 0.01;
+
+  // ── 4H Indicators ──
+  const rsi4h = RSI(c4, 14), curRSI4h = rsi4h[rsi4h.length - 1];
+  const macd4h = MACD(c4), cm4 = macd4h.macdLine[macd4h.macdLine.length - 1], cs4 = macd4h.signalLine[macd4h.signalLine.length - 1];
+  const ema21_4h = EMA(c4, 21), ce21_4h = ema21_4h[ema21_4h.length - 1];
+
+  // ── Daily Indicators ──
+  const ema21_d = EMA(cd, 21), ce21_d = ema21_d[ema21_d.length - 1];
+  const rsiD = RSI(cd, 14), curRSID = rsiD[rsiD.length - 1];
+
+  // ── Support / Resistance ──
+  const sr = findSRLines(c1, h1, l1);
+  const nearestSupport = sr.supports[0] || curPrice * 0.97;
+  const nearestResistance = sr.resistances[0] || curPrice * 1.03;
+  const nextSupport = sr.supports[1] || curPrice * 0.95;
+  const nextResistance = sr.resistances[1] || curPrice * 1.05;
+
+  // ── Determine Trend Direction ──
+  // 1H trend
+  const trend1h = curPrice > ce21 ? (curPrice > ce9 && ce9 > ce21 ? 2 : 1) : (curPrice < ce9 && ce9 < ce21 ? -2 : -1);
+  // 4H trend
+  const trend4h = curPrice > ce21_4h ? 1 : -1;
+  // Daily trend
+  const trendD = curPrice > ce21_d ? 1 : -1;
+
+  const trendScore = trend1h + trend4h + trendD; // Range: -5 to +5
+  const direction = trendScore >= 3 ? 'bullish' : trendScore <= -3 ? 'bearish' : 'neutral';
+
+  // ── Technical Score (60 pts) ──
+  let techScore = 0;
+
+  // Trend alignment (20 pts)
+  if (direction === 'bullish') {
+    techScore += trend1h > 0 ? 7 : 2;
+    techScore += trend4h > 0 ? 7 : 2;
+    techScore += trendD > 0 ? 6 : 2;
+  } else if (direction === 'bearish') {
+    techScore += trend1h < 0 ? 7 : 2;
+    techScore += trend4h < 0 ? 7 : 2;
+    techScore += trendD < 0 ? 6 : 2;
+  } else {
+    techScore += 3 + 3 + 3;
+  }
+
+  // Momentum (20 pts)
+  if (cm1 !== null && cs1 !== null) {
+    if (direction === 'bullish') {
+      if (pm1 <= ps1 && cm1 > cs1) techScore += 10; // golden cross
+      else if (cm1 > cs1) techScore += 7;
+      else techScore += 3;
+    } else if (direction === 'bearish') {
+      if (pm1 >= ps1 && cm1 < cs1) techScore += 10; // death cross
+      else if (cm1 < cs1) techScore += 7;
+      else techScore += 3;
+    } else techScore += 5;
+  } else techScore += 5;
+
+  // 4H MACD confirmation
+  if (cm4 !== null && cs4 !== null) {
+    if ((direction === 'bullish' && cm4 > cs4) || (direction === 'bearish' && cm4 < cs4)) techScore += 5;
+    else if (direction === 'neutral') techScore += 3;
+    else techScore += 1;
+  } else techScore += 3;
+
+  // RSI positioning (10 pts)
+  if (curRSI1h !== null) {
+    if (direction === 'bullish' && curRSI1h >= 30 && curRSI1h <= 55) techScore += 10;
+    else if (direction === 'bearish' && curRSI1h >= 45 && curRSI1h <= 70) techScore += 10;
+    else if (curRSI1h >= 35 && curRSI1h <= 65) techScore += 6;
+    else if (curRSI1h < 25 || curRSI1h > 75) techScore += 2; // extreme
+    else techScore += 4;
+  } else techScore += 5;
+
+  // Volume / volatility (10 pts)
+  const atrPct = (curATR / curPrice) * 100;
+  if (atrPct < 3 && atrPct > 0.5) techScore += 10; // healthy volatility
+  else if (atrPct < 6) techScore += 6;
+  else techScore += 2; // too volatile
+
+  // ── Fundamental Score (20 pts) ──
+  let fundScore = 0;
+  if (info) {
+    const md = info.market_data || {};
+    const chg7d = md.price_change_percentage_7d || 0;
+    const chg30d = md.price_change_percentage_30d || 0;
+
+    if (direction === 'bullish') {
+      if (chg7d > 0 && chg30d > 0) fundScore += 8;
+      else if (chg7d > 0 || chg30d > 0) fundScore += 5;
+      else fundScore += 2;
+    } else if (direction === 'bearish') {
+      if (chg7d < 0 && chg30d < 0) fundScore += 8;
+      else if (chg7d < 0 || chg30d < 0) fundScore += 5;
+      else fundScore += 2;
+    } else fundScore += 4;
+
+    const mcap = md.market_cap?.usd || 0;
+    if (mcap > 100e9) fundScore += 6; // large cap stability
+    else if (mcap > 10e9) fundScore += 4;
+    else fundScore += 2;
+
+    const vol = md.total_volume?.usd || 0;
+    if (vol > 10e9) fundScore += 6;
+    else if (vol > 1e9) fundScore += 4;
+    else fundScore += 2;
+  } else fundScore += 10;
+
+  // ── News Sentiment (20 pts) ──
+  let newsScore = 10;
+  let posCount = 0, negCount = 0;
+  if (newsItems && newsItems.length > 0) {
+    const posW = ['涨','bull','surge','rally','gain','up','buy','strong','growth','利好','突破','买入','positive','rise','record','profit','green','soar','boost','outperform','recovery','adopt','launch','upgrade'];
+    const negW = ['跌','bear','crash','drop','fall','down','sell','weak','risk','暴跌','利空','抛售','卖出','negative','decline','loss','fear','warn','plunge','slump','cut','concern','tariff','hack','ban','crackdown'];
+    for (const n of newsItems) {
+      const t = (n.title||'').toLowerCase();
+      let pc = 0, nc = 0;
+      posW.forEach(w => { if (t.includes(w)) pc++; });
+      negW.forEach(w => { if (t.includes(w)) nc++; });
+      if (pc > nc) { n.sentiment = 'positive'; posCount++; }
+      else if (nc > pc) { n.sentiment = 'negative'; negCount++; }
+      else n.sentiment = 'neutral';
+    }
+    const posRatio = posCount / newsItems.length;
+    newsScore = Math.round(posRatio * 12) + Math.min(8, newsItems.length);
+    if (direction === 'bearish') newsScore = Math.round((negCount / newsItems.length) * 12) + Math.min(8, newsItems.length);
+  }
+
+  const totalScore = Math.round(Math.min(100, techScore + fundScore + newsScore));
+
+  // ── Risk/Reward Calculation ──
+  let entryPrice = curPrice;
+  let stopLoss, takeProfit, rrRatio;
+  let signal, sigClass;
+
+  if (direction === 'bullish' && totalScore >= 65) {
+    // LONG setup (优化参数: 止损2.0×ATR, 止盈5.0×ATR, R:R≥1.5)
+    signal = '做多 LONG';
+    sigClass = 'long';
+    // Stop: below nearest support or 2.0x ATR, take the WIDER one for safety
+    const atrStop = entryPrice - curATR * 2.0;
+    const srStop = nearestSupport * 0.995; // 0.5% below support (wider buffer)
+    stopLoss = Math.min(atrStop, srStop); // wider stop (lower price) — gives trade room to breathe
+
+    // Target: first resistance, then ATR-based, ensure R:R ≥ 1.5
+    const atrTarget1 = entryPrice + curATR * 4;
+    const atrTarget2 = entryPrice + curATR * 5;
+    if ((nearestResistance - entryPrice) / (entryPrice - stopLoss) >= 1.5) {
+      takeProfit = nearestResistance * 0.995;
+    } else if ((nextResistance - entryPrice) / (entryPrice - stopLoss) >= 1.5) {
+      takeProfit = nextResistance * 0.995;
+    } else if ((atrTarget1 - entryPrice) / (entryPrice - stopLoss) >= 1.5) {
+      takeProfit = atrTarget1;
+    } else {
+      takeProfit = atrTarget2;
+    }
+    rrRatio = (takeProfit - entryPrice) / (entryPrice - stopLoss);
+  } else if (direction === 'bearish' && totalScore >= 65) {
+    // SHORT setup (优化参数: 止损2.0×ATR, 止盈5.0×ATR, R:R≥1.5)
+    signal = '做空 SHORT';
+    sigClass = 'short';
+    const atrStop = entryPrice + curATR * 2.0;
+    const srStop = nearestResistance * 1.005; // 0.5% above resistance (wider buffer)
+    stopLoss = Math.max(atrStop, srStop); // wider stop (higher price) — gives trade room to breathe
+
+    const atrTarget1 = entryPrice - curATR * 4;
+    const atrTarget2 = entryPrice - curATR * 5;
+    if ((entryPrice - nearestSupport) / (stopLoss - entryPrice) >= 1.5) {
+      takeProfit = nearestSupport * 1.005;
+    } else if ((entryPrice - nextSupport) / (stopLoss - entryPrice) >= 1.5) {
+      takeProfit = nextSupport * 1.005;
+    } else if ((entryPrice - atrTarget1) / (stopLoss - entryPrice) >= 1.5) {
+      takeProfit = atrTarget1;
+    } else {
+      takeProfit = atrTarget2;
+    }
+    rrRatio = (entryPrice - takeProfit) / (stopLoss - entryPrice);
+  } else {
+    // WAIT - not enough conviction
+    signal = '观望 WAIT';
+    sigClass = 'wait';
+    stopLoss = direction === 'bullish' ? entryPrice - curATR * 2.0 : entryPrice + curATR * 2.0;
+    takeProfit = direction === 'bullish' ? entryPrice + curATR * 4.0 : entryPrice - curATR * 4.0;
+    rrRatio = direction === 'neutral' ? 0 : (direction === 'bullish' ? (takeProfit - entryPrice) / (entryPrice - stopLoss) : (entryPrice - takeProfit) / (stopLoss - entryPrice));
+  }
+
+  // ── Leverage Recommendation ──
+  const slPct = Math.abs((stopLoss - entryPrice) / entryPrice) * 100;
+  let leverage, levClass;
+  if (slPct < 1.5) { leverage = 3; levClass = 'l3'; }
+  else if (slPct < 3) { leverage = 2; levClass = 'l2'; }
+  else { leverage = 1; levClass = 'l1'; }
+
+  if (sigClass === 'wait') { leverage = 0; levClass = 'l1'; }
+
+  // ── Confidence / Win Rate Estimate ──
+  const confidence = totalScore >= 80 ? '高' : totalScore >= 65 ? '中高' : totalScore >= 50 ? '中' : '低';
+  const winRateEst = totalScore >= 80 ? 72 : totalScore >= 70 ? 65 : totalScore >= 60 ? 58 : totalScore >= 50 ? 50 : 40;
+  const riskPct = sigClass !== 'wait' ? Math.abs((stopLoss - entryPrice) / entryPrice) * 100 : 0;
+  const rewardPct = sigClass !== 'wait' ? Math.abs((takeProfit - entryPrice) / entryPrice) * 100 : 0;
+
+  return {
+    signal, sigClass, direction,
+    totalScore, techScore, fundScore, newsScore,
+    confidence, winRateEst,
+    entryPrice, stopLoss, takeProfit, rrRatio,
+    riskPct, rewardPct,
+    leverage, levClass,
+    // Detailed indicators for display
+    curRSI1h, curRSI4h, curRSID,
+    cm1, cs1, pm1, ps1, cm4, cs4,
+    ce9, ce21, ce50, ce21_4h, ce21_d,
+    bu, bl, curATR, atrPct,
+    trend1h, trend4h, trendD,
+    nearestSupport, nearestResistance,
+    nextSupport, nextResistance,
+    posCount, negCount,
+  };
+}
+
+// ── Parse & Derive Timeframes ──
+// From 14-day hourly data (~336 points), derive 1H, 4H, 1D
+function parseTFData(raw) {
+  if (!raw?.prices?.length) return null;
+  const closes = raw.prices.map(p => p[1]);
+  const timestamps = raw.prices.map(p => p[0] / 1000);
+  // Approx highs/lows from nearby window
+  const highs = closes.map((c, i) => { const s = closes.slice(Math.max(0, i - 6), i + 1); return Math.max(...s); });
+  const lows = closes.map((c, i) => { const s = closes.slice(Math.max(0, i - 6), i + 1); return Math.min(...s); });
+  if (closes.length < 30) return null;
+  return { closes, highs, lows, timestamps };
+}
+
+function deriveTimeframes(hourlyData) {
+  const { closes, highs, lows, timestamps } = hourlyData;
+  const n = closes.length;
+
+  // 1H: Use directly (last 72 hours = 72 candles for focused short-term analysis)
+  const h1c = closes.slice(-72), h1h = highs.slice(-72), h1l = lows.slice(-72), h1t = timestamps.slice(-72);
+
+  // 4H: Every 4th candle (last 84 candles ≈ 14 days of 4H)
+  const h4c = [], h4h = [], h4l = [], h4t = [];
+  for (let i = Math.max(0, n - 336); i < n; i += 4) {
+    h4c.push(closes[i]); h4h.push(highs[i]); h4l.push(lows[i]); h4t.push(timestamps[i]);
+  }
+
+  // 1D: Every 24th candle (last 14 days)
+  const h1dc = [], h1dh = [], h1dl = [], h1dt = [];
+  for (let i = Math.max(0, n - 336); i < n; i += 24) {
+    h1dc.push(closes[i]); h1dh.push(highs[i]); h1dl.push(lows[i]); h1dt.push(timestamps[i]);
+  }
+
+  return {
+    tf1h: { closes: h1c, highs: h1h, lows: h1l, timestamps: h1t },
+    tf4h: { closes: h4c, highs: h4h, lows: h4l, timestamps: h4t },
+    tf1d: { closes: h1dc, highs: h1dh, lows: h1dl, timestamps: h1dt },
+  };
+}
+
+// ── Render One Asset Column ──
+function renderAsset(asset, data, signal, newsItems) {
+  const { id, s, n, icon } = asset;
+  const colId = id === 'bitcoin' ? 'colBTC' : 'colETH';
+  const col = document.getElementById(colId);
+  if (!col) return;
+
+  const d1h = data.tf1h, d4h = data.tf4h, d1d = data.tf1d, info = data.info;
+  const curPrice = d1h.closes[d1h.closes.length - 1];
+  const prePrice = d1h.closes[0] || curPrice;
+  const chg = ((curPrice - prePrice) / prePrice) * 100;
+  const priceStr = curPrice >= 1000 ? curPrice.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })
+    : curPrice >= 1 ? curPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+    : curPrice.toFixed(6);
+
+  const sig = signal;
+  const directionEmoji = sig.sigClass === 'long' ? '🟢' : sig.sigClass === 'short' ? '🔴' : '🟡';
+  const scoreCls = sig.totalScore >= 70 ? 'high' : sig.totalScore >= 50 ? 'mid' : 'low';
+  const chgCls = chg >= 0 ? 'var(--green)' : 'var(--red)';
+  const chgSign = chg >= 0 ? '+' : '';
+
+  const slPctStr = sig.sigClass !== 'wait' ? `(${sig.riskPct.toFixed(2)}%)` : '';
+  const tpPctStr = sig.sigClass !== 'wait' ? `(${sig.rewardPct.toFixed(2)}%)` : '';
+  const rrStr = sig.sigClass !== 'wait' ? `${sig.rrRatio.toFixed(1)}:1` : '--';
+  const levStr = sig.sigClass !== 'wait' ? `${sig.leverage}x` : '--';
+
+  const planHighlight = sig.sigClass === 'long' ? 'highlight' : sig.sigClass === 'short' ? 'danger' : '';
+
+  col.innerHTML = `
+    <!-- Signal Hero -->
+    <div class="signal-hero ${sig.sigClass}">
+      <div class="sig-decision ${sig.sigClass}">${directionEmoji}<br>${sig.signal.split(' ')[0]}</div>
+      <div class="sig-details">
+        <div>
+          <span style="font-size:1.2rem;font-weight:800">${icon} ${s}</span>
+          <span style="font-size:1.3rem;font-weight:800;margin-left:8px">$${priceStr}</span>
+          <span style="color:${chgCls};font-weight:700;margin-left:6px;font-size:.9rem">${chgSign}${chg.toFixed(2)}%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;margin-top:4px">
+          <span class="sig-score ${scoreCls}">${sig.totalScore}/100</span>
+          <span style="font-size:.8rem;color:var(--t2)">胜率预估 <b style="color:var(--text)">${sig.winRateEst}%</b></span>
+          <span style="font-size:.8rem;color:var(--t2)">置信度 <b style="color:var(--text)">${sig.confidence}</b></span>
+        </div>
+        <div class="sig-conf">
+          <span class="sig-conf-item"><span class="dot ${sig.trend1h > 0 ? 'g' : sig.trend1h < 0 ? 'r' : 'y'}"></span>1H: ${sig.trend1h > 0 ? '多头' : sig.trend1h < 0 ? '空头' : '震荡'}</span>
+          <span class="sig-conf-item"><span class="dot ${sig.trend4h > 0 ? 'g' : sig.trend4h < 0 ? 'r' : 'y'}"></span>4H: ${sig.trend4h > 0 ? '多头' : sig.trend4h < 0 ? '空头' : '震荡'}</span>
+          <span class="sig-conf-item"><span class="dot ${sig.trendD > 0 ? 'g' : sig.trendD < 0 ? 'r' : 'y'}"></span>日线: ${sig.trendD > 0 ? '多头' : sig.trendD < 0 ? '空头' : '震荡'}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trade Plan -->
+    <div class="card">
+      <div class="ch">🎯 交易计划 ${sig.sigClass !== 'wait' ? `<span class="lev-badge ${sig.levClass}">建议 ${levStr} 杠杆</span>` : ''}</div>
+      <div class="plan-grid">
+        <div class="plan-it"><div class="plan-lbl">💰 入场价</div><div class="plan-val e">$${sig.entryPrice < 100 ? sig.entryPrice.toFixed(2) : sig.entryPrice.toLocaleString('en-US',{maximumFractionDigits:0})}</div><div class="plan-sub">市价</div></div>
+        <div class="plan-it danger"><div class="plan-lbl">🛑 止损</div><div class="plan-val s">$${sig.stopLoss < 100 ? sig.stopLoss.toFixed(2) : sig.stopLoss.toLocaleString('en-US',{maximumFractionDigits:0})}</div><div class="plan-sub">${slPctStr} 风险</div></div>
+        <div class="plan-it highlight"><div class="plan-lbl">🎯 止盈</div><div class="plan-val t">$${sig.takeProfit < 100 ? sig.takeProfit.toFixed(2) : sig.takeProfit.toLocaleString('en-US',{maximumFractionDigits:0})}</div><div class="plan-sub">${tpPctStr} 收益</div></div>
+        <div class="plan-it ${sig.rrRatio >= 2 ? 'highlight' : ''}"><div class="plan-lbl">📊 盈亏比</div><div class="plan-val r">${rrStr}</div><div class="plan-sub">${sig.rrRatio >= 2 ? '✅ 优秀' : sig.rrRatio >= 1.5 ? '⚠️ 一般' : '❌ 不足'}</div></div>
+      </div>
+      <div style="display:flex;height:4px;border-radius:2px;overflow:hidden;margin-top:8px">
+        <div style="background:var(--accent);width:${sig.techScore/100*100}%"></div>
+        <div style="background:var(--green);width:${sig.fundScore/100*100}%"></div>
+        <div style="background:var(--yellow);width:${sig.newsScore/100*100}%"></div>
+      </div>
+      <div style="display:flex;gap:12px;margin-top:4px;font-size:.7rem;color:var(--t2)">
+        <span>技术面 ${sig.techScore}/60</span>
+        <span>基本面 ${sig.fundScore}/20</span>
+        <span>消息面 ${sig.newsScore}/20</span>
+      </div>
+    </div>
+
+    <!-- Technical Indicators -->
+    <div class="card">
+      <div class="ch">📈 多时间框架技术分析</div>
+      <div class="tech-grid">
+        <div class="tech-it ${sig.curRSI1h < 30 ? 'bull' : sig.curRSI1h > 70 ? 'bear' : 'neut'}">
+          <div class="tech-tf">1H</div><div class="tech-lbl">RSI</div>
+          <div class="tech-val">${sig.curRSI1h?.toFixed(1)||'--'}</div>
+          <div class="tech-sig ${sig.curRSI1h < 30 ? 'bull' : sig.curRSI1h > 70 ? 'bear' : 'neut'}">${sig.curRSI1h < 30 ? '超卖' : sig.curRSI1h > 70 ? '超买' : '中性'}</div>
+        </div>
+        <div class="tech-it ${sig.cm1 > sig.cs1 ? 'bull' : 'bear'}">
+          <div class="tech-tf">1H</div><div class="tech-lbl">MACD</div>
+          <div class="tech-val">${sig.cm1?.toFixed(4)||'--'}</div>
+          <div class="tech-sig ${sig.cm1 > sig.cs1 ? 'bull' : 'bear'}">${sig.pm1 <= sig.ps1 && sig.cm1 > sig.cs1 ? '金叉✨' : sig.pm1 >= sig.ps1 && sig.cm1 < sig.cs1 ? '死叉' : sig.cm1 > sig.cs1 ? '多头' : '空头'}</div>
+        </div>
+        <div class="tech-it ${sig.curPrice > sig.ce21 ? 'bull' : 'bear'}">
+          <div class="tech-tf">1H</div><div class="tech-lbl">EMA趋势</div>
+          <div class="tech-val">${sig.ce9 > sig.ce21 && sig.ce21 > sig.ce50 ? '强多头' : sig.ce9 < sig.ce21 && sig.ce21 < sig.ce50 ? '强空头' : '震荡'}</div>
+          <div class="tech-sig ${sig.curPrice > sig.ce21 ? 'bull' : 'bear'}">EMA21: $${sig.ce21?.toFixed(2)||'--'}</div>
+        </div>
+        <div class="tech-it ${sig.curRSI4h < 30 ? 'bull' : sig.curRSI4h > 70 ? 'bear' : 'neut'}">
+          <div class="tech-tf">4H</div><div class="tech-lbl">RSI</div>
+          <div class="tech-val">${sig.curRSI4h?.toFixed(1)||'--'}</div>
+          <div class="tech-sig ${sig.curRSI4h < 30 ? 'bull' : sig.curRSI4h > 70 ? 'bear' : 'neut'}">${sig.curRSI4h < 30 ? '超卖' : sig.curRSI4h > 70 ? '超买' : '中性'}</div>
+        </div>
+        <div class="tech-it ${sig.cm4 > sig.cs4 ? 'bull' : 'bear'}">
+          <div class="tech-tf">4H</div><div class="tech-lbl">MACD</div>
+          <div class="tech-val">${sig.cm4?.toFixed(4)||'--'}</div>
+          <div class="tech-sig ${sig.cm4 > sig.cs4 ? 'bull' : 'bear'}">${sig.cm4 > sig.cs4 ? '多头' : '空头'}</div>
+        </div>
+        <div class="tech-it ${sig.curRSID < 30 ? 'bull' : sig.curRSID > 70 ? 'bear' : 'neut'}">
+          <div class="tech-tf">日线</div><div class="tech-lbl">RSI</div>
+          <div class="tech-val">${sig.curRSID?.toFixed(1)||'--'}</div>
+          <div class="tech-sig ${sig.curRSID < 30 ? 'bull' : sig.curRSID > 70 ? 'bear' : 'neut'}">${sig.curRSID < 30 ? '超卖' : sig.curRSID > 70 ? '超买' : '中性'}</div>
+        </div>
+        <div class="tech-it ${sig.atrPct < 3 ? 'bull' : sig.atrPct > 6 ? 'bear' : 'neut'}">
+          <div class="tech-tf">1H</div><div class="tech-lbl">波动率</div>
+          <div class="tech-val">${sig.atrPct?.toFixed(2)}%</div>
+          <div class="tech-sig ${sig.atrPct < 3 ? 'bull' : sig.atrPct > 6 ? 'bear' : 'neut'}">ATR: $${sig.curATR?.toFixed(2)}</div>
+        </div>
+        <div class="tech-it neut">
+          <div class="tech-tf">S/R</div><div class="tech-lbl">支撑/阻力</div>
+          <div class="tech-val" style="font-size:.75rem">S: $${sig.nearestSupport?.toFixed(2)}</div>
+          <div class="tech-sig neut">R: $${sig.nearestResistance?.toFixed(2)}</div>
+        </div>
+        <div class="tech-it ${sig.curPrice > sig.bl && sig.curPrice < sig.bu ? 'neut' : sig.curPrice <= sig.bl ? 'bull' : 'bear'}">
+          <div class="tech-tf">1H</div><div class="tech-lbl">布林带</div>
+          <div class="tech-val">${sig.curPrice <= sig.bl ? '下轨' : sig.curPrice >= sig.bu ? '上轨' : '中轨'}</div>
+          <div class="tech-sig ${sig.curPrice <= sig.bl ? 'bull' : sig.curPrice >= sig.bu ? 'bear' : 'neut'}">带宽: $${sig.bu&&sig.bl ? (sig.bu-sig.bl).toFixed(2) : '--'}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charts: Price + MACD -->
+    <div class="card">
+      <div class="ch">📊 价格走势 (1H)</div>
+      <div class="tf-bar" data-asset="${id}">
+        <button class="tf-btn on" data-tf="1h">1小时</button>
+        <button class="tf-btn" data-tf="4h">4小时</button>
+        <button class="tf-btn" data-tf="1d">日线</button>
+      </div>
+      <div class="chart-wrap" style="height:300px"><canvas id="chart_${id}_price"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="ch">📉 MACD</div>
+      <div class="chart-wrap" style="height:140px"><canvas id="chart_${id}_macd"></canvas></div>
+    </div>
+
+    <!-- Fundamentals -->
+    <div class="card">
+      <div class="ch">💎 基本面</div>
+      <div id="fund_${id}">${renderFund(info, s)}</div>
+    </div>
+
+    <!-- News -->
+    <div class="card">
+      <div class="ch">📰 消息面 <span style="font-size:.65rem;color:var(--t3);font-weight:400">正面${sig.posCount} 负面${sig.negCount}</span></div>
+      <div class="news-list" id="news_${id}">${renderNews(newsItems)}</div>
+    </div>
+  `;
+
+  // Render charts
+  renderPriceChart(id, d1h, asset);
+  renderMACDChart(id, d1h);
+
+  // Attach timeframe handlers
+  col.querySelectorAll('.tf-btn').forEach(btn => {
+    btn.addEventListener('click', async function() {
+      const tf = this.dataset.tf;
+      const parent = this.parentElement;
+      parent.querySelectorAll('.tf-btn').forEach(b => b.classList.remove('on'));
+      this.classList.add('on');
+
+      const data = assetData[id];
+      if (!data) return;
+      let tfData;
+      if (tf === '1h') tfData = data.tf1h;
+      else if (tf === '4h') tfData = data.tf4h;
+      else tfData = data.tf1d;
+      if (tfData) {
+        renderPriceChart(id, tfData, asset);
+        renderMACDChart(id, tfData);
+      }
+    });
+  });
+}
+
+function renderFund(info, symbol) {
+  if (!info) return '<div style="color:var(--t3);text-align:center;padding:15px">基本面数据暂不可用</div>';
+  const md = info.market_data || {};
+  const cap = n => n >= 1e12 ? (n/1e12).toFixed(2)+'T' : n >= 1e9 ? (n/1e9).toFixed(2)+'B' : n >= 1e6 ? (n/1e6).toFixed(2)+'M' : '--';
+  const items = [
+    ['市值排名', `#${info.market_cap_rank||'--'}`, 'y'],
+    ['总市值', `$${cap(md.market_cap?.usd)}`, ''],
+    ['24h成交量', `$${cap(md.total_volume?.usd)}`, ''],
+    ['流通供应', `${cap(md.circulating_supply)} ${symbol}`, ''],
+    ['总供应量', md.total_supply ? cap(md.total_supply) : '∞', ''],
+    ['历史最高 (ATH)', `$${md.ath?.usd?.toLocaleString?.('en-US',{maximumFractionDigits:0})||'--'}`, 'y'],
+    ['距ATH', `${md.ath_change_percentage?.usd?.toFixed(1)||'--'}%`, md.ath_change_percentage?.usd > -30 ? 'g' : 'r'],
+    ['7日变化', `${md.price_change_percentage_7d?.toFixed(2)||'--'}%`, md.price_change_percentage_7d >= 0 ? 'g' : 'r'],
+    ['30日变化', `${md.price_change_percentage_30d?.toFixed(2)||'--'}%`, md.price_change_percentage_30d >= 0 ? 'g' : 'r'],
+    ['1年变化', `${md.price_change_percentage_1y?.toFixed(2)||'--'}%`, md.price_change_percentage_1y >= 0 ? 'g' : 'r'],
+  ];
+  return items.map(([l,v,c]) => `<div class="f-row"><span class="f-lbl">${l}</span><span class="f-val ${c}">${v}</span></div>`).join('');
+}
+
+function renderNews(items) {
+  if (!items?.length) return '<div style="color:var(--t3);text-align:center;padding:15px">暂无新闻数据<br><small>请检查网络后刷新</small></div>';
+  return items.map(n => {
+    const cls = n.sentiment === 'positive' ? 'p' : n.sentiment === 'negative' ? 'n' : 'x';
+    const lbl = n.sentiment === 'positive' ? '正面' : n.sentiment === 'negative' ? '负面' : '中性';
+    const d = n.date ? new Date(n.date).toLocaleDateString('zh-CN') : '';
+    return `<a class="news-it" href="${n.link}" target="_blank"><div class="news-tl">${n.title}</div><div class="news-meta"><span>${n.src||''}</span><span>${d}</span><span class="sent ${cls}">${lbl}</span></div></a>`;
+  }).join('');
+}
+
+function renderPriceChart(id, data, asset) {
+  const canvasId = `chart_${id}_price`;
+  const canvas = document.getElementById(canvasId);
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  // Destroy existing
+  const key = `${id}_price`;
+  if (charts[key]) charts[key].destroy();
+
+  const c = data.closes, ts = data.timestamps;
+  const labels = ts.map(t => new Date(t * 1000).toLocaleString('zh-CN', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }));
+  const ma20 = SMA(c, 20), ma50 = c.length >= 50 ? SMA(c, 50) : null;
+  const bb = BB(c, 20, 2);
+
+  const datasets = [
+    { label: '收盘价', data: c, borderColor: '#e6edf3', borderWidth: 1.8, pointRadius: 0, pointHitRadius: 8, tension: 0.1, order: 1 },
+  ];
+  if (ma20.some(v => v !== null)) datasets.push({ label: 'EMA20', data: ma20, borderColor: '#f0883e', borderWidth: 1, pointRadius: 0, tension: 0.1, order: 2 });
+  if (ma50 && ma50.some(v => v !== null)) datasets.push({ label: 'EMA50', data: ma50, borderColor: '#d2991d', borderWidth: 1, pointRadius: 0, tension: 0.1, order: 2 });
+  if (bb.upper.some(v => v !== null)) {
+    datasets.push({ label: '布林上轨', data: bb.upper, borderColor: 'rgba(88,166,255,0.35)', borderWidth: .7, borderDash: [5,3], pointRadius: 0, order: 3 });
+    datasets.push({ label: '布林下轨', data: bb.lower, borderColor: 'rgba(88,166,255,0.35)', borderWidth: .7, borderDash: [5,3], pointRadius: 0, order: 3, fill: { target: '+1', above: 'rgba(88,166,255,0.03)', below: 'rgba(88,166,255,0.03)' } });
+  }
+
+  charts[key] = new Chart(ctx, {
+    type: 'line', data: { labels, datasets },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: { legend: { position: 'top', labels: { color: '#8b949e', usePointStyle: true, boxWidth: 6, padding: 12, font: { size: 10 } } } },
+      scales: {
+        x: { ticks: { color: '#555d68', maxTicksLimit: 8, font: { size: 9 } }, grid: { color: 'rgba(30,41,59,0.5)' } },
+        y: { position: 'right', ticks: { color: '#8b949e', font: { size: 9 }, callback: v => asset.s === 'BTC' || v >= 1000 ? '$' + v.toFixed(0) : '$' + v.toFixed(2) }, grid: { color: 'rgba(30,41,59,0.5)' } },
+      },
+    },
+  });
+}
+
+function renderMACDChart(id, data) {
+  const canvasId = `chart_${id}_macd`;
+  const canvas = document.getElementById(canvasId);
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  const key = `${id}_macd`;
+  if (charts[key]) charts[key].destroy();
+
+  const c = data.closes, ts = data.timestamps;
+  const labels = ts.map(t => new Date(t * 1000).toLocaleString('zh-CN', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }));
+  const macd = MACD(c);
+
+  charts[key] = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [
+        { label: '柱', data: macd.histogram, backgroundColor: macd.histogram.map(v => v >= 0 ? 'rgba(63,185,80,0.55)' : 'rgba(248,81,73,0.55)'), borderColor: 'transparent', order: 1 },
+        { label: 'MACD', data: macd.macdLine, borderColor: '#58a6ff', borderWidth: 1.3, pointRadius: 0, type: 'line', order: 2 },
+        { label: '信号', data: macd.signalLine, borderColor: '#f0883e', borderWidth: 1, pointRadius: 0, type: 'line', order: 2 },
+      ],
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: { legend: { position: 'top', labels: { color: '#8b949e', usePointStyle: true, boxWidth: 6, padding: 12, font: { size: 10 } } } },
+      scales: {
+        x: { ticks: { color: '#555d68', maxTicksLimit: 8, font: { size: 9 } }, grid: { color: 'rgba(30,41,59,0.5)' } },
+        y: { ticks: { color: '#8b949e', font: { size: 9 } }, grid: { color: 'rgba(30,41,59,0.5)' } },
+      },
+    },
+  });
+}
+
+// ── Toast ──
+function toast(msg, type = 'i') {
+  const el = document.createElement('div');
+  el.className = `toast ${type}`; el.textContent = msg;
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 3500);
+}
+
+// ── Refresh One Asset ──
+async function refreshAsset(asset) {
+  const { id, s } = asset;
+  try {
+    // Single price API call (14 days hourly data → derive all timeframes)
+    const [rawPrice, info, news] = await Promise.all([
+      fetchPriceData(id),
+      fetchCoinInfo(id),
+      fetchNewsSafe(s),
+    ]);
+
+    const hourlyData = parseTFData(rawPrice);
+    if (!hourlyData) throw new Error(`${s} 价格数据不足`);
+
+    const timeframes = deriveTimeframes(hourlyData);
+    const { tf1h, tf4h, tf1d } = timeframes;
+
+    if (!tf1h || !tf4h || !tf1d) throw new Error(`${s} 时间框架推导失败`);
+    if (tf1h.closes.length < 25 || tf4h.closes.length < 14 || tf1d.closes.length < 7) {
+      throw new Error(`${s} 数据点不足 (1H:${tf1h.closes.length} 4H:${tf4h.closes.length} D:${tf1d.closes.length})`);
+    }
+
+    const signal = generateSignal(tf1h, tf4h, tf1d, info, news);
+
+    return { tf1h, tf4h, tf1d, info, news, signal };
+  } catch (err) {
+    console.error(`Error fetching ${s}:`, err.message);
+    return null;
+  }
+}
+
+// ── Refresh All (sequential with delays, incremental rendering) ──
+async function refreshAll() {
+  const btn = document.getElementById('btnRefresh');
+  const statusEl = document.getElementById('updateTime');
+  btn.disabled = true;
+  btn.textContent = '⏳ 获取中...';
+  statusEl.textContent = '连接中...';
+
+  // Destroy old charts upfront
+  Object.values(charts).forEach(c => { try { c.destroy() } catch {} });
+  charts = {};
+
+  let anySuccess = false;
+  const signalsFound = [];
+
+  try {
+    // Fetch sequentially with delay, render each asset as it completes
+    for (let i = 0; i < ASSETS.length; i++) {
+      const asset = ASSETS[i];
+      statusEl.textContent = `获取 ${asset.s}...`;
+      const data = await refreshAsset(asset);
+
+      if (data) {
+        anySuccess = true;
+        assetData[asset.id] = data;
+        // Render immediately — don't wait for the other asset
+        renderAsset(asset, data, data.signal, data.news);
+        if (data.signal?.sigClass !== 'wait') signalsFound.push(`${asset.s}: ${data.signal.signal}`);
+      } else {
+        const colId = asset.id === 'bitcoin' ? 'colBTC' : 'colETH';
+        document.getElementById(colId).innerHTML =
+          `<div class="card" style="text-align:center;padding:30px"><p style="color:var(--red);font-weight:700">❌ ${asset.s} 数据获取失败</p><p style="color:var(--t3);font-size:.8rem;margin-top:4px">可能原因：网络连接问题或 API 限流</p><button class="btn btn-p" style="margin-top:10px" onclick="refreshAll()">🔄 重试</button></div>`;
+      }
+
+      // 1.5s delay between assets to respect CoinGecko rate limits
+      if (i < ASSETS.length - 1) {
+        statusEl.textContent = `等待 ${ASSETS[i + 1].s}...`;
+        await new Promise(r => setTimeout(r, 1500));
+      }
+    }
+
+    const now = new Date().toLocaleString('zh-CN');
+    statusEl.textContent = now;
+    document.getElementById('liveInd').style.display = 'inline';
+
+    if (!anySuccess) {
+      toast('❌ 数据获取完全失败，请检查网络连接后手动刷新', 'e');
+      statusEl.textContent = '获取失败';
+    } else if (signalsFound.length) {
+      toast(`🎯 发现交易机会: ${signalsFound.join(' | ')}`, 'i');
+    }
+  } catch (err) {
+    toast(`刷新出错: ${err.message}`, 'e');
+    console.error(err);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = '🔄 刷新';
+    resetCountdown();
+  }
+}
+
+// ── Countdown Timer ──
+function resetCountdown() {
+  if (countdownTimer) clearInterval(countdownTimer);
+  let remaining = 3600; // 1 hour
+  const el = document.getElementById('countdown');
+
+  countdownTimer = setInterval(() => {
+    remaining--;
+    if (remaining <= 0) {
+      el.textContent = '更新中...';
+      if (autoRefresh) refreshAll();
+      return;
+    }
+    const m = Math.floor(remaining / 60);
+    const s = remaining % 60;
+    el.textContent = `${m}:${s.toString().padStart(2, '0')}`;
+  }, 1000);
+}
+
+function toggleAuto() {
+  autoRefresh = !autoRefresh;
+  const btn = document.getElementById('btnAuto');
+  if (autoRefresh) {
+    btn.textContent = '⏱ 自动刷新';
+    btn.classList.add('on');
+    if (refreshInterval) clearInterval(refreshInterval);
+    refreshInterval = setInterval(refreshAll, 3600000);
+    resetCountdown();
+    toast('✅ 自动刷新已开启 — 每小时更新一次');
+  } else {
+    btn.textContent = '⏱ 自动刷新: 关';
+    btn.classList.remove('on');
+    if (refreshInterval) { clearInterval(refreshInterval); refreshInterval = null; }
+    if (countdownTimer) { clearInterval(countdownTimer); countdownTimer = null; }
+    document.getElementById('countdown').textContent = '--';
+    toast('⏸ 自动刷新已关闭');
+  }
+}
+
+window.toggleAuto = toggleAuto;
+window.refreshAll = refreshAll;
+window.toggleBacktest = toggleBacktest;
+
+// ═══════════════════════════════════════════════════════════
+//  Strategy Backtest Engine (daily resolution)
+// ═══════════════════════════════════════════════════════════
+
+// Adapted signal generator for daily-only data (uses daily as all timeframes)
+function backtestSignal(closes, highs, lows, idx) {
+  // Use data up to 'idx' as "known" history
+  const hist = closes.slice(0, idx + 1);
+  const histH = highs.slice(0, idx + 1);
+  const histL = lows.slice(0, idx + 1);
+  const n = hist.length;
+  if (n < 60) return null; // need at least 60 days of history
+
+  const curPrice = hist[n - 1];
+
+  // Indicators on daily data
+  const rsiV = RSI(hist, 14), curRSI = rsiV[n - 1];
+  const macd = MACD(hist), cm = macd.macdLine[n - 1], cs = macd.signalLine[n - 1];
+  const pm = macd.macdLine[n - 2], ps = macd.signalLine[n - 2];
+  const ema9 = EMA(hist, 9), ema21 = EMA(hist, 21), ema50 = n >= 50 ? EMA(hist, 50) : null;
+  const e9 = ema9[n - 1], e21 = ema21[n - 1], e50 = ema50 ? ema50[n - 1] : null;
+  const bb = BB(hist), bu = bb.upper[n - 1], bl = bb.lower[n - 1];
+  const atrV = ATR(histH, histL, hist, 14), curATR = atrV[n - 1] || curPrice * 0.02;
+
+  // Determine trend direction
+  let trendScore = 0;
+  if (curPrice > e21) trendScore += (curPrice > e9 && e9 > e21) ? 2 : 1;
+  else trendScore += (curPrice < e9 && e9 < e21) ? -2 : -1;
+  if (e50 && curPrice > e50) trendScore += 1; else if (e50) trendScore -= 1;
+
+  const direction = trendScore >= 2 ? 'bullish' : trendScore <= -2 ? 'bearish' : 'neutral';
+  if (direction === 'neutral') return null; // no trade
+
+  // Score calculation (simplified for daily)
+  let score = 0;
+  // Trend
+  score += (direction === 'bullish' && trendScore >= 2) ? 20 : (direction === 'bearish' && trendScore <= -2) ? 20 : 10;
+  // RSI
+  if (curRSI != null) {
+    if (direction === 'bullish' && curRSI >= 30 && curRSI <= 55) score += 20;
+    else if (direction === 'bearish' && curRSI >= 45 && curRSI <= 70) score += 20;
+    else if (curRSI >= 35 && curRSI <= 65) score += 12;
+    else score += 5;
+  } else score += 10;
+  // MACD
+  if (cm != null && cs != null) {
+    if ((direction === 'bullish' && cm > cs) || (direction === 'bearish' && cm < cs)) score += 15;
+    else score += 5;
+  } else score += 8;
+  // BB position
+  if (bu != null && bl != null) {
+    const pos = (curPrice - bl) / (bu - bl || 1);
+    if ((direction === 'bullish' && pos < 0.3) || (direction === 'bearish' && pos > 0.7)) score += 10;
+    else score += 5;
+  } else score += 5;
+
+  if (score < 55) return null; // not enough conviction (优化: 50→55, 少而精)
+
+  // Entry / SL / TP (优化参数: 止损2.0×ATR, 止盈5.0×ATR)
+  const entry = curPrice;
+  let sl, tp;
+  if (direction === 'bullish') {
+    sl = entry - curATR * 2.0;
+    tp = entry + curATR * 5.0;
+  } else {
+    sl = entry + curATR * 2.0;
+    tp = entry - curATR * 5.0;
+  }
+  const rr = direction === 'bullish' ? (tp - entry) / (entry - sl) : (entry - tp) / (sl - entry);
+  if (rr < 1.5) return null; // poor R:R, skip
+
+  return { direction, entry, sl, tp, score, rr, curATR };
+}
+
+function simulateTrade(entry, sl, tp, direction, futureHighs, futureLows, maxBars = 14) {
+  for (let i = 0; i < Math.min(futureHighs.length, maxBars); i++) {
+    if (direction === 'bullish') {
+      if (futureLows[i] <= sl) return { result: 'loss', bars: i + 1, exitPrice: sl };
+      if (futureHighs[i] >= tp) return { result: 'win', bars: i + 1, exitPrice: tp };
+    } else {
+      if (futureHighs[i] >= sl) return { result: 'loss', bars: i + 1, exitPrice: sl };
+      if (futureLows[i] <= tp) return { result: 'win', bars: i + 1, exitPrice: tp };
+    }
+  }
+  // Timeout: close at last available price
+  if (futureHighs.length > 0) {
+    const lastClose = (futureHighs[futureHighs.length - 1] + futureLows[futureLows.length - 1]) / 2;
+    const pnl = direction === 'bullish' ? (lastClose - entry) / entry : (entry - lastClose) / entry;
+    return { result: pnl > 0 ? 'win' : 'loss', bars: futureHighs.length, exitPrice: lastClose, timeout: true };
+  }
+  return null;
+}
+
+async function runBacktest() {
+  const panel = document.getElementById('backtestPanel');
+  const content = document.getElementById('backtestContent');
+  panel.style.display = 'block';
+  content.innerHTML = '<div class="loading"><div class="spinner"></div><p style="margin-top:8px">正在获取历史数据 & 回测中...</p></div>';
+
+  const results = {};
+
+  for (const asset of ASSETS) {
+    try {
+      // Fetch 1 year of daily data
+      const raw = await fetchSafe(
+        `https://api.coingecko.com/api/v3/coins/${asset.id}/market_chart?vs_currency=usd&days=400`
+      );
+      if (!raw?.prices?.length) throw new Error('无数据');
+
+      const closes = raw.prices.map(p => p[1]);
+      const timestamps = raw.prices.map(p => p[0] / 1000);
+      // Approximate daily highs/lows
+      const highs = closes.map((c, i) => { const s = closes.slice(Math.max(0, i - 3), Math.min(closes.length, i + 4)); return Math.max(...s); });
+      const lows = closes.map((c, i) => { const s = closes.slice(Math.max(0, i - 3), Math.min(closes.length, i + 4)); return Math.min(...s); });
+
+      const n = closes.length;
+      // Map index to date
+      const idxToDate = i => new Date(timestamps[i] * 1000).toISOString().slice(0, 10);
+
+      // Run backtest from day 60 to day n-15 (leave room for forward-looking trade simulation)
+      const trades = [];
+      for (let i = 60; i < n - 15; i++) {
+        const sig = backtestSignal(closes, highs, lows, i);
+        if (!sig) continue;
+
+        const futureH = highs.slice(i + 1, i + 16);
+        const futureL = lows.slice(i + 1, i + 16);
+        const outcome = simulateTrade(sig.entry, sig.sl, sig.tp, sig.direction, futureH, futureL, 14);
+
+        if (outcome) {
+          trades.push({
+            date: idxToDate(i),
+            direction: sig.direction,
+            entry: sig.entry, sl: sig.sl, tp: sig.tp,
+            rr: sig.rr, score: sig.score,
+            result: outcome.result,
+            bars: outcome.bars,
+            exitPrice: outcome.exitPrice,
+            timeout: !!outcome.timeout,
+          });
+        }
+      }
+
+      // Calculate period stats
+      const calcStats = (tradesSlice) => {
+        const wins = tradesSlice.filter(t => t.result === 'win');
+        const losses = tradesSlice.filter(t => t.result === 'loss');
+        const total = wins.length + losses.length;
+        if (total === 0) return null;
+
+        const winRate = (wins.length / total) * 100;
+        const avgWin = wins.length ? wins.reduce((s, t) => {
+          const pnl = t.direction === 'bullish' ? (t.exitPrice - t.entry) / t.entry : (t.entry - t.exitPrice) / t.entry;
+          return s + pnl * 100;
+        }, 0) / wins.length : 0;
+        const avgLoss = losses.length ? losses.reduce((s, t) => {
+          const pnl = t.direction === 'bullish' ? (t.exitPrice - t.entry) / t.entry : (t.entry - t.exitPrice) / t.entry;
+          return s + Math.abs(pnl) * 100;
+        }, 0) / losses.length : 0;
+        const profitFactor = avgLoss > 0 ? (avgWin * wins.length) / (avgLoss * losses.length) : (wins.length > 0 ? Infinity : 0);
+
+        return { total, wins: wins.length, losses: losses.length, winRate, avgWin, avgLoss, profitFactor };
+      };
+
+      const now = new Date();
+      const oneMonthAgo = new Date(now.getTime() - 30 * 86400000);
+      const threeMonthsAgo = new Date(now.getTime() - 90 * 86400000);
+      const oneYearAgo = new Date(now.getTime() - 365 * 86400000);
+
+      const t1m = trades.filter(t => new Date(t.date) >= oneMonthAgo);
+      const t3m = trades.filter(t => new Date(t.date) >= threeMonthsAgo);
+      const t1y = trades.filter(t => new Date(t.date) >= oneYearAgo);
+
+      results[asset.s] = {
+        allTrades: trades,
+        stats1m: calcStats(t1m),
+        stats3m: calcStats(t3m),
+        stats1y: calcStats(t1y),
+        firstTradeDate: trades.length ? trades[0].date : null,
+        lastTradeDate: trades.length ? trades[trades.length - 1].date : null,
+      };
+    } catch (err) {
+      results[asset.s] = { error: err.message };
+    }
+
+    // Delay between assets
+    if (asset !== ASSETS[ASSETS.length - 1]) {
+      await new Promise(r => setTimeout(r, 1200));
+    }
+  }
+
+  // Render results
+  renderBacktestResults(results);
+}
+
+function renderBacktestResults(results) {
+  const content = document.getElementById('backtestContent');
+
+  const renderTable = (assetResults, label) => {
+    if (!assetResults || assetResults.error) {
+      return `<p style="color:var(--red);text-align:center;padding:20px">${label}: ${assetResults?.error || '无数据'}</p>`;
+    }
+    const { stats1m, stats3m, stats1y, allTrades, firstTradeDate, lastTradeDate } = assetResults;
+
+    const row = (period, stats) => {
+      if (!stats) return `<tr><td>${period}</td><td colspan="7" style="color:var(--t3)">数据不足</td></tr>`;
+      const wrCls = stats.winRate >= 60 ? 'win' : stats.winRate >= 45 ? 'neutral' : 'lose';
+      const pfStr = stats.profitFactor === Infinity ? '∞' : stats.profitFactor.toFixed(2);
+      const pfCls = stats.profitFactor >= 1.5 ? 'win' : stats.profitFactor >= 1 ? 'neutral' : 'lose';
+      return `<tr>
+        <td>${period}</td>
+        <td>${stats.total}</td>
+        <td class="win">${stats.wins}</td>
+        <td class="lose">${stats.losses}</td>
+        <td class="${wrCls}">${stats.winRate.toFixed(1)}%</td>
+        <td class="win">+${stats.avgWin.toFixed(2)}%</td>
+        <td class="lose">-${stats.avgLoss.toFixed(2)}%</td>
+        <td class="${pfCls}">${pfStr}</td>
+      </tr>`;
+    };
+
+    return `
+      <table class="bt-table">
+        <thead><tr>
+          <th>回测周期</th><th>总交易</th><th>盈利</th><th>亏损</th>
+          <th>胜率</th><th>均盈利</th><th>均亏损</th><th>盈亏比</th>
+        </tr></thead>
+        <tbody>
+          ${row('近1个月', stats1m)}
+          ${row('近3个月', stats3m)}
+          ${row('近1年', stats1y)}
+        </tbody>
+      </table>
+      <div style="font-size:.72rem;color:var(--t3);margin-top:6px">
+        回测区间: ${firstTradeDate || '--'} ~ ${lastTradeDate || '--'} · 共 ${allTrades?.length || 0} 笔交易 ·
+        基于日线数据模拟 · 持有最长14天
+      </div>`;
+  };
+
+  content.innerHTML = `
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div>
+        <div style="font-weight:800;font-size:1rem;margin-bottom:8px">🪙 BTC 回测结果</div>
+        ${renderTable(results['BTC'], 'BTC')}
+      </div>
+      <div>
+        <div style="font-weight:800;font-size:1rem;margin-bottom:8px">💎 ETH 回测结果</div>
+        ${renderTable(results['ETH'], 'ETH')}
+      </div>
+    </div>
+    <div class="bt-summary">
+      <div class="bt-stat">
+        <div class="bt-stat-lbl">BTC 近1年胜率</div>
+        <div class="bt-stat-val ${(results['BTC']?.stats1y?.winRate || 0) >= 60 ? 'g' : (results['BTC']?.stats1y?.winRate || 0) >= 45 ? 'y' : 'r'}">${results['BTC']?.stats1y?.winRate?.toFixed(1) || '--'}%</div>
+      </div>
+      <div class="bt-stat">
+        <div class="bt-stat-lbl">ETH 近1年胜率</div>
+        <div class="bt-stat-val ${(results['ETH']?.stats1y?.winRate || 0) >= 60 ? 'g' : (results['ETH']?.stats1y?.winRate || 0) >= 45 ? 'y' : 'r'}">${results['ETH']?.stats1y?.winRate?.toFixed(1) || '--'}%</div>
+      </div>
+      <div class="bt-stat">
+        <div class="bt-stat-lbl">BTC 1年交易</div>
+        <div class="bt-stat-val y">${results['BTC']?.stats1y?.total || '--'}</div>
+      </div>
+      <div class="bt-stat">
+        <div class="bt-stat-lbl">ETH 1年交易</div>
+        <div class="bt-stat-val y">${results['ETH']?.stats1y?.total || '--'}</div>
+      </div>
+    </div>
+    <div class="bt-note">
+      ⚠️ <b>回测说明：</b>策略参数已优化 — 止损 2.0×ATR | 止盈 5.0×ATR | 评分≥55 | R:R≥1.5。
+      回测基于<b>日线数据</b>模拟（实际策略使用1H数据），收盘价入场，持有最长14个交易日。<b>回测结果仅供评估策略逻辑参考，不构成未来收益保证。</b>
+      实盘短线信号请参考上方实时分析面板。
+    </div>
+  `;
+}
+
+function toggleBacktest() {
+  const panel = document.getElementById('backtestPanel');
+  const btn = document.getElementById('btnBacktest');
+  if (panel.style.display === 'none') {
+    btn.textContent = '⏳ 回测中...';
+    btn.disabled = true;
+    runBacktest().finally(() => {
+      btn.textContent = '📊 策略回测';
+      btn.disabled = false;
+    });
+  } else {
+    panel.style.display = 'none';
+  }
+}
+
+// ── Init ──
+async function init() {
+  await refreshAll();
+  if (autoRefresh) {
+    refreshInterval = setInterval(refreshAll, 3600000);
+    resetCountdown();
+  }
+}
+
+init();
+</script>
+</body>
+</html>
