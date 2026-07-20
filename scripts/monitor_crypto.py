@@ -529,10 +529,72 @@ def generate_signal(data_1h, data_4h, data_1d, asset="BTC", ticker_info=None):
 
 
 # ============================================================
+# Kraken 备选数据源（提供真实 OHLC，比 CoinGecko 更准）
+# ============================================================
+
+KRAKEN_PAIRS = {"BTC": "XXBTZUSD", "ETH": "XETHZUSD"}
+
+def fetch_klines_kraken(pair, interval=60, limit=720):
+    """从 Kraken 获取 OHLC 数据（美国交易所，GitHub IP 可访问）"""
+    url = "https://api.kraken.com/0/public/OHLC"
+    params = {"pair": pair, "interval": interval, "since": 0}
+    for attempt in range(3):
+        try:
+            resp = requests.get(url, params=params, timeout=30)
+            resp.raise_for_status()
+            data = resp.json()
+            if data.get("error"):
+                raise Exception(str(data["error"]))
+            ohlc = data["result"].get(pair, [])
+            if not ohlc or len(ohlc) < 60:
+                # 尝试更大的 limit
+                if attempt < 2:
+                    continue
+                raise Exception(f"数据不足 ({len(ohlc)} 条)")
+            # Kraken OHLC: [time, open, high, low, close, vwap, volume, count]
+            closes = [float(o[4]) for o in ohlc[-limit:]]
+            highs = [float(o[2]) for o in ohlc[-limit:]]
+            lows = [float(o[3]) for o in ohlc[-limit:]]
+            timestamps = [float(o[0]) for o in ohlc[-limit:]]
+            return {"closes": closes, "highs": highs, "lows": lows, "timestamps": timestamps}
+        except Exception as e:
+            if attempt < 2:
+                time.sleep(2)
+    return None
+
+
+# ============================================================
 # CoinGecko 备选数据源（Binance 不可用时自动切换）
 # ============================================================
 
 COINGECKO_IDS = {"BTC": "bitcoin", "ETH": "ethereum"}
+
+def fetch_ticker_coingecko(coin_id):
+    """从 CoinGecko 获取 24h 行情（备选基本面数据）"""
+    url = f"https://api.coingecko.com/api/v3/simple/price"
+    params = {
+        "ids": coin_id,
+        "vs_currencies": "usd",
+        "include_24hr_change": "true",
+        "include_24hr_vol": "true",
+        "include_24hr_high": "true",
+        "include_24hr_low": "true",
+    }
+    try:
+        resp = requests.get(url, params=params, timeout=15)
+        resp.raise_for_status()
+        data = resp.json().get(coin_id, {})
+        if data:
+            return {
+                "priceChangePercent": data.get("usd_24h_change", 0),
+                "quoteVolume": data.get("usd_24h_vol", 0),
+                "highPrice": data.get("usd_24h_high", 0),
+                "lowPrice": data.get("usd_24h_low", 0),
+            }
+    except Exception:
+        pass
+    return None
+
 
 def fetch_klines_coingecko(coin_id, hours=336):
     """从 CoinGecko 获取历史价格数据（备选方案）"""
@@ -773,12 +835,23 @@ def run_detection(send_email=True):
     for asset, symbol in SYMBOL_MAP.items():
         print(f"\n  📡 获取 {asset} ({symbol}) 1H K线数据...")
 
-        # 1. 获取 1H 数据（Binance 优先，CoinGecko 备选）
+        # 1. 获取 1H 数据（Binance → Kraken → CoinGecko 链式备选）
         hourly = fetch_klines_binance(symbol, "1h", 1000)
         data_source = "Binance"
 
         if not hourly:
-            print(f"    ⚠️ Binance 不可用，尝试 CoinGecko 备选...")
+            # 第二备选：Kraken（真实OHLC，美国服务器可访问）
+            print(f"    ⚠️ Binance 不可用，尝试 Kraken 备选...")
+            kp = KRAKEN_PAIRS.get(asset, "")
+            if kp:
+                hourly = fetch_klines_kraken(kp, interval=60)
+                if hourly:
+                    data_source = "Kraken"
+                    print(f"    ✓ Kraken 备选成功")
+
+        if not hourly:
+            # 第三备选：CoinGecko（仅有收盘价，高低价近似）
+            print(f"    ⚠️ Kraken 也不可用，尝试 CoinGecko 备选...")
             cg_id = COINGECKO_IDS.get(asset, "")
             if cg_id:
                 hourly = fetch_klines_coingecko(cg_id)
@@ -789,7 +862,7 @@ def run_detection(send_email=True):
                     print(f"    ❌ CoinGecko 也失败了")
 
         if not hourly:
-            print(f"    ❌ {asset} 所有数据源均获取失败（Binance + CoinGecko）")
+            print(f"    ❌ {asset} 所有数据源均获取失败（Binance + Kraken + CoinGecko）")
             log_fetch_error(asset, "所有数据源获取失败")
             continue
 
@@ -798,7 +871,15 @@ def run_detection(send_email=True):
         # 2. 获取 24h ticker（用于基本面评分，添加短暂延迟避免限速）
         time.sleep(0.5)
         ticker = fetch_24h_ticker(symbol)
-        if ticker:
+
+        # 如果 Binance ticker 也失败但用了 CoinGecko k线，尝试 CoinGecko ticker
+        if not ticker and data_source == "CoinGecko":
+            cg_id = COINGECKO_IDS.get(asset, "")
+            if cg_id:
+                ticker = fetch_ticker_coingecko(cg_id)
+                if ticker:
+                    print(f"    ✓ 24h 行情 (CoinGecko): 涨跌 {float(ticker.get('priceChangePercent',0)):.2f}%")
+        elif ticker:
             print(f"    ✓ 24h 行情: 涨跌 {float(ticker.get('priceChangePercent',0)):.2f}%, "
                   f"成交量 ${float(ticker.get('quoteVolume',0)):,.0f}")
 
