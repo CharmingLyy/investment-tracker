@@ -1,0 +1,23 @@
+name: 📧 测试邮件发送
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Test email
+        env:
+          AI_MONITOR_EMAIL_FROM: ${{ secrets.AI_MONITOR_EMAIL_FROM }}
+          AI_MONITOR_EMAIL_PASSWORD: ${{ secrets.AI_MONITOR_EMAIL_PASSWORD }}
+          AI_MONITOR_EMAIL_TO: ${{ secrets.AI_MONITOR_EMAIL_TO }}
+        run: python scripts/test_email.py
