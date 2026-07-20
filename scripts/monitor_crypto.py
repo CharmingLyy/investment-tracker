@@ -873,7 +873,7 @@ def run_detection(send_email=True):
         ticker = fetch_24h_ticker(symbol)
 
         # 如果 Binance ticker 也失败但用了 CoinGecko k线，尝试 CoinGecko ticker
-        if not ticker and data_source == "CoinGecko":
+        if not ticker:
             cg_id = COINGECKO_IDS.get(asset, "")
             if cg_id:
                 ticker = fetch_ticker_coingecko(cg_id)
