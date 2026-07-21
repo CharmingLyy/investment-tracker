@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-07-21 13:07:10",
+  "update_time": "2026-07-21 17:02:02",
   "stocks": {
     "a_stocks": [
       {
@@ -69,25 +69,25 @@
         "symbol": "01810",
         "industry": "Consumer Electronics",
         "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
-        "price": 27.42,
-        "open": 27.34,
-        "high": 28.16,
-        "low": 27.24,
-        "change_pct": -1.15,
+        "price": NaN,
+        "open": null,
+        "high": null,
+        "low": null,
+        "change_pct": NaN,
         "volume": 158569507,
         "turnover": null,
         "market_cap": 7031.83,
         "pe": 15.23,
         "cash_flow": 77.67,
-        "macd": 0.3193,
-        "macd_signal": -0.3015,
-        "macd_histogram": 1.2417,
-        "rsi": 60.38,
+        "macd": 0.2082,
+        "macd_signal": -0.3238,
+        "macd_histogram": 1.064,
+        "rsi": 62.74,
         "ma": {
-          "MA5": 27.08,
-          "MA10": 26.34,
-          "MA20": 24.41,
-          "MA60": 27.51
+          "MA5": null,
+          "MA10": null,
+          "MA20": null,
+          "MA60": null
         },
         "main_net_flow": null
       }
@@ -95,30 +95,59 @@
     "us_stocks": [
       {
         "market": "美股",
+        "code": "NVDA",
+        "name": "NVIDIA",
+        "symbol": "NVDA",
+        "industry": "Semiconductors",
+        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
+        "price": 205.49,
+        "open": 207.54,
+        "high": 208.65,
+        "low": 204.01,
+        "change_pct": 1.08,
+        "volume": 55658236,
+        "turnover": null,
+        "market_cap": 49771.73,
+        "pe": 31.47,
+        "cash_flow": 463.36,
+        "macd": 0.0675,
+        "macd_signal": -0.6405,
+        "macd_histogram": 1.416,
+        "rsi": 50.7,
+        "ma": {
+          "MA5": 206.29,
+          "MA10": 206.47,
+          "MA20": 201.6,
+          "MA60": 208.96
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
         "code": "GOOG",
         "name": "Alphabet (Google)",
         "symbol": "GOOG",
         "industry": "Internet Content & Information",
         "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
-        "price": 351.37,
-        "open": 350.17,
-        "high": 359.49,
-        "low": 350.01,
-        "change_pct": 1.52,
-        "volume": 13180200,
+        "price": 348.82,
+        "open": 350.56,
+        "high": 350.68,
+        "low": 346.88,
+        "change_pct": -0.73,
+        "volume": 6400102,
         "turnover": null,
-        "market_cap": 42876.18,
-        "pe": 26.8,
+        "market_cap": 42564.41,
+        "pe": 26.61,
         "cash_flow": 279.22,
-        "macd": -1.9617,
-        "macd_signal": -1.9046,
-        "macd_histogram": -0.1141,
-        "rsi": 46.57,
+        "macd": -2.3134,
+        "macd_signal": -1.9864,
+        "macd_histogram": -0.654,
+        "rsi": 45.19,
         "ma": {
-          "MA5": 355.77,
-          "MA10": 356.31,
-          "MA20": 353.17,
-          "MA60": 366.59
+          "MA5": 354.06,
+          "MA10": 354.83,
+          "MA20": 353.18,
+          "MA60": 366.78
         },
         "main_net_flow": null
       },
@@ -129,25 +158,25 @@
         "symbol": "CRCL",
         "industry": "Capital Markets",
         "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
-        "price": 65.45,
-        "open": 60.95,
-        "high": 66.98,
-        "low": 60.87,
-        "change_pct": 8.25,
-        "volume": 13633300,
+        "price": 70.95,
+        "open": 68.94,
+        "high": 72.68,
+        "low": 68.76,
+        "change_pct": 8.4,
+        "volume": 12078935,
         "turnover": null,
-        "market_cap": 174.94,
-        "pe": 33.78,
+        "market_cap": 189.64,
+        "pe": 36.62,
         "cash_flow": 1.41,
-        "macd": -6.2659,
-        "macd_signal": -7.1953,
-        "macd_histogram": 1.8588,
-        "rsi": 42.7,
+        "macd": -5.3242,
+        "macd_signal": -6.8211,
+        "macd_histogram": 2.9937,
+        "rsi": 49.23,
         "ma": {
-          "MA5": 63.09,
-          "MA10": 63.68,
-          "MA20": 66.98,
-          "MA60": 90.02
+          "MA5": 64.64,
+          "MA10": 64.26,
+          "MA20": 66.53,
+          "MA60": 89.54
         },
         "main_net_flow": null
       },
@@ -158,25 +187,25 @@
         "symbol": "MP",
         "industry": "Other Industrial Metals & Mining",
         "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
-        "price": 45.7,
-        "open": 45.36,
-        "high": 46.7,
-        "low": 44.02,
-        "change_pct": 1.02,
-        "volume": 6418700,
+        "price": 46.6,
+        "open": 46.7,
+        "high": 47.57,
+        "low": 45.23,
+        "change_pct": 1.97,
+        "volume": 2720590,
         "turnover": null,
-        "market_cap": 81.36,
-        "pe": 45.95,
+        "market_cap": 82.96,
+        "pe": 46.86,
         "cash_flow": 1.75,
-        "macd": -3.4014,
-        "macd_signal": -2.8082,
-        "macd_histogram": -1.1862,
-        "rsi": 32.62,
+        "macd": -3.3905,
+        "macd_signal": -2.9247,
+        "macd_histogram": -0.9315,
+        "rsi": 35.31,
         "ma": {
-          "MA5": 47.33,
-          "MA10": 49.36,
-          "MA20": 52.51,
-          "MA60": 59.44
+          "MA5": 46.49,
+          "MA10": 48.97,
+          "MA20": 51.82,
+          "MA60": 59.16
         },
         "main_net_flow": null
       },
@@ -187,25 +216,25 @@
         "symbol": "PLTR",
         "industry": "Software - Infrastructure",
         "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
-        "price": 134.85,
-        "open": 131.88,
-        "high": 136.62,
-        "low": 131.82,
-        "change_pct": 1.87,
-        "volume": 30508200,
+        "price": 133.09,
+        "open": 133.98,
+        "high": 134.68,
+        "low": 131.23,
+        "change_pct": -1.31,
+        "volume": 12919889,
         "turnover": null,
-        "market_cap": 3232.78,
-        "pe": 151.52,
+        "market_cap": 3190.46,
+        "pe": 149.53,
         "cash_flow": 17.53,
-        "macd": 0.8437,
-        "macd_signal": -0.6297,
-        "macd_histogram": 2.9469,
-        "rsi": 55.76,
+        "macd": 0.9408,
+        "macd_signal": -0.3156,
+        "macd_histogram": 2.5129,
+        "rsi": 53.38,
         "ma": {
-          "MA5": 133.83,
-          "MA10": 132.16,
-          "MA20": 125.57,
-          "MA60": 133.85
+          "MA5": 133.7,
+          "MA10": 132.03,
+          "MA20": 126.25,
+          "MA60": 133.7
         },
         "main_net_flow": null
       },
@@ -216,25 +245,25 @@
         "symbol": "NOW",
         "industry": "Software - Application",
         "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
-        "price": 104.7,
-        "open": 100.52,
-        "high": 105.33,
-        "low": 98.43,
-        "change_pct": 1.41,
-        "volume": 20498000,
+        "price": 101.82,
+        "open": 101.65,
+        "high": 104.58,
+        "low": 101.05,
+        "change_pct": -2.76,
+        "volume": 10296968,
         "turnover": null,
-        "market_cap": 1079.78,
-        "pe": 62.32,
+        "market_cap": 1050.03,
+        "pe": 60.6,
         "cash_flow": 51.08,
-        "macd": 0.6843,
-        "macd_signal": 0.7914,
-        "macd_histogram": -0.214,
-        "rsi": 50.52,
+        "macd": 0.3746,
+        "macd_signal": 0.708,
+        "macd_histogram": -0.6668,
+        "rsi": 46.67,
         "ma": {
-          "MA5": 104.31,
-          "MA10": 106.78,
-          "MA20": 102.89,
-          "MA60": 101.34
+          "MA5": 103.7,
+          "MA10": 105.89,
+          "MA20": 103.33,
+          "MA60": 101.62
         },
         "main_net_flow": null
       },
@@ -245,25 +274,25 @@
         "symbol": "DDOG",
         "industry": "Software - Application",
         "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
-        "price": 263.2,
-        "open": 258.59,
-        "high": 268.83,
-        "low": 257.08,
-        "change_pct": 1.74,
-        "volume": 3283700,
+        "price": 255.03,
+        "open": 258.5,
+        "high": 263.32,
+        "low": 254.24,
+        "change_pct": -3.1,
+        "volume": 1452194,
         "turnover": null,
-        "market_cap": 936.89,
-        "pe": 674.87,
+        "market_cap": 907.81,
+        "pe": 653.92,
         "cash_flow": 9.37,
-        "macd": 10.216,
-        "macd_signal": 11.2019,
-        "macd_histogram": -1.9718,
-        "rsi": 60.04,
+        "macd": 9.1202,
+        "macd_signal": 10.7856,
+        "macd_histogram": -3.3308,
+        "rsi": 54.1,
         "ma": {
-          "MA5": 263.88,
-          "MA10": 262.41,
-          "MA20": 251.93,
-          "MA60": 219.07
+          "MA5": 260.74,
+          "MA10": 262.23,
+          "MA20": 253.61,
+          "MA60": 221.19
         },
         "main_net_flow": null
       }
@@ -275,14 +304,14 @@
         "name": "Bitcoin",
         "symbol": "BTC",
         "industry": "Smart Contract Platform",
-        "price": 66479,
+        "price": 66519,
         "open": null,
-        "high": 66542,
-        "low": 64176,
-        "change_pct": 2.86,
-        "volume": 30198832953,
+        "high": 66840,
+        "low": 65027,
+        "change_pct": 1.7,
+        "volume": 29855731829,
         "turnover": null,
-        "market_cap": 13335.45,
+        "market_cap": 13343.38,
         "market_cap_rank": 1,
         "pe": null,
         "funding_rate": null,
@@ -290,24 +319,24 @@
         "etf_inflow": null,
         "etf_outflow": null,
         "etf_net_flow": null,
-        "macd": 499.6354,
-        "macd_signal": 106.1429,
-        "macd_histogram": 786.985,
-        "rsi": 61.42,
+        "macd": 502.878,
+        "macd_signal": 106.7914,
+        "macd_histogram": 792.1731,
+        "rsi": 61.55,
         "ma": {
-          "MA5": 65015.3,
-          "MA10": 64455.35,
-          "MA20": 63804.35,
-          "MA60": 65023.5
+          "MA5": 65023.43,
+          "MA10": 64459.42,
+          "MA20": 63806.39,
+          "MA60": 65024.18
         },
         "main_net_flow": null,
         "onchain": {
-          "circulating_supply": 20059368.0,
-          "total_supply": 20059368.0,
+          "circulating_supply": 20059440.0,
+          "total_supply": 20059440.0,
           "circ_ratio": 100.0,
-          "price_change_7d": 4.09446,
-          "price_change_30d": 3.6755,
-          "ath_pct": -47.27,
+          "price_change_7d": 3.8875,
+          "price_change_30d": 3.67079,
+          "ath_pct": -47.24,
           "ath_date": null,
           "categories": [
             "Smart Contract Platform",
@@ -328,14 +357,14 @@
         "name": "Ethereum",
         "symbol": "ETH",
         "industry": "Smart Contract Platform",
-        "price": 1940.26,
+        "price": 1926.33,
         "open": null,
         "high": 1946.42,
-        "low": 1856.39,
-        "change_pct": 3.63,
-        "volume": 11752742523,
+        "low": 1892.04,
+        "change_pct": 1.57,
+        "volume": 12014938730,
         "turnover": null,
-        "market_cap": 2341.72,
+        "market_cap": 2324.56,
         "market_cap_rank": 2,
         "pe": null,
         "funding_rate": null,
@@ -343,24 +372,24 @@
         "etf_inflow": null,
         "etf_outflow": null,
         "etf_net_flow": null,
-        "macd": 46.4159,
-        "macd_signal": 32.2361,
-        "macd_histogram": 28.3598,
-        "rsi": 65.48,
+        "macd": 45.3042,
+        "macd_signal": 32.0137,
+        "macd_histogram": 26.581,
+        "rsi": 64.4,
         "ma": {
-          "MA5": 1883.28,
-          "MA10": 1866.66,
-          "MA20": 1816.38,
-          "MA60": 1783.82
+          "MA5": 1880.49,
+          "MA10": 1865.27,
+          "MA20": 1815.68,
+          "MA60": 1783.58
         },
         "main_net_flow": null,
         "onchain": {
           "circulating_supply": 120682803.0755918,
           "total_supply": 120682803.0755918,
           "circ_ratio": 100.0,
-          "price_change_7d": 4.52069,
-          "price_change_30d": 12.54303,
-          "ath_pct": -60.77,
+          "price_change_7d": 2.80113,
+          "price_change_30d": 11.5937,
+          "ath_pct": -61.05,
           "ath_date": null,
           "categories": [
             "Smart Contract Platform",
@@ -387,164 +416,420 @@
       "published": ""
     },
     {
-      "id": "73134480db",
-      "title": "It’s getting easier for terminally ill people to end their own lives. What to know as laws change.",
-      "summary": "Patients must meet three conditions to qualify for Medical Aid in Dying.",
-      "link": "https://www.marketwatch.com/story/its-getting-easier-for-terminally-ill-people-to-end-their-own-lives-what-to-know-as-laws-change-4fa04c54?mod=mw_rss_topstories",
+      "id": "cfa0524439",
+      "title": "Here’s how to time your retirement to keep your healthcare costs down",
+      "summary": "Plus, more ways to lower how much you pay out of pocket for medical care in retirement.",
+      "link": "https://www.marketwatch.com/story/heres-how-to-time-your-retirement-to-keep-your-healthcare-costs-down-b1a4d427?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Tue, 21 Jul 2026 12:41:00 GMT"
+      "published": "Tue, 21 Jul 2026 16:56:00 GMT"
     },
     {
-      "id": "2edcb57809",
-      "title": "Your healthcare could now cost $185,500 in retirement — and that doesn’t include long-term care",
-      "summary": "Rising prices for care and managing chronic conditions helped drive up the forecast.",
-      "link": "https://www.marketwatch.com/story/your-healthcare-could-now-cost-185-500-in-retirement-and-that-doesnt-include-long-term-care-5f4f6da8?mod=mw_rss_topstories",
+      "id": "c06df39265",
+      "title": "An oil lifeline is under threat, and markets have yet to price in the growing crisis",
+      "summary": "The Houthis escalated threats on Tuesday, risking millions of barrels of Saudi oil that had been reaching energy markets despite the U.S.-Iran war.",
+      "link": "https://www.marketwatch.com/story/an-oil-lifeline-is-under-threat-and-markets-have-yet-to-price-in-the-growing-crisis-801d53b1?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Tue, 21 Jul 2026 12:39:00 GMT"
+      "published": "Tue, 21 Jul 2026 16:54:00 GMT"
     },
     {
-      "id": "568297a08e",
-      "title": "Alphabet is pouring record cash into data centers, and earnings will show whether that’s paying off",
-      "summary": "Investors will be looking for more signs of AI monetization when Alphabet reports its earnings Wednesday.",
-      "link": "https://www.marketwatch.com/story/alphabet-is-pouring-record-cash-into-data-centers-and-earnings-will-show-if-thats-paying-off-fad38a2c?mod=mw_rss_topstories",
+      "id": "1ab04c210f",
+      "title": "SpaceX’s stock looks to snap brutal losing streak as it heads for one of its best days yet",
+      "summary": "Plus, investors just found out when insiders can start dumping their shares.",
+      "link": "https://www.marketwatch.com/story/spacexs-stock-looks-to-snap-brutal-losing-streak-as-it-heads-for-one-of-its-best-days-yet-74220273?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Tue, 21 Jul 2026 12:35:00 GMT"
+      "published": "Tue, 21 Jul 2026 16:44:00 GMT"
     },
     {
-      "id": "24c0946dc9",
-      "title": "Novo Nordisk sues Eli Lilly over ads comparing GLP-1 medications",
-      "summary": "The Danish company Novo says U.S.-based Lilly isn’t including the most up-to-date clinical information about its drugs.",
+      "id": "84a48be82e",
+      "title": "Microsoft has 3 secret weapons that could drive its stock 50% higher, analyst says",
+      "summary": "Wall Street is misjudging Microsoft’s AI strategy, according to Morgan Stanley.",
+      "link": "https://www.marketwatch.com/story/microsoft-has-3-secret-weapons-that-could-drive-its-stock-50-higher-analyst-says-f1afb554?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 21 Jul 2026 16:25:00 GMT"
+    },
+    {
+      "id": "0c0470a3b1",
+      "title": "These signs suggest investors should give the software sector a second chance",
+      "summary": "Software stocks and loans have started to find their footing in July, suggesting it may be time for investors to forgive and forget.",
+      "link": "https://www.marketwatch.com/story/here-are-some-signs-that-say-investors-should-give-the-software-sector-a-second-chance-f4143255?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 21 Jul 2026 16:10:00 GMT"
+    },
+    {
+      "id": "926f16240a",
+      "title": "Pro stock pickers cannot beat simple math — war in the Middle East is proving it",
+      "summary": "Active stock pickers almost always lose against the broad market. They can’t beat simple math.",
+      "link": "https://www.marketwatch.com/story/if-timing-the-stock-market-were-easy-the-iran-war-would-have-proven-it-its-done-the-opposite-ac090ad3?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 21 Jul 2026 15:12:00 GMT"
+    },
+    {
+      "id": "bd5dca112d",
+      "title": "Novo Nordisk’s lawsuit against Eli Lilly over ads highlights intense competition in GLP-1 market",
+      "summary": "The Danish company Novo Nordisk says U.S.-based Lilly isn’t including the most up-to-date clinical information about its drugs.",
       "link": "https://www.marketwatch.com/story/novo-nordisk-sues-eli-lilly-over-ads-comparing-glp-1-medications-6b223080?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Tue, 21 Jul 2026 12:27:00 GMT"
+      "published": "Tue, 21 Jul 2026 15:02:00 GMT"
     },
     {
-      "id": "9fafd4304a",
-      "title": "GM’s stock bounces back as revenue grows for the first time in over a year",
-      "summary": "GM’s stock rises after a beat-and-raise earnings report, as revenue grows to snap a four-quarter streak of declines.",
-      "link": "https://www.marketwatch.com/story/gms-stock-bounces-back-as-revenue-grows-for-the-first-time-in-over-a-year-d5d95804?mod=mw_rss_topstories",
+      "id": "83279ca401",
+      "title": "Think this stock market is in a bubble? These earnings numbers say otherwise.",
+      "summary": "Stay with the AI trade and overweight technology stocks, according to one earnings expert.",
+      "link": "https://www.marketwatch.com/story/welcome-to-the-roaring-20s-heres-how-this-earnings-season-will-keep-the-bull-market-strong-4a70be72?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Tue, 21 Jul 2026 12:21:00 GMT"
+      "published": "Tue, 21 Jul 2026 15:01:00 GMT"
     },
     {
-      "id": "e1d91d4d77",
-      "title": "Why are gasoline prices rising faster than oil prices? Blame it on the ‘crack.’",
-      "summary": "The spread between the cost of barrels of gasoline and crude oil — known as the “crack spread” — has widened sharply.",
-      "link": "https://www.marketwatch.com/story/why-are-gasoline-prices-rising-faster-than-oil-prices-blame-it-on-the-crack-22b454e7?mod=mw_rss_topstories",
+      "id": "bcc7756d79",
+      "title": "Why Paramount could win if it loses the Warner Bros. Discovery deal",
+      "summary": "States are trying to block Paramount’s mega-merger. Shareholders should root for them.",
+      "link": "https://www.marketwatch.com/story/why-paramount-could-win-if-it-loses-the-warner-bros-discovery-deal-5f174963?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Tue, 21 Jul 2026 11:53:00 GMT"
+      "published": "Tue, 21 Jul 2026 14:53:00 GMT"
     },
     {
-      "id": "021d765aa9",
-      "title": "The co-founder of Stocktwits dumped chip stocks before their 20% slide. Where he’s putting his money now.",
-      "summary": "Stocktwits’ Howard Lindzon talks to MarketWatch about sidestepping a chip selloff, where he sees opportunity and the “degenerate economy.”",
-      "link": "https://www.marketwatch.com/story/the-co-founder-of-stocktwits-dumped-chip-stocks-before-a-20-slide-where-hes-putting-his-money-now-07e8724f?mod=mw_rss_topstories",
+      "id": "b59d175206",
+      "title": "Tesla earnings are on deck, and investors will be looking to settle this major debate",
+      "summary": "Wall Street wants to see whether Tesla can deliver on its robotaxi and Optimus plans.",
+      "link": "https://www.marketwatch.com/story/tesla-earnings-are-on-deck-and-investors-will-be-looking-to-settle-this-major-debate-f5a11d0e?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Tue, 21 Jul 2026 11:47:00 GMT"
+      "published": "Tue, 21 Jul 2026 14:32:00 GMT"
     },
     {
-      "id": "a1b6fbc68f",
-      "title": "Do I use $300,000 of my $1.2 million retirement savings so my daughter can attend her dream college?",
-      "summary": "“Our daughter is a highly ranked competitive softball pitcher with a 3.94 GPA.”",
-      "link": "https://www.marketwatch.com/story/do-i-use-300-000-of-my-1-2-million-retirement-savings-so-my-daughter-can-attend-her-dream-college-50842e7a?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Tue, 21 Jul 2026 11:15:00 GMT"
-    },
-    {
-      "id": "0a21dbecd2",
-      "title": "China has been buying the gold dip, and these analysts say a comeback is brewing",
-      "summary": "For the last few years, China’s buying patterns have been an excellent investment signal on gold",
-      "link": "https://www.marketwatch.com/story/china-has-been-buying-the-gold-dip-and-these-analysts-say-a-comeback-is-brewing-6b0400d3?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Tue, 21 Jul 2026 11:06:00 GMT"
-    },
-    {
-      "id": "8ab9c1c116",
-      "title": "We have $8 million in traditional IRAs. Should we tap them to buy a house — and take the tax hit?",
-      "summary": "“We would rather pay taxes upfront than pay mortgage interest.”",
-      "link": "https://www.marketwatch.com/story/we-have-8-million-in-traditional-iras-should-we-tap-them-to-buy-a-house-and-take-the-tax-hit-c2478daa?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Tue, 21 Jul 2026 11:00:00 GMT"
-    },
-    {
-      "id": "0b8c02c243",
-      "title": "Why is Zions Bancorp stock sliding today?",
+      "id": "80c8000830",
+      "title": "MSCI Q2 2026 slides: record ETF growth drives 18.5% EPS gain",
       "summary": "",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-zions-bancorp-stock-sliding-today-93CH-4803324",
+      "link": "https://www.investing.com/news/company-news/msci-q2-2026-slides-record-etf-growth-drives-185-eps-gain-93CH-4803916",
       "source": "www.investing.com",
-      "published": "2026-07-21 12:49:04"
+      "published": "2026-07-21 16:39:59"
     },
     {
-      "id": "6272a7bcbe",
-      "title": "Why is Rapid7 stock sliding today?",
+      "id": "e8d870b213",
+      "title": "TikTok US chief security officer to testify before US House on September 15",
       "summary": "",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-rapid7-stock-sliding-today-93CH-4803323",
+      "link": "https://www.investing.com/news/stock-market-news/tiktok-us-chief-security-officer-to-testify-before-us-house-on-september-15-4803915",
       "source": "www.investing.com",
-      "published": "2026-07-21 12:49:01"
+      "published": "2026-07-21 16:36:59"
     },
     {
-      "id": "18b7951281",
-      "title": "Why is JFrog stock sliding today?",
+      "id": "927dd6edc7",
+      "title": "Gates Foundation engaged with Epstein but made no payments to him, review finds",
       "summary": "",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-jfrog-stock-sliding-today-93CH-4803320",
+      "link": "https://www.investing.com/news/stock-market-news/gates-foundation-external-review-finds-no-evidence-of-payments-to-epstein-4803820",
       "source": "www.investing.com",
-      "published": "2026-07-21 12:48:54"
+      "published": "2026-07-21 16:36:35"
     },
     {
-      "id": "5af5342a86",
-      "title": "Boeing asks US to intervene over record EU loan to Airbus",
+      "id": "3b8ae6a71e",
+      "title": "Bank of America enters short CAD/JPY trade amid tariff concerns",
       "summary": "",
-      "link": "https://www.investing.com/news/stock-market-news/exclusiveboeing-asks-us-to-intervene-over-record-eu-loan-to-airbus-4802333",
+      "link": "https://www.investing.com/news/forex-news/bank-of-america-enters-short-cadjpy-trade-amid-tariff-concerns-93CH-4803914",
       "source": "www.investing.com",
-      "published": "2026-07-21 12:48:53"
+      "published": "2026-07-21 16:35:52"
     },
     {
-      "id": "5d7cccee2e",
-      "title": "Saudi Arabia’s crude oil exports fall to record low in May",
+      "id": "928986c6e6",
+      "title": "Raymond James reiterates Strong Buy on Salesforce stock on Agentforce demand",
       "summary": "",
-      "link": "https://www.investing.com/news/commodities-news/saudi-arabias-crude-oil-exports-fall-to-record-low-in-may-93CH-4803319",
+      "link": "https://www.investing.com/news/analyst-ratings/raymond-james-reiterates-strong-buy-on-salesforce-stock-on-agentforce-demand-93CH-4803913",
       "source": "www.investing.com",
-      "published": "2026-07-21 12:48:39"
+      "published": "2026-07-21 16:34:46"
     },
     {
-      "id": "f57e4a0c79",
-      "title": "Sobha Q1 FY27 slides: record sales, net cash positive position",
+      "id": "53c6529325",
+      "title": "Steel Dynamics Q2 2026 slides: revenue jumps 33%, aluminum narrows losses",
       "summary": "",
-      "link": "https://www.investing.com/news/company-news/sobha-q1-fy27-slides-record-sales-net-cash-positive-position-93CH-4803318",
+      "link": "https://www.investing.com/news/company-news/steel-dynamics-q2-2026-slides-revenue-jumps-33-aluminum-narrows-losses-93CH-4803911",
       "source": "www.investing.com",
-      "published": "2026-07-21 12:48:33"
+      "published": "2026-07-21 16:31:46"
     },
     {
-      "id": "181645f46a",
-      "title": "3M boosts annual profit forecast driven by resilient industrial unit",
+      "id": "973bf621a7",
+      "title": "Earnings call transcript: MSCI tops Q2 2026 estimates but shares fall",
       "summary": "",
-      "link": "https://www.investing.com/news/stock-market-news/3m-lifts-annual-profit-forecast-as-industrial-unit-remains-resilient-4802669",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-msci-tops-q2-2026-estimates-but-shares-fall-93CH-4803910",
       "source": "www.investing.com",
-      "published": "2026-07-21 12:48:33"
+      "published": "2026-07-21 16:31:41"
     },
     {
-      "id": "af39567e1d",
-      "title": "Earnings call transcript: IndiaMART Q1 2026 growth slows as margins hold up",
+      "id": "699feb7f09",
+      "title": "KeychainX Study Finds $2.7B in Presale ETH Never Moved",
       "summary": "",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-indiamart-q1-2026-growth-slows-as-margins-hold-up-93CH-4803317",
+      "link": "https://www.investing.com/news/press-releases/keychainx-study-finds-27b-in-presale-eth-never-moved-4803909",
       "source": "www.investing.com",
-      "published": "2026-07-21 12:47:53"
+      "published": "2026-07-21 16:31:28"
     },
     {
-      "id": "a8a6a1a29f",
-      "title": "Why is Halliburton stock sliding today?",
+      "id": "d1a3f2658e",
+      "title": "US House Republicans face major test passing Trump priorities as August break looms",
       "summary": "",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-halliburton-stock-sliding-today-93CH-4803316",
+      "link": "https://www.investing.com/news/economy-news/us-house-republicans-face-major-test-passing-trump-priorities-as-august-break-looms-4803854",
       "source": "www.investing.com",
-      "published": "2026-07-21 12:47:19"
+      "published": "2026-07-21 16:30:30"
     },
     {
-      "id": "61250506d1",
-      "title": "Carlyle Group stock rises on Anthesis deal talks",
+      "id": "e3f69f064d",
+      "title": "Evercore ISI reiterates Lam Research stock rating on strong fundamentals",
       "summary": "",
-      "link": "https://www.investing.com/news/stock-market-news/carlyle-group-stock-rises-on-anthesis-deal-talks-93CH-4803313",
+      "link": "https://www.investing.com/news/analyst-ratings/evercore-isi-reiterates-lam-research-stock-rating-on-strong-fundamentals-93CH-4803906",
       "source": "www.investing.com",
-      "published": "2026-07-21 12:46:48"
+      "published": "2026-07-21 16:28:59"
     }
-  ]
+  ],
+  "briefing": {
+    "date": "2026-07-22",
+    "update_time": "2026-07-21 16:13:57",
+    "candidate_count": 20,
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-22\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 谁在恐惧中国 AI 模型？ (来源: Hacker News)\n- **核心干货**：Stratechery 深度分析中国大模型崛起对全球 AI 格局的影响。从 Qwen、DeepSeek 到 Kimi，开源/开放权重模型正在以低成本、高迭代速度逼近甚至在某些维度超越闭源巨头。文章探讨了地缘政治、技术封锁和开源生态的微妙博弈——不是能不能追上，而是谁先被逼疯。\n- **毒舌/硬核点评**：硅谷大厂们一边喊着“开源是未来”，一边偷偷把训练数据锁进保险箱。中国选手直接把底牌摊桌上：这局我跟你玩到底，你敢跟吗？\n- **🔗 传送门**：[https://stratechery.com/2026/whos-afraid-of-chinese-models/](https://stratechery.com/2026/whos-afraid-of-chinese-models/)\n\n---\n\n### 2. 📌 Kimi K3 与中国的开放权重模型浪潮 (来源: Dev.to)\n- **核心干货**：Moonshot AI 发布 Kimi K3，基准测试表明一个开放权重模型首次在多项任务上与最佳闭源模型（GPT-4o/Claude-3.5 级别）并驾齐驱。但代价是“平台孤岛”——K3 只在 Moonshot 平台，GLM-5.2 在 Z.ai，DeepSeek V4 Pro 在自家，MiniMax M3 在 MiniMax。开发者需要维护四个账号、四个账单——这就是“开放”的代价。\n- **毒舌/硬核点评**：中国大模型厂商把“开放”玩成了“分布式封闭”——每个都说自己是开源，但都想要你注册、绑定、付费。真正的开源精神？不存在的，只有“你来我这儿玩”的营销话术。\n- **🔗 传送门**：[https://dev.to/smakosh/kimi-k3-and-chinas-open-weight-model-wave-bpp](https://dev.to/smakosh/kimi-k3-and-chinas-open-weight-model-wave-bpp)\n\n---\n\n### 3. 📌 关键 SharePoint RCE 漏洞 (CVE-2026-50522) 正在被积极利用 (来源: The Hacker News)\n- **核心干货**：微软 7 月补丁日修复的第三个 SharePoint Server 漏洞 CVE-2026-50522（CVSS 9.8，严重级别）已被 watchTowr 确认正在活跃利用。该漏洞是反序列化不信任数据导致的远程代码执行，PoC 已公开。攻击者只需发送一个特制包即可完全控制目标 SharePoint 服务器——这对企业内网意味着全面沦陷。\n- **毒舌/硬核点评**：微软：我们修了，但 PoC 已经满天飞了。IT 运维：好的，我这就去加班打补丁。攻击者：谢谢微软的“及时”修复，我先用着。\n- **🔗 传送门**：[https://thehackernews.com/2026/07/critical-sharepoint-rce-cve-2026-50522.html](https://thehackernews.com/2026/07/critical-sharepoint-rce-cve-2026-50522.html)\n\n---\n\n### 🗣️ 今日顶男金句\n“开源不是终点，是起点——终点是你能用别人的代码，让别人无码可用。”",
+    "briefing_items": [
+      {
+        "title": "谁在恐惧中国 AI 模型？",
+        "source": "Hacker News",
+        "summary": "Stratechery 深度分析中国大模型崛起对全球 AI 格局的影响。从 Qwen、DeepSeek 到 Kimi，开源/开放权重模型正在以低成本、高迭代速度逼近甚至在某些维度超越闭源巨头。文章探讨了地缘政治、技术封锁和开源生态的微妙博弈——不是能不能追上，而是谁先被逼疯。",
+        "commentary": "硅谷大厂们一边喊着“开源是未来”，一边偷偷把训练数据锁进保险箱。中国选手直接把底牌摊桌上：这局我跟你玩到底，你敢跟吗？",
+        "url": ""
+      },
+      {
+        "title": "Kimi K3 与中国的开放权重模型浪潮",
+        "source": "Dev.to",
+        "summary": "Moonshot AI 发布 Kimi K3，基准测试表明一个开放权重模型首次在多项任务上与最佳闭源模型（GPT-4o/Claude-3.5 级别）并驾齐驱。但代价是“平台孤岛”——K3 只在 Moonshot 平台，GLM-5.2 在 Z.ai，DeepSeek V4 Pro 在自家，MiniMax M3 在 MiniMax。开发者需要维护四个账号、四个账单——这就是“开放”的代价。",
+        "commentary": "中国大模型厂商把“开放”玩成了“分布式封闭”——每个都说自己是开源，但都想要你注册、绑定、付费。真正的开源精神？不存在的，只有“你来我这儿玩”的营销话术。",
+        "url": ""
+      },
+      {
+        "title": "关键 SharePoint RCE 漏洞 (CVE-2026-50522) 正在被积极利用",
+        "source": "The Hacker News",
+        "summary": "微软 7 月补丁日修复的第三个 SharePoint Server 漏洞 CVE-2026-50522（CVSS 9.8，严重级别）已被 watchTowr 确认正在活跃利用。该漏洞是反序列化不信任数据导致的远程代码执行，PoC 已公开。攻击者只需发送一个特制包即可完全控制目标 SharePoint 服务器——这对企业内网意味着全面沦陷。",
+        "commentary": "微软：我们修了，但 PoC 已经满天飞了。IT 运维：好的，我这就去加班打补丁。攻击者：谢谢微软的“及时”修复，我先用着。",
+        "url": ""
+      }
+    ],
+    "candidates": [
+      {
+        "id": "hn:48989701",
+        "title": "Qwen-Image-3.0: Rich Content, Authentic Details, Deep Knowledge",
+        "summary": "",
+        "url": "https://qwen.ai/blog?id=qwen-image-3.0",
+        "source": "Hacker News",
+        "score": 422,
+        "comments": 175
+      },
+      {
+        "id": "hn:48977128",
+        "title": "Who's afraid of Chinese models?",
+        "summary": "",
+        "url": "https://stratechery.com/2026/whos-afraid-of-chinese-models/",
+        "source": "Hacker News",
+        "score": 870,
+        "comments": 701
+      },
+      {
+        "id": "hn:48987822",
+        "title": "Incremental – A library for incremental computations",
+        "summary": "",
+        "url": "https://github.com/janestreet/incremental",
+        "source": "Hacker News",
+        "score": 304,
+        "comments": 56
+      },
+      {
+        "id": "lob:t2jxyu",
+        "title": "432 Linux kernel CVEs published in the last 24 hours",
+        "summary": "",
+        "url": "https://lore.kernel.org/linux-cve-announce/",
+        "source": "Lobste.rs",
+        "score": 22,
+        "comments": 11,
+        "tags": [
+          "linux",
+          "security"
+        ]
+      },
+      {
+        "id": "hn:48993414",
+        "title": "Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber",
+        "summary": "",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
+        "source": "Hacker News",
+        "score": 166,
+        "comments": 96
+      },
+      {
+        "id": "lob:op1k28",
+        "title": "I wrote an API client for my water-cooled bed",
+        "summary": "",
+        "url": "https://tinkering.xyz/bedctl/",
+        "source": "Lobste.rs",
+        "score": 52,
+        "comments": 16,
+        "tags": [
+          "hardware",
+          "zig"
+        ]
+      },
+      {
+        "id": "lob:p3z0zw",
+        "title": "Meta Garbage Collection: Using OCaml's GC to GC Rust",
+        "summary": "",
+        "url": "https://soteria-tools.com/blog/meta-garbage-collection",
+        "source": "Lobste.rs",
+        "score": 47,
+        "comments": 8,
+        "tags": [
+          "ml",
+          "rust"
+        ]
+      },
+      {
+        "id": "lob:twqtlo",
+        "title": "GitHub suddenly rejected my SSH key (the fix was a .pub file?!)",
+        "summary": "",
+        "url": "https://thorsell.io/2026/07/21/github-ssh-keys.html",
+        "source": "Lobste.rs",
+        "score": 35,
+        "comments": 14,
+        "tags": [
+          "devops",
+          "vcs"
+        ]
+      },
+      {
+        "id": "hn:48992870",
+        "title": "Apple Defeats Liability for Not Scanning iCloud for CSAM",
+        "summary": "",
+        "url": "https://blog.ericgoldman.org/archives/2026/07/apple-defeats-liability-for-not-scanning-icloud-for-csam-but-the-judge-was-not-pleased-amy-v-apple.htm",
+        "source": "Hacker News",
+        "score": 122,
+        "comments": 72
+      },
+      {
+        "id": "hn:48993448",
+        "title": "ICE to Pay Thomson Reuters $125M to Find Voter Fraud",
+        "summary": "",
+        "url": "https://www.404media.co/ice-to-pay-thomson-reuters-125-million-to-find-voter-fraud/",
+        "source": "Hacker News",
+        "score": 122,
+        "comments": 52
+      },
+      {
+        "id": "lob:wfmpqr",
+        "title": "Human mathematicians are being outcounterexampled",
+        "summary": "",
+        "url": "https://xenaproject.wordpress.com/2026/07/20/human-mathematicians-are-being-outcounterexampled/",
+        "source": "Lobste.rs",
+        "score": 56,
+        "comments": 9,
+        "tags": [
+          "math"
+        ]
+      },
+      {
+        "id": "lob:21lrrw",
+        "title": "Gitolite",
+        "summary": "",
+        "url": "https://gitolite.com/gitolite/index.html",
+        "source": "Lobste.rs",
+        "score": 48,
+        "comments": 12,
+        "tags": [
+          "practices",
+          "vcs"
+        ]
+      },
+      {
+        "id": "rss:ff6dc7812d",
+        "title": "Critical SharePoint RCE CVE-2026-50522 Under Active Exploitation After Public PoC",
+        "summary": "A third SharePoint Server flaw patched by Microsoft as part of its Patch Tuesday update for July 2026 has come under active exploitation, per watchTowr.\n\nThe vulnerability in question is CVE-2026-50522 (CVSS score: 9.8), a critical deserialization of untrusted data in Microsoft Office SharePoint tha",
+        "url": "https://thehackernews.com/2026/07/critical-sharepoint-rce-cve-2026-50522.html",
+        "source": "Tech RSS",
+        "score": 0
+      },
+      {
+        "id": "hn:48993059",
+        "title": "Claude Is Not a Compiler",
+        "summary": "",
+        "url": "https://blog.exe.dev/claude-is-not-a-compiler",
+        "source": "Hacker News",
+        "score": 79,
+        "comments": 73
+      },
+      {
+        "id": "lob:kdflhr",
+        "title": "InvisiCaps: The Fil-C Capability Model",
+        "summary": "",
+        "url": "https://fil-c.org/invisicaps",
+        "source": "Lobste.rs",
+        "score": 49,
+        "comments": 4,
+        "tags": [
+          "c",
+          "compilers"
+        ]
+      },
+      {
+        "id": "lob:v3xuxn",
+        "title": "95 reasons for having your own website",
+        "summary": "",
+        "url": "https://bellkiosk.website/blog/reasons-to-website.html",
+        "source": "Lobste.rs",
+        "score": 38,
+        "comments": 5,
+        "tags": [
+          "philosophy",
+          "web"
+        ]
+      },
+      {
+        "id": "arxiv:2607.18225v1",
+        "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+        "summary": "We propose one-step and two-step methods for policy learning with retrieval-augmented generation (RAG). We formulate RAG-based action selection under the potential outcome framework. In the two-step method, vector search retrieves action-specific neighboring evidence in an embedding space, the gener",
+        "url": "https://arxiv.org/abs/2607.18225v1",
+        "source": "ArXiv",
+        "categories": [
+          "econ.EM",
+          "cs.LG",
+          "math.ST",
+          "stat.ME",
+          "stat.ML"
+        ],
+        "arxiv_id": "2607.18225v1"
+      },
+      {
+        "id": "arxiv:2607.18199v1",
+        "title": "PPL-Factory: Task-Aware and Budget-Aware Data Selection from Language Modeling to Reasoning",
+        "summary": "Not all training samples contribute equally to large language model fine-tuning. Selecting informative training samples can reduce the computational cost while preserving downstream performance. Many existing data selection methods rely on indirect heuristics, such as data quality, diversity or reas",
+        "url": "https://arxiv.org/abs/2607.18199v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.CL",
+          "cs.LG"
+        ],
+        "arxiv_id": "2607.18199v1"
+      },
+      {
+        "id": "rss:d65718a1f1",
+        "title": "Kimi K3 and China's Open-Weight Model Wave",
+        "summary": "Moonshot AI released Kimi K3 on July 16, and the benchmarks put an open-weight model next to the best closed ones for the first time. The catch is access. K3 sits on Moonshot's platform, GLM-5.2 on Z.ai's, DeepSeek V4 Pro on DeepSeek's, MiniMax M3 on MiniMax's — four accounts, four billing relations",
+        "url": "https://dev.to/smakosh/kimi-k3-and-chinas-open-weight-model-wave-bpp",
+        "source": "Tech RSS",
+        "score": 0
+      },
+      {
+        "id": "lob:msg39b",
+        "title": "Linux kernel will support $ORIGIN, sort of",
+        "summary": "<p>HN discussions: <a href=\"https://news.ycombinator.com/item?id=48988793\" rel=\"ugc\">https://news.ycombinator.com/item?id=48988793</a></p>\n",
+        "url": "https://fzakaria.com/2026/07/20/linux-kernel-will-support-origin-sort-of",
+        "source": "Lobste.rs",
+        "score": 12,
+        "comments": 0,
+        "tags": [
+          "c",
+          "linux",
+          "nix",
+          "osdev"
+        ]
+      }
+    ],
+    "ai_curated": true
+  }
 }
