@@ -2,41 +2,95 @@ name: 🤖 Crypto Signal Monitor
 
 on:
   schedule:
-    # 每 15 分钟检测一次 (UTC 时间)
-    - cron: '*/15 * * * *'
+    # 🔥 多 cron 入口 — 散射到不同分钟以提高触发覆盖率
+    # GitHub Actions 免费仓库的 schedule 触发极度不稳定（可能连续数小时只触发 1-2 次）
+    # 通过 8 条 cron 规则覆盖大部分分钟，大幅提高实际触发概率
+    - cron: '*/5 * * * *'        # 0,5,10,15,20,25,30,35,40,45,50,55
+    - cron: '1,6,11,16,21,26,31,36,41,46,51,56 * * * *'
+    - cron: '2,7,12,17,22,27,32,37,42,47,52,57 * * * *'
+    - cron: '3,8,13,18,23,28,33,38,43,48,53,58 * * * *'
+    - cron: '4,9,14,19,24,29,34,39,44,49,54,59 * * * *'
+    - cron: '0,10,20,30,40,50 * * * *'          # 双保险：整10分钟也触发
+    - cron: '5,15,25,35,45,55 * * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
+  actions: write    # 允许 self-ping（自触发）
 
 jobs:
   monitor:
     runs-on: ubuntu-latest
+    concurrency:
+      group: crypto-monitor
+      cancel-in-progress: false
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: 🛡️ 去重守卫 — 检查距上次检测时间
+        id: guard
+        run: |
+          LAST_RUN=$(cat logs/last_run_ts.txt 2>/dev/null || echo 0)
+          NOW=$(date +%s)
+          DIFF=$((NOW - LAST_RUN))
+
+          # 🔥 缩短到 8 分钟（原 14 分钟太保守）
+          # 配合多 cron 入口，目标 ~10 分钟一次实际检测
+          MIN_GAP=480  # 8 分钟
+
+          echo "🕐 当前 UTC:      $(date -u +'%Y-%m-%d %H:%M:%S')"
+          echo "🕐 北京时间:      $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')"
+          echo "📊 距上次检测:     ${DIFF}s (阈值: ${MIN_GAP}s)"
+
+          if [ "$DIFF" -lt "$MIN_GAP" ]; then
+            echo "SKIP=true" >> $GITHUB_OUTPUT
+            echo "⏭ 决策: 跳过 — 距上次检测仅 ${DIFF}s，不足 ${MIN_GAP}s"
+          else
+            echo "SKIP=false" >> $GITHUB_OUTPUT
+            echo "✅ 决策: 执行 — 距上次检测 ${DIFF}s >= ${MIN_GAP}s"
+          fi
+
+          # 信号状态快照
+          echo ""
+          echo "📊 当前信号状态:"
+          cat logs/signal_state.json 2>/dev/null || echo "  (尚无记录)"
+          echo ""
+          echo "📊 网站数据文件:"
+          python3 -c "
+          import json
+          try:
+            d = json.load(open('data/signals.json'))
+            print(f'  更新时间: {d.get(\"update_time\",\"?\")}')
+            for a in ['BTC','ETH']:
+              if a in d and d[a].get('signal'):
+                s = d[a]['signal']
+                print(f'  {a}: {s[\"signal\"]} | 评分 {s[\"totalScore\"]}/100 | \${s[\"entryPrice\"]:,.2f}')
+              else:
+                print(f'  {a}: 无数据')
+          except: print('  (尚无记录)')
+          " 2>/dev/null || echo "  (尚无记录)"
+
+      # ═══════════════════════════════════════════════════════
+      #  以下步骤仅在去重守卫通过后执行
+      # ═══════════════════════════════════════════════════════
+
       - name: Setup Python
+        if: steps.guard.outputs.SKIP == 'false'
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
           cache: 'pip'
 
       - name: Install dependencies
+        if: steps.guard.outputs.SKIP == 'false'
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: 📋 诊断信息
-        run: |
-          echo "🕐 当前 UTC 时间: $(date -u +'%Y-%m-%d %H:%M:%S')"
-          echo "🕐 北京时间: $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')"
-          echo "📊 信号状态文件:"
-          cat logs/signal_state.json 2>/dev/null || echo "  (空)"
-          echo "📝 最近 5 条日志:"
-          tail -5 logs/monitor.log 2>/dev/null || echo "  (空)"
-
-      - name: Run crypto signal detection
+      - name: 🔍 运行信号检测
+        if: steps.guard.outputs.SKIP == 'false'
         id: monitor
         env:
           AI_MONITOR_EMAIL_FROM: ${{ secrets.AI_MONITOR_EMAIL_FROM }}
@@ -46,15 +100,57 @@ jobs:
           python scripts/monitor_crypto.py --once 2>&1 | tee logs/workflow_output.log
           echo "EXIT_CODE=${PIPESTATUS[0]}" >> $GITHUB_ENV
 
-      - name: Commit signal state & logs
+      - name: 📝 记录运行时间戳
+        if: steps.guard.outputs.SKIP == 'false'
+        run: |
+          date +%s > logs/last_run_ts.txt
+          echo "✅ 已记录本次检测时间: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+
+      - name: Commit signal state, logs & data
+        if: steps.guard.outputs.SKIP == 'false'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add logs/signal_state.json logs/monitor.log logs/workflow_output.log
+          git add logs/signal_state.json logs/monitor.log logs/workflow_output.log logs/last_run_ts.txt data/signals.json
           if ! git diff --staged --quiet; then
             git commit -m "🤖 Crypto signal update - $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M CST')"
             git pull --rebase origin main 2>/dev/null || true
             git push origin main
+            echo "✅ 变更已提交并推送"
           else
             echo "📭 无变化，跳过提交"
           fi
+
+      # 🔥 Self-ping: 用当前运行的 GITHUB_TOKEN 在 5 分钟后触发下一次检测
+      # 这是对 GitHub scheduler 不可靠的兜底方案
+      - name: 🔄 Self-ping 下一次检测
+        if: steps.guard.outputs.SKIP == 'false'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # 检查 self-ping 状态文件，避免短时间内重复 ping
+          LAST_PING=$(cat logs/last_self_ping_ts.txt 2>/dev/null || echo 0)
+          NOW=$(date +%s)
+          PING_DIFF=$((NOW - LAST_PING))
+          PING_COOLDOWN=540  # 9 分钟冷却
+
+          if [ "$PING_DIFF" -lt "$PING_COOLDOWN" ]; then
+            echo "🔇 Self-ping 跳过（距上次 ping 仅 ${PING_DIFF}s，冷却 ${PING_COOLDOWN}s）"
+            exit 0
+          fi
+
+          echo "🔔 Self-ping: 触发下一次 workflow_dispatch..."
+          if gh workflow run "crypto monitor" --ref main 2>/dev/null; then
+            date +%s > logs/last_self_ping_ts.txt
+            echo "✅ Self-ping 成功"
+          else
+            echo "⚠️ Self-ping 失败（可能 GITHUB_TOKEN 权限不足），不影响主流程"
+            echo "   如需修复: Settings → Actions → General → Workflow permissions → Read and write"
+          fi
+
+      - name: 📋 跳过说明 (去重守卫触发时)
+        if: steps.guard.outputs.SKIP == 'true'
+        run: |
+          echo "⏭ 本次运行被去重守卫跳过"
+          echo "💡 这是正常行为：多 cron 入口 + 8 分钟去重间隔 = 高频触发 + 合理检测频率"
+          echo "   预期效果：每 ~10 分钟一次实际检测（即使 scheduler 丢失 60% 的触发）"

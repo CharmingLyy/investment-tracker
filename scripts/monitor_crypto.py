@@ -210,13 +210,15 @@ def find_sr_lines(closes, highs, lows, n=5):
 # 信号生成引擎（完整移植自 JS generateSignal）
 # ============================================================
 
-def generate_signal(data_1h, data_4h, data_1d, asset="BTC", ticker_info=None):
+def generate_signal(data_1h, data_4h, data_1d, asset="BTC", futures_info=None):
     """
     完整移植自 ai选股/index.html 的 generateSignal()
+
     参数：
       data_1h, data_4h, data_1d: {"closes":[], "highs":[], "lows":[]}
       asset: "BTC" 或 "ETH" — 不同资产使用不同参数
-      ticker_info: Binance 24h ticker dict（用于基本面评分），可选
+      futures_info: dict — fetch_futures_data() 的返回值（资金费率 + 持仓量），可选
+
     返回: dict — 完整的信号对象
 
     ETH 专属参数 (2026-07-20 回测优化):
@@ -349,64 +351,55 @@ def generate_signal(data_1h, data_4h, data_1d, asset="BTC", ticker_info=None):
         tech_score += 2
 
     # ── 基本面评分 (20 pts) ──
-    # 使用 Binance 24h ticker 数据替代 CoinGecko
-    fund_score = 10  # 默认中性
-    if ticker_info:
+    # 数据来源：Binance 期货公开 API（资金费率 + 持仓量）
+    # 这两个指标独立于价格 K 线，提供真正的增量信息
+    fund_score = 10  # 默认中性（futures 数据不可用时使用）
+
+    if futures_info:
         try:
-            chg_24h = float(ticker_info.get("priceChangePercent", 0))
-            volume = float(ticker_info.get("quoteVolume", 0))  # USDT 计价成交量
-            high_24h = float(ticker_info.get("highPrice", 0))
-            low_24h = float(ticker_info.get("lowPrice", 0))
+            # ═══ 子项 ①：资金费率 (12 pts) ═══
+            # 机制：正费率 = 多头付钱给空头（市场过热偏多）
+            #       负费率 = 空头付钱给多头（市场恐慌偏空）
+            # 用法：反向指标 — 极端费率是反转信号
+            fr_pct = float(futures_info.get("funding_rate_pct", 0))
+            fr_time = futures_info.get("funding_time", "?")
 
-            # 趋势匹配度 (8 pts) — 24h 涨跌是否与信号方向一致
             if direction == 'bullish':
-                if chg_24h > 2:
-                    fund_score += 8
-                elif chg_24h > 0:
-                    fund_score += 5
-                else:
-                    fund_score += 2
+                if fr_pct < -0.01:       fund_score += 12  # 极度恐慌，反向做多绝佳
+                elif fr_pct < 0:         fund_score += 10  # 略偏空，做多有优势
+                elif fr_pct < 0.005:     fund_score += 8   # 中性偏负
+                elif fr_pct < 0.01:      fund_score += 6   # 中性
+                elif fr_pct < 0.03:      fund_score += 3   # 偏多拥挤
+                else:                    fund_score += 1   # 极度拥挤，危险
             elif direction == 'bearish':
-                if chg_24h < -2:
-                    fund_score += 8
-                elif chg_24h < 0:
-                    fund_score += 5
-                else:
-                    fund_score += 2
+                if fr_pct > 0.03:        fund_score += 12  # 极度贪婪，反向做空绝佳
+                elif fr_pct > 0.01:      fund_score += 10
+                elif fr_pct > 0.005:     fund_score += 8
+                elif fr_pct > 0:         fund_score += 6
+                elif fr_pct > -0.01:     fund_score += 3
+                else:                    fund_score += 1   # 极度恐慌，做空危险
             else:
-                fund_score += 4
+                # neutral 方向：费率越极端越说明有机会（矛盾越大概率越大）
+                if abs(fr_pct) > 0.03:   fund_score += 10
+                elif abs(fr_pct) > 0.01: fund_score += 8
+                elif abs(fr_pct) > 0.005: fund_score += 6
+                else:                    fund_score += 4
 
-            # 交易量评分 (6 pts) — 流动性越好分越高
-            if volume > 500_000_000:   # >5亿 USDT
-                fund_score += 6
-            elif volume > 100_000_000:  # >1亿 USDT
-                fund_score += 4
-            elif volume > 10_000_000:   # >1000万 USDT
-                fund_score += 2
-            else:
-                fund_score += 1
+            # ═══ 子项 ②：持仓量变化 (8 pts) ═══
+            # OI 变化 = 市场参与度增减
+            # 大变化 = 市场活跃 = 技术信号更可靠（无论方向）
+            oi_chg = abs(float(futures_info.get("oi_change_pct", 0)))
 
-            # 日内波动健康度 (6 pts) — 有波动但不过度
-            if high_24h > 0 and low_24h > 0:
-                daily_range_pct = (high_24h - low_24h) / low_24h * 100
-                if 1 < daily_range_pct < 6:
-                    fund_score += 6
-                elif daily_range_pct < 10:
-                    fund_score += 3
-                else:
-                    fund_score += 1
-            else:
-                fund_score += 3
+            if oi_chg > 3:       fund_score += 8   # 资本大幅进出，信号强
+            elif oi_chg > 1:     fund_score += 6   # 活跃市场
+            elif oi_chg > 0.5:   fund_score += 4   # 一般
+            else:                fund_score += 2   # 死水，信号弱
 
             fund_score = min(20, fund_score)
         except Exception:
-            pass  # 解析失败，保持默认 10 分
+            pass  # 解析失败，保底 10 分
 
-    # ── 消息面评分 (20 pts) ──
-    # 新闻 RSS 不适合高频轮询，暂时使用默认分
-    news_score = 10  # 中性默认
-
-    total_score = round(min(100, tech_score + fund_score + news_score))
+    total_score = round(min(100, tech_score + fund_score))
 
     # ── 资产专属参数 ──
     # ETH 波动更大(日均ATR 4.9% vs BTC 4.1%), 用更紧的止损和更近的止盈
@@ -423,7 +416,7 @@ def generate_signal(data_1h, data_4h, data_1d, asset="BTC", ticker_info=None):
     entry_price = cur_price
     signal, sig_class = "", ""
 
-    if direction == 'bullish' and total_score >= 65:
+    if direction == 'bullish' and total_score >= 55:
         signal = '做多 LONG'
         sig_class = 'long'
         atr_stop = entry_price - cur_atr * sl_atr_mult
@@ -442,7 +435,7 @@ def generate_signal(data_1h, data_4h, data_1d, asset="BTC", ticker_info=None):
             take_profit = atr_target2
         rr_ratio = (take_profit - entry_price) / (entry_price - stop_loss)
 
-    elif direction == 'bearish' and total_score >= 65:
+    elif direction == 'bearish' and total_score >= 55:
         signal = '做空 SHORT'
         sig_class = 'short'
         atr_stop = entry_price + cur_atr * sl_atr_mult
@@ -486,17 +479,17 @@ def generate_signal(data_1h, data_4h, data_1d, asset="BTC", ticker_info=None):
     else:
         leverage, lev_class = 1, 'l1'
 
-    # ── 置信度 ──
-    if total_score >= 80:
+    # ── 置信度 (基于 75 分满分体系) ──
+    if total_score >= 60:
         confidence = '高'
-    elif total_score >= 65:
-        confidence = '中高'
     elif total_score >= 50:
+        confidence = '中高'
+    elif total_score >= 40:
         confidence = '中'
     else:
         confidence = '低'
 
-    win_rate_est = 72 if total_score >= 80 else 65 if total_score >= 70 else 58 if total_score >= 60 else 50 if total_score >= 50 else 40
+    win_rate_est = 72 if total_score >= 60 else 65 if total_score >= 50 else 58 if total_score >= 40 else 50 if total_score >= 30 else 40
     risk_pct = abs((stop_loss - entry_price) / entry_price) * 100 if sig_class != 'wait' else 0
     reward_pct = abs((take_profit - entry_price) / entry_price) * 100 if sig_class != 'wait' else 0
 
@@ -510,7 +503,7 @@ def generate_signal(data_1h, data_4h, data_1d, asset="BTC", ticker_info=None):
     return {
         "signal": signal, "sigClass": sig_class, "direction": direction,
         "totalScore": total_score, "techScore": tech_score,
-        "fundScore": fund_score, "newsScore": news_score,
+        "fundScore": fund_score,
         "confidence": confidence, "winRateEst": win_rate_est,
         "entryPrice": entry_price, "stopLoss": stop_loss,
         "takeProfit": take_profit, "rrRatio": rr_ratio,
@@ -700,6 +693,57 @@ def fetch_24h_ticker(symbol):
 
 
 # ============================================================
+# 期货数据（资金费率 + 持仓量 — 独立于价格的基本面数据）
+# ============================================================
+
+def fetch_futures_data(symbol):
+    """
+    从 Binance 期货公开 API 获取两个独立于价格的数据：
+      1. 资金费率 — 多空双方谁在付钱（反向情绪指标）
+      2. 持仓量变化 — 市场参与度趋势
+    无需 API Key，免费公开接口。
+    返回 dict 或 None
+    """
+    result = {}
+
+    # 1. 最新资金费率
+    try:
+        fr_resp = requests.get(
+            "https://fapi.binance.com/fapi/v1/fundingRate",
+            params={"symbol": symbol, "limit": 1},
+            timeout=10
+        )
+        if fr_resp.ok and fr_resp.json():
+            raw = fr_resp.json()[0]
+            result["funding_rate"] = float(raw["fundingRate"])       # 小数, 如 0.0001 = 0.01%
+            result["funding_rate_pct"] = result["funding_rate"] * 100  # 百分比
+            result["funding_time"] = datetime.fromtimestamp(
+                raw.get("fundingTime", 0) / 1000
+            ).strftime("%H:%M")
+    except Exception:
+        pass
+
+    # 2. 持仓量变化（取最近两笔 30 分钟快照算 OI 变化）
+    try:
+        oi_resp = requests.get(
+            "https://fapi.binance.com/fapi/v1/openInterestHist",
+            params={"symbol": symbol, "period": "30m", "limit": 3},
+            timeout=10
+        )
+        if oi_resp.ok:
+            oi_data = oi_resp.json()
+            if len(oi_data) >= 2:
+                cur = float(oi_data[-1]["sumOpenInterest"])
+                prev = float(oi_data[-2]["sumOpenInterest"])
+                result["oi_current"] = cur
+                result["oi_change_pct"] = round((cur - prev) / prev * 100, 3) if prev > 0 else 0
+    except Exception:
+        pass
+
+    return result if result else None
+
+
+# ============================================================
 # 去重 & 状态管理
 # ============================================================
 
@@ -720,6 +764,44 @@ def save_state(state):
     state_file = os.path.join(LOG_DIR, "signal_state.json")
     with open(state_file, "w", encoding="utf-8") as f:
         json.dump(state, f, ensure_ascii=False, indent=2)
+
+
+def save_signals_json(results, ohlc_data, data_sources):
+    """保存网站数据文件 — 包含信号结果和 OHLC 数据，供 GitHub Pages 直接读取"""
+    data_dir = os.path.join(PROJECT_ROOT, "data")
+    os.makedirs(data_dir, exist_ok=True)
+    signals_file = os.path.join(data_dir, "signals.json")
+
+    output = {
+        "update_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "update_ts": int(time.time()),
+        "data_sources": data_sources,
+    }
+
+    for asset, sig in results.items():
+        # 清理信号中不能 JSON 序列化的值 (NaN, inf)
+        sig_clean = {}
+        for k, v in sig.items():
+            if isinstance(v, float):
+                import math
+                if math.isnan(v):
+                    sig_clean[k] = None
+                elif math.isinf(v):
+                    sig_clean[k] = None
+                else:
+                    sig_clean[k] = round(v, 6)
+            else:
+                sig_clean[k] = v
+
+        output[asset] = {
+            "signal": sig_clean,
+            "ohlc": ohlc_data.get(asset, {}),
+        }
+
+    with open(signals_file, "w", encoding="utf-8") as f:
+        json.dump(output, f, ensure_ascii=False, indent=2)
+
+    print(f"  📄 网站数据已保存: {signals_file}")
 
 
 def should_notify(asset, signal_info, state):
@@ -748,10 +830,10 @@ def should_notify(asset, signal_info, state):
         state[asset + "_failCount"] = 0  # 临时重置（方向变了值得重试）
         return True
 
-    # 同一方向，检查时间间隔（4小时 = 14400秒）
+    # 同一方向，检查时间间隔（1小时 = 3600秒）
     if prev_class == curr_class:
-        # 如果之前多次失败，延长冷却到 24 小时
-        cooldown = 86400 if fail_count >= 3 else 14400
+        # 如果之前多次失败，延长冷却到 6 小时
+        cooldown = 21600 if fail_count >= 3 else 3600
         elapsed = time.time() - max(prev_time, prev_attempt)
         if elapsed > cooldown:
             return True
@@ -831,6 +913,8 @@ def run_detection(send_email=True):
 
     state = load_state()
     results = {}
+    ohlc_data = {}  # 保存 OHLC 原始数据，供网站 signals.json 使用
+    data_sources = {}  # 记录每个资产的数据源
 
     for asset, symbol in SYMBOL_MAP.items():
         print(f"\n  📡 获取 {asset} ({symbol}) 1H K线数据...")
@@ -868,24 +952,17 @@ def run_detection(send_email=True):
 
         print(f"    ✓ {len(hourly['closes'])} 根 1H K线 (数据源: {data_source})")
 
-        # 2. 获取 24h ticker（基本面评分），Binance 失败则用 CoinGecko 备选
+        # 2. 获取期货数据（资金费率 + 持仓量 — 基本面评分的核心输入）
         time.sleep(0.5)
-        ticker = fetch_24h_ticker(symbol)
+        futures = fetch_futures_data(symbol)
 
-        if not ticker:
-            # Binance ticker 不可用，尝试 CoinGecko（不管 k 线来自哪个数据源）
-            cg_id = COINGECKO_IDS.get(asset, "")
-            if cg_id:
-                ticker = fetch_ticker_coingecko(cg_id)
-                if ticker:
-                    print(f"    ✓ 24h 行情 (CoinGecko): 涨跌 {float(ticker.get('priceChangePercent',0)):.2f}%")
-                else:
-                    print(f"    ⚠️ 24h 行情不可用，基本面评分为默认值")
-            else:
-                print(f"    ⚠️ 24h 行情不可用，基本面评分为默认值")
+        if futures:
+            fr_str = f"{futures.get('funding_rate_pct', 0):.4f}%"
+            oi_str = f"{futures.get('oi_change_pct', 0):+.3f}%"
+            print(f"    ✓ 期货数据: 资金费率 {fr_str} ({futures.get('funding_time','?')}), "
+                  f"OI 变化 {oi_str}")
         else:
-            print(f"    ✓ 24h 行情 (Binance): 涨跌 {float(ticker.get('priceChangePercent',0)):.2f}%, "
-                  f"成交量 ${float(ticker.get('quoteVolume',0)):,.0f}")
+            print(f"    ⚠️ 期货数据不可用 (Binance Futures API), 基本面评分为默认值")
 
         # 3. 推导时间框架
         tf = derive_timeframes(hourly)
@@ -893,9 +970,29 @@ def run_detection(send_email=True):
               f"4H: {len(tf['tf4h']['closes'])} 根, "
               f"1D: {len(tf['tf1d']['closes'])} 根")
 
-        # 4. 生成信号 (传入 asset 和 ticker info)
-        sig = generate_signal(tf["tf1h"], tf["tf4h"], tf["tf1d"], asset=asset, ticker_info=ticker)
+        # 4. 生成信号 (传入 asset 和期货数据)
+        sig = generate_signal(tf["tf1h"], tf["tf4h"], tf["tf1d"], asset=asset, futures_info=futures)
         results[asset] = sig
+
+        # 5. 保存 OHLC 数据（供网站 signals.json 使用）
+        ohlc_data[asset] = {
+            "1h": {
+                "closes": tf["tf1h"]["closes"],
+                "highs": tf["tf1h"]["highs"],
+                "lows": tf["tf1h"]["lows"],
+            },
+            "4h": {
+                "closes": tf["tf4h"]["closes"],
+                "highs": tf["tf4h"]["highs"],
+                "lows": tf["tf4h"]["lows"],
+            },
+            "1d": {
+                "closes": tf["tf1d"]["closes"],
+                "highs": tf["tf1d"]["highs"],
+                "lows": tf["tf1d"]["lows"],
+            },
+        }
+        data_sources[asset] = data_source
 
         # 5. 日志输出
         log_signal(asset, sig)
@@ -946,7 +1043,6 @@ def run_detection(send_email=True):
                         atr_pct=sig["atrPct"],
                         tech_score=sig["techScore"],
                         fund_score=sig["fundScore"],
-                        news_score=sig["newsScore"],
                     )
                     if success:
                         state[state_key]["lastNotified"] = time.time()
@@ -983,6 +1079,9 @@ def run_detection(send_email=True):
 
     # 保存状态
     save_state(state)
+
+    # 保存网站数据文件 (data/signals.json) — 供 GitHub Pages 直接读取
+    save_signals_json(results, ohlc_data, data_sources)
 
     # 汇总
     print(f"\n{'─' * 80}")

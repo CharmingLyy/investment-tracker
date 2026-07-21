@@ -258,6 +258,97 @@ async function fetchSafe(url, options = {}) {
   throw lastErr || new Error('所有数据源均无法连接');
 }
 
+// ── Signals JSON (GitHub Actions 预计算结果) ──
+const SIGNALS_JSON_URL = '../data/signals.json';
+const CACHE_MAX_AGE = 3600; // 1 小时内的数据视为新鲜
+
+async function loadFromSignalsJSON() {
+  /** 尝试从 GitHub Actions 预计算的 signals.json 加载数据。
+      返回: 成功时返回 { update_time, data_sources, assets: { btc: {...}, eth: {...} } }
+             失败或数据过期时返回 null */
+  try {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 8000);
+    const resp = await fetch(SIGNALS_JSON_URL, {
+      signal: ctrl.signal,
+      headers: { 'Accept': 'application/json' },
+      cache: 'no-cache',  // 总是请求最新版本
+    });
+    clearTimeout(timer);
+    if (!resp.ok) {
+      console.log('signals.json 不可用 (HTTP ' + resp.status + ')，回退到 CoinGecko');
+      return null;
+    }
+
+    const json = await resp.json();
+    const age = (Date.now() / 1000) - (json.update_ts || 0);
+    console.log(`signals.json 更新时间: ${json.update_time}, 距今 ${Math.round(age)}s`);
+
+    if (age > CACHE_MAX_AGE) {
+      console.log(`signals.json 数据已过期 (${Math.round(age)}s > ${CACHE_MAX_AGE}s)，回退到 CoinGecko`);
+      return null;
+    }
+
+    // 检查是否有至少一个资产的完整数据
+    const hasData = ['BTC', 'ETH'].some(a => json[a] && json[a].signal && json[a].ohlc);
+    if (!hasData) {
+      console.log('signals.json 数据不完整，回退到 CoinGecko');
+      return null;
+    }
+
+    console.log(`✅ 使用 GitHub Actions 预计算信号 (数据源: ${JSON.stringify(json.data_sources)})`);
+    return json;
+  } catch (err) {
+    console.log('加载 signals.json 失败:', err.message, '，回退到 CoinGecko');
+    return null;
+  }
+}
+
+function buildAssetDataFromJSON(json, assetId) {
+  /** 将 signals.json 中的资产数据转换为 renderAsset 期望的格式 */
+  const assetKey = assetId === 'bitcoin' ? 'BTC' : 'ETH';
+  const entry = json[assetKey];
+  if (!entry || !entry.signal || !entry.ohlc) return null;
+
+  const { signal, ohlc } = entry;
+
+  // 为每个时间框架生成近似时间戳（用于图表 X 轴标签）
+  function addTimestamps(closes, intervalHours) {
+    const now = Date.now() / 1000;
+    const ts = [];
+    for (let i = 0; i < closes.length; i++) {
+      // 从最新时间往回推算
+      ts.push(now - (closes.length - 1 - i) * intervalHours * 3600);
+    }
+    return ts;
+  }
+
+  const tf1h = {
+    closes: ohlc['1h']?.closes || [],
+    highs: ohlc['1h']?.highs || [],
+    lows: ohlc['1h']?.lows || [],
+    timestamps: addTimestamps(ohlc['1h']?.closes || [], 1),
+  };
+  const tf4h = {
+    closes: ohlc['4h']?.closes || [],
+    highs: ohlc['4h']?.highs || [],
+    lows: ohlc['4h']?.lows || [],
+    timestamps: addTimestamps(ohlc['4h']?.closes || [], 4),
+  };
+  const tf1d = {
+    closes: ohlc['1d']?.closes || [],
+    highs: ohlc['1d']?.highs || [],
+    lows: ohlc['1d']?.lows || [],
+    timestamps: addTimestamps(ohlc['1d']?.closes || [], 24),
+  };
+
+  return {
+    tf1h, tf4h, tf1d,
+    info: null,        // signals.json 不含 CoinGecko 基本面信息
+    signal: signal,    // 已经是完整信号对象
+  };
+}
+
 // ── Data Fetching (simplified: 1 price call per asset, derived timeframes) ──
 async function fetchPriceData(id) {
   // Single call: 14 days of hourly data → derive 1H, 4H, 1D
@@ -274,36 +365,6 @@ async function fetchCoinInfo(id) {
       `https://api.coingecko.com/api/v3/coins/${id}?localization=false&tickers=false&community_data=false&developer_data=false`
     );
   } catch { return null; }
-}
-
-// News: try RSS proxies, return empty on failure (non-critical)
-async function fetchNewsSafe(query) {
-  const results = [];
-  const rssUrl = `https://news.google.com/rss/search?q=${encodeURIComponent(query + ' crypto')}&hl=en-US&gl=US&ceid=US:en`;
-  const proxies = [
-    u => `https://api.allorigins.win/raw?url=${encodeURIComponent(u)}`,
-    u => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(u)}`,
-    u => `https://corsproxy.io/?${encodeURIComponent(u)}`,
-  ];
-  for (const fn of proxies) {
-    try {
-      const ctrl = new AbortController();
-      const timer = setTimeout(() => ctrl.abort(), 10000);
-      const r = await fetch(fn(rssUrl), { signal: ctrl.signal });
-      clearTimeout(timer);
-      if (!r.ok) continue;
-      const t = await r.text();
-      const xml = new DOMParser().parseFromString(t, 'text/xml');
-      xml.querySelectorAll('item').forEach(it => {
-        const title = it.querySelector('title')?.textContent?.replace(/<\/?[^>]+(>|$)/g, '') || '';
-        const link = it.querySelector('link')?.textContent || '';
-        const d = it.querySelector('pubDate')?.textContent || '';
-        if (title) results.push({ title, link, date: d, src: 'Google News' });
-      });
-      if (results.length) break;
-    } catch { continue; }
-  }
-  return results.slice(0, 10);
 }
 
 // ── Technical Indicators ──
@@ -376,7 +437,7 @@ function findSRLines(closes, highs, lows, n = 5) {
 }
 
 // ── Signal Engine ──
-function generateSignal(data1h, data4h, data1d, info, newsItems) {
+function generateSignal(data1h, data4h, data1d, info) {
   const c1 = data1h.closes, h1 = data1h.highs, l1 = data1h.lows;
   const c4 = data4h.closes, h4 = data4h.highs, l4 = data4h.lows;
   const cd = data1d.closes;
@@ -470,61 +531,35 @@ function generateSignal(data1h, data4h, data1d, info, newsItems) {
   else techScore += 2; // too volatile
 
   // ── Fundamental Score (20 pts) ──
+  // 浏览器端无法访问 Binance 期货 API (CORS)
+  // 生产环境使用资金费率 + 持仓量 (见 monitor_crypto.py)
+  // 这里用 CoinGecko 的市值+成交量衡量市场成熟度
   let fundScore = 0;
   if (info) {
     const md = info.market_data || {};
-    const chg7d = md.price_change_percentage_7d || 0;
-    const chg30d = md.price_change_percentage_30d || 0;
-
-    if (direction === 'bullish') {
-      if (chg7d > 0 && chg30d > 0) fundScore += 8;
-      else if (chg7d > 0 || chg30d > 0) fundScore += 5;
-      else fundScore += 2;
-    } else if (direction === 'bearish') {
-      if (chg7d < 0 && chg30d < 0) fundScore += 8;
-      else if (chg7d < 0 || chg30d < 0) fundScore += 5;
-      else fundScore += 2;
-    } else fundScore += 4;
-
-    const mcap = md.market_cap?.usd || 0;
-    if (mcap > 100e9) fundScore += 6; // large cap stability
-    else if (mcap > 10e9) fundScore += 4;
-    else fundScore += 2;
-
+    // 成交量 (10 pts) — 流动性越好，技术信号越可靠
     const vol = md.total_volume?.usd || 0;
-    if (vol > 10e9) fundScore += 6;
+    if (vol > 20e9) fundScore += 10;
+    else if (vol > 10e9) fundScore += 8;
+    else if (vol > 5e9) fundScore += 6;
     else if (vol > 1e9) fundScore += 4;
     else fundScore += 2;
+    // 市值 (10 pts) — 大盘资产信号更稳定
+    const mcap = md.market_cap?.usd || 0;
+    if (mcap > 500e9) fundScore += 10;
+    else if (mcap > 200e9) fundScore += 8;
+    else if (mcap > 100e9) fundScore += 6;
+    else fundScore += 4;
   } else fundScore += 10;
 
-  // ── News Sentiment (20 pts) ──
-  let newsScore = 10;
-  let posCount = 0, negCount = 0;
-  if (newsItems && newsItems.length > 0) {
-    const posW = ['涨','bull','surge','rally','gain','up','buy','strong','growth','利好','突破','买入','positive','rise','record','profit','green','soar','boost','outperform','recovery','adopt','launch','upgrade'];
-    const negW = ['跌','bear','crash','drop','fall','down','sell','weak','risk','暴跌','利空','抛售','卖出','negative','decline','loss','fear','warn','plunge','slump','cut','concern','tariff','hack','ban','crackdown'];
-    for (const n of newsItems) {
-      const t = (n.title||'').toLowerCase();
-      let pc = 0, nc = 0;
-      posW.forEach(w => { if (t.includes(w)) pc++; });
-      negW.forEach(w => { if (t.includes(w)) nc++; });
-      if (pc > nc) { n.sentiment = 'positive'; posCount++; }
-      else if (nc > pc) { n.sentiment = 'negative'; negCount++; }
-      else n.sentiment = 'neutral';
-    }
-    const posRatio = posCount / newsItems.length;
-    newsScore = Math.round(posRatio * 12) + Math.min(8, newsItems.length);
-    if (direction === 'bearish') newsScore = Math.round((negCount / newsItems.length) * 12) + Math.min(8, newsItems.length);
-  }
-
-  const totalScore = Math.round(Math.min(100, techScore + fundScore + newsScore));
+  const totalScore = Math.round(Math.min(100, techScore + fundScore));
 
   // ── Risk/Reward Calculation ──
   let entryPrice = curPrice;
   let stopLoss, takeProfit, rrRatio;
   let signal, sigClass;
 
-  if (direction === 'bullish' && totalScore >= 65) {
+  if (direction === 'bullish' && totalScore >= 55) {
     // LONG setup (优化参数: 止损2.0×ATR, 止盈5.0×ATR, R:R≥1.5)
     signal = '做多 LONG';
     sigClass = 'long';
@@ -546,7 +581,7 @@ function generateSignal(data1h, data4h, data1d, info, newsItems) {
       takeProfit = atrTarget2;
     }
     rrRatio = (takeProfit - entryPrice) / (entryPrice - stopLoss);
-  } else if (direction === 'bearish' && totalScore >= 65) {
+  } else if (direction === 'bearish' && totalScore >= 55) {
     // SHORT setup (优化参数: 止损2.0×ATR, 止盈5.0×ATR, R:R≥1.5)
     signal = '做空 SHORT';
     sigClass = 'short';
@@ -585,14 +620,14 @@ function generateSignal(data1h, data4h, data1d, info, newsItems) {
   if (sigClass === 'wait') { leverage = 0; levClass = 'l1'; }
 
   // ── Confidence / Win Rate Estimate ──
-  const confidence = totalScore >= 80 ? '高' : totalScore >= 65 ? '中高' : totalScore >= 50 ? '中' : '低';
-  const winRateEst = totalScore >= 80 ? 72 : totalScore >= 70 ? 65 : totalScore >= 60 ? 58 : totalScore >= 50 ? 50 : 40;
+  const confidence = totalScore >= 60 ? '高' : totalScore >= 50 ? '中高' : totalScore >= 40 ? '中' : '低';
+  const winRateEst = totalScore >= 60 ? 72 : totalScore >= 50 ? 65 : totalScore >= 40 ? 58 : totalScore >= 30 ? 50 : 40;
   const riskPct = sigClass !== 'wait' ? Math.abs((stopLoss - entryPrice) / entryPrice) * 100 : 0;
   const rewardPct = sigClass !== 'wait' ? Math.abs((takeProfit - entryPrice) / entryPrice) * 100 : 0;
 
   return {
     signal, sigClass, direction,
-    totalScore, techScore, fundScore, newsScore,
+    totalScore, techScore, fundScore,
     confidence, winRateEst,
     entryPrice, stopLoss, takeProfit, rrRatio,
     riskPct, rewardPct,
@@ -605,7 +640,6 @@ function generateSignal(data1h, data4h, data1d, info, newsItems) {
     trend1h, trend4h, trendD,
     nearestSupport, nearestResistance,
     nextSupport, nextResistance,
-    posCount, negCount,
   };
 }
 
@@ -649,7 +683,7 @@ function deriveTimeframes(hourlyData) {
 }
 
 // ── Render One Asset Column ──
-function renderAsset(asset, data, signal, newsItems) {
+function renderAsset(asset, data, signal) {
   const { id, s, n, icon } = asset;
   const colId = id === 'bitcoin' ? 'colBTC' : 'colETH';
   const col = document.getElementById(colId);
@@ -709,14 +743,12 @@ function renderAsset(asset, data, signal, newsItems) {
         <div class="plan-it ${sig.rrRatio >= 2 ? 'highlight' : ''}"><div class="plan-lbl">📊 盈亏比</div><div class="plan-val r">${rrStr}</div><div class="plan-sub">${sig.rrRatio >= 2 ? '✅ 优秀' : sig.rrRatio >= 1.5 ? '⚠️ 一般' : '❌ 不足'}</div></div>
       </div>
       <div style="display:flex;height:4px;border-radius:2px;overflow:hidden;margin-top:8px">
-        <div style="background:var(--accent);width:${sig.techScore/100*100}%"></div>
-        <div style="background:var(--green);width:${sig.fundScore/100*100}%"></div>
-        <div style="background:var(--yellow);width:${sig.newsScore/100*100}%"></div>
+        <div style="background:var(--accent);width:${sig.techScore/80*100}%"></div>
+        <div style="background:var(--green);width:${sig.fundScore/80*100}%"></div>
       </div>
       <div style="display:flex;gap:12px;margin-top:4px;font-size:.7rem;color:var(--t2)">
         <span>技术面 ${sig.techScore}/60</span>
         <span>基本面 ${sig.fundScore}/20</span>
-        <span>消息面 ${sig.newsScore}/20</span>
       </div>
     </div>
 
@@ -793,11 +825,6 @@ function renderAsset(asset, data, signal, newsItems) {
       <div id="fund_${id}">${renderFund(info, s)}</div>
     </div>
 
-    <!-- News -->
-    <div class="card">
-      <div class="ch">📰 消息面 <span style="font-size:.65rem;color:var(--t3);font-weight:400">正面${sig.posCount} 负面${sig.negCount}</span></div>
-      <div class="news-list" id="news_${id}">${renderNews(newsItems)}</div>
-    </div>
   `;
 
   // Render charts
@@ -843,16 +870,6 @@ function renderFund(info, symbol) {
     ['1年变化', `${md.price_change_percentage_1y?.toFixed(2)||'--'}%`, md.price_change_percentage_1y >= 0 ? 'g' : 'r'],
   ];
   return items.map(([l,v,c]) => `<div class="f-row"><span class="f-lbl">${l}</span><span class="f-val ${c}">${v}</span></div>`).join('');
-}
-
-function renderNews(items) {
-  if (!items?.length) return '<div style="color:var(--t3);text-align:center;padding:15px">暂无新闻数据<br><small>请检查网络后刷新</small></div>';
-  return items.map(n => {
-    const cls = n.sentiment === 'positive' ? 'p' : n.sentiment === 'negative' ? 'n' : 'x';
-    const lbl = n.sentiment === 'positive' ? '正面' : n.sentiment === 'negative' ? '负面' : '中性';
-    const d = n.date ? new Date(n.date).toLocaleDateString('zh-CN') : '';
-    return `<a class="news-it" href="${n.link}" target="_blank"><div class="news-tl">${n.title}</div><div class="news-meta"><span>${n.src||''}</span><span>${d}</span><span class="sent ${cls}">${lbl}</span></div></a>`;
-  }).join('');
 }
 
 function renderPriceChart(id, data, asset) {
@@ -942,10 +959,9 @@ async function refreshAsset(asset) {
   const { id, s } = asset;
   try {
     // Single price API call (14 days hourly data → derive all timeframes)
-    const [rawPrice, info, news] = await Promise.all([
+    const [rawPrice, info] = await Promise.all([
       fetchPriceData(id),
       fetchCoinInfo(id),
-      fetchNewsSafe(s),
     ]);
 
     const hourlyData = parseTFData(rawPrice);
@@ -959,9 +975,9 @@ async function refreshAsset(asset) {
       throw new Error(`${s} 数据点不足 (1H:${tf1h.closes.length} 4H:${tf4h.closes.length} D:${tf1d.closes.length})`);
     }
 
-    const signal = generateSignal(tf1h, tf4h, tf1d, info, news);
+    const signal = generateSignal(tf1h, tf4h, tf1d, info);
 
-    return { tf1h, tf4h, tf1d, info, news, signal };
+    return { tf1h, tf4h, tf1d, info, signal };
   } catch (err) {
     console.error(`Error fetching ${s}:`, err.message);
     return null;
@@ -984,34 +1000,67 @@ async function refreshAll() {
   const signalsFound = [];
 
   try {
-    // Fetch sequentially with delay, render each asset as it completes
-    for (let i = 0; i < ASSETS.length; i++) {
-      const asset = ASSETS[i];
-      statusEl.textContent = `获取 ${asset.s}...`;
-      const data = await refreshAsset(asset);
+    // 🚀 优先尝试 GitHub Actions 预计算的 signals.json
+    const signalsJSON = await loadFromSignalsJSON();
 
-      if (data) {
-        anySuccess = true;
-        assetData[asset.id] = data;
-        // Render immediately — don't wait for the other asset
-        renderAsset(asset, data, data.signal, data.news);
-        if (data.signal?.sigClass !== 'wait') signalsFound.push(`${asset.s}: ${data.signal.signal}`);
-      } else {
-        const colId = asset.id === 'bitcoin' ? 'colBTC' : 'colETH';
-        document.getElementById(colId).innerHTML =
-          `<div class="card" style="text-align:center;padding:30px"><p style="color:var(--red);font-weight:700">❌ ${asset.s} 数据获取失败</p><p style="color:var(--t3);font-size:.8rem;margin-top:4px">可能原因：网络连接问题或 API 限流</p><button class="btn btn-p" style="margin-top:10px" onclick="refreshAll()">🔄 重试</button></div>`;
+    if (signalsJSON) {
+      // 使用预计算数据（快速路径：无需 CoinGecko API）
+      for (const asset of ASSETS) {
+        const data = buildAssetDataFromJSON(signalsJSON, asset.id);
+        if (data) {
+          anySuccess = true;
+          assetData[asset.id] = data;
+          renderAsset(asset, data, data.signal);
+          if (data.signal?.sigClass !== 'wait') signalsFound.push(`${asset.s}: ${data.signal.signal}`);
+        } else {
+          // 单个资产数据缺失，回退到 API
+          console.log(`${asset.s} 在 signals.json 中无数据，尝试 API...`);
+          statusEl.textContent = `获取 ${asset.s} (API)...`;
+          const apiData = await refreshAsset(asset);
+          if (apiData) {
+            anySuccess = true;
+            assetData[asset.id] = apiData;
+            renderAsset(asset, apiData, apiData.signal);
+            if (apiData.signal?.sigClass !== 'wait') signalsFound.push(`${asset.s}: ${apiData.signal.signal}`);
+          } else {
+            showAssetError(asset);
+          }
+        }
       }
 
-      // 1.5s delay between assets to respect CoinGecko rate limits
-      if (i < ASSETS.length - 1) {
-        statusEl.textContent = `等待 ${ASSETS[i + 1].s}...`;
-        await new Promise(r => setTimeout(r, 1500));
+      // 更新状态栏显示数据来源
+      const ds = signalsJSON.data_sources || {};
+      const dsStr = Object.entries(ds).map(([a, s]) => `${a}:${s}`).join(', ');
+      statusEl.textContent = `✅ GitHub Actions (${dsStr}) · ${signalsJSON.update_time}`;
+      document.getElementById('liveInd').style.display = 'inline';
+    } else {
+      // signals.json 不可用，回退到 CoinGecko API（原有逻辑）
+      statusEl.textContent = '🔄 CoinGecko API...';
+      for (let i = 0; i < ASSETS.length; i++) {
+        const asset = ASSETS[i];
+        statusEl.textContent = `获取 ${asset.s} (CoinGecko)...`;
+        const data = await refreshAsset(asset);
+
+        if (data) {
+          anySuccess = true;
+          assetData[asset.id] = data;
+          renderAsset(asset, data, data.signal);
+          if (data.signal?.sigClass !== 'wait') signalsFound.push(`${asset.s}: ${data.signal.signal}`);
+        } else {
+          showAssetError(asset);
+        }
+
+        // 1.5s delay between assets to respect CoinGecko rate limits
+        if (i < ASSETS.length - 1) {
+          statusEl.textContent = `等待 ${ASSETS[i + 1].s}...`;
+          await new Promise(r => setTimeout(r, 1500));
+        }
       }
+
+      const now = new Date().toLocaleString('zh-CN');
+      statusEl.textContent = now;
+      document.getElementById('liveInd').style.display = 'inline';
     }
-
-    const now = new Date().toLocaleString('zh-CN');
-    statusEl.textContent = now;
-    document.getElementById('liveInd').style.display = 'inline';
 
     if (!anySuccess) {
       toast('❌ 数据获取完全失败，请检查网络连接后手动刷新', 'e');
@@ -1027,6 +1076,13 @@ async function refreshAll() {
     btn.textContent = '🔄 刷新';
     resetCountdown();
   }
+}
+
+// ── Helper: show asset error card ──
+function showAssetError(asset) {
+  const colId = asset.id === 'bitcoin' ? 'colBTC' : 'colETH';
+  document.getElementById(colId).innerHTML =
+    `<div class="card" style="text-align:center;padding:30px"><p style="color:var(--red);font-weight:700">❌ ${asset.s} 数据获取失败</p><p style="color:var(--t3);font-size:.8rem;margin-top:4px">可能原因：网络连接问题或 API 限流</p><button class="btn btn-p" style="margin-top:10px" onclick="refreshAll()">🔄 重试</button></div>`;
 }
 
 // ── Countdown Timer ──

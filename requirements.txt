@@ -8,3 +8,5 @@ jinja2>=3.1.0
 requests>=2.31.0
 feedparser>=6.0.0
 ta>=0.11.0
+# 可选：AI 策展需要（设置 ANTHROPIC_API_KEY 环境变量后启用）
+# anthropic>=0.30.0

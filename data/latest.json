@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-07-20 15:32:25",
+  "update_time": "2026-07-21 15:26:31",
   "stocks": {
     "a_stocks": [
       {
@@ -61,294 +61,47 @@
         "main_net_flow": null
       }
     ],
-    "hk_stocks": [
-      {
-        "market": "港股",
-        "code": "01810",
-        "name": "小米集团-W",
-        "symbol": "01810",
-        "industry": "Consumer Electronics",
-        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
-        "price": 27.74,
-        "open": 27.5,
-        "high": 27.86,
-        "low": 27.04,
-        "change_pct": 3.2,
-        "volume": 167547503,
-        "turnover": null,
-        "market_cap": 7113.89,
-        "pe": 15.41,
-        "cash_flow": 77.67,
-        "macd": 0.2082,
-        "macd_signal": -0.4568,
-        "macd_histogram": 1.33,
-        "rsi": 62.74,
-        "ma": {
-          "MA5": 26.8,
-          "MA10": 25.91,
-          "MA20": 24.22,
-          "MA60": 27.58
-        },
-        "main_net_flow": null
-      }
-    ],
-    "us_stocks": [
-      {
-        "market": "美股",
-        "code": "NVDA",
-        "name": "NVIDIA",
-        "symbol": "NVDA",
-        "industry": "Semiconductors",
-        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
-        "price": 206.36,
-        "open": 206.04,
-        "high": 207.74,
-        "low": 204.58,
-        "change_pct": 1.75,
-        "volume": 31807884,
-        "turnover": null,
-        "market_cap": 49970.35,
-        "pe": 31.59,
-        "cash_flow": 463.36,
-        "macd": 0.25,
-        "macd_signal": -0.7678,
-        "macd_histogram": 2.0356,
-        "rsi": 51.28,
-        "ma": {
-          "MA5": 208.17,
-          "MA10": 205.92,
-          "MA20": 201.91,
-          "MA60": 208.91
-        },
-        "main_net_flow": null
-      },
-      {
-        "market": "美股",
-        "code": "GOOG",
-        "name": "Alphabet (Google)",
-        "symbol": "GOOG",
-        "industry": "Internet Content & Information",
-        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
-        "price": 356.77,
-        "open": 350.17,
-        "high": 359.49,
-        "low": 350.01,
-        "change_pct": 3.08,
-        "volume": 4853379,
-        "turnover": null,
-        "market_cap": 43530.24,
-        "pe": 27.19,
-        "cash_flow": 279.22,
-        "macd": -1.5308,
-        "macd_signal": -1.8179,
-        "macd_histogram": 0.5741,
-        "rsi": 49.59,
-        "ma": {
-          "MA5": 356.85,
-          "MA10": 356.85,
-          "MA20": 353.44,
-          "MA60": 366.68
-        },
-        "main_net_flow": null
-      },
-      {
-        "market": "美股",
-        "code": "CRCL",
-        "name": "Circle",
-        "symbol": "CRCL",
-        "industry": "Capital Markets",
-        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
-        "price": 64.56,
-        "open": 60.95,
-        "high": 64.79,
-        "low": 60.93,
-        "change_pct": 6.78,
-        "volume": 3813098,
-        "turnover": null,
-        "market_cap": 172.56,
-        "pe": 33.32,
-        "cash_flow": 1.41,
-        "macd": -6.3369,
-        "macd_signal": -7.2095,
-        "macd_histogram": 1.7452,
-        "rsi": 41.57,
-        "ma": {
-          "MA5": 62.91,
-          "MA10": 63.59,
-          "MA20": 66.94,
-          "MA60": 90.01
-        },
-        "main_net_flow": null
-      },
-      {
-        "market": "美股",
-        "code": "MP",
-        "name": "MP Materials",
-        "symbol": "MP",
-        "industry": "Other Industrial Metals & Mining",
-        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
-        "price": 44.37,
-        "open": 45.36,
-        "high": 45.76,
-        "low": 44.02,
-        "change_pct": -1.92,
-        "volume": 1690863,
-        "turnover": null,
-        "market_cap": 78.99,
-        "pe": 44.62,
-        "cash_flow": 1.75,
-        "macd": -3.5077,
-        "macd_signal": -2.8299,
-        "macd_histogram": -1.3557,
-        "rsi": 30.11,
-        "ma": {
-          "MA5": 47.06,
-          "MA10": 49.22,
-          "MA20": 52.44,
-          "MA60": 59.42
-        },
-        "main_net_flow": null
-      },
-      {
-        "market": "美股",
-        "code": "PLTR",
-        "name": "Palantir",
-        "symbol": "PLTR",
-        "industry": "Software - Infrastructure",
-        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
-        "price": 133.35,
-        "open": 131.88,
-        "high": 135.38,
-        "low": 131.82,
-        "change_pct": 0.73,
-        "volume": 10068819,
-        "turnover": null,
-        "market_cap": 3196.8,
-        "pe": 149.83,
-        "cash_flow": 17.53,
-        "macd": 0.7238,
-        "macd_signal": -0.654,
-        "macd_histogram": 2.7556,
-        "rsi": 54.15,
-        "ma": {
-          "MA5": 133.53,
-          "MA10": 132.01,
-          "MA20": 125.5,
-          "MA60": 133.82
-        },
-        "main_net_flow": null
-      },
-      {
-        "market": "美股",
-        "code": "NOW",
-        "name": "ServiceNow",
-        "symbol": "NOW",
-        "industry": "Software - Application",
-        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
-        "price": 101.95,
-        "open": 100.52,
-        "high": 102.58,
-        "low": 98.43,
-        "change_pct": -1.25,
-        "volume": 8091443,
-        "turnover": null,
-        "market_cap": 1051.11,
-        "pe": 60.67,
-        "cash_flow": 51.08,
-        "macd": 0.465,
-        "macd_signal": 0.7475,
-        "macd_histogram": -0.565,
-        "rsi": 46.85,
-        "ma": {
-          "MA5": 103.76,
-          "MA10": 106.51,
-          "MA20": 102.75,
-          "MA60": 101.29
-        },
-        "main_net_flow": null
-      },
-      {
-        "market": "美股",
-        "code": "DDOG",
-        "name": "Datadog",
-        "symbol": "DDOG",
-        "industry": "Software - Application",
-        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
-        "price": 264.05,
-        "open": 258.58,
-        "high": 268.41,
-        "low": 257.08,
-        "change_pct": 2.07,
-        "volume": 776420,
-        "turnover": null,
-        "market_cap": 939.9,
-        "pe": 677.04,
-        "cash_flow": 9.37,
-        "macd": 10.2839,
-        "macd_signal": 11.2161,
-        "macd_histogram": -1.8643,
-        "rsi": 60.46,
-        "ma": {
-          "MA5": 264.05,
-          "MA10": 262.49,
-          "MA20": 251.97,
-          "MA60": 219.08
-        },
-        "main_net_flow": null
-      }
-    ],
+    "hk_stocks": [],
+    "us_stocks": [],
     "crypto": [
       {
         "market": "加密货币",
         "code": "bitcoin",
         "name": "Bitcoin",
         "symbol": "BTC",
-        "industry": "Smart Contract Platform",
-        "price": 64917,
+        "industry": null,
+        "price": 65863,
         "open": null,
-        "high": 64979,
-        "low": 63743,
-        "change_pct": 0.71,
-        "volume": 27482523736,
+        "high": null,
+        "low": null,
+        "change_pct": 2.81,
+        "volume": 31533381251.62,
         "turnover": null,
-        "market_cap": 13021.65,
-        "market_cap_rank": 1,
+        "market_cap": 13211.6,
+        "market_cap_rank": null,
         "pe": null,
         "funding_rate": null,
         "open_interest": null,
         "etf_inflow": null,
-        "etf_outflow": null,
-        "etf_net_flow": null,
-        "macd": 312.1303,
-        "macd_signal": 3.2587,
-        "macd_histogram": 617.7431,
-        "rsi": 55.61,
-        "ma": {
-          "MA5": 64420.83,
-          "MA10": 64168.51,
-          "MA20": 63465.28,
-          "MA60": 65168.85
-        },
+        "etf_outflow": 38.76,
+        "etf_net_flow": -38.76,
+        "macd": null,
+        "macd_signal": null,
+        "macd_histogram": null,
+        "rsi": null,
+        "ma": {},
         "main_net_flow": null,
         "onchain": {
-          "circulating_supply": 20059012.0,
-          "total_supply": 20059040.0,
-          "circ_ratio": 100.0,
-          "price_change_7d": 3.49882,
-          "price_change_30d": 1.57349,
-          "ath_pct": -48.51,
-          "ath_date": null,
-          "categories": [
-            "Smart Contract Platform",
-            "Layer 1 (L1)",
-            "FTX Holdings"
-          ],
           "hash_rate": null,
           "active_addresses": null,
-          "tx_fee_usd": null,
           "gas_gwei": null,
           "staking_apr": null,
-          "validators": null
+          "categories": [],
+          "price_change_7d": null,
+          "price_change_30d": null,
+          "ath_pct": null,
+          "ath_date": null,
+          "circ_ratio": null
         }
       },
       {
@@ -356,52 +109,39 @@
         "code": "ethereum",
         "name": "Ethereum",
         "symbol": "ETH",
-        "industry": "Smart Contract Platform",
-        "price": 1885.36,
+        "industry": null,
+        "price": 1933.4,
         "open": null,
-        "high": 1891.67,
-        "low": 1844.86,
-        "change_pct": 0.88,
-        "volume": 9461253350,
+        "high": null,
+        "low": null,
+        "change_pct": 4.15,
+        "volume": 11402027584.39,
         "turnover": null,
-        "market_cap": 2275.26,
-        "market_cap_rank": 2,
+        "market_cap": 2333.39,
+        "market_cap_rank": null,
         "pe": null,
         "funding_rate": null,
         "open_interest": null,
         "etf_inflow": null,
-        "etf_outflow": null,
-        "etf_net_flow": null,
-        "macd": 40.0974,
-        "macd_signal": 28.4128,
-        "macd_histogram": 23.3692,
-        "rsi": 60.93,
-        "ma": {
-          "MA5": 1864.36,
-          "MA10": 1849.96,
-          "MA20": 1798.92,
-          "MA60": 1785.59
-        },
+        "etf_outflow": 18.27,
+        "etf_net_flow": -18.27,
+        "macd": null,
+        "macd_signal": null,
+        "macd_histogram": null,
+        "rsi": null,
+        "ma": {},
         "main_net_flow": null,
         "onchain": {
-          "circulating_supply": 120682825.3811603,
-          "total_supply": 120682825.3811603,
-          "circ_ratio": 100.0,
-          "price_change_7d": 5.92155,
-          "price_change_30d": 8.6812,
-          "ath_pct": -61.88,
-          "ath_date": null,
-          "categories": [
-            "Smart Contract Platform",
-            "Layer 1 (L1)",
-            "Ethereum Ecosystem"
-          ],
           "hash_rate": null,
           "active_addresses": null,
-          "tx_fee_usd": null,
           "gas_gwei": null,
           "staking_apr": null,
-          "validators": null
+          "categories": [],
+          "price_change_7d": null,
+          "price_change_30d": null,
+          "ath_pct": null,
+          "ath_date": null,
+          "circ_ratio": null
         }
       }
     ]
@@ -416,20 +156,52 @@
       "published": ""
     },
     {
+      "id": "2edcb57809",
+      "title": "Your healthcare could now cost $185,500 in retirement — and that doesn’t include long-term care",
+      "summary": "Rising prices for care and managing chronic conditions helped drive up the forecast.",
+      "link": "https://www.marketwatch.com/story/your-healthcare-could-now-cost-185-500-in-retirement-and-that-doesnt-include-long-term-care-5f4f6da8?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 21 Jul 2026 04:01:00 GMT"
+    },
+    {
+      "id": "42507e61e5",
+      "title": "U.S. hits Canada with stiff new tariffs, escalating trade tensions",
+      "summary": "The Trump administration on Monday said it would slap 50% tariffs on some goods imported from Canada, in an effort to end what it sees as discriminatory trade practices by Ottawa against the U.S. auto",
+      "link": "https://www.marketwatch.com/story/u-s-hits-canada-with-stiff-new-tariffs-escalating-trade-tensions-4a97065f?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 21 Jul 2026 00:13:00 GMT"
+    },
+    {
+      "id": "6acdad030c",
+      "title": "I racked up $35,000 in credit-card debt. Should I file for bankruptcy?",
+      "summary": "“I’m also considering working with a credit-counseling agency or enrolling in a hardship program.”",
+      "link": "https://www.marketwatch.com/story/i-have-racked-up-35-000-in-credit-card-debt-should-i-file-for-bankruptcy-4c92d9e5?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 20 Jul 2026 23:15:00 GMT"
+    },
+    {
+      "id": "e1d91d4d77",
+      "title": "Why are gasoline prices rising faster than oil prices? Blame it on the ‘crack.’",
+      "summary": "The spread between the cost of barrels of gasoline and crude oil — known as the “crack spread” — has widened sharply.",
+      "link": "https://www.marketwatch.com/story/why-are-gasoline-prices-rising-faster-than-oil-prices-blame-it-on-the-crack-22b454e7?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 20 Jul 2026 22:55:00 GMT"
+    },
+    {
       "id": "10cbe2acb4",
       "title": "I will claim Social Security early. Why do so few people talk about the elephant in the room?",
       "summary": "“The strongest argument for claiming benefits earlier goes beyond the traditional break-even analyses.”",
       "link": "https://www.marketwatch.com/story/i-will-claim-social-security-early-why-do-so-few-people-talk-about-the-elephant-in-the-room-64820675?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Mon, 20 Jul 2026 15:15:00 GMT"
+      "published": "Mon, 20 Jul 2026 22:30:00 GMT"
     },
     {
-      "id": "ef52b13f0a",
-      "title": "Detecting cyclospora is ‘notoriously difficult.’ Here’s what the FDA’s apology to Taylor Farms means.",
-      "summary": "The FDA and CDC are investigating iceberg lettuce sold by Taylor Farms to confirm the source of the cyclospora outbreak",
-      "link": "https://www.marketwatch.com/story/detecting-cyclospora-is-notoriously-difficult-heres-what-the-fdas-apology-to-taylor-farms-means-cafd3a2a?mod=mw_rss_topstories",
+      "id": "6ceda31a26",
+      "title": "Why cheap Chinese AI models could actually be a boon for Nvidia, Micron and other chip stocks",
+      "summary": "Moonshot AI’s Kimi K3 could encourage a surge in enterprise workloads and provide a long-term tailwind to chip demand.",
+      "link": "https://www.marketwatch.com/story/why-cheap-chinese-ai-models-could-actually-be-a-boon-for-nvidia-micron-and-other-chip-stocks-8dd4baba?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Mon, 20 Jul 2026 15:05:00 GMT"
+      "published": "Mon, 20 Jul 2026 22:21:00 GMT"
     },
     {
       "id": "8ab9c1c116",
@@ -437,143 +209,337 @@
       "summary": "“We would rather pay taxes upfront than pay mortgage interest.”",
       "link": "https://www.marketwatch.com/story/we-have-8-million-in-traditional-iras-should-we-tap-them-to-buy-a-house-and-take-the-tax-hit-c2478daa?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Mon, 20 Jul 2026 14:46:00 GMT"
+      "published": "Mon, 20 Jul 2026 22:00:00 GMT"
     },
     {
-      "id": "d48f4035e1",
-      "title": "South Korean stocks weren’t a big deal in your emerging-markets fund. Artificial intelligence changed that.",
-      "summary": "Is your emerging-markets fund an accidental bet on AI? Returns for these two ETFs show why it might be.",
-      "link": "https://www.marketwatch.com/story/south-korean-stocks-werent-a-big-deal-in-your-emerging-markets-fund-artificial-intelligence-changed-that-21308089?mod=mw_rss_topstories",
+      "id": "dc4f6dcf6c",
+      "title": "Americans are skipping lettuce and salads as investigation into cyclospora outbreak continues",
+      "summary": "Shares of salad chains like Cava, Chipotle and Sweetgreen closed lower on Monday.",
+      "link": "https://www.marketwatch.com/story/americans-are-skipping-lettuce-and-salads-as-investigation-into-cyclospora-outbreak-continues-562499b6?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Mon, 20 Jul 2026 14:37:00 GMT"
+      "published": "Mon, 20 Jul 2026 21:44:00 GMT"
     },
     {
-      "id": "2050d52c38",
-      "title": "SpaceX gave investors intense FOMO. Now the decade’s hottest IPO represents a brutal reality check.",
-      "summary": "The hidden danger of chasing hyped initial public offerings? Skipping the fine print.",
-      "link": "https://www.marketwatch.com/story/spacex-gave-investors-intense-fomo-now-the-decades-hottest-ipo-represents-a-brutal-reality-check-54f878cb?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Mon, 20 Jul 2026 14:21:00 GMT"
-    },
-    {
-      "id": "8e839a2eee",
-      "title": "Can the ‘Magnificent Seven’ save a stock market that might be doomed without them?",
-      "summary": "Apple, Amazon, Nvidia and peers are quietly coming back to life, and that could easily jolt this sleepy stock market back into gear.",
-      "link": "https://www.marketwatch.com/story/can-the-magnificent-seven-save-a-stock-market-that-might-be-doomed-without-them-f88988f3?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Mon, 20 Jul 2026 14:15:00 GMT"
-    },
-    {
-      "id": "75b7d4955a",
-      "title": "Global oil prices reverse to below $87 a barrel after report of new Iran cease-fire proposal",
-      "summary": "Oil prices took a dive into the red on Monday morning, reversing an earlier sharp rally, after a report of a 10-day cease-fire proposal between the U.S. and Iran sparked a sharp decline in energy pric",
+      "id": "25e234660d",
+      "title": "Global oil prices settle at one-month high despite new Iran ceasefire proposal, as blockade on Saudi Arabia by Yemen’s Houthis keeps market on edge",
+      "summary": "Oil prices settled at one-month highs in volatile trading on Monday as traders weighed escalating geopolitical tensions following a fresh barrage of strikes across the Middle East over the weekend aga",
       "link": "https://www.marketwatch.com/story/oil-prices-surge-stock-futures-dip-as-fighting-between-u-s-and-iran-intensifies-6fb37c79?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Mon, 20 Jul 2026 14:04:00 GMT"
+      "published": "Mon, 20 Jul 2026 21:11:00 GMT"
     },
     {
-      "id": "a3b02b4dfe",
-      "title": "Forget Nvidia. These 5 S&P 500 stocks are quietly going all in on AI.",
-      "summary": "The “Mag Seven” has become the “Bag Seven.” Sharp tech investors are looking elsewhere.",
-      "link": "https://www.marketwatch.com/story/forget-nvidia-these-5-s-p-500-stocks-are-quietly-going-all-in-on-ai-68642f84?mod=mw_rss_topstories",
+      "id": "7c7f83def3",
+      "title": "Lumentum’s stock just got a lot more interesting — and Barclays has turned bullish",
+      "summary": "A Barclays analyst now recommends Lumentum’s stock after a period of substantial underperformance relative to the broader chip sector.",
+      "link": "https://www.marketwatch.com/story/lumentums-stock-just-got-a-lot-more-interesting-and-barclays-has-turned-bullish-e00e3395?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Mon, 20 Jul 2026 13:46:00 GMT"
+      "published": "Mon, 20 Jul 2026 21:05:00 GMT"
     },
     {
-      "id": "89a1997de4",
-      "title": "As the battle for AI supremacy intensifies, Trump White House reportedly contemplates a ban on Chinese models",
-      "summary": "Not only do Chinese models perform many of the same tasks for a fraction of the cost of U.S. versions, their prospective flotations may dilute the appetite for mega-IPOs like Anthropic and OpenAI.",
-      "link": "https://www.marketwatch.com/story/as-the-battle-for-ai-supremacy-intensifies-trump-white-house-reportedly-contemplates-a-ban-on-chinese-models-c8d9a0a0?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Mon, 20 Jul 2026 13:44:00 GMT"
-    },
-    {
-      "id": "24a1bf1cc4",
-      "title": "Scared of the AI trade? Here are three investment themes Goldman Sachs is offering instead.",
-      "summary": "Semiconductors have fallen into a bear market, prompting some investors to look elsewhere",
-      "link": "https://www.marketwatch.com/story/scared-of-the-ai-trade-here-are-three-investment-themes-instead-says-goldman-sachs-e620a510?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Mon, 20 Jul 2026 13:30:00 GMT"
-    },
-    {
-      "id": "213d2c26a2",
-      "title": "Hamas names Khalil Al-Hayya as new overall leader",
+      "id": "425ef08025",
+      "title": "Quantum dynamics CFO sells $50,399 in company stock",
       "summary": "",
-      "link": "https://www.investing.com/news/commodities-news/hamas-names-khalil-alhayya-as-new-overall-leader-4801259",
+      "link": "https://www.investing.com/news/insider-trading-news/quantum-dynamics-cfo-sells-50399-in-company-stock-93CH-4801990",
       "source": "www.investing.com",
-      "published": "2026-07-20 15:12:44"
+      "published": "2026-07-21 07:22:30"
     },
     {
-      "id": "b3e0e2d9bd",
-      "title": "Why is Elbit Systems stock rallying today?",
+      "id": "2235797845",
+      "title": "UK grocery inflation eases to 2.6% in July, lowest since December",
       "summary": "",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-elbit-systems-stock-rallying-today-93CH-4801346",
+      "link": "https://www.investing.com/news/economic-indicators/uk-grocery-inflation-eases-to-26-in-july-lowest-since-december-93CH-4801989",
       "source": "www.investing.com",
-      "published": "2026-07-20 15:12:12"
+      "published": "2026-07-21 07:22:16"
     },
     {
-      "id": "2373db7020",
-      "title": "Xtrackers updates index methodology for three thematic ETFs",
+      "id": "9dcfe0e537",
+      "title": "Form 4 Acies Acquisition Corp For: 21 July",
       "summary": "",
-      "link": "https://www.investing.com/news/company-news/xtrackers-updates-index-methodology-for-three-thematic-etfs-93CH-4801344",
+      "link": "https://www.investing.com/news/filings/form-4-acies-acquisition-corp-for-21-july-93CH-4801988",
       "source": "www.investing.com",
-      "published": "2026-07-20 15:10:50"
+      "published": "2026-07-21 07:21:49"
     },
     {
-      "id": "e268fe951d",
-      "title": "Morocco stocks lower at close of trade; Moroccan All Shares down 0.22%",
+      "id": "0529ce7a00",
+      "title": "Form 4 Acies Acquisition Corp For: 21 July",
       "summary": "",
-      "link": "https://www.investing.com/news/stock-market-news/morocco-stocks-lower-at-close-of-trade-moroccan-all-shares-down-022-4801343",
+      "link": "https://www.investing.com/news/filings/form-4-acies-acquisition-corp-for-21-july-93CH-4801987",
       "source": "www.investing.com",
-      "published": "2026-07-20 15:10:03"
+      "published": "2026-07-21 07:21:48"
     },
     {
-      "id": "bac25d148c",
-      "title": "SanDisk stock analysis: brutal drawdown meets transformative fundamentals",
+      "id": "ad6fdedf40",
+      "title": "Form 4 Acies Acquisition Corp For: 21 July",
       "summary": "",
-      "link": "https://www.investing.com/news/stock-market-news/sandisk-stock-analysis-brutal-drawdown-meets-transformative-fundamentals-93CH-4801342",
+      "link": "https://www.investing.com/news/filings/form-4-acies-acquisition-corp-for-21-july-93CH-4801986",
       "source": "www.investing.com",
-      "published": "2026-07-20 15:07:21"
+      "published": "2026-07-21 07:21:47"
     },
     {
-      "id": "bea906cb40",
-      "title": "Farnborough opens with Boeing, Airbus orders and air defence focus",
+      "id": "678ce480bb",
+      "title": "Form 4 Acies Acquisition Corp For: 21 July",
       "summary": "",
-      "link": "https://www.investing.com/news/stock-market-news/conflicts-aircraft-orders-in-focus-as-farnborough-airshow-kicks-off-4799790",
+      "link": "https://www.investing.com/news/filings/form-4-acies-acquisition-corp-for-21-july-93CH-4801985",
       "source": "www.investing.com",
-      "published": "2026-07-20 15:06:53"
+      "published": "2026-07-21 07:21:41"
     },
     {
-      "id": "83dcf1057d",
-      "title": "Elbit Systems stock rises on $370M U.S. border contracts",
+      "id": "5d45d2ed78",
+      "title": "Form 4 Kinder Morgan Inc For: 21 July",
       "summary": "",
-      "link": "https://www.investing.com/news/stock-market-news/elbit-systems-stock-rises-on-370m-us-border-contracts-93CH-4801341",
+      "link": "https://www.investing.com/news/filings/form-4-kinder-morgan-inc-for-21-july-93CH-4801984",
       "source": "www.investing.com",
-      "published": "2026-07-20 15:06:50"
+      "published": "2026-07-21 07:21:40"
     },
     {
-      "id": "d08d18002e",
-      "title": "New UK leader Burnham says he will never take risks with economy",
+      "id": "669ee78534",
+      "title": "Form 144 RADCOM LTD For: 21 July",
       "summary": "",
-      "link": "https://www.investing.com/news/economy-news/new-uk-leader-burnham-says-he-will-never-take-risks-with-economy-4801340",
+      "link": "https://www.investing.com/news/filings/form-144-radcom-ltd-for-21-july-93CH-4801983",
       "source": "www.investing.com",
-      "published": "2026-07-20 15:06:36"
+      "published": "2026-07-21 07:21:40"
     },
     {
-      "id": "9cbd445263",
-      "title": "GLG Partners increases stake in Central Asia Metals to 6%",
+      "id": "5f75b1093f",
+      "title": "Form 4 People Incorporated For: 21 July",
       "summary": "",
-      "link": "https://www.investing.com/news/company-news/glg-partners-increases-stake-in-central-asia-metals-to-6-93CH-4801339",
+      "link": "https://www.investing.com/news/filings/form-4-people-incorporated-for-21-july-93CH-4801982",
       "source": "www.investing.com",
-      "published": "2026-07-20 15:05:58"
+      "published": "2026-07-21 07:21:34"
     },
     {
-      "id": "03a375cfc8",
-      "title": "UK’s new PM Burnham pledges no economic risks, plans cost relief",
+      "id": "e75eae3f2b",
+      "title": "Form 4 People Incorporated For: 21 July",
       "summary": "",
-      "link": "https://www.investing.com/news/economy-news/uks-new-pm-burnham-pledges-no-economic-risks-plans-cost-relief-4801338",
+      "link": "https://www.investing.com/news/filings/form-4-people-incorporated-for-21-july-93CH-4801981",
       "source": "www.investing.com",
-      "published": "2026-07-20 15:05:48"
+      "published": "2026-07-21 07:21:33"
     }
-  ]
+  ],
+  "briefing": {
+    "date": "2026-07-21",
+    "update_time": "2026-07-21 14:10:30",
+    "candidate_count": 20,
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-21\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n> ⚠️ 本简报由启发式算法自动生成（未配置 ANTHROPIC_API_KEY）。\n> 设置 `ANTHROPIC_API_KEY` 环境变量即可启用 AI 深度策展与毒舌点评。\n\n---\n\n### 1. 📌 Flock Credibility Lost as It Repeatedly Lies to City Councils, Police, & Public (来源: Hacker News)\n- **核心干货**：详情请查看原链接\n- **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。\n- **🔗 传送门**：[点击直达原链接](https://www.aclu.org/news/privacy-technology/tracking-alpr-cameras/flock-safety-credibility-lost-as-it-repeatedly-lies-to-city-councils-police-departments-and-public-across-the-country)\n\n---\n\n### 2. 📌 Who's afraid of Chinese models? (来源: Hacker News)\n- **核心干货**：详情请查看原链接\n- **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。\n- **🔗 传送门**：[点击直达原链接](https://stratechery.com/2026/whos-afraid-of-chinese-models/)\n\n---\n\n### 3. 📌 Jelly UI: Soft-body physics for native HTML form controls (来源: Hacker News)\n- **核心干货**：详情请查看原链接\n- **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。\n- **🔗 传送门**：[点击直达原链接](https://jelly-ui.com/)\n\n---\n\n### 🗣️ 今日顶男金句\n> 代码写得烂不丢人，丢人的是不写测试。技术债的利息比你想象的高。\n",
+    "briefing_items": [
+      {
+        "quote": "代码写得烂不丢人，丢人的是不写测试。技术债的利息比你想象的高。"
+      }
+    ],
+    "candidates": [
+      {
+        "id": "hn:48986731",
+        "title": "Flock Credibility Lost as It Repeatedly Lies to City Councils, Police, & Public",
+        "summary": "",
+        "url": "https://www.aclu.org/news/privacy-technology/tracking-alpr-cameras/flock-safety-credibility-lost-as-it-repeatedly-lies-to-city-councils-police-departments-and-public-across-the-country",
+        "source": "Hacker News",
+        "score": 296,
+        "comments": 53
+      },
+      {
+        "id": "hn:48977128",
+        "title": "Who's afraid of Chinese models?",
+        "summary": "",
+        "url": "https://stratechery.com/2026/whos-afraid-of-chinese-models/",
+        "source": "Hacker News",
+        "score": 487,
+        "comments": 335
+      },
+      {
+        "id": "hn:48981620",
+        "title": "Jelly UI: Soft-body physics for native HTML form controls",
+        "summary": "",
+        "url": "https://jelly-ui.com/",
+        "source": "Hacker News",
+        "score": 422,
+        "comments": 144
+      },
+      {
+        "id": "hn:48983382",
+        "title": "Human mathematicians are being outcounterexampled",
+        "summary": "",
+        "url": "https://xenaproject.wordpress.com/2026/07/20/human-mathematicians-are-being-outcounterexampled/",
+        "source": "Hacker News",
+        "score": 291,
+        "comments": 103
+      },
+      {
+        "id": "hn:48982681",
+        "title": "Nativ: Run frontier open models locally on your Mac",
+        "summary": "",
+        "url": "https://blaizzy.github.io/nativ/",
+        "source": "Hacker News",
+        "score": 238,
+        "comments": 82
+      },
+      {
+        "id": "hn:48986091",
+        "title": "Jellyfin founder Andrew leaves team",
+        "summary": "",
+        "url": "https://forum.jellyfin.org/t-project-leadership-changes",
+        "source": "Hacker News",
+        "score": 199,
+        "comments": 128
+      },
+      {
+        "id": "hn:48981703",
+        "title": "Kimi Work",
+        "summary": "",
+        "url": "https://www.kimi.com/products/kimi-work",
+        "source": "Hacker News",
+        "score": 488,
+        "comments": 203
+      },
+      {
+        "id": "hn:48987863",
+        "title": "Five US tech giants' hidden debts soar to $1.65T on opaque AI funding",
+        "summary": "",
+        "url": "https://asia.nikkei.com/business/technology/five-us-tech-giants-hidden-debts-soar-to-1.65tn-on-opaque-ai-funding",
+        "source": "Hacker News",
+        "score": 137,
+        "comments": 34
+      },
+      {
+        "id": "arxiv:2607.18225v1",
+        "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+        "summary": "We propose one-step and two-step methods for policy learning with retrieval-augmented generation (RAG). We formulate RAG-based action selection under the potential outcome framework. In the two-step method, vector search retrieves action-specific neighboring evidence in an embedding space, the gener",
+        "url": "https://arxiv.org/abs/2607.18225v1",
+        "source": "ArXiv",
+        "categories": [
+          "econ.EM",
+          "cs.LG",
+          "math.ST",
+          "stat.ME",
+          "stat.ML"
+        ],
+        "arxiv_id": "2607.18225v1"
+      },
+      {
+        "id": "arxiv:2607.18199v1",
+        "title": "PPL-Factory: Task-Aware and Budget-Aware Data Selection from Language Modeling to Reasoning",
+        "summary": "Not all training samples contribute equally to large language model fine-tuning. Selecting informative training samples can reduce the computational cost while preserving downstream performance. Many existing data selection methods rely on indirect heuristics, such as data quality, diversity or reas",
+        "url": "https://arxiv.org/abs/2607.18199v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.CL",
+          "cs.LG"
+        ],
+        "arxiv_id": "2607.18199v1"
+      },
+      {
+        "id": "arxiv:2607.18235v1",
+        "title": "Automated Discovery Has No Universally Superior Harness",
+        "summary": "Autonomous discovery systems such as OpenEvolve and TTT-Discover are often used as general-purpose harnesses. However, in practice these are composite systems combining several design choices about archives, parent selection, exploration, and budget allocation into a single recipe. Because discovery",
+        "url": "https://arxiv.org/abs/2607.18235v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.CL",
+          "cs.AI"
+        ],
+        "arxiv_id": "2607.18235v1"
+      },
+      {
+        "id": "arxiv:2607.18228v1",
+        "title": "Logical Judgments Under Pressure: Diagnosing Syllogistic Stability with Learned Soft Prefixes",
+        "summary": "To test how correct logical judgments respond to learned context, we prepend a soft prefix to an exactly labeled syllogistic reasoning benchmark while keeping the model fixed. Soft prefixes are opaque continuous vectors, so we characterize them through the behavior they induce across controlled vari",
+        "url": "https://arxiv.org/abs/2607.18228v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.AI",
+          "cs.CL"
+        ],
+        "arxiv_id": "2607.18228v1"
+      },
+      {
+        "id": "hn:48987822",
+        "title": "Incremental – A library for incremental computations",
+        "summary": "",
+        "url": "https://github.com/janestreet/incremental",
+        "source": "Hacker News",
+        "score": 87,
+        "comments": 16
+      },
+      {
+        "id": "hn:48987831",
+        "title": "A Koi Pond Mosaic Made from 10 Pounds of 3D Printer Waste",
+        "summary": "",
+        "url": "https://www.instructables.com/A-Koi-Pond-Mosaic-Made-From-10-Pounds-of-3D-Printe/",
+        "source": "Hacker News",
+        "score": 22,
+        "comments": 12
+      },
+      {
+        "id": "hn:48988196",
+        "title": "Do we just want slaves?",
+        "summary": "",
+        "url": "https://www.yashthapliyal.com/blog/do-we-just-want-slaves",
+        "source": "Hacker News",
+        "score": 31,
+        "comments": 35
+      },
+      {
+        "id": "arxiv:2607.18236v1",
+        "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+        "summary": "Pretrained dense visual features from Vision Transformers (ViTs) are powerful yet have been underutilized in robot learning. Modern robot policies either compress each observation into a single global token, or rely on visual backbones trained from scratch, sacrificing both fine-grained spatial deta",
+        "url": "https://arxiv.org/abs/2607.18236v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.RO",
+          "cs.LG"
+        ],
+        "arxiv_id": "2607.18236v1"
+      },
+      {
+        "id": "arxiv:2607.18230v1",
+        "title": "Simple Domain Generalization for Strong Pixel-Level Image Tampering Detection in Modern VLMs",
+        "summary": "Modern vision-language models (VLMs) have significantly improved image generation and editing capabilities, making pixel-level image tampering detection increasingly important yet challenging under cross-model and out-of-distribution shifts. This work studies domain generalization for pixel-level im",
+        "url": "https://arxiv.org/abs/2607.18230v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.CV",
+          "cs.AI"
+        ],
+        "arxiv_id": "2607.18230v1"
+      },
+      {
+        "id": "arxiv:2607.18213v1",
+        "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+        "summary": "Pruning long context for coding agents has been a vital technology for efficient context management. While existing context pruning methods such as SWE-Pruner realize this by attaching a separate code classifier, we find the agent itself encodes internal representations indicating the relevance of c",
+        "url": "https://arxiv.org/abs/2607.18213v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.CL",
+          "cs.SE"
+        ],
+        "arxiv_id": "2607.18213v1"
+      },
+      {
+        "id": "arxiv:2607.18209v1",
+        "title": "Unveiling Invariant and Transferable Latent Factors Across Heterogeneous Environments via ATLAS",
+        "summary": "This paper considers a multi-environment factor model in which high-dimensional covariates are collected from heterogeneous environments, with auxiliary labels available in a subset of these environments. The joint distribution of the covariates may vary across environments, whereas the latent struc",
+        "url": "https://arxiv.org/abs/2607.18209v1",
+        "source": "ArXiv",
+        "categories": [
+          "math.ST",
+          "cs.LG",
+          "stat.ME",
+          "stat.ML"
+        ],
+        "arxiv_id": "2607.18209v1"
+      },
+      {
+        "id": "arxiv:2607.18200v1",
+        "title": "Learning Adaptive Safety Margins for Visual Navigation",
+        "summary": "Robots in cluttered indoor spaces often fail not because they cannot generate collision-free paths, but because a fixed safety margin is mis-calibrated: conservative margins cause detours and timeouts, while permissive margins lead to near-boundary shortcuts under perception bias. Diffusion-based pl",
+        "url": "https://arxiv.org/abs/2607.18200v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.RO",
+          "cs.AI"
+        ],
+        "arxiv_id": "2607.18200v1"
+      }
+    ],
+    "ai_curated": false
+  }
 }

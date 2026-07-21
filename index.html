@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📊 投资观察面板 | 2026-07-20 15:32 UTC+8 (北京时间)</title>
+    <title>📊 投资观察面板 | 2026-07-21 15:26 UTC+8 (北京时间)</title>
     <style>
         /* ===== 全局样式 ===== */
         :root {
@@ -396,6 +396,105 @@
         .btn-tool.accent:hover {
             background: rgba(74,144,217,0.12);
         }
+
+        /* ===== 每日简报区 ===== */
+        .briefing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+        .briefing-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 18px;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .briefing-card:hover {
+            border-color: var(--accent-purple);
+            background: var(--bg-hover);
+        }
+        .briefing-card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .briefing-num {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--accent-purple);
+        }
+        .briefing-source-tag {
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 10px;
+            background: rgba(139,92,246,0.12);
+            color: var(--accent-purple);
+        }
+        .briefing-title-link {
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+        .briefing-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            line-height: 1.4;
+            color: var(--text-primary);
+        }
+        .briefing-title-link:hover .briefing-title {
+            color: var(--accent-blue);
+        }
+        .briefing-section {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .briefing-label {
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .briefing-text {
+            font-size: 0.84rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .briefing-commentary {
+            color: var(--accent-yellow);
+            font-style: italic;
+            border-left: 2px solid rgba(240,185,11,0.3);
+            padding-left: 10px;
+        }
+        .briefing-quote-card {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, rgba(139,92,246,0.08), rgba(74,144,217,0.04));
+            border: 1px solid rgba(139,92,246,0.2);
+            border-radius: 12px;
+            padding: 16px 24px;
+            text-align: center;
+        }
+        .briefing-quote-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+        .briefing-quote-text {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            font-style: italic;
+        }
+
+        @media (max-width: 900px) {
+            .briefing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
         .sync-status {
             font-size: 0.72rem;
             color: var(--text-muted);
@@ -421,7 +520,7 @@
                     <span>港股 <span class="status-dot open"></span></span>
                     <span>美股 <span class="status-dot open"></span></span>
                 </div>
-                <span class="update-badge">🕐 更新: 2026-07-20 15:32 UTC+8 (北京时间)</span>
+                <span class="update-badge">🕐 更新: 2026-07-21 15:26 UTC+8 (北京时间)</span>
             </div>
         </div>
     </header>
@@ -445,17 +544,17 @@
         <div class="summary-grid">
             <div class="summary-card">
                 <div class="card-label">📈 总跟踪标的</div>
-                <div class="card-value">12</div>
-                <div class="card-sub">A股 2 · 港股 1 · 美股 7 · 加密 2</div>
+                <div class="card-value">4</div>
+                <div class="card-sub">A股 2 · 港股 0 · 美股 0 · 加密 2</div>
             </div>
             <div class="summary-card">
                 <div class="card-label">🟢 今日上涨</div>
-                <div class="card-value up">9</div>
+                <div class="card-value up">3</div>
                 <div class="card-sub">占比 75.0%</div>
             </div>
             <div class="summary-card">
                 <div class="card-label">🔴 今日下跌</div>
-                <div class="card-value down">3</div>
+                <div class="card-value down">1</div>
                 <div class="card-sub">占比 25.0%</div>
             </div>
             <div class="summary-card">
@@ -464,6 +563,27 @@
                 <div class="card-sub">最近24h内</div>
             </div>
         </div>
+
+        <!-- 每日硬核情报简报 -->
+        
+        <section class="market-section">
+            <div class="section-header">
+                <h2>🗞️ 每日硬核情报简报</h2>
+                <span class="section-badge" style="background: rgba(139,92,246,0.15); color: var(--accent-purple);">2026-07-21</span>
+                
+            </div>
+            <div class="briefing-grid">
+                
+                
+                <div class="briefing-quote-card">
+                    <div class="briefing-quote-label">🗣️ 今日顶男金句</div>
+                    <div class="briefing-quote-text">"代码写得烂不丢人，丢人的是不写测试。技术债的利息比你想象的高。"</div>
+                </div>
+                
+                
+            </div>
+        </section>
+        
 
         <!-- A股表格 -->
         
@@ -566,290 +686,16 @@
         <!-- 港股表格 -->
         
         <section class="market-section">
-            <div class="section-header">
-                <h2>🇭🇰 港股</h2>
-                <span class="section-badge badge-hk">港交所</span>
-            </div>
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>名称/代码</th>
-                            <th>行业</th>
-                            <th>主营业务</th>
-                            <th>收盘价</th>
-                            <th>涨跌幅</th>
-                            <th>市值(亿)</th>
-                            <th>PE</th>
-                            <th>现金流(亿)</th>
-                            <th>MACD</th>
-                            <th>RSI</th>
-                            <th>MA5</th>
-                            <th>MA20</th>
-                        </tr>
-                    </thead>
-                    <tbody id="hk-stock-table-body">
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">小米集团-W</span>
-                                <span class="stock-code">01810</span>
-                            </td>
-                            <td><span class="stock-industry">Consumer Electronics</span></td>
-                            <td><span class="stock-business" title="Xiaomi Corporation, an investment holding company, engages in the development an...">Xiaomi Corporation, an investment holding company, engages in the development an...</span></td>
-                            <td class="price">HK$27.74</td>
-                            <td>
-                                <span class="change-badge positive">
-                                    +3.2%
-                                </span>
-                            </td>
-                            <td>7113.89</td>
-                            <td>15.41</td>
-                            <td class="up">
-                                77.67
-                            </td>
-                            <td class="indicator bullish">
-                                0.2082
-                            </td>
-                            <td class="indicator bullish">
-                                62.74
-                            </td>
-                            <td>26.8</td>
-                            <td>24.22</td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
+            <div class="section-header"><h2>🇭🇰 港股</h2></div>
+            <div class="empty-state">尚未配置港股标的，请在 config.py 中添加</div>
         </section>
         
 
         <!-- 美股表格 -->
         
         <section class="market-section">
-            <div class="section-header">
-                <h2>🇺🇸 美股</h2>
-                <span class="section-badge badge-us">NASDAQ/NYSE</span>
-            </div>
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>名称/代码</th>
-                            <th>行业</th>
-                            <th>主营业务</th>
-                            <th>收盘价</th>
-                            <th>涨跌幅</th>
-                            <th>市值(亿)</th>
-                            <th>PE</th>
-                            <th>现金流(亿)</th>
-                            <th>MACD</th>
-                            <th>RSI</th>
-                            <th>MA5</th>
-                            <th>MA20</th>
-                        </tr>
-                    </thead>
-                    <tbody id="us-stock-table-body">
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">NVIDIA</span>
-                                <span class="stock-code">NVDA</span>
-                            </td>
-                            <td><span class="stock-industry">Semiconductors</span></td>
-                            <td><span class="stock-business" title="NVIDIA Corporation operates as a data center scale AI infrastructure company in ...">NVIDIA Corporation operates as a data center scale AI infrastructure company in ...</span></td>
-                            <td class="price">$206.36</td>
-                            <td>
-                                <span class="change-badge positive">
-                                    +1.75%
-                                </span>
-                            </td>
-                            <td>49970.35</td>
-                            <td>31.59</td>
-                            <td class="up">
-                                463.36
-                            </td>
-                            <td class="indicator bullish">
-                                0.25
-                            </td>
-                            <td class="indicator bullish">
-                                51.28
-                            </td>
-                            <td>208.17</td>
-                            <td>201.91</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">Alphabet (Google)</span>
-                                <span class="stock-code">GOOG</span>
-                            </td>
-                            <td><span class="stock-industry">Internet Content &amp; Information</span></td>
-                            <td><span class="stock-business" title="Alphabet Inc. offers various products and platforms in the United States, Europe...">Alphabet Inc. offers various products and platforms in the United States, Europe...</span></td>
-                            <td class="price">$356.77</td>
-                            <td>
-                                <span class="change-badge positive">
-                                    +3.08%
-                                </span>
-                            </td>
-                            <td>43530.24</td>
-                            <td>27.19</td>
-                            <td class="up">
-                                279.22
-                            </td>
-                            <td class="indicator bearish">
-                                -1.5308
-                            </td>
-                            <td class="indicator bearish">
-                                49.59
-                            </td>
-                            <td>356.85</td>
-                            <td>353.44</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">Circle</span>
-                                <span class="stock-code">CRCL</span>
-                            </td>
-                            <td><span class="stock-industry">Capital Markets</span></td>
-                            <td><span class="stock-business" title="Circle Internet Group, Inc. operates as a platform, network, and market infrastr...">Circle Internet Group, Inc. operates as a platform, network, and market infrastr...</span></td>
-                            <td class="price">$64.56</td>
-                            <td>
-                                <span class="change-badge positive">
-                                    +6.78%
-                                </span>
-                            </td>
-                            <td>172.56</td>
-                            <td>33.32</td>
-                            <td class="up">
-                                1.41
-                            </td>
-                            <td class="indicator bearish">
-                                -6.3369
-                            </td>
-                            <td class="indicator bearish">
-                                41.57
-                            </td>
-                            <td>62.91</td>
-                            <td>66.94</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">MP Materials</span>
-                                <span class="stock-code">MP</span>
-                            </td>
-                            <td><span class="stock-industry">Other Industrial Metals &amp; Mining</span></td>
-                            <td><span class="stock-business" title="MP Materials Corp., together with its subsidiaries, produces rare earth material...">MP Materials Corp., together with its subsidiaries, produces rare earth material...</span></td>
-                            <td class="price">$44.37</td>
-                            <td>
-                                <span class="change-badge negative">
-                                    -1.92%
-                                </span>
-                            </td>
-                            <td>78.99</td>
-                            <td>44.62</td>
-                            <td class="up">
-                                1.75
-                            </td>
-                            <td class="indicator bearish">
-                                -3.5077
-                            </td>
-                            <td class="indicator bearish">
-                                30.11
-                            </td>
-                            <td>47.06</td>
-                            <td>52.44</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">Palantir</span>
-                                <span class="stock-code">PLTR</span>
-                            </td>
-                            <td><span class="stock-industry">Software - Infrastructure</span></td>
-                            <td><span class="stock-business" title="Palantir Technologies Inc. builds and deploys software platforms for the intelli...">Palantir Technologies Inc. builds and deploys software platforms for the intelli...</span></td>
-                            <td class="price">$133.35</td>
-                            <td>
-                                <span class="change-badge positive">
-                                    +0.73%
-                                </span>
-                            </td>
-                            <td>3196.8</td>
-                            <td>149.83</td>
-                            <td class="up">
-                                17.53
-                            </td>
-                            <td class="indicator bullish">
-                                0.7238
-                            </td>
-                            <td class="indicator bullish">
-                                54.15
-                            </td>
-                            <td>133.53</td>
-                            <td>125.5</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">ServiceNow</span>
-                                <span class="stock-code">NOW</span>
-                            </td>
-                            <td><span class="stock-industry">Software - Application</span></td>
-                            <td><span class="stock-business" title="ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...">ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...</span></td>
-                            <td class="price">$101.95</td>
-                            <td>
-                                <span class="change-badge negative">
-                                    -1.25%
-                                </span>
-                            </td>
-                            <td>1051.11</td>
-                            <td>60.67</td>
-                            <td class="up">
-                                51.08
-                            </td>
-                            <td class="indicator bullish">
-                                0.465
-                            </td>
-                            <td class="indicator bearish">
-                                46.85
-                            </td>
-                            <td>103.76</td>
-                            <td>102.75</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <span class="stock-name">Datadog</span>
-                                <span class="stock-code">DDOG</span>
-                            </td>
-                            <td><span class="stock-industry">Software - Application</span></td>
-                            <td><span class="stock-business" title="Datadog, Inc. operates an observability and security platform for cloud applicat...">Datadog, Inc. operates an observability and security platform for cloud applicat...</span></td>
-                            <td class="price">$264.05</td>
-                            <td>
-                                <span class="change-badge positive">
-                                    +2.07%
-                                </span>
-                            </td>
-                            <td>939.9</td>
-                            <td>677.04</td>
-                            <td class="up">
-                                9.37
-                            </td>
-                            <td class="indicator bullish">
-                                10.2839
-                            </td>
-                            <td class="indicator bullish">
-                                60.46
-                            </td>
-                            <td>264.05</td>
-                            <td>251.97</td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
+            <div class="section-header"><h2>🇺🇸 美股</h2></div>
+            <div class="empty-state">尚未配置美股标的，请在 config.py 中添加</div>
         </section>
         
 
@@ -886,35 +732,35 @@
                                 <span class="stock-name">Bitcoin</span>
                                 <span class="stock-code">BTC</span>
                             </td>
-                            <td><span class="stock-industry">Smart Contract Platform</span></td>
-                            <td class="price">$64917</td>
+                            <td><span class="stock-industry">-</span></td>
+                            <td class="price">$65863</td>
                             <td>
                                 <span class="change-badge positive">
-                                    +0.71%
+                                    +2.81%
                                 </span>
                             </td>
-                            <td>13021.65</td>
-                            <td>#1</td>
+                            <td>13211.6</td>
+                            <td>#-</td>
                             <td class="">
                                 -
-                            </td>
-                            <td class="">
-                                -
-                            </td>
-                            <td class="indicator bullish">
-                                312.1303
-                            </td>
-                            <td class="indicator bullish">
-                                55.61
-                            </td>
-                            <td class="up">
-                                +3.5%
-                            </td>
-                            <td class="up">
-                                +1.6%
                             </td>
                             <td class="down">
-                                -48.5%
+                                -38.76
+                            </td>
+                            <td class="indicator neutral">
+                                -
+                            </td>
+                            <td class="indicator neutral">
+                                -
+                            </td>
+                            <td class="">
+                                -%
+                            </td>
+                            <td class="">
+                                -%
+                            </td>
+                            <td class="">
+                                -%
                             </td>
                         </tr>
                         
@@ -923,35 +769,35 @@
                                 <span class="stock-name">Ethereum</span>
                                 <span class="stock-code">ETH</span>
                             </td>
-                            <td><span class="stock-industry">Smart Contract Platform</span></td>
-                            <td class="price">$1885.36</td>
+                            <td><span class="stock-industry">-</span></td>
+                            <td class="price">$1933.4</td>
                             <td>
                                 <span class="change-badge positive">
-                                    +0.88%
+                                    +4.15%
                                 </span>
                             </td>
-                            <td>2275.26</td>
-                            <td>#2</td>
+                            <td>2333.39</td>
+                            <td>#-</td>
                             <td class="">
                                 -
-                            </td>
-                            <td class="">
-                                -
-                            </td>
-                            <td class="indicator bullish">
-                                40.0974
-                            </td>
-                            <td class="indicator bullish">
-                                60.93
-                            </td>
-                            <td class="up">
-                                +5.9%
-                            </td>
-                            <td class="up">
-                                +8.7%
                             </td>
                             <td class="down">
-                                -61.9%
+                                -18.27
+                            </td>
+                            <td class="indicator neutral">
+                                -
+                            </td>
+                            <td class="indicator neutral">
+                                -
+                            </td>
+                            <td class="">
+                                -%
+                            </td>
+                            <td class="">
+                                -%
+                            </td>
+                            <td class="">
+                                -%
                             </td>
                         </tr>
                         
@@ -972,6 +818,7 @@
                         📊 持仓量(OI): <span>-</span>
                     </span>
                     
+                    <span>📈 ETF净流动: <span class="down">-38.76亿$</span></span>
                     
                     
                     
@@ -979,10 +826,7 @@
                     
                     
                     
-                    <span>🔄 流通占比: 100.0%</span>
                     
-                    
-                    <span>🏷️ 赛道: Smart Contract Platform, Layer 1 (L1), FTX Holdings</span>
                     
                 </div>
             </div>
@@ -998,6 +842,7 @@
                         📊 持仓量(OI): <span>-</span>
                     </span>
                     
+                    <span>📈 ETF净流动: <span class="down">-18.27亿$</span></span>
                     
                     
                     
@@ -1005,10 +850,7 @@
                     
                     
                     
-                    <span>🔄 流通占比: 100.0%</span>
                     
-                    
-                    <span>🏷️ 赛道: Smart Contract Platform, Layer 1 (L1), Ethereum Ecosystem</span>
                     
                 </div>
             </div>
@@ -1038,23 +880,67 @@
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.marketwatch.com/story/i-will-claim-social-security-early-why-do-so-few-people-talk-about-the-elephant-in-the-room-64820675?mod=mw_rss_topstories" target="_blank" rel="noopener">
-                        <div class="news-title">I will claim Social Security early. Why do so few people talk about the elephant in the room?</div>
-                        <div class="news-summary">“The strongest argument for claiming benefits earlier goes beyond the traditional break-even analyses.”</div>
+                    <a href="https://www.marketwatch.com/story/your-healthcare-could-now-cost-185-500-in-retirement-and-that-doesnt-include-long-term-care-5f4f6da8?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">Your healthcare could now cost $185,500 in retirement — and that doesn’t include long-term care</div>
+                        <div class="news-summary">Rising prices for care and managing chronic conditions helped drive up the forecast.</div>
                         <div class="news-meta">
                             <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Mon, 20 Jul 2026 15:15:00 GMT</span>
+                            <span>Tue, 21 Jul 2026 04:01:00 GMT</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.marketwatch.com/story/detecting-cyclospora-is-notoriously-difficult-heres-what-the-fdas-apology-to-taylor-farms-means-cafd3a2a?mod=mw_rss_topstories" target="_blank" rel="noopener">
-                        <div class="news-title">Detecting cyclospora is ‘notoriously difficult.’ Here’s what the FDA’s apology to Taylor Farms means.</div>
-                        <div class="news-summary">The FDA and CDC are investigating iceberg lettuce sold by Taylor Farms to confirm the source of the cyclospora outbreak</div>
+                    <a href="https://www.marketwatch.com/story/u-s-hits-canada-with-stiff-new-tariffs-escalating-trade-tensions-4a97065f?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">U.S. hits Canada with stiff new tariffs, escalating trade tensions</div>
+                        <div class="news-summary">The Trump administration on Monday said it would slap 50% tariffs on some goods imported from Canada, in an effort to end what it sees as discriminatory trade practices by Ottawa against the U.S. auto</div>
                         <div class="news-meta">
                             <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Mon, 20 Jul 2026 15:05:00 GMT</span>
+                            <span>Tue, 21 Jul 2026 00:13:00 GMT</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.marketwatch.com/story/i-have-racked-up-35-000-in-credit-card-debt-should-i-file-for-bankruptcy-4c92d9e5?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">I racked up $35,000 in credit-card debt. Should I file for bankruptcy?</div>
+                        <div class="news-summary">“I’m also considering working with a credit-counseling agency or enrolling in a hardship program.”</div>
+                        <div class="news-meta">
+                            <span class="news-source">feeds.marketwatch.com</span>
+                            <span>Mon, 20 Jul 2026 23:15:00 GMT</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.marketwatch.com/story/why-are-gasoline-prices-rising-faster-than-oil-prices-blame-it-on-the-crack-22b454e7?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">Why are gasoline prices rising faster than oil prices? Blame it on the ‘crack.’</div>
+                        <div class="news-summary">The spread between the cost of barrels of gasoline and crude oil — known as the “crack spread” — has widened sharply.</div>
+                        <div class="news-meta">
+                            <span class="news-source">feeds.marketwatch.com</span>
+                            <span>Mon, 20 Jul 2026 22:55:00 GMT</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.marketwatch.com/story/i-will-claim-social-security-early-why-do-so-few-people-talk-about-the-elephant-in-the-room-64820675?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">I will claim Social Security early. Why do so few people talk about the elephant in the room?</div>
+                        <div class="news-summary">“The strongest argument for claiming benefits earlier goes beyond the traditional break-even analyses.”</div>
+                        <div class="news-meta">
+                            <span class="news-source">feeds.marketwatch.com</span>
+                            <span>Mon, 20 Jul 2026 22:30:00 GMT</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.marketwatch.com/story/why-cheap-chinese-ai-models-could-actually-be-a-boon-for-nvidia-micron-and-other-chip-stocks-8dd4baba?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">Why cheap Chinese AI models could actually be a boon for Nvidia, Micron and other chip stocks</div>
+                        <div class="news-summary">Moonshot AI’s Kimi K3 could encourage a surge in enterprise workloads and provide a long-term tailwind to chip demand.</div>
+                        <div class="news-meta">
+                            <span class="news-source">feeds.marketwatch.com</span>
+                            <span>Mon, 20 Jul 2026 22:21:00 GMT</span>
                         </div>
                     </a>
                 </div>
@@ -1065,194 +951,150 @@
                         <div class="news-summary">“We would rather pay taxes upfront than pay mortgage interest.”</div>
                         <div class="news-meta">
                             <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Mon, 20 Jul 2026 14:46:00 GMT</span>
+                            <span>Mon, 20 Jul 2026 22:00:00 GMT</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.marketwatch.com/story/south-korean-stocks-werent-a-big-deal-in-your-emerging-markets-fund-artificial-intelligence-changed-that-21308089?mod=mw_rss_topstories" target="_blank" rel="noopener">
-                        <div class="news-title">South Korean stocks weren’t a big deal in your emerging-markets fund. Artificial intelligence changed that.</div>
-                        <div class="news-summary">Is your emerging-markets fund an accidental bet on AI? Returns for these two ETFs show why it might be.</div>
+                    <a href="https://www.marketwatch.com/story/americans-are-skipping-lettuce-and-salads-as-investigation-into-cyclospora-outbreak-continues-562499b6?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">Americans are skipping lettuce and salads as investigation into cyclospora outbreak continues</div>
+                        <div class="news-summary">Shares of salad chains like Cava, Chipotle and Sweetgreen closed lower on Monday.</div>
                         <div class="news-meta">
                             <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Mon, 20 Jul 2026 14:37:00 GMT</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="news-card">
-                    <a href="https://www.marketwatch.com/story/spacex-gave-investors-intense-fomo-now-the-decades-hottest-ipo-represents-a-brutal-reality-check-54f878cb?mod=mw_rss_topstories" target="_blank" rel="noopener">
-                        <div class="news-title">SpaceX gave investors intense FOMO. Now the decade’s hottest IPO represents a brutal reality check.</div>
-                        <div class="news-summary">The hidden danger of chasing hyped initial public offerings? Skipping the fine print.</div>
-                        <div class="news-meta">
-                            <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Mon, 20 Jul 2026 14:21:00 GMT</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="news-card">
-                    <a href="https://www.marketwatch.com/story/can-the-magnificent-seven-save-a-stock-market-that-might-be-doomed-without-them-f88988f3?mod=mw_rss_topstories" target="_blank" rel="noopener">
-                        <div class="news-title">Can the ‘Magnificent Seven’ save a stock market that might be doomed without them?</div>
-                        <div class="news-summary">Apple, Amazon, Nvidia and peers are quietly coming back to life, and that could easily jolt this sleepy stock market back into gear.</div>
-                        <div class="news-meta">
-                            <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Mon, 20 Jul 2026 14:15:00 GMT</span>
+                            <span>Mon, 20 Jul 2026 21:44:00 GMT</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
                     <a href="https://www.marketwatch.com/story/oil-prices-surge-stock-futures-dip-as-fighting-between-u-s-and-iran-intensifies-6fb37c79?mod=mw_rss_topstories" target="_blank" rel="noopener">
-                        <div class="news-title">Global oil prices reverse to below $87 a barrel after report of new Iran cease-fire proposal</div>
-                        <div class="news-summary">Oil prices took a dive into the red on Monday morning, reversing an earlier sharp rally, after a report of a 10-day cease-fire proposal between the U.S. and Iran sparked a sharp decline in energy pric</div>
+                        <div class="news-title">Global oil prices settle at one-month high despite new Iran ceasefire proposal, as blockade on Saudi Arabia by Yemen’s Houthis keeps market on edge</div>
+                        <div class="news-summary">Oil prices settled at one-month highs in volatile trading on Monday as traders weighed escalating geopolitical tensions following a fresh barrage of strikes across the Middle East over the weekend aga</div>
                         <div class="news-meta">
                             <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Mon, 20 Jul 2026 14:04:00 GMT</span>
+                            <span>Mon, 20 Jul 2026 21:11:00 GMT</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.marketwatch.com/story/forget-nvidia-these-5-s-p-500-stocks-are-quietly-going-all-in-on-ai-68642f84?mod=mw_rss_topstories" target="_blank" rel="noopener">
-                        <div class="news-title">Forget Nvidia. These 5 S&amp;P 500 stocks are quietly going all in on AI.</div>
-                        <div class="news-summary">The “Mag Seven” has become the “Bag Seven.” Sharp tech investors are looking elsewhere.</div>
+                    <a href="https://www.marketwatch.com/story/lumentums-stock-just-got-a-lot-more-interesting-and-barclays-has-turned-bullish-e00e3395?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">Lumentum’s stock just got a lot more interesting — and Barclays has turned bullish</div>
+                        <div class="news-summary">A Barclays analyst now recommends Lumentum’s stock after a period of substantial underperformance relative to the broader chip sector.</div>
                         <div class="news-meta">
                             <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Mon, 20 Jul 2026 13:46:00 GMT</span>
+                            <span>Mon, 20 Jul 2026 21:05:00 GMT</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.marketwatch.com/story/as-the-battle-for-ai-supremacy-intensifies-trump-white-house-reportedly-contemplates-a-ban-on-chinese-models-c8d9a0a0?mod=mw_rss_topstories" target="_blank" rel="noopener">
-                        <div class="news-title">As the battle for AI supremacy intensifies, Trump White House reportedly contemplates a ban on Chinese models</div>
-                        <div class="news-summary">Not only do Chinese models perform many of the same tasks for a fraction of the cost of U.S. versions, their prospective flotations may dilute the appetite for mega-IPOs like Anthropic and OpenAI.</div>
-                        <div class="news-meta">
-                            <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Mon, 20 Jul 2026 13:44:00 GMT</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="news-card">
-                    <a href="https://www.marketwatch.com/story/scared-of-the-ai-trade-here-are-three-investment-themes-instead-says-goldman-sachs-e620a510?mod=mw_rss_topstories" target="_blank" rel="noopener">
-                        <div class="news-title">Scared of the AI trade? Here are three investment themes Goldman Sachs is offering instead.</div>
-                        <div class="news-summary">Semiconductors have fallen into a bear market, prompting some investors to look elsewhere</div>
-                        <div class="news-meta">
-                            <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Mon, 20 Jul 2026 13:30:00 GMT</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="news-card">
-                    <a href="https://www.investing.com/news/commodities-news/hamas-names-khalil-alhayya-as-new-overall-leader-4801259" target="_blank" rel="noopener">
-                        <div class="news-title">Hamas names Khalil Al-Hayya as new overall leader</div>
+                    <a href="https://www.investing.com/news/insider-trading-news/quantum-dynamics-cfo-sells-50399-in-company-stock-93CH-4801990" target="_blank" rel="noopener">
+                        <div class="news-title">Quantum dynamics CFO sells $50,399 in company stock</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-07-20 15:12:44</span>
+                            <span>2026-07-21 07:22:30</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.investing.com/news/stock-market-news/why-is-elbit-systems-stock-rallying-today-93CH-4801346" target="_blank" rel="noopener">
-                        <div class="news-title">Why is Elbit Systems stock rallying today?</div>
+                    <a href="https://www.investing.com/news/economic-indicators/uk-grocery-inflation-eases-to-26-in-july-lowest-since-december-93CH-4801989" target="_blank" rel="noopener">
+                        <div class="news-title">UK grocery inflation eases to 2.6% in July, lowest since December</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-07-20 15:12:12</span>
+                            <span>2026-07-21 07:22:16</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.investing.com/news/company-news/xtrackers-updates-index-methodology-for-three-thematic-etfs-93CH-4801344" target="_blank" rel="noopener">
-                        <div class="news-title">Xtrackers updates index methodology for three thematic ETFs</div>
+                    <a href="https://www.investing.com/news/filings/form-4-acies-acquisition-corp-for-21-july-93CH-4801988" target="_blank" rel="noopener">
+                        <div class="news-title">Form 4 Acies Acquisition Corp For: 21 July</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-07-20 15:10:50</span>
+                            <span>2026-07-21 07:21:49</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.investing.com/news/stock-market-news/morocco-stocks-lower-at-close-of-trade-moroccan-all-shares-down-022-4801343" target="_blank" rel="noopener">
-                        <div class="news-title">Morocco stocks lower at close of trade; Moroccan All Shares down 0.22%</div>
+                    <a href="https://www.investing.com/news/filings/form-4-acies-acquisition-corp-for-21-july-93CH-4801987" target="_blank" rel="noopener">
+                        <div class="news-title">Form 4 Acies Acquisition Corp For: 21 July</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-07-20 15:10:03</span>
+                            <span>2026-07-21 07:21:48</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.investing.com/news/stock-market-news/sandisk-stock-analysis-brutal-drawdown-meets-transformative-fundamentals-93CH-4801342" target="_blank" rel="noopener">
-                        <div class="news-title">SanDisk stock analysis: brutal drawdown meets transformative fundamentals</div>
+                    <a href="https://www.investing.com/news/filings/form-4-acies-acquisition-corp-for-21-july-93CH-4801986" target="_blank" rel="noopener">
+                        <div class="news-title">Form 4 Acies Acquisition Corp For: 21 July</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-07-20 15:07:21</span>
+                            <span>2026-07-21 07:21:47</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.investing.com/news/stock-market-news/conflicts-aircraft-orders-in-focus-as-farnborough-airshow-kicks-off-4799790" target="_blank" rel="noopener">
-                        <div class="news-title">Farnborough opens with Boeing, Airbus orders and air defence focus</div>
+                    <a href="https://www.investing.com/news/filings/form-4-acies-acquisition-corp-for-21-july-93CH-4801985" target="_blank" rel="noopener">
+                        <div class="news-title">Form 4 Acies Acquisition Corp For: 21 July</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-07-20 15:06:53</span>
+                            <span>2026-07-21 07:21:41</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.investing.com/news/stock-market-news/elbit-systems-stock-rises-on-370m-us-border-contracts-93CH-4801341" target="_blank" rel="noopener">
-                        <div class="news-title">Elbit Systems stock rises on $370M U.S. border contracts</div>
+                    <a href="https://www.investing.com/news/filings/form-4-kinder-morgan-inc-for-21-july-93CH-4801984" target="_blank" rel="noopener">
+                        <div class="news-title">Form 4 Kinder Morgan Inc For: 21 July</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-07-20 15:06:50</span>
+                            <span>2026-07-21 07:21:40</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.investing.com/news/economy-news/new-uk-leader-burnham-says-he-will-never-take-risks-with-economy-4801340" target="_blank" rel="noopener">
-                        <div class="news-title">New UK leader Burnham says he will never take risks with economy</div>
+                    <a href="https://www.investing.com/news/filings/form-144-radcom-ltd-for-21-july-93CH-4801983" target="_blank" rel="noopener">
+                        <div class="news-title">Form 144 RADCOM LTD For: 21 July</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-07-20 15:06:36</span>
+                            <span>2026-07-21 07:21:40</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.investing.com/news/company-news/glg-partners-increases-stake-in-central-asia-metals-to-6-93CH-4801339" target="_blank" rel="noopener">
-                        <div class="news-title">GLG Partners increases stake in Central Asia Metals to 6%</div>
+                    <a href="https://www.investing.com/news/filings/form-4-people-incorporated-for-21-july-93CH-4801982" target="_blank" rel="noopener">
+                        <div class="news-title">Form 4 People Incorporated For: 21 July</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-07-20 15:05:58</span>
+                            <span>2026-07-21 07:21:34</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.investing.com/news/economy-news/uks-new-pm-burnham-pledges-no-economic-risks-plans-cost-relief-4801338" target="_blank" rel="noopener">
-                        <div class="news-title">UK’s new PM Burnham pledges no economic risks, plans cost relief</div>
+                    <a href="https://www.investing.com/news/filings/form-4-people-incorporated-for-21-july-93CH-4801981" target="_blank" rel="noopener">
+                        <div class="news-title">Form 4 People Incorporated For: 21 July</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-07-20 15:05:48</span>
+                            <span>2026-07-21 07:21:33</span>
                         </div>
                     </a>
                 </div>
@@ -1277,7 +1119,7 @@
 
         // ===== 状态 =====
         var autoRefreshEnabled = localStorage.getItem('auto-refresh') !== 'false';
-        var pageUpdateTime = '2026-07-20 15:32 UTC+8 (北京时间)';  // 页面生成时间
+        var pageUpdateTime = '2026-07-21 15:26 UTC+8 (北京时间)';  // 页面生成时间
         var countdownSeconds = REFRESH_INTERVAL;
         var dataCheckTimer = null;
         var countdownTimer = null;
@@ -1737,6 +1579,40 @@
                 html += '</a></div>';
             }
             grid.innerHTML = html;
+        }
+
+        function updateBriefingSection(briefing) {
+            var section = document.querySelector('.briefing-grid');
+            if (!section || !briefing || !briefing.briefing_items) return;
+            var html = '';
+            for (var i = 0; i < briefing.briefing_items.length; i++) {
+                var item = briefing.briefing_items[i];
+                if (item.quote) {
+                    html += '<div class="briefing-quote-card">';
+                    html += '<div class="briefing-quote-label">🗣️ 今日顶男金句</div>';
+                    html += '<div class="briefing-quote-text">"' + escHtml(item.quote) + '"</div>';
+                    html += '</div>';
+                } else {
+                    html += '<div class="briefing-card">';
+                    html += '<div class="briefing-card-header">';
+                    html += '<span class="briefing-num">#' + (i + 1) + '</span>';
+                    html += '<span class="briefing-source-tag">' + escHtml(item.source || '') + '</span>';
+                    html += '</div>';
+                    html += '<a href="' + escAttr(item.url) + '" target="_blank" rel="noopener" class="briefing-title-link">';
+                    html += '<div class="briefing-title">📌 ' + escHtml(item.title) + '</div>';
+                    html += '</a>';
+                    html += '<div class="briefing-section">';
+                    html += '<div class="briefing-label">💡 核心干货</div>';
+                    html += '<div class="briefing-text">' + escHtml(item.summary) + '</div>';
+                    html += '</div>';
+                    html += '<div class="briefing-section">';
+                    html += '<div class="briefing-label">🎯 毒舌点评</div>';
+                    html += '<div class="briefing-text briefing-commentary">' + escHtml(item.commentary) + '</div>';
+                    html += '</div>';
+                    html += '</div>';
+                }
+            }
+            section.innerHTML = html;
         }
 
         // ===== 工具函数 =====

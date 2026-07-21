@@ -396,6 +396,105 @@
         .btn-tool.accent:hover {
             background: rgba(74,144,217,0.12);
         }
+
+        /* ===== 每日简报区 ===== */
+        .briefing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+        .briefing-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 18px;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .briefing-card:hover {
+            border-color: var(--accent-purple);
+            background: var(--bg-hover);
+        }
+        .briefing-card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .briefing-num {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--accent-purple);
+        }
+        .briefing-source-tag {
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 10px;
+            background: rgba(139,92,246,0.12);
+            color: var(--accent-purple);
+        }
+        .briefing-title-link {
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+        .briefing-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            line-height: 1.4;
+            color: var(--text-primary);
+        }
+        .briefing-title-link:hover .briefing-title {
+            color: var(--accent-blue);
+        }
+        .briefing-section {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .briefing-label {
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .briefing-text {
+            font-size: 0.84rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .briefing-commentary {
+            color: var(--accent-yellow);
+            font-style: italic;
+            border-left: 2px solid rgba(240,185,11,0.3);
+            padding-left: 10px;
+        }
+        .briefing-quote-card {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, rgba(139,92,246,0.08), rgba(74,144,217,0.04));
+            border: 1px solid rgba(139,92,246,0.2);
+            border-radius: 12px;
+            padding: 16px 24px;
+            text-align: center;
+        }
+        .briefing-quote-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+        .briefing-quote-text {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            font-style: italic;
+        }
+
+        @media (max-width: 900px) {
+            .briefing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
         .sync-status {
             font-size: 0.72rem;
             color: var(--text-muted);
@@ -464,6 +563,47 @@
                 <div class="card-sub">最近24h内</div>
             </div>
         </div>
+
+        <!-- 每日硬核情报简报 -->
+        {% if briefing and briefing.briefing_items %}
+        <section class="market-section">
+            <div class="section-header">
+                <h2>🗞️ 每日硬核情报简报</h2>
+                <span class="section-badge" style="background: rgba(139,92,246,0.15); color: var(--accent-purple);">{{ briefing.date }}</span>
+                {% if briefing.ai_curated %}
+                <span style="font-size:0.7rem;color:var(--accent-green);margin-left:4px;">🤖 AI策展</span>
+                {% endif %}
+            </div>
+            <div class="briefing-grid">
+                {% for item in briefing.briefing_items %}
+                {% if item.quote %}
+                <div class="briefing-quote-card">
+                    <div class="briefing-quote-label">🗣️ 今日顶男金句</div>
+                    <div class="briefing-quote-text">"{{ item.quote }}"</div>
+                </div>
+                {% else %}
+                <div class="briefing-card">
+                    <div class="briefing-card-header">
+                        <span class="briefing-num">#{{ loop.index }}</span>
+                        <span class="briefing-source-tag">{{ item.source }}</span>
+                    </div>
+                    <a href="{{ item.url }}" target="_blank" rel="noopener" class="briefing-title-link">
+                        <div class="briefing-title">📌 {{ item.title }}</div>
+                    </a>
+                    <div class="briefing-section">
+                        <div class="briefing-label">💡 核心干货</div>
+                        <div class="briefing-text">{{ item.summary }}</div>
+                    </div>
+                    <div class="briefing-section">
+                        <div class="briefing-label">🎯 毒舌点评</div>
+                        <div class="briefing-text briefing-commentary">{{ item.commentary }}</div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
 
         <!-- A股表格 -->
         {% if a_stocks %}
@@ -1288,6 +1428,40 @@
                 html += '</a></div>';
             }
             grid.innerHTML = html;
+        }
+
+        function updateBriefingSection(briefing) {
+            var section = document.querySelector('.briefing-grid');
+            if (!section || !briefing || !briefing.briefing_items) return;
+            var html = '';
+            for (var i = 0; i < briefing.briefing_items.length; i++) {
+                var item = briefing.briefing_items[i];
+                if (item.quote) {
+                    html += '<div class="briefing-quote-card">';
+                    html += '<div class="briefing-quote-label">🗣️ 今日顶男金句</div>';
+                    html += '<div class="briefing-quote-text">"' + escHtml(item.quote) + '"</div>';
+                    html += '</div>';
+                } else {
+                    html += '<div class="briefing-card">';
+                    html += '<div class="briefing-card-header">';
+                    html += '<span class="briefing-num">#' + (i + 1) + '</span>';
+                    html += '<span class="briefing-source-tag">' + escHtml(item.source || '') + '</span>';
+                    html += '</div>';
+                    html += '<a href="' + escAttr(item.url) + '" target="_blank" rel="noopener" class="briefing-title-link">';
+                    html += '<div class="briefing-title">📌 ' + escHtml(item.title) + '</div>';
+                    html += '</a>';
+                    html += '<div class="briefing-section">';
+                    html += '<div class="briefing-label">💡 核心干货</div>';
+                    html += '<div class="briefing-text">' + escHtml(item.summary) + '</div>';
+                    html += '</div>';
+                    html += '<div class="briefing-section">';
+                    html += '<div class="briefing-label">🎯 毒舌点评</div>';
+                    html += '<div class="briefing-text briefing-commentary">' + escHtml(item.commentary) + '</div>';
+                    html += '</div>';
+                    html += '</div>';
+                }
+            }
+            section.innerHTML = html;
         }
 
         // ===== 工具函数 =====

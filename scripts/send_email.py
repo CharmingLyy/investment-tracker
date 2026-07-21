@@ -34,7 +34,7 @@ def is_configured():
 def send_signal_email(asset, signal, direction, score, entry_price, stop_loss,
                       take_profit, rr_ratio, risk_pct, reward_pct, confidence,
                       win_rate_est, trend_summary, cur_price, atr_pct,
-                      tech_score=0, fund_score=0, news_score=0):
+                      tech_score=0, fund_score=0):
     """
     发送交易信号邮件通知
 
@@ -42,7 +42,7 @@ def send_signal_email(asset, signal, direction, score, entry_price, stop_loss,
       asset: str — 资产名称 "BTC" / "ETH"
       signal: str — "做多 LONG" / "做空 SHORT"
       direction: str — "bullish" / "bearish"
-      score: int — 综合评分 0-100
+      score: int — 综合评分 (满分 75: 技术55 + 基本面20)
       entry_price: float — 入场价
       stop_loss: float — 止损价
       take_profit: float — 止盈价
@@ -56,7 +56,6 @@ def send_signal_email(asset, signal, direction, score, entry_price, stop_loss,
       atr_pct: float — ATR 波动率百分比
       tech_score: int — 技术面得分
       fund_score: int — 基本面得分
-      news_score: int — 消息面得分
 
     返回: True/False — 是否发送成功
     """
@@ -64,10 +63,10 @@ def send_signal_email(asset, signal, direction, score, entry_price, stop_loss,
     # ── 构建邮件 ──
     direction_emoji = "🟢" if direction == "bullish" else "🔴"
     rr_color = "✅" if rr_ratio >= 2 else "⚠️" if rr_ratio >= 1.5 else "❌"
-    score_color = "🟢" if score >= 70 else "🟡" if score >= 55 else "🔴"
+    score_color = "🟢" if score >= 55 else "🟡" if score >= 40 else "🔴"
 
     update_time = datetime.now().strftime("%Y-%m-%d %H:%M Beijing")
-    subject = f"{direction_emoji} [{asset}] {signal} — 评分 {score}/100 | {datetime.now().strftime('%H:%M')}"
+    subject = f"{direction_emoji} [{asset}] {signal} — 评分 {score} | {datetime.now().strftime('%H:%M')}"
 
     # HTML 格式邮件正文
     html_body = f"""
@@ -90,18 +89,17 @@ def send_signal_email(asset, signal, direction, score, entry_price, stop_loss,
 
         <!-- 评分 -->
         <div style="background: #181f2a; border-radius: 8px; padding: 12px; margin-bottom: 12px; text-align: center;">
-          <div style="font-size: 32px; font-weight: 900;">{score_color} {score}<span style="font-size: 16px; color: #8b949e;">/100</span></div>
+          <div style="font-size: 32px; font-weight: 900;">{score_color} {score}<span style="font-size: 16px; color: #8b949e;"> 分</span></div>
           <div style="font-size: 12px; color: #8b949e; margin-top: 4px;">
             置信度: <b style="color: #e6edf3;">{confidence}</b> &nbsp;|&nbsp;
             预估胜率: <b style="color: #e6edf3;">{win_rate_est}%</b>
           </div>
           <div style="display: flex; height: 4px; border-radius: 2px; overflow: hidden; margin-top: 8px;">
-            <div style="background: #58a6ff; width: {tech_score/100*100}%;"></div>
-            <div style="background: #3fb950; width: {fund_score/100*100}%;"></div>
-            <div style="background: #d2991d; width: {news_score/100*100}%;"></div>
+            <div style="background: #58a6ff; width: {tech_score/80*100}%;"></div>
+            <div style="background: #3fb950; width: {fund_score/80*100}%;"></div>
           </div>
           <div style="font-size: 10px; color: #555d68; margin-top: 3px;">
-            技术{tech_score}/60 &nbsp; 基本{fund_score}/20 &nbsp; 消息{news_score}/20
+            技术{tech_score}/60 &nbsp; 基本{fund_score}/20
           </div>
         </div>
 

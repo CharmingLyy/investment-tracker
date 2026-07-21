@@ -17,12 +17,16 @@ from scripts.fetch_global import fetch_hk_stock_data, fetch_us_stock_data
 from scripts.fetch_crypto import fetch_crypto_data
 from scripts.fetch_news import fetch_market_news, find_relevant_news
 try:
+    from scripts.daily_briefing import generate_daily_briefing
+except ImportError:
+    generate_daily_briefing = None
+try:
     from scripts.generate_report import generate_report
 except ImportError:
     generate_report = None
 
 
-def generate_html(all_data, news_data, update_time):
+def generate_html(all_data, news_data, update_time, briefing_data=None):
     """使用 Jinja2 模板生成HTML"""
     from jinja2 import Environment, FileSystemLoader, select_autoescape
 
@@ -59,6 +63,7 @@ def generate_html(all_data, news_data, update_time):
         us_stocks=us_stocks,
         crypto_list=crypto_list,
         news=news_data,
+        briefing=briefing_data,
         total_count=total_count,
         up_count=up_count,
         down_count=down_count,
@@ -74,7 +79,7 @@ def generate_html(all_data, news_data, update_time):
     return html
 
 
-def save_data_json(all_data, news_data):
+def save_data_json(all_data, news_data, briefing_data=None):
     """保存原始数据到 data/ 目录"""
     data_dir = os.path.join(PROJECT_ROOT, "data")
     os.makedirs(data_dir, exist_ok=True)
@@ -87,6 +92,9 @@ def save_data_json(all_data, news_data):
         "stocks": all_data,
         "news": news_data,
     }
+    if briefing_data:
+        full_data["briefing"] = briefing_data
+
     with open(os.path.join(data_dir, f"data_{timestamp}.json"), "w", encoding="utf-8") as f:
         json.dump(full_data, f, ensure_ascii=False, indent=2, default=str)
 
@@ -125,9 +133,31 @@ def main():
     print()
     news_data = fetch_market_news()
 
+    # 5b. 尝试加载最新简报（由 daily_briefing.yml 生成）
+    briefing_data = None
+    briefing_json_path = os.path.join(PROJECT_ROOT, "data", "daily_briefing.json")
+    if os.path.exists(briefing_json_path):
+        try:
+            with open(briefing_json_path, "r", encoding="utf-8") as f:
+                briefing_data = json.load(f)
+            # 检查新鲜度（24 小时内有效）
+            from datetime import timedelta
+            update_ts = briefing_data.get("update_time", "")
+            print(f"[简报] 已加载现有简报 ({update_ts})")
+        except Exception:
+            pass
+
+    # 如果简报太旧或不存在，尝试生成新的
+    if generate_daily_briefing and not briefing_data:
+        print()
+        try:
+            briefing_data = generate_daily_briefing()
+        except Exception as e:
+            print(f"[简报] 生成失败（非致命）: {e}")
+
     # 6. 保存原始数据
     print()
-    save_data_json(all_data, news_data)
+    save_data_json(all_data, news_data, briefing_data)
 
     # 7. 生成 Markdown 日报（可选）
     if generate_report:
@@ -139,7 +169,7 @@ def main():
     print()
     print("[生成] 正在生成HTML页面...")
     update_time = datetime.now().strftime("%Y-%m-%d %H:%M UTC+8 (北京时间)")
-    html_content = generate_html(all_data, news_data, update_time)
+    html_content = generate_html(all_data, news_data, update_time, briefing_data)
 
     output_path = os.path.join(PROJECT_ROOT, "index.html")
     with open(output_path, "w", encoding="utf-8") as f:

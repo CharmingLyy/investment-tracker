@@ -1,0 +1,85 @@
+name: 🗞️ Daily Tech Briefing
+
+on:
+  schedule:
+    # 北京时间每天 8:00 (UTC 00:00)
+    - cron: '0 0 * * *'
+    # 北京时间每天 20:00 (UTC 12:00)
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-briefing:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: daily-briefing
+      cancel-in-progress: false
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 🔍 生成每日硬核情报简报
+        id: briefing
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SERVERCHAN_SEND_KEY: ${{ secrets.SERVERCHAN_SEND_KEY }}
+        run: |
+          python scripts/daily_briefing.py 2>&1 | tee logs/briefing_output.log
+          echo "EXIT_CODE=${PIPESTATUS[0]}" >> $GITHUB_ENV
+
+      - name: 📊 显示简报预览
+        run: |
+          echo "====== 简报预览（前 60 行）======"
+          head -60 daily_briefing.md 2>/dev/null || echo "(简报文件未生成)"
+          echo ""
+          echo "====== JSON 数据摘要 ======"
+          python3 -c "
+          import json
+          try:
+            d = json.load(open('data/daily_briefing.json'))
+            print(f'日期: {d.get(\"date\",\"?\")}')
+            print(f'更新时间: {d.get(\"update_time\",\"?\")}')
+            print(f'候选数: {d.get(\"candidate_count\",0)}')
+            print(f'AI策展: {d.get(\"ai_curated\",False)}')
+            print(f'简报长度: {len(d.get(\"briefing_markdown\",\"\"))} 字符')
+          except Exception as e: print(f'(读取失败: {e})')
+          "
+
+      - name: Commit briefing files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add daily_briefing.md data/daily_briefing.json logs/briefing_output.log
+          if ! git diff --staged --quiet; then
+            git commit -m "🗞️ Daily tech briefing - $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M CST')"
+            git pull --rebase origin main 2>/dev/null || true
+            git push origin main
+            echo "✅ 简报已提交并推送"
+          else
+            echo "📭 无变化，跳过提交"
+          fi
+
+      - name: ⚠️ 通知失败
+        if: failure()
+        run: |
+          echo "❌ 简报生成失败，请查看日志"
+          echo "💡 常见原因："
+          echo "  1. 上游 API (HN/ArXiv/GitHub) 暂时不可用 — 下次运行通常会恢复"
+          echo "  2. DEEPSEEK_API_KEY 或 ANTHROPIC_API_KEY 过期/额度用尽 — 检查 GitHub Secrets"
+          echo "  3. 网络超时 — GitHub Actions 服务器网络波动"
