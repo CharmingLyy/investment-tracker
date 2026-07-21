@@ -65,8 +65,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add daily_briefing.md data/daily_briefing.json
-          git add -f logs/briefing_output.log 2>/dev/null || true
+          git add daily_briefing.md data/daily_briefing.json logs/briefing_output.log
           if ! git diff --staged --quiet; then
             git commit -m "🗞️ Daily tech briefing - $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M CST')"
             git pull --rebase origin main 2>/dev/null || true

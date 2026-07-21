@@ -9,5 +9,6 @@ venv/
 *.log
 !logs/monitor.log
 !logs/workflow_output.log
+!logs/briefing_output.log
 .cache/
 .claude/
