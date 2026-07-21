@@ -1,10 +1,83 @@
 # TODO — AI 投资观察面板
 
-> 最后更新: 2026-07-21 (每日情报简报上线 + 调度稳定性二次修复)
+> 最后更新: 2026-07-22 (策略重构完成 + 简报 AI 策展 + 微信推送上线)
 
 ---
 
-## ✅ 今日完成 (2026-07-21) — 🗞️ 每日硬核情报简报 + 调度修复
+## ✅ 今日完成 (2026-07-22) — 🔥 策略评分体系重构 + 简报系统全面升级
+
+### 一、加密货币信号评分体系重构
+
+**删除消息面评分** — 原来硬编码 10 分，无效占位符，从 `monitor_crypto.py`、`send_email.py`、`ai选股/index.html` 全部移除。
+
+**基本面重新设计** — 从"循环论证的 24h 价格数据"改为"独立于价格的期货市场数据"：
+
+| 旧基本面 (20分) | 新基本面 (20分) | 为什么改 |
+|------|------|------|
+| 24h 涨跌匹配度 (8分) | **资金费率 (12分)** | 旧：价格算信号方向→价格校验方向=循环论证。新：期货多空谁付钱=真独立情绪指标 |
+| 24h 成交量 (6分) | **OI 持仓量变化 (8分)** | 旧：BTC/ETH 永远 +6，无区分度。新：资本进出速度=市场参与度 |
+| 24h 振幅 (6分) | — | 旧：和 ATR 评分重叠。新：删掉 |
+
+**资金费率逻辑**：正费率=多头付钱给空头（市场过热），负费率=空头付钱给多头（市场恐慌）。做多时费率越负分越高（反向做多），做空时费率越正分越高（反向做空）。
+
+**OI 变化逻辑**：持仓量大幅变化=市场活跃=技术信号更可靠，不论方向。|OI|>3% = +8分。
+
+**阈值同步调整**（有效满分 85→75）：
+
+| 参数 | 旧值 | 新值 |
+|------|:--:|:--:|
+| 信号触发阈值 | 65 | **55** |
+| 高置信度 | 80 | **60** |
+| 中高置信度 | 65 | **50** |
+| 中置信度 | 50 | **40** |
+
+**数据源**：Binance 期货公开 API (`/fapi/v1/fundingRate` + `/fapi/v1/openInterestHist`)，无需 API Key。
+
+### 二、每日简报系统升级
+
+**DeepSeek API 策展**（优先，¥1/百万 token，中文原生）：
+- `scripts/daily_briefing.py` 重构为多 provider 架构
+- 优先级: DeepSeek (`deepseek-chat`) → Anthropic (`claude-sonnet-5`) → 启发式回退
+- OpenAI 兼容 API，无需额外 SDK
+
+**Server酱微信推送**：
+- 新增 `push_to_wechat()` 函数，简报生成后自动推送到微信
+- 通过 `SERVERCHAN_SEND_KEY` 环境变量配置
+- 免费额度每天 5 条，完全够用
+
+**GitHub Actions 修复**：
+- `.gitignore` 添加 `!logs/briefing_output.log` 白名单（修复 `git add` 失败）
+- `.github/workflows/daily_briefing.yml` 添加 `SERVERCHAN_SEND_KEY` 和 `DEEPSEEK_API_KEY` secrets
+
+### 三、修改的文件清单
+
+| 文件 | 改动 |
+|------|------|
+| `scripts/monitor_crypto.py` | 新增 `fetch_futures_data()` + 重写 `generate_signal()` 基本面评分 + 阈值调整 + 删消息面 |
+| `scripts/send_email.py` | 删 `news_score` 参数 + 评分条从三色变两色 + 阈值调色 + 分数显示修正 |
+| `scripts/daily_briefing.py` | 新增 DeepSeek provider + Server酱推送 + 重构为 `curate_with_llm()` 多 provider 架构 |
+| `ai选股/index.html` | 删 `fetchNewsSafe()` + `renderNews()` + 消息面全部 UI/JS + 基本面简化 + 阈值同步 |
+| `.github/workflows/daily_briefing.yml` | 添加 `DEEPSEEK_API_KEY` + `SERVERCHAN_SEND_KEY` secrets + 修复 git add |
+| `.github/workflows/crypto_monitor.yml` | 7 cron + self-ping（前一版本） |
+| `.gitignore` | 白名单 `!logs/briefing_output.log` |
+| `templates/index.html` | 简报展示区 + CSS + JS 软刷新（前一版本） |
+| `scripts/main.py` | 简报集成（前一版本） |
+
+### 四、当前配置状态
+
+用户已完成:
+- ✅ DeepSeek API Key 已配置
+- ✅ Server酱 SendKey 已配置
+- ✅ GitHub Secrets 全部就位
+- ✅ 手动触发成功 — DeepSeek 策展 + 微信推送正常
+
+用户未配置:
+- ⬜ Anthropic API Key（不需要，DeepSeek 已够用）
+- ⬜ 邮件 Secrets（`AI_MONITOR_EMAIL_FROM/PASSWORD/TO`）— 信号通知邮件仍不可用
+
+---
+
+## ✅ 之前完成 (2026-07-21) — 🗞️ 每日硬核情报简报 + 调度修复
 
 ### 项目扩大：新增「硬核科技与情报首席分析师」系统
 
