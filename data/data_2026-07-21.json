@@ -1,0 +1,550 @@
+{
+  "update_time": "2026-07-21 13:07:10",
+  "stocks": {
+    "a_stocks": [
+      {
+        "market": "A股",
+        "code": "002050",
+        "name": "三花智控",
+        "symbol": "sz.002050",
+        "industry": null,
+        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
+        "price": 38.1,
+        "open": 36.77,
+        "high": 38.16,
+        "low": 36.19,
+        "change_pct": 5.48,
+        "volume": 100496099,
+        "turnover": 37.45,
+        "market_cap": null,
+        "pe": 39.23,
+        "cash_flow": 50.92,
+        "macd": -1.8055,
+        "macd_signal": -1.2856,
+        "macd_histogram": -1.0399,
+        "rsi": 37.43,
+        "ma": {
+          "MA5": 39.46,
+          "MA10": 40.75,
+          "MA20": 42.44,
+          "MA60": 46.0
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
+        "price": 6.58,
+        "open": 6.41,
+        "high": 6.58,
+        "low": 6.41,
+        "change_pct": 2.65,
+        "volume": 101443023,
+        "turnover": 6.61,
+        "market_cap": null,
+        "pe": 79.0,
+        "cash_flow": 105.67,
+        "macd": -0.2809,
+        "macd_signal": -0.2903,
+        "macd_histogram": 0.0188,
+        "rsi": 36.68,
+        "ma": {
+          "MA5": 6.49,
+          "MA10": 6.6,
+          "MA20": 6.78,
+          "MA60": 7.66
+        },
+        "main_net_flow": null
+      }
+    ],
+    "hk_stocks": [
+      {
+        "market": "港股",
+        "code": "01810",
+        "name": "小米集团-W",
+        "symbol": "01810",
+        "industry": "Consumer Electronics",
+        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
+        "price": 27.42,
+        "open": 27.34,
+        "high": 28.16,
+        "low": 27.24,
+        "change_pct": -1.15,
+        "volume": 158569507,
+        "turnover": null,
+        "market_cap": 7031.83,
+        "pe": 15.23,
+        "cash_flow": 77.67,
+        "macd": 0.3193,
+        "macd_signal": -0.3015,
+        "macd_histogram": 1.2417,
+        "rsi": 60.38,
+        "ma": {
+          "MA5": 27.08,
+          "MA10": 26.34,
+          "MA20": 24.41,
+          "MA60": 27.51
+        },
+        "main_net_flow": null
+      }
+    ],
+    "us_stocks": [
+      {
+        "market": "美股",
+        "code": "GOOG",
+        "name": "Alphabet (Google)",
+        "symbol": "GOOG",
+        "industry": "Internet Content & Information",
+        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
+        "price": 351.37,
+        "open": 350.17,
+        "high": 359.49,
+        "low": 350.01,
+        "change_pct": 1.52,
+        "volume": 13180200,
+        "turnover": null,
+        "market_cap": 42876.18,
+        "pe": 26.8,
+        "cash_flow": 279.22,
+        "macd": -1.9617,
+        "macd_signal": -1.9046,
+        "macd_histogram": -0.1141,
+        "rsi": 46.57,
+        "ma": {
+          "MA5": 355.77,
+          "MA10": 356.31,
+          "MA20": 353.17,
+          "MA60": 366.59
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "CRCL",
+        "name": "Circle",
+        "symbol": "CRCL",
+        "industry": "Capital Markets",
+        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
+        "price": 65.45,
+        "open": 60.95,
+        "high": 66.98,
+        "low": 60.87,
+        "change_pct": 8.25,
+        "volume": 13633300,
+        "turnover": null,
+        "market_cap": 174.94,
+        "pe": 33.78,
+        "cash_flow": 1.41,
+        "macd": -6.2659,
+        "macd_signal": -7.1953,
+        "macd_histogram": 1.8588,
+        "rsi": 42.7,
+        "ma": {
+          "MA5": 63.09,
+          "MA10": 63.68,
+          "MA20": 66.98,
+          "MA60": 90.02
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "MP",
+        "name": "MP Materials",
+        "symbol": "MP",
+        "industry": "Other Industrial Metals & Mining",
+        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
+        "price": 45.7,
+        "open": 45.36,
+        "high": 46.7,
+        "low": 44.02,
+        "change_pct": 1.02,
+        "volume": 6418700,
+        "turnover": null,
+        "market_cap": 81.36,
+        "pe": 45.95,
+        "cash_flow": 1.75,
+        "macd": -3.4014,
+        "macd_signal": -2.8082,
+        "macd_histogram": -1.1862,
+        "rsi": 32.62,
+        "ma": {
+          "MA5": 47.33,
+          "MA10": 49.36,
+          "MA20": 52.51,
+          "MA60": 59.44
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "PLTR",
+        "name": "Palantir",
+        "symbol": "PLTR",
+        "industry": "Software - Infrastructure",
+        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
+        "price": 134.85,
+        "open": 131.88,
+        "high": 136.62,
+        "low": 131.82,
+        "change_pct": 1.87,
+        "volume": 30508200,
+        "turnover": null,
+        "market_cap": 3232.78,
+        "pe": 151.52,
+        "cash_flow": 17.53,
+        "macd": 0.8437,
+        "macd_signal": -0.6297,
+        "macd_histogram": 2.9469,
+        "rsi": 55.76,
+        "ma": {
+          "MA5": 133.83,
+          "MA10": 132.16,
+          "MA20": 125.57,
+          "MA60": 133.85
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "NOW",
+        "name": "ServiceNow",
+        "symbol": "NOW",
+        "industry": "Software - Application",
+        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
+        "price": 104.7,
+        "open": 100.52,
+        "high": 105.33,
+        "low": 98.43,
+        "change_pct": 1.41,
+        "volume": 20498000,
+        "turnover": null,
+        "market_cap": 1079.78,
+        "pe": 62.32,
+        "cash_flow": 51.08,
+        "macd": 0.6843,
+        "macd_signal": 0.7914,
+        "macd_histogram": -0.214,
+        "rsi": 50.52,
+        "ma": {
+          "MA5": 104.31,
+          "MA10": 106.78,
+          "MA20": 102.89,
+          "MA60": 101.34
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "DDOG",
+        "name": "Datadog",
+        "symbol": "DDOG",
+        "industry": "Software - Application",
+        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
+        "price": 263.2,
+        "open": 258.59,
+        "high": 268.83,
+        "low": 257.08,
+        "change_pct": 1.74,
+        "volume": 3283700,
+        "turnover": null,
+        "market_cap": 936.89,
+        "pe": 674.87,
+        "cash_flow": 9.37,
+        "macd": 10.216,
+        "macd_signal": 11.2019,
+        "macd_histogram": -1.9718,
+        "rsi": 60.04,
+        "ma": {
+          "MA5": 263.88,
+          "MA10": 262.41,
+          "MA20": 251.93,
+          "MA60": 219.07
+        },
+        "main_net_flow": null
+      }
+    ],
+    "crypto": [
+      {
+        "market": "加密货币",
+        "code": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "industry": "Smart Contract Platform",
+        "price": 66479,
+        "open": null,
+        "high": 66542,
+        "low": 64176,
+        "change_pct": 2.86,
+        "volume": 30198832953,
+        "turnover": null,
+        "market_cap": 13335.45,
+        "market_cap_rank": 1,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": 499.6354,
+        "macd_signal": 106.1429,
+        "macd_histogram": 786.985,
+        "rsi": 61.42,
+        "ma": {
+          "MA5": 65015.3,
+          "MA10": 64455.35,
+          "MA20": 63804.35,
+          "MA60": 65023.5
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 20059368.0,
+          "total_supply": 20059368.0,
+          "circ_ratio": 100.0,
+          "price_change_7d": 4.09446,
+          "price_change_30d": 3.6755,
+          "ath_pct": -47.27,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      },
+      {
+        "market": "加密货币",
+        "code": "ethereum",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "industry": "Smart Contract Platform",
+        "price": 1940.26,
+        "open": null,
+        "high": 1946.42,
+        "low": 1856.39,
+        "change_pct": 3.63,
+        "volume": 11752742523,
+        "turnover": null,
+        "market_cap": 2341.72,
+        "market_cap_rank": 2,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": 46.4159,
+        "macd_signal": 32.2361,
+        "macd_histogram": 28.3598,
+        "rsi": 65.48,
+        "ma": {
+          "MA5": 1883.28,
+          "MA10": 1866.66,
+          "MA20": 1816.38,
+          "MA60": 1783.82
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 120682803.0755918,
+          "total_supply": 120682803.0755918,
+          "circ_ratio": 100.0,
+          "price_change_7d": 4.52069,
+          "price_change_30d": 12.54303,
+          "ath_pct": -60.77,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      }
+    ]
+  },
+  "news": [
+    {
+      "id": "35b871d31c",
+      "title": "[播客]独家实拍：我那永远跪着的母亲(11/07 22:10)",
+      "summary": "独家实拍：我那永远跪着的母亲",
+      "link": "http://go.rss.sina.com.cn/redirect.php?url=http://you.video.sina.com.cn/b/16972162-1239095354.html",
+      "source": "rss.sina.com.cn",
+      "published": ""
+    },
+    {
+      "id": "73134480db",
+      "title": "It’s getting easier for terminally ill people to end their own lives. What to know as laws change.",
+      "summary": "Patients must meet three conditions to qualify for Medical Aid in Dying.",
+      "link": "https://www.marketwatch.com/story/its-getting-easier-for-terminally-ill-people-to-end-their-own-lives-what-to-know-as-laws-change-4fa04c54?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 21 Jul 2026 12:41:00 GMT"
+    },
+    {
+      "id": "2edcb57809",
+      "title": "Your healthcare could now cost $185,500 in retirement — and that doesn’t include long-term care",
+      "summary": "Rising prices for care and managing chronic conditions helped drive up the forecast.",
+      "link": "https://www.marketwatch.com/story/your-healthcare-could-now-cost-185-500-in-retirement-and-that-doesnt-include-long-term-care-5f4f6da8?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 21 Jul 2026 12:39:00 GMT"
+    },
+    {
+      "id": "568297a08e",
+      "title": "Alphabet is pouring record cash into data centers, and earnings will show whether that’s paying off",
+      "summary": "Investors will be looking for more signs of AI monetization when Alphabet reports its earnings Wednesday.",
+      "link": "https://www.marketwatch.com/story/alphabet-is-pouring-record-cash-into-data-centers-and-earnings-will-show-if-thats-paying-off-fad38a2c?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 21 Jul 2026 12:35:00 GMT"
+    },
+    {
+      "id": "24c0946dc9",
+      "title": "Novo Nordisk sues Eli Lilly over ads comparing GLP-1 medications",
+      "summary": "The Danish company Novo says U.S.-based Lilly isn’t including the most up-to-date clinical information about its drugs.",
+      "link": "https://www.marketwatch.com/story/novo-nordisk-sues-eli-lilly-over-ads-comparing-glp-1-medications-6b223080?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 21 Jul 2026 12:27:00 GMT"
+    },
+    {
+      "id": "9fafd4304a",
+      "title": "GM’s stock bounces back as revenue grows for the first time in over a year",
+      "summary": "GM’s stock rises after a beat-and-raise earnings report, as revenue grows to snap a four-quarter streak of declines.",
+      "link": "https://www.marketwatch.com/story/gms-stock-bounces-back-as-revenue-grows-for-the-first-time-in-over-a-year-d5d95804?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 21 Jul 2026 12:21:00 GMT"
+    },
+    {
+      "id": "e1d91d4d77",
+      "title": "Why are gasoline prices rising faster than oil prices? Blame it on the ‘crack.’",
+      "summary": "The spread between the cost of barrels of gasoline and crude oil — known as the “crack spread” — has widened sharply.",
+      "link": "https://www.marketwatch.com/story/why-are-gasoline-prices-rising-faster-than-oil-prices-blame-it-on-the-crack-22b454e7?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 21 Jul 2026 11:53:00 GMT"
+    },
+    {
+      "id": "021d765aa9",
+      "title": "The co-founder of Stocktwits dumped chip stocks before their 20% slide. Where he’s putting his money now.",
+      "summary": "Stocktwits’ Howard Lindzon talks to MarketWatch about sidestepping a chip selloff, where he sees opportunity and the “degenerate economy.”",
+      "link": "https://www.marketwatch.com/story/the-co-founder-of-stocktwits-dumped-chip-stocks-before-a-20-slide-where-hes-putting-his-money-now-07e8724f?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 21 Jul 2026 11:47:00 GMT"
+    },
+    {
+      "id": "a1b6fbc68f",
+      "title": "Do I use $300,000 of my $1.2 million retirement savings so my daughter can attend her dream college?",
+      "summary": "“Our daughter is a highly ranked competitive softball pitcher with a 3.94 GPA.”",
+      "link": "https://www.marketwatch.com/story/do-i-use-300-000-of-my-1-2-million-retirement-savings-so-my-daughter-can-attend-her-dream-college-50842e7a?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 21 Jul 2026 11:15:00 GMT"
+    },
+    {
+      "id": "0a21dbecd2",
+      "title": "China has been buying the gold dip, and these analysts say a comeback is brewing",
+      "summary": "For the last few years, China’s buying patterns have been an excellent investment signal on gold",
+      "link": "https://www.marketwatch.com/story/china-has-been-buying-the-gold-dip-and-these-analysts-say-a-comeback-is-brewing-6b0400d3?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 21 Jul 2026 11:06:00 GMT"
+    },
+    {
+      "id": "8ab9c1c116",
+      "title": "We have $8 million in traditional IRAs. Should we tap them to buy a house — and take the tax hit?",
+      "summary": "“We would rather pay taxes upfront than pay mortgage interest.”",
+      "link": "https://www.marketwatch.com/story/we-have-8-million-in-traditional-iras-should-we-tap-them-to-buy-a-house-and-take-the-tax-hit-c2478daa?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 21 Jul 2026 11:00:00 GMT"
+    },
+    {
+      "id": "0b8c02c243",
+      "title": "Why is Zions Bancorp stock sliding today?",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-zions-bancorp-stock-sliding-today-93CH-4803324",
+      "source": "www.investing.com",
+      "published": "2026-07-21 12:49:04"
+    },
+    {
+      "id": "6272a7bcbe",
+      "title": "Why is Rapid7 stock sliding today?",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-rapid7-stock-sliding-today-93CH-4803323",
+      "source": "www.investing.com",
+      "published": "2026-07-21 12:49:01"
+    },
+    {
+      "id": "18b7951281",
+      "title": "Why is JFrog stock sliding today?",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-jfrog-stock-sliding-today-93CH-4803320",
+      "source": "www.investing.com",
+      "published": "2026-07-21 12:48:54"
+    },
+    {
+      "id": "5af5342a86",
+      "title": "Boeing asks US to intervene over record EU loan to Airbus",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/exclusiveboeing-asks-us-to-intervene-over-record-eu-loan-to-airbus-4802333",
+      "source": "www.investing.com",
+      "published": "2026-07-21 12:48:53"
+    },
+    {
+      "id": "5d7cccee2e",
+      "title": "Saudi Arabia’s crude oil exports fall to record low in May",
+      "summary": "",
+      "link": "https://www.investing.com/news/commodities-news/saudi-arabias-crude-oil-exports-fall-to-record-low-in-may-93CH-4803319",
+      "source": "www.investing.com",
+      "published": "2026-07-21 12:48:39"
+    },
+    {
+      "id": "f57e4a0c79",
+      "title": "Sobha Q1 FY27 slides: record sales, net cash positive position",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/sobha-q1-fy27-slides-record-sales-net-cash-positive-position-93CH-4803318",
+      "source": "www.investing.com",
+      "published": "2026-07-21 12:48:33"
+    },
+    {
+      "id": "181645f46a",
+      "title": "3M boosts annual profit forecast driven by resilient industrial unit",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/3m-lifts-annual-profit-forecast-as-industrial-unit-remains-resilient-4802669",
+      "source": "www.investing.com",
+      "published": "2026-07-21 12:48:33"
+    },
+    {
+      "id": "af39567e1d",
+      "title": "Earnings call transcript: IndiaMART Q1 2026 growth slows as margins hold up",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-indiamart-q1-2026-growth-slows-as-margins-hold-up-93CH-4803317",
+      "source": "www.investing.com",
+      "published": "2026-07-21 12:47:53"
+    },
+    {
+      "id": "a8a6a1a29f",
+      "title": "Why is Halliburton stock sliding today?",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-halliburton-stock-sliding-today-93CH-4803316",
+      "source": "www.investing.com",
+      "published": "2026-07-21 12:47:19"
+    },
+    {
+      "id": "61250506d1",
+      "title": "Carlyle Group stock rises on Anthesis deal talks",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/carlyle-group-stock-rises-on-anthesis-deal-talks-93CH-4803313",
+      "source": "www.investing.com",
+      "published": "2026-07-21 12:46:48"
+    }
+  ]
+}

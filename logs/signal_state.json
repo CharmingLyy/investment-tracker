@@ -1,20 +1,22 @@
 {
   "BTC": {
-    "sigClass": "wait",
+    "sigClass": "long",
     "direction": "bullish",
-    "totalScore": 64,
-    "lastSignal": "2026-07-20 16:56:19",
-    "lastNotified": 0,
-    "lastAttempted": 0,
+    "totalScore": 72,
+    "lastSignal": "2026-07-21 13:02:52",
+    "lastNotified": 1784638976.2335138,
+    "lastAttempted": 1784638972.8888586,
     "notifyFailures": 0
   },
   "ETH": {
-    "sigClass": "wait",
+    "sigClass": "long",
     "direction": "bullish",
-    "totalScore": 64,
-    "lastSignal": "2026-07-20 16:56:27",
-    "lastNotified": 0,
-    "lastAttempted": 0,
+    "totalScore": 76,
+    "lastSignal": "2026-07-21 13:03:04",
+    "lastNotified": 1784638986.910403,
+    "lastAttempted": 1784638984.479353,
     "notifyFailures": 0
-  }
+  },
+  "BTC_failCount": 0,
+  "ETH_failCount": 0
 }
