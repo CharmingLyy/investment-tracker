@@ -1,0 +1,256 @@
+{
+  "date": "2026-07-22",
+  "update_time": "2026-07-21 16:13:57",
+  "candidate_count": 20,
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-22\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 谁在恐惧中国 AI 模型？ (来源: Hacker News)\n- **核心干货**：Stratechery 深度分析中国大模型崛起对全球 AI 格局的影响。从 Qwen、DeepSeek 到 Kimi，开源/开放权重模型正在以低成本、高迭代速度逼近甚至在某些维度超越闭源巨头。文章探讨了地缘政治、技术封锁和开源生态的微妙博弈——不是能不能追上，而是谁先被逼疯。\n- **毒舌/硬核点评**：硅谷大厂们一边喊着“开源是未来”，一边偷偷把训练数据锁进保险箱。中国选手直接把底牌摊桌上：这局我跟你玩到底，你敢跟吗？\n- **🔗 传送门**：[https://stratechery.com/2026/whos-afraid-of-chinese-models/](https://stratechery.com/2026/whos-afraid-of-chinese-models/)\n\n---\n\n### 2. 📌 Kimi K3 与中国的开放权重模型浪潮 (来源: Dev.to)\n- **核心干货**：Moonshot AI 发布 Kimi K3，基准测试表明一个开放权重模型首次在多项任务上与最佳闭源模型（GPT-4o/Claude-3.5 级别）并驾齐驱。但代价是“平台孤岛”——K3 只在 Moonshot 平台，GLM-5.2 在 Z.ai，DeepSeek V4 Pro 在自家，MiniMax M3 在 MiniMax。开发者需要维护四个账号、四个账单——这就是“开放”的代价。\n- **毒舌/硬核点评**：中国大模型厂商把“开放”玩成了“分布式封闭”——每个都说自己是开源，但都想要你注册、绑定、付费。真正的开源精神？不存在的，只有“你来我这儿玩”的营销话术。\n- **🔗 传送门**：[https://dev.to/smakosh/kimi-k3-and-chinas-open-weight-model-wave-bpp](https://dev.to/smakosh/kimi-k3-and-chinas-open-weight-model-wave-bpp)\n\n---\n\n### 3. 📌 关键 SharePoint RCE 漏洞 (CVE-2026-50522) 正在被积极利用 (来源: The Hacker News)\n- **核心干货**：微软 7 月补丁日修复的第三个 SharePoint Server 漏洞 CVE-2026-50522（CVSS 9.8，严重级别）已被 watchTowr 确认正在活跃利用。该漏洞是反序列化不信任数据导致的远程代码执行，PoC 已公开。攻击者只需发送一个特制包即可完全控制目标 SharePoint 服务器——这对企业内网意味着全面沦陷。\n- **毒舌/硬核点评**：微软：我们修了，但 PoC 已经满天飞了。IT 运维：好的，我这就去加班打补丁。攻击者：谢谢微软的“及时”修复，我先用着。\n- **🔗 传送门**：[https://thehackernews.com/2026/07/critical-sharepoint-rce-cve-2026-50522.html](https://thehackernews.com/2026/07/critical-sharepoint-rce-cve-2026-50522.html)\n\n---\n\n### 🗣️ 今日顶男金句\n“开源不是终点，是起点——终点是你能用别人的代码，让别人无码可用。”",
+  "briefing_items": [
+    {
+      "title": "谁在恐惧中国 AI 模型？",
+      "source": "Hacker News",
+      "summary": "Stratechery 深度分析中国大模型崛起对全球 AI 格局的影响。从 Qwen、DeepSeek 到 Kimi，开源/开放权重模型正在以低成本、高迭代速度逼近甚至在某些维度超越闭源巨头。文章探讨了地缘政治、技术封锁和开源生态的微妙博弈——不是能不能追上，而是谁先被逼疯。",
+      "commentary": "硅谷大厂们一边喊着“开源是未来”，一边偷偷把训练数据锁进保险箱。中国选手直接把底牌摊桌上：这局我跟你玩到底，你敢跟吗？",
+      "url": ""
+    },
+    {
+      "title": "Kimi K3 与中国的开放权重模型浪潮",
+      "source": "Dev.to",
+      "summary": "Moonshot AI 发布 Kimi K3，基准测试表明一个开放权重模型首次在多项任务上与最佳闭源模型（GPT-4o/Claude-3.5 级别）并驾齐驱。但代价是“平台孤岛”——K3 只在 Moonshot 平台，GLM-5.2 在 Z.ai，DeepSeek V4 Pro 在自家，MiniMax M3 在 MiniMax。开发者需要维护四个账号、四个账单——这就是“开放”的代价。",
+      "commentary": "中国大模型厂商把“开放”玩成了“分布式封闭”——每个都说自己是开源，但都想要你注册、绑定、付费。真正的开源精神？不存在的，只有“你来我这儿玩”的营销话术。",
+      "url": ""
+    },
+    {
+      "title": "关键 SharePoint RCE 漏洞 (CVE-2026-50522) 正在被积极利用",
+      "source": "The Hacker News",
+      "summary": "微软 7 月补丁日修复的第三个 SharePoint Server 漏洞 CVE-2026-50522（CVSS 9.8，严重级别）已被 watchTowr 确认正在活跃利用。该漏洞是反序列化不信任数据导致的远程代码执行，PoC 已公开。攻击者只需发送一个特制包即可完全控制目标 SharePoint 服务器——这对企业内网意味着全面沦陷。",
+      "commentary": "微软：我们修了，但 PoC 已经满天飞了。IT 运维：好的，我这就去加班打补丁。攻击者：谢谢微软的“及时”修复，我先用着。",
+      "url": ""
+    }
+  ],
+  "candidates": [
+    {
+      "id": "hn:48989701",
+      "title": "Qwen-Image-3.0: Rich Content, Authentic Details, Deep Knowledge",
+      "summary": "",
+      "url": "https://qwen.ai/blog?id=qwen-image-3.0",
+      "source": "Hacker News",
+      "score": 422,
+      "comments": 175
+    },
+    {
+      "id": "hn:48977128",
+      "title": "Who's afraid of Chinese models?",
+      "summary": "",
+      "url": "https://stratechery.com/2026/whos-afraid-of-chinese-models/",
+      "source": "Hacker News",
+      "score": 870,
+      "comments": 701
+    },
+    {
+      "id": "hn:48987822",
+      "title": "Incremental – A library for incremental computations",
+      "summary": "",
+      "url": "https://github.com/janestreet/incremental",
+      "source": "Hacker News",
+      "score": 304,
+      "comments": 56
+    },
+    {
+      "id": "lob:t2jxyu",
+      "title": "432 Linux kernel CVEs published in the last 24 hours",
+      "summary": "",
+      "url": "https://lore.kernel.org/linux-cve-announce/",
+      "source": "Lobste.rs",
+      "score": 22,
+      "comments": 11,
+      "tags": [
+        "linux",
+        "security"
+      ]
+    },
+    {
+      "id": "hn:48993414",
+      "title": "Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber",
+      "summary": "",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
+      "source": "Hacker News",
+      "score": 166,
+      "comments": 96
+    },
+    {
+      "id": "lob:op1k28",
+      "title": "I wrote an API client for my water-cooled bed",
+      "summary": "",
+      "url": "https://tinkering.xyz/bedctl/",
+      "source": "Lobste.rs",
+      "score": 52,
+      "comments": 16,
+      "tags": [
+        "hardware",
+        "zig"
+      ]
+    },
+    {
+      "id": "lob:p3z0zw",
+      "title": "Meta Garbage Collection: Using OCaml's GC to GC Rust",
+      "summary": "",
+      "url": "https://soteria-tools.com/blog/meta-garbage-collection",
+      "source": "Lobste.rs",
+      "score": 47,
+      "comments": 8,
+      "tags": [
+        "ml",
+        "rust"
+      ]
+    },
+    {
+      "id": "lob:twqtlo",
+      "title": "GitHub suddenly rejected my SSH key (the fix was a .pub file?!)",
+      "summary": "",
+      "url": "https://thorsell.io/2026/07/21/github-ssh-keys.html",
+      "source": "Lobste.rs",
+      "score": 35,
+      "comments": 14,
+      "tags": [
+        "devops",
+        "vcs"
+      ]
+    },
+    {
+      "id": "hn:48992870",
+      "title": "Apple Defeats Liability for Not Scanning iCloud for CSAM",
+      "summary": "",
+      "url": "https://blog.ericgoldman.org/archives/2026/07/apple-defeats-liability-for-not-scanning-icloud-for-csam-but-the-judge-was-not-pleased-amy-v-apple.htm",
+      "source": "Hacker News",
+      "score": 122,
+      "comments": 72
+    },
+    {
+      "id": "hn:48993448",
+      "title": "ICE to Pay Thomson Reuters $125M to Find Voter Fraud",
+      "summary": "",
+      "url": "https://www.404media.co/ice-to-pay-thomson-reuters-125-million-to-find-voter-fraud/",
+      "source": "Hacker News",
+      "score": 122,
+      "comments": 52
+    },
+    {
+      "id": "lob:wfmpqr",
+      "title": "Human mathematicians are being outcounterexampled",
+      "summary": "",
+      "url": "https://xenaproject.wordpress.com/2026/07/20/human-mathematicians-are-being-outcounterexampled/",
+      "source": "Lobste.rs",
+      "score": 56,
+      "comments": 9,
+      "tags": [
+        "math"
+      ]
+    },
+    {
+      "id": "lob:21lrrw",
+      "title": "Gitolite",
+      "summary": "",
+      "url": "https://gitolite.com/gitolite/index.html",
+      "source": "Lobste.rs",
+      "score": 48,
+      "comments": 12,
+      "tags": [
+        "practices",
+        "vcs"
+      ]
+    },
+    {
+      "id": "rss:ff6dc7812d",
+      "title": "Critical SharePoint RCE CVE-2026-50522 Under Active Exploitation After Public PoC",
+      "summary": "A third SharePoint Server flaw patched by Microsoft as part of its Patch Tuesday update for July 2026 has come under active exploitation, per watchTowr.\n\nThe vulnerability in question is CVE-2026-50522 (CVSS score: 9.8), a critical deserialization of untrusted data in Microsoft Office SharePoint tha",
+      "url": "https://thehackernews.com/2026/07/critical-sharepoint-rce-cve-2026-50522.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "hn:48993059",
+      "title": "Claude Is Not a Compiler",
+      "summary": "",
+      "url": "https://blog.exe.dev/claude-is-not-a-compiler",
+      "source": "Hacker News",
+      "score": 79,
+      "comments": 73
+    },
+    {
+      "id": "lob:kdflhr",
+      "title": "InvisiCaps: The Fil-C Capability Model",
+      "summary": "",
+      "url": "https://fil-c.org/invisicaps",
+      "source": "Lobste.rs",
+      "score": 49,
+      "comments": 4,
+      "tags": [
+        "c",
+        "compilers"
+      ]
+    },
+    {
+      "id": "lob:v3xuxn",
+      "title": "95 reasons for having your own website",
+      "summary": "",
+      "url": "https://bellkiosk.website/blog/reasons-to-website.html",
+      "source": "Lobste.rs",
+      "score": 38,
+      "comments": 5,
+      "tags": [
+        "philosophy",
+        "web"
+      ]
+    },
+    {
+      "id": "arxiv:2607.18225v1",
+      "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+      "summary": "We propose one-step and two-step methods for policy learning with retrieval-augmented generation (RAG). We formulate RAG-based action selection under the potential outcome framework. In the two-step method, vector search retrieves action-specific neighboring evidence in an embedding space, the gener",
+      "url": "https://arxiv.org/abs/2607.18225v1",
+      "source": "ArXiv",
+      "categories": [
+        "econ.EM",
+        "cs.LG",
+        "math.ST",
+        "stat.ME",
+        "stat.ML"
+      ],
+      "arxiv_id": "2607.18225v1"
+    },
+    {
+      "id": "arxiv:2607.18199v1",
+      "title": "PPL-Factory: Task-Aware and Budget-Aware Data Selection from Language Modeling to Reasoning",
+      "summary": "Not all training samples contribute equally to large language model fine-tuning. Selecting informative training samples can reduce the computational cost while preserving downstream performance. Many existing data selection methods rely on indirect heuristics, such as data quality, diversity or reas",
+      "url": "https://arxiv.org/abs/2607.18199v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_id": "2607.18199v1"
+    },
+    {
+      "id": "rss:d65718a1f1",
+      "title": "Kimi K3 and China's Open-Weight Model Wave",
+      "summary": "Moonshot AI released Kimi K3 on July 16, and the benchmarks put an open-weight model next to the best closed ones for the first time. The catch is access. K3 sits on Moonshot's platform, GLM-5.2 on Z.ai's, DeepSeek V4 Pro on DeepSeek's, MiniMax M3 on MiniMax's — four accounts, four billing relations",
+      "url": "https://dev.to/smakosh/kimi-k3-and-chinas-open-weight-model-wave-bpp",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "lob:msg39b",
+      "title": "Linux kernel will support $ORIGIN, sort of",
+      "summary": "<p>HN discussions: <a href=\"https://news.ycombinator.com/item?id=48988793\" rel=\"ugc\">https://news.ycombinator.com/item?id=48988793</a></p>\n",
+      "url": "https://fzakaria.com/2026/07/20/linux-kernel-will-support-origin-sort-of",
+      "source": "Lobste.rs",
+      "score": 12,
+      "comments": 0,
+      "tags": [
+        "c",
+        "linux",
+        "nix",
+        "osdev"
+      ]
+    }
+  ],
+  "ai_curated": true
+}
