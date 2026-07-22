@@ -4,26 +4,26 @@
 
 ---
 
-### 1. 📌 Gemini 3.6 Flash / 3.5 Flash-Lite / 3.5 Flash Cyber 三连发 (来源: Hacker News | 638分)
-- **核心干货**：Google 一口气发布了三款 Gemini 系列新模型。3.6 Flash 是性能提升的主力，3.5 Flash-Lite 主打轻量化低成本，3.5 Flash Cyber 则专门针对网络安全场景进行了微调。模型已在 Google Cloud Agent Platform 上线。
-- **毒舌/硬核点评**：Google 这是把模型当牙膏挤，但好歹这次牙膏管够。Flash-Lite 和 Cyber 两个分支终于让人看到了“针对场景设计模型”的诚意，而不是一个模子刻所有。不过，3.6 Flash 到底能不能打过 Claude 3.5 Sonnet 和 GPT-4o，得看实战。
-- **🔗 传送门**：[点击直达原链接](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/)
+### 1. 📌 Gemini 3.6 Flash 及 3.5 Flash-Lite/Cyber 发布 (来源: Google Blog)
+- **核心干货**：Google 发布三款 Gemini 新模型：3.6 Flash（最强主力）、3.5 Flash-Lite（轻量廉价版）、3.5 Flash Cyber（专为网络安全场景优化）。3.6 Flash 在推理、多模态和指令遵循上全面超越前代，且保持低延迟。Cyber 版可直接用于威胁检测、漏洞分析等任务。
+- **毒舌/硬核点评**：OpenAI 刚跟 Hugging Face 吵完架，Google 反手就甩出三款模型刷榜。这波操作堪比科技界的“趁你病，要你命”。
+- **🔗 传送门**：[https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/)
 
 ---
 
-### 2. 📌 Jack Dorsey 推出 Buzz: 团队聊天 + AI代理 + Git托管 缝合怪 (来源: Hacker News | 270分)
-- **核心干货**：Twitter 创始人 Jack Dorsey 发布了一个名为 Buzz 的新项目，试图将企业即时通讯、AI 代理执行任务、以及 Git 代码托管整合到一个平台。这是要跟 Slack、GitHub Copilot、以及 GitLab 抢饭碗的节奏。
-- **毒舌/硬核点评**：Jack Dorsey 大概是觉得 Twitter 玩腻了，想再搞个更混乱的“数字宇宙”。把聊天、代码和 AI 塞到一起，听起来很酷，但大概率会变成“代码没写完，消息炸成河，AI 在画饼”的三重地狱。不过，如果他真能把 AI Agent 和代码仓库深度融合，那确实是降维打击。
-- **🔗 传送门**：[点击直达原链接](https://runtimewire.com/article/jack-dorsey-block-buzz-team-chat-ai-agents-git)
+### 2. 📌 Kimi K3 与 Fable 双双刷新 SoTA (来源: Fireworks AI)
+- **核心干货**：两个新模型 Kimi K3 和 Fable 在多项基准测试中达到当前最优（SoTA），尤其是在代码生成、数学推理和长上下文任务上表现亮眼。Kimi K3 被评价“完全具备与 Fable 竞争的实力”。
+- **毒舌/硬核点评**：开源模型的内卷已经卷到“SoTA 批发商”的地步了。今天你 SoTA，明天我 SoTA，最后用户爽到飞起，OpenAI 和 Anthropic 的定价团队在角落里瑟瑟发抖。
+- **🔗 传送门**：[https://fireworks.ai/blog/kimik3-fable](https://fireworks.ai/blog/kimik3-fable)
 
 ---
 
-### 3. 📌 OpenAI & Hugging Face 联合披露模型评估期间的安全事件 (来源: Hacker News | 844分)
-- **核心干货**：OpenAI 与 Hugging Face 联合发布声明，披露了一起发生在模型评估期间的安全事件。初步调查显示，漏洞源头竟是一个被上传到 Hugging Face 的恶意模型，该模型被用于评估流程时触发了安全缺口。OpenAI 表示已修复并加强了评估沙箱。
-- **毒舌/硬核点评**：这简直是在揭示 AI 时代的“供应链投毒”新玩法。不是代码库被黑，而是评估用的模型本身就成了木马。以后 AI 工程师们不仅要防代码，还得防“同事”上传的模型是卧底。OpenAI 和 Hugging Face 这次联手擦屁股，算是给全行业敲了个警钟：别他妈乱跑别人的模型。
-- **🔗 传送门**：[点击直达原链接](https://openai.com/index/hugging-face-model-evaluation-security-incident/)
+### 3. 📌 人类数学家正在被“反例”超越 (来源: ArXiv/Xena Project)
+- **核心干货**：一篇引发数学界震动的新博客指出，AI 系统（尤其是形式化证明引擎）生成的反例数量和质量已经远超人类数学家。人类往往需要花费数周甚至数月才能理解 AI 抛出的一个复杂反例，而 AI 可以每天生成几十个。
+- **毒舌/硬核点评**：以前是“AI 能写论文了”，现在是“AI 能推翻人类论文了”。建议数学家们赶紧学会跑 AI 模型，否则下一个被“反例”打脸的，可能就是你自己。
+- **🔗 传送门**：[https://xenaproject.wordpress.com/2026/07/20/human-mathematicians-are-being-outcounterexampled/](https://xenaproject.wordpress.com/2026/07/20/human-mathematicians-are-being-outcounterexampled/)
 
 ---
 
 ### 🗣️ 今日顶男金句
-> *“不要试图用战术上的勤奋，去掩盖战略上的懒惰——比如，用 30 个新模型去掩盖 1 个核心突破。”*
+**“当你还在纠结要不要学 AI 时，AI 已经开始教你写数学证明了。别等了，上船。”**

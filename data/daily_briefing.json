@@ -1,44 +1,32 @@
 {
   "date": "2026-07-22",
-  "update_time": "2026-07-22 04:09:21",
+  "update_time": "2026-07-22 05:46:29",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-22\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Gemini 3.6 Flash / 3.5 Flash-Lite / 3.5 Flash Cyber 三连发 (来源: Hacker News | 638分)\n- **核心干货**：Google 一口气发布了三款 Gemini 系列新模型。3.6 Flash 是性能提升的主力，3.5 Flash-Lite 主打轻量化低成本，3.5 Flash Cyber 则专门针对网络安全场景进行了微调。模型已在 Google Cloud Agent Platform 上线。\n- **毒舌/硬核点评**：Google 这是把模型当牙膏挤，但好歹这次牙膏管够。Flash-Lite 和 Cyber 两个分支终于让人看到了“针对场景设计模型”的诚意，而不是一个模子刻所有。不过，3.6 Flash 到底能不能打过 Claude 3.5 Sonnet 和 GPT-4o，得看实战。\n- **🔗 传送门**：[点击直达原链接](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/)\n\n---\n\n### 2. 📌 Jack Dorsey 推出 Buzz: 团队聊天 + AI代理 + Git托管 缝合怪 (来源: Hacker News | 270分)\n- **核心干货**：Twitter 创始人 Jack Dorsey 发布了一个名为 Buzz 的新项目，试图将企业即时通讯、AI 代理执行任务、以及 Git 代码托管整合到一个平台。这是要跟 Slack、GitHub Copilot、以及 GitLab 抢饭碗的节奏。\n- **毒舌/硬核点评**：Jack Dorsey 大概是觉得 Twitter 玩腻了，想再搞个更混乱的“数字宇宙”。把聊天、代码和 AI 塞到一起，听起来很酷，但大概率会变成“代码没写完，消息炸成河，AI 在画饼”的三重地狱。不过，如果他真能把 AI Agent 和代码仓库深度融合，那确实是降维打击。\n- **🔗 传送门**：[点击直达原链接](https://runtimewire.com/article/jack-dorsey-block-buzz-team-chat-ai-agents-git)\n\n---\n\n### 3. 📌 OpenAI & Hugging Face 联合披露模型评估期间的安全事件 (来源: Hacker News | 844分)\n- **核心干货**：OpenAI 与 Hugging Face 联合发布声明，披露了一起发生在模型评估期间的安全事件。初步调查显示，漏洞源头竟是一个被上传到 Hugging Face 的恶意模型，该模型被用于评估流程时触发了安全缺口。OpenAI 表示已修复并加强了评估沙箱。\n- **毒舌/硬核点评**：这简直是在揭示 AI 时代的“供应链投毒”新玩法。不是代码库被黑，而是评估用的模型本身就成了木马。以后 AI 工程师们不仅要防代码，还得防“同事”上传的模型是卧底。OpenAI 和 Hugging Face 这次联手擦屁股，算是给全行业敲了个警钟：别他妈乱跑别人的模型。\n- **🔗 传送门**：[点击直达原链接](https://openai.com/index/hugging-face-model-evaluation-security-incident/)\n\n---\n\n### 🗣️ 今日顶男金句\n> *“不要试图用战术上的勤奋，去掩盖战略上的懒惰——比如，用 30 个新模型去掩盖 1 个核心突破。”*",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-22\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Gemini 3.6 Flash 及 3.5 Flash-Lite/Cyber 发布 (来源: Google Blog)\n- **核心干货**：Google 发布三款 Gemini 新模型：3.6 Flash（最强主力）、3.5 Flash-Lite（轻量廉价版）、3.5 Flash Cyber（专为网络安全场景优化）。3.6 Flash 在推理、多模态和指令遵循上全面超越前代，且保持低延迟。Cyber 版可直接用于威胁检测、漏洞分析等任务。\n- **毒舌/硬核点评**：OpenAI 刚跟 Hugging Face 吵完架，Google 反手就甩出三款模型刷榜。这波操作堪比科技界的“趁你病，要你命”。\n- **🔗 传送门**：[https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/)\n\n---\n\n### 2. 📌 Kimi K3 与 Fable 双双刷新 SoTA (来源: Fireworks AI)\n- **核心干货**：两个新模型 Kimi K3 和 Fable 在多项基准测试中达到当前最优（SoTA），尤其是在代码生成、数学推理和长上下文任务上表现亮眼。Kimi K3 被评价“完全具备与 Fable 竞争的实力”。\n- **毒舌/硬核点评**：开源模型的内卷已经卷到“SoTA 批发商”的地步了。今天你 SoTA，明天我 SoTA，最后用户爽到飞起，OpenAI 和 Anthropic 的定价团队在角落里瑟瑟发抖。\n- **🔗 传送门**：[https://fireworks.ai/blog/kimik3-fable](https://fireworks.ai/blog/kimik3-fable)\n\n---\n\n### 3. 📌 人类数学家正在被“反例”超越 (来源: ArXiv/Xena Project)\n- **核心干货**：一篇引发数学界震动的新博客指出，AI 系统（尤其是形式化证明引擎）生成的反例数量和质量已经远超人类数学家。人类往往需要花费数周甚至数月才能理解 AI 抛出的一个复杂反例，而 AI 可以每天生成几十个。\n- **毒舌/硬核点评**：以前是“AI 能写论文了”，现在是“AI 能推翻人类论文了”。建议数学家们赶紧学会跑 AI 模型，否则下一个被“反例”打脸的，可能就是你自己。\n- **🔗 传送门**：[https://xenaproject.wordpress.com/2026/07/20/human-mathematicians-are-being-outcounterexampled/](https://xenaproject.wordpress.com/2026/07/20/human-mathematicians-are-being-outcounterexampled/)\n\n---\n\n### 🗣️ 今日顶男金句\n**“当你还在纠结要不要学 AI 时，AI 已经开始教你写数学证明了。别等了，上船。”**",
   "briefing_items": [
     {
-      "title": "Gemini 3.6 Flash / 3.5 Flash-Lite / 3.5 Flash Cyber 三连发",
-      "source": "Hacker News | 638分",
-      "summary": "Google 一口气发布了三款 Gemini 系列新模型。3.6 Flash 是性能提升的主力，3.5 Flash-Lite 主打轻量化低成本，3.5 Flash Cyber 则专门针对网络安全场景进行了微调。模型已在 Google Cloud Agent Platform 上线。",
-      "commentary": "Google 这是把模型当牙膏挤，但好歹这次牙膏管够。Flash-Lite 和 Cyber 两个分支终于让人看到了“针对场景设计模型”的诚意，而不是一个模子刻所有。不过，3.6 Flash 到底能不能打过 Claude 3.5 Sonnet 和 GPT-4o，得看实战。",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/"
+      "title": "Gemini 3.6 Flash 及 3.5 Flash-Lite/Cyber 发布",
+      "source": "Google Blog",
+      "summary": "Google 发布三款 Gemini 新模型：3.6 Flash（最强主力）、3.5 Flash-Lite（轻量廉价版）、3.5 Flash Cyber（专为网络安全场景优化）。3.6 Flash 在推理、多模态和指令遵循上全面超越前代，且保持低延迟。Cyber 版可直接用于威胁检测、漏洞分析等任务。",
+      "commentary": "OpenAI 刚跟 Hugging Face 吵完架，Google 反手就甩出三款模型刷榜。这波操作堪比科技界的“趁你病，要你命”。",
+      "url": ""
     },
     {
-      "title": "Jack Dorsey 推出 Buzz: 团队聊天 + AI代理 + Git托管 缝合怪",
-      "source": "Hacker News | 270分",
-      "summary": "Twitter 创始人 Jack Dorsey 发布了一个名为 Buzz 的新项目，试图将企业即时通讯、AI 代理执行任务、以及 Git 代码托管整合到一个平台。这是要跟 Slack、GitHub Copilot、以及 GitLab 抢饭碗的节奏。",
-      "commentary": "Jack Dorsey 大概是觉得 Twitter 玩腻了，想再搞个更混乱的“数字宇宙”。把聊天、代码和 AI 塞到一起，听起来很酷，但大概率会变成“代码没写完，消息炸成河，AI 在画饼”的三重地狱。不过，如果他真能把 AI Agent 和代码仓库深度融合，那确实是降维打击。",
-      "url": "https://runtimewire.com/article/jack-dorsey-block-buzz-team-chat-ai-agents-git"
+      "title": "Kimi K3 与 Fable 双双刷新 SoTA",
+      "source": "Fireworks AI",
+      "summary": "两个新模型 Kimi K3 和 Fable 在多项基准测试中达到当前最优（SoTA），尤其是在代码生成、数学推理和长上下文任务上表现亮眼。Kimi K3 被评价“完全具备与 Fable 竞争的实力”。",
+      "commentary": "开源模型的内卷已经卷到“SoTA 批发商”的地步了。今天你 SoTA，明天我 SoTA，最后用户爽到飞起，OpenAI 和 Anthropic 的定价团队在角落里瑟瑟发抖。",
+      "url": ""
     },
     {
-      "title": "OpenAI & Hugging Face 联合披露模型评估期间的安全事件",
-      "source": "Hacker News | 844分",
-      "summary": "OpenAI 与 Hugging Face 联合发布声明，披露了一起发生在模型评估期间的安全事件。初步调查显示，漏洞源头竟是一个被上传到 Hugging Face 的恶意模型，该模型被用于评估流程时触发了安全缺口。OpenAI 表示已修复并加强了评估沙箱。",
-      "commentary": "这简直是在揭示 AI 时代的“供应链投毒”新玩法。不是代码库被黑，而是评估用的模型本身就成了木马。以后 AI 工程师们不仅要防代码，还得防“同事”上传的模型是卧底。OpenAI 和 Hugging Face 这次联手擦屁股，算是给全行业敲了个警钟：别他妈乱跑别人的模型。",
-      "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/"
-    },
-    {
-      "quote": "*“不要试图用战术上的勤奋，去掩盖战略上的懒惰——比如，用 30 个新模型去掩盖 1 个核心突破。”*"
+      "title": "人类数学家正在被“反例”超越",
+      "source": "ArXiv/Xena Project",
+      "summary": "一篇引发数学界震动的新博客指出，AI 系统（尤其是形式化证明引擎）生成的反例数量和质量已经远超人类数学家。人类往往需要花费数周甚至数月才能理解 AI 抛出的一个复杂反例，而 AI 可以每天生成几十个。",
+      "commentary": "以前是“AI 能写论文了”，现在是“AI 能推翻人类论文了”。建议数学家们赶紧学会跑 AI 模型，否则下一个被“反例”打脸的，可能就是你自己。",
+      "url": ""
     }
   ],
   "candidates": [
-    {
-      "id": "hn:48995213",
-      "title": "Jack Dorsey launches Buzz to combine team chat, AI agents and Git hosting",
-      "summary": "<a href=\"https:&#x2F;&#x2F;x.com&#x2F;jack&#x2F;status&#x2F;2079605800998146171\" rel=\"nofollow\">https:&#x2F;&#x2F;x.com&#x2F;jack&#x2F;status&#x2F;2079605800998146171</a>, <a href=\"https:&#x2F;&#x2F;xcancel.com&#x2F;jack&#x2F;status&#x2F;2079605800998146171\" rel=\"nofollow\">https:&#x2F;&#x2F;xcancel.",
-      "url": "https://runtimewire.com/article/jack-dorsey-block-buzz-team-chat-ai-agents-git",
-      "source": "Hacker News",
-      "score": 270,
-      "comments": 230
-    },
     {
       "id": "lob:t2jxyu",
       "title": "432 Linux kernel CVEs published in the last 24 hours",
@@ -58,8 +46,8 @@
       "summary": "<a href=\"https:&#x2F;&#x2F;www.axios.com&#x2F;2026&#x2F;07&#x2F;21&#x2F;openai-says-hugging-face-breach-caused-by-one-its-models\" rel=\"nofollow\">https:&#x2F;&#x2F;www.axios.com&#x2F;2026&#x2F;07&#x2F;21&#x2F;openai-says-hugging-face-br...</a><p>See also <i>Security incident disclosure – July 2026</i",
       "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
       "source": "Hacker News",
-      "score": 844,
-      "comments": 586
+      "score": 919,
+      "comments": 641
     },
     {
       "id": "hn:48996318",
@@ -67,8 +55,8 @@
       "summary": "",
       "url": "https://freeink.org/",
       "source": "Hacker News",
-      "score": 453,
-      "comments": 109
+      "score": 480,
+      "comments": 113
     },
     {
       "id": "hn:48993414",
@@ -76,8 +64,8 @@
       "summary": "<a href=\"https:&#x2F;&#x2F;console.cloud.google.com&#x2F;agent-platform&#x2F;publishers&#x2F;google&#x2F;model-garden&#x2F;gemini-3.6-flash\" rel=\"nofollow\">https:&#x2F;&#x2F;console.cloud.google.com&#x2F;agent-platform&#x2F;publishers&#x2F;g...</a>",
       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
       "source": "Hacker News",
-      "score": 638,
-      "comments": 509
+      "score": 652,
+      "comments": 511
     },
     {
       "id": "hn:48996571",
@@ -85,8 +73,8 @@
       "summary": "",
       "url": "https://ads.openai.com/",
       "source": "Hacker News",
-      "score": 476,
-      "comments": 380
+      "score": 570,
+      "comments": 419
     },
     {
       "id": "hn:48999291",
@@ -94,8 +82,8 @@
       "summary": "",
       "url": "https://fireworks.ai/blog/kimik3-fable",
       "source": "Hacker News",
-      "score": 400,
-      "comments": 237
+      "score": 462,
+      "comments": 273
     },
     {
       "id": "hn:48998362",
@@ -103,26 +91,8 @@
       "summary": "",
       "url": "https://terrytao.wordpress.com/2026/07/21/a-digestion-of-the-jacobian-conjecture-counterexample/",
       "source": "Hacker News",
-      "score": 214,
-      "comments": 71
-    },
-    {
-      "id": "hn:48993816",
-      "title": "Long presumed dead, a thriving coral reef is discovered in West Africa",
-      "summary": "<a href=\"https:&#x2F;&#x2F;www.frontiersin.org&#x2F;journals&#x2F;marine-science&#x2F;articles&#x2F;10.3389&#x2F;fmars.2026.1848226&#x2F;full\" rel=\"nofollow\">https:&#x2F;&#x2F;www.frontiersin.org&#x2F;journals&#x2F;marine-science&#x2F;articles...</a>",
-      "url": "https://e360.yale.edu/digest/benin-coral-reef",
-      "source": "Hacker News",
-      "score": 316,
-      "comments": 60
-    },
-    {
-      "id": "hn:48992870",
-      "title": "Apple defeats liability for not scanning iCloud for CSAM",
-      "summary": "",
-      "url": "https://blog.ericgoldman.org/archives/2026/07/apple-defeats-liability-for-not-scanning-icloud-for-csam-but-the-judge-was-not-pleased-amy-v-apple.htm",
-      "source": "Hacker News",
-      "score": 374,
-      "comments": 345
+      "score": 226,
+      "comments": 74
     },
     {
       "id": "hn:48996652",
@@ -130,8 +100,17 @@
       "summary": "",
       "url": "https://apnews.com/article/ai-anthropic-copyright-settlement-claude-books-bartz-74b140444023898aeba8579b6e9f0d63",
       "source": "Hacker News",
-      "score": 187,
-      "comments": 145
+      "score": 241,
+      "comments": 171
+    },
+    {
+      "id": "hn:48993816",
+      "title": "Long presumed dead, a thriving coral reef is discovered in West Africa",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.frontiersin.org&#x2F;journals&#x2F;marine-science&#x2F;articles&#x2F;10.3389&#x2F;fmars.2026.1848226&#x2F;full\" rel=\"nofollow\">https:&#x2F;&#x2F;www.frontiersin.org&#x2F;journals&#x2F;marine-science&#x2F;articles...</a>",
+      "url": "https://e360.yale.edu/digest/benin-coral-reef",
+      "source": "Hacker News",
+      "score": 329,
+      "comments": 69
     },
     {
       "id": "hn:48998404",
@@ -139,8 +118,8 @@
       "summary": "",
       "url": "https://www.tryai.dev/blog/ai-drawing-arena-colored-pencils-claude-gpt-grok",
       "source": "Hacker News",
-      "score": 142,
-      "comments": 51
+      "score": 159,
+      "comments": 55
     },
     {
       "id": "lob:twqtlo",
@@ -156,12 +135,21 @@
       ]
     },
     {
+      "id": "hn:49000864",
+      "title": "LG to ban residential proxies from smart TV apps",
+      "summary": "",
+      "url": "https://krebsonsecurity.com/2026/07/lg-to-ban-residential-proxies-from-smart-tv-apps/",
+      "source": "Hacker News",
+      "score": 153,
+      "comments": 112
+    },
+    {
       "id": "lob:msg39b",
       "title": "Linux kernel will support $ORIGIN, sort of",
       "summary": "<p>HN discussions: <a href=\"https://news.ycombinator.com/item?id=48988793\" rel=\"ugc\">https://news.ycombinator.com/item?id=48988793</a></p>\n",
       "url": "https://fzakaria.com/2026/07/20/linux-kernel-will-support-origin-sort-of",
       "source": "Lobste.rs",
-      "score": 49,
+      "score": 53,
       "comments": 1,
       "tags": [
         "c",
@@ -209,21 +197,12 @@
       "summary": "",
       "url": "https://nesbitt.io/2026/07/21/end-of-options.html",
       "source": "Lobste.rs",
-      "score": 50,
+      "score": 51,
       "comments": 8,
       "tags": [
         "security",
         "vcs"
       ]
-    },
-    {
-      "id": "hn:49000864",
-      "title": "LG to ban residential proxies from smart TV apps",
-      "summary": "",
-      "url": "https://krebsonsecurity.com/2026/07/lg-to-ban-residential-proxies-from-smart-tv-apps/",
-      "source": "Hacker News",
-      "score": 68,
-      "comments": 49
     },
     {
       "id": "arxiv:2607.19344v1",
@@ -237,6 +216,31 @@
         "cs.GR"
       ],
       "arxiv_id": "2607.19344v1"
+    },
+    {
+      "id": "arxiv:2607.19336v1",
+      "title": "Agents in the Wild: Where Research Meets Deployment",
+      "summary": "Agentic systems large language model (LLM) based architectures capable of reasoning, planning, acting, and coordinating with tools and other agents are rapidly transitioning from research prototypes to production scale deployments across domains such as software engineering, scientific discovery, an",
+      "url": "https://arxiv.org/abs/2607.19336v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_id": "2607.19336v1"
+    },
+    {
+      "id": "arxiv:2607.19333v1",
+      "title": "Provable diffusion-based posterior sampling for linear inverse problems via DDIM",
+      "summary": "Diffusion-based methods have achieved remarkable empirical success in solving inverse problems. However, many existing posterior samplers either lack rigorous theoretical guarantees or incur substantial computational overhead. We propose a simple and efficient algorithm, called \\pddim, for solving l",
+      "url": "https://arxiv.org/abs/2607.19333v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ],
+      "arxiv_id": "2607.19333v1"
     }
   ],
   "ai_curated": true
