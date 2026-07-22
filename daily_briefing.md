@@ -4,26 +4,26 @@
 
 ---
 
-### 1. 📌 Gemini 3.6 Flash 及 3.5 Flash-Lite/Cyber 发布 (来源: Google Blog)
-- **核心干货**：Google 发布三款 Gemini 新模型：3.6 Flash（最强主力）、3.5 Flash-Lite（轻量廉价版）、3.5 Flash Cyber（专为网络安全场景优化）。3.6 Flash 在推理、多模态和指令遵循上全面超越前代，且保持低延迟。Cyber 版可直接用于威胁检测、漏洞分析等任务。
-- **毒舌/硬核点评**：OpenAI 刚跟 Hugging Face 吵完架，Google 反手就甩出三款模型刷榜。这波操作堪比科技界的“趁你病，要你命”。
-- **🔗 传送门**：[https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/)
+### 1. 📌 OpenAI 与 Hugging Face 联合披露模型评估安全事件 (来源: Hacker News | 966 HN)
+- **核心干货**：OpenAI 官方承认，在联合 Hugging Face 进行模型评估时，因自身某个模型的问题引发了安全漏洞。这打破了“模型只是文件”的幻想——模型本身也可能成为攻击向量，且发生在 AI 安全“圣殿”Hugging Face 上，讽刺拉满。
+- **毒舌/硬核点评**：你训练 AI 是为了安全，结果 AI 自己先成了安全隐患。这波啊，是“用魔法打败魔法”的反面教材——“用魔法制造漏洞”。
+- **🔗 传送门**：[OpenAI 官方披露](https://openai.com/index/hugging-face-model-evaluation-security-incident/)
 
 ---
 
-### 2. 📌 Kimi K3 与 Fable 双双刷新 SoTA (来源: Fireworks AI)
-- **核心干货**：两个新模型 Kimi K3 和 Fable 在多项基准测试中达到当前最优（SoTA），尤其是在代码生成、数学推理和长上下文任务上表现亮眼。Kimi K3 被评价“完全具备与 Fable 竞争的实力”。
-- **毒舌/硬核点评**：开源模型的内卷已经卷到“SoTA 批发商”的地步了。今天你 SoTA，明天我 SoTA，最后用户爽到飞起，OpenAI 和 Anthropic 的定价团队在角落里瑟瑟发抖。
-- **🔗 传送门**：[https://fireworks.ai/blog/kimik3-fable](https://fireworks.ai/blog/kimik3-fable)
+### 2. 📌 Google 发布 Gemini 3.6 Flash 及“赛博”系列新模型 (来源: Hacker News | 660 HN)
+- **核心干货**：一口气发布三个新模型：Gemini 3.6 Flash（性能提升）、3.5 Flash-Lite（轻量版）、以及一个名字极为赛博朋克的 **3.5 Flash Cyber**。Flash 系列本就是中小型模型的性价比之王，这次直接推出“网络战/赛博”特化版，意图覆盖边缘计算、安全审计等硬核场景。
+- **毒舌/硬核点评**：建议下一款直接叫 “Gemini 3.5 Flash 杀毒软件版”，给每行代码都装上防火墙。Google 这是要把模型当武器卖了，不是，当工具卖。
+- **🔗 传送门**：[Google 官方博客](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/)
 
 ---
 
-### 3. 📌 人类数学家正在被“反例”超越 (来源: ArXiv/Xena Project)
-- **核心干货**：一篇引发数学界震动的新博客指出，AI 系统（尤其是形式化证明引擎）生成的反例数量和质量已经远超人类数学家。人类往往需要花费数周甚至数月才能理解 AI 抛出的一个复杂反例，而 AI 可以每天生成几十个。
-- **毒舌/硬核点评**：以前是“AI 能写论文了”，现在是“AI 能推翻人类论文了”。建议数学家们赶紧学会跑 AI 模型，否则下一个被“反例”打脸的，可能就是你自己。
-- **🔗 传送门**：[https://xenaproject.wordpress.com/2026/07/20/human-mathematicians-are-being-outcounterexampled/](https://xenaproject.wordpress.com/2026/07/20/human-mathematicians-are-being-outcounterexampled/)
+### 3. 📌 Anthropic 因“盗版书籍训练 Claude”被判赔 15 亿美元 (来源: Hacker News | 265 HN)
+- **核心干货**：法官正式批准了 Anthropic 与出版商就“使用盗版书籍训练 Claude”一案达成的 15 亿美元和解协议。这意味着大模型公司为“洗”训练数据付出了天价学费，也确立了“用未经授权的版权内容训练模型 = 巨额赔款”的先例。
+- **毒舌/硬核点评**：15 亿买个教训：别拿别人的书当自己的训练燃料。从此以后，AI 公司的法务部怕是要比算法部还忙了。
+- **🔗 传送门**：[AP News 报道](https://apnews.com/article/ai-anthropic-copyright-settlement-claude-books-bartz-74b140444023898aeba8579b6e9f0f63d)
 
 ---
 
 ### 🗣️ 今日顶男金句
-**“当你还在纠结要不要学 AI 时，AI 已经开始教你写数学证明了。别等了，上船。”**
+> *“别把 AI 当万能钥匙，它只会帮你把锁撬得更快，然后顺便留个后门。”*
