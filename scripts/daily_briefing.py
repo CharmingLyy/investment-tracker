@@ -858,6 +858,7 @@ def push_to_wechat(briefing_md: str, date_str: str):
         # 记录完整响应用于调试
         print(f"[推送] HTTP {resp.status_code}")
         result = resp.json()
+        print(f"[推送] 完整响应: {json.dumps(result, ensure_ascii=False)}")
         data_field = result.get("data", {})
         if isinstance(data_field, dict):
             data_errno = data_field.get("errno", 0)
