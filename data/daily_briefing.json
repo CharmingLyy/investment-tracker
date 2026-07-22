@@ -1,58 +1,40 @@
 {
   "date": "2026-07-22",
-  "update_time": "2026-07-21 16:13:57",
+  "update_time": "2026-07-22 03:50:57",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-22\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 谁在恐惧中国 AI 模型？ (来源: Hacker News)\n- **核心干货**：Stratechery 深度分析中国大模型崛起对全球 AI 格局的影响。从 Qwen、DeepSeek 到 Kimi，开源/开放权重模型正在以低成本、高迭代速度逼近甚至在某些维度超越闭源巨头。文章探讨了地缘政治、技术封锁和开源生态的微妙博弈——不是能不能追上，而是谁先被逼疯。\n- **毒舌/硬核点评**：硅谷大厂们一边喊着“开源是未来”，一边偷偷把训练数据锁进保险箱。中国选手直接把底牌摊桌上：这局我跟你玩到底，你敢跟吗？\n- **🔗 传送门**：[https://stratechery.com/2026/whos-afraid-of-chinese-models/](https://stratechery.com/2026/whos-afraid-of-chinese-models/)\n\n---\n\n### 2. 📌 Kimi K3 与中国的开放权重模型浪潮 (来源: Dev.to)\n- **核心干货**：Moonshot AI 发布 Kimi K3，基准测试表明一个开放权重模型首次在多项任务上与最佳闭源模型（GPT-4o/Claude-3.5 级别）并驾齐驱。但代价是“平台孤岛”——K3 只在 Moonshot 平台，GLM-5.2 在 Z.ai，DeepSeek V4 Pro 在自家，MiniMax M3 在 MiniMax。开发者需要维护四个账号、四个账单——这就是“开放”的代价。\n- **毒舌/硬核点评**：中国大模型厂商把“开放”玩成了“分布式封闭”——每个都说自己是开源，但都想要你注册、绑定、付费。真正的开源精神？不存在的，只有“你来我这儿玩”的营销话术。\n- **🔗 传送门**：[https://dev.to/smakosh/kimi-k3-and-chinas-open-weight-model-wave-bpp](https://dev.to/smakosh/kimi-k3-and-chinas-open-weight-model-wave-bpp)\n\n---\n\n### 3. 📌 关键 SharePoint RCE 漏洞 (CVE-2026-50522) 正在被积极利用 (来源: The Hacker News)\n- **核心干货**：微软 7 月补丁日修复的第三个 SharePoint Server 漏洞 CVE-2026-50522（CVSS 9.8，严重级别）已被 watchTowr 确认正在活跃利用。该漏洞是反序列化不信任数据导致的远程代码执行，PoC 已公开。攻击者只需发送一个特制包即可完全控制目标 SharePoint 服务器——这对企业内网意味着全面沦陷。\n- **毒舌/硬核点评**：微软：我们修了，但 PoC 已经满天飞了。IT 运维：好的，我这就去加班打补丁。攻击者：谢谢微软的“及时”修复，我先用着。\n- **🔗 传送门**：[https://thehackernews.com/2026/07/critical-sharepoint-rce-cve-2026-50522.html](https://thehackernews.com/2026/07/critical-sharepoint-rce-cve-2026-50522.html)\n\n---\n\n### 🗣️ 今日顶男金句\n“开源不是终点，是起点——终点是你能用别人的代码，让别人无码可用。”",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-22\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Google Gemini 3.6 Flash 与 3.5 Flash Cyber 发布 (来源: HackerNews | 636分)\n- **核心干货**：Google 一口气推出三款新模型：Gemini 3.6 Flash（性能更强的闪电战）、3.5 Flash-Lite（轻量版打性价比）、以及专门面向网络安全的 3.5 Flash Cyber（自带安全审计技能点）。Flash Cyber 专门针对渗透测试、漏洞分析等场景优化，试图用 AI 替代部分红队工作。\n- **毒舌/硬核点评**：Google 这是把模型当牙膏挤？Flash Cyber 倒是有点意思——以后黑客攻击前可能先问问 AI 能不能绕过你，然后 AI 说“能，但得加钱”。\n- **🔗 传送门**：[https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/)\n\n---\n\n### 2. 📌 OpenAI 与 Hugging Face 模型评估安全事件 (来源: HackerNews | 827分)\n- **核心干货**：OpenAI 和 Hugging Face 联合披露了一起安全事件——在模型评估过程中，一个 OpenAI 模型被利用导致 Hugging Face 遭入侵。具体细节尚未完全公开，但涉及模型供应链安全问题。\n- **毒舌/硬核点评**：模型评估变红队实战？这波操作堪比“请黑客来验收防火墙，结果黑客把服务器搬走了”。各位 AI 公司，自己养的狗咬了邻居，得赔。\n- **🔗 传送门**：[https://openai.com/index/hugging-face-model-evaluation-security-incident/](https://openai.com/index/hugging-face-model-evaluation-security-incident/)\n\n---\n\n### 3. 📌 FreeInk: 开源电子书阅读器生态 (来源: HackerNews | 449分)\n- **核心干货**：FreeInk 项目试图打造一个开放、兼容的电子墨水屏阅读器生态系统，对抗 Amazon Kindle 的封闭花园。支持自定义固件、开放格式、甚至能运行 Linux 应用。\n- **毒舌/硬核点评**：Kindle 用户终于不用在“官方书店”里当韭菜了。建议 FreeInk 团队直接内置一个“一键破解亚马逊 DRM”功能，销量翻倍。\n- **🔗 传送门**：[https://freeink.org/](https://freeink.org/)\n\n---\n\n### 🗣️ 今日顶男金句\n\"当别人在卷 Model 参数时，你已经在研究 Model 的漏洞了——这叫降维打击，也叫‘先手致富’。\"",
   "briefing_items": [
     {
-      "title": "谁在恐惧中国 AI 模型？",
-      "source": "Hacker News",
-      "summary": "Stratechery 深度分析中国大模型崛起对全球 AI 格局的影响。从 Qwen、DeepSeek 到 Kimi，开源/开放权重模型正在以低成本、高迭代速度逼近甚至在某些维度超越闭源巨头。文章探讨了地缘政治、技术封锁和开源生态的微妙博弈——不是能不能追上，而是谁先被逼疯。",
-      "commentary": "硅谷大厂们一边喊着“开源是未来”，一边偷偷把训练数据锁进保险箱。中国选手直接把底牌摊桌上：这局我跟你玩到底，你敢跟吗？",
+      "title": "Google Gemini 3.6 Flash 与 3.5 Flash Cyber 发布",
+      "source": "HackerNews | 636分",
+      "summary": "Google 一口气推出三款新模型：Gemini 3.6 Flash（性能更强的闪电战）、3.5 Flash-Lite（轻量版打性价比）、以及专门面向网络安全的 3.5 Flash Cyber（自带安全审计技能点）。Flash Cyber 专门针对渗透测试、漏洞分析等场景优化，试图用 AI 替代部分红队工作。",
+      "commentary": "Google 这是把模型当牙膏挤？Flash Cyber 倒是有点意思——以后黑客攻击前可能先问问 AI 能不能绕过你，然后 AI 说“能，但得加钱”。",
       "url": ""
     },
     {
-      "title": "Kimi K3 与中国的开放权重模型浪潮",
-      "source": "Dev.to",
-      "summary": "Moonshot AI 发布 Kimi K3，基准测试表明一个开放权重模型首次在多项任务上与最佳闭源模型（GPT-4o/Claude-3.5 级别）并驾齐驱。但代价是“平台孤岛”——K3 只在 Moonshot 平台，GLM-5.2 在 Z.ai，DeepSeek V4 Pro 在自家，MiniMax M3 在 MiniMax。开发者需要维护四个账号、四个账单——这就是“开放”的代价。",
-      "commentary": "中国大模型厂商把“开放”玩成了“分布式封闭”——每个都说自己是开源，但都想要你注册、绑定、付费。真正的开源精神？不存在的，只有“你来我这儿玩”的营销话术。",
+      "title": "OpenAI 与 Hugging Face 模型评估安全事件",
+      "source": "HackerNews | 827分",
+      "summary": "OpenAI 和 Hugging Face 联合披露了一起安全事件——在模型评估过程中，一个 OpenAI 模型被利用导致 Hugging Face 遭入侵。具体细节尚未完全公开，但涉及模型供应链安全问题。",
+      "commentary": "模型评估变红队实战？这波操作堪比“请黑客来验收防火墙，结果黑客把服务器搬走了”。各位 AI 公司，自己养的狗咬了邻居，得赔。",
       "url": ""
     },
     {
-      "title": "关键 SharePoint RCE 漏洞 (CVE-2026-50522) 正在被积极利用",
-      "source": "The Hacker News",
-      "summary": "微软 7 月补丁日修复的第三个 SharePoint Server 漏洞 CVE-2026-50522（CVSS 9.8，严重级别）已被 watchTowr 确认正在活跃利用。该漏洞是反序列化不信任数据导致的远程代码执行，PoC 已公开。攻击者只需发送一个特制包即可完全控制目标 SharePoint 服务器——这对企业内网意味着全面沦陷。",
-      "commentary": "微软：我们修了，但 PoC 已经满天飞了。IT 运维：好的，我这就去加班打补丁。攻击者：谢谢微软的“及时”修复，我先用着。",
+      "title": "FreeInk: 开源电子书阅读器生态",
+      "source": "HackerNews | 449分",
+      "summary": "FreeInk 项目试图打造一个开放、兼容的电子墨水屏阅读器生态系统，对抗 Amazon Kindle 的封闭花园。支持自定义固件、开放格式、甚至能运行 Linux 应用。",
+      "commentary": "Kindle 用户终于不用在“官方书店”里当韭菜了。建议 FreeInk 团队直接内置一个“一键破解亚马逊 DRM”功能，销量翻倍。",
       "url": ""
     }
   ],
   "candidates": [
     {
-      "id": "hn:48989701",
-      "title": "Qwen-Image-3.0: Rich Content, Authentic Details, Deep Knowledge",
-      "summary": "",
-      "url": "https://qwen.ai/blog?id=qwen-image-3.0",
+      "id": "hn:48995213",
+      "title": "Jack Dorsey launches Buzz to combine team chat, AI agents and Git hosting",
+      "summary": "<a href=\"https:&#x2F;&#x2F;x.com&#x2F;jack&#x2F;status&#x2F;2079605800998146171\" rel=\"nofollow\">https:&#x2F;&#x2F;x.com&#x2F;jack&#x2F;status&#x2F;2079605800998146171</a>, <a href=\"https:&#x2F;&#x2F;xcancel.com&#x2F;jack&#x2F;status&#x2F;2079605800998146171\" rel=\"nofollow\">https:&#x2F;&#x2F;xcancel.",
+      "url": "https://runtimewire.com/article/jack-dorsey-block-buzz-team-chat-ai-agents-git",
       "source": "Hacker News",
-      "score": 422,
-      "comments": 175
-    },
-    {
-      "id": "hn:48977128",
-      "title": "Who's afraid of Chinese models?",
-      "summary": "",
-      "url": "https://stratechery.com/2026/whos-afraid-of-chinese-models/",
-      "source": "Hacker News",
-      "score": 870,
-      "comments": 701
-    },
-    {
-      "id": "hn:48987822",
-      "title": "Incremental – A library for incremental computations",
-      "summary": "",
-      "url": "https://github.com/janestreet/incremental",
-      "source": "Hacker News",
-      "score": 304,
-      "comments": 56
+      "score": 267,
+      "comments": 228
     },
     {
       "id": "lob:t2jxyu",
@@ -60,47 +42,111 @@
       "summary": "",
       "url": "https://lore.kernel.org/linux-cve-announce/",
       "source": "Lobste.rs",
-      "score": 22,
-      "comments": 11,
+      "score": 34,
+      "comments": 13,
       "tags": [
         "linux",
         "security"
       ]
     },
     {
+      "id": "hn:48997548",
+      "title": "OpenAI and Hugging Face address security incident during model evaluation",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.axios.com&#x2F;2026&#x2F;07&#x2F;21&#x2F;openai-says-hugging-face-breach-caused-by-one-its-models\" rel=\"nofollow\">https:&#x2F;&#x2F;www.axios.com&#x2F;2026&#x2F;07&#x2F;21&#x2F;openai-says-hugging-face-br...</a><p>See also <i>Security incident disclosure – July 2026</i",
+      "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
+      "source": "Hacker News",
+      "score": 827,
+      "comments": 570
+    },
+    {
+      "id": "hn:48996318",
+      "title": "FreeInk: Open ecosystem for e-readers",
+      "summary": "",
+      "url": "https://freeink.org/",
+      "source": "Hacker News",
+      "score": 449,
+      "comments": 109
+    },
+    {
       "id": "hn:48993414",
       "title": "Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber",
-      "summary": "",
+      "summary": "<a href=\"https:&#x2F;&#x2F;console.cloud.google.com&#x2F;agent-platform&#x2F;publishers&#x2F;google&#x2F;model-garden&#x2F;gemini-3.6-flash\" rel=\"nofollow\">https:&#x2F;&#x2F;console.cloud.google.com&#x2F;agent-platform&#x2F;publishers&#x2F;g...</a>",
       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
       "source": "Hacker News",
-      "score": 166,
-      "comments": 96
+      "score": 636,
+      "comments": 509
     },
     {
-      "id": "lob:op1k28",
-      "title": "I wrote an API client for my water-cooled bed",
+      "id": "hn:48996571",
+      "title": "Advertise in ChatGPT",
       "summary": "",
-      "url": "https://tinkering.xyz/bedctl/",
-      "source": "Lobste.rs",
-      "score": 52,
-      "comments": 16,
-      "tags": [
-        "hardware",
-        "zig"
-      ]
+      "url": "https://ads.openai.com/",
+      "source": "Hacker News",
+      "score": 449,
+      "comments": 375
     },
     {
-      "id": "lob:p3z0zw",
-      "title": "Meta Garbage Collection: Using OCaml's GC to GC Rust",
+      "id": "hn:48999291",
+      "title": "Kimi K3 Is Competitive with Fable; Kimi K3 and Fable Is SoTA",
       "summary": "",
-      "url": "https://soteria-tools.com/blog/meta-garbage-collection",
-      "source": "Lobste.rs",
-      "score": 47,
-      "comments": 8,
-      "tags": [
-        "ml",
-        "rust"
-      ]
+      "url": "https://fireworks.ai/blog/kimik3-fable",
+      "source": "Hacker News",
+      "score": 387,
+      "comments": 222
+    },
+    {
+      "id": "hn:48998362",
+      "title": "A digestion of the Jacobian conjecture counterexample",
+      "summary": "",
+      "url": "https://terrytao.wordpress.com/2026/07/21/a-digestion-of-the-jacobian-conjecture-counterexample/",
+      "source": "Hacker News",
+      "score": 212,
+      "comments": 69
+    },
+    {
+      "id": "hn:48993816",
+      "title": "Long presumed dead, a thriving coral reef is discovered in West Africa",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.frontiersin.org&#x2F;journals&#x2F;marine-science&#x2F;articles&#x2F;10.3389&#x2F;fmars.2026.1848226&#x2F;full\" rel=\"nofollow\">https:&#x2F;&#x2F;www.frontiersin.org&#x2F;journals&#x2F;marine-science&#x2F;articles...</a>",
+      "url": "https://e360.yale.edu/digest/benin-coral-reef",
+      "source": "Hacker News",
+      "score": 315,
+      "comments": 59
+    },
+    {
+      "id": "hn:48992870",
+      "title": "Apple defeats liability for not scanning iCloud for CSAM",
+      "summary": "",
+      "url": "https://blog.ericgoldman.org/archives/2026/07/apple-defeats-liability-for-not-scanning-icloud-for-csam-but-the-judge-was-not-pleased-amy-v-apple.htm",
+      "source": "Hacker News",
+      "score": 371,
+      "comments": 343
+    },
+    {
+      "id": "hn:48994178",
+      "title": "Map of the world's great castles and fortresses",
+      "summary": "",
+      "url": "https://thecastlemap.com/",
+      "source": "Hacker News",
+      "score": 199,
+      "comments": 145
+    },
+    {
+      "id": "hn:48998404",
+      "title": "\"Drawing\" the Mona Lisa with GPT-5.6, Claude, Gemini, and Grok",
+      "summary": "",
+      "url": "https://www.tryai.dev/blog/ai-drawing-arena-colored-pencils-claude-gpt-grok",
+      "source": "Hacker News",
+      "score": 140,
+      "comments": 49
+    },
+    {
+      "id": "hn:48996652",
+      "title": "Judge approves $1.5B Anthropic settlement for pirated books used to train Claude",
+      "summary": "",
+      "url": "https://apnews.com/article/ai-anthropic-copyright-settlement-claude-books-bartz-74b140444023898aeba8579b6e9f0d63",
+      "source": "Hacker News",
+      "score": 175,
+      "comments": 137
     },
     {
       "id": "lob:twqtlo",
@@ -108,30 +154,40 @@
       "summary": "",
       "url": "https://thorsell.io/2026/07/21/github-ssh-keys.html",
       "source": "Lobste.rs",
-      "score": 35,
-      "comments": 14,
+      "score": 51,
+      "comments": 17,
       "tags": [
         "devops",
         "vcs"
       ]
     },
     {
-      "id": "hn:48992870",
-      "title": "Apple Defeats Liability for Not Scanning iCloud for CSAM",
-      "summary": "",
-      "url": "https://blog.ericgoldman.org/archives/2026/07/apple-defeats-liability-for-not-scanning-icloud-for-csam-but-the-judge-was-not-pleased-amy-v-apple.htm",
-      "source": "Hacker News",
-      "score": 122,
-      "comments": 72
+      "id": "lob:msg39b",
+      "title": "Linux kernel will support $ORIGIN, sort of",
+      "summary": "<p>HN discussions: <a href=\"https://news.ycombinator.com/item?id=48988793\" rel=\"ugc\">https://news.ycombinator.com/item?id=48988793</a></p>\n",
+      "url": "https://fzakaria.com/2026/07/20/linux-kernel-will-support-origin-sort-of",
+      "source": "Lobste.rs",
+      "score": 49,
+      "comments": 1,
+      "tags": [
+        "c",
+        "linux",
+        "nix",
+        "osdev"
+      ]
     },
     {
-      "id": "hn:48993448",
-      "title": "ICE to Pay Thomson Reuters $125M to Find Voter Fraud",
+      "id": "lob:v3xuxn",
+      "title": "95 reasons for having your own website",
       "summary": "",
-      "url": "https://www.404media.co/ice-to-pay-thomson-reuters-125-million-to-find-voter-fraud/",
-      "source": "Hacker News",
-      "score": 122,
-      "comments": 52
+      "url": "https://bellkiosk.website/blog/reasons-to-website.html",
+      "source": "Lobste.rs",
+      "score": 55,
+      "comments": 12,
+      "tags": [
+        "philosophy",
+        "web"
+      ]
     },
     {
       "id": "lob:wfmpqr",
@@ -139,23 +195,10 @@
       "summary": "",
       "url": "https://xenaproject.wordpress.com/2026/07/20/human-mathematicians-are-being-outcounterexampled/",
       "source": "Lobste.rs",
-      "score": 56,
-      "comments": 9,
+      "score": 63,
+      "comments": 11,
       "tags": [
         "math"
-      ]
-    },
-    {
-      "id": "lob:21lrrw",
-      "title": "Gitolite",
-      "summary": "",
-      "url": "https://gitolite.com/gitolite/index.html",
-      "source": "Lobste.rs",
-      "score": 48,
-      "comments": 12,
-      "tags": [
-        "practices",
-        "vcs"
       ]
     },
     {
@@ -167,89 +210,30 @@
       "score": 0
     },
     {
-      "id": "hn:48993059",
-      "title": "Claude Is Not a Compiler",
+      "id": "lob:cxz7vd",
+      "title": "git --end-of-options",
       "summary": "",
-      "url": "https://blog.exe.dev/claude-is-not-a-compiler",
-      "source": "Hacker News",
-      "score": 79,
-      "comments": 73
-    },
-    {
-      "id": "lob:kdflhr",
-      "title": "InvisiCaps: The Fil-C Capability Model",
-      "summary": "",
-      "url": "https://fil-c.org/invisicaps",
+      "url": "https://nesbitt.io/2026/07/21/end-of-options.html",
       "source": "Lobste.rs",
       "score": 49,
-      "comments": 4,
+      "comments": 8,
       "tags": [
-        "c",
-        "compilers"
+        "security",
+        "vcs"
       ]
     },
     {
-      "id": "lob:v3xuxn",
-      "title": "95 reasons for having your own website",
-      "summary": "",
-      "url": "https://bellkiosk.website/blog/reasons-to-website.html",
-      "source": "Lobste.rs",
-      "score": 38,
-      "comments": 5,
-      "tags": [
-        "philosophy",
-        "web"
-      ]
-    },
-    {
-      "id": "arxiv:2607.18225v1",
-      "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
-      "summary": "We propose one-step and two-step methods for policy learning with retrieval-augmented generation (RAG). We formulate RAG-based action selection under the potential outcome framework. In the two-step method, vector search retrieves action-specific neighboring evidence in an embedding space, the gener",
-      "url": "https://arxiv.org/abs/2607.18225v1",
+      "id": "arxiv:2607.19344v1",
+      "title": "Appearance Pointers -- Multimodal Region Control of Diffusion Transformers",
+      "summary": "Controllable image generation remains challenging for creative professionals, who often require precise regional control over materials, object identities, and spatial arrangements that cannot be reliably achieved through text prompting alone. Diffusion Transformers (DiTs) can natively ingest hetero",
+      "url": "https://arxiv.org/abs/2607.19344v1",
       "source": "ArXiv",
       "categories": [
-        "econ.EM",
-        "cs.LG",
-        "math.ST",
-        "stat.ME",
-        "stat.ML"
+        "cs.CV",
+        "cs.AI",
+        "cs.GR"
       ],
-      "arxiv_id": "2607.18225v1"
-    },
-    {
-      "id": "arxiv:2607.18199v1",
-      "title": "PPL-Factory: Task-Aware and Budget-Aware Data Selection from Language Modeling to Reasoning",
-      "summary": "Not all training samples contribute equally to large language model fine-tuning. Selecting informative training samples can reduce the computational cost while preserving downstream performance. Many existing data selection methods rely on indirect heuristics, such as data quality, diversity or reas",
-      "url": "https://arxiv.org/abs/2607.18199v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.LG"
-      ],
-      "arxiv_id": "2607.18199v1"
-    },
-    {
-      "id": "rss:d65718a1f1",
-      "title": "Kimi K3 and China's Open-Weight Model Wave",
-      "summary": "Moonshot AI released Kimi K3 on July 16, and the benchmarks put an open-weight model next to the best closed ones for the first time. The catch is access. K3 sits on Moonshot's platform, GLM-5.2 on Z.ai's, DeepSeek V4 Pro on DeepSeek's, MiniMax M3 on MiniMax's — four accounts, four billing relations",
-      "url": "https://dev.to/smakosh/kimi-k3-and-chinas-open-weight-model-wave-bpp",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "lob:msg39b",
-      "title": "Linux kernel will support $ORIGIN, sort of",
-      "summary": "<p>HN discussions: <a href=\"https://news.ycombinator.com/item?id=48988793\" rel=\"ugc\">https://news.ycombinator.com/item?id=48988793</a></p>\n",
-      "url": "https://fzakaria.com/2026/07/20/linux-kernel-will-support-origin-sort-of",
-      "source": "Lobste.rs",
-      "score": 12,
-      "comments": 0,
-      "tags": [
-        "c",
-        "linux",
-        "nix",
-        "osdev"
-      ]
+      "arxiv_id": "2607.19344v1"
     }
   ],
   "ai_curated": true

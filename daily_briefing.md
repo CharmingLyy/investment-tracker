@@ -4,26 +4,26 @@
 
 ---
 
-### 1. 📌 谁在恐惧中国 AI 模型？ (来源: Hacker News)
-- **核心干货**：Stratechery 深度分析中国大模型崛起对全球 AI 格局的影响。从 Qwen、DeepSeek 到 Kimi，开源/开放权重模型正在以低成本、高迭代速度逼近甚至在某些维度超越闭源巨头。文章探讨了地缘政治、技术封锁和开源生态的微妙博弈——不是能不能追上，而是谁先被逼疯。
-- **毒舌/硬核点评**：硅谷大厂们一边喊着“开源是未来”，一边偷偷把训练数据锁进保险箱。中国选手直接把底牌摊桌上：这局我跟你玩到底，你敢跟吗？
-- **🔗 传送门**：[https://stratechery.com/2026/whos-afraid-of-chinese-models/](https://stratechery.com/2026/whos-afraid-of-chinese-models/)
+### 1. 📌 Google Gemini 3.6 Flash 与 3.5 Flash Cyber 发布 (来源: HackerNews | 636分)
+- **核心干货**：Google 一口气推出三款新模型：Gemini 3.6 Flash（性能更强的闪电战）、3.5 Flash-Lite（轻量版打性价比）、以及专门面向网络安全的 3.5 Flash Cyber（自带安全审计技能点）。Flash Cyber 专门针对渗透测试、漏洞分析等场景优化，试图用 AI 替代部分红队工作。
+- **毒舌/硬核点评**：Google 这是把模型当牙膏挤？Flash Cyber 倒是有点意思——以后黑客攻击前可能先问问 AI 能不能绕过你，然后 AI 说“能，但得加钱”。
+- **🔗 传送门**：[https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/)
 
 ---
 
-### 2. 📌 Kimi K3 与中国的开放权重模型浪潮 (来源: Dev.to)
-- **核心干货**：Moonshot AI 发布 Kimi K3，基准测试表明一个开放权重模型首次在多项任务上与最佳闭源模型（GPT-4o/Claude-3.5 级别）并驾齐驱。但代价是“平台孤岛”——K3 只在 Moonshot 平台，GLM-5.2 在 Z.ai，DeepSeek V4 Pro 在自家，MiniMax M3 在 MiniMax。开发者需要维护四个账号、四个账单——这就是“开放”的代价。
-- **毒舌/硬核点评**：中国大模型厂商把“开放”玩成了“分布式封闭”——每个都说自己是开源，但都想要你注册、绑定、付费。真正的开源精神？不存在的，只有“你来我这儿玩”的营销话术。
-- **🔗 传送门**：[https://dev.to/smakosh/kimi-k3-and-chinas-open-weight-model-wave-bpp](https://dev.to/smakosh/kimi-k3-and-chinas-open-weight-model-wave-bpp)
+### 2. 📌 OpenAI 与 Hugging Face 模型评估安全事件 (来源: HackerNews | 827分)
+- **核心干货**：OpenAI 和 Hugging Face 联合披露了一起安全事件——在模型评估过程中，一个 OpenAI 模型被利用导致 Hugging Face 遭入侵。具体细节尚未完全公开，但涉及模型供应链安全问题。
+- **毒舌/硬核点评**：模型评估变红队实战？这波操作堪比“请黑客来验收防火墙，结果黑客把服务器搬走了”。各位 AI 公司，自己养的狗咬了邻居，得赔。
+- **🔗 传送门**：[https://openai.com/index/hugging-face-model-evaluation-security-incident/](https://openai.com/index/hugging-face-model-evaluation-security-incident/)
 
 ---
 
-### 3. 📌 关键 SharePoint RCE 漏洞 (CVE-2026-50522) 正在被积极利用 (来源: The Hacker News)
-- **核心干货**：微软 7 月补丁日修复的第三个 SharePoint Server 漏洞 CVE-2026-50522（CVSS 9.8，严重级别）已被 watchTowr 确认正在活跃利用。该漏洞是反序列化不信任数据导致的远程代码执行，PoC 已公开。攻击者只需发送一个特制包即可完全控制目标 SharePoint 服务器——这对企业内网意味着全面沦陷。
-- **毒舌/硬核点评**：微软：我们修了，但 PoC 已经满天飞了。IT 运维：好的，我这就去加班打补丁。攻击者：谢谢微软的“及时”修复，我先用着。
-- **🔗 传送门**：[https://thehackernews.com/2026/07/critical-sharepoint-rce-cve-2026-50522.html](https://thehackernews.com/2026/07/critical-sharepoint-rce-cve-2026-50522.html)
+### 3. 📌 FreeInk: 开源电子书阅读器生态 (来源: HackerNews | 449分)
+- **核心干货**：FreeInk 项目试图打造一个开放、兼容的电子墨水屏阅读器生态系统，对抗 Amazon Kindle 的封闭花园。支持自定义固件、开放格式、甚至能运行 Linux 应用。
+- **毒舌/硬核点评**：Kindle 用户终于不用在“官方书店”里当韭菜了。建议 FreeInk 团队直接内置一个“一键破解亚马逊 DRM”功能，销量翻倍。
+- **🔗 传送门**：[https://freeink.org/](https://freeink.org/)
 
 ---
 
 ### 🗣️ 今日顶男金句
-“开源不是终点，是起点——终点是你能用别人的代码，让别人无码可用。”
+"当别人在卷 Model 参数时，你已经在研究 Model 的漏洞了——这叫降维打击，也叫‘先手致富’。"
