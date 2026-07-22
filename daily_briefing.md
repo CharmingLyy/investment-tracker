@@ -4,26 +4,26 @@
 
 ---
 
-### 1. 📌 Google Gemini 3.6 Flash 与 3.5 Flash Cyber 发布 (来源: HackerNews | 636分)
-- **核心干货**：Google 一口气推出三款新模型：Gemini 3.6 Flash（性能更强的闪电战）、3.5 Flash-Lite（轻量版打性价比）、以及专门面向网络安全的 3.5 Flash Cyber（自带安全审计技能点）。Flash Cyber 专门针对渗透测试、漏洞分析等场景优化，试图用 AI 替代部分红队工作。
-- **毒舌/硬核点评**：Google 这是把模型当牙膏挤？Flash Cyber 倒是有点意思——以后黑客攻击前可能先问问 AI 能不能绕过你，然后 AI 说“能，但得加钱”。
-- **🔗 传送门**：[https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/)
+### 1. 📌 Gemini 3.6 Flash / 3.5 Flash-Lite / 3.5 Flash Cyber 三连发 (来源: Hacker News | 638分)
+- **核心干货**：Google 一口气发布了三款 Gemini 系列新模型。3.6 Flash 是性能提升的主力，3.5 Flash-Lite 主打轻量化低成本，3.5 Flash Cyber 则专门针对网络安全场景进行了微调。模型已在 Google Cloud Agent Platform 上线。
+- **毒舌/硬核点评**：Google 这是把模型当牙膏挤，但好歹这次牙膏管够。Flash-Lite 和 Cyber 两个分支终于让人看到了“针对场景设计模型”的诚意，而不是一个模子刻所有。不过，3.6 Flash 到底能不能打过 Claude 3.5 Sonnet 和 GPT-4o，得看实战。
+- **🔗 传送门**：[点击直达原链接](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/)
 
 ---
 
-### 2. 📌 OpenAI 与 Hugging Face 模型评估安全事件 (来源: HackerNews | 827分)
-- **核心干货**：OpenAI 和 Hugging Face 联合披露了一起安全事件——在模型评估过程中，一个 OpenAI 模型被利用导致 Hugging Face 遭入侵。具体细节尚未完全公开，但涉及模型供应链安全问题。
-- **毒舌/硬核点评**：模型评估变红队实战？这波操作堪比“请黑客来验收防火墙，结果黑客把服务器搬走了”。各位 AI 公司，自己养的狗咬了邻居，得赔。
-- **🔗 传送门**：[https://openai.com/index/hugging-face-model-evaluation-security-incident/](https://openai.com/index/hugging-face-model-evaluation-security-incident/)
+### 2. 📌 Jack Dorsey 推出 Buzz: 团队聊天 + AI代理 + Git托管 缝合怪 (来源: Hacker News | 270分)
+- **核心干货**：Twitter 创始人 Jack Dorsey 发布了一个名为 Buzz 的新项目，试图将企业即时通讯、AI 代理执行任务、以及 Git 代码托管整合到一个平台。这是要跟 Slack、GitHub Copilot、以及 GitLab 抢饭碗的节奏。
+- **毒舌/硬核点评**：Jack Dorsey 大概是觉得 Twitter 玩腻了，想再搞个更混乱的“数字宇宙”。把聊天、代码和 AI 塞到一起，听起来很酷，但大概率会变成“代码没写完，消息炸成河，AI 在画饼”的三重地狱。不过，如果他真能把 AI Agent 和代码仓库深度融合，那确实是降维打击。
+- **🔗 传送门**：[点击直达原链接](https://runtimewire.com/article/jack-dorsey-block-buzz-team-chat-ai-agents-git)
 
 ---
 
-### 3. 📌 FreeInk: 开源电子书阅读器生态 (来源: HackerNews | 449分)
-- **核心干货**：FreeInk 项目试图打造一个开放、兼容的电子墨水屏阅读器生态系统，对抗 Amazon Kindle 的封闭花园。支持自定义固件、开放格式、甚至能运行 Linux 应用。
-- **毒舌/硬核点评**：Kindle 用户终于不用在“官方书店”里当韭菜了。建议 FreeInk 团队直接内置一个“一键破解亚马逊 DRM”功能，销量翻倍。
-- **🔗 传送门**：[https://freeink.org/](https://freeink.org/)
+### 3. 📌 OpenAI & Hugging Face 联合披露模型评估期间的安全事件 (来源: Hacker News | 844分)
+- **核心干货**：OpenAI 与 Hugging Face 联合发布声明，披露了一起发生在模型评估期间的安全事件。初步调查显示，漏洞源头竟是一个被上传到 Hugging Face 的恶意模型，该模型被用于评估流程时触发了安全缺口。OpenAI 表示已修复并加强了评估沙箱。
+- **毒舌/硬核点评**：这简直是在揭示 AI 时代的“供应链投毒”新玩法。不是代码库被黑，而是评估用的模型本身就成了木马。以后 AI 工程师们不仅要防代码，还得防“同事”上传的模型是卧底。OpenAI 和 Hugging Face 这次联手擦屁股，算是给全行业敲了个警钟：别他妈乱跑别人的模型。
+- **🔗 传送门**：[点击直达原链接](https://openai.com/index/hugging-face-model-evaluation-security-incident/)
 
 ---
 
 ### 🗣️ 今日顶男金句
-"当别人在卷 Model 参数时，你已经在研究 Model 的漏洞了——这叫降维打击，也叫‘先手致富’。"
+> *“不要试图用战术上的勤奋，去掩盖战略上的懒惰——比如，用 30 个新模型去掩盖 1 个核心突破。”*
