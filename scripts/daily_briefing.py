@@ -855,13 +855,32 @@ def push_to_wechat(briefing_md: str, date_str: str):
             data={"title": title, "desp": desp},
             timeout=15
         )
+        # 记录完整响应用于调试
+        print(f"[推送] HTTP {resp.status_code}")
         result = resp.json()
-        if result.get("code") == 0:
+        data_field = result.get("data", {})
+        if isinstance(data_field, dict):
+            data_errno = data_field.get("errno", 0)
+        else:
+            data_errno = 0
+        print(f"[推送] Server酱响应: code={result.get('code')}, errno={result.get('errno')}, "
+              f"data.errno={data_errno}, message={result.get('message', 'N/A')}")
+
+        # Server酱 v2 API: code=0 且 data.errno=0 才是真正成功
+        if result.get("code") == 0 and data_errno == 0:
             print(f"[推送] ✅ 微信推送成功")
             return True
-        else:
-            print(f"[推送] ⚠️ Server酱返回错误: {result.get('message', '未知')}")
+        elif result.get("code") == 0:
+            # code=0 但 data.errno != 0: 假成功
+            print(f"[推送] ⚠️ Server酱部分失败: code=0 但 data.errno={data_errno}, "
+                  f"message={data_field.get('message', '?')}")
             return False
+        else:
+            print(f"[推送] ⚠️ Server酱返回错误: code={result.get('code')}, message={result.get('message', '未知')}")
+            return False
+    except requests.exceptions.JSONDecodeError:
+        print(f"[推送] ❌ Server酱返回非JSON响应: {resp.text[:200]}")
+        return False
     except Exception as e:
         print(f"[推送] ❌ 微信推送失败: {e}")
         return False
