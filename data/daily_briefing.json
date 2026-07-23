@@ -1,76 +1,95 @@
 {
-  "date": "2026-07-23",
-  "update_time": "2026-07-23 09:16:22",
+  "date": "2026-07-24",
+  "update_time": "2026-07-23 17:04:39",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-23\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 GigaToken: 让 Token 化快到飞起 (来源: GitHub Trending / Hacker News)\n- **核心干货**：一个号称比现有方法快 **1000 倍**的语言模型 Tokenizer 工具。它不是用传统逐字符或子词方式，而是利用 SIMD 指令等底层黑魔法，在 CPU 上直接暴力并行，显著降低 LLM 推理的预处理延迟。解决了大模型响应“卡第一句”的痛点。\n- **毒舌/硬核点评**：终于有人对 LLM 的“肠梗阻”下手了。别光盯着 GPU 算力，CPU 端的 Token 化瓶颈才是很多本地模型的社死现场。1000 倍？希望不是在只跑一句话的基准测试里骗人。\n- **🔗 传送门**：[https://github.com/marcelroed/gigatoken/](https://github.com/marcelroed/gigatoken/)\n\n---\n\n### 2. 📌 陶哲轩联手 AI 攻克雅可比猜想反例 (来源: Hacker News / ArXiv)\n- **核心干货**：数学大佬陶哲轩用 ChatGPT 与 Claude Fable 生成的“雅可比猜想”反例进行了深度对话与消化。这个猜想是代数几何领域的经典难题，如果反例成立，将颠覆许多现有定理。AI 不仅生成了反例，还参与了逻辑推演。\n- **毒舌/硬核点评**：以前 AI 帮人类写代码，现在 AI 帮人类写数学证明，下一步是不是该帮人类写毕业论文了？陶哲轩的这波操作告诉我们：最牛逼的工具不是取代你，而是让你能更高效地去搞那些更玄学的事儿。\n- **🔗 传送门**：[https://chatgpt.com/share/6a5fdc7a-d6f8-83e8-bbea-8deb42cfed56](https://chatgpt.com/share/6a5fdc7a-d6f8-83e8-bbea-8deb42cfed56)\n\n---\n\n### 3. 📌 RefluXFS: Linux XFS 内核提权漏洞 (CVE-2026-64600) (来源: Lobste.rs / 安全新闻)\n- **核心干货**：Qualys 安全团队披露了一个存在于 Linux 内核 XFS 文件系统中的高危本地提权漏洞（CVSS 9.8）。攻击者可通过精心构造的操作，从普通用户权限直接获得 root 权限。影响范围巨大，几乎所有使用 XFS 的 Linux 发行版都中招。\n- **毒舌/硬核点评**：又到了 Linux 用户喜闻乐见的“更新内核并重启”环节。文件系统作为系统根基，出个漏洞就是爷中爷。Qualys 这波操作再次证明了：挖内核漏洞的，才是真正的“赏金猎人”。\n- **🔗 传送门**：[https://blog.qualys.com/vulnerabilities-threat-research/2026/07/22/refluxfs-a-linux-kernel-local-privilege-escalation-to-root-in-xfs-cve-2026-64600](https://blog.qualys.com/vulnerabilities-threat-research/2026/07/22/refluxfs-a-linux-kernel-local-privilege-escalation-to-root-in-xfs-cve-2026-64600)\n\n---\n\n### 🗣️ 今日顶男金句\n技术圈最大的幻觉不是“我能再重构一次”，而是“我这次不会再改 bug 了”。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-24\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 开源AI模型禁令遭创始人联名反对 (来源: Hacker News/Politico)\n- **核心干货**：美国一群AI初创公司创始人联名致信特朗普政府，反对切断中国开源AI模型（open-weight AI）渠道。他们认为此举会扼杀美国小公司的创新，因为大量开源模型来自中国，且禁令难以执行。\n- **毒舌/硬核点评**：一边喊着要“去风险”，一边发现自家AI创业公司全靠中国开源模型续命。这波操作堪比一边喊抵制进口奶粉，一边发现孩子断奶了。\n- **🔗 传送门**：[点击直达原链接](https://www.politico.com/news/2026/07/22/startup-founders-urge-trump-not-to-shut-off-chinese-open-weight-ai-01008992)\n\n---\n\n### 2. 📌 Claude Cowork沙箱逃逸漏洞曝光 (来源: Tech RSS/The Hacker News)\n- **核心干货**：研究人员发现Anthropic的Claude Cowork存在沙箱逃逸漏洞，攻击者能让AI agent突破Linux虚拟机限制，直接读写Mac主机上的任意文件。这意味着你的AI助手可能背地里翻你家抽屉。\n- **毒舌/硬核点评**：给AI agent装沙箱就像给熊孩子装围栏——理论上能拦住，实际上他总能找到缝隙钻出去。建议所有部署AI agent的团队先检查一下自家围栏。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html)\n\n---\n\n### 3. 📌 九岁Linux内核漏洞：RefluXFS让普通用户秒变Root (来源: Tech RSS/The Hacker News)\n- **核心干货**：新披露的Linux内核漏洞CVE-2026-64600（RefluXFS），存在于XFS文件系统中长达九年。本地低权限用户可通过该漏洞覆盖root文件，实现持久化提权。默认RHEL及Fedora Server等发行版均受影响。\n- **毒舌/硬核点评**：一个漏洞在Linux内核里潜伏了九年，比某些小孩上完小学的时间还长。建议各位Linux管理员今天就去查一下CVE详情，不要等到漏洞变成“九年义务教育”的毕业典礼再行动。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/07/nine-year-old-refluxfs-linux-flaw-gives.html)\n\n---\n\n### 🗣️ 今日顶男金句\n**“开源不是免费午餐，是自助餐——你吃的每一口，都可能带着别人的锅碗瓢盆。”**",
   "briefing_items": [
     {
-      "title": "GigaToken: 让 Token 化快到飞起",
-      "source": "GitHub Trending / Hacker News",
-      "summary": "一个号称比现有方法快 **1000 倍**的语言模型 Tokenizer 工具。它不是用传统逐字符或子词方式，而是利用 SIMD 指令等底层黑魔法，在 CPU 上直接暴力并行，显著降低 LLM 推理的预处理延迟。解决了大模型响应“卡第一句”的痛点。",
-      "commentary": "终于有人对 LLM 的“肠梗阻”下手了。别光盯着 GPU 算力，CPU 端的 Token 化瓶颈才是很多本地模型的社死现场。1000 倍？希望不是在只跑一句话的基准测试里骗人。",
-      "url": ""
+      "title": "开源AI模型禁令遭创始人联名反对",
+      "source": "Hacker News/Politico",
+      "summary": "美国一群AI初创公司创始人联名致信特朗普政府，反对切断中国开源AI模型（open-weight AI）渠道。他们认为此举会扼杀美国小公司的创新，因为大量开源模型来自中国，且禁令难以执行。",
+      "commentary": "一边喊着要“去风险”，一边发现自家AI创业公司全靠中国开源模型续命。这波操作堪比一边喊抵制进口奶粉，一边发现孩子断奶了。",
+      "url": "https://www.politico.com/news/2026/07/22/startup-founders-urge-trump-not-to-shut-off-chinese-open-weight-ai-01008992"
     },
     {
-      "title": "陶哲轩联手 AI 攻克雅可比猜想反例",
-      "source": "Hacker News / ArXiv",
-      "summary": "数学大佬陶哲轩用 ChatGPT 与 Claude Fable 生成的“雅可比猜想”反例进行了深度对话与消化。这个猜想是代数几何领域的经典难题，如果反例成立，将颠覆许多现有定理。AI 不仅生成了反例，还参与了逻辑推演。",
-      "commentary": "以前 AI 帮人类写代码，现在 AI 帮人类写数学证明，下一步是不是该帮人类写毕业论文了？陶哲轩的这波操作告诉我们：最牛逼的工具不是取代你，而是让你能更高效地去搞那些更玄学的事儿。",
-      "url": ""
+      "title": "Claude Cowork沙箱逃逸漏洞曝光",
+      "source": "Tech RSS/The Hacker News",
+      "summary": "研究人员发现Anthropic的Claude Cowork存在沙箱逃逸漏洞，攻击者能让AI agent突破Linux虚拟机限制，直接读写Mac主机上的任意文件。这意味着你的AI助手可能背地里翻你家抽屉。",
+      "commentary": "给AI agent装沙箱就像给熊孩子装围栏——理论上能拦住，实际上他总能找到缝隙钻出去。建议所有部署AI agent的团队先检查一下自家围栏。",
+      "url": "https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html"
     },
     {
-      "title": "RefluXFS: Linux XFS 内核提权漏洞 (CVE-2026-64600)",
-      "source": "Lobste.rs / 安全新闻",
-      "summary": "Qualys 安全团队披露了一个存在于 Linux 内核 XFS 文件系统中的高危本地提权漏洞（CVSS 9.8）。攻击者可通过精心构造的操作，从普通用户权限直接获得 root 权限。影响范围巨大，几乎所有使用 XFS 的 Linux 发行版都中招。",
-      "commentary": "又到了 Linux 用户喜闻乐见的“更新内核并重启”环节。文件系统作为系统根基，出个漏洞就是爷中爷。Qualys 这波操作再次证明了：挖内核漏洞的，才是真正的“赏金猎人”。",
-      "url": ""
+      "title": "九岁Linux内核漏洞：RefluXFS让普通用户秒变Root",
+      "source": "Tech RSS/The Hacker News",
+      "summary": "新披露的Linux内核漏洞CVE-2026-64600（RefluXFS），存在于XFS文件系统中长达九年。本地低权限用户可通过该漏洞覆盖root文件，实现持久化提权。默认RHEL及Fedora Server等发行版均受影响。",
+      "commentary": "一个漏洞在Linux内核里潜伏了九年，比某些小孩上完小学的时间还长。建议各位Linux管理员今天就去查一下CVE详情，不要等到漏洞变成“九年义务教育”的毕业典礼再行动。",
+      "url": "https://thehackernews.com/2026/07/nine-year-old-refluxfs-linux-flaw-gives.html"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49010345",
-      "title": "Terence Tao's ChatGPT conversation about the Jacobian Conjecture counterexample",
-      "summary": "<i>A digestion of the Jacobian conjecture counterexample</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=48998362\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=48998362</a> - July 2026 (133 comments)<p><i>Claude Fable produced a counterexample to the Jacobian Conjecture</i>",
-      "url": "https://chatgpt.com/share/6a5fdc7a-d6f8-83e8-bbea-8deb42cfed56",
-      "source": "Hacker News",
-      "score": 861,
-      "comments": 498
-    },
-    {
-      "id": "hn:49007247",
-      "title": "Quality non-fiction books are the antithesis of AI slop",
-      "summary": "<a href=\"https:&#x2F;&#x2F;book-prize-index.vercel.app&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;book-prize-index.vercel.app&#x2F;</a>",
-      "url": "https://resobscura.substack.com/p/quality-non-fiction-books-are-the",
-      "source": "Hacker News",
-      "score": 354,
-      "comments": 118
-    },
-    {
-      "id": "hn:49010167",
-      "title": "GigaToken: ~1000x faster Language model tokenization",
+      "id": "hn:49022152",
+      "title": "Writing by hand is good for your brain",
       "summary": "",
-      "url": "https://github.com/marcelroed/gigatoken/",
+      "url": "https://nealstephenson.substack.com/p/writing-by-hand-is-good-for-your",
       "source": "Hacker News",
-      "score": 500,
-      "comments": 102
+      "score": 329,
+      "comments": 133
     },
     {
-      "id": "hn:49010648",
-      "title": "Everyone should know SIMD",
-      "summary": "",
-      "url": "https://mitchellh.com/writing/everyone-should-know-simd",
+      "id": "hn:49023016",
+      "title": "Startup founders urge Trump not to shut off Chinese open weight AI",
+      "summary": "<a href=\"https:&#x2F;&#x2F;littletech.org&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;littletech.org&#x2F;</a><p><a href=\"https:&#x2F;&#x2F;static.politico.com&#x2F;4a&#x2F;bf&#x2F;9c4021d8404386b0a311dcccf0e5&#x2F;lta-open-weight-ai-letter-7-22-26.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;static.politico.c",
+      "url": "https://www.politico.com/news/2026/07/22/startup-founders-urge-trump-not-to-shut-off-chinese-open-weight-ai-01008992",
       "source": "Hacker News",
-      "score": 416,
-      "comments": 152
+      "score": 262,
+      "comments": 272
     },
     {
-      "id": "hn:49010129",
-      "title": "Are AI labs pelicanmaxxing?",
+      "id": "hn:49020999",
+      "title": "AI Companies Are Trying to Hide a Staggering Amount of Debt",
       "summary": "",
-      "url": "https://dylancastillo.co/posts/pelicanmaxxing.html",
+      "url": "https://futurism.com/artificial-intelligence/ai-companies-hide-debt-off-balance-sheet",
       "source": "Hacker News",
-      "score": 521,
-      "comments": 205
+      "score": 324,
+      "comments": 148
+    },
+    {
+      "id": "lob:ax914v",
+      "title": "Protecting our FLOSS commons from LLMs",
+      "summary": "",
+      "url": "https://blog.codeberg.org/protecting-our-floss-commons-from-llms.html",
+      "source": "Lobste.rs",
+      "score": 116,
+      "comments": 68,
+      "tags": [
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "lob:53g8f7",
+      "title": "PyPI releases now reject new files after 14 days",
+      "summary": "",
+      "url": "https://blog.pypi.org/posts/2026-07-22-releases-now-reject-new-files-after-14-days/",
+      "source": "Lobste.rs",
+      "score": 44,
+      "comments": 11,
+      "tags": [
+        "python",
+        "security"
+      ]
+    },
+    {
+      "id": "lob:fmyrgy",
+      "title": "Calm technologies that excite me",
+      "summary": "",
+      "url": "https://abhi.now/blog/calm-technologies/",
+      "source": "Lobste.rs",
+      "score": 57,
+      "comments": 20,
+      "tags": [
+        "hardware"
+      ]
     },
     {
       "id": "lob:gqdvdt",
@@ -78,8 +97,8 @@
       "summary": "",
       "url": "https://www.cole-k.com/2026/07/21/reddit/",
       "source": "Lobste.rs",
-      "score": 101,
-      "comments": 60,
+      "score": 111,
+      "comments": 69,
       "tags": [
         "rant",
         "web"
@@ -91,120 +110,35 @@
       "summary": "",
       "url": "https://krebsonsecurity.com/2026/07/lg-to-ban-residential-proxies-from-smart-tv-apps/",
       "source": "Lobste.rs",
-      "score": 92,
-      "comments": 15,
+      "score": 93,
+      "comments": 16,
       "tags": [
         "security"
       ]
     },
     {
-      "id": "lob:53g8f7",
-      "title": "PyPI releases now reject new files after 14 days",
+      "id": "lob:p1jpv1",
+      "title": "Justif: Knuth-Plass justification and microtypography for the web",
       "summary": "",
-      "url": "https://blog.pypi.org/posts/2026-07-22-releases-now-reject-new-files-after-14-days/",
+      "url": "https://justif.lyall.co/",
       "source": "Lobste.rs",
-      "score": 38,
-      "comments": 5,
-      "tags": [
-        "python",
-        "security"
-      ]
-    },
-    {
-      "id": "lob:gkcjic",
-      "title": "SIMD for Collision",
-      "summary": "",
-      "url": "https://box2d.org/posts/2026/07/simd-for-collision/",
-      "source": "Lobste.rs",
-      "score": 46,
+      "score": 49,
       "comments": 12,
       "tags": [
-        "performance"
+        "design",
+        "show",
+        "vibecoding",
+        "web"
       ]
     },
     {
-      "id": "hn:48991882",
-      "title": "git's –end-of-options Flag",
+      "id": "hn:49021783",
+      "title": "Astronomers may have found the first exomoon",
       "summary": "",
-      "url": "https://nesbitt.io/2026/07/21/end-of-options.html",
-      "source": "Hacker News",
-      "score": 137,
-      "comments": 70
-    },
-    {
-      "id": "hn:49010782",
-      "title": "Show HN: Cactus Hybrid: We taught Gemma 4 to know when it's wrong",
-      "summary": "Hey HN, Henry &amp; Roman here from Cactus.<p>A small, on-device model is fast and private, but sometimes wrong, but frontier models are getting expensive pretty fast. So, we post-trained Gemma 4 E2B post-trained to know when it&#x27;s wrong. Every response comes with a confidence score between 0 an",
-      "url": "https://github.com/cactus-compute/cactus-hybrid",
-      "source": "Hacker News",
-      "score": 129,
-      "comments": 24
-    },
-    {
-      "id": "rss:ff6dc7812d",
-      "title": "Critical SharePoint RCE CVE-2026-50522 Under Active Exploitation After Public PoC",
-      "summary": "A third SharePoint Server flaw patched by Microsoft as part of its Patch Tuesday update for July 2026 has come under active exploitation, per watchTowr.\n\nThe vulnerability in question is CVE-2026-50522 (CVSS score: 9.8), a critical deserialization of untrusted data in Microsoft Office SharePoint tha",
-      "url": "https://thehackernews.com/2026/07/critical-sharepoint-rce-cve-2026-50522.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "lob:pa54mh",
-      "title": "log is non-monotonic in PHP and Lua",
-      "summary": "",
-      "url": "https://purplesyringa.moe/blog/log-is-non-monotonous-in-php-and-lua/",
-      "source": "Lobste.rs",
-      "score": 41,
-      "comments": 6,
-      "tags": [
-        "lua",
-        "math",
-        "php"
-      ]
-    },
-    {
-      "id": "hn:49014007",
-      "title": "Medici family mystery may be solved after more than 400 years",
-      "summary": "",
-      "url": "https://www.cnn.com/2026/07/15/science/medici-family-mystery-dna-malaria",
+      "url": "https://www.eso.org/public/news/eso2610/",
       "source": "Hacker News",
       "score": 120,
-      "comments": 31
-    },
-    {
-      "id": "lob:tltlwf",
-      "title": "RefluXFS: A Linux Kernel Local Privilege Escalation to Root in XFS (CVE-2026-64600)",
-      "summary": "",
-      "url": "https://blog.qualys.com/vulnerabilities-threat-research/2026/07/22/refluxfs-a-linux-kernel-local-privilege-escalation-to-root-in-xfs-cve-2026-64600",
-      "source": "Lobste.rs",
-      "score": 10,
-      "comments": 2,
-      "tags": [
-        "linux",
-        "security"
-      ]
-    },
-    {
-      "id": "hn:49017265",
-      "title": "Amiga 1000: Ten years ahead of its time",
-      "summary": "",
-      "url": "https://dfarq.homeip.net/amiga-1000-ten-years-ahead-of-its-time/",
-      "source": "Hacker News",
-      "score": 71,
-      "comments": 39
-    },
-    {
-      "id": "lob:tsp3fq",
-      "title": "Unranked, systemd, crawls",
-      "summary": "",
-      "url": "https://www.marginalia.nu/log/a_138_systemdocker/",
-      "source": "Lobste.rs",
-      "score": 34,
-      "comments": 3,
-      "tags": [
-        "linux",
-        "systemd"
-      ]
+      "comments": 49
     },
     {
       "id": "lob:5nhto6",
@@ -212,11 +146,88 @@
       "summary": "",
       "url": "https://citizendot.github.io/articles/fake-job-interview-git-hook-malware/",
       "source": "Lobste.rs",
-      "score": 27,
-      "comments": 3,
+      "score": 56,
+      "comments": 7,
       "tags": [
         "security"
       ]
+    },
+    {
+      "id": "lob:lv12lc",
+      "title": "Why care about programming languages",
+      "summary": "",
+      "url": "https://ebellani.github.io/blog/2026/why-care-about-programming-languages/",
+      "source": "Lobste.rs",
+      "score": 36,
+      "comments": 6,
+      "tags": [
+        "programming",
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "hn:49023427",
+      "title": "Show HN: OneCLI – OSS credential gateway that keeps secrets out of AI agents",
+      "summary": "hey HN, Jonathan and Guy here, creators of OneCLI (<a href=\"https:&#x2F;&#x2F;onecli.sh&#x2F;\">https:&#x2F;&#x2F;onecli.sh&#x2F;</a>). OneCLI is an open source vault for AI Agents.<p>Traditional vaults are used to store your secrets and, on demand, provide them to you all in a secure way, trusting t",
+      "url": "https://github.com/onecli/onecli",
+      "source": "Hacker News",
+      "score": 8,
+      "comments": 2
+    },
+    {
+      "id": "lob:ap3z0l",
+      "title": "John C. Dvorak has died",
+      "summary": "",
+      "url": "http://oldvcr.blogspot.com/2026/07/john-c-dvorak-has-died.html",
+      "source": "Lobste.rs",
+      "score": 46,
+      "comments": 4,
+      "tags": [
+        "person"
+      ]
+    },
+    {
+      "id": "rss:d2e7696103",
+      "title": "Claude Cowork Flaw Could Let AI Agent Escape Its VM and Access Mac Files",
+      "summary": "Cybersecurity researchers have uncovered a sandbox escape vulnerability in Anthropic's Claude Cowork that makes it possible to break out of the confines of a Linux virtual machine (VM) within which the agent runs to read or write files anywhere on the Mac.\n\nAccomplish AI, which shared details of the",
+      "url": "https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:dc08e7d270",
+      "title": "Nine-Year-Old RefluXFS Linux Flaw Gives Local Users Root on Default RHEL Installs",
+      "summary": "RefluXFS, a new Linux kernel flaw disclosed on July 22 and tracked as CVE-2026-64600, lets an unprivileged local user overwrite root-owned files on an XFS filesystem and gain persistent root access.\n\nQualys said default installations of Red Hat Enterprise Linux and its derivatives, Fedora Server, an",
+      "url": "https://thehackernews.com/2026/07/nine-year-old-refluxfs-linux-flaw-gives.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "hn:49022038",
+      "title": "Software rendering in 500 lines of bare C++",
+      "summary": "",
+      "url": "https://haqr.eu/tinyrenderer/",
+      "source": "Hacker News",
+      "score": 108,
+      "comments": 22
+    },
+    {
+      "id": "hn:49022911",
+      "title": "Show HN: Palmier Pro – open-source macOS video editor built for AI",
+      "summary": "Hi HN, we are Marcos and Harrison, cofounders of Palmier (<a href=\"https:&#x2F;&#x2F;palmier.io\">https:&#x2F;&#x2F;palmier.io</a>). We are building Palmier Pro, an open source macOS video editor, with built-in AI generation and a local MCP server that connects to your agent. Here are a few demos:<p>",
+      "url": "https://github.com/palmier-io/palmier-pro",
+      "source": "Hacker News",
+      "score": 11,
+      "comments": 2
+    },
+    {
+      "id": "hn:49022634",
+      "title": "Learn OpenGL, extensive tutorial resource for learning Modern OpenGL",
+      "summary": "",
+      "url": "https://learnopengl.com/",
+      "source": "Hacker News",
+      "score": 68,
+      "comments": 29
     },
     {
       "id": "arxiv:2607.20399v1",
@@ -230,17 +241,6 @@
         "cs.LG"
       ],
       "arxiv_id": "2607.20399v1"
-    },
-    {
-      "id": "arxiv:2607.20374v1",
-      "title": "Online Variance Reduction for Domain Adaptation on Streaming Data",
-      "summary": "This paper studies the problem of stochastic variance reduction (SVR) for the maximum mean discrepancy (MMD) and correlation alignment (CORAL) loss functions. Although various offline SVR algorithms for these losses have been proposed, these are incompatible with online, distributed, or incremental ",
-      "url": "https://arxiv.org/abs/2607.20374v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG"
-      ],
-      "arxiv_id": "2607.20374v1"
     }
   ],
   "ai_curated": true
