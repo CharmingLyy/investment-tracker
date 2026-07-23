@@ -159,6 +159,31 @@ body{
 .loading .spinner{display:inline-block;width:28px;height:28px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .7s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 
+/* ── Market Sentiment (F&G + ETF) ── */
+.sentiment-bar{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+@media(max-width:768px){.sentiment-bar{grid-template-columns:1fr}}
+.sent-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:14px 18px;display:flex;align-items:center;gap:16px}
+.sent-gauge{flex-shrink:0;width:72px;height:72px;position:relative}
+.sent-gauge svg{transform:rotate(-90deg)}
+.sent-gauge .bg{fill:none;stroke:var(--border);stroke-width:6}
+.sent-gauge .fg{fill:none;stroke-width:6;stroke-linecap:round;transition:stroke-dashoffset .8s ease}
+.sent-gauge .val{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:900}
+.sent-info{flex:1;min-width:0}
+.sent-label{font-size:.7rem;color:var(--t2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px}
+.sent-classification{font-size:1.1rem;font-weight:800;margin-bottom:2px}
+.sent-classification.extreme_fear{color:#e74c3c}
+.sent-classification.fear{color:#e67e22}
+.sent-classification.neutral{color:#f1c40f}
+.sent-classification.greed{color:#2ecc71}
+.sent-classification.extreme_greed{color:#27ae60}
+.sent-ts{font-size:.65rem;color:var(--t3)}
+.sent-bar-wrap{height:8px;border-radius:4px;background:linear-gradient(to right,#e74c3c,#e67e22,#f1c40f,#2ecc71,#27ae60);margin-top:6px;position:relative}
+.sent-bar-indicator{position:absolute;top:-3px;width:3px;height:14px;border-radius:2px;background:#fff;transform:translateX(-50%);transition:left .8s ease;box-shadow:0 0 6px rgba(255,255,255,.5)}
+.etf-flow-num{font-size:.85rem;font-weight:700}
+.etf-flow-num.in{color:var(--green)}.etf-flow-num.out{color:var(--red)}.etf-flow-num.zero{color:var(--t2)}
+.etf-label{font-size:.68rem;color:var(--t2)}
+.etf-asset-row{display:flex;justify-content:space-between;align-items:center;padding:3px 0}
+
 /* Backtest */
 .bt-table{width:100%;border-collapse:collapse;font-size:.82rem;margin-top:8px}
 .bt-table th{background:var(--card2);padding:8px 10px;text-align:center;font-size:.7rem;font-weight:600;color:var(--t2);text-transform:uppercase;border-bottom:2px solid var(--border)}
@@ -190,6 +215,25 @@ body{
     </div>
   </header>
 
+  <!-- Market Sentiment: Fear & Greed + ETF Flows -->
+  <div class="sentiment-bar" id="sentimentBar">
+    <div class="sent-card" id="sentFNG">
+      <div class="sent-gauge"><svg viewBox="0 0 36 36" width="72" height="72"><circle class="bg" cx="18" cy="18" r="15"/><circle class="fg" id="fngArc" cx="18" cy="18" r="15"/></svg><div class="val" id="fngVal">--</div></div>
+      <div class="sent-info">
+        <div class="sent-label">😱 恐惧贪婪指数</div>
+        <div class="sent-classification" id="fngClass">加载中...</div>
+        <div class="sent-ts" id="fngTs"></div>
+        <div class="sent-bar-wrap"><div class="sent-bar-indicator" id="fngIndicator" style="left:50%"></div></div>
+      </div>
+    </div>
+    <div class="sent-card" id="sentETF">
+      <div style="flex:1">
+        <div class="sent-label">📈 BTC/ETH 现货 ETF 净流动 (亿$)</div>
+        <div id="etfContent" style="margin-top:4px"><span style="color:var(--t3);font-size:.8rem">加载中...</span></div>
+      </div>
+    </div>
+  </div>
+
   <!-- Two Columns: BTC | ETH -->
   <div class="main-grid">
     <div id="colBTC"><div class="loading"><div class="spinner"></div><p style="margin-top:8px">BTC 分析中...</p></div></div>
@@ -218,6 +262,7 @@ const ASSETS = [
 
 // ── State ──
 let autoRefresh = true;
+let sentimentData = null; // { fear_greed: {...}, etf_flows: {...} }
 let countdownTimer = null;
 let refreshInterval = null;
 let assetData = {}; // { btc: { tf1h, tf4h, tf1d, info, news, signal }, eth: {...} }
@@ -552,62 +597,59 @@ function generateSignal(data1h, data4h, data1d, info) {
     else fundScore += 4;
   } else fundScore += 10;
 
-  const totalScore = Math.round(Math.min(100, techScore + fundScore));
+  const totalScore = Math.round(Math.min(80, techScore + fundScore));
 
-  // ── Risk/Reward Calculation ──
+  // ── 两段式止盈 + 保本止损 ──
+  // TP1 (50%仓位): 近端锁利 → 触发后止损移到入场价（保本）
+  // TP2 (剩余50%): 远端吃大波段 → 零风险纯利润
+  const SL_ATR = 2.0;     // 止损 ATR 倍数
+  const TP1_ATR = 2.0;    // 第一止盈 ATR 倍数
+  const TP2_ATR = 5.0;    // 第二止盈 ATR 倍数
+  const POS_PCT1 = 50;     // TP1 平仓比例 (%)
+
   let entryPrice = curPrice;
-  let stopLoss, takeProfit, rrRatio;
+  let stopLoss, takeProfit1, takeProfit2, breakevenPrice, rrRatio;
   let signal, sigClass;
 
   if (direction === 'bullish' && totalScore >= 55) {
-    // LONG setup (优化参数: 止损2.0×ATR, 止盈5.0×ATR, R:R≥1.5)
     signal = '做多 LONG';
     sigClass = 'long';
-    // Stop: below nearest support or 2.0x ATR, take the WIDER one for safety
-    const atrStop = entryPrice - curATR * 2.0;
-    const srStop = nearestSupport * 0.995; // 0.5% below support (wider buffer)
-    stopLoss = Math.min(atrStop, srStop); // wider stop (lower price) — gives trade room to breathe
+    const atrStop = entryPrice - curATR * SL_ATR;
+    const srStop = nearestSupport * 0.995;
+    stopLoss = Math.min(atrStop, srStop);
 
-    // Target: first resistance, then ATR-based, ensure R:R ≥ 1.5
-    const atrTarget1 = entryPrice + curATR * 4;
-    const atrTarget2 = entryPrice + curATR * 5;
-    if ((nearestResistance - entryPrice) / (entryPrice - stopLoss) >= 1.5) {
-      takeProfit = nearestResistance * 0.995;
-    } else if ((nextResistance - entryPrice) / (entryPrice - stopLoss) >= 1.5) {
-      takeProfit = nextResistance * 0.995;
-    } else if ((atrTarget1 - entryPrice) / (entryPrice - stopLoss) >= 1.5) {
-      takeProfit = atrTarget1;
-    } else {
-      takeProfit = atrTarget2;
-    }
-    rrRatio = (takeProfit - entryPrice) / (entryPrice - stopLoss);
+    takeProfit1 = entryPrice + curATR * TP1_ATR;
+    takeProfit2 = entryPrice + curATR * TP2_ATR;
+    breakevenPrice = entryPrice;  // TP1 触发后止损上移至此
   } else if (direction === 'bearish' && totalScore >= 55) {
-    // SHORT setup (优化参数: 止损2.0×ATR, 止盈5.0×ATR, R:R≥1.5)
     signal = '做空 SHORT';
     sigClass = 'short';
-    const atrStop = entryPrice + curATR * 2.0;
-    const srStop = nearestResistance * 1.005; // 0.5% above resistance (wider buffer)
-    stopLoss = Math.max(atrStop, srStop); // wider stop (higher price) — gives trade room to breathe
+    const atrStop = entryPrice + curATR * SL_ATR;
+    const srStop = nearestResistance * 1.005;
+    stopLoss = Math.max(atrStop, srStop);
 
-    const atrTarget1 = entryPrice - curATR * 4;
-    const atrTarget2 = entryPrice - curATR * 5;
-    if ((entryPrice - nearestSupport) / (stopLoss - entryPrice) >= 1.5) {
-      takeProfit = nearestSupport * 1.005;
-    } else if ((entryPrice - nextSupport) / (stopLoss - entryPrice) >= 1.5) {
-      takeProfit = nextSupport * 1.005;
-    } else if ((entryPrice - atrTarget1) / (stopLoss - entryPrice) >= 1.5) {
-      takeProfit = atrTarget1;
-    } else {
-      takeProfit = atrTarget2;
-    }
-    rrRatio = (entryPrice - takeProfit) / (stopLoss - entryPrice);
+    takeProfit1 = entryPrice - curATR * TP1_ATR;
+    takeProfit2 = entryPrice - curATR * TP2_ATR;
+    breakevenPrice = entryPrice;
   } else {
-    // WAIT - not enough conviction
     signal = '观望 WAIT';
     sigClass = 'wait';
-    stopLoss = direction === 'bullish' ? entryPrice - curATR * 2.0 : entryPrice + curATR * 2.0;
-    takeProfit = direction === 'bullish' ? entryPrice + curATR * 4.0 : entryPrice - curATR * 4.0;
-    rrRatio = direction === 'neutral' ? 0 : (direction === 'bullish' ? (takeProfit - entryPrice) / (entryPrice - stopLoss) : (entryPrice - takeProfit) / (stopLoss - entryPrice));
+    stopLoss = direction === 'bullish' ? entryPrice - curATR * SL_ATR : entryPrice + curATR * SL_ATR;
+    takeProfit1 = direction === 'bullish' ? entryPrice + curATR * TP1_ATR : entryPrice - curATR * TP1_ATR;
+    takeProfit2 = direction === 'bullish' ? entryPrice + curATR * TP2_ATR : entryPrice - curATR * TP2_ATR;
+    breakevenPrice = entryPrice;
+  }
+
+  // 加权 R:R
+  if (sigClass !== 'wait') {
+    const pct1 = POS_PCT1 / 100, pct2 = 1 - pct1;
+    const tp1Dist = Math.abs(takeProfit1 - entryPrice);
+    const tp2Dist = Math.abs(takeProfit2 - entryPrice);
+    const riskDist = Math.abs(entryPrice - stopLoss);
+    const weightedReward = pct1 * tp1Dist + pct2 * tp2Dist;
+    rrRatio = weightedReward / (riskDist || 1);
+  } else {
+    rrRatio = 0;
   }
 
   // ── Leverage Recommendation ──
@@ -616,21 +658,27 @@ function generateSignal(data1h, data4h, data1d, info) {
   if (slPct < 1.5) { leverage = 3; levClass = 'l3'; }
   else if (slPct < 3) { leverage = 2; levClass = 'l2'; }
   else { leverage = 1; levClass = 'l1'; }
-
   if (sigClass === 'wait') { leverage = 0; levClass = 'l1'; }
 
   // ── Confidence / Win Rate Estimate ──
   const confidence = totalScore >= 60 ? '高' : totalScore >= 50 ? '中高' : totalScore >= 40 ? '中' : '低';
   const winRateEst = totalScore >= 60 ? 72 : totalScore >= 50 ? 65 : totalScore >= 40 ? 58 : totalScore >= 30 ? 50 : 40;
   const riskPct = sigClass !== 'wait' ? Math.abs((stopLoss - entryPrice) / entryPrice) * 100 : 0;
-  const rewardPct = sigClass !== 'wait' ? Math.abs((takeProfit - entryPrice) / entryPrice) * 100 : 0;
+  const tp1Pct = sigClass !== 'wait' ? Math.abs((takeProfit1 - entryPrice) / entryPrice) * 100 : 0;
+  const tp2Pct = sigClass !== 'wait' ? Math.abs((takeProfit2 - entryPrice) / entryPrice) * 100 : 0;
 
   return {
     signal, sigClass, direction,
     totalScore, techScore, fundScore,
     confidence, winRateEst,
-    entryPrice, stopLoss, takeProfit, rrRatio,
-    riskPct, rewardPct,
+    entryPrice, stopLoss,
+    takeProfit: takeProfit1,      // 向后兼容 = TP1
+    takeProfit1, takeProfit2,     // 两段式止盈
+    positionPct1: POS_PCT1,       // TP1 平仓比例
+    breakevenPrice,                // 保本止损价
+    rrRatio, riskPct,
+    rewardPct: tp1Pct,            // 向后兼容 = TP1%
+    tp1Pct, tp2Pct,
     leverage, levClass,
     // Detailed indicators for display
     curRSI1h, curRSI4h, curRSID,
@@ -640,6 +688,7 @@ function generateSignal(data1h, data4h, data1d, info) {
     trend1h, trend4h, trendD,
     nearestSupport, nearestResistance,
     nextSupport, nextResistance,
+    fundingRatePct: null,  // 浏览器端无法获取 Binance 期货数据，来自 signals.json
   };
 }
 
@@ -704,7 +753,8 @@ function renderAsset(asset, data, signal) {
   const chgSign = chg >= 0 ? '+' : '';
 
   const slPctStr = sig.sigClass !== 'wait' ? `(${sig.riskPct.toFixed(2)}%)` : '';
-  const tpPctStr = sig.sigClass !== 'wait' ? `(${sig.rewardPct.toFixed(2)}%)` : '';
+  const tp1PctStr = sig.sigClass !== 'wait' && sig.tp1Pct != null ? `(+${sig.tp1Pct.toFixed(2)}%)` : '';
+  const tp2PctStr = sig.sigClass !== 'wait' && sig.tp2Pct != null ? `(+${sig.tp2Pct.toFixed(2)}%)` : '';
   const rrStr = sig.sigClass !== 'wait' ? `${sig.rrRatio.toFixed(1)}:1` : '--';
   const levStr = sig.sigClass !== 'wait' ? `${sig.leverage}x` : '--';
 
@@ -721,7 +771,7 @@ function renderAsset(asset, data, signal) {
           <span style="color:${chgCls};font-weight:700;margin-left:6px;font-size:.9rem">${chgSign}${chg.toFixed(2)}%</span>
         </div>
         <div style="display:flex;align-items:center;gap:12px;margin-top:4px">
-          <span class="sig-score ${scoreCls}">${sig.totalScore}/100</span>
+          <span class="sig-score ${scoreCls}">${sig.totalScore}/80</span>
           <span style="font-size:.8rem;color:var(--t2)">胜率预估 <b style="color:var(--text)">${sig.winRateEst}%</b></span>
           <span style="font-size:.8rem;color:var(--t2)">置信度 <b style="color:var(--text)">${sig.confidence}</b></span>
         </div>
@@ -730,18 +780,32 @@ function renderAsset(asset, data, signal) {
           <span class="sig-conf-item"><span class="dot ${sig.trend4h > 0 ? 'g' : sig.trend4h < 0 ? 'r' : 'y'}"></span>4H: ${sig.trend4h > 0 ? '多头' : sig.trend4h < 0 ? '空头' : '震荡'}</span>
           <span class="sig-conf-item"><span class="dot ${sig.trendD > 0 ? 'g' : sig.trendD < 0 ? 'r' : 'y'}"></span>日线: ${sig.trendD > 0 ? '多头' : sig.trendD < 0 ? '空头' : '震荡'}</span>
         </div>
+        ${sig.fundingRatePct != null ? `
+        <div style="margin-top:4px;font-size:.78rem;color:var(--t2);display:flex;align-items:center;gap:8px">
+          <span>💰 资金费率:</span>
+          <span style="font-weight:700;color:${sig.fundingRatePct > 0 ? 'var(--red)' : sig.fundingRatePct < 0 ? 'var(--green)' : 'var(--t2)'}">
+            ${(sig.fundingRatePct > 0 ? '+' : '') + sig.fundingRatePct.toFixed(4)}%
+          </span>
+          <span style="font-size:.7rem;color:var(--t3)">
+            ${sig.fundingRatePct > 0.05 ? '(多头拥挤 🐻)' : sig.fundingRatePct < -0.05 ? '(空头拥挤 🐂)' : '(中性)'}
+          </span>
+        </div>` : ''}
       </div>
     </div>
 
-    <!-- Trade Plan -->
+    <!-- Trade Plan — 两段式止盈 + 保本止损 -->
     <div class="card">
       <div class="ch">🎯 交易计划 ${sig.sigClass !== 'wait' ? `<span class="lev-badge ${sig.levClass}">建议 ${levStr} 杠杆</span>` : ''}</div>
       <div class="plan-grid">
         <div class="plan-it"><div class="plan-lbl">💰 入场价</div><div class="plan-val e">$${sig.entryPrice < 100 ? sig.entryPrice.toFixed(2) : sig.entryPrice.toLocaleString('en-US',{maximumFractionDigits:0})}</div><div class="plan-sub">市价</div></div>
         <div class="plan-it danger"><div class="plan-lbl">🛑 止损</div><div class="plan-val s">$${sig.stopLoss < 100 ? sig.stopLoss.toFixed(2) : sig.stopLoss.toLocaleString('en-US',{maximumFractionDigits:0})}</div><div class="plan-sub">${slPctStr} 风险</div></div>
-        <div class="plan-it highlight"><div class="plan-lbl">🎯 止盈</div><div class="plan-val t">$${sig.takeProfit < 100 ? sig.takeProfit.toFixed(2) : sig.takeProfit.toLocaleString('en-US',{maximumFractionDigits:0})}</div><div class="plan-sub">${tpPctStr} 收益</div></div>
-        <div class="plan-it ${sig.rrRatio >= 2 ? 'highlight' : ''}"><div class="plan-lbl">📊 盈亏比</div><div class="plan-val r">${rrStr}</div><div class="plan-sub">${sig.rrRatio >= 2 ? '✅ 优秀' : sig.rrRatio >= 1.5 ? '⚠️ 一般' : '❌ 不足'}</div></div>
+        <div class="plan-it ${planHighlight}"><div class="plan-lbl">🎯 止盈① ${sig.sigClass !== 'wait' ? sig.positionPct1 + '%' : ''}</div><div class="plan-val t">$${sig.takeProfit1 < 100 ? sig.takeProfit1.toFixed(2) : sig.takeProfit1.toLocaleString('en-US',{maximumFractionDigits:0})}</div><div class="plan-sub">${tp1PctStr} → 保本</div></div>
+        <div class="plan-it ${sig.rrRatio >= 2 ? 'highlight' : ''}"><div class="plan-lbl">🚀 止盈② ${sig.sigClass !== 'wait' ? (100 - sig.positionPct1) + '%' : ''}</div><div class="plan-val r">$${sig.takeProfit2 < 100 ? sig.takeProfit2.toFixed(2) : sig.takeProfit2.toLocaleString('en-US',{maximumFractionDigits:0})}</div><div class="plan-sub">${tp2PctStr} 零风险</div></div>
       </div>
+      ${sig.sigClass !== 'wait' ? `
+      <div style="margin-top:8px;padding:8px 12px;background:var(--card2);border-radius:var(--rs);font-size:.72rem;color:var(--t2);line-height:1.5">
+        💡 <b>策略:</b> 到达止盈①时平仓 <b>${sig.positionPct1}%</b>，止损上移至 <b>$${sig.breakevenPrice < 100 ? sig.breakevenPrice.toFixed(2) : sig.breakevenPrice.toLocaleString('en-US',{maximumFractionDigits:0})}</b>（保本价），剩余仓位零风险博弈止盈②
+      </div>` : ''}
       <div style="display:flex;height:4px;border-radius:2px;overflow:hidden;margin-top:8px">
         <div style="background:var(--accent);width:${sig.techScore/80*100}%"></div>
         <div style="background:var(--green);width:${sig.fundScore/80*100}%"></div>
@@ -749,6 +813,7 @@ function renderAsset(asset, data, signal) {
       <div style="display:flex;gap:12px;margin-top:4px;font-size:.7rem;color:var(--t2)">
         <span>技术面 ${sig.techScore}/60</span>
         <span>基本面 ${sig.fundScore}/20</span>
+        <span>加权 R:R ${rrStr}</span>
       </div>
     </div>
 
@@ -954,6 +1019,58 @@ function toast(msg, type = 'i') {
   setTimeout(() => el.remove(), 3500);
 }
 
+// ── Render Market Sentiment (Fear & Greed + ETF Flows) ──
+const FNG_CIRCUMFERENCE = 2 * Math.PI * 15; // ~94.25
+
+function renderSentiment(data) {
+  sentimentData = data;
+  const fg = data?.fear_greed;
+  const etf = data?.etf_flows;
+
+  // ── Fear & Greed Gauge ──
+  const val = fg?.value;
+  const cls = (fg?.classification || '').toLowerCase().replace(/\s+/g, '_');
+  const clsMap = {
+    'extreme_fear': 'extreme_fear', 'fear': 'fear', 'neutral': 'neutral',
+    'greed': 'greed', 'extreme_greed': 'extreme_greed'
+  };
+
+  document.getElementById('fngVal').textContent = val != null ? val : '--';
+  const classEl = document.getElementById('fngClass');
+  classEl.textContent = fg?.classification || '无数据';
+  classEl.className = 'sent-classification ' + (clsMap[cls] || '');
+
+  document.getElementById('fngTs').textContent = fg?.timestamp ? `更新: ${fg.timestamp}` : '';
+
+  // Gauge arc
+  const arc = document.getElementById('fngArc');
+  const pct = val != null ? Math.max(0, Math.min(100, val)) / 100 : 0;
+  const offset = FNG_CIRCUMFERENCE * (1 - pct);
+  arc.setAttribute('stroke-dasharray', `${FNG_CIRCUMFERENCE} ${FNG_CIRCUMFERENCE}`);
+  arc.setAttribute('stroke-dashoffset', offset);
+  // Color: extreme fear=red, fear=orange, neutral=yellow, greed=light green, extreme greed=green
+  const colors = ['#e74c3c','#e74c3c','#e67e22','#e67e22','#f1c40f','#f1c40f','#2ecc71','#2ecc71','#27ae60','#27ae60'];
+  const colorIdx = val != null ? Math.min(9, Math.floor(val / 10)) : 4;
+  arc.setAttribute('stroke', colors[colorIdx]);
+
+  // Gradient bar indicator
+  document.getElementById('fngIndicator').style.left = `${pct * 100}%`;
+
+  // ── ETF Flows ──
+  const etfEl = document.getElementById('etfContent');
+  if (!etf || (!etf.BTC && !etf.ETH)) {
+    etfEl.innerHTML = '<span style="color:var(--t3);font-size:.8rem">ETF 数据暂不可用</span>';
+  } else {
+    const renderFlow = (label, flow) => {
+      if (flow == null) return '';
+      const cls = flow > 0 ? 'in' : flow < 0 ? 'out' : 'zero';
+      const sign = flow > 0 ? '+' : '';
+      return `<div class="etf-asset-row"><span class="etf-label">${label}</span><span class="etf-flow-num ${cls}">${sign}${flow.toFixed(2)} 亿$</span></div>`;
+    };
+    etfEl.innerHTML = (renderFlow('BTC', etf.BTC?.net_flow) || '') + (renderFlow('ETH', etf.ETH?.net_flow) || '');
+  }
+}
+
 // ── Refresh One Asset ──
 async function refreshAsset(asset) {
   const { id, s } = asset;
@@ -1004,6 +1121,12 @@ async function refreshAll() {
     const signalsJSON = await loadFromSignalsJSON();
 
     if (signalsJSON) {
+      // 渲染市场情绪数据（恐惧贪婪指数 + ETF 流动）
+      renderSentiment({
+        fear_greed: signalsJSON.fear_greed || null,
+        etf_flows: signalsJSON.etf_flows || null,
+      });
+
       // 使用预计算数据（快速路径：无需 CoinGecko API）
       for (const asset of ASSETS) {
         const data = buildAssetDataFromJSON(signalsJSON, asset.id);
@@ -1035,6 +1158,8 @@ async function refreshAll() {
       document.getElementById('liveInd').style.display = 'inline';
     } else {
       // signals.json 不可用，回退到 CoinGecko API（原有逻辑）
+      // 情绪数据不可用（仅 signals.json 提供）
+      renderSentiment(null);
       statusEl.textContent = '🔄 CoinGecko API...';
       for (let i = 0; i < ASSETS.length; i++) {
         const asset = ASSETS[i];
@@ -1186,7 +1311,7 @@ function backtestSignal(closes, highs, lows, idx) {
 
   if (score < 55) return null; // not enough conviction (优化: 50→55, 少而精)
 
-  // Entry / SL / TP (优化参数: 止损2.0×ATR, 止盈5.0×ATR)
+  // Entry / SL / TP (两段式止盈: TP1=2.0×ATR锁利50%+保本, TP2=5.0×ATR零风险)
   const entry = curPrice;
   let sl, tp;
   if (direction === 'bullish') {
@@ -1397,7 +1522,7 @@ function renderBacktestResults(results) {
       </div>
     </div>
     <div class="bt-note">
-      ⚠️ <b>回测说明：</b>策略参数已优化 — 止损 2.0×ATR | 止盈 5.0×ATR | 评分≥55 | R:R≥1.5。
+      ⚠️ <b>回测说明：</b>两段式止盈 — 止损 2.0×ATR | 止盈① 2.0×ATR(50%+保本) | 止盈② 5.0×ATR(50%零风险) | 评分≥55。
       回测基于<b>日线数据</b>模拟（实际策略使用1H数据），收盘价入场，持有最长14个交易日。<b>回测结果仅供评估策略逻辑参考，不构成未来收益保证。</b>
       实盘短线信号请参考上方实时分析面板。
     </div>

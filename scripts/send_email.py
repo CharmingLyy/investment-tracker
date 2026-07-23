@@ -34,30 +34,21 @@ def is_configured():
 def send_signal_email(asset, signal, direction, score, entry_price, stop_loss,
                       take_profit, rr_ratio, risk_pct, reward_pct, confidence,
                       win_rate_est, trend_summary, cur_price, atr_pct,
-                      tech_score=0, fund_score=0):
+                      tech_score=0, fund_score=0,
+                      take_profit1=None, take_profit2=None,
+                      tp1_pct=0, tp2_pct=0, position_pct1=50,
+                      breakeven_price=None):
     """
-    发送交易信号邮件通知
+    发送交易信号邮件通知（两段式止盈 + 保本止损）
 
     参数：
       asset: str — 资产名称 "BTC" / "ETH"
       signal: str — "做多 LONG" / "做空 SHORT"
-      direction: str — "bullish" / "bearish"
-      score: int — 综合评分 (满分 75: 技术55 + 基本面20)
-      entry_price: float — 入场价
-      stop_loss: float — 止损价
-      take_profit: float — 止盈价
-      rr_ratio: float — 盈亏比
-      risk_pct: float — 风险百分比
-      reward_pct: float — 收益百分比
-      confidence: str — 置信度 "高"/"中高"/"中"/"低"
-      win_rate_est: int — 预估胜率
-      trend_summary: str — 趋势摘要
-      cur_price: float — 当前价格
-      atr_pct: float — ATR 波动率百分比
-      tech_score: int — 技术面得分
-      fund_score: int — 基本面得分
-
-    返回: True/False — 是否发送成功
+      ...
+      take_profit1: float — 第一止盈价 (平仓 position_pct1%)
+      take_profit2: float — 第二止盈价 (平仓剩余%)
+      position_pct1: int — TP1 平仓比例
+      breakeven_price: float — TP1 触发后的保本止损价
     """
 
     # ── 构建邮件 ──
@@ -103,33 +94,36 @@ def send_signal_email(asset, signal, direction, score, entry_price, stop_loss,
           </div>
         </div>
 
-        <!-- 交易计划 -->
+        <!-- 交易计划 — 两段式止盈 + 保本止损 -->
         <table style="width: 100%; border-collapse: collapse; margin-bottom: 12px;">
           <tr>
-            <td style="background: #181f2a; border-radius: 6px; padding: 10px; text-align: center; width: 25%;">
-              <div style="font-size: 10px; color: #8b949e;">💰 入场价</div>
+            <td style="background: #181f2a; border-radius: 6px; padding: 10px; text-align: center; width: 24%;">
+              <div style="font-size: 10px; color: #8b949e;">💰 入场</div>
               <div style="font-size: 16px; font-weight: 800; color: #58a6ff;">${entry_price:,.2f}</div>
             </td>
-            <td style="width: 4px;"></td>
-            <td style="background: rgba(248,81,73,.1); border-radius: 6px; padding: 10px; text-align: center; width: 25%;">
+            <td style="width: 3px;"></td>
+            <td style="background: rgba(248,81,73,.1); border-radius: 6px; padding: 10px; text-align: center; width: 24%;">
               <div style="font-size: 10px; color: #8b949e;">🛑 止损</div>
               <div style="font-size: 16px; font-weight: 800; color: #f85149;">${stop_loss:,.2f}</div>
               <div style="font-size: 10px; color: #555d68;">风险 {risk_pct:.2f}%</div>
             </td>
-            <td style="width: 4px;"></td>
-            <td style="background: rgba(63,185,80,.1); border-radius: 6px; padding: 10px; text-align: center; width: 25%;">
-              <div style="font-size: 10px; color: #8b949e;">🎯 止盈</div>
-              <div style="font-size: 16px; font-weight: 800; color: #3fb950;">${take_profit:,.2f}</div>
-              <div style="font-size: 10px; color: #555d68;">收益 {reward_pct:.2f}%</div>
+            <td style="width: 3px;"></td>
+            <td style="background: rgba(63,185,80,.1); border-radius: 6px; padding: 10px; text-align: center; width: 24%;">
+              <div style="font-size: 10px; color: #8b949e;">🎯 止盈① {position_pct1}%</div>
+              <div style="font-size: 16px; font-weight: 800; color: #3fb950;">${take_profit1 or take_profit:,.2f}</div>
+              <div style="font-size: 10px; color: #555d68;">+{tp1_pct:.2f}% → 保本</div>
             </td>
-            <td style="width: 4px;"></td>
-            <td style="background: #181f2a; border-radius: 6px; padding: 10px; text-align: center; width: 25%;">
-              <div style="font-size: 10px; color: #8b949e;">📊 盈亏比</div>
-              <div style="font-size: 16px; font-weight: 800; color: #d2991d;">{rr_ratio:.1f}:1</div>
-              <div style="font-size: 10px; color: #555d68;">{rr_color}</div>
+            <td style="width: 3px;"></td>
+            <td style="background: rgba(63,185,80,.08); border-radius: 6px; padding: 10px; text-align: center; width: 24%;">
+              <div style="font-size: 10px; color: #8b949e;">🚀 止盈② {100-position_pct1}%</div>
+              <div style="font-size: 16px; font-weight: 800; color: #2ecc71;">${take_profit2 or take_profit:,.2f}</div>
+              <div style="font-size: 10px; color: #555d68;">+{tp2_pct:.2f}% 零风险</div>
             </td>
           </tr>
         </table>
+        <div style="background: #181f2a; border-radius: 6px; padding: 10px; margin-bottom: 12px; font-size: 11px; color: #8b949e; text-align: center;">
+          💡 止盈①触发后平仓<b>{position_pct1}%</b>，止损上移至<b>${breakeven_price or entry_price:,.2f}</b>（保本），剩余仓位零风险博弈止盈② &nbsp;|&nbsp; 📊 加权 R:R <b style="color: #d2991d;">{rr_ratio:.1f}:1</b> {rr_color}
+        </div>
 
         <!-- 趋势 -->
         <div style="background: #181f2a; border-radius: 8px; padding: 10px; font-size: 12px; color: #8b949e;">

@@ -18,6 +18,7 @@
 """
 import sys
 import io
+import math
 import os
 import json
 import time
@@ -37,6 +38,9 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, PROJECT_ROOT)
 LOG_DIR = os.path.join(PROJECT_ROOT, "logs")
 os.makedirs(LOG_DIR, exist_ok=True)
+
+# 延迟导入（避免循环依赖，仅在实际发送邮件时才使用）
+from scripts.send_email import send_signal_email, is_configured
 
 
 # ============================================================
@@ -399,20 +403,24 @@ def generate_signal(data_1h, data_4h, data_1d, asset="BTC", futures_info=None):
         except Exception:
             pass  # 解析失败，保底 10 分
 
-    total_score = round(min(100, tech_score + fund_score))
+    total_score = round(min(80, tech_score + fund_score))
 
     # ── 资产专属参数 ──
     # ETH 波动更大(日均ATR 4.9% vs BTC 4.1%), 用更紧的止损和更近的止盈
     if asset == "ETH":
-        sl_atr_mult = 1.5   # BTC 用 2.0
-        tp_atr_mult = 4.0   # BTC 用 5.0
-        tp_atr_t1 = 3.0     # BTC 用 4.0
+        sl_atr_mult = 1.5   # 止损
+        tp1_atr_mult = 1.5  # 第一止盈（近端锁利）
+        tp2_atr_mult = 4.0  # 第二止盈（远端吃波段）
     else:
         sl_atr_mult = 2.0
-        tp_atr_mult = 5.0
-        tp_atr_t1 = 4.0
+        tp1_atr_mult = 2.0
+        tp2_atr_mult = 5.0
 
-    # ── 风险收益计算 ──
+    # ── 两段式止盈 + 保本止损 ──
+    # TP1 (50%仓位): 近端锁利 → 触发后止损移到入场价（保本）
+    # TP2 (剩余50%): 远端吃大波段 → 零风险纯利润
+    POSITION_PCT_1 = 50  # TP1 平仓比例 (%)
+
     entry_price = cur_price
     signal, sig_class = "", ""
 
@@ -420,20 +428,16 @@ def generate_signal(data_1h, data_4h, data_1d, asset="BTC", futures_info=None):
         signal = '做多 LONG'
         sig_class = 'long'
         atr_stop = entry_price - cur_atr * sl_atr_mult
-        sr_stop = nearest_support * 0.995  # 0.5% 缓冲
-        stop_loss = min(atr_stop, sr_stop)  # 取更宽的止损（更低价）
+        sr_stop = nearest_support * 0.995
+        stop_loss = min(atr_stop, sr_stop)
 
-        atr_target1 = entry_price + cur_atr * tp_atr_t1
-        atr_target2 = entry_price + cur_atr * tp_atr_mult
-        if (nearest_resistance - entry_price) / (entry_price - stop_loss) >= 1.5:
-            take_profit = nearest_resistance * 0.995
-        elif (next_resistance - entry_price) / (entry_price - stop_loss) >= 1.5:
-            take_profit = next_resistance * 0.995
-        elif (atr_target1 - entry_price) / (entry_price - stop_loss) >= 1.5:
-            take_profit = atr_target1
-        else:
-            take_profit = atr_target2
-        rr_ratio = (take_profit - entry_price) / (entry_price - stop_loss)
+        take_profit1 = entry_price + cur_atr * tp1_atr_mult
+        take_profit2 = entry_price + cur_atr * tp2_atr_mult
+        # 保本价 = 入场价（TP1 触发后，止损上移至此）
+        breakeven_price = entry_price
+
+        tp1_dist = take_profit1 - entry_price
+        tp2_dist = take_profit2 - entry_price
 
     elif direction == 'bearish' and total_score >= 55:
         signal = '做空 SHORT'
@@ -442,31 +446,40 @@ def generate_signal(data_1h, data_4h, data_1d, asset="BTC", futures_info=None):
         sr_stop = nearest_resistance * 1.005
         stop_loss = max(atr_stop, sr_stop)
 
-        atr_target1 = entry_price - cur_atr * tp_atr_t1
-        atr_target2 = entry_price - cur_atr * tp_atr_mult
-        if (entry_price - nearest_support) / (stop_loss - entry_price) >= 1.5:
-            take_profit = nearest_support * 1.005
-        elif (entry_price - next_support) / (stop_loss - entry_price) >= 1.5:
-            take_profit = next_support * 1.005
-        elif (entry_price - atr_target1) / (stop_loss - entry_price) >= 1.5:
-            take_profit = atr_target1
-        else:
-            take_profit = atr_target2
-        rr_ratio = (entry_price - take_profit) / (stop_loss - entry_price)
+        take_profit1 = entry_price - cur_atr * tp1_atr_mult
+        take_profit2 = entry_price - cur_atr * tp2_atr_mult
+        breakeven_price = entry_price
+
+        tp1_dist = entry_price - take_profit1
+        tp2_dist = entry_price - take_profit2
 
     else:
         signal = '观望 WAIT'
         sig_class = 'wait'
         if direction == 'bullish':
             stop_loss = entry_price - cur_atr * sl_atr_mult
-            take_profit = entry_price + cur_atr * tp_atr_t1
+            take_profit1 = entry_price + cur_atr * tp1_atr_mult
+            take_profit2 = entry_price + cur_atr * tp2_atr_mult
         else:
             stop_loss = entry_price + cur_atr * sl_atr_mult
-            take_profit = entry_price - cur_atr * tp_atr_t1
-        rr_ratio = 0 if direction == 'neutral' else (
-            (take_profit - entry_price) / (entry_price - stop_loss) if direction == 'bullish'
-            else (entry_price - take_profit) / (stop_loss - entry_price)
-        )
+            take_profit1 = entry_price - cur_atr * tp1_atr_mult
+            take_profit2 = entry_price - cur_atr * tp2_atr_mult
+        breakeven_price = entry_price
+        tp1_dist = abs(take_profit1 - entry_price)
+        tp2_dist = abs(take_profit2 - entry_price)
+
+    # ── 综合 R:R（加权平均） ──
+    if sig_class != 'wait':
+        pct1 = POSITION_PCT_1 / 100
+        pct2 = 1 - pct1
+        risk_dist = abs(entry_price - stop_loss)
+        weighted_reward = pct1 * tp1_dist + pct2 * tp2_dist
+        rr_ratio = weighted_reward / risk_dist if risk_dist > 0 else 0
+        # 向后兼容: takeProfit = TP1（第一目标）
+        take_profit = take_profit1
+    else:
+        rr_ratio = 0
+        take_profit = take_profit1
 
     # ── 杠杆建议 ──
     sl_pct = abs((stop_loss - entry_price) / entry_price) * 100
@@ -479,7 +492,7 @@ def generate_signal(data_1h, data_4h, data_1d, asset="BTC", futures_info=None):
     else:
         leverage, lev_class = 1, 'l1'
 
-    # ── 置信度 (基于 75 分满分体系) ──
+    # ── 置信度 ──
     if total_score >= 60:
         confidence = '高'
     elif total_score >= 50:
@@ -491,7 +504,10 @@ def generate_signal(data_1h, data_4h, data_1d, asset="BTC", futures_info=None):
 
     win_rate_est = 72 if total_score >= 60 else 65 if total_score >= 50 else 58 if total_score >= 40 else 50 if total_score >= 30 else 40
     risk_pct = abs((stop_loss - entry_price) / entry_price) * 100 if sig_class != 'wait' else 0
-    reward_pct = abs((take_profit - entry_price) / entry_price) * 100 if sig_class != 'wait' else 0
+    tp1_pct = abs((take_profit1 - entry_price) / entry_price) * 100 if sig_class != 'wait' else 0
+    tp2_pct = abs((take_profit2 - entry_price) / entry_price) * 100 if sig_class != 'wait' else 0
+    # 向后兼容: rewardPct = TP1 距离
+    reward_pct = tp1_pct
 
     # ── 趋势摘要 ──
     tf_parts = []
@@ -505,9 +521,17 @@ def generate_signal(data_1h, data_4h, data_1d, asset="BTC", futures_info=None):
         "totalScore": total_score, "techScore": tech_score,
         "fundScore": fund_score,
         "confidence": confidence, "winRateEst": win_rate_est,
+        # 入场 + 止损
         "entryPrice": entry_price, "stopLoss": stop_loss,
-        "takeProfit": take_profit, "rrRatio": rr_ratio,
+        # 两段式止盈 + 保本止损
+        "takeProfit": take_profit1,       # 向后兼容 = TP1
+        "takeProfit1": take_profit1,      # 第一止盈 (平仓 50%)
+        "takeProfit2": take_profit2,      # 第二止盈 (平仓剩余 50%)
+        "positionPct1": POSITION_PCT_1,    # TP1 平仓比例
+        "breakevenPrice": breakeven_price, # TP1 触发后的保本止损价
+        "rrRatio": rr_ratio,
         "riskPct": risk_pct, "rewardPct": reward_pct,
+        "tp1Pct": tp1_pct, "tp2Pct": tp2_pct,
         "leverage": leverage, "levClass": lev_class,
         "curRSI1h": cur_rsi1h, "curRSI4h": cur_rsi4h, "curRSID": cur_rsiD,
         "cm1": cm1, "cs1": cs1, "cm4": cm4, "cs4": cs4,
@@ -518,6 +542,10 @@ def generate_signal(data_1h, data_4h, data_1d, asset="BTC", futures_info=None):
         "nearestSupport": nearest_support, "nearestResistance": nearest_resistance,
         "nextSupport": next_support, "nextResistance": next_resistance,
         "trendSummary": trend_summary,
+        # 资金费率（来自期货市场，独立于价格的做多/做空情绪指标）
+        "fundingRate": futures_info.get("funding_rate") if futures_info else None,
+        "fundingRatePct": futures_info.get("funding_rate_pct") if futures_info else None,
+        "fundingTime": futures_info.get("funding_time") if futures_info else None,
     }
 
 
@@ -766,7 +794,82 @@ def save_state(state):
         json.dump(state, f, ensure_ascii=False, indent=2)
 
 
-def save_signals_json(results, ohlc_data, data_sources):
+def fetch_fear_greed_index():
+    """获取加密货币恐惧贪婪指数 (数据源: alternative.me, 免费无需API Key)"""
+    try:
+        resp = requests.get("https://api.alternative.me/fng/?limit=1", timeout=10)
+        if resp.status_code == 200:
+            data = resp.json()
+            item = data.get("data", [{}])[0]
+            ts = item.get("timestamp")
+            return {
+                "value": int(item.get("value", 50)),
+                "classification": item.get("value_classification", "Neutral"),
+                "timestamp": datetime.fromtimestamp(int(ts)).strftime("%Y-%m-%d %H:%M:%S") if ts else None,
+            }
+    except Exception as e:
+        print(f"  ⚠️ 恐惧贪婪指数获取失败: {e}")
+    return None
+
+
+def fetch_etf_flows_simple():
+    """获取 BTC/ETH 现货 ETF 净流入/流出 (数据源: farside.co.uk)
+    返回: {"BTC": {"net_flow": 1.25}, "ETH": {"net_flow": -0.35}}  (单位: 亿$)"""
+    import re as _re
+    etf_data = {}
+    symbol_map = {"BTC": "btc", "ETH": "eth"}
+
+    for asset, fs_slug in symbol_map.items():
+        try:
+            url = f"https://farside.co.uk/{fs_slug}/"
+            resp = requests.get(url, headers={
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+                "Accept": "text/html,*/*",
+            }, timeout=15)
+            if resp.status_code != 200:
+                continue
+            content = resp.text
+
+            # 提取所有表格中的数值行
+            tables = _re.findall(r'<table[^>]*>(.*?)</table>', content, _re.DOTALL)
+            daily_net = None
+
+            for table_html in tables:
+                rows = _re.findall(r'<tr[^>]*>(.*?)</tr>', table_html, _re.DOTALL)
+                search_rows = rows[-4:] if len(rows) >= 4 else rows
+
+                for row_html in search_rows:
+                    if '<th' in row_html or 'otal' in row_html or 'OTAL' in row_html:
+                        continue
+                    cells = _re.findall(r'<td[^>]*>(.*?)</td>', row_html, _re.DOTALL)
+                    clean_cells = []
+                    for c in cells:
+                        c = _re.sub(r'<[^>]+>', '', c).strip()
+                        c = c.replace('$', '').replace(',', '').replace(' ', '')
+                        clean_cells.append(c)
+                    if len(clean_cells) >= 2:
+                        nums = []
+                        for val in clean_cells[1:]:
+                            if val.startswith('(') and val.endswith(')'):
+                                val = '-' + val[1:-1]
+                            try:
+                                nums.append(float(val))
+                            except ValueError:
+                                pass
+                        if nums:
+                            daily_net = round(sum(nums), 1)
+
+            if daily_net is not None:
+                net_billion = round(daily_net / 100, 2)
+                etf_data[asset] = {"net_flow": net_billion}
+                print(f"  📈 {asset} ETF 净流动: {net_billion:+.2f}亿$")
+        except Exception as e:
+            print(f"  ⚠️ {asset} ETF 流动数据获取失败: {str(e)[:80]}")
+
+    return etf_data
+
+
+def save_signals_json(results, ohlc_data, data_sources, fear_greed=None, etf_flows=None):
     """保存网站数据文件 — 包含信号结果和 OHLC 数据，供 GitHub Pages 直接读取"""
     data_dir = os.path.join(PROJECT_ROOT, "data")
     os.makedirs(data_dir, exist_ok=True)
@@ -778,12 +881,16 @@ def save_signals_json(results, ohlc_data, data_sources):
         "data_sources": data_sources,
     }
 
+    if fear_greed is not None:
+        output["fear_greed"] = fear_greed
+    if etf_flows:
+        output["etf_flows"] = etf_flows
+
     for asset, sig in results.items():
         # 清理信号中不能 JSON 序列化的值 (NaN, inf)
         sig_clean = {}
         for k, v in sig.items():
             if isinstance(v, float):
-                import math
                 if math.isnan(v):
                     sig_clean[k] = None
                 elif math.isinf(v):
@@ -856,7 +963,7 @@ def log_signal(asset, sig):
     line = (
         f"[{timestamp}] {direction_icon} {asset:4s} | "
         f"{sig['signal']:12s} | "
-        f"评分 {sig['totalScore']:3d}/100 | "
+        f"评分 {sig['totalScore']:3d}/80 | "
         f"${sig['entryPrice']:,.2f} | "
         f"R:R {sig['rrRatio']:.1f}:1 | "
         f"止损 {sig['riskPct']:.2f}% | "
@@ -1022,7 +1129,6 @@ def run_detection(send_email=True):
         if should_send:
             print(f"    📧 触发通知条件，发送邮件...")
             try:
-                from scripts.send_email import send_signal_email, is_configured
                 if is_configured():
                     state[state_key]["lastAttempted"] = time.time()
                     success = send_signal_email(
@@ -1043,6 +1149,12 @@ def run_detection(send_email=True):
                         atr_pct=sig["atrPct"],
                         tech_score=sig["techScore"],
                         fund_score=sig["fundScore"],
+                        take_profit1=sig.get("takeProfit1"),
+                        take_profit2=sig.get("takeProfit2"),
+                        tp1_pct=sig.get("tp1Pct", 0),
+                        tp2_pct=sig.get("tp2Pct", 0),
+                        position_pct1=sig.get("positionPct1", 50),
+                        breakeven_price=sig.get("breakevenPrice"),
                     )
                     if success:
                         state[state_key]["lastNotified"] = time.time()
@@ -1081,16 +1193,27 @@ def run_detection(send_email=True):
     save_state(state)
 
     # 保存网站数据文件 (data/signals.json) — 供 GitHub Pages 直接读取
-    save_signals_json(results, ohlc_data, data_sources)
+    try:
+        # 获取市场情绪数据（恐惧贪婪指数 + ETF 流动）
+        print(f"\n  🌍 获取市场情绪数据...")
+        fear_greed = fetch_fear_greed_index()
+        if fear_greed:
+            print(f"    😱 恐惧贪婪指数: {fear_greed['value']} — {fear_greed['classification']}")
+        etf_flows = fetch_etf_flows_simple()
+        save_signals_json(results, ohlc_data, data_sources, fear_greed=fear_greed, etf_flows=etf_flows)
+    except Exception as e:
+        print(f"  ⚠️ 网站数据保存失败（不影响主流程）: {e}")
 
     # 汇总
     print(f"\n{'─' * 80}")
     print(f"📊 检测汇总:")
     for asset, sig in results.items():
         icon = "🟢" if sig["sigClass"] == "long" else "🔴" if sig["sigClass"] == "short" else "🟡"
-        print(f"  {icon} {asset}: {sig['signal']} | 评分 {sig['totalScore']}/100 | "
-              f"${sig['entryPrice']:,.2f} | R:R {sig['rrRatio']:.1f}:1 | "
-              f"置信度 {sig['confidence']}")
+        tp1 = sig.get('takeProfit1', sig['takeProfit'])
+        tp2 = sig.get('takeProfit2', sig['takeProfit'])
+        print(f"  {icon} {asset}: {sig['signal']} | 评分 {sig['totalScore']}/80 | "
+              f"${sig['entryPrice']:,.2f} | TP1 ${tp1:,.2f} → TP2 ${tp2:,.2f} | "
+              f"加权R:R {sig['rrRatio']:.1f}:1 | 置信度 {sig['confidence']}")
     print(f"{'═' * 80}\n")
 
     return results

@@ -135,6 +135,26 @@ def _fetch_etf_flows():
     return etf_data
 
 
+def fetch_fear_greed_index():
+    """获取加密货币恐惧贪婪指数 (数据源: alternative.me, 免费无需API Key)
+    返回: {"value": 45, "classification": "Fear", "timestamp": "2026-07-23 12:00:00"} 或 None"""
+    from datetime import datetime as _dt
+    try:
+        resp = requests.get("https://api.alternative.me/fng/?limit=1", timeout=10)
+        if resp.status_code == 200:
+            data = resp.json()
+            item = data.get("data", [{}])[0]
+            ts = item.get("timestamp")
+            return {
+                "value": int(item.get("value", 50)),
+                "classification": item.get("value_classification", "Neutral"),
+                "timestamp": _dt.fromtimestamp(int(ts)).strftime("%Y-%m-%d %H:%M:%S") if ts else None,
+            }
+    except Exception as e:
+        print(f"  ⚠️ 恐惧贪婪指数获取失败: {e}")
+    return None
+
+
 def _fetch_funding_rates():
     """获取永续合约资金费率 + OI（多源：Bybit → OKX → CoinGecko）"""
     funding_data = {}

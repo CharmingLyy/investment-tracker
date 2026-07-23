@@ -89,55 +89,44 @@ def fetch_github_trending() -> list[dict]:
     }
 
     # ── 方案 A: 直接抓取 trending 页面 ──
-    for section in ["", "?since=daily"]:
-        for lang in ["python", ""]:
-            url = f"https://github.com/trending/{lang}{section}"
-            if lang:
-                url = f"https://github.com/trending/{lang}?since=daily"
-            try:
-                resp = requests.get(url, headers=headers, timeout=20)
-                if resp.status_code != 200:
-                    continue
-                # 简易 HTML 解析（避免引入 BeautifulSoup）
-                html_text = resp.text
-                # 找 repo 卡片: <h2 class="h3 lh-condensed">...<a href="/owner/repo">
-                repo_pattern = re.compile(
-                    r'<h2[^>]*class="[^"]*h3[^"]*"[^>]*>.*?'
-                    r'<a\s+href="/([^/"]+)/([^/"]+)"[^>]*>.*?'
-                    r'</h2>.*?'
-                    r'<p[^>]*class="[^"]*col-9[^"]*"[^>]*>(.*?)</p>',
-                    re.DOTALL
-                )
-                # 更简单的做法：分步提取
-                # 提取 repo 链接
-                link_pattern = re.compile(r'<a\s+href="/([^/"]+)/([^/"]+)"[^>]*>\s*(?:\1\s*/\s*)?\2\s*</a>')
-                desc_pattern = re.compile(r'<p[^>]*class="[^"]*col-9[^"]*"[^>]*>(.*?)</p>', re.DOTALL)
-                stars_pattern = re.compile(r'(\d[\d,]*)\s+stars\s+today', re.IGNORECASE)
-
-                links = link_pattern.findall(html_text)
-                descs = desc_pattern.findall(html_text)
-                stars_today = stars_pattern.findall(html_text)
-
-                for i, (owner, repo) in enumerate(links[:MAX_PER_SOURCE]):
-                    desc = descs[i].strip() if i < len(descs) else ""
-                    desc = re.sub(r'<[^>]+>', '', desc).strip()
-                    stars = stars_today[i].replace(",", "") if i < len(stars_today) else "0"
-                    items.append({
-                        "id": f"gh:{owner}/{repo}",
-                        "title": f"{owner}/{repo}",
-                        "summary": desc[:300] if desc else "",
-                        "url": f"https://github.com/{owner}/{repo}",
-                        "source": "GitHub Trending",
-                        "stars_today": int(stars) if stars.isdigit() else 0,
-                        "owner": owner,
-                        "repo": repo,
-                    })
-                if links:
-                    break  # 成功抓取到一个 section 就不再继续
-            except Exception:
+    # 分别抓取 daily Python 和 daily 全语言，最多两个请求
+    urls_to_try = [
+        ("https://github.com/trending/python?since=daily", "python"),
+        ("https://github.com/trending?since=daily", "all"),
+    ]
+    for url, label in urls_to_try:
+        try:
+            resp = requests.get(url, headers=headers, timeout=20)
+            if resp.status_code != 200:
                 continue
-        if items:
-            break
+            html_text = resp.text
+            # 提取 repo 链接
+            link_pattern = re.compile(r'<a\s+href="/([^/"]+)/([^/"]+)"[^>]*>\s*(?:\1\s*/\s*)?\2\s*</a>')
+            desc_pattern = re.compile(r'<p[^>]*class="[^"]*col-9[^"]*"[^>]*>(.*?)</p>', re.DOTALL)
+            stars_pattern = re.compile(r'(\d[\d,]*)\s+stars\s+today', re.IGNORECASE)
+
+            links = link_pattern.findall(html_text)
+            descs = desc_pattern.findall(html_text)
+            stars_today = stars_pattern.findall(html_text)
+
+            for i, (owner, repo) in enumerate(links[:MAX_PER_SOURCE]):
+                desc = descs[i].strip() if i < len(descs) else ""
+                desc = re.sub(r'<[^>]+>', '', desc).strip()
+                stars = stars_today[i].replace(",", "") if i < len(stars_today) else "0"
+                items.append({
+                    "id": f"gh:{owner}/{repo}",
+                    "title": f"{owner}/{repo}",
+                    "summary": desc[:300] if desc else "",
+                    "url": f"https://github.com/{owner}/{repo}",
+                    "source": "GitHub Trending",
+                    "stars_today": int(stars) if stars.isdigit() else 0,
+                    "owner": owner,
+                    "repo": repo,
+                })
+            if links:
+                break  # 成功抓取到数据就不再尝试其他 URL
+        except Exception:
+            continue
 
     # ── 方案 B: GitHub Search API 回退 ──
     if not items:
@@ -849,42 +838,45 @@ def push_to_wechat(briefing_md: str, date_str: str):
     if len(body_lines) > 60:
         desp += f"\n\n... (共 {len(body_lines)} 行，完整内容见 GitHub)"
 
-    try:
-        resp = requests.post(
-            f"https://sctapi.ftqq.com/{SERVERCHAN_SEND_KEY}.send",
-            data={"title": title, "desp": desp},
-            timeout=15
-        )
-        # 记录完整响应用于调试
-        print(f"[推送] HTTP {resp.status_code}")
-        result = resp.json()
-        print(f"[推送] 完整响应: {json.dumps(result, ensure_ascii=False)}")
-        data_field = result.get("data", {})
-        if isinstance(data_field, dict):
-            data_errno = data_field.get("errno", 0)
-        else:
-            data_errno = 0
-        print(f"[推送] Server酱响应: code={result.get('code')}, errno={result.get('errno')}, "
-              f"data.errno={data_errno}, message={result.get('message', 'N/A')}")
+    for attempt in range(3):
+        try:
+            resp = requests.post(
+                f"https://sctapi.ftqq.com/{SERVERCHAN_SEND_KEY}.send",
+                data={"title": title, "desp": desp},
+                timeout=15
+            )
+            result = resp.json()
+            data_field = result.get("data", {})
+            if isinstance(data_field, dict):
+                data_errno = data_field.get("errno", 0)
+            else:
+                data_errno = 0
 
-        # Server酱 v2 API: code=0 且 data.errno=0 才是真正成功
-        if result.get("code") == 0 and data_errno == 0:
-            print(f"[推送] ✅ 微信推送成功")
-            return True
-        elif result.get("code") == 0:
-            # code=0 但 data.errno != 0: 假成功
-            print(f"[推送] ⚠️ Server酱部分失败: code=0 但 data.errno={data_errno}, "
-                  f"message={data_field.get('message', '?')}")
-            return False
-        else:
-            print(f"[推送] ⚠️ Server酱返回错误: code={result.get('code')}, message={result.get('message', '未知')}")
-            return False
-    except requests.exceptions.JSONDecodeError:
-        print(f"[推送] ❌ Server酱返回非JSON响应: {resp.text[:200]}")
-        return False
-    except Exception as e:
-        print(f"[推送] ❌ 微信推送失败: {e}")
-        return False
+            # Server酱 v2 API: code=0 且 data.errno=0 才是真正成功
+            if result.get("code") == 0 and data_errno == 0:
+                print(f"[推送] ✅ 微信推送成功")
+                return True
+            elif result.get("code") == 0:
+                # code=0 但 data.errno != 0: 假成功
+                print(f"[推送] ⚠️ Server酱部分失败: code=0 但 data.errno={data_errno}, "
+                      f"message={data_field.get('message', '?')}")
+                return False
+            else:
+                print(f"[推送] ⚠️ Server酱返回错误 (第{attempt+1}次): code={result.get('code')}, "
+                      f"message={result.get('message', '未知')}")
+                if attempt < 2:
+                    time.sleep(2)
+        except requests.exceptions.JSONDecodeError:
+            print(f"[推送] ⚠️ Server酱返回非JSON响应 (第{attempt+1}次): {resp.text[:200]}")
+            if attempt < 2:
+                time.sleep(2)
+        except Exception as e:
+            print(f"[推送] ⚠️ 微信推送失败 (第{attempt+1}次): {e}")
+            if attempt < 2:
+                time.sleep(2)
+
+    print(f"[推送] ❌ 微信推送失败（3次重试后仍失败）")
+    return False
 
 
 # ═══════════════════════════════════════════════════════════════

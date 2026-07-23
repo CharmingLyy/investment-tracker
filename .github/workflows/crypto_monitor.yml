@@ -63,10 +63,19 @@ jobs:
           try:
             d = json.load(open('data/signals.json'))
             print(f'  更新时间: {d.get(\"update_time\",\"?\")}')
+            fg = d.get('fear_greed')
+            if fg: print(f'  F&G: {fg[\"value\"]} - {fg[\"classification\"]}')
+            etf = d.get('etf_flows')
+            if etf:
+              for a, flow in etf.items():
+                nf = flow.get('net_flow')
+                if nf is not None: print(f'  {a} ETF: {nf:+.2f}B')
             for a in ['BTC','ETH']:
               if a in d and d[a].get('signal'):
                 s = d[a]['signal']
-                print(f'  {a}: {s[\"signal\"]} | 评分 {s[\"totalScore\"]}/100 | \${s[\"entryPrice\"]:,.2f}')
+                fr = s.get('fundingRatePct')
+                fr_str = f' | 资金费率 {fr:.4f}%' if fr is not None else ''
+                print(f'  {a}: {s[\"signal\"]} | 评分 {s[\"totalScore\"]}/80 | \${s[\"entryPrice\"]:,.2f}{fr_str}')
               else:
                 print(f'  {a}: 无数据')
           except: print('  (尚无记录)')

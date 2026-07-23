@@ -128,6 +128,15 @@
         .up { color: var(--accent-green); }
         .down { color: var(--accent-red); }
 
+        /* Fear & Greed card */
+        .fg-extreme_fear { color: #e74c3c; }
+        .fg-fear { color: #e67e22; }
+        .fg-neutral { color: #f1c40f; }
+        .fg-greed { color: #2ecc71; }
+        .fg-extreme_greed { color: #27ae60; }
+        .fg-bar{height:6px;border-radius:3px;background:linear-gradient(to right,#e74c3c,#e67e22,#f1c40f,#2ecc71,#27ae60);margin-top:8px;position:relative}
+        .fg-bar-indicator{position:absolute;top:-3px;width:4px;height:12px;border-radius:2px;background:#fff;transform:translateX(-50%);box-shadow:0 0 6px rgba(255,255,255,.4)}
+
         /* ===== 市场分区 ===== */
         .market-section {
             margin-bottom: 32px;
@@ -557,6 +566,23 @@
                 <div class="card-value down">{{ down_count }}</div>
                 <div class="card-sub">占比 {{ down_pct }}%</div>
             </div>
+            {% if fear_greed %}
+            {% set fg_val = fear_greed.value | int %}
+            {% set fg_cls = 'fg-extreme_fear' if fg_val <= 24 else 'fg-fear' if fg_val <= 44 else 'fg-neutral' if fg_val <= 55 else 'fg-greed' if fg_val <= 75 else 'fg-extreme_greed' %}
+            <div class="summary-card" id="fg-card">
+                <div class="card-label">😱 恐惧贪婪指数 (加密)</div>
+                <div class="card-value {{ fg_cls }}" id="fg-value">{{ fg_val }}</div>
+                <div class="card-sub" id="fg-class">{{ fear_greed.classification }}</div>
+                <div class="fg-bar"><div class="fg-bar-indicator" id="fg-indicator" style="left:{{ fg_val }}%"></div></div>
+            </div>
+            {% else %}
+            <div class="summary-card" id="fg-card">
+                <div class="card-label">😱 恐惧贪婪指数 (加密)</div>
+                <div class="card-value" id="fg-value" style="color:var(--text-muted)">--</div>
+                <div class="card-sub" id="fg-class">数据暂不可用</div>
+                <div class="fg-bar"><div class="fg-bar-indicator" id="fg-indicator" style="left:50%"></div></div>
+            </div>
+            {% endif %}
             <div class="summary-card">
                 <div class="card-label">📰 市场新闻</div>
                 <div class="card-value" style="font-size:1.4rem">{{ news_count }} 条</div>
@@ -1253,6 +1279,11 @@
 
             updateSummaryCards(totalCount, upCount, downCount, upPct, downPct, stocks, news.length);
 
+            // 更新恐惧贪婪指数卡片
+            if (data.fear_greed) {
+                updateFearGreedCard(data.fear_greed);
+            }
+
             // 更新各市场表格
             updateStockTable('a-stock-table-body', stocks.a_stocks || [], 'A');
             updateStockTable('hk-stock-table-body', stocks.hk_stocks || [], 'HK');
@@ -1286,6 +1317,33 @@
                 subs[0].textContent = 'A股 ' + (stocks.a_stocks || []).length + ' · 港股 ' + (stocks.hk_stocks || []).length + ' · 美股 ' + (stocks.us_stocks || []).length + ' · 加密 ' + (stocks.crypto || []).length;
                 subs[1].textContent = '占比 ' + upPct + '%';
                 subs[2].textContent = '占比 ' + downPct + '%';
+            }
+        }
+
+        function updateFearGreedCard(fg) {
+            var valEl = document.getElementById('fg-value');
+            var classEl = document.getElementById('fg-class');
+            var indicator = document.getElementById('fg-indicator');
+            if (!valEl) return;
+
+            var val = fg.value != null ? parseInt(fg.value) : null;
+            var clsName = (fg.classification || '').toLowerCase().replace(/\s+/g, '_');
+            var colorMap = {
+                'extreme_fear': 'fg-extreme_fear', 'fear': 'fg-fear', 'neutral': 'fg-neutral',
+                'greed': 'fg-greed', 'extreme_greed': 'fg-extreme_greed'
+            };
+            var cls = colorMap[clsName] || '';
+
+            if (val != null) {
+                valEl.textContent = val;
+                valEl.className = 'card-value ' + cls;
+                classEl.textContent = fg.classification || '';
+                if (indicator) indicator.style.left = Math.max(0, Math.min(100, val)) + '%';
+            } else {
+                valEl.textContent = '--';
+                valEl.className = 'card-value';
+                valEl.style.color = 'var(--text-muted)';
+                classEl.textContent = '数据暂不可用';
             }
         }
 

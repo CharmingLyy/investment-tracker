@@ -1,6 +1,102 @@
 # TODO — AI 投资观察面板
 
-> 最后更新: 2026-07-22 (策略重构完成 + 简报 AI 策展 + 微信推送上线)
+> 最后更新: 2026-07-23 (市场情绪指标: 恐惧贪婪指数 + ETF 流入流出)
+
+---
+
+## ✅ 今日完成 (2026-07-23) — 🌡️ 市场情绪指标新增
+
+### 新增: 恐惧贪婪指数 + ETF 流入流出
+
+为 AI 选股页面和主面板新增两个市场情绪指标。
+
+**恐惧贪婪指数 (Crypto Fear & Greed Index):**
+- 数据源: `https://api.alternative.me/fng/`（免费，无需 API Key）
+- 返回 0-100 分 + 分类（Extreme Fear / Fear / Neutral / Greed / Extreme Greed）
+- 展示位置:
+  - `ai选股/index.html`: 页面顶部仪表盘卡片（SVG 弧形 + 渐变条形图 + 分类标签）
+  - `templates/index.html`: 摘要卡片网格第 4 张卡片（彩色数值 + 渐变条形指示器）
+
+**ETF 流入流出 (BTC/ETH 现货 ETF):**
+- 数据源: `farside.co.uk`（已有后端逻辑，扩展至 signals.json）
+- 展示位置: `ai选股/index.html` 页面顶部 ETF 流动卡片（BTC/ETH 分别显示净流动，绿色/红色编码）
+
+### 修改的文件清单
+
+| 文件 | 改动 |
+|------|------|
+| `scripts/monitor_crypto.py` | 新增 `fetch_fear_greed_index()` + `fetch_etf_flows_simple()`；扩展 `save_signals_json()` 输出 `fear_greed` 和 `etf_flows` 字段；`run_detection()` 调用市场情绪抓取 |
+| `scripts/fetch_crypto.py` | 新增 `fetch_fear_greed_index()` 公开函数（主面板使用） |
+| `scripts/main.py` | 导入并调用 `fetch_fear_greed_index()`；传入 `generate_html()` 和 `save_data_json()`；保存到 `data/latest.json` |
+| `ai选股/index.html` | 新增市场情绪卡片 CSS + HTML（F&G SVG 仪表盘 + ETF 净流动）；新增 `renderSentiment()` JS 函数；集成到 signals.json 加载路径 |
+| `templates/index.html` | 摘要卡片网格新增恐惧贪婪指数卡片（Jinja2 条件渲染 + 软刷新 JS 更新）；新增 `updateFearGreedCard()` 函数 |
+
+### 数据流
+
+```
+monitor_crypto.py (~10min)          main.py (工作日 16:00/20:00)
+  ├── fetch_fear_greed_index()        ├── fetch_fear_greed_index()
+  ├── fetch_etf_flows_simple()        └── → data/latest.json
+  └── → data/signals.json                  → index.html (Jinja2)
+       → ai选股/index.html 读取
+```
+
+---
+
+## ✅ 今日完成 (2026-07-23) — 🧹 卡点验证 + 代码质量优化
+
+### 一、卡点状态确认
+
+两个之前的卡点均已解决：
+
+| 卡点 | 结果 |
+|------|------|
+| GitHub Actions 权限 "Read and write" | ✅ 用户已配置，self-ping 正常工作 |
+| 邮件 Secrets（`AI_MONITOR_EMAIL_*`） | ✅ 已配置，`workflow_output.log` 证实邮件成功发送到 `1660669970@qq.com` |
+
+**全链路验证通过**：信号检测 → 评分 → 触发通知 → QQ 邮箱推送，BTC/ETH 均正常。
+
+### 二、代码质量优化
+
+**`scripts/monitor_crypto.py`（4 处）：**
+
+| 改动 | 说明 |
+|------|------|
+| `import math` 移到文件顶部 | 原来在 for 循环内重复 import |
+| `from scripts.send_email import ...` 移到文件顶部 | 原来在 per-asset 循环里每次发邮件前才 import |
+| `save_signals_json()` 外包 try/except | 原来 JSON 序列化失败会崩溃导致 state 也不保存 |
+| 删除循环内的 `import math` | 配合第一项 |
+
+**`scripts/main.py`（1 处）：**
+
+| 改动 | 说明 |
+|------|------|
+| 删除未使用的 `from datetime import timedelta` | if 分支内 import 但从未使用，死代码 |
+
+**`scripts/daily_briefing.py`（2 处）：**
+
+| 改动 | 说明 |
+|------|------|
+| GitHub Trending 抓取逻辑简化 | 原来 2 层嵌套循环（section × lang = 4 次迭代），但 URL 生成逻辑有冗余。改为直接声明 2 个目标 URL |
+| `push_to_wechat()` 增加 3 次重试 | 原来网络抖一下就失败，现在最多重试 3 次（间隔 2s），与 `send_email.py` 策略一致 |
+
+### 三、当前完整功能概览
+
+三个自动化系统 + 一个数据面板，全部跑在 GitHub Actions 免费额度上：
+
+1. **🔔 加密货币交易信号监控**（每 ~10 分钟）
+   - Binance → Kraken → CoinGecko 三层备选 → 1H/4H/日线技术指标 → 期货基本面验证 → 评分 ≥ 55 触发 → QQ 邮箱 HTML 邮件
+   
+2. **🗞️ 每日硬核科技情报简报**（每天 8:00 / 20:00）
+   - 5 路数据并行抓取 → 启发式评分 → DeepSeek API 策展（优先）/ 启发式回退 → Markdown + JSON + 微信推送 + 网站展示
+   
+3. **📊 投资观察数据面板**（工作日 16:00 / 20:00）
+   - A股/港股/美股/加密货币 → Jinja2 渲染 → GitHub Pages 部署
+   
+4. **🖥️ AI 选股面板**（`ai选股/index.html`）
+   - 优先从 `data/signals.json` 加载，回退 CoinGecko API
+
+三端覆盖：**邮箱**（交易信号）、**微信**（科技简报）、**网页**（数据面板 + 简报）。
 
 ---
 
@@ -235,52 +331,37 @@ GitHub Actions (每15分钟): Binance → Kraken → CoinGecko 三层备选 → 
 
 ## ⚠️ 当前卡点 / 已知问题
 
-### 🔴 下次继续
+### 🟢 已解决 (2026-07-23 确认)
 
-1. **GitHub Actions 定时调度稳定性** 🔥 **二次修复 (2026-07-21)**
-   - ~~之前出现过 22 小时内只触发 1 次 schedule 的异常~~
-   - **根因**：GitHub Actions scheduler 对免费仓库的 `schedule` 触发极度不稳定
-   - **第一次修复尝试**：`*/15` → `*/5` + 14min 去重守卫 — 效果不够，仍出现数小时只触发 1 次
-   - **🔥 第二次修复（激进方案）**：
-     1. **7 条 cron 规则**：覆盖几乎所有分钟数（`*/5`, `1,6,11...`, `2,7,12...`, `3,8,13...`, `4,9,14...`, `0,10,20...`, `5,15,25...`）
-     2. **Self-ping 链式触发**：每次成功执行后，用 `gh workflow run` 触发下一次（9 分钟冷却防死循环）
-     3. **去重守卫**：14 分钟 → 8 分钟（配合多 cron 实现 ~10分钟/次）
-     4. **通知冷却**：4 小时 → 1 小时（同方向信号更频繁提醒）
-     5. **失败冷却**：24 小时 → 6 小时（邮件失败后更快恢复重试）
-   - **需要的权限**：Settings → Actions → General → Workflow permissions → **Read and write permissions**（self-ping 需要）
-   - **验证**：过几小时查看 Actions 运行历史，确认频率是否达到 ~10 分钟一次
+1. ~~**GitHub Actions 定时调度稳定性**~~ ✅ **已解决**
+   - 7 条 cron + self-ping 链式触发 + 8 分钟去重守卫 = 实际检测频率 ~10 分钟/次
+   - Workflow permissions 已设为 "Read and write"（self-ping 需要）
+   - 运行稳定，无需进一步操作
 
-2. ~~**网站版数据源仍是 CoinGecko**~~ ✅ **已修复**
-   - ~~`ai选股/index.html` 用 CoinGecko（经常挂，网页加载失败）~~
-   - ~~GitHub Actions 版已经用 Kraken + CoinGecko 双保险了~~
-   - **解决方案**：GitHub Actions 每次运行后把信号+OHLC数据写入 `data/signals.json`，网站优先读取（<1h 新鲜度），过期或不可用时回退 CoinGecko API
-   - **修改文件**：`scripts/monitor_crypto.py`（新增 `save_signals_json()`）、`.github/workflows/crypto_monitor.yml`（提交 signals.json）、`ai选股/index.html`（新增 `loadFromSignalsJSON()` + `buildAssetDataFromJSON()`）
-   - 零延迟：JSON 在同域 GitHub Pages，无 CORS 问题；15 分钟更新一次
-
-3. **Kraken K 线数据与 Binance 有微小差异**
-   - 不同交易所价格和 K 线边界不同，会导致 RSI/MACD 等技术指标有偏差
-   - 本地 Binance 评分 74，GitHub Kraken 评分也是 74（补上 ticker 后）
-   - 但如果某次差异刚好跨过 65 阈值就会漏信号——可把阈值调到 60 作为 Kraken 模式的容错
+2. ~~**邮件 Secrets 未配置**~~ ✅ **已解决**
+   - `AI_MONITOR_EMAIL_FROM` / `AI_MONITOR_EMAIL_PASSWORD` / `AI_MONITOR_EMAIL_TO` 全部就位
+   - `logs/workflow_output.log` 证实：BTC/ETH 信号邮件成功发送到 `1660669970@qq.com`
 
 ### 🟡 中优先级
 
-4. ~~**ai选股/index.html 数据源切换到 Binance/Kraken**~~ ✅ **已合并到 #2**
-   - ~~浏览器端没法直接调 Binance API（CORS），需要走代理或从 GitHub 仓库的 JSON 文件读~~
-   - 已通过 `data/signals.json` 方案解决（与 #2 相同）
-
-5. **1H/4H 多时间框架回测**
+3. **1H/4H 多时间框架回测**
    - 当前回测用日线模拟，实盘用 1H 数据，两者之间存在 gap
    - 用 Binance 1H K 线重写回测，直接验证实盘信号质量
 
-6. **策略参数自动调优**
+4. **策略参数自动调优**
    - 每季度用最新数据跑一次 `scan_eth.py` + `backtest_grid.py`
+
+5. **Kraken K 线数据与 Binance 有微小差异**
+   - 不同交易所价格和 K 线边界不同，会导致 RSI/MACD 等技术指标有偏差
+   - 目前数据源自适应，差异可接受，但极端情况下可能跨阈值漏信号
+   - 可考虑为 Kraken 模式设独立阈值（如 50 分，比 Binance 的 55 分低 5 分作为容错）
 
 ### 🟢 低优先级
 
-7. 网页版显示策略参数版本号和各资产专属参数
-8. 回测页面增加参数对比功能
-9. 邮件增加更多细节（如最近 N 次信号准确率统计）
-10. 监控覆盖面扩展：考虑加入 SOL 等主流币种
+6. 网页版显示策略参数版本号和各资产专属参数
+7. 回测页面增加参数对比功能
+8. 邮件增加更多细节（如最近 N 次信号准确率统计）
+9. 监控覆盖面扩展：考虑加入 SOL 等主流币种
 
 ---
 
@@ -368,11 +449,11 @@ python scripts/daily_briefing.py
 
 ```
 GitHub Actions
-  ├── crypto_monitor.yml (每5分钟, 去重守卫~15分钟)
+  ├── crypto_monitor.yml (7条cron + self-ping, 有效频率 ~10分钟/次)
   │   ├── 数据获取链: Binance → Kraken(真实OHLC) → CoinGecko(近似)
-  │   ├── ticker数据: Binance 24h → CoinGecko simple/price
+  │   ├── 期货基本面: Binance Futures API（资金费率 + OI 变化）
   │   ├── 信号引擎: generate_signal() — 多时间框架(1H+4H+日线)
-  │   ├── 邮件通知: QQ邮箱 SMTP（评分≥65且非观望时发送）
+  │   ├── 邮件通知: QQ邮箱 SMTP（评分≥55且非观望时发送）
   │   ├── 状态持久化: logs/signal_state.json + logs/monitor.log
   │   └── 网站数据: data/signals.json → ai选股/index.html
   │
@@ -385,7 +466,8 @@ GitHub Actions
   │
   └── daily_briefing.yml (每天 8:00 / 20:00)
       ├── 5 路数据抓取: HN + GitHub + ArXiv + Lobste.rs + RSS
-      ├── AI 策展: Claude API (可选) / 启发式回退
+      ├── AI 策展: DeepSeek API（优先）→ Claude API → 启发式回退
+      ├── 微信推送: Server酱 → 手机微信直达
       ├── 输出: daily_briefing.md + data/daily_briefing.json
       └── 提交推送 → 网站自动展示
 ```
@@ -396,8 +478,9 @@ GitHub Actions
 
 - **零操作** — GitHub Actions 全自动，电脑关机也运行
 - **手机挂 QQ 邮箱** — 收到做多/做空信号后自行判断
+- **微信收简报** — 每天早 8 点/晚 8 点，Server酱 推送毒舌科技情报
 - **数据面板**: https://charminglyy.github.io/investment-tracker/
 - **每日简报**: 数据面板摘要区下方（每天 8:00 / 20:00 更新）
 - **查看运行记录**: https://github.com/CharmingLyy/investment-tracker/actions
 - **手动触发**: Actions → 选择工作流 → Run workflow
-- **启用 AI 策展**: 设置 `ANTHROPIC_API_KEY` secret 即可解锁毒舌点评
+- **AI 策展**: 已启用 DeepSeek API（¥1/百万 token，中文原生），回退链: DeepSeek → Anthropic → 启发式
