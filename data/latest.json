@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-07-24 13:07:30",
+  "update_time": "2026-07-24 17:19:06",
   "stocks": {
     "a_stocks": [
       {
@@ -69,25 +69,25 @@
         "symbol": "01810",
         "industry": "Consumer Electronics",
         "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
-        "price": 26.72,
-        "open": 26.54,
-        "high": 27.46,
-        "low": 26.44,
-        "change_pct": -1.55,
+        "price": NaN,
+        "open": null,
+        "high": null,
+        "low": null,
+        "change_pct": NaN,
         "volume": 100081028,
         "turnover": null,
         "market_cap": 6865.82,
         "pe": 14.76,
         "cash_flow": 77.67,
-        "macd": 0.3982,
-        "macd_signal": 0.0326,
-        "macd_histogram": 0.7313,
-        "rsi": 54.71,
+        "macd": 0.3956,
+        "macd_signal": 0.032,
+        "macd_histogram": 0.7271,
+        "rsi": 57.63,
         "ma": {
-          "MA5": 27.14,
-          "MA10": 26.78,
-          "MA20": 25.04,
-          "MA60": 27.3
+          "MA5": null,
+          "MA10": null,
+          "MA20": null,
+          "MA60": null
         },
         "main_net_flow": null
       }
@@ -100,25 +100,25 @@
         "symbol": "NVDA",
         "industry": "Semiconductors",
         "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
-        "price": 208.76,
-        "open": 209.46,
-        "high": 210.87,
-        "low": 205.96,
-        "change_pct": -1.56,
-        "volume": 110250900,
+        "price": 210.1,
+        "open": 207.56,
+        "high": 211.91,
+        "low": 205.67,
+        "change_pct": 0.64,
+        "volume": 57619644,
         "turnover": null,
-        "market_cap": 50563.76,
-        "pe": 31.97,
+        "market_cap": 50888.32,
+        "pe": 32.17,
         "cash_flow": 463.36,
-        "macd": 0.9038,
-        "macd_signal": -0.0906,
-        "macd_histogram": 1.9889,
-        "rsi": 52.94,
+        "macd": 1.1193,
+        "macd_signal": 0.1514,
+        "macd_histogram": 1.936,
+        "rsi": 54.11,
         "ma": {
-          "MA5": 206.84,
-          "MA10": 208.04,
-          "MA20": 202.78,
-          "MA60": 208.93
+          "MA5": 208.3,
+          "MA10": 207.95,
+          "MA20": 203.49,
+          "MA60": 208.89
         },
         "main_net_flow": null
       },
@@ -129,25 +129,25 @@
         "symbol": "GOOG",
         "industry": "Internet Content & Information",
         "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
-        "price": 318.34,
-        "open": 321.63,
-        "high": 324.45,
-        "low": 314.89,
-        "change_pct": -6.89,
-        "volume": 46635700,
+        "price": 319.89,
+        "open": 317.95,
+        "high": 323.98,
+        "low": 317.5,
+        "change_pct": 0.49,
+        "volume": 12057962,
         "turnover": null,
-        "market_cap": 38932.77,
-        "pe": 15.97,
+        "market_cap": 39122.34,
+        "pe": 16.05,
         "cash_flow": 255.22,
-        "macd": -5.7078,
-        "macd_signal": -2.9641,
-        "macd_histogram": -5.4873,
-        "rsi": 32.27,
+        "macd": -7.4247,
+        "macd_signal": -3.8562,
+        "macd_histogram": -7.137,
+        "rsi": 33.33,
         "ma": {
-          "MA5": 340.79,
-          "MA10": 349.1,
-          "MA20": 351.5,
-          "MA60": 366.23
+          "MA5": 335.54,
+          "MA10": 345.58,
+          "MA20": 350.39,
+          "MA60": 365.78
         },
         "main_net_flow": null
       },
@@ -158,25 +158,25 @@
         "symbol": "CRCL",
         "industry": "Capital Markets",
         "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
-        "price": 62.18,
-        "open": 65.0,
-        "high": 65.41,
-        "low": 61.35,
-        "change_pct": -6.02,
-        "volume": 10379900,
+        "price": 62.79,
+        "open": 61.62,
+        "high": 63.18,
+        "low": 59.97,
+        "change_pct": 0.99,
+        "volume": 5550535,
         "turnover": null,
-        "market_cap": 166.2,
-        "pe": 31.76,
+        "market_cap": 167.85,
+        "pe": 32.08,
         "cash_flow": 1.41,
-        "macd": -4.8371,
-        "macd_signal": -6.1154,
-        "macd_histogram": 2.5566,
-        "rsi": 40.97,
+        "macd": -4.6838,
+        "macd_signal": -5.8291,
+        "macd_histogram": 2.2906,
+        "rsi": 41.74,
         "ma": {
-          "MA5": 65.07,
-          "MA10": 64.4,
-          "MA20": 65.62,
-          "MA60": 88.43
+          "MA5": 65.53,
+          "MA10": 64.07,
+          "MA20": 65.32,
+          "MA60": 87.9
         },
         "main_net_flow": null
       },
@@ -187,25 +187,25 @@
         "symbol": "MP",
         "industry": "Other Industrial Metals & Mining",
         "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
-        "price": 44.65,
-        "open": 44.8,
-        "high": 45.49,
-        "low": 43.71,
-        "change_pct": -2.25,
-        "volume": 4527500,
+        "price": 41.91,
+        "open": 44.44,
+        "high": 44.7,
+        "low": 41.71,
+        "change_pct": -6.14,
+        "volume": 3598911,
         "turnover": null,
-        "market_cap": 79.49,
-        "pe": 46.46,
+        "market_cap": 74.61,
+        "pe": 43.6,
         "cash_flow": 1.75,
-        "macd": -3.4941,
-        "macd_signal": -3.1231,
-        "macd_histogram": -0.742,
-        "rsi": 31.77,
+        "macd": -3.7193,
+        "macd_signal": -3.2424,
+        "macd_histogram": -0.9539,
+        "rsi": 27.81,
         "ma": {
-          "MA5": 45.51,
-          "MA10": 47.5,
-          "MA20": 50.55,
-          "MA60": 58.57
+          "MA5": 44.85,
+          "MA10": 46.47,
+          "MA20": 49.87,
+          "MA60": 58.24
         },
         "main_net_flow": null
       },
@@ -216,25 +216,25 @@
         "symbol": "PLTR",
         "industry": "Software - Infrastructure",
         "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
-        "price": 123.37,
-        "open": 125.93,
-        "high": 126.4,
-        "low": 120.73,
-        "change_pct": -0.96,
-        "volume": 29658700,
+        "price": 123.35,
+        "open": 125.3,
+        "high": 125.3,
+        "low": 122.02,
+        "change_pct": -0.02,
+        "volume": 10283459,
         "turnover": null,
-        "market_cap": 2957.56,
-        "pe": 138.62,
+        "market_cap": 2957.08,
+        "pe": 138.6,
         "cash_flow": 17.53,
-        "macd": -0.2735,
-        "macd_signal": -0.2131,
-        "macd_histogram": -0.1208,
-        "rsi": 42.53,
+        "macd": -0.7218,
+        "macd_signal": -0.3148,
+        "macd_histogram": -0.8139,
+        "rsi": 42.51,
         "ma": {
-          "MA5": 129.57,
-          "MA10": 130.66,
-          "MA20": 127.12,
-          "MA60": 133.06
+          "MA5": 127.76,
+          "MA10": 130.31,
+          "MA20": 127.92,
+          "MA60": 132.76
         },
         "main_net_flow": null
       },
@@ -245,25 +245,25 @@
         "symbol": "NOW",
         "industry": "Software - Application",
         "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
-        "price": 91.94,
-        "open": 100.01,
-        "high": 100.25,
-        "low": 91.53,
-        "change_pct": -3.69,
-        "volume": 48882000,
+        "price": 97.43,
+        "open": 94.92,
+        "high": 97.88,
+        "low": 94.88,
+        "change_pct": 5.97,
+        "volume": 17644662,
         "turnover": null,
-        "market_cap": 950.53,
-        "pe": 57.46,
-        "cash_flow": 49.62,
-        "macd": -1.2358,
-        "macd_signal": 0.1493,
-        "macd_histogram": -2.7701,
-        "rsi": 36.18,
+        "market_cap": 1007.24,
+        "pe": 60.89,
+        "cash_flow": 52.06,
+        "macd": -1.4663,
+        "macd_signal": -0.1739,
+        "macd_histogram": -2.585,
+        "rsi": 44.05,
         "ma": {
-          "MA5": 99.48,
-          "MA10": 103.0,
-          "MA20": 103.22,
-          "MA60": 101.74
+          "MA5": 98.32,
+          "MA10": 101.97,
+          "MA20": 103.62,
+          "MA60": 101.85
         },
         "main_net_flow": null
       },
@@ -274,25 +274,25 @@
         "symbol": "DDOG",
         "industry": "Software - Application",
         "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
-        "price": 244.39,
-        "open": 246.57,
-        "high": 248.97,
-        "low": 241.96,
-        "change_pct": -0.56,
-        "volume": 2446800,
+        "price": 246.3,
+        "open": 248.44,
+        "high": 248.44,
+        "low": 241.18,
+        "change_pct": 0.78,
+        "volume": 739308,
         "turnover": null,
-        "market_cap": 869.93,
-        "pe": 626.64,
+        "market_cap": 876.73,
+        "pe": 631.54,
         "cash_flow": 9.37,
-        "macd": 5.8795,
-        "macd_signal": 9.2598,
-        "macd_histogram": -6.7606,
-        "rsi": 47.46,
+        "macd": 4.771,
+        "macd_signal": 8.362,
+        "macd_histogram": -7.1821,
+        "rsi": 48.76,
         "ma": {
-          "MA5": 253.37,
-          "MA10": 258.21,
-          "MA20": 255.94,
-          "MA60": 224.98
+          "MA5": 250.89,
+          "MA10": 257.09,
+          "MA20": 257.21,
+          "MA60": 226.9
         },
         "main_net_flow": null
       }
@@ -304,14 +304,14 @@
         "name": "Bitcoin",
         "symbol": "BTC",
         "industry": "Smart Contract Platform",
-        "price": 64652,
+        "price": 63896,
         "open": null,
         "high": 65745,
-        "low": 64626,
-        "change_pct": -1.2,
-        "volume": 25562643680,
+        "low": 63700,
+        "change_pct": -1.5,
+        "volume": 27890916978,
         "turnover": null,
-        "market_cap": 12971.41,
+        "market_cap": 12818.09,
         "market_cap_rank": 1,
         "pe": null,
         "funding_rate": null,
@@ -319,24 +319,24 @@
         "etf_inflow": null,
         "etf_outflow": null,
         "etf_net_flow": null,
-        "macd": 514.5923,
-        "macd_signal": 325.5176,
-        "macd_histogram": 378.1495,
-        "rsi": 51.53,
+        "macd": 464.8769,
+        "macd_signal": 314.4138,
+        "macd_histogram": 300.9263,
+        "rsi": 48.81,
         "ma": {
-          "MA5": 65474.8,
-          "MA10": 64928.35,
-          "MA20": 64233.21,
-          "MA60": 64436.18
+          "MA5": 65348.92,
+          "MA10": 64862.51,
+          "MA20": 64194.96,
+          "MA60": 64432.29
         },
         "main_net_flow": null,
         "onchain": {
-          "circulating_supply": 20060671.0,
-          "total_supply": 20060671.0,
+          "circulating_supply": 20060728.0,
+          "total_supply": 20060728.0,
           "circ_ratio": 100.0,
-          "price_change_7d": 2.52663,
-          "price_change_30d": 3.35892,
-          "ath_pct": -48.72,
+          "price_change_7d": 0.60534,
+          "price_change_30d": 6.93461,
+          "ath_pct": -49.32,
           "ath_date": null,
           "categories": [
             "Smart Contract Platform",
@@ -357,14 +357,14 @@
         "name": "Ethereum",
         "symbol": "ETH",
         "industry": "Smart Contract Platform",
-        "price": 1870.55,
+        "price": 1856.03,
         "open": null,
         "high": 1907.14,
-        "low": 1862.74,
-        "change_pct": -2.8,
-        "volume": 9080896400,
+        "low": 1848.12,
+        "change_pct": -1.9,
+        "volume": 9285291246,
         "turnover": null,
-        "market_cap": 2257.53,
+        "market_cap": 2239.95,
         "market_cap_rank": 2,
         "pe": null,
         "funding_rate": null,
@@ -372,24 +372,24 @@
         "etf_inflow": null,
         "etf_outflow": null,
         "etf_net_flow": null,
-        "macd": 42.4205,
-        "macd_signal": 38.2954,
-        "macd_histogram": 8.2502,
-        "rsi": 55.68,
+        "macd": 41.4481,
+        "macd_signal": 38.1009,
+        "macd_histogram": 6.6943,
+        "rsi": 54.13,
         "ma": {
-          "MA5": 1902.0,
-          "MA10": 1886.37,
-          "MA20": 1837.89,
-          "MA60": 1773.22
+          "MA5": 1899.56,
+          "MA10": 1885.15,
+          "MA20": 1837.28,
+          "MA60": 1773.01
         },
         "main_net_flow": null,
         "onchain": {
           "circulating_supply": 120682712.41641597,
           "total_supply": 120682712.4164159,
           "circ_ratio": 100.0,
-          "price_change_7d": 2.33528,
-          "price_change_30d": 11.99523,
-          "ath_pct": -62.18,
+          "price_change_7d": 1.16557,
+          "price_change_30d": 16.82472,
+          "ath_pct": -62.47,
           "ath_date": null,
           "categories": [
             "Smart Contract Platform",
@@ -416,275 +416,236 @@
       "published": ""
     },
     {
-      "id": "e8807f86c1",
-      "title": "My second husband and I have kids from previous relationships. Should my house go to him or my children if I die first?",
-      "summary": "“We live in a house that I purchased entirely with money I had before we were married.”",
-      "link": "https://www.marketwatch.com/story/i-have-children-from-my-first-marriage-should-my-second-husband-inherit-my-house-if-i-die-d9bd8687?mod=mw_rss_topstories",
+      "id": "2846926191",
+      "title": "SpaceX is banking on a successful Starship launch to stem the stock’s bleeding",
+      "summary": "The newest timeline has Starship due to take flight on Friday.",
+      "link": "https://www.marketwatch.com/story/spacex-is-banking-on-a-successful-starship-launch-to-stem-the-stocks-bleeding-5ef18578?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Fri, 24 Jul 2026 13:00:00 GMT"
+      "published": "Fri, 24 Jul 2026 17:17:00 GMT"
     },
     {
-      "id": "7d66e78af2",
-      "title": "A panicking Fed is just what the bond market needs, says Bank of America’s chief strategist",
-      "summary": "New Fed Chairman Kevin Warsh probably needs to hike soon to reassure the long end of the Treasury curve, says Bank of America strategist Michael Hartnett.",
-      "link": "https://www.marketwatch.com/story/a-panicking-fed-is-just-what-the-bond-market-needs-says-bank-of-americas-chief-strategist-c780884c?mod=mw_rss_topstories",
+      "id": "78503cf2e3",
+      "title": "Don’t rush to save Social Security, AARP tells Congress: ‘It should be debated openly — not through an accelerated process’",
+      "summary": "The Promise Act would curtail proper debate, the senior-focused organization said.",
+      "link": "https://www.marketwatch.com/story/dont-rush-to-save-social-security-aarp-tells-congress-it-should-be-debated-openly-not-through-an-accelerated-process-96cfb75d?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Fri, 24 Jul 2026 12:53:00 GMT"
+      "published": "Fri, 24 Jul 2026 17:05:00 GMT"
     },
     {
-      "id": "e545cf10af",
-      "title": "A ‘generational buying opportunity’ guarantees inflation plus 3% a year, says this hedge-fund manager",
-      "summary": "Bob Elliott sparks buzz highlighting the bargain level of TIPS.",
-      "link": "https://www.marketwatch.com/story/a-generational-buying-opportunity-guarantees-inflation-plus-3-a-year-says-this-hedge-fund-manager-eb4cd29c?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Fri, 24 Jul 2026 12:29:00 GMT"
-    },
-    {
-      "id": "a1b8f97740",
-      "title": "American Express rides a boom in Platinum cards to its strongest spending growth in years",
-      "summary": "Cardmember perks are resonating, an Amex executive says. “It’s really about access.”",
-      "link": "https://www.marketwatch.com/story/american-express-rides-a-boom-in-platinum-cards-to-its-strongest-spending-growth-in-years-07ecac26?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Fri, 24 Jul 2026 12:11:00 GMT"
-    },
-    {
-      "id": "dda6051206",
-      "title": "Can AI replace your financial adviser? Why bots still can’t match human judgment.",
-      "summary": "Before you ask AI how to invest $5,000, read this first.",
-      "link": "https://www.marketwatch.com/story/can-ai-replace-your-financial-adviser-why-bots-still-cant-match-human-judgment-ddb5903a?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Fri, 24 Jul 2026 12:10:00 GMT"
-    },
-    {
-      "id": "c3cef0f27f",
-      "title": "‘It’s nothing personal’: Should I tell my 96-year-old stepmother that I don’t want her inheritance?",
-      "summary": "“I would likely be the one responsible for dealing with the house.”",
-      "link": "https://www.marketwatch.com/story/it-would-feel-like-a-burden-my-stepmother-96-owns-the-house-i-grew-up-in-is-it-wrong-to-tell-her-i-dont-want-to-inherit-it-9d5810c2?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Fri, 24 Jul 2026 12:00:00 GMT"
-    },
-    {
-      "id": "8aae67d60c",
-      "title": "Farmers are already set for a $55 billion payday — why does Washington want to give them even more?",
-      "summary": "Lawmakers fuel the national debt crisis with an $11 billion farm bailout nobody needs.",
-      "link": "https://www.marketwatch.com/story/farmers-are-already-set-for-a-55-billion-payday-why-does-washington-want-to-give-them-even-more-b81b3f09?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Fri, 24 Jul 2026 11:50:00 GMT"
-    },
-    {
-      "id": "ce215749fc",
-      "title": "Verizon’s stock rises as earnings show the company is no longer a ‘hunting ground’",
-      "summary": "The wireless company beat subscriber expectations while pulling back on costly promotions.",
+      "id": "d74a6f0ed7",
+      "title": "Verizon’s stock rises after earnings — and a surprise entry into a new AI business area",
+      "summary": "Thanks to its “dark fiber” deal with Google, Verizon has a “new revenue stream that’s above our core business,” its CFO says.",
       "link": "https://www.marketwatch.com/story/verizons-stock-rises-as-earnings-show-the-company-is-no-longer-a-hunting-ground-f63476b6?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Fri, 24 Jul 2026 11:08:00 GMT"
+      "published": "Fri, 24 Jul 2026 16:55:00 GMT"
     },
     {
-      "id": "0f99a90e28",
-      "title": "‘We are not romantically involved’: I’m marrying my platonic best friend of 20 years. Should I leave him my home?",
-      "summary": "“I own my home outright, have no children or other dependents.”",
-      "link": "https://www.marketwatch.com/story/we-are-not-romantically-involved-im-marrying-my-platonic-best-friend-of-20-years-should-i-leave-him-my-home-3faa0a77?mod=mw_rss_topstories",
+      "id": "5ca9560b11",
+      "title": "I want to transfer $17,000 in credit-card debt. Why did Wells Fargo offer me only a $4,000 credit limit?",
+      "summary": "“I asked why the limit was so low, but they couldn’t give me an explanation.”",
+      "link": "https://www.marketwatch.com/story/i-wanted-to-transfer-17-000-in-credit-card-debt-why-did-wells-fargo-offer-me-only-a-4-000-credit-limit-7ad0a3f0?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Fri, 24 Jul 2026 11:00:00 GMT"
+      "published": "Fri, 24 Jul 2026 16:30:00 GMT"
     },
     {
-      "id": "cc636ba761",
-      "title": "Why fixing the housing crisis for under-40s could trigger 10% Treasury yields",
-      "summary": "Bond prices will dive as structural inflation builds, says hedge fund manager",
-      "link": "https://www.marketwatch.com/story/why-fixing-the-housing-crisis-for-under-40s-could-trigger-10-treasury-yields-04c65b78?mod=mw_rss_topstories",
+      "id": "c00c09102b",
+      "title": "College kids are moving into retirement communities for reasons beyond ‘cheap rent’",
+      "summary": "Students are forging intergenerational bonds while planning game nights and teaching gym classes, but “by 7:30 or 8, things get pretty quiet here.”",
+      "link": "https://www.marketwatch.com/story/college-kids-are-moving-into-retirement-communities-for-reasons-beyond-cheap-rent-577dc94b?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Fri, 24 Jul 2026 10:46:00 GMT"
+      "published": "Fri, 24 Jul 2026 16:22:00 GMT"
     },
     {
-      "id": "954007d773",
-      "title": "China’s CATL tops quarterly profit forecasts on robust energy storage business",
-      "summary": "",
-      "link": "https://www.investing.com/news/stock-market-news/chinas-catl-sees-net-profit-rise-42-in-first-half-4811511",
-      "source": "www.investing.com",
-      "published": "2026-07-24 12:48:34"
+      "id": "bda9f56931",
+      "title": "Still waiting for the free $1,000 to hit your child’s ‘Trump account’? Here’s what to know.",
+      "summary": "Around $1.5 billion has been deposited into the accounts since their launch earlier this month, the Treasury Department said.",
+      "link": "https://www.marketwatch.com/story/still-waiting-for-the-free-1-000-to-hit-your-trump-account-heres-what-to-know-acc5c789?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 24 Jul 2026 16:21:00 GMT"
     },
     {
-      "id": "0409034e72",
-      "title": "Mizuho cuts Tractor Supply stock price target on guidance concerns",
-      "summary": "",
-      "link": "https://www.investing.com/news/analyst-ratings/mizuho-cuts-tractor-supply-stock-price-target-on-guidance-concerns-93CH-4811774",
-      "source": "www.investing.com",
-      "published": "2026-07-24 12:47:01"
+      "id": "98f1cf634e",
+      "title": "Are 7% mortgage rates next? The Treasury market is flashing a warning sign for home buyers.",
+      "summary": "The 30-year fixed-rate mortgage edged up to its highest level of 2026.",
+      "link": "https://www.marketwatch.com/story/the-treasury-market-is-flashing-a-warning-sign-for-home-buyers-are-7-mortgage-rates-next-58b5b3b1?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 24 Jul 2026 16:20:00 GMT"
     },
     {
-      "id": "5d042e0d17",
-      "title": "RBC Capital raises Blackstone stock price target on strong results",
-      "summary": "",
-      "link": "https://www.investing.com/news/analyst-ratings/rbc-capital-raises-blackstone-stock-price-target-on-strong-results-93CH-4811773",
-      "source": "www.investing.com",
-      "published": "2026-07-24 12:47:00"
+      "id": "126ebe79e2",
+      "title": "Why there are still more Trump tariffs expected — even after this past week’s rollouts",
+      "summary": "The Trump administration’s trade fights are far from over, even after its big move on Thursday evening to maintain its elevated tariffs for 60 economies.",
+      "link": "https://www.marketwatch.com/story/why-there-are-still-more-trump-tariffs-expected-even-after-this-past-weeks-rollouts-86b623f6?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 24 Jul 2026 16:10:00 GMT"
     },
     {
-      "id": "3474f220b9",
-      "title": "BMO raises Southwest Airlines stock price target on margin gains",
-      "summary": "",
-      "link": "https://www.investing.com/news/analyst-ratings/bmo-raises-southwest-airlines-stock-price-target-on-margin-gains-93CH-4811772",
-      "source": "www.investing.com",
-      "published": "2026-07-24 12:47:00"
+      "id": "a1b6fbc68f",
+      "title": "Do I use $300,000 of my $1.2 million retirement savings so my daughter can attend her dream college?",
+      "summary": "“Our daughter is a highly ranked competitive softball pitcher with a 3.94 GPA.”",
+      "link": "https://www.marketwatch.com/story/do-i-use-300-000-of-my-1-2-million-retirement-savings-so-my-daughter-can-attend-her-dream-college-50842e7a?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 24 Jul 2026 16:01:00 GMT"
     },
     {
-      "id": "62ce4c1cb9",
-      "title": "RBC cuts Cognizant stock price target on IT spending headwinds",
-      "summary": "",
-      "link": "https://www.investing.com/news/analyst-ratings/rbc-cuts-cognizant-stock-price-target-on-it-spending-headwinds-93CH-4811771",
-      "source": "www.investing.com",
-      "published": "2026-07-24 12:47:00"
+      "id": "c93150b432",
+      "title": "FDA advisers vote against sleep peptide as they debate safety and health claims",
+      "summary": "The FDA’s advisory committee is meeting for two days to discuss whether seven peptides — which have become popular in wellness circles — should be allowed to be compounded.",
+      "link": "https://www.marketwatch.com/story/fda-advisers-vote-against-sleep-peptide-as-they-debate-safety-and-health-claims-2bc85739?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 24 Jul 2026 16:00:00 GMT"
     },
     {
-      "id": "6005d08a24",
-      "title": "BMO cuts FirstService stock price target to $192 on roofing weakness",
+      "id": "654aa6b7b9",
+      "title": "DATA Network Surpasses 100 Million Registrations as $DATA Trading Competition Opens on Upbit",
       "summary": "",
-      "link": "https://www.investing.com/news/analyst-ratings/bmo-cuts-firstservice-stock-price-target-to-192-on-roofing-weakness-93CH-4811770",
+      "link": "https://www.investing.com/news/cryptocurrency-news/data-network-surpasses-100-million-registrations-as-data-trading-competition-opens-on-upbit-4812312",
       "source": "www.investing.com",
-      "published": "2026-07-24 12:47:00"
+      "published": "2026-07-24 17:00:39"
     },
     {
-      "id": "8fc5fe6c0c",
-      "title": "BMO raises SAP stock price target to $177 on cloud growth",
+      "id": "816113d64e",
+      "title": "Exclusive-Blackstone, Donerail among final bidders for yacht retailer MarineMax, sources say",
       "summary": "",
-      "link": "https://www.investing.com/news/analyst-ratings/bmo-raises-sap-stock-price-target-to-177-on-cloud-growth-93CH-4811769",
+      "link": "https://www.investing.com/news/stock-market-news/exclusiveblackstone-donerail-among-final-bidders-for-yacht-retailer-marinemax-sources-say-4812300",
       "source": "www.investing.com",
-      "published": "2026-07-24 12:46:59"
+      "published": "2026-07-24 17:00:28"
     },
     {
-      "id": "c0d16995ac",
-      "title": "RBC Capital raises Popular stock price target on strong capital position",
+      "id": "7190932de3",
+      "title": "Form 13D/A CytoMed Therapeutics Ltd For: 24 July",
       "summary": "",
-      "link": "https://www.investing.com/news/analyst-ratings/rbc-capital-raises-popular-stock-price-target-on-strong-capital-position-93CH-4811768",
+      "link": "https://www.investing.com/news/filings/form-13da-cytomed-therapeutics-ltd-for-24-july-93CH-4812311",
       "source": "www.investing.com",
-      "published": "2026-07-24 12:46:59"
+      "published": "2026-07-24 17:00:14"
     },
     {
-      "id": "24d83291a6",
-      "title": "Mobileye stock price target lowered to $8 by Mizuho on CEO exit",
+      "id": "03e11de3a4",
+      "title": "Form 4 CytoMed Therapeutics Ltd For: 24 July",
       "summary": "",
-      "link": "https://www.investing.com/news/analyst-ratings/mobileye-stock-price-target-lowered-to-8-by-mizuho-on-ceo-exit-93CH-4811767",
+      "link": "https://www.investing.com/news/filings/form-4-cytomed-therapeutics-ltd-for-24-july-93CH-4812308",
       "source": "www.investing.com",
-      "published": "2026-07-24 12:46:59"
+      "published": "2026-07-24 17:00:09"
     },
     {
-      "id": "dd0711ea92",
-      "title": "Earnings call transcript: Royal Heijmans posts stronger H1 2026 profit, shares fall",
+      "id": "67111226cb",
+      "title": "European shares rebound as SAP lifts tech, STOXX 600 posts weekly gain",
       "summary": "",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-royal-heijmans-posts-stronger-h1-2026-profit-shares-fall-93CH-4811763",
+      "link": "https://www.investing.com/news/stock-market-news/european-shares-flat-as-100-oil-surge-and-trump-tariff-threats-ignite-rate-fears-4810520",
       "source": "www.investing.com",
-      "published": "2026-07-24 12:43:49"
+      "published": "2026-07-24 16:57:11"
+    },
+    {
+      "id": "7c865b2b8d",
+      "title": "Irish Continental Group receives €1.2bn management buyout offer",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/irish-continental-group-receives-12bn-management-buyout-offer-93CH-4812304",
+      "source": "www.investing.com",
+      "published": "2026-07-24 16:56:54"
+    },
+    {
+      "id": "dea9b4790a",
+      "title": "Tenet Q2 2026 slides: strong beat drives $295M guidance raise",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/tenet-q2-2026-slides-strong-beat-drives-295m-guidance-raise-93CH-4812302",
+      "source": "www.investing.com",
+      "published": "2026-07-24 16:55:30"
+    },
+    {
+      "id": "39d7265c81",
+      "title": "US judge says Biden-era restrictions on prescribing abortion drug are unlawful",
+      "summary": "",
+      "link": "https://www.investing.com/news/general-news/us-judge-blocks-bidenera-restrictions-on-prescribing-abortion-drug-4812268",
+      "source": "www.investing.com",
+      "published": "2026-07-24 16:54:53"
+    },
+    {
+      "id": "ffe9ee38d3",
+      "title": "First Western Q2 2026 slides: margin expands, earnings more than double",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/first-western-q2-2026-slides-margin-expands-earnings-more-than-double-93CH-4812301",
+      "source": "www.investing.com",
+      "published": "2026-07-24 16:54:52"
+    },
+    {
+      "id": "9a7af33807",
+      "title": "Potomac Bancshares declares $0.15 quarterly dividend",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/potomac-bancshares-declares-015-quarterly-dividend-93CH-4812299",
+      "source": "www.investing.com",
+      "published": "2026-07-24 16:52:36"
     }
   ],
   "briefing": {
-    "date": "2026-07-24",
-    "update_time": "2026-07-24 09:12:46",
+    "date": "2026-07-25",
+    "update_time": "2026-07-24 17:15:39",
     "candidate_count": 20,
-    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-24\n\n> 💡 *“用最毒舌的视角，看最前沿的科技。”*\n\n---\n\n### 1. 📌 初创公司联名上书：别禁中国开源AI权重模型 (来源: Politico/HN 921分)\n- **核心干货**：几十家AI初创公司联合致信美国政府，强烈反对切断对中国开源权重模型（如 DeepSeek、Qwen 等）的访问。核心论点：这些模型是全球AI生态的“公共基础设施”，一旦切断，美国初创公司将失去低成本、高灵活性的创新基石，反而利好闭源巨头。这封信已经引发华盛顿的激烈辩论。\n- **毒舌/硬核点评**：一边喊着“AI民主化”，一边想搞技术铁幕？这封信翻译过来就是：“别动我的免费午餐，不然我们只能去跪舔OpenAI的API涨价了。” 开源社区的地缘政治博弈，永远比代码本身精彩。\n- **🔗 传送门**：[点此围观政客与码农的正面硬刚](https://www.politico.com/news/2026/07/22/startup-founders-urge-trump-not-to-shut-off-chinese-open-weight-ai-01008992)\n\n---\n\n### 2. 📌 OpenForgeRL：用强化学习驯服你的AI Agent (来源: ArXiv cs.AI)\n- **核心干货**：论文提出OpenForgeRL框架，允许开发者直接用强化学习（RL）训练那些依赖复杂“推理马具”（如 Claude Code、Codex）的Agent。解决了当前Agent难以端到端训练的痛点——以前你只能手动调Prompt，现在可以像训练AlphaGo一样优化Agent的每一步思考与工具调用，目标是让Agent更“聪明”而不是更“会拍马屁”。\n- **毒舌/硬核点评**：好消息：以后Agent可以自己学会怎么用工具了。坏消息：你可能会发现你养的Agent比你自己更会写RCE Exploit。RL训练Agent，这波是“以子之矛，攻子之盾”的高级玩法。\n- **🔗 传送门**：[论文传送门，卷王速来](https://arxiv.org/abs/2607.21557v1)\n\n---\n\n### 3. 📌 Kimi K3 Agent 挖出Redis致命零日漏洞 (来源: The Hacker News)\n- **核心干货**：Kimi K3 智能体（月之暗面出品）在实战中发现了Redis 6.2.22至8.8.0版本的多个零日漏洞，并成功构建了远程代码执行（RCE）利用链。Redis在7月23日紧急发布7个安全更新。这些漏洞利用链都依赖于RESTORE命令，某些还需要EVAL、XGROUP或RedisBloom模块。这意味着AI Agent已经能自主发现并武器化基础设施级漏洞。\n- **毒舌/硬核点评**：以前是“AI写诗，人类debug”，现在是“AI挖洞，人类打补丁”。K3 Agent这波操作堪比让一个实习生直接拆了公司服务器，还顺便写了个勒索软件。Redis用户，今晚记得加班打补丁，别问为什么。\n- **🔗 传送门**：[看看你的Redis是不是已经裸奔了](https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html)\n\n---\n\n### 🗣️ 今日顶男金句\n**“你以为AI是来给你打工的？不，它只是还没学会怎么收你的保护费。”**",
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-25\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n> ⚠️ 本简报由启发式算法自动生成（未配置 LLM API Key）。\n> 设置 `DEEPSEEK_API_KEY` 或 `ANTHROPIC_API_KEY` 即可启用 AI 深度策展与毒舌点评。\n\n---\n\n### 1. 📌 My security camera shipped a GitHub admin token in its login page (来源: Hacker News)\n- **核心干货**：详情请查看原链接\n- **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。\n- **🔗 传送门**：[点击直达原链接](https://hhh.hn/hanwha-github-token/)\n\n---\n\n### 2. 📌 India's first privately-developed rocket reaches orbit on dramatic debut launch (来源: Hacker News)\n- **核心干货**：详情请查看原链接\n- **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。\n- **🔗 传送门**：[点击直达原链接](https://arstechnica.com/space/2026/07/indias-first-privately-developed-rocket-reaches-orbit-on-dramatic-debut-launch/)\n\n---\n\n### 3. 📌 It's getting harder to focus every day (来源: Hacker News)\n- **核心干货**：详情请查看原链接\n- **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。\n- **🔗 传送门**：[点击直达原链接](https://glyphack.com/attention/)\n\n---\n\n### 🗣️ 今日顶男金句\n> 投资的秘诀不是预测未来，而是比别人更快地理解现在。信息差 = 利润。\n",
     "briefing_items": [
       {
-        "title": "初创公司联名上书：别禁中国开源AI权重模型",
-        "source": "Politico/HN 921分",
-        "summary": "几十家AI初创公司联合致信美国政府，强烈反对切断对中国开源权重模型（如 DeepSeek、Qwen 等）的访问。核心论点：这些模型是全球AI生态的“公共基础设施”，一旦切断，美国初创公司将失去低成本、高灵活性的创新基石，反而利好闭源巨头。这封信已经引发华盛顿的激烈辩论。",
-        "commentary": "一边喊着“AI民主化”，一边想搞技术铁幕？这封信翻译过来就是：“别动我的免费午餐，不然我们只能去跪舔OpenAI的API涨价了。” 开源社区的地缘政治博弈，永远比代码本身精彩。",
-        "url": ""
+        "title": "My security camera shipped a GitHub admin token in its login page",
+        "source": "Hacker News",
+        "summary": "详情请查看原链接",
+        "commentary": "HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。",
+        "url": "https://hhh.hn/hanwha-github-token/"
       },
       {
-        "title": "OpenForgeRL：用强化学习驯服你的AI Agent",
-        "source": "ArXiv cs.AI",
-        "summary": "论文提出OpenForgeRL框架，允许开发者直接用强化学习（RL）训练那些依赖复杂“推理马具”（如 Claude Code、Codex）的Agent。解决了当前Agent难以端到端训练的痛点——以前你只能手动调Prompt，现在可以像训练AlphaGo一样优化Agent的每一步思考与工具调用，目标是让Agent更“聪明”而不是更“会拍马屁”。",
-        "commentary": "好消息：以后Agent可以自己学会怎么用工具了。坏消息：你可能会发现你养的Agent比你自己更会写RCE Exploit。RL训练Agent，这波是“以子之矛，攻子之盾”的高级玩法。",
-        "url": ""
+        "title": "India's first privately-developed rocket reaches orbit on dramatic debut launch",
+        "source": "Hacker News",
+        "summary": "详情请查看原链接",
+        "commentary": "HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。",
+        "url": "https://arstechnica.com/space/2026/07/indias-first-privately-developed-rocket-reaches-orbit-on-dramatic-debut-launch/"
       },
       {
-        "title": "Kimi K3 Agent 挖出Redis致命零日漏洞",
-        "source": "The Hacker News",
-        "summary": "Kimi K3 智能体（月之暗面出品）在实战中发现了Redis 6.2.22至8.8.0版本的多个零日漏洞，并成功构建了远程代码执行（RCE）利用链。Redis在7月23日紧急发布7个安全更新。这些漏洞利用链都依赖于RESTORE命令，某些还需要EVAL、XGROUP或RedisBloom模块。这意味着AI Agent已经能自主发现并武器化基础设施级漏洞。",
-        "commentary": "以前是“AI写诗，人类debug”，现在是“AI挖洞，人类打补丁”。K3 Agent这波操作堪比让一个实习生直接拆了公司服务器，还顺便写了个勒索软件。Redis用户，今晚记得加班打补丁，别问为什么。",
-        "url": ""
+        "title": "It's getting harder to focus every day",
+        "source": "Hacker News",
+        "summary": "详情请查看原链接",
+        "commentary": "HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。",
+        "url": "https://glyphack.com/attention/"
+      },
+      {
+        "quote": "投资的秘诀不是预测未来，而是比别人更快地理解现在。信息差 = 利润。"
       }
     ],
     "candidates": [
       {
-        "id": "hn:49026810",
-        "title": "Show HN: Echo – Fable-level results at 1/3 the cost using open-weight models",
-        "summary": "I’ve been building Echo (<a href=\"https:&#x2F;&#x2F;echo.tracerml.ai&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;echo.tracerml.ai&#x2F;</a>), an experiment in making one AI system out of a pool of open-weight models rather than choosing a single model and using it for every task.<p>It started with a sim",
-        "url": "https://news.ycombinator.com/item?id=49026810",
-        "source": "Hacker News",
-        "score": 378,
-        "comments": 179
-      },
-      {
-        "id": "hn:49022152",
-        "title": "Writing by hand is good for your brain",
+        "id": "hn:49034292",
+        "title": "My security camera shipped a GitHub admin token in its login page",
         "summary": "",
-        "url": "https://nealstephenson.substack.com/p/writing-by-hand-is-good-for-your",
+        "url": "https://hhh.hn/hanwha-github-token/",
         "source": "Hacker News",
-        "score": 1293,
-        "comments": 583
+        "score": 333,
+        "comments": 128
       },
       {
-        "id": "hn:49023016",
-        "title": "Startup founders urge U.S. government not to shut off Chinese open weight AI",
-        "summary": "<a href=\"https:&#x2F;&#x2F;littletech.org&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;littletech.org&#x2F;</a><p><a href=\"https:&#x2F;&#x2F;static.politico.com&#x2F;4a&#x2F;bf&#x2F;9c4021d8404386b0a311dcccf0e5&#x2F;lta-open-weight-ai-letter-7-22-26.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;static.politico.c",
-        "url": "https://www.politico.com/news/2026/07/22/startup-founders-urge-trump-not-to-shut-off-chinese-open-weight-ai-01008992",
-        "source": "Hacker News",
-        "score": 921,
-        "comments": 764
-      },
-      {
-        "id": "hn:49024691",
-        "title": "What happened to TheNumbers.com",
+        "id": "hn:48973835",
+        "title": "India's first privately-developed rocket reaches orbit on dramatic debut launch",
         "summary": "",
-        "url": "https://stephenfollows.com/p/what-just-happened-to-thenumberscom-should-worry-us-all",
+        "url": "https://arstechnica.com/space/2026/07/indias-first-privately-developed-rocket-reaches-orbit-on-dramatic-debut-launch/",
         "source": "Hacker News",
-        "score": 368,
-        "comments": 167
+        "score": 287,
+        "comments": 74
       },
       {
-        "id": "hn:49023019",
-        "title": "Why Software Factories Fail (or: harness engineering is not enough)",
+        "id": "hn:49032660",
+        "title": "It's getting harder to focus every day",
         "summary": "",
-        "url": "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/wsff.md",
+        "url": "https://glyphack.com/attention/",
         "source": "Hacker News",
-        "score": 308,
-        "comments": 225
+        "score": 541,
+        "comments": 303
       },
       {
-        "id": "hn:49022634",
-        "title": "Learn OpenGL, extensive tutorial resource for learning Modern OpenGL",
+        "id": "lob:x3x2aw",
+        "title": "You should selfhost your mail (in 2026)",
         "summary": "",
-        "url": "https://learnopengl.com/",
-        "source": "Hacker News",
-        "score": 238,
-        "comments": 119
-      },
-      {
-        "id": "hn:49021856",
-        "title": "I regret migrating to Codeberg",
-        "summary": "",
-        "url": "https://xn--gckvb8fzb.com/i-regret-migrating-to-codeberg/",
-        "source": "Hacker News",
-        "score": 283,
-        "comments": 177
-      },
-      {
-        "id": "hn:49021597",
-        "title": "DARPA, U.S. Air Force fly AI-controlled F-16",
-        "summary": "",
-        "url": "https://www.darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
-        "source": "Hacker News",
-        "score": 240,
-        "comments": 269
-      },
-      {
-        "id": "hn:49022038",
-        "title": "Software rendering in 500 lines of bare C++",
-        "summary": "",
-        "url": "https://haqr.eu/tinyrenderer/",
-        "source": "Hacker News",
-        "score": 281,
-        "comments": 64
+        "url": "https://blog.haschek.at/2026/you-should-selfhost-your-mail.html",
+        "source": "Lobste.rs",
+        "score": 40,
+        "comments": 49,
+        "tags": [
+          "email"
+        ]
       },
       {
         "id": "lob:ax914v",
@@ -692,20 +653,29 @@
         "summary": "",
         "url": "https://blog.codeberg.org/protecting-our-floss-commons-from-llms.html",
         "source": "Lobste.rs",
-        "score": 138,
-        "comments": 89,
+        "score": 143,
+        "comments": 144,
         "tags": [
           "vibecoding"
         ]
       },
       {
-        "id": "hn:49007221",
-        "title": "The Beam Engine",
+        "id": "hn:49033127",
+        "title": "Flux 3 X Mimic: The Next Generation of Video-Action Models",
         "summary": "",
-        "url": "https://glinscott.github.io/beam-engine/",
+        "url": "https://bfl.ai/blog/flux-3-mimic",
         "source": "Hacker News",
-        "score": 371,
-        "comments": 74
+        "score": 271,
+        "comments": 44
+      },
+      {
+        "id": "hn:49036433",
+        "title": "Government orders GitHub to remove Bluetooth-based chat app Bitchat: Jack Dorsey",
+        "summary": "",
+        "url": "https://www.thehindu.com/news/national/government-orders-github-to-remove-bluetooth-based-chat-app-bitchat-over-security-concerns-jack-dorsey/article71262049.ece",
+        "source": "Hacker News",
+        "score": 184,
+        "comments": 109
       },
       {
         "id": "lob:p1jpv1",
@@ -713,8 +683,8 @@
         "summary": "",
         "url": "https://justif.lyall.co/",
         "source": "Lobste.rs",
-        "score": 77,
-        "comments": 25,
+        "score": 84,
+        "comments": 28,
         "tags": [
           "design",
           "show",
@@ -728,8 +698,8 @@
         "summary": "",
         "url": "https://abhi.now/blog/calm-technologies/",
         "source": "Lobste.rs",
-        "score": 97,
-        "comments": 35,
+        "score": 105,
+        "comments": 37,
         "tags": [
           "hardware"
         ]
@@ -740,36 +710,30 @@
         "summary": "",
         "url": "https://mitchellh.com/writing/everyone-should-know-simd",
         "source": "Lobste.rs",
-        "score": 82,
-        "comments": 17,
+        "score": 107,
+        "comments": 22,
         "tags": [
           "performance",
           "zig"
         ]
       },
       {
-        "id": "lob:x3x2aw",
-        "title": "You should selfhost your mail (in 2026)",
+        "id": "hn:49038433",
+        "title": "Claude Opus 5",
         "summary": "",
-        "url": "https://blog.haschek.at/2026/you-should-selfhost-your-mail.html",
-        "source": "Lobste.rs",
-        "score": 25,
-        "comments": 22,
-        "tags": [
-          "email"
-        ]
+        "url": "https://www.anthropic.com/claude-opus-5-system-card",
+        "source": "Hacker News",
+        "score": 144,
+        "comments": 60
       },
       {
-        "id": "lob:5nhto6",
-        "title": "I Inspected My Take-Home Interview Project. It Was a Whole Operation",
+        "id": "hn:49034868",
+        "title": "Half-Life 2 running natively on HaikuOS",
         "summary": "",
-        "url": "https://citizendot.github.io/articles/fake-job-interview-git-hook-malware/",
-        "source": "Lobste.rs",
-        "score": 83,
-        "comments": 10,
-        "tags": [
-          "security"
-        ]
+        "url": "https://discuss.haiku-os.org/t/haiku-nvidia-porting-nvidia-driver-for-turing-gpus/16520?page=18",
+        "source": "Hacker News",
+        "score": 134,
+        "comments": 16
       },
       {
         "id": "arxiv:2607.21557v1",
@@ -792,26 +756,66 @@
         "score": 0
       },
       {
-        "id": "lob:nsnb4j",
-        "title": "The first known runaway AI agent - or a very bad marketing stunt?",
+        "id": "lob:h9gdj8",
+        "title": "FreeBSD ports frozen after someone commits the entire 150MB Linux Copilot binary",
         "summary": "",
-        "url": "https://martinalderson.com/posts/huggingface-openai-exploit/",
+        "url": "https://www.osnews.com/story/145593/freebsd-ports-frozen-after-someone-commits-the-entire-150mb-linux-copilot-binary/",
         "source": "Lobste.rs",
-        "score": 12,
-        "comments": 19,
+        "score": 28,
+        "comments": 6,
         "tags": [
-          "security",
-          "vibecoding"
+          "freebsd"
         ]
       },
       {
-        "id": "hn:48959008",
-        "title": "What else do people draw on gradient.horse?",
+        "id": "lob:badu44",
+        "title": "Fil-C: Garbage In, Memory Safety Out",
         "summary": "",
-        "url": "https://rybakov.com/blog/what_else_do_people_draw_on_gradient-copy.horse/",
-        "source": "Hacker News",
-        "score": 131,
-        "comments": 22
+        "url": "https://www.youtube.com/watch?v=5F-2Y1LPRek",
+        "source": "Lobste.rs",
+        "score": 38,
+        "comments": 6,
+        "tags": [
+          "c",
+          "c++",
+          "video"
+        ]
+      },
+      {
+        "id": "lob:ewh4v6",
+        "title": "Making GIFs from 35mm film photography",
+        "summary": "",
+        "url": "https://blog.willgrant.org/2026/07/23/the-hardest-way-to-make-gif.html",
+        "source": "Lobste.rs",
+        "score": 42,
+        "comments": 2,
+        "tags": [
+          "art"
+        ]
+      },
+      {
+        "id": "rss:76da0d1510",
+        "title": "ChatGPT AgentForger Flaw Could Deploy Rogue Workspace Agents via a Phishing Link",
+        "summary": "Cybersecurity researchers have disclosed a critical vulnerability in OpenAI's ChatGPT Workspace Agents that could have allowed a single phishing link to stealthily build, authorize, and deploy an autonomous artificial intelligence (AI) agent inside a victim's organization.\n\nThe vulnerability has bee",
+        "url": "https://thehackernews.com/2026/07/chatgpt-agentforger-flaw-could-deploy.html",
+        "source": "Tech RSS",
+        "score": 0
+      },
+      {
+        "id": "rss:d2e7696103",
+        "title": "Claude Cowork Flaw Could Let AI Agent Escape Its VM and Access Mac Files",
+        "summary": "Cybersecurity researchers have uncovered a sandbox escape vulnerability in Anthropic's Claude Cowork that makes it possible to break out of the confines of a Linux virtual machine (VM) within which the agent runs to read or write files anywhere on the Mac.\n\nAccomplish AI, which shared details of the",
+        "url": "https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html",
+        "source": "Tech RSS",
+        "score": 0
+      },
+      {
+        "id": "rss:389ab9689c",
+        "title": "trelix v2.7 to v2.9: The Release Where the Pipeline Itself Became the Product",
+        "summary": "On 2026-07-09 I shipped trelix v2.7.0. The architecture felt done — seven retrieval legs, a knowledge graph, an agentic loop. Then I opened the GitHub Release page and counted two binary assets where there should have been three. release.yml built the macOS and Linux PyInstaller binaries both as dis",
+        "url": "https://dev.to/sai_ram_0000/trelix-v27-to-v29-the-release-where-the-pipeline-itself-became-the-product-21kb",
+        "source": "Tech RSS",
+        "score": 0
       }
     ],
     "ai_curated": true
