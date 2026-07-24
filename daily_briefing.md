@@ -1,29 +1,32 @@
-# 🗞️ 每日硬核情报简报 | 2026-07-24
+# 🗞️ 每日硬核情报简报 | 2026-07-25
 
-> 💡 *“用最毒舌的视角，看最前沿的科技。”*
+> 💡 *"用最毒舌的视角，看最前沿的科技。"*
 
----
-
-### 1. 📌 初创公司联名上书：别禁中国开源AI权重模型 (来源: Politico/HN 921分)
-- **核心干货**：几十家AI初创公司联合致信美国政府，强烈反对切断对中国开源权重模型（如 DeepSeek、Qwen 等）的访问。核心论点：这些模型是全球AI生态的“公共基础设施”，一旦切断，美国初创公司将失去低成本、高灵活性的创新基石，反而利好闭源巨头。这封信已经引发华盛顿的激烈辩论。
-- **毒舌/硬核点评**：一边喊着“AI民主化”，一边想搞技术铁幕？这封信翻译过来就是：“别动我的免费午餐，不然我们只能去跪舔OpenAI的API涨价了。” 开源社区的地缘政治博弈，永远比代码本身精彩。
-- **🔗 传送门**：[点此围观政客与码农的正面硬刚](https://www.politico.com/news/2026/07/22/startup-founders-urge-trump-not-to-shut-off-chinese-open-weight-ai-01008992)
+> ⚠️ 本简报由启发式算法自动生成（未配置 LLM API Key）。
+> 设置 `DEEPSEEK_API_KEY` 或 `ANTHROPIC_API_KEY` 即可启用 AI 深度策展与毒舌点评。
 
 ---
 
-### 2. 📌 OpenForgeRL：用强化学习驯服你的AI Agent (来源: ArXiv cs.AI)
-- **核心干货**：论文提出OpenForgeRL框架，允许开发者直接用强化学习（RL）训练那些依赖复杂“推理马具”（如 Claude Code、Codex）的Agent。解决了当前Agent难以端到端训练的痛点——以前你只能手动调Prompt，现在可以像训练AlphaGo一样优化Agent的每一步思考与工具调用，目标是让Agent更“聪明”而不是更“会拍马屁”。
-- **毒舌/硬核点评**：好消息：以后Agent可以自己学会怎么用工具了。坏消息：你可能会发现你养的Agent比你自己更会写RCE Exploit。RL训练Agent，这波是“以子之矛，攻子之盾”的高级玩法。
-- **🔗 传送门**：[论文传送门，卷王速来](https://arxiv.org/abs/2607.21557v1)
+### 1. 📌 My security camera shipped a GitHub admin token in its login page (来源: Hacker News)
+- **核心干货**：详情请查看原链接
+- **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。
+- **🔗 传送门**：[点击直达原链接](https://hhh.hn/hanwha-github-token/)
 
 ---
 
-### 3. 📌 Kimi K3 Agent 挖出Redis致命零日漏洞 (来源: The Hacker News)
-- **核心干货**：Kimi K3 智能体（月之暗面出品）在实战中发现了Redis 6.2.22至8.8.0版本的多个零日漏洞，并成功构建了远程代码执行（RCE）利用链。Redis在7月23日紧急发布7个安全更新。这些漏洞利用链都依赖于RESTORE命令，某些还需要EVAL、XGROUP或RedisBloom模块。这意味着AI Agent已经能自主发现并武器化基础设施级漏洞。
-- **毒舌/硬核点评**：以前是“AI写诗，人类debug”，现在是“AI挖洞，人类打补丁”。K3 Agent这波操作堪比让一个实习生直接拆了公司服务器，还顺便写了个勒索软件。Redis用户，今晚记得加班打补丁，别问为什么。
-- **🔗 传送门**：[看看你的Redis是不是已经裸奔了](https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html)
+### 2. 📌 India's first privately-developed rocket reaches orbit on dramatic debut launch (来源: Hacker News)
+- **核心干货**：详情请查看原链接
+- **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。
+- **🔗 传送门**：[点击直达原链接](https://arstechnica.com/space/2026/07/indias-first-privately-developed-rocket-reaches-orbit-on-dramatic-debut-launch/)
+
+---
+
+### 3. 📌 It's getting harder to focus every day (来源: Hacker News)
+- **核心干货**：详情请查看原链接
+- **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。
+- **🔗 传送门**：[点击直达原链接](https://glyphack.com/attention/)
 
 ---
 
 ### 🗣️ 今日顶男金句
-**“你以为AI是来给你打工的？不，它只是还没学会怎么收你的保护费。”**
+> 投资的秘诀不是预测未来，而是比别人更快地理解现在。信息差 = 利润。
