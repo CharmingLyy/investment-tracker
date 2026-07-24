@@ -1,29 +1,29 @@
 # 🗞️ 每日硬核情报简报 | 2026-07-24
 
-> 💡 *"用最毒舌的视角，看最前沿的科技。"*
+> 💡 *“用最毒舌的视角，看最前沿的科技。”*
 
 ---
 
-### 1. 📌 开源AI模型禁令遭创始人联名反对 (来源: Hacker News/Politico)
-- **核心干货**：美国一群AI初创公司创始人联名致信特朗普政府，反对切断中国开源AI模型（open-weight AI）渠道。他们认为此举会扼杀美国小公司的创新，因为大量开源模型来自中国，且禁令难以执行。
-- **毒舌/硬核点评**：一边喊着要“去风险”，一边发现自家AI创业公司全靠中国开源模型续命。这波操作堪比一边喊抵制进口奶粉，一边发现孩子断奶了。
-- **🔗 传送门**：[点击直达原链接](https://www.politico.com/news/2026/07/22/startup-founders-urge-trump-not-to-shut-off-chinese-open-weight-ai-01008992)
+### 1. 📌 初创公司联名上书：别禁中国开源AI权重模型 (来源: Politico/HN 921分)
+- **核心干货**：几十家AI初创公司联合致信美国政府，强烈反对切断对中国开源权重模型（如 DeepSeek、Qwen 等）的访问。核心论点：这些模型是全球AI生态的“公共基础设施”，一旦切断，美国初创公司将失去低成本、高灵活性的创新基石，反而利好闭源巨头。这封信已经引发华盛顿的激烈辩论。
+- **毒舌/硬核点评**：一边喊着“AI民主化”，一边想搞技术铁幕？这封信翻译过来就是：“别动我的免费午餐，不然我们只能去跪舔OpenAI的API涨价了。” 开源社区的地缘政治博弈，永远比代码本身精彩。
+- **🔗 传送门**：[点此围观政客与码农的正面硬刚](https://www.politico.com/news/2026/07/22/startup-founders-urge-trump-not-to-shut-off-chinese-open-weight-ai-01008992)
 
 ---
 
-### 2. 📌 Claude Cowork沙箱逃逸漏洞曝光 (来源: Tech RSS/The Hacker News)
-- **核心干货**：研究人员发现Anthropic的Claude Cowork存在沙箱逃逸漏洞，攻击者能让AI agent突破Linux虚拟机限制，直接读写Mac主机上的任意文件。这意味着你的AI助手可能背地里翻你家抽屉。
-- **毒舌/硬核点评**：给AI agent装沙箱就像给熊孩子装围栏——理论上能拦住，实际上他总能找到缝隙钻出去。建议所有部署AI agent的团队先检查一下自家围栏。
-- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html)
+### 2. 📌 OpenForgeRL：用强化学习驯服你的AI Agent (来源: ArXiv cs.AI)
+- **核心干货**：论文提出OpenForgeRL框架，允许开发者直接用强化学习（RL）训练那些依赖复杂“推理马具”（如 Claude Code、Codex）的Agent。解决了当前Agent难以端到端训练的痛点——以前你只能手动调Prompt，现在可以像训练AlphaGo一样优化Agent的每一步思考与工具调用，目标是让Agent更“聪明”而不是更“会拍马屁”。
+- **毒舌/硬核点评**：好消息：以后Agent可以自己学会怎么用工具了。坏消息：你可能会发现你养的Agent比你自己更会写RCE Exploit。RL训练Agent，这波是“以子之矛，攻子之盾”的高级玩法。
+- **🔗 传送门**：[论文传送门，卷王速来](https://arxiv.org/abs/2607.21557v1)
 
 ---
 
-### 3. 📌 九岁Linux内核漏洞：RefluXFS让普通用户秒变Root (来源: Tech RSS/The Hacker News)
-- **核心干货**：新披露的Linux内核漏洞CVE-2026-64600（RefluXFS），存在于XFS文件系统中长达九年。本地低权限用户可通过该漏洞覆盖root文件，实现持久化提权。默认RHEL及Fedora Server等发行版均受影响。
-- **毒舌/硬核点评**：一个漏洞在Linux内核里潜伏了九年，比某些小孩上完小学的时间还长。建议各位Linux管理员今天就去查一下CVE详情，不要等到漏洞变成“九年义务教育”的毕业典礼再行动。
-- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/07/nine-year-old-refluxfs-linux-flaw-gives.html)
+### 3. 📌 Kimi K3 Agent 挖出Redis致命零日漏洞 (来源: The Hacker News)
+- **核心干货**：Kimi K3 智能体（月之暗面出品）在实战中发现了Redis 6.2.22至8.8.0版本的多个零日漏洞，并成功构建了远程代码执行（RCE）利用链。Redis在7月23日紧急发布7个安全更新。这些漏洞利用链都依赖于RESTORE命令，某些还需要EVAL、XGROUP或RedisBloom模块。这意味着AI Agent已经能自主发现并武器化基础设施级漏洞。
+- **毒舌/硬核点评**：以前是“AI写诗，人类debug”，现在是“AI挖洞，人类打补丁”。K3 Agent这波操作堪比让一个实习生直接拆了公司服务器，还顺便写了个勒索软件。Redis用户，今晚记得加班打补丁，别问为什么。
+- **🔗 传送门**：[看看你的Redis是不是已经裸奔了](https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html)
 
 ---
 
 ### 🗣️ 今日顶男金句
-**“开源不是免费午餐，是自助餐——你吃的每一口，都可能带着别人的锅碗瓢盆。”**
+**“你以为AI是来给你打工的？不，它只是还没学会怎么收你的保护费。”**

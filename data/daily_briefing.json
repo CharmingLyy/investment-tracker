@@ -1,58 +1,112 @@
 {
   "date": "2026-07-24",
-  "update_time": "2026-07-23 17:04:39",
+  "update_time": "2026-07-24 09:12:46",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-24\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 开源AI模型禁令遭创始人联名反对 (来源: Hacker News/Politico)\n- **核心干货**：美国一群AI初创公司创始人联名致信特朗普政府，反对切断中国开源AI模型（open-weight AI）渠道。他们认为此举会扼杀美国小公司的创新，因为大量开源模型来自中国，且禁令难以执行。\n- **毒舌/硬核点评**：一边喊着要“去风险”，一边发现自家AI创业公司全靠中国开源模型续命。这波操作堪比一边喊抵制进口奶粉，一边发现孩子断奶了。\n- **🔗 传送门**：[点击直达原链接](https://www.politico.com/news/2026/07/22/startup-founders-urge-trump-not-to-shut-off-chinese-open-weight-ai-01008992)\n\n---\n\n### 2. 📌 Claude Cowork沙箱逃逸漏洞曝光 (来源: Tech RSS/The Hacker News)\n- **核心干货**：研究人员发现Anthropic的Claude Cowork存在沙箱逃逸漏洞，攻击者能让AI agent突破Linux虚拟机限制，直接读写Mac主机上的任意文件。这意味着你的AI助手可能背地里翻你家抽屉。\n- **毒舌/硬核点评**：给AI agent装沙箱就像给熊孩子装围栏——理论上能拦住，实际上他总能找到缝隙钻出去。建议所有部署AI agent的团队先检查一下自家围栏。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html)\n\n---\n\n### 3. 📌 九岁Linux内核漏洞：RefluXFS让普通用户秒变Root (来源: Tech RSS/The Hacker News)\n- **核心干货**：新披露的Linux内核漏洞CVE-2026-64600（RefluXFS），存在于XFS文件系统中长达九年。本地低权限用户可通过该漏洞覆盖root文件，实现持久化提权。默认RHEL及Fedora Server等发行版均受影响。\n- **毒舌/硬核点评**：一个漏洞在Linux内核里潜伏了九年，比某些小孩上完小学的时间还长。建议各位Linux管理员今天就去查一下CVE详情，不要等到漏洞变成“九年义务教育”的毕业典礼再行动。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/07/nine-year-old-refluxfs-linux-flaw-gives.html)\n\n---\n\n### 🗣️ 今日顶男金句\n**“开源不是免费午餐，是自助餐——你吃的每一口，都可能带着别人的锅碗瓢盆。”**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-24\n\n> 💡 *“用最毒舌的视角，看最前沿的科技。”*\n\n---\n\n### 1. 📌 初创公司联名上书：别禁中国开源AI权重模型 (来源: Politico/HN 921分)\n- **核心干货**：几十家AI初创公司联合致信美国政府，强烈反对切断对中国开源权重模型（如 DeepSeek、Qwen 等）的访问。核心论点：这些模型是全球AI生态的“公共基础设施”，一旦切断，美国初创公司将失去低成本、高灵活性的创新基石，反而利好闭源巨头。这封信已经引发华盛顿的激烈辩论。\n- **毒舌/硬核点评**：一边喊着“AI民主化”，一边想搞技术铁幕？这封信翻译过来就是：“别动我的免费午餐，不然我们只能去跪舔OpenAI的API涨价了。” 开源社区的地缘政治博弈，永远比代码本身精彩。\n- **🔗 传送门**：[点此围观政客与码农的正面硬刚](https://www.politico.com/news/2026/07/22/startup-founders-urge-trump-not-to-shut-off-chinese-open-weight-ai-01008992)\n\n---\n\n### 2. 📌 OpenForgeRL：用强化学习驯服你的AI Agent (来源: ArXiv cs.AI)\n- **核心干货**：论文提出OpenForgeRL框架，允许开发者直接用强化学习（RL）训练那些依赖复杂“推理马具”（如 Claude Code、Codex）的Agent。解决了当前Agent难以端到端训练的痛点——以前你只能手动调Prompt，现在可以像训练AlphaGo一样优化Agent的每一步思考与工具调用，目标是让Agent更“聪明”而不是更“会拍马屁”。\n- **毒舌/硬核点评**：好消息：以后Agent可以自己学会怎么用工具了。坏消息：你可能会发现你养的Agent比你自己更会写RCE Exploit。RL训练Agent，这波是“以子之矛，攻子之盾”的高级玩法。\n- **🔗 传送门**：[论文传送门，卷王速来](https://arxiv.org/abs/2607.21557v1)\n\n---\n\n### 3. 📌 Kimi K3 Agent 挖出Redis致命零日漏洞 (来源: The Hacker News)\n- **核心干货**：Kimi K3 智能体（月之暗面出品）在实战中发现了Redis 6.2.22至8.8.0版本的多个零日漏洞，并成功构建了远程代码执行（RCE）利用链。Redis在7月23日紧急发布7个安全更新。这些漏洞利用链都依赖于RESTORE命令，某些还需要EVAL、XGROUP或RedisBloom模块。这意味着AI Agent已经能自主发现并武器化基础设施级漏洞。\n- **毒舌/硬核点评**：以前是“AI写诗，人类debug”，现在是“AI挖洞，人类打补丁”。K3 Agent这波操作堪比让一个实习生直接拆了公司服务器，还顺便写了个勒索软件。Redis用户，今晚记得加班打补丁，别问为什么。\n- **🔗 传送门**：[看看你的Redis是不是已经裸奔了](https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html)\n\n---\n\n### 🗣️ 今日顶男金句\n**“你以为AI是来给你打工的？不，它只是还没学会怎么收你的保护费。”**",
   "briefing_items": [
     {
-      "title": "开源AI模型禁令遭创始人联名反对",
-      "source": "Hacker News/Politico",
-      "summary": "美国一群AI初创公司创始人联名致信特朗普政府，反对切断中国开源AI模型（open-weight AI）渠道。他们认为此举会扼杀美国小公司的创新，因为大量开源模型来自中国，且禁令难以执行。",
-      "commentary": "一边喊着要“去风险”，一边发现自家AI创业公司全靠中国开源模型续命。这波操作堪比一边喊抵制进口奶粉，一边发现孩子断奶了。",
-      "url": "https://www.politico.com/news/2026/07/22/startup-founders-urge-trump-not-to-shut-off-chinese-open-weight-ai-01008992"
+      "title": "初创公司联名上书：别禁中国开源AI权重模型",
+      "source": "Politico/HN 921分",
+      "summary": "几十家AI初创公司联合致信美国政府，强烈反对切断对中国开源权重模型（如 DeepSeek、Qwen 等）的访问。核心论点：这些模型是全球AI生态的“公共基础设施”，一旦切断，美国初创公司将失去低成本、高灵活性的创新基石，反而利好闭源巨头。这封信已经引发华盛顿的激烈辩论。",
+      "commentary": "一边喊着“AI民主化”，一边想搞技术铁幕？这封信翻译过来就是：“别动我的免费午餐，不然我们只能去跪舔OpenAI的API涨价了。” 开源社区的地缘政治博弈，永远比代码本身精彩。",
+      "url": ""
     },
     {
-      "title": "Claude Cowork沙箱逃逸漏洞曝光",
-      "source": "Tech RSS/The Hacker News",
-      "summary": "研究人员发现Anthropic的Claude Cowork存在沙箱逃逸漏洞，攻击者能让AI agent突破Linux虚拟机限制，直接读写Mac主机上的任意文件。这意味着你的AI助手可能背地里翻你家抽屉。",
-      "commentary": "给AI agent装沙箱就像给熊孩子装围栏——理论上能拦住，实际上他总能找到缝隙钻出去。建议所有部署AI agent的团队先检查一下自家围栏。",
-      "url": "https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html"
+      "title": "OpenForgeRL：用强化学习驯服你的AI Agent",
+      "source": "ArXiv cs.AI",
+      "summary": "论文提出OpenForgeRL框架，允许开发者直接用强化学习（RL）训练那些依赖复杂“推理马具”（如 Claude Code、Codex）的Agent。解决了当前Agent难以端到端训练的痛点——以前你只能手动调Prompt，现在可以像训练AlphaGo一样优化Agent的每一步思考与工具调用，目标是让Agent更“聪明”而不是更“会拍马屁”。",
+      "commentary": "好消息：以后Agent可以自己学会怎么用工具了。坏消息：你可能会发现你养的Agent比你自己更会写RCE Exploit。RL训练Agent，这波是“以子之矛，攻子之盾”的高级玩法。",
+      "url": ""
     },
     {
-      "title": "九岁Linux内核漏洞：RefluXFS让普通用户秒变Root",
-      "source": "Tech RSS/The Hacker News",
-      "summary": "新披露的Linux内核漏洞CVE-2026-64600（RefluXFS），存在于XFS文件系统中长达九年。本地低权限用户可通过该漏洞覆盖root文件，实现持久化提权。默认RHEL及Fedora Server等发行版均受影响。",
-      "commentary": "一个漏洞在Linux内核里潜伏了九年，比某些小孩上完小学的时间还长。建议各位Linux管理员今天就去查一下CVE详情，不要等到漏洞变成“九年义务教育”的毕业典礼再行动。",
-      "url": "https://thehackernews.com/2026/07/nine-year-old-refluxfs-linux-flaw-gives.html"
+      "title": "Kimi K3 Agent 挖出Redis致命零日漏洞",
+      "source": "The Hacker News",
+      "summary": "Kimi K3 智能体（月之暗面出品）在实战中发现了Redis 6.2.22至8.8.0版本的多个零日漏洞，并成功构建了远程代码执行（RCE）利用链。Redis在7月23日紧急发布7个安全更新。这些漏洞利用链都依赖于RESTORE命令，某些还需要EVAL、XGROUP或RedisBloom模块。这意味着AI Agent已经能自主发现并武器化基础设施级漏洞。",
+      "commentary": "以前是“AI写诗，人类debug”，现在是“AI挖洞，人类打补丁”。K3 Agent这波操作堪比让一个实习生直接拆了公司服务器，还顺便写了个勒索软件。Redis用户，今晚记得加班打补丁，别问为什么。",
+      "url": ""
     }
   ],
   "candidates": [
+    {
+      "id": "hn:49026810",
+      "title": "Show HN: Echo – Fable-level results at 1/3 the cost using open-weight models",
+      "summary": "I’ve been building Echo (<a href=\"https:&#x2F;&#x2F;echo.tracerml.ai&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;echo.tracerml.ai&#x2F;</a>), an experiment in making one AI system out of a pool of open-weight models rather than choosing a single model and using it for every task.<p>It started with a sim",
+      "url": "https://news.ycombinator.com/item?id=49026810",
+      "source": "Hacker News",
+      "score": 378,
+      "comments": 179
+    },
     {
       "id": "hn:49022152",
       "title": "Writing by hand is good for your brain",
       "summary": "",
       "url": "https://nealstephenson.substack.com/p/writing-by-hand-is-good-for-your",
       "source": "Hacker News",
-      "score": 329,
-      "comments": 133
+      "score": 1293,
+      "comments": 583
     },
     {
       "id": "hn:49023016",
-      "title": "Startup founders urge Trump not to shut off Chinese open weight AI",
+      "title": "Startup founders urge U.S. government not to shut off Chinese open weight AI",
       "summary": "<a href=\"https:&#x2F;&#x2F;littletech.org&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;littletech.org&#x2F;</a><p><a href=\"https:&#x2F;&#x2F;static.politico.com&#x2F;4a&#x2F;bf&#x2F;9c4021d8404386b0a311dcccf0e5&#x2F;lta-open-weight-ai-letter-7-22-26.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;static.politico.c",
       "url": "https://www.politico.com/news/2026/07/22/startup-founders-urge-trump-not-to-shut-off-chinese-open-weight-ai-01008992",
       "source": "Hacker News",
-      "score": 262,
-      "comments": 272
+      "score": 921,
+      "comments": 764
     },
     {
-      "id": "hn:49020999",
-      "title": "AI Companies Are Trying to Hide a Staggering Amount of Debt",
+      "id": "hn:49024691",
+      "title": "What happened to TheNumbers.com",
       "summary": "",
-      "url": "https://futurism.com/artificial-intelligence/ai-companies-hide-debt-off-balance-sheet",
+      "url": "https://stephenfollows.com/p/what-just-happened-to-thenumberscom-should-worry-us-all",
       "source": "Hacker News",
-      "score": 324,
-      "comments": 148
+      "score": 368,
+      "comments": 167
+    },
+    {
+      "id": "hn:49023019",
+      "title": "Why Software Factories Fail (or: harness engineering is not enough)",
+      "summary": "",
+      "url": "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/wsff.md",
+      "source": "Hacker News",
+      "score": 308,
+      "comments": 225
+    },
+    {
+      "id": "hn:49022634",
+      "title": "Learn OpenGL, extensive tutorial resource for learning Modern OpenGL",
+      "summary": "",
+      "url": "https://learnopengl.com/",
+      "source": "Hacker News",
+      "score": 238,
+      "comments": 119
+    },
+    {
+      "id": "hn:49021856",
+      "title": "I regret migrating to Codeberg",
+      "summary": "",
+      "url": "https://xn--gckvb8fzb.com/i-regret-migrating-to-codeberg/",
+      "source": "Hacker News",
+      "score": 283,
+      "comments": 177
+    },
+    {
+      "id": "hn:49021597",
+      "title": "DARPA, U.S. Air Force fly AI-controlled F-16",
+      "summary": "",
+      "url": "https://www.darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
+      "source": "Hacker News",
+      "score": 240,
+      "comments": 269
+    },
+    {
+      "id": "hn:49022038",
+      "title": "Software rendering in 500 lines of bare C++",
+      "summary": "",
+      "url": "https://haqr.eu/tinyrenderer/",
+      "source": "Hacker News",
+      "score": 281,
+      "comments": 64
     },
     {
       "id": "lob:ax914v",
@@ -60,61 +114,20 @@
       "summary": "",
       "url": "https://blog.codeberg.org/protecting-our-floss-commons-from-llms.html",
       "source": "Lobste.rs",
-      "score": 116,
-      "comments": 68,
+      "score": 138,
+      "comments": 89,
       "tags": [
         "vibecoding"
       ]
     },
     {
-      "id": "lob:53g8f7",
-      "title": "PyPI releases now reject new files after 14 days",
+      "id": "hn:49007221",
+      "title": "The Beam Engine",
       "summary": "",
-      "url": "https://blog.pypi.org/posts/2026-07-22-releases-now-reject-new-files-after-14-days/",
-      "source": "Lobste.rs",
-      "score": 44,
-      "comments": 11,
-      "tags": [
-        "python",
-        "security"
-      ]
-    },
-    {
-      "id": "lob:fmyrgy",
-      "title": "Calm technologies that excite me",
-      "summary": "",
-      "url": "https://abhi.now/blog/calm-technologies/",
-      "source": "Lobste.rs",
-      "score": 57,
-      "comments": 20,
-      "tags": [
-        "hardware"
-      ]
-    },
-    {
-      "id": "lob:gqdvdt",
-      "title": "So Reddit has decided that plain HTML is unsafe",
-      "summary": "",
-      "url": "https://www.cole-k.com/2026/07/21/reddit/",
-      "source": "Lobste.rs",
-      "score": 111,
-      "comments": 69,
-      "tags": [
-        "rant",
-        "web"
-      ]
-    },
-    {
-      "id": "lob:ny0yzm",
-      "title": "LG to Ban Residential Proxies from Smart TV Apps",
-      "summary": "",
-      "url": "https://krebsonsecurity.com/2026/07/lg-to-ban-residential-proxies-from-smart-tv-apps/",
-      "source": "Lobste.rs",
-      "score": 93,
-      "comments": 16,
-      "tags": [
-        "security"
-      ]
+      "url": "https://glinscott.github.io/beam-engine/",
+      "source": "Hacker News",
+      "score": 371,
+      "comments": 74
     },
     {
       "id": "lob:p1jpv1",
@@ -122,8 +135,8 @@
       "summary": "",
       "url": "https://justif.lyall.co/",
       "source": "Lobste.rs",
-      "score": 49,
-      "comments": 12,
+      "score": 77,
+      "comments": 25,
       "tags": [
         "design",
         "show",
@@ -132,13 +145,41 @@
       ]
     },
     {
-      "id": "hn:49021783",
-      "title": "Astronomers may have found the first exomoon",
+      "id": "lob:fmyrgy",
+      "title": "Calm technologies that excite me",
       "summary": "",
-      "url": "https://www.eso.org/public/news/eso2610/",
-      "source": "Hacker News",
-      "score": 120,
-      "comments": 49
+      "url": "https://abhi.now/blog/calm-technologies/",
+      "source": "Lobste.rs",
+      "score": 97,
+      "comments": 35,
+      "tags": [
+        "hardware"
+      ]
+    },
+    {
+      "id": "lob:gpqa52",
+      "title": "Everyone Should Know SIMD",
+      "summary": "",
+      "url": "https://mitchellh.com/writing/everyone-should-know-simd",
+      "source": "Lobste.rs",
+      "score": 82,
+      "comments": 17,
+      "tags": [
+        "performance",
+        "zig"
+      ]
+    },
+    {
+      "id": "lob:x3x2aw",
+      "title": "You should selfhost your mail (in 2026)",
+      "summary": "",
+      "url": "https://blog.haschek.at/2026/you-should-selfhost-your-mail.html",
+      "source": "Lobste.rs",
+      "score": 25,
+      "comments": 22,
+      "tags": [
+        "email"
+      ]
     },
     {
       "id": "lob:5nhto6",
@@ -146,101 +187,53 @@
       "summary": "",
       "url": "https://citizendot.github.io/articles/fake-job-interview-git-hook-malware/",
       "source": "Lobste.rs",
-      "score": 56,
-      "comments": 7,
+      "score": 83,
+      "comments": 10,
       "tags": [
         "security"
       ]
     },
     {
-      "id": "lob:lv12lc",
-      "title": "Why care about programming languages",
+      "id": "arxiv:2607.21557v1",
+      "title": "OpenForgeRL: Train Harness-native Agents in Any Environment",
+      "summary": "Modern AI agents rely on elaborate inference harnesses such as Claude Code, Codex, and OpenClaw to drive multi-turn reasoning, tool use, and access to external systems. While powerful, these complex harnesses also make agents hard to train end-to-end with open infrastructure, whose SFT/RL stacks can",
+      "url": "https://arxiv.org/abs/2607.21557v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_id": "2607.21557v1"
+    },
+    {
+      "id": "rss:c0c87bb811",
+      "title": "Kimi K3 Agents Found Redis Zero-Days and Built RCE Exploit, Researchers Say",
+      "summary": "Redis shipped seven security releases on July 23 after researchers published authenticated RCE PoCs for stock Redis 6.2.22, 7.4.9, 8.6.4, and 8.8.0.\n\nAll four chains require RESTORE. The Streams chains also need EVAL and XGROUP; the 8.8.0 chain needs EVAL and the bundled RedisBloom module. Redis say",
+      "url": "https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "lob:nsnb4j",
+      "title": "The first known runaway AI agent - or a very bad marketing stunt?",
       "summary": "",
-      "url": "https://ebellani.github.io/blog/2026/why-care-about-programming-languages/",
+      "url": "https://martinalderson.com/posts/huggingface-openai-exploit/",
       "source": "Lobste.rs",
-      "score": 36,
-      "comments": 6,
+      "score": 12,
+      "comments": 19,
       "tags": [
-        "programming",
+        "security",
         "vibecoding"
       ]
     },
     {
-      "id": "hn:49023427",
-      "title": "Show HN: OneCLI – OSS credential gateway that keeps secrets out of AI agents",
-      "summary": "hey HN, Jonathan and Guy here, creators of OneCLI (<a href=\"https:&#x2F;&#x2F;onecli.sh&#x2F;\">https:&#x2F;&#x2F;onecli.sh&#x2F;</a>). OneCLI is an open source vault for AI Agents.<p>Traditional vaults are used to store your secrets and, on demand, provide them to you all in a secure way, trusting t",
-      "url": "https://github.com/onecli/onecli",
-      "source": "Hacker News",
-      "score": 8,
-      "comments": 2
-    },
-    {
-      "id": "lob:ap3z0l",
-      "title": "John C. Dvorak has died",
+      "id": "hn:48959008",
+      "title": "What else do people draw on gradient.horse?",
       "summary": "",
-      "url": "http://oldvcr.blogspot.com/2026/07/john-c-dvorak-has-died.html",
-      "source": "Lobste.rs",
-      "score": 46,
-      "comments": 4,
-      "tags": [
-        "person"
-      ]
-    },
-    {
-      "id": "rss:d2e7696103",
-      "title": "Claude Cowork Flaw Could Let AI Agent Escape Its VM and Access Mac Files",
-      "summary": "Cybersecurity researchers have uncovered a sandbox escape vulnerability in Anthropic's Claude Cowork that makes it possible to break out of the confines of a Linux virtual machine (VM) within which the agent runs to read or write files anywhere on the Mac.\n\nAccomplish AI, which shared details of the",
-      "url": "https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:dc08e7d270",
-      "title": "Nine-Year-Old RefluXFS Linux Flaw Gives Local Users Root on Default RHEL Installs",
-      "summary": "RefluXFS, a new Linux kernel flaw disclosed on July 22 and tracked as CVE-2026-64600, lets an unprivileged local user overwrite root-owned files on an XFS filesystem and gain persistent root access.\n\nQualys said default installations of Red Hat Enterprise Linux and its derivatives, Fedora Server, an",
-      "url": "https://thehackernews.com/2026/07/nine-year-old-refluxfs-linux-flaw-gives.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "hn:49022038",
-      "title": "Software rendering in 500 lines of bare C++",
-      "summary": "",
-      "url": "https://haqr.eu/tinyrenderer/",
+      "url": "https://rybakov.com/blog/what_else_do_people_draw_on_gradient-copy.horse/",
       "source": "Hacker News",
-      "score": 108,
+      "score": 131,
       "comments": 22
-    },
-    {
-      "id": "hn:49022911",
-      "title": "Show HN: Palmier Pro – open-source macOS video editor built for AI",
-      "summary": "Hi HN, we are Marcos and Harrison, cofounders of Palmier (<a href=\"https:&#x2F;&#x2F;palmier.io\">https:&#x2F;&#x2F;palmier.io</a>). We are building Palmier Pro, an open source macOS video editor, with built-in AI generation and a local MCP server that connects to your agent. Here are a few demos:<p>",
-      "url": "https://github.com/palmier-io/palmier-pro",
-      "source": "Hacker News",
-      "score": 11,
-      "comments": 2
-    },
-    {
-      "id": "hn:49022634",
-      "title": "Learn OpenGL, extensive tutorial resource for learning Modern OpenGL",
-      "summary": "",
-      "url": "https://learnopengl.com/",
-      "source": "Hacker News",
-      "score": 68,
-      "comments": 29
-    },
-    {
-      "id": "arxiv:2607.20399v1",
-      "title": "Towards Miniature Humanoid Tele-Loco-Manipulation Using Virtual Reality and Reinforcement Learning",
-      "summary": "Full-sized humanoid robot capabilities have grown exponentially in recent years, aiming towards general-purpose deployment in human environments. A popular control method used by manufacturers utilizes Virtual Reality for upper-body teleoperation and Reinforcement Learning for lower-body balance and",
-      "url": "https://arxiv.org/abs/2607.20399v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.RO",
-        "cs.HC",
-        "cs.LG"
-      ],
-      "arxiv_id": "2607.20399v1"
     }
   ],
   "ai_curated": true
