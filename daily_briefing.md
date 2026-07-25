@@ -14,19 +14,19 @@
 
 ---
 
-### 2. 📌 Nvidia, Microsoft, Meta warn against overregulating open-weight models (来源: Hacker News)
-- **核心干货**：Letter: <a href="https:&#x2F;&#x2F;images.nvidia.com&#x2F;pdf&#x2F;Open-Weights-and-American-AI-Leadership.pdf" rel="nofollow">https:&#x2F;&#x2F;images.nvidia.com&#x2F;pdf&#x2F;Open-Weights-and-Americ
+### 2. 📌 Android May Soon Restrict On-Device ADB (来源: Hacker News)
+- **核心干货**：详情请查看原链接
 - **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。
-- **🔗 传送门**：[点击直达原链接](https://www.cnbc.com/2026/07/24/nvidia-microsoft-meta-open-weight-ai-models.html)
+- **🔗 传送门**：[点击直达原链接](https://kitsumed.github.io/blog/posts/android-may-soon-restrict-on-device-adb/)
 
 ---
 
-### 3. 📌 Half-Life 2 running natively on HaikuOS (来源: Hacker News)
+### 3. 📌 Hannah Fry Wins the Leelavati Prize in 2026 for Mathematics Outreach (来源: Hacker News)
 - **核心干货**：详情请查看原链接
 - **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。
-- **🔗 传送门**：[点击直达原链接](https://discuss.haiku-os.org/t/haiku-nvidia-porting-nvidia-driver-for-turing-gpus/16520?page=18)
+- **🔗 传送门**：[点击直达原链接](https://www.maths.cam.ac.uk/features/professor-hannah-fry-wins-leelavati-prize)
 
 ---
 
 ### 🗣️ 今日顶男金句
-> 牛市里人人都是股神，熊市里活下来的才是交易员。杠杆是双刃剑，别用它刮胡子。
+> 开源不是因为开发者闲，是因为他们受不了闭源软件的垃圾体验。这才叫用脚投票。
