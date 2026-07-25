@@ -7,26 +7,26 @@
 
 ---
 
-### 1. 📌 My security camera shipped a GitHub admin token in its login page (来源: Hacker News)
+### 1. 📌 Postgres LISTEN/NOTIFY actually scales (来源: Hacker News)
 - **核心干货**：详情请查看原链接
 - **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。
-- **🔗 传送门**：[点击直达原链接](https://hhh.hn/hanwha-github-token/)
+- **🔗 传送门**：[点击直达原链接](https://www.dbos.dev/blog/postgres-listen-notify-scalability)
 
 ---
 
-### 2. 📌 India's first privately-developed rocket reaches orbit on dramatic debut launch (来源: Hacker News)
-- **核心干货**：详情请查看原链接
+### 2. 📌 Nvidia, Microsoft, Meta warn against overregulating open-weight models (来源: Hacker News)
+- **核心干货**：Letter: <a href="https:&#x2F;&#x2F;images.nvidia.com&#x2F;pdf&#x2F;Open-Weights-and-American-AI-Leadership.pdf" rel="nofollow">https:&#x2F;&#x2F;images.nvidia.com&#x2F;pdf&#x2F;Open-Weights-and-Americ
 - **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。
-- **🔗 传送门**：[点击直达原链接](https://arstechnica.com/space/2026/07/indias-first-privately-developed-rocket-reaches-orbit-on-dramatic-debut-launch/)
+- **🔗 传送门**：[点击直达原链接](https://www.cnbc.com/2026/07/24/nvidia-microsoft-meta-open-weight-ai-models.html)
 
 ---
 
-### 3. 📌 It's getting harder to focus every day (来源: Hacker News)
+### 3. 📌 Half-Life 2 running natively on HaikuOS (来源: Hacker News)
 - **核心干货**：详情请查看原链接
 - **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。
-- **🔗 传送门**：[点击直达原链接](https://glyphack.com/attention/)
+- **🔗 传送门**：[点击直达原链接](https://discuss.haiku-os.org/t/haiku-nvidia-porting-nvidia-driver-for-turing-gpus/16520?page=18)
 
 ---
 
 ### 🗣️ 今日顶男金句
-> 投资的秘诀不是预测未来，而是比别人更快地理解现在。信息差 = 利润。
+> 牛市里人人都是股神，熊市里活下来的才是交易员。杠杆是双刃剑，别用它刮胡子。

@@ -1,61 +1,97 @@
 {
   "date": "2026-07-25",
-  "update_time": "2026-07-24 17:15:39",
+  "update_time": "2026-07-25 02:58:37",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-25\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n> ⚠️ 本简报由启发式算法自动生成（未配置 LLM API Key）。\n> 设置 `DEEPSEEK_API_KEY` 或 `ANTHROPIC_API_KEY` 即可启用 AI 深度策展与毒舌点评。\n\n---\n\n### 1. 📌 My security camera shipped a GitHub admin token in its login page (来源: Hacker News)\n- **核心干货**：详情请查看原链接\n- **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。\n- **🔗 传送门**：[点击直达原链接](https://hhh.hn/hanwha-github-token/)\n\n---\n\n### 2. 📌 India's first privately-developed rocket reaches orbit on dramatic debut launch (来源: Hacker News)\n- **核心干货**：详情请查看原链接\n- **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。\n- **🔗 传送门**：[点击直达原链接](https://arstechnica.com/space/2026/07/indias-first-privately-developed-rocket-reaches-orbit-on-dramatic-debut-launch/)\n\n---\n\n### 3. 📌 It's getting harder to focus every day (来源: Hacker News)\n- **核心干货**：详情请查看原链接\n- **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。\n- **🔗 传送门**：[点击直达原链接](https://glyphack.com/attention/)\n\n---\n\n### 🗣️ 今日顶男金句\n> 投资的秘诀不是预测未来，而是比别人更快地理解现在。信息差 = 利润。\n",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-25\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n> ⚠️ 本简报由启发式算法自动生成（未配置 LLM API Key）。\n> 设置 `DEEPSEEK_API_KEY` 或 `ANTHROPIC_API_KEY` 即可启用 AI 深度策展与毒舌点评。\n\n---\n\n### 1. 📌 Postgres LISTEN/NOTIFY actually scales (来源: Hacker News)\n- **核心干货**：详情请查看原链接\n- **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。\n- **🔗 传送门**：[点击直达原链接](https://www.dbos.dev/blog/postgres-listen-notify-scalability)\n\n---\n\n### 2. 📌 Nvidia, Microsoft, Meta warn against overregulating open-weight models (来源: Hacker News)\n- **核心干货**：Letter: <a href=\"https:&#x2F;&#x2F;images.nvidia.com&#x2F;pdf&#x2F;Open-Weights-and-American-AI-Leadership.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;images.nvidia.com&#x2F;pdf&#x2F;Open-Weights-and-Americ\n- **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。\n- **🔗 传送门**：[点击直达原链接](https://www.cnbc.com/2026/07/24/nvidia-microsoft-meta-open-weight-ai-models.html)\n\n---\n\n### 3. 📌 Half-Life 2 running natively on HaikuOS (来源: Hacker News)\n- **核心干货**：详情请查看原链接\n- **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。\n- **🔗 传送门**：[点击直达原链接](https://discuss.haiku-os.org/t/haiku-nvidia-porting-nvidia-driver-for-turing-gpus/16520?page=18)\n\n---\n\n### 🗣️ 今日顶男金句\n> 牛市里人人都是股神，熊市里活下来的才是交易员。杠杆是双刃剑，别用它刮胡子。\n",
   "briefing_items": [
     {
-      "title": "My security camera shipped a GitHub admin token in its login page",
+      "title": "Postgres LISTEN/NOTIFY actually scales",
       "source": "Hacker News",
       "summary": "详情请查看原链接",
       "commentary": "HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。",
-      "url": "https://hhh.hn/hanwha-github-token/"
+      "url": "https://www.dbos.dev/blog/postgres-listen-notify-scalability"
     },
     {
-      "title": "India's first privately-developed rocket reaches orbit on dramatic debut launch",
+      "title": "Nvidia, Microsoft, Meta warn against overregulating open-weight models",
+      "source": "Hacker News",
+      "summary": "Letter: <a href=\"https:&#x2F;&#x2F;images.nvidia.com&#x2F;pdf&#x2F;Open-Weights-and-American-AI-Leadership.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;images.nvidia.com&#x2F;pdf&#x2F;Open-Weights-and-Americ",
+      "commentary": "HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。",
+      "url": "https://www.cnbc.com/2026/07/24/nvidia-microsoft-meta-open-weight-ai-models.html"
+    },
+    {
+      "title": "Half-Life 2 running natively on HaikuOS",
       "source": "Hacker News",
       "summary": "详情请查看原链接",
       "commentary": "HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。",
-      "url": "https://arstechnica.com/space/2026/07/indias-first-privately-developed-rocket-reaches-orbit-on-dramatic-debut-launch/"
+      "url": "https://discuss.haiku-os.org/t/haiku-nvidia-porting-nvidia-driver-for-turing-gpus/16520?page=18"
     },
     {
-      "title": "It's getting harder to focus every day",
-      "source": "Hacker News",
-      "summary": "详情请查看原链接",
-      "commentary": "HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。",
-      "url": "https://glyphack.com/attention/"
-    },
-    {
-      "quote": "投资的秘诀不是预测未来，而是比别人更快地理解现在。信息差 = 利润。"
+      "quote": "牛市里人人都是股神，熊市里活下来的才是交易员。杠杆是双刃剑，别用它刮胡子。"
     }
   ],
   "candidates": [
+    {
+      "id": "hn:49040296",
+      "title": "Postgres LISTEN/NOTIFY actually scales",
+      "summary": "",
+      "url": "https://www.dbos.dev/blog/postgres-listen-notify-scalability",
+      "source": "Hacker News",
+      "score": 219,
+      "comments": 38
+    },
+    {
+      "id": "hn:49035303",
+      "title": "Nvidia, Microsoft, Meta warn against overregulating open-weight models",
+      "summary": "Letter: <a href=\"https:&#x2F;&#x2F;images.nvidia.com&#x2F;pdf&#x2F;Open-Weights-and-American-AI-Leadership.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;images.nvidia.com&#x2F;pdf&#x2F;Open-Weights-and-American-AI-L...</a> [pdf]<p><a href=\"https:&#x2F;&#x2F;x.com&#x2F;JensenHuang&#x2F;status&#x2F;2080643682",
+      "url": "https://www.cnbc.com/2026/07/24/nvidia-microsoft-meta-open-weight-ai-models.html",
+      "source": "Hacker News",
+      "score": 524,
+      "comments": 240
+    },
+    {
+      "id": "hn:49034868",
+      "title": "Half-Life 2 running natively on HaikuOS",
+      "summary": "",
+      "url": "https://discuss.haiku-os.org/t/haiku-nvidia-porting-nvidia-driver-for-turing-gpus/16520?page=18",
+      "source": "Hacker News",
+      "score": 277,
+      "comments": 53
+    },
+    {
+      "id": "hn:49024938",
+      "title": "Kimi K3 exploited the latest Redis server",
+      "summary": "<a href=\"https:&#x2F;&#x2F;xcancel.com&#x2F;fried_rice&#x2F;status&#x2F;2080059356322918777\" rel=\"nofollow\">https:&#x2F;&#x2F;xcancel.com&#x2F;fried_rice&#x2F;status&#x2F;2080059356322918777</a>",
+      "url": "https://twitter.com/fried_rice/status/2080059356322918777",
+      "source": "Hacker News",
+      "score": 150,
+      "comments": 41
+    },
+    {
+      "id": "hn:48973835",
+      "title": "India's first privately-developed rocket reaches orbit on debut launch",
+      "summary": "",
+      "url": "https://arstechnica.com/space/2026/07/indias-first-privately-developed-rocket-reaches-orbit-on-dramatic-debut-launch/",
+      "source": "Hacker News",
+      "score": 507,
+      "comments": 146
+    },
     {
       "id": "hn:49034292",
       "title": "My security camera shipped a GitHub admin token in its login page",
       "summary": "",
       "url": "https://hhh.hn/hanwha-github-token/",
       "source": "Hacker News",
-      "score": 333,
-      "comments": 128
+      "score": 523,
+      "comments": 181
     },
     {
-      "id": "hn:48973835",
-      "title": "India's first privately-developed rocket reaches orbit on dramatic debut launch",
+      "id": "hn:49033004",
+      "title": "If coding has been solved, why does software keep getting worse?",
       "summary": "",
-      "url": "https://arstechnica.com/space/2026/07/indias-first-privately-developed-rocket-reaches-orbit-on-dramatic-debut-launch/",
+      "url": "https://ptrchm.com/posts/nothing-works-and-everyone-is-euphoric/",
       "source": "Hacker News",
-      "score": 287,
-      "comments": 74
-    },
-    {
-      "id": "hn:49032660",
-      "title": "It's getting harder to focus every day",
-      "summary": "",
-      "url": "https://glyphack.com/attention/",
-      "source": "Hacker News",
-      "score": 541,
-      "comments": 303
+      "score": 569,
+      "comments": 445
     },
     {
       "id": "lob:x3x2aw",
@@ -63,67 +99,58 @@
       "summary": "",
       "url": "https://blog.haschek.at/2026/you-should-selfhost-your-mail.html",
       "source": "Lobste.rs",
-      "score": 40,
-      "comments": 49,
+      "score": 52,
+      "comments": 59,
       "tags": [
         "email"
       ]
     },
     {
-      "id": "lob:ax914v",
-      "title": "Protecting our FLOSS commons from LLMs",
-      "summary": "",
-      "url": "https://blog.codeberg.org/protecting-our-floss-commons-from-llms.html",
-      "source": "Lobste.rs",
-      "score": 143,
-      "comments": 144,
-      "tags": [
-        "vibecoding"
-      ]
-    },
-    {
-      "id": "hn:49033127",
-      "title": "Flux 3 X Mimic: The Next Generation of Video-Action Models",
-      "summary": "",
-      "url": "https://bfl.ai/blog/flux-3-mimic",
+      "id": "hn:49020545",
+      "title": "Show HN: I simulated closing the Strait of Hormuz on real oil trade data",
+      "summary": "OP here: I created this visualization tool as the byproduct of a supply chain class I taught at Columbia. The pedagogical exercise grew into a full blown visualization and paper about global oil trade.<p>The model:\nThe mechanics are the same as the financial network Eisenberg-Noe: Instead of banks, ",
+      "url": "https://globaloilnetwork.staffinganalytics.io/",
       "source": "Hacker News",
-      "score": 271,
-      "comments": 44
+      "score": 109,
+      "comments": 54
     },
     {
-      "id": "hn:49036433",
-      "title": "Government orders GitHub to remove Bluetooth-based chat app Bitchat: Jack Dorsey",
-      "summary": "",
-      "url": "https://www.thehindu.com/news/national/government-orders-github-to-remove-bluetooth-based-chat-app-bitchat-over-security-concerns-jack-dorsey/article71262049.ece",
+      "id": "hn:49038433",
+      "title": "Claude Opus 5",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.anthropic.com&#x2F;claude-opus-5-system-card\" rel=\"nofollow\">https:&#x2F;&#x2F;www.anthropic.com&#x2F;claude-opus-5-system-card</a>",
+      "url": "https://www.anthropic.com/news/claude-opus-5",
       "source": "Hacker News",
-      "score": 184,
-      "comments": 109
+      "score": 1343,
+      "comments": 729
     },
     {
-      "id": "lob:p1jpv1",
-      "title": "Justif: Knuth-Plass justification and microtypography for the web",
+      "id": "hn:48995409",
+      "title": "Firefox Containers Preview",
       "summary": "",
-      "url": "https://justif.lyall.co/",
-      "source": "Lobste.rs",
-      "score": 84,
-      "comments": 28,
-      "tags": [
-        "design",
-        "show",
-        "vibecoding",
-        "web"
-      ]
+      "url": "https://blog.mozilla.org/en/firefox/firefox-containers-preview/",
+      "source": "Hacker News",
+      "score": 239,
+      "comments": 84
     },
     {
-      "id": "lob:fmyrgy",
-      "title": "Calm technologies that excite me",
+      "id": "hn:49040741",
+      "title": "Opus 5 is currently #1 on Artificial Analysis Intelligence Leaderboard",
       "summary": "",
-      "url": "https://abhi.now/blog/calm-technologies/",
+      "url": "https://artificialanalysis.ai/models",
+      "source": "Hacker News",
+      "score": 159,
+      "comments": 106
+    },
+    {
+      "id": "lob:h9gdj8",
+      "title": "FreeBSD ports frozen after someone commits the entire 150MB Linux Copilot binary",
+      "summary": "",
+      "url": "https://www.osnews.com/story/145593/freebsd-ports-frozen-after-someone-commits-the-entire-150mb-linux-copilot-binary/",
       "source": "Lobste.rs",
-      "score": 105,
-      "comments": 37,
+      "score": 40,
+      "comments": 8,
       "tags": [
-        "hardware"
+        "freebsd"
       ]
     },
     {
@@ -132,42 +159,30 @@
       "summary": "",
       "url": "https://mitchellh.com/writing/everyone-should-know-simd",
       "source": "Lobste.rs",
-      "score": 107,
-      "comments": 22,
+      "score": 120,
+      "comments": 23,
       "tags": [
         "performance",
         "zig"
       ]
     },
     {
-      "id": "hn:49038433",
-      "title": "Claude Opus 5",
-      "summary": "",
-      "url": "https://www.anthropic.com/claude-opus-5-system-card",
+      "id": "hn:49008512",
+      "title": "An old patent inspired the new \"Y-zipper\", a three-sided fastener",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=AWig98GVIno\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=AWig98GVIno</a><p><a href=\"https:&#x2F;&#x2F;www.tomshardware.com&#x2F;3d-printing&#x2F;mit-researchers-revive-40-year-old-triangular-zipper-concept-now-made-possible-by",
+      "url": "https://news.mit.edu/2026/three-sided-y-zipper-design-0504",
       "source": "Hacker News",
-      "score": 144,
-      "comments": 60
+      "score": 139,
+      "comments": 30
     },
     {
-      "id": "hn:49034868",
-      "title": "Half-Life 2 running natively on HaikuOS",
+      "id": "hn:49026933",
+      "title": "Fil-C: Garbage In, Memory Safety Out [video]",
       "summary": "",
-      "url": "https://discuss.haiku-os.org/t/haiku-nvidia-porting-nvidia-driver-for-turing-gpus/16520?page=18",
+      "url": "https://www.youtube.com/watch?v=5F-2Y1LPRek",
       "source": "Hacker News",
-      "score": 134,
-      "comments": 16
-    },
-    {
-      "id": "arxiv:2607.21557v1",
-      "title": "OpenForgeRL: Train Harness-native Agents in Any Environment",
-      "summary": "Modern AI agents rely on elaborate inference harnesses such as Claude Code, Codex, and OpenClaw to drive multi-turn reasoning, tool use, and access to external systems. While powerful, these complex harnesses also make agents hard to train end-to-end with open infrastructure, whose SFT/RL stacks can",
-      "url": "https://arxiv.org/abs/2607.21557v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_id": "2607.21557v1"
+      "score": 110,
+      "comments": 99
     },
     {
       "id": "rss:c0c87bb811",
@@ -178,30 +193,21 @@
       "score": 0
     },
     {
-      "id": "lob:h9gdj8",
-      "title": "FreeBSD ports frozen after someone commits the entire 150MB Linux Copilot binary",
-      "summary": "",
-      "url": "https://www.osnews.com/story/145593/freebsd-ports-frozen-after-someone-commits-the-entire-150mb-linux-copilot-binary/",
-      "source": "Lobste.rs",
-      "score": 28,
-      "comments": 6,
-      "tags": [
-        "freebsd"
-      ]
+      "id": "rss:40720dc810",
+      "title": "MCP rug-pulls: how a \"safe\" AI tool turns malicious after you approve it",
+      "summary": "Your AI agent trusts its tools completely. That trust is the vulnerability.\n\nWhen you connect an MCP (Model Context Protocol) tool to an agent, you approve it based on its definition: the name, the description, the parameters. The agent then treats that definition as gospel. It does what the tool sa",
+      "url": "https://dev.to/wesellistools/mcp-rug-pulls-how-a-safe-ai-tool-turns-malicious-after-you-approve-it-1224",
+      "source": "Tech RSS",
+      "score": 0
     },
     {
-      "id": "lob:badu44",
-      "title": "Fil-C: Garbage In, Memory Safety Out",
+      "id": "hn:48985182",
+      "title": "Designing an Ethernet Switch ASIC",
       "summary": "",
-      "url": "https://www.youtube.com/watch?v=5F-2Y1LPRek",
-      "source": "Lobste.rs",
-      "score": 38,
-      "comments": 6,
-      "tags": [
-        "c",
-        "c++",
-        "video"
-      ]
+      "url": "https://essenceia.github.io/projects/ethernet_switch_asic/",
+      "source": "Hacker News",
+      "score": 122,
+      "comments": 35
     },
     {
       "id": "lob:ewh4v6",
@@ -209,35 +215,11 @@
       "summary": "",
       "url": "https://blog.willgrant.org/2026/07/23/the-hardest-way-to-make-gif.html",
       "source": "Lobste.rs",
-      "score": 42,
+      "score": 56,
       "comments": 2,
       "tags": [
         "art"
       ]
-    },
-    {
-      "id": "rss:76da0d1510",
-      "title": "ChatGPT AgentForger Flaw Could Deploy Rogue Workspace Agents via a Phishing Link",
-      "summary": "Cybersecurity researchers have disclosed a critical vulnerability in OpenAI's ChatGPT Workspace Agents that could have allowed a single phishing link to stealthily build, authorize, and deploy an autonomous artificial intelligence (AI) agent inside a victim's organization.\n\nThe vulnerability has bee",
-      "url": "https://thehackernews.com/2026/07/chatgpt-agentforger-flaw-could-deploy.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:d2e7696103",
-      "title": "Claude Cowork Flaw Could Let AI Agent Escape Its VM and Access Mac Files",
-      "summary": "Cybersecurity researchers have uncovered a sandbox escape vulnerability in Anthropic's Claude Cowork that makes it possible to break out of the confines of a Linux virtual machine (VM) within which the agent runs to read or write files anywhere on the Mac.\n\nAccomplish AI, which shared details of the",
-      "url": "https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:389ab9689c",
-      "title": "trelix v2.7 to v2.9: The Release Where the Pipeline Itself Became the Product",
-      "summary": "On 2026-07-09 I shipped trelix v2.7.0. The architecture felt done — seven retrieval legs, a knowledge graph, an agentic loop. Then I opened the GitHub Release page and counted two binary assets where there should have been three. release.yml built the macOS and Linux PyInstaller binaries both as dis",
-      "url": "https://dev.to/sai_ram_0000/trelix-v27-to-v29-the-release-where-the-pipeline-itself-became-the-product-21kb",
-      "source": "Tech RSS",
-      "score": 0
     }
   ],
   "ai_curated": true
