@@ -1,29 +1,29 @@
 {
   "date": "2026-07-26",
-  "update_time": "2026-07-26 13:26:32",
+  "update_time": "2026-07-26 13:36:42",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-26\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Claude 5 时代的新规则：上下文工程 (来源: Hacker News)\n- **核心干货**：Anthropic 官方发布了针对 Claude 5 模型的上下文工程新范式，重点在于如何利用超长上下文窗口（推测超过 1M token）进行更复杂的多步推理和结构化提示设计，而非简单堆砌文本。\n- **毒舌/硬核点评**：如果你还在用\"请详细解释\"这种小学生级别的提示词，恭喜你，你成功把 Claude 5 用成了 GPT-3。上下文工程不是让你写小作文，是让你当架构师。\n- **🔗 传送门**：[点击直达原链接](https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models)\n\n---\n\n### 2. 📌 Kimi K3 代理发现 Redis 多个零日漏洞并构建 RCE 利用链 (来源: Tech RSS)\n- **核心干货**：Kimi 的 K3 智能代理在 Redis 6.2.22、7.4.9、8.6.4 和 8.8.0 版本中挖出多个零日漏洞，并成功构建了需要 RESTORE、EVAL 等命令的远程代码执行链。Redis 已于7月23日紧急发布安全更新。\n- **毒舌/硬核点评**：AI 开始自己找漏洞造武器了，人类安全研究员的饭碗不是被抢，是被 AI 直接端走了。Redis 用户：赶紧升级，别等 PoC 满天飞了再哭。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html)\n\n---\n\n### 3. 📌 OpenForgeRL：在任何环境中训练原生 Agent (来源: ArXiv)\n- **核心干货**：提出了一种新的训练框架，允许直接在任何环境中对 Agent 进行端到端的强化学习训练，无需依赖 Claude Code、Codex 等复杂推理外壳，打通了 SFT/RL 训练与工具使用的闭环。\n- **毒舌/硬核点评**：终于有人意识到让 Agent 套着巨大的推理壳子跑是种病态了。去掉束缚直接裸训，这才是 Agent 该有的进化方向——别老想着给 AI 穿西装打领带。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2607.21557v1)\n\n---\n\n### 🗣️ 今日顶男金句\n**\"AI 替你写代码、找漏洞、做研究，你唯一能做的就是别比 AI 还懒。\"**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-26\n\n> 💡 *“用最毒舌的视角，看最前沿的科技。”*\n\n---\n\n### 1. 📌 Kimi K3 Agent 发现 Redis 零日漏洞并构建 RCE 利用链 (来源: The Hacker News)\n- **核心干货**：Kimi K3 智能体在 Redis 6.2.22、7.4.9、8.6.4 和 8.8.0 等多个版本中发现了可利用的零日漏洞，并成功生成了远程代码执行（RCE）利用链。Redis 已于 7 月 23 日紧急发布 7 个安全更新。所有利用链均需 `RESTORE` 命令，部分版本还需 `EVAL`、`XGROUP` 或 RedisBloom 模块。\n- **毒舌/硬核点评**：AI Agent 现在不只会写诗，还会帮你挖洞、写 PoC、然后让你加班打补丁。以后安全团队面试题得改成：“你让 AI 黑进 Redis 需要几步？”\n- **🔗 传送门**：[Kimi K3 Agents Found Redis Zero-Days and Built RCE Exploit, Researchers Say](https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html)\n\n---\n\n### 2. 📌 Claude 5 代模型的上下文工程新规则 (来源: Hacker News)\n- **核心干货**：Anthropic 官方发布博客，详细阐述了针对 Claude 5 系列模型（注意，不是 3.5 或 4）的上下文工程最佳实践。重点包括：如何设计超长上下文（百万 token 级别）的提示词、如何利用“结构化提示”来引导模型在复杂任务中保持一致性，以及如何通过“思维链”变体来提升推理深度。\n- **毒舌/硬核点评**：还记得你花两周写的那个 500 行 prompt 吗？在 Claude 5 面前，它可能连“及格”都算不上。上下文工程已经从“写小作文”进化到了“写操作系统”的级别。\n- **🔗 传送门**：[The new rules of context engineering for Claude 5 generation models](https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models)\n\n---\n\n### 3. 📌 Inflect-Micro-v2: 9.36M 参数实现完整语音合成 (来源: Hugging Face)\n- **核心干货**：一个仅有 936 万个参数的微型语音合成模型，却能实现从文本到完整语音（含语调、情感、多说话人）的端到端生成。相比于动辄几亿甚至几十亿参数的主流 TTS 模型（如 Bark、VALL-E），它在保持可接受质量的同时，将参数量压缩了两个数量级。适合边缘设备和嵌入式场景。\n- **毒舌/硬核点评**：大厂们还在卷“百亿参数听歌识曲”的时候，人家用 900 万参数就把语音合成搞定了。这告诉我们：不是所有问题都需要用核弹来炸蚊子。\n- **🔗 传送门**：[owensong/Inflect-Micro-v2 · Hugging Face](https://huggingface.co/owensong/Inflect-Micro-v2)\n\n---\n\n### 🗣️ 今日顶男金句\n“真正的高手，不是把代码写得多漂亮，而是让 AI 帮你把代码写得比自己还漂亮，然后你在旁边喝茶骂它写得慢。”",
   "briefing_items": [
     {
-      "title": "Claude 5 时代的新规则：上下文工程",
+      "title": "Kimi K3 Agent 发现 Redis 零日漏洞并构建 RCE 利用链",
+      "source": "The Hacker News",
+      "summary": "Kimi K3 智能体在 Redis 6.2.22、7.4.9、8.6.4 和 8.8.0 等多个版本中发现了可利用的零日漏洞，并成功生成了远程代码执行（RCE）利用链。Redis 已于 7 月 23 日紧急发布 7 个安全更新。所有利用链均需 `RESTORE` 命令，部分版本还需 `EVAL`、`XGROUP` 或 RedisBloom 模块。",
+      "commentary": "AI Agent 现在不只会写诗，还会帮你挖洞、写 PoC、然后让你加班打补丁。以后安全团队面试题得改成：“你让 AI 黑进 Redis 需要几步？”",
+      "url": ""
+    },
+    {
+      "title": "Claude 5 代模型的上下文工程新规则",
       "source": "Hacker News",
-      "summary": "Anthropic 官方发布了针对 Claude 5 模型的上下文工程新范式，重点在于如何利用超长上下文窗口（推测超过 1M token）进行更复杂的多步推理和结构化提示设计，而非简单堆砌文本。",
-      "commentary": "如果你还在用\"请详细解释\"这种小学生级别的提示词，恭喜你，你成功把 Claude 5 用成了 GPT-3。上下文工程不是让你写小作文，是让你当架构师。",
-      "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models"
+      "summary": "Anthropic 官方发布博客，详细阐述了针对 Claude 5 系列模型（注意，不是 3.5 或 4）的上下文工程最佳实践。重点包括：如何设计超长上下文（百万 token 级别）的提示词、如何利用“结构化提示”来引导模型在复杂任务中保持一致性，以及如何通过“思维链”变体来提升推理深度。",
+      "commentary": "还记得你花两周写的那个 500 行 prompt 吗？在 Claude 5 面前，它可能连“及格”都算不上。上下文工程已经从“写小作文”进化到了“写操作系统”的级别。",
+      "url": ""
     },
     {
-      "title": "Kimi K3 代理发现 Redis 多个零日漏洞并构建 RCE 利用链",
-      "source": "Tech RSS",
-      "summary": "Kimi 的 K3 智能代理在 Redis 6.2.22、7.4.9、8.6.4 和 8.8.0 版本中挖出多个零日漏洞，并成功构建了需要 RESTORE、EVAL 等命令的远程代码执行链。Redis 已于7月23日紧急发布安全更新。",
-      "commentary": "AI 开始自己找漏洞造武器了，人类安全研究员的饭碗不是被抢，是被 AI 直接端走了。Redis 用户：赶紧升级，别等 PoC 满天飞了再哭。",
-      "url": "https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html"
-    },
-    {
-      "title": "OpenForgeRL：在任何环境中训练原生 Agent",
-      "source": "ArXiv",
-      "summary": "提出了一种新的训练框架，允许直接在任何环境中对 Agent 进行端到端的强化学习训练，无需依赖 Claude Code、Codex 等复杂推理外壳，打通了 SFT/RL 训练与工具使用的闭环。",
-      "commentary": "终于有人意识到让 Agent 套着巨大的推理壳子跑是种病态了。去掉束缚直接裸训，这才是 Agent 该有的进化方向——别老想着给 AI 穿西装打领带。",
-      "url": "https://arxiv.org/abs/2607.21557v1"
+      "title": "Inflect-Micro-v2: 9.36M 参数实现完整语音合成",
+      "source": "Hugging Face",
+      "summary": "一个仅有 936 万个参数的微型语音合成模型，却能实现从文本到完整语音（含语调、情感、多说话人）的端到端生成。相比于动辄几亿甚至几十亿参数的主流 TTS 模型（如 Bark、VALL-E），它在保持可接受质量的同时，将参数量压缩了两个数量级。适合边缘设备和嵌入式场景。",
+      "commentary": "大厂们还在卷“百亿参数听歌识曲”的时候，人家用 900 万参数就把语音合成搞定了。这告诉我们：不是所有问题都需要用核弹来炸蚊子。",
+      "url": ""
     }
   ],
   "candidates": [
@@ -33,8 +33,8 @@
       "summary": "",
       "url": "https://github.com/demo-zexuan/liang-wenfeng-investor-meeting-2026-7-22/blob/master/%E6%A2%81%E6%96%87%E9%94%8B%E6%8A%95%E8%B5%84%E8%80%85%E4%BA%A4%E6%B5%81%E4%BC%9A-%E6%96%87%E5%AD%97%E7%A8%BF_1_18_translate_20260723201651.pdf",
       "source": "Hacker News",
-      "score": 191,
-      "comments": 146
+      "score": 192,
+      "comments": 149
     },
     {
       "id": "hn:49055169",
@@ -42,26 +42,8 @@
       "summary": "",
       "url": "https://discuss.grapheneos.org/d/40700-grapheneos-protections-against-data-extraction-from-locked-devices",
       "source": "Hacker News",
-      "score": 179,
-      "comments": 90
-    },
-    {
-      "id": "hn:49047453",
-      "title": "A shell colon does nothing. Use it anyway",
-      "summary": "",
-      "url": "https://refp.se/articles/your-shell-and-the-magic-colon",
-      "source": "Hacker News",
-      "score": 280,
-      "comments": 113
-    },
-    {
-      "id": "hn:49051361",
-      "title": "The new rules of context engineering for Claude 5 generation models",
-      "summary": "",
-      "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
-      "source": "Hacker News",
-      "score": 378,
-      "comments": 274
+      "score": 181,
+      "comments": 96
     },
     {
       "id": "hn:49054010",
@@ -69,30 +51,26 @@
       "summary": "I got tired of Googling basic course info, so I made a free directory of every US course<p>Google filters for golf course results are terrible so I built a better way to browse courses using OSM as the backbone.... <a href=\"https:&#x2F;&#x2F;golfcoursebrowser.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#",
       "url": "https://golfcoursebrowser.com/",
       "source": "Hacker News",
-      "score": 160,
-      "comments": 100
+      "score": 163,
+      "comments": 102
     },
     {
-      "id": "lob:bvgaff",
-      "title": "stinkpot: sqlite-backed shell history",
+      "id": "hn:49047453",
+      "title": "A shell colon does nothing. Use it anyway",
       "summary": "",
-      "url": "https://tangled.org/oppi.li/stinkpot",
-      "source": "Lobste.rs",
-      "score": 43,
-      "comments": 20,
-      "tags": [
-        "go",
-        "show"
-      ]
-    },
-    {
-      "id": "hn:49054107",
-      "title": "An ESP32 based plane radar for my desk",
-      "summary": "",
-      "url": "https://blog.ktz.me/esp32-plane-radar/",
+      "url": "https://refp.se/articles/your-shell-and-the-magic-colon",
       "source": "Hacker News",
-      "score": 192,
-      "comments": 38
+      "score": 284,
+      "comments": 117
+    },
+    {
+      "id": "hn:49051361",
+      "title": "The new rules of context engineering for Claude 5 generation models",
+      "summary": "",
+      "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
+      "source": "Hacker News",
+      "score": 381,
+      "comments": 275
     },
     {
       "id": "hn:49056112",
@@ -100,8 +78,17 @@
       "summary": "",
       "url": "https://astral.sh/blog/ruff-v0.16.0",
       "source": "Hacker News",
-      "score": 167,
-      "comments": 94
+      "score": 174,
+      "comments": 98
+    },
+    {
+      "id": "hn:49054107",
+      "title": "An ESP32 based plane radar for my desk",
+      "summary": "",
+      "url": "https://blog.ktz.me/esp32-plane-radar/",
+      "source": "Hacker News",
+      "score": 194,
+      "comments": 38
     },
     {
       "id": "lob:wee5yh",
@@ -158,6 +145,15 @@
       ]
     },
     {
+      "id": "hn:49057248",
+      "title": "Third Drone Shot Down in Three Days in Romanian Territory",
+      "summary": "",
+      "url": "https://english.mapn.ro/",
+      "source": "Hacker News",
+      "score": 104,
+      "comments": 60
+    },
+    {
       "id": "arxiv:2607.21557v1",
       "title": "OpenForgeRL: Train Harness-native Agents in Any Environment",
       "summary": "Modern AI agents rely on elaborate inference harnesses such as Claude Code, Codex, and OpenClaw to drive multi-turn reasoning, tool use, and access to external systems. While powerful, these complex harnesses also make agents hard to train end-to-end with open infrastructure, whose SFT/RL stacks can",
@@ -209,17 +205,8 @@
       "summary": "",
       "url": "https://huggingface.co/owensong/Inflect-Micro-v2",
       "source": "Hacker News",
-      "score": 165,
+      "score": 166,
       "comments": 12
-    },
-    {
-      "id": "hn:49057248",
-      "title": "Third Drone Shot Down in Three Days in Romanian Territory",
-      "summary": "",
-      "url": "https://english.mapn.ro/",
-      "source": "Hacker News",
-      "score": 90,
-      "comments": 47
     },
     {
       "id": "lob:s75zd9",
@@ -234,13 +221,22 @@
       ]
     },
     {
+      "id": "hn:49034777",
+      "title": "Stinkpot: SQLite-backed shell history",
+      "summary": "",
+      "url": "https://tangled.org/oppi.li/stinkpot",
+      "source": "Hacker News",
+      "score": 89,
+      "comments": 25
+    },
+    {
       "id": "hn:49053708",
       "title": "Alien World Chemistry Found Inside Meteorite That Struck New Jersey Home",
       "summary": "",
       "url": "https://www.seti.org/news/alien-world-chemistry-found-inside-meteorite/",
       "source": "Hacker News",
       "score": 99,
-      "comments": 33
+      "comments": 35
     }
   ],
   "ai_curated": true

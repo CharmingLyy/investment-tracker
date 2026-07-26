@@ -1,29 +1,29 @@
 # 🗞️ 每日硬核情报简报 | 2026-07-26
 
-> 💡 *"用最毒舌的视角，看最前沿的科技。"*
+> 💡 *“用最毒舌的视角，看最前沿的科技。”*
 
 ---
 
-### 1. 📌 Claude 5 时代的新规则：上下文工程 (来源: Hacker News)
-- **核心干货**：Anthropic 官方发布了针对 Claude 5 模型的上下文工程新范式，重点在于如何利用超长上下文窗口（推测超过 1M token）进行更复杂的多步推理和结构化提示设计，而非简单堆砌文本。
-- **毒舌/硬核点评**：如果你还在用"请详细解释"这种小学生级别的提示词，恭喜你，你成功把 Claude 5 用成了 GPT-3。上下文工程不是让你写小作文，是让你当架构师。
-- **🔗 传送门**：[点击直达原链接](https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models)
+### 1. 📌 Kimi K3 Agent 发现 Redis 零日漏洞并构建 RCE 利用链 (来源: The Hacker News)
+- **核心干货**：Kimi K3 智能体在 Redis 6.2.22、7.4.9、8.6.4 和 8.8.0 等多个版本中发现了可利用的零日漏洞，并成功生成了远程代码执行（RCE）利用链。Redis 已于 7 月 23 日紧急发布 7 个安全更新。所有利用链均需 `RESTORE` 命令，部分版本还需 `EVAL`、`XGROUP` 或 RedisBloom 模块。
+- **毒舌/硬核点评**：AI Agent 现在不只会写诗，还会帮你挖洞、写 PoC、然后让你加班打补丁。以后安全团队面试题得改成：“你让 AI 黑进 Redis 需要几步？”
+- **🔗 传送门**：[Kimi K3 Agents Found Redis Zero-Days and Built RCE Exploit, Researchers Say](https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html)
 
 ---
 
-### 2. 📌 Kimi K3 代理发现 Redis 多个零日漏洞并构建 RCE 利用链 (来源: Tech RSS)
-- **核心干货**：Kimi 的 K3 智能代理在 Redis 6.2.22、7.4.9、8.6.4 和 8.8.0 版本中挖出多个零日漏洞，并成功构建了需要 RESTORE、EVAL 等命令的远程代码执行链。Redis 已于7月23日紧急发布安全更新。
-- **毒舌/硬核点评**：AI 开始自己找漏洞造武器了，人类安全研究员的饭碗不是被抢，是被 AI 直接端走了。Redis 用户：赶紧升级，别等 PoC 满天飞了再哭。
-- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html)
+### 2. 📌 Claude 5 代模型的上下文工程新规则 (来源: Hacker News)
+- **核心干货**：Anthropic 官方发布博客，详细阐述了针对 Claude 5 系列模型（注意，不是 3.5 或 4）的上下文工程最佳实践。重点包括：如何设计超长上下文（百万 token 级别）的提示词、如何利用“结构化提示”来引导模型在复杂任务中保持一致性，以及如何通过“思维链”变体来提升推理深度。
+- **毒舌/硬核点评**：还记得你花两周写的那个 500 行 prompt 吗？在 Claude 5 面前，它可能连“及格”都算不上。上下文工程已经从“写小作文”进化到了“写操作系统”的级别。
+- **🔗 传送门**：[The new rules of context engineering for Claude 5 generation models](https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models)
 
 ---
 
-### 3. 📌 OpenForgeRL：在任何环境中训练原生 Agent (来源: ArXiv)
-- **核心干货**：提出了一种新的训练框架，允许直接在任何环境中对 Agent 进行端到端的强化学习训练，无需依赖 Claude Code、Codex 等复杂推理外壳，打通了 SFT/RL 训练与工具使用的闭环。
-- **毒舌/硬核点评**：终于有人意识到让 Agent 套着巨大的推理壳子跑是种病态了。去掉束缚直接裸训，这才是 Agent 该有的进化方向——别老想着给 AI 穿西装打领带。
-- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2607.21557v1)
+### 3. 📌 Inflect-Micro-v2: 9.36M 参数实现完整语音合成 (来源: Hugging Face)
+- **核心干货**：一个仅有 936 万个参数的微型语音合成模型，却能实现从文本到完整语音（含语调、情感、多说话人）的端到端生成。相比于动辄几亿甚至几十亿参数的主流 TTS 模型（如 Bark、VALL-E），它在保持可接受质量的同时，将参数量压缩了两个数量级。适合边缘设备和嵌入式场景。
+- **毒舌/硬核点评**：大厂们还在卷“百亿参数听歌识曲”的时候，人家用 900 万参数就把语音合成搞定了。这告诉我们：不是所有问题都需要用核弹来炸蚊子。
+- **🔗 传送门**：[owensong/Inflect-Micro-v2 · Hugging Face](https://huggingface.co/owensong/Inflect-Micro-v2)
 
 ---
 
 ### 🗣️ 今日顶男金句
-**"AI 替你写代码、找漏洞、做研究，你唯一能做的就是别比 AI 还懒。"**
+“真正的高手，不是把代码写得多漂亮，而是让 AI 帮你把代码写得比自己还漂亮，然后你在旁边喝茶骂它写得慢。”
