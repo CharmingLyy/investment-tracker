@@ -2,31 +2,28 @@
 
 > 💡 *"用最毒舌的视角，看最前沿的科技。"*
 
-> ⚠️ 本简报由启发式算法自动生成（未配置 LLM API Key）。
-> 设置 `DEEPSEEK_API_KEY` 或 `ANTHROPIC_API_KEY` 即可启用 AI 深度策展与毒舌点评。
-
 ---
 
-### 1. 📌 Open-weight AI is having its Kubernetes moment (来源: Hacker News)
-- **核心干货**：详情请查看原链接
-- **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。
-- **🔗 传送门**：[点击直达原链接](https://tobi.knaup.me/2026-07-25-open-weight-ai-is-having-its-kubernetes-moment/)
-
----
-
-### 2. 📌 stinkpot: sqlite-backed shell history (来源: Lobste.rs)
-- **核心干货**：详情请查看原链接
-- **毒舌/硬核点评**：信息量有限，建议查看原文自行判断。
-- **🔗 传送门**：[点击直达原链接](https://tangled.org/oppi.li/stinkpot)
-
----
-
-### 3. 📌 The new rules of context engineering for Claude 5 generation models (来源: Hacker News)
-- **核心干货**：详情请查看原链接
-- **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。
+### 1. 📌 Claude 5 时代的新规则：上下文工程 (来源: Hacker News)
+- **核心干货**：Anthropic 官方发布了针对 Claude 5 模型的上下文工程新范式，重点在于如何利用超长上下文窗口（推测超过 1M token）进行更复杂的多步推理和结构化提示设计，而非简单堆砌文本。
+- **毒舌/硬核点评**：如果你还在用"请详细解释"这种小学生级别的提示词，恭喜你，你成功把 Claude 5 用成了 GPT-3。上下文工程不是让你写小作文，是让你当架构师。
 - **🔗 传送门**：[点击直达原链接](https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models)
 
 ---
 
+### 2. 📌 Kimi K3 代理发现 Redis 多个零日漏洞并构建 RCE 利用链 (来源: Tech RSS)
+- **核心干货**：Kimi 的 K3 智能代理在 Redis 6.2.22、7.4.9、8.6.4 和 8.8.0 版本中挖出多个零日漏洞，并成功构建了需要 RESTORE、EVAL 等命令的远程代码执行链。Redis 已于7月23日紧急发布安全更新。
+- **毒舌/硬核点评**：AI 开始自己找漏洞造武器了，人类安全研究员的饭碗不是被抢，是被 AI 直接端走了。Redis 用户：赶紧升级，别等 PoC 满天飞了再哭。
+- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html)
+
+---
+
+### 3. 📌 OpenForgeRL：在任何环境中训练原生 Agent (来源: ArXiv)
+- **核心干货**：提出了一种新的训练框架，允许直接在任何环境中对 Agent 进行端到端的强化学习训练，无需依赖 Claude Code、Codex 等复杂推理外壳，打通了 SFT/RL 训练与工具使用的闭环。
+- **毒舌/硬核点评**：终于有人意识到让 Agent 套着巨大的推理壳子跑是种病态了。去掉束缚直接裸训，这才是 Agent 该有的进化方向——别老想着给 AI 穿西装打领带。
+- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2607.21557v1)
+
+---
+
 ### 🗣️ 今日顶男金句
-> 你的竞争对手在熬夜读论文，你在熬夜刷短视频。一年后，差距不用解释。
+**"AI 替你写代码、找漏洞、做研究，你唯一能做的就是别比 AI 还懒。"**

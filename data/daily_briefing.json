@@ -1,56 +1,58 @@
 {
   "date": "2026-07-26",
-  "update_time": "2026-07-26 03:24:04",
+  "update_time": "2026-07-26 13:26:32",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-26\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n> ⚠️ 本简报由启发式算法自动生成（未配置 LLM API Key）。\n> 设置 `DEEPSEEK_API_KEY` 或 `ANTHROPIC_API_KEY` 即可启用 AI 深度策展与毒舌点评。\n\n---\n\n### 1. 📌 Open-weight AI is having its Kubernetes moment (来源: Hacker News)\n- **核心干货**：详情请查看原链接\n- **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。\n- **🔗 传送门**：[点击直达原链接](https://tobi.knaup.me/2026-07-25-open-weight-ai-is-having-its-kubernetes-moment/)\n\n---\n\n### 2. 📌 stinkpot: sqlite-backed shell history (来源: Lobste.rs)\n- **核心干货**：详情请查看原链接\n- **毒舌/硬核点评**：信息量有限，建议查看原文自行判断。\n- **🔗 传送门**：[点击直达原链接](https://tangled.org/oppi.li/stinkpot)\n\n---\n\n### 3. 📌 The new rules of context engineering for Claude 5 generation models (来源: Hacker News)\n- **核心干货**：详情请查看原链接\n- **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。\n- **🔗 传送门**：[点击直达原链接](https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models)\n\n---\n\n### 🗣️ 今日顶男金句\n> 你的竞争对手在熬夜读论文，你在熬夜刷短视频。一年后，差距不用解释。\n",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-26\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Claude 5 时代的新规则：上下文工程 (来源: Hacker News)\n- **核心干货**：Anthropic 官方发布了针对 Claude 5 模型的上下文工程新范式，重点在于如何利用超长上下文窗口（推测超过 1M token）进行更复杂的多步推理和结构化提示设计，而非简单堆砌文本。\n- **毒舌/硬核点评**：如果你还在用\"请详细解释\"这种小学生级别的提示词，恭喜你，你成功把 Claude 5 用成了 GPT-3。上下文工程不是让你写小作文，是让你当架构师。\n- **🔗 传送门**：[点击直达原链接](https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models)\n\n---\n\n### 2. 📌 Kimi K3 代理发现 Redis 多个零日漏洞并构建 RCE 利用链 (来源: Tech RSS)\n- **核心干货**：Kimi 的 K3 智能代理在 Redis 6.2.22、7.4.9、8.6.4 和 8.8.0 版本中挖出多个零日漏洞，并成功构建了需要 RESTORE、EVAL 等命令的远程代码执行链。Redis 已于7月23日紧急发布安全更新。\n- **毒舌/硬核点评**：AI 开始自己找漏洞造武器了，人类安全研究员的饭碗不是被抢，是被 AI 直接端走了。Redis 用户：赶紧升级，别等 PoC 满天飞了再哭。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html)\n\n---\n\n### 3. 📌 OpenForgeRL：在任何环境中训练原生 Agent (来源: ArXiv)\n- **核心干货**：提出了一种新的训练框架，允许直接在任何环境中对 Agent 进行端到端的强化学习训练，无需依赖 Claude Code、Codex 等复杂推理外壳，打通了 SFT/RL 训练与工具使用的闭环。\n- **毒舌/硬核点评**：终于有人意识到让 Agent 套着巨大的推理壳子跑是种病态了。去掉束缚直接裸训，这才是 Agent 该有的进化方向——别老想着给 AI 穿西装打领带。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2607.21557v1)\n\n---\n\n### 🗣️ 今日顶男金句\n**\"AI 替你写代码、找漏洞、做研究，你唯一能做的就是别比 AI 还懒。\"**",
   "briefing_items": [
     {
-      "title": "Open-weight AI is having its Kubernetes moment",
+      "title": "Claude 5 时代的新规则：上下文工程",
       "source": "Hacker News",
-      "summary": "详情请查看原链接",
-      "commentary": "HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。",
-      "url": "https://tobi.knaup.me/2026-07-25-open-weight-ai-is-having-its-kubernetes-moment/"
-    },
-    {
-      "title": "stinkpot: sqlite-backed shell history",
-      "source": "Lobste.rs",
-      "summary": "详情请查看原链接",
-      "commentary": "信息量有限，建议查看原文自行判断。",
-      "url": "https://tangled.org/oppi.li/stinkpot"
-    },
-    {
-      "title": "The new rules of context engineering for Claude 5 generation models",
-      "source": "Hacker News",
-      "summary": "详情请查看原链接",
-      "commentary": "HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。",
+      "summary": "Anthropic 官方发布了针对 Claude 5 模型的上下文工程新范式，重点在于如何利用超长上下文窗口（推测超过 1M token）进行更复杂的多步推理和结构化提示设计，而非简单堆砌文本。",
+      "commentary": "如果你还在用\"请详细解释\"这种小学生级别的提示词，恭喜你，你成功把 Claude 5 用成了 GPT-3。上下文工程不是让你写小作文，是让你当架构师。",
       "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models"
     },
     {
-      "quote": "你的竞争对手在熬夜读论文，你在熬夜刷短视频。一年后，差距不用解释。"
+      "title": "Kimi K3 代理发现 Redis 多个零日漏洞并构建 RCE 利用链",
+      "source": "Tech RSS",
+      "summary": "Kimi 的 K3 智能代理在 Redis 6.2.22、7.4.9、8.6.4 和 8.8.0 版本中挖出多个零日漏洞，并成功构建了需要 RESTORE、EVAL 等命令的远程代码执行链。Redis 已于7月23日紧急发布安全更新。",
+      "commentary": "AI 开始自己找漏洞造武器了，人类安全研究员的饭碗不是被抢，是被 AI 直接端走了。Redis 用户：赶紧升级，别等 PoC 满天飞了再哭。",
+      "url": "https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html"
+    },
+    {
+      "title": "OpenForgeRL：在任何环境中训练原生 Agent",
+      "source": "ArXiv",
+      "summary": "提出了一种新的训练框架，允许直接在任何环境中对 Agent 进行端到端的强化学习训练，无需依赖 Claude Code、Codex 等复杂推理外壳，打通了 SFT/RL 训练与工具使用的闭环。",
+      "commentary": "终于有人意识到让 Agent 套着巨大的推理壳子跑是种病态了。去掉束缚直接裸训，这才是 Agent 该有的进化方向——别老想着给 AI 穿西装打领带。",
+      "url": "https://arxiv.org/abs/2607.21557v1"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49048034",
-      "title": "Open-weight AI is having its Kubernetes moment",
+      "id": "hn:49052912",
+      "title": "DeepSeek pause fundraise after comments on compute gap to US leaked (transcript) [pdf]",
       "summary": "",
-      "url": "https://tobi.knaup.me/2026-07-25-open-weight-ai-is-having-its-kubernetes-moment/",
+      "url": "https://github.com/demo-zexuan/liang-wenfeng-investor-meeting-2026-7-22/blob/master/%E6%A2%81%E6%96%87%E9%94%8B%E6%8A%95%E8%B5%84%E8%80%85%E4%BA%A4%E6%B5%81%E4%BC%9A-%E6%96%87%E5%AD%97%E7%A8%BF_1_18_translate_20260723201651.pdf",
       "source": "Hacker News",
-      "score": 327,
-      "comments": 262
+      "score": 191,
+      "comments": 146
     },
     {
-      "id": "lob:bvgaff",
-      "title": "stinkpot: sqlite-backed shell history",
+      "id": "hn:49055169",
+      "title": "GrapheneOS protections against data extraction from locked devices",
       "summary": "",
-      "url": "https://tangled.org/oppi.li/stinkpot",
-      "source": "Lobste.rs",
-      "score": 38,
-      "comments": 16,
-      "tags": [
-        "go",
-        "show"
-      ]
+      "url": "https://discuss.grapheneos.org/d/40700-grapheneos-protections-against-data-extraction-from-locked-devices",
+      "source": "Hacker News",
+      "score": 179,
+      "comments": 90
+    },
+    {
+      "id": "hn:49047453",
+      "title": "A shell colon does nothing. Use it anyway",
+      "summary": "",
+      "url": "https://refp.se/articles/your-shell-and-the-magic-colon",
+      "source": "Hacker News",
+      "score": 280,
+      "comments": 113
     },
     {
       "id": "hn:49051361",
@@ -58,37 +60,61 @@
       "summary": "",
       "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
       "source": "Hacker News",
-      "score": 191,
-      "comments": 130
+      "score": 378,
+      "comments": 274
     },
     {
-      "id": "hn:49051947",
-      "title": "GM Backs Sodium Ion Batteries for U.S. Grid Storage",
-      "summary": "",
-      "url": "https://spectrum.ieee.org/sodium-ion-battery-peak-energy",
+      "id": "hn:49054010",
+      "title": "Show HN: I mapped every US golf course",
+      "summary": "I got tired of Googling basic course info, so I made a free directory of every US course<p>Google filters for golf course results are terrible so I built a better way to browse courses using OSM as the backbone.... <a href=\"https:&#x2F;&#x2F;golfcoursebrowser.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#",
+      "url": "https://golfcoursebrowser.com/",
       "source": "Hacker News",
-      "score": 143,
-      "comments": 56
+      "score": 160,
+      "comments": 100
     },
     {
-      "id": "hn:48976262",
-      "title": "Stolen Buttons",
+      "id": "lob:bvgaff",
+      "title": "stinkpot: sqlite-backed shell history",
       "summary": "",
-      "url": "https://anatolyzenkov.com/stolen-buttons",
-      "source": "Hacker News",
-      "score": 620,
-      "comments": 151
-    },
-    {
-      "id": "lob:eidh3u",
-      "title": "A shell colon does nothing. Use it anyway",
-      "summary": "",
-      "url": "https://refp.se/articles/your-shell-and-the-magic-colon",
+      "url": "https://tangled.org/oppi.li/stinkpot",
       "source": "Lobste.rs",
-      "score": 76,
-      "comments": 30,
+      "score": 43,
+      "comments": 20,
       "tags": [
-        "programming"
+        "go",
+        "show"
+      ]
+    },
+    {
+      "id": "hn:49054107",
+      "title": "An ESP32 based plane radar for my desk",
+      "summary": "",
+      "url": "https://blog.ktz.me/esp32-plane-radar/",
+      "source": "Hacker News",
+      "score": 192,
+      "comments": 38
+    },
+    {
+      "id": "hn:49056112",
+      "title": "Ruff v0.16.0 – Significant new updates – 413 default rules up from 59",
+      "summary": "",
+      "url": "https://astral.sh/blog/ruff-v0.16.0",
+      "source": "Hacker News",
+      "score": 167,
+      "comments": 94
+    },
+    {
+      "id": "lob:wee5yh",
+      "title": "Your harddrive is probably full",
+      "summary": "",
+      "url": "https://www.marginalia.nu/log/a_139_hdd/",
+      "source": "Lobste.rs",
+      "score": 49,
+      "comments": 18,
+      "tags": [
+        "culture",
+        "performance",
+        "practices"
       ]
     },
     {
@@ -97,7 +123,7 @@
       "summary": "",
       "url": "https://unsung.aresluna.org/chromes-breaking-and-entering/",
       "source": "Lobste.rs",
-      "score": 71,
+      "score": 74,
       "comments": 41,
       "tags": [
         "browsers",
@@ -106,17 +132,29 @@
       ]
     },
     {
-      "id": "lob:wee5yh",
-      "title": "Your harddrive is probably full",
+      "id": "lob:x7jtkt",
+      "title": "Memory Safety Absolutists",
       "summary": "",
-      "url": "https://www.marginalia.nu/log/a_139_hdd/",
+      "url": "https://itsallaboutthebit.com/memory-safety-absolutists/",
       "source": "Lobste.rs",
-      "score": 38,
-      "comments": 12,
+      "score": 42,
+      "comments": 39,
       "tags": [
-        "culture",
-        "performance",
-        "practices"
+        "c",
+        "rust",
+        "zig"
+      ]
+    },
+    {
+      "id": "lob:krsvrp",
+      "title": "Maybe we should revisit microkernels",
+      "summary": "",
+      "url": "https://notes.hella.cheap/maybe-we-should-revisit-microkernels.html",
+      "source": "Lobste.rs",
+      "score": 24,
+      "comments": 15,
+      "tags": [
+        "osdev"
       ]
     },
     {
@@ -140,32 +178,48 @@
       "score": 0
     },
     {
-      "id": "lob:u60zv9",
-      "title": "Watching Go's new garbage collector move through the heap",
+      "id": "lob:t5os1h",
+      "title": "Android May Soon Restrict On-Device ADB, Affecting Shizuku, libadb and Developers",
       "summary": "",
-      "url": "https://theconsensus.dev/p/2026/07/19/observing-gos-garbage-collector-old-and-new.html",
+      "url": "https://kitsumed.github.io/blog/posts/android-may-soon-restrict-on-device-adb/",
       "source": "Lobste.rs",
-      "score": 44,
-      "comments": 3,
+      "score": 41,
+      "comments": 5,
       "tags": [
-        "dotnet",
-        "go",
-        "performance"
+        "android"
       ]
     },
     {
-      "id": "lob:x7jtkt",
-      "title": "Memory Safety Absolutists",
+      "id": "lob:ygobr3",
+      "title": "General Resolution: LLM usage in Debian",
       "summary": "",
-      "url": "https://itsallaboutthebit.com/memory-safety-absolutists/",
+      "url": "https://www.debian.org/vote/2026/vote_002",
       "source": "Lobste.rs",
-      "score": 21,
-      "comments": 17,
+      "score": 23,
+      "comments": 20,
       "tags": [
-        "c",
-        "rust",
-        "zig"
+        "culture",
+        "linux",
+        "vibecoding"
       ]
+    },
+    {
+      "id": "hn:49053375",
+      "title": "Inflect-Micro-v2: complete voice in 9.36M parameters",
+      "summary": "",
+      "url": "https://huggingface.co/owensong/Inflect-Micro-v2",
+      "source": "Hacker News",
+      "score": 165,
+      "comments": 12
+    },
+    {
+      "id": "hn:49057248",
+      "title": "Third Drone Shot Down in Three Days in Romanian Territory",
+      "summary": "",
+      "url": "https://english.mapn.ro/",
+      "source": "Hacker News",
+      "score": 90,
+      "comments": 47
     },
     {
       "id": "lob:s75zd9",
@@ -173,87 +227,20 @@
       "summary": "<p>Inspired by the infamous <a href=\"https://gobyexample.com/\" rel=\"ugc\">Go by Example</a></p>\n",
       "url": "https://zigbyexample.neocities.org/",
       "source": "Lobste.rs",
-      "score": 36,
+      "score": 43,
       "comments": 6,
       "tags": [
         "zig"
       ]
     },
     {
-      "id": "lob:t5os1h",
-      "title": "Android May Soon Restrict On-Device ADB, Affecting Shizuku, libadb and Developers",
+      "id": "hn:49053708",
+      "title": "Alien World Chemistry Found Inside Meteorite That Struck New Jersey Home",
       "summary": "",
-      "url": "https://kitsumed.github.io/blog/posts/android-may-soon-restrict-on-device-adb/",
-      "source": "Lobste.rs",
-      "score": 36,
-      "comments": 3,
-      "tags": [
-        "android"
-      ]
-    },
-    {
-      "id": "rss:76da0d1510",
-      "title": "ChatGPT AgentForger Flaw Could Deploy Rogue Workspace Agents via a Phishing Link",
-      "summary": "Cybersecurity researchers have disclosed a critical vulnerability in OpenAI's ChatGPT Workspace Agents that could have allowed a single phishing link to stealthily build, authorize, and deploy an autonomous artificial intelligence (AI) agent inside a victim's organization.\n\nThe vulnerability has bee",
-      "url": "https://thehackernews.com/2026/07/chatgpt-agentforger-flaw-could-deploy.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "lob:zfvln5",
-      "title": "We Are Not Special (2021)",
-      "summary": "",
-      "url": "https://www.hillelwayne.com/post/we-are-not-special/",
-      "source": "Lobste.rs",
-      "score": 31,
-      "comments": 7,
-      "tags": [
-        "practices"
-      ]
-    },
-    {
-      "id": "hn:49050512",
-      "title": "Running a 28.9M parameter LLM on an $8 microcontroller",
-      "summary": "",
-      "url": "https://github.com/slvDev/esp32-ai",
+      "url": "https://www.seti.org/news/alien-world-chemistry-found-inside-meteorite/",
       "source": "Hacker News",
-      "score": 97,
-      "comments": 20
-    },
-    {
-      "id": "hn:49052628",
-      "title": "Clinical failure rates over the decades: yikes",
-      "summary": "",
-      "url": "https://www.science.org/content/blog-post/clinical-failure-rates-over-decades-yikes",
-      "source": "Hacker News",
-      "score": 62,
-      "comments": 34
-    },
-    {
-      "id": "arxiv:2607.21595v1",
-      "title": "3D-Aware VLMs with Implicit and Explicit Geometries",
-      "summary": "Despite rapid progress, most existing vision-language models (VLMs) built from 2D visual inputs often struggle when handling various 3D tasks that require fine-grained spatial understanding and reasoning. To bridge this gap, we present VLM-IE3D, a unified framework that enhances the 3D spatial aware",
-      "url": "https://arxiv.org/abs/2607.21595v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2607.21595v1"
-    },
-    {
-      "id": "arxiv:2607.21579v1",
-      "title": "Barzilai-Borwein Fails Superlinear Convergence on an Open Set of Quadratics for Every Dimension $n\\geq 4$",
-      "summary": "Barzilai--Borwein (BB) method has shown strong practical performance in continuous optimization, yet its convergence dynamics remains poorly understood. In particular, a central unresolved question is whether BB converges superlinearly for almost every strictly convex quadratic problem and initializ",
-      "url": "https://arxiv.org/abs/2607.21579v1",
-      "source": "ArXiv",
-      "categories": [
-        "math.OC",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2607.21579v1"
+      "score": 99,
+      "comments": 33
     }
   ],
   "ai_curated": true
