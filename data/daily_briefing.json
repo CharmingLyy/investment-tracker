@@ -1,136 +1,76 @@
 {
-  "date": "2026-07-26",
-  "update_time": "2026-07-26 13:36:42",
+  "date": "2026-07-27",
+  "update_time": "2026-07-27 03:34:14",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-26\n\n> 💡 *“用最毒舌的视角，看最前沿的科技。”*\n\n---\n\n### 1. 📌 Kimi K3 Agent 发现 Redis 零日漏洞并构建 RCE 利用链 (来源: The Hacker News)\n- **核心干货**：Kimi K3 智能体在 Redis 6.2.22、7.4.9、8.6.4 和 8.8.0 等多个版本中发现了可利用的零日漏洞，并成功生成了远程代码执行（RCE）利用链。Redis 已于 7 月 23 日紧急发布 7 个安全更新。所有利用链均需 `RESTORE` 命令，部分版本还需 `EVAL`、`XGROUP` 或 RedisBloom 模块。\n- **毒舌/硬核点评**：AI Agent 现在不只会写诗，还会帮你挖洞、写 PoC、然后让你加班打补丁。以后安全团队面试题得改成：“你让 AI 黑进 Redis 需要几步？”\n- **🔗 传送门**：[Kimi K3 Agents Found Redis Zero-Days and Built RCE Exploit, Researchers Say](https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html)\n\n---\n\n### 2. 📌 Claude 5 代模型的上下文工程新规则 (来源: Hacker News)\n- **核心干货**：Anthropic 官方发布博客，详细阐述了针对 Claude 5 系列模型（注意，不是 3.5 或 4）的上下文工程最佳实践。重点包括：如何设计超长上下文（百万 token 级别）的提示词、如何利用“结构化提示”来引导模型在复杂任务中保持一致性，以及如何通过“思维链”变体来提升推理深度。\n- **毒舌/硬核点评**：还记得你花两周写的那个 500 行 prompt 吗？在 Claude 5 面前，它可能连“及格”都算不上。上下文工程已经从“写小作文”进化到了“写操作系统”的级别。\n- **🔗 传送门**：[The new rules of context engineering for Claude 5 generation models](https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models)\n\n---\n\n### 3. 📌 Inflect-Micro-v2: 9.36M 参数实现完整语音合成 (来源: Hugging Face)\n- **核心干货**：一个仅有 936 万个参数的微型语音合成模型，却能实现从文本到完整语音（含语调、情感、多说话人）的端到端生成。相比于动辄几亿甚至几十亿参数的主流 TTS 模型（如 Bark、VALL-E），它在保持可接受质量的同时，将参数量压缩了两个数量级。适合边缘设备和嵌入式场景。\n- **毒舌/硬核点评**：大厂们还在卷“百亿参数听歌识曲”的时候，人家用 900 万参数就把语音合成搞定了。这告诉我们：不是所有问题都需要用核弹来炸蚊子。\n- **🔗 传送门**：[owensong/Inflect-Micro-v2 · Hugging Face](https://huggingface.co/owensong/Inflect-Micro-v2)\n\n---\n\n### 🗣️ 今日顶男金句\n“真正的高手，不是把代码写得多漂亮，而是让 AI 帮你把代码写得比自己还漂亮，然后你在旁边喝茶骂它写得慢。”",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-27\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 美国公民因机场搜身时GrapheneOS手机自动擦除被起诉 (来源: Hacker News)\n- **核心干货**：一名亚特兰大男子在机场被CBP搜身时，其搭载GrapheneOS系统的手机因安全策略自动触发“工厂重置”。美国检方竟以此为由起诉他“妨碍执法”。这实际上是GrapheneOS的防物理扣押设计，系统在检测到特定解锁失败或强制刷机尝试时自动销毁数据。\n- **毒舌/硬核点评**：当你的手机比你还守口如瓶时，法律就变成了攻击你的武器。这不是手机犯罪，这是“隐私税”的最新缴纳方式——只不过是以牢饭的形式。GrapheneOS，真正把“永不信任”刻进硅基里的系统。\n- **🔗 传送门**：[TechSpot报道](https://www.techspot.com/news/113236-us-prosecutors-charge-atlanta-man-after-grapheneos-phone.html)\n\n---\n\n### 2. 📌 Kimi K3 AI Agent发现Redis零日漏洞并构建RCE利用链 (来源: Hacker News/Tech RSS)\n- **核心干货**：Kimi K3 AI Agent（非Kimi K3模型，而是AI Agent框架）团队在Redis 6.2.22、7.4.9等版本中发现了四个零日漏洞，并成功构建了完整的远程代码执行（RCE）利用链。漏洞涉及RESTORE命令、Streams、XGROUP和RedisBloom模块。Redis已于7月23日发布安全更新。这是AI Agent首次独立发现并利用真实世界关键基础设施漏洞。\n- **毒舌/硬核点评**：AI Agent不再只会写诗和编代码了，现在它还能帮你挖Redis的坟。当Agent学会了“先搞破坏再修复”的资本主义式创新，人类安全工程师可以准备转行去写诗了。Redis，你的“内存数据库”现在成了“内存漏洞库”。\n- **🔗 传送门**：[The Hacker News报道](https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html)\n\n---\n\n### 3. 📌 浏览器中的真实物理黑洞模拟 (来源: Hacker News)\n- **核心干货**：哈佛大学黑洞计划天体物理学家Sasha Plavin开发了一个基于实时射线追踪和辐射传输模拟的黑洞可视化工具，完全在浏览器中运行。它模拟了真实的相对论效应——光线弯曲、引力红移、吸积盘辐射，甚至包括多普勒束流效应。不是那种“画个黑圈加个光晕”的玩具，而是真正的物理引擎。\n- **毒舌/硬核点评**：你可以在卧室里“拥有”一个黑洞，而且它比你的前任更真实——因为至少它不耗电（除了你的显卡）。这玩意儿展示了WebGPU和WASM的真正潜力：把天体物理从超级计算机搬到你的笔记本里。建议配合《星际穿越》原声带食用，效果更佳。\n- **🔗 传送门**：[Blackhole模拟](https://blackhole.plav.in)\n\n---\n\n### 🗣️ 今日顶男金句\n**“当你的手机比你更懂法律时，要么是手机该升级，要么是你该换监狱。”**",
   "briefing_items": [
     {
-      "title": "Kimi K3 Agent 发现 Redis 零日漏洞并构建 RCE 利用链",
-      "source": "The Hacker News",
-      "summary": "Kimi K3 智能体在 Redis 6.2.22、7.4.9、8.6.4 和 8.8.0 等多个版本中发现了可利用的零日漏洞，并成功生成了远程代码执行（RCE）利用链。Redis 已于 7 月 23 日紧急发布 7 个安全更新。所有利用链均需 `RESTORE` 命令，部分版本还需 `EVAL`、`XGROUP` 或 RedisBloom 模块。",
-      "commentary": "AI Agent 现在不只会写诗，还会帮你挖洞、写 PoC、然后让你加班打补丁。以后安全团队面试题得改成：“你让 AI 黑进 Redis 需要几步？”",
-      "url": ""
-    },
-    {
-      "title": "Claude 5 代模型的上下文工程新规则",
+      "title": "美国公民因机场搜身时GrapheneOS手机自动擦除被起诉",
       "source": "Hacker News",
-      "summary": "Anthropic 官方发布博客，详细阐述了针对 Claude 5 系列模型（注意，不是 3.5 或 4）的上下文工程最佳实践。重点包括：如何设计超长上下文（百万 token 级别）的提示词、如何利用“结构化提示”来引导模型在复杂任务中保持一致性，以及如何通过“思维链”变体来提升推理深度。",
-      "commentary": "还记得你花两周写的那个 500 行 prompt 吗？在 Claude 5 面前，它可能连“及格”都算不上。上下文工程已经从“写小作文”进化到了“写操作系统”的级别。",
+      "summary": "一名亚特兰大男子在机场被CBP搜身时，其搭载GrapheneOS系统的手机因安全策略自动触发“工厂重置”。美国检方竟以此为由起诉他“妨碍执法”。这实际上是GrapheneOS的防物理扣押设计，系统在检测到特定解锁失败或强制刷机尝试时自动销毁数据。",
+      "commentary": "当你的手机比你还守口如瓶时，法律就变成了攻击你的武器。这不是手机犯罪，这是“隐私税”的最新缴纳方式——只不过是以牢饭的形式。GrapheneOS，真正把“永不信任”刻进硅基里的系统。",
       "url": ""
     },
     {
-      "title": "Inflect-Micro-v2: 9.36M 参数实现完整语音合成",
-      "source": "Hugging Face",
-      "summary": "一个仅有 936 万个参数的微型语音合成模型，却能实现从文本到完整语音（含语调、情感、多说话人）的端到端生成。相比于动辄几亿甚至几十亿参数的主流 TTS 模型（如 Bark、VALL-E），它在保持可接受质量的同时，将参数量压缩了两个数量级。适合边缘设备和嵌入式场景。",
-      "commentary": "大厂们还在卷“百亿参数听歌识曲”的时候，人家用 900 万参数就把语音合成搞定了。这告诉我们：不是所有问题都需要用核弹来炸蚊子。",
+      "title": "Kimi K3 AI Agent发现Redis零日漏洞并构建RCE利用链",
+      "source": "Hacker News/Tech RSS",
+      "summary": "Kimi K3 AI Agent（非Kimi K3模型，而是AI Agent框架）团队在Redis 6.2.22、7.4.9等版本中发现了四个零日漏洞，并成功构建了完整的远程代码执行（RCE）利用链。漏洞涉及RESTORE命令、Streams、XGROUP和RedisBloom模块。Redis已于7月23日发布安全更新。这是AI Agent首次独立发现并利用真实世界关键基础设施漏洞。",
+      "commentary": "AI Agent不再只会写诗和编代码了，现在它还能帮你挖Redis的坟。当Agent学会了“先搞破坏再修复”的资本主义式创新，人类安全工程师可以准备转行去写诗了。Redis，你的“内存数据库”现在成了“内存漏洞库”。",
+      "url": ""
+    },
+    {
+      "title": "浏览器中的真实物理黑洞模拟",
+      "source": "Hacker News",
+      "summary": "哈佛大学黑洞计划天体物理学家Sasha Plavin开发了一个基于实时射线追踪和辐射传输模拟的黑洞可视化工具，完全在浏览器中运行。它模拟了真实的相对论效应——光线弯曲、引力红移、吸积盘辐射，甚至包括多普勒束流效应。不是那种“画个黑圈加个光晕”的玩具，而是真正的物理引擎。",
+      "commentary": "你可以在卧室里“拥有”一个黑洞，而且它比你的前任更真实——因为至少它不耗电（除了你的显卡）。这玩意儿展示了WebGPU和WASM的真正潜力：把天体物理从超级计算机搬到你的笔记本里。建议配合《星际穿越》原声带食用，效果更佳。",
       "url": ""
     }
   ],
   "candidates": [
     {
-      "id": "hn:49052912",
-      "title": "DeepSeek pause fundraise after comments on compute gap to US leaked (transcript) [pdf]",
+      "id": "hn:49060856",
+      "title": "Decker, a platform that builds on the legacy of Hypercard and classic macOS",
       "summary": "",
-      "url": "https://github.com/demo-zexuan/liang-wenfeng-investor-meeting-2026-7-22/blob/master/%E6%A2%81%E6%96%87%E9%94%8B%E6%8A%95%E8%B5%84%E8%80%85%E4%BA%A4%E6%B5%81%E4%BC%9A-%E6%96%87%E5%AD%97%E7%A8%BF_1_18_translate_20260723201651.pdf",
+      "url": "https://beyondloom.com/decker/",
       "source": "Hacker News",
-      "score": 192,
-      "comments": 149
+      "score": 248,
+      "comments": 60
     },
     {
-      "id": "hn:49055169",
-      "title": "GrapheneOS protections against data extraction from locked devices",
+      "id": "hn:49063022",
+      "title": "US citizen charged after GrapheneOS phone wipes during airport search",
       "summary": "",
-      "url": "https://discuss.grapheneos.org/d/40700-grapheneos-protections-against-data-extraction-from-locked-devices",
+      "url": "https://www.techspot.com/news/113236-us-prosecutors-charge-atlanta-man-after-grapheneos-phone.html",
       "source": "Hacker News",
-      "score": 181,
-      "comments": 96
+      "score": 311,
+      "comments": 198
     },
     {
-      "id": "hn:49054010",
-      "title": "Show HN: I mapped every US golf course",
-      "summary": "I got tired of Googling basic course info, so I made a free directory of every US course<p>Google filters for golf course results are terrible so I built a better way to browse courses using OSM as the backbone.... <a href=\"https:&#x2F;&#x2F;golfcoursebrowser.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#",
-      "url": "https://golfcoursebrowser.com/",
+      "id": "hn:49057241",
+      "title": "Htmx 4.0, the first JavaScript library to release exclusively on the Game Boy",
+      "summary": "",
+      "url": "https://swag.htmx.org/en-cad/products/htmx-4-the-game",
       "source": "Hacker News",
-      "score": 163,
-      "comments": 102
+      "score": 377,
+      "comments": 119
     },
     {
-      "id": "hn:49047453",
-      "title": "A shell colon does nothing. Use it anyway",
+      "id": "hn:49063754",
+      "title": "PGSimCity - How PostgreSQL Works",
       "summary": "",
-      "url": "https://refp.se/articles/your-shell-and-the-magic-colon",
+      "url": "https://nikolays.github.io/PGSimCity/",
       "source": "Hacker News",
-      "score": 284,
-      "comments": 117
+      "score": 200,
+      "comments": 29
     },
     {
-      "id": "hn:49051361",
-      "title": "The new rules of context engineering for Claude 5 generation models",
+      "id": "hn:49060495",
+      "title": "French firefighters face 'pyrocumulonimbus' for first time",
       "summary": "",
-      "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
+      "url": "https://www.france24.com/en/live-news/20260726-french-firefighters-face-pyrocumulonimbus-for-first-time",
       "source": "Hacker News",
-      "score": 381,
-      "comments": 275
-    },
-    {
-      "id": "hn:49056112",
-      "title": "Ruff v0.16.0 – Significant new updates – 413 default rules up from 59",
-      "summary": "",
-      "url": "https://astral.sh/blog/ruff-v0.16.0",
-      "source": "Hacker News",
-      "score": 174,
-      "comments": 98
-    },
-    {
-      "id": "hn:49054107",
-      "title": "An ESP32 based plane radar for my desk",
-      "summary": "",
-      "url": "https://blog.ktz.me/esp32-plane-radar/",
-      "source": "Hacker News",
-      "score": 194,
-      "comments": 38
-    },
-    {
-      "id": "lob:wee5yh",
-      "title": "Your harddrive is probably full",
-      "summary": "",
-      "url": "https://www.marginalia.nu/log/a_139_hdd/",
-      "source": "Lobste.rs",
-      "score": 49,
-      "comments": 18,
-      "tags": [
-        "culture",
-        "performance",
-        "practices"
-      ]
-    },
-    {
-      "id": "lob:c76s0r",
-      "title": "Chrome registers a global shortcut for Gemini popup window",
-      "summary": "",
-      "url": "https://unsung.aresluna.org/chromes-breaking-and-entering/",
-      "source": "Lobste.rs",
-      "score": 74,
-      "comments": 41,
-      "tags": [
-        "browsers",
-        "mac",
-        "windows"
-      ]
-    },
-    {
-      "id": "lob:x7jtkt",
-      "title": "Memory Safety Absolutists",
-      "summary": "",
-      "url": "https://itsallaboutthebit.com/memory-safety-absolutists/",
-      "source": "Lobste.rs",
-      "score": 42,
-      "comments": 39,
-      "tags": [
-        "c",
-        "rust",
-        "zig"
-      ]
+      "score": 209,
+      "comments": 120
     },
     {
       "id": "lob:krsvrp",
@@ -138,32 +78,98 @@
       "summary": "",
       "url": "https://notes.hella.cheap/maybe-we-should-revisit-microkernels.html",
       "source": "Lobste.rs",
-      "score": 24,
-      "comments": 15,
+      "score": 47,
+      "comments": 31,
       "tags": [
         "osdev"
       ]
     },
     {
-      "id": "hn:49057248",
-      "title": "Third Drone Shot Down in Three Days in Romanian Territory",
+      "id": "lob:bvgaff",
+      "title": "stinkpot: sqlite-backed shell history",
       "summary": "",
-      "url": "https://english.mapn.ro/",
-      "source": "Hacker News",
-      "score": 104,
-      "comments": 60
+      "url": "https://tangled.org/oppi.li/stinkpot",
+      "source": "Lobste.rs",
+      "score": 47,
+      "comments": 21,
+      "tags": [
+        "go",
+        "show"
+      ]
     },
     {
-      "id": "arxiv:2607.21557v1",
-      "title": "OpenForgeRL: Train Harness-native Agents in Any Environment",
-      "summary": "Modern AI agents rely on elaborate inference harnesses such as Claude Code, Codex, and OpenClaw to drive multi-turn reasoning, tool use, and access to external systems. While powerful, these complex harnesses also make agents hard to train end-to-end with open infrastructure, whose SFT/RL stacks can",
-      "url": "https://arxiv.org/abs/2607.21557v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_id": "2607.21557v1"
+      "id": "hn:49059367",
+      "title": "Design is compromise",
+      "summary": "",
+      "url": "https://stephango.com/design-is-compromise",
+      "source": "Hacker News",
+      "score": 207,
+      "comments": 76
+    },
+    {
+      "id": "lob:eidh3u",
+      "title": "A shell colon does nothing. Use it anyway",
+      "summary": "",
+      "url": "https://refp.se/articles/your-shell-and-the-magic-colon",
+      "source": "Lobste.rs",
+      "score": 98,
+      "comments": 40,
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "id": "hn:49059398",
+      "title": "Show HN: CheapSecurity – Lightweight, Self-Hosted CCTV for Linux SBCs",
+      "summary": "",
+      "url": "https://github.com/gmrandazzo/CheapSecurity",
+      "source": "Hacker News",
+      "score": 116,
+      "comments": 22
+    },
+    {
+      "id": "lob:x7jtkt",
+      "title": "Memory Safety Absolutists",
+      "summary": "",
+      "url": "https://itsallaboutthebit.com/memory-safety-absolutists/",
+      "source": "Lobste.rs",
+      "score": 50,
+      "comments": 68,
+      "tags": [
+        "c",
+        "rust",
+        "zig"
+      ]
+    },
+    {
+      "id": "lob:sh9bbn",
+      "title": "How to self-host servers in your living room on static IPs",
+      "summary": "",
+      "url": "https://vimuser.org/l2tp.html",
+      "source": "Lobste.rs",
+      "score": 18,
+      "comments": 14,
+      "tags": [
+        "networking"
+      ]
+    },
+    {
+      "id": "hn:49060724",
+      "title": "Introduction to Data-Oriented Design [pdf]",
+      "summary": "",
+      "url": "https://www.gamedevs.org/uploads/introduction-to-data-oriented-design.pdf",
+      "source": "Hacker News",
+      "score": 128,
+      "comments": 38
+    },
+    {
+      "id": "hn:49060295",
+      "title": "How to Write English Prose",
+      "summary": "",
+      "url": "https://thelampmagazine.com/blog/how-to-write-english-prose",
+      "source": "Hacker News",
+      "score": 89,
+      "comments": 46
     },
     {
       "id": "rss:c0c87bb811",
@@ -174,69 +180,57 @@
       "score": 0
     },
     {
-      "id": "lob:t5os1h",
-      "title": "Android May Soon Restrict On-Device ADB, Affecting Shizuku, libadb and Developers",
+      "id": "hn:49061887",
+      "title": "Simulate cassette tape audio profiles using FFmpeg",
       "summary": "",
-      "url": "https://kitsumed.github.io/blog/posts/android-may-soon-restrict-on-device-adb/",
-      "source": "Lobste.rs",
-      "score": 41,
-      "comments": 5,
-      "tags": [
-        "android"
-      ]
+      "url": "https://github.com/AARomanov1985/Audio-Cassette-Simulation",
+      "source": "Hacker News",
+      "score": 91,
+      "comments": 42
     },
     {
-      "id": "lob:ygobr3",
-      "title": "General Resolution: LLM usage in Debian",
+      "id": "rss:76da0d1510",
+      "title": "ChatGPT AgentForger Flaw Could Deploy Rogue Workspace Agents via a Phishing Link",
+      "summary": "Cybersecurity researchers have disclosed a critical vulnerability in OpenAI's ChatGPT Workspace Agents that could have allowed a single phishing link to stealthily build, authorize, and deploy an autonomous artificial intelligence (AI) agent inside a victim's organization.\n\nThe vulnerability has bee",
+      "url": "https://thehackernews.com/2026/07/chatgpt-agentforger-flaw-could-deploy.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "lob:sd5em2",
+      "title": "Himalaya v2.0.0: CLI to manage emails",
       "summary": "",
-      "url": "https://www.debian.org/vote/2026/vote_002",
+      "url": "https://fosstodon.org/@pimalaya/116983467890532240",
       "source": "Lobste.rs",
-      "score": 23,
-      "comments": 20,
+      "score": 17,
+      "comments": 5,
       "tags": [
-        "culture",
-        "linux",
+        "email",
+        "release",
+        "rust",
         "vibecoding"
       ]
     },
     {
-      "id": "hn:49053375",
-      "title": "Inflect-Micro-v2: complete voice in 9.36M parameters",
-      "summary": "",
-      "url": "https://huggingface.co/owensong/Inflect-Micro-v2",
-      "source": "Hacker News",
-      "score": 166,
-      "comments": 12
-    },
-    {
-      "id": "lob:s75zd9",
-      "title": "Zig by Example",
-      "summary": "<p>Inspired by the infamous <a href=\"https://gobyexample.com/\" rel=\"ugc\">Go by Example</a></p>\n",
-      "url": "https://zigbyexample.neocities.org/",
-      "source": "Lobste.rs",
-      "score": 43,
-      "comments": 6,
-      "tags": [
-        "zig"
-      ]
-    },
-    {
-      "id": "hn:49034777",
-      "title": "Stinkpot: SQLite-backed shell history",
-      "summary": "",
-      "url": "https://tangled.org/oppi.li/stinkpot",
+      "id": "hn:49021270",
+      "title": "Show HN: Physically accurate black hole you can put in your room",
+      "summary": "We have a black hole at home — with actual relativistic physics, live in your browser.<p>I&#x27;m Sasha (Alexander) Plavin, an astrophysicist at Harvard&#x27;s Black Hole Initiative studying quasars and black hole environments. I work with raytracing&#x2F;radiative transfer simulations professionall",
+      "url": "https://blackhole.plav.in",
       "source": "Hacker News",
       "score": 89,
-      "comments": 25
+      "comments": 18
     },
     {
-      "id": "hn:49053708",
-      "title": "Alien World Chemistry Found Inside Meteorite That Struck New Jersey Home",
+      "id": "lob:utnhmy",
+      "title": "How I Find Problems to Solve as a Staff Engineer",
       "summary": "",
-      "url": "https://www.seti.org/news/alien-world-chemistry-found-inside-meteorite/",
-      "source": "Hacker News",
-      "score": 99,
-      "comments": 35
+      "url": "https://lalitm.com/post/find-problems-staff-engineer/",
+      "source": "Lobste.rs",
+      "score": 31,
+      "comments": 0,
+      "tags": [
+        "practices"
+      ]
     }
   ],
   "ai_curated": true

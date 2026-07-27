@@ -1,29 +1,29 @@
-# 🗞️ 每日硬核情报简报 | 2026-07-26
+# 🗞️ 每日硬核情报简报 | 2026-07-27
 
-> 💡 *“用最毒舌的视角，看最前沿的科技。”*
-
----
-
-### 1. 📌 Kimi K3 Agent 发现 Redis 零日漏洞并构建 RCE 利用链 (来源: The Hacker News)
-- **核心干货**：Kimi K3 智能体在 Redis 6.2.22、7.4.9、8.6.4 和 8.8.0 等多个版本中发现了可利用的零日漏洞，并成功生成了远程代码执行（RCE）利用链。Redis 已于 7 月 23 日紧急发布 7 个安全更新。所有利用链均需 `RESTORE` 命令，部分版本还需 `EVAL`、`XGROUP` 或 RedisBloom 模块。
-- **毒舌/硬核点评**：AI Agent 现在不只会写诗，还会帮你挖洞、写 PoC、然后让你加班打补丁。以后安全团队面试题得改成：“你让 AI 黑进 Redis 需要几步？”
-- **🔗 传送门**：[Kimi K3 Agents Found Redis Zero-Days and Built RCE Exploit, Researchers Say](https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html)
+> 💡 *"用最毒舌的视角，看最前沿的科技。"*
 
 ---
 
-### 2. 📌 Claude 5 代模型的上下文工程新规则 (来源: Hacker News)
-- **核心干货**：Anthropic 官方发布博客，详细阐述了针对 Claude 5 系列模型（注意，不是 3.5 或 4）的上下文工程最佳实践。重点包括：如何设计超长上下文（百万 token 级别）的提示词、如何利用“结构化提示”来引导模型在复杂任务中保持一致性，以及如何通过“思维链”变体来提升推理深度。
-- **毒舌/硬核点评**：还记得你花两周写的那个 500 行 prompt 吗？在 Claude 5 面前，它可能连“及格”都算不上。上下文工程已经从“写小作文”进化到了“写操作系统”的级别。
-- **🔗 传送门**：[The new rules of context engineering for Claude 5 generation models](https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models)
+### 1. 📌 美国公民因机场搜身时GrapheneOS手机自动擦除被起诉 (来源: Hacker News)
+- **核心干货**：一名亚特兰大男子在机场被CBP搜身时，其搭载GrapheneOS系统的手机因安全策略自动触发“工厂重置”。美国检方竟以此为由起诉他“妨碍执法”。这实际上是GrapheneOS的防物理扣押设计，系统在检测到特定解锁失败或强制刷机尝试时自动销毁数据。
+- **毒舌/硬核点评**：当你的手机比你还守口如瓶时，法律就变成了攻击你的武器。这不是手机犯罪，这是“隐私税”的最新缴纳方式——只不过是以牢饭的形式。GrapheneOS，真正把“永不信任”刻进硅基里的系统。
+- **🔗 传送门**：[TechSpot报道](https://www.techspot.com/news/113236-us-prosecutors-charge-atlanta-man-after-grapheneos-phone.html)
 
 ---
 
-### 3. 📌 Inflect-Micro-v2: 9.36M 参数实现完整语音合成 (来源: Hugging Face)
-- **核心干货**：一个仅有 936 万个参数的微型语音合成模型，却能实现从文本到完整语音（含语调、情感、多说话人）的端到端生成。相比于动辄几亿甚至几十亿参数的主流 TTS 模型（如 Bark、VALL-E），它在保持可接受质量的同时，将参数量压缩了两个数量级。适合边缘设备和嵌入式场景。
-- **毒舌/硬核点评**：大厂们还在卷“百亿参数听歌识曲”的时候，人家用 900 万参数就把语音合成搞定了。这告诉我们：不是所有问题都需要用核弹来炸蚊子。
-- **🔗 传送门**：[owensong/Inflect-Micro-v2 · Hugging Face](https://huggingface.co/owensong/Inflect-Micro-v2)
+### 2. 📌 Kimi K3 AI Agent发现Redis零日漏洞并构建RCE利用链 (来源: Hacker News/Tech RSS)
+- **核心干货**：Kimi K3 AI Agent（非Kimi K3模型，而是AI Agent框架）团队在Redis 6.2.22、7.4.9等版本中发现了四个零日漏洞，并成功构建了完整的远程代码执行（RCE）利用链。漏洞涉及RESTORE命令、Streams、XGROUP和RedisBloom模块。Redis已于7月23日发布安全更新。这是AI Agent首次独立发现并利用真实世界关键基础设施漏洞。
+- **毒舌/硬核点评**：AI Agent不再只会写诗和编代码了，现在它还能帮你挖Redis的坟。当Agent学会了“先搞破坏再修复”的资本主义式创新，人类安全工程师可以准备转行去写诗了。Redis，你的“内存数据库”现在成了“内存漏洞库”。
+- **🔗 传送门**：[The Hacker News报道](https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html)
+
+---
+
+### 3. 📌 浏览器中的真实物理黑洞模拟 (来源: Hacker News)
+- **核心干货**：哈佛大学黑洞计划天体物理学家Sasha Plavin开发了一个基于实时射线追踪和辐射传输模拟的黑洞可视化工具，完全在浏览器中运行。它模拟了真实的相对论效应——光线弯曲、引力红移、吸积盘辐射，甚至包括多普勒束流效应。不是那种“画个黑圈加个光晕”的玩具，而是真正的物理引擎。
+- **毒舌/硬核点评**：你可以在卧室里“拥有”一个黑洞，而且它比你的前任更真实——因为至少它不耗电（除了你的显卡）。这玩意儿展示了WebGPU和WASM的真正潜力：把天体物理从超级计算机搬到你的笔记本里。建议配合《星际穿越》原声带食用，效果更佳。
+- **🔗 传送门**：[Blackhole模拟](https://blackhole.plav.in)
 
 ---
 
 ### 🗣️ 今日顶男金句
-“真正的高手，不是把代码写得多漂亮，而是让 AI 帮你把代码写得比自己还漂亮，然后你在旁边喝茶骂它写得慢。”
+**“当你的手机比你更懂法律时，要么是手机该升级，要么是你该换监狱。”**
