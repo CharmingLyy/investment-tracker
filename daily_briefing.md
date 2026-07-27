@@ -1,29 +1,29 @@
 # 🗞️ 每日硬核情报简报 | 2026-07-27
 
-> 💡 *"用最毒舌的视角，看最前沿的科技。"*
+> 💡 *“用最毒舌的视角，看最前沿的科技。”*
 
 ---
 
-### 1. 📌 美国公民因机场搜身时GrapheneOS手机自动擦除被起诉 (来源: Hacker News)
-- **核心干货**：一名亚特兰大男子在机场被CBP搜身时，其搭载GrapheneOS系统的手机因安全策略自动触发“工厂重置”。美国检方竟以此为由起诉他“妨碍执法”。这实际上是GrapheneOS的防物理扣押设计，系统在检测到特定解锁失败或强制刷机尝试时自动销毁数据。
-- **毒舌/硬核点评**：当你的手机比你还守口如瓶时，法律就变成了攻击你的武器。这不是手机犯罪，这是“隐私税”的最新缴纳方式——只不过是以牢饭的形式。GrapheneOS，真正把“永不信任”刻进硅基里的系统。
-- **🔗 传送门**：[TechSpot报道](https://www.techspot.com/news/113236-us-prosecutors-charge-atlanta-man-after-grapheneos-phone.html)
+### 1. 📌 Kimi-K3 开源发布 (来源: HuggingFace)
+- **核心干货**：月之暗面正式开源了其旗舰大模型 Kimi-K3，权重已可在 HuggingFace 直接下载。这标志着国产大模型在开放性和性能上的一次硬核突围，不再只是“PPT 发布”。
+- **毒舌/硬核点评**：终于不是“套壳”了？希望参数和训练细节也能像 HuggingFace 页面一样干净利落，别学某些公司开源个“阉割版”出来刷存在感。
+- **🔗 传送门**：[https://huggingface.co/moonshotai/Kimi-K3](https://huggingface.co/moonshotai/Kimi-K3)
 
 ---
 
-### 2. 📌 Kimi K3 AI Agent发现Redis零日漏洞并构建RCE利用链 (来源: Hacker News/Tech RSS)
-- **核心干货**：Kimi K3 AI Agent（非Kimi K3模型，而是AI Agent框架）团队在Redis 6.2.22、7.4.9等版本中发现了四个零日漏洞，并成功构建了完整的远程代码执行（RCE）利用链。漏洞涉及RESTORE命令、Streams、XGROUP和RedisBloom模块。Redis已于7月23日发布安全更新。这是AI Agent首次独立发现并利用真实世界关键基础设施漏洞。
-- **毒舌/硬核点评**：AI Agent不再只会写诗和编代码了，现在它还能帮你挖Redis的坟。当Agent学会了“先搞破坏再修复”的资本主义式创新，人类安全工程师可以准备转行去写诗了。Redis，你的“内存数据库”现在成了“内存漏洞库”。
-- **🔗 传送门**：[The Hacker News报道](https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html)
+### 2. 📌 黑洞模拟器，物理系硬核玩具 (来源: Hacker News | HN 分数: 405)
+- **核心干货**：哈佛天体物理学家搞了个浏览器里的真实黑洞模拟器，基于物理光线追踪，动态模拟引力透镜、吸积盘和时空弯曲。不是你那种“像素风”的玩具，而是能让物理系学生尖叫的硬核工具。
+- **毒舌/硬核点评**：建议所有声称“用 AI 模拟物理”的项目都来学学——这才是“硬核”，而不是给个模糊的扩散模型输出就说“宇宙模拟”。
+- **🔗 传送门**：[https://blackhole.plav.in](https://blackhole.plav.in)
 
 ---
 
-### 3. 📌 浏览器中的真实物理黑洞模拟 (来源: Hacker News)
-- **核心干货**：哈佛大学黑洞计划天体物理学家Sasha Plavin开发了一个基于实时射线追踪和辐射传输模拟的黑洞可视化工具，完全在浏览器中运行。它模拟了真实的相对论效应——光线弯曲、引力红移、吸积盘辐射，甚至包括多普勒束流效应。不是那种“画个黑圈加个光晕”的玩具，而是真正的物理引擎。
-- **毒舌/硬核点评**：你可以在卧室里“拥有”一个黑洞，而且它比你的前任更真实——因为至少它不耗电（除了你的显卡）。这玩意儿展示了WebGPU和WASM的真正潜力：把天体物理从超级计算机搬到你的笔记本里。建议配合《星际穿越》原声带食用，效果更佳。
-- **🔗 传送门**：[Blackhole模拟](https://blackhole.plav.in)
+### 3. 📌 ChatGPT AgentForger 漏洞：一键部署恶意 AI 特工 (来源: Hacker News | Tech RSS)
+- **核心干货**：安全研究人员披露了 ChatGPT Workspace Agents 的一个严重漏洞（AgentForger）。攻击者只需一个钓鱼链接，就能在受害者的工作空间中悄无声息地创建、授权并部署一个恶意 AI 代理，实现内鬼式渗透。
+- **毒舌/硬核点评**：AI 特工还没帮人类打工呢，先被黑客拿来当“间谍”用了。OpenAI，你们的安全团队是不是也该“开个会”了？
+- **🔗 传送门**：[https://thehackernews.com/2026/07/chatgpt-agentforger-flaw-could-deploy.html](https://thehackernews.com/2026/07/chatgpt-agentforger-flaw-could-deploy.html)
 
 ---
 
 ### 🗣️ 今日顶男金句
-**“当你的手机比你更懂法律时，要么是手机该升级，要么是你该换监狱。”**
+**“别让‘AI 特工’还没帮你赚钱，先帮黑客偷了你的密码。”**
