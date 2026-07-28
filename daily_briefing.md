@@ -1,29 +1,29 @@
-# 🗞️ 每日硬核情报简报 | 2026-07-27
+# 🗞️ 每日硬核情报简报 | 2026-07-28
 
-> 💡 *“用最毒舌的视角，看最前沿的科技。”*
-
----
-
-### 1. 📌 Kimi-K3 开源发布 (来源: HuggingFace)
-- **核心干货**：月之暗面正式开源了其旗舰大模型 Kimi-K3，权重已可在 HuggingFace 直接下载。这标志着国产大模型在开放性和性能上的一次硬核突围，不再只是“PPT 发布”。
-- **毒舌/硬核点评**：终于不是“套壳”了？希望参数和训练细节也能像 HuggingFace 页面一样干净利落，别学某些公司开源个“阉割版”出来刷存在感。
-- **🔗 传送门**：[https://huggingface.co/moonshotai/Kimi-K3](https://huggingface.co/moonshotai/Kimi-K3)
+> 💡 *"用最毒舌的视角，看最前沿的科技。"*
 
 ---
 
-### 2. 📌 黑洞模拟器，物理系硬核玩具 (来源: Hacker News | HN 分数: 405)
-- **核心干货**：哈佛天体物理学家搞了个浏览器里的真实黑洞模拟器，基于物理光线追踪，动态模拟引力透镜、吸积盘和时空弯曲。不是你那种“像素风”的玩具，而是能让物理系学生尖叫的硬核工具。
-- **毒舌/硬核点评**：建议所有声称“用 AI 模拟物理”的项目都来学学——这才是“硬核”，而不是给个模糊的扩散模型输出就说“宇宙模拟”。
-- **🔗 传送门**：[https://blackhole.plav.in](https://blackhole.plav.in)
+### 1. 📌 Anthropic 摊牌：我们为什么死磕开放权重 (来源: Hacker News)
+- **核心干货**：Anthropic 正式发布声明，阐述其对“开放权重”模型的立场。核心观点是：开放权重（Open Weights）≠ 安全可控。他们承认开源生态的价值，但认为在能力临界点，纯粹开放权重模型可能导致不可逆的安全风险，因此会继续在“有用性”和“安全性”之间走一条更保守的路线。这基本是在跟 Meta 的 Llama 系列和各类“全裸开源”派公开划清界限。
+- **毒舌/硬核点评**：翻译一下就是：“我们觉得你们这帮人玩火玩得太嗨了，我们不想当那个被烧死的背锅侠。” 这波操作既是对监管的投诚，也是对技术责任的清醒认知——毕竟，没人想看到自家的模型被用来写勒索信。
+- **🔗 传送门**：[https://www.anthropic.com/news/position-open-weights-models](https://www.anthropic.com/news/position-open-weights-models)
 
 ---
 
-### 3. 📌 ChatGPT AgentForger 漏洞：一键部署恶意 AI 特工 (来源: Hacker News | Tech RSS)
-- **核心干货**：安全研究人员披露了 ChatGPT Workspace Agents 的一个严重漏洞（AgentForger）。攻击者只需一个钓鱼链接，就能在受害者的工作空间中悄无声息地创建、授权并部署一个恶意 AI 代理，实现内鬼式渗透。
-- **毒舌/硬核点评**：AI 特工还没帮人类打工呢，先被黑客拿来当“间谍”用了。OpenAI，你们的安全团队是不是也该“开个会”了？
-- **🔗 传送门**：[https://thehackernews.com/2026/07/chatgpt-agentforger-flaw-could-deploy.html](https://thehackernews.com/2026/07/chatgpt-agentforger-flaw-could-deploy.html)
+### 2. 📌 别高兴太早，你看到的 Googlebot 八成是假的 (来源: Hacker News)
+- **核心干货**：安全研究员发现，互联网上绝大多数自称“Googlebot”的爬虫流量都是冒牌货。这些假爬虫通过伪造 User-Agent 和 IP 段，绕过简易的机器人检测，用于爬取内容、进行 DDoS 侦察或直接攻击。文章给出了通过反向 DNS 和 IP 范围验证真伪的具体方法。
+- **毒舌/硬核点评**：你的网站日志里那些“来自 Google”的访客，可能根本不是什么搜索引擎，而是某个脚本小子开着代理在裸奔。建议各位站长把“验证 Googlebot”的代码从“有空再写”移到“今天不改就吃不下饭”的优先级。
+- **🔗 传送门**：[https://digitalseams.com/blog/most-googlebots-are-fake](https://digitalseams.com/blog/most-googlebots-are-fake)
+
+---
+
+### 3. 📌 Fastjson 又出 RCE 漏洞，这次没补丁 (来源: Tech RSS)
+- **核心干货**：安全公司 ThreatBook 和 Imperva 披露，阿里巴巴的 Java JSON 库 Fastjson 1.x 版本存在一个严重远程代码执行漏洞（CVE-2026-16723）。攻击者只需发送一个恶意 JSON 请求，无需任何认证，就能在受影响的 Spring Boot 应用上以 Java 进程权限执行任意代码。更刺激的是，目前官方还没有补丁。
+- **毒舌/硬核点评**：Fastjson —— 一个让无数 Java 程序员又爱又恨的名字，它就像一个定时炸弹，你永远不知道下一次爆炸是明天还是后天。如果你还在用 1.x 版本，建议立刻、马上把它从你的依赖里踢出去，换个安全的库。这不是建议，是生存指南。
+- **🔗 传送门**：[https://thehackernews.com/2026/07/fastjson-1x-rce-vulnerability-targeted.html](https://thehackernews.com/2026/07/fastjson-1x-rce-vulnerability-targeted.html)
 
 ---
 
 ### 🗣️ 今日顶男金句
-**“别让‘AI 特工’还没帮你赚钱，先帮黑客偷了你的密码。”**
+> **“你看到的每一个‘Googlebot’，都可能是另一个程序员还没修完的 Bug。”**

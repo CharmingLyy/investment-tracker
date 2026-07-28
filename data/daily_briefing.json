@@ -1,168 +1,154 @@
 {
-  "date": "2026-07-27",
-  "update_time": "2026-07-27 14:39:39",
+  "date": "2026-07-28",
+  "update_time": "2026-07-28 02:51:05",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-27\n\n> 💡 *“用最毒舌的视角，看最前沿的科技。”*\n\n---\n\n### 1. 📌 Kimi-K3 开源发布 (来源: HuggingFace)\n- **核心干货**：月之暗面正式开源了其旗舰大模型 Kimi-K3，权重已可在 HuggingFace 直接下载。这标志着国产大模型在开放性和性能上的一次硬核突围，不再只是“PPT 发布”。\n- **毒舌/硬核点评**：终于不是“套壳”了？希望参数和训练细节也能像 HuggingFace 页面一样干净利落，别学某些公司开源个“阉割版”出来刷存在感。\n- **🔗 传送门**：[https://huggingface.co/moonshotai/Kimi-K3](https://huggingface.co/moonshotai/Kimi-K3)\n\n---\n\n### 2. 📌 黑洞模拟器，物理系硬核玩具 (来源: Hacker News | HN 分数: 405)\n- **核心干货**：哈佛天体物理学家搞了个浏览器里的真实黑洞模拟器，基于物理光线追踪，动态模拟引力透镜、吸积盘和时空弯曲。不是你那种“像素风”的玩具，而是能让物理系学生尖叫的硬核工具。\n- **毒舌/硬核点评**：建议所有声称“用 AI 模拟物理”的项目都来学学——这才是“硬核”，而不是给个模糊的扩散模型输出就说“宇宙模拟”。\n- **🔗 传送门**：[https://blackhole.plav.in](https://blackhole.plav.in)\n\n---\n\n### 3. 📌 ChatGPT AgentForger 漏洞：一键部署恶意 AI 特工 (来源: Hacker News | Tech RSS)\n- **核心干货**：安全研究人员披露了 ChatGPT Workspace Agents 的一个严重漏洞（AgentForger）。攻击者只需一个钓鱼链接，就能在受害者的工作空间中悄无声息地创建、授权并部署一个恶意 AI 代理，实现内鬼式渗透。\n- **毒舌/硬核点评**：AI 特工还没帮人类打工呢，先被黑客拿来当“间谍”用了。OpenAI，你们的安全团队是不是也该“开个会”了？\n- **🔗 传送门**：[https://thehackernews.com/2026/07/chatgpt-agentforger-flaw-could-deploy.html](https://thehackernews.com/2026/07/chatgpt-agentforger-flaw-could-deploy.html)\n\n---\n\n### 🗣️ 今日顶男金句\n**“别让‘AI 特工’还没帮你赚钱，先帮黑客偷了你的密码。”**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-28\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Anthropic 摊牌：我们为什么死磕开放权重 (来源: Hacker News)\n- **核心干货**：Anthropic 正式发布声明，阐述其对“开放权重”模型的立场。核心观点是：开放权重（Open Weights）≠ 安全可控。他们承认开源生态的价值，但认为在能力临界点，纯粹开放权重模型可能导致不可逆的安全风险，因此会继续在“有用性”和“安全性”之间走一条更保守的路线。这基本是在跟 Meta 的 Llama 系列和各类“全裸开源”派公开划清界限。\n- **毒舌/硬核点评**：翻译一下就是：“我们觉得你们这帮人玩火玩得太嗨了，我们不想当那个被烧死的背锅侠。” 这波操作既是对监管的投诚，也是对技术责任的清醒认知——毕竟，没人想看到自家的模型被用来写勒索信。\n- **🔗 传送门**：[https://www.anthropic.com/news/position-open-weights-models](https://www.anthropic.com/news/position-open-weights-models)\n\n---\n\n### 2. 📌 别高兴太早，你看到的 Googlebot 八成是假的 (来源: Hacker News)\n- **核心干货**：安全研究员发现，互联网上绝大多数自称“Googlebot”的爬虫流量都是冒牌货。这些假爬虫通过伪造 User-Agent 和 IP 段，绕过简易的机器人检测，用于爬取内容、进行 DDoS 侦察或直接攻击。文章给出了通过反向 DNS 和 IP 范围验证真伪的具体方法。\n- **毒舌/硬核点评**：你的网站日志里那些“来自 Google”的访客，可能根本不是什么搜索引擎，而是某个脚本小子开着代理在裸奔。建议各位站长把“验证 Googlebot”的代码从“有空再写”移到“今天不改就吃不下饭”的优先级。\n- **🔗 传送门**：[https://digitalseams.com/blog/most-googlebots-are-fake](https://digitalseams.com/blog/most-googlebots-are-fake)\n\n---\n\n### 3. 📌 Fastjson 又出 RCE 漏洞，这次没补丁 (来源: Tech RSS)\n- **核心干货**：安全公司 ThreatBook 和 Imperva 披露，阿里巴巴的 Java JSON 库 Fastjson 1.x 版本存在一个严重远程代码执行漏洞（CVE-2026-16723）。攻击者只需发送一个恶意 JSON 请求，无需任何认证，就能在受影响的 Spring Boot 应用上以 Java 进程权限执行任意代码。更刺激的是，目前官方还没有补丁。\n- **毒舌/硬核点评**：Fastjson —— 一个让无数 Java 程序员又爱又恨的名字，它就像一个定时炸弹，你永远不知道下一次爆炸是明天还是后天。如果你还在用 1.x 版本，建议立刻、马上把它从你的依赖里踢出去，换个安全的库。这不是建议，是生存指南。\n- **🔗 传送门**：[https://thehackernews.com/2026/07/fastjson-1x-rce-vulnerability-targeted.html](https://thehackernews.com/2026/07/fastjson-1x-rce-vulnerability-targeted.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> **“你看到的每一个‘Googlebot’，都可能是另一个程序员还没修完的 Bug。”**",
   "briefing_items": [
     {
-      "title": "Kimi-K3 开源发布",
-      "source": "HuggingFace",
-      "summary": "月之暗面正式开源了其旗舰大模型 Kimi-K3，权重已可在 HuggingFace 直接下载。这标志着国产大模型在开放性和性能上的一次硬核突围，不再只是“PPT 发布”。",
-      "commentary": "终于不是“套壳”了？希望参数和训练细节也能像 HuggingFace 页面一样干净利落，别学某些公司开源个“阉割版”出来刷存在感。",
+      "title": "Anthropic 摊牌：我们为什么死磕开放权重",
+      "source": "Hacker News",
+      "summary": "Anthropic 正式发布声明，阐述其对“开放权重”模型的立场。核心观点是：开放权重（Open Weights）≠ 安全可控。他们承认开源生态的价值，但认为在能力临界点，纯粹开放权重模型可能导致不可逆的安全风险，因此会继续在“有用性”和“安全性”之间走一条更保守的路线。这基本是在跟 Meta 的 Llama 系列和各类“全裸开源”派公开划清界限。",
+      "commentary": "翻译一下就是：“我们觉得你们这帮人玩火玩得太嗨了，我们不想当那个被烧死的背锅侠。” 这波操作既是对监管的投诚，也是对技术责任的清醒认知——毕竟，没人想看到自家的模型被用来写勒索信。",
       "url": ""
     },
     {
-      "title": "黑洞模拟器，物理系硬核玩具",
-      "source": "Hacker News | HN 分数: 405",
-      "summary": "哈佛天体物理学家搞了个浏览器里的真实黑洞模拟器，基于物理光线追踪，动态模拟引力透镜、吸积盘和时空弯曲。不是你那种“像素风”的玩具，而是能让物理系学生尖叫的硬核工具。",
-      "commentary": "建议所有声称“用 AI 模拟物理”的项目都来学学——这才是“硬核”，而不是给个模糊的扩散模型输出就说“宇宙模拟”。",
+      "title": "别高兴太早，你看到的 Googlebot 八成是假的",
+      "source": "Hacker News",
+      "summary": "安全研究员发现，互联网上绝大多数自称“Googlebot”的爬虫流量都是冒牌货。这些假爬虫通过伪造 User-Agent 和 IP 段，绕过简易的机器人检测，用于爬取内容、进行 DDoS 侦察或直接攻击。文章给出了通过反向 DNS 和 IP 范围验证真伪的具体方法。",
+      "commentary": "你的网站日志里那些“来自 Google”的访客，可能根本不是什么搜索引擎，而是某个脚本小子开着代理在裸奔。建议各位站长把“验证 Googlebot”的代码从“有空再写”移到“今天不改就吃不下饭”的优先级。",
       "url": ""
     },
     {
-      "title": "ChatGPT AgentForger 漏洞：一键部署恶意 AI 特工",
-      "source": "Hacker News | Tech RSS",
-      "summary": "安全研究人员披露了 ChatGPT Workspace Agents 的一个严重漏洞（AgentForger）。攻击者只需一个钓鱼链接，就能在受害者的工作空间中悄无声息地创建、授权并部署一个恶意 AI 代理，实现内鬼式渗透。",
-      "commentary": "AI 特工还没帮人类打工呢，先被黑客拿来当“间谍”用了。OpenAI，你们的安全团队是不是也该“开个会”了？",
+      "title": "Fastjson 又出 RCE 漏洞，这次没补丁",
+      "source": "Tech RSS",
+      "summary": "安全公司 ThreatBook 和 Imperva 披露，阿里巴巴的 Java JSON 库 Fastjson 1.x 版本存在一个严重远程代码执行漏洞（CVE-2026-16723）。攻击者只需发送一个恶意 JSON 请求，无需任何认证，就能在受影响的 Spring Boot 应用上以 Java 进程权限执行任意代码。更刺激的是，目前官方还没有补丁。",
+      "commentary": "Fastjson —— 一个让无数 Java 程序员又爱又恨的名字，它就像一个定时炸弹，你永远不知道下一次爆炸是明天还是后天。如果你还在用 1.x 版本，建议立刻、马上把它从你的依赖里踢出去，换个安全的库。这不是建议，是生存指南。",
       "url": ""
+    },
+    {
+      "quote": "**“你看到的每一个‘Googlebot’，都可能是另一个程序员还没修完的 Bug。”**"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49067854",
-      "title": "How is the Bun Rewrite in Rust going?",
+      "id": "hn:49076057",
+      "title": "Our position on open-weights models",
       "summary": "",
-      "url": "https://lockwood.dev/ai/2026/07/27/how-is-the-bun-rewrite-in-rust-going.html",
+      "url": "https://www.anthropic.com/news/position-open-weights-models",
       "source": "Hacker News",
-      "score": 241,
-      "comments": 159
+      "score": 508,
+      "comments": 714
     },
     {
-      "id": "hn:49063754",
-      "title": "PGSimCity - How PostgreSQL Works",
+      "id": "lob:h9hdzg",
+      "title": "Most Googlebots are fake",
       "summary": "",
-      "url": "https://nikolays.github.io/PGSimCity/",
-      "source": "Hacker News",
-      "score": 770,
-      "comments": 71
-    },
-    {
-      "id": "hn:49065752",
-      "title": "Kimi-K3 Releases on HuggingFace 7/27",
-      "summary": "",
-      "url": "https://huggingface.co/moonshotai/Kimi-K3",
-      "source": "Hacker News",
-      "score": 687,
-      "comments": 306
-    },
-    {
-      "id": "hn:49068738",
-      "title": "AI companies are shredding rare books",
-      "summary": "",
-      "url": "https://xcancel.com/HedgieMarkets/status/2081534588485296565",
-      "source": "Hacker News",
-      "score": 343,
-      "comments": 202
-    },
-    {
-      "id": "hn:49021270",
-      "title": "Show HN: Physically accurate black hole you can put in your room",
-      "summary": "We have a black hole at home — with actual relativistic physics, live in your browser.<p>I&#x27;m Sasha (Alexander) Plavin, an astrophysicist at Harvard&#x27;s Black Hole Initiative studying quasars and black hole environments. I work with raytracing&#x2F;radiative transfer simulations professionall",
-      "url": "https://blackhole.plav.in",
-      "source": "Hacker News",
-      "score": 405,
-      "comments": 143
-    },
-    {
-      "id": "hn:49009706",
-      "title": "Magnolias Are So Old That They're Pollinated by Beetles, Not Bees",
-      "summary": "",
-      "url": "https://mymodernmet.com/magnolia-ancient-flowers-beetles/",
-      "source": "Hacker News",
-      "score": 158,
-      "comments": 64
-    },
-    {
-      "id": "arxiv:2607.22511v1",
-      "title": "CausalForge: A Formally Grounded, Self-Improving Agentic Framework for Automated Research in Causal Inference",
-      "summary": "Automating theoretical research is constrained not only by the generation of candidate results, but also by their reliable evaluation. A common approach is to close the research loop with a large language model (LLM) reviewer. However, such reviewers remain empirically unreliable: they may accept fa",
-      "url": "https://arxiv.org/abs/2607.22511v1",
-      "source": "ArXiv",
-      "categories": [
-        "stat.ML",
-        "cs.AI",
-        "cs.LG",
-        "econ.EM"
-      ],
-      "arxiv_id": "2607.22511v1"
-    },
-    {
-      "id": "lob:llf3mg",
-      "title": "lobste.rs ~~has~~had a js-error: here is a mitigation",
-      "summary": "<strong>Introduction</strong>\n<p><a href=\"https://lobste.rs\" rel=\"ugc\">https://lobste.rs</a> – at the time of writing – has a javascript error on load for logged in users:</p>\n<pre><code>Uncaught ReferenceError: qS is not defined\r\n    at new _LobstersFunction (user-c27ac03d.js:144:34)\r\n    at user-c",
-      "url": "https://lobste.rs/s/llf3mg/lobste_rs_has_had_js_error_here_is",
+      "url": "https://digitalseams.com/blog/most-googlebots-are-fake",
       "source": "Lobste.rs",
-      "score": 14,
-      "comments": 17,
+      "score": 40,
+      "comments": 14,
       "tags": [
-        "javascript",
-        "meta"
+        "networking"
       ]
     },
     {
-      "id": "hn:49067301",
-      "title": "Removing React.js from the codebase and adapting Htmx for UI interactivity (2023)",
+      "id": "lob:gicomw",
+      "title": "The Productivity Mirage",
       "summary": "",
-      "url": "https://misago-project.org/t/removing-reactjs-from-the-codebase-and-adapting-htmx-for-ui-interactivity/1267/",
+      "url": "https://frantic.im/mirage",
+      "source": "Lobste.rs",
+      "score": 33,
+      "comments": 14,
+      "tags": [
+        "practices",
+        "programming"
+      ]
+    },
+    {
+      "id": "lob:vtev1n",
+      "title": "How is the Bun Rewrite in Rust Going?",
+      "summary": "",
+      "url": "https://lockwood.dev/ai/2026/07/27/how-is-the-bun-rewrite-in-rust-going.html",
+      "source": "Lobste.rs",
+      "score": 34,
+      "comments": 4,
+      "tags": [
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "hn:49076391",
+      "title": "Benchmarking Opus 5 on SlopCodeBench",
+      "summary": "",
+      "url": "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-opus-5-on-slop-code-bench.md",
       "source": "Hacker News",
-      "score": 80,
-      "comments": 44
+      "score": 151,
+      "comments": 39
     },
     {
-      "id": "arxiv:2607.22525v1",
-      "title": "Explainable Reinforcement Learning for assisting Air Traffic Controllers",
-      "summary": "To effectively integrate AI into high-stakes, critical environments such as healthcare, autonomous driving, and aviation--and to advance toward higher levels of automation and seamless human-AI collaboration--building trust in AI-driven solutions is essential. Trust, in turn, is closely linked to th",
-      "url": "https://arxiv.org/abs/2607.22525v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI"
-      ],
-      "arxiv_id": "2607.22525v1"
+      "id": "hn:49045474",
+      "title": "Watching Go's new garbage collector move through the heap",
+      "summary": "",
+      "url": "https://theconsensus.dev/p/2026/07/19/observing-gos-garbage-collector-old-and-new.html",
+      "source": "Hacker News",
+      "score": 177,
+      "comments": 17
     },
     {
-      "id": "arxiv:2607.22520v1",
-      "title": "The Regression Tax: Decomposing Why Skills Help and Hurt LLM Agents",
-      "summary": "Adding procedural skills to an LLM agent is typically evaluated by average improvement in task success. However, this metric hides an important cost: skills can also make agents worse. We measure both sides by comparing agents with and without skills across nearly 6,000 runs spanning two office auto",
-      "url": "https://arxiv.org/abs/2607.22520v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI"
-      ],
-      "arxiv_id": "2607.22520v1"
+      "id": "lob:yijxwe",
+      "title": "Blogging Can Just Be Stating The Obvious",
+      "summary": "",
+      "url": "https://blog.jim-nielsen.com/2026/blogging-stating-the-obvious/",
+      "source": "Lobste.rs",
+      "score": 53,
+      "comments": 7,
+      "tags": [
+        "education"
+      ]
     },
     {
-      "id": "arxiv:2607.22513v1",
-      "title": "Opaque Epistemic Mediation: How LLM Deployment Configurations Shape the Validation of Pseudo-Science",
-      "summary": "Commercial large language models are increasingly used as knowledge references, yet their stance on contested scientific claims is neither stable nor transparent. We tested how four major LLM families (Claude, Grok, GPT, Gemini) evaluate ethnonationalist pseudo-science derived from Frank Salter's bi",
-      "url": "https://arxiv.org/abs/2607.22513v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CY",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_id": "2607.22513v1"
+      "id": "lob:vjwhqn",
+      "title": "Open Source Must Be Fun (Or It Will Die)",
+      "summary": "",
+      "url": "https://mikemcquaid.com/open-source-must-be-fun-or-it-will-die/",
+      "source": "Lobste.rs",
+      "score": 35,
+      "comments": 3,
+      "tags": [
+        "culture",
+        "practices"
+      ]
     },
     {
-      "id": "arxiv:2607.22489v1",
-      "title": "\\k{appa}-LoRA: Condition Numbers Reveal Which LoRA Matrices Worth Updating",
-      "summary": "Low-Rank Adaptation (LoRA) has become a widely adopted technique for efficient neural network fine-tuning, decomposing model updates into low-rank matrices. However, LoRA remains computationally costly because it updates all matrices uniformly, regardless of their actual contribution to adaptation. ",
-      "url": "https://arxiv.org/abs/2607.22489v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "arxiv_id": "2607.22489v1"
+      "id": "hn:49076900",
+      "title": "Astronauts describe persistent 'observer' sensation after 6 month missions",
+      "summary": "",
+      "url": "https://spacedaily.com/sd-v-astronauts-returning-from-six-month-missions-describe-a-persistent-observer-sensation-the-feeling-of-watching-their-own-lives-from-a-half-step-outside-the-frame-weeks-after-theyr/",
+      "source": "Hacker News",
+      "score": 92,
+      "comments": 38
+    },
+    {
+      "id": "hn:49073942",
+      "title": "Self-contained highly-portable Python distributions",
+      "summary": "",
+      "url": "https://gregoryszorc.com/docs/python-build-standalone/main/",
+      "source": "Hacker News",
+      "score": 119,
+      "comments": 24
+    },
+    {
+      "id": "lob:jnhyrh",
+      "title": "What does GitHub’s security team even do?",
+      "summary": "",
+      "url": "https://orchidfiles.com/github-security-team/",
+      "source": "Lobste.rs",
+      "score": 24,
+      "comments": 10,
+      "tags": [
+        "security",
+        "vcs"
+      ]
     },
     {
       "id": "rss:9b661d3c11",
@@ -173,62 +159,82 @@
       "score": 0
     },
     {
-      "id": "rss:76da0d1510",
-      "title": "ChatGPT AgentForger Flaw Could Deploy Rogue Workspace Agents via a Phishing Link",
-      "summary": "Cybersecurity researchers have disclosed a critical vulnerability in OpenAI's ChatGPT Workspace Agents that could have allowed a single phishing link to stealthily build, authorize, and deploy an autonomous artificial intelligence (AI) agent inside a victim's organization.\n\nThe vulnerability has bee",
-      "url": "https://thehackernews.com/2026/07/chatgpt-agentforger-flaw-could-deploy.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:4dd7e1d374",
-      "title": "Opus 5: More Capability? Definitely a Better Liar.",
-      "summary": "Twenty-two commits to change one line.\n\nOn Friday, Anthropic released version 5 across all their models. I was curious after all the Fable hype and just hadn't found the right problem to throw at a Fable model. I decided using an Opus 5 local agent to upgrade my code review agents from Opus 4.8 to O",
-      "url": "https://dev.to/raleighschickel/opus-5-more-capability-definitely-a-better-liar-125g",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "hn:49069132",
-      "title": "Should you wash your solar panels?",
+      "id": "lob:cbbit5",
+      "title": "Paged Out - Issue #9",
       "summary": "",
-      "url": "https://incoherency.co.uk/blog/stories/should-you-wash-your-solar-panels.html",
-      "source": "Hacker News",
-      "score": 66,
-      "comments": 43
-    },
-    {
-      "id": "hn:49066928",
-      "title": "VLC for Unity now supported on Linux",
-      "summary": "",
-      "url": "https://code.videolan.org/videolan/vlc-unity",
-      "source": "Hacker News",
-      "score": 69,
-      "comments": 18
-    },
-    {
-      "id": "lob:h9hdzg",
-      "title": "Most Googlebots are fake",
-      "summary": "",
-      "url": "https://digitalseams.com/blog/most-googlebots-are-fake",
+      "url": "https://pagedout.institute/webview.php?issue=9&page=1",
       "source": "Lobste.rs",
-      "score": 15,
-      "comments": 9,
+      "score": 34,
+      "comments": 3,
       "tags": [
-        "networking"
+        "release",
+        "security"
       ]
     },
     {
-      "id": "lob:n3dz7x",
-      "title": "Teaching Kids Forth",
+      "id": "rss:1d63dd7e8a",
+      "title": "Public Exploit Released for Patched vBulletin Pre-Auth Code Execution Flaw",
+      "summary": "Public exploit details released on July 27 show how an unauthenticated request can reach PHP's eval() function inside vBulletin and execute code on an unpatched forum server. The attack requires no account, administrative access, or interaction from another user.\n\nSSD Secure Disclosure lists vBullet",
+      "url": "https://thehackernews.com/2026/07/public-exploit-released-for-patched.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:4eaed4a6a5",
+      "title": "Fastjson 1.x RCE Vulnerability Targeted in Attacks With No Patched Available",
+      "summary": "Security firms ThreatBook and Imperva say attackers are targeting a critical flaw in Fastjson, Alibaba's JSON library for Java. In affected Spring Boot applications, a malicious JSON request can execute code without authentication, with the privileges of the Java process.\n\nTracked as CVE-2026-16723,",
+      "url": "https://thehackernews.com/2026/07/fastjson-1x-rce-vulnerability-targeted.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:7dada1564a",
+      "title": "A beginner's guide to the Kimi-K3 model by Moonshotai on Huggingface",
+      "summary": "This is a simplified guide to an AI model called Kimi-K3 maintained by Moonshotai. If you like these kinds of analysis, you should join AImodels.fyi or follow us on Twitter.\n\n\n  \n  \n  Overview\n\n\nKimi-K3 is a 2.8 trillion parameter open-weight multimodal agentic model developed by moonshotai. It repr",
+      "url": "https://dev.to/aimodels-fyi/a-beginners-guide-to-the-kimi-k3-model-by-moonshotai-on-huggingface-912",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "hn:49021024",
+      "title": "Securing Services with Rootless Containers",
       "summary": "",
-      "url": "https://gracefulliberty.com/articles/teaching-kids-forth/",
+      "url": "https://blog.coderspirit.xyz/blog/2026/07/06/securing-services-with-rootless-containers/",
+      "source": "Hacker News",
+      "score": 70,
+      "comments": 24
+    },
+    {
+      "id": "lob:r7zjlm",
+      "title": "What are you doing this week?",
+      "summary": "<p>What are you doing this week? Feel free to share!</p>\n<p>Keep in mind it’s OK to do nothing at all, too.</p>\n",
+      "url": "https://lobste.rs/s/r7zjlm/what_are_you_doing_this_week",
       "source": "Lobste.rs",
-      "score": 24,
-      "comments": 9,
+      "score": 11,
+      "comments": 13,
       "tags": [
-        "concatenative",
-        "education"
+        "programming"
+      ]
+    },
+    {
+      "id": "hn:49074817",
+      "title": "Launch HN: Rise Reforming (YC S26) – Turning Waste Gases into Valuable Chemicals",
+      "summary": "Hi HN! This is George, Lucas, and Jona from Rise Reforming\n(<a href=\"https:&#x2F;&#x2F;www.rise-reforming.com&#x2F;\">https:&#x2F;&#x2F;www.rise-reforming.com&#x2F;</a>). We’re developing a process to convert gas produced at landfills, farms, and wastewater plants (“biogas”) into higher value chemica",
+      "url": "https://www.rise-reforming.com",
+      "source": "Hacker News",
+      "score": 60,
+      "comments": 22
+    },
+    {
+      "id": "lob:pg4toy",
+      "title": "Exploiting Volvo/Eicher’s fleet management platform to gain control over all users and vehicles",
+      "summary": "",
+      "url": "https://eaton-works.com/2026/07/27/my-eicher-hack/",
+      "source": "Lobste.rs",
+      "score": 11,
+      "comments": 1,
+      "tags": [
+        "security"
       ]
     }
   ],
