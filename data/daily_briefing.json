@@ -1,76 +1,49 @@
 {
   "date": "2026-07-29",
-  "update_time": "2026-07-29 02:57:17",
+  "update_time": "2026-07-29 14:13:56",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-29\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Kimi K3 架构深度解读 (来源: Hacker News)\n- **核心干货**：Sebastian Raschka 大佬亲自下场，对月之暗面的 Kimi K3 进行了硬核架构拆解。这可不是普通的产品评测，而是从 MoE（混合专家模型）的专家路由策略、长上下文注意力机制优化，到训练数据配比的全方位技术解剖。简单说，就是告诉你国产大模型在底层技术上到底卷到了什么程度。\n- **毒舌/硬核点评**：当别人还在吹“千亿参数”时，K3 已经开始抠 MoE 的路由性能和长文损失函数了。这波技术透明度，给国内大模型厂商上了一课：光喊“超越 GPT-4”没用，拿出架构干货来才是真本事。\n- **🔗 传送门**：[https://sebastianraschka.com/blog/2026/kimi-k3-architecture-notes.html](https://sebastianraschka.com/blog/2026/kimi-k3-architecture-notes.html)\n\n---\n\n### 2. 📌 AI 辅助发现 Linux 内核 Root 提权漏洞 (来源: Tech RSS)\n- **核心干货**：STAR Labs 的研究员利用 AI 辅助分析，在 Linux 内核的网络流量控制子系统中挖出一个高危 UAF（释放后使用）竞态条件漏洞（CVE-2026-53264, CVSS 7.8）。攻击者能从普通用户直接拿到 CentOS Stream 9 的 root 权限。关键是，AI 在漏洞发现和利用链构建环节扮演了“加速器”角色。\n- **毒舌/硬核点评**：以前黑客写 exploit 靠的是“千年功力”，现在 AI 辅助下，漏洞挖掘变成了“炼丹加速”。这波操作直接让安全攻防进入“卷速度”时代：你的代码还在 review，AI 已经帮你把 POC（概念验证）写好了。V社你看到了吗？该给反作弊系统升级了！\n- **🔗 传送门**：[https://thehackernews.com/2026/07/researcher-says-ai-helped-develop-linux.html](https://thehackernews.com/2026/07/researcher-says-ai-helped-develop-linux.html)\n\n---\n\n### 3. 📌 MDTransformer：光子计算加速 Transformer，硬件-软件协同设计 (来源: ArXiv)\n- **核心干货**：这篇论文提出了 MDTransformer，一个基于模式分复用（Mode-Division）的光子Transformer加速器。它用逆向设计的相干交叉阵列替代了传统多波长光源，直接解决了光子计算中“光波干涉”这个老大难问题。实验表明，相比电子加速器和现有光子加速器，能效和速度都有数量级提升。\n- **毒舌/硬核点评**：AI 硬件厂商们，别光顾着堆 HBM 带宽了。当硅基电子走到物理极限，光子计算才是真·未来。这篇论文直接告诉你：不用昂贵的多波长激光器，用“光路设计”也能搞定 Transformer。这波操作，感觉英伟达的工程团队得连夜开会。\n- **🔗 传送门**：[https://arxiv.org/abs/2607.26016v1](https://arxiv.org/abs/2607.26016v1)\n\n---\n\n### 🗣️ 今日顶男金句\n“不要问 AI 能帮你做什么，要问你能做些什么让 AI 都卷不动你的事。”",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-29\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Anthropic Mythos 自主发现零日漏洞 (来源: Dev.to/Hacker News)\n- **核心干货**：Anthropic 的 Claude Mythos 预览版模型展示了AI自主发现并利用真实软件环境中零日漏洞的能力，覆盖浏览器、操作系统、网络服务和加密库。这不再是理论演示，而是实打实的自动化漏洞挖掘。\n- **毒舌/硬核点评**：以后安全圈面试题可能变成：\"你如何证明你不是一个AI写的脚本？\" 红队同学，你们的职业生涯可能提前被AI“毕业”了。\n- **🔗 传送门**：[点击直达原链接](https://dev.to/alifar/anthropics-mythos-preview-shows-how-ai-is-reshaping-defensive-vulnerability-research-4lll)\n\n---\n\n### 2. 📌 Turso 用 Rust 重写 SQLite 后，剑指 Postgres (来源: The Register)\n- **核心干货**：Turso 在成功用 Rust 重写并优化 SQLite（LibSQL）后，宣布将目标转向 Postgres。计划用一个虚拟机核心同时驱动多个 SQL 前端，试图在云数据库领域复刻 SQLite 的轻量级魔法。\n- **毒舌/硬核点评**：Turso 这是要把“万物皆可 Rust”的邪教从边缘延伸到云核心。Postgres 社区：你们礼貌吗？不过，如果真能实现单核多前端，云数据库的定价模型怕是要被掀桌子。\n- **🔗 传送门**：[点击直达原链接](https://www.theregister.com/databases/2026/07/29/after-rewriting-sqlite-in-rust-turso-turns-its-sights-on-postgres/5279835)\n\n---\n\n### 3. 📌 Codex Security：OpenAI 开源了“代码间谍” (来源: GitHub/Hacker News)\n- **核心干货**：OpenAI 开源了 Codex Security，一个旨在分析代码库安全性的工具。它能扫描代码，识别潜在的安全漏洞和不良模式，并给出修复建议。简单说，就是给代码库做AI驱动的安全审计。\n- **毒舌/硬核点评**：OpenAI 终于意识到，光会写代码不行，还得会“抓坏人”。以后代码审查流程：先让 Codex 跑一遍，再让人工复查。建议改名“Codex 背锅侠”，毕竟AI写的代码出问题，总是AI先被骂。\n- **🔗 传送门**：[点击直达原链接](https://github.com/openai/codex-security)\n\n---\n\n### 🗣️ 今日顶男金句\n**当你觉得AI会抢你饭碗时，不妨想想：你的焦虑，AI连“焦虑”这个功能都还没实现。**",
   "briefing_items": [
     {
-      "title": "Kimi K3 架构深度解读",
-      "source": "Hacker News",
-      "summary": "Sebastian Raschka 大佬亲自下场，对月之暗面的 Kimi K3 进行了硬核架构拆解。这可不是普通的产品评测，而是从 MoE（混合专家模型）的专家路由策略、长上下文注意力机制优化，到训练数据配比的全方位技术解剖。简单说，就是告诉你国产大模型在底层技术上到底卷到了什么程度。",
-      "commentary": "当别人还在吹“千亿参数”时，K3 已经开始抠 MoE 的路由性能和长文损失函数了。这波技术透明度，给国内大模型厂商上了一课：光喊“超越 GPT-4”没用，拿出架构干货来才是真本事。",
-      "url": ""
+      "title": "Anthropic Mythos 自主发现零日漏洞",
+      "source": "Dev.to/Hacker News",
+      "summary": "Anthropic 的 Claude Mythos 预览版模型展示了AI自主发现并利用真实软件环境中零日漏洞的能力，覆盖浏览器、操作系统、网络服务和加密库。这不再是理论演示，而是实打实的自动化漏洞挖掘。",
+      "commentary": "以后安全圈面试题可能变成：\"你如何证明你不是一个AI写的脚本？\" 红队同学，你们的职业生涯可能提前被AI“毕业”了。",
+      "url": "https://dev.to/alifar/anthropics-mythos-preview-shows-how-ai-is-reshaping-defensive-vulnerability-research-4lll"
     },
     {
-      "title": "AI 辅助发现 Linux 内核 Root 提权漏洞",
-      "source": "Tech RSS",
-      "summary": "STAR Labs 的研究员利用 AI 辅助分析，在 Linux 内核的网络流量控制子系统中挖出一个高危 UAF（释放后使用）竞态条件漏洞（CVE-2026-53264, CVSS 7.8）。攻击者能从普通用户直接拿到 CentOS Stream 9 的 root 权限。关键是，AI 在漏洞发现和利用链构建环节扮演了“加速器”角色。",
-      "commentary": "以前黑客写 exploit 靠的是“千年功力”，现在 AI 辅助下，漏洞挖掘变成了“炼丹加速”。这波操作直接让安全攻防进入“卷速度”时代：你的代码还在 review，AI 已经帮你把 POC（概念验证）写好了。V社你看到了吗？该给反作弊系统升级了！",
-      "url": ""
+      "title": "Turso 用 Rust 重写 SQLite 后，剑指 Postgres",
+      "source": "The Register",
+      "summary": "Turso 在成功用 Rust 重写并优化 SQLite（LibSQL）后，宣布将目标转向 Postgres。计划用一个虚拟机核心同时驱动多个 SQL 前端，试图在云数据库领域复刻 SQLite 的轻量级魔法。",
+      "commentary": "Turso 这是要把“万物皆可 Rust”的邪教从边缘延伸到云核心。Postgres 社区：你们礼貌吗？不过，如果真能实现单核多前端，云数据库的定价模型怕是要被掀桌子。",
+      "url": "https://www.theregister.com/databases/2026/07/29/after-rewriting-sqlite-in-rust-turso-turns-its-sights-on-postgres/5279835"
     },
     {
-      "title": "MDTransformer：光子计算加速 Transformer，硬件-软件协同设计",
-      "source": "ArXiv",
-      "summary": "这篇论文提出了 MDTransformer，一个基于模式分复用（Mode-Division）的光子Transformer加速器。它用逆向设计的相干交叉阵列替代了传统多波长光源，直接解决了光子计算中“光波干涉”这个老大难问题。实验表明，相比电子加速器和现有光子加速器，能效和速度都有数量级提升。",
-      "commentary": "AI 硬件厂商们，别光顾着堆 HBM 带宽了。当硅基电子走到物理极限，光子计算才是真·未来。这篇论文直接告诉你：不用昂贵的多波长激光器，用“光路设计”也能搞定 Transformer。这波操作，感觉英伟达的工程团队得连夜开会。",
-      "url": ""
+      "title": "Codex Security：OpenAI 开源了“代码间谍”",
+      "source": "GitHub/Hacker News",
+      "summary": "OpenAI 开源了 Codex Security，一个旨在分析代码库安全性的工具。它能扫描代码，识别潜在的安全漏洞和不良模式，并给出修复建议。简单说，就是给代码库做AI驱动的安全审计。",
+      "commentary": "OpenAI 终于意识到，光会写代码不行，还得会“抓坏人”。以后代码审查流程：先让 Codex 跑一遍，再让人工复查。建议改名“Codex 背锅侠”，毕竟AI写的代码出问题，总是AI先被骂。",
+      "url": "https://github.com/openai/codex-security"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49086788",
-      "title": "Substack writers, you need a website",
+      "id": "hn:49093569",
+      "title": "More Tailscale tricks for your jailbroken Kindle",
       "summary": "",
-      "url": "https://elizabethtai.com/2026/06/10/substack-writers-you-need-a-website/",
+      "url": "https://tailscale.com/blog/jailbroken-kindle-proxy-tun-modes",
       "source": "Hacker News",
-      "score": 431,
-      "comments": 215
+      "score": 296,
+      "comments": 95
     },
     {
-      "id": "hn:49086971",
-      "title": "Steel Bank Common Lisp version 2.6.7",
+      "id": "hn:49093434",
+      "title": "User Interfaces of the Demo Scene",
       "summary": "",
-      "url": "https://sbcl.org/all-news.html?2.6.7",
+      "url": "https://www.datagubbe.se/scenegui/",
       "source": "Hacker News",
-      "score": 203,
-      "comments": 84
-    },
-    {
-      "id": "hn:49085698",
-      "title": "Kimi K3 Architecture Overview and Notes",
-      "summary": "",
-      "url": "https://sebastianraschka.com/blog/2026/kimi-k3-architecture-notes.html",
-      "source": "Hacker News",
-      "score": 327,
+      "score": 293,
       "comments": 51
-    },
-    {
-      "id": "hn:49085731",
-      "title": "Delayed Gratification – Proud to Be 'Last to Breaking News'",
-      "summary": "",
-      "url": "https://www.slow-journalism.com/",
-      "source": "Hacker News",
-      "score": 243,
-      "comments": 141
-    },
-    {
-      "id": "hn:49089814",
-      "title": "Half-Life ported to Mac OS 9",
-      "summary": "",
-      "url": "https://mac-classic.com/news/half-life-ported-to-mac-os-9/",
-      "source": "Hacker News",
-      "score": 167,
-      "comments": 83
     },
     {
       "id": "lob:jrq2d9",
@@ -78,11 +51,29 @@
       "summary": "",
       "url": "https://cgicoffee.com/blog/2026/04/tcl-tk-develop-cross-platform-cli-gui-tools-tutorial-guide",
       "source": "Lobste.rs",
-      "score": 51,
-      "comments": 13,
+      "score": 58,
+      "comments": 14,
       "tags": [
         "graphics"
       ]
+    },
+    {
+      "id": "hn:49094346",
+      "title": "SQLite in Production: Optimizing WAL Mode, Concurrency, and VFS Layers",
+      "summary": "",
+      "url": "https://micrologics.org/blog/sqlite-in-production-optimizing-wal-mode-concurrency-and-vfs-layers-for-low-latency-app-servers",
+      "source": "Hacker News",
+      "score": 143,
+      "comments": 52
+    },
+    {
+      "id": "hn:49095865",
+      "title": "KOReader",
+      "summary": "",
+      "url": "https://koreader.rocks/",
+      "source": "Hacker News",
+      "score": 274,
+      "comments": 96
     },
     {
       "id": "hn:49089755",
@@ -90,74 +81,42 @@
       "summary": "",
       "url": "https://github.com/openai/codex-security",
       "source": "Hacker News",
-      "score": 370,
-      "comments": 109
+      "score": 549,
+      "comments": 199
     },
     {
-      "id": "lob:yo5wxp",
-      "title": "Framework 13 Pro review: Much better battery, much worse price",
+      "id": "lob:49nob7",
+      "title": "I Designed A Custom PCB To Avoid Pressing A Button Three Times",
       "summary": "",
-      "url": "https://arstechnica.com/gadgets/2026/07/framework-laptop-13-pro-review-much-better-battery-much-worse-price/",
+      "url": "https://blog.tymscar.com/posts/opensourcedimmer/",
       "source": "Lobste.rs",
-      "score": 53,
-      "comments": 40,
+      "score": 42,
+      "comments": 15,
       "tags": [
-        "hardware"
+        "c",
+        "hardware",
+        "reversing"
       ]
     },
     {
-      "id": "hn:49090607",
-      "title": "Show HN: I was tired of opening 2 tabs for every HN link, so I made a userscript",
-      "summary": "HN is great for the links people share, but a big part of the value I get comes from reading the discussion around them. I realized I was always opening the article in one tab and the comments in another, constantly switching back and forth.<p>I figured there was probably a simpler way, so I threw t",
-      "url": "https://github.com/twalichiewicz/HNewhere",
+      "id": "hn:49096188",
+      "title": "Document-borne AI worms can self-propagate through Copilot for Word",
+      "summary": "",
+      "url": "https://enklypesalt.com/posts/context-collapse-part3-ai-worming-through-word/",
       "source": "Hacker News",
-      "score": 155,
-      "comments": 51
+      "score": 138,
+      "comments": 117
     },
     {
-      "id": "lob:pzsmzv",
-      "title": "Try the New Firefox Design in Nightly",
+      "id": "lob:p0fdmk",
+      "title": "The mean means nothing",
       "summary": "",
-      "url": "https://blog.nightly.mozilla.org/2026/07/27/new-firefox-design/",
+      "url": "https://fzakaria.com/2026/07/27/the-mean-means-nothing",
       "source": "Lobste.rs",
-      "score": 32,
-      "comments": 33,
+      "score": 42,
+      "comments": 13,
       "tags": [
-        "browsers"
-      ]
-    },
-    {
-      "id": "lob:nfcclq",
-      "title": "Setup a Simple, Self-Hosted Web Server with OpenBSD",
-      "summary": "",
-      "url": "https://btxx.org/posts/self-hosted-openbsd/",
-      "source": "Lobste.rs",
-      "score": 36,
-      "comments": 6,
-      "tags": [
-        "openbsd",
-        "web"
-      ]
-    },
-    {
-      "id": "rss:ceeea52b64",
-      "title": "Researcher Says AI Helped Develop Linux Traffic-Control Race Into Root Exploit",
-      "summary": "STAR Labs has published a Linux kernel exploit that turns an ordinary local user into root on the CentOS Stream 9 build it targeted. The flaw, tracked as CVE-2026-53264 (CVSS score: 7.8), is a use-after-free race in the kernel's network traffic-control subsystem.Researcher Lee Jia Jie said artificia",
-      "url": "https://thehackernews.com/2026/07/researcher-says-ai-helped-develop-linux.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "lob:7qtdhk",
-      "title": "What even are microservices?",
-      "summary": "",
-      "url": "https://var0.xyz/posts/what-even-are-microservices.html",
-      "source": "Lobste.rs",
-      "score": 17,
-      "comments": 22,
-      "tags": [
-        "distributed",
-        "philosophy"
+        "performance"
       ]
     },
     {
@@ -166,8 +125,8 @@
       "summary": "",
       "url": "https://mlugg.co.uk/posts/incremental-compilation-internals/",
       "source": "Lobste.rs",
-      "score": 102,
-      "comments": 4,
+      "score": 138,
+      "comments": 9,
       "tags": [
         "compilers",
         "performance",
@@ -175,17 +134,47 @@
       ]
     },
     {
-      "id": "lob:49nob7",
-      "title": "I Designed A Custom PCB To Avoid Pressing A Button Three Times",
+      "id": "hn:49096290",
+      "title": "French musician Kavinsky found dead",
       "summary": "",
-      "url": "https://blog.tymscar.com/posts/opensourcedimmer/",
+      "url": "https://www.euronews.com/culture/2026/07/29/dj-kavinsky-known-for-his-track-nightcall-found-dead-at-his-paris-home",
+      "source": "Hacker News",
+      "score": 145,
+      "comments": 35
+    },
+    {
+      "id": "lob:vnh6b2",
+      "title": "Why Rocq is better than Lean for program verification",
+      "summary": "<p>A write-up on why I don't give in to the hype and switch to Lean for formal verification of programs.</p>\n",
+      "url": "https://joomy.korkutblech.com/posts/2026-07-28-why-rocq-is-better.html",
       "source": "Lobste.rs",
-      "score": 26,
-      "comments": 12,
+      "score": 35,
+      "comments": 10,
       "tags": [
-        "c",
-        "hardware",
-        "reversing"
+        "compilers",
+        "formalmethods",
+        "ml",
+        "plt"
+      ]
+    },
+    {
+      "id": "rss:cfdd878d68",
+      "title": "After rewriting SQLite in Rust, Turso turns its sights on Postgres",
+      "summary": "Cloud database upstart wants one virtual machine core to power multiple SQL frontends",
+      "url": "https://www.theregister.com/databases/2026/07/29/after-rewriting-sqlite-in-rust-turso-turns-its-sights-on-postgres/5279835",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "lob:anvtjk",
+      "title": "State of multi-player Wayland",
+      "summary": "",
+      "url": "https://blinry.org/multi-seat-wayland/",
+      "source": "Lobste.rs",
+      "score": 56,
+      "comments": 7,
+      "tags": [
+        "linux"
       ]
     },
     {
@@ -201,12 +190,30 @@
       "arxiv_id": "2607.26042v1"
     },
     {
-      "id": "rss:9b661d3c11",
-      "title": "⚡ Weekly Recap: Rogue AI Agents, Check Point Exploit, Slopsquatting, ClickFix Lures and More",
-      "summary": "Monday starts with the usual promise that everything is under control. Then the logs wake up.\n\nThis week, trusted tools crossed lines, old flaws found new work, exposed systems stayed exposed, and attackers kept hiding inside normal-looking services. Nothing looked strange at first. That helped.\n\nTh",
-      "url": "https://thehackernews.com/2026/07/weekly-recap-rogue-ai-agents-check.html",
+      "id": "rss:e38dcf6b25",
+      "title": "Anthropic’s Mythos Preview Shows How AI Is Reshaping Defensive Vulnerability Research",
+      "summary": "Anthropic says its Claude Mythos Preview research model can autonomously identify and, in many cases, exploit zero-day vulnerabilities in real software environments. The results span browser, operating-system, network-service, and cryptography-library code, making the work a significant illustration",
+      "url": "https://dev.to/alifar/anthropics-mythos-preview-shows-how-ai-is-reshaping-defensive-vulnerability-research-4lll",
       "source": "Tech RSS",
       "score": 0
+    },
+    {
+      "id": "hn:49096969",
+      "title": "Handbook.md shows that long policy documents do not reliably govern agents",
+      "summary": "",
+      "url": "https://arxiv.org/abs/2607.25398",
+      "source": "Hacker News",
+      "score": 54,
+      "comments": 31
+    },
+    {
+      "id": "hn:49096917",
+      "title": "Show HN: Bullshit Detector – agent skills that fact-check videos and articles",
+      "summary": "",
+      "url": "https://github.com/SerhiiKorniienko/bullshit-detector",
+      "source": "Hacker News",
+      "score": 34,
+      "comments": 13
     },
     {
       "id": "arxiv:2607.26016v1",
@@ -222,27 +229,16 @@
       "arxiv_id": "2607.26016v1"
     },
     {
-      "id": "arxiv:2607.26040v1",
-      "title": "Reinformed Dreamer: An Asymmetric World Model Efficiently Trained through Latent Guidance",
-      "summary": "Much like humans benefit from guidance while learning, reinforcement learning algorithms may benefit from additional supervision beyond rewards. Leveraging additional information during training to learn better representations and behaviors has been the focus of asymmetric reinforcement learning. Th",
-      "url": "https://arxiv.org/abs/2607.26040v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "stat.ML"
-      ],
-      "arxiv_id": "2607.26040v1"
-    },
-    {
-      "id": "arxiv:2607.26023v1",
-      "title": "CHARM: A Multimodal Graph Foundation Model with Hierarchical Context Modeling for Zero-Shot Transfer",
-      "summary": "Graph foundation models (GFMs) have emerged as a promising paradigm for transferring knowledge across graph domains and tasks. Real-world graphs associate nodes with text, images, and other modalities, making multimodal graphs essential for representing complex entities and relations. Moreover, coll",
-      "url": "https://arxiv.org/abs/2607.26023v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI"
-      ],
-      "arxiv_id": "2607.26023v1"
+      "id": "lob:ax6col",
+      "title": "Writing Toy Software Is A Joy (2025)",
+      "summary": "",
+      "url": "https://blog.jsbarretto.com/post/software-is-joy",
+      "source": "Lobste.rs",
+      "score": 27,
+      "comments": 3,
+      "tags": [
+        "programming"
+      ]
     }
   ],
   "ai_curated": true

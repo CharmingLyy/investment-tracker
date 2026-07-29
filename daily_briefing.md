@@ -4,26 +4,26 @@
 
 ---
 
-### 1. 📌 Kimi K3 架构深度解读 (来源: Hacker News)
-- **核心干货**：Sebastian Raschka 大佬亲自下场，对月之暗面的 Kimi K3 进行了硬核架构拆解。这可不是普通的产品评测，而是从 MoE（混合专家模型）的专家路由策略、长上下文注意力机制优化，到训练数据配比的全方位技术解剖。简单说，就是告诉你国产大模型在底层技术上到底卷到了什么程度。
-- **毒舌/硬核点评**：当别人还在吹“千亿参数”时，K3 已经开始抠 MoE 的路由性能和长文损失函数了。这波技术透明度，给国内大模型厂商上了一课：光喊“超越 GPT-4”没用，拿出架构干货来才是真本事。
-- **🔗 传送门**：[https://sebastianraschka.com/blog/2026/kimi-k3-architecture-notes.html](https://sebastianraschka.com/blog/2026/kimi-k3-architecture-notes.html)
+### 1. 📌 Anthropic Mythos 自主发现零日漏洞 (来源: Dev.to/Hacker News)
+- **核心干货**：Anthropic 的 Claude Mythos 预览版模型展示了AI自主发现并利用真实软件环境中零日漏洞的能力，覆盖浏览器、操作系统、网络服务和加密库。这不再是理论演示，而是实打实的自动化漏洞挖掘。
+- **毒舌/硬核点评**：以后安全圈面试题可能变成："你如何证明你不是一个AI写的脚本？" 红队同学，你们的职业生涯可能提前被AI“毕业”了。
+- **🔗 传送门**：[点击直达原链接](https://dev.to/alifar/anthropics-mythos-preview-shows-how-ai-is-reshaping-defensive-vulnerability-research-4lll)
 
 ---
 
-### 2. 📌 AI 辅助发现 Linux 内核 Root 提权漏洞 (来源: Tech RSS)
-- **核心干货**：STAR Labs 的研究员利用 AI 辅助分析，在 Linux 内核的网络流量控制子系统中挖出一个高危 UAF（释放后使用）竞态条件漏洞（CVE-2026-53264, CVSS 7.8）。攻击者能从普通用户直接拿到 CentOS Stream 9 的 root 权限。关键是，AI 在漏洞发现和利用链构建环节扮演了“加速器”角色。
-- **毒舌/硬核点评**：以前黑客写 exploit 靠的是“千年功力”，现在 AI 辅助下，漏洞挖掘变成了“炼丹加速”。这波操作直接让安全攻防进入“卷速度”时代：你的代码还在 review，AI 已经帮你把 POC（概念验证）写好了。V社你看到了吗？该给反作弊系统升级了！
-- **🔗 传送门**：[https://thehackernews.com/2026/07/researcher-says-ai-helped-develop-linux.html](https://thehackernews.com/2026/07/researcher-says-ai-helped-develop-linux.html)
+### 2. 📌 Turso 用 Rust 重写 SQLite 后，剑指 Postgres (来源: The Register)
+- **核心干货**：Turso 在成功用 Rust 重写并优化 SQLite（LibSQL）后，宣布将目标转向 Postgres。计划用一个虚拟机核心同时驱动多个 SQL 前端，试图在云数据库领域复刻 SQLite 的轻量级魔法。
+- **毒舌/硬核点评**：Turso 这是要把“万物皆可 Rust”的邪教从边缘延伸到云核心。Postgres 社区：你们礼貌吗？不过，如果真能实现单核多前端，云数据库的定价模型怕是要被掀桌子。
+- **🔗 传送门**：[点击直达原链接](https://www.theregister.com/databases/2026/07/29/after-rewriting-sqlite-in-rust-turso-turns-its-sights-on-postgres/5279835)
 
 ---
 
-### 3. 📌 MDTransformer：光子计算加速 Transformer，硬件-软件协同设计 (来源: ArXiv)
-- **核心干货**：这篇论文提出了 MDTransformer，一个基于模式分复用（Mode-Division）的光子Transformer加速器。它用逆向设计的相干交叉阵列替代了传统多波长光源，直接解决了光子计算中“光波干涉”这个老大难问题。实验表明，相比电子加速器和现有光子加速器，能效和速度都有数量级提升。
-- **毒舌/硬核点评**：AI 硬件厂商们，别光顾着堆 HBM 带宽了。当硅基电子走到物理极限，光子计算才是真·未来。这篇论文直接告诉你：不用昂贵的多波长激光器，用“光路设计”也能搞定 Transformer。这波操作，感觉英伟达的工程团队得连夜开会。
-- **🔗 传送门**：[https://arxiv.org/abs/2607.26016v1](https://arxiv.org/abs/2607.26016v1)
+### 3. 📌 Codex Security：OpenAI 开源了“代码间谍” (来源: GitHub/Hacker News)
+- **核心干货**：OpenAI 开源了 Codex Security，一个旨在分析代码库安全性的工具。它能扫描代码，识别潜在的安全漏洞和不良模式，并给出修复建议。简单说，就是给代码库做AI驱动的安全审计。
+- **毒舌/硬核点评**：OpenAI 终于意识到，光会写代码不行，还得会“抓坏人”。以后代码审查流程：先让 Codex 跑一遍，再让人工复查。建议改名“Codex 背锅侠”，毕竟AI写的代码出问题，总是AI先被骂。
+- **🔗 传送门**：[点击直达原链接](https://github.com/openai/codex-security)
 
 ---
 
 ### 🗣️ 今日顶男金句
-“不要问 AI 能帮你做什么，要问你能做些什么让 AI 都卷不动你的事。”
+**当你觉得AI会抢你饭碗时，不妨想想：你的焦虑，AI连“焦虑”这个功能都还没实现。**
