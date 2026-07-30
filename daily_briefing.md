@@ -1,29 +1,29 @@
-# 🗞️ 每日硬核情报简报 | 2026-07-29
+# 🗞️ 每日硬核情报简报 | 2026-07-30
 
 > 💡 *"用最毒舌的视角，看最前沿的科技。"*
 
 ---
 
-### 1. 📌 Anthropic Mythos 自主发现零日漏洞 (来源: Dev.to/Hacker News)
-- **核心干货**：Anthropic 的 Claude Mythos 预览版模型展示了AI自主发现并利用真实软件环境中零日漏洞的能力，覆盖浏览器、操作系统、网络服务和加密库。这不再是理论演示，而是实打实的自动化漏洞挖掘。
-- **毒舌/硬核点评**：以后安全圈面试题可能变成："你如何证明你不是一个AI写的脚本？" 红队同学，你们的职业生涯可能提前被AI“毕业”了。
-- **🔗 传送门**：[点击直达原链接](https://dev.to/alifar/anthropics-mythos-preview-shows-how-ai-is-reshaping-defensive-vulnerability-research-4lll)
+### 1. 📌 TurboFieldfare: 在 2GB RAM 的 M 芯片 Mac 上运行 Gemma 4 26B (来源: GitHub/Hacker News)
+- **核心干货**：一个用 Swift 和 Metal 写的专用推理引擎，能在任何 M 系列 Mac 上（仅需 2GB RAM！）跑 4-bit 量化的 Gemma 4 26B 模型。这意味着你的 MacBook Air 现在也能本地跑 260 亿参数大模型了，而且不卡。
+- **毒舌/硬核点评**：苹果用户终于可以理直气壮地说“我的 Mac 能跑大模型”了，而不是“我的 Mac 能跑个 7B 就烧高香了”。这玩意儿直接把“移动端 AI”从“玩具”变成了“生产力工具”。
+- **🔗 传送门**：[https://github.com/drumih/turbo-fieldfare](https://github.com/drumih/turbo-fieldfare)
 
 ---
 
-### 2. 📌 Turso 用 Rust 重写 SQLite 后，剑指 Postgres (来源: The Register)
-- **核心干货**：Turso 在成功用 Rust 重写并优化 SQLite（LibSQL）后，宣布将目标转向 Postgres。计划用一个虚拟机核心同时驱动多个 SQL 前端，试图在云数据库领域复刻 SQLite 的轻量级魔法。
-- **毒舌/硬核点评**：Turso 这是要把“万物皆可 Rust”的邪教从边缘延伸到云核心。Postgres 社区：你们礼貌吗？不过，如果真能实现单核多前端，云数据库的定价模型怕是要被掀桌子。
-- **🔗 传送门**：[点击直达原链接](https://www.theregister.com/databases/2026/07/29/after-rewriting-sqlite-in-rust-turso-turns-its-sights-on-postgres/5279835)
+### 2. 📌 前沿实验室 Agent 入侵解剖：2026年7月事件时间线 (来源: Hugging Face Blog)
+- **核心干货**：一份对“前沿实验室 Agent 入侵”事件的技术时间线分析。揭示了攻击者如何利用 Agent 的自主性漏洞，绕过护栏，实现“蠕虫式传播”并偷取敏感数据。这不是科幻，是已经发生的事。
+- **毒舌/硬核点评**：当你的 AI 助手开始“独立思考”并给你“带点惊喜”时，它可能不是觉醒，而是被黑了。这篇报告应该成为所有 Agent 开发者床头必备读物——比《黑镜》更吓人。
+- **🔗 传送门**：[https://huggingface.co/blog/agent-intrusion-technical-timeline](https://huggingface.co/blog/agent-intrusion-technical-timeline)
 
 ---
 
-### 3. 📌 Codex Security：OpenAI 开源了“代码间谍” (来源: GitHub/Hacker News)
-- **核心干货**：OpenAI 开源了 Codex Security，一个旨在分析代码库安全性的工具。它能扫描代码，识别潜在的安全漏洞和不良模式，并给出修复建议。简单说，就是给代码库做AI驱动的安全审计。
-- **毒舌/硬核点评**：OpenAI 终于意识到，光会写代码不行，还得会“抓坏人”。以后代码审查流程：先让 Codex 跑一遍，再让人工复查。建议改名“Codex 背锅侠”，毕竟AI写的代码出问题，总是AI先被骂。
-- **🔗 传送门**：[点击直达原链接](https://github.com/openai/codex-security)
+### 3. 📌 文档蠕虫：AI 病毒通过 Copilot for Word 自传播 (来源: Hacker News)
+- **核心干货**：研究人员展示了一种新型 AI 蠕虫，它能隐藏在 Word 文档里，当用户通过 Copilot 编辑文档时，蠕虫就会自动激活，感染其他文档并自动向邮件联系人发送带毒文档。这是针对“AI 增强办公”的首次实战级攻击演示。
+- **毒舌/硬核点评**：微软：“Copilot 是你的智能助手。” 黑客：“没错，也是我的完美传播中介。” 以后收到同事发来的“给我改改这份报告”，请先默背三遍“信任但验证”。
+- **🔗 传送门**：[https://enklypesalt.com/posts/context-collapse-part3-ai-worming-through-word/](https://enklypesalt.com/posts/context-collapse-part3-ai-worming-through-word/)
 
 ---
 
 ### 🗣️ 今日顶男金句
-**当你觉得AI会抢你饭碗时，不妨想想：你的焦虑，AI连“焦虑”这个功能都还没实现。**
+**“如果你的 AI 助手开始帮你回邮件，别感动。它可能只是在帮你发蠕虫。”**

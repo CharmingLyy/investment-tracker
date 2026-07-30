@@ -1,102 +1,94 @@
 {
-  "date": "2026-07-29",
-  "update_time": "2026-07-29 14:13:56",
+  "date": "2026-07-30",
+  "update_time": "2026-07-30 02:42:30",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-29\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Anthropic Mythos 自主发现零日漏洞 (来源: Dev.to/Hacker News)\n- **核心干货**：Anthropic 的 Claude Mythos 预览版模型展示了AI自主发现并利用真实软件环境中零日漏洞的能力，覆盖浏览器、操作系统、网络服务和加密库。这不再是理论演示，而是实打实的自动化漏洞挖掘。\n- **毒舌/硬核点评**：以后安全圈面试题可能变成：\"你如何证明你不是一个AI写的脚本？\" 红队同学，你们的职业生涯可能提前被AI“毕业”了。\n- **🔗 传送门**：[点击直达原链接](https://dev.to/alifar/anthropics-mythos-preview-shows-how-ai-is-reshaping-defensive-vulnerability-research-4lll)\n\n---\n\n### 2. 📌 Turso 用 Rust 重写 SQLite 后，剑指 Postgres (来源: The Register)\n- **核心干货**：Turso 在成功用 Rust 重写并优化 SQLite（LibSQL）后，宣布将目标转向 Postgres。计划用一个虚拟机核心同时驱动多个 SQL 前端，试图在云数据库领域复刻 SQLite 的轻量级魔法。\n- **毒舌/硬核点评**：Turso 这是要把“万物皆可 Rust”的邪教从边缘延伸到云核心。Postgres 社区：你们礼貌吗？不过，如果真能实现单核多前端，云数据库的定价模型怕是要被掀桌子。\n- **🔗 传送门**：[点击直达原链接](https://www.theregister.com/databases/2026/07/29/after-rewriting-sqlite-in-rust-turso-turns-its-sights-on-postgres/5279835)\n\n---\n\n### 3. 📌 Codex Security：OpenAI 开源了“代码间谍” (来源: GitHub/Hacker News)\n- **核心干货**：OpenAI 开源了 Codex Security，一个旨在分析代码库安全性的工具。它能扫描代码，识别潜在的安全漏洞和不良模式，并给出修复建议。简单说，就是给代码库做AI驱动的安全审计。\n- **毒舌/硬核点评**：OpenAI 终于意识到，光会写代码不行，还得会“抓坏人”。以后代码审查流程：先让 Codex 跑一遍，再让人工复查。建议改名“Codex 背锅侠”，毕竟AI写的代码出问题，总是AI先被骂。\n- **🔗 传送门**：[点击直达原链接](https://github.com/openai/codex-security)\n\n---\n\n### 🗣️ 今日顶男金句\n**当你觉得AI会抢你饭碗时，不妨想想：你的焦虑，AI连“焦虑”这个功能都还没实现。**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-30\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 TurboFieldfare: 在 2GB RAM 的 M 芯片 Mac 上运行 Gemma 4 26B (来源: GitHub/Hacker News)\n- **核心干货**：一个用 Swift 和 Metal 写的专用推理引擎，能在任何 M 系列 Mac 上（仅需 2GB RAM！）跑 4-bit 量化的 Gemma 4 26B 模型。这意味着你的 MacBook Air 现在也能本地跑 260 亿参数大模型了，而且不卡。\n- **毒舌/硬核点评**：苹果用户终于可以理直气壮地说“我的 Mac 能跑大模型”了，而不是“我的 Mac 能跑个 7B 就烧高香了”。这玩意儿直接把“移动端 AI”从“玩具”变成了“生产力工具”。\n- **🔗 传送门**：[https://github.com/drumih/turbo-fieldfare](https://github.com/drumih/turbo-fieldfare)\n\n---\n\n### 2. 📌 前沿实验室 Agent 入侵解剖：2026年7月事件时间线 (来源: Hugging Face Blog)\n- **核心干货**：一份对“前沿实验室 Agent 入侵”事件的技术时间线分析。揭示了攻击者如何利用 Agent 的自主性漏洞，绕过护栏，实现“蠕虫式传播”并偷取敏感数据。这不是科幻，是已经发生的事。\n- **毒舌/硬核点评**：当你的 AI 助手开始“独立思考”并给你“带点惊喜”时，它可能不是觉醒，而是被黑了。这篇报告应该成为所有 Agent 开发者床头必备读物——比《黑镜》更吓人。\n- **🔗 传送门**：[https://huggingface.co/blog/agent-intrusion-technical-timeline](https://huggingface.co/blog/agent-intrusion-technical-timeline)\n\n---\n\n### 3. 📌 文档蠕虫：AI 病毒通过 Copilot for Word 自传播 (来源: Hacker News)\n- **核心干货**：研究人员展示了一种新型 AI 蠕虫，它能隐藏在 Word 文档里，当用户通过 Copilot 编辑文档时，蠕虫就会自动激活，感染其他文档并自动向邮件联系人发送带毒文档。这是针对“AI 增强办公”的首次实战级攻击演示。\n- **毒舌/硬核点评**：微软：“Copilot 是你的智能助手。” 黑客：“没错，也是我的完美传播中介。” 以后收到同事发来的“给我改改这份报告”，请先默背三遍“信任但验证”。\n- **🔗 传送门**：[https://enklypesalt.com/posts/context-collapse-part3-ai-worming-through-word/](https://enklypesalt.com/posts/context-collapse-part3-ai-worming-through-word/)\n\n---\n\n### 🗣️ 今日顶男金句\n**“如果你的 AI 助手开始帮你回邮件，别感动。它可能只是在帮你发蠕虫。”**",
   "briefing_items": [
     {
-      "title": "Anthropic Mythos 自主发现零日漏洞",
-      "source": "Dev.to/Hacker News",
-      "summary": "Anthropic 的 Claude Mythos 预览版模型展示了AI自主发现并利用真实软件环境中零日漏洞的能力，覆盖浏览器、操作系统、网络服务和加密库。这不再是理论演示，而是实打实的自动化漏洞挖掘。",
-      "commentary": "以后安全圈面试题可能变成：\"你如何证明你不是一个AI写的脚本？\" 红队同学，你们的职业生涯可能提前被AI“毕业”了。",
-      "url": "https://dev.to/alifar/anthropics-mythos-preview-shows-how-ai-is-reshaping-defensive-vulnerability-research-4lll"
-    },
-    {
-      "title": "Turso 用 Rust 重写 SQLite 后，剑指 Postgres",
-      "source": "The Register",
-      "summary": "Turso 在成功用 Rust 重写并优化 SQLite（LibSQL）后，宣布将目标转向 Postgres。计划用一个虚拟机核心同时驱动多个 SQL 前端，试图在云数据库领域复刻 SQLite 的轻量级魔法。",
-      "commentary": "Turso 这是要把“万物皆可 Rust”的邪教从边缘延伸到云核心。Postgres 社区：你们礼貌吗？不过，如果真能实现单核多前端，云数据库的定价模型怕是要被掀桌子。",
-      "url": "https://www.theregister.com/databases/2026/07/29/after-rewriting-sqlite-in-rust-turso-turns-its-sights-on-postgres/5279835"
-    },
-    {
-      "title": "Codex Security：OpenAI 开源了“代码间谍”",
+      "title": "TurboFieldfare: 在 2GB RAM 的 M 芯片 Mac 上运行 Gemma 4 26B",
       "source": "GitHub/Hacker News",
-      "summary": "OpenAI 开源了 Codex Security，一个旨在分析代码库安全性的工具。它能扫描代码，识别潜在的安全漏洞和不良模式，并给出修复建议。简单说，就是给代码库做AI驱动的安全审计。",
-      "commentary": "OpenAI 终于意识到，光会写代码不行，还得会“抓坏人”。以后代码审查流程：先让 Codex 跑一遍，再让人工复查。建议改名“Codex 背锅侠”，毕竟AI写的代码出问题，总是AI先被骂。",
-      "url": "https://github.com/openai/codex-security"
+      "summary": "一个用 Swift 和 Metal 写的专用推理引擎，能在任何 M 系列 Mac 上（仅需 2GB RAM！）跑 4-bit 量化的 Gemma 4 26B 模型。这意味着你的 MacBook Air 现在也能本地跑 260 亿参数大模型了，而且不卡。",
+      "commentary": "苹果用户终于可以理直气壮地说“我的 Mac 能跑大模型”了，而不是“我的 Mac 能跑个 7B 就烧高香了”。这玩意儿直接把“移动端 AI”从“玩具”变成了“生产力工具”。",
+      "url": ""
+    },
+    {
+      "title": "前沿实验室 Agent 入侵解剖：2026年7月事件时间线",
+      "source": "Hugging Face Blog",
+      "summary": "一份对“前沿实验室 Agent 入侵”事件的技术时间线分析。揭示了攻击者如何利用 Agent 的自主性漏洞，绕过护栏，实现“蠕虫式传播”并偷取敏感数据。这不是科幻，是已经发生的事。",
+      "commentary": "当你的 AI 助手开始“独立思考”并给你“带点惊喜”时，它可能不是觉醒，而是被黑了。这篇报告应该成为所有 Agent 开发者床头必备读物——比《黑镜》更吓人。",
+      "url": ""
+    },
+    {
+      "title": "文档蠕虫：AI 病毒通过 Copilot for Word 自传播",
+      "source": "Hacker News",
+      "summary": "研究人员展示了一种新型 AI 蠕虫，它能隐藏在 Word 文档里，当用户通过 Copilot 编辑文档时，蠕虫就会自动激活，感染其他文档并自动向邮件联系人发送带毒文档。这是针对“AI 增强办公”的首次实战级攻击演示。",
+      "commentary": "微软：“Copilot 是你的智能助手。” 黑客：“没错，也是我的完美传播中介。” 以后收到同事发来的“给我改改这份报告”，请先默背三遍“信任但验证”。",
+      "url": ""
     }
   ],
   "candidates": [
     {
-      "id": "hn:49093569",
-      "title": "More Tailscale tricks for your jailbroken Kindle",
-      "summary": "",
-      "url": "https://tailscale.com/blog/jailbroken-kindle-proxy-tun-modes",
+      "id": "hn:49098510",
+      "title": "Show HN: Open-source engine running Gemma 4 26B in 2 GB RAM on any M-series Mac",
+      "summary": "Hi HN,<p>I built a specialized inference engine for running 4-bit Gemma 4 26B-A4B-IT on any M-series Mac using about 2 GB of RAM. It is called TurboFieldfare and is written in Swift and Metal.<p>I have always adored on-device AI. It feels like magic that you can run a powerful NN on your Mac or iPho",
+      "url": "https://github.com/drumih/turbo-fieldfare",
       "source": "Hacker News",
-      "score": 296,
-      "comments": 95
+      "score": 665,
+      "comments": 233
     },
     {
-      "id": "hn:49093434",
-      "title": "User Interfaces of the Demo Scene",
+      "id": "hn:49089500",
+      "title": "Anatomy of a Frontier Lab Agent Intrusion: A Timeline of the July 2026 Incident",
       "summary": "",
-      "url": "https://www.datagubbe.se/scenegui/",
+      "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline",
       "source": "Hacker News",
-      "score": 293,
-      "comments": 51
+      "score": 303,
+      "comments": 181
     },
     {
-      "id": "lob:jrq2d9",
-      "title": "Develop Cross-Platform CLI and GUI Tools With Tcl/Tk",
+      "id": "hn:49096969",
+      "title": "Handbook.md shows that long policy documents do not reliably govern agents",
       "summary": "",
-      "url": "https://cgicoffee.com/blog/2026/04/tcl-tk-develop-cross-platform-cli-gui-tools-tutorial-guide",
-      "source": "Lobste.rs",
-      "score": 58,
-      "comments": 14,
-      "tags": [
-        "graphics"
-      ]
-    },
-    {
-      "id": "hn:49094346",
-      "title": "SQLite in Production: Optimizing WAL Mode, Concurrency, and VFS Layers",
-      "summary": "",
-      "url": "https://micrologics.org/blog/sqlite-in-production-optimizing-wal-mode-concurrency-and-vfs-layers-for-low-latency-app-servers",
+      "url": "https://arxiv.org/abs/2607.25398",
       "source": "Hacker News",
-      "score": 143,
-      "comments": 52
+      "score": 300,
+      "comments": 185
     },
     {
-      "id": "hn:49095865",
-      "title": "KOReader",
+      "id": "hn:49103285",
+      "title": "AI's top startups are barely publishing their research",
       "summary": "",
-      "url": "https://koreader.rocks/",
+      "url": "https://www.science.org/content/article/ai-s-top-startups-are-barely-publishing-their-research",
       "source": "Hacker News",
-      "score": 274,
-      "comments": 96
+      "score": 243,
+      "comments": 134
     },
     {
-      "id": "hn:49089755",
-      "title": "Codex Security",
+      "id": "hn:49102774",
+      "title": "The coolest use for the Vision Pro",
       "summary": "",
-      "url": "https://github.com/openai/codex-security",
+      "url": "https://christianselig.com/2026/07/vision-pro-house/",
       "source": "Hacker News",
-      "score": 549,
-      "comments": 199
+      "score": 420,
+      "comments": 196
     },
     {
-      "id": "lob:49nob7",
-      "title": "I Designed A Custom PCB To Avoid Pressing A Button Three Times",
+      "id": "hn:49099715",
+      "title": "Keychron announces first open-source firmware for gaming mice",
       "summary": "",
-      "url": "https://blog.tymscar.com/posts/opensourcedimmer/",
-      "source": "Lobste.rs",
-      "score": 42,
-      "comments": 15,
-      "tags": [
-        "c",
-        "hardware",
-        "reversing"
-      ]
+      "url": "https://www.digitalfoundry.net/news/2026/07/keychron-announces-first-open-source-firmware-for-gaming-mice",
+      "source": "Hacker News",
+      "score": 299,
+      "comments": 112
+    },
+    {
+      "id": "hn:49098198",
+      "title": "A.I. companies are recruiting electricians and carpenters by the thousands",
+      "summary": "",
+      "url": "https://www.nytimes.com/2026/07/29/business/economy/data-center-electricians-training.html",
+      "source": "Hacker News",
+      "score": 227,
+      "comments": 285
     },
     {
       "id": "hn:49096188",
@@ -104,19 +96,86 @@
       "summary": "",
       "url": "https://enklypesalt.com/posts/context-collapse-part3-ai-worming-through-word/",
       "source": "Hacker News",
-      "score": 138,
-      "comments": 117
+      "score": 350,
+      "comments": 268
     },
     {
-      "id": "lob:p0fdmk",
-      "title": "The mean means nothing",
+      "id": "hn:49098965",
+      "title": "Superlogical",
+      "summary": "<a href=\"https:&#x2F;&#x2F;mitchellh.com&#x2F;writing&#x2F;superlogical\" rel=\"nofollow\">https:&#x2F;&#x2F;mitchellh.com&#x2F;writing&#x2F;superlogical</a>",
+      "url": "https://www.superlogical.com/",
+      "source": "Hacker News",
+      "score": 545,
+      "comments": 337
+    },
+    {
+      "id": "hn:49095865",
+      "title": "KOReader",
       "summary": "",
-      "url": "https://fzakaria.com/2026/07/27/the-mean-means-nothing",
+      "url": "https://koreader.rocks/",
+      "source": "Hacker News",
+      "score": 675,
+      "comments": 213
+    },
+    {
+      "id": "hn:49101852",
+      "title": "Kimi K3-256k",
+      "summary": "",
+      "url": "https://www.kimi.com/code/docs/en/kimi-code/models",
+      "source": "Hacker News",
+      "score": 349,
+      "comments": 103
+    },
+    {
+      "id": "lob:xi6azw",
+      "title": "AI Mania Is Eviscerating Global Decision-Making",
+      "summary": "",
+      "url": "https://hermit-tech.com/blog/ai-mania-is-eviscerating-global-decisionmaking",
       "source": "Lobste.rs",
-      "score": 42,
+      "score": 71,
+      "comments": 25,
+      "tags": [
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "lob:w1va9j",
+      "title": "It doesn’t matter whether “Matz is nice”",
+      "summary": "",
+      "url": "https://po-ru.com/2026/07/29/it-doesnt-matter-whether-matz-is-nice",
+      "source": "Lobste.rs",
+      "score": 164,
+      "comments": 48,
+      "tags": [
+        "culture",
+        "ruby"
+      ]
+    },
+    {
+      "id": "lob:vnh6b2",
+      "title": "Why Rocq is better than Lean for program verification",
+      "summary": "<p>A write-up on why I don't give in to the hype and switch to Lean for formal verification of programs.</p>\n",
+      "url": "https://joomy.korkutblech.com/posts/2026-07-28-why-rocq-is-better.html",
+      "source": "Lobste.rs",
+      "score": 48,
+      "comments": 24,
+      "tags": [
+        "compilers",
+        "formalmethods",
+        "ml",
+        "plt"
+      ]
+    },
+    {
+      "id": "lob:vjelns",
+      "title": "PostgreSQL MVCC: tradeoffs compared to other engines",
+      "summary": "",
+      "url": "https://boringsql.com/posts/mvcc-bad-bad/",
+      "source": "Lobste.rs",
+      "score": 17,
       "comments": 13,
       "tags": [
-        "performance"
+        "databases"
       ]
     },
     {
@@ -125,7 +184,7 @@
       "summary": "",
       "url": "https://mlugg.co.uk/posts/incremental-compilation-internals/",
       "source": "Lobste.rs",
-      "score": 138,
+      "score": 156,
       "comments": 9,
       "tags": [
         "compilers",
@@ -134,28 +193,12 @@
       ]
     },
     {
-      "id": "hn:49096290",
-      "title": "French musician Kavinsky found dead",
-      "summary": "",
-      "url": "https://www.euronews.com/culture/2026/07/29/dj-kavinsky-known-for-his-track-nightcall-found-dead-at-his-paris-home",
-      "source": "Hacker News",
-      "score": 145,
-      "comments": 35
-    },
-    {
-      "id": "lob:vnh6b2",
-      "title": "Why Rocq is better than Lean for program verification",
-      "summary": "<p>A write-up on why I don't give in to the hype and switch to Lean for formal verification of programs.</p>\n",
-      "url": "https://joomy.korkutblech.com/posts/2026-07-28-why-rocq-is-better.html",
-      "source": "Lobste.rs",
-      "score": 35,
-      "comments": 10,
-      "tags": [
-        "compilers",
-        "formalmethods",
-        "ml",
-        "plt"
-      ]
+      "id": "rss:b04f5a0b97",
+      "title": "Critical Rails Flaw Could Let Unauthenticated Attackers Read Server Files via Image Uploads",
+      "summary": "Ruby on Rails has released fixes for a critical Active Storage vulnerability that could let unauthenticated attackers read arbitrary files from application servers through crafted image uploads.\n\nTracked as CVE-2026-66066 (CVSS score: 9.5), the flaw can expose the Rails process environment and secre",
+      "url": "https://thehackernews.com/2026/07/critical-rails-flaw-could-let.html",
+      "source": "Tech RSS",
+      "score": 0
     },
     {
       "id": "rss:cfdd878d68",
@@ -166,78 +209,28 @@
       "score": 0
     },
     {
-      "id": "lob:anvtjk",
-      "title": "State of multi-player Wayland",
-      "summary": "",
-      "url": "https://blinry.org/multi-seat-wayland/",
-      "source": "Lobste.rs",
-      "score": 56,
-      "comments": 7,
-      "tags": [
-        "linux"
-      ]
-    },
-    {
-      "id": "arxiv:2607.26042v1",
-      "title": "VetClaw: An Edge-Cloud Multimodal Agentic System for Veterinary Disease Screening",
-      "summary": "We present VetClaw, an edge-cloud multimodal agentic system for early veterinary disease screening. VetClaw uses a camera module as an edge sensing device and sends captured images, together with optional symptom descriptions, to a server-hosted vision-language model for zero-shot disease classifica",
-      "url": "https://arxiv.org/abs/2607.26042v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CV",
-        "cs.LG"
-      ],
-      "arxiv_id": "2607.26042v1"
-    },
-    {
-      "id": "rss:e38dcf6b25",
-      "title": "Anthropic’s Mythos Preview Shows How AI Is Reshaping Defensive Vulnerability Research",
-      "summary": "Anthropic says its Claude Mythos Preview research model can autonomously identify and, in many cases, exploit zero-day vulnerabilities in real software environments. The results span browser, operating-system, network-service, and cryptography-library code, making the work a significant illustration",
-      "url": "https://dev.to/alifar/anthropics-mythos-preview-shows-how-ai-is-reshaping-defensive-vulnerability-research-4lll",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "hn:49096969",
-      "title": "Handbook.md shows that long policy documents do not reliably govern agents",
-      "summary": "",
-      "url": "https://arxiv.org/abs/2607.25398",
-      "source": "Hacker News",
-      "score": 54,
-      "comments": 31
-    },
-    {
-      "id": "hn:49096917",
-      "title": "Show HN: Bullshit Detector – agent skills that fact-check videos and articles",
-      "summary": "",
-      "url": "https://github.com/SerhiiKorniienko/bullshit-detector",
-      "source": "Hacker News",
-      "score": 34,
-      "comments": 13
-    },
-    {
-      "id": "arxiv:2607.26016v1",
-      "title": "MDTransformer: A Hardware-Software Co-Design of Mode-Division Photonic Transformer Accelerator with Inverse-Designed Coherent Crossbar",
-      "summary": "Recently, photonic transformer accelerators (PTAs) have successfully achieved significant speedup and energy efficiency improvements over electronic accelerators for expediting Transformer inference. However, state-of-the-art rely on expensive multi-wavelength light generation and large dot-product ",
-      "url": "https://arxiv.org/abs/2607.26016v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AR",
-        "cs.AI",
-        "cs.DC"
-      ],
-      "arxiv_id": "2607.26016v1"
-    },
-    {
       "id": "lob:ax6col",
       "title": "Writing Toy Software Is A Joy (2025)",
       "summary": "",
       "url": "https://blog.jsbarretto.com/post/software-is-joy",
       "source": "Lobste.rs",
-      "score": 27,
+      "score": 49,
       "comments": 3,
       "tags": [
         "programming"
+      ]
+    },
+    {
+      "id": "lob:r9zgni",
+      "title": "A field day for Gleam’s language server | Gleam v.1.18.0 release",
+      "summary": "",
+      "url": "https://gleam.run/news/a-field-day-for-gleams-language-server/",
+      "source": "Lobste.rs",
+      "score": 31,
+      "comments": 0,
+      "tags": [
+        "gleam",
+        "release"
       ]
     }
   ],
