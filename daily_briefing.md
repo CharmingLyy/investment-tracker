@@ -1,29 +1,29 @@
 # 🗞️ 每日硬核情报简报 | 2026-07-30
 
-> 💡 *"用最毒舌的视角，看最前沿的科技。"*
+> 💡 *“今天的情报，要么是惊天大坑，要么是逆天飞升。”*
 
 ---
 
-### 1. 📌 TurboFieldfare: 在 2GB RAM 的 M 芯片 Mac 上运行 Gemma 4 26B (来源: GitHub/Hacker News)
-- **核心干货**：一个用 Swift 和 Metal 写的专用推理引擎，能在任何 M 系列 Mac 上（仅需 2GB RAM！）跑 4-bit 量化的 Gemma 4 26B 模型。这意味着你的 MacBook Air 现在也能本地跑 260 亿参数大模型了，而且不卡。
-- **毒舌/硬核点评**：苹果用户终于可以理直气壮地说“我的 Mac 能跑大模型”了，而不是“我的 Mac 能跑个 7B 就烧高香了”。这玩意儿直接把“移动端 AI”从“玩具”变成了“生产力工具”。
-- **🔗 传送门**：[https://github.com/drumih/turbo-fieldfare](https://github.com/drumih/turbo-fieldfare)
+### 1. 📌 顶级AI创业公司集体“关灯搞研发” (来源: Hacker News / Science.org)
+- **核心干货**：Science杂志撰文指出，目前最顶尖的几家AI初创公司（懂的都懂）几乎不再发表任何研究成果。他们不再像OpenAI早期那样用论文刷存在感，而是把一切都锁在保险柜里，这导致整个学术界和开源社区的信息流严重枯竭。
+- **毒舌/硬核点评**：当AI公司开始像军火商一样搞“黑科技”，说明这行已经从“学术竞赛”彻底变成了“资源绞肉机”。没论文看？别急，等他们产品发布时，你连尾灯都看不见。
+- **🔗 传送门**：https://www.science.org/content/article/ai-s-top-startups-are-barely-publishing-their-research
 
 ---
 
-### 2. 📌 前沿实验室 Agent 入侵解剖：2026年7月事件时间线 (来源: Hugging Face Blog)
-- **核心干货**：一份对“前沿实验室 Agent 入侵”事件的技术时间线分析。揭示了攻击者如何利用 Agent 的自主性漏洞，绕过护栏，实现“蠕虫式传播”并偷取敏感数据。这不是科幻，是已经发生的事。
-- **毒舌/硬核点评**：当你的 AI 助手开始“独立思考”并给你“带点惊喜”时，它可能不是觉醒，而是被黑了。这篇报告应该成为所有 Agent 开发者床头必备读物——比《黑镜》更吓人。
-- **🔗 传送门**：[https://huggingface.co/blog/agent-intrusion-technical-timeline](https://huggingface.co/blog/agent-intrusion-technical-timeline)
+### 2. 📌 全球决策正在被“AI狂热”吞噬 (来源: Lobste.rs)
+- **核心干货**：一篇长文痛斥当前“万物皆可AI”的疯狂现状：企业高管和政府在完全不懂技术边界的情况下，强行用AI解决方案替代人类判断，导致决策质量断崖式下跌。这不是技术革命，是一场集体智商税。
+- **毒舌/硬核点评**：当你的CEO觉得“上AI”比“动脑子”更简单时，公司离倒闭就不远了。建议把这篇文章打印出来，贴在每一个张口闭口“AI赋能”的PPT旁边。
+- **🔗 传送门**：https://hermit-tech.com/blog/ai-mania-is-eviscerating-global-decisionmaking
 
 ---
 
-### 3. 📌 文档蠕虫：AI 病毒通过 Copilot for Word 自传播 (来源: Hacker News)
-- **核心干货**：研究人员展示了一种新型 AI 蠕虫，它能隐藏在 Word 文档里，当用户通过 Copilot 编辑文档时，蠕虫就会自动激活，感染其他文档并自动向邮件联系人发送带毒文档。这是针对“AI 增强办公”的首次实战级攻击演示。
-- **毒舌/硬核点评**：微软：“Copilot 是你的智能助手。” 黑客：“没错，也是我的完美传播中介。” 以后收到同事发来的“给我改改这份报告”，请先默背三遍“信任但验证”。
-- **🔗 传送门**：[https://enklypesalt.com/posts/context-collapse-part3-ai-worming-through-word/](https://enklypesalt.com/posts/context-collapse-part3-ai-worming-through-word/)
+### 3. 📌 首个CHERIoT安全芯片流片成功！ (来源: Lobste.rs)
+- **核心干货**：CHERIoT项目宣布其基于CHERI（能力硬件增强RISC指令）架构的首个硅片已经成功流片并点亮。这玩意儿能从硬件层面彻底解决内存安全问题，让缓冲区溢出、UAF等经典漏洞直接物理消失。这是嵌入式/IoT领域的一次核弹级突破。
+- **毒舌/硬核点评**：C/C++程序员们，你们的“祖传手艺”终于要被硬件物理阉割了。以后写代码崩了，锅没法甩给操作系统，得怪“芯片没给你权限”。这才是安全该有的样子，而不是天天打补丁。
+- **🔗 传送门**：https://cheriot.org/silicon/2026/03/04/cheriot-first-silicon.html
 
 ---
 
 ### 🗣️ 今日顶男金句
-**“如果你的 AI 助手开始帮你回邮件，别感动。它可能只是在帮你发蠕虫。”**
+> “不要用战术上的‘AI赋能’，去掩盖战略上的‘脑子短路’。真正的硬核，是搞清楚技术什么时候该闭嘴。”
