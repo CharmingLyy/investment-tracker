@@ -1,42 +1,67 @@
 {
   "date": "2026-07-31",
-  "update_time": "2026-07-31 03:24:08",
+  "update_time": "2026-07-31 14:11:43",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-31\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Gemini Robotics 2：机器人终于有\"全身心眼\"了 (来源: HackerNews | 493分)\n- **核心干货**：Google DeepMind 发布 Gemini Robotics 2，核心突破在于\"全身智能\"——让机器人不再只是机械臂+视觉模块的缝合怪，而是能协调全身动作、理解物理交互的端到端模型。这意味着机器人从\"看见-执行\"进化到\"感知-理解-行动\"的闭环。\n- **毒舌/硬核点评**：终于，机器人不再像个帕金森患者抓杯子了。但别急着让家务机器人上岗，先让它学会不把猫当\"可抓取物体\"再说。\n- **🔗 传送门**：[点击直达](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/)\n\n---\n\n### 2. 📌 GitHub 上线 Stacked PR：代码评审终于进入\"叠叠乐\"时代 (来源: HackerNews | 506分)\n- **核心干货**：GitHub 正式推出 Stacked Pull Requests 公开预览。这项功能允许开发者将多个依赖的 PR 堆叠提交，解决大型变更无法拆分评审的痛点——不用再等一个 PR 合并才能提下一个，大幅提升大型功能开发的并行效率。\n- **毒舌/硬核点评**：GitHub 终于把\"改一行代码等三天评审\"的糟粕文化往棺材里钉了一颗钉子。但小心，别把自己叠成代码界的比萨斜塔。\n- **🔗 传送门**：[点击直达](https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/)\n\n---\n\n### 3. 📌 Rails 曝出 9.5 分高危漏洞：图片上传变\"服务器裸奔\"（来源: 科技新闻）\n- **核心干货**：Ruby on Rails 修复 Active Storage 高危漏洞（CVE-2026-66066，CVSS 9.5），未认证攻击者可通过构造恶意图片上传，读取应用服务器上的任意文件，包括环境变量和密钥。所有使用 Active Storage 的 Rails 应用均受影响，需立即升级。\n- **毒舌/硬核点评**：又是一个\"上传图片\"变\"下载源码\"的经典案例。建议所有 Rails 开发者今天别干别的，先打补丁，你的服务器可能已经在裸奔了。\n- **🔗 传送门**：[点击直达](https://thehackernews.com/2026/07/critical-rails-flaw-could-let.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\"技术债不会消失，它只会像高利贷一样，在你最需要发布新功能的时候，连本带利找上门来。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-31\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 GitHub 正式上线 Stacked PRs 公共预览 (来源: GitHub Blog)\n- **核心干货**：GitHub 终于把那些用 `gh` CLI 和第三方工具折腾了几年的\"栈式拉取请求\"工作流变成了原生功能。它允许你将一个大型 PR 拆分成多个相互依赖的小 PR，按顺序合并，大幅降低 Code Review 的认知负担，让\"小步快跑\"在大型特性分支上真正落地。\n- **毒舌/硬核点评**：GitHub 这波操作，等于把\"线性历史强迫症\"和\"巨型 PR 恐惧症\"同时给治了。恭喜，你的 Git 技巧树终于可以少点几个没用的分支管理技能了。\n- **🔗 传送门**：[点击直达原链接](https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/)\n\n---\n\n### 2. 📌 Google 借助 AI 修复 Chrome 漏洞数量创两年新高 (来源: Google Blog)\n- **核心干货**：Google 声称在 6 月份利用 AI 修复的 Chrome 漏洞数量，比过去两年加起来还多。这不是简单的自动补丁，而是 AI 辅助进行代码审计、漏洞模式识别和补丁生成，将安全修复从\"人工排雷\"推向\"AI 扫雷\"的自动化时代。\n- **毒舌/硬核点评**：以前是\"写代码一时爽，修 Bug 火葬场\"，现在 AI 直接帮你把火葬场改成了\"全自动垃圾回收站\"。建议 Chrome 团队给 AI 发个\"本月最佳程序员\"奖，毕竟它比某些人类同事效率高多了。\n- **🔗 传送门**：[点击直达原链接](https://blog.google/security/chrome-stronger-with-every-update/)\n\n---\n\n### 3. 📌 Gemini Robotics 2 发布：为机器人注入\"全身智能\" (来源: DeepMind Blog)\n- **核心干货**：DeepMind 推出了 Gemini Robotics 2，其核心突破在于 \"whole body intelligence\"（全身智能）。它不再是简单的\"视觉-语言-动作\"模型，而是让机器人能够理解并协调整个身体的运动，包括在动态环境中保持平衡、进行精细操作，甚至处理身体被触碰时的反应，让机器人更像\"人\"而非\"机械臂\"。\n- **毒舌/硬核点评**：以前机器人是\"四肢发达，头脑简单\"，现在 Gemini Robotics 2 终于让它们\"身心协调\"了。这离《西部世界》又近了一步，希望它们学会走路之前，先学会别把咖啡洒在人类键盘上。\n- **🔗 传送门**：[点击直达原链接](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/)\n\n---\n\n### 🗣️ 今日顶男金句\n\"别光顾着给 AI 打工，要想着怎么让 AI 给你打工——毕竟，连 Chrome 的 Bug 都是 AI 在修了，你还在手动 Deploy 吗？\"",
   "briefing_items": [
     {
-      "title": "Gemini Robotics 2：机器人终于有\"全身心眼\"了",
-      "source": "HackerNews | 493分",
-      "summary": "Google DeepMind 发布 Gemini Robotics 2，核心突破在于\"全身智能\"——让机器人不再只是机械臂+视觉模块的缝合怪，而是能协调全身动作、理解物理交互的端到端模型。这意味着机器人从\"看见-执行\"进化到\"感知-理解-行动\"的闭环。",
-      "commentary": "终于，机器人不再像个帕金森患者抓杯子了。但别急着让家务机器人上岗，先让它学会不把猫当\"可抓取物体\"再说。",
-      "url": ""
+      "title": "GitHub 正式上线 Stacked PRs 公共预览",
+      "source": "GitHub Blog",
+      "summary": "GitHub 终于把那些用 `gh` CLI 和第三方工具折腾了几年的\"栈式拉取请求\"工作流变成了原生功能。它允许你将一个大型 PR 拆分成多个相互依赖的小 PR，按顺序合并，大幅降低 Code Review 的认知负担，让\"小步快跑\"在大型特性分支上真正落地。",
+      "commentary": "GitHub 这波操作，等于把\"线性历史强迫症\"和\"巨型 PR 恐惧症\"同时给治了。恭喜，你的 Git 技巧树终于可以少点几个没用的分支管理技能了。",
+      "url": "https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/"
     },
     {
-      "title": "GitHub 上线 Stacked PR：代码评审终于进入\"叠叠乐\"时代",
-      "source": "HackerNews | 506分",
-      "summary": "GitHub 正式推出 Stacked Pull Requests 公开预览。这项功能允许开发者将多个依赖的 PR 堆叠提交，解决大型变更无法拆分评审的痛点——不用再等一个 PR 合并才能提下一个，大幅提升大型功能开发的并行效率。",
-      "commentary": "GitHub 终于把\"改一行代码等三天评审\"的糟粕文化往棺材里钉了一颗钉子。但小心，别把自己叠成代码界的比萨斜塔。",
-      "url": ""
+      "title": "Google 借助 AI 修复 Chrome 漏洞数量创两年新高",
+      "source": "Google Blog",
+      "summary": "Google 声称在 6 月份利用 AI 修复的 Chrome 漏洞数量，比过去两年加起来还多。这不是简单的自动补丁，而是 AI 辅助进行代码审计、漏洞模式识别和补丁生成，将安全修复从\"人工排雷\"推向\"AI 扫雷\"的自动化时代。",
+      "commentary": "以前是\"写代码一时爽，修 Bug 火葬场\"，现在 AI 直接帮你把火葬场改成了\"全自动垃圾回收站\"。建议 Chrome 团队给 AI 发个\"本月最佳程序员\"奖，毕竟它比某些人类同事效率高多了。",
+      "url": "https://blog.google/security/chrome-stronger-with-every-update/"
+    },
+    {
+      "title": "Gemini Robotics 2 发布：为机器人注入\"全身智能\"",
+      "source": "DeepMind Blog",
+      "summary": "DeepMind 推出了 Gemini Robotics 2，其核心突破在于 \"whole body intelligence\"（全身智能）。它不再是简单的\"视觉-语言-动作\"模型，而是让机器人能够理解并协调整个身体的运动，包括在动态环境中保持平衡、进行精细操作，甚至处理身体被触碰时的反应，让机器人更像\"人\"而非\"机械臂\"。",
+      "commentary": "以前机器人是\"四肢发达，头脑简单\"，现在 Gemini Robotics 2 终于让它们\"身心协调\"了。这离《西部世界》又近了一步，希望它们学会走路之前，先学会别把咖啡洒在人类键盘上。",
+      "url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49114639",
-      "title": "Agent Skill to Force Docs in ASD-STE100 Simplified Technical English",
+      "id": "hn:49120299",
+      "title": "DeepSeek V4 Flash 0731 Intelligence, Performance and Price Analysis",
       "summary": "",
-      "url": "https://github.com/AminBlg/SimpleEnglish",
+      "url": "https://artificialanalysis.ai/models/deepseek-v4-flash-ga",
       "source": "Hacker News",
-      "score": 232,
-      "comments": 85
+      "score": 222,
+      "comments": 90
     },
     {
-      "id": "hn:49112744",
-      "title": "Read this before you buy that TV streaming stick",
+      "id": "hn:49119559",
+      "title": "DeepSeek-V4-Flash Update",
       "summary": "",
-      "url": "https://krebsonsecurity.com/2026/07/read-this-before-you-buy-that-tv-streaming-stick/",
+      "url": "https://api-docs.deepseek.com/updates/",
       "source": "Hacker News",
-      "score": 604,
-      "comments": 355
+      "score": 440,
+      "comments": 225
+    },
+    {
+      "id": "hn:49118781",
+      "title": "The session you cannot take with you",
+      "summary": "",
+      "url": "https://earendil.com/posts/session-portability/",
+      "source": "Hacker News",
+      "score": 558,
+      "comments": 151
+    },
+    {
+      "id": "hn:49120097",
+      "title": "Google fixed more Chrome bugs in June than over the past two years, thanks to AI",
+      "summary": "",
+      "url": "https://blog.google/security/chrome-stronger-with-every-update/",
+      "source": "Hacker News",
+      "score": 240,
+      "comments": 228
     },
     {
       "id": "hn:49112232",
@@ -44,8 +69,8 @@
       "summary": "",
       "url": "https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/",
       "source": "Hacker News",
-      "score": 506,
-      "comments": 169
+      "score": 722,
+      "comments": 248
     },
     {
       "id": "hn:49111237",
@@ -53,35 +78,17 @@
       "summary": "",
       "url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
       "source": "Hacker News",
-      "score": 493,
-      "comments": 398
+      "score": 589,
+      "comments": 477
     },
     {
-      "id": "hn:49107950",
-      "title": "Google will expand age checks on Android worldwide till the end of the year",
+      "id": "hn:49116721",
+      "title": "I flagged two research papers for fake authors and both were accepted as orals",
       "summary": "",
-      "url": "https://android-developers.googleblog.com/2026/07/google-play-age-signals-api-safer-experiences.html",
+      "url": "https://geospatialml.com/posts/reviewing-ai-slop/",
       "source": "Hacker News",
-      "score": 367,
-      "comments": 457
-    },
-    {
-      "id": "hn:49113929",
-      "title": "UEFA and its national associations will not participate in FIFA competitions",
-      "summary": "",
-      "url": "https://www.uefa.com/news-media/news/02a7-213a92896eb0-54dfbf454e3b-1000--statement-on-behalf-of-uefa-and-its-55-national-associations/",
-      "source": "Hacker News",
-      "score": 835,
-      "comments": 461
-    },
-    {
-      "id": "hn:49111176",
-      "title": "The Economic Benefit of Refactoring",
-      "summary": "",
-      "url": "https://martinfowler.com/articles/exploring-gen-ai/refactoring-economic-benefit.html",
-      "source": "Hacker News",
-      "score": 205,
-      "comments": 85
+      "score": 248,
+      "comments": 113
     },
     {
       "id": "lob:ba2yfy",
@@ -89,63 +96,56 @@
       "summary": "",
       "url": "https://kttnr.net/blog/cpp-float-to-int-conversion-undefined-behavior/",
       "source": "Lobste.rs",
-      "score": 66,
-      "comments": 30,
+      "score": 75,
+      "comments": 37,
       "tags": [
         "c++"
       ]
     },
     {
-      "id": "lob:mbk56v",
-      "title": "What side projects have you enjoyed the most?",
-      "summary": "<p>In the spirit of <a href=\"https://blog.jsbarretto.com/post/software-is-joy\" rel=\"ugc\">https://blog.jsbarretto.com/post/software-is-joy</a>, what side projects have you enjoyed working on the most?</p>\n",
-      "url": "https://lobste.rs/s/mbk56v/what_side_projects_have_you_enjoyed_most",
+      "id": "hn:49119063",
+      "title": "JEP 401: Value Objects (Preview) merged to OpenJDK master",
+      "summary": "",
+      "url": "https://github.com/openjdk/jdk/pull/31120",
+      "source": "Hacker News",
+      "score": 176,
+      "comments": 96
+    },
+    {
+      "id": "lob:cpyuub",
+      "title": "Progress toward compiling Linux with gccrs",
+      "summary": "",
+      "url": "https://lwn.net/SubscriberLink/1083202/f1ba926cd57ac5c5/",
       "source": "Lobste.rs",
-      "score": 48,
-      "comments": 63,
+      "score": 38,
+      "comments": 12,
       "tags": [
-        "ask",
-        "programming"
+        "linux",
+        "rust"
       ]
     },
     {
-      "id": "hn:49111305",
-      "title": "Physicists Solve a Muon Mystery. Now, Old Results Don't Add Up",
+      "id": "hn:49121980",
+      "title": "The End of an Era",
       "summary": "",
-      "url": "https://www.quantamagazine.org/physicists-solve-a-muon-mystery-now-old-results-dont-add-up-20260729/",
+      "url": "https://hughhowey.com/the-end-of-an-era/",
       "source": "Hacker News",
       "score": 188,
-      "comments": 104
+      "comments": 197
     },
     {
-      "id": "lob:xi6azw",
-      "title": "AI Mania Is Eviscerating Global Decision-Making",
+      "id": "lob:ycsivx",
+      "title": "How to speed up the Rust compiler in July 2026",
       "summary": "",
-      "url": "https://hermit-tech.com/blog/ai-mania-is-eviscerating-global-decisionmaking",
+      "url": "https://nnethercote.github.io/2026/07/31/how-to-speed-up-the-rust-compiler-in-july-2026.html",
       "source": "Lobste.rs",
-      "score": 125,
-      "comments": 50,
+      "score": 47,
+      "comments": 3,
       "tags": [
-        "vibecoding"
+        "compilers",
+        "performance",
+        "rust"
       ]
-    },
-    {
-      "id": "hn:49113338",
-      "title": "CodePen 2.0",
-      "summary": "",
-      "url": "https://chriscoyier.net/2026/07/30/codepen-2-0/",
-      "source": "Hacker News",
-      "score": 141,
-      "comments": 43
-    },
-    {
-      "id": "hn:49117099",
-      "title": "The AI Aesthetic",
-      "summary": "",
-      "url": "https://blog.jim-nielsen.com/2026/ai-aesthetic/",
-      "source": "Hacker News",
-      "score": 159,
-      "comments": 82
     },
     {
       "id": "lob:zk0qqe",
@@ -153,11 +153,20 @@
       "summary": "",
       "url": "https://github.com/hrvach/deskhop",
       "source": "Lobste.rs",
-      "score": 47,
-      "comments": 11,
+      "score": 68,
+      "comments": 15,
       "tags": [
         "hardware"
       ]
+    },
+    {
+      "id": "hn:49119425",
+      "title": "Show HN: Gander, an Android file viewer that asks for no permissions at all",
+      "summary": "Hi HN,<p>I built an Android file viewer that opens PDF, Word, Excel, PowerPoint, images, video, audio, Markdown and code, and asks for no permissions at all.<p>I have always been uneasy about opening files people send me. On Android you either install a 400 MB office suite and sign in or use a small",
+      "url": "https://github.com/mokshablr/gander",
+      "source": "Hacker News",
+      "score": 126,
+      "comments": 58
     },
     {
       "id": "arxiv:2607.28618v1",
@@ -207,27 +216,31 @@
       "score": 0
     },
     {
-      "id": "hn:49116721",
-      "title": "I flagged two research papers for fake authors and both were accepted as orals",
-      "summary": "",
-      "url": "https://geospatialml.com/posts/reviewing-ai-slop/",
-      "source": "Hacker News",
-      "score": 110,
-      "comments": 43
+      "id": "lob:itp1nm",
+      "title": "A question about a factorial operator",
+      "summary": "<p>I wrote an assembler that supports floating point values.  One of the operators I implemented was factorial because a lot of Taylor series seem to use it to define various constants.  So right now, I have</p>\n<pre><code>.float\t-((2*3.14159265)**11)/11!\n</code></pre>\n<p>I found a bug in the parsin",
+      "url": "https://lobste.rs/s/itp1nm/question_about_factorial_operator",
+      "source": "Lobste.rs",
+      "score": 18,
+      "comments": 13,
+      "tags": [
+        "ask",
+        "compilers"
+      ]
     },
     {
-      "id": "arxiv:2607.28617v1",
-      "title": "AISPA: User-Centric System Prompt Auditing for Large Language Model Applications",
-      "summary": "System prompts are instructions configured by developers to govern the behaviors of foundation models in AI applications. They are used throughout commercial AI products, but are rarely disclosed to the public or regulators, creating a serious trust and accountability gap in the wide deployment of A",
-      "url": "https://arxiv.org/abs/2607.28617v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.CY",
-        "cs.HC"
-      ],
-      "arxiv_id": "2607.28617v1"
+      "id": "lob:fbqlpy",
+      "title": "GCC steering committee announces AI policy",
+      "summary": "",
+      "url": "https://lwn.net/Articles/1086041/",
+      "source": "Lobste.rs",
+      "score": 20,
+      "comments": 17,
+      "tags": [
+        "c",
+        "c++",
+        "vibecoding"
+      ]
     }
   ],
   "ai_curated": true

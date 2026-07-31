@@ -4,26 +4,26 @@
 
 ---
 
-### 1. 📌 Gemini Robotics 2：机器人终于有"全身心眼"了 (来源: HackerNews | 493分)
-- **核心干货**：Google DeepMind 发布 Gemini Robotics 2，核心突破在于"全身智能"——让机器人不再只是机械臂+视觉模块的缝合怪，而是能协调全身动作、理解物理交互的端到端模型。这意味着机器人从"看见-执行"进化到"感知-理解-行动"的闭环。
-- **毒舌/硬核点评**：终于，机器人不再像个帕金森患者抓杯子了。但别急着让家务机器人上岗，先让它学会不把猫当"可抓取物体"再说。
-- **🔗 传送门**：[点击直达](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/)
+### 1. 📌 GitHub 正式上线 Stacked PRs 公共预览 (来源: GitHub Blog)
+- **核心干货**：GitHub 终于把那些用 `gh` CLI 和第三方工具折腾了几年的"栈式拉取请求"工作流变成了原生功能。它允许你将一个大型 PR 拆分成多个相互依赖的小 PR，按顺序合并，大幅降低 Code Review 的认知负担，让"小步快跑"在大型特性分支上真正落地。
+- **毒舌/硬核点评**：GitHub 这波操作，等于把"线性历史强迫症"和"巨型 PR 恐惧症"同时给治了。恭喜，你的 Git 技巧树终于可以少点几个没用的分支管理技能了。
+- **🔗 传送门**：[点击直达原链接](https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/)
 
 ---
 
-### 2. 📌 GitHub 上线 Stacked PR：代码评审终于进入"叠叠乐"时代 (来源: HackerNews | 506分)
-- **核心干货**：GitHub 正式推出 Stacked Pull Requests 公开预览。这项功能允许开发者将多个依赖的 PR 堆叠提交，解决大型变更无法拆分评审的痛点——不用再等一个 PR 合并才能提下一个，大幅提升大型功能开发的并行效率。
-- **毒舌/硬核点评**：GitHub 终于把"改一行代码等三天评审"的糟粕文化往棺材里钉了一颗钉子。但小心，别把自己叠成代码界的比萨斜塔。
-- **🔗 传送门**：[点击直达](https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/)
+### 2. 📌 Google 借助 AI 修复 Chrome 漏洞数量创两年新高 (来源: Google Blog)
+- **核心干货**：Google 声称在 6 月份利用 AI 修复的 Chrome 漏洞数量，比过去两年加起来还多。这不是简单的自动补丁，而是 AI 辅助进行代码审计、漏洞模式识别和补丁生成，将安全修复从"人工排雷"推向"AI 扫雷"的自动化时代。
+- **毒舌/硬核点评**：以前是"写代码一时爽，修 Bug 火葬场"，现在 AI 直接帮你把火葬场改成了"全自动垃圾回收站"。建议 Chrome 团队给 AI 发个"本月最佳程序员"奖，毕竟它比某些人类同事效率高多了。
+- **🔗 传送门**：[点击直达原链接](https://blog.google/security/chrome-stronger-with-every-update/)
 
 ---
 
-### 3. 📌 Rails 曝出 9.5 分高危漏洞：图片上传变"服务器裸奔"（来源: 科技新闻）
-- **核心干货**：Ruby on Rails 修复 Active Storage 高危漏洞（CVE-2026-66066，CVSS 9.5），未认证攻击者可通过构造恶意图片上传，读取应用服务器上的任意文件，包括环境变量和密钥。所有使用 Active Storage 的 Rails 应用均受影响，需立即升级。
-- **毒舌/硬核点评**：又是一个"上传图片"变"下载源码"的经典案例。建议所有 Rails 开发者今天别干别的，先打补丁，你的服务器可能已经在裸奔了。
-- **🔗 传送门**：[点击直达](https://thehackernews.com/2026/07/critical-rails-flaw-could-let.html)
+### 3. 📌 Gemini Robotics 2 发布：为机器人注入"全身智能" (来源: DeepMind Blog)
+- **核心干货**：DeepMind 推出了 Gemini Robotics 2，其核心突破在于 "whole body intelligence"（全身智能）。它不再是简单的"视觉-语言-动作"模型，而是让机器人能够理解并协调整个身体的运动，包括在动态环境中保持平衡、进行精细操作，甚至处理身体被触碰时的反应，让机器人更像"人"而非"机械臂"。
+- **毒舌/硬核点评**：以前机器人是"四肢发达，头脑简单"，现在 Gemini Robotics 2 终于让它们"身心协调"了。这离《西部世界》又近了一步，希望它们学会走路之前，先学会别把咖啡洒在人类键盘上。
+- **🔗 传送门**：[点击直达原链接](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/)
 
 ---
 
 ### 🗣️ 今日顶男金句
-"技术债不会消失，它只会像高利贷一样，在你最需要发布新功能的时候，连本带利找上门来。"
+"别光顾着给 AI 打工，要想着怎么让 AI 给你打工——毕竟，连 Chrome 的 Bug 都是 AI 在修了，你还在手动 Deploy 吗？"
