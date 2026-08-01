@@ -1,137 +1,67 @@
 {
-  "date": "2026-07-31",
-  "update_time": "2026-07-31 14:11:43",
+  "date": "2026-08-01",
+  "update_time": "2026-08-01 03:22:37",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-31\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 GitHub 正式上线 Stacked PRs 公共预览 (来源: GitHub Blog)\n- **核心干货**：GitHub 终于把那些用 `gh` CLI 和第三方工具折腾了几年的\"栈式拉取请求\"工作流变成了原生功能。它允许你将一个大型 PR 拆分成多个相互依赖的小 PR，按顺序合并，大幅降低 Code Review 的认知负担，让\"小步快跑\"在大型特性分支上真正落地。\n- **毒舌/硬核点评**：GitHub 这波操作，等于把\"线性历史强迫症\"和\"巨型 PR 恐惧症\"同时给治了。恭喜，你的 Git 技巧树终于可以少点几个没用的分支管理技能了。\n- **🔗 传送门**：[点击直达原链接](https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/)\n\n---\n\n### 2. 📌 Google 借助 AI 修复 Chrome 漏洞数量创两年新高 (来源: Google Blog)\n- **核心干货**：Google 声称在 6 月份利用 AI 修复的 Chrome 漏洞数量，比过去两年加起来还多。这不是简单的自动补丁，而是 AI 辅助进行代码审计、漏洞模式识别和补丁生成，将安全修复从\"人工排雷\"推向\"AI 扫雷\"的自动化时代。\n- **毒舌/硬核点评**：以前是\"写代码一时爽，修 Bug 火葬场\"，现在 AI 直接帮你把火葬场改成了\"全自动垃圾回收站\"。建议 Chrome 团队给 AI 发个\"本月最佳程序员\"奖，毕竟它比某些人类同事效率高多了。\n- **🔗 传送门**：[点击直达原链接](https://blog.google/security/chrome-stronger-with-every-update/)\n\n---\n\n### 3. 📌 Gemini Robotics 2 发布：为机器人注入\"全身智能\" (来源: DeepMind Blog)\n- **核心干货**：DeepMind 推出了 Gemini Robotics 2，其核心突破在于 \"whole body intelligence\"（全身智能）。它不再是简单的\"视觉-语言-动作\"模型，而是让机器人能够理解并协调整个身体的运动，包括在动态环境中保持平衡、进行精细操作，甚至处理身体被触碰时的反应，让机器人更像\"人\"而非\"机械臂\"。\n- **毒舌/硬核点评**：以前机器人是\"四肢发达，头脑简单\"，现在 Gemini Robotics 2 终于让它们\"身心协调\"了。这离《西部世界》又近了一步，希望它们学会走路之前，先学会别把咖啡洒在人类键盘上。\n- **🔗 传送门**：[点击直达原链接](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/)\n\n---\n\n### 🗣️ 今日顶男金句\n\"别光顾着给 AI 打工，要想着怎么让 AI 给你打工——毕竟，连 Chrome 的 Bug 都是 AI 在修了，你还在手动 Deploy 吗？\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-01\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Tailscale 未能阻止 Hugging Face 入侵事件 (来源: Hacker News)\n- **核心干货**：Tailscale 官方博客披露了 Hugging Face 安全事件的细节，承认其零信任网络解决方案并非万能。攻击者绕过了基于身份的访问控制，暴露了\"零信任\"架构在供应链攻击和内部威胁面前的盲区。\n- **毒舌/硬核点评**：这波\"自曝家丑\"堪称教科书级的公关灾难。零信任如果连自家产品都护不住，那这\"信任\"是不是该改名叫\"零防御\"？建议把口号改成\"我们不信任任何人，包括我们自己\"。\n- **🔗 传送门**：[点击直达原链接](https://tailscale.com/blog/hugging-face-intrusion)\n\n---\n\n### 2. 📌 Kimi K3 极限压榨：29GB 内存跑大模型 (来源: Hacker News)\n- **核心干货**：一个名为 `waste` 的项目展示了如何在仅 29GB 内存环境下运行 Kimi K3 模型，虽然速度只有 0.50 tok/s，但证明了大规模模型在消费级硬件上的可行性。这本质上是极致的量化与内存优化技术的炫技。\n- **毒舌/硬核点评**：0.5 tok/s 的速度，比我看完一篇技术文档还慢。但话说回来，这项目就像在沙滩上用沙砾造芯片——虽然不实用，但那股\"硬核折腾\"的劲儿，确实让人respect。\n- **🔗 传送门**：[点击直达原链接](https://github.com/sqliteai/waste)\n\n---\n\n### 3. 📌 Azure Cosmos DB 爆出平台级密钥漏洞 (来源: Tech RSS)\n- **核心干货**：Wiz 研究团队发现 Azure Cosmos DB 的 Gremlin 查询沙箱存在逃逸漏洞（代号 CosmosEscape），攻击者可获取平台级密钥，进而读写任意租户数据库。虽然已修复，但攻击链的复杂度和影响范围令人咋舌。\n- **毒舌/硬核点评**：又一个\"云上安全\"的美丽泡沫被戳破。微软这波\"平台级密钥\"漏洞，堪比把万能钥匙挂在门口说\"我们很安全\"。建议下次发布会把\"安全第一\"的PPT改成\"漏洞第一\"。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/07/azure-cosmos-db-flaw-exposed-platform.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\"技术圈每天都在上演'我们很安全'的戏码，但真正的顶男早就明白：**没有绝对的安全，只有不断被打脸后的修补**。与其迷信'零信任'，不如学会'零侥幸'。\"",
   "briefing_items": [
     {
-      "title": "GitHub 正式上线 Stacked PRs 公共预览",
-      "source": "GitHub Blog",
-      "summary": "GitHub 终于把那些用 `gh` CLI 和第三方工具折腾了几年的\"栈式拉取请求\"工作流变成了原生功能。它允许你将一个大型 PR 拆分成多个相互依赖的小 PR，按顺序合并，大幅降低 Code Review 的认知负担，让\"小步快跑\"在大型特性分支上真正落地。",
-      "commentary": "GitHub 这波操作，等于把\"线性历史强迫症\"和\"巨型 PR 恐惧症\"同时给治了。恭喜，你的 Git 技巧树终于可以少点几个没用的分支管理技能了。",
-      "url": "https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/"
+      "title": "Tailscale 未能阻止 Hugging Face 入侵事件",
+      "source": "Hacker News",
+      "summary": "Tailscale 官方博客披露了 Hugging Face 安全事件的细节，承认其零信任网络解决方案并非万能。攻击者绕过了基于身份的访问控制，暴露了\"零信任\"架构在供应链攻击和内部威胁面前的盲区。",
+      "commentary": "这波\"自曝家丑\"堪称教科书级的公关灾难。零信任如果连自家产品都护不住，那这\"信任\"是不是该改名叫\"零防御\"？建议把口号改成\"我们不信任任何人，包括我们自己\"。",
+      "url": "https://tailscale.com/blog/hugging-face-intrusion"
     },
     {
-      "title": "Google 借助 AI 修复 Chrome 漏洞数量创两年新高",
-      "source": "Google Blog",
-      "summary": "Google 声称在 6 月份利用 AI 修复的 Chrome 漏洞数量，比过去两年加起来还多。这不是简单的自动补丁，而是 AI 辅助进行代码审计、漏洞模式识别和补丁生成，将安全修复从\"人工排雷\"推向\"AI 扫雷\"的自动化时代。",
-      "commentary": "以前是\"写代码一时爽，修 Bug 火葬场\"，现在 AI 直接帮你把火葬场改成了\"全自动垃圾回收站\"。建议 Chrome 团队给 AI 发个\"本月最佳程序员\"奖，毕竟它比某些人类同事效率高多了。",
-      "url": "https://blog.google/security/chrome-stronger-with-every-update/"
+      "title": "Kimi K3 极限压榨：29GB 内存跑大模型",
+      "source": "Hacker News",
+      "summary": "一个名为 `waste` 的项目展示了如何在仅 29GB 内存环境下运行 Kimi K3 模型，虽然速度只有 0.50 tok/s，但证明了大规模模型在消费级硬件上的可行性。这本质上是极致的量化与内存优化技术的炫技。",
+      "commentary": "0.5 tok/s 的速度，比我看完一篇技术文档还慢。但话说回来，这项目就像在沙滩上用沙砾造芯片——虽然不实用，但那股\"硬核折腾\"的劲儿，确实让人respect。",
+      "url": "https://github.com/sqliteai/waste"
     },
     {
-      "title": "Gemini Robotics 2 发布：为机器人注入\"全身智能\"",
-      "source": "DeepMind Blog",
-      "summary": "DeepMind 推出了 Gemini Robotics 2，其核心突破在于 \"whole body intelligence\"（全身智能）。它不再是简单的\"视觉-语言-动作\"模型，而是让机器人能够理解并协调整个身体的运动，包括在动态环境中保持平衡、进行精细操作，甚至处理身体被触碰时的反应，让机器人更像\"人\"而非\"机械臂\"。",
-      "commentary": "以前机器人是\"四肢发达，头脑简单\"，现在 Gemini Robotics 2 终于让它们\"身心协调\"了。这离《西部世界》又近了一步，希望它们学会走路之前，先学会别把咖啡洒在人类键盘上。",
-      "url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/"
+      "title": "Azure Cosmos DB 爆出平台级密钥漏洞",
+      "source": "Tech RSS",
+      "summary": "Wiz 研究团队发现 Azure Cosmos DB 的 Gremlin 查询沙箱存在逃逸漏洞（代号 CosmosEscape），攻击者可获取平台级密钥，进而读写任意租户数据库。虽然已修复，但攻击链的复杂度和影响范围令人咋舌。",
+      "commentary": "又一个\"云上安全\"的美丽泡沫被戳破。微软这波\"平台级密钥\"漏洞，堪比把万能钥匙挂在门口说\"我们很安全\"。建议下次发布会把\"安全第一\"的PPT改成\"漏洞第一\"。",
+      "url": "https://thehackernews.com/2026/07/azure-cosmos-db-flaw-exposed-platform.html"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49120299",
-      "title": "DeepSeek V4 Flash 0731 Intelligence, Performance and Price Analysis",
+      "id": "hn:49126604",
+      "title": "qm – Multiplayer agent harness for work",
       "summary": "",
-      "url": "https://artificialanalysis.ai/models/deepseek-v4-flash-ga",
+      "url": "https://github.com/yc-software/qm",
       "source": "Hacker News",
-      "score": 222,
-      "comments": 90
+      "score": 492,
+      "comments": 106
     },
     {
-      "id": "hn:49119559",
-      "title": "DeepSeek-V4-Flash Update",
+      "id": "hn:49127306",
+      "title": "Tailscale didn't stop the Hugging Face intrusion",
       "summary": "",
-      "url": "https://api-docs.deepseek.com/updates/",
+      "url": "https://tailscale.com/blog/hugging-face-intrusion",
       "source": "Hacker News",
-      "score": 440,
-      "comments": 225
+      "score": 479,
+      "comments": 189
     },
     {
-      "id": "hn:49118781",
-      "title": "The session you cannot take with you",
+      "id": "hn:49124218",
+      "title": "Elevators",
       "summary": "",
-      "url": "https://earendil.com/posts/session-portability/",
+      "url": "https://john.fun/elevators",
       "source": "Hacker News",
-      "score": 558,
-      "comments": 151
+      "score": 961,
+      "comments": 237
     },
     {
-      "id": "hn:49120097",
-      "title": "Google fixed more Chrome bugs in June than over the past two years, thanks to AI",
+      "id": "hn:49124858",
+      "title": "Big Food vs. the People",
       "summary": "",
-      "url": "https://blog.google/security/chrome-stronger-with-every-update/",
+      "url": "https://www.lighthousereports.com/investigation/big-food-vs-the-people/",
       "source": "Hacker News",
-      "score": 240,
-      "comments": 228
-    },
-    {
-      "id": "hn:49112232",
-      "title": "Stacked PRs are now live on GitHub",
-      "summary": "",
-      "url": "https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/",
-      "source": "Hacker News",
-      "score": 722,
-      "comments": 248
-    },
-    {
-      "id": "hn:49111237",
-      "title": "Gemini Robotics 2 brings whole body intelligence to robots",
-      "summary": "",
-      "url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
-      "source": "Hacker News",
-      "score": 589,
-      "comments": 477
-    },
-    {
-      "id": "hn:49116721",
-      "title": "I flagged two research papers for fake authors and both were accepted as orals",
-      "summary": "",
-      "url": "https://geospatialml.com/posts/reviewing-ai-slop/",
-      "source": "Hacker News",
-      "score": 248,
-      "comments": 113
-    },
-    {
-      "id": "lob:ba2yfy",
-      "title": "C++ float-to-int conversion can be undefined behavior",
-      "summary": "",
-      "url": "https://kttnr.net/blog/cpp-float-to-int-conversion-undefined-behavior/",
-      "source": "Lobste.rs",
-      "score": 75,
-      "comments": 37,
-      "tags": [
-        "c++"
-      ]
-    },
-    {
-      "id": "hn:49119063",
-      "title": "JEP 401: Value Objects (Preview) merged to OpenJDK master",
-      "summary": "",
-      "url": "https://github.com/openjdk/jdk/pull/31120",
-      "source": "Hacker News",
-      "score": 176,
-      "comments": 96
-    },
-    {
-      "id": "lob:cpyuub",
-      "title": "Progress toward compiling Linux with gccrs",
-      "summary": "",
-      "url": "https://lwn.net/SubscriberLink/1083202/f1ba926cd57ac5c5/",
-      "source": "Lobste.rs",
-      "score": 38,
-      "comments": 12,
-      "tags": [
-        "linux",
-        "rust"
-      ]
-    },
-    {
-      "id": "hn:49121980",
-      "title": "The End of an Era",
-      "summary": "",
-      "url": "https://hughhowey.com/the-end-of-an-era/",
-      "source": "Hacker News",
-      "score": 188,
-      "comments": 197
+      "score": 202,
+      "comments": 134
     },
     {
       "id": "lob:ycsivx",
@@ -139,8 +69,8 @@
       "summary": "",
       "url": "https://nnethercote.github.io/2026/07/31/how-to-speed-up-the-rust-compiler-in-july-2026.html",
       "source": "Lobste.rs",
-      "score": 47,
-      "comments": 3,
+      "score": 79,
+      "comments": 6,
       "tags": [
         "compilers",
         "performance",
@@ -148,25 +78,58 @@
       ]
     },
     {
-      "id": "lob:zk0qqe",
-      "title": "deskhop: Fast Desktop Switching Device",
+      "id": "hn:49123386",
+      "title": "Run Kimi K3 using 29 GB of RAM at 0.50 tok/s",
       "summary": "",
-      "url": "https://github.com/hrvach/deskhop",
+      "url": "https://github.com/sqliteai/waste",
+      "source": "Hacker News",
+      "score": 171,
+      "comments": 70
+    },
+    {
+      "id": "hn:49125034",
+      "title": "Getting 25 Gbps Thunderbolt Ethernet on My Mac Studio",
+      "summary": "",
+      "url": "https://www.jeffgeerling.com/blog/2026/getting-25g-ethernet-mac-thunderbolt/",
+      "source": "Hacker News",
+      "score": 157,
+      "comments": 89
+    },
+    {
+      "id": "lob:kvxee3",
+      "title": "Why I forked rand",
+      "summary": "",
+      "url": "https://casualhacks.net/blog/2026-07-27-why-i-forked-rand.html",
       "source": "Lobste.rs",
-      "score": 68,
-      "comments": 15,
+      "score": 48,
+      "comments": 16,
       "tags": [
-        "hardware"
+        "rust"
       ]
     },
     {
-      "id": "hn:49119425",
-      "title": "Show HN: Gander, an Android file viewer that asks for no permissions at all",
-      "summary": "Hi HN,<p>I built an Android file viewer that opens PDF, Word, Excel, PowerPoint, images, video, audio, Markdown and code, and asks for no permissions at all.<p>I have always been uneasy about opening files people send me. On Android you either install a 400 MB office suite and sign in or use a small",
-      "url": "https://github.com/mokshablr/gander",
-      "source": "Hacker News",
-      "score": 126,
-      "comments": 58
+      "id": "lob:7ibjyl",
+      "title": "Go 1.27 interactive tour",
+      "summary": "",
+      "url": "https://victoriametrics.com/blog/go-1-27/",
+      "source": "Lobste.rs",
+      "score": 56,
+      "comments": 21,
+      "tags": [
+        "go"
+      ]
+    },
+    {
+      "id": "lob:qvbkpa",
+      "title": "Ruby Central's Destructive Legacy",
+      "summary": "",
+      "url": "https://andre.arko.net/2026/07/30/ruby-centrals-destructive-legacy/",
+      "source": "Lobste.rs",
+      "score": 56,
+      "comments": 9,
+      "tags": [
+        "ruby"
+      ]
     },
     {
       "id": "arxiv:2607.28618v1",
@@ -208,39 +171,84 @@
       "arxiv_id": "2607.28589v1"
     },
     {
-      "id": "rss:b04f5a0b97",
-      "title": "Critical Rails Flaw Could Let Unauthenticated Attackers Read Server Files via Image Uploads",
-      "summary": "Ruby on Rails has released fixes for a critical Active Storage vulnerability that could let unauthenticated attackers read arbitrary files from application servers through crafted image uploads.\n\nTracked as CVE-2026-66066 (CVSS score: 9.5), the flaw can expose the Rails process environment and secre",
-      "url": "https://thehackernews.com/2026/07/critical-rails-flaw-could-let.html",
-      "source": "Tech RSS",
-      "score": 0
+      "id": "hn:49126765",
+      "title": "June in Servo: real world compat, media queries, SharedWorker, and more",
+      "summary": "",
+      "url": "https://servo.org/blog/2026/07/31/june-in-servo/",
+      "source": "Hacker News",
+      "score": 116,
+      "comments": 34
     },
     {
-      "id": "lob:itp1nm",
-      "title": "A question about a factorial operator",
-      "summary": "<p>I wrote an assembler that supports floating point values.  One of the operators I implemented was factorial because a lot of Taylor series seem to use it to define various constants.  So right now, I have</p>\n<pre><code>.float\t-((2*3.14159265)**11)/11!\n</code></pre>\n<p>I found a bug in the parsin",
-      "url": "https://lobste.rs/s/itp1nm/question_about_factorial_operator",
+      "id": "lob:ri8bav",
+      "title": "Stripe Just Wants a Number",
+      "summary": "",
+      "url": "https://blog.exe.dev/billable-facts",
       "source": "Lobste.rs",
-      "score": 18,
-      "comments": 13,
+      "score": 26,
+      "comments": 16,
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "id": "lob:won0b2",
+      "title": "What are you doing this weekend?",
+      "summary": "<p>Feel free to tell what you plan on doing this weekend and even ask for help or feedback.</p>\n<p>Please keep in mind it’s more than OK to do nothing at all too!</p>\n<p>(Seems this is the first time in <em>years</em> we missed one—the week start one 5 days ago. As a reminder, if I’ve not posted it,",
+      "url": "https://lobste.rs/s/won0b2/what_are_you_doing_this_weekend",
+      "source": "Lobste.rs",
+      "score": 7,
+      "comments": 20,
       "tags": [
         "ask",
-        "compilers"
+        "programming"
       ]
     },
     {
-      "id": "lob:fbqlpy",
-      "title": "GCC steering committee announces AI policy",
-      "summary": "",
-      "url": "https://lwn.net/Articles/1086041/",
-      "source": "Lobste.rs",
-      "score": 20,
-      "comments": 17,
-      "tags": [
-        "c",
-        "c++",
-        "vibecoding"
-      ]
+      "id": "arxiv:2607.28617v1",
+      "title": "AISPA: User-Centric System Prompt Auditing for Large Language Model Applications",
+      "summary": "System prompts are instructions configured by developers to govern the behaviors of foundation models in AI applications. They are used throughout commercial AI products, but are rarely disclosed to the public or regulators, creating a serious trust and accountability gap in the wide deployment of A",
+      "url": "https://arxiv.org/abs/2607.28617v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.CY",
+        "cs.HC"
+      ],
+      "arxiv_id": "2607.28617v1"
+    },
+    {
+      "id": "arxiv:2607.28591v1",
+      "title": "Change2Task: From Repository Changes to Executable Coding Agent Tasks and Environments",
+      "summary": "Scaling coding agents requires a continuing supply of executable data for training, benchmarking, and continuous evaluation. Each task must couple a realistic software state with a specification, development tools, and reliable verification. To expand this supply, we present Change2Task, a system gr",
+      "url": "https://arxiv.org/abs/2607.28591v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.SE",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_id": "2607.28591v1"
+    },
+    {
+      "id": "arxiv:2607.28580v1",
+      "title": "DualG-MRAG: Decoupling Macro-Reasoning and Micro-Matching for Multimodal Retrieval-Augmented Generation",
+      "summary": "While Multimodal Retrieval-Augmented Generation (MM-RAG) has shown promising results, it still struggles with complex multi-hop reasoning tasks. Existing methods primarily focus on independent instance-level matching, which often fails to capture explicit relationships across modalities and document",
+      "url": "https://arxiv.org/abs/2607.28580v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI"
+      ],
+      "arxiv_id": "2607.28580v1"
+    },
+    {
+      "id": "rss:14a2770977",
+      "title": "Azure Cosmos DB Flaw Exposed Platform-Wide Key That Could Access Any Database",
+      "summary": "A now-patched vulnerability in Azure Cosmos DB could have let an attacker escape the service's Gremlin query sandbox and obtain full read and write access to databases across customer tenants, according to Wiz.\n\nWiz, which codenamed the chain CosmosEscape, said the exploit chain began with a crafted",
+      "url": "https://thehackernews.com/2026/07/azure-cosmos-db-flaw-exposed-platform.html",
+      "source": "Tech RSS",
+      "score": 0
     }
   ],
   "ai_curated": true
