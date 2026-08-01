@@ -1,29 +1,29 @@
 {
   "date": "2026-08-01",
-  "update_time": "2026-08-01 03:22:37",
+  "update_time": "2026-08-01 13:25:13",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-01\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Tailscale 未能阻止 Hugging Face 入侵事件 (来源: Hacker News)\n- **核心干货**：Tailscale 官方博客披露了 Hugging Face 安全事件的细节，承认其零信任网络解决方案并非万能。攻击者绕过了基于身份的访问控制，暴露了\"零信任\"架构在供应链攻击和内部威胁面前的盲区。\n- **毒舌/硬核点评**：这波\"自曝家丑\"堪称教科书级的公关灾难。零信任如果连自家产品都护不住，那这\"信任\"是不是该改名叫\"零防御\"？建议把口号改成\"我们不信任任何人，包括我们自己\"。\n- **🔗 传送门**：[点击直达原链接](https://tailscale.com/blog/hugging-face-intrusion)\n\n---\n\n### 2. 📌 Kimi K3 极限压榨：29GB 内存跑大模型 (来源: Hacker News)\n- **核心干货**：一个名为 `waste` 的项目展示了如何在仅 29GB 内存环境下运行 Kimi K3 模型，虽然速度只有 0.50 tok/s，但证明了大规模模型在消费级硬件上的可行性。这本质上是极致的量化与内存优化技术的炫技。\n- **毒舌/硬核点评**：0.5 tok/s 的速度，比我看完一篇技术文档还慢。但话说回来，这项目就像在沙滩上用沙砾造芯片——虽然不实用，但那股\"硬核折腾\"的劲儿，确实让人respect。\n- **🔗 传送门**：[点击直达原链接](https://github.com/sqliteai/waste)\n\n---\n\n### 3. 📌 Azure Cosmos DB 爆出平台级密钥漏洞 (来源: Tech RSS)\n- **核心干货**：Wiz 研究团队发现 Azure Cosmos DB 的 Gremlin 查询沙箱存在逃逸漏洞（代号 CosmosEscape），攻击者可获取平台级密钥，进而读写任意租户数据库。虽然已修复，但攻击链的复杂度和影响范围令人咋舌。\n- **毒舌/硬核点评**：又一个\"云上安全\"的美丽泡沫被戳破。微软这波\"平台级密钥\"漏洞，堪比把万能钥匙挂在门口说\"我们很安全\"。建议下次发布会把\"安全第一\"的PPT改成\"漏洞第一\"。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/07/azure-cosmos-db-flaw-exposed-platform.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\"技术圈每天都在上演'我们很安全'的戏码，但真正的顶男早就明白：**没有绝对的安全，只有不断被打脸后的修补**。与其迷信'零信任'，不如学会'零侥幸'。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-01\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Flint：专为 AI 时代打造的可视化语言 (来源: GitHub/Microsoft)\n- **核心干货**：微软推出的全新可视化语言，直击 AI 生成内容中数据可视化的痛点。它不满足于生成静态图表，而是提供一种结构化语言，让 AI 能精准构建交互式、复杂的可视化界面，解决了大模型在图表生成上\"看着像那么回事，实则一塌糊涂\"的顽疾。\n- **毒舌/硬核点评**：这是给 AI 的\"绘图板\"上了规矩。以后 AI 再生成那种坐标轴错乱、数据对不上的图表，可就没借口了——不是模型不行，是你没用 Flint。\n- **🔗 传送门**：[点击直达原链接](https://microsoft.github.io/flint-chart/)\n\n---\n\n### 2. 📌 OSReward：给\"电脑操控型 AI\"立的行业标杆 (来源: ArXiv)\n- **核心干货**：随着能操控电脑的 AI 代理（CUA）越来越多，如何标准化评估它们是否真正完成任务成了大问题。OSReward 提出了一个跨平台的标准化评估框架，用奖励模型来验证 AI 在电脑上的操作轨迹是否达标，为训练、评测和强化学习提供了统一标尺。\n- **毒舌/硬核点评**：AI 操控电脑的\"高考\"终于有了统一出题组。以前各家自说自话，现在总算有个能横向对比的\"分数线\"了，免得某些 Agent 演示视频里全是精心剪辑的\"幸存者偏差\"。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2607.28609v1)\n\n---\n\n### 3. 📌 Change2Task：把代码仓库变成 AI 程序员的\"练习题\" (来源: ArXiv)\n- **核心干货**：训练和评估编程 AI 需要海量\"题目\"，但人工构造太慢。Change2Task 能直接从真实代码仓库的变更记录中，自动生成可执行的编程任务和配套环境。这意味着 AI 程序员能拿到源源不断的、贴近真实开发的训练数据，而不是总在刷那些玩具级 LeetCode 题。\n- **毒舌/硬核点评**：这相当于给 AI 程序员开了个\"实战训练营\"，题库直接来自 GitHub 真实战场。这波下来，以后 AI 写代码的水平评估会更有说服力，比那些\"能通过单元测试\"的自嗨强多了。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2607.28591v1)\n\n---\n\n### 🗣️ 今日顶男金句\n别光让 AI 帮你写代码、做图表，真正的护城河是：当 AI 能搞定一切执行时，你还能提出那个值得被解决的问题。",
   "briefing_items": [
     {
-      "title": "Tailscale 未能阻止 Hugging Face 入侵事件",
-      "source": "Hacker News",
-      "summary": "Tailscale 官方博客披露了 Hugging Face 安全事件的细节，承认其零信任网络解决方案并非万能。攻击者绕过了基于身份的访问控制，暴露了\"零信任\"架构在供应链攻击和内部威胁面前的盲区。",
-      "commentary": "这波\"自曝家丑\"堪称教科书级的公关灾难。零信任如果连自家产品都护不住，那这\"信任\"是不是该改名叫\"零防御\"？建议把口号改成\"我们不信任任何人，包括我们自己\"。",
-      "url": "https://tailscale.com/blog/hugging-face-intrusion"
+      "title": "Flint：专为 AI 时代打造的可视化语言",
+      "source": "GitHub/Microsoft",
+      "summary": "微软推出的全新可视化语言，直击 AI 生成内容中数据可视化的痛点。它不满足于生成静态图表，而是提供一种结构化语言，让 AI 能精准构建交互式、复杂的可视化界面，解决了大模型在图表生成上\"看着像那么回事，实则一塌糊涂\"的顽疾。",
+      "commentary": "这是给 AI 的\"绘图板\"上了规矩。以后 AI 再生成那种坐标轴错乱、数据对不上的图表，可就没借口了——不是模型不行，是你没用 Flint。",
+      "url": "https://microsoft.github.io/flint-chart/"
     },
     {
-      "title": "Kimi K3 极限压榨：29GB 内存跑大模型",
-      "source": "Hacker News",
-      "summary": "一个名为 `waste` 的项目展示了如何在仅 29GB 内存环境下运行 Kimi K3 模型，虽然速度只有 0.50 tok/s，但证明了大规模模型在消费级硬件上的可行性。这本质上是极致的量化与内存优化技术的炫技。",
-      "commentary": "0.5 tok/s 的速度，比我看完一篇技术文档还慢。但话说回来，这项目就像在沙滩上用沙砾造芯片——虽然不实用，但那股\"硬核折腾\"的劲儿，确实让人respect。",
-      "url": "https://github.com/sqliteai/waste"
+      "title": "OSReward：给\"电脑操控型 AI\"立的行业标杆",
+      "source": "ArXiv",
+      "summary": "随着能操控电脑的 AI 代理（CUA）越来越多，如何标准化评估它们是否真正完成任务成了大问题。OSReward 提出了一个跨平台的标准化评估框架，用奖励模型来验证 AI 在电脑上的操作轨迹是否达标，为训练、评测和强化学习提供了统一标尺。",
+      "commentary": "AI 操控电脑的\"高考\"终于有了统一出题组。以前各家自说自话，现在总算有个能横向对比的\"分数线\"了，免得某些 Agent 演示视频里全是精心剪辑的\"幸存者偏差\"。",
+      "url": "https://arxiv.org/abs/2607.28609v1"
     },
     {
-      "title": "Azure Cosmos DB 爆出平台级密钥漏洞",
-      "source": "Tech RSS",
-      "summary": "Wiz 研究团队发现 Azure Cosmos DB 的 Gremlin 查询沙箱存在逃逸漏洞（代号 CosmosEscape），攻击者可获取平台级密钥，进而读写任意租户数据库。虽然已修复，但攻击链的复杂度和影响范围令人咋舌。",
-      "commentary": "又一个\"云上安全\"的美丽泡沫被戳破。微软这波\"平台级密钥\"漏洞，堪比把万能钥匙挂在门口说\"我们很安全\"。建议下次发布会把\"安全第一\"的PPT改成\"漏洞第一\"。",
-      "url": "https://thehackernews.com/2026/07/azure-cosmos-db-flaw-exposed-platform.html"
+      "title": "Change2Task：把代码仓库变成 AI 程序员的\"练习题\"",
+      "source": "ArXiv",
+      "summary": "训练和评估编程 AI 需要海量\"题目\"，但人工构造太慢。Change2Task 能直接从真实代码仓库的变更记录中，自动生成可执行的编程任务和配套环境。这意味着 AI 程序员能拿到源源不断的、贴近真实开发的训练数据，而不是总在刷那些玩具级 LeetCode 题。",
+      "commentary": "这相当于给 AI 程序员开了个\"实战训练营\"，题库直接来自 GitHub 真实战场。这波下来，以后 AI 写代码的水平评估会更有说服力，比那些\"能通过单元测试\"的自嗨强多了。",
+      "url": "https://arxiv.org/abs/2607.28591v1"
     }
   ],
   "candidates": [
@@ -33,35 +33,8 @@
       "summary": "",
       "url": "https://github.com/yc-software/qm",
       "source": "Hacker News",
-      "score": 492,
-      "comments": 106
-    },
-    {
-      "id": "hn:49127306",
-      "title": "Tailscale didn't stop the Hugging Face intrusion",
-      "summary": "",
-      "url": "https://tailscale.com/blog/hugging-face-intrusion",
-      "source": "Hacker News",
-      "score": 479,
-      "comments": 189
-    },
-    {
-      "id": "hn:49124218",
-      "title": "Elevators",
-      "summary": "",
-      "url": "https://john.fun/elevators",
-      "source": "Hacker News",
-      "score": 961,
-      "comments": 237
-    },
-    {
-      "id": "hn:49124858",
-      "title": "Big Food vs. the People",
-      "summary": "",
-      "url": "https://www.lighthousereports.com/investigation/big-food-vs-the-people/",
-      "source": "Hacker News",
-      "score": 202,
-      "comments": 134
+      "score": 596,
+      "comments": 127
     },
     {
       "id": "lob:ycsivx",
@@ -69,8 +42,8 @@
       "summary": "",
       "url": "https://nnethercote.github.io/2026/07/31/how-to-speed-up-the-rust-compiler-in-july-2026.html",
       "source": "Lobste.rs",
-      "score": 79,
-      "comments": 6,
+      "score": 87,
+      "comments": 7,
       "tags": [
         "compilers",
         "performance",
@@ -78,22 +51,31 @@
       ]
     },
     {
-      "id": "hn:49123386",
-      "title": "Run Kimi K3 using 29 GB of RAM at 0.50 tok/s",
+      "id": "hn:49124218",
+      "title": "Elevators",
       "summary": "",
-      "url": "https://github.com/sqliteai/waste",
+      "url": "https://john.fun/elevators",
       "source": "Hacker News",
-      "score": 171,
-      "comments": 70
+      "score": 1404,
+      "comments": 340
     },
     {
-      "id": "hn:49125034",
-      "title": "Getting 25 Gbps Thunderbolt Ethernet on My Mac Studio",
+      "id": "hn:49129990",
+      "title": "How to Exist",
       "summary": "",
-      "url": "https://www.jeffgeerling.com/blog/2026/getting-25g-ethernet-mac-thunderbolt/",
+      "url": "https://www.raptitude.com/2026/07/how-to-exist/",
+      "source": "Hacker News",
+      "score": 260,
+      "comments": 149
+    },
+    {
+      "id": "hn:49130604",
+      "title": "Flint: A Visualization Language for the AI Era",
+      "summary": "",
+      "url": "https://microsoft.github.io/flint-chart/",
       "source": "Hacker News",
       "score": 157,
-      "comments": 89
+      "comments": 56
     },
     {
       "id": "lob:kvxee3",
@@ -101,8 +83,8 @@
       "summary": "",
       "url": "https://casualhacks.net/blog/2026-07-27-why-i-forked-rand.html",
       "source": "Lobste.rs",
-      "score": 48,
-      "comments": 16,
+      "score": 63,
+      "comments": 19,
       "tags": [
         "rust"
       ]
@@ -113,8 +95,8 @@
       "summary": "",
       "url": "https://victoriametrics.com/blog/go-1-27/",
       "source": "Lobste.rs",
-      "score": 56,
-      "comments": 21,
+      "score": 66,
+      "comments": 23,
       "tags": [
         "go"
       ]
@@ -125,11 +107,50 @@
       "summary": "",
       "url": "https://andre.arko.net/2026/07/30/ruby-centrals-destructive-legacy/",
       "source": "Lobste.rs",
-      "score": 56,
-      "comments": 9,
+      "score": 71,
+      "comments": 11,
       "tags": [
         "ruby"
       ]
+    },
+    {
+      "id": "hn:49096605",
+      "title": "Software for One",
+      "summary": "",
+      "url": "https://www.ajwaxman.com/writing/software-for-one",
+      "source": "Hacker News",
+      "score": 148,
+      "comments": 133
+    },
+    {
+      "id": "hn:49130726",
+      "title": "The development pipeline is a production system",
+      "summary": "",
+      "url": "https://sundry.jerryorr.com/2026/07/31/development-pipeline-is-a-production-system",
+      "source": "Hacker News",
+      "score": 111,
+      "comments": 49
+    },
+    {
+      "id": "lob:ri8bav",
+      "title": "Stripe Just Wants a Number",
+      "summary": "",
+      "url": "https://blog.exe.dev/billable-facts",
+      "source": "Lobste.rs",
+      "score": 32,
+      "comments": 18,
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "id": "hn:49132460",
+      "title": "RamenHaus",
+      "summary": "",
+      "url": "https://ramen.haus/",
+      "source": "Hacker News",
+      "score": 123,
+      "comments": 70
     },
     {
       "id": "arxiv:2607.28618v1",
@@ -171,37 +192,28 @@
       "arxiv_id": "2607.28589v1"
     },
     {
-      "id": "hn:49126765",
-      "title": "June in Servo: real world compat, media queries, SharedWorker, and more",
+      "id": "lob:nw7rzu",
+      "title": "The Wheels We Keep Reinventing",
       "summary": "",
-      "url": "https://servo.org/blog/2026/07/31/june-in-servo/",
-      "source": "Hacker News",
-      "score": 116,
-      "comments": 34
-    },
-    {
-      "id": "lob:ri8bav",
-      "title": "Stripe Just Wants a Number",
-      "summary": "",
-      "url": "https://blog.exe.dev/billable-facts",
+      "url": "https://blainsmith.com/articles/reinventing-the-wheel/",
       "source": "Lobste.rs",
-      "score": 26,
-      "comments": 16,
+      "score": 20,
+      "comments": 41,
       "tags": [
-        "programming"
+        "practices"
       ]
     },
     {
-      "id": "lob:won0b2",
-      "title": "What are you doing this weekend?",
-      "summary": "<p>Feel free to tell what you plan on doing this weekend and even ask for help or feedback.</p>\n<p>Please keep in mind it’s more than OK to do nothing at all too!</p>\n<p>(Seems this is the first time in <em>years</em> we missed one—the week start one 5 days ago. As a reminder, if I’ve not posted it,",
-      "url": "https://lobste.rs/s/won0b2/what_are_you_doing_this_weekend",
+      "id": "lob:i6e5wp",
+      "title": "Dead Software Walking: The ongoing evolution of relayd(8) and httpd(8)",
+      "summary": "",
+      "url": "https://rsadowski.de/posts/2026/dead-software-walking-relayd-and-httpd/",
       "source": "Lobste.rs",
-      "score": 7,
-      "comments": 20,
+      "score": 26,
+      "comments": 9,
       "tags": [
-        "ask",
-        "programming"
+        "openbsd",
+        "practices"
       ]
     },
     {
@@ -241,14 +253,6 @@
         "cs.AI"
       ],
       "arxiv_id": "2607.28580v1"
-    },
-    {
-      "id": "rss:14a2770977",
-      "title": "Azure Cosmos DB Flaw Exposed Platform-Wide Key That Could Access Any Database",
-      "summary": "A now-patched vulnerability in Azure Cosmos DB could have let an attacker escape the service's Gremlin query sandbox and obtain full read and write access to databases across customer tenants, according to Wiz.\n\nWiz, which codenamed the chain CosmosEscape, said the exploit chain began with a crafted",
-      "url": "https://thehackernews.com/2026/07/azure-cosmos-db-flaw-exposed-platform.html",
-      "source": "Tech RSS",
-      "score": 0
     }
   ],
   "ai_curated": true
