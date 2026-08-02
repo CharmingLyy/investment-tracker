@@ -1,49 +1,62 @@
 {
   "date": "2026-08-02",
-  "update_time": "2026-08-02 03:22:28",
+  "update_time": "2026-08-02 13:25:29",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-02\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Seedance 2.5：字节跳动的\"一条过\"视频生成革命 (来源: Hacker News, 211分)\n- **核心干货**：字节跳动发布Seedance 2.5，主打\"One-Take Creation\"（一条过）和灵活引用机制。这意味着视频生成从\"抽卡式\"试错进化到可控的实时创作，告别了反复调参的玄学时代。\n- **毒舌/硬核点评**：以前是\"盲人摸象\"，现在是\"上帝视角\"。当生成式视频开始讲\"导演思维\"而非\"抽卡概率\"，Adobe和PR该失眠了。\n- **🔗 传送门**：[点击直达原链接](https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5)\n\n---\n\n### 2. 📌 CosmosEscape：Azure Cosmos DB 平台级密钥泄露漏洞 (来源: Tech RSS)\n- **核心干货**：Wiz 披露 Azure Cosmos DB 存在严重漏洞，攻击者可通过 Gremlin 查询沙箱逃逸，获取跨租户数据库的完全读写权限。目前已修复，但暴露了云原生架构中\"共享基础组件\"的致命信任缺口。\n- **毒舌/硬核点评**：云安全的第一定律再次应验——\"你的租户隔离，不过是别人的正则表达式。\" 这波 Wiz 又给微软上了一课，建议云厂商把\"沙箱逃逸\"加入年度KPI。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/07/azure-cosmos-db-flaw-exposed-platform.html)\n\n---\n\n### 3. 📌 内核健全性漏洞 #14576 事后剖析：验证器的\"翻车\"现场 (来源: Hacker News, 122分)\n- **核心干货**：Lean 编译器权威 Leo de Moura 亲自发布内核健全性漏洞的事后剖析。该漏洞出现在验证器关键路径，展示了即便是形式化验证工具，其\"信任根\"本身也可能存在人类逻辑盲点。\n- **毒舌/硬核点评**：用不完全的逻辑去验证逻辑的完全性，这本身就是个哲学悖论。感谢大佬公开复盘，这比100篇\"我们很安全\"的博客有价值多了。\n- **🔗 传送门**：[点击直达原链接](https://leodemoura.github.io/blog/2026-8-1-postmortem-for-kernel-soundness-bug-14576/)\n\n---\n\n### 🗣️ 今日顶男金句\n\"别问 AI 会不会取代你，先问自己是不是一个未经优化的默认配置。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-02\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Seedance 2.5: 字节跳动的\"一键生成\"卷王之王 (来源: Hacker News | 384分)\n- **核心干货**：字节跳动发布 Seedance 2.5，主打\"One-Take Creation\"（一镜到底）和灵活引用（Flexible Referencing）。这不再是简单的文生视频，而是能基于参考素材（图像/视频）进行风格迁移、角色一致性和多镜头叙事生成的系统，意图直接降低专业视频制作的门槛。\n- **毒舌/硬核点评**：当别人还在卷\"画质清晰度\"，字节已经在卷\"导演思维自动化\"了。这玩意儿要是真如描述般丝滑，好莱坞的Pixar们可能得考虑给算法开个编剧部的工资。\n- **🔗 传送门**：[点击直达原链接](https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5)\n\n---\n\n### 2. 📌 Azure Cosmos DB \"CosmosEscape\"漏洞: 云上保险箱的钥匙挂在门口 (来源: The Hacker News)\n- **核心干货**：安全公司Wiz披露了一个已修复的Azure Cosmos DB高危漏洞链。攻击者可通过构造恶意Gremlin查询逃逸沙箱，获得平台级主键，从而读写**任何**租户的数据库。这相当于拿到了云数据库的万能钥匙，属于基础设施级的\"史诗级\"权限提升。\n- **毒舌/硬核点评**：云厂商天天喊\"安全是我们的最高优先级\"，结果一个查询接口就能让整个数据库服务变成\"共享单车\"。建议各位CTO别光顾着降本增效，先把云上资产的\"门锁\"换了吧。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/07/azure-cosmos-db-flaw-exposed-platform.html)\n\n---\n\n### 3. 📌 Change2Task: 给编码智能体投喂\"真正\"的工作任务 (来源: ArXiv)\n- **核心干货**：该研究提出从真实代码仓库的变更记录（Git diff）中，自动生成可执行的编码任务与环境。它解决了AI编程训练数据\"假大空\"的痛点，为智能体提供了带真实依赖、测试和验证逻辑的\"实操题\"，而非机械的补全题。\n- **毒舌/硬核点评**：以前训练AI写代码像是在教小学生做数学应用题，现在这玩意儿直接丢给你一个\"创业公司级\"的祖传屎山让你重构。这才是通往AGI的程序员之路，建议各大厂赶紧拿去给自家Copilot上强度。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2607.28591v1)\n\n---\n\n### 🗣️ 今日顶男金句\n\"别老想着用AI替代自己，要想着用AI替代那些只会用AI糊弄你的人。技术演进的速度，永远比你摸鱼的速度快。\"",
   "briefing_items": [
     {
-      "title": "Seedance 2.5：字节跳动的\"一条过\"视频生成革命",
-      "source": "Hacker News, 211分",
-      "summary": "字节跳动发布Seedance 2.5，主打\"One-Take Creation\"（一条过）和灵活引用机制。这意味着视频生成从\"抽卡式\"试错进化到可控的实时创作，告别了反复调参的玄学时代。",
-      "commentary": "以前是\"盲人摸象\"，现在是\"上帝视角\"。当生成式视频开始讲\"导演思维\"而非\"抽卡概率\"，Adobe和PR该失眠了。",
+      "title": "Seedance 2.5: 字节跳动的\"一键生成\"卷王之王",
+      "source": "Hacker News | 384分",
+      "summary": "字节跳动发布 Seedance 2.5，主打\"One-Take Creation\"（一镜到底）和灵活引用（Flexible Referencing）。这不再是简单的文生视频，而是能基于参考素材（图像/视频）进行风格迁移、角色一致性和多镜头叙事生成的系统，意图直接降低专业视频制作的门槛。",
+      "commentary": "当别人还在卷\"画质清晰度\"，字节已经在卷\"导演思维自动化\"了。这玩意儿要是真如描述般丝滑，好莱坞的Pixar们可能得考虑给算法开个编剧部的工资。",
       "url": "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5"
     },
     {
-      "title": "CosmosEscape：Azure Cosmos DB 平台级密钥泄露漏洞",
-      "source": "Tech RSS",
-      "summary": "Wiz 披露 Azure Cosmos DB 存在严重漏洞，攻击者可通过 Gremlin 查询沙箱逃逸，获取跨租户数据库的完全读写权限。目前已修复，但暴露了云原生架构中\"共享基础组件\"的致命信任缺口。",
-      "commentary": "云安全的第一定律再次应验——\"你的租户隔离，不过是别人的正则表达式。\" 这波 Wiz 又给微软上了一课，建议云厂商把\"沙箱逃逸\"加入年度KPI。",
+      "title": "Azure Cosmos DB \"CosmosEscape\"漏洞: 云上保险箱的钥匙挂在门口",
+      "source": "The Hacker News",
+      "summary": "安全公司Wiz披露了一个已修复的Azure Cosmos DB高危漏洞链。攻击者可通过构造恶意Gremlin查询逃逸沙箱，获得平台级主键，从而读写**任何**租户的数据库。这相当于拿到了云数据库的万能钥匙，属于基础设施级的\"史诗级\"权限提升。",
+      "commentary": "云厂商天天喊\"安全是我们的最高优先级\"，结果一个查询接口就能让整个数据库服务变成\"共享单车\"。建议各位CTO别光顾着降本增效，先把云上资产的\"门锁\"换了吧。",
       "url": "https://thehackernews.com/2026/07/azure-cosmos-db-flaw-exposed-platform.html"
     },
     {
-      "title": "内核健全性漏洞 #14576 事后剖析：验证器的\"翻车\"现场",
-      "source": "Hacker News, 122分",
-      "summary": "Lean 编译器权威 Leo de Moura 亲自发布内核健全性漏洞的事后剖析。该漏洞出现在验证器关键路径，展示了即便是形式化验证工具，其\"信任根\"本身也可能存在人类逻辑盲点。",
-      "commentary": "用不完全的逻辑去验证逻辑的完全性，这本身就是个哲学悖论。感谢大佬公开复盘，这比100篇\"我们很安全\"的博客有价值多了。",
-      "url": "https://leodemoura.github.io/blog/2026-8-1-postmortem-for-kernel-soundness-bug-14576/"
+      "title": "Change2Task: 给编码智能体投喂\"真正\"的工作任务",
+      "source": "ArXiv",
+      "summary": "该研究提出从真实代码仓库的变更记录（Git diff）中，自动生成可执行的编码任务与环境。它解决了AI编程训练数据\"假大空\"的痛点，为智能体提供了带真实依赖、测试和验证逻辑的\"实操题\"，而非机械的补全题。",
+      "commentary": "以前训练AI写代码像是在教小学生做数学应用题，现在这玩意儿直接丢给你一个\"创业公司级\"的祖传屎山让你重构。这才是通往AGI的程序员之路，建议各大厂赶紧拿去给自家Copilot上强度。",
+      "url": "https://arxiv.org/abs/2607.28591v1"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49139102",
-      "title": "AI financial advice is surprisingly good, especially if you ask right questions",
+      "id": "lob:pvrnor",
+      "title": "NetBSD 11.0 released",
       "summary": "",
-      "url": "https://mitsloan.mit.edu/ideas-made-to-matter/ai-financial-advice-surprisingly-good-especially-if-you-ask-right-questions",
-      "source": "Hacker News",
-      "score": 197,
-      "comments": 168
+      "url": "https://blog.netbsd.org/tnf/entry/netbsd_11_0_released",
+      "source": "Lobste.rs",
+      "score": 87,
+      "comments": 14,
+      "tags": [
+        "netbsd",
+        "release"
+      ]
     },
     {
-      "id": "hn:49137060",
-      "title": "Postmortem for Kernel Soundness Bug #14576",
+      "id": "hn:49140396",
+      "title": "Show HN: I'm a 15 Year Old Wannabe Engineer, This Is a Cycloidal Gearbox I Built",
       "summary": "",
-      "url": "https://leodemoura.github.io/blog/2026-8-1-postmortem-for-kernel-soundness-bug-14576/",
+      "url": "https://github.com/tom-ilan/cycloidal_gearbox",
       "source": "Hacker News",
-      "score": 122,
-      "comments": 44
+      "score": 197,
+      "comments": 69
+    },
+    {
+      "id": "hn:49140218",
+      "title": "Go 1.27 Interactive Tour",
+      "summary": "",
+      "url": "https://victoriametrics.com/blog/go-1-27/index.html",
+      "source": "Hacker News",
+      "score": 262,
+      "comments": 107
     },
     {
       "id": "hn:49138302",
@@ -51,33 +64,8 @@
       "summary": "",
       "url": "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
       "source": "Hacker News",
-      "score": 211,
-      "comments": 98
-    },
-    {
-      "id": "lob:pvrnor",
-      "title": "NetBSD 11.0 released",
-      "summary": "",
-      "url": "https://blog.netbsd.org/tnf/entry/netbsd_11_0_released",
-      "source": "Lobste.rs",
-      "score": 59,
-      "comments": 8,
-      "tags": [
-        "netbsd",
-        "release"
-      ]
-    },
-    {
-      "id": "lob:qvbkpa",
-      "title": "Ruby Central's Destructive Legacy",
-      "summary": "",
-      "url": "https://andre.arko.net/2026/07/30/ruby-centrals-destructive-legacy/",
-      "source": "Lobste.rs",
-      "score": 90,
-      "comments": 32,
-      "tags": [
-        "ruby"
-      ]
+      "score": 384,
+      "comments": 202
     },
     {
       "id": "hn:49138188",
@@ -85,8 +73,42 @@
       "summary": "",
       "url": "https://diataxis.fr/",
       "source": "Hacker News",
-      "score": 234,
-      "comments": 32
+      "score": 398,
+      "comments": 49
+    },
+    {
+      "id": "hn:49143414",
+      "title": "Wikimedia Foundation refuses union recognition, hires union-busting law firm",
+      "summary": "",
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:Wikipedia_Signpost/2026-08-02/News_and_notes",
+      "source": "Hacker News",
+      "score": 142,
+      "comments": 98
+    },
+    {
+      "id": "lob:80cn4r",
+      "title": "Atom is better than RSS, in ways that matter",
+      "summary": "",
+      "url": "https://chrismorgan.info/atom%3Erss",
+      "source": "Lobste.rs",
+      "score": 34,
+      "comments": 25,
+      "tags": [
+        "web"
+      ]
+    },
+    {
+      "id": "lob:ojcl8j",
+      "title": "Postmortem for Lean Kernel Soundness Bug #14576",
+      "summary": "",
+      "url": "https://leodemoura.github.io/blog/2026-8-1-postmortem-for-kernel-soundness-bug-14576/",
+      "source": "Lobste.rs",
+      "score": 37,
+      "comments": 1,
+      "tags": [
+        "formalmethods",
+        "plt"
+      ]
     },
     {
       "id": "arxiv:2607.28618v1",
@@ -128,31 +150,51 @@
       "arxiv_id": "2607.28589v1"
     },
     {
-      "id": "lob:jxqf1w",
-      "title": "Elevators",
+      "id": "lob:ectcmr",
+      "title": "Resigning from Arch Linux",
       "summary": "",
-      "url": "https://john.fun/elevators",
+      "url": "https://linderud.dev/blog/resigning-from-arch-linux/",
       "source": "Lobste.rs",
-      "score": 57,
-      "comments": 6,
+      "score": 36,
+      "comments": 2,
       "tags": [
-        "compsci",
-        "math",
-        "performance",
-        "visualization"
+        "linux",
+        "person"
       ]
     },
     {
-      "id": "lob:72ni5s",
-      "title": "Test the Email Verification Protocol with an origin trial",
+      "id": "hn:49142569",
+      "title": "Show HN: Bor – Open-source policy management for Linux desktops",
+      "summary": "Hi HN! I&#x27;ve been working on Bor, an open-source system for centralized Linux desktop management.<p>Bor consists of a lightweight Go agent and a central server. Policies are streamed to clients over mTLS&#x2F;gRPC in real time—no polling—and currently support Firefox, Chrome, KDE, dconf, polkit ",
+      "url": "https://getbor.dev/blog/2026-08-02-bor-v080-release/",
+      "source": "Hacker News",
+      "score": 68,
+      "comments": 13
+    },
+    {
+      "id": "lob:obipgm",
+      "title": "A week in Matrix",
       "summary": "",
-      "url": "https://developer.chrome.com/blog/email-verification-protocol-origin-trial",
+      "url": "https://piegames.de/dumps/a-week-in-matrix/",
       "source": "Lobste.rs",
-      "score": 17,
-      "comments": 19,
+      "score": 34,
+      "comments": 8,
       "tags": [
-        "browsers",
-        "email"
+        "distributed",
+        "rant"
+      ]
+    },
+    {
+      "id": "lob:vrd28h",
+      "title": "An old-new take on argument parsing in Rust",
+      "summary": "",
+      "url": "https://jmmv.dev/2026/07/hello-getoptsargs.html",
+      "source": "Lobste.rs",
+      "score": 23,
+      "comments": 5,
+      "tags": [
+        "rust",
+        "unix"
       ]
     },
     {
@@ -202,61 +244,17 @@
       "score": 0
     },
     {
-      "id": "rss:6e21db9824",
-      "title": "Context compaction happens in the dark. I made it happen on a map.",
-      "summary": "Every long AI session ends the same way. The context window fills up, and something has to give.\n\nMost tools handle this moment for you. A summarizer wakes up, rewrites your history into a paragraph you never see, and the conversation carries on as if nothing happened. Coding agents call it auto-com",
-      "url": "https://dev.to/chenxiachan/context-compaction-happens-in-the-dark-i-made-it-happen-on-a-map-41k2",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "lob:vrd28h",
-      "title": "An old-new take on argument parsing in Rust",
-      "summary": "",
-      "url": "https://jmmv.dev/2026/07/hello-getoptsargs.html",
-      "source": "Lobste.rs",
-      "score": 18,
-      "comments": 4,
-      "tags": [
-        "rust",
-        "unix"
-      ]
-    },
-    {
-      "id": "hn:49137713",
+      "id": "lob:voozor",
       "title": "But can your calculator run Linux?",
       "summary": "",
       "url": "https://raymii.org/s/articles/But_can_your_calculator_run_Linux.html",
-      "source": "Hacker News",
-      "score": 73,
-      "comments": 6
-    },
-    {
-      "id": "arxiv:2607.28628v1",
-      "title": "Learning to Trace Seiberg Dualities",
-      "summary": "Dualities play an important role in establishing both microscopic and emergent phenomena in a wide range of physical systems. In practice, though, it can often be computationally challenging to establish when two systems are dual, even when all of the \"rules of the game\" are well-known. Said differe",
-      "url": "https://arxiv.org/abs/2607.28628v1",
-      "source": "ArXiv",
-      "categories": [
-        "hep-th",
-        "cs.AI",
-        "cs.LG",
-        "hep-ph"
-      ],
-      "arxiv_id": "2607.28628v1"
-    },
-    {
-      "id": "arxiv:2607.28627v1",
-      "title": "ReToken: One Token to Improve Vision-Language Models for Visual Retrieval",
-      "summary": "Long visual context poses a challenge for vision-language models: performance degrades as the number of distractors grows, and processing all tokens at once is computationally infeasible under GPU memory constraints. We present ReToken, a single learnable embedding trained as an explicit retrieval t",
-      "url": "https://arxiv.org/abs/2607.28627v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2607.28627v1"
+      "source": "Lobste.rs",
+      "score": 20,
+      "comments": 2,
+      "tags": [
+        "hardware",
+        "linux"
+      ]
     }
   ],
   "ai_curated": true
