@@ -1,6 +1,6 @@
 {
-  "update_time": "2026-08-02 23:10:17",
-  "update_ts": 1785712217,
+  "update_time": "2026-08-02 23:26:30",
+  "update_ts": 1785713190,
   "data_sources": {
     "BTC": "Kraken",
     "ETH": "Kraken"
@@ -20,13 +20,13 @@
       "fundScore": 10,
       "confidence": "低",
       "winRateEst": 50,
-      "entryPrice": 63318.9,
-      "stopLoss": 63712.165175,
-      "takeProfit": 62925.634825,
-      "takeProfit1": 62925.634825,
-      "takeProfit2": 62335.737062,
+      "entryPrice": 63446.0,
+      "stopLoss": 63851.308033,
+      "takeProfit": 63040.691967,
+      "takeProfit1": 63040.691967,
+      "takeProfit2": 62432.729919,
       "positionPct1": 50,
-      "breakevenPrice": 63318.9,
+      "breakevenPrice": 63446.0,
       "rrRatio": 0,
       "riskPct": 0,
       "rewardPct": 0,
@@ -37,27 +37,27 @@
       "curRSI1h": 56.423982,
       "curRSI4h": 44.403538,
       "curRSID": null,
-      "cm1": 80.483997,
-      "cs1": 57.780032,
+      "cm1": 90.623028,
+      "cs1": 59.807838,
       "cm4": -244.395722,
       "cs4": -294.781156,
-      "ce9": 63310.73041,
-      "ce21": 63221.718439,
-      "ce50": 63241.23885,
+      "ce9": 63336.15041,
+      "ce21": 63233.272984,
+      "ce50": 63246.223163,
       "ce21_4h": 63355.8339,
       "ce21_d": 64234.676393,
-      "bu": 63592.353474,
-      "bl": 62903.216526,
-      "curATR": 196.632588,
-      "atrPct": 0.310543,
+      "bu": 63608.275931,
+      "bl": 62900.004069,
+      "curATR": 202.654016,
+      "atrPct": 0.319412,
       "trend1h": 2,
-      "trend4h": -1,
+      "trend4h": 1,
       "trendD": -1,
-      "nearestSupport": 63241.24,
+      "nearestSupport": 63246.22,
       "nearestResistance": 63554.4,
       "nextSupport": 62596.72,
       "nextResistance": 70000,
-      "trendSummary": "1H: 多头 / 4H: 空头 / 日线: 空头",
+      "trendSummary": "1H: 多头 / 4H: 多头 / 日线: 空头",
       "fundingRate": null,
       "fundingRatePct": null,
       "fundingTime": null
@@ -136,7 +136,7 @@
           63427.2,
           63500.9,
           63351.4,
-          63318.9
+          63446.0
         ],
         "highs": [
           64839.9,
@@ -210,7 +210,7 @@
           63435.2,
           63696.8,
           63712.1,
-          63378.5
+          63450.6
         ],
         "lows": [
           64625.5,
@@ -284,7 +284,7 @@
           63332.1,
           63405.3,
           63290.0,
-          63290.0
+          63277.8
         ]
       },
       "4h": {
@@ -609,13 +609,13 @@
       "fundScore": 10,
       "confidence": "中",
       "winRateEst": 58,
-      "entryPrice": 1877.21,
-      "stopLoss": 1891.368001,
-      "takeProfit": 1863.051999,
-      "takeProfit1": 1863.051999,
-      "takeProfit2": 1839.455332,
+      "entryPrice": 1881.53,
+      "stopLoss": 1895.994429,
+      "takeProfit": 1867.065571,
+      "takeProfit1": 1867.065571,
+      "takeProfit2": 1842.958189,
       "positionPct1": 50,
-      "breakevenPrice": 1877.21,
+      "breakevenPrice": 1881.53,
       "rrRatio": 0,
       "riskPct": 0,
       "rewardPct": 0,
@@ -626,23 +626,23 @@
       "curRSI1h": 58.909199,
       "curRSI4h": 44.381514,
       "curRSID": null,
-      "cm1": 4.591653,
-      "cs1": 2.345113,
+      "cm1": 4.936269,
+      "cs1": 2.414036,
       "cm4": -9.063409,
       "cs4": -10.372127,
-      "ce9": 1875.275921,
-      "ce21": 1869.630524,
-      "ce50": 1869.700214,
+      "ce9": 1876.139921,
+      "ce21": 1870.023251,
+      "ce50": 1869.869626,
       "ce21_4h": 1874.123251,
       "ce21_d": 1884.837596,
-      "bu": 1890.945251,
-      "bl": 1847.388749,
-      "curATR": 9.438667,
-      "atrPct": 0.502803,
+      "bu": 1891.558129,
+      "bl": 1847.207871,
+      "curATR": 9.642953,
+      "atrPct": 0.512506,
       "trend1h": 2,
       "trend4h": 1,
       "trendD": -1,
-      "nearestSupport": 1869.7,
+      "nearestSupport": 1869.87,
       "nearestResistance": 1882.13,
       "nextSupport": 1853.44,
       "nextResistance": 2000,
@@ -725,7 +725,7 @@
           1881.79,
           1888.43,
           1879.94,
-          1877.21
+          1881.53
         ],
         "highs": [
           1920.56,
@@ -799,7 +799,7 @@
           1883.5,
           1896.06,
           1895.79,
-          1880.24
+          1881.63
         ],
         "lows": [
           1913.28,
@@ -873,7 +873,7 @@
           1877.79,
           1880.59,
           1878.8,
-          1876.2
+          1874.73
         ]
       },
       "4h": {
