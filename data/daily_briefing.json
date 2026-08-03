@@ -1,71 +1,76 @@
 {
   "date": "2026-08-03",
-  "update_time": "2026-08-03 03:24:11",
+  "update_time": "2026-08-03 14:42:42",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-03\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 CosmosEscape：Azure Cosmos DB 惊现平台级密钥漏洞 (来源: The Hacker News)\n- **核心干货**：安全厂商 Wiz 发现 Azure Cosmos DB 的 Gremlin 查询沙箱存在逃逸漏洞，攻击者可利用该漏洞链获取平台级密钥，进而对任意租户的数据库进行完整读写。目前微软已修复，但该漏洞理论上可让攻击者\"一锅端\"整个云平台的数据库。\n- **毒舌/硬核点评**：云安全就像酒店门锁——你锁好了自己房间，结果发现前台有把万能钥匙挂在墙上。这年头，多租户隔离就是个\"薛定谔的边界\"。\n- **🔗 传送门**：[点击直达漏洞详情](https://thehackernews.com/2026/07/azure-cosmos-db-flaw-exposed-platform.html)\n\n---\n\n### 2. 📌 Kakehashi：在 Linux ARM 上跑 macOS 的\"赛博翻译官\" (来源: Hacker News)\n- **核心干货**：一个实验性的用户态运行时，目标是在 Linux ARM 设备（比如树莓派或 ARM 服务器）上直接运行 macOS 二进制文件。它不走虚拟机路线，而是通过系统调用翻译和 ABI 兼容层模拟，试图实现\"原生级\"兼容。\n- **毒舌/硬核点评**：当年 Wine 把 Windows 游戏搬进 Linux 用了二十年，现在这位想当\"macOS 的 Wine\"。想法很性感，但库比蒂诺的律师函可能比技术瓶颈来得更快。\n- **🔗 传送门**：[点击直达 GitHub 仓库](https://github.com/wie-project/kakehashi)\n\n---\n\n### 3. 📌 TokTier：给 Agentic LLM 的\"记忆\"做精准瘦身 (来源: ArXiv)\n- **核心干货**：针对 Agent 型 LLM 服务中重复重新分词导致的高昂计算开销，提出了一种有状态的分词方案。它通过精确追踪 token 边界变化，让长对话历史（如编程 Agent 反复提交代码上下文）的 KV 缓存能被高效复用，大幅降低延迟和成本。\n- **毒舌/硬核点评**：AI Agent 每次干活都把整个剧本重新背一遍，这不叫智能，叫\"金鱼记忆\"。TokTier 终于给了它们真正的\"工作记忆\"，建议所有 LLM 服务商立刻抄作业。\n- **🔗 传送门**：[点击直达 ArXiv 论文](https://arxiv.org/abs/2607.29678v1)\n\n---\n\n### 🗣️ 今日顶男金句\n\"真正的高手不是记住每一行代码，而是知道哪些 Token 该被缓存——人生同理，别把 CPU 浪费在重复结算旧账上。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-03\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 千问3.8-Max：编程与协作的新天花板 (来源: Hacker News, HN 分数: 830)\n- **核心干货**：阿里系大模型 Qwen 系列又整新活了。3.8-Max 版本在代码生成和\"智能体协作\"（Agentic Cowork）能力上大幅提升，摆明了是要在 AI 编程助手这个红海里硬刚。这不仅是模型参数变大，更是对复杂任务分解与执行的工程化能力升级。\n- **毒舌/硬核点评**：当别人还在用 AI 写 \"Hello World\" 时，Qwen 已经在琢磨怎么让 AI 自己开个项目组了。这波迭代速度，建议隔壁闭源厂商把\"遥遥领先\"的稿子改一改，不然真赶不上趟了。\n- **🔗 传送门**：[Qwen 官方博客](https://qwen.ai/blog?id=qwen3.8)\n\n---\n\n### 2. 📌 TokTier：给 Agent 时代的 LLM 推理装上\"记忆卡\" (来源: ArXiv, 分类: cs.CL/cs.DC)\n- **核心干货**：这篇论文切中了当前 Agent 应用的一个隐性痛点：编码助手每次调用都要把冗长的对话历史重新 tokenize 一遍，白白烧钱又拖慢速度。TokTier 提出了\"有状态 tokenization\"方案，在 KV 缓存复用的同时精确处理 token 边界变化，直击长上下文场景的推理效率瓶颈。\n- **毒舌/硬核点评**：如果说大模型是大脑，那现在的 Agent 架构就是个\"金鱼记忆\"患者——每次对话都像失忆重启。TokTier 这波操作，相当于给金鱼装了个外挂硬盘，干得漂亮。\n- **🔗 传送门**：[ArXiv 论文链接](https://arxiv.org/abs/2607.29678v1)\n\n---\n\n### 3. 📌 手把手重敲 AI 代码：反\"认知债务\"的硬核修行 (来源: Hacker News, HN 分数: 202)\n- **核心干货**：当大家都在鼓吹 AI 生成代码、程序员要失业时，这篇文章反其道而行之：建议开发者把 LLM 生成的代码**手动重新敲一遍**。核心逻辑是，这个过程强制你逐行理解、消化逻辑，避免为了短期速度背上长期的\"认知债务\"——即代码能跑但你根本不懂，后续维护直接爆炸。\n- **毒舌/硬核点评**：这建议放在\"速食主义\"盛行的 AI 时代，简直是一股清流。别让 AI 把你的脑子变成只会按 Tab 的肌肉记忆，不然哪天 AI 抽风，你连屎山都铲不动。\n- **🔗 传送门**：[原文链接](https://ankursethi.com/blog/prevent-cognitive-debt-by-manually-retyping-llm-generated-code/)\n\n---\n\n### 🗣️ 今日顶男金句\n**\"别让 AI 替你思考，要让你比 AI 更懂它在想什么——这才是未来不会被替代的唯一姿势。\"**",
   "briefing_items": [
     {
-      "title": "CosmosEscape：Azure Cosmos DB 惊现平台级密钥漏洞",
-      "source": "The Hacker News",
-      "summary": "安全厂商 Wiz 发现 Azure Cosmos DB 的 Gremlin 查询沙箱存在逃逸漏洞，攻击者可利用该漏洞链获取平台级密钥，进而对任意租户的数据库进行完整读写。目前微软已修复，但该漏洞理论上可让攻击者\"一锅端\"整个云平台的数据库。",
-      "commentary": "云安全就像酒店门锁——你锁好了自己房间，结果发现前台有把万能钥匙挂在墙上。这年头，多租户隔离就是个\"薛定谔的边界\"。",
+      "title": "千问3.8-Max：编程与协作的新天花板",
+      "source": "Hacker News, HN 分数: 830",
+      "summary": "阿里系大模型 Qwen 系列又整新活了。3.8-Max 版本在代码生成和\"智能体协作\"（Agentic Cowork）能力上大幅提升，摆明了是要在 AI 编程助手这个红海里硬刚。这不仅是模型参数变大，更是对复杂任务分解与执行的工程化能力升级。",
+      "commentary": "当别人还在用 AI 写 \"Hello World\" 时，Qwen 已经在琢磨怎么让 AI 自己开个项目组了。这波迭代速度，建议隔壁闭源厂商把\"遥遥领先\"的稿子改一改，不然真赶不上趟了。",
       "url": ""
     },
     {
-      "title": "Kakehashi：在 Linux ARM 上跑 macOS 的\"赛博翻译官\"",
-      "source": "Hacker News",
-      "summary": "一个实验性的用户态运行时，目标是在 Linux ARM 设备（比如树莓派或 ARM 服务器）上直接运行 macOS 二进制文件。它不走虚拟机路线，而是通过系统调用翻译和 ABI 兼容层模拟，试图实现\"原生级\"兼容。",
-      "commentary": "当年 Wine 把 Windows 游戏搬进 Linux 用了二十年，现在这位想当\"macOS 的 Wine\"。想法很性感，但库比蒂诺的律师函可能比技术瓶颈来得更快。",
+      "title": "TokTier：给 Agent 时代的 LLM 推理装上\"记忆卡\"",
+      "source": "ArXiv, 分类: cs.CL/cs.DC",
+      "summary": "这篇论文切中了当前 Agent 应用的一个隐性痛点：编码助手每次调用都要把冗长的对话历史重新 tokenize 一遍，白白烧钱又拖慢速度。TokTier 提出了\"有状态 tokenization\"方案，在 KV 缓存复用的同时精确处理 token 边界变化，直击长上下文场景的推理效率瓶颈。",
+      "commentary": "如果说大模型是大脑，那现在的 Agent 架构就是个\"金鱼记忆\"患者——每次对话都像失忆重启。TokTier 这波操作，相当于给金鱼装了个外挂硬盘，干得漂亮。",
       "url": ""
     },
     {
-      "title": "TokTier：给 Agentic LLM 的\"记忆\"做精准瘦身",
-      "source": "ArXiv",
-      "summary": "针对 Agent 型 LLM 服务中重复重新分词导致的高昂计算开销，提出了一种有状态的分词方案。它通过精确追踪 token 边界变化，让长对话历史（如编程 Agent 反复提交代码上下文）的 KV 缓存能被高效复用，大幅降低延迟和成本。",
-      "commentary": "AI Agent 每次干活都把整个剧本重新背一遍，这不叫智能，叫\"金鱼记忆\"。TokTier 终于给了它们真正的\"工作记忆\"，建议所有 LLM 服务商立刻抄作业。",
+      "title": "手把手重敲 AI 代码：反\"认知债务\"的硬核修行",
+      "source": "Hacker News, HN 分数: 202",
+      "summary": "当大家都在鼓吹 AI 生成代码、程序员要失业时，这篇文章反其道而行之：建议开发者把 LLM 生成的代码**手动重新敲一遍**。核心逻辑是，这个过程强制你逐行理解、消化逻辑，避免为了短期速度背上长期的\"认知债务\"——即代码能跑但你根本不懂，后续维护直接爆炸。",
+      "commentary": "这建议放在\"速食主义\"盛行的 AI 时代，简直是一股清流。别让 AI 把你的脑子变成只会按 Tab 的肌肉记忆，不然哪天 AI 抽风，你连屎山都铲不动。",
       "url": ""
     }
   ],
   "candidates": [
     {
-      "id": "hn:49145937",
-      "title": "Show HN: Kakehashi – Experimental userspace to run macOS binaries on Linux ARM",
+      "id": "hn:49154332",
+      "title": "Critical CVE issued for hallucinated SQLite vulnerability",
       "summary": "",
-      "url": "https://github.com/wie-project/kakehashi",
+      "url": "https://research.jfrog.com/post/sqlite-critical-cves-or-llm-slops/",
       "source": "Hacker News",
-      "score": 188,
-      "comments": 40
+      "score": 376,
+      "comments": 121
     },
     {
-      "id": "lob:pvrnor",
-      "title": "NetBSD 11.0 released",
+      "id": "hn:49150470",
+      "title": "Qwen3.8-Max: A New Bar for Coding and Cowork",
       "summary": "",
-      "url": "https://blog.netbsd.org/tnf/entry/netbsd_11_0_released",
-      "source": "Lobste.rs",
-      "score": 102,
-      "comments": 18,
-      "tags": [
-        "netbsd",
-        "release"
-      ]
+      "url": "https://qwen.ai/blog?id=qwen3.8",
+      "source": "Hacker News",
+      "score": 830,
+      "comments": 422
     },
     {
-      "id": "hn:49097961",
-      "title": "Developers are attached to tools because tools encode trust",
+      "id": "hn:49153374",
+      "title": "Prevent cognitive debt by manually retyping LLM-generated code",
       "summary": "",
-      "url": "https://stackoverflow.blog/2026/07/29/developers-are-attached-to-tools-because-tools-encode-trust/",
+      "url": "https://ankursethi.com/blog/prevent-cognitive-debt-by-manually-retyping-llm-generated-code/",
       "source": "Hacker News",
-      "score": 171,
-      "comments": 89
+      "score": 202,
+      "comments": 151
     },
     {
-      "id": "hn:49140998",
-      "title": "Karpathy’s Pelican",
-      "summary": "<a href=\"https:&#x2F;&#x2F;xcancel.com&#x2F;karpathy&#x2F;status&#x2F;2083749667410727319\" rel=\"nofollow\">https:&#x2F;&#x2F;xcancel.com&#x2F;karpathy&#x2F;status&#x2F;2083749667410727319</a>",
-      "url": "https://twitter.com/karpathy/status/2083749667410727319",
+      "id": "hn:49152023",
+      "title": "Rust project goals: Immobile types and guaranteed destructors",
+      "summary": "",
+      "url": "https://github.com/rust-lang/rust-project-goals/blob/main/src/2026/move-trait.md",
       "source": "Hacker News",
-      "score": 474,
-      "comments": 352
+      "score": 150,
+      "comments": 57
+    },
+    {
+      "id": "hn:49151933",
+      "title": "Don't be a meat proxy",
+      "summary": "",
+      "url": "https://gruhn.me/blog/2026-08-03/",
+      "source": "Hacker News",
+      "score": 1150,
+      "comments": 489
     },
     {
       "id": "lob:80cn4r",
@@ -73,32 +78,11 @@
       "summary": "",
       "url": "https://chrismorgan.info/atom%3Erss",
       "source": "Lobste.rs",
-      "score": 71,
-      "comments": 55,
+      "score": 85,
+      "comments": 70,
       "tags": [
         "web"
       ]
-    },
-    {
-      "id": "lob:hozhli",
-      "title": "sizeof is surprisingly difficult to parse in c",
-      "summary": "",
-      "url": "https://sebsite.pw/w/20260802-sizeof.html",
-      "source": "Lobste.rs",
-      "score": 50,
-      "comments": 33,
-      "tags": [
-        "c"
-      ]
-    },
-    {
-      "id": "hn:49084324",
-      "title": "Note-Taking and Personal Knowledge Management",
-      "summary": "",
-      "url": "https://unattributed.cc/note-taking-and-personal-knowledge-management",
-      "source": "Hacker News",
-      "score": 147,
-      "comments": 44
     },
     {
       "id": "lob:aso7dh",
@@ -106,45 +90,33 @@
       "summary": "",
       "url": "https://martinalderson.com/posts/speed-vs-intelligence/",
       "source": "Lobste.rs",
-      "score": 21,
-      "comments": 14,
+      "score": 29,
+      "comments": 17,
       "tags": [
         "performance",
         "vibecoding"
       ]
     },
     {
-      "id": "lob:ectcmr",
-      "title": "Resigning from Arch Linux",
+      "id": "hn:49152842",
+      "title": "Bonsai: Janestreet's UI Library",
       "summary": "",
-      "url": "https://linderud.dev/blog/resigning-from-arch-linux/",
-      "source": "Lobste.rs",
-      "score": 46,
-      "comments": 5,
-      "tags": [
-        "linux",
-        "person"
-      ]
-    },
-    {
-      "id": "hn:49147263",
-      "title": "SwiftUI After 7 Years",
-      "summary": "",
-      "url": "https://ykvm.com/2026/07/swiftui-a-story-of-mediocrity/",
+      "url": "https://github.com/janestreet/bonsai",
       "source": "Hacker News",
-      "score": 127,
-      "comments": 104
+      "score": 154,
+      "comments": 55
     },
     {
-      "id": "lob:ui2vor",
-      "title": "Prevent cognitive debt by manually retyping LLM-generated code",
+      "id": "lob:jnznnu",
+      "title": "Faster floating point math with Rust’s new API",
       "summary": "",
-      "url": "https://ankursethi.com/blog/prevent-cognitive-debt-by-manually-retyping-llm-generated-code/",
+      "url": "https://pythonspeed.com/articles/faster-float-math-rust/",
       "source": "Lobste.rs",
-      "score": 29,
-      "comments": 12,
+      "score": 30,
+      "comments": 11,
       "tags": [
-        "vibecoding"
+        "performance",
+        "rust"
       ]
     },
     {
@@ -153,8 +125,42 @@
       "summary": "",
       "url": "https://www.arscyni.cc/file/warez_your_website.html",
       "source": "Lobste.rs",
-      "score": 26,
-      "comments": 20,
+      "score": 37,
+      "comments": 29,
+      "tags": [
+        "culture"
+      ]
+    },
+    {
+      "id": "lob:lbmwvb",
+      "title": "Getting Started with Google Wave (2010)",
+      "summary": "",
+      "url": "https://www.youtube.com/watch?v=eKUAqNGVwX0",
+      "source": "Lobste.rs",
+      "score": 28,
+      "comments": 21,
+      "tags": [
+        "design",
+        "video"
+      ]
+    },
+    {
+      "id": "hn:49125168",
+      "title": "The Abandoned Fish Sauce Terrorizing a Small Canadian Town",
+      "summary": "",
+      "url": "https://defector.com/abandoned-fish-sauce-canada-interview",
+      "source": "Hacker News",
+      "score": 79,
+      "comments": 50
+    },
+    {
+      "id": "lob:tqcwbi",
+      "title": "Don't Take the Black Pill (Text Adaptation)",
+      "summary": "",
+      "url": "https://andrewkelley.me/post/dont-take-black-pill.html",
+      "source": "Lobste.rs",
+      "score": 37,
+      "comments": 3,
       "tags": [
         "culture"
       ]
@@ -173,69 +179,43 @@
       "arxiv_id": "2607.29624v1"
     },
     {
-      "id": "rss:14a2770977",
-      "title": "Azure Cosmos DB Flaw Exposed Platform-Wide Key That Could Access Any Database",
-      "summary": "A now-patched vulnerability in Azure Cosmos DB could have let an attacker escape the service's Gremlin query sandbox and obtain full read and write access to databases across customer tenants, according to Wiz.\n\nWiz, which codenamed the chain CosmosEscape, said the exploit chain began with a crafted",
-      "url": "https://thehackernews.com/2026/07/azure-cosmos-db-flaw-exposed-platform.html",
-      "source": "Tech RSS",
-      "score": 0
+      "id": "hn:49154228",
+      "title": "AirLLM 70B inference with single 4GB GPU",
+      "summary": "",
+      "url": "https://github.com/lyogavin/airllm",
+      "source": "Hacker News",
+      "score": 61,
+      "comments": 29
     },
     {
-      "id": "hn:49150470",
-      "title": "Qwen3.8-Max: A New Bar for Coding and Cowork",
+      "id": "lob:tjgemj",
+      "title": "Your JSON Is Lying to You",
       "summary": "",
-      "url": "https://qwen.ai/blog?id=qwen3.8",
+      "url": "https://blog.gaborkoos.com/posts/2026-08-03-Your-JSON-Is-Lying-to-You/",
+      "source": "Lobste.rs",
+      "score": 26,
+      "comments": 10,
+      "tags": [
+        "javascript"
+      ]
+    },
+    {
+      "id": "hn:49154127",
+      "title": "Show HN: Nightcrawler – A local AI pentesting agent running on a smartphone",
+      "summary": "",
+      "url": "https://github.com/garagehq/nightcrawler/",
       "source": "Hacker News",
-      "score": 69,
+      "score": 50,
       "comments": 18
     },
     {
-      "id": "lob:7emnqu",
-      "title": "EPIPE on write might mean you're doing it wrong",
+      "id": "hn:49152973",
+      "title": "The true power of regular expressions (2012)",
       "summary": "",
-      "url": "https://rachelbythebay.com/w/2026/07/09/pipe/",
-      "source": "Lobste.rs",
-      "score": 22,
-      "comments": 7,
-      "tags": [
-        "php",
-        "unix"
-      ]
-    },
-    {
-      "id": "hn:49129676",
-      "title": "Read the novels and forget everything else",
-      "summary": "",
-      "url": "https://hedgehogreview.com/web-features/thr/posts/read-the-novels-and-forget-everything-else",
+      "url": "https://www.npopov.com/2012/06/15/The-true-power-of-regular-expressions.html",
       "source": "Hacker News",
-      "score": 62,
-      "comments": 34
-    },
-    {
-      "id": "lob:lbmwvb",
-      "title": "Getting Started with Google Wave (2010)",
-      "summary": "",
-      "url": "https://www.youtube.com/watch?v=eKUAqNGVwX0",
-      "source": "Lobste.rs",
-      "score": 15,
-      "comments": 10,
-      "tags": [
-        "design",
-        "video"
-      ]
-    },
-    {
-      "id": "lob:jnznnu",
-      "title": "Faster floating point math with Rust’s new API",
-      "summary": "",
-      "url": "https://pythonspeed.com/articles/faster-float-math-rust/",
-      "source": "Lobste.rs",
-      "score": 13,
-      "comments": 5,
-      "tags": [
-        "performance",
-        "rust"
-      ]
+      "score": 48,
+      "comments": 37
     },
     {
       "id": "arxiv:2607.29678v1",
@@ -249,6 +229,17 @@
         "cs.PF"
       ],
       "arxiv_id": "2607.29678v1"
+    },
+    {
+      "id": "arxiv:2607.29677v1",
+      "title": "ExtractBench: A Benchmark for Schema-Guided Enterprise Document Extraction",
+      "summary": "Enterprise workflows increasingly rely on agents for \\emph{schema-guided extraction}: given a document and a user-defined schema, the agent faithfully follows the schema to produce the correct output with source evidence as grounding metadata. We present ExtractBench, a benchmark for schema-guided e",
+      "url": "https://arxiv.org/abs/2607.29677v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI"
+      ],
+      "arxiv_id": "2607.29677v1"
     }
   ],
   "ai_curated": true
