@@ -1,89 +1,71 @@
 {
-  "date": "2026-08-02",
-  "update_time": "2026-08-02 13:25:29",
+  "date": "2026-08-03",
+  "update_time": "2026-08-03 03:24:11",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-02\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Seedance 2.5: 字节跳动的\"一键生成\"卷王之王 (来源: Hacker News | 384分)\n- **核心干货**：字节跳动发布 Seedance 2.5，主打\"One-Take Creation\"（一镜到底）和灵活引用（Flexible Referencing）。这不再是简单的文生视频，而是能基于参考素材（图像/视频）进行风格迁移、角色一致性和多镜头叙事生成的系统，意图直接降低专业视频制作的门槛。\n- **毒舌/硬核点评**：当别人还在卷\"画质清晰度\"，字节已经在卷\"导演思维自动化\"了。这玩意儿要是真如描述般丝滑，好莱坞的Pixar们可能得考虑给算法开个编剧部的工资。\n- **🔗 传送门**：[点击直达原链接](https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5)\n\n---\n\n### 2. 📌 Azure Cosmos DB \"CosmosEscape\"漏洞: 云上保险箱的钥匙挂在门口 (来源: The Hacker News)\n- **核心干货**：安全公司Wiz披露了一个已修复的Azure Cosmos DB高危漏洞链。攻击者可通过构造恶意Gremlin查询逃逸沙箱，获得平台级主键，从而读写**任何**租户的数据库。这相当于拿到了云数据库的万能钥匙，属于基础设施级的\"史诗级\"权限提升。\n- **毒舌/硬核点评**：云厂商天天喊\"安全是我们的最高优先级\"，结果一个查询接口就能让整个数据库服务变成\"共享单车\"。建议各位CTO别光顾着降本增效，先把云上资产的\"门锁\"换了吧。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/07/azure-cosmos-db-flaw-exposed-platform.html)\n\n---\n\n### 3. 📌 Change2Task: 给编码智能体投喂\"真正\"的工作任务 (来源: ArXiv)\n- **核心干货**：该研究提出从真实代码仓库的变更记录（Git diff）中，自动生成可执行的编码任务与环境。它解决了AI编程训练数据\"假大空\"的痛点，为智能体提供了带真实依赖、测试和验证逻辑的\"实操题\"，而非机械的补全题。\n- **毒舌/硬核点评**：以前训练AI写代码像是在教小学生做数学应用题，现在这玩意儿直接丢给你一个\"创业公司级\"的祖传屎山让你重构。这才是通往AGI的程序员之路，建议各大厂赶紧拿去给自家Copilot上强度。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2607.28591v1)\n\n---\n\n### 🗣️ 今日顶男金句\n\"别老想着用AI替代自己，要想着用AI替代那些只会用AI糊弄你的人。技术演进的速度，永远比你摸鱼的速度快。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-03\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 CosmosEscape：Azure Cosmos DB 惊现平台级密钥漏洞 (来源: The Hacker News)\n- **核心干货**：安全厂商 Wiz 发现 Azure Cosmos DB 的 Gremlin 查询沙箱存在逃逸漏洞，攻击者可利用该漏洞链获取平台级密钥，进而对任意租户的数据库进行完整读写。目前微软已修复，但该漏洞理论上可让攻击者\"一锅端\"整个云平台的数据库。\n- **毒舌/硬核点评**：云安全就像酒店门锁——你锁好了自己房间，结果发现前台有把万能钥匙挂在墙上。这年头，多租户隔离就是个\"薛定谔的边界\"。\n- **🔗 传送门**：[点击直达漏洞详情](https://thehackernews.com/2026/07/azure-cosmos-db-flaw-exposed-platform.html)\n\n---\n\n### 2. 📌 Kakehashi：在 Linux ARM 上跑 macOS 的\"赛博翻译官\" (来源: Hacker News)\n- **核心干货**：一个实验性的用户态运行时，目标是在 Linux ARM 设备（比如树莓派或 ARM 服务器）上直接运行 macOS 二进制文件。它不走虚拟机路线，而是通过系统调用翻译和 ABI 兼容层模拟，试图实现\"原生级\"兼容。\n- **毒舌/硬核点评**：当年 Wine 把 Windows 游戏搬进 Linux 用了二十年，现在这位想当\"macOS 的 Wine\"。想法很性感，但库比蒂诺的律师函可能比技术瓶颈来得更快。\n- **🔗 传送门**：[点击直达 GitHub 仓库](https://github.com/wie-project/kakehashi)\n\n---\n\n### 3. 📌 TokTier：给 Agentic LLM 的\"记忆\"做精准瘦身 (来源: ArXiv)\n- **核心干货**：针对 Agent 型 LLM 服务中重复重新分词导致的高昂计算开销，提出了一种有状态的分词方案。它通过精确追踪 token 边界变化，让长对话历史（如编程 Agent 反复提交代码上下文）的 KV 缓存能被高效复用，大幅降低延迟和成本。\n- **毒舌/硬核点评**：AI Agent 每次干活都把整个剧本重新背一遍，这不叫智能，叫\"金鱼记忆\"。TokTier 终于给了它们真正的\"工作记忆\"，建议所有 LLM 服务商立刻抄作业。\n- **🔗 传送门**：[点击直达 ArXiv 论文](https://arxiv.org/abs/2607.29678v1)\n\n---\n\n### 🗣️ 今日顶男金句\n\"真正的高手不是记住每一行代码，而是知道哪些 Token 该被缓存——人生同理，别把 CPU 浪费在重复结算旧账上。\"",
   "briefing_items": [
     {
-      "title": "Seedance 2.5: 字节跳动的\"一键生成\"卷王之王",
-      "source": "Hacker News | 384分",
-      "summary": "字节跳动发布 Seedance 2.5，主打\"One-Take Creation\"（一镜到底）和灵活引用（Flexible Referencing）。这不再是简单的文生视频，而是能基于参考素材（图像/视频）进行风格迁移、角色一致性和多镜头叙事生成的系统，意图直接降低专业视频制作的门槛。",
-      "commentary": "当别人还在卷\"画质清晰度\"，字节已经在卷\"导演思维自动化\"了。这玩意儿要是真如描述般丝滑，好莱坞的Pixar们可能得考虑给算法开个编剧部的工资。",
-      "url": "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5"
-    },
-    {
-      "title": "Azure Cosmos DB \"CosmosEscape\"漏洞: 云上保险箱的钥匙挂在门口",
+      "title": "CosmosEscape：Azure Cosmos DB 惊现平台级密钥漏洞",
       "source": "The Hacker News",
-      "summary": "安全公司Wiz披露了一个已修复的Azure Cosmos DB高危漏洞链。攻击者可通过构造恶意Gremlin查询逃逸沙箱，获得平台级主键，从而读写**任何**租户的数据库。这相当于拿到了云数据库的万能钥匙，属于基础设施级的\"史诗级\"权限提升。",
-      "commentary": "云厂商天天喊\"安全是我们的最高优先级\"，结果一个查询接口就能让整个数据库服务变成\"共享单车\"。建议各位CTO别光顾着降本增效，先把云上资产的\"门锁\"换了吧。",
-      "url": "https://thehackernews.com/2026/07/azure-cosmos-db-flaw-exposed-platform.html"
+      "summary": "安全厂商 Wiz 发现 Azure Cosmos DB 的 Gremlin 查询沙箱存在逃逸漏洞，攻击者可利用该漏洞链获取平台级密钥，进而对任意租户的数据库进行完整读写。目前微软已修复，但该漏洞理论上可让攻击者\"一锅端\"整个云平台的数据库。",
+      "commentary": "云安全就像酒店门锁——你锁好了自己房间，结果发现前台有把万能钥匙挂在墙上。这年头，多租户隔离就是个\"薛定谔的边界\"。",
+      "url": ""
     },
     {
-      "title": "Change2Task: 给编码智能体投喂\"真正\"的工作任务",
+      "title": "Kakehashi：在 Linux ARM 上跑 macOS 的\"赛博翻译官\"",
+      "source": "Hacker News",
+      "summary": "一个实验性的用户态运行时，目标是在 Linux ARM 设备（比如树莓派或 ARM 服务器）上直接运行 macOS 二进制文件。它不走虚拟机路线，而是通过系统调用翻译和 ABI 兼容层模拟，试图实现\"原生级\"兼容。",
+      "commentary": "当年 Wine 把 Windows 游戏搬进 Linux 用了二十年，现在这位想当\"macOS 的 Wine\"。想法很性感，但库比蒂诺的律师函可能比技术瓶颈来得更快。",
+      "url": ""
+    },
+    {
+      "title": "TokTier：给 Agentic LLM 的\"记忆\"做精准瘦身",
       "source": "ArXiv",
-      "summary": "该研究提出从真实代码仓库的变更记录（Git diff）中，自动生成可执行的编码任务与环境。它解决了AI编程训练数据\"假大空\"的痛点，为智能体提供了带真实依赖、测试和验证逻辑的\"实操题\"，而非机械的补全题。",
-      "commentary": "以前训练AI写代码像是在教小学生做数学应用题，现在这玩意儿直接丢给你一个\"创业公司级\"的祖传屎山让你重构。这才是通往AGI的程序员之路，建议各大厂赶紧拿去给自家Copilot上强度。",
-      "url": "https://arxiv.org/abs/2607.28591v1"
+      "summary": "针对 Agent 型 LLM 服务中重复重新分词导致的高昂计算开销，提出了一种有状态的分词方案。它通过精确追踪 token 边界变化，让长对话历史（如编程 Agent 反复提交代码上下文）的 KV 缓存能被高效复用，大幅降低延迟和成本。",
+      "commentary": "AI Agent 每次干活都把整个剧本重新背一遍，这不叫智能，叫\"金鱼记忆\"。TokTier 终于给了它们真正的\"工作记忆\"，建议所有 LLM 服务商立刻抄作业。",
+      "url": ""
     }
   ],
   "candidates": [
+    {
+      "id": "hn:49145937",
+      "title": "Show HN: Kakehashi – Experimental userspace to run macOS binaries on Linux ARM",
+      "summary": "",
+      "url": "https://github.com/wie-project/kakehashi",
+      "source": "Hacker News",
+      "score": 188,
+      "comments": 40
+    },
     {
       "id": "lob:pvrnor",
       "title": "NetBSD 11.0 released",
       "summary": "",
       "url": "https://blog.netbsd.org/tnf/entry/netbsd_11_0_released",
       "source": "Lobste.rs",
-      "score": 87,
-      "comments": 14,
+      "score": 102,
+      "comments": 18,
       "tags": [
         "netbsd",
         "release"
       ]
     },
     {
-      "id": "hn:49140396",
-      "title": "Show HN: I'm a 15 Year Old Wannabe Engineer, This Is a Cycloidal Gearbox I Built",
+      "id": "hn:49097961",
+      "title": "Developers are attached to tools because tools encode trust",
       "summary": "",
-      "url": "https://github.com/tom-ilan/cycloidal_gearbox",
+      "url": "https://stackoverflow.blog/2026/07/29/developers-are-attached-to-tools-because-tools-encode-trust/",
       "source": "Hacker News",
-      "score": 197,
-      "comments": 69
+      "score": 171,
+      "comments": 89
     },
     {
-      "id": "hn:49140218",
-      "title": "Go 1.27 Interactive Tour",
-      "summary": "",
-      "url": "https://victoriametrics.com/blog/go-1-27/index.html",
+      "id": "hn:49140998",
+      "title": "Karpathy’s Pelican",
+      "summary": "<a href=\"https:&#x2F;&#x2F;xcancel.com&#x2F;karpathy&#x2F;status&#x2F;2083749667410727319\" rel=\"nofollow\">https:&#x2F;&#x2F;xcancel.com&#x2F;karpathy&#x2F;status&#x2F;2083749667410727319</a>",
+      "url": "https://twitter.com/karpathy/status/2083749667410727319",
       "source": "Hacker News",
-      "score": 262,
-      "comments": 107
-    },
-    {
-      "id": "hn:49138302",
-      "title": "Seedance 2.5",
-      "summary": "",
-      "url": "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
-      "source": "Hacker News",
-      "score": 384,
-      "comments": 202
-    },
-    {
-      "id": "hn:49138188",
-      "title": "Diátaxis",
-      "summary": "",
-      "url": "https://diataxis.fr/",
-      "source": "Hacker News",
-      "score": 398,
-      "comments": 49
-    },
-    {
-      "id": "hn:49143414",
-      "title": "Wikimedia Foundation refuses union recognition, hires union-busting law firm",
-      "summary": "",
-      "url": "https://en.wikipedia.org/wiki/Wikipedia:Wikipedia_Signpost/2026-08-02/News_and_notes",
-      "source": "Hacker News",
-      "score": 142,
-      "comments": 98
+      "score": 474,
+      "comments": 352
     },
     {
       "id": "lob:80cn4r",
@@ -91,63 +73,45 @@
       "summary": "",
       "url": "https://chrismorgan.info/atom%3Erss",
       "source": "Lobste.rs",
-      "score": 34,
-      "comments": 25,
+      "score": 71,
+      "comments": 55,
       "tags": [
         "web"
       ]
     },
     {
-      "id": "lob:ojcl8j",
-      "title": "Postmortem for Lean Kernel Soundness Bug #14576",
+      "id": "lob:hozhli",
+      "title": "sizeof is surprisingly difficult to parse in c",
       "summary": "",
-      "url": "https://leodemoura.github.io/blog/2026-8-1-postmortem-for-kernel-soundness-bug-14576/",
+      "url": "https://sebsite.pw/w/20260802-sizeof.html",
       "source": "Lobste.rs",
-      "score": 37,
-      "comments": 1,
+      "score": 50,
+      "comments": 33,
       "tags": [
-        "formalmethods",
-        "plt"
+        "c"
       ]
     },
     {
-      "id": "arxiv:2607.28618v1",
-      "title": "AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis",
-      "summary": "Chemistry literature synthesis often requires assembling specific findings scattered across many publications, yet existing literature-search systems primarily return ranked document lists. As a result, scientists and AI agents need to locate relevant information, verify their provenance, and assemb",
-      "url": "https://arxiv.org/abs/2607.28618v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.IR",
-        "cs.LG"
-      ],
-      "arxiv_id": "2607.28618v1"
+      "id": "hn:49084324",
+      "title": "Note-Taking and Personal Knowledge Management",
+      "summary": "",
+      "url": "https://unattributed.cc/note-taking-and-personal-knowledge-management",
+      "source": "Hacker News",
+      "score": 147,
+      "comments": 44
     },
     {
-      "id": "arxiv:2607.28609v1",
-      "title": "OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models",
-      "summary": "Computer-using agents (CUAs) are advancing rapidly across the digital world. A CUA trajectory records the agent's actions, states, and reasoning. Verifying whether it fulfilled the task instruction is central to CUA evaluation, data curation, and reinforcement learning. Neither human-written verifie",
-      "url": "https://arxiv.org/abs/2607.28609v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.CV"
-      ],
-      "arxiv_id": "2607.28609v1"
-    },
-    {
-      "id": "arxiv:2607.28589v1",
-      "title": "MixFrag: Fragility-Guided Mixed-Precision Post-Training Quantization for Vision Transformers",
-      "summary": "Post-training quantization (PTQ) has emerged as an effective solution for deploying Vision Transformers (ViTs) on resource-constrained devices. However, existing PTQ methods typically employ uniform bit-widths across transformer components, overlooking their heterogeneous sensitivity to quantization",
-      "url": "https://arxiv.org/abs/2607.28589v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CV",
-        "cs.LG"
-      ],
-      "arxiv_id": "2607.28589v1"
+      "id": "lob:aso7dh",
+      "title": "I'm (mostly) picking models on speed now, not intelligence",
+      "summary": "",
+      "url": "https://martinalderson.com/posts/speed-vs-intelligence/",
+      "source": "Lobste.rs",
+      "score": 21,
+      "comments": 14,
+      "tags": [
+        "performance",
+        "vibecoding"
+      ]
     },
     {
       "id": "lob:ectcmr",
@@ -155,85 +119,58 @@
       "summary": "",
       "url": "https://linderud.dev/blog/resigning-from-arch-linux/",
       "source": "Lobste.rs",
-      "score": 36,
-      "comments": 2,
+      "score": 46,
+      "comments": 5,
       "tags": [
         "linux",
         "person"
       ]
     },
     {
-      "id": "hn:49142569",
-      "title": "Show HN: Bor – Open-source policy management for Linux desktops",
-      "summary": "Hi HN! I&#x27;ve been working on Bor, an open-source system for centralized Linux desktop management.<p>Bor consists of a lightweight Go agent and a central server. Policies are streamed to clients over mTLS&#x2F;gRPC in real time—no polling—and currently support Firefox, Chrome, KDE, dconf, polkit ",
-      "url": "https://getbor.dev/blog/2026-08-02-bor-v080-release/",
+      "id": "hn:49147263",
+      "title": "SwiftUI After 7 Years",
+      "summary": "",
+      "url": "https://ykvm.com/2026/07/swiftui-a-story-of-mediocrity/",
       "source": "Hacker News",
-      "score": 68,
-      "comments": 13
+      "score": 127,
+      "comments": 104
     },
     {
-      "id": "lob:obipgm",
-      "title": "A week in Matrix",
+      "id": "lob:ui2vor",
+      "title": "Prevent cognitive debt by manually retyping LLM-generated code",
       "summary": "",
-      "url": "https://piegames.de/dumps/a-week-in-matrix/",
+      "url": "https://ankursethi.com/blog/prevent-cognitive-debt-by-manually-retyping-llm-generated-code/",
       "source": "Lobste.rs",
-      "score": 34,
-      "comments": 8,
+      "score": 29,
+      "comments": 12,
       "tags": [
-        "distributed",
-        "rant"
+        "vibecoding"
       ]
     },
     {
-      "id": "lob:vrd28h",
-      "title": "An old-new take on argument parsing in Rust",
+      "id": "lob:uw1lfb",
+      "title": "Where's your website?",
       "summary": "",
-      "url": "https://jmmv.dev/2026/07/hello-getoptsargs.html",
+      "url": "https://www.arscyni.cc/file/warez_your_website.html",
       "source": "Lobste.rs",
-      "score": 23,
-      "comments": 5,
+      "score": 26,
+      "comments": 20,
       "tags": [
-        "rust",
-        "unix"
+        "culture"
       ]
     },
     {
-      "id": "arxiv:2607.28617v1",
-      "title": "AISPA: User-Centric System Prompt Auditing for Large Language Model Applications",
-      "summary": "System prompts are instructions configured by developers to govern the behaviors of foundation models in AI applications. They are used throughout commercial AI products, but are rarely disclosed to the public or regulators, creating a serious trust and accountability gap in the wide deployment of A",
-      "url": "https://arxiv.org/abs/2607.28617v1",
+      "id": "arxiv:2607.29624v1",
+      "title": "The Theoretical Foundation of Socratic Tests: Dynamic, Multimodal, Conversational Examinations",
+      "summary": "Traditional static assessments rely on a subtractive, deficit-based grading model that often penalizes ambition and obscures diagnostic feedback. Conversely, traditional face-to-face oral examinations introduce severe construct-irrelevant variance by exacerbating performative anxiety and the sociolo",
+      "url": "https://arxiv.org/abs/2607.29624v1",
       "source": "ArXiv",
       "categories": [
-        "cs.AI",
-        "cs.CL",
         "cs.CY",
+        "cs.AI",
         "cs.HC"
       ],
-      "arxiv_id": "2607.28617v1"
-    },
-    {
-      "id": "arxiv:2607.28591v1",
-      "title": "Change2Task: From Repository Changes to Executable Coding Agent Tasks and Environments",
-      "summary": "Scaling coding agents requires a continuing supply of executable data for training, benchmarking, and continuous evaluation. Each task must couple a realistic software state with a specification, development tools, and reliable verification. To expand this supply, we present Change2Task, a system gr",
-      "url": "https://arxiv.org/abs/2607.28591v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.SE",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "arxiv_id": "2607.28591v1"
-    },
-    {
-      "id": "arxiv:2607.28580v1",
-      "title": "DualG-MRAG: Decoupling Macro-Reasoning and Micro-Matching for Multimodal Retrieval-Augmented Generation",
-      "summary": "While Multimodal Retrieval-Augmented Generation (MM-RAG) has shown promising results, it still struggles with complex multi-hop reasoning tasks. Existing methods primarily focus on independent instance-level matching, which often fails to capture explicit relationships across modalities and document",
-      "url": "https://arxiv.org/abs/2607.28580v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI"
-      ],
-      "arxiv_id": "2607.28580v1"
+      "arxiv_id": "2607.29624v1"
     },
     {
       "id": "rss:14a2770977",
@@ -244,17 +181,74 @@
       "score": 0
     },
     {
-      "id": "lob:voozor",
-      "title": "But can your calculator run Linux?",
+      "id": "hn:49150470",
+      "title": "Qwen3.8-Max: A New Bar for Coding and Cowork",
       "summary": "",
-      "url": "https://raymii.org/s/articles/But_can_your_calculator_run_Linux.html",
+      "url": "https://qwen.ai/blog?id=qwen3.8",
+      "source": "Hacker News",
+      "score": 69,
+      "comments": 18
+    },
+    {
+      "id": "lob:7emnqu",
+      "title": "EPIPE on write might mean you're doing it wrong",
+      "summary": "",
+      "url": "https://rachelbythebay.com/w/2026/07/09/pipe/",
       "source": "Lobste.rs",
-      "score": 20,
-      "comments": 2,
+      "score": 22,
+      "comments": 7,
       "tags": [
-        "hardware",
-        "linux"
+        "php",
+        "unix"
       ]
+    },
+    {
+      "id": "hn:49129676",
+      "title": "Read the novels and forget everything else",
+      "summary": "",
+      "url": "https://hedgehogreview.com/web-features/thr/posts/read-the-novels-and-forget-everything-else",
+      "source": "Hacker News",
+      "score": 62,
+      "comments": 34
+    },
+    {
+      "id": "lob:lbmwvb",
+      "title": "Getting Started with Google Wave (2010)",
+      "summary": "",
+      "url": "https://www.youtube.com/watch?v=eKUAqNGVwX0",
+      "source": "Lobste.rs",
+      "score": 15,
+      "comments": 10,
+      "tags": [
+        "design",
+        "video"
+      ]
+    },
+    {
+      "id": "lob:jnznnu",
+      "title": "Faster floating point math with Rust’s new API",
+      "summary": "",
+      "url": "https://pythonspeed.com/articles/faster-float-math-rust/",
+      "source": "Lobste.rs",
+      "score": 13,
+      "comments": 5,
+      "tags": [
+        "performance",
+        "rust"
+      ]
+    },
+    {
+      "id": "arxiv:2607.29678v1",
+      "title": "TokTier: Exact Stateful Tokenization for Agentic LLM Serving",
+      "summary": "LLM serving systems cache prompt KV state, yet most front ends still re-tokenize the full request text on every call. The cost lands on coding agents, which resubmit a long transcript after each small tool result, and reuse is hard because even a short append can change token boundaries near the end",
+      "url": "https://arxiv.org/abs/2607.29678v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.DC",
+        "cs.PF"
+      ],
+      "arxiv_id": "2607.29678v1"
     }
   ],
   "ai_curated": true
