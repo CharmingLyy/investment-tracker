@@ -1,44 +1,49 @@
 {
   "date": "2026-08-04",
-  "update_time": "2026-08-04 02:53:16",
+  "update_time": "2026-08-04 14:19:25",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-04\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 OpenAI 发布数学与理论计算机科学十大进展 (来源: Hacker News | 454分)\n- **核心干货**：OpenAI 一口气甩出十项数学和理论计算机科学领域的突破。别问细节，问就是「为下一代推理模型铺路」。这不仅是算法优化，更是试图用 LLM 重新定义人类探索数学定理的方式——从「猜答案」进化到「证明答案」。\n- **毒舌/硬核点评**：上次 OpenAI 发数学进展是给 Codex 打广告，这次估计是给「Orion 2.0」预热。建议数学系博士生们提前改行学 Prompt Engineering，免得毕业即失业。\n- **🔗 传送门**：[点击直达原链接](https://openai.com/index/ten-advances-in-mathematics/)\n\n---\n\n### 2. 📌 ComfyUI 宣布 MiniMax H3 首日支持：开源权重+原生音频+2K视频 (来源: Hacker News | 263分)\n- **核心干货**：ComfyUI 在 MiniMax H3 发布当天就完成了集成，支持开源权重加载、原生音频生成以及 2K 分辨率视频合成。这意味着原本需要一堆插件和脚本才能跑通的多模态工作流，现在开箱即用，且全链路可本地化部署。\n- **毒舌/硬核点评**：这速度比某些大厂发布会PPT还快。开源社区卷起来，闭源 API 的「护城河」怕是要变成「下水道」了。\n- **🔗 传送门**：[点击直达原链接](https://blog.comfy.org/p/minimax-h3-day-0-support-in-comfyui)\n\n---\n\n### 3. 📌 ClickHouse 挖角数据库大神 Andy Pavlo，成立 ClickHouse Labs (来源: Hacker News | 280分)\n- **核心干货**：CMU 教授、数据库领域顶流 Andy Pavlo 正式加入 ClickHouse，牵头组建 ClickHouse Labs。目标很明确：把学术界的前沿存储引擎、查询优化技术直接灌进生产级 OLAP 数据库，缩短「论文到生产」的时差。\n- **毒舌/硬核点评**：Pavlo 教授嘴上说着「热爱教学」，身体却很诚实地加入了商业公司。这下他的「数据库排名」榜单终于不用靠爬虫抓数据了，直接内部泄露。\n- **🔗 传送门**：[点击直达原链接](https://clickhouse.com/blog/andy-pavlo-joins-clickhouse)\n\n---\n\n### 🗣️ 今日顶男金句\n**\"别问 AI 会不会取代你，先问问自己有没有把 API 调明白。\"**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-04\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 边缘端大模型内存革命：80B 模型塞进 4.3GB 内存 (来源: Hacker News)\n- **核心干货**：Swiftlet 项目通过激进量化与内存映射技术，让 80B 参数的 Qwen 模型在 Mac 上仅用 4.3GB 内存运行，甚至能在 iPhone 上跑 35B 模型。这相当于把一头大象塞进 Mini Cooper，还让它跑得比马快。\n- **毒舌/硬核点评**：云厂商看了血压飙升，本地推理党看了高潮迭起。这不仅是技术突破，更是对\"没钱就别玩大模型\"这一共识的公开处刑。\n- **🔗 传送门**：[GitHub - Swiftlet](https://github.com/leonickson1/Swiftlet)\n\n---\n\n### 2. 📌 数学与理论计算机十年十突破 (来源: Hacker News / OpenAI)\n- **核心干货**：OpenAI 官方盘点近十年数学与理论计算机领域的十大进展，涵盖从 PCP 定理到量子优势验证等核心突破。这不仅是学术年终总结，更是对\"AI 只懂炼丹不懂数学\"论调的一记响亮耳光——毕竟，连 ChatGPT 都开始做数学研究了。\n- **毒舌/硬核点评**：建议所有声称\"AI 没有推理能力\"的键盘侠把这份清单打印出来贴在工位上。怕他们看不懂？没关系，反正他们也不看论文，只看标题。\n- **🔗 传送门**：[Ten advances in mathematics](https://openai.com/index/ten-advances-in-mathematics/)\n\n---\n\n### 3. 📌 边缘 LLM 结构化记忆：RAG 的 O(1) 终结者 (来源: ArXiv)\n- **核心干货**：这篇论文提出通过 O(1) SSM 状态注入技术，在状态空间模型上实现结构化记忆，彻底消除 RAG 中检索上下文的 prefill 开销。Transformer 的 KV-cache 大限将至，边缘设备上的长上下文推理终于不再是个伪命题。\n- **毒舌/硬核点评**：RAG 的\"检索-拼接-填空\"三板斧终于被治了。以后别再吹你那 200K 上下文窗口了——真正的记忆不是塞得下，而是记得住、用得巧。\n- **🔗 传送门**：[arXiv:2608.02560](https://arxiv.org/abs/2608.02560v1)\n\n---\n\n### 🗣️ 今日顶男金句\n\"内存不够就压缩，上下文太长就遗忘——AI 的进化路线，跟你老板画饼的套路一模一样。\"",
   "briefing_items": [
     {
-      "title": "OpenAI 发布数学与理论计算机科学十大进展",
-      "source": "Hacker News | 454分",
-      "summary": "OpenAI 一口气甩出十项数学和理论计算机科学领域的突破。别问细节，问就是「为下一代推理模型铺路」。这不仅是算法优化，更是试图用 LLM 重新定义人类探索数学定理的方式——从「猜答案」进化到「证明答案」。",
-      "commentary": "上次 OpenAI 发数学进展是给 Codex 打广告，这次估计是给「Orion 2.0」预热。建议数学系博士生们提前改行学 Prompt Engineering，免得毕业即失业。",
-      "url": "https://openai.com/index/ten-advances-in-mathematics/"
+      "title": "边缘端大模型内存革命：80B 模型塞进 4.3GB 内存",
+      "source": "Hacker News",
+      "summary": "Swiftlet 项目通过激进量化与内存映射技术，让 80B 参数的 Qwen 模型在 Mac 上仅用 4.3GB 内存运行，甚至能在 iPhone 上跑 35B 模型。这相当于把一头大象塞进 Mini Cooper，还让它跑得比马快。",
+      "commentary": "云厂商看了血压飙升，本地推理党看了高潮迭起。这不仅是技术突破，更是对\"没钱就别玩大模型\"这一共识的公开处刑。",
+      "url": ""
     },
     {
-      "title": "ComfyUI 宣布 MiniMax H3 首日支持：开源权重+原生音频+2K视频",
-      "source": "Hacker News | 263分",
-      "summary": "ComfyUI 在 MiniMax H3 发布当天就完成了集成，支持开源权重加载、原生音频生成以及 2K 分辨率视频合成。这意味着原本需要一堆插件和脚本才能跑通的多模态工作流，现在开箱即用，且全链路可本地化部署。",
-      "commentary": "这速度比某些大厂发布会PPT还快。开源社区卷起来，闭源 API 的「护城河」怕是要变成「下水道」了。",
-      "url": "https://blog.comfy.org/p/minimax-h3-day-0-support-in-comfyui"
+      "title": "数学与理论计算机十年十突破",
+      "source": "Hacker News / OpenAI",
+      "summary": "OpenAI 官方盘点近十年数学与理论计算机领域的十大进展，涵盖从 PCP 定理到量子优势验证等核心突破。这不仅是学术年终总结，更是对\"AI 只懂炼丹不懂数学\"论调的一记响亮耳光——毕竟，连 ChatGPT 都开始做数学研究了。",
+      "commentary": "建议所有声称\"AI 没有推理能力\"的键盘侠把这份清单打印出来贴在工位上。怕他们看不懂？没关系，反正他们也不看论文，只看标题。",
+      "url": ""
     },
     {
-      "title": "ClickHouse 挖角数据库大神 Andy Pavlo，成立 ClickHouse Labs",
-      "source": "Hacker News | 280分",
-      "summary": "CMU 教授、数据库领域顶流 Andy Pavlo 正式加入 ClickHouse，牵头组建 ClickHouse Labs。目标很明确：把学术界的前沿存储引擎、查询优化技术直接灌进生产级 OLAP 数据库，缩短「论文到生产」的时差。",
-      "commentary": "Pavlo 教授嘴上说着「热爱教学」，身体却很诚实地加入了商业公司。这下他的「数据库排名」榜单终于不用靠爬虫抓数据了，直接内部泄露。",
-      "url": "https://clickhouse.com/blog/andy-pavlo-joins-clickhouse"
+      "title": "边缘 LLM 结构化记忆：RAG 的 O(1) 终结者",
+      "source": "ArXiv",
+      "summary": "这篇论文提出通过 O(1) SSM 状态注入技术，在状态空间模型上实现结构化记忆，彻底消除 RAG 中检索上下文的 prefill 开销。Transformer 的 KV-cache 大限将至，边缘设备上的长上下文推理终于不再是个伪命题。",
+      "commentary": "RAG 的\"检索-拼接-填空\"三板斧终于被治了。以后别再吹你那 200K 上下文窗口了——真正的记忆不是塞得下，而是记得住、用得巧。",
+      "url": ""
     }
   ],
   "candidates": [
     {
-      "id": "lob:peqq4p",
-      "title": "9front \"THIS WAS SUPPOSED TO BE FUN\" Released",
+      "id": "hn:49167113",
+      "title": "AI-Generated Images Discourage Me from Reading Your Blog",
       "summary": "",
-      "url": "https://9front.org/releases/2026/08/02/0/",
-      "source": "Lobste.rs",
-      "score": 55,
-      "comments": 14,
-      "tags": [
-        "art",
-        "release"
-      ]
+      "url": "https://nelson.cloud/ai-generated-images-discourage-me-from-reading-your-blog/",
+      "source": "Hacker News",
+      "score": 446,
+      "comments": 262
+    },
+    {
+      "id": "hn:49158333",
+      "title": "Show HN: Run an 80B Qwen in 4.3 GB of RAM on a Mac, and a 35B on an iPhone",
+      "summary": "",
+      "url": "https://github.com/leonickson1/Swiftlet",
+      "source": "Hacker News",
+      "score": 247,
+      "comments": 112
     },
     {
       "id": "hn:49156111",
@@ -46,8 +51,26 @@
       "summary": "",
       "url": "https://blog.exe.dev/devtools-must-be-open-source",
       "source": "Hacker News",
-      "score": 518,
-      "comments": 187
+      "score": 663,
+      "comments": 216
+    },
+    {
+      "id": "hn:49166386",
+      "title": "DeepSeek V4 Flash on a Single AMD MI300X",
+      "summary": "",
+      "url": "https://github.com/ryanzhou/deepseek-v4-flash-mi300x",
+      "source": "Hacker News",
+      "score": 177,
+      "comments": 45
+    },
+    {
+      "id": "hn:49167448",
+      "title": "Xbox goes down. You can't play games you own on disc",
+      "summary": "",
+      "url": "https://birchtree.me/blog/xbox-goes-down-you-cant-play-games-you-own-on-disc/",
+      "source": "Hacker News",
+      "score": 211,
+      "comments": 200
     },
     {
       "id": "hn:49157930",
@@ -55,35 +78,29 @@
       "summary": "",
       "url": "https://openai.com/index/ten-advances-in-mathematics/",
       "source": "Hacker News",
-      "score": 454,
-      "comments": 725
+      "score": 579,
+      "comments": 867
     },
     {
-      "id": "hn:49155629",
-      "title": "MiniMax H3 Day-0 Support in ComfyUI: Open Weights, Native Audio, and 2K Video",
+      "id": "lob:sp2wji",
+      "title": "Rust Project Goals: Immobile types and guaranteed destructors",
       "summary": "",
-      "url": "https://blog.comfy.org/p/minimax-h3-day-0-support-in-comfyui",
-      "source": "Hacker News",
-      "score": 263,
-      "comments": 79
+      "url": "https://github.com/rust-lang/rust-project-goals/blob/main/src/2026/move-trait.md",
+      "source": "Lobste.rs",
+      "score": 42,
+      "comments": 15,
+      "tags": [
+        "rust"
+      ]
     },
     {
-      "id": "hn:49153374",
-      "title": "Prevent cognitive debt by manually retyping LLM-generated code",
+      "id": "hn:49166491",
+      "title": "Ray Bradbury's \"There Will Come Soft Rains\" is set today (2026-08-04)",
       "summary": "",
-      "url": "https://ankursethi.com/blog/prevent-cognitive-debt-by-manually-retyping-llm-generated-code/",
+      "url": "https://short-stories.co/@raybradbury/there-will-come-soft-rains-6k8vr4xxlnmj",
       "source": "Hacker News",
-      "score": 398,
-      "comments": 337
-    },
-    {
-      "id": "hn:49156011",
-      "title": "Andy Pavlo joins ClickHouse to establish ClickHouse Labs",
-      "summary": "",
-      "url": "https://clickhouse.com/blog/andy-pavlo-joins-clickhouse",
-      "source": "Hacker News",
-      "score": 280,
-      "comments": 58
+      "score": 192,
+      "comments": 48
     },
     {
       "id": "hn:49161518",
@@ -91,35 +108,32 @@
       "summary": "",
       "url": "https://www.seangoedecke.com/llms-reward-expertise/",
       "source": "Hacker News",
-      "score": 505,
-      "comments": 223
+      "score": 1134,
+      "comments": 478
     },
     {
-      "id": "hn:49132992",
-      "title": "200 Milliseconds",
+      "id": "lob:9nxwpi",
+      "title": "SQLite Critical CVEs or LLM Slop?",
       "summary": "",
-      "url": "https://200ms.thenodebook.com",
-      "source": "Hacker News",
-      "score": 200,
-      "comments": 62
+      "url": "https://research.jfrog.com/post/sqlite-critical-cves-or-llm-slops/",
+      "source": "Lobste.rs",
+      "score": 23,
+      "comments": 12,
+      "tags": [
+        "security"
+      ]
     },
     {
-      "id": "hn:49156683",
-      "title": "Ask HN: Who is hiring? (August 2026)",
-      "summary": "Please state the location and include REMOTE for remote work, REMOTE (US)\nor similar if the country is restricted, and ONSITE when remote work is <i>not</i> an option.<p>Please only post if you personally are part of the hiring company—no\nrecruiting firms or job boards. One post per company. If it i",
-      "url": "https://news.ycombinator.com/item?id=49156683",
-      "source": "Hacker News",
-      "score": 117,
-      "comments": 109
-    },
-    {
-      "id": "hn:49158474",
-      "title": "Celebrating 45 Years of Kermit with the First New C-Kermit Release in 15 Years",
+      "id": "lob:0ykmyt",
+      "title": "Soppo - Go, with the features it's missing",
       "summary": "",
-      "url": "https://changelog.complete.org/archives/44456-celebrating-45-years-of-kermit-with-the-first-new-c-kermit-release-in-15-years-and-working-with-a-decades-old-c-codebase",
-      "source": "Hacker News",
-      "score": 134,
-      "comments": 36
+      "url": "https://soppolang.dev/",
+      "source": "Lobste.rs",
+      "score": 39,
+      "comments": 13,
+      "tags": [
+        "go"
+      ]
     },
     {
       "id": "lob:aftrcr",
@@ -127,8 +141,8 @@
       "summary": "",
       "url": "https://killthecookiebanner.eu/",
       "source": "Lobste.rs",
-      "score": 91,
-      "comments": 17,
+      "score": 129,
+      "comments": 36,
       "tags": [
         "law",
         "privacy"
@@ -140,8 +154,8 @@
       "summary": "",
       "url": "https://gruhn.me/blog/2026-08-03/",
       "source": "Lobste.rs",
-      "score": 89,
-      "comments": 41,
+      "score": 115,
+      "comments": 44,
       "tags": [
         "practices",
         "vibecoding"
@@ -153,33 +167,12 @@
       "summary": "",
       "url": "https://lake.computer/blog/help-wanted/",
       "source": "Lobste.rs",
-      "score": 127,
-      "comments": 17,
+      "score": 175,
+      "comments": 23,
       "tags": [
         "rant",
         "satire",
         "vibecoding"
-      ]
-    },
-    {
-      "id": "hn:49158581",
-      "title": "Smaller, faster, safer: running Kimi and GLM at scale",
-      "summary": "",
-      "url": "https://blog.cloudflare.com/smaller-faster-safer-models/",
-      "source": "Hacker News",
-      "score": 156,
-      "comments": 40
-    },
-    {
-      "id": "lob:tjgemj",
-      "title": "Your JSON Is Lying to You",
-      "summary": "",
-      "url": "https://blog.gaborkoos.com/posts/2026-08-03-Your-JSON-Is-Lying-to-You/",
-      "source": "Lobste.rs",
-      "score": 39,
-      "comments": 13,
-      "tags": [
-        "javascript"
       ]
     },
     {
@@ -188,53 +181,71 @@
       "summary": "",
       "url": "https://andrewkelley.me/post/dont-take-black-pill.html",
       "source": "Lobste.rs",
-      "score": 99,
-      "comments": 9,
+      "score": 128,
+      "comments": 12,
       "tags": [
         "culture"
       ]
     },
     {
-      "id": "lob:sp2wji",
-      "title": "Rust Project Goals: Immobile types and guaranteed destructors",
+      "id": "lob:kprcuc",
+      "title": "Reliability Lessons From SQLite",
       "summary": "",
-      "url": "https://github.com/rust-lang/rust-project-goals/blob/main/src/2026/move-trait.md",
+      "url": "https://www.youtube.com/watch?v=V_qzqY1bb7I",
       "source": "Lobste.rs",
-      "score": 28,
-      "comments": 10,
+      "score": 38,
+      "comments": 7,
       "tags": [
-        "rust"
+        "practices",
+        "video"
       ]
     },
     {
-      "id": "hn:49156682",
-      "title": "Ask HN: Who wants to be hired? (August 2026)",
-      "summary": "Share your information if you are looking for work. Please use this format:<p><pre><code>  Location:\n  Remote:\n  Willing to relocate:\n  Technologies:\n  Résumé&#x2F;CV:\n  Email:\n</code></pre>\nPlease only post if you are personally looking for work. Agencies, recruiters, job boards,\nand so on, are off",
-      "url": "https://news.ycombinator.com/item?id=49156682",
+      "id": "hn:49164896",
+      "title": "Harness Engineering for Self-Improvement",
+      "summary": "",
+      "url": "https://lilianweng.github.io/posts/2026-07-04-harness/",
       "source": "Hacker News",
-      "score": 66,
-      "comments": 191
+      "score": 152,
+      "comments": 29
     },
     {
-      "id": "lob:9nxwpi",
-      "title": "SQLite Critical CVEs or LLM Slop?",
+      "id": "arxiv:2608.02560v1",
+      "title": "Structured Memory for Edge Language Models: Persistent Context and Corpus Retrieval via O(1) SSM State Injection",
+      "summary": "Retrieval-augmented generation (RAG) imposes a prefill cost proportional to retrieved context length, and -- with Transformer backbones -- a KV-cache that grows with each generated token. State-Space Models (SSMs) avoid the second cost by construction; we eliminate the first, collapsing prefill from",
+      "url": "https://arxiv.org/abs/2608.02560v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.IR"
+      ],
+      "arxiv_id": "2608.02560v1"
+    },
+    {
+      "id": "lob:3umxr8",
+      "title": "The Future of GNOME Boxes",
       "summary": "",
-      "url": "https://research.jfrog.com/post/sqlite-critical-cves-or-llm-slops/",
+      "url": "https://blogs.gnome.org/feborges/future-of-boxes/",
       "source": "Lobste.rs",
-      "score": 14,
-      "comments": 6,
+      "score": 36,
+      "comments": 9,
       "tags": [
-        "security"
+        "virtualization"
       ]
     },
     {
-      "id": "hn:49162086",
-      "title": "Windows XP 2002 for the Itanium: Unbridled rage",
+      "id": "lob:blflqs",
+      "title": "Twenty Years of Pandoc",
       "summary": "",
-      "url": "https://virtuallyfun.com/2026/08/03/windows-xp-2002-for-the-itanium-unbridled-rage/",
-      "source": "Hacker News",
-      "score": 64,
-      "comments": 31
+      "url": "https://pandoc.org/twenty-years-of-pandoc.html",
+      "source": "Lobste.rs",
+      "score": 80,
+      "comments": 2,
+      "tags": [
+        "haskell",
+        "historical"
+      ]
     }
   ],
   "ai_curated": true
