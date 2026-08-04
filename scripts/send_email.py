@@ -57,9 +57,9 @@ def send_signal_email(asset, signal, direction, score, entry_price, stop_loss,
     score_color = "🟢" if score >= 55 else "🟡" if score >= 40 else "🔴"
 
     update_time = datetime.now().strftime("%Y-%m-%d %H:%M Beijing")
-    subject = f"{direction_emoji} [{asset}] {signal} — 评分 {score} | {datetime.now().strftime('%H:%M')}"
+    subject = f"{direction_emoji} [{asset}] {signal} | V4硬闸 | {datetime.now().strftime('%H:%M')}"
 
-    # HTML 格式邮件正文
+    # HTML 格式邮件正文 — V4 硬性门槛制
     html_body = f"""
     <html>
     <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0e14; color: #e6edf3; padding: 20px;">
@@ -67,7 +67,7 @@ def send_signal_email(asset, signal, direction, score, entry_price, stop_loss,
 
         <!-- 标题 -->
         <h2 style="margin: 0 0 16px 0; font-size: 20px;">
-          {direction_emoji} {asset} · {signal}
+          {direction_emoji} {asset} · {signal} <span style="font-size: 14px; color: #d2991d;">V4 硬性门槛</span>
         </h2>
 
         <!-- 价格 -->
@@ -78,19 +78,13 @@ def send_signal_email(asset, signal, direction, score, entry_price, stop_loss,
           </span>
         </div>
 
-        <!-- 评分 -->
-        <div style="background: #181f2a; border-radius: 8px; padding: 12px; margin-bottom: 12px; text-align: center;">
-          <div style="font-size: 32px; font-weight: 900;">{score_color} {score}<span style="font-size: 16px; color: #8b949e;"> 分</span></div>
-          <div style="font-size: 12px; color: #8b949e; margin-top: 4px;">
-            置信度: <b style="color: #e6edf3;">{confidence}</b> &nbsp;|&nbsp;
-            预估胜率: <b style="color: #e6edf3;">{win_rate_est}%</b>
-          </div>
-          <div style="display: flex; height: 4px; border-radius: 2px; overflow: hidden; margin-top: 8px;">
-            <div style="background: #58a6ff; width: {tech_score/80*100}%;"></div>
-            <div style="background: #3fb950; width: {fund_score/80*100}%;"></div>
-          </div>
-          <div style="font-size: 10px; color: #555d68; margin-top: 3px;">
-            技术{tech_score}/60 &nbsp; 基本{fund_score}/20
+        <!-- V4 三道闸门状态 -->
+        <div style="background: #181f2a; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+          <div style="font-size: 13px; color: #d2991d; margin-bottom: 8px; text-align: center;">🛡️ 三道硬闸通过确认</div>
+          <div style="font-size: 12px; color: #e6edf3;">
+            ✅ 闸门1 — 1H趋势环境: <b>{trend_summary}</b><br>
+            ✅ 闸门2 — 15min入场Setup: <b>回调/结构点满足</b><br>
+            ✅ 闸门3 — OI量价绑定: <b>主动资金确认</b>
           </div>
         </div>
 
@@ -125,14 +119,16 @@ def send_signal_email(asset, signal, direction, score, entry_price, stop_loss,
           💡 止盈①触发后平仓<b>{position_pct1}%</b>，止损上移至<b>${breakeven_price or entry_price:,.2f}</b>（保本），剩余仓位零风险博弈止盈② &nbsp;|&nbsp; 📊 加权 R:R <b style="color: #d2991d;">{rr_ratio:.1f}:1</b> {rr_color}
         </div>
 
-        <!-- 趋势 -->
-        <div style="background: #181f2a; border-radius: 8px; padding: 10px; font-size: 12px; color: #8b949e;">
+        <!-- 风控规则 -->
+        <div style="background: #181f2a; border-radius: 8px; padding: 10px; margin-bottom: 12px; font-size: 12px; color: #8b949e;">
+          ⏱️ 时间止损: 持仓超过 <b>4小时 (16根15min)</b> 未触发 TP1 → 市价平仓<br>
+          🛑 止损: <b>max(Swing ± 0.2%, 1.2×ATR)</b> — 防插针扫损<br>
           📈 {trend_summary} &nbsp;|&nbsp; 波动率 ATR: {atr_pct:.2f}%
         </div>
 
         <!-- 脚注 -->
         <div style="margin-top: 16px; font-size: 10px; color: #555d68; text-align: center;">
-          AI 加密货币监控 · {update_time} · 仅供参考不构成投资建议
+          AI 加密货币监控 V4 · {update_time} · 仅供参考不构成投资建议
         </div>
       </div>
     </body>

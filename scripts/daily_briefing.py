@@ -504,18 +504,28 @@ def curate_with_llm(candidates: list[dict], date_str: str) -> str | None:
 
     # ── 优先 DeepSeek（便宜、中文好、OpenAI 兼容）──
     if DEEPSEEK_API_KEY:
+        print(f"[简报] 🤖 尝试 DeepSeek API（deepseek-chat）...")
         result = _curate_with_deepseek(user_message, date_str)
         if result:
             return result
         print("[简报] ⚠ DeepSeek 失败，尝试 Anthropic 备选...")
+    else:
+        print("[简报] ℹ 未配置 DEEPSEEK_API_KEY，跳过 DeepSeek")
 
     # ── 备选 Anthropic ──
     if ANTHROPIC_API_KEY:
+        print(f"[简报] 🤖 尝试 Anthropic API（claude-sonnet-5）...")
         result = _curate_with_claude_api(parts, user_message, date_str)
         if result:
             return result
         print("[简报] ⚠ Anthropic 也失败了")
+    else:
+        print("[简报] ℹ 未配置 ANTHROPIC_API_KEY，跳过 Anthropic")
 
+    print("[简报] 💡 两个 LLM API 都不可用，将使用启发式模式生成简报")
+    print("[简报] 💡 修复方法：")
+    print("[简报]     1. DeepSeek（推荐，便宜）: https://platform.deepseek.com → 充值 → 复制 Key → GitHub Secrets → DEEPSEEK_API_KEY")
+    print("[简报]     2. Anthropic（备选）: https://console.anthropic.com → API Keys → GitHub Secrets → ANTHROPIC_API_KEY")
     return None
 
 
@@ -542,9 +552,23 @@ def _curate_with_deepseek(user_message: str, date_str: str) -> str | None:
         if resp.status_code == 200:
             data = resp.json()
             return data["choices"][0]["message"]["content"]
-        else:
-            print(f"  ⚠ DeepSeek API HTTP 错误 {resp.status_code}: {resp.text[:200]}")
+        elif resp.status_code == 401:
+            print(f"  ❌ DeepSeek API Key 无效或已过期！请检查 GitHub Secrets → DEEPSEEK_API_KEY")
+            print(f"     → https://platform.deepseek.com → API Keys → 检查余额和 Key 状态")
             return None
+        elif resp.status_code == 402:
+            print(f"  ❌ DeepSeek 账户余额不足！请充值")
+            print(f"     → https://platform.deepseek.com → 充值（¥1 够用几个月）")
+            return None
+        elif resp.status_code == 429:
+            print(f"  ⚠ DeepSeek API 限流: {resp.text[:300]}")
+            return None
+        else:
+            print(f"  ⚠ DeepSeek API HTTP 错误 {resp.status_code}: {resp.text[:300]}")
+            return None
+    except requests.exceptions.Timeout:
+        print(f"  ⚠ DeepSeek API 请求超时（120s）")
+        return None
     except Exception as e:
         print(f"  ⚠ DeepSeek API 调用失败: {e}")
         return None
@@ -558,15 +582,23 @@ def _curate_with_claude_api(parts: list[str], user_message: str, date_str: str) 
         response = client.messages.create(
             model="claude-sonnet-5",
             max_tokens=4096,
-            temperature=0.85,
             system=SYSTEM_PROMPT.replace("{DATE}", date_str),
             messages=[{"role": "user", "content": user_message}],
         )
         return response.content[0].text
     except ImportError:
-        pass
+        print("  ℹ Anthropic SDK 未安装，使用 HTTP 备选方式")
     except Exception as e:
-        print(f"  ⚠ Claude SDK 调用失败: {e}")
+        err_msg = str(e)
+        if "401" in err_msg or "authentication" in err_msg.lower() or "api key" in err_msg.lower():
+            print(f"  ❌ Anthropic API Key 无效或已过期！请检查 GitHub Secrets → ANTHROPIC_API_KEY")
+            print(f"     → https://console.anthropic.com → API Keys → 检查 Key 状态")
+        elif "429" in err_msg or "rate" in err_msg.lower():
+            print(f"  ⚠ Anthropic API 限流: {e}")
+        elif "402" in err_msg or "payment" in err_msg.lower() or "billing" in err_msg.lower():
+            print(f"  ❌ Anthropic 账户计费问题: {e}")
+        else:
+            print(f"  ⚠ Claude SDK 调用失败: {e}")
 
     # HTTP 备选
     candidates_text = "\n---\n".join(parts)
@@ -582,7 +614,6 @@ def _curate_with_claude_api(parts: list[str], user_message: str, date_str: str) 
             json={
                 "model": "claude-sonnet-5",
                 "max_tokens": 4096,
-                "temperature": 0.85,
                 "system": SYSTEM_PROMPT.replace("{DATE}", date_str),
                 "messages": [{"role": "user", "content": user_message_http}],
             },
@@ -591,9 +622,22 @@ def _curate_with_claude_api(parts: list[str], user_message: str, date_str: str) 
         if resp.status_code == 200:
             data = resp.json()
             return data["content"][0]["text"]
-        else:
-            print(f"  ⚠ Anthropic API HTTP 错误 {resp.status_code}: {resp.text[:200]}")
+        elif resp.status_code == 401:
+            print(f"  ❌ Anthropic API Key 无效或已过期！请检查 GitHub Secrets → ANTHROPIC_API_KEY")
+            print(f"     → https://console.anthropic.com → API Keys → 检查 Key 状态")
             return None
+        elif resp.status_code == 429:
+            print(f"  ⚠ Anthropic API 限流: {resp.text[:300]}")
+            return None
+        elif resp.status_code == 529:
+            print(f"  ⚠ Anthropic API 过载，稍后自动重试: {resp.text[:300]}")
+            return None
+        else:
+            print(f"  ⚠ Anthropic API HTTP 错误 {resp.status_code}: {resp.text[:300]}")
+            return None
+    except requests.exceptions.Timeout:
+        print(f"  ⚠ Anthropic API 请求超时（120s）")
+        return None
     except Exception as e:
         print(f"  ⚠ Anthropic API HTTP 调用失败: {e}")
         return None

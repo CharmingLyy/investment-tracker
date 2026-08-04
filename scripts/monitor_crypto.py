@@ -3,7 +3,7 @@
 每 10 分钟自动检测 BTC/ETH，有交易机会时邮件通知
 
 数据源: Binance 公开 API（无需 API Key）
-信号逻辑: 完整移植自 ai选股/index.html 的 generateSignal()
+信号逻辑: V4 硬性门槛制 — 废除打分，三道硬闸过滤
 
 使用方式:
   python scripts/monitor_crypto.py           # 单次检测
@@ -211,342 +211,457 @@ def find_sr_lines(closes, highs, lows, n=5):
 
 
 # ============================================================
-# 信号生成引擎（完整移植自 JS generateSignal）
+# V4 辅助函数：波段点检测
 # ============================================================
 
-def generate_signal(data_1h, data_4h, data_1d, asset="BTC", futures_info=None):
+def find_swing_points(highs, lows, lookback=5):
     """
-    完整移植自 ai选股/index.html 的 generateSignal()
+    检测最近一个波段高点和波段低点（用于 V4 止损和入场 Setup）
+    返回: {"swing_high": float or None, "swing_low": float or None,
+           "swing_high_idx": int, "swing_low_idx": int}
+    """
+    n = len(highs)
+    if n < lookback * 2 + 1:
+        return {"swing_high": None, "swing_low": None,
+                "swing_high_idx": -1, "swing_low_idx": -1}
 
-    参数：
-      data_1h, data_4h, data_1d: {"closes":[], "highs":[], "lows":[]}
-      asset: "BTC" 或 "ETH" — 不同资产使用不同参数
-      futures_info: dict — fetch_futures_data() 的返回值（资金费率 + 持仓量），可选
+    # 找最近的 swing high（从后往前找）
+    swing_high, swing_high_idx = None, -1
+    for i in range(n - lookback - 1, lookback - 1, -1):
+        is_swing_high = True
+        for j in range(i - lookback, i + lookback + 1):
+            if j == i:
+                continue
+            if highs[j] >= highs[i]:
+                is_swing_high = False
+                break
+        if is_swing_high:
+            swing_high = highs[i]
+            swing_high_idx = i
+            break
 
-    返回: dict — 完整的信号对象
+    # 找最近的 swing low（从后往前找）
+    swing_low, swing_low_idx = None, -1
+    for i in range(n - lookback - 1, lookback - 1, -1):
+        is_swing_low = True
+        for j in range(i - lookback, i + lookback + 1):
+            if j == i:
+                continue
+            if lows[j] <= lows[i]:
+                is_swing_low = False
+                break
+        if is_swing_low:
+            swing_low = lows[i]
+            swing_low_idx = i
+            break
 
-    ETH 专属参数 (2026-07-20 回测优化):
-      - 止损 1.5×ATR (vs BTC 2.0×) — ETH 波动更大，紧止损控风险
-      - 止盈 4.0×ATR (vs BTC 5.0×) — 匹配 ETH 更快的反转速度
-      - 回测 1000 天: ETH +55.58% (1000天), 胜率 42.4%, PF 1.16
+    return {"swing_high": swing_high, "swing_low": swing_low,
+            "swing_high_idx": swing_high_idx, "swing_low_idx": swing_low_idx}
+
+
+def check_spring_pattern(lows, recent_swing_low, lookback=8):
+    """
+    检测 Spring 形态：跌破前一波段低点后收回（Wyckoff 弹簧）
+    返回 True 如果在最近 lookback 根 K 线内出现过此形态
+    """
+    if recent_swing_low is None:
+        return False
+    n = len(lows)
+    check_range = min(lookback, n - 2)
+    for i in range(n - check_range, n):
+        if lows[i] < recent_swing_low * 0.998:  # 跌破过（留 0.2% 容差）
+            # 确认已收回：当前价格在波段低点上方
+            return True
+    return False
+
+
+def check_upthrust_pattern(highs, recent_swing_high, lookback=8):
+    """
+    检测 Upthrust 形态：突破前一波段高点后收回（Wyckoff 上冲回落）
+    返回 True 如果在最近 lookback 根 K 线内出现过此形态
+    """
+    if recent_swing_high is None:
+        return False
+    n = len(highs)
+    check_range = min(lookback, n - 2)
+    for i in range(n - check_range, n):
+        if highs[i] > recent_swing_high * 1.002:  # 突破过（留 0.2% 容差）
+            return True
+    return False
+
+
+# ============================================================
+# 信号生成引擎 V4 — 硬性门槛制
+# ============================================================
+
+def generate_signal(data_1h, data_4h, data_1d=None, asset="BTC", futures_info=None, data_15m=None, oi_15m=None):
+    """
+    V4 — 硬性门槛制（2026-08-04）
+
+    废除 V1-V3 的凑分逻辑，改为三道硬性闸门：
+
+    【闸门 1】1H 大周期趋势过滤 (EMA50/EMA200 + RSI)
+      - 做多环境: 1H Close > EMA50 > EMA200 且 1H RSI(14) > 50
+      - 做空环境: 1H Close < EMA50 < EMA200 且 1H RSI(14) < 50
+      - 观望: EMA50/EMA200 纠缠或价格处于均线之间 → 一票否决
+
+    【闸门 2】15min 入场 Setup
+      - 做多: 价格回调至 15min EMA50 附近 (偏离 < 0.3%) 或 Spring 形态(跌破前低后收回)
+      - 做空: 价格反弹至 15min EMA50 附近 (偏离 < 0.3%) 或 Upthrust 形态(突破前高后收回)
+
+    【闸门 3】OI + 量价方向绑定
+      - 做多确认: 最近 3 根 15min K线中 (Price↑ AND OI↑) → 主力主动开多
+      - 做空确认: 最近 3 根 15min K线中 (Price↓ AND OI↑) → 主力主动开空
+      - 拒绝: 价格上涨但 OI 减少 → 空头平仓驱动，不入场
+
+    【风控】
+      - SL: max(Swing ± 0.2%, 1.2 × ATR15m) — 取更宽的止损防插针
+      - TP1: 1.5 × Risk (盈亏比 1:1.5)，平仓 50%，移止损至保本
+      - TP2: 2.5 × Risk 或 1H 前高/前低阻力位，平仓剩余 50%
+      - 时间止损: 持仓超过 16 根 15min (4小时) 未触发 TP1 → 市价平仓
     """
     c1, h1, l1 = data_1h["closes"], data_1h["highs"], data_1h["lows"]
-    c4, h4, l4 = data_4h["closes"], data_4h["highs"], data_4h["lows"]
-    cd = data_1d["closes"]
-    cur_price = c1[-1]
 
-    # ── 1H 指标 ──
+    # ── 15min 数据 ──
+    has_15m = data_15m is not None and len(data_15m.get("closes", [])) >= 50
+    if has_15m:
+        c15 = data_15m["closes"]; h15 = data_15m["highs"]; l15 = data_15m["lows"]
+        cur_price = c15[-1]
+    else:
+        # 无 15min 数据 → 观望（V4 必须依赖 15min）
+        return _make_wait_signal(c1[-1], "15min 数据不可用")
+
+    # ── OI 数据 ──
+    has_oi = oi_15m is not None and len(oi_15m) >= 4
+
+    # ═══════════════════════════════════════════════════════════
+    # 闸门 1: 1H 大周期趋势过滤
+    # ═══════════════════════════════════════════════════════════
+    if len(c1) < 200:
+        return _make_wait_signal(cur_price, "1H 数据不足 (需 ≥200 根)")
+
+    ema50_1h = EMA(c1, 50); ce50 = ema50_1h[-1]
+    ema200_1h = EMA(c1, 200); ce200 = ema200_1h[-1]
     rsi1h = RSI(c1, 14); cur_rsi1h = rsi1h[-1]
+
+    if ce50 is None or ce200 is None or cur_rsi1h is None:
+        return _make_wait_signal(cur_price, "1H 指标计算失败")
+
+    # 做多环境: Close > EMA50 > EMA200 且 RSI > 50
+    bull_env = (cur_price > ce50 > ce200) and (cur_rsi1h > 50)
+    # 做空环境: Close < EMA50 < EMA200 且 RSI < 50
+    bear_env = (cur_price < ce50 < ce200) and (cur_rsi1h < 50)
+
+    if not bull_env and not bear_env:
+        regime = _classify_regime_text(cur_price, ce50, ce200, cur_rsi1h)
+        return _make_wait_signal(cur_price, f"1H 环境不满足: {regime}")
+
+    direction = 'bullish' if bull_env else 'bearish'
+    regime_text = "多头排列" if bull_env else "空头排列"
+
+    # ═══════════════════════════════════════════════════════════
+    # 闸门 2: 15min 入场 Setup
+    # ═══════════════════════════════════════════════════════════
+    ema50_15 = EMA(c15, 50)
+    e50_15 = ema50_15[-1] if len(ema50_15) > 0 else None
+    atr15 = ATR(h15, l15, c15, 14)
+    cur_atr15 = atr15[-1] if atr15[-1] is not None else cur_price * 0.005
+
+    if e50_15 is None:
+        return _make_wait_signal(cur_price, "15min EMA50 计算失败")
+
+    # 波段点检测
+    swings15 = find_swing_points(h15, l15, lookback=5)
+    swing_high_15 = swings15["swing_high"]
+    swing_low_15 = swings15["swing_low"]
+
+    # Entry Setup 判定
+    entry_setup_ok = False
+    entry_reason = ""
+
+    if direction == 'bullish':
+        # 条件 A: 价格在 15min EMA50 附近（偏离 < 0.3%）
+        deviation_ema = abs(cur_price - e50_15) / e50_15 * 100 if e50_15 > 0 else 999
+        near_ema = deviation_ema < 0.3
+        # 条件 B: Spring 形态（跌破前低后收回）
+        spring = check_spring_pattern(l15, swing_low_15, lookback=8)
+
+        if near_ema:
+            entry_setup_ok = True
+            entry_reason = f"回调至 15min EMA50 (偏离 {deviation_ema:.2f}%)"
+        elif spring:
+            entry_setup_ok = True
+            entry_reason = "Spring 形态: 跌破前低后收回"
+    else:
+        # 做空
+        deviation_ema = abs(cur_price - e50_15) / e50_15 * 100 if e50_15 > 0 else 999
+        near_ema = deviation_ema < 0.3
+        upthrust = check_upthrust_pattern(h15, swing_high_15, lookback=8)
+
+        if near_ema:
+            entry_setup_ok = True
+            entry_reason = f"反弹至 15min EMA50 (偏离 {deviation_ema:.2f}%)"
+        elif upthrust:
+            entry_setup_ok = True
+            entry_reason = "Upthrust 形态: 突破前高后收回"
+
+    if not entry_setup_ok:
+        return _make_wait_signal(cur_price, "15min 入场 Setup 不满足")
+
+    # ═══════════════════════════════════════════════════════════
+    # 闸门 3: OI + 量价方向绑定
+    # ═══════════════════════════════════════════════════════════
+    oi_confirmed = False
+    oi_detail = "OI 数据不可用 (跳过)"
+
+    if has_oi:
+        oi_confirmed, oi_detail = _check_oi_confirmation(c15, oi_15m, direction)
+
+    # OI 不可用时仍然允许入场（不阻塞），但有 OI 且不满足时拒绝
+    if has_oi and not oi_confirmed:
+        return _make_wait_signal(cur_price, f"OI 拒绝: {oi_detail}")
+
+    # ═══════════════════════════════════════════════════════════
+    # 全部闸门通过 — 生成入场信号
+    # ═══════════════════════════════════════════════════════════
+
+    # 1H 前高/前低（用于 TP2 阻力判断）
+    swings1h = find_swing_points(h1, l1, lookback=5)
+    prev_high_1h = swings1h["swing_high"]
+    prev_low_1h = swings1h["swing_low"]
+
+    # ── 止损: max(Swing ± 0.2%, 1.2 × ATR_15m) ──
+    atr_stop_dist = 1.2 * cur_atr15
+    if direction == 'bullish':
+        swing_stop_dist = cur_price - (swing_low_15 * 0.998) if swing_low_15 else 0
+        stop_dist = max(swing_stop_dist, atr_stop_dist)
+        # 至少留 0.3% 的止损距离
+        stop_dist = max(stop_dist, cur_price * 0.003)
+        stop_loss = cur_price - stop_dist
+    else:
+        swing_stop_dist = (swing_high_15 * 1.002) - cur_price if swing_high_15 else 0
+        stop_dist = max(swing_stop_dist, atr_stop_dist)
+        stop_dist = max(stop_dist, cur_price * 0.003)
+        stop_loss = cur_price + stop_dist
+
+    risk_dist = abs(cur_price - stop_loss)
+
+    # ── 止盈: TP1 = 1.5 × Risk, TP2 = 2.5 × Risk (or 1H swing) ──
+    tp1_dist = 1.5 * risk_dist
+    tp2_dist_raw = 2.5 * risk_dist
+
+    if direction == 'bullish':
+        take_profit1 = cur_price + tp1_dist
+        # TP2: min(2.5×Risk, 触及1H前高阻力)
+        if prev_high_1h and prev_high_1h > cur_price:
+            tp2_dist = min(tp2_dist_raw, prev_high_1h - cur_price)
+        else:
+            tp2_dist = tp2_dist_raw
+        take_profit2 = cur_price + tp2_dist
+        # 保本价
+        breakeven_price = cur_price
+    else:
+        take_profit1 = cur_price - tp1_dist
+        if prev_low_1h and prev_low_1h < cur_price:
+            tp2_dist = min(tp2_dist_raw, cur_price - prev_low_1h)
+        else:
+            tp2_dist = tp2_dist_raw
+        take_profit2 = cur_price - tp2_dist
+        breakeven_price = cur_price
+
+    # 仓位管理
+    POSITION_PCT_1 = 50
+
+    # ── R:R ──
+    pct1 = POSITION_PCT_1 / 100
+    pct2 = 1 - pct1
+    weighted_reward = pct1 * tp1_dist + pct2 * tp2_dist
+    rr_ratio = weighted_reward / risk_dist if risk_dist > 0 else 0
+
+    # ── 百分比 ──
+    risk_pct = risk_dist / cur_price * 100
+    tp1_pct = tp1_dist / cur_price * 100
+    tp2_pct = tp2_dist / cur_price * 100
+
+    # ── 信号 ──
+    if direction == 'bullish':
+        signal = '做多 LONG'
+        sig_class = 'long'
+    else:
+        signal = '做空 SHORT'
+        sig_class = 'short'
+
+    # ── 杠杆 ──
+    if risk_pct < 1.5:
+        leverage, lev_class = 3, 'l3'
+    elif risk_pct < 3:
+        leverage, lev_class = 2, 'l2'
+    else:
+        leverage, lev_class = 1, 'l1'
+
+    # ── 趋势摘要 ──
+    atr_pct_1h = (ATR(h1, l1, c1, 14)[-1] or cur_price * 0.01) / cur_price * 100
+    trend_summary = f"V4 硬闸 | 1H: {regime_text} | {entry_reason}"
+
+    # 获取 1H 的其他指标用于参考显示
+    ema21_1h = EMA(c1, 21); ce21 = ema21_1h[-1]
+    ema9_1h = EMA(c1, 9); ce9 = ema9_1h[-1]
+    rsi4h = RSI(data_4h["closes"], 14); cur_rsi4h = rsi4h[-1]
     macd1h = MACD(c1)
     cm1 = macd1h["macdLine"][-1]; cs1 = macd1h["signalLine"][-1]
-    pm1 = macd1h["macdLine"][-2]; ps1 = macd1h["signalLine"][-2]
-    ema9_1h = EMA(c1, 9); ema21_1h = EMA(c1, 21); ema50_1h = EMA(c1, 50)
-    ce9 = ema9_1h[-1]; ce21 = ema21_1h[-1]; ce50 = ema50_1h[-1]
+    macd4h = MACD(data_4h["closes"])
+    cm4 = macd4h["macdLine"][-1]; cs4 = macd4h["signalLine"][-1]
     bb1h = BB(c1, 20, 2)
     bu = bb1h["upper"][-1]; bl = bb1h["lower"][-1]
-    atr1h = ATR(h1, l1, c1, 14)
-    cur_atr = atr1h[-1] if atr1h[-1] is not None else cur_price * 0.01
 
-    # ── 4H 指标 ──
-    rsi4h = RSI(c4, 14); cur_rsi4h = rsi4h[-1]
-    macd4h = MACD(c4)
-    cm4 = macd4h["macdLine"][-1]; cs4 = macd4h["signalLine"][-1]
-    ema21_4h = EMA(c4, 21); ce21_4h = ema21_4h[-1]
-
-    # ── 日线指标 ──
-    ema21_d = EMA(cd, 21); ce21_d = ema21_d[-1] if len(ema21_d) > 0 else cur_price
-    rsiD = RSI(cd, 14); cur_rsiD = rsiD[-1]
-
-    # ── 支撑/阻力 ──
+    # 支撑阻力
     sr = find_sr_lines(c1, h1, l1)
     nearest_support = sr["supports"][0] if sr["supports"] else cur_price * 0.97
     nearest_resistance = sr["resistances"][0] if sr["resistances"] else cur_price * 1.03
     next_support = sr["supports"][1] if len(sr["supports"]) > 1 else cur_price * 0.95
     next_resistance = sr["resistances"][1] if len(sr["resistances"]) > 1 else cur_price * 1.05
 
-    # ── 趋势方向判定 ──
-    # 1H 趋势
-    if cur_price > ce21:
-        trend1h = 2 if (cur_price > ce9 and ce9 > ce21) else 1
-    else:
-        trend1h = -2 if (cur_price < ce9 and ce9 < ce21) else -1
-    # 4H 趋势
-    trend4h = 1 if cur_price > ce21_4h else -1
-    # 日线趋势
-    trendD = 1 if cur_price > ce21_d else -1
-
-    trend_score = trend1h + trend4h + trendD  # Range: -5 to +5
-    if trend_score >= 3:
-        direction = 'bullish'
-    elif trend_score <= -3:
-        direction = 'bearish'
-    else:
-        direction = 'neutral'
-
-    # ── 技术评分 (60 pts) ──
-    tech_score = 0
-
-    # 趋势一致性 (20 pts)
-    if direction == 'bullish':
-        tech_score += 7 if trend1h > 0 else 2
-        tech_score += 7 if trend4h > 0 else 2
-        tech_score += 6 if trendD > 0 else 2
-    elif direction == 'bearish':
-        tech_score += 7 if trend1h < 0 else 2
-        tech_score += 7 if trend4h < 0 else 2
-        tech_score += 6 if trendD < 0 else 2
-    else:
-        tech_score += 3 + 3 + 3
-
-    # 动量 (20 pts) — 基于 1H MACD
-    if cm1 is not None and cs1 is not None:
-        if direction == 'bullish':
-            if pm1 <= ps1 and cm1 > cs1:  # 金叉
-                tech_score += 10
-            elif cm1 > cs1:
-                tech_score += 7
-            else:
-                tech_score += 3
-        elif direction == 'bearish':
-            if pm1 >= ps1 and cm1 < cs1:  # 死叉
-                tech_score += 10
-            elif cm1 < cs1:
-                tech_score += 7
-            else:
-                tech_score += 3
-        else:
-            tech_score += 5
-    else:
-        tech_score += 5
-
-    # 4H MACD 确认
-    if cm4 is not None and cs4 is not None:
-        if (direction == 'bullish' and cm4 > cs4) or (direction == 'bearish' and cm4 < cs4):
-            tech_score += 5
-        elif direction == 'neutral':
-            tech_score += 3
-        else:
-            tech_score += 1
-    else:
-        tech_score += 3
-
-    # RSI 位置 (10 pts)
-    if cur_rsi1h is not None:
-        if direction == 'bullish' and 30 <= cur_rsi1h <= 55:
-            tech_score += 10
-        elif direction == 'bearish' and 45 <= cur_rsi1h <= 70:
-            tech_score += 10
-        elif 35 <= cur_rsi1h <= 65:
-            tech_score += 6
-        elif cur_rsi1h < 25 or cur_rsi1h > 75:
-            tech_score += 2
-        else:
-            tech_score += 4
-    else:
-        tech_score += 5
-
-    # 波动率 (10 pts)
-    atr_pct = (cur_atr / cur_price) * 100
-    if 0.5 < atr_pct < 3:
-        tech_score += 10
-    elif atr_pct < 6:
-        tech_score += 6
-    else:
-        tech_score += 2
-
-    # ── 基本面评分 (20 pts) ──
-    # 数据来源：Binance 期货公开 API（资金费率 + 持仓量）
-    # 这两个指标独立于价格 K 线，提供真正的增量信息
-    fund_score = 10  # 默认中性（futures 数据不可用时使用）
-
-    if futures_info:
-        try:
-            # ═══ 子项 ①：资金费率 (12 pts) ═══
-            # 机制：正费率 = 多头付钱给空头（市场过热偏多）
-            #       负费率 = 空头付钱给多头（市场恐慌偏空）
-            # 用法：反向指标 — 极端费率是反转信号
-            fr_pct = float(futures_info.get("funding_rate_pct", 0))
-            fr_time = futures_info.get("funding_time", "?")
-
-            if direction == 'bullish':
-                if fr_pct < -0.01:       fund_score += 12  # 极度恐慌，反向做多绝佳
-                elif fr_pct < 0:         fund_score += 10  # 略偏空，做多有优势
-                elif fr_pct < 0.005:     fund_score += 8   # 中性偏负
-                elif fr_pct < 0.01:      fund_score += 6   # 中性
-                elif fr_pct < 0.03:      fund_score += 3   # 偏多拥挤
-                else:                    fund_score += 1   # 极度拥挤，危险
-            elif direction == 'bearish':
-                if fr_pct > 0.03:        fund_score += 12  # 极度贪婪，反向做空绝佳
-                elif fr_pct > 0.01:      fund_score += 10
-                elif fr_pct > 0.005:     fund_score += 8
-                elif fr_pct > 0:         fund_score += 6
-                elif fr_pct > -0.01:     fund_score += 3
-                else:                    fund_score += 1   # 极度恐慌，做空危险
-            else:
-                # neutral 方向：费率越极端越说明有机会（矛盾越大概率越大）
-                if abs(fr_pct) > 0.03:   fund_score += 10
-                elif abs(fr_pct) > 0.01: fund_score += 8
-                elif abs(fr_pct) > 0.005: fund_score += 6
-                else:                    fund_score += 4
-
-            # ═══ 子项 ②：持仓量变化 (8 pts) ═══
-            # OI 变化 = 市场参与度增减
-            # 大变化 = 市场活跃 = 技术信号更可靠（无论方向）
-            oi_chg = abs(float(futures_info.get("oi_change_pct", 0)))
-
-            if oi_chg > 3:       fund_score += 8   # 资本大幅进出，信号强
-            elif oi_chg > 1:     fund_score += 6   # 活跃市场
-            elif oi_chg > 0.5:   fund_score += 4   # 一般
-            else:                fund_score += 2   # 死水，信号弱
-
-            fund_score = min(20, fund_score)
-        except Exception:
-            pass  # 解析失败，保底 10 分
-
-    total_score = round(min(80, tech_score + fund_score))
-
-    # ── 资产专属参数 ──
-    # ETH 波动更大(日均ATR 4.9% vs BTC 4.1%), 用更紧的止损和更近的止盈
-    if asset == "ETH":
-        sl_atr_mult = 1.5   # 止损
-        tp1_atr_mult = 1.5  # 第一止盈（近端锁利）
-        tp2_atr_mult = 4.0  # 第二止盈（远端吃波段）
-    else:
-        sl_atr_mult = 2.0
-        tp1_atr_mult = 2.0
-        tp2_atr_mult = 5.0
-
-    # ── 两段式止盈 + 保本止损 ──
-    # TP1 (50%仓位): 近端锁利 → 触发后止损移到入场价（保本）
-    # TP2 (剩余50%): 远端吃大波段 → 零风险纯利润
-    POSITION_PCT_1 = 50  # TP1 平仓比例 (%)
-
-    entry_price = cur_price
-    signal, sig_class = "", ""
-
-    if direction == 'bullish' and total_score >= 55:
-        signal = '做多 LONG'
-        sig_class = 'long'
-        atr_stop = entry_price - cur_atr * sl_atr_mult
-        sr_stop = nearest_support * 0.995
-        stop_loss = min(atr_stop, sr_stop)
-
-        take_profit1 = entry_price + cur_atr * tp1_atr_mult
-        take_profit2 = entry_price + cur_atr * tp2_atr_mult
-        # 保本价 = 入场价（TP1 触发后，止损上移至此）
-        breakeven_price = entry_price
-
-        tp1_dist = take_profit1 - entry_price
-        tp2_dist = take_profit2 - entry_price
-
-    elif direction == 'bearish' and total_score >= 55:
-        signal = '做空 SHORT'
-        sig_class = 'short'
-        atr_stop = entry_price + cur_atr * sl_atr_mult
-        sr_stop = nearest_resistance * 1.005
-        stop_loss = max(atr_stop, sr_stop)
-
-        take_profit1 = entry_price - cur_atr * tp1_atr_mult
-        take_profit2 = entry_price - cur_atr * tp2_atr_mult
-        breakeven_price = entry_price
-
-        tp1_dist = entry_price - take_profit1
-        tp2_dist = entry_price - take_profit2
-
-    else:
-        signal = '观望 WAIT'
-        sig_class = 'wait'
-        if direction == 'bullish':
-            stop_loss = entry_price - cur_atr * sl_atr_mult
-            take_profit1 = entry_price + cur_atr * tp1_atr_mult
-            take_profit2 = entry_price + cur_atr * tp2_atr_mult
-        else:
-            stop_loss = entry_price + cur_atr * sl_atr_mult
-            take_profit1 = entry_price - cur_atr * tp1_atr_mult
-            take_profit2 = entry_price - cur_atr * tp2_atr_mult
-        breakeven_price = entry_price
-        tp1_dist = abs(take_profit1 - entry_price)
-        tp2_dist = abs(take_profit2 - entry_price)
-
-    # ── 综合 R:R（加权平均） ──
-    if sig_class != 'wait':
-        pct1 = POSITION_PCT_1 / 100
-        pct2 = 1 - pct1
-        risk_dist = abs(entry_price - stop_loss)
-        weighted_reward = pct1 * tp1_dist + pct2 * tp2_dist
-        rr_ratio = weighted_reward / risk_dist if risk_dist > 0 else 0
-        # 向后兼容: takeProfit = TP1（第一目标）
-        take_profit = take_profit1
-    else:
-        rr_ratio = 0
-        take_profit = take_profit1
-
-    # ── 杠杆建议 ──
-    sl_pct = abs((stop_loss - entry_price) / entry_price) * 100
-    if sig_class == 'wait':
-        leverage, lev_class = 0, 'l1'
-    elif sl_pct < 1.5:
-        leverage, lev_class = 3, 'l3'
-    elif sl_pct < 3:
-        leverage, lev_class = 2, 'l2'
-    else:
-        leverage, lev_class = 1, 'l1'
-
-    # ── 置信度 ──
-    if total_score >= 60:
-        confidence = '高'
-    elif total_score >= 50:
-        confidence = '中高'
-    elif total_score >= 40:
-        confidence = '中'
-    else:
-        confidence = '低'
-
-    win_rate_est = 72 if total_score >= 60 else 65 if total_score >= 50 else 58 if total_score >= 40 else 50 if total_score >= 30 else 40
-    risk_pct = abs((stop_loss - entry_price) / entry_price) * 100 if sig_class != 'wait' else 0
-    tp1_pct = abs((take_profit1 - entry_price) / entry_price) * 100 if sig_class != 'wait' else 0
-    tp2_pct = abs((take_profit2 - entry_price) / entry_price) * 100 if sig_class != 'wait' else 0
-    # 向后兼容: rewardPct = TP1 距离
-    reward_pct = tp1_pct
-
-    # ── 趋势摘要 ──
-    tf_parts = []
-    tf_parts.append(f"1H: {'多头' if trend1h > 0 else '空头' if trend1h < 0 else '震荡'}")
-    tf_parts.append(f"4H: {'多头' if trend4h > 0 else '空头' if trend4h < 0 else '震荡'}")
-    tf_parts.append(f"日线: {'多头' if trendD > 0 else '空头' if trendD < 0 else '震荡'}")
-    trend_summary = " / ".join(tf_parts)
+    # 1H 趋势方向
+    trend1h = 1 if cur_price > ce21 else -1
+    trend4h = 1 if cur_price > EMA(data_4h["closes"], 21)[-1] else -1
 
     return {
         "signal": signal, "sigClass": sig_class, "direction": direction,
-        "totalScore": total_score, "techScore": tech_score,
-        "fundScore": fund_score,
-        "confidence": confidence, "winRateEst": win_rate_est,
-        # 入场 + 止损
-        "entryPrice": entry_price, "stopLoss": stop_loss,
-        # 两段式止盈 + 保本止损
-        "takeProfit": take_profit1,       # 向后兼容 = TP1
-        "takeProfit1": take_profit1,      # 第一止盈 (平仓 50%)
-        "takeProfit2": take_profit2,      # 第二止盈 (平仓剩余 50%)
-        "positionPct1": POSITION_PCT_1,    # TP1 平仓比例
-        "breakevenPrice": breakeven_price, # TP1 触发后的保本止损价
+        "totalScore": 0,  # V4 废弃评分
+        "confidence": "V4 硬闸",
+        "winRateEst": 0,
+        "entryPrice": cur_price, "stopLoss": stop_loss,
+        "takeProfit": take_profit1, "takeProfit1": take_profit1, "takeProfit2": take_profit2,
+        "positionPct1": POSITION_PCT_1, "breakevenPrice": breakeven_price,
         "rrRatio": rr_ratio,
-        "riskPct": risk_pct, "rewardPct": reward_pct,
+        "riskPct": risk_pct, "rewardPct": tp1_pct,
         "tp1Pct": tp1_pct, "tp2Pct": tp2_pct,
         "leverage": leverage, "levClass": lev_class,
-        "curRSI1h": cur_rsi1h, "curRSI4h": cur_rsi4h, "curRSID": cur_rsiD,
+        # V4 闸门信息
+        "v4_gate1_env": regime_text,
+        "v4_gate1_ema50": ce50, "v4_gate1_ema200": ce200, "v4_gate1_rsi1h": cur_rsi1h,
+        "v4_gate2_entry": entry_reason,
+        "v4_gate2_ema50_15": e50_15, "v4_gate2_atr15": cur_atr15,
+        "v4_gate2_swing_low": swing_low_15, "v4_gate2_swing_high": swing_high_15,
+        "v4_gate3_oi": oi_detail,
+        "v4_time_stop_bars": 16, "v4_time_stop_minutes": 240,
+        # 兼容旧版字段
+        "curRSI1h": cur_rsi1h, "curRSI4h": cur_rsi4h,
         "cm1": cm1, "cs1": cs1, "cm4": cm4, "cs4": cs4,
         "ce9": ce9, "ce21": ce21, "ce50": ce50,
-        "ce21_4h": ce21_4h, "ce21_d": ce21_d,
-        "bu": bu, "bl": bl, "curATR": cur_atr, "atrPct": atr_pct,
-        "trend1h": trend1h, "trend4h": trend4h, "trendD": trendD,
+        "ce21_4h": EMA(data_4h["closes"], 21)[-1],
+        "bu": bu, "bl": bl, "curATR": cur_atr15, "atrPct": atr_pct_1h,
+        "trend1h": trend1h, "trend4h": trend4h,
         "nearestSupport": nearest_support, "nearestResistance": nearest_resistance,
         "nextSupport": next_support, "nextResistance": next_resistance,
         "trendSummary": trend_summary,
-        # 资金费率（来自期货市场，独立于价格的做多/做空情绪指标）
         "fundingRate": futures_info.get("funding_rate") if futures_info else None,
         "fundingRatePct": futures_info.get("funding_rate_pct") if futures_info else None,
         "fundingTime": futures_info.get("funding_time") if futures_info else None,
     }
+
+
+def _make_wait_signal(cur_price, reason=""):
+    """生成观望信号"""
+    return {
+        "signal": f'观望 WAIT', "sigClass": "wait", "direction": "neutral",
+        "totalScore": 0, "confidence": "观望", "winRateEst": 0,
+        "entryPrice": cur_price,
+        "stopLoss": cur_price, "takeProfit": cur_price,
+        "takeProfit1": cur_price, "takeProfit2": cur_price,
+        "positionPct1": 50, "breakevenPrice": cur_price,
+        "rrRatio": 0, "riskPct": 0, "rewardPct": 0,
+        "tp1Pct": 0, "tp2Pct": 0,
+        "leverage": 0, "levClass": "l1",
+        "v4_gate1_env": reason,
+        "v4_gate2_entry": "", "v4_gate3_oi": "",
+        "v4_time_stop_bars": 0, "v4_time_stop_minutes": 0,
+        "curRSI1h": None, "curRSI4h": None,
+        "cm1": None, "cs1": None, "cm4": None, "cs4": None,
+        "ce9": None, "ce21": None, "ce50": None, "ce21_4h": None,
+        "bu": None, "bl": None, "curATR": None, "atrPct": 0,
+        "trend1h": 0, "trend4h": 0,
+        "nearestSupport": cur_price * 0.97, "nearestResistance": cur_price * 1.03,
+        "nextSupport": cur_price * 0.95, "nextResistance": cur_price * 1.05,
+        "trendSummary": f"V4: {reason}",
+        "fundingRate": None, "fundingRatePct": None, "fundingTime": None,
+    }
+
+
+def _classify_regime_text(price, ema50, ema200, rsi):
+    """分类 1H 环境状态，返回中文描述"""
+    if ema50 is None or ema200 is None:
+        return "均线数据不足"
+    ema_diff_pct = abs(ema50 - ema200) / ema200 * 100 if ema200 > 0 else 0
+    if ema_diff_pct < 1.0:  # EMA50/200 距离 < 1% → 纠缠
+        return f"均线纠缠 (EMA50/200 距 {ema_diff_pct:.1f}%)"
+    if price > ema50:
+        if ema50 > ema200:
+            return f"多头排列但 RSI={rsi:.0f}≤50 (偏弱)"
+        else:
+            return f"价格在均线上方但 EMA50<EMA200 (矛盾)"
+    elif price < ema50:
+        if ema50 < ema200:
+            return f"空头排列但 RSI={rsi:.0f}≥50 (偏强)"
+        else:
+            return f"价格在均线下方但 EMA50>EMA200 (矛盾)"
+    return f"价格在均线之间 (EMA50/200 中间地带)"
+
+
+def _check_oi_confirmation(c15, oi_15m, direction):
+    """
+    OI + 量价方向绑定检查
+    返回: (confirmed: bool, detail: str)
+    """
+    n = min(len(c15), len(oi_15m))
+    if n < 4:
+        return False, "OI 数据不足 (<4)"
+
+    # 最近 3 根 15min K 线的价格变化和 OI 变化
+    checks = []
+    for i in range(n - 3, n):
+        if i < 1:
+            continue
+        price_chg = c15[i] - c15[i - 1]
+        oi_chg = oi_15m[i] - oi_15m[i - 1]
+
+        price_up = price_chg > 0
+        price_down = price_chg < 0
+        oi_up = oi_chg > 0
+        oi_down = oi_chg < 0
+
+        checks.append({
+            "price_up": price_up, "price_down": price_down,
+            "oi_up": oi_up, "oi_down": oi_down,
+        })
+
+    if len(checks) < 2:
+        return False, "有效 OI 检查点不足"
+
+    if direction == 'bullish':
+        # 确认: 有 (Price↑ AND OI↑) → 主动开多
+        active_long = any(c["price_up"] and c["oi_up"] for c in checks)
+        # 拒绝: Price↑ 但 OI↓ → 空头平仓驱动上涨
+        short_covering = any(c["price_up"] and c["oi_down"] for c in checks)
+
+        if short_covering and not active_long:
+            return False, "价格上涨但 OI 下降 (空头平仓驱动, 不追)"
+        if active_long:
+            return True, "OI 确认: 主动开多 (Price↑ + OI↑)"
+        # 有涨有跌但没有明确的主动开多
+        return False, "OI 未确认主动开多 (最近3根无 Price↑+OI↑)"
+
+    else:
+        # 做空确认: (Price↓ AND OI↑) → 主动开空
+        active_short = any(c["price_down"] and c["oi_up"] for c in checks)
+        # 拒绝: 价格下跌但 OI 下降 → 多头平仓驱动
+        long_liquidation = any(c["price_down"] and c["oi_down"] for c in checks)
+
+        if long_liquidation and not active_short:
+            return False, "价格下跌但 OI 下降 (多头平仓驱动, 不追)"
+        if active_short:
+            return True, "OI 确认: 主动开空 (Price↓ + OI↑)"
+        return False, "OI 未确认主动开空 (最近3根无 Price↓+OI↑)"
 
 
 # ============================================================
@@ -659,9 +774,15 @@ def fetch_klines_coingecko(coin_id, hours=336):
 
 def fetch_klines_binance(symbol, interval="1h", limit=1000):
     """获取 Binance K线数据（公开 API，无需 Key）"""
-    url = "https://api.binance.com/api/v3/klines"
+    # 多端点轮换（主站在大陆可能被墙）
+    urls = [
+        "https://api.binance.com/api/v3/klines",
+        "https://api1.binance.com/api/v3/klines",
+        "https://api2.binance.com/api/v3/klines",
+    ]
     params = {"symbol": symbol, "interval": interval, "limit": limit}
     for attempt in range(3):
+        url = urls[attempt % len(urls)]
         try:
             resp = requests.get(url, params=params, timeout=30)
             resp.raise_for_status()
@@ -671,8 +792,10 @@ def fetch_klines_binance(symbol, interval="1h", limit=1000):
             closes = [float(k[4]) for k in klines]
             highs = [float(k[2]) for k in klines]
             lows = [float(k[3]) for k in klines]
+            volumes = [float(k[5]) for k in klines]
             timestamps = [k[0] / 1000 for k in klines]
-            return {"closes": closes, "highs": highs, "lows": lows, "timestamps": timestamps}
+            return {"closes": closes, "highs": highs, "lows": lows,
+                    "volumes": volumes, "timestamps": timestamps}
         except Exception as e:
             if attempt < 2:
                 time.sleep(2)
@@ -680,30 +803,47 @@ def fetch_klines_binance(symbol, interval="1h", limit=1000):
 
 
 def derive_timeframes(hourly_data):
-    """从 1H 数据推导 4H 和 1D 时间框架"""
+    """从 1H 数据推导 4H 和 1D 时间框架（含成交量）"""
     closes = hourly_data["closes"]
     highs = hourly_data["highs"]
     lows = hourly_data["lows"]
+    volumes = hourly_data.get("volumes", [])
     n = len(closes)
 
-    # 1H: 最近 72 根
-    h1c = closes[-72:]; h1h = highs[-72:]; h1l = lows[-72:]
+    # 1H: 最近 336 根（14天，确保 V4 EMA200 有足够数据）
+    h1c = closes[-336:]; h1h = highs[-336:]; h1l = lows[-336:]
+    h1v = volumes[-336:] if volumes else []
 
-    # 4H: 每 4 根取一根
-    h4c, h4h, h4l = [], [], []
+    # 4H: 每 4 根取收盘价，最高/最低取4根极值，成交量求和
+    h4c, h4h, h4l, h4v = [], [], [], []
     for i in range(max(0, n - 336), n, 4):
-        h4c.append(closes[i]); h4h.append(highs[i]); h4l.append(lows[i])
+        end = min(i + 4, n)
+        h4c.append(closes[end - 1])
+        h4h.append(max(highs[i:end]))
+        h4l.append(min(lows[i:end]))
+        if volumes:
+            h4v.append(sum(volumes[i:end]))
 
-    # 1D: 每 24 根取一根
-    h1dc, h1dh, h1dl = [], [], []
+    # 1D: 类似 4H，每 24 根聚合
+    h1dc, h1dh, h1dl, h1dv = [], [], [], []
     for i in range(max(0, n - 336), n, 24):
-        h1dc.append(closes[i]); h1dh.append(highs[i]); h1dl.append(lows[i])
+        end = min(i + 24, n)
+        h1dc.append(closes[end - 1])
+        h1dh.append(max(highs[i:end]))
+        h1dl.append(min(lows[i:end]))
+        if volumes:
+            h1dv.append(sum(volumes[i:end]))
 
-    return {
+    result = {
         "tf1h": {"closes": h1c, "highs": h1h, "lows": h1l},
         "tf4h": {"closes": h4c, "highs": h4h, "lows": h4l},
         "tf1d": {"closes": h1dc, "highs": h1dh, "lows": h1dl},
     }
+    if volumes:
+        result["tf1h"]["volumes"] = h1v
+        result["tf4h"]["volumes"] = h4v
+        result["tf1d"]["volumes"] = h1dv
+    return result
 
 
 def fetch_24h_ticker(symbol):
@@ -772,6 +912,30 @@ def fetch_futures_data(symbol):
 
 
 # ============================================================
+# V4 新增: 15min OI 数据获取（用于闸门 3 OI+量价绑定）
+# ============================================================
+
+def fetch_oi_15min(symbol, limit=20):
+    """
+    获取 15min 粒度的 OI 历史数据（用于 V4 闸门 3：OI+量价方向绑定）
+    返回: list[float] — 按时间排列的 sumOpenInterest 值，失败返回 None
+    """
+    try:
+        resp = requests.get(
+            "https://fapi.binance.com/fapi/v1/openInterestHist",
+            params={"symbol": symbol, "period": "15m", "limit": limit},
+            timeout=10
+        )
+        if resp.ok:
+            data = resp.json()
+            if data and len(data) >= 4:
+                return [float(d["sumOpenInterest"]) for d in data]
+    except Exception:
+        pass
+    return None
+
+
+# ============================================================
 # 去重 & 状态管理
 # ============================================================
 
@@ -795,26 +959,40 @@ def save_state(state):
 
 
 def fetch_fear_greed_index():
-    """获取加密货币恐惧贪婪指数 (数据源: alternative.me, 免费无需API Key)"""
-    try:
-        resp = requests.get("https://api.alternative.me/fng/?limit=1", timeout=10)
-        if resp.status_code == 200:
-            data = resp.json()
-            item = data.get("data", [{}])[0]
-            ts = item.get("timestamp")
-            return {
-                "value": int(item.get("value", 50)),
-                "classification": item.get("value_classification", "Neutral"),
-                "timestamp": datetime.fromtimestamp(int(ts)).strftime("%Y-%m-%d %H:%M:%S") if ts else None,
-            }
-    except Exception as e:
-        print(f"  ⚠️ 恐惧贪婪指数获取失败: {e}")
+    """获取加密货币恐惧贪婪指数 (数据源: alternative.me, 免费无需API Key)
+    重试 3 次，间隔递增（1s, 2s, 3s）"""
+    for attempt in range(3):
+        try:
+            resp = requests.get("https://api.alternative.me/fng/?limit=1", timeout=10)
+            if resp.status_code == 200:
+                data = resp.json()
+                item = data.get("data", [{}])[0]
+                if not item:
+                    raise Exception("API 返回空数据")
+                ts = item.get("timestamp")
+                return {
+                    "value": int(item.get("value", 50)),
+                    "classification": item.get("value_classification", "Neutral"),
+                    "timestamp": datetime.fromtimestamp(int(ts)).strftime("%Y-%m-%d %H:%M:%S") if ts else None,
+                }
+            else:
+                print(f"  ⚠️ 恐惧贪婪指数 HTTP {resp.status_code} (attempt {attempt+1}/3)")
+        except Exception as e:
+            print(f"  ⚠️ 恐惧贪婪指数获取失败 (attempt {attempt+1}/3): {e}")
+            if attempt < 2:
+                time.sleep(attempt + 1)
     return None
 
 
 def fetch_etf_flows_simple():
     """获取 BTC/ETH 现货 ETF 净流入/流出 (数据源: farside.co.uk)
-    返回: {"BTC": {"net_flow": 1.25}, "ETH": {"net_flow": -0.35}}  (单位: 亿$)"""
+
+    ⚠️ 已知限制: farside.co.uk 使用了 Cloudflare 反爬虫保护，
+    从 GitHub Actions 服务器 IP 通常无法直接访问。
+    浏览器端 (ai选股/index.html) 会通过 CORS 代理尝试获取。
+
+    返回: {"BTC": {"net_flow": 1.25}, "ETH": {"net_flow": -0.35}}  (单位: 亿$)
+          失败时返回 None（而非空 dict，以区分"未尝试"和"尝试失败"）"""
     import re as _re
     etf_data = {}
     symbol_map = {"BTC": "btc", "ETH": "eth"}
@@ -827,8 +1005,14 @@ def fetch_etf_flows_simple():
                 "Accept": "text/html,*/*",
             }, timeout=15)
             if resp.status_code != 200:
+                print(f"  ⚠️ {asset} ETF: farside.co.uk 返回 HTTP {resp.status_code}")
                 continue
+
             content = resp.text
+            # Cloudflare 保护检测
+            if 'Just a moment' in content or 'cf_chl' in content or 'challenge-platform' in content:
+                print(f"  ⚠️ {asset} ETF: farside.co.uk 被 Cloudflare 保护，无法从服务器端访问（将依赖浏览器端获取）")
+                continue
 
             # 提取所有表格中的数值行
             tables = _re.findall(r'<table[^>]*>(.*?)</table>', content, _re.DOTALL)
@@ -866,7 +1050,7 @@ def fetch_etf_flows_simple():
         except Exception as e:
             print(f"  ⚠️ {asset} ETF 流动数据获取失败: {str(e)[:80]}")
 
-    return etf_data
+    return etf_data if etf_data else None  # 返回 None 而非空 dict
 
 
 def save_signals_json(results, ohlc_data, data_sources, fear_greed=None, etf_flows=None):
@@ -963,13 +1147,12 @@ def log_signal(asset, sig):
     line = (
         f"[{timestamp}] {direction_icon} {asset:4s} | "
         f"{sig['signal']:12s} | "
-        f"评分 {sig['totalScore']:3d}/80 | "
+        f"V4 硬闸 | "
         f"${sig['entryPrice']:,.2f} | "
         f"R:R {sig['rrRatio']:.1f}:1 | "
         f"止损 {sig['riskPct']:.2f}% | "
-        f"止盈 {sig['rewardPct']:.2f}% | "
-        f"ATR {sig['atrPct']:.2f}% | "
-        f"{sig['trendSummary']}"
+        f"TP1 {sig['tp1Pct']:.2f}% TP2 {sig['tp2Pct']:.2f}% | "
+        f"闸门: {sig.get('v4_gate1_env', '?')} | {sig.get('v4_gate2_entry', '?')}"
     )
 
     # 读取现有行，追加新行，保留最近 MAX_LINES 行
@@ -1059,17 +1242,40 @@ def run_detection(send_email=True):
 
         print(f"    ✓ {len(hourly['closes'])} 根 1H K线 (数据源: {data_source})")
 
-        # 2. 获取期货数据（资金费率 + 持仓量 — 基本面评分的核心输入）
+        # 1b. 获取 15min 数据（V4 入场 Setup 必需）
+        data_15m = None
+        if data_source == "Binance":
+            try:
+                m15 = fetch_klines_binance(symbol, "15m", 500)
+                if m15 and len(m15.get("closes", [])) >= 50:
+                    data_15m = {"closes": m15["closes"], "highs": m15["highs"], "lows": m15["lows"]}
+                    print(f"    ✓ {len(data_15m['closes'])} 根 15min K线 (V4 入场 Setup)")
+                else:
+                    print(f"    ⚠️ 15min 数据不足，V4 将返回观望")
+            except Exception:
+                print(f"    ⚠️ 15min 数据获取失败，V4 将返回观望")
+
+        # 1c. 获取 15min OI 数据（V4 闸门 3：OI+量价绑定）
+        oi_15m = None
+        if data_source == "Binance":
+            try:
+                oi_15m = fetch_oi_15min(symbol, limit=20)
+                if oi_15m:
+                    print(f"    ✓ {len(oi_15m)} 个 15min OI 快照 (V4 OI确认)")
+                else:
+                    print(f"    ⚠️ 15min OI 数据不可用，将跳过 OI 确认")
+            except Exception:
+                print(f"    ⚠️ 15min OI 数据获取异常，将跳过 OI 确认")
+
+        # 2. 获取期货数据（资金费率 — 参考信息，不影响 V4 入场）
         time.sleep(0.5)
         futures = fetch_futures_data(symbol)
 
         if futures:
             fr_str = f"{futures.get('funding_rate_pct', 0):.4f}%"
-            oi_str = f"{futures.get('oi_change_pct', 0):+.3f}%"
-            print(f"    ✓ 期货数据: 资金费率 {fr_str} ({futures.get('funding_time','?')}), "
-                  f"OI 变化 {oi_str}")
+            print(f"    ✓ 期货数据: 资金费率 {fr_str} ({futures.get('funding_time','?')})")
         else:
-            print(f"    ⚠️ 期货数据不可用 (Binance Futures API), 基本面评分为默认值")
+            print(f"    ⚠️ 期货数据不可用 (Binance Futures API)")
 
         # 3. 推导时间框架
         tf = derive_timeframes(hourly)
@@ -1077,8 +1283,10 @@ def run_detection(send_email=True):
               f"4H: {len(tf['tf4h']['closes'])} 根, "
               f"1D: {len(tf['tf1d']['closes'])} 根")
 
-        # 4. 生成信号 (传入 asset 和期货数据)
-        sig = generate_signal(tf["tf1h"], tf["tf4h"], tf["tf1d"], asset=asset, futures_info=futures)
+        # 4. 生成信号 (V4: 硬性门槛制 — 三道闸门过滤)
+        sig = generate_signal(tf["tf1h"], tf["tf4h"], tf["tf1d"],
+                             asset=asset, futures_info=futures,
+                             data_15m=data_15m, oi_15m=oi_15m)
         results[asset] = sig
 
         # 5. 保存 OHLC 数据（供网站 signals.json 使用）
@@ -1147,8 +1355,8 @@ def run_detection(send_email=True):
                         trend_summary=sig["trendSummary"],
                         cur_price=sig["entryPrice"],
                         atr_pct=sig["atrPct"],
-                        tech_score=sig["techScore"],
-                        fund_score=sig["fundScore"],
+                        tech_score=0,  # V4 废弃评分
+                        fund_score=0,  # V4 废弃评分
                         take_profit1=sig.get("takeProfit1"),
                         take_profit2=sig.get("takeProfit2"),
                         tp1_pct=sig.get("tp1Pct", 0),
@@ -1206,14 +1414,19 @@ def run_detection(send_email=True):
 
     # 汇总
     print(f"\n{'─' * 80}")
-    print(f"📊 检测汇总:")
+    print(f"📊 V4 硬性门槛检测汇总:")
     for asset, sig in results.items():
         icon = "🟢" if sig["sigClass"] == "long" else "🔴" if sig["sigClass"] == "short" else "🟡"
-        tp1 = sig.get('takeProfit1', sig['takeProfit'])
-        tp2 = sig.get('takeProfit2', sig['takeProfit'])
-        print(f"  {icon} {asset}: {sig['signal']} | 评分 {sig['totalScore']}/80 | "
-              f"${sig['entryPrice']:,.2f} | TP1 ${tp1:,.2f} → TP2 ${tp2:,.2f} | "
-              f"加权R:R {sig['rrRatio']:.1f}:1 | 置信度 {sig['confidence']}")
+        if sig["sigClass"] != "wait":
+            print(f"  {icon} {asset}: {sig['signal']} | "
+                  f"${sig['entryPrice']:,.2f} | "
+                  f"TP1 ${sig['takeProfit1']:,.2f} → TP2 ${sig['takeProfit2']:,.2f} | "
+                  f"R:R {sig['rrRatio']:.1f}:1 | "
+                  f"闸1: {sig.get('v4_gate1_env','?')} | "
+                  f"闸2: {sig.get('v4_gate2_entry','?')} | "
+                  f"闸3: {sig.get('v4_gate3_oi','?')}")
+        else:
+            print(f"  {icon} {asset}: {sig['signal']} | {sig.get('trendSummary', '')}")
     print(f"{'═' * 80}\n")
 
     return results
@@ -1232,10 +1445,10 @@ def main():
     send_email_flag = not args.no_email
 
     print("=" * 80)
-    print("🤖 AI 加密货币短线交易信号监控")
+    print("🤖 AI 加密货币短线交易信号监控 V4 — 硬性门槛制")
     print(f"   标的: BTC, ETH")
-    print(f"   数据源: Binance 公开 API (1H K线)")
-    print(f"   信号逻辑: 多时间框架分析 (1H + 4H + 日线)")
+    print(f"   数据源: Binance 公开 API (15min + 1H K线)")
+    print(f"   信号逻辑: 三道硬闸 — 1H趋势过滤 → 15min入场Setup → OI量价绑定")
     print(f"   邮件通知: {'已配置' if send_email_flag else '已禁用'}")
     print(f"   日志文件: {os.path.join(LOG_DIR, 'monitor.log')}")
     print("=" * 80)

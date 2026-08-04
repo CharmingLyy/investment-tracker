@@ -1118,6 +1118,29 @@
             liveCryptoTimer = setInterval(fetchLiveCryptoPrices, LIVE_CRYPTO_INTERVAL * 1000);
         }
 
+        // ===== 浏览器端恐惧贪婪指数（直接 API，绕过 GitHub Actions 限制）=====
+        function fetchFearGreedDirect() {
+            fetch('https://api.alternative.me/fng/?limit=1', {
+                headers: { 'Accept': 'application/json' },
+            })
+            .then(function(resp) { return resp.ok ? resp.json() : Promise.reject('HTTP ' + resp.status); })
+            .then(function(json) {
+                var item = json.data && json.data[0];
+                if (!item) return;
+                var ts = item.timestamp;
+                var fg = {
+                    value: parseInt(item.value),
+                    classification: item.value_classification,
+                    timestamp: ts ? new Date(parseInt(ts) * 1000).toLocaleString('zh-CN') : null,
+                };
+                updateFearGreedCard(fg);
+                console.log('[F&G] 浏览器端直接获取:', fg.value, fg.classification);
+            })
+            .catch(function(err) {
+                console.log('[F&G] 浏览器端获取失败:', err);
+            });
+        }
+
         // ===== 初始化 =====
         function init() {
             // 检查在线状态
@@ -1134,6 +1157,11 @@
 
             // 启动实时加密货币价格
             startLiveCrypto();
+
+            // 🔥 浏览器端直接获取恐惧贪婪指数（如果页面渲染时没有）
+            {% if not fear_greed %}
+            fetchFearGreedDirect();
+            {% endif %}
 
             if (autoRefreshEnabled) {
                 startAutoRefresh();
@@ -1282,6 +1310,9 @@
             // 更新恐惧贪婪指数卡片
             if (data.fear_greed) {
                 updateFearGreedCard(data.fear_greed);
+            } else {
+                // 🔥 服务器端没有 F&G 数据时，浏览器端直接获取
+                fetchFearGreedDirect();
             }
 
             // 更新各市场表格

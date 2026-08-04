@@ -35,7 +35,12 @@ FUNDING_RATE_SYMBOLS = {
 
 
 def _fetch_etf_flows():
-    """获取 BTC/ETH 现货 ETF 净流入/流出（来源：Farside）"""
+    """获取 BTC/ETH 现货 ETF 净流入/流出（来源：Farside）
+
+    ⚠️ 已知限制: farside.co.uk 使用 Cloudflare 反爬虫保护，
+    从 GitHub Actions 服务器 IP 通常无法访问。
+    ETF 数据主要通过浏览器端 (ai选股/index.html) 的 CORS 代理获取。
+    此函数作为尽力而为的补充。"""
     import re as _re
     etf_data = {}
 
@@ -48,20 +53,14 @@ def _fetch_etf_flows():
                 "Accept": "text/html,*/*",
             }, timeout=15)
             if resp.status_code != 200:
-                # 方法2：WP REST API
-                wp_url = f"https://farside.co.uk/wp-json/wp/v2/pages?slug={fs_slug}"
-                resp = requests.get(wp_url, headers={
-                    "User-Agent": "Mozilla/5.0",
-                    "Accept": "application/json",
-                }, timeout=15)
-                if resp.status_code != 200:
-                    continue
-                pages = resp.json()
-                if not pages:
-                    continue
-                content = pages[0].get("content", {}).get("rendered", "")
-            else:
-                content = resp.text
+                print(f"    [ETF] {fs_slug} HTTP {resp.status_code}")
+                continue
+            content = resp.text
+
+            # Cloudflare 保护检测
+            if 'Just a moment' in content or 'cf_chl' in content or 'challenge-platform' in content:
+                print(f"    [ETF] {fs_slug} farside.co.uk 被 Cloudflare 保护，服务器端无法访问")
+                continue
 
             # 从 HTML 中提取表格数据
             # 找到 Total 行（累积总流动）
@@ -137,21 +136,30 @@ def _fetch_etf_flows():
 
 def fetch_fear_greed_index():
     """获取加密货币恐惧贪婪指数 (数据源: alternative.me, 免费无需API Key)
+    重试 3 次，间隔递增。
     返回: {"value": 45, "classification": "Fear", "timestamp": "2026-07-23 12:00:00"} 或 None"""
     from datetime import datetime as _dt
-    try:
-        resp = requests.get("https://api.alternative.me/fng/?limit=1", timeout=10)
-        if resp.status_code == 200:
-            data = resp.json()
-            item = data.get("data", [{}])[0]
-            ts = item.get("timestamp")
-            return {
-                "value": int(item.get("value", 50)),
-                "classification": item.get("value_classification", "Neutral"),
-                "timestamp": _dt.fromtimestamp(int(ts)).strftime("%Y-%m-%d %H:%M:%S") if ts else None,
-            }
-    except Exception as e:
-        print(f"  ⚠️ 恐惧贪婪指数获取失败: {e}")
+    import time as _time
+    for attempt in range(3):
+        try:
+            resp = requests.get("https://api.alternative.me/fng/?limit=1", timeout=10)
+            if resp.status_code == 200:
+                data = resp.json()
+                item = data.get("data", [{}])[0]
+                if not item:
+                    raise Exception("API 返回空数据")
+                ts = item.get("timestamp")
+                return {
+                    "value": int(item.get("value", 50)),
+                    "classification": item.get("value_classification", "Neutral"),
+                    "timestamp": _dt.fromtimestamp(int(ts)).strftime("%Y-%m-%d %H:%M:%S") if ts else None,
+                }
+            else:
+                print(f"  ⚠️ 恐惧贪婪指数 HTTP {resp.status_code} (attempt {attempt+1}/3)")
+        except Exception as e:
+            print(f"  ⚠️ 恐惧贪婪指数获取失败 (attempt {attempt+1}/3): {e}")
+            if attempt < 2:
+                _time.sleep(attempt + 1)
     return None
 
 
