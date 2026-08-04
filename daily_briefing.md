@@ -1,29 +1,29 @@
-# 🗞️ 每日硬核情报简报 | 2026-07-23
+# 🗞️ 每日硬核情报简报 | 2026-08-04
 
 > 💡 *"用最毒舌的视角，看最前沿的科技。"*
 
 ---
 
-### 1. 📌 GigaToken: 让 Token 化快到飞起 (来源: GitHub Trending / Hacker News)
-- **核心干货**：一个号称比现有方法快 **1000 倍**的语言模型 Tokenizer 工具。它不是用传统逐字符或子词方式，而是利用 SIMD 指令等底层黑魔法，在 CPU 上直接暴力并行，显著降低 LLM 推理的预处理延迟。解决了大模型响应“卡第一句”的痛点。
-- **毒舌/硬核点评**：终于有人对 LLM 的“肠梗阻”下手了。别光盯着 GPU 算力，CPU 端的 Token 化瓶颈才是很多本地模型的社死现场。1000 倍？希望不是在只跑一句话的基准测试里骗人。
-- **🔗 传送门**：[https://github.com/marcelroed/gigatoken/](https://github.com/marcelroed/gigatoken/)
+### 1. 📌 OpenAI 发布数学与理论计算机科学十大进展 (来源: Hacker News | 454分)
+- **核心干货**：OpenAI 一口气甩出十项数学和理论计算机科学领域的突破。别问细节，问就是「为下一代推理模型铺路」。这不仅是算法优化，更是试图用 LLM 重新定义人类探索数学定理的方式——从「猜答案」进化到「证明答案」。
+- **毒舌/硬核点评**：上次 OpenAI 发数学进展是给 Codex 打广告，这次估计是给「Orion 2.0」预热。建议数学系博士生们提前改行学 Prompt Engineering，免得毕业即失业。
+- **🔗 传送门**：[点击直达原链接](https://openai.com/index/ten-advances-in-mathematics/)
 
 ---
 
-### 2. 📌 陶哲轩联手 AI 攻克雅可比猜想反例 (来源: Hacker News / ArXiv)
-- **核心干货**：数学大佬陶哲轩用 ChatGPT 与 Claude Fable 生成的“雅可比猜想”反例进行了深度对话与消化。这个猜想是代数几何领域的经典难题，如果反例成立，将颠覆许多现有定理。AI 不仅生成了反例，还参与了逻辑推演。
-- **毒舌/硬核点评**：以前 AI 帮人类写代码，现在 AI 帮人类写数学证明，下一步是不是该帮人类写毕业论文了？陶哲轩的这波操作告诉我们：最牛逼的工具不是取代你，而是让你能更高效地去搞那些更玄学的事儿。
-- **🔗 传送门**：[https://chatgpt.com/share/6a5fdc7a-d6f8-83e8-bbea-8deb42cfed56](https://chatgpt.com/share/6a5fdc7a-d6f8-83e8-bbea-8deb42cfed56)
+### 2. 📌 ComfyUI 宣布 MiniMax H3 首日支持：开源权重+原生音频+2K视频 (来源: Hacker News | 263分)
+- **核心干货**：ComfyUI 在 MiniMax H3 发布当天就完成了集成，支持开源权重加载、原生音频生成以及 2K 分辨率视频合成。这意味着原本需要一堆插件和脚本才能跑通的多模态工作流，现在开箱即用，且全链路可本地化部署。
+- **毒舌/硬核点评**：这速度比某些大厂发布会PPT还快。开源社区卷起来，闭源 API 的「护城河」怕是要变成「下水道」了。
+- **🔗 传送门**：[点击直达原链接](https://blog.comfy.org/p/minimax-h3-day-0-support-in-comfyui)
 
 ---
 
-### 3. 📌 RefluXFS: Linux XFS 内核提权漏洞 (CVE-2026-64600) (来源: Lobste.rs / 安全新闻)
-- **核心干货**：Qualys 安全团队披露了一个存在于 Linux 内核 XFS 文件系统中的高危本地提权漏洞（CVSS 9.8）。攻击者可通过精心构造的操作，从普通用户权限直接获得 root 权限。影响范围巨大，几乎所有使用 XFS 的 Linux 发行版都中招。
-- **毒舌/硬核点评**：又到了 Linux 用户喜闻乐见的“更新内核并重启”环节。文件系统作为系统根基，出个漏洞就是爷中爷。Qualys 这波操作再次证明了：挖内核漏洞的，才是真正的“赏金猎人”。
-- **🔗 传送门**：[https://blog.qualys.com/vulnerabilities-threat-research/2026/07/22/refluxfs-a-linux-kernel-local-privilege-escalation-to-root-in-xfs-cve-2026-64600](https://blog.qualys.com/vulnerabilities-threat-research/2026/07/22/refluxfs-a-linux-kernel-local-privilege-escalation-to-root-in-xfs-cve-2026-64600)
+### 3. 📌 ClickHouse 挖角数据库大神 Andy Pavlo，成立 ClickHouse Labs (来源: Hacker News | 280分)
+- **核心干货**：CMU 教授、数据库领域顶流 Andy Pavlo 正式加入 ClickHouse，牵头组建 ClickHouse Labs。目标很明确：把学术界的前沿存储引擎、查询优化技术直接灌进生产级 OLAP 数据库，缩短「论文到生产」的时差。
+- **毒舌/硬核点评**：Pavlo 教授嘴上说着「热爱教学」，身体却很诚实地加入了商业公司。这下他的「数据库排名」榜单终于不用靠爬虫抓数据了，直接内部泄露。
+- **🔗 传送门**：[点击直达原链接](https://clickhouse.com/blog/andy-pavlo-joins-clickhouse)
 
 ---
 
 ### 🗣️ 今日顶男金句
-技术圈最大的幻觉不是“我能再重构一次”，而是“我这次不会再改 bug 了”。
+**"别问 AI 会不会取代你，先问问自己有没有把 API 调明白。"**

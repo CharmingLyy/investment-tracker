@@ -1,0 +1,829 @@
+{
+  "update_time": "2026-07-29 14:24:08",
+  "stocks": {
+    "a_stocks": [
+      {
+        "market": "A股",
+        "code": "002050",
+        "name": "三花智控",
+        "symbol": "sz.002050",
+        "industry": null,
+        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
+        "price": 36.02,
+        "open": 35.58,
+        "high": 36.3,
+        "low": 35.04,
+        "change_pct": 1.24,
+        "volume": 57817638,
+        "turnover": 20.66,
+        "market_cap": null,
+        "pe": 37.09,
+        "cash_flow": 50.92,
+        "macd": -2.4062,
+        "macd_signal": -2.017,
+        "macd_histogram": -0.7783,
+        "rsi": 36.23,
+        "ma": {
+          "MA5": 35.97,
+          "MA10": 37.4,
+          "MA20": 40.5,
+          "MA60": 45.13
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
+        "price": 6.97,
+        "open": 6.71,
+        "high": 7.1,
+        "low": 6.69,
+        "change_pct": 1.75,
+        "volume": 181799037,
+        "turnover": 12.61,
+        "market_cap": null,
+        "pe": 83.68,
+        "cash_flow": 105.67,
+        "macd": -0.1416,
+        "macd_signal": -0.2208,
+        "macd_histogram": 0.1582,
+        "rsi": 53.35,
+        "ma": {
+          "MA5": 6.74,
+          "MA10": 6.61,
+          "MA20": 6.69,
+          "MA60": 7.53
+        },
+        "main_net_flow": null
+      }
+    ],
+    "hk_stocks": [
+      {
+        "market": "港股",
+        "code": "01810",
+        "name": "小米集团-W",
+        "symbol": "01810",
+        "industry": "Consumer Electronics",
+        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
+        "price": 31.88,
+        "open": 29.7,
+        "high": 32.0,
+        "low": 29.48,
+        "change_pct": 8.95,
+        "volume": 482249702,
+        "turnover": null,
+        "market_cap": 8191.11,
+        "pe": 17.61,
+        "cash_flow": 77.67,
+        "macd": 1.0391,
+        "macd_signal": 0.409,
+        "macd_histogram": 1.2602,
+        "rsi": 73.83,
+        "ma": {
+          "MA5": 28.74,
+          "MA10": 27.99,
+          "MA20": 26.29,
+          "MA60": 27.31
+        },
+        "main_net_flow": null
+      }
+    ],
+    "us_stocks": [
+      {
+        "market": "美股",
+        "code": "NVDA",
+        "name": "NVIDIA",
+        "symbol": "NVDA",
+        "industry": "Semiconductors",
+        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
+        "price": 192.33,
+        "open": 195.85,
+        "high": 197.07,
+        "low": 191.2,
+        "change_pct": -2.13,
+        "volume": 23893808,
+        "turnover": null,
+        "market_cap": 46588.63,
+        "pe": 29.41,
+        "cash_flow": 463.36,
+        "macd": -1.0238,
+        "macd_signal": -0.1432,
+        "macd_histogram": -1.7612,
+        "rsi": 39.55,
+        "ma": {
+          "MA5": 203.3,
+          "MA10": 204.98,
+          "MA20": 203.4,
+          "MA60": 208.51
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "GOOG",
+        "name": "Alphabet (Google)",
+        "symbol": "GOOG",
+        "industry": "Internet Content & Information",
+        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
+        "price": 332.58,
+        "open": 333.79,
+        "high": 335.67,
+        "low": 330.41,
+        "change_pct": -0.01,
+        "volume": 2851739,
+        "turnover": null,
+        "market_cap": 40673.71,
+        "pe": 16.7,
+        "cash_flow": 226.65,
+        "macd": -8.0826,
+        "macd_signal": -5.9574,
+        "macd_histogram": -4.2504,
+        "rsi": 41.76,
+        "ma": {
+          "MA5": 325.84,
+          "MA10": 336.86,
+          "MA20": 347.97,
+          "MA60": 363.76
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "CRCL",
+        "name": "Circle",
+        "symbol": "CRCL",
+        "industry": "Capital Markets",
+        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
+        "price": 63.21,
+        "open": 63.16,
+        "high": 64.46,
+        "low": 62.9,
+        "change_pct": -1.73,
+        "volume": 1583480,
+        "turnover": null,
+        "market_cap": 168.95,
+        "pe": 32.29,
+        "cash_flow": 1.41,
+        "macd": -3.8806,
+        "macd_signal": -4.9624,
+        "macd_histogram": 2.1636,
+        "rsi": 42.85,
+        "ma": {
+          "MA5": 63.55,
+          "MA10": 64.15,
+          "MA20": 64.35,
+          "MA60": 86.35
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "MP",
+        "name": "MP Materials",
+        "symbol": "MP",
+        "industry": "Other Industrial Metals & Mining",
+        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
+        "price": 40.19,
+        "open": 40.87,
+        "high": 41.13,
+        "low": 39.97,
+        "change_pct": -2.64,
+        "volume": 1064300,
+        "turnover": null,
+        "market_cap": 71.55,
+        "pe": 42.27,
+        "cash_flow": 1.75,
+        "macd": -4.0577,
+        "macd_signal": -3.5889,
+        "macd_histogram": -0.9375,
+        "rsi": 28.8,
+        "ma": {
+          "MA5": 42.11,
+          "MA10": 43.89,
+          "MA20": 47.83,
+          "MA60": 57.07
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "PLTR",
+        "name": "Palantir",
+        "symbol": "PLTR",
+        "industry": "Software - Infrastructure",
+        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
+        "price": 123.99,
+        "open": 123.96,
+        "high": 125.49,
+        "low": 122.7,
+        "change_pct": 0.37,
+        "volume": 4921705,
+        "turnover": null,
+        "market_cap": 2972.31,
+        "pe": 139.31,
+        "cash_flow": 17.53,
+        "macd": -1.0778,
+        "macd_signal": -0.5669,
+        "macd_histogram": -1.0218,
+        "rsi": 45.02,
+        "ma": {
+          "MA5": 125.07,
+          "MA10": 128.42,
+          "MA20": 129.59,
+          "MA60": 132.05
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "NOW",
+        "name": "ServiceNow",
+        "symbol": "NOW",
+        "industry": "Software - Application",
+        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
+        "price": 113.29,
+        "open": 110.42,
+        "high": 114.42,
+        "low": 109.5,
+        "change_pct": 2.41,
+        "volume": 6712169,
+        "turnover": null,
+        "market_cap": 1171.21,
+        "pe": 70.8,
+        "cash_flow": 51.49,
+        "macd": 0.6988,
+        "macd_signal": -0.0713,
+        "macd_histogram": 1.5401,
+        "rsi": 60.07,
+        "ma": {
+          "MA5": 104.04,
+          "MA10": 102.97,
+          "MA20": 105.28,
+          "MA60": 102.89
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "DDOG",
+        "name": "Datadog",
+        "symbol": "DDOG",
+        "industry": "Software - Application",
+        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
+        "price": 256.2,
+        "open": 252.88,
+        "high": 260.23,
+        "low": 252.5,
+        "change_pct": 2.12,
+        "volume": 513188,
+        "turnover": null,
+        "market_cap": 911.99,
+        "pe": 640.51,
+        "cash_flow": 9.37,
+        "macd": 3.7967,
+        "macd_signal": 6.2102,
+        "macd_histogram": -4.827,
+        "rsi": 55.24,
+        "ma": {
+          "MA5": 250.04,
+          "MA10": 253.5,
+          "MA20": 257.75,
+          "MA60": 232.78
+        },
+        "main_net_flow": null
+      }
+    ],
+    "crypto": [
+      {
+        "market": "加密货币",
+        "code": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "industry": "Smart Contract Platform",
+        "price": 64298,
+        "open": null,
+        "high": 64660,
+        "low": 63242,
+        "change_pct": 1.4,
+        "volume": 24134261360,
+        "turnover": null,
+        "market_cap": 12895.2,
+        "market_cap_rank": 1,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": 216.5843,
+        "macd_signal": 308.7331,
+        "macd_histogram": -184.2975,
+        "rsi": 50.34,
+        "ma": {
+          "MA5": 64301.41,
+          "MA10": 64843.37,
+          "MA20": 64464.2,
+          "MA60": 63606.33
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 20062821.0,
+          "total_supply": 20062821.0,
+          "circ_ratio": 100.0,
+          "price_change_7d": -2.43802,
+          "price_change_30d": 8.13167,
+          "ath_pct": -49.0,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      },
+      {
+        "market": "加密货币",
+        "code": "ethereum",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "industry": "Smart Contract Platform",
+        "price": 1899.39,
+        "open": null,
+        "high": 1925.65,
+        "low": 1883.83,
+        "change_pct": 0.6,
+        "volume": 9552856835,
+        "turnover": null,
+        "market_cap": 2290.93,
+        "market_cap_rank": 2,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": 38.6616,
+        "macd_signal": 39.6,
+        "macd_histogram": -1.8767,
+        "rsi": 55.75,
+        "ma": {
+          "MA5": 1907.33,
+          "MA10": 1903.87,
+          "MA20": 1872.27,
+          "MA60": 1763.08
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 120682557.07440276,
+          "total_supply": 120682557.0744027,
+          "circ_ratio": 100.0,
+          "price_change_7d": -0.86585,
+          "price_change_30d": 20.64788,
+          "ath_pct": -61.6,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      }
+    ]
+  },
+  "news": [
+    {
+      "id": "35b871d31c",
+      "title": "[播客]独家实拍：我那永远跪着的母亲(11/07 22:10)",
+      "summary": "独家实拍：我那永远跪着的母亲",
+      "link": "http://go.rss.sina.com.cn/redirect.php?url=http://you.video.sina.com.cn/b/16972162-1239095354.html",
+      "source": "rss.sina.com.cn",
+      "published": ""
+    },
+    {
+      "id": "7efcc91312",
+      "title": "This country is buying up the most homes in America right now, even as international sales dry up",
+      "summary": "International buyers only bought about 67,000 homes in the U.S. over the last 12 months ending in March, a near-record low, according to the National Association of Realtors.",
+      "link": "https://www.marketwatch.com/story/this-country-is-buying-up-the-most-homes-in-america-right-now-even-as-international-sales-dry-up-c8b2afbb?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 29 Jul 2026 14:20:00 GMT"
+    },
+    {
+      "id": "9cf9d719d1",
+      "title": "My stepdad is in the military and dying of cancer. Will my mom automatically get his money?",
+      "summary": "“My worry is that one of his kids from his other marriage or one of his siblings will pop up and say they deserve his assets.”",
+      "link": "https://www.marketwatch.com/story/my-stepdad-is-dying-from-cancer-how-can-i-help-my-mom-find-out-if-shell-get-his-assets-8a10bad2?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 29 Jul 2026 14:12:00 GMT"
+    },
+    {
+      "id": "bb249554bf",
+      "title": "Economy is poised to show strong second-quarter growth — but only after a look under the hood",
+      "summary": "The U.S. economy churned out another robust rate of growth in the second  quarter even as the Iran war boosted inflation, but that might not be so readily apparent in the latest report on gross domest",
+      "link": "https://www.marketwatch.com/story/economy-is-poised-to-show-strong-second-quarter-growth-but-only-after-a-look-under-the-hood-8fd3615d?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 29 Jul 2026 14:09:00 GMT"
+    },
+    {
+      "id": "b78cfe0349",
+      "title": "Global oil prices rise above $87 a barrel after Trump vows retaliation for surprise Iranian attack on U.S. troops",
+      "summary": "Oil prices rose on Wednesday after President Donald Trump said the U.S. would order heavy strikes after Iran targeted American forces in the Middle East with ballistic missiles overnight.",
+      "link": "https://www.marketwatch.com/story/oil-prices-rise-after-u-s-and-saudi-arabia-attack-iran-backed-militias-in-iraq-f0f409ea?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 29 Jul 2026 13:56:00 GMT"
+    },
+    {
+      "id": "d9acee7374",
+      "title": "Forget oil. A surging El Niño could kill Fed rate cuts — and these stocks stand to win.",
+      "summary": "Climate disruption could prolong inflation. Look to refiners, tanker operators and agricultural stocks.",
+      "link": "https://www.marketwatch.com/story/forget-oil-a-surging-el-nino-could-kill-fed-rate-cuts-and-these-stocks-stand-to-win-41f8e67f?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 29 Jul 2026 13:41:00 GMT"
+    },
+    {
+      "id": "b5480398d6",
+      "title": "The Fed isn’t your biggest worry. The central-bank decision that actually impacts your 401(k) lands in Tokyo.",
+      "summary": "Japan is edging toward the exit on buying America’s debt. Here is why this matters to your retirement plans.",
+      "link": "https://www.marketwatch.com/story/the-fed-isnt-your-biggest-worry-the-central-bank-decision-that-actually-impacts-your-401-k-lands-in-tokyo-fc9d22c8?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 29 Jul 2026 13:33:00 GMT"
+    },
+    {
+      "id": "ad6cf425a0",
+      "title": "Alphabet and Tesla took a hit from soaring AI spending. Will Microsoft, Meta and Amazon be next?",
+      "summary": "Big Tech’s binge is draining free cash flow — and the bond markets are taking notice.",
+      "link": "https://www.marketwatch.com/story/alphabet-and-tesla-took-a-hit-from-soaring-ai-spending-will-microsoft-meta-and-amazon-be-next-80ecb30b?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 29 Jul 2026 13:32:00 GMT"
+    },
+    {
+      "id": "55662c6042",
+      "title": "A profit squeeze is coming for tech. This manager is betting on these unglamorous stocks instead.",
+      "summary": "MFS Investment Management’s chief global investment strategist, Robert Almeida, says investors are focusing too much on the Federal Reserve, when their attention should be on a major shift in the capi",
+      "link": "https://www.marketwatch.com/story/a-profit-squeeze-is-coming-for-tech-this-manager-is-betting-on-these-unglamorous-stocks-instead-ea19a2ab?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 29 Jul 2026 13:30:00 GMT"
+    },
+    {
+      "id": "ce8557f551",
+      "title": "Gen Z stays home almost every weekend because going out isn’t worth the money",
+      "summary": "Forget FOMO: Fear of financial regret is keeping younger Americans at home on Saturday night.",
+      "link": "https://www.marketwatch.com/story/gen-z-stays-home-almost-every-weekend-because-going-out-isnt-worth-the-money-64f03227?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 29 Jul 2026 13:01:00 GMT"
+    },
+    {
+      "id": "11864e408c",
+      "title": "Two rival AI super PACs are backing the same congressman. What gives?",
+      "summary": "The artificial-intelligence industry is following in the crypto sector’s footsteps in working to influence elections.",
+      "link": "https://www.marketwatch.com/story/two-rival-ai-super-pacs-are-backing-the-same-congressman-what-gives-dbc93094?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 29 Jul 2026 12:30:00 GMT"
+    },
+    {
+      "id": "fe03a7b982",
+      "title": "Aon Q2 2026 slides: 5% organic growth, margins expand despite FCF dip",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/aon-q2-2026-slides-5-organic-growth-margins-expand-despite-fcf-dip-93CH-4820625",
+      "source": "www.investing.com",
+      "published": "2026-07-29 13:57:06"
+    },
+    {
+      "id": "17192b2408",
+      "title": "ADP Q4 FY2026 slides: 17% EPS growth, AI drives margins",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/adp-q4-fy2026-slides-17-eps-growth-ai-drives-margins-93CH-4820624",
+      "source": "www.investing.com",
+      "published": "2026-07-29 13:57:05"
+    },
+    {
+      "id": "0a8279cca4",
+      "title": "NPK International earnings in focus as growth trajectory tested",
+      "summary": "",
+      "link": "https://www.investing.com/news/earnings/npk-international-earnings-in-focus-as-growth-trajectory-tested-93CH-4820623",
+      "source": "www.investing.com",
+      "published": "2026-07-29 13:56:51"
+    },
+    {
+      "id": "3ce01a3671",
+      "title": "Earnings call transcript: Biogen beats Q2 2026 estimates, lifts revenue outlook",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-biogen-beats-q2-2026-estimates-lifts-revenue-outlook-93CH-4820621",
+      "source": "www.investing.com",
+      "published": "2026-07-29 13:55:38"
+    },
+    {
+      "id": "a39196f4a5",
+      "title": "Earnings call transcript: Ionis beats Q2 2026 estimates as sales jump",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-ionis-beats-q2-2026-estimates-as-sales-jump-93CH-4820620",
+      "source": "www.investing.com",
+      "published": "2026-07-29 13:55:37"
+    },
+    {
+      "id": "46d6cf8f0b",
+      "title": "GE HealthCare Q2 2026 slides: record orders offset margin pressure",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/ge-healthcare-q2-2026-slides-record-orders-offset-margin-pressure-93CH-4820619",
+      "source": "www.investing.com",
+      "published": "2026-07-29 13:55:29"
+    },
+    {
+      "id": "490c0c468d",
+      "title": "Federated Investors Inc B stock hits all-time high at 60.8 USD",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/federated-investors-inc-b-stock-hits-alltime-high-at-608-usd-93CH-4820618",
+      "source": "www.investing.com",
+      "published": "2026-07-29 13:55:26"
+    },
+    {
+      "id": "5f6064a4d9",
+      "title": "Hyperscaler debt binge pushes yields up as investor demand cools",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/hyperscaler-debt-binge-pushes-yields-up-as-investor-demand-cools-4820617",
+      "source": "www.investing.com",
+      "published": "2026-07-29 13:55:09"
+    },
+    {
+      "id": "0e3f130618",
+      "title": "Xenia Hotels faces earnings test as stock hits 52-week high",
+      "summary": "",
+      "link": "https://www.investing.com/news/earnings/xenia-hotels-faces-earnings-test-as-stock-hits-52week-high-93CH-4820616",
+      "source": "www.investing.com",
+      "published": "2026-07-29 13:54:57"
+    },
+    {
+      "id": "df9830e6f9",
+      "title": "DoorDash launches in-house drone delivery program after FAA certification",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/doordash-launches-inhouse-drone-delivery-program-after-faa-certification-4820615",
+      "source": "www.investing.com",
+      "published": "2026-07-29 13:54:29"
+    }
+  ],
+  "briefing": {
+    "date": "2026-07-29",
+    "update_time": "2026-07-29 14:13:56",
+    "candidate_count": 20,
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-29\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Anthropic Mythos 自主发现零日漏洞 (来源: Dev.to/Hacker News)\n- **核心干货**：Anthropic 的 Claude Mythos 预览版模型展示了AI自主发现并利用真实软件环境中零日漏洞的能力，覆盖浏览器、操作系统、网络服务和加密库。这不再是理论演示，而是实打实的自动化漏洞挖掘。\n- **毒舌/硬核点评**：以后安全圈面试题可能变成：\"你如何证明你不是一个AI写的脚本？\" 红队同学，你们的职业生涯可能提前被AI“毕业”了。\n- **🔗 传送门**：[点击直达原链接](https://dev.to/alifar/anthropics-mythos-preview-shows-how-ai-is-reshaping-defensive-vulnerability-research-4lll)\n\n---\n\n### 2. 📌 Turso 用 Rust 重写 SQLite 后，剑指 Postgres (来源: The Register)\n- **核心干货**：Turso 在成功用 Rust 重写并优化 SQLite（LibSQL）后，宣布将目标转向 Postgres。计划用一个虚拟机核心同时驱动多个 SQL 前端，试图在云数据库领域复刻 SQLite 的轻量级魔法。\n- **毒舌/硬核点评**：Turso 这是要把“万物皆可 Rust”的邪教从边缘延伸到云核心。Postgres 社区：你们礼貌吗？不过，如果真能实现单核多前端，云数据库的定价模型怕是要被掀桌子。\n- **🔗 传送门**：[点击直达原链接](https://www.theregister.com/databases/2026/07/29/after-rewriting-sqlite-in-rust-turso-turns-its-sights-on-postgres/5279835)\n\n---\n\n### 3. 📌 Codex Security：OpenAI 开源了“代码间谍” (来源: GitHub/Hacker News)\n- **核心干货**：OpenAI 开源了 Codex Security，一个旨在分析代码库安全性的工具。它能扫描代码，识别潜在的安全漏洞和不良模式，并给出修复建议。简单说，就是给代码库做AI驱动的安全审计。\n- **毒舌/硬核点评**：OpenAI 终于意识到，光会写代码不行，还得会“抓坏人”。以后代码审查流程：先让 Codex 跑一遍，再让人工复查。建议改名“Codex 背锅侠”，毕竟AI写的代码出问题，总是AI先被骂。\n- **🔗 传送门**：[点击直达原链接](https://github.com/openai/codex-security)\n\n---\n\n### 🗣️ 今日顶男金句\n**当你觉得AI会抢你饭碗时，不妨想想：你的焦虑，AI连“焦虑”这个功能都还没实现。**",
+    "briefing_items": [
+      {
+        "title": "Anthropic Mythos 自主发现零日漏洞",
+        "source": "Dev.to/Hacker News",
+        "summary": "Anthropic 的 Claude Mythos 预览版模型展示了AI自主发现并利用真实软件环境中零日漏洞的能力，覆盖浏览器、操作系统、网络服务和加密库。这不再是理论演示，而是实打实的自动化漏洞挖掘。",
+        "commentary": "以后安全圈面试题可能变成：\"你如何证明你不是一个AI写的脚本？\" 红队同学，你们的职业生涯可能提前被AI“毕业”了。",
+        "url": "https://dev.to/alifar/anthropics-mythos-preview-shows-how-ai-is-reshaping-defensive-vulnerability-research-4lll"
+      },
+      {
+        "title": "Turso 用 Rust 重写 SQLite 后，剑指 Postgres",
+        "source": "The Register",
+        "summary": "Turso 在成功用 Rust 重写并优化 SQLite（LibSQL）后，宣布将目标转向 Postgres。计划用一个虚拟机核心同时驱动多个 SQL 前端，试图在云数据库领域复刻 SQLite 的轻量级魔法。",
+        "commentary": "Turso 这是要把“万物皆可 Rust”的邪教从边缘延伸到云核心。Postgres 社区：你们礼貌吗？不过，如果真能实现单核多前端，云数据库的定价模型怕是要被掀桌子。",
+        "url": "https://www.theregister.com/databases/2026/07/29/after-rewriting-sqlite-in-rust-turso-turns-its-sights-on-postgres/5279835"
+      },
+      {
+        "title": "Codex Security：OpenAI 开源了“代码间谍”",
+        "source": "GitHub/Hacker News",
+        "summary": "OpenAI 开源了 Codex Security，一个旨在分析代码库安全性的工具。它能扫描代码，识别潜在的安全漏洞和不良模式，并给出修复建议。简单说，就是给代码库做AI驱动的安全审计。",
+        "commentary": "OpenAI 终于意识到，光会写代码不行，还得会“抓坏人”。以后代码审查流程：先让 Codex 跑一遍，再让人工复查。建议改名“Codex 背锅侠”，毕竟AI写的代码出问题，总是AI先被骂。",
+        "url": "https://github.com/openai/codex-security"
+      }
+    ],
+    "candidates": [
+      {
+        "id": "hn:49093569",
+        "title": "More Tailscale tricks for your jailbroken Kindle",
+        "summary": "",
+        "url": "https://tailscale.com/blog/jailbroken-kindle-proxy-tun-modes",
+        "source": "Hacker News",
+        "score": 296,
+        "comments": 95
+      },
+      {
+        "id": "hn:49093434",
+        "title": "User Interfaces of the Demo Scene",
+        "summary": "",
+        "url": "https://www.datagubbe.se/scenegui/",
+        "source": "Hacker News",
+        "score": 293,
+        "comments": 51
+      },
+      {
+        "id": "lob:jrq2d9",
+        "title": "Develop Cross-Platform CLI and GUI Tools With Tcl/Tk",
+        "summary": "",
+        "url": "https://cgicoffee.com/blog/2026/04/tcl-tk-develop-cross-platform-cli-gui-tools-tutorial-guide",
+        "source": "Lobste.rs",
+        "score": 58,
+        "comments": 14,
+        "tags": [
+          "graphics"
+        ]
+      },
+      {
+        "id": "hn:49094346",
+        "title": "SQLite in Production: Optimizing WAL Mode, Concurrency, and VFS Layers",
+        "summary": "",
+        "url": "https://micrologics.org/blog/sqlite-in-production-optimizing-wal-mode-concurrency-and-vfs-layers-for-low-latency-app-servers",
+        "source": "Hacker News",
+        "score": 143,
+        "comments": 52
+      },
+      {
+        "id": "hn:49095865",
+        "title": "KOReader",
+        "summary": "",
+        "url": "https://koreader.rocks/",
+        "source": "Hacker News",
+        "score": 274,
+        "comments": 96
+      },
+      {
+        "id": "hn:49089755",
+        "title": "Codex Security",
+        "summary": "",
+        "url": "https://github.com/openai/codex-security",
+        "source": "Hacker News",
+        "score": 549,
+        "comments": 199
+      },
+      {
+        "id": "lob:49nob7",
+        "title": "I Designed A Custom PCB To Avoid Pressing A Button Three Times",
+        "summary": "",
+        "url": "https://blog.tymscar.com/posts/opensourcedimmer/",
+        "source": "Lobste.rs",
+        "score": 42,
+        "comments": 15,
+        "tags": [
+          "c",
+          "hardware",
+          "reversing"
+        ]
+      },
+      {
+        "id": "hn:49096188",
+        "title": "Document-borne AI worms can self-propagate through Copilot for Word",
+        "summary": "",
+        "url": "https://enklypesalt.com/posts/context-collapse-part3-ai-worming-through-word/",
+        "source": "Hacker News",
+        "score": 138,
+        "comments": 117
+      },
+      {
+        "id": "lob:p0fdmk",
+        "title": "The mean means nothing",
+        "summary": "",
+        "url": "https://fzakaria.com/2026/07/27/the-mean-means-nothing",
+        "source": "Lobste.rs",
+        "score": 42,
+        "comments": 13,
+        "tags": [
+          "performance"
+        ]
+      },
+      {
+        "id": "lob:rmzzdb",
+        "title": "Inside Zig's Incremental Compilation",
+        "summary": "",
+        "url": "https://mlugg.co.uk/posts/incremental-compilation-internals/",
+        "source": "Lobste.rs",
+        "score": 138,
+        "comments": 9,
+        "tags": [
+          "compilers",
+          "performance",
+          "zig"
+        ]
+      },
+      {
+        "id": "hn:49096290",
+        "title": "French musician Kavinsky found dead",
+        "summary": "",
+        "url": "https://www.euronews.com/culture/2026/07/29/dj-kavinsky-known-for-his-track-nightcall-found-dead-at-his-paris-home",
+        "source": "Hacker News",
+        "score": 145,
+        "comments": 35
+      },
+      {
+        "id": "lob:vnh6b2",
+        "title": "Why Rocq is better than Lean for program verification",
+        "summary": "<p>A write-up on why I don't give in to the hype and switch to Lean for formal verification of programs.</p>\n",
+        "url": "https://joomy.korkutblech.com/posts/2026-07-28-why-rocq-is-better.html",
+        "source": "Lobste.rs",
+        "score": 35,
+        "comments": 10,
+        "tags": [
+          "compilers",
+          "formalmethods",
+          "ml",
+          "plt"
+        ]
+      },
+      {
+        "id": "rss:cfdd878d68",
+        "title": "After rewriting SQLite in Rust, Turso turns its sights on Postgres",
+        "summary": "Cloud database upstart wants one virtual machine core to power multiple SQL frontends",
+        "url": "https://www.theregister.com/databases/2026/07/29/after-rewriting-sqlite-in-rust-turso-turns-its-sights-on-postgres/5279835",
+        "source": "Tech RSS",
+        "score": 0
+      },
+      {
+        "id": "lob:anvtjk",
+        "title": "State of multi-player Wayland",
+        "summary": "",
+        "url": "https://blinry.org/multi-seat-wayland/",
+        "source": "Lobste.rs",
+        "score": 56,
+        "comments": 7,
+        "tags": [
+          "linux"
+        ]
+      },
+      {
+        "id": "arxiv:2607.26042v1",
+        "title": "VetClaw: An Edge-Cloud Multimodal Agentic System for Veterinary Disease Screening",
+        "summary": "We present VetClaw, an edge-cloud multimodal agentic system for early veterinary disease screening. VetClaw uses a camera module as an edge sensing device and sends captured images, together with optional symptom descriptions, to a server-hosted vision-language model for zero-shot disease classifica",
+        "url": "https://arxiv.org/abs/2607.26042v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.CV",
+          "cs.LG"
+        ],
+        "arxiv_id": "2607.26042v1"
+      },
+      {
+        "id": "rss:e38dcf6b25",
+        "title": "Anthropic’s Mythos Preview Shows How AI Is Reshaping Defensive Vulnerability Research",
+        "summary": "Anthropic says its Claude Mythos Preview research model can autonomously identify and, in many cases, exploit zero-day vulnerabilities in real software environments. The results span browser, operating-system, network-service, and cryptography-library code, making the work a significant illustration",
+        "url": "https://dev.to/alifar/anthropics-mythos-preview-shows-how-ai-is-reshaping-defensive-vulnerability-research-4lll",
+        "source": "Tech RSS",
+        "score": 0
+      },
+      {
+        "id": "hn:49096969",
+        "title": "Handbook.md shows that long policy documents do not reliably govern agents",
+        "summary": "",
+        "url": "https://arxiv.org/abs/2607.25398",
+        "source": "Hacker News",
+        "score": 54,
+        "comments": 31
+      },
+      {
+        "id": "hn:49096917",
+        "title": "Show HN: Bullshit Detector – agent skills that fact-check videos and articles",
+        "summary": "",
+        "url": "https://github.com/SerhiiKorniienko/bullshit-detector",
+        "source": "Hacker News",
+        "score": 34,
+        "comments": 13
+      },
+      {
+        "id": "arxiv:2607.26016v1",
+        "title": "MDTransformer: A Hardware-Software Co-Design of Mode-Division Photonic Transformer Accelerator with Inverse-Designed Coherent Crossbar",
+        "summary": "Recently, photonic transformer accelerators (PTAs) have successfully achieved significant speedup and energy efficiency improvements over electronic accelerators for expediting Transformer inference. However, state-of-the-art rely on expensive multi-wavelength light generation and large dot-product ",
+        "url": "https://arxiv.org/abs/2607.26016v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.AR",
+          "cs.AI",
+          "cs.DC"
+        ],
+        "arxiv_id": "2607.26016v1"
+      },
+      {
+        "id": "lob:ax6col",
+        "title": "Writing Toy Software Is A Joy (2025)",
+        "summary": "",
+        "url": "https://blog.jsbarretto.com/post/software-is-joy",
+        "source": "Lobste.rs",
+        "score": 27,
+        "comments": 3,
+        "tags": [
+          "programming"
+        ]
+      }
+    ],
+    "ai_curated": true
+  },
+  "fear_greed": {
+    "value": 29,
+    "classification": "Fear",
+    "timestamp": "2026-07-29 00:00:00"
+  }
+}

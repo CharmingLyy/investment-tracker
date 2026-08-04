@@ -1,0 +1,840 @@
+{
+  "update_time": "2026-07-30 14:17:50",
+  "stocks": {
+    "a_stocks": [
+      {
+        "market": "A股",
+        "code": "002050",
+        "name": "三花智控",
+        "symbol": "sz.002050",
+        "industry": null,
+        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
+        "price": 35.46,
+        "open": 35.65,
+        "high": 36.23,
+        "low": 35.2,
+        "change_pct": -1.55,
+        "volume": 47521928,
+        "turnover": 16.96,
+        "market_cap": null,
+        "pe": 36.51,
+        "cash_flow": 50.92,
+        "macd": -2.4226,
+        "macd_signal": -2.0982,
+        "macd_histogram": -0.6489,
+        "rsi": 35.01,
+        "ma": {
+          "MA5": 35.63,
+          "MA10": 36.77,
+          "MA20": 40.04,
+          "MA60": 44.93
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
+        "price": 6.89,
+        "open": 6.88,
+        "high": 7.01,
+        "low": 6.84,
+        "change_pct": -1.15,
+        "volume": 116681078,
+        "turnover": 8.06,
+        "market_cap": null,
+        "pe": 82.72,
+        "cash_flow": 105.67,
+        "macd": -0.1165,
+        "macd_signal": -0.1999,
+        "macd_histogram": 0.1668,
+        "rsi": 50.82,
+        "ma": {
+          "MA5": 6.77,
+          "MA10": 6.65,
+          "MA20": 6.69,
+          "MA60": 7.51
+        },
+        "main_net_flow": null
+      }
+    ],
+    "hk_stocks": [
+      {
+        "market": "港股",
+        "code": "01810",
+        "name": "小米集团-W",
+        "symbol": "01810",
+        "industry": "Consumer Electronics",
+        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
+        "price": 31.04,
+        "open": 32.4,
+        "high": 32.4,
+        "low": 30.8,
+        "change_pct": -2.63,
+        "volume": 242298626,
+        "turnover": null,
+        "market_cap": 7975.29,
+        "pe": 17.15,
+        "cash_flow": 77.67,
+        "macd": 1.2163,
+        "macd_signal": 0.5706,
+        "macd_histogram": 1.2914,
+        "rsi": 68.44,
+        "ma": {
+          "MA5": 29.52,
+          "MA10": 28.34,
+          "MA20": 26.71,
+          "MA60": 27.31
+        },
+        "main_net_flow": null
+      }
+    ],
+    "us_stocks": [
+      {
+        "market": "美股",
+        "code": "NVDA",
+        "name": "NVIDIA",
+        "symbol": "NVDA",
+        "industry": "Semiconductors",
+        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
+        "price": 195.82,
+        "open": 193.45,
+        "high": 196.4,
+        "low": 191.52,
+        "change_pct": 3.06,
+        "volume": 29394394,
+        "turnover": null,
+        "market_cap": 47431.98,
+        "pe": 29.94,
+        "cash_flow": 463.36,
+        "macd": -2.0456,
+        "macd_signal": -0.7254,
+        "macd_histogram": -2.6405,
+        "rsi": 43.8,
+        "ma": {
+          "MA5": 197.24,
+          "MA10": 202.04,
+          "MA20": 203.04,
+          "MA60": 208.41
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "GOOG",
+        "name": "Alphabet (Google)",
+        "symbol": "GOOG",
+        "industry": "Internet Content & Information",
+        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
+        "price": 332.37,
+        "open": 333.08,
+        "high": 335.45,
+        "low": 329.82,
+        "change_pct": -1.01,
+        "volume": 4795988,
+        "turnover": null,
+        "market_cap": 40645.58,
+        "pe": 16.67,
+        "cash_flow": 226.65,
+        "macd": -7.7295,
+        "macd_signal": -6.2712,
+        "macd_histogram": -2.9166,
+        "rsi": 42.1,
+        "ma": {
+          "MA5": 329.28,
+          "MA10": 335.03,
+          "MA20": 346.85,
+          "MA60": 363.03
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "CRCL",
+        "name": "Circle",
+        "symbol": "CRCL",
+        "industry": "Capital Markets",
+        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
+        "price": 61.71,
+        "open": 61.48,
+        "high": 63.01,
+        "low": 61.0,
+        "change_pct": 0.56,
+        "volume": 2224289,
+        "turnover": null,
+        "market_cap": 164.93,
+        "pe": 31.52,
+        "cash_flow": 1.41,
+        "macd": -3.9419,
+        "macd_signal": -4.7816,
+        "macd_histogram": 1.6795,
+        "rsi": 41.56,
+        "ma": {
+          "MA5": 63.08,
+          "MA10": 64.07,
+          "MA20": 64.25,
+          "MA60": 85.35
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "MP",
+        "name": "MP Materials",
+        "symbol": "MP",
+        "industry": "Other Industrial Metals & Mining",
+        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
+        "price": 39.84,
+        "open": 39.26,
+        "high": 40.16,
+        "low": 38.76,
+        "change_pct": 4.57,
+        "volume": 1473532,
+        "turnover": null,
+        "market_cap": 70.92,
+        "pe": 41.9,
+        "cash_flow": 1.75,
+        "macd": -4.2774,
+        "macd_signal": -3.753,
+        "macd_histogram": -1.0488,
+        "rsi": 31.57,
+        "ma": {
+          "MA5": 40.73,
+          "MA10": 43.12,
+          "MA20": 47.01,
+          "MA60": 56.6
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "PLTR",
+        "name": "Palantir",
+        "symbol": "PLTR",
+        "industry": "Software - Infrastructure",
+        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
+        "price": 121.56,
+        "open": 121.14,
+        "high": 123.67,
+        "low": 120.3,
+        "change_pct": -1.17,
+        "volume": 6061600,
+        "turnover": null,
+        "market_cap": 2914.17,
+        "pe": 136.58,
+        "cash_flow": 17.53,
+        "macd": -1.5196,
+        "macd_signal": -0.7695,
+        "macd_histogram": -1.5001,
+        "rsi": 42.67,
+        "ma": {
+          "MA5": 124.51,
+          "MA10": 127.04,
+          "MA20": 129.33,
+          "MA60": 131.63
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "NOW",
+        "name": "ServiceNow",
+        "symbol": "NOW",
+        "industry": "Software - Application",
+        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
+        "price": 108.07,
+        "open": 110.5,
+        "high": 113.11,
+        "low": 107.33,
+        "change_pct": -6.65,
+        "volume": 8940777,
+        "turnover": null,
+        "market_cap": 1117.24,
+        "pe": 67.54,
+        "cash_flow": 51.49,
+        "macd": 1.0699,
+        "macd_signal": 0.1885,
+        "macd_histogram": 1.7627,
+        "rsi": 53.5,
+        "ma": {
+          "MA5": 107.76,
+          "MA10": 103.62,
+          "MA20": 105.52,
+          "MA60": 103.2
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "DDOG",
+        "name": "Datadog",
+        "symbol": "DDOG",
+        "industry": "Software - Application",
+        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
+        "price": 265.67,
+        "open": 263.8,
+        "high": 270.33,
+        "low": 263.42,
+        "change_pct": 0.56,
+        "volume": 797323,
+        "turnover": null,
+        "market_cap": 945.68,
+        "pe": 632.55,
+        "cash_flow": 9.37,
+        "macd": 4.9858,
+        "macd_signal": 6.0673,
+        "macd_histogram": -2.1628,
+        "rsi": 60.44,
+        "ma": {
+          "MA5": 255.89,
+          "MA10": 254.63,
+          "MA20": 258.21,
+          "MA60": 234.89
+        },
+        "main_net_flow": null
+      }
+    ],
+    "crypto": [
+      {
+        "market": "加密货币",
+        "code": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "industry": "Smart Contract Platform",
+        "price": 64678,
+        "open": null,
+        "high": 65056,
+        "low": 63247,
+        "change_pct": 1.2,
+        "volume": 31579182926,
+        "turnover": null,
+        "market_cap": 12978.39,
+        "market_cap_rank": 1,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": 199.8287,
+        "macd_signal": 282.7563,
+        "macd_histogram": -165.8552,
+        "rsi": 52.21,
+        "ma": {
+          "MA5": 64305.0,
+          "MA10": 64757.14,
+          "MA20": 64471.87,
+          "MA60": 63453.11
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 20063293.0,
+          "total_supply": 20063293.0,
+          "circ_ratio": 100.0,
+          "price_change_7d": -0.30874,
+          "price_change_30d": 10.28254,
+          "ath_pct": -48.7,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      },
+      {
+        "market": "加密货币",
+        "code": "ethereum",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "industry": "Smart Contract Platform",
+        "price": 1916.87,
+        "open": null,
+        "high": 1932.88,
+        "low": 1875.4,
+        "change_pct": 1.3,
+        "volume": 9731339880,
+        "turnover": null,
+        "market_cap": 2313.77,
+        "market_cap_rank": 2,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": 38.5969,
+        "macd_signal": 39.5648,
+        "macd_histogram": -1.9358,
+        "rsi": 57.5,
+        "ma": {
+          "MA5": 1918.12,
+          "MA10": 1906.49,
+          "MA20": 1878.91,
+          "MA60": 1761.79
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 120682508.54011048,
+          "total_supply": 120682508.5401104,
+          "circ_ratio": 100.0,
+          "price_change_7d": 0.94677,
+          "price_change_30d": 22.55589,
+          "ath_pct": -61.24,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      }
+    ]
+  },
+  "news": [
+    {
+      "id": "35b871d31c",
+      "title": "[播客]独家实拍：我那永远跪着的母亲(11/07 22:10)",
+      "summary": "独家实拍：我那永远跪着的母亲",
+      "link": "http://go.rss.sina.com.cn/redirect.php?url=http://you.video.sina.com.cn/b/16972162-1239095354.html",
+      "source": "rss.sina.com.cn",
+      "published": ""
+    },
+    {
+      "id": "f6ad4ff062",
+      "title": "‘Don’t get suckered like I did’: I paid $185 to the wrong passport website. Can I get my money back?",
+      "summary": "“I will file a complaint with the Better Business Bureau.”",
+      "link": "https://www.marketwatch.com/story/dont-get-suckered-like-i-did-i-paid-185-to-the-wrong-passport-website-can-i-get-my-money-back-3a781412?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 30 Jul 2026 14:15:00 GMT"
+    },
+    {
+      "id": "266459464f",
+      "title": "Looking for a second home? Sellers in these vacation areas could be ready to make a deal.",
+      "summary": "House hunters could find good prices in second-home markets across the South and Midwest.",
+      "link": "https://www.marketwatch.com/story/looking-for-a-second-home-sellers-in-these-markets-could-be-ready-to-make-a-deal-b8d85b34?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 30 Jul 2026 14:10:00 GMT"
+    },
+    {
+      "id": "3c7db4ae3b",
+      "title": "Meta’s stock is falling hard. Here’s why the company is in Wall Street’s doghouse.",
+      "summary": "Meta’s spending on AI is ramping, and investors want proof that the company can make serious money in areas other than advertising.",
+      "link": "https://www.marketwatch.com/story/metas-stock-is-falling-hard-heres-why-the-company-is-in-wall-streets-doghouse-afae2f55?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 30 Jul 2026 14:09:00 GMT"
+    },
+    {
+      "id": "24eac56f49",
+      "title": "PCE inflation gauge falls for the first time since the pandemic. The danger is far from over.",
+      "summary": "The main inflation barometer used by the Federal Reserve to set U.S. interest rates fell in June for the first time since the pandemic, underscoring why the Fed took no action this week to raise borro",
+      "link": "https://www.marketwatch.com/story/fed-favored-pce-inflation-gauge-falls-for-first-time-since-pandemic-but-danger-far-from-over-57e382bf?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 30 Jul 2026 14:08:00 GMT"
+    },
+    {
+      "id": "ce8557f551",
+      "title": "Gen Z stays home almost every weekend because going out isn’t worth the money",
+      "summary": "Forget FOMO: Fear of financial regret is keeping younger Americans at home on Saturday night.",
+      "link": "https://www.marketwatch.com/story/gen-z-stays-home-almost-every-weekend-because-going-out-isnt-worth-the-money-64f03227?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 30 Jul 2026 14:04:00 GMT"
+    },
+    {
+      "id": "84c778757e",
+      "title": "Why Microsoft’s stock is soaring toward a historic gain after earnings",
+      "summary": "The company’s cloud business is sporting impressive growth, and Microsoft expects to avoid heading into cash-burn mode as it spends up on AI.",
+      "link": "https://www.marketwatch.com/story/why-microsofts-stock-is-soaring-toward-a-historic-gain-after-earnings-96cd5b1e?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 30 Jul 2026 13:51:00 GMT"
+    },
+    {
+      "id": "43842cedaa",
+      "title": "‘Love Island USA’ winners are using their $100,000 prize money to pay bills and student loans. Many Americans can relate.",
+      "summary": "Trinity Tatum and Bryce Alakai aren’t spending their reality-TV winnings on shopping sprees just yet.",
+      "link": "https://www.marketwatch.com/story/love-island-usa-winners-are-spending-their-100-000-prize-money-in-a-very-relatable-way-5f4f1794?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 30 Jul 2026 13:46:00 GMT"
+    },
+    {
+      "id": "809b7ed4fb",
+      "title": "Wall Street just suffered a historic crash in highflying stocks. Why a quick tech rebound could be a trap.",
+      "summary": "A bounce may be coming for those momentum stocks that have been brought back to earth, which could open up another selloff, says BTIG’s Jonathan Krinsky.",
+      "link": "https://www.marketwatch.com/story/wall-street-just-suffered-a-historic-crash-in-high-flying-stocks-here-is-why-a-quick-tech-rebound-could-be-a-trap-c021318a?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 30 Jul 2026 13:33:00 GMT"
+    },
+    {
+      "id": "20ec36f496",
+      "title": "We’re in our 60s with $1.5 million. Would a trust be more effective than a will to prevent conflict among our heirs?",
+      "summary": "“I realize that probate can be lengthy, public and expensive.”",
+      "link": "https://www.marketwatch.com/story/we-already-have-wills-were-in-our-60s-with-1-5-million-how-do-we-prevent-family-drama-among-our-heirs-bf7b0eb1?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 30 Jul 2026 13:30:00 GMT"
+    },
+    {
+      "id": "c273c38e17",
+      "title": "Pioneering AI hedge fund with returns of 1000% since inception discovers the downside of leverage",
+      "summary": "AI wunderkind Leopold Aschenbrenner has reportedly asked investors for an injection of fresh capital, and offered them to opportunity to buy some of its assets directly from the fund.",
+      "link": "https://www.marketwatch.com/story/pioneering-ai-hedge-fund-with-returns-of-1000-since-inception-discovers-the-downside-of-leverage-b01ab03a?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 30 Jul 2026 13:21:00 GMT"
+    },
+    {
+      "id": "c316a504c8",
+      "title": "JPMorgan cuts Meta stock price target to $640 on AI monetization concerns",
+      "summary": "",
+      "link": "https://www.investing.com/news/analyst-ratings/jpmorgan-cuts-meta-stock-price-target-to-640-on-ai-monetization-concerns-93CH-4824973",
+      "source": "www.investing.com",
+      "published": "2026-07-30 14:07:02"
+    },
+    {
+      "id": "793573c1db",
+      "title": "Earnings call transcript: Gildan tops Q2 2026 EPS forecast as sales miss slightly",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-gildan-tops-q2-2026-eps-forecast-as-sales-miss-slightly-93CH-4824972",
+      "source": "www.investing.com",
+      "published": "2026-07-30 14:06:52"
+    },
+    {
+      "id": "a5eb3776ed",
+      "title": "Goldman Sachs asset arm forms an AI investing platform, memo shows",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/goldman-sachs-asset-arm-forms-an-ai-investing-platform-memo-shows-4824971",
+      "source": "www.investing.com",
+      "published": "2026-07-30 14:06:34"
+    },
+    {
+      "id": "4dcc2697db",
+      "title": "Gold gains as investors assess Fed decision, Mideast tensions",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/gold-pares-feddriven-gains-as-markets-digest-warsh-comments-dollar-steadies-4822232",
+      "source": "www.investing.com",
+      "published": "2026-07-30 14:06:33"
+    },
+    {
+      "id": "467aa632ff",
+      "title": "Embassy REIT Q1 FY2027 slides: 17% NOI growth, strong GCC leasing",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/embassy-reit-q1-fy2027-slides-17-noi-growth-strong-gcc-leasing-93CH-4824970",
+      "source": "www.investing.com",
+      "published": "2026-07-30 14:06:12"
+    },
+    {
+      "id": "50cb0f417c",
+      "title": "Earnings call transcript: Vicat jumps on H1 2026 revenue beat and raised outlook",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-vicat-jumps-on-h1-2026-revenue-beat-and-raised-outlook-93CH-4824969",
+      "source": "www.investing.com",
+      "published": "2026-07-30 14:06:11"
+    },
+    {
+      "id": "df329725ab",
+      "title": "Wallbox NV earnings beat by €0.28, revenue fell short of estimates",
+      "summary": "",
+      "link": "https://www.investing.com/news/earnings/wallbox-nv-earnings-beat-by-028-revenue-fell-short-of-estimates-4824968",
+      "source": "www.investing.com",
+      "published": "2026-07-30 14:06:11"
+    },
+    {
+      "id": "728841541d",
+      "title": "Euronet earnings missed by $0.15, revenue fell short of estimates",
+      "summary": "",
+      "link": "https://www.investing.com/news/earnings/euronet-earnings-missed-by-015-revenue-fell-short-of-estimates-4824967",
+      "source": "www.investing.com",
+      "published": "2026-07-30 14:06:11"
+    },
+    {
+      "id": "0f49584073",
+      "title": "Federal Signal earnings beat by $0.13, revenue topped estimates",
+      "summary": "",
+      "link": "https://www.investing.com/news/earnings/federal-signal-earnings-beat-by-013-revenue-topped-estimates-4824966",
+      "source": "www.investing.com",
+      "published": "2026-07-30 14:06:01"
+    },
+    {
+      "id": "6a073d76aa",
+      "title": "CSW Industrials Inc earnings beat by $0.36, revenue topped estimates",
+      "summary": "",
+      "link": "https://www.investing.com/news/earnings/csw-industrials-inc-earnings-beat-by-036-revenue-topped-estimates-4824965",
+      "source": "www.investing.com",
+      "published": "2026-07-30 14:06:01"
+    }
+  ],
+  "briefing": {
+    "date": "2026-07-30",
+    "update_time": "2026-07-30 14:07:02",
+    "candidate_count": 20,
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-30\n\n> 💡 *“今天的情报，要么是惊天大坑，要么是逆天飞升。”*\n\n---\n\n### 1. 📌 顶级AI创业公司集体“关灯搞研发” (来源: Hacker News / Science.org)\n- **核心干货**：Science杂志撰文指出，目前最顶尖的几家AI初创公司（懂的都懂）几乎不再发表任何研究成果。他们不再像OpenAI早期那样用论文刷存在感，而是把一切都锁在保险柜里，这导致整个学术界和开源社区的信息流严重枯竭。\n- **毒舌/硬核点评**：当AI公司开始像军火商一样搞“黑科技”，说明这行已经从“学术竞赛”彻底变成了“资源绞肉机”。没论文看？别急，等他们产品发布时，你连尾灯都看不见。\n- **🔗 传送门**：https://www.science.org/content/article/ai-s-top-startups-are-barely-publishing-their-research\n\n---\n\n### 2. 📌 全球决策正在被“AI狂热”吞噬 (来源: Lobste.rs)\n- **核心干货**：一篇长文痛斥当前“万物皆可AI”的疯狂现状：企业高管和政府在完全不懂技术边界的情况下，强行用AI解决方案替代人类判断，导致决策质量断崖式下跌。这不是技术革命，是一场集体智商税。\n- **毒舌/硬核点评**：当你的CEO觉得“上AI”比“动脑子”更简单时，公司离倒闭就不远了。建议把这篇文章打印出来，贴在每一个张口闭口“AI赋能”的PPT旁边。\n- **🔗 传送门**：https://hermit-tech.com/blog/ai-mania-is-eviscerating-global-decisionmaking\n\n---\n\n### 3. 📌 首个CHERIoT安全芯片流片成功！ (来源: Lobste.rs)\n- **核心干货**：CHERIoT项目宣布其基于CHERI（能力硬件增强RISC指令）架构的首个硅片已经成功流片并点亮。这玩意儿能从硬件层面彻底解决内存安全问题，让缓冲区溢出、UAF等经典漏洞直接物理消失。这是嵌入式/IoT领域的一次核弹级突破。\n- **毒舌/硬核点评**：C/C++程序员们，你们的“祖传手艺”终于要被硬件物理阉割了。以后写代码崩了，锅没法甩给操作系统，得怪“芯片没给你权限”。这才是安全该有的样子，而不是天天打补丁。\n- **🔗 传送门**：https://cheriot.org/silicon/2026/03/04/cheriot-first-silicon.html\n\n---\n\n### 🗣️ 今日顶男金句\n> “不要用战术上的‘AI赋能’，去掩盖战略上的‘脑子短路’。真正的硬核，是搞清楚技术什么时候该闭嘴。”",
+    "briefing_items": [
+      {
+        "title": "顶级AI创业公司集体“关灯搞研发”",
+        "source": "Hacker News / Science.org",
+        "summary": "Science杂志撰文指出，目前最顶尖的几家AI初创公司（懂的都懂）几乎不再发表任何研究成果。他们不再像OpenAI早期那样用论文刷存在感，而是把一切都锁在保险柜里，这导致整个学术界和开源社区的信息流严重枯竭。",
+        "commentary": "当AI公司开始像军火商一样搞“黑科技”，说明这行已经从“学术竞赛”彻底变成了“资源绞肉机”。没论文看？别急，等他们产品发布时，你连尾灯都看不见。",
+        "url": ""
+      },
+      {
+        "title": "全球决策正在被“AI狂热”吞噬",
+        "source": "Lobste.rs",
+        "summary": "一篇长文痛斥当前“万物皆可AI”的疯狂现状：企业高管和政府在完全不懂技术边界的情况下，强行用AI解决方案替代人类判断，导致决策质量断崖式下跌。这不是技术革命，是一场集体智商税。",
+        "commentary": "当你的CEO觉得“上AI”比“动脑子”更简单时，公司离倒闭就不远了。建议把这篇文章打印出来，贴在每一个张口闭口“AI赋能”的PPT旁边。",
+        "url": ""
+      },
+      {
+        "title": "首个CHERIoT安全芯片流片成功！",
+        "source": "Lobste.rs",
+        "summary": "CHERIoT项目宣布其基于CHERI（能力硬件增强RISC指令）架构的首个硅片已经成功流片并点亮。这玩意儿能从硬件层面彻底解决内存安全问题，让缓冲区溢出、UAF等经典漏洞直接物理消失。这是嵌入式/IoT领域的一次核弹级突破。",
+        "commentary": "C/C++程序员们，你们的“祖传手艺”终于要被硬件物理阉割了。以后写代码崩了，锅没法甩给操作系统，得怪“芯片没给你权限”。这才是安全该有的样子，而不是天天打补丁。",
+        "url": ""
+      },
+      {
+        "quote": "“不要用战术上的‘AI赋能’，去掩盖战略上的‘脑子短路’。真正的硬核，是搞清楚技术什么时候该闭嘴。”"
+      }
+    ],
+    "candidates": [
+      {
+        "id": "hn:49103285",
+        "title": "AI's top startups are barely publishing their research",
+        "summary": "",
+        "url": "https://www.science.org/content/article/ai-s-top-startups-are-barely-publishing-their-research",
+        "source": "Hacker News",
+        "score": 558,
+        "comments": 290
+      },
+      {
+        "id": "hn:49102774",
+        "title": "The coolest use for the Vision Pro",
+        "summary": "",
+        "url": "https://christianselig.com/2026/07/vision-pro-house/",
+        "source": "Hacker News",
+        "score": 764,
+        "comments": 289
+      },
+      {
+        "id": "lob:ba2yfy",
+        "title": "C++ float-to-int conversion can be undefined behavior",
+        "summary": "",
+        "url": "https://kttnr.net/blog/cpp-float-to-int-conversion-undefined-behavior/",
+        "source": "Lobste.rs",
+        "score": 37,
+        "comments": 12,
+        "tags": [
+          "c++"
+        ]
+      },
+      {
+        "id": "lob:xi6azw",
+        "title": "AI Mania Is Eviscerating Global Decision-Making",
+        "summary": "",
+        "url": "https://hermit-tech.com/blog/ai-mania-is-eviscerating-global-decisionmaking",
+        "source": "Lobste.rs",
+        "score": 103,
+        "comments": 44,
+        "tags": [
+          "vibecoding"
+        ]
+      },
+      {
+        "id": "lob:w1va9j",
+        "title": "It doesn’t matter whether “Matz is nice”",
+        "summary": "",
+        "url": "https://po-ru.com/2026/07/29/it-doesnt-matter-whether-matz-is-nice",
+        "source": "Lobste.rs",
+        "score": 231,
+        "comments": 70,
+        "tags": [
+          "culture",
+          "ruby"
+        ]
+      },
+      {
+        "id": "hn:49109440",
+        "title": "'VPNs are lawful technical tools,' says EU Court in landmark copyright ruling",
+        "summary": "",
+        "url": "https://remysharp.com/links/2026-07-23-35890312",
+        "source": "Hacker News",
+        "score": 153,
+        "comments": 50
+      },
+      {
+        "id": "lob:mbk56v",
+        "title": "What side projects have you enjoyed the most?",
+        "summary": "<p>In the spirit of <a href=\"https://blog.jsbarretto.com/post/software-is-joy\" rel=\"ugc\">https://blog.jsbarretto.com/post/software-is-joy</a>, what side projects have you enjoyed working on the most?</p>\n",
+        "url": "https://lobste.rs/s/mbk56v/what_side_projects_have_you_enjoyed_most",
+        "source": "Lobste.rs",
+        "score": 27,
+        "comments": 40,
+        "tags": [
+          "ask",
+          "programming"
+        ]
+      },
+      {
+        "id": "lob:ozules",
+        "title": "Overengineered calculator: Zig + QBE",
+        "summary": "",
+        "url": "https://tomekw.com/overengineered-calculator-zig-qbe/",
+        "source": "Lobste.rs",
+        "score": 41,
+        "comments": 8,
+        "tags": [
+          "compilers",
+          "zig"
+        ]
+      },
+      {
+        "id": "rss:b04f5a0b97",
+        "title": "Critical Rails Flaw Could Let Unauthenticated Attackers Read Server Files via Image Uploads",
+        "summary": "Ruby on Rails has released fixes for a critical Active Storage vulnerability that could let unauthenticated attackers read arbitrary files from application servers through crafted image uploads.\n\nTracked as CVE-2026-66066 (CVSS score: 9.5), the flaw can expose the Rails process environment and secre",
+        "url": "https://thehackernews.com/2026/07/critical-rails-flaw-could-let.html",
+        "source": "Tech RSS",
+        "score": 0
+      },
+      {
+        "id": "lob:r9zgni",
+        "title": "A field day for Gleam’s language server | Gleam v.1.18.0 release",
+        "summary": "",
+        "url": "https://gleam.run/news/a-field-day-for-gleams-language-server/",
+        "source": "Lobste.rs",
+        "score": 47,
+        "comments": 0,
+        "tags": [
+          "gleam",
+          "release"
+        ]
+      },
+      {
+        "id": "hn:49107246",
+        "title": "Ron Gilbert started production on Thimbleweed Park 2",
+        "summary": "",
+        "url": "https://www.grumpygamer.com/twp2_announce/",
+        "source": "Hacker News",
+        "score": 116,
+        "comments": 41
+      },
+      {
+        "id": "lob:l3sj7g",
+        "title": "First CHERIoT Silicon",
+        "summary": "",
+        "url": "https://cheriot.org/silicon/2026/03/04/cheriot-first-silicon.html",
+        "source": "Lobste.rs",
+        "score": 42,
+        "comments": 6,
+        "tags": [
+          "hardware"
+        ]
+      },
+      {
+        "id": "hn:49107749",
+        "title": "Agent-Manager: A Tmux TUI for Running Claude Code, Codex and OpenCode",
+        "summary": "",
+        "url": "https://github.com/YoanWai/agent-manager",
+        "source": "Hacker News",
+        "score": 55,
+        "comments": 40
+      },
+      {
+        "id": "lob:g9bkak",
+        "title": "Some notes about Anthropic’s new results",
+        "summary": "",
+        "url": "https://blog.cryptographyengineering.com/2026/07/29/some-notes-about-anthropics-new-results/",
+        "source": "Lobste.rs",
+        "score": 27,
+        "comments": 9,
+        "tags": [
+          "cryptography",
+          "vibecoding"
+        ]
+      },
+      {
+        "id": "lob:5z7akz",
+        "title": "GNU Hyperbole Implicit Buttons: Build your Hyperverse",
+        "summary": "",
+        "url": "https://www.chiply.dev/post-hyperbole-implicit-buttons",
+        "source": "Lobste.rs",
+        "score": 22,
+        "comments": 11,
+        "tags": [
+          "emacs"
+        ]
+      },
+      {
+        "id": "arxiv:2607.27191v1",
+        "title": "Can AI agents conduct open-ended AI research? Early evidence from two case studies",
+        "summary": "Forecasts of explosive AI progress hinge on AI agents automating AI research. But evidence on whether agents can carry out open-ended AI research is thin. Current evaluations either test agents on narrow, verifiable tasks, which excludes open-ended research, or submit AI-generated papers to blind pe",
+        "url": "https://arxiv.org/abs/2607.27191v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.AI",
+          "cs.CY",
+          "cs.LG"
+        ],
+        "arxiv_id": "2607.27191v1"
+      },
+      {
+        "id": "arxiv:2607.27155v1",
+        "title": "OmegaUse-OfficeVal: Benchmarking LLM Agents on Long-Horizon Office-Suite Tasks with Economic Grounding",
+        "summary": "Large language model (LLM) agents are increasingly expected to assist users in completing tasks. However, existing benchmarks provide limited support for evaluating whether agents can carry out office-suite workflows at a reasonable cost. We introduce OmegaUse-OfficeVal, a benchmark for evaluating L",
+        "url": "https://arxiv.org/abs/2607.27155v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.AI",
+          "cs.CL",
+          "cs.HC"
+        ],
+        "arxiv_id": "2607.27155v1"
+      },
+      {
+        "id": "rss:0dc9caa0be",
+        "title": "Cisco FMC Zero-Day Actively Exploited, Static Credentials Could Expose Sensitive Data",
+        "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added a newly disclosed security flaw impacting Cisco Secure Firewall Management Center (FMC) Software to its Known Exploited Vulnerabilities (KEV) catalog, following reports of zero-day exploitation.\n\nThe vulnerability, a",
+        "url": "https://thehackernews.com/2026/07/cisco-fmc-zero-day-actively-exploited.html",
+        "source": "Tech RSS",
+        "score": 0
+      },
+      {
+        "id": "lob:1efcss",
+        "title": "Setting timers in simple games (feat. the frame rule)",
+        "summary": "",
+        "url": "https://lynn.github.io/blog/pico-timers/",
+        "source": "Lobste.rs",
+        "score": 20,
+        "comments": 7,
+        "tags": [
+          "games"
+        ]
+      },
+      {
+        "id": "hn:49108048",
+        "title": "Gpiozero Flow",
+        "summary": "",
+        "url": "https://bennuttall.com/blog/2026/07/gpiozero-flow/",
+        "source": "Hacker News",
+        "score": 89,
+        "comments": 27
+      }
+    ],
+    "ai_curated": true
+  },
+  "fear_greed": {
+    "value": 28,
+    "classification": "Fear",
+    "timestamp": "2026-07-30 00:00:00"
+  }
+}

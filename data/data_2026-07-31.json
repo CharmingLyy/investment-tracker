@@ -1,0 +1,831 @@
+{
+  "update_time": "2026-07-31 14:23:40",
+  "stocks": {
+    "a_stocks": [
+      {
+        "market": "A股",
+        "code": "002050",
+        "name": "三花智控",
+        "symbol": "sz.002050",
+        "industry": null,
+        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
+        "price": 37.53,
+        "open": 36.51,
+        "high": 38.0,
+        "low": 36.45,
+        "change_pct": 5.84,
+        "volume": 109141111,
+        "turnover": 40.69,
+        "market_cap": null,
+        "pe": 38.64,
+        "cash_flow": 50.92,
+        "macd": -2.2428,
+        "macd_signal": -2.1271,
+        "macd_histogram": -0.2314,
+        "rsi": 42.7,
+        "ma": {
+          "MA5": 36.12,
+          "MA10": 36.54,
+          "MA20": 39.49,
+          "MA60": 44.72
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": null,
+        "price": 6.9,
+        "open": 6.88,
+        "high": 6.94,
+        "low": 6.87,
+        "change_pct": 0.29,
+        "volume": 78933920,
+        "turnover": 5.45,
+        "market_cap": null,
+        "pe": 82.84,
+        "cash_flow": 28.61,
+        "macd": -0.0937,
+        "macd_signal": -0.1784,
+        "macd_histogram": 0.1694,
+        "rsi": 51.44,
+        "ma": {
+          "MA5": 6.83,
+          "MA10": 6.7,
+          "MA20": 6.67,
+          "MA60": 7.48
+        },
+        "main_net_flow": null
+      }
+    ],
+    "hk_stocks": [
+      {
+        "market": "港股",
+        "code": "01810",
+        "name": "小米集团-W",
+        "symbol": "01810",
+        "industry": "Consumer Electronics",
+        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
+        "price": 28.78,
+        "open": 29.3,
+        "high": 29.5,
+        "low": 27.76,
+        "change_pct": -7.28,
+        "volume": 414222966,
+        "turnover": null,
+        "market_cap": 7394.61,
+        "pe": 15.9,
+        "cash_flow": 77.67,
+        "macd": 1.1609,
+        "macd_signal": 0.6887,
+        "macd_histogram": 0.9444,
+        "rsi": 56.49,
+        "ma": {
+          "MA5": 29.93,
+          "MA10": 28.53,
+          "MA20": 27.0,
+          "MA60": 27.28
+        },
+        "main_net_flow": null
+      }
+    ],
+    "us_stocks": [
+      {
+        "market": "美股",
+        "code": "NVDA",
+        "name": "NVIDIA",
+        "symbol": "NVDA",
+        "industry": "Semiconductors",
+        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
+        "price": 197.04,
+        "open": 198.44,
+        "high": 200.09,
+        "low": 194.95,
+        "change_pct": 1.03,
+        "volume": 28398025,
+        "turnover": null,
+        "market_cap": 47725.03,
+        "pe": 30.17,
+        "cash_flow": 463.36,
+        "macd": -2.2403,
+        "macd_signal": -1.0378,
+        "macd_histogram": -2.4049,
+        "rsi": 45.03,
+        "ma": {
+          "MA5": 195.12,
+          "MA10": 201.38,
+          "MA20": 203.11,
+          "MA60": 208.41
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "GOOG",
+        "name": "Alphabet (Google)",
+        "symbol": "GOOG",
+        "industry": "Internet Content & Information",
+        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
+        "price": 346.45,
+        "open": 340.08,
+        "high": 347.29,
+        "low": 339.17,
+        "change_pct": 3.83,
+        "volume": 5850430,
+        "turnover": null,
+        "market_cap": 42370.61,
+        "pe": 17.39,
+        "cash_flow": 226.65,
+        "macd": -6.3603,
+        "macd_signal": -6.2728,
+        "macd_histogram": -0.175,
+        "rsi": 50.41,
+        "ma": {
+          "MA5": 335.01,
+          "MA10": 335.2,
+          "MA20": 346.43,
+          "MA60": 362.43
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "CRCL",
+        "name": "Circle",
+        "symbol": "CRCL",
+        "industry": "Capital Markets",
+        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
+        "price": 60.23,
+        "open": 62.72,
+        "high": 63.51,
+        "low": 59.46,
+        "change_pct": -6.24,
+        "volume": 4171247,
+        "turnover": null,
+        "market_cap": 160.99,
+        "pe": 30.77,
+        "cash_flow": 1.41,
+        "macd": -3.7907,
+        "macd_signal": -4.5506,
+        "macd_histogram": 1.5199,
+        "rsi": 40.91,
+        "ma": {
+          "MA5": 63.16,
+          "MA10": 64.31,
+          "MA20": 64.15,
+          "MA60": 84.49
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "MP",
+        "name": "MP Materials",
+        "symbol": "MP",
+        "industry": "Other Industrial Metals & Mining",
+        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
+        "price": 41.35,
+        "open": 42.24,
+        "high": 42.5,
+        "low": 40.72,
+        "change_pct": -0.74,
+        "volume": 1298034,
+        "turnover": null,
+        "market_cap": 73.61,
+        "pe": 43.49,
+        "cash_flow": 1.75,
+        "macd": -4.0378,
+        "macd_signal": -3.7867,
+        "macd_histogram": -0.5021,
+        "rsi": 35.84,
+        "ma": {
+          "MA5": 41.1,
+          "MA10": 42.91,
+          "MA20": 46.5,
+          "MA60": 56.18
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "PLTR",
+        "name": "Palantir",
+        "symbol": "PLTR",
+        "industry": "Software - Infrastructure",
+        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
+        "price": 120.48,
+        "open": 122.34,
+        "high": 123.32,
+        "low": 119.88,
+        "change_pct": -1.46,
+        "volume": 6696980,
+        "turnover": null,
+        "market_cap": 2888.64,
+        "pe": 135.39,
+        "cash_flow": 17.53,
+        "macd": -1.8302,
+        "macd_signal": -0.9728,
+        "macd_histogram": -1.7148,
+        "rsi": 41.59,
+        "ma": {
+          "MA5": 124.16,
+          "MA10": 125.92,
+          "MA20": 128.92,
+          "MA60": 131.38
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "NOW",
+        "name": "ServiceNow",
+        "symbol": "NOW",
+        "industry": "Software - Application",
+        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
+        "price": 109.04,
+        "open": 108.5,
+        "high": 112.39,
+        "low": 106.67,
+        "change_pct": -0.93,
+        "volume": 6021812,
+        "turnover": null,
+        "market_cap": 1127.37,
+        "pe": 68.15,
+        "cash_flow": 51.49,
+        "macd": 1.3953,
+        "macd_signal": 0.4554,
+        "macd_histogram": 1.8799,
+        "rsi": 54.37,
+        "ma": {
+          "MA5": 110.21,
+          "MA10": 104.4,
+          "MA20": 105.75,
+          "MA60": 103.52
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "DDOG",
+        "name": "Datadog",
+        "symbol": "DDOG",
+        "industry": "Software - Application",
+        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
+        "price": 267.44,
+        "open": 270.0,
+        "high": 278.76,
+        "low": 265.69,
+        "change_pct": -0.42,
+        "volume": 1178099,
+        "turnover": null,
+        "market_cap": 953.64,
+        "pe": 669.76,
+        "cash_flow": 9.37,
+        "macd": 5.6803,
+        "macd_signal": 6.0268,
+        "macd_histogram": -0.693,
+        "rsi": 60.96,
+        "ma": {
+          "MA5": 260.59,
+          "MA10": 255.8,
+          "MA20": 258.71,
+          "MA60": 236.97
+        },
+        "main_net_flow": null
+      }
+    ],
+    "crypto": [
+      {
+        "market": "加密货币",
+        "code": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "industry": "Smart Contract Platform",
+        "price": 62554,
+        "open": null,
+        "high": 65305,
+        "low": 63198,
+        "change_pct": -2.5,
+        "volume": 27076345064,
+        "turnover": null,
+        "market_cap": 12547.99,
+        "market_cap_rank": 1,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": 28.8486,
+        "macd_signal": 248.7858,
+        "macd_histogram": -439.8744,
+        "rsi": 42.64,
+        "ma": {
+          "MA5": 63877.12,
+          "MA10": 64543.2,
+          "MA20": 64364.9,
+          "MA60": 63417.46
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 20063734.0,
+          "total_supply": 20063734.0,
+          "circ_ratio": 100.0,
+          "price_change_7d": -2.34935,
+          "price_change_30d": 5.36276,
+          "ath_pct": -50.39,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      },
+      {
+        "market": "加密货币",
+        "code": "ethereum",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "industry": "Smart Contract Platform",
+        "price": 1866.71,
+        "open": null,
+        "high": 1933.62,
+        "low": 1864.19,
+        "change_pct": -3.1,
+        "volume": 8056889815,
+        "turnover": null,
+        "market_cap": 2251.73,
+        "market_cap_rank": 2,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": 34.5332,
+        "macd_signal": 38.74,
+        "macd_histogram": -8.4136,
+        "rsi": 51.7,
+        "ma": {
+          "MA5": 1907.89,
+          "MA10": 1901.38,
+          "MA20": 1876.35,
+          "MA60": 1760.94
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 120682333.68853992,
+          "total_supply": 120682333.6885399,
+          "circ_ratio": 100.0,
+          "price_change_7d": 0.55218,
+          "price_change_30d": 17.08041,
+          "ath_pct": -62.26,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      }
+    ]
+  },
+  "news": [
+    {
+      "id": "35b871d31c",
+      "title": "[播客]独家实拍：我那永远跪着的母亲(11/07 22:10)",
+      "summary": "独家实拍：我那永远跪着的母亲",
+      "link": "http://go.rss.sina.com.cn/redirect.php?url=http://you.video.sina.com.cn/b/16972162-1239095354.html",
+      "source": "rss.sina.com.cn",
+      "published": ""
+    },
+    {
+      "id": "befa6ec648",
+      "title": "My ex-husband’s sister died — so why is Fidelity asking me for her death certificate?",
+      "summary": "“Part of me jokes that paying for a death certificate would be like buying a lottery ticket.”",
+      "link": "https://www.marketwatch.com/story/its-like-buying-a-lottery-ticket-fidelity-asked-for-my-former-sister-in-laws-death-certificate-does-this-mean-im-due-a-windfall-2ebdcd69?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 31 Jul 2026 14:15:00 GMT"
+    },
+    {
+      "id": "66ca2798e9",
+      "title": "Here’s what’s worth streaming in August 2026 on Netflix, Hulu, HBO Max and more",
+      "summary": "Turn off your brain and enjoy new seasons of Apple’s ‘Ted Lasso,’ Amazon’s ‘Reacher,’ Netflix’s ‘Outer Banks’ and much more",
+      "link": "https://www.marketwatch.com/story/heres-whats-worth-streaming-in-august-2026-on-netflix-hulu-hbo-max-and-more-21b78a08?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 31 Jul 2026 14:00:00 GMT"
+    },
+    {
+      "id": "35453a3e28",
+      "title": "Implosion of Situational Awareness hedge fund has Wall Street betting the bottom is in for the AI trade",
+      "summary": "One of the wildest months in recent memory for the U.S. stock market is ending on yet another remarkable note: A highflying hedge fund run by an AI wunderkind in his mid-20s has apparently just been c",
+      "link": "https://www.marketwatch.com/story/implosion-of-situational-awareness-has-wall-street-betting-the-bottom-is-in-for-the-ai-trade-05d9f346?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 31 Jul 2026 14:00:00 GMT"
+    },
+    {
+      "id": "47b13388c6",
+      "title": "Novo Nordisk’s stock slumps after failed trial — adding to the company’s woes",
+      "summary": "The Danish healthcare company’s stock slumped on Friday after it announced the Phase 3 trial failure.",
+      "link": "https://www.marketwatch.com/story/novo-nordisks-stock-slumps-after-failed-trial-adding-to-the-companys-woes-202419cd?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 31 Jul 2026 13:54:00 GMT"
+    },
+    {
+      "id": "5497a040ff",
+      "title": "Apple heads for $460 billion wipeout with its stock seeing worst post-earnings drop in 13 years",
+      "summary": "Investors are reacting negatively to weak guidance brought on by supply-chain pressures.",
+      "link": "https://www.marketwatch.com/story/apple-heads-for-460-billion-wipeout-with-its-stock-seeing-worst-post-earnings-drop-in-13-years-a438d16c?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 31 Jul 2026 13:51:00 GMT"
+    },
+    {
+      "id": "673a3ab90e",
+      "title": "Why 3 Fed dissenters say waiting to raise interest rates could make inflation harder to tame",
+      "summary": "The trio of dissenters at the Federal Reserve who backed an increase in interest rates this week contend high inflation could get entrenched in the economy unless the central bank acts decisively to g",
+      "link": "https://www.marketwatch.com/story/fed-dissenters-speak-why-they-backed-higher-interest-rates-e0306129?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 31 Jul 2026 13:48:00 GMT"
+    },
+    {
+      "id": "8afa3607b3",
+      "title": "Is spending thousands of dollars on an AI certification worth it? Here’s how to decide.",
+      "summary": "Job seekers are pursuing AI certifications in the hopes of standing out — and maybe getting paid more.",
+      "link": "https://www.marketwatch.com/story/is-spending-thousands-of-dollars-on-an-ai-certification-worth-it-heres-how-to-decide-f73e49c6?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 31 Jul 2026 13:45:00 GMT"
+    },
+    {
+      "id": "bf072e484e",
+      "title": "Why fresh volatility means a ‘valuation opportunity’ is opening up in U.S. stocks",
+      "summary": "It’s normal for equities to have a tough time around Federal Reserve transitions, says RBC.",
+      "link": "https://www.marketwatch.com/story/why-fresh-volatility-means-a-valuation-opportunity-is-opening-up-in-u-s-stocks-9dbef149?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 31 Jul 2026 13:31:00 GMT"
+    },
+    {
+      "id": "b6fe092e63",
+      "title": "If Social Security’s funding crisis is the elephant in the room, this is the mouse everyone has overlooked. You have been warned.",
+      "summary": "“Delaying Social Security until 70 results in an increased monthly payment — and that comes with proportionally higher cost-of-living adjustments.”",
+      "link": "https://www.marketwatch.com/story/if-social-securitys-funding-crisis-is-the-elephant-in-the-room-this-is-the-mouse-everyone-has-overlooked-you-have-been-warned-b95c450d?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 31 Jul 2026 13:16:00 GMT"
+    },
+    {
+      "id": "24224cb33f",
+      "title": "Get ready to buy the dip in tech stocks. Why the recent selling won’t break the bull market.",
+      "summary": "The stock-market selloff in July looks more like a stress test than a breaking point.",
+      "link": "https://www.marketwatch.com/story/get-ready-to-buy-the-dip-in-tech-stocks-why-the-recent-selling-wont-break-the-bull-market-900699f5?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 31 Jul 2026 13:09:00 GMT"
+    },
+    {
+      "id": "f722390812",
+      "title": "Greenland Mines says interest in Greenland has grown after Trump’s comments",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/greenland-mines-says-interest-in-greenland-has-grown-after-trumps-comments-4828677",
+      "source": "www.investing.com",
+      "published": "2026-07-31 14:08:11"
+    },
+    {
+      "id": "8b771c69fd",
+      "title": "CIR 1H 2026 slides: KOS acquisition lifts profit 28%, buyback resumed",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/cir-1h-2026-slides-kos-acquisition-lifts-profit-28-buyback-resumed-93CH-4828676",
+      "source": "www.investing.com",
+      "published": "2026-07-31 14:07:50"
+    },
+    {
+      "id": "497c9f9bcd",
+      "title": "Marriott earnings in focus: Can fee growth offset RevPAR slowdown?",
+      "summary": "",
+      "link": "https://www.investing.com/news/earnings/marriott-earnings-in-focus-can-fee-growth-offset-revpar-slowdown-93CH-4828675",
+      "source": "www.investing.com",
+      "published": "2026-07-31 14:07:47"
+    },
+    {
+      "id": "80a86a2458",
+      "title": "Yapı Kredi 1H26 slides: margin strength offsets Q2 volatility impact",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/yap-kredi-1h26-slides-margin-strength-offsets-q2-volatility-impact-93CH-4828674",
+      "source": "www.investing.com",
+      "published": "2026-07-31 14:07:33"
+    },
+    {
+      "id": "08ff055d4e",
+      "title": "Starwood Property Trust stock hits 52-week low at 15.98 USD",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/starwood-property-trust-stock-hits-52week-low-at-1598-usd-93CH-4828673",
+      "source": "www.investing.com",
+      "published": "2026-07-31 14:07:19"
+    },
+    {
+      "id": "8a4004083a",
+      "title": "First Business Bank Q2 2026 slides: record earnings, margin expansion",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/first-business-bank-q2-2026-slides-record-earnings-margin-expansion-93CH-4828672",
+      "source": "www.investing.com",
+      "published": "2026-07-31 14:06:53"
+    },
+    {
+      "id": "1c2583b9fb",
+      "title": "Berkshire Hathaway earnings set to test Abel’s capital allocation",
+      "summary": "",
+      "link": "https://www.investing.com/news/earnings/berkshire-hathaway-earnings-set-to-test-abels-capital-allocation-93CH-4828671",
+      "source": "www.investing.com",
+      "published": "2026-07-31 14:06:50"
+    },
+    {
+      "id": "932f7593a9",
+      "title": "Nasdaq leads Wall Street gains as Amazon rally offsets Apple decline",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/nasdaq-100-leads-us-futures-higher-as-amazon-surge-offsets-apple-decline-4827431",
+      "source": "www.investing.com",
+      "published": "2026-07-31 14:06:25"
+    },
+    {
+      "id": "c20eee1ece",
+      "title": "Western Union stock hits 52-week low at 6.86 USD",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/western-union-stock-hits-52week-low-at-686-usd-93CH-4828669",
+      "source": "www.investing.com",
+      "published": "2026-07-31 14:06:00"
+    },
+    {
+      "id": "4bb99760c3",
+      "title": "Bessent praises Bank of Japan’s commitment to stability",
+      "summary": "",
+      "link": "https://www.investing.com/news/forex-news/bessent-praises-bank-of-japans-commitment-to-stability-93CH-4828665",
+      "source": "www.investing.com",
+      "published": "2026-07-31 14:05:58"
+    }
+  ],
+  "briefing": {
+    "date": "2026-07-31",
+    "update_time": "2026-07-31 14:11:43",
+    "candidate_count": 20,
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-07-31\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 GitHub 正式上线 Stacked PRs 公共预览 (来源: GitHub Blog)\n- **核心干货**：GitHub 终于把那些用 `gh` CLI 和第三方工具折腾了几年的\"栈式拉取请求\"工作流变成了原生功能。它允许你将一个大型 PR 拆分成多个相互依赖的小 PR，按顺序合并，大幅降低 Code Review 的认知负担，让\"小步快跑\"在大型特性分支上真正落地。\n- **毒舌/硬核点评**：GitHub 这波操作，等于把\"线性历史强迫症\"和\"巨型 PR 恐惧症\"同时给治了。恭喜，你的 Git 技巧树终于可以少点几个没用的分支管理技能了。\n- **🔗 传送门**：[点击直达原链接](https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/)\n\n---\n\n### 2. 📌 Google 借助 AI 修复 Chrome 漏洞数量创两年新高 (来源: Google Blog)\n- **核心干货**：Google 声称在 6 月份利用 AI 修复的 Chrome 漏洞数量，比过去两年加起来还多。这不是简单的自动补丁，而是 AI 辅助进行代码审计、漏洞模式识别和补丁生成，将安全修复从\"人工排雷\"推向\"AI 扫雷\"的自动化时代。\n- **毒舌/硬核点评**：以前是\"写代码一时爽，修 Bug 火葬场\"，现在 AI 直接帮你把火葬场改成了\"全自动垃圾回收站\"。建议 Chrome 团队给 AI 发个\"本月最佳程序员\"奖，毕竟它比某些人类同事效率高多了。\n- **🔗 传送门**：[点击直达原链接](https://blog.google/security/chrome-stronger-with-every-update/)\n\n---\n\n### 3. 📌 Gemini Robotics 2 发布：为机器人注入\"全身智能\" (来源: DeepMind Blog)\n- **核心干货**：DeepMind 推出了 Gemini Robotics 2，其核心突破在于 \"whole body intelligence\"（全身智能）。它不再是简单的\"视觉-语言-动作\"模型，而是让机器人能够理解并协调整个身体的运动，包括在动态环境中保持平衡、进行精细操作，甚至处理身体被触碰时的反应，让机器人更像\"人\"而非\"机械臂\"。\n- **毒舌/硬核点评**：以前机器人是\"四肢发达，头脑简单\"，现在 Gemini Robotics 2 终于让它们\"身心协调\"了。这离《西部世界》又近了一步，希望它们学会走路之前，先学会别把咖啡洒在人类键盘上。\n- **🔗 传送门**：[点击直达原链接](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/)\n\n---\n\n### 🗣️ 今日顶男金句\n\"别光顾着给 AI 打工，要想着怎么让 AI 给你打工——毕竟，连 Chrome 的 Bug 都是 AI 在修了，你还在手动 Deploy 吗？\"",
+    "briefing_items": [
+      {
+        "title": "GitHub 正式上线 Stacked PRs 公共预览",
+        "source": "GitHub Blog",
+        "summary": "GitHub 终于把那些用 `gh` CLI 和第三方工具折腾了几年的\"栈式拉取请求\"工作流变成了原生功能。它允许你将一个大型 PR 拆分成多个相互依赖的小 PR，按顺序合并，大幅降低 Code Review 的认知负担，让\"小步快跑\"在大型特性分支上真正落地。",
+        "commentary": "GitHub 这波操作，等于把\"线性历史强迫症\"和\"巨型 PR 恐惧症\"同时给治了。恭喜，你的 Git 技巧树终于可以少点几个没用的分支管理技能了。",
+        "url": "https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/"
+      },
+      {
+        "title": "Google 借助 AI 修复 Chrome 漏洞数量创两年新高",
+        "source": "Google Blog",
+        "summary": "Google 声称在 6 月份利用 AI 修复的 Chrome 漏洞数量，比过去两年加起来还多。这不是简单的自动补丁，而是 AI 辅助进行代码审计、漏洞模式识别和补丁生成，将安全修复从\"人工排雷\"推向\"AI 扫雷\"的自动化时代。",
+        "commentary": "以前是\"写代码一时爽，修 Bug 火葬场\"，现在 AI 直接帮你把火葬场改成了\"全自动垃圾回收站\"。建议 Chrome 团队给 AI 发个\"本月最佳程序员\"奖，毕竟它比某些人类同事效率高多了。",
+        "url": "https://blog.google/security/chrome-stronger-with-every-update/"
+      },
+      {
+        "title": "Gemini Robotics 2 发布：为机器人注入\"全身智能\"",
+        "source": "DeepMind Blog",
+        "summary": "DeepMind 推出了 Gemini Robotics 2，其核心突破在于 \"whole body intelligence\"（全身智能）。它不再是简单的\"视觉-语言-动作\"模型，而是让机器人能够理解并协调整个身体的运动，包括在动态环境中保持平衡、进行精细操作，甚至处理身体被触碰时的反应，让机器人更像\"人\"而非\"机械臂\"。",
+        "commentary": "以前机器人是\"四肢发达，头脑简单\"，现在 Gemini Robotics 2 终于让它们\"身心协调\"了。这离《西部世界》又近了一步，希望它们学会走路之前，先学会别把咖啡洒在人类键盘上。",
+        "url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/"
+      }
+    ],
+    "candidates": [
+      {
+        "id": "hn:49120299",
+        "title": "DeepSeek V4 Flash 0731 Intelligence, Performance and Price Analysis",
+        "summary": "",
+        "url": "https://artificialanalysis.ai/models/deepseek-v4-flash-ga",
+        "source": "Hacker News",
+        "score": 222,
+        "comments": 90
+      },
+      {
+        "id": "hn:49119559",
+        "title": "DeepSeek-V4-Flash Update",
+        "summary": "",
+        "url": "https://api-docs.deepseek.com/updates/",
+        "source": "Hacker News",
+        "score": 440,
+        "comments": 225
+      },
+      {
+        "id": "hn:49118781",
+        "title": "The session you cannot take with you",
+        "summary": "",
+        "url": "https://earendil.com/posts/session-portability/",
+        "source": "Hacker News",
+        "score": 558,
+        "comments": 151
+      },
+      {
+        "id": "hn:49120097",
+        "title": "Google fixed more Chrome bugs in June than over the past two years, thanks to AI",
+        "summary": "",
+        "url": "https://blog.google/security/chrome-stronger-with-every-update/",
+        "source": "Hacker News",
+        "score": 240,
+        "comments": 228
+      },
+      {
+        "id": "hn:49112232",
+        "title": "Stacked PRs are now live on GitHub",
+        "summary": "",
+        "url": "https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/",
+        "source": "Hacker News",
+        "score": 722,
+        "comments": 248
+      },
+      {
+        "id": "hn:49111237",
+        "title": "Gemini Robotics 2 brings whole body intelligence to robots",
+        "summary": "",
+        "url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
+        "source": "Hacker News",
+        "score": 589,
+        "comments": 477
+      },
+      {
+        "id": "hn:49116721",
+        "title": "I flagged two research papers for fake authors and both were accepted as orals",
+        "summary": "",
+        "url": "https://geospatialml.com/posts/reviewing-ai-slop/",
+        "source": "Hacker News",
+        "score": 248,
+        "comments": 113
+      },
+      {
+        "id": "lob:ba2yfy",
+        "title": "C++ float-to-int conversion can be undefined behavior",
+        "summary": "",
+        "url": "https://kttnr.net/blog/cpp-float-to-int-conversion-undefined-behavior/",
+        "source": "Lobste.rs",
+        "score": 75,
+        "comments": 37,
+        "tags": [
+          "c++"
+        ]
+      },
+      {
+        "id": "hn:49119063",
+        "title": "JEP 401: Value Objects (Preview) merged to OpenJDK master",
+        "summary": "",
+        "url": "https://github.com/openjdk/jdk/pull/31120",
+        "source": "Hacker News",
+        "score": 176,
+        "comments": 96
+      },
+      {
+        "id": "lob:cpyuub",
+        "title": "Progress toward compiling Linux with gccrs",
+        "summary": "",
+        "url": "https://lwn.net/SubscriberLink/1083202/f1ba926cd57ac5c5/",
+        "source": "Lobste.rs",
+        "score": 38,
+        "comments": 12,
+        "tags": [
+          "linux",
+          "rust"
+        ]
+      },
+      {
+        "id": "hn:49121980",
+        "title": "The End of an Era",
+        "summary": "",
+        "url": "https://hughhowey.com/the-end-of-an-era/",
+        "source": "Hacker News",
+        "score": 188,
+        "comments": 197
+      },
+      {
+        "id": "lob:ycsivx",
+        "title": "How to speed up the Rust compiler in July 2026",
+        "summary": "",
+        "url": "https://nnethercote.github.io/2026/07/31/how-to-speed-up-the-rust-compiler-in-july-2026.html",
+        "source": "Lobste.rs",
+        "score": 47,
+        "comments": 3,
+        "tags": [
+          "compilers",
+          "performance",
+          "rust"
+        ]
+      },
+      {
+        "id": "lob:zk0qqe",
+        "title": "deskhop: Fast Desktop Switching Device",
+        "summary": "",
+        "url": "https://github.com/hrvach/deskhop",
+        "source": "Lobste.rs",
+        "score": 68,
+        "comments": 15,
+        "tags": [
+          "hardware"
+        ]
+      },
+      {
+        "id": "hn:49119425",
+        "title": "Show HN: Gander, an Android file viewer that asks for no permissions at all",
+        "summary": "Hi HN,<p>I built an Android file viewer that opens PDF, Word, Excel, PowerPoint, images, video, audio, Markdown and code, and asks for no permissions at all.<p>I have always been uneasy about opening files people send me. On Android you either install a 400 MB office suite and sign in or use a small",
+        "url": "https://github.com/mokshablr/gander",
+        "source": "Hacker News",
+        "score": 126,
+        "comments": 58
+      },
+      {
+        "id": "arxiv:2607.28618v1",
+        "title": "AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis",
+        "summary": "Chemistry literature synthesis often requires assembling specific findings scattered across many publications, yet existing literature-search systems primarily return ranked document lists. As a result, scientists and AI agents need to locate relevant information, verify their provenance, and assemb",
+        "url": "https://arxiv.org/abs/2607.28618v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.CL",
+          "cs.AI",
+          "cs.IR",
+          "cs.LG"
+        ],
+        "arxiv_id": "2607.28618v1"
+      },
+      {
+        "id": "arxiv:2607.28609v1",
+        "title": "OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models",
+        "summary": "Computer-using agents (CUAs) are advancing rapidly across the digital world. A CUA trajectory records the agent's actions, states, and reasoning. Verifying whether it fulfilled the task instruction is central to CUA evaluation, data curation, and reinforcement learning. Neither human-written verifie",
+        "url": "https://arxiv.org/abs/2607.28609v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.AI",
+          "cs.CL",
+          "cs.CV"
+        ],
+        "arxiv_id": "2607.28609v1"
+      },
+      {
+        "id": "arxiv:2607.28589v1",
+        "title": "MixFrag: Fragility-Guided Mixed-Precision Post-Training Quantization for Vision Transformers",
+        "summary": "Post-training quantization (PTQ) has emerged as an effective solution for deploying Vision Transformers (ViTs) on resource-constrained devices. However, existing PTQ methods typically employ uniform bit-widths across transformer components, overlooking their heterogeneous sensitivity to quantization",
+        "url": "https://arxiv.org/abs/2607.28589v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.CV",
+          "cs.LG"
+        ],
+        "arxiv_id": "2607.28589v1"
+      },
+      {
+        "id": "rss:b04f5a0b97",
+        "title": "Critical Rails Flaw Could Let Unauthenticated Attackers Read Server Files via Image Uploads",
+        "summary": "Ruby on Rails has released fixes for a critical Active Storage vulnerability that could let unauthenticated attackers read arbitrary files from application servers through crafted image uploads.\n\nTracked as CVE-2026-66066 (CVSS score: 9.5), the flaw can expose the Rails process environment and secre",
+        "url": "https://thehackernews.com/2026/07/critical-rails-flaw-could-let.html",
+        "source": "Tech RSS",
+        "score": 0
+      },
+      {
+        "id": "lob:itp1nm",
+        "title": "A question about a factorial operator",
+        "summary": "<p>I wrote an assembler that supports floating point values.  One of the operators I implemented was factorial because a lot of Taylor series seem to use it to define various constants.  So right now, I have</p>\n<pre><code>.float\t-((2*3.14159265)**11)/11!\n</code></pre>\n<p>I found a bug in the parsin",
+        "url": "https://lobste.rs/s/itp1nm/question_about_factorial_operator",
+        "source": "Lobste.rs",
+        "score": 18,
+        "comments": 13,
+        "tags": [
+          "ask",
+          "compilers"
+        ]
+      },
+      {
+        "id": "lob:fbqlpy",
+        "title": "GCC steering committee announces AI policy",
+        "summary": "",
+        "url": "https://lwn.net/Articles/1086041/",
+        "source": "Lobste.rs",
+        "score": 20,
+        "comments": 17,
+        "tags": [
+          "c",
+          "c++",
+          "vibecoding"
+        ]
+      }
+    ],
+    "ai_curated": true
+  },
+  "fear_greed": {
+    "value": 25,
+    "classification": "Extreme Fear",
+    "timestamp": "2026-07-31 00:00:00"
+  }
+}
