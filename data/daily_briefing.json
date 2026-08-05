@@ -1,126 +1,78 @@
 {
-  "date": "2026-08-04",
-  "update_time": "2026-08-04 14:19:25",
+  "date": "2026-08-05",
+  "update_time": "2026-08-05 02:50:36",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-04\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 边缘端大模型内存革命：80B 模型塞进 4.3GB 内存 (来源: Hacker News)\n- **核心干货**：Swiftlet 项目通过激进量化与内存映射技术，让 80B 参数的 Qwen 模型在 Mac 上仅用 4.3GB 内存运行，甚至能在 iPhone 上跑 35B 模型。这相当于把一头大象塞进 Mini Cooper，还让它跑得比马快。\n- **毒舌/硬核点评**：云厂商看了血压飙升，本地推理党看了高潮迭起。这不仅是技术突破，更是对\"没钱就别玩大模型\"这一共识的公开处刑。\n- **🔗 传送门**：[GitHub - Swiftlet](https://github.com/leonickson1/Swiftlet)\n\n---\n\n### 2. 📌 数学与理论计算机十年十突破 (来源: Hacker News / OpenAI)\n- **核心干货**：OpenAI 官方盘点近十年数学与理论计算机领域的十大进展，涵盖从 PCP 定理到量子优势验证等核心突破。这不仅是学术年终总结，更是对\"AI 只懂炼丹不懂数学\"论调的一记响亮耳光——毕竟，连 ChatGPT 都开始做数学研究了。\n- **毒舌/硬核点评**：建议所有声称\"AI 没有推理能力\"的键盘侠把这份清单打印出来贴在工位上。怕他们看不懂？没关系，反正他们也不看论文，只看标题。\n- **🔗 传送门**：[Ten advances in mathematics](https://openai.com/index/ten-advances-in-mathematics/)\n\n---\n\n### 3. 📌 边缘 LLM 结构化记忆：RAG 的 O(1) 终结者 (来源: ArXiv)\n- **核心干货**：这篇论文提出通过 O(1) SSM 状态注入技术，在状态空间模型上实现结构化记忆，彻底消除 RAG 中检索上下文的 prefill 开销。Transformer 的 KV-cache 大限将至，边缘设备上的长上下文推理终于不再是个伪命题。\n- **毒舌/硬核点评**：RAG 的\"检索-拼接-填空\"三板斧终于被治了。以后别再吹你那 200K 上下文窗口了——真正的记忆不是塞得下，而是记得住、用得巧。\n- **🔗 传送门**：[arXiv:2608.02560](https://arxiv.org/abs/2608.02560v1)\n\n---\n\n### 🗣️ 今日顶男金句\n\"内存不够就压缩，上下文太长就遗忘——AI 的进化路线，跟你老板画饼的套路一模一样。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-05\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 IntelliJ IDEA 正式下场 LSP：Java/Kotlin 智能涌入 VS Code 与 Cursor (来源: Lobste.rs)\n- **核心干货**：JetBrains 终于放下身段，将其看家的 Java 与 Kotlin 语言智能（补全、重构、导航）打包成 Language Server Protocol 服务。这意味着 VS Code、Cursor 以及各类 Agentic 编程流程，终于能体验到 IDEA 级别的内功心法，而非仅仅停留在\"能跑\"的层面。\n- **毒舌/硬核点评**：JetBrains 这波是\"打不过就加入\"的教科书级操作。与其看着 Cursor 们靠插件生态蚕食市场，不如把核武器租出去收过路费。对于开发者，这是\"编辑器自由\"的胜利——终于可以在轻量编辑器里享受重 IDE 的待遇了。\n- **🔗 传送门**：[点击直达原链接](https://blog.jetbrains.com/idea/2026/08/intellij-idea-goes-lsp/)\n\n---\n\n### 2. 📌 Polonius 登陆 Nightly：Rust 借用检查器迈入\"下一代\" (来源: Lobste.rs)\n- **核心干货**：Rust 团队宣布在 nightly 版本中启用 Polonius 的 Alpha 阶段。作为下一代借用检查模型，它解决了当前基于\"位置\"分析的局限性，能更精准地处理复杂的借用关系（例如循环中的借用），让编译器少一些\"无理取闹\"的拒绝，为更符合直觉的 Rust 代码铺路。\n- **毒舌/硬核点评**：Rust 编译器终于开始学着\"讲道理\"了。Polonius 不是简单的修修补补，而是从逻辑层面重构了\"借用\"的判定标准。虽然 Alpha 到生产还有段路，但至少看见了\"借 checker 不再教你写代码\"的曙光。对于那些曾被借用检查器折磨到怀疑人生的兄弟们，这波眼泪没白流。\n- **🔗 传送门**：[点击直达原链接](https://blog.rust-lang.org/2026/08/04/enabling-polonius-alpha-on-nighty/)\n\n---\n\n### 3. 📌 AI 已成非洲网络犯罪\"主力军\"，Interpol 报告敲响警钟 (来源: Hacker News)\n- **核心干货**：国际刑警组织（Interpol）最新报告显示，AI 已参与驱动非洲超过一半的网络犯罪活动。从深度伪造诈骗到自动化钓鱼攻击，AI 大幅降低了犯罪门槛和成本，让网络诈骗从\"手工小作坊\"升级为\"流水线大工厂\"，形势严峻。\n- **毒舌/硬核点评**：当我们在讨论 AI 如何改变生产力时，犯罪分子已经用它实现了\"降本增效\"。这不仅是网络安全问题，更是技术普惠的阴暗面。AI 是双刃剑这句话说腻了，但现实是，防御方还在用长矛，攻击方已经开上坦克了。是时候把 AI 防御提上最高优先级日程了。\n- **🔗 传送门**：[点击直达原链接](https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/)\n\n---\n\n### 🗣️ 今日顶男金句\n技术演进从来不是线性的，而是一场\"打脸与被打脸\"的循环——今天你嘲笑 JetBrains 放不下身段，明天它就把 IDE 内核塞进你的编辑器。所以，保持开放，保持学习，别跟趋势对着干，除非你想成为下一个被\"毒舌\"的对象。",
   "briefing_items": [
     {
-      "title": "边缘端大模型内存革命：80B 模型塞进 4.3GB 内存",
+      "title": "IntelliJ IDEA 正式下场 LSP：Java/Kotlin 智能涌入 VS Code 与 Cursor",
+      "source": "Lobste.rs",
+      "summary": "JetBrains 终于放下身段，将其看家的 Java 与 Kotlin 语言智能（补全、重构、导航）打包成 Language Server Protocol 服务。这意味着 VS Code、Cursor 以及各类 Agentic 编程流程，终于能体验到 IDEA 级别的内功心法，而非仅仅停留在\"能跑\"的层面。",
+      "commentary": "JetBrains 这波是\"打不过就加入\"的教科书级操作。与其看着 Cursor 们靠插件生态蚕食市场，不如把核武器租出去收过路费。对于开发者，这是\"编辑器自由\"的胜利——终于可以在轻量编辑器里享受重 IDE 的待遇了。",
+      "url": "https://blog.jetbrains.com/idea/2026/08/intellij-idea-goes-lsp/"
+    },
+    {
+      "title": "Polonius 登陆 Nightly：Rust 借用检查器迈入\"下一代\"",
+      "source": "Lobste.rs",
+      "summary": "Rust 团队宣布在 nightly 版本中启用 Polonius 的 Alpha 阶段。作为下一代借用检查模型，它解决了当前基于\"位置\"分析的局限性，能更精准地处理复杂的借用关系（例如循环中的借用），让编译器少一些\"无理取闹\"的拒绝，为更符合直觉的 Rust 代码铺路。",
+      "commentary": "Rust 编译器终于开始学着\"讲道理\"了。Polonius 不是简单的修修补补，而是从逻辑层面重构了\"借用\"的判定标准。虽然 Alpha 到生产还有段路，但至少看见了\"借 checker 不再教你写代码\"的曙光。对于那些曾被借用检查器折磨到怀疑人生的兄弟们，这波眼泪没白流。",
+      "url": "https://blog.rust-lang.org/2026/08/04/enabling-polonius-alpha-on-nighty/"
+    },
+    {
+      "title": "AI 已成非洲网络犯罪\"主力军\"，Interpol 报告敲响警钟",
       "source": "Hacker News",
-      "summary": "Swiftlet 项目通过激进量化与内存映射技术，让 80B 参数的 Qwen 模型在 Mac 上仅用 4.3GB 内存运行，甚至能在 iPhone 上跑 35B 模型。这相当于把一头大象塞进 Mini Cooper，还让它跑得比马快。",
-      "commentary": "云厂商看了血压飙升，本地推理党看了高潮迭起。这不仅是技术突破，更是对\"没钱就别玩大模型\"这一共识的公开处刑。",
-      "url": ""
-    },
-    {
-      "title": "数学与理论计算机十年十突破",
-      "source": "Hacker News / OpenAI",
-      "summary": "OpenAI 官方盘点近十年数学与理论计算机领域的十大进展，涵盖从 PCP 定理到量子优势验证等核心突破。这不仅是学术年终总结，更是对\"AI 只懂炼丹不懂数学\"论调的一记响亮耳光——毕竟，连 ChatGPT 都开始做数学研究了。",
-      "commentary": "建议所有声称\"AI 没有推理能力\"的键盘侠把这份清单打印出来贴在工位上。怕他们看不懂？没关系，反正他们也不看论文，只看标题。",
-      "url": ""
-    },
-    {
-      "title": "边缘 LLM 结构化记忆：RAG 的 O(1) 终结者",
-      "source": "ArXiv",
-      "summary": "这篇论文提出通过 O(1) SSM 状态注入技术，在状态空间模型上实现结构化记忆，彻底消除 RAG 中检索上下文的 prefill 开销。Transformer 的 KV-cache 大限将至，边缘设备上的长上下文推理终于不再是个伪命题。",
-      "commentary": "RAG 的\"检索-拼接-填空\"三板斧终于被治了。以后别再吹你那 200K 上下文窗口了——真正的记忆不是塞得下，而是记得住、用得巧。",
-      "url": ""
+      "summary": "国际刑警组织（Interpol）最新报告显示，AI 已参与驱动非洲超过一半的网络犯罪活动。从深度伪造诈骗到自动化钓鱼攻击，AI 大幅降低了犯罪门槛和成本，让网络诈骗从\"手工小作坊\"升级为\"流水线大工厂\"，形势严峻。",
+      "commentary": "当我们在讨论 AI 如何改变生产力时，犯罪分子已经用它实现了\"降本增效\"。这不仅是网络安全问题，更是技术普惠的阴暗面。AI 是双刃剑这句话说腻了，但现实是，防御方还在用长矛，攻击方已经开上坦克了。是时候把 AI 防御提上最高优先级日程了。",
+      "url": "https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49167113",
-      "title": "AI-Generated Images Discourage Me from Reading Your Blog",
+      "id": "hn:49171268",
+      "title": "Mistral's Shieldstral: 3B open-weights model for multimodal moderation",
       "summary": "",
-      "url": "https://nelson.cloud/ai-generated-images-discourage-me-from-reading-your-blog/",
+      "url": "https://mistral.ai/news/shieldstral/",
       "source": "Hacker News",
-      "score": 446,
-      "comments": 262
+      "score": 322,
+      "comments": 77
     },
     {
-      "id": "hn:49158333",
-      "title": "Show HN: Run an 80B Qwen in 4.3 GB of RAM on a Mac, and a 35B on an iPhone",
-      "summary": "",
-      "url": "https://github.com/leonickson1/Swiftlet",
+      "id": "hn:49170165",
+      "title": "Show HN: Simple algorithm and color space to generate diverse skin tones",
+      "summary": "Hello HN!<p>I found that picking out plausible but diverse skin tones for my digital art and game development projects was kind of difficult, and I got curious about if there was a way to define a color space that made it easy.<p>I&#x27;ve built a color picker and procedural generation algorithm bas",
+      "url": "https://toneyalexander.github.io/inclusive-color-space/",
       "source": "Hacker News",
-      "score": 247,
-      "comments": 112
+      "score": 473,
+      "comments": 90
     },
     {
-      "id": "hn:49156111",
-      "title": "Devtools must be open source",
+      "id": "hn:49173165",
+      "title": "In Memory of My Wife, Elise Cawley, with Thanks for 36 Wonderful Years",
       "summary": "",
-      "url": "https://blog.exe.dev/devtools-must-be-open-source",
+      "url": "https://writings.stephenwolfram.com/2026/08/in-memory-of-my-wife-elise-cawley-1961-2026-with-thanks-for-36-wonderful-years/",
       "source": "Hacker News",
-      "score": 663,
-      "comments": 216
+      "score": 992,
+      "comments": 55
     },
     {
-      "id": "hn:49166386",
-      "title": "DeepSeek V4 Flash on a Single AMD MI300X",
-      "summary": "",
-      "url": "https://github.com/ryanzhou/deepseek-v4-flash-mi300x",
-      "source": "Hacker News",
-      "score": 177,
-      "comments": 45
-    },
-    {
-      "id": "hn:49167448",
-      "title": "Xbox goes down. You can't play games you own on disc",
-      "summary": "",
-      "url": "https://birchtree.me/blog/xbox-goes-down-you-cant-play-games-you-own-on-disc/",
-      "source": "Hacker News",
-      "score": 211,
-      "comments": 200
-    },
-    {
-      "id": "hn:49157930",
-      "title": "Ten advances in mathematics and theoretical computer science",
-      "summary": "",
-      "url": "https://openai.com/index/ten-advances-in-mathematics/",
-      "source": "Hacker News",
-      "score": 579,
-      "comments": 867
-    },
-    {
-      "id": "lob:sp2wji",
-      "title": "Rust Project Goals: Immobile types and guaranteed destructors",
-      "summary": "",
-      "url": "https://github.com/rust-lang/rust-project-goals/blob/main/src/2026/move-trait.md",
-      "source": "Lobste.rs",
-      "score": 42,
-      "comments": 15,
-      "tags": [
-        "rust"
-      ]
-    },
-    {
-      "id": "hn:49166491",
-      "title": "Ray Bradbury's \"There Will Come Soft Rains\" is set today (2026-08-04)",
-      "summary": "",
-      "url": "https://short-stories.co/@raybradbury/there-will-come-soft-rains-6k8vr4xxlnmj",
+      "id": "hn:49174900",
+      "title": "I am retiring from fulltime writing (& pseudonymity) to launch Guardian Angel",
+      "summary": "<a href=\"https:&#x2F;&#x2F;twitter.com&#x2F;willdepue&#x2F;status&#x2F;2084750925013434768\" rel=\"nofollow\">https:&#x2F;&#x2F;twitter.com&#x2F;willdepue&#x2F;status&#x2F;2084750925013434768</a>, <a href=\"https:&#x2F;&#x2F;xcancel.com&#x2F;willdepue&#x2F;status&#x2F;2084750925013434768\" rel=\"nofollow\"",
+      "url": "https://twitter.com/gwern/status/2084739205071343837",
       "source": "Hacker News",
       "score": 192,
-      "comments": 48
+      "comments": 107
     },
     {
-      "id": "hn:49161518",
-      "title": "LLMs reward expertise",
+      "id": "lob:t7wzko",
+      "title": "The Lua community needs to learn to move on",
       "summary": "",
-      "url": "https://www.seangoedecke.com/llms-reward-expertise/",
-      "source": "Hacker News",
-      "score": 1134,
-      "comments": 478
-    },
-    {
-      "id": "lob:9nxwpi",
-      "title": "SQLite Critical CVEs or LLM Slop?",
-      "summary": "",
-      "url": "https://research.jfrog.com/post/sqlite-critical-cves-or-llm-slops/",
+      "url": "https://hisham.hm/2026/08/04/the-lua-community-needs-to-learn-to-move-on/",
       "source": "Lobste.rs",
-      "score": 23,
-      "comments": 12,
+      "score": 62,
+      "comments": 23,
       "tags": [
-        "security"
+        "lua"
       ]
     },
     {
@@ -129,11 +81,20 @@
       "summary": "",
       "url": "https://soppolang.dev/",
       "source": "Lobste.rs",
-      "score": 39,
-      "comments": 13,
+      "score": 72,
+      "comments": 30,
       "tags": [
         "go"
       ]
+    },
+    {
+      "id": "hn:49175826",
+      "title": "AI fuels more than half of cybercrime in Africa as scams surge – Interpol",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.interpol.int&#x2F;Media&#x2F;Documents&#x2F;Publications&#x2F;Cybercrime&#x2F;African-Cyberthreat-Assessment-Report-2026\" rel=\"nofollow\">https:&#x2F;&#x2F;www.interpol.int&#x2F;Media&#x2F;Documents&#x2F;Publications&#x2F;Cyberc...</a>",
+      "url": "https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/",
+      "source": "Hacker News",
+      "score": 149,
+      "comments": 112
     },
     {
       "id": "lob:aftrcr",
@@ -141,111 +102,135 @@
       "summary": "",
       "url": "https://killthecookiebanner.eu/",
       "source": "Lobste.rs",
-      "score": 129,
-      "comments": 36,
+      "score": 151,
+      "comments": 41,
       "tags": [
         "law",
         "privacy"
       ]
     },
     {
-      "id": "lob:hfbqr3",
-      "title": "Don't be a meat proxy",
+      "id": "hn:49176038",
+      "title": "Pi's Minimalism Is Its Advantage",
       "summary": "",
-      "url": "https://gruhn.me/blog/2026-08-03/",
+      "url": "https://earendil.com/posts/pi-autoresearch-and-databricks/",
+      "source": "Hacker News",
+      "score": 130,
+      "comments": 41
+    },
+    {
+      "id": "lob:culsub",
+      "title": "IntelliJ IDEA Goes LSP: Java and Kotlin Intelligence Comes to VS Code, Cursor, and Agentic Flows",
+      "summary": "",
+      "url": "https://blog.jetbrains.com/idea/2026/08/intellij-idea-goes-lsp/",
       "source": "Lobste.rs",
-      "score": 115,
-      "comments": 44,
+      "score": 13,
+      "comments": 17,
       "tags": [
-        "practices",
-        "vibecoding"
+        "java",
+        "kotlin",
+        "vibecoding",
+        "vscode"
       ]
     },
     {
-      "id": "lob:a355zh",
-      "title": "help wanted",
+      "id": "hn:49176830",
+      "title": "Eight Myths on Software Engineering and GenAI",
       "summary": "",
-      "url": "https://lake.computer/blog/help-wanted/",
+      "url": "https://queue.acm.org/detail.cfm?id=3807963",
+      "source": "Hacker News",
+      "score": 84,
+      "comments": 47
+    },
+    {
+      "id": "hn:49176606",
+      "title": "libexpat now funded by the City of Munich for up to 6 months",
+      "summary": "",
+      "url": "https://blog.hartwork.org/posts/libexpat-city-of-munich-open-source-sabbatical/",
+      "source": "Hacker News",
+      "score": 154,
+      "comments": 11
+    },
+    {
+      "id": "lob:qoptbx",
+      "title": "Security is Hard, Y’all",
+      "summary": "",
+      "url": "https://textslashplain.com/2026/08/04/security-is-hard-yall/",
       "source": "Lobste.rs",
-      "score": 175,
-      "comments": 23,
+      "score": 54,
+      "comments": 5,
       "tags": [
-        "rant",
-        "satire",
-        "vibecoding"
+        "security"
       ]
     },
     {
-      "id": "lob:tqcwbi",
-      "title": "Don't Take the Black Pill (Text Adaptation)",
+      "id": "hn:49176055",
+      "title": "We finally learned to center a div, then browsers added sidebars",
       "summary": "",
-      "url": "https://andrewkelley.me/post/dont-take-black-pill.html",
-      "source": "Lobste.rs",
-      "score": 128,
-      "comments": 12,
-      "tags": [
-        "culture"
-      ]
+      "url": "https://seg6.space/posts/center-div/",
+      "source": "Hacker News",
+      "score": 72,
+      "comments": 60
     },
     {
-      "id": "lob:kprcuc",
-      "title": "Reliability Lessons From SQLite",
+      "id": "lob:skft2i",
+      "title": "Enabling the next iteration of the borrow checker on nightly",
       "summary": "",
-      "url": "https://www.youtube.com/watch?v=V_qzqY1bb7I",
+      "url": "https://blog.rust-lang.org/2026/08/04/enabling-polonius-alpha-on-nighty/",
       "source": "Lobste.rs",
       "score": 38,
-      "comments": 7,
+      "comments": 0,
       "tags": [
-        "practices",
-        "video"
+        "rust"
       ]
     },
     {
-      "id": "hn:49164896",
-      "title": "Harness Engineering for Self-Improvement",
+      "id": "lob:jkv2du",
+      "title": "BorrowSanitizer",
       "summary": "",
-      "url": "https://lilianweng.github.io/posts/2026-07-04-harness/",
-      "source": "Hacker News",
-      "score": 152,
-      "comments": 29
-    },
-    {
-      "id": "arxiv:2608.02560v1",
-      "title": "Structured Memory for Edge Language Models: Persistent Context and Corpus Retrieval via O(1) SSM State Injection",
-      "summary": "Retrieval-augmented generation (RAG) imposes a prefill cost proportional to retrieved context length, and -- with Transformer backbones -- a KV-cache that grows with each generated token. State-Space Models (SSMs) avoid the second cost by construction; we eliminate the first, collapsing prefill from",
-      "url": "https://arxiv.org/abs/2608.02560v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.IR"
-      ],
-      "arxiv_id": "2608.02560v1"
-    },
-    {
-      "id": "lob:3umxr8",
-      "title": "The Future of GNOME Boxes",
-      "summary": "",
-      "url": "https://blogs.gnome.org/feborges/future-of-boxes/",
+      "url": "https://borrowsanitizer.com/",
       "source": "Lobste.rs",
-      "score": 36,
-      "comments": 9,
+      "score": 35,
+      "comments": 3,
       "tags": [
-        "virtualization"
+        "rust"
       ]
     },
     {
-      "id": "lob:blflqs",
-      "title": "Twenty Years of Pandoc",
+      "id": "lob:4w9m07",
+      "title": "The Nix sandbox is a hidden input",
       "summary": "",
-      "url": "https://pandoc.org/twenty-years-of-pandoc.html",
+      "url": "https://fzakaria.com/2026/07/30/the-nix-sandbox-is-a-hidden-input",
       "source": "Lobste.rs",
-      "score": 80,
-      "comments": 2,
+      "score": 16,
+      "comments": 11,
       "tags": [
-        "haskell",
-        "historical"
+        "nix"
       ]
+    },
+    {
+      "id": "rss:f98f1e5a52",
+      "title": "New cPanel Critical Flaw Could Let Hosting Customers Run SQL as Database Root",
+      "summary": "cPanel has patched a flaw that let an authenticated hosting customer execute SQL in the database's root context, crossing the privilege boundary between a cPanel account and the server's administrative database identity. It shipped in a targeted security release that closes two other routes past acc",
+      "url": "https://thehackernews.com/2026/08/new-cpanel-critical-flaw-could-let.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:6686254fc1",
+      "title": "CISA Adds Exploited N-able N-central Flaw to KEV After Customer Compromises",
+      "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added a high-severity security flaw impacting N-able N-central to its Known Exploited Vulnerabilities (KEV) catalog following reports of active exploitation in the wild.\n\nThe vulnerability, tracked as CVE-2026-18577 (CVSS sco",
+      "url": "https://thehackernews.com/2026/08/cisa-adds-exploited-n-able-n-central.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:61cf2f03b9",
+      "title": "18 Malicious npm Packages Deliver Cross-Platform RAT to Alibaba Tool Users",
+      "summary": "Cybersecurity researchers have discovered a new set of malicious npm packages that target users of Alibaba developer tools with a cross-platform remote access trojan (RAT) as part of a sophisticated, targeted software supply chain attack targeting Chinese-speaking environments.\n\nOne of the packages",
+      "url": "https://thehackernews.com/2026/08/18-malicious-npm-packages-deliver-cross.html",
+      "source": "Tech RSS",
+      "score": 0
     }
   ],
   "ai_curated": true
