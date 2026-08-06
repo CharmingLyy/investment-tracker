@@ -1,76 +1,58 @@
 {
-  "date": "2026-08-05",
-  "update_time": "2026-08-05 14:12:35",
+  "date": "2026-08-06",
+  "update_time": "2026-08-06 02:53:55",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-05\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 OVSwrap 漏洞：Open vSwitch 送出的\"Root 大礼包\" (来源: Hacker News/安全新闻)\n- **核心干货**：Linux 内核 Open vSwitch 数据路径存在严重内存破坏漏洞（CVE-2026-64531），默认配置下的普通用户可直接提权至 Root。更狠的是，公开的 Exploit 已预置了约 800 种内核版本的攻击载荷，属于开箱即用的\"一键 Root\"。这可能是近期影响面最广的本地提权漏洞之一。\n- **毒舌/硬核点评**：又是\"默认配置\"惹的祸。这年头，内核漏洞都开始搞\"开箱即用\"了，建议各位运维把 `ovs` 模块当祖宗供起来，最好直接焊死在黑名单里。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/new-ovswrap-linux-kernel-flaw-lets.html)\n\n---\n\n### 2. 📌 Shieldstral：3B 参数的\"内容审查门神\" (来源: Hacker News/GitHub)\n- **核心干货**：Mistral 推出 3B 参数的开源权重多模态审查模型，专攻文本、图像等内容安全过滤。小体积意味着可以低成本部署在边缘或现有业务管线中，为 AI 生成内容加上一道\"合规闸门\"。\n- **毒舌/硬核点评**：又一个\"3B 模型\"来拯救世界了。不过这次审查的不是代码，而是那些让法务部心跳骤停的 AI 生成图。开源是好事，但建议各位别光顾着部署，先想想自己的模型到底产出了多少需要被它\"处决\"的内容。\n- **🔗 传送门**：[点击直达原链接](https://mistral.ai/news/shieldstral/)\n\n---\n\n### 3. 📌 TIME 给 AI 机器人\"开小灶\"：带广告的专属网页 (来源: Hacker News)\n- **核心干货**：知名媒体 TIME 被曝针对 AI 爬虫提供定制化网页，内容与人类读者看到的版本不同，且内嵌了广告。这标志着媒体与 AI 公司的博弈进入新阶段：从\"封杀爬虫\"升级为\"既然你要抓，我就给你看带货版\"。\n- **毒舌/硬核点评**：好家伙，媒体终于想通了。既然打不过 AI 爬虫，那就把它们变成\"广告流量\"。这波操作堪称商业鬼才，建议各大内容平台尽快跟进，让 AI 们好好感受一下什么叫\"信息茧房 Plus\"。\n- **🔗 传送门**：[点击直达原链接](https://www.vincentschmalbach.com/time-serves-ai-bots-a-different-website/)\n\n---\n\n### 🗣️ 今日顶男金句\n**\"当 AI 开始读带广告的新闻时，它离学会'人间清醒'就不远了。\"** —— 保持警惕，因为筛选信息的能力，永远是你最硬核的护城河。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-06\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Cloudflare OS：给 Agent 们建了个\"操作系统\" (来源: Hacker News)\n- **核心干货**：Cloudflare 宣布了他们的\"操作系统\"——不是要跟 Windows 抢饭碗，而是给 AI 代理、应用和工作流搭建的开放运行平台。核心逻辑是让 Agent 在边缘网络上安全地调用数据、访问工具，而不必把核心资产托管给某个 AI 巨头。这相当于给 AI 生态搭了个\"中立国\"。\n- **毒舌/硬核点评**：嘴上说着\"开放平台\"，实际上是想做 AI 时代的\"水电煤\"。不过话说回来，与其让各家大模型当\"包租公\"，Cloudflare 这套玩法确实更符合极客们的分布式执念。\n- **🔗 传送门**：[点击直达原链接](https://blog.cloudflare.com/cloudflare-os/)\n\n---\n\n### 2. 📌 DeepMind 高层大换血：Hassabis 转任主席，Jeff Dean 离开 (来源: Hacker News)\n- **核心干货**：Google DeepMind 迎来重大组织架构调整：Demis Hassabis 从 CEO 转任董事会主席，传奇工程师 Jeff Dean 正式离职。这一变动标志着 DeepMind 从\"研究驱动\"全面转向\"产品驱动\"的整合期，也意味着 Google 在 AI 军备竞赛中进入了更务实的商业化阶段。\n- **毒舌/硬核点评**：当\"神\"开始做管理，说明公司已经到了要\"打仗\"而不是\"做梦\"的阶段。Jeff Dean 的离开，就像武侠小说里的大师兄下山——江湖还在，但传说换了。\n- **🔗 传送门**：[点击直达原链接](https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/)\n\n---\n\n### 3. 📌 用便宜 100 倍的模型，在检索任务上干翻 GPT-5.6 Sol (来源: Hacker News)\n- **核心干货**：Neon 分享了 Castform 的实战案例——通过精心设计的检索增强生成（RAG）管道和模型蒸馏技术，他们用开放权重的小模型在特定检索基准上击败了 GPT-5.6 Sol，而推理成本仅为其百分之一。核心洞察是：针对特定任务的\"小而精\"模型组合，正在吞噬通用大模型的场景化优势。\n- **毒舌/硬核点评**：大模型厂商还在比谁的参数多，聪明人已经在比谁的账单少了。当\"够用就好\"成为企业采购的第一原则，那些动辄千亿参数的\"大力士\"们该想想怎么转型当\"特种兵\"了。\n- **🔗 传送门**：[点击直达原链接](https://neon.com/blog/how-castform-neon-beats-frontier-models-on-price-and-efficiency)\n\n---\n\n### 🗣️ 今日顶男金句\n**\"别总盯着排行榜上的大模型刷分，算算落地时每千次调用要烧多少钱——搞钱的人都明白，毛利才是王道。\"**",
   "briefing_items": [
     {
-      "title": "OVSwrap 漏洞：Open vSwitch 送出的\"Root 大礼包\"",
-      "source": "Hacker News/安全新闻",
-      "summary": "Linux 内核 Open vSwitch 数据路径存在严重内存破坏漏洞（CVE-2026-64531），默认配置下的普通用户可直接提权至 Root。更狠的是，公开的 Exploit 已预置了约 800 种内核版本的攻击载荷，属于开箱即用的\"一键 Root\"。这可能是近期影响面最广的本地提权漏洞之一。",
-      "commentary": "又是\"默认配置\"惹的祸。这年头，内核漏洞都开始搞\"开箱即用\"了，建议各位运维把 `ovs` 模块当祖宗供起来，最好直接焊死在黑名单里。",
-      "url": "https://thehackernews.com/2026/08/new-ovswrap-linux-kernel-flaw-lets.html"
-    },
-    {
-      "title": "Shieldstral：3B 参数的\"内容审查门神\"",
-      "source": "Hacker News/GitHub",
-      "summary": "Mistral 推出 3B 参数的开源权重多模态审查模型，专攻文本、图像等内容安全过滤。小体积意味着可以低成本部署在边缘或现有业务管线中，为 AI 生成内容加上一道\"合规闸门\"。",
-      "commentary": "又一个\"3B 模型\"来拯救世界了。不过这次审查的不是代码，而是那些让法务部心跳骤停的 AI 生成图。开源是好事，但建议各位别光顾着部署，先想想自己的模型到底产出了多少需要被它\"处决\"的内容。",
-      "url": "https://mistral.ai/news/shieldstral/"
-    },
-    {
-      "title": "TIME 给 AI 机器人\"开小灶\"：带广告的专属网页",
+      "title": "Cloudflare OS：给 Agent 们建了个\"操作系统\"",
       "source": "Hacker News",
-      "summary": "知名媒体 TIME 被曝针对 AI 爬虫提供定制化网页，内容与人类读者看到的版本不同，且内嵌了广告。这标志着媒体与 AI 公司的博弈进入新阶段：从\"封杀爬虫\"升级为\"既然你要抓，我就给你看带货版\"。",
-      "commentary": "好家伙，媒体终于想通了。既然打不过 AI 爬虫，那就把它们变成\"广告流量\"。这波操作堪称商业鬼才，建议各大内容平台尽快跟进，让 AI 们好好感受一下什么叫\"信息茧房 Plus\"。",
-      "url": "https://www.vincentschmalbach.com/time-serves-ai-bots-a-different-website/"
+      "summary": "Cloudflare 宣布了他们的\"操作系统\"——不是要跟 Windows 抢饭碗，而是给 AI 代理、应用和工作流搭建的开放运行平台。核心逻辑是让 Agent 在边缘网络上安全地调用数据、访问工具，而不必把核心资产托管给某个 AI 巨头。这相当于给 AI 生态搭了个\"中立国\"。",
+      "commentary": "嘴上说着\"开放平台\"，实际上是想做 AI 时代的\"水电煤\"。不过话说回来，与其让各家大模型当\"包租公\"，Cloudflare 这套玩法确实更符合极客们的分布式执念。",
+      "url": "https://blog.cloudflare.com/cloudflare-os/"
+    },
+    {
+      "title": "DeepMind 高层大换血：Hassabis 转任主席，Jeff Dean 离开",
+      "source": "Hacker News",
+      "summary": "Google DeepMind 迎来重大组织架构调整：Demis Hassabis 从 CEO 转任董事会主席，传奇工程师 Jeff Dean 正式离职。这一变动标志着 DeepMind 从\"研究驱动\"全面转向\"产品驱动\"的整合期，也意味着 Google 在 AI 军备竞赛中进入了更务实的商业化阶段。",
+      "commentary": "当\"神\"开始做管理，说明公司已经到了要\"打仗\"而不是\"做梦\"的阶段。Jeff Dean 的离开，就像武侠小说里的大师兄下山——江湖还在，但传说换了。",
+      "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/"
+    },
+    {
+      "title": "用便宜 100 倍的模型，在检索任务上干翻 GPT-5.6 Sol",
+      "source": "Hacker News",
+      "summary": "Neon 分享了 Castform 的实战案例——通过精心设计的检索增强生成（RAG）管道和模型蒸馏技术，他们用开放权重的小模型在特定检索基准上击败了 GPT-5.6 Sol，而推理成本仅为其百分之一。核心洞察是：针对特定任务的\"小而精\"模型组合，正在吞噬通用大模型的场景化优势。",
+      "commentary": "大模型厂商还在比谁的参数多，聪明人已经在比谁的账单少了。当\"够用就好\"成为企业采购的第一原则，那些动辄千亿参数的\"大力士\"们该想想怎么转型当\"特种兵\"了。",
+      "url": "https://neon.com/blog/how-castform-neon-beats-frontier-models-on-price-and-efficiency"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49171268",
-      "title": "Mistral's Shieldstral: 3B open-weights model for multimodal moderation",
+      "id": "hn:49182996",
+      "title": "Cloudflare OS: an open platform for agents, apps, and work",
       "summary": "",
-      "url": "https://mistral.ai/news/shieldstral/",
+      "url": "https://blog.cloudflare.com/cloudflare-os/",
       "source": "Hacker News",
-      "score": 457,
-      "comments": 119
+      "score": 482,
+      "comments": 244
     },
     {
-      "id": "hn:49170165",
-      "title": "Show HN: Simple algorithm and color space to generate diverse skin tones",
-      "summary": "Hello HN!<p>I found that picking out plausible but diverse skin tones for my digital art and game development projects was kind of difficult, and I got curious about if there was a way to define a color space that made it easy.<p>I&#x27;ve built a color picker and procedural generation algorithm bas",
-      "url": "https://toneyalexander.github.io/inclusive-color-space/",
+      "id": "hn:49184755",
+      "title": "Changes at Google DeepMind: Demis Hassabis from CEO to Chair, Jeff Dean departs",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.axios.com&#x2F;2026&#x2F;08&#x2F;05&#x2F;google-deepmind-demis-hassabis-ai\" rel=\"nofollow\">https:&#x2F;&#x2F;www.axios.com&#x2F;2026&#x2F;08&#x2F;05&#x2F;google-deepmind-demis-hassa...</a><p><a href=\"https:&#x2F;&#x2F;www.reuters.com&#x2F;business&#x2F;google-shakes-up",
+      "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
       "source": "Hacker News",
-      "score": 575,
-      "comments": 98
+      "score": 502,
+      "comments": 609
     },
     {
-      "id": "hn:49181099",
-      "title": "Civilian plane crash in New Mexico tied to military GPS blocking",
+      "id": "hn:49186762",
+      "title": "Beating GPT-5.6 Sol on retrieval with 100x cheaper open models",
       "summary": "",
-      "url": "https://www.wired.com/story/a-civilian-plane-crashed-in-new-mexico-was-the-militarys-tech-to-blame/",
+      "url": "https://neon.com/blog/how-castform-neon-beats-frontier-models-on-price-and-efficiency",
       "source": "Hacker News",
-      "score": 215,
-      "comments": 101
-    },
-    {
-      "id": "hn:49131438",
-      "title": "Stateless MCP has recaptured my interest",
-      "summary": "",
-      "url": "https://simonwillison.net/2026/Jul/31/stateless-mcp/",
-      "source": "Hacker News",
-      "score": 314,
-      "comments": 172
-    },
-    {
-      "id": "hn:49176038",
-      "title": "Pi's Minimalism Is Its Advantage",
-      "summary": "",
-      "url": "https://earendil.com/posts/pi-autoresearch-and-databricks/",
-      "source": "Hacker News",
-      "score": 460,
-      "comments": 231
+      "score": 233,
+      "comments": 57
     },
     {
       "id": "lob:czvkjy",
@@ -78,12 +60,69 @@
       "summary": "",
       "url": "https://blog.rust-lang.org/inside-rust/2026/08/05/rust-langrust-is-adopting-an-llm-policy/",
       "source": "Lobste.rs",
-      "score": 69,
-      "comments": 17,
+      "score": 131,
+      "comments": 38,
       "tags": [
         "rust",
         "vibecoding"
       ]
+    },
+    {
+      "id": "hn:49184960",
+      "title": "Discovery Loop",
+      "summary": "",
+      "url": "https://www.discoveryloop.com/",
+      "source": "Hacker News",
+      "score": 622,
+      "comments": 392
+    },
+    {
+      "id": "hn:49187256",
+      "title": "Zed DeltaDB",
+      "summary": "",
+      "url": "https://zed.dev/deltadb",
+      "source": "Hacker News",
+      "score": 323,
+      "comments": 166
+    },
+    {
+      "id": "hn:49185983",
+      "title": "Atlassian Rovo Exfiltrates Data, Bypassing Controls",
+      "summary": "",
+      "url": "https://www.promptarmor.com/resources/atlassian-rovo-exfiltrates-data",
+      "source": "Hacker News",
+      "score": 180,
+      "comments": 71
+    },
+    {
+      "id": "lob:fgcrj0",
+      "title": "Offensive Internet Posture",
+      "summary": "",
+      "url": "https://bruceediger.com/posts/offensive-machine/",
+      "source": "Lobste.rs",
+      "score": 65,
+      "comments": 15,
+      "tags": [
+        "networking"
+      ]
+    },
+    {
+      "id": "hn:49187575",
+      "title": "Muse Code and Muse Spark 1.2",
+      "summary": "",
+      "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+      "source": "Hacker News",
+      "score": 190,
+      "comments": 112
+    },
+    {
+      "id": "hn:49189287",
+      "title": "The title cards in Blade Runner are amazing",
+      "summary": "",
+      "url": "https://randsinrepose.com/archives/blade-runner-title-cards/",
+      "source": "Hacker News",
+      "score": 164,
+      "comments": 72
     },
     {
       "id": "lob:t7wzko",
@@ -91,53 +130,20 @@
       "summary": "",
       "url": "https://hisham.hm/2026/08/04/the-lua-community-needs-to-learn-to-move-on/",
       "source": "Lobste.rs",
-      "score": 84,
-      "comments": 36,
+      "score": 93,
+      "comments": 51,
       "tags": [
         "lua"
       ]
     },
     {
-      "id": "lob:0ykmyt",
-      "title": "Soppo - Go, with the features it's missing",
-      "summary": "",
-      "url": "https://soppolang.dev/",
-      "source": "Lobste.rs",
-      "score": 79,
-      "comments": 31,
-      "tags": [
-        "go"
-      ]
-    },
-    {
-      "id": "hn:49105978",
-      "title": "“Gravity is worth asking about”",
-      "summary": "",
-      "url": "https://unsung.aresluna.org/gravity-is-worth-asking-about/",
-      "source": "Hacker News",
-      "score": 159,
-      "comments": 99
-    },
-    {
-      "id": "hn:49181083",
-      "title": "Position: LLMs Can't Jump",
-      "summary": "",
-      "url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3DklU4737opt",
-      "source": "Hacker News",
-      "score": 125,
-      "comments": 76
-    },
-    {
-      "id": "lob:3d3wbr",
-      "title": "Born Against, or why hobby programming communities are aggressively against LLM usage",
+      "id": "hn:49187061",
+      "title": "Born Against, or why hobby programming communities are against LLM usage",
       "summary": "",
       "url": "https://blog.fogus.me/llm/born-against.html",
-      "source": "Lobste.rs",
-      "score": 55,
-      "comments": 12,
-      "tags": [
-        "vibecoding"
-      ]
+      "source": "Hacker News",
+      "score": 152,
+      "comments": 152
     },
     {
       "id": "lob:qoptbx",
@@ -145,8 +151,8 @@
       "summary": "",
       "url": "https://textslashplain.com/2026/08/04/security-is-hard-yall/",
       "source": "Lobste.rs",
-      "score": 106,
-      "comments": 14,
+      "score": 125,
+      "comments": 15,
       "tags": [
         "security"
       ]
@@ -160,52 +166,26 @@
       "score": 0
     },
     {
-      "id": "lob:12aef8",
-      "title": "irken: A tiny hackable full-featured IRC client",
+      "id": "hn:49189075",
+      "title": "Prime Agent: A self-improving RLM agent",
       "summary": "",
-      "url": "https://codeberg.org/dlowe/irken",
-      "source": "Lobste.rs",
-      "score": 33,
-      "comments": 10,
-      "tags": [
-        "programming"
-      ]
+      "url": "https://www.primeintellect.ai/blog/prime-agent",
+      "source": "Hacker News",
+      "score": 112,
+      "comments": 19
     },
     {
-      "id": "lob:4w9m07",
-      "title": "The Nix sandbox is a hidden input",
+      "id": "lob:lzupt0",
+      "title": "The \"Disability Dongle\": Why Silicon Valley Hates Me and you",
       "summary": "",
-      "url": "https://fzakaria.com/2026/07/30/the-nix-sandbox-is-a-hidden-input",
+      "url": "https://sightlessscribbles.com/disability-dongle/",
       "source": "Lobste.rs",
-      "score": 26,
-      "comments": 13,
+      "score": 57,
+      "comments": 4,
       "tags": [
-        "nix"
+        "a11y",
+        "rant"
       ]
-    },
-    {
-      "id": "arxiv:2608.04010v1",
-      "title": "ParVL: Parallel Scaling and Expandable Compute Allocation for Multimodal LLMs",
-      "summary": "Existing scaling strategies for Multimodal Large Language Models (MLLMs) typically expand either model parameters or sequential inference computation, incurring substantial memory or latency overhead. More importantly, most existing methods fail to alter the rigid, fixed computation allocation betwe",
-      "url": "https://arxiv.org/abs/2608.04010v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CV",
-        "cs.CL"
-      ],
-      "arxiv_id": "2608.04010v1"
-    },
-    {
-      "id": "arxiv:2608.04007v1",
-      "title": "TurnSight: Turn-Level Hindsight Self-Distillation for Tool-Integrated Reasoning",
-      "summary": "Tool-Integrated Reasoning (TIR) enables LLMs to solve complex tasks through iterative tool interactions. However, existing reinforcement learning methods often rely on trajectory-level supervision, limiting fine-grained credit assignment in long-horizon TIR scenarios. On-policy self-distillation off",
-      "url": "https://arxiv.org/abs/2608.04007v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "arxiv_id": "2608.04007v1"
     },
     {
       "id": "lob:skft2i",
@@ -213,33 +193,44 @@
       "summary": "",
       "url": "https://blog.rust-lang.org/2026/08/04/enabling-polonius-alpha-on-nighty/",
       "source": "Lobste.rs",
-      "score": 95,
-      "comments": 0,
+      "score": 123,
+      "comments": 3,
       "tags": [
         "rust"
       ]
     },
     {
-      "id": "lob:2avtyb",
-      "title": "Liquid Glass effect for GNU/Emacs",
+      "id": "lob:wnyesi",
+      "title": "Nix Overrides That Expire Themselves",
       "summary": "",
-      "url": "https://github.com/larrasket/emacs-liquid-glass",
+      "url": "https://jezenthomas.com/2026/07/nix-overrides-that-expire-themselves/",
       "source": "Lobste.rs",
-      "score": 30,
-      "comments": 3,
+      "score": 32,
+      "comments": 6,
       "tags": [
-        "emacs",
-        "mac"
+        "nix"
       ]
     },
     {
-      "id": "hn:49182041",
-      "title": "TIME Is Serving AI Bots a Different Website, with Ads Built In",
+      "id": "lob:31hk9y",
+      "title": "Faster Than Ninja",
       "summary": "",
-      "url": "https://www.vincentschmalbach.com/time-serves-ai-bots-a-different-website/",
+      "url": "https://build2.org/blog/faster-than-ninja.xhtml",
+      "source": "Lobste.rs",
+      "score": 44,
+      "comments": 4,
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "id": "hn:49189234",
+      "title": "NVIDIA’s Vera Whitepaper Has a Thread Loose",
+      "summary": "",
+      "url": "https://chipsandcheese.com/p/nvidias-vera-whitepaper-has-a-thread",
       "source": "Hacker News",
-      "score": 76,
-      "comments": 25
+      "score": 93,
+      "comments": 13
     }
   ],
   "ai_curated": true
