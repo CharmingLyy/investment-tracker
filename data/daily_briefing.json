@@ -1,29 +1,29 @@
 {
   "date": "2026-08-07",
-  "update_time": "2026-08-07 02:59:38",
+  "update_time": "2026-08-07 13:08:18",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-07\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 AMD 收购 Taalas：把模型\"蚀刻\"进硅片，AI 推理性能暴涨 (来源: Hacker News)\n- **核心干货**：AMD 收购 AI 芯片初创公司 Taalas，后者核心技术是在硅片上直接\"蚀刻\"AI 模型，将特定模型架构转化为硬件逻辑，从而大幅提升推理效率并降低延迟。这标志着 AI 芯片竞争从\"通用加速\"转向\"模型专用硬件\"的极端路线。\n- **毒舌/硬核点评**：别人是软件定义硬件，Taalas 是\"模型定义芯片\"。AMD 这波操作，是想把 AI 推理卷成\"物理定律\"级别的壁垒。黄仁勋的皮衣，恐怕要再裹紧一点了。\n- **🔗 传送门**：[点击直达原链接](https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/)\n\n---\n\n### 2. 📌 新型 Zapscape KVM 漏洞：虚拟机\"越狱\"直通宿主机 (来源: Tech RSS)\n- **核心干货**：Linux 内核曝出高危漏洞 Zapscape (CVE-2026-6xxx)，攻击者只要在 L1 客户虚拟机内拥有内核权限，就能利用嵌套虚拟化场景突破 KVM 隔离，直接在宿主机上执行代码。对云厂商和多租户环境构成严重威胁。\n- **毒舌/硬核点评**：KVM 的隔离墙又被人凿了个洞。这提醒我们，虚拟化不是\"安全结界\"，而是\"共享公寓\"——隔壁邻居练拳击，你家天花板会掉灰。打补丁的速度，请务必跑在黑客前面。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/new-zapscape-kvm-flaw-could-let.html)\n\n---\n\n### 3. 📌 AI 推荐投毒：悄无声息篡改 LLM 记忆 (来源: Tech RSS)\n- **核心干货**：安全研究者发现一种新型提示注入攻击，利用主流 AI 助手的\"预填深度链接\"功能，在商业网站中植入隐藏指令。用户只需点击\"Ask AI\"按钮，LLM 的上下文记忆就会被悄悄污染，无需恶意软件或零日漏洞即可实现。\n- **毒舌/硬核点评**：以前是\"钓鱼\"，现在是\"养鱼\"。你每点一次 AI 按钮，都可能是在给模型喂一颗\"糖衣炮弹\"。当 AI 的推荐开始变得\"不对劲\"，请检查一下是不是有人给它下了降头。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/ai-recommendation-poisoning-how-ask-ai.html)\n\n---\n\n### 🗣️ 今日顶男金句\n真正的护城河不是写了几百万行代码，而是你写的代码让对手连\"抄作业\"的硬件都买不到。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-07\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 AMD 收购 Taalas：把大模型直接\"焊死\"在硅片上 (来源: Hacker News/新闻)\n- **核心干货**：AMD 收购了 AI 芯片初创公司 Taalas，后者核心技术是直接把训练好的模型架构\"蚀刻\"进硅片，实现推理性能的指数级提升。这相当于把软件逻辑物理化，跳过指令集和通用计算的中间层，针对特定模型做到极致能效比。\n- **毒舌/硬核点评**：英伟达还在卷 GPU 通用算力，AMD 直接掀桌子玩\"物理固化\"了。这波是硬件界的\"重写代码不如重写物理\"，但小心别把自己焊死在单一模型上，万一模型迭代了，你的芯片可就真成\"化石\"了。\n- **🔗 传送门**：[点击直达原链接](https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344)\n\n---\n\n### 2. 📌 Zapscape KVM 漏洞：虚拟机逃逸，宿主裸奔 (来源: 科技新闻)\n- **核心干货**：Linux 内核新发现高危漏洞 CVE-2026-6，允许拥有 L1 客户机内核权限的攻击者利用嵌套虚拟化漏洞，逃逸 KVM 隔离并在宿主机上执行代码。这意味着云服务商的租户隔离边界被击穿，一个恶意租户可能直接掌控物理服务器。\n- **毒舌/硬核点评**：虚拟化是云计算的\"隔离墙\"，现在墙上有洞了。各位云厂商的运维同学，今晚怕是要加班打补丁了。这漏洞提醒我们：所谓\"租户隔离\"，在安全研究员眼里可能只是\"一戳就破的纸灯笼\"。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/new-zapscape-kvm-flaw-could-let.html)\n\n---\n\n### 3. 📌 AV-AIVAT：用统计学给 AI 对战\"掐秒表\"，评估成本狂降 74 倍 (来源: ArXiv)\n- **核心干货**：这篇论文提出 AV-AIVAT 框架，解决了在非完美信息博弈中评估 AI 智能体强弱的核心痛点——你永远不知道要打多少局才能排除运气成分。它通过\"随时有效停止\"的认证算法，在结果已定时立刻终止测试，将评估成本最高降低 74 倍，且统计置信度有严格数学保证。\n- **毒舌/硬核点评**：以后评判两个 AI 谁更强，不用再打到天荒地老了。这玩意儿就是 AI 界的\"拳击裁判\"，看到一方毫无胜算就直接扔白毛巾，既省了比赛费用，又保住了输家的面子。做 AI 评测的团队，赶紧把这篇论文打印出来贴墙上。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2608.06362v1)\n\n---\n\n### 🗣️ 今日顶男金句\n\"别人在讨论'AI 会不会取代你'的时候，聪明人已经在研究怎么把 AI 的评估成本砍掉 74 倍。搞钱的本质，就是比对手更早看清'游戏何时结束'。\"",
   "briefing_items": [
     {
-      "title": "AMD 收购 Taalas：把模型\"蚀刻\"进硅片，AI 推理性能暴涨",
-      "source": "Hacker News",
-      "summary": "AMD 收购 AI 芯片初创公司 Taalas，后者核心技术是在硅片上直接\"蚀刻\"AI 模型，将特定模型架构转化为硬件逻辑，从而大幅提升推理效率并降低延迟。这标志着 AI 芯片竞争从\"通用加速\"转向\"模型专用硬件\"的极端路线。",
-      "commentary": "别人是软件定义硬件，Taalas 是\"模型定义芯片\"。AMD 这波操作，是想把 AI 推理卷成\"物理定律\"级别的壁垒。黄仁勋的皮衣，恐怕要再裹紧一点了。",
-      "url": "https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/"
+      "title": "AMD 收购 Taalas：把大模型直接\"焊死\"在硅片上",
+      "source": "Hacker News/新闻",
+      "summary": "AMD 收购了 AI 芯片初创公司 Taalas，后者核心技术是直接把训练好的模型架构\"蚀刻\"进硅片，实现推理性能的指数级提升。这相当于把软件逻辑物理化，跳过指令集和通用计算的中间层，针对特定模型做到极致能效比。",
+      "commentary": "英伟达还在卷 GPU 通用算力，AMD 直接掀桌子玩\"物理固化\"了。这波是硬件界的\"重写代码不如重写物理\"，但小心别把自己焊死在单一模型上，万一模型迭代了，你的芯片可就真成\"化石\"了。",
+      "url": "https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344"
     },
     {
-      "title": "新型 Zapscape KVM 漏洞：虚拟机\"越狱\"直通宿主机",
-      "source": "Tech RSS",
-      "summary": "Linux 内核曝出高危漏洞 Zapscape (CVE-2026-6xxx)，攻击者只要在 L1 客户虚拟机内拥有内核权限，就能利用嵌套虚拟化场景突破 KVM 隔离，直接在宿主机上执行代码。对云厂商和多租户环境构成严重威胁。",
-      "commentary": "KVM 的隔离墙又被人凿了个洞。这提醒我们，虚拟化不是\"安全结界\"，而是\"共享公寓\"——隔壁邻居练拳击，你家天花板会掉灰。打补丁的速度，请务必跑在黑客前面。",
+      "title": "Zapscape KVM 漏洞：虚拟机逃逸，宿主裸奔",
+      "source": "科技新闻",
+      "summary": "Linux 内核新发现高危漏洞 CVE-2026-6，允许拥有 L1 客户机内核权限的攻击者利用嵌套虚拟化漏洞，逃逸 KVM 隔离并在宿主机上执行代码。这意味着云服务商的租户隔离边界被击穿，一个恶意租户可能直接掌控物理服务器。",
+      "commentary": "虚拟化是云计算的\"隔离墙\"，现在墙上有洞了。各位云厂商的运维同学，今晚怕是要加班打补丁了。这漏洞提醒我们：所谓\"租户隔离\"，在安全研究员眼里可能只是\"一戳就破的纸灯笼\"。",
       "url": "https://thehackernews.com/2026/08/new-zapscape-kvm-flaw-could-let.html"
     },
     {
-      "title": "AI 推荐投毒：悄无声息篡改 LLM 记忆",
-      "source": "Tech RSS",
-      "summary": "安全研究者发现一种新型提示注入攻击，利用主流 AI 助手的\"预填深度链接\"功能，在商业网站中植入隐藏指令。用户只需点击\"Ask AI\"按钮，LLM 的上下文记忆就会被悄悄污染，无需恶意软件或零日漏洞即可实现。",
-      "commentary": "以前是\"钓鱼\"，现在是\"养鱼\"。你每点一次 AI 按钮，都可能是在给模型喂一颗\"糖衣炮弹\"。当 AI 的推荐开始变得\"不对劲\"，请检查一下是不是有人给它下了降头。",
-      "url": "https://thehackernews.com/2026/08/ai-recommendation-poisoning-how-ask-ai.html"
+      "title": "AV-AIVAT：用统计学给 AI 对战\"掐秒表\"，评估成本狂降 74 倍",
+      "source": "ArXiv",
+      "summary": "这篇论文提出 AV-AIVAT 框架，解决了在非完美信息博弈中评估 AI 智能体强弱的核心痛点——你永远不知道要打多少局才能排除运气成分。它通过\"随时有效停止\"的认证算法，在结果已定时立刻终止测试，将评估成本最高降低 74 倍，且统计置信度有严格数学保证。",
+      "commentary": "以后评判两个 AI 谁更强，不用再打到天荒地老了。这玩意儿就是 AI 界的\"拳击裁判\"，看到一方毫无胜算就直接扔白毛巾，既省了比赛费用，又保住了输家的面子。做 AI 评测的团队，赶紧把这篇论文打印出来贴墙上。",
+      "url": "https://arxiv.org/abs/2608.06362v1"
     }
   ],
   "candidates": [
@@ -33,17 +33,8 @@
       "summary": "<a href=\"https:&#x2F;&#x2F;ir.amd.com&#x2F;news-events&#x2F;press-releases&#x2F;detail&#x2F;1296&#x2F;amd-acquires-taalas-to-advance-compute-solutions-for-rapidly-growing-ai-inference-market\" rel=\"nofollow\">https:&#x2F;&#x2F;ir.amd.com&#x2F;news-events&#x2F;press-releases&#x2F;detail&#x2F;1296&#x2F;",
       "url": "https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344",
       "source": "Hacker News",
-      "score": 408,
-      "comments": 323
-    },
-    {
-      "id": "hn:49198069",
-      "title": "Almost no skill required to cook a steak",
-      "summary": "",
-      "url": "https://blog.sydorets.com/en/posts/almost-no-skill-required-to-cook-a-steak/",
-      "source": "Hacker News",
-      "score": 289,
-      "comments": 333
+      "score": 737,
+      "comments": 557
     },
     {
       "id": "hn:49199357",
@@ -51,8 +42,35 @@
       "summary": "",
       "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/",
       "source": "Hacker News",
-      "score": 165,
-      "comments": 120
+      "score": 260,
+      "comments": 210
+    },
+    {
+      "id": "hn:49208314",
+      "title": "US strikes $1.2B deal to pay German firm to halt offshore wind projects",
+      "summary": "",
+      "url": "https://www.bbc.com/news/articles/c1e1vg0gjl5o",
+      "source": "Hacker News",
+      "score": 376,
+      "comments": 343
+    },
+    {
+      "id": "hn:49204352",
+      "title": "New Mexico court orders Meta to pay $567m over harms to children’s mental health",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.reuters.com&#x2F;world&#x2F;new-mexico-court-orders-meta-pay-567-mln-teen-mental-health-fund-2026-08-06&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.reuters.com&#x2F;world&#x2F;new-mexico-court-orders-meta-p...</a><p><a href=\"https:&#x2F;&#x2F;www.theguardian.com&#x2F;t",
+      "url": "https://www.theguardian.com/technology/2026/aug/06/new-mexico-court-meta",
+      "source": "Hacker News",
+      "score": 401,
+      "comments": 248
+    },
+    {
+      "id": "hn:49184355",
+      "title": "Scientists discover Kelvin-Helmholtz Instability on the surface of the Sun",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.bbc.com&#x2F;news&#x2F;articles&#x2F;c36d4376nd2o\" rel=\"nofollow\">https:&#x2F;&#x2F;www.bbc.com&#x2F;news&#x2F;articles&#x2F;c36d4376nd2o</a>, <a href=\"https:&#x2F;&#x2F;archive.is&#x2F;YDn6S\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.is&#x2F;YDn6S</a>",
+      "url": "https://nso.edu/press-release/nsf-inouye-solar-telescope-enables-major-discovery-of-a-hidden-solar-process/",
+      "source": "Hacker News",
+      "score": 256,
+      "comments": 53
     },
     {
       "id": "hn:49198302",
@@ -60,8 +78,8 @@
       "summary": "<a href=\"https:&#x2F;&#x2F;www.githubstatus.com&#x2F;uptime&#x2F;br0l2tvcx85d\" rel=\"nofollow\">https:&#x2F;&#x2F;www.githubstatus.com&#x2F;uptime&#x2F;br0l2tvcx85d</a>",
       "url": "https://www.githubstatus.com/incidents/qcvjkzcs7j74",
       "source": "Hacker News",
-      "score": 340,
-      "comments": 275
+      "score": 430,
+      "comments": 354
     },
     {
       "id": "hn:49198464",
@@ -69,17 +87,17 @@
       "summary": "Hey HN, we’re Will &amp; Johnny from ProvenMetal (<a href=\"https:&#x2F;&#x2F;provenmetal.com\">https:&#x2F;&#x2F;provenmetal.com</a>). You send us design files or specs and we give you assembled boards domestically in days.<p>The US produced 30% of PCBs globally in 2000, now they produce 4%. Chinese ",
       "url": "https://provenmetal.com",
       "source": "Hacker News",
-      "score": 187,
-      "comments": 131
+      "score": 210,
+      "comments": 149
     },
     {
-      "id": "hn:49195231",
-      "title": "Mario Meets Pareto",
-      "summary": "",
-      "url": "https://www.mayerowitz.io/blog/mario-meets-pareto",
+      "id": "hn:49138446",
+      "title": "São Paulo resident transforms degraded area into urban forest",
+      "summary": "<a href=\"https:&#x2F;&#x2F;thursd.com&#x2F;articles&#x2F;helio-da-silva-sao-paulo-tiquatira-linear-park\" rel=\"nofollow\">https:&#x2F;&#x2F;thursd.com&#x2F;articles&#x2F;helio-da-silva-sao-paulo-tiquati...</a>",
+      "url": "https://saopaulosecreto.com/en/tiquatira-linear-park-en/",
       "source": "Hacker News",
-      "score": 898,
-      "comments": 150
+      "score": 193,
+      "comments": 80
     },
     {
       "id": "hn:49199346",
@@ -87,8 +105,20 @@
       "summary": "",
       "url": "https://notashelf.dev/posts/taste-is-all-thats-left",
       "source": "Hacker News",
-      "score": 228,
-      "comments": 183
+      "score": 503,
+      "comments": 375
+    },
+    {
+      "id": "lob:0cdps4",
+      "title": "i wonder if you could make a useful DOS executable with just emoji",
+      "summary": "",
+      "url": "https://oldbytes.space/@gloriouscow/117044736309312697",
+      "source": "Lobste.rs",
+      "score": 104,
+      "comments": 10,
+      "tags": [
+        "retrocomputing"
+      ]
     },
     {
       "id": "lob:97laur",
@@ -96,33 +126,36 @@
       "summary": "",
       "url": "https://bobdahacker.com/blog/tldv-hack",
       "source": "Lobste.rs",
-      "score": 128,
-      "comments": 26,
+      "score": 170,
+      "comments": 38,
       "tags": [
         "privacy",
         "security"
       ]
     },
     {
-      "id": "lob:mxdfdv",
-      "title": "python string literals are kinda funny",
+      "id": "hn:49202716",
+      "title": "Bioengineered chewing gum may offer a way to fight HPV and other microbes",
       "summary": "",
-      "url": "https://sebsite.pw/w/20260806-pystrings.html",
-      "source": "Lobste.rs",
-      "score": 51,
-      "comments": 15,
-      "tags": [
-        "python"
-      ]
+      "url": "https://www.sciencedaily.com/releases/2026/08/260803080917.htm",
+      "source": "Hacker News",
+      "score": 157,
+      "comments": 44
     },
     {
-      "id": "hn:49201003",
-      "title": "Herdr is joining Y Combinator. The runtime stays open",
-      "summary": "",
-      "url": "https://herdr.dev/blog/herdr-is-joining-y-combinator/",
-      "source": "Hacker News",
-      "score": 156,
-      "comments": 105
+      "id": "arxiv:2608.06362v1",
+      "title": "AV-AIVAT: 74x Cheaper Agent Evaluation with Certified Anytime-Valid Stopping in Imperfect-Information Games",
+      "summary": "Deciding which of two agents is stronger means playing games until skill outweighs luck, and every game costs money, model inference, or expert time. Since the number of games needed is unknown, fixed-budget evaluations either keep paying after the result is settled or stop before the agents can be ",
+      "url": "https://arxiv.org/abs/2608.06362v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.GT",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "cs.MA"
+      ],
+      "arxiv_id": "2608.06362v1"
     },
     {
       "id": "rss:a5e0ff78a5",
@@ -138,74 +171,23 @@
       "summary": "",
       "url": "https://github.com/jj-vcs/jj/releases/tag/v0.44.0",
       "source": "Lobste.rs",
-      "score": 51,
-      "comments": 25,
+      "score": 60,
+      "comments": 28,
       "tags": [
         "release",
         "vcs"
       ]
     },
     {
-      "id": "lob:0cdps4",
-      "title": "i wonder if you could make a useful DOS executable with just emoji",
+      "id": "lob:0mjyep",
+      "title": "A shell exclamation mark is not for yelling. Be lazy",
       "summary": "",
-      "url": "https://oldbytes.space/@gloriouscow/117044736309312697",
-      "source": "Lobste.rs",
-      "score": 85,
-      "comments": 6,
-      "tags": [
-        "retrocomputing"
-      ]
-    },
-    {
-      "id": "hn:49152255",
-      "title": "I stopped trusting USB-C cable labels and started testing them",
-      "summary": "",
-      "url": "https://www.makeuseof.com/i-stopped-trusting-usb-c-cable-labels-started-testing-with-meter-instead/",
-      "source": "Hacker News",
-      "score": 92,
-      "comments": 54
-    },
-    {
-      "id": "hn:49184355",
-      "title": "Scientists discover Kelvin-Helmholtz Instability on the surface of the Sun",
-      "summary": "<a href=\"https:&#x2F;&#x2F;www.bbc.com&#x2F;news&#x2F;articles&#x2F;c36d4376nd2o\" rel=\"nofollow\">https:&#x2F;&#x2F;www.bbc.com&#x2F;news&#x2F;articles&#x2F;c36d4376nd2o</a>, <a href=\"https:&#x2F;&#x2F;archive.is&#x2F;YDn6S\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.is&#x2F;YDn6S</a>",
-      "url": "https://nso.edu/press-release/nsf-inouye-solar-telescope-enables-major-discovery-of-a-hidden-solar-process/",
-      "source": "Hacker News",
-      "score": 157,
-      "comments": 32
-    },
-    {
-      "id": "rss:13392654c5",
-      "title": "AI Recommendation Poisoning: How \"Ask AI\" Buttons Silently Alter LLM Memory",
-      "summary": "A new class of prompt injection is spreading across commercial websites. It requires no malware, no stolen credentials, and no zero-day exploit. It abuses a standard feature built into almost every major AI assistant: pre-filled deep links.\n\nWe observed production websites embedding hidden prompt in",
-      "url": "https://thehackernews.com/2026/08/ai-recommendation-poisoning-how-ask-ai.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "lob:o8ttys",
-      "title": "The following is a valid DOS COM executable",
-      "summary": "",
-      "url": "https://oldbytes.space/@gloriouscow/117045701876951834",
-      "source": "Lobste.rs",
-      "score": 23,
-      "comments": 1,
-      "tags": [
-        "art",
-        "programming"
-      ]
-    },
-    {
-      "id": "lob:aegq82",
-      "title": "Zig's Io.Threaded is Neat",
-      "summary": "",
-      "url": "https://matklad.github.io/2026/08/06/neat-io-threaded.html",
+      "url": "https://refp.se/articles/your-shell-and-the-lazy-exclamation-mark",
       "source": "Lobste.rs",
       "score": 32,
-      "comments": 4,
+      "comments": 23,
       "tags": [
-        "zig"
+        "unix"
       ]
     },
     {
@@ -214,16 +196,41 @@
       "summary": "",
       "url": "https://www.troyhunt.com/welcoming-the-nepalese-government-to-have-i-been-pwned/",
       "source": "Hacker News",
-      "score": 100,
-      "comments": 16
+      "score": 173,
+      "comments": 27
     },
     {
-      "id": "rss:2dde4d4fd7",
-      "title": "ThreatsDay: Odysseus RCE, Samsung One-Click Takeover, iCloud Backdoor Fight + 27 More Stories",
-      "summary": "Apparently, opening the thing is now enough. A repo can run before the first prompt, a package can hide among hundreds, and a harmless-looking PDF can finish the job.\n\nThis week runs on cheap leverage: exposed servers, recycled bugs, poisoned agent instructions, remote-access tools dressed as suppor",
-      "url": "https://thehackernews.com/2026/08/threatsday-odysseus-rce-samsung-one.html",
-      "source": "Tech RSS",
-      "score": 0
+      "id": "lob:aegq82",
+      "title": "Zig's Io.Threaded is Neat",
+      "summary": "",
+      "url": "https://matklad.github.io/2026/08/06/neat-io-threaded.html",
+      "source": "Lobste.rs",
+      "score": 62,
+      "comments": 8,
+      "tags": [
+        "zig"
+      ]
+    },
+    {
+      "id": "lob:ch83co",
+      "title": "I'm leaving OpenAI to build Jurassic Park",
+      "summary": "",
+      "url": "https://taylor.town/leaving-openai",
+      "source": "Lobste.rs",
+      "score": 56,
+      "comments": 4,
+      "tags": [
+        "satire"
+      ]
+    },
+    {
+      "id": "hn:49129015",
+      "title": "Atomic Clocks",
+      "summary": "",
+      "url": "https://www.nist.gov/atomic-clocks/how-do-atomic-clocks-work",
+      "source": "Hacker News",
+      "score": 105,
+      "comments": 58
     }
   ],
   "ai_curated": true
