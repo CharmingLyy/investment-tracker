@@ -1,123 +1,76 @@
 {
-  "date": "2026-08-06",
-  "update_time": "2026-08-06 14:14:13",
+  "date": "2026-08-07",
+  "update_time": "2026-08-07 02:59:38",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-06\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 DeepMind 高层大地震：Hassabis 转任主席，Jeff Dean 离场 (来源: Hacker News)\n- **核心干货**：Demis Hassabis 从 CEO 转任主席，Jeff Dean 正式告别，标志着 Google AI 权力架构的彻底重构。这不仅仅是人事变动，更是 Google 在 AGI 竞赛下半场的一次战略级转向——从科学家主导转向更商业化的运营模式。\n- **毒舌/硬核点评**：当实验室的梦想家开始坐董事会，说明 AGI 的\"军备竞赛\"已经进入拼刺刀的阶段。科学家退居二线，职业经理人上台——这波啊，是\"理想主义\"给\"财报\"让路。\n- **🔗 传送门**：[点击直达原链接](https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/)\n\n---\n\n### 2. 📌 Zed DeltaDB：编辑器也要造数据库？ (来源: Hacker News)\n- **核心干货**：Zed 编辑器团队开源了 DeltaDB，一个为协作编辑设计的本地优先、增量同步的嵌入式数据库。它解决了多人实时协作中\"离线编辑\"与\"冲突合并\"的痛点，把 CRDT 的性能和内存占用优化到了工业级水准。\n- **毒舌/硬核点评**：当你的 IDE 开始用自研数据库解决同步问题，而某些大厂还在用 JSON 文件存配置。这波是\"降维打击\"，也是给那些\"能用就行\"的团队一记响亮的耳光。\n- **🔗 传送门**：[点击直达原链接](https://zed.dev/deltadb)\n\n---\n\n### 3. 📌 人类审核 AI Agent：40,000 次运行中漏掉了 1/3 的威胁 (来源: Hacker News)\n- **核心干货**：一项针对 AI Agent 权限审批的大规模研究显示，人类在审查 AI 执行命令时，有高达 33% 的恶意或危险操作被直接放行。这意味着，在 Agent 自主行动的场景下，人类监督者已经成为最薄弱的环节——不是 AI 不够安全，是\"人肉防火墙\"先崩了。\n- **毒舌/硬核点评**：我们造出了需要\"监护人\"的 AI，结果监护人自己先摸鱼了。这 1/3 的漏网之鱼，不是 AI 的锅，是人类注意力经济下\"确认按钮疲劳\"的必然结局。\n- **🔗 传送门**：[点击直达原链接](https://scalex.dev/blog/ai-agent-permissions-stats/)\n\n---\n\n### 🗣️ 今日顶男金句\n\"真正的技术壁垒不是写代码的速度，而是当别人都在追风口时，你能否一眼看穿哪些是泡沫，哪些是硬核。今早的咖啡，敬那些还在坚持造轮子的人。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-07\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 AMD 收购 Taalas：把模型\"蚀刻\"进硅片，AI 推理性能暴涨 (来源: Hacker News)\n- **核心干货**：AMD 收购 AI 芯片初创公司 Taalas，后者核心技术是在硅片上直接\"蚀刻\"AI 模型，将特定模型架构转化为硬件逻辑，从而大幅提升推理效率并降低延迟。这标志着 AI 芯片竞争从\"通用加速\"转向\"模型专用硬件\"的极端路线。\n- **毒舌/硬核点评**：别人是软件定义硬件，Taalas 是\"模型定义芯片\"。AMD 这波操作，是想把 AI 推理卷成\"物理定律\"级别的壁垒。黄仁勋的皮衣，恐怕要再裹紧一点了。\n- **🔗 传送门**：[点击直达原链接](https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/)\n\n---\n\n### 2. 📌 新型 Zapscape KVM 漏洞：虚拟机\"越狱\"直通宿主机 (来源: Tech RSS)\n- **核心干货**：Linux 内核曝出高危漏洞 Zapscape (CVE-2026-6xxx)，攻击者只要在 L1 客户虚拟机内拥有内核权限，就能利用嵌套虚拟化场景突破 KVM 隔离，直接在宿主机上执行代码。对云厂商和多租户环境构成严重威胁。\n- **毒舌/硬核点评**：KVM 的隔离墙又被人凿了个洞。这提醒我们，虚拟化不是\"安全结界\"，而是\"共享公寓\"——隔壁邻居练拳击，你家天花板会掉灰。打补丁的速度，请务必跑在黑客前面。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/new-zapscape-kvm-flaw-could-let.html)\n\n---\n\n### 3. 📌 AI 推荐投毒：悄无声息篡改 LLM 记忆 (来源: Tech RSS)\n- **核心干货**：安全研究者发现一种新型提示注入攻击，利用主流 AI 助手的\"预填深度链接\"功能，在商业网站中植入隐藏指令。用户只需点击\"Ask AI\"按钮，LLM 的上下文记忆就会被悄悄污染，无需恶意软件或零日漏洞即可实现。\n- **毒舌/硬核点评**：以前是\"钓鱼\"，现在是\"养鱼\"。你每点一次 AI 按钮，都可能是在给模型喂一颗\"糖衣炮弹\"。当 AI 的推荐开始变得\"不对劲\"，请检查一下是不是有人给它下了降头。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/ai-recommendation-poisoning-how-ask-ai.html)\n\n---\n\n### 🗣️ 今日顶男金句\n真正的护城河不是写了几百万行代码，而是你写的代码让对手连\"抄作业\"的硬件都买不到。",
   "briefing_items": [
     {
-      "title": "DeepMind 高层大地震：Hassabis 转任主席，Jeff Dean 离场",
+      "title": "AMD 收购 Taalas：把模型\"蚀刻\"进硅片，AI 推理性能暴涨",
       "source": "Hacker News",
-      "summary": "Demis Hassabis 从 CEO 转任主席，Jeff Dean 正式告别，标志着 Google AI 权力架构的彻底重构。这不仅仅是人事变动，更是 Google 在 AGI 竞赛下半场的一次战略级转向——从科学家主导转向更商业化的运营模式。",
-      "commentary": "当实验室的梦想家开始坐董事会，说明 AGI 的\"军备竞赛\"已经进入拼刺刀的阶段。科学家退居二线，职业经理人上台——这波啊，是\"理想主义\"给\"财报\"让路。",
-      "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/"
+      "summary": "AMD 收购 AI 芯片初创公司 Taalas，后者核心技术是在硅片上直接\"蚀刻\"AI 模型，将特定模型架构转化为硬件逻辑，从而大幅提升推理效率并降低延迟。这标志着 AI 芯片竞争从\"通用加速\"转向\"模型专用硬件\"的极端路线。",
+      "commentary": "别人是软件定义硬件，Taalas 是\"模型定义芯片\"。AMD 这波操作，是想把 AI 推理卷成\"物理定律\"级别的壁垒。黄仁勋的皮衣，恐怕要再裹紧一点了。",
+      "url": "https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/"
     },
     {
-      "title": "Zed DeltaDB：编辑器也要造数据库？",
-      "source": "Hacker News",
-      "summary": "Zed 编辑器团队开源了 DeltaDB，一个为协作编辑设计的本地优先、增量同步的嵌入式数据库。它解决了多人实时协作中\"离线编辑\"与\"冲突合并\"的痛点，把 CRDT 的性能和内存占用优化到了工业级水准。",
-      "commentary": "当你的 IDE 开始用自研数据库解决同步问题，而某些大厂还在用 JSON 文件存配置。这波是\"降维打击\"，也是给那些\"能用就行\"的团队一记响亮的耳光。",
-      "url": "https://zed.dev/deltadb"
+      "title": "新型 Zapscape KVM 漏洞：虚拟机\"越狱\"直通宿主机",
+      "source": "Tech RSS",
+      "summary": "Linux 内核曝出高危漏洞 Zapscape (CVE-2026-6xxx)，攻击者只要在 L1 客户虚拟机内拥有内核权限，就能利用嵌套虚拟化场景突破 KVM 隔离，直接在宿主机上执行代码。对云厂商和多租户环境构成严重威胁。",
+      "commentary": "KVM 的隔离墙又被人凿了个洞。这提醒我们，虚拟化不是\"安全结界\"，而是\"共享公寓\"——隔壁邻居练拳击，你家天花板会掉灰。打补丁的速度，请务必跑在黑客前面。",
+      "url": "https://thehackernews.com/2026/08/new-zapscape-kvm-flaw-could-let.html"
     },
     {
-      "title": "人类审核 AI Agent：40,000 次运行中漏掉了 1/3 的威胁",
-      "source": "Hacker News",
-      "summary": "一项针对 AI Agent 权限审批的大规模研究显示，人类在审查 AI 执行命令时，有高达 33% 的恶意或危险操作被直接放行。这意味着，在 Agent 自主行动的场景下，人类监督者已经成为最薄弱的环节——不是 AI 不够安全，是\"人肉防火墙\"先崩了。",
-      "commentary": "我们造出了需要\"监护人\"的 AI，结果监护人自己先摸鱼了。这 1/3 的漏网之鱼，不是 AI 的锅，是人类注意力经济下\"确认按钮疲劳\"的必然结局。",
-      "url": "https://scalex.dev/blog/ai-agent-permissions-stats/"
+      "title": "AI 推荐投毒：悄无声息篡改 LLM 记忆",
+      "source": "Tech RSS",
+      "summary": "安全研究者发现一种新型提示注入攻击，利用主流 AI 助手的\"预填深度链接\"功能，在商业网站中植入隐藏指令。用户只需点击\"Ask AI\"按钮，LLM 的上下文记忆就会被悄悄污染，无需恶意软件或零日漏洞即可实现。",
+      "commentary": "以前是\"钓鱼\"，现在是\"养鱼\"。你每点一次 AI 按钮，都可能是在给模型喂一颗\"糖衣炮弹\"。当 AI 的推荐开始变得\"不对劲\"，请检查一下是不是有人给它下了降头。",
+      "url": "https://thehackernews.com/2026/08/ai-recommendation-poisoning-how-ask-ai.html"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49184755",
-      "title": "Changes at Google DeepMind: Demis Hassabis from CEO to Chair, Jeff Dean departs",
-      "summary": "<a href=\"https:&#x2F;&#x2F;www.axios.com&#x2F;2026&#x2F;08&#x2F;05&#x2F;google-deepmind-demis-hassabis-ai\" rel=\"nofollow\">https:&#x2F;&#x2F;www.axios.com&#x2F;2026&#x2F;08&#x2F;05&#x2F;google-deepmind-demis-hassa...</a><p><a href=\"https:&#x2F;&#x2F;www.reuters.com&#x2F;business&#x2F;google-shakes-up",
-      "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
+      "id": "hn:49201970",
+      "title": "AMD acquires Taalas to boost inference performance by etching models in silicon",
+      "summary": "<a href=\"https:&#x2F;&#x2F;ir.amd.com&#x2F;news-events&#x2F;press-releases&#x2F;detail&#x2F;1296&#x2F;amd-acquires-taalas-to-advance-compute-solutions-for-rapidly-growing-ai-inference-market\" rel=\"nofollow\">https:&#x2F;&#x2F;ir.amd.com&#x2F;news-events&#x2F;press-releases&#x2F;detail&#x2F;1296&#x2F;",
+      "url": "https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344",
       "source": "Hacker News",
-      "score": 735,
-      "comments": 788
+      "score": 408,
+      "comments": 323
     },
     {
-      "id": "hn:49168622",
-      "title": "How to Make a Nintendo 64 Game in 2026",
+      "id": "hn:49198069",
+      "title": "Almost no skill required to cook a steak",
       "summary": "",
-      "url": "https://phoboslab.org/log/2026/08/xibalba64-making-of",
+      "url": "https://blog.sydorets.com/en/posts/almost-no-skill-required-to-cook-a-steak/",
       "source": "Hacker News",
-      "score": 264,
-      "comments": 78
+      "score": 289,
+      "comments": 333
     },
     {
-      "id": "hn:49189287",
-      "title": "The title cards in Blade Runner are amazing",
+      "id": "hn:49199357",
+      "title": "Improving GPT‑5.6 Sol in ChatGPT, expanding GPT‑5.6 Luna access for free users",
       "summary": "",
-      "url": "https://randsinrepose.com/archives/blade-runner-title-cards/",
+      "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/",
       "source": "Hacker News",
-      "score": 332,
-      "comments": 162
+      "score": 165,
+      "comments": 120
     },
     {
-      "id": "lob:czvkjy",
-      "title": "rust-lang/rust is adopting an LLM policy",
-      "summary": "",
-      "url": "https://blog.rust-lang.org/inside-rust/2026/08/05/rust-langrust-is-adopting-an-llm-policy/",
-      "source": "Lobste.rs",
-      "score": 149,
-      "comments": 50,
-      "tags": [
-        "rust",
-        "vibecoding"
-      ]
-    },
-    {
-      "id": "hn:49192566",
-      "title": "Crime Pays but Botany Doesn't",
-      "summary": "",
-      "url": "https://www.crimepaysbutbotanydoesnt.com/reading-list",
+      "id": "hn:49198302",
+      "title": "GitHub Actions and Pages are experiencing degraded availability",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.githubstatus.com&#x2F;uptime&#x2F;br0l2tvcx85d\" rel=\"nofollow\">https:&#x2F;&#x2F;www.githubstatus.com&#x2F;uptime&#x2F;br0l2tvcx85d</a>",
+      "url": "https://www.githubstatus.com/incidents/qcvjkzcs7j74",
       "source": "Hacker News",
-      "score": 380,
-      "comments": 124
+      "score": 340,
+      "comments": 275
     },
     {
-      "id": "hn:49184960",
-      "title": "Discovery Loop",
-      "summary": "",
-      "url": "https://www.discoveryloop.com/",
+      "id": "hn:49198464",
+      "title": "Launch HN: ProvenMetal (YC S26) delivers circuit boards in days instead of weeks",
+      "summary": "Hey HN, we’re Will &amp; Johnny from ProvenMetal (<a href=\"https:&#x2F;&#x2F;provenmetal.com\">https:&#x2F;&#x2F;provenmetal.com</a>). You send us design files or specs and we give you assembled boards domestically in days.<p>The US produced 30% of PCBs globally in 2000, now they produce 4%. Chinese ",
+      "url": "https://provenmetal.com",
       "source": "Hacker News",
-      "score": 813,
-      "comments": 505
-    },
-    {
-      "id": "hn:49187256",
-      "title": "Zed DeltaDB",
-      "summary": "",
-      "url": "https://zed.dev/deltadb",
-      "source": "Hacker News",
-      "score": 473,
-      "comments": 266
-    },
-    {
-      "id": "lob:fgcrj0",
-      "title": "Offensive Internet Posture",
-      "summary": "",
-      "url": "https://bruceediger.com/posts/offensive-machine/",
-      "source": "Lobste.rs",
-      "score": 96,
-      "comments": 23,
-      "tags": [
-        "networking"
-      ]
-    },
-    {
-      "id": "lob:lzupt0",
-      "title": "The \"Disability Dongle\": Why Silicon Valley Hates Me and you",
-      "summary": "",
-      "url": "https://sightlessscribbles.com/disability-dongle/",
-      "source": "Lobste.rs",
-      "score": 124,
-      "comments": 15,
-      "tags": [
-        "a11y",
-        "rant"
-      ]
+      "score": 187,
+      "comments": 131
     },
     {
       "id": "hn:49195231",
@@ -125,30 +78,59 @@
       "summary": "",
       "url": "https://www.mayerowitz.io/blog/mario-meets-pareto",
       "source": "Hacker News",
-      "score": 202,
-      "comments": 38
+      "score": 898,
+      "comments": 150
     },
     {
-      "id": "hn:49193173",
-      "title": "On non-rooted Android 17, ADB uninstall of system apps fails",
+      "id": "hn:49199346",
+      "title": "Taste Is All That's Left",
       "summary": "",
-      "url": "https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/issues/1426",
+      "url": "https://notashelf.dev/posts/taste-is-all-thats-left",
       "source": "Hacker News",
-      "score": 143,
-      "comments": 91
+      "score": 228,
+      "comments": 183
     },
     {
-      "id": "arxiv:2608.05127v1",
-      "title": "SSTQ:Privacy-Preserving Vector Quantization via Subsampled Stochastic TurboQuant",
-      "summary": "Achieving local differential privacy in distributed optimization while maintaining low communication cost remains challenging. Existing vector quantization methods, such as vqSGD, use high-dimensional geometric constructions but incur unfavorable dimension-dependent variance. In this work, we propos",
-      "url": "https://arxiv.org/abs/2608.05127v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "stat.ML"
-      ],
-      "arxiv_id": "2608.05127v1"
+      "id": "lob:97laur",
+      "title": "tl;dv (Too Lazy; Didn't Validate): 181,874 Meetings Left Wide Open",
+      "summary": "",
+      "url": "https://bobdahacker.com/blog/tldv-hack",
+      "source": "Lobste.rs",
+      "score": 128,
+      "comments": 26,
+      "tags": [
+        "privacy",
+        "security"
+      ]
+    },
+    {
+      "id": "lob:mxdfdv",
+      "title": "python string literals are kinda funny",
+      "summary": "",
+      "url": "https://sebsite.pw/w/20260806-pystrings.html",
+      "source": "Lobste.rs",
+      "score": 51,
+      "comments": 15,
+      "tags": [
+        "python"
+      ]
+    },
+    {
+      "id": "hn:49201003",
+      "title": "Herdr is joining Y Combinator. The runtime stays open",
+      "summary": "",
+      "url": "https://herdr.dev/blog/herdr-is-joining-y-combinator/",
+      "source": "Hacker News",
+      "score": 156,
+      "comments": 105
+    },
+    {
+      "id": "rss:a5e0ff78a5",
+      "title": "New Zapscape KVM Flaw Could Let Privileged L1 Guest Code Escape to Linux Hosts",
+      "summary": "Zapscape, a new Linux kernel vulnerability, could allow an attacker with kernel privileges inside an L1 guest virtual machine (VM) to escape KVM isolation and execute code on the host. The risk applies when nested virtualization is exposed to untrusted guests.\n\nThe flaw is tracked as&nbsp;CVE-2026-6",
+      "url": "https://thehackernews.com/2026/08/new-zapscape-kvm-flaw-could-let.html",
+      "source": "Tech RSS",
+      "score": 0
     },
     {
       "id": "lob:xx83dr",
@@ -156,34 +138,12 @@
       "summary": "",
       "url": "https://github.com/jj-vcs/jj/releases/tag/v0.44.0",
       "source": "Lobste.rs",
-      "score": 30,
-      "comments": 16,
+      "score": 51,
+      "comments": 25,
       "tags": [
         "release",
         "vcs"
       ]
-    },
-    {
-      "id": "hn:49195468",
-      "title": "Humans missed 1 in 3 threats approving AI agent commands across 40k game runs",
-      "summary": "",
-      "url": "https://scalex.dev/blog/ai-agent-permissions-stats/",
-      "source": "Hacker News",
-      "score": 50,
-      "comments": 29
-    },
-    {
-      "id": "arxiv:2608.05138v1",
-      "title": "Teaching Nemotron Greek: Mining a Corpus, Adapting Retrieval, and Grounding Generation for Modern Greek across Specialist Domains",
-      "summary": "Modern Greek is absent from NVIDIA's Nemotron retrieval models and from major multilingual retrieval benchmarks, despite being important for retrieval-augmented generation (RAG) in legal, energy, financial, and medical applications. We present an end-to-end adaptation of the Nemotron retrieval stack",
-      "url": "https://arxiv.org/abs/2608.05138v1",
-      "source": "ArXiv",
-      "categories": [
-        "eess.AS",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_id": "2608.05138v1"
     },
     {
       "id": "lob:0cdps4",
@@ -191,59 +151,79 @@
       "summary": "",
       "url": "https://oldbytes.space/@gloriouscow/117044736309312697",
       "source": "Lobste.rs",
-      "score": 31,
-      "comments": 1,
+      "score": 85,
+      "comments": 6,
       "tags": [
         "retrocomputing"
       ]
     },
     {
-      "id": "lob:qamm7j",
-      "title": "I Built a Blog and Forgot to Write",
+      "id": "hn:49152255",
+      "title": "I stopped trusting USB-C cable labels and started testing them",
       "summary": "",
-      "url": "https://benjcal.space/blog/i-built-a-blog-and-forgot-to-write/",
-      "source": "Lobste.rs",
-      "score": 17,
-      "comments": 21,
-      "tags": [
-        "culture",
-        "philosophy",
-        "practices"
-      ]
+      "url": "https://www.makeuseof.com/i-stopped-trusting-usb-c-cable-labels-started-testing-with-meter-instead/",
+      "source": "Hacker News",
+      "score": 92,
+      "comments": 54
     },
     {
-      "id": "lob:31hk9y",
-      "title": "Faster Than Ninja",
+      "id": "hn:49184355",
+      "title": "Scientists discover Kelvin-Helmholtz Instability on the surface of the Sun",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.bbc.com&#x2F;news&#x2F;articles&#x2F;c36d4376nd2o\" rel=\"nofollow\">https:&#x2F;&#x2F;www.bbc.com&#x2F;news&#x2F;articles&#x2F;c36d4376nd2o</a>, <a href=\"https:&#x2F;&#x2F;archive.is&#x2F;YDn6S\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.is&#x2F;YDn6S</a>",
+      "url": "https://nso.edu/press-release/nsf-inouye-solar-telescope-enables-major-discovery-of-a-hidden-solar-process/",
+      "source": "Hacker News",
+      "score": 157,
+      "comments": 32
+    },
+    {
+      "id": "rss:13392654c5",
+      "title": "AI Recommendation Poisoning: How \"Ask AI\" Buttons Silently Alter LLM Memory",
+      "summary": "A new class of prompt injection is spreading across commercial websites. It requires no malware, no stolen credentials, and no zero-day exploit. It abuses a standard feature built into almost every major AI assistant: pre-filled deep links.\n\nWe observed production websites embedding hidden prompt in",
+      "url": "https://thehackernews.com/2026/08/ai-recommendation-poisoning-how-ask-ai.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "lob:o8ttys",
+      "title": "The following is a valid DOS COM executable",
       "summary": "",
-      "url": "https://build2.org/blog/faster-than-ninja.xhtml",
+      "url": "https://oldbytes.space/@gloriouscow/117045701876951834",
       "source": "Lobste.rs",
-      "score": 49,
-      "comments": 4,
+      "score": 23,
+      "comments": 1,
       "tags": [
+        "art",
         "programming"
       ]
     },
     {
-      "id": "hn:49096439",
-      "title": "Pareto Front",
+      "id": "lob:aegq82",
+      "title": "Zig's Io.Threaded is Neat",
       "summary": "",
-      "url": "https://en.wikipedia.org/wiki/Pareto_front",
-      "source": "Hacker News",
-      "score": 97,
-      "comments": 44
+      "url": "https://matklad.github.io/2026/08/06/neat-io-threaded.html",
+      "source": "Lobste.rs",
+      "score": 32,
+      "comments": 4,
+      "tags": [
+        "zig"
+      ]
     },
     {
-      "id": "arxiv:2608.05141v1",
-      "title": "OctoLong: Mid-Training On Cross-Repository Code Contexts Enhances Long-Context Modeling",
-      "summary": "Context lengths of language models (LMs) have dramatically increased, driven by the demands for in-context learning, self-improvement, and long-horizon agentic workflows. Existing long-context corpora, however, are dominated by books, academic articles, and code repositories, which are finite resour",
-      "url": "https://arxiv.org/abs/2608.05141v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.LG",
-        "cs.SE"
-      ],
-      "arxiv_id": "2608.05141v1"
+      "id": "hn:49203105",
+      "title": "Welcoming the Nepalese Government to Have I Been Pwned",
+      "summary": "",
+      "url": "https://www.troyhunt.com/welcoming-the-nepalese-government-to-have-i-been-pwned/",
+      "source": "Hacker News",
+      "score": 100,
+      "comments": 16
+    },
+    {
+      "id": "rss:2dde4d4fd7",
+      "title": "ThreatsDay: Odysseus RCE, Samsung One-Click Takeover, iCloud Backdoor Fight + 27 More Stories",
+      "summary": "Apparently, opening the thing is now enough. A repo can run before the first prompt, a package can hide among hundreds, and a harmless-looking PDF can finish the job.\n\nThis week runs on cheap leverage: exposed servers, recycled bugs, poisoned agent instructions, remote-access tools dressed as suppor",
+      "url": "https://thehackernews.com/2026/08/threatsday-odysseus-rce-samsung-one.html",
+      "source": "Tech RSS",
+      "score": 0
     }
   ],
   "ai_curated": true
