@@ -1,123 +1,99 @@
 {
-  "date": "2026-08-07",
-  "update_time": "2026-08-07 13:08:18",
+  "date": "2026-08-08",
+  "update_time": "2026-08-08 01:54:28",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-07\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 AMD 收购 Taalas：把大模型直接\"焊死\"在硅片上 (来源: Hacker News/新闻)\n- **核心干货**：AMD 收购了 AI 芯片初创公司 Taalas，后者核心技术是直接把训练好的模型架构\"蚀刻\"进硅片，实现推理性能的指数级提升。这相当于把软件逻辑物理化，跳过指令集和通用计算的中间层，针对特定模型做到极致能效比。\n- **毒舌/硬核点评**：英伟达还在卷 GPU 通用算力，AMD 直接掀桌子玩\"物理固化\"了。这波是硬件界的\"重写代码不如重写物理\"，但小心别把自己焊死在单一模型上，万一模型迭代了，你的芯片可就真成\"化石\"了。\n- **🔗 传送门**：[点击直达原链接](https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344)\n\n---\n\n### 2. 📌 Zapscape KVM 漏洞：虚拟机逃逸，宿主裸奔 (来源: 科技新闻)\n- **核心干货**：Linux 内核新发现高危漏洞 CVE-2026-6，允许拥有 L1 客户机内核权限的攻击者利用嵌套虚拟化漏洞，逃逸 KVM 隔离并在宿主机上执行代码。这意味着云服务商的租户隔离边界被击穿，一个恶意租户可能直接掌控物理服务器。\n- **毒舌/硬核点评**：虚拟化是云计算的\"隔离墙\"，现在墙上有洞了。各位云厂商的运维同学，今晚怕是要加班打补丁了。这漏洞提醒我们：所谓\"租户隔离\"，在安全研究员眼里可能只是\"一戳就破的纸灯笼\"。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/new-zapscape-kvm-flaw-could-let.html)\n\n---\n\n### 3. 📌 AV-AIVAT：用统计学给 AI 对战\"掐秒表\"，评估成本狂降 74 倍 (来源: ArXiv)\n- **核心干货**：这篇论文提出 AV-AIVAT 框架，解决了在非完美信息博弈中评估 AI 智能体强弱的核心痛点——你永远不知道要打多少局才能排除运气成分。它通过\"随时有效停止\"的认证算法，在结果已定时立刻终止测试，将评估成本最高降低 74 倍，且统计置信度有严格数学保证。\n- **毒舌/硬核点评**：以后评判两个 AI 谁更强，不用再打到天荒地老了。这玩意儿就是 AI 界的\"拳击裁判\"，看到一方毫无胜算就直接扔白毛巾，既省了比赛费用，又保住了输家的面子。做 AI 评测的团队，赶紧把这篇论文打印出来贴墙上。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2608.06362v1)\n\n---\n\n### 🗣️ 今日顶男金句\n\"别人在讨论'AI 会不会取代你'的时候，聪明人已经在研究怎么把 AI 的评估成本砍掉 74 倍。搞钱的本质，就是比对手更早看清'游戏何时结束'。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-08\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 DeepSeek V4 Flash 0731：Arc Prize 上的\"闪电战\" (来源: Hacker News)\n- **核心干货**：DeepSeek 在 Arc Prize 基准上发布了 V4 Flash 版本，HN 分数高达 468 且讨论激烈。这不仅是模型迭代，更释放出\"推理能力平权\"的信号——用更小的模型、更低的成本，去逼近甚至超越那些需要庞大算力集群的封闭模型。\n- **毒舌/硬核点评**：别家宣传\"更大更强\"，DeepSeek 直接玩\"更小更狠\"。这波操作，是给硅谷那些烧钱烧到眼红的巨头们一记响亮的耳光。\n- **🔗 传送门**：[点击直达原链接](https://arcprize.org/results/deepseek-v4-flash-0731)\n\n---\n\n### 2. 📌 Oracle 封杀 AI 生成代码，OpenJDK 开启\"纯净模式\" (来源: Hacker News)\n- **核心干货**：Oracle 正式禁止 AI 生成代码进入 OpenJDK，理由是版权与合规风险。讽刺的是，其 CEO 拉里·埃里森此前还声称\"Oracle 自己不用 AI 写代码\"。这波操作，相当于在自家后院里立了块\"AI 与狗不得入内\"的牌子。\n- **毒舌/硬核点评**：嘴上说不要，身体很诚实？不对，这次是嘴上吹牛，手上封杀。Oracle 这波\"既要又要\"的骚操作，属实是把开源社区当韭菜田了。\n- **🔗 传送门**：[点击直达原链接](https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code)\n\n---\n\n### 3. 📌 18 年老 Bug：Linux SCTP 漏洞可提权至 Root 并逃逸容器 (来源: Tech RSS)\n- **核心干货**：腾讯安全团队发现 Linux SCTP 协议栈中存在一个自 2008 年就潜伏的 use-after-free 漏洞，可被本地用户利用获得主机 Root 权限，甚至实现容器逃逸。修复补丁已随内核 7.1.6、6.18.42 等版本推送。\n- **毒舌/硬核点评**：一个\"18 岁\"的代码老古董，比硅谷一半创业公司的\"年龄\"还大，却依然能掀翻整个容器化地基——这告诉我们，技术债不还，迟早是要爆雷的。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/18-year-old-linux-sctp-flaw-could-let.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\"真正的硬核不是追着风口跑，而是当风暴来临时，你早已把地基打到了岩层。\"",
   "briefing_items": [
     {
-      "title": "AMD 收购 Taalas：把大模型直接\"焊死\"在硅片上",
-      "source": "Hacker News/新闻",
-      "summary": "AMD 收购了 AI 芯片初创公司 Taalas，后者核心技术是直接把训练好的模型架构\"蚀刻\"进硅片，实现推理性能的指数级提升。这相当于把软件逻辑物理化，跳过指令集和通用计算的中间层，针对特定模型做到极致能效比。",
-      "commentary": "英伟达还在卷 GPU 通用算力，AMD 直接掀桌子玩\"物理固化\"了。这波是硬件界的\"重写代码不如重写物理\"，但小心别把自己焊死在单一模型上，万一模型迭代了，你的芯片可就真成\"化石\"了。",
-      "url": "https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344"
+      "title": "DeepSeek V4 Flash 0731：Arc Prize 上的\"闪电战\"",
+      "source": "Hacker News",
+      "summary": "DeepSeek 在 Arc Prize 基准上发布了 V4 Flash 版本，HN 分数高达 468 且讨论激烈。这不仅是模型迭代，更释放出\"推理能力平权\"的信号——用更小的模型、更低的成本，去逼近甚至超越那些需要庞大算力集群的封闭模型。",
+      "commentary": "别家宣传\"更大更强\"，DeepSeek 直接玩\"更小更狠\"。这波操作，是给硅谷那些烧钱烧到眼红的巨头们一记响亮的耳光。",
+      "url": "https://arcprize.org/results/deepseek-v4-flash-0731"
     },
     {
-      "title": "Zapscape KVM 漏洞：虚拟机逃逸，宿主裸奔",
-      "source": "科技新闻",
-      "summary": "Linux 内核新发现高危漏洞 CVE-2026-6，允许拥有 L1 客户机内核权限的攻击者利用嵌套虚拟化漏洞，逃逸 KVM 隔离并在宿主机上执行代码。这意味着云服务商的租户隔离边界被击穿，一个恶意租户可能直接掌控物理服务器。",
-      "commentary": "虚拟化是云计算的\"隔离墙\"，现在墙上有洞了。各位云厂商的运维同学，今晚怕是要加班打补丁了。这漏洞提醒我们：所谓\"租户隔离\"，在安全研究员眼里可能只是\"一戳就破的纸灯笼\"。",
-      "url": "https://thehackernews.com/2026/08/new-zapscape-kvm-flaw-could-let.html"
+      "title": "Oracle 封杀 AI 生成代码，OpenJDK 开启\"纯净模式\"",
+      "source": "Hacker News",
+      "summary": "Oracle 正式禁止 AI 生成代码进入 OpenJDK，理由是版权与合规风险。讽刺的是，其 CEO 拉里·埃里森此前还声称\"Oracle 自己不用 AI 写代码\"。这波操作，相当于在自家后院里立了块\"AI 与狗不得入内\"的牌子。",
+      "commentary": "嘴上说不要，身体很诚实？不对，这次是嘴上吹牛，手上封杀。Oracle 这波\"既要又要\"的骚操作，属实是把开源社区当韭菜田了。",
+      "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code"
     },
     {
-      "title": "AV-AIVAT：用统计学给 AI 对战\"掐秒表\"，评估成本狂降 74 倍",
-      "source": "ArXiv",
-      "summary": "这篇论文提出 AV-AIVAT 框架，解决了在非完美信息博弈中评估 AI 智能体强弱的核心痛点——你永远不知道要打多少局才能排除运气成分。它通过\"随时有效停止\"的认证算法，在结果已定时立刻终止测试，将评估成本最高降低 74 倍，且统计置信度有严格数学保证。",
-      "commentary": "以后评判两个 AI 谁更强，不用再打到天荒地老了。这玩意儿就是 AI 界的\"拳击裁判\"，看到一方毫无胜算就直接扔白毛巾，既省了比赛费用，又保住了输家的面子。做 AI 评测的团队，赶紧把这篇论文打印出来贴墙上。",
-      "url": "https://arxiv.org/abs/2608.06362v1"
+      "title": "18 年老 Bug：Linux SCTP 漏洞可提权至 Root 并逃逸容器",
+      "source": "Tech RSS",
+      "summary": "腾讯安全团队发现 Linux SCTP 协议栈中存在一个自 2008 年就潜伏的 use-after-free 漏洞，可被本地用户利用获得主机 Root 权限，甚至实现容器逃逸。修复补丁已随内核 7.1.6、6.18.42 等版本推送。",
+      "commentary": "一个\"18 岁\"的代码老古董，比硅谷一半创业公司的\"年龄\"还大，却依然能掀翻整个容器化地基——这告诉我们，技术债不还，迟早是要爆雷的。",
+      "url": "https://thehackernews.com/2026/08/18-year-old-linux-sctp-flaw-could-let.html"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49201970",
-      "title": "AMD acquires Taalas to boost inference performance by etching models in silicon",
-      "summary": "<a href=\"https:&#x2F;&#x2F;ir.amd.com&#x2F;news-events&#x2F;press-releases&#x2F;detail&#x2F;1296&#x2F;amd-acquires-taalas-to-advance-compute-solutions-for-rapidly-growing-ai-inference-market\" rel=\"nofollow\">https:&#x2F;&#x2F;ir.amd.com&#x2F;news-events&#x2F;press-releases&#x2F;detail&#x2F;1296&#x2F;",
-      "url": "https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344",
-      "source": "Hacker News",
-      "score": 737,
-      "comments": 557
-    },
-    {
-      "id": "hn:49199357",
-      "title": "Improving GPT‑5.6 Sol in ChatGPT, expanding GPT‑5.6 Luna access for free users",
+      "id": "hn:49209539",
+      "title": "What happens if an entire class of workers loses faith in their careers",
       "summary": "",
-      "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/",
+      "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
       "source": "Hacker News",
-      "score": 260,
-      "comments": 210
+      "score": 428,
+      "comments": 535
     },
     {
-      "id": "hn:49208314",
-      "title": "US strikes $1.2B deal to pay German firm to halt offshore wind projects",
+      "id": "hn:49214008",
+      "title": "DeepSeek V4 Flash 0731",
       "summary": "",
-      "url": "https://www.bbc.com/news/articles/c1e1vg0gjl5o",
+      "url": "https://arcprize.org/results/deepseek-v4-flash-0731",
       "source": "Hacker News",
-      "score": 376,
-      "comments": 343
+      "score": 468,
+      "comments": 279
     },
     {
-      "id": "hn:49204352",
-      "title": "New Mexico court orders Meta to pay $567m over harms to children’s mental health",
-      "summary": "<a href=\"https:&#x2F;&#x2F;www.reuters.com&#x2F;world&#x2F;new-mexico-court-orders-meta-pay-567-mln-teen-mental-health-fund-2026-08-06&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.reuters.com&#x2F;world&#x2F;new-mexico-court-orders-meta-p...</a><p><a href=\"https:&#x2F;&#x2F;www.theguardian.com&#x2F;t",
-      "url": "https://www.theguardian.com/technology/2026/aug/06/new-mexico-court-meta",
-      "source": "Hacker News",
-      "score": 401,
-      "comments": 248
-    },
-    {
-      "id": "hn:49184355",
-      "title": "Scientists discover Kelvin-Helmholtz Instability on the surface of the Sun",
-      "summary": "<a href=\"https:&#x2F;&#x2F;www.bbc.com&#x2F;news&#x2F;articles&#x2F;c36d4376nd2o\" rel=\"nofollow\">https:&#x2F;&#x2F;www.bbc.com&#x2F;news&#x2F;articles&#x2F;c36d4376nd2o</a>, <a href=\"https:&#x2F;&#x2F;archive.is&#x2F;YDn6S\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.is&#x2F;YDn6S</a>",
-      "url": "https://nso.edu/press-release/nsf-inouye-solar-telescope-enables-major-discovery-of-a-hidden-solar-process/",
-      "source": "Hacker News",
-      "score": 256,
-      "comments": 53
-    },
-    {
-      "id": "hn:49198302",
-      "title": "GitHub Actions and Pages are experiencing degraded availability",
-      "summary": "<a href=\"https:&#x2F;&#x2F;www.githubstatus.com&#x2F;uptime&#x2F;br0l2tvcx85d\" rel=\"nofollow\">https:&#x2F;&#x2F;www.githubstatus.com&#x2F;uptime&#x2F;br0l2tvcx85d</a>",
-      "url": "https://www.githubstatus.com/incidents/qcvjkzcs7j74",
-      "source": "Hacker News",
-      "score": 430,
-      "comments": 354
-    },
-    {
-      "id": "hn:49198464",
-      "title": "Launch HN: ProvenMetal (YC S26) delivers circuit boards in days instead of weeks",
-      "summary": "Hey HN, we’re Will &amp; Johnny from ProvenMetal (<a href=\"https:&#x2F;&#x2F;provenmetal.com\">https:&#x2F;&#x2F;provenmetal.com</a>). You send us design files or specs and we give you assembled boards domestically in days.<p>The US produced 30% of PCBs globally in 2000, now they produce 4%. Chinese ",
-      "url": "https://provenmetal.com",
-      "source": "Hacker News",
-      "score": 210,
-      "comments": 149
-    },
-    {
-      "id": "hn:49138446",
-      "title": "São Paulo resident transforms degraded area into urban forest",
-      "summary": "<a href=\"https:&#x2F;&#x2F;thursd.com&#x2F;articles&#x2F;helio-da-silva-sao-paulo-tiquatira-linear-park\" rel=\"nofollow\">https:&#x2F;&#x2F;thursd.com&#x2F;articles&#x2F;helio-da-silva-sao-paulo-tiquati...</a>",
-      "url": "https://saopaulosecreto.com/en/tiquatira-linear-park-en/",
-      "source": "Hacker News",
-      "score": 193,
-      "comments": 80
-    },
-    {
-      "id": "hn:49199346",
-      "title": "Taste Is All That's Left",
+      "id": "hn:49214468",
+      "title": "Managing AI Coding Costs at Scale",
       "summary": "",
-      "url": "https://notashelf.dev/posts/taste-is-all-thats-left",
+      "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
       "source": "Hacker News",
-      "score": 503,
-      "comments": 375
+      "score": 168,
+      "comments": 173
     },
     {
-      "id": "lob:0cdps4",
-      "title": "i wonder if you could make a useful DOS executable with just emoji",
+      "id": "hn:49213754",
+      "title": "Oracle bans AI-generated code from OpenJDK",
       "summary": "",
-      "url": "https://oldbytes.space/@gloriouscow/117044736309312697",
+      "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
+      "source": "Hacker News",
+      "score": 391,
+      "comments": 257
+    },
+    {
+      "id": "hn:49214098",
+      "title": "Assembly Hall of Shame",
+      "summary": "",
+      "url": "https://github.com/xoreaxeaxeax/asm-hall-of-shame",
+      "source": "Hacker News",
+      "score": 251,
+      "comments": 58
+    },
+    {
+      "id": "lob:0mjyep",
+      "title": "A shell exclamation mark is not for yelling. Be lazy",
+      "summary": "",
+      "url": "https://refp.se/articles/your-shell-and-the-lazy-exclamation-mark",
       "source": "Lobste.rs",
-      "score": 104,
-      "comments": 10,
+      "score": 62,
+      "comments": 39,
       "tags": [
-        "retrocomputing"
+        "unix"
+      ]
+    },
+    {
+      "id": "lob:ch83co",
+      "title": "I'm leaving OpenAI to build Jurassic Park",
+      "summary": "",
+      "url": "https://taylor.town/leaving-openai",
+      "source": "Lobste.rs",
+      "score": 130,
+      "comments": 15,
+      "tags": [
+        "satire"
       ]
     },
     {
@@ -126,36 +102,30 @@
       "summary": "",
       "url": "https://bobdahacker.com/blog/tldv-hack",
       "source": "Lobste.rs",
-      "score": 170,
-      "comments": 38,
+      "score": 183,
+      "comments": 46,
       "tags": [
         "privacy",
         "security"
       ]
     },
     {
-      "id": "hn:49202716",
-      "title": "Bioengineered chewing gum may offer a way to fight HPV and other microbes",
+      "id": "hn:49213029",
+      "title": "Responding to the next frontier of critical cyber capabilities",
       "summary": "",
-      "url": "https://www.sciencedaily.com/releases/2026/08/260803080917.htm",
+      "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/",
       "source": "Hacker News",
-      "score": 157,
-      "comments": 44
+      "score": 155,
+      "comments": 167
     },
     {
-      "id": "arxiv:2608.06362v1",
-      "title": "AV-AIVAT: 74x Cheaper Agent Evaluation with Certified Anytime-Valid Stopping in Imperfect-Information Games",
-      "summary": "Deciding which of two agents is stronger means playing games until skill outweighs luck, and every game costs money, model inference, or expert time. Since the number of games needed is unknown, fixed-budget evaluations either keep paying after the result is settled or stop before the agents can be ",
-      "url": "https://arxiv.org/abs/2608.06362v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.GT",
-        "cs.AI",
-        "cs.CL",
-        "cs.LG",
-        "cs.MA"
-      ],
-      "arxiv_id": "2608.06362v1"
+      "id": "hn:49214770",
+      "title": "Ancient Library – 1,060 Greek/Latin texts, click any word to parse it",
+      "summary": "",
+      "url": "https://ancientlibrary.net/",
+      "source": "Hacker News",
+      "score": 148,
+      "comments": 49
     },
     {
       "id": "rss:a5e0ff78a5",
@@ -166,38 +136,34 @@
       "score": 0
     },
     {
-      "id": "lob:xx83dr",
-      "title": "jujutsu 0.44.0",
+      "id": "lob:rn4inr",
+      "title": "the web server deployment model breaks at hobby scale",
       "summary": "",
-      "url": "https://github.com/jj-vcs/jj/releases/tag/v0.44.0",
-      "source": "Lobste.rs",
-      "score": 60,
-      "comments": 28,
-      "tags": [
-        "release",
-        "vcs"
-      ]
-    },
-    {
-      "id": "lob:0mjyep",
-      "title": "A shell exclamation mark is not for yelling. Be lazy",
-      "summary": "",
-      "url": "https://refp.se/articles/your-shell-and-the-lazy-exclamation-mark",
+      "url": "https://w.on-t.work/web-deployment-model",
       "source": "Lobste.rs",
       "score": 32,
-      "comments": 23,
+      "comments": 29,
       "tags": [
-        "unix"
+        "web"
       ]
     },
     {
-      "id": "hn:49203105",
-      "title": "Welcoming the Nepalese Government to Have I Been Pwned",
+      "id": "hn:49216362",
+      "title": "Water system controllers don't belong on the internet, says ex-NSA chief",
       "summary": "",
-      "url": "https://www.troyhunt.com/welcoming-the-nepalese-government-to-have-i-been-pwned/",
+      "url": "https://www.theregister.com/security/2026/08/07/water-system-controllers-dont-belong-on-the-internet-says-ex-nsa-chief-after-suspected-iran-attacks/5285070",
       "source": "Hacker News",
-      "score": 173,
-      "comments": 27
+      "score": 124,
+      "comments": 84
+    },
+    {
+      "id": "hn:49211921",
+      "title": "An all-sky map of half a million supermassive black holes",
+      "summary": "",
+      "url": "https://www.sdss.org/black-hole-mapper-release-20/",
+      "source": "Hacker News",
+      "score": 141,
+      "comments": 35
     },
     {
       "id": "lob:aegq82",
@@ -205,32 +171,62 @@
       "summary": "",
       "url": "https://matklad.github.io/2026/08/06/neat-io-threaded.html",
       "source": "Lobste.rs",
-      "score": 62,
-      "comments": 8,
+      "score": 79,
+      "comments": 9,
       "tags": [
         "zig"
       ]
     },
     {
-      "id": "lob:ch83co",
-      "title": "I'm leaving OpenAI to build Jurassic Park",
-      "summary": "",
-      "url": "https://taylor.town/leaving-openai",
+      "id": "lob:ucaatd",
+      "title": "What are you doing this weekend?",
+      "summary": "<p>Feel free to tell what you plan on doing this weekend and even ask for help or feedback.</p>\n<p>Please keep in mind it’s more than OK to do nothing at all too!</p>\n",
+      "url": "https://lobste.rs/s/ucaatd/what_are_you_doing_this_weekend",
       "source": "Lobste.rs",
-      "score": 56,
-      "comments": 4,
+      "score": 22,
+      "comments": 38,
       "tags": [
-        "satire"
+        "ask",
+        "programming"
       ]
     },
     {
-      "id": "hn:49129015",
-      "title": "Atomic Clocks",
+      "id": "lob:c30jsd",
+      "title": "Am I the problem? Interviewing another team to find out",
       "summary": "",
-      "url": "https://www.nist.gov/atomic-clocks/how-do-atomic-clocks-work",
+      "url": "https://www.macchaffee.com/blog/2026/am-i-the-problem/",
+      "source": "Lobste.rs",
+      "score": 36,
+      "comments": 5,
+      "tags": [
+        "culture",
+        "practices"
+      ]
+    },
+    {
+      "id": "hn:49216946",
+      "title": "U.S. Department of Energy Launches the Genesis Open Models Initiative",
+      "summary": "",
+      "url": "https://genesisopenmodels.anl.gov/",
       "source": "Hacker News",
-      "score": 105,
-      "comments": 58
+      "score": 91,
+      "comments": 38
+    },
+    {
+      "id": "rss:2c0188e097",
+      "title": "18-Year-Old Linux SCTP Flaw Could Let Local Users Gain Root and Escape Containers",
+      "summary": "A use-after-free bug in Linux's SCTP networking code can be turned into full root on a host, and Tencent researchers say they used it to escape a container and reach the machine underneath.\n\nThe flaw has existed since 2008. The fix already shipped: stable kernels 7.1.6, 6.18.42, 6.12.101 and 6.6.148",
+      "url": "https://thehackernews.com/2026/08/18-year-old-linux-sctp-flaw-could-let.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:398276f398",
+      "title": "AI titans to tidy agent frontier with plugin prescription",
+      "summary": "Agent Plugins 1.0 defines a write-once-run-anywhere container for passing tools and skills across different agent platforms",
+      "url": "https://www.theregister.com/devops/2026/08/07/ai-titans-to-tidy-agent-frontier-with-plugin-prescription/5285017",
+      "source": "Tech RSS",
+      "score": 0
     }
   ],
   "ai_curated": true
