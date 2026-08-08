@@ -1,28 +1,28 @@
 {
   "date": "2026-08-08",
-  "update_time": "2026-08-08 01:54:28",
+  "update_time": "2026-08-08 12:51:58",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-08\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 DeepSeek V4 Flash 0731：Arc Prize 上的\"闪电战\" (来源: Hacker News)\n- **核心干货**：DeepSeek 在 Arc Prize 基准上发布了 V4 Flash 版本，HN 分数高达 468 且讨论激烈。这不仅是模型迭代，更释放出\"推理能力平权\"的信号——用更小的模型、更低的成本，去逼近甚至超越那些需要庞大算力集群的封闭模型。\n- **毒舌/硬核点评**：别家宣传\"更大更强\"，DeepSeek 直接玩\"更小更狠\"。这波操作，是给硅谷那些烧钱烧到眼红的巨头们一记响亮的耳光。\n- **🔗 传送门**：[点击直达原链接](https://arcprize.org/results/deepseek-v4-flash-0731)\n\n---\n\n### 2. 📌 Oracle 封杀 AI 生成代码，OpenJDK 开启\"纯净模式\" (来源: Hacker News)\n- **核心干货**：Oracle 正式禁止 AI 生成代码进入 OpenJDK，理由是版权与合规风险。讽刺的是，其 CEO 拉里·埃里森此前还声称\"Oracle 自己不用 AI 写代码\"。这波操作，相当于在自家后院里立了块\"AI 与狗不得入内\"的牌子。\n- **毒舌/硬核点评**：嘴上说不要，身体很诚实？不对，这次是嘴上吹牛，手上封杀。Oracle 这波\"既要又要\"的骚操作，属实是把开源社区当韭菜田了。\n- **🔗 传送门**：[点击直达原链接](https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code)\n\n---\n\n### 3. 📌 18 年老 Bug：Linux SCTP 漏洞可提权至 Root 并逃逸容器 (来源: Tech RSS)\n- **核心干货**：腾讯安全团队发现 Linux SCTP 协议栈中存在一个自 2008 年就潜伏的 use-after-free 漏洞，可被本地用户利用获得主机 Root 权限，甚至实现容器逃逸。修复补丁已随内核 7.1.6、6.18.42 等版本推送。\n- **毒舌/硬核点评**：一个\"18 岁\"的代码老古董，比硅谷一半创业公司的\"年龄\"还大，却依然能掀翻整个容器化地基——这告诉我们，技术债不还，迟早是要爆雷的。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/18-year-old-linux-sctp-flaw-could-let.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\"真正的硬核不是追着风口跑，而是当风暴来临时，你早已把地基打到了岩层。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-08\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 DeepSeek V4 Flash 0731 登顶 ARC Prize 排行榜 (来源: Hacker News)\n- **核心干货**：DeepSeek 最新发布的 V4 Flash 版本在 ARC Prize 基准测试中表现炸裂，以 672 分冲上 HN 热榜。这标志着国产模型在抽象推理和逻辑泛化能力上首次逼近甚至超越顶尖闭源模型，而非单纯堆参数拼算力。\n- **毒舌/硬核点评**：别家还在卷\"千亿参数写情诗\"，DeepSeek 已经跑到\"通用智能\"赛道上抢跑了。这波是\"卷王\"的降维打击，建议友商们把\"我们参数更多\"的PPT删了，改练内功。\n- **🔗 传送门**：[点击直达原链接](https://arcprize.org/results/deepseek-v4-flash-0731)\n\n---\n\n### 2. 📌 美国能源部启动\"Genesis 开源模型计划\" (来源: Hacker News)\n- **核心干货**：美国能源部联合阿贡国家实验室推出 Genesis Open Models Initiative，旨在打造政府级别的开源基础模型体系。这不仅是技术开源，更是国家战略层面对AI生态主导权的争夺，目标直指当前由商业巨头垄断的模型格局。\n- **毒舌/硬核点评**：美国政府终于意识到，AI 时代不能只当\"裁判\"和\"消费者\"，也得下场当\"运动员\"了。不过，政府机构的\"开源\"速度，希望别像国会立法一样，等法案通过时模型都进化到下一代了。\n- **🔗 传送门**：[点击直达原链接](https://genesisopenmodels.anl.gov/)\n\n---\n\n### 3. 📌 18岁高龄 Linux SCTP 漏洞可致容器逃逸与提权 (来源: Tech RSS)\n- **核心干货**：腾讯安全团队披露了一个潜伏长达 18 年之久的 Linux SCTP 协议栈 use-after-free 漏洞。该漏洞允许本地攻击者获得宿主机 root 权限并逃逸出容器，影响所有使用 Linux 内核的云环境和容器平台。修复补丁已发布至稳定内核分支。\n- **毒舌/硬核点评**：一个 bug 比很多程序员的职业生涯还长。这告诉我们两件事：第一，Linux 内核的代码审计任重道远；第二，你的容器环境可能早就是别人的\"后花园\"了。赶紧打补丁，别等黑客帮你\"考古\"。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/18-year-old-linux-sctp-flaw-could-let.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\"真正的护城河不是你的代码有多深，而是当别人还在修 18 年前的 bug 时，你已经用新模型把问题解决了。\"",
   "briefing_items": [
     {
-      "title": "DeepSeek V4 Flash 0731：Arc Prize 上的\"闪电战\"",
+      "title": "DeepSeek V4 Flash 0731 登顶 ARC Prize 排行榜",
       "source": "Hacker News",
-      "summary": "DeepSeek 在 Arc Prize 基准上发布了 V4 Flash 版本，HN 分数高达 468 且讨论激烈。这不仅是模型迭代，更释放出\"推理能力平权\"的信号——用更小的模型、更低的成本，去逼近甚至超越那些需要庞大算力集群的封闭模型。",
-      "commentary": "别家宣传\"更大更强\"，DeepSeek 直接玩\"更小更狠\"。这波操作，是给硅谷那些烧钱烧到眼红的巨头们一记响亮的耳光。",
+      "summary": "DeepSeek 最新发布的 V4 Flash 版本在 ARC Prize 基准测试中表现炸裂，以 672 分冲上 HN 热榜。这标志着国产模型在抽象推理和逻辑泛化能力上首次逼近甚至超越顶尖闭源模型，而非单纯堆参数拼算力。",
+      "commentary": "别家还在卷\"千亿参数写情诗\"，DeepSeek 已经跑到\"通用智能\"赛道上抢跑了。这波是\"卷王\"的降维打击，建议友商们把\"我们参数更多\"的PPT删了，改练内功。",
       "url": "https://arcprize.org/results/deepseek-v4-flash-0731"
     },
     {
-      "title": "Oracle 封杀 AI 生成代码，OpenJDK 开启\"纯净模式\"",
+      "title": "美国能源部启动\"Genesis 开源模型计划\"",
       "source": "Hacker News",
-      "summary": "Oracle 正式禁止 AI 生成代码进入 OpenJDK，理由是版权与合规风险。讽刺的是，其 CEO 拉里·埃里森此前还声称\"Oracle 自己不用 AI 写代码\"。这波操作，相当于在自家后院里立了块\"AI 与狗不得入内\"的牌子。",
-      "commentary": "嘴上说不要，身体很诚实？不对，这次是嘴上吹牛，手上封杀。Oracle 这波\"既要又要\"的骚操作，属实是把开源社区当韭菜田了。",
-      "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code"
+      "summary": "美国能源部联合阿贡国家实验室推出 Genesis Open Models Initiative，旨在打造政府级别的开源基础模型体系。这不仅是技术开源，更是国家战略层面对AI生态主导权的争夺，目标直指当前由商业巨头垄断的模型格局。",
+      "commentary": "美国政府终于意识到，AI 时代不能只当\"裁判\"和\"消费者\"，也得下场当\"运动员\"了。不过，政府机构的\"开源\"速度，希望别像国会立法一样，等法案通过时模型都进化到下一代了。",
+      "url": "https://genesisopenmodels.anl.gov/"
     },
     {
-      "title": "18 年老 Bug：Linux SCTP 漏洞可提权至 Root 并逃逸容器",
+      "title": "18岁高龄 Linux SCTP 漏洞可致容器逃逸与提权",
       "source": "Tech RSS",
-      "summary": "腾讯安全团队发现 Linux SCTP 协议栈中存在一个自 2008 年就潜伏的 use-after-free 漏洞，可被本地用户利用获得主机 Root 权限，甚至实现容器逃逸。修复补丁已随内核 7.1.6、6.18.42 等版本推送。",
-      "commentary": "一个\"18 岁\"的代码老古董，比硅谷一半创业公司的\"年龄\"还大，却依然能掀翻整个容器化地基——这告诉我们，技术债不还，迟早是要爆雷的。",
+      "summary": "腾讯安全团队披露了一个潜伏长达 18 年之久的 Linux SCTP 协议栈 use-after-free 漏洞。该漏洞允许本地攻击者获得宿主机 root 权限并逃逸出容器，影响所有使用 Linux 内核的云环境和容器平台。修复补丁已发布至稳定内核分支。",
+      "commentary": "一个 bug 比很多程序员的职业生涯还长。这告诉我们两件事：第一，Linux 内核的代码审计任重道远；第二，你的容器环境可能早就是别人的\"后花园\"了。赶紧打补丁，别等黑客帮你\"考古\"。",
       "url": "https://thehackernews.com/2026/08/18-year-old-linux-sctp-flaw-could-let.html"
     }
   ],
@@ -33,8 +33,8 @@
       "summary": "",
       "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
       "source": "Hacker News",
-      "score": 428,
-      "comments": 535
+      "score": 755,
+      "comments": 845
     },
     {
       "id": "hn:49214008",
@@ -42,26 +42,35 @@
       "summary": "",
       "url": "https://arcprize.org/results/deepseek-v4-flash-0731",
       "source": "Hacker News",
-      "score": 468,
-      "comments": 279
+      "score": 672,
+      "comments": 401
     },
     {
-      "id": "hn:49214468",
-      "title": "Managing AI Coding Costs at Scale",
+      "id": "hn:49189457",
+      "title": "A Physicist Rigged His Pet Hamster’s Wheel to Upload to Strava",
       "summary": "",
-      "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
+      "url": "https://www.runnersworld.com/news/a73355106/hamster-wheel-strava-running/",
       "source": "Hacker News",
-      "score": 168,
-      "comments": 173
+      "score": 271,
+      "comments": 62
     },
     {
-      "id": "hn:49213754",
-      "title": "Oracle bans AI-generated code from OpenJDK",
+      "id": "hn:49216946",
+      "title": "U.S. Department of Energy Launches the Genesis Open Models Initiative",
       "summary": "",
-      "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
+      "url": "https://genesisopenmodels.anl.gov/",
       "source": "Hacker News",
-      "score": 391,
-      "comments": 257
+      "score": 265,
+      "comments": 97
+    },
+    {
+      "id": "hn:49214770",
+      "title": "Ancient Library – 1,060 Greek/Latin texts, click any word to parse it",
+      "summary": "",
+      "url": "https://ancientlibrary.net/",
+      "source": "Hacker News",
+      "score": 217,
+      "comments": 70
     },
     {
       "id": "hn:49214098",
@@ -69,8 +78,17 @@
       "summary": "",
       "url": "https://github.com/xoreaxeaxeax/asm-hall-of-shame",
       "source": "Hacker News",
-      "score": 251,
-      "comments": 58
+      "score": 362,
+      "comments": 91
+    },
+    {
+      "id": "hn:49219508",
+      "title": "Hardware backdoors in some x86 CPUs",
+      "summary": "",
+      "url": "https://github.com/xoreaxeaxeax/rosenbridge",
+      "source": "Hacker News",
+      "score": 171,
+      "comments": 54
     },
     {
       "id": "lob:0mjyep",
@@ -78,8 +96,8 @@
       "summary": "",
       "url": "https://refp.se/articles/your-shell-and-the-lazy-exclamation-mark",
       "source": "Lobste.rs",
-      "score": 62,
-      "comments": 39,
+      "score": 69,
+      "comments": 47,
       "tags": [
         "unix"
       ]
@@ -90,8 +108,8 @@
       "summary": "",
       "url": "https://taylor.town/leaving-openai",
       "source": "Lobste.rs",
-      "score": 130,
-      "comments": 15,
+      "score": 145,
+      "comments": 16,
       "tags": [
         "satire"
       ]
@@ -102,7 +120,7 @@
       "summary": "",
       "url": "https://bobdahacker.com/blog/tldv-hack",
       "source": "Lobste.rs",
-      "score": 183,
+      "score": 185,
       "comments": 46,
       "tags": [
         "privacy",
@@ -110,60 +128,41 @@
       ]
     },
     {
-      "id": "hn:49213029",
-      "title": "Responding to the next frontier of critical cyber capabilities",
+      "id": "hn:49220350",
+      "title": "New Amazon Data Center Is Set to Have the Most Polluting Power Plant in the U.S.",
       "summary": "",
-      "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/",
+      "url": "https://www.nytimes.com/2026/08/08/climate/amazon-data-center-texas-pollution.html",
       "source": "Hacker News",
-      "score": 155,
-      "comments": 167
+      "score": 111,
+      "comments": 104
     },
     {
-      "id": "hn:49214770",
-      "title": "Ancient Library – 1,060 Greek/Latin texts, click any word to parse it",
+      "id": "lob:c30jsd",
+      "title": "Am I the problem? Interviewing another team to find out",
       "summary": "",
-      "url": "https://ancientlibrary.net/",
-      "source": "Hacker News",
-      "score": 148,
-      "comments": 49
-    },
-    {
-      "id": "rss:a5e0ff78a5",
-      "title": "New Zapscape KVM Flaw Could Let Privileged L1 Guest Code Escape to Linux Hosts",
-      "summary": "Zapscape, a new Linux kernel vulnerability, could allow an attacker with kernel privileges inside an L1 guest virtual machine (VM) to escape KVM isolation and execute code on the host. The risk applies when nested virtualization is exposed to untrusted guests.\n\nThe flaw is tracked as&nbsp;CVE-2026-6",
-      "url": "https://thehackernews.com/2026/08/new-zapscape-kvm-flaw-could-let.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "lob:rn4inr",
-      "title": "the web server deployment model breaks at hobby scale",
-      "summary": "",
-      "url": "https://w.on-t.work/web-deployment-model",
+      "url": "https://www.macchaffee.com/blog/2026/am-i-the-problem/",
       "source": "Lobste.rs",
-      "score": 32,
-      "comments": 29,
+      "score": 64,
+      "comments": 13,
       "tags": [
-        "web"
+        "culture",
+        "practices"
       ]
     },
     {
-      "id": "hn:49216362",
-      "title": "Water system controllers don't belong on the internet, says ex-NSA chief",
-      "summary": "",
-      "url": "https://www.theregister.com/security/2026/08/07/water-system-controllers-dont-belong-on-the-internet-says-ex-nsa-chief-after-suspected-iran-attacks/5285070",
-      "source": "Hacker News",
-      "score": 124,
-      "comments": 84
-    },
-    {
-      "id": "hn:49211921",
-      "title": "An all-sky map of half a million supermassive black holes",
-      "summary": "",
-      "url": "https://www.sdss.org/black-hole-mapper-release-20/",
-      "source": "Hacker News",
-      "score": 141,
-      "comments": 35
+      "id": "arxiv:2608.06362v1",
+      "title": "AV-AIVAT: 74x Cheaper Agent Evaluation with Certified Anytime-Valid Stopping in Imperfect-Information Games",
+      "summary": "Deciding which of two agents is stronger means playing games until skill outweighs luck, and every game costs money, model inference, or expert time. Since the number of games needed is unknown, fixed-budget evaluations either keep paying after the result is settled or stop before the agents can be ",
+      "url": "https://arxiv.org/abs/2608.06362v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.GT",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "cs.MA"
+      ],
+      "arxiv_id": "2608.06362v1"
     },
     {
       "id": "lob:aegq82",
@@ -171,7 +170,7 @@
       "summary": "",
       "url": "https://matklad.github.io/2026/08/06/neat-io-threaded.html",
       "source": "Lobste.rs",
-      "score": 79,
+      "score": 84,
       "comments": 9,
       "tags": [
         "zig"
@@ -183,34 +182,45 @@
       "summary": "<p>Feel free to tell what you plan on doing this weekend and even ask for help or feedback.</p>\n<p>Please keep in mind it’s more than OK to do nothing at all too!</p>\n",
       "url": "https://lobste.rs/s/ucaatd/what_are_you_doing_this_weekend",
       "source": "Lobste.rs",
-      "score": 22,
-      "comments": 38,
+      "score": 23,
+      "comments": 48,
       "tags": [
         "ask",
         "programming"
       ]
     },
     {
-      "id": "lob:c30jsd",
-      "title": "Am I the problem? Interviewing another team to find out",
-      "summary": "",
-      "url": "https://www.macchaffee.com/blog/2026/am-i-the-problem/",
-      "source": "Lobste.rs",
-      "score": 36,
-      "comments": 5,
-      "tags": [
-        "culture",
-        "practices"
-      ]
+      "id": "arxiv:2608.06377v1",
+      "title": "Learning When to Trust via Selective Context Preference Optimization",
+      "summary": "Language models increasingly condition their answers on external signals, and a single misleading one can turn a correct answer wrong. The obvious remedy, training models to resist such signals, hides a failure mode: a model that ignores all context looks robust yet is useless when the context is wo",
+      "url": "https://arxiv.org/abs/2608.06377v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_id": "2608.06377v1"
     },
     {
-      "id": "hn:49216946",
-      "title": "U.S. Department of Energy Launches the Genesis Open Models Initiative",
-      "summary": "",
-      "url": "https://genesisopenmodels.anl.gov/",
-      "source": "Hacker News",
-      "score": 91,
-      "comments": 38
+      "id": "arxiv:2608.06366v1",
+      "title": "Tracing the Heart: An Evidence-Linked Pipeline for Heart-Failure Feature Engineering",
+      "summary": "Electronic health record (EHR) feature engineering is a major bottleneck in clinical research and AI, accounting for 39-45% of data scientists' workload. This is especially pronounced in heart failure, which affects an estimated 6.7 million U.S. adults and requires integrating fragmented EHR data wi",
+      "url": "https://arxiv.org/abs/2608.06366v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_id": "2608.06366v1"
+    },
+    {
+      "id": "rss:746141012f",
+      "title": "Metabase Zero-Day Exploited in Wild Allows Admin Access Without Authentication",
+      "summary": "Metabase has warned that a maximum-severity security flaw impacting its business intelligence and data visualization software package has been exploited in the wild as a zero-day.\n\nThe vulnerability (CVSS score: 10.0), which does not carry a CVE identifier, allows an unauthenticated remote attacker",
+      "url": "https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html",
+      "source": "Tech RSS",
+      "score": 0
     },
     {
       "id": "rss:2c0188e097",
