@@ -1,140 +1,101 @@
 {
-  "date": "2026-08-08",
-  "update_time": "2026-08-08 12:51:58",
+  "date": "2026-08-09",
+  "update_time": "2026-08-09 02:01:46",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-08\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 DeepSeek V4 Flash 0731 登顶 ARC Prize 排行榜 (来源: Hacker News)\n- **核心干货**：DeepSeek 最新发布的 V4 Flash 版本在 ARC Prize 基准测试中表现炸裂，以 672 分冲上 HN 热榜。这标志着国产模型在抽象推理和逻辑泛化能力上首次逼近甚至超越顶尖闭源模型，而非单纯堆参数拼算力。\n- **毒舌/硬核点评**：别家还在卷\"千亿参数写情诗\"，DeepSeek 已经跑到\"通用智能\"赛道上抢跑了。这波是\"卷王\"的降维打击，建议友商们把\"我们参数更多\"的PPT删了，改练内功。\n- **🔗 传送门**：[点击直达原链接](https://arcprize.org/results/deepseek-v4-flash-0731)\n\n---\n\n### 2. 📌 美国能源部启动\"Genesis 开源模型计划\" (来源: Hacker News)\n- **核心干货**：美国能源部联合阿贡国家实验室推出 Genesis Open Models Initiative，旨在打造政府级别的开源基础模型体系。这不仅是技术开源，更是国家战略层面对AI生态主导权的争夺，目标直指当前由商业巨头垄断的模型格局。\n- **毒舌/硬核点评**：美国政府终于意识到，AI 时代不能只当\"裁判\"和\"消费者\"，也得下场当\"运动员\"了。不过，政府机构的\"开源\"速度，希望别像国会立法一样，等法案通过时模型都进化到下一代了。\n- **🔗 传送门**：[点击直达原链接](https://genesisopenmodels.anl.gov/)\n\n---\n\n### 3. 📌 18岁高龄 Linux SCTP 漏洞可致容器逃逸与提权 (来源: Tech RSS)\n- **核心干货**：腾讯安全团队披露了一个潜伏长达 18 年之久的 Linux SCTP 协议栈 use-after-free 漏洞。该漏洞允许本地攻击者获得宿主机 root 权限并逃逸出容器，影响所有使用 Linux 内核的云环境和容器平台。修复补丁已发布至稳定内核分支。\n- **毒舌/硬核点评**：一个 bug 比很多程序员的职业生涯还长。这告诉我们两件事：第一，Linux 内核的代码审计任重道远；第二，你的容器环境可能早就是别人的\"后花园\"了。赶紧打补丁，别等黑客帮你\"考古\"。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/18-year-old-linux-sctp-flaw-could-let.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\"真正的护城河不是你的代码有多深，而是当别人还在修 18 年前的 bug 时，你已经用新模型把问题解决了。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-09\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 DeepMind WeatherNext 实现气旋预报突破 (来源: Hacker News)\n- **核心干货**：DeepMind 的 WeatherNext 模型在气旋预报上取得重大突破，能更精准地预测热带气旋的路径与强度。这不仅是气象学的进步，更是 AI 在应对极端气候事件中从\"辅助工具\"转向\"核心决策引擎\"的标志性案例。\n- **毒舌/硬核点评**：以后天气预报不准，终于不能怪\"天有不测风云\"了，得怪 GPU 不够多。建议气象局赶紧囤卡，别让 AI 在暴雨来临前还在排队跑推理。\n- **🔗 传送门**：[点击直达原链接](https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/)\n\n---\n\n### 2. 📌 Linux 18岁高龄 SCTP 漏洞可致容器逃逸与提权 (来源: 新闻)\n- **核心干货**：腾讯安全团队发现 Linux SCTP 网络代码中存在一个自2008年就存在的 use-after-free 漏洞，可被本地用户利用获得 root 权限并逃逸出容器。虽然漏洞\"高龄\"，但修复补丁已随稳定内核版本发布，各运维团队需即刻行动。\n- **毒舌/硬核点评**：18岁，刚好成年，就出来搞事情。这个漏洞告诉我们，代码里的\"老古董\"不是岁月的沉淀，而是潜在的安全债。赶紧打补丁，别让你的容器变成黑客的\"自由行\"。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/18-year-old-linux-sctp-flaw-could-let.html)\n\n---\n\n### 3. 📌 OpenAI 遭攻击波及 Hugging Face 事件时间线 (来源: Hacker News)\n- **核心干货**：Simon Willison 梳理了 OpenAI 对 Hugging Face 的\"意外攻击\"完整时间线，详细记录了事件起因、传播路径与影响范围。这是对 AI 供应链安全的一次系统性复盘，极具警示意义。\n- **毒舌/硬核点评**：AI 巨头之间\"误伤\"的戏码，比科幻片还精彩。这次是\"误击\"，下次可能就是\"精准打击\"了。建议各大 AI 公司先把安全团队的预算翻倍，再谈 AGI。\n- **🔗 传送门**：[点击直达原链接](https://simonwillison.net/2026/Aug/7/openai-timeline/)\n\n---\n\n### 🗣️ 今日顶男金句\n真正的技术壁垒不是你的模型有多强，而是你的系统崩了之后，你能不能在一个小时内恢复——毕竟，安全才是那个\"一票否决\"的甲方。",
   "briefing_items": [
     {
-      "title": "DeepSeek V4 Flash 0731 登顶 ARC Prize 排行榜",
+      "title": "DeepMind WeatherNext 实现气旋预报突破",
       "source": "Hacker News",
-      "summary": "DeepSeek 最新发布的 V4 Flash 版本在 ARC Prize 基准测试中表现炸裂，以 672 分冲上 HN 热榜。这标志着国产模型在抽象推理和逻辑泛化能力上首次逼近甚至超越顶尖闭源模型，而非单纯堆参数拼算力。",
-      "commentary": "别家还在卷\"千亿参数写情诗\"，DeepSeek 已经跑到\"通用智能\"赛道上抢跑了。这波是\"卷王\"的降维打击，建议友商们把\"我们参数更多\"的PPT删了，改练内功。",
-      "url": "https://arcprize.org/results/deepseek-v4-flash-0731"
+      "summary": "DeepMind 的 WeatherNext 模型在气旋预报上取得重大突破，能更精准地预测热带气旋的路径与强度。这不仅是气象学的进步，更是 AI 在应对极端气候事件中从\"辅助工具\"转向\"核心决策引擎\"的标志性案例。",
+      "commentary": "以后天气预报不准，终于不能怪\"天有不测风云\"了，得怪 GPU 不够多。建议气象局赶紧囤卡，别让 AI 在暴雨来临前还在排队跑推理。",
+      "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/"
     },
     {
-      "title": "美国能源部启动\"Genesis 开源模型计划\"",
-      "source": "Hacker News",
-      "summary": "美国能源部联合阿贡国家实验室推出 Genesis Open Models Initiative，旨在打造政府级别的开源基础模型体系。这不仅是技术开源，更是国家战略层面对AI生态主导权的争夺，目标直指当前由商业巨头垄断的模型格局。",
-      "commentary": "美国政府终于意识到，AI 时代不能只当\"裁判\"和\"消费者\"，也得下场当\"运动员\"了。不过，政府机构的\"开源\"速度，希望别像国会立法一样，等法案通过时模型都进化到下一代了。",
-      "url": "https://genesisopenmodels.anl.gov/"
-    },
-    {
-      "title": "18岁高龄 Linux SCTP 漏洞可致容器逃逸与提权",
-      "source": "Tech RSS",
-      "summary": "腾讯安全团队披露了一个潜伏长达 18 年之久的 Linux SCTP 协议栈 use-after-free 漏洞。该漏洞允许本地攻击者获得宿主机 root 权限并逃逸出容器，影响所有使用 Linux 内核的云环境和容器平台。修复补丁已发布至稳定内核分支。",
-      "commentary": "一个 bug 比很多程序员的职业生涯还长。这告诉我们两件事：第一，Linux 内核的代码审计任重道远；第二，你的容器环境可能早就是别人的\"后花园\"了。赶紧打补丁，别等黑客帮你\"考古\"。",
+      "title": "Linux 18岁高龄 SCTP 漏洞可致容器逃逸与提权",
+      "source": "新闻",
+      "summary": "腾讯安全团队发现 Linux SCTP 网络代码中存在一个自2008年就存在的 use-after-free 漏洞，可被本地用户利用获得 root 权限并逃逸出容器。虽然漏洞\"高龄\"，但修复补丁已随稳定内核版本发布，各运维团队需即刻行动。",
+      "commentary": "18岁，刚好成年，就出来搞事情。这个漏洞告诉我们，代码里的\"老古董\"不是岁月的沉淀，而是潜在的安全债。赶紧打补丁，别让你的容器变成黑客的\"自由行\"。",
       "url": "https://thehackernews.com/2026/08/18-year-old-linux-sctp-flaw-could-let.html"
+    },
+    {
+      "title": "OpenAI 遭攻击波及 Hugging Face 事件时间线",
+      "source": "Hacker News",
+      "summary": "Simon Willison 梳理了 OpenAI 对 Hugging Face 的\"意外攻击\"完整时间线，详细记录了事件起因、传播路径与影响范围。这是对 AI 供应链安全的一次系统性复盘，极具警示意义。",
+      "commentary": "AI 巨头之间\"误伤\"的戏码，比科幻片还精彩。这次是\"误击\"，下次可能就是\"精准打击\"了。建议各大 AI 公司先把安全团队的预算翻倍，再谈 AGI。",
+      "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49209539",
-      "title": "What happens if an entire class of workers loses faith in their careers",
+      "id": "hn:49223082",
+      "title": "Fastmail offers EU data region",
       "summary": "",
-      "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
+      "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
       "source": "Hacker News",
-      "score": 755,
-      "comments": 845
+      "score": 322,
+      "comments": 146
     },
     {
-      "id": "hn:49214008",
-      "title": "DeepSeek V4 Flash 0731",
+      "id": "hn:49220126",
+      "title": "DeepMind's WeatherNext model achieves breakthrough forecasting cyclones",
       "summary": "",
-      "url": "https://arcprize.org/results/deepseek-v4-flash-0731",
+      "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
       "source": "Hacker News",
-      "score": 672,
-      "comments": 401
+      "score": 389,
+      "comments": 116
     },
     {
-      "id": "hn:49189457",
-      "title": "A Physicist Rigged His Pet Hamster’s Wheel to Upload to Strava",
+      "id": "hn:49220609",
+      "title": "Timeline of the OpenAI accidental attack against Hugging Face",
       "summary": "",
-      "url": "https://www.runnersworld.com/news/a73355106/hamster-wheel-strava-running/",
+      "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
       "source": "Hacker News",
-      "score": 271,
-      "comments": 62
+      "score": 344,
+      "comments": 351
     },
     {
-      "id": "hn:49216946",
-      "title": "U.S. Department of Energy Launches the Genesis Open Models Initiative",
+      "id": "hn:49221668",
+      "title": "_for-sale DNS records",
       "summary": "",
-      "url": "https://genesisopenmodels.anl.gov/",
+      "url": "https://specification.website/spec/foundations/for-sale-dns/",
       "source": "Hacker News",
-      "score": 265,
-      "comments": 97
+      "score": 349,
+      "comments": 132
     },
     {
-      "id": "hn:49214770",
-      "title": "Ancient Library – 1,060 Greek/Latin texts, click any word to parse it",
-      "summary": "",
-      "url": "https://ancientlibrary.net/",
-      "source": "Hacker News",
-      "score": 217,
-      "comments": 70
-    },
-    {
-      "id": "hn:49214098",
-      "title": "Assembly Hall of Shame",
-      "summary": "",
-      "url": "https://github.com/xoreaxeaxeax/asm-hall-of-shame",
-      "source": "Hacker News",
-      "score": 362,
-      "comments": 91
-    },
-    {
-      "id": "hn:49219508",
-      "title": "Hardware backdoors in some x86 CPUs",
-      "summary": "",
-      "url": "https://github.com/xoreaxeaxeax/rosenbridge",
-      "source": "Hacker News",
-      "score": 171,
-      "comments": 54
-    },
-    {
-      "id": "lob:0mjyep",
-      "title": "A shell exclamation mark is not for yelling. Be lazy",
-      "summary": "",
-      "url": "https://refp.se/articles/your-shell-and-the-lazy-exclamation-mark",
+      "id": "lob:cmrfrj",
+      "title": "some software talks i like",
+      "summary": "<p>Not tagged as video but contains mostly links to videos</p>\n",
+      "url": "https://char.lt/blog/2026/08/talks-i-like/",
       "source": "Lobste.rs",
-      "score": 69,
-      "comments": 47,
+      "score": 55,
+      "comments": 13,
       "tags": [
-        "unix"
+        "programming"
       ]
     },
     {
-      "id": "lob:ch83co",
-      "title": "I'm leaving OpenAI to build Jurassic Park",
+      "id": "hn:49223079",
+      "title": "Can Intel finally beat ARM on performance per Watt?",
       "summary": "",
-      "url": "https://taylor.town/leaving-openai",
-      "source": "Lobste.rs",
-      "score": 145,
-      "comments": 16,
-      "tags": [
-        "satire"
-      ]
-    },
-    {
-      "id": "lob:97laur",
-      "title": "tl;dv (Too Lazy; Didn't Validate): 181,874 Meetings Left Wide Open",
-      "summary": "",
-      "url": "https://bobdahacker.com/blog/tldv-hack",
-      "source": "Lobste.rs",
-      "score": 185,
-      "comments": 46,
-      "tags": [
-        "privacy",
-        "security"
-      ]
-    },
-    {
-      "id": "hn:49220350",
-      "title": "New Amazon Data Center Is Set to Have the Most Polluting Power Plant in the U.S.",
-      "summary": "",
-      "url": "https://www.nytimes.com/2026/08/08/climate/amazon-data-center-texas-pollution.html",
+      "url": "https://hackaday.com/2026/08/08/want-energy-efficiency-dude-youre-getting-a-dell/",
       "source": "Hacker News",
-      "score": 111,
-      "comments": 104
+      "score": 164,
+      "comments": 99
+    },
+    {
+      "id": "lob:uny1fo",
+      "title": "They don’t make ’em like Sublime Text anymore",
+      "summary": "",
+      "url": "https://dbushell.com/2026/08/07/sublime-text/",
+      "source": "Lobste.rs",
+      "score": 84,
+      "comments": 39,
+      "tags": [
+        "editors",
+        "rant"
+      ]
     },
     {
       "id": "lob:c30jsd",
@@ -142,77 +103,51 @@
       "summary": "",
       "url": "https://www.macchaffee.com/blog/2026/am-i-the-problem/",
       "source": "Lobste.rs",
-      "score": 64,
-      "comments": 13,
+      "score": 95,
+      "comments": 19,
       "tags": [
         "culture",
         "practices"
       ]
     },
     {
-      "id": "arxiv:2608.06362v1",
-      "title": "AV-AIVAT: 74x Cheaper Agent Evaluation with Certified Anytime-Valid Stopping in Imperfect-Information Games",
-      "summary": "Deciding which of two agents is stronger means playing games until skill outweighs luck, and every game costs money, model inference, or expert time. Since the number of games needed is unknown, fixed-budget evaluations either keep paying after the result is settled or stop before the agents can be ",
-      "url": "https://arxiv.org/abs/2608.06362v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.GT",
-        "cs.AI",
-        "cs.CL",
-        "cs.LG",
-        "cs.MA"
-      ],
-      "arxiv_id": "2608.06362v1"
-    },
-    {
-      "id": "lob:aegq82",
-      "title": "Zig's Io.Threaded is Neat",
+      "id": "lob:9cv8me",
+      "title": "The Nixpkgs core team has disbanded",
       "summary": "",
-      "url": "https://matklad.github.io/2026/08/06/neat-io-threaded.html",
+      "url": "https://discourse.nixos.org/t/the-nixpkgs-core-team-has-disbanded/79413",
       "source": "Lobste.rs",
-      "score": 84,
-      "comments": 9,
+      "score": 95,
+      "comments": 12,
       "tags": [
-        "zig"
+        "nix"
       ]
     },
     {
-      "id": "lob:ucaatd",
-      "title": "What are you doing this weekend?",
-      "summary": "<p>Feel free to tell what you plan on doing this weekend and even ask for help or feedback.</p>\n<p>Please keep in mind it’s more than OK to do nothing at all too!</p>\n",
-      "url": "https://lobste.rs/s/ucaatd/what_are_you_doing_this_weekend",
-      "source": "Lobste.rs",
-      "score": 23,
-      "comments": 48,
-      "tags": [
-        "ask",
-        "programming"
-      ]
+      "id": "hn:49225918",
+      "title": "Maryland Closes More of Cunningham Falls State Park After Second Beaver Attack",
+      "summary": "",
+      "url": "https://news.maryland.gov/dnr/2026/08/05/dnr-closes-additional-areas-of-cunningham-falls-state-park-following-second-beaver-attack/",
+      "source": "Hacker News",
+      "score": 87,
+      "comments": 52
     },
     {
-      "id": "arxiv:2608.06377v1",
-      "title": "Learning When to Trust via Selective Context Preference Optimization",
-      "summary": "Language models increasingly condition their answers on external signals, and a single misleading one can turn a correct answer wrong. The obvious remedy, training models to resist such signals, hides a failure mode: a model that ignores all context looks robust yet is useless when the context is wo",
-      "url": "https://arxiv.org/abs/2608.06377v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2608.06377v1"
+      "id": "hn:49221711",
+      "title": "Triton: DirectX 11 Driver for QEMU",
+      "summary": "",
+      "url": "https://blog.getutm.app/2026/introducing-triton-directx-11-driver-for-qemu/",
+      "source": "Hacker News",
+      "score": 138,
+      "comments": 25
     },
     {
-      "id": "arxiv:2608.06366v1",
-      "title": "Tracing the Heart: An Evidence-Linked Pipeline for Heart-Failure Feature Engineering",
-      "summary": "Electronic health record (EHR) feature engineering is a major bottleneck in clinical research and AI, accounting for 39-45% of data scientists' workload. This is especially pronounced in heart failure, which affects an estimated 6.7 million U.S. adults and requires integrating fragmented EHR data wi",
-      "url": "https://arxiv.org/abs/2608.06366v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2608.06366v1"
+      "id": "hn:49226636",
+      "title": "My server is a phone now",
+      "summary": "",
+      "url": "https://seg6.space/posts/phone-server/",
+      "source": "Hacker News",
+      "score": 98,
+      "comments": 45
     },
     {
       "id": "rss:746141012f",
@@ -237,6 +172,49 @@
       "url": "https://www.theregister.com/devops/2026/08/07/ai-titans-to-tidy-agent-frontier-with-plugin-prescription/5285017",
       "source": "Tech RSS",
       "score": 0
+    },
+    {
+      "id": "hn:49225139",
+      "title": "Open-source interactive map for the Aug 12 total solar eclipse",
+      "summary": "",
+      "url": "https://eclipsefan.org/?v=2&t=max&layers=eclipse%2Cbesselian%2Cumbra-live%2Cshadow-3d%2Ccloud-projection%2Cosm&lat=43.4623&lon=-3.8099&opacity=besselian%3A0.2%2Cumbra-live%3A0.2&zoom=6&palier=minute",
+      "source": "Hacker News",
+      "score": 90,
+      "comments": 18
+    },
+    {
+      "id": "rss:eccd7142a7",
+      "title": "N-able Issues N-central Hotfix 2 as Attackers Reach Managed Systems and Persist",
+      "summary": "N-able has released a fresh round of hotfixes for N‑central as part of its investigation into ongoing exploitation of a recently disclosed security flaw in the Remote Monitoring and Management (RMM) product.\n\n\"We are proactively expanding protections in response to ongoing monitoring of threat actor",
+      "url": "https://thehackernews.com/2026/08/n-central-attackers-reach-managed.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:18609fdb53",
+      "title": "Progress Kemp LoadMaster Flaw Hits CISA KEV After 792 Reported Exploit Attempts",
+      "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added a critical-severity security flaw impacting Progress Kemp LoadMaster to its Known Exploited Vulnerabilities (KEV) catalog, following reports of active exploitation in the wild.\n\nThe vulnerability, tracked as CVE-2026-80",
+      "url": "https://thehackernews.com/2026/08/progress-kemp-loadmaster-flaw-hits-cisa.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "hn:49226536",
+      "title": "Shopify replaced Redis with MySQL for inventory reservations–and it scaled",
+      "summary": "",
+      "url": "https://shopify.engineering/scaling-inventory-reservations",
+      "source": "Hacker News",
+      "score": 47,
+      "comments": 11
+    },
+    {
+      "id": "hn:49180649",
+      "title": "Making difficulty curves in games",
+      "summary": "",
+      "url": "http://www.davetech.co.uk/difficultycurves",
+      "source": "Hacker News",
+      "score": 60,
+      "comments": 18
     }
   ],
   "ai_curated": true
