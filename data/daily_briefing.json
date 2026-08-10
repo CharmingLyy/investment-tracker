@@ -1,101 +1,49 @@
 {
   "date": "2026-08-10",
-  "update_time": "2026-08-10 02:06:26",
+  "update_time": "2026-08-10 13:12:49",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-10\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Metabase 零日漏洞被野外利用，无需认证即可获取管理员权限 (来源: The Hacker News)\n- **核心干货**：Metabase 曝出 CVSS 10.0 级零日漏洞，无需任何认证即可让远程攻击者获取管理员权限，且已被证实存在野外利用。这相当于你家大门不仅没锁，还贴了张纸条写着\"管理员入口在这\"。\n- **毒舌/硬核点评**：CVSS 满分不是终点，是起点——安全团队凌晨三点的闹钟已就位。建议所有 BI 工具管理员立刻检查版本，别等红队来给你演示什么叫\"一键接管\"。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html)\n\n---\n\n### 2. 📌 18年高龄 Linux SCTP 漏洞：本地提权至 Root 并逃逸容器 (来源: The Hacker News)\n- **核心干货**：Linux 内核 SCTP 协议栈中存在一个自 2008 年就存在的 use-after-free 漏洞，腾讯安全团队已成功利用它从容器内逃逸并拿下宿主机 Root 权限。修复补丁已发布，涉及 7.1.6、6.18.42 等多个稳定分支。\n- **毒舌/硬核点评**：2008 年出生的漏洞，现在都能合法\"成年\"搞破坏了。容器逃逸 + Root 提权一套连招，直接把你精心搭建的\"隔离环境\"打成筛子。赶紧升级内核，别让 18 岁的漏洞教你做人。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/18-year-old-linux-sctp-flaw-could-let.html)\n\n---\n\n### 3. 📌 Agent Plugins 1.0 发布：AI 智能体插件互操作标准出炉 (来源: The Register)\n- **核心干货**：多家 AI 巨头联合推出 Agent Plugins 1.0 规范，定义了一种\"一次编写，到处运行\"的容器格式，用于跨平台传递工具和技能，试图终结智能体生态碎片化。说白了，就是给 AI Agent 们统一了\"USB-C 接口\"。\n- **毒舌/硬核点评**：继 USB-C 统一充电口后，AI 界终于也要迎来自己的\"接口大一统\"了。但标准有了，生态能不能跟上，还得看各位\"巨头\"愿不愿意放下身段真互通——别到时候又是一纸空文，各自圈地。\n- **🔗 传送门**：[点击直达原链接](https://www.theregister.com/devops/2026/08/07/ai-titans-to-tidy-agent-frontier-with-plugin-prescription/5285017)\n\n---\n\n### 🗣️ 今日顶男金句\n**\"漏洞不会变老，只会等你变强。今天不修的内核，明天就是别人手里的 root shell。\"**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-10\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Docker Sandboxes：给 AI Agent 的\"一次性隔离盒\" (来源: Hacker News, 330分)\n- **核心干货**：Docker 正式发布了面向 AI Agent 的沙箱产品，主打\"用完即焚\"的隔离环境。这解决了 Agent 在自主执行任务时可能引发的安全问题——比如乱跑命令、污染宿主环境。本质上是给 AI 的\"手\"戴上一次性手套，防止它在你服务器上乱搞。\n- **毒舌/硬核点评**：AI Agent 终于有自己的\"安全套\"了，但这玩意儿到底是保护用户，还是保护 Docker 的云业务？反正隔离了，出事儿别找我。\n- **🔗 传送门**：[点击直达原链接](https://www.docker.com/products/docker-sandboxes/)\n\n---\n\n### 2. 📌 Meta Muse Glimmer：30B 开源编程模型，重拳出击 (来源: Hacker News, 301分)\n- **核心干货**：Meta 推出开源（open weights）的 30B 参数本地编程模型，专攻代码生成与 Agent 任务。30B 的规模意味着可以在不错的消费级硬件上本地运行，对隐私敏感和离线开发场景是重大利好，直接对标闭源大厂的云端代码模型。\n- **毒舌/硬核点评**：Meta 这波是\"开源界的内卷之王\"，30B 就把活儿干漂亮了。看来以后\"本地跑大模型\"不再是极客的玩具，而是程序员的标配了。\n- **🔗 传送门**：[点击直达原链接](https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model)\n\n---\n\n### 3. 📌 Metabase 零日漏洞：满分 10 分，无认证直接当管理员 (来源: Tech RSS)\n- **核心干货**：Metabase 曝出 CVSS 10.0 的最高危零日漏洞，且已被在野利用。攻击者无需任何认证即可获取管理员权限，直接接管你的 BI 和数据可视化系统。连 CVE 编号都还没分配，说明是刚被发现就被打穿了。\n- **毒舌/硬核点评**：这可能是今年最\"朴实无华\"的漏洞——不整花活儿，直接让你裸奔。赶紧去查你的 Metabase 实例，没打补丁的等于把数据库钥匙挂在大门口。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\"技术债务像脂肪，不运动（重构）就会堆积；但今天，先看看你的 Metabase 补丁打了没。\"",
   "briefing_items": [
     {
-      "title": "Metabase 零日漏洞被野外利用，无需认证即可获取管理员权限",
-      "source": "The Hacker News",
-      "summary": "Metabase 曝出 CVSS 10.0 级零日漏洞，无需任何认证即可让远程攻击者获取管理员权限，且已被证实存在野外利用。这相当于你家大门不仅没锁，还贴了张纸条写着\"管理员入口在这\"。",
-      "commentary": "CVSS 满分不是终点，是起点——安全团队凌晨三点的闹钟已就位。建议所有 BI 工具管理员立刻检查版本，别等红队来给你演示什么叫\"一键接管\"。",
+      "title": "Docker Sandboxes：给 AI Agent 的\"一次性隔离盒\"",
+      "source": "Hacker News, 330分",
+      "summary": "Docker 正式发布了面向 AI Agent 的沙箱产品，主打\"用完即焚\"的隔离环境。这解决了 Agent 在自主执行任务时可能引发的安全问题——比如乱跑命令、污染宿主环境。本质上是给 AI 的\"手\"戴上一次性手套，防止它在你服务器上乱搞。",
+      "commentary": "AI Agent 终于有自己的\"安全套\"了，但这玩意儿到底是保护用户，还是保护 Docker 的云业务？反正隔离了，出事儿别找我。",
+      "url": "https://www.docker.com/products/docker-sandboxes/"
+    },
+    {
+      "title": "Meta Muse Glimmer：30B 开源编程模型，重拳出击",
+      "source": "Hacker News, 301分",
+      "summary": "Meta 推出开源（open weights）的 30B 参数本地编程模型，专攻代码生成与 Agent 任务。30B 的规模意味着可以在不错的消费级硬件上本地运行，对隐私敏感和离线开发场景是重大利好，直接对标闭源大厂的云端代码模型。",
+      "commentary": "Meta 这波是\"开源界的内卷之王\"，30B 就把活儿干漂亮了。看来以后\"本地跑大模型\"不再是极客的玩具，而是程序员的标配了。",
+      "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model"
+    },
+    {
+      "title": "Metabase 零日漏洞：满分 10 分，无认证直接当管理员",
+      "source": "Tech RSS",
+      "summary": "Metabase 曝出 CVSS 10.0 的最高危零日漏洞，且已被在野利用。攻击者无需任何认证即可获取管理员权限，直接接管你的 BI 和数据可视化系统。连 CVE 编号都还没分配，说明是刚被发现就被打穿了。",
+      "commentary": "这可能是今年最\"朴实无华\"的漏洞——不整花活儿，直接让你裸奔。赶紧去查你的 Metabase 实例，没打补丁的等于把数据库钥匙挂在大门口。",
       "url": "https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html"
-    },
-    {
-      "title": "18年高龄 Linux SCTP 漏洞：本地提权至 Root 并逃逸容器",
-      "source": "The Hacker News",
-      "summary": "Linux 内核 SCTP 协议栈中存在一个自 2008 年就存在的 use-after-free 漏洞，腾讯安全团队已成功利用它从容器内逃逸并拿下宿主机 Root 权限。修复补丁已发布，涉及 7.1.6、6.18.42 等多个稳定分支。",
-      "commentary": "2008 年出生的漏洞，现在都能合法\"成年\"搞破坏了。容器逃逸 + Root 提权一套连招，直接把你精心搭建的\"隔离环境\"打成筛子。赶紧升级内核，别让 18 岁的漏洞教你做人。",
-      "url": "https://thehackernews.com/2026/08/18-year-old-linux-sctp-flaw-could-let.html"
-    },
-    {
-      "title": "Agent Plugins 1.0 发布：AI 智能体插件互操作标准出炉",
-      "source": "The Register",
-      "summary": "多家 AI 巨头联合推出 Agent Plugins 1.0 规范，定义了一种\"一次编写，到处运行\"的容器格式，用于跨平台传递工具和技能，试图终结智能体生态碎片化。说白了，就是给 AI Agent 们统一了\"USB-C 接口\"。",
-      "commentary": "继 USB-C 统一充电口后，AI 界终于也要迎来自己的\"接口大一统\"了。但标准有了，生态能不能跟上，还得看各位\"巨头\"愿不愿意放下身段真互通——别到时候又是一纸空文，各自圈地。",
-      "url": "https://www.theregister.com/devops/2026/08/07/ai-titans-to-tidy-agent-frontier-with-plugin-prescription/5285017"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49234675",
-      "title": "How I use LLMs to learn complex topics",
+      "id": "hn:49239751",
+      "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
       "summary": "",
-      "url": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/",
+      "url": "https://www.docker.com/products/docker-sandboxes/",
       "source": "Hacker News",
-      "score": 430,
-      "comments": 249
+      "score": 330,
+      "comments": 194
     },
     {
-      "id": "hn:49230477",
-      "title": "Everything you do is being recorded",
-      "summary": "<a href=\"https:&#x2F;&#x2F;archive.is&#x2F;JxaZ7\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.is&#x2F;JxaZ7</a>",
-      "url": "https://www.theatlantic.com/technology/2026/05/ai-wearable-surveillance-countermeasures/687203/",
-      "source": "Hacker News",
-      "score": 215,
-      "comments": 171
-    },
-    {
-      "id": "hn:49232253",
-      "title": "Taxi drivers rarely die of Alzheimer's",
+      "id": "hn:49241679",
+      "title": "Meta Muse Glimmer – open weights 30B local coding model",
       "summary": "",
-      "url": "https://theconversation.com/taxi-drivers-rarely-die-of-alzheimers-how-complex-mental-maps-and-spatial-reasoning-protect-your-brain-286650",
+      "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
       "source": "Hacker News",
-      "score": 186,
-      "comments": 139
-    },
-    {
-      "id": "hn:49231154",
-      "title": "Mea Culpa – Dark Hours",
-      "summary": "",
-      "url": "https://blog.terrygodier.com/2026/08/09/mea-culpa-dark-hours.html",
-      "source": "Hacker News",
-      "score": 561,
-      "comments": 254
-    },
-    {
-      "id": "lob:cmrfrj",
-      "title": "some software talks i like",
-      "summary": "<p>Not tagged as video but contains mostly links to videos</p>\n",
-      "url": "https://char.lt/blog/2026/08/talks-i-like/",
-      "source": "Lobste.rs",
-      "score": 87,
-      "comments": 17,
-      "tags": [
-        "programming"
-      ]
-    },
-    {
-      "id": "lob:he9j7y",
-      "title": "I think the vibecoding tag has gotten out of hand",
-      "summary": "<p>I was reading <a href=\"https://lobste.rs/s/x0jlp7/tracking_down_zsh_history_data_loss_bug\" rel=\"ugc\">this post</a> and noticed the <code>vibecoding</code> had been applied. I’m not sure if this was applied by the lobste.rs team or by the author, but after reading the post it’s pretty clear that t",
-      "url": "https://lobste.rs/s/he9j7y/i_think_vibecoding_tag_has_gotten_out_hand",
-      "source": "Lobste.rs",
-      "score": 34,
-      "comments": 32,
-      "tags": [
-        "meta",
-        "vibecoding"
-      ]
-    },
-    {
-      "id": "hn:49233423",
-      "title": "Ask HN: What are you working on? (August 2026)",
-      "summary": "What are you working on?  What have you been curious about lately?",
-      "url": "https://news.ycombinator.com/item?id=49233423",
-      "source": "Hacker News",
-      "score": 174,
-      "comments": 655
+      "score": 301,
+      "comments": 121
     },
     {
       "id": "lob:x0jlp7",
@@ -103,11 +51,29 @@
       "summary": "",
       "url": "https://michael.stapelberg.ch/posts/2026-08-09-zsh-history-truncation-bug/",
       "source": "Lobste.rs",
-      "score": 54,
-      "comments": 10,
+      "score": 65,
+      "comments": 14,
       "tags": [
         "debugging"
       ]
+    },
+    {
+      "id": "hn:49238561",
+      "title": "What Happened to HackerOne?",
+      "summary": "",
+      "url": "https://blog.teknogeek.io/posts/what-happened-to-hackerone/",
+      "source": "Hacker News",
+      "score": 285,
+      "comments": 145
+    },
+    {
+      "id": "hn:49238851",
+      "title": "Show HN: Voice driven murder mystery, Interview AI suspects with your voice",
+      "summary": "Hey HN!<p>I&#x27;m excited to show off this really fun project I put together. I originally built this project 2-3 years ago, AI was already booming at the time, however voice AI agents were still very early. I loved my proof of concept at the time, but wasn&#x27;t quite happy with it.<p>I recently ",
+      "url": "https://www.whodunnitai.com/",
+      "source": "Hacker News",
+      "score": 125,
+      "comments": 52
     },
     {
       "id": "lob:rsztog",
@@ -115,65 +81,25 @@
       "summary": "",
       "url": "https://kristoff.it/blog/source-code-availability/",
       "source": "Lobste.rs",
-      "score": 55,
-      "comments": 35,
+      "score": 74,
+      "comments": 48,
       "tags": [
         "vcs",
         "zig"
       ]
     },
     {
-      "id": "lob:iixlsm",
-      "title": "\"Code was never the hard part\" is an insult to all programmers",
+      "id": "lob:vowt4d",
+      "title": "I got an email about resistance",
       "summary": "",
-      "url": "https://blog.senko.net/code-was-never-the-hard-part-is-an-insult-to-all-programmers",
+      "url": "https://www.seangoedecke.com/i-got-an-email-about-resistance/",
       "source": "Lobste.rs",
-      "score": 53,
-      "comments": 27,
-      "tags": [
-        "practices",
-        "vibecoding"
-      ]
-    },
-    {
-      "id": "hn:49231809",
-      "title": "Cool URIs Don't Change (1998)",
-      "summary": "",
-      "url": "https://www.w3.org/Provider/Style/URI",
-      "source": "Hacker News",
-      "score": 187,
-      "comments": 43
-    },
-    {
-      "id": "hn:49233448",
-      "title": "OpenChamber: An Agentic Development Environment",
-      "summary": "",
-      "url": "https://openchamber.dev/",
-      "source": "Hacker News",
-      "score": 108,
-      "comments": 55
-    },
-    {
-      "id": "lob:paryb7",
-      "title": "Rails is done",
-      "summary": "",
-      "url": "https://lucas.dohmen.io/posts/2026/08/09/rails-is-done/",
-      "source": "Lobste.rs",
-      "score": 63,
-      "comments": 38,
+      "score": 38,
+      "comments": 21,
       "tags": [
         "culture",
-        "ruby"
+        "vibecoding"
       ]
-    },
-    {
-      "id": "hn:49235641",
-      "title": "New Zealand lost its music media, and what we're building to replace it",
-      "summary": "",
-      "url": "https://propelmusic.co.nz/articles/the-sound-went-quiet-nz-music-media",
-      "source": "Hacker News",
-      "score": 78,
-      "comments": 43
     },
     {
       "id": "lob:u0ks1k",
@@ -181,34 +107,103 @@
       "summary": "",
       "url": "https://www.ilmarilauhakangas.fi/irc_technology_news_from_the_first_half_of_2026/",
       "source": "Lobste.rs",
-      "score": 39,
-      "comments": 7,
+      "score": 67,
+      "comments": 11,
       "tags": [
         "networking"
       ]
     },
     {
-      "id": "hn:49235011",
-      "title": "The tragedy of the commons, AI edition",
+      "id": "lob:09l5py",
+      "title": "nixpkgs-multiverse: every version that ever existed",
       "summary": "",
-      "url": "https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition",
-      "source": "Hacker News",
-      "score": 76,
-      "comments": 41
+      "url": "https://fzakaria.com/2026/08/09/nixpkgs-multiverse-every-version-that-ever-existed",
+      "source": "Lobste.rs",
+      "score": 35,
+      "comments": 13,
+      "tags": [
+        "nix"
+      ]
+    },
+    {
+      "id": "lob:jnbujx",
+      "title": "Mea Culpa - Dark Hours",
+      "summary": "<p>Vibecoded website plagiarizes existing free software program.</p>\n",
+      "url": "https://blog.terrygodier.com/2026/08/09/mea-culpa-dark-hours.html",
+      "source": "Lobste.rs",
+      "score": 44,
+      "comments": 11,
+      "tags": [
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "arxiv:2608.07458v1",
+      "title": "CoinRAG: Contextualized Information Nugget KV Cache Reuse for Long-Context RAG",
+      "summary": "Recent optimization studies on Retrieval-Augmented Generation (RAG) have exploited chunk-level KV cache reuse to avoid processing long retrieved contexts for higher efficiency, while significant information redundancy and noise still remain in the coarse-grained chunks. This paper optimizes the Pare",
+      "url": "https://arxiv.org/abs/2608.07458v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "arxiv_id": "2608.07458v1"
+    },
+    {
+      "id": "lob:1ygxcp",
+      "title": "Relying on Go",
+      "summary": "",
+      "url": "https://antonz.org/relying-on-go/",
+      "source": "Lobste.rs",
+      "score": 32,
+      "comments": 10,
+      "tags": [
+        "go"
+      ]
+    },
+    {
+      "id": "arxiv:2608.07460v1",
+      "title": "CreativeInstruct: Scalably Teaching LLMs to Balance Quality, Creativity, and Diversity",
+      "summary": "While post-training improves the capabilities of large language models (LLMs), it generally lowers their output diversity and creativity, negatively impacting tasks that explicitly require creativity (e.g., story generation) as well as those that require it implicitly, e.g., reinforcement learning (",
+      "url": "https://arxiv.org/abs/2608.07460v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_id": "2608.07460v1"
+    },
+    {
+      "id": "arxiv:2608.07449v1",
+      "title": "SkillProx: Self-Evolving Agent Skills via Proximal Textual Gradient Descent",
+      "summary": "LLM agents increasingly adapt to recurring tasks by accumulating procedural knowledge in skills. These skills are lightweight, reusable textual artifacts that are loaded into the agent's context without weight updates. Recent methods refine skills through iterative task execution, failure diagnosis,",
+      "url": "https://arxiv.org/abs/2608.07449v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_id": "2608.07449v1"
+    },
+    {
+      "id": "arxiv:2608.07436v1",
+      "title": "Post-Grokking Collapse at the Representation-Readout Interface in Muon-Trained Transformers",
+      "summary": "Under the standard split, Muon gets hidden matrices and AdamW embeddings/output head. Muon groks modular addition faster, but its solutions do not hold. All nine configurations on $(a+b) \\bmod 113$ grok and later lose generalization. Across five seeds the selected AdamW reference falls below thresho",
+      "url": "https://arxiv.org/abs/2608.07436v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_id": "2608.07436v1"
     },
     {
       "id": "rss:746141012f",
       "title": "Metabase Zero-Day Exploited in Wild Allows Admin Access Without Authentication",
       "summary": "Metabase has warned that a maximum-severity security flaw impacting its business intelligence and data visualization software package has been exploited in the wild as a zero-day.\n\nThe vulnerability (CVSS score: 10.0), which does not carry a CVE identifier, allows an unauthenticated remote attacker",
       "url": "https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:2c0188e097",
-      "title": "18-Year-Old Linux SCTP Flaw Could Let Local Users Gain Root and Escape Containers",
-      "summary": "A use-after-free bug in Linux's SCTP networking code can be turned into full root on a host, and Tencent researchers say they used it to escape a container and reach the machine underneath.\n\nThe flaw has existed since 2008. The fix already shipped: stable kernels 7.1.6, 6.18.42, 6.12.101 and 6.6.148",
-      "url": "https://thehackernews.com/2026/08/18-year-old-linux-sctp-flaw-could-let.html",
       "source": "Tech RSS",
       "score": 0
     },
@@ -221,17 +216,34 @@
       "score": 0
     },
     {
-      "id": "lob:urdoby",
-      "title": "Dithered QR codes",
+      "id": "hn:49209132",
+      "title": "Tail-Call Interpreters in Rust – Jimmy Ostler",
       "summary": "",
-      "url": "https://www.andrewt.net/dithered-qr-codes/wtf/",
+      "url": "https://lordgoati.us/blog/tail-call/",
+      "source": "Hacker News",
+      "score": 45,
+      "comments": 16
+    },
+    {
+      "id": "lob:ulinck",
+      "title": "Toggles Considered Harmful",
+      "summary": "",
+      "url": "https://ignorethecode.net/blog/2026/08/09/toggles_considered_harmful/",
       "source": "Lobste.rs",
-      "score": 68,
-      "comments": 3,
+      "score": 34,
+      "comments": 6,
       "tags": [
-        "art",
-        "graphics"
+        "design"
       ]
+    },
+    {
+      "id": "hn:49238818",
+      "title": "Run Android ARM64 VR APKs on Apple Vision Pro",
+      "summary": "",
+      "url": "https://github.com/shinyquagsire23/Klepton",
+      "source": "Hacker News",
+      "score": 116,
+      "comments": 18
     }
   ],
   "ai_curated": true
