@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-08-10 09:08:14",
+  "update_time": "2026-08-10 13:23:35",
   "stocks": {
     "a_stocks": [
       {
@@ -9,25 +9,25 @@
         "symbol": "sz.002050",
         "industry": null,
         "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
-        "price": 39.12,
-        "open": 38.71,
-        "high": 39.16,
-        "low": 38.13,
-        "change_pct": 1.06,
-        "volume": 60420320,
-        "turnover": 23.46,
+        "price": 38.53,
+        "open": 39.22,
+        "high": 39.6,
+        "low": 38.38,
+        "change_pct": -1.51,
+        "volume": 46266810,
+        "turnover": 17.9,
         "market_cap": null,
-        "pe": 40.28,
+        "pe": 39.67,
         "cash_flow": 50.92,
-        "macd": -1.1777,
-        "macd_signal": -1.6909,
-        "macd_histogram": 1.0264,
-        "rsi": 48.29,
+        "macd": -1.0727,
+        "macd_signal": -1.5673,
+        "macd_histogram": 0.9892,
+        "rsi": 46.28,
         "ma": {
-          "MA5": 38.86,
-          "MA10": 37.49,
-          "MA20": 38.29,
-          "MA60": 43.74
+          "MA5": 38.9,
+          "MA10": 37.74,
+          "MA20": 38.15,
+          "MA60": 43.52
         },
         "main_net_flow": null
       },
@@ -38,25 +38,25 @@
         "symbol": "sh.601727",
         "industry": null,
         "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
-        "price": 6.83,
-        "open": 6.88,
-        "high": 6.9,
-        "low": 6.76,
-        "change_pct": -0.73,
-        "volume": 64577409,
-        "turnover": 4.39,
+        "price": 6.85,
+        "open": 6.83,
+        "high": 6.86,
+        "low": 6.81,
+        "change_pct": 0.29,
+        "volume": 49318291,
+        "turnover": 3.37,
         "market_cap": null,
-        "pe": 82.0,
+        "pe": 82.24,
         "cash_flow": 105.67,
-        "macd": -0.0231,
-        "macd_signal": -0.0803,
-        "macd_histogram": 0.1144,
-        "rsi": 48.06,
+        "macd": -0.0215,
+        "macd_signal": -0.0685,
+        "macd_histogram": 0.0941,
+        "rsi": 48.83,
         "ma": {
-          "MA5": 6.94,
-          "MA10": 6.89,
-          "MA20": 6.71,
-          "MA60": 7.34
+          "MA5": 6.91,
+          "MA10": 6.91,
+          "MA20": 6.73,
+          "MA60": 7.3
         },
         "main_net_flow": null
       }
@@ -195,8 +195,8 @@
         "volume": 12349900,
         "turnover": null,
         "market_cap": 90.99,
-        "pe": 55.39,
-        "cash_flow": 4.24,
+        "pe": 56.3,
+        "cash_flow": 4.33,
         "macd": -1.5681,
         "macd_signal": -2.8668,
         "macd_histogram": 2.5975,
@@ -304,14 +304,14 @@
         "name": "Bitcoin",
         "symbol": "BTC",
         "industry": "Smart Contract Platform",
-        "price": 65159,
+        "price": 64872,
         "open": null,
         "high": 65363,
         "low": 64788,
-        "change_pct": 0.6,
-        "volume": 14323562556,
+        "change_pct": 0.0,
+        "volume": 15711100346,
         "turnover": null,
-        "market_cap": 13077.33,
+        "market_cap": 13017.4,
         "market_cap_rank": 1,
         "pe": null,
         "funding_rate": null,
@@ -319,24 +319,24 @@
         "etf_inflow": null,
         "etf_outflow": null,
         "etf_net_flow": null,
-        "macd": 212.3685,
-        "macd_signal": 101.6282,
-        "macd_histogram": 221.4807,
-        "rsi": 56.07,
+        "macd": 189.0205,
+        "macd_signal": 96.9586,
+        "macd_histogram": 184.1239,
+        "rsi": 54.39,
         "ma": {
-          "MA5": 64819.68,
-          "MA10": 64245.4,
-          "MA20": 64326.41,
-          "MA60": 63531.6
+          "MA5": 64761.14,
+          "MA10": 64216.13,
+          "MA20": 64311.77,
+          "MA60": 63526.72
         },
         "main_net_flow": null,
         "onchain": {
-          "circulating_supply": 20068265.0,
-          "total_supply": 20068265.0,
+          "circulating_supply": 20068334.0,
+          "total_supply": 20068334.0,
           "circ_ratio": 100.0,
-          "price_change_7d": 4.33619,
-          "price_change_30d": 1.47097,
-          "ath_pct": -48.32,
+          "price_change_7d": 3.54778,
+          "price_change_30d": 1.12982,
+          "ath_pct": -48.55,
           "ath_date": null,
           "categories": [
             "Smart Contract Platform",
@@ -357,14 +357,14 @@
         "name": "Ethereum",
         "symbol": "ETH",
         "industry": "Smart Contract Platform",
-        "price": 1924.6,
+        "price": 1907.11,
         "open": null,
         "high": 1934.33,
-        "low": 1905.4,
-        "change_pct": 0.3,
-        "volume": 5168067399,
+        "low": 1904.24,
+        "change_pct": -0.5,
+        "volume": 5683096766,
         "turnover": null,
-        "market_cap": 2322.94,
+        "market_cap": 2301.9,
         "market_cap_rank": 2,
         "pe": null,
         "funding_rate": null,
@@ -372,24 +372,24 @@
         "etf_inflow": null,
         "etf_outflow": null,
         "etf_net_flow": null,
-        "macd": 21.4498,
-        "macd_signal": 22.8043,
-        "macd_histogram": -2.7091,
-        "rsi": 57.6,
+        "macd": 20.0357,
+        "macd_signal": 22.5215,
+        "macd_histogram": -4.9717,
+        "rsi": 55.19,
         "ma": {
-          "MA5": 1912.63,
-          "MA10": 1892.21,
-          "MA20": 1896.14,
-          "MA60": 1793.17
+          "MA5": 1909.08,
+          "MA10": 1890.44,
+          "MA20": 1895.26,
+          "MA60": 1792.88
         },
         "main_net_flow": null,
         "onchain": {
           "circulating_supply": 120682057.57390183,
           "total_supply": 120682057.5739018,
           "circ_ratio": 100.0,
-          "price_change_7d": 4.74466,
-          "price_change_30d": 6.90537,
-          "ath_pct": -61.09,
+          "price_change_7d": 3.55486,
+          "price_change_30d": 5.98999,
+          "ath_pct": -61.44,
           "ath_date": null,
           "categories": [
             "Smart Contract Platform",
@@ -416,60 +416,28 @@
       "published": ""
     },
     {
-      "id": "d7d9b167c0",
-      "title": "How ‘Ted Lasso’ turned an affluent London neighborhood into a tourist hotspot",
-      "summary": "One of London’s most charming residential enclaves has recently gained international renown thanks to Jason Sudeikis’ fictional soccer coach character Ted Lasso.",
-      "link": "https://www.marketwatch.com/story/how-ted-lasso-turned-an-affluent-london-neighborhood-into-a-tourist-hotspot-a7cbf0eb?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Mon, 10 Aug 2026 09:04:00 GMT"
-    },
-    {
-      "id": "add524e58a",
-      "title": "From ‘Billionaire Bunker’ to Beverly Hills: The properties that make up Jeff Bezos’ $500 million real estate empire",
-      "summary": "As Amazon soars, nowhere is Bezos’ astronomical wealth more tangibly displayed than in his $500 million real estate empire.",
-      "link": "https://www.marketwatch.com/story/from-billionaire-bunker-to-beverly-hills-the-properties-that-make-up-jeff-bezos-500-million-real-estate-empire-5aec38c3?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Mon, 10 Aug 2026 09:02:00 GMT"
-    },
-    {
       "id": "c8c63ba9bb",
       "title": "Berkshire Hathaway finally started spending its nearly $400 billion in cash — on one stock it knows very well",
       "summary": "Berkshire is buying its own stock after years of building up a cash pile. Not everyone is excited.",
       "link": "https://www.marketwatch.com/story/berkshire-hathaway-finally-started-spending-its-nearly-400-billion-in-cash-on-one-stock-it-knows-very-well-f9d56389?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Mon, 10 Aug 2026 08:21:00 GMT"
+      "published": "Mon, 10 Aug 2026 12:53:00 GMT"
     },
     {
-      "id": "1cffd4e5b6",
-      "title": "U.S. stock futures flat as investors await inflation data, grapple with more Iran uncertainty",
-      "summary": "U.S. stock-index futures were little changed on Sunday, after new demands from Iran raised fresh doubts about the Strait of Hormuz reopening anytime soon and as investors await key inflation data late",
-      "link": "https://www.marketwatch.com/story/u-s-stock-futures-flat-as-investors-await-inflation-data-grapple-with-more-iran-uncertainty-133212d2?mod=mw_rss_topstories",
+      "id": "f6b0aab92e",
+      "title": "Apple’s stock could underperform, especially without an ‘all-glass’ iPhone, this analyst warns",
+      "summary": "A Jefferies analyst says that it may be harder than it looks for Apple to roll out dramatically more expensive devices in a bid to boost profitability.",
+      "link": "https://www.marketwatch.com/story/apples-stock-could-underperform-especially-without-an-all-glass-iphone-this-analyst-warns-fc9a750c?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Mon, 10 Aug 2026 03:02:00 GMT"
+      "published": "Mon, 10 Aug 2026 12:48:00 GMT"
     },
     {
-      "id": "9213fa48df",
-      "title": "‘I’m easing into retirement’: I’m getting an $80,000 pension payout. Where can I invest it safely?",
-      "summary": "“I expect to have several years before I take distributions from my 401(k) account.”",
-      "link": "https://www.marketwatch.com/story/im-easing-into-retirement-im-getting-an-80-000-pension-payout-where-can-i-invest-it-safely-6653d810?mod=mw_rss_topstories",
+      "id": "8aa24a44ce",
+      "title": "Intel plans to sell $15 billion worth of stock after it has risen 400% in a year",
+      "summary": "The company said it sees growth opportunities in physical AI, custom chips and advanced packaging.",
+      "link": "https://www.marketwatch.com/story/intel-plans-to-sell-15-billion-worth-of-stock-after-it-has-risen-400-in-a-year-395effce?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Mon, 10 Aug 2026 00:00:00 GMT"
-    },
-    {
-      "id": "ff0a2ebcf0",
-      "title": "If I marry my girlfriend, 67, will she lose her Supplemental Security Income and divorced spouse benefits?",
-      "summary": "“She has been living with me for four years.”",
-      "link": "https://www.marketwatch.com/story/if-i-marry-my-girlfriend-67-will-she-lose-her-supplemental-security-income-and-divorced-spouse-benefits-9340bab9?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Sun, 09 Aug 2026 23:30:00 GMT"
-    },
-    {
-      "id": "0afb57cd50",
-      "title": "The number of stocks beating the S&P 500 is the highest in 4 years. Why that number should rise.",
-      "summary": "For the first time in four years, the average stock is beating the stock market.",
-      "link": "https://www.marketwatch.com/story/the-number-of-stocks-beating-the-s-p-500-is-the-highest-in-4-years-why-that-number-should-rise-b9bd05b3?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Sun, 09 Aug 2026 19:11:00 GMT"
+      "published": "Mon, 10 Aug 2026 12:24:00 GMT"
     },
     {
       "id": "65cd8226c0",
@@ -477,203 +445,183 @@
       "summary": "“Right now, we’re withdrawing about $100,000 a year from our investments.”",
       "link": "https://www.marketwatch.com/story/my-wife-and-i-are-both-retired-do-we-dip-into-our-2-3-million-fund-to-pay-off-our-300-000-mortgage-at-2-9-2d23d1df?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Sun, 09 Aug 2026 16:00:00 GMT"
+      "published": "Mon, 10 Aug 2026 12:16:00 GMT"
     },
     {
-      "id": "59ecb1795d",
-      "title": "S&P 500 sales growth is at a nearly 5-year high. Here’s what’s behind the surge.",
-      "summary": "Energy companies in the S&amp;P 500 have put up a 42.5% revenue gain in the second quarter, powering the index’s sales performance.",
-      "link": "https://www.marketwatch.com/story/s-p-500-sales-growth-is-at-a-nearly-5-year-high-heres-whats-behind-the-surge-a4ccf06d?mod=mw_rss_topstories",
+      "id": "a0ac0c20ce",
+      "title": "Are target date funds aggressive enough to give Americans retirement savings that last their lifetimes?",
+      "summary": "The popular default investments may need to be more aggressive in order to fund decades of retirement.",
+      "link": "https://www.marketwatch.com/story/are-target-date-funds-hurting-americans-as-they-live-longer-929f4f92?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Sun, 09 Aug 2026 14:00:00 GMT"
+      "published": "Mon, 10 Aug 2026 11:36:00 GMT"
     },
     {
-      "id": "14fe746d47",
-      "title": "‘I don’t wish to be cold-hearted’: My elderly relative can no longer care for himself. Am I wrong to leave his care to the state?",
-      "summary": "“He has never been particularly generous or nurturing.”",
-      "link": "https://www.marketwatch.com/story/i-dont-wish-to-be-cold-hearted-my-elderly-relative-can-no-longer-care-for-himself-am-i-wrong-to-leave-his-care-to-the-state-8d546b32?mod=mw_rss_topstories",
+      "id": "6bb56f3114",
+      "title": "How can we minimize taxes in retirement with a $2.3 million nest egg — while buying homes in Florida and New England?",
+      "summary": "Timing is everything when balancing retirement distributions and moving across state lines.",
+      "link": "https://www.marketwatch.com/story/how-can-we-minimize-taxes-in-retirement-with-a-2-3-million-nest-egg-while-buying-homes-in-florida-and-new-england-9e2449aa?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Sun, 09 Aug 2026 13:30:00 GMT"
+      "published": "Mon, 10 Aug 2026 11:36:00 GMT"
     },
     {
-      "id": "88c50ded77",
-      "title": "Port of Tallinn Q2 2026 slides: revenue rises but profit falls 59%",
-      "summary": "",
-      "link": "https://www.investing.com/news/company-news/port-of-tallinn-q2-2026-slides-revenue-rises-but-profit-falls-59-93CH-4848123",
-      "source": "www.investing.com",
-      "published": "2026-08-10 09:01:23"
+      "id": "a6907c6e50",
+      "title": "Don’t worry about what other people have saved for retirement. Here’s how to find your perfect number.",
+      "summary": "Don’t compare your nest-egg balance to a number that doesn’t actually mean anything. Instead, do this calculation to see if you’re on track for retirement.",
+      "link": "https://www.marketwatch.com/story/dont-worry-about-what-other-people-have-saved-for-retirement-heres-how-to-find-your-perfect-number-73fc460e?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 10 Aug 2026 11:35:00 GMT"
     },
     {
-      "id": "6cab8152e1",
-      "title": "Base Markets Appoints Nazim Moussaoui as Head of Premium Clients and Partnerships",
-      "summary": "",
-      "link": "https://www.investing.com/news/company-news/base-markets-appoints-nazim-moussaoui-as-head-of-premium-clients-and-partnerships-4848120",
-      "source": "www.investing.com",
-      "published": "2026-08-10 09:00:45"
+      "id": "d6a0a21042",
+      "title": "‘I want her to choose the best strategy’: My wife’s Social Security is just $900. Should she claim spousal benefit at 62?",
+      "summary": "“She was a teacher at a school district, so didn’t put much into Social Security.”",
+      "link": "https://www.marketwatch.com/story/i-want-her-to-choose-the-best-strategy-my-wifes-social-security-is-just-900-should-she-claim-spousal-benefit-at-62-e3ef621d?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 10 Aug 2026 11:15:00 GMT"
     },
     {
-      "id": "9412db4c9e",
-      "title": "Rakuten Q2 2026 slides: record revenue, FinTech drives profit surge",
-      "summary": "",
-      "link": "https://www.investing.com/news/company-news/rakuten-q2-2026-slides-record-revenue-fintech-drives-profit-surge-93CH-4848119",
-      "source": "www.investing.com",
-      "published": "2026-08-10 09:00:07"
+      "id": "3d8e7f4c61",
+      "title": "The U.S. economy is shedding jobs. Here’s why that’s good news for stocks.",
+      "summary": "A weaker labor market may mean the Federal Reserve can cut interest rates amid benign wage inflation, says 22V.",
+      "link": "https://www.marketwatch.com/story/the-u-s-economy-is-shedding-jobs-why-thats-good-news-for-stocks-a7f4773c?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 10 Aug 2026 11:11:00 GMT"
     },
     {
-      "id": "a4ebd978b3",
-      "title": "Goldman Sachs notes European banks trail US peers in equities",
-      "summary": "",
-      "link": "https://www.investing.com/news/stock-market-news/goldman-sachs-notes-european-banks-trail-us-peers-in-equities-93CH-4848117",
-      "source": "www.investing.com",
-      "published": "2026-08-10 08:59:46"
+      "id": "6a83200649",
+      "title": "Mark Zuckerberg takes on the AI doomers in 6,500-word essay",
+      "summary": "Meta Platforms CEO Mark Zuckerberg has a response to the gloom about artificial intelligence coming from both inside and outside the industry: AI will be helpful for both the economy and society.",
+      "link": "https://www.marketwatch.com/story/mark-zuckerberg-takes-on-the-ai-doomers-in-6-500-word-essay-fd581f3b?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 10 Aug 2026 10:42:00 GMT"
     },
     {
-      "id": "2cc26104d7",
-      "title": "Morgan Stanley reviews Indian June earnings performance",
+      "id": "90699369a1",
+      "title": "Earnings call transcript: Niu Technologies posts steep Q2 2026 miss, shares fall",
       "summary": "",
-      "link": "https://www.investing.com/news/stock-market-news/morgan-stanley-reviews-indian-june-earnings-performance-93CH-4848116",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-niu-technologies-posts-steep-q2-2026-miss-shares-fall-93CH-4849257",
       "source": "www.investing.com",
-      "published": "2026-08-10 08:57:17"
+      "published": "2026-08-10 12:46:48"
     },
     {
-      "id": "46778ad014",
-      "title": "Raymond James downgrades Arko stock rating on retail challenges",
+      "id": "32a158e722",
+      "title": "Bankwell director Lawrence Seidman buys $666,254 in BWFG shares",
       "summary": "",
-      "link": "https://www.investing.com/news/analyst-ratings/raymond-james-downgrades-arko-stock-rating-on-retail-challenges-93CH-4848115",
+      "link": "https://www.investing.com/news/insider-trading-news/bankwell-director-lawrence-seidman-buys-666254-in-bwfg-shares-93CH-4849256",
       "source": "www.investing.com",
-      "published": "2026-08-10 08:57:03"
+      "published": "2026-08-10 12:46:10"
     },
     {
-      "id": "28b7089b85",
-      "title": "Citizens raises Nationwide Health Properties price target on strong Q2 results",
+      "id": "4f10900c6b",
+      "title": "Why is Meta Platforms stock climbing today?",
       "summary": "",
-      "link": "https://www.investing.com/news/analyst-ratings/citizens-raises-nationwide-health-properties-price-target-on-strong-q2-results-93CH-4848114",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-meta-platforms-stock-climbing-today-93CH-4849255",
       "source": "www.investing.com",
-      "published": "2026-08-10 08:57:00"
+      "published": "2026-08-10 12:46:06"
     },
     {
-      "id": "596aa1f677",
-      "title": "Citi sees industrial growth at 6.9% in second quarter 2026",
+      "id": "2683517059",
+      "title": "Saudi Arabia stocks higher at close of trade; Tadawul All Share up 0.26%",
       "summary": "",
-      "link": "https://www.investing.com/news/stock-market-news/citi-sees-industrial-growth-at-69-in-second-quarter-2026-93CH-4848100",
+      "link": "https://www.investing.com/news/stock-market-news/saudi-arabia-stocks-higher-at-close-of-trade-tadawul-all-share-up-026-4849253",
       "source": "www.investing.com",
-      "published": "2026-08-10 08:53:11"
+      "published": "2026-08-10 12:45:03"
     },
     {
-      "id": "8efafaf66a",
-      "title": "Jefferies downgrades Ibstock as housing recovery catalysts fade",
+      "id": "505b81cbb4",
+      "title": "Stifel reiterates Buy on Rapid Micro stock, keeps $8 target",
       "summary": "",
-      "link": "https://www.investing.com/news/stock-market-news/jefferies-downgrades-ibstock-as-housing-recovery-catalysts-fade-4848092",
+      "link": "https://www.investing.com/news/analyst-ratings/stifel-reiterates-buy-on-rapid-micro-stock-keeps-8-target-93CH-4849250",
       "source": "www.investing.com",
-      "published": "2026-08-10 08:49:13"
+      "published": "2026-08-10 12:44:58"
     },
     {
-      "id": "fbb12b64d3",
-      "title": "Iran hopes neighbors will move to \"strengthen\" regional security - Baghaei",
+      "id": "3184476139",
+      "title": "Bowman Consulting stock surges 55% on $1 billion buyout deal",
       "summary": "",
-      "link": "https://www.investing.com/news/economy-news/iran-hopes-neighbors-will-move-to-strengthen-regional-security--baghaei-4848085",
+      "link": "https://www.investing.com/news/stock-market-news/bowman-consulting-stock-surges-55-on-1-billion-buyout-deal-93CH-4849245",
       "source": "www.investing.com",
-      "published": "2026-08-10 08:46:43"
+      "published": "2026-08-10 12:44:34"
+    },
+    {
+      "id": "191a692908",
+      "title": "Why is GameStop stock rallying today?",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-gamestop-stock-rallying-today-93CH-4849243",
+      "source": "www.investing.com",
+      "published": "2026-08-10 12:42:45"
+    },
+    {
+      "id": "086abbc114",
+      "title": "CoreWeave earnings preview: CRWV stock setup into Q2 results",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/coreweave-earnings-preview-crwv-stock-setup-into-q2-results-93CH-4849242",
+      "source": "www.investing.com",
+      "published": "2026-08-10 12:42:40"
+    },
+    {
+      "id": "b56f46cec9",
+      "title": "Jerash earnings beat by $0.05, revenue topped estimates",
+      "summary": "",
+      "link": "https://www.investing.com/news/earnings/jerash-earnings-beat-by-005-revenue-topped-estimates-4849241",
+      "source": "www.investing.com",
+      "published": "2026-08-10 12:42:31"
+    },
+    {
+      "id": "1c4ff73dd5",
+      "title": "July’s CPI data is the most important event this week, Wolfe says. Here’s why.",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/julys-cpi-data-is-the-most-important-event-this-week-wolfe-says-heres-why-4849240",
+      "source": "www.investing.com",
+      "published": "2026-08-10 12:42:10"
     }
   ],
   "briefing": {
     "date": "2026-08-10",
-    "update_time": "2026-08-10 02:06:26",
+    "update_time": "2026-08-10 13:12:49",
     "candidate_count": 20,
-    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-10\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Metabase 零日漏洞被野外利用，无需认证即可获取管理员权限 (来源: The Hacker News)\n- **核心干货**：Metabase 曝出 CVSS 10.0 级零日漏洞，无需任何认证即可让远程攻击者获取管理员权限，且已被证实存在野外利用。这相当于你家大门不仅没锁，还贴了张纸条写着\"管理员入口在这\"。\n- **毒舌/硬核点评**：CVSS 满分不是终点，是起点——安全团队凌晨三点的闹钟已就位。建议所有 BI 工具管理员立刻检查版本，别等红队来给你演示什么叫\"一键接管\"。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html)\n\n---\n\n### 2. 📌 18年高龄 Linux SCTP 漏洞：本地提权至 Root 并逃逸容器 (来源: The Hacker News)\n- **核心干货**：Linux 内核 SCTP 协议栈中存在一个自 2008 年就存在的 use-after-free 漏洞，腾讯安全团队已成功利用它从容器内逃逸并拿下宿主机 Root 权限。修复补丁已发布，涉及 7.1.6、6.18.42 等多个稳定分支。\n- **毒舌/硬核点评**：2008 年出生的漏洞，现在都能合法\"成年\"搞破坏了。容器逃逸 + Root 提权一套连招，直接把你精心搭建的\"隔离环境\"打成筛子。赶紧升级内核，别让 18 岁的漏洞教你做人。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/18-year-old-linux-sctp-flaw-could-let.html)\n\n---\n\n### 3. 📌 Agent Plugins 1.0 发布：AI 智能体插件互操作标准出炉 (来源: The Register)\n- **核心干货**：多家 AI 巨头联合推出 Agent Plugins 1.0 规范，定义了一种\"一次编写，到处运行\"的容器格式，用于跨平台传递工具和技能，试图终结智能体生态碎片化。说白了，就是给 AI Agent 们统一了\"USB-C 接口\"。\n- **毒舌/硬核点评**：继 USB-C 统一充电口后，AI 界终于也要迎来自己的\"接口大一统\"了。但标准有了，生态能不能跟上，还得看各位\"巨头\"愿不愿意放下身段真互通——别到时候又是一纸空文，各自圈地。\n- **🔗 传送门**：[点击直达原链接](https://www.theregister.com/devops/2026/08/07/ai-titans-to-tidy-agent-frontier-with-plugin-prescription/5285017)\n\n---\n\n### 🗣️ 今日顶男金句\n**\"漏洞不会变老，只会等你变强。今天不修的内核，明天就是别人手里的 root shell。\"**",
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-10\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Docker Sandboxes：给 AI Agent 的\"一次性隔离盒\" (来源: Hacker News, 330分)\n- **核心干货**：Docker 正式发布了面向 AI Agent 的沙箱产品，主打\"用完即焚\"的隔离环境。这解决了 Agent 在自主执行任务时可能引发的安全问题——比如乱跑命令、污染宿主环境。本质上是给 AI 的\"手\"戴上一次性手套，防止它在你服务器上乱搞。\n- **毒舌/硬核点评**：AI Agent 终于有自己的\"安全套\"了，但这玩意儿到底是保护用户，还是保护 Docker 的云业务？反正隔离了，出事儿别找我。\n- **🔗 传送门**：[点击直达原链接](https://www.docker.com/products/docker-sandboxes/)\n\n---\n\n### 2. 📌 Meta Muse Glimmer：30B 开源编程模型，重拳出击 (来源: Hacker News, 301分)\n- **核心干货**：Meta 推出开源（open weights）的 30B 参数本地编程模型，专攻代码生成与 Agent 任务。30B 的规模意味着可以在不错的消费级硬件上本地运行，对隐私敏感和离线开发场景是重大利好，直接对标闭源大厂的云端代码模型。\n- **毒舌/硬核点评**：Meta 这波是\"开源界的内卷之王\"，30B 就把活儿干漂亮了。看来以后\"本地跑大模型\"不再是极客的玩具，而是程序员的标配了。\n- **🔗 传送门**：[点击直达原链接](https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model)\n\n---\n\n### 3. 📌 Metabase 零日漏洞：满分 10 分，无认证直接当管理员 (来源: Tech RSS)\n- **核心干货**：Metabase 曝出 CVSS 10.0 的最高危零日漏洞，且已被在野利用。攻击者无需任何认证即可获取管理员权限，直接接管你的 BI 和数据可视化系统。连 CVE 编号都还没分配，说明是刚被发现就被打穿了。\n- **毒舌/硬核点评**：这可能是今年最\"朴实无华\"的漏洞——不整花活儿，直接让你裸奔。赶紧去查你的 Metabase 实例，没打补丁的等于把数据库钥匙挂在大门口。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\"技术债务像脂肪，不运动（重构）就会堆积；但今天，先看看你的 Metabase 补丁打了没。\"",
     "briefing_items": [
       {
-        "title": "Metabase 零日漏洞被野外利用，无需认证即可获取管理员权限",
-        "source": "The Hacker News",
-        "summary": "Metabase 曝出 CVSS 10.0 级零日漏洞，无需任何认证即可让远程攻击者获取管理员权限，且已被证实存在野外利用。这相当于你家大门不仅没锁，还贴了张纸条写着\"管理员入口在这\"。",
-        "commentary": "CVSS 满分不是终点，是起点——安全团队凌晨三点的闹钟已就位。建议所有 BI 工具管理员立刻检查版本，别等红队来给你演示什么叫\"一键接管\"。",
+        "title": "Docker Sandboxes：给 AI Agent 的\"一次性隔离盒\"",
+        "source": "Hacker News, 330分",
+        "summary": "Docker 正式发布了面向 AI Agent 的沙箱产品，主打\"用完即焚\"的隔离环境。这解决了 Agent 在自主执行任务时可能引发的安全问题——比如乱跑命令、污染宿主环境。本质上是给 AI 的\"手\"戴上一次性手套，防止它在你服务器上乱搞。",
+        "commentary": "AI Agent 终于有自己的\"安全套\"了，但这玩意儿到底是保护用户，还是保护 Docker 的云业务？反正隔离了，出事儿别找我。",
+        "url": "https://www.docker.com/products/docker-sandboxes/"
+      },
+      {
+        "title": "Meta Muse Glimmer：30B 开源编程模型，重拳出击",
+        "source": "Hacker News, 301分",
+        "summary": "Meta 推出开源（open weights）的 30B 参数本地编程模型，专攻代码生成与 Agent 任务。30B 的规模意味着可以在不错的消费级硬件上本地运行，对隐私敏感和离线开发场景是重大利好，直接对标闭源大厂的云端代码模型。",
+        "commentary": "Meta 这波是\"开源界的内卷之王\"，30B 就把活儿干漂亮了。看来以后\"本地跑大模型\"不再是极客的玩具，而是程序员的标配了。",
+        "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model"
+      },
+      {
+        "title": "Metabase 零日漏洞：满分 10 分，无认证直接当管理员",
+        "source": "Tech RSS",
+        "summary": "Metabase 曝出 CVSS 10.0 的最高危零日漏洞，且已被在野利用。攻击者无需任何认证即可获取管理员权限，直接接管你的 BI 和数据可视化系统。连 CVE 编号都还没分配，说明是刚被发现就被打穿了。",
+        "commentary": "这可能是今年最\"朴实无华\"的漏洞——不整花活儿，直接让你裸奔。赶紧去查你的 Metabase 实例，没打补丁的等于把数据库钥匙挂在大门口。",
         "url": "https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html"
-      },
-      {
-        "title": "18年高龄 Linux SCTP 漏洞：本地提权至 Root 并逃逸容器",
-        "source": "The Hacker News",
-        "summary": "Linux 内核 SCTP 协议栈中存在一个自 2008 年就存在的 use-after-free 漏洞，腾讯安全团队已成功利用它从容器内逃逸并拿下宿主机 Root 权限。修复补丁已发布，涉及 7.1.6、6.18.42 等多个稳定分支。",
-        "commentary": "2008 年出生的漏洞，现在都能合法\"成年\"搞破坏了。容器逃逸 + Root 提权一套连招，直接把你精心搭建的\"隔离环境\"打成筛子。赶紧升级内核，别让 18 岁的漏洞教你做人。",
-        "url": "https://thehackernews.com/2026/08/18-year-old-linux-sctp-flaw-could-let.html"
-      },
-      {
-        "title": "Agent Plugins 1.0 发布：AI 智能体插件互操作标准出炉",
-        "source": "The Register",
-        "summary": "多家 AI 巨头联合推出 Agent Plugins 1.0 规范，定义了一种\"一次编写，到处运行\"的容器格式，用于跨平台传递工具和技能，试图终结智能体生态碎片化。说白了，就是给 AI Agent 们统一了\"USB-C 接口\"。",
-        "commentary": "继 USB-C 统一充电口后，AI 界终于也要迎来自己的\"接口大一统\"了。但标准有了，生态能不能跟上，还得看各位\"巨头\"愿不愿意放下身段真互通——别到时候又是一纸空文，各自圈地。",
-        "url": "https://www.theregister.com/devops/2026/08/07/ai-titans-to-tidy-agent-frontier-with-plugin-prescription/5285017"
       }
     ],
     "candidates": [
       {
-        "id": "hn:49234675",
-        "title": "How I use LLMs to learn complex topics",
+        "id": "hn:49239751",
+        "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
         "summary": "",
-        "url": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/",
+        "url": "https://www.docker.com/products/docker-sandboxes/",
         "source": "Hacker News",
-        "score": 430,
-        "comments": 249
+        "score": 330,
+        "comments": 194
       },
       {
-        "id": "hn:49230477",
-        "title": "Everything you do is being recorded",
-        "summary": "<a href=\"https:&#x2F;&#x2F;archive.is&#x2F;JxaZ7\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.is&#x2F;JxaZ7</a>",
-        "url": "https://www.theatlantic.com/technology/2026/05/ai-wearable-surveillance-countermeasures/687203/",
-        "source": "Hacker News",
-        "score": 215,
-        "comments": 171
-      },
-      {
-        "id": "hn:49232253",
-        "title": "Taxi drivers rarely die of Alzheimer's",
+        "id": "hn:49241679",
+        "title": "Meta Muse Glimmer – open weights 30B local coding model",
         "summary": "",
-        "url": "https://theconversation.com/taxi-drivers-rarely-die-of-alzheimers-how-complex-mental-maps-and-spatial-reasoning-protect-your-brain-286650",
+        "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
         "source": "Hacker News",
-        "score": 186,
-        "comments": 139
-      },
-      {
-        "id": "hn:49231154",
-        "title": "Mea Culpa – Dark Hours",
-        "summary": "",
-        "url": "https://blog.terrygodier.com/2026/08/09/mea-culpa-dark-hours.html",
-        "source": "Hacker News",
-        "score": 561,
-        "comments": 254
-      },
-      {
-        "id": "lob:cmrfrj",
-        "title": "some software talks i like",
-        "summary": "<p>Not tagged as video but contains mostly links to videos</p>\n",
-        "url": "https://char.lt/blog/2026/08/talks-i-like/",
-        "source": "Lobste.rs",
-        "score": 87,
-        "comments": 17,
-        "tags": [
-          "programming"
-        ]
-      },
-      {
-        "id": "lob:he9j7y",
-        "title": "I think the vibecoding tag has gotten out of hand",
-        "summary": "<p>I was reading <a href=\"https://lobste.rs/s/x0jlp7/tracking_down_zsh_history_data_loss_bug\" rel=\"ugc\">this post</a> and noticed the <code>vibecoding</code> had been applied. I’m not sure if this was applied by the lobste.rs team or by the author, but after reading the post it’s pretty clear that t",
-        "url": "https://lobste.rs/s/he9j7y/i_think_vibecoding_tag_has_gotten_out_hand",
-        "source": "Lobste.rs",
-        "score": 34,
-        "comments": 32,
-        "tags": [
-          "meta",
-          "vibecoding"
-        ]
-      },
-      {
-        "id": "hn:49233423",
-        "title": "Ask HN: What are you working on? (August 2026)",
-        "summary": "What are you working on?  What have you been curious about lately?",
-        "url": "https://news.ycombinator.com/item?id=49233423",
-        "source": "Hacker News",
-        "score": 174,
-        "comments": 655
+        "score": 301,
+        "comments": 121
       },
       {
         "id": "lob:x0jlp7",
@@ -681,11 +629,29 @@
         "summary": "",
         "url": "https://michael.stapelberg.ch/posts/2026-08-09-zsh-history-truncation-bug/",
         "source": "Lobste.rs",
-        "score": 54,
-        "comments": 10,
+        "score": 65,
+        "comments": 14,
         "tags": [
           "debugging"
         ]
+      },
+      {
+        "id": "hn:49238561",
+        "title": "What Happened to HackerOne?",
+        "summary": "",
+        "url": "https://blog.teknogeek.io/posts/what-happened-to-hackerone/",
+        "source": "Hacker News",
+        "score": 285,
+        "comments": 145
+      },
+      {
+        "id": "hn:49238851",
+        "title": "Show HN: Voice driven murder mystery, Interview AI suspects with your voice",
+        "summary": "Hey HN!<p>I&#x27;m excited to show off this really fun project I put together. I originally built this project 2-3 years ago, AI was already booming at the time, however voice AI agents were still very early. I loved my proof of concept at the time, but wasn&#x27;t quite happy with it.<p>I recently ",
+        "url": "https://www.whodunnitai.com/",
+        "source": "Hacker News",
+        "score": 125,
+        "comments": 52
       },
       {
         "id": "lob:rsztog",
@@ -693,65 +659,25 @@
         "summary": "",
         "url": "https://kristoff.it/blog/source-code-availability/",
         "source": "Lobste.rs",
-        "score": 55,
-        "comments": 35,
+        "score": 74,
+        "comments": 48,
         "tags": [
           "vcs",
           "zig"
         ]
       },
       {
-        "id": "lob:iixlsm",
-        "title": "\"Code was never the hard part\" is an insult to all programmers",
+        "id": "lob:vowt4d",
+        "title": "I got an email about resistance",
         "summary": "",
-        "url": "https://blog.senko.net/code-was-never-the-hard-part-is-an-insult-to-all-programmers",
+        "url": "https://www.seangoedecke.com/i-got-an-email-about-resistance/",
         "source": "Lobste.rs",
-        "score": 53,
-        "comments": 27,
-        "tags": [
-          "practices",
-          "vibecoding"
-        ]
-      },
-      {
-        "id": "hn:49231809",
-        "title": "Cool URIs Don't Change (1998)",
-        "summary": "",
-        "url": "https://www.w3.org/Provider/Style/URI",
-        "source": "Hacker News",
-        "score": 187,
-        "comments": 43
-      },
-      {
-        "id": "hn:49233448",
-        "title": "OpenChamber: An Agentic Development Environment",
-        "summary": "",
-        "url": "https://openchamber.dev/",
-        "source": "Hacker News",
-        "score": 108,
-        "comments": 55
-      },
-      {
-        "id": "lob:paryb7",
-        "title": "Rails is done",
-        "summary": "",
-        "url": "https://lucas.dohmen.io/posts/2026/08/09/rails-is-done/",
-        "source": "Lobste.rs",
-        "score": 63,
-        "comments": 38,
+        "score": 38,
+        "comments": 21,
         "tags": [
           "culture",
-          "ruby"
+          "vibecoding"
         ]
-      },
-      {
-        "id": "hn:49235641",
-        "title": "New Zealand lost its music media, and what we're building to replace it",
-        "summary": "",
-        "url": "https://propelmusic.co.nz/articles/the-sound-went-quiet-nz-music-media",
-        "source": "Hacker News",
-        "score": 78,
-        "comments": 43
       },
       {
         "id": "lob:u0ks1k",
@@ -759,34 +685,103 @@
         "summary": "",
         "url": "https://www.ilmarilauhakangas.fi/irc_technology_news_from_the_first_half_of_2026/",
         "source": "Lobste.rs",
-        "score": 39,
-        "comments": 7,
+        "score": 67,
+        "comments": 11,
         "tags": [
           "networking"
         ]
       },
       {
-        "id": "hn:49235011",
-        "title": "The tragedy of the commons, AI edition",
+        "id": "lob:09l5py",
+        "title": "nixpkgs-multiverse: every version that ever existed",
         "summary": "",
-        "url": "https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition",
-        "source": "Hacker News",
-        "score": 76,
-        "comments": 41
+        "url": "https://fzakaria.com/2026/08/09/nixpkgs-multiverse-every-version-that-ever-existed",
+        "source": "Lobste.rs",
+        "score": 35,
+        "comments": 13,
+        "tags": [
+          "nix"
+        ]
+      },
+      {
+        "id": "lob:jnbujx",
+        "title": "Mea Culpa - Dark Hours",
+        "summary": "<p>Vibecoded website plagiarizes existing free software program.</p>\n",
+        "url": "https://blog.terrygodier.com/2026/08/09/mea-culpa-dark-hours.html",
+        "source": "Lobste.rs",
+        "score": 44,
+        "comments": 11,
+        "tags": [
+          "vibecoding"
+        ]
+      },
+      {
+        "id": "arxiv:2608.07458v1",
+        "title": "CoinRAG: Contextualized Information Nugget KV Cache Reuse for Long-Context RAG",
+        "summary": "Recent optimization studies on Retrieval-Augmented Generation (RAG) have exploited chunk-level KV cache reuse to avoid processing long retrieved contexts for higher efficiency, while significant information redundancy and noise still remain in the coarse-grained chunks. This paper optimizes the Pare",
+        "url": "https://arxiv.org/abs/2608.07458v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.CL",
+          "cs.AI",
+          "cs.IR",
+          "cs.LG"
+        ],
+        "arxiv_id": "2608.07458v1"
+      },
+      {
+        "id": "lob:1ygxcp",
+        "title": "Relying on Go",
+        "summary": "",
+        "url": "https://antonz.org/relying-on-go/",
+        "source": "Lobste.rs",
+        "score": 32,
+        "comments": 10,
+        "tags": [
+          "go"
+        ]
+      },
+      {
+        "id": "arxiv:2608.07460v1",
+        "title": "CreativeInstruct: Scalably Teaching LLMs to Balance Quality, Creativity, and Diversity",
+        "summary": "While post-training improves the capabilities of large language models (LLMs), it generally lowers their output diversity and creativity, negatively impacting tasks that explicitly require creativity (e.g., story generation) as well as those that require it implicitly, e.g., reinforcement learning (",
+        "url": "https://arxiv.org/abs/2608.07460v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.CL",
+          "cs.AI"
+        ],
+        "arxiv_id": "2608.07460v1"
+      },
+      {
+        "id": "arxiv:2608.07449v1",
+        "title": "SkillProx: Self-Evolving Agent Skills via Proximal Textual Gradient Descent",
+        "summary": "LLM agents increasingly adapt to recurring tasks by accumulating procedural knowledge in skills. These skills are lightweight, reusable textual artifacts that are loaded into the agent's context without weight updates. Recent methods refine skills through iterative task execution, failure diagnosis,",
+        "url": "https://arxiv.org/abs/2608.07449v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.AI",
+          "cs.CL"
+        ],
+        "arxiv_id": "2608.07449v1"
+      },
+      {
+        "id": "arxiv:2608.07436v1",
+        "title": "Post-Grokking Collapse at the Representation-Readout Interface in Muon-Trained Transformers",
+        "summary": "Under the standard split, Muon gets hidden matrices and AdamW embeddings/output head. Muon groks modular addition faster, but its solutions do not hold. All nine configurations on $(a+b) \\bmod 113$ grok and later lose generalization. Across five seeds the selected AdamW reference falls below thresho",
+        "url": "https://arxiv.org/abs/2608.07436v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.AI",
+          "cs.LG"
+        ],
+        "arxiv_id": "2608.07436v1"
       },
       {
         "id": "rss:746141012f",
         "title": "Metabase Zero-Day Exploited in Wild Allows Admin Access Without Authentication",
         "summary": "Metabase has warned that a maximum-severity security flaw impacting its business intelligence and data visualization software package has been exploited in the wild as a zero-day.\n\nThe vulnerability (CVSS score: 10.0), which does not carry a CVE identifier, allows an unauthenticated remote attacker",
         "url": "https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html",
-        "source": "Tech RSS",
-        "score": 0
-      },
-      {
-        "id": "rss:2c0188e097",
-        "title": "18-Year-Old Linux SCTP Flaw Could Let Local Users Gain Root and Escape Containers",
-        "summary": "A use-after-free bug in Linux's SCTP networking code can be turned into full root on a host, and Tencent researchers say they used it to escape a container and reach the machine underneath.\n\nThe flaw has existed since 2008. The fix already shipped: stable kernels 7.1.6, 6.18.42, 6.12.101 and 6.6.148",
-        "url": "https://thehackernews.com/2026/08/18-year-old-linux-sctp-flaw-could-let.html",
         "source": "Tech RSS",
         "score": 0
       },
@@ -799,17 +794,34 @@
         "score": 0
       },
       {
-        "id": "lob:urdoby",
-        "title": "Dithered QR codes",
+        "id": "hn:49209132",
+        "title": "Tail-Call Interpreters in Rust – Jimmy Ostler",
         "summary": "",
-        "url": "https://www.andrewt.net/dithered-qr-codes/wtf/",
+        "url": "https://lordgoati.us/blog/tail-call/",
+        "source": "Hacker News",
+        "score": 45,
+        "comments": 16
+      },
+      {
+        "id": "lob:ulinck",
+        "title": "Toggles Considered Harmful",
+        "summary": "",
+        "url": "https://ignorethecode.net/blog/2026/08/09/toggles_considered_harmful/",
         "source": "Lobste.rs",
-        "score": 68,
-        "comments": 3,
+        "score": 34,
+        "comments": 6,
         "tags": [
-          "art",
-          "graphics"
+          "design"
         ]
+      },
+      {
+        "id": "hn:49238818",
+        "title": "Run Android ARM64 VR APKs on Apple Vision Pro",
+        "summary": "",
+        "url": "https://github.com/shinyquagsire23/Klepton",
+        "source": "Hacker News",
+        "score": 116,
+        "comments": 18
       }
     ],
     "ai_curated": true
