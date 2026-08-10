@@ -1,67 +1,67 @@
 {
-  "date": "2026-08-09",
-  "update_time": "2026-08-09 12:54:12",
+  "date": "2026-08-10",
+  "update_time": "2026-08-10 02:06:26",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-09\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 18岁高龄的Linux SCTP漏洞：从容器逃逸到主机Root (来源: 新闻)\n- **核心干货**：一个潜伏自2008年的 use-after-free 漏洞，存在于 Linux 内核的 SCTP 网络代码中。腾讯安全团队已证实可利用它实现容器逃逸并获取宿主机 Root 权限，CVSS 评级为致命。修复补丁已随最新稳定内核（7.1.6, 6.18.42等）发布，建议所有云厂商和运维立刻自查。\n- **毒舌/硬核点评**：一个\"08年金融危机\"时代的代码漏洞，今天还能让攻击者直接掀翻你的整个K8s集群。这不叫技术债，这叫技术遗产——还是带诅咒的那种。\n- **🔗 传送门**: [点击直达原链接](https://thehackernews.com/2026/08/18-year-old-linux-sctp-flaw-could-let.html)\n\n---\n\n### 2. 📌 AV-AIVAT: 让Agent评估成本暴跌98.6% (来源: ArXiv)\n- **核心干货**：这篇论文提出一种在非完全信息博弈（如扑克）中评估两个AI Agent强弱的新方法。它通过\"随时有效停止\"的统计认证，在保证结论可靠的前提下，将所需对局数量平均减少了74倍，大幅削减评估所需的算力或人类专家时间。\n- **毒舌/硬核点评**：以前烧几百万美金算力去分个高下，现在几百块搞定。这进展堪比从\"核动力印钞\"直接跳到\"扫码支付\"，建议所有搞大模型竞技场的团队立刻研读，能省下不止一辆保时捷。\n- **🔗 传送门**: [点击直达原链接](https://arxiv.org/abs/2608.06362v1)\n\n---\n\n### 3. 📌 Nixpkgs 核心团队解散：开源治理的又一次\"地震\" (来源: Lobste.rs)\n- **核心干货**：NixOS 生态的基石——Nixpkgs 仓库的核心维护团队宣布集体解散。这意味着这个拥有数万软件包、对构建系统有着颠覆性理念的发行版，其治理模式走到了一个关键转折点，未来走向充满不确定性。\n- **毒舌/硬核点评**：当\"包管理器的终极答案\"连自己的管理团队都搞不定时，这可能是对\"社区驱动开发\"神话最生动的一记耳光。事情本身很严肃，但讽刺感拉满，值得所有开源项目管理者引以为戒。\n- **🔗 传送门**: [点击直达原链接](https://discourse.nixos.org/t/the-nixpkgs-core-team-has-disbanded/79413)\n\n---\n\n### 🗣️ 今日顶男金句\n**\"你以为是技术瓶颈，最后发现全是组织问题——写代码难，难的是让写代码的人不吵架。\"**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-10\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Metabase 零日漏洞被野外利用，无需认证即可获取管理员权限 (来源: The Hacker News)\n- **核心干货**：Metabase 曝出 CVSS 10.0 级零日漏洞，无需任何认证即可让远程攻击者获取管理员权限，且已被证实存在野外利用。这相当于你家大门不仅没锁，还贴了张纸条写着\"管理员入口在这\"。\n- **毒舌/硬核点评**：CVSS 满分不是终点，是起点——安全团队凌晨三点的闹钟已就位。建议所有 BI 工具管理员立刻检查版本，别等红队来给你演示什么叫\"一键接管\"。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html)\n\n---\n\n### 2. 📌 18年高龄 Linux SCTP 漏洞：本地提权至 Root 并逃逸容器 (来源: The Hacker News)\n- **核心干货**：Linux 内核 SCTP 协议栈中存在一个自 2008 年就存在的 use-after-free 漏洞，腾讯安全团队已成功利用它从容器内逃逸并拿下宿主机 Root 权限。修复补丁已发布，涉及 7.1.6、6.18.42 等多个稳定分支。\n- **毒舌/硬核点评**：2008 年出生的漏洞，现在都能合法\"成年\"搞破坏了。容器逃逸 + Root 提权一套连招，直接把你精心搭建的\"隔离环境\"打成筛子。赶紧升级内核，别让 18 岁的漏洞教你做人。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/18-year-old-linux-sctp-flaw-could-let.html)\n\n---\n\n### 3. 📌 Agent Plugins 1.0 发布：AI 智能体插件互操作标准出炉 (来源: The Register)\n- **核心干货**：多家 AI 巨头联合推出 Agent Plugins 1.0 规范，定义了一种\"一次编写，到处运行\"的容器格式，用于跨平台传递工具和技能，试图终结智能体生态碎片化。说白了，就是给 AI Agent 们统一了\"USB-C 接口\"。\n- **毒舌/硬核点评**：继 USB-C 统一充电口后，AI 界终于也要迎来自己的\"接口大一统\"了。但标准有了，生态能不能跟上，还得看各位\"巨头\"愿不愿意放下身段真互通——别到时候又是一纸空文，各自圈地。\n- **🔗 传送门**：[点击直达原链接](https://www.theregister.com/devops/2026/08/07/ai-titans-to-tidy-agent-frontier-with-plugin-prescription/5285017)\n\n---\n\n### 🗣️ 今日顶男金句\n**\"漏洞不会变老，只会等你变强。今天不修的内核，明天就是别人手里的 root shell。\"**",
   "briefing_items": [
     {
-      "title": "18岁高龄的Linux SCTP漏洞：从容器逃逸到主机Root",
-      "source": "新闻",
-      "summary": "一个潜伏自2008年的 use-after-free 漏洞，存在于 Linux 内核的 SCTP 网络代码中。腾讯安全团队已证实可利用它实现容器逃逸并获取宿主机 Root 权限，CVSS 评级为致命。修复补丁已随最新稳定内核（7.1.6, 6.18.42等）发布，建议所有云厂商和运维立刻自查。",
-      "commentary": "一个\"08年金融危机\"时代的代码漏洞，今天还能让攻击者直接掀翻你的整个K8s集群。这不叫技术债，这叫技术遗产——还是带诅咒的那种。",
+      "title": "Metabase 零日漏洞被野外利用，无需认证即可获取管理员权限",
+      "source": "The Hacker News",
+      "summary": "Metabase 曝出 CVSS 10.0 级零日漏洞，无需任何认证即可让远程攻击者获取管理员权限，且已被证实存在野外利用。这相当于你家大门不仅没锁，还贴了张纸条写着\"管理员入口在这\"。",
+      "commentary": "CVSS 满分不是终点，是起点——安全团队凌晨三点的闹钟已就位。建议所有 BI 工具管理员立刻检查版本，别等红队来给你演示什么叫\"一键接管\"。",
+      "url": "https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html"
+    },
+    {
+      "title": "18年高龄 Linux SCTP 漏洞：本地提权至 Root 并逃逸容器",
+      "source": "The Hacker News",
+      "summary": "Linux 内核 SCTP 协议栈中存在一个自 2008 年就存在的 use-after-free 漏洞，腾讯安全团队已成功利用它从容器内逃逸并拿下宿主机 Root 权限。修复补丁已发布，涉及 7.1.6、6.18.42 等多个稳定分支。",
+      "commentary": "2008 年出生的漏洞，现在都能合法\"成年\"搞破坏了。容器逃逸 + Root 提权一套连招，直接把你精心搭建的\"隔离环境\"打成筛子。赶紧升级内核，别让 18 岁的漏洞教你做人。",
       "url": "https://thehackernews.com/2026/08/18-year-old-linux-sctp-flaw-could-let.html"
     },
     {
-      "title": "AV-AIVAT: 让Agent评估成本暴跌98.6%",
-      "source": "ArXiv",
-      "summary": "这篇论文提出一种在非完全信息博弈（如扑克）中评估两个AI Agent强弱的新方法。它通过\"随时有效停止\"的统计认证，在保证结论可靠的前提下，将所需对局数量平均减少了74倍，大幅削减评估所需的算力或人类专家时间。",
-      "commentary": "以前烧几百万美金算力去分个高下，现在几百块搞定。这进展堪比从\"核动力印钞\"直接跳到\"扫码支付\"，建议所有搞大模型竞技场的团队立刻研读，能省下不止一辆保时捷。",
-      "url": "https://arxiv.org/abs/2608.06362v1"
-    },
-    {
-      "title": "Nixpkgs 核心团队解散：开源治理的又一次\"地震\"",
-      "source": "Lobste.rs",
-      "summary": "NixOS 生态的基石——Nixpkgs 仓库的核心维护团队宣布集体解散。这意味着这个拥有数万软件包、对构建系统有着颠覆性理念的发行版，其治理模式走到了一个关键转折点，未来走向充满不确定性。",
-      "commentary": "当\"包管理器的终极答案\"连自己的管理团队都搞不定时，这可能是对\"社区驱动开发\"神话最生动的一记耳光。事情本身很严肃，但讽刺感拉满，值得所有开源项目管理者引以为戒。",
-      "url": "https://discourse.nixos.org/t/the-nixpkgs-core-team-has-disbanded/79413"
+      "title": "Agent Plugins 1.0 发布：AI 智能体插件互操作标准出炉",
+      "source": "The Register",
+      "summary": "多家 AI 巨头联合推出 Agent Plugins 1.0 规范，定义了一种\"一次编写，到处运行\"的容器格式，用于跨平台传递工具和技能，试图终结智能体生态碎片化。说白了，就是给 AI Agent 们统一了\"USB-C 接口\"。",
+      "commentary": "继 USB-C 统一充电口后，AI 界终于也要迎来自己的\"接口大一统\"了。但标准有了，生态能不能跟上，还得看各位\"巨头\"愿不愿意放下身段真互通——别到时候又是一纸空文，各自圈地。",
+      "url": "https://www.theregister.com/devops/2026/08/07/ai-titans-to-tidy-agent-frontier-with-plugin-prescription/5285017"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49226536",
-      "title": "Shopify replaced Redis with MySQL for inventory reservations–and it scaled",
+      "id": "hn:49234675",
+      "title": "How I use LLMs to learn complex topics",
       "summary": "",
-      "url": "https://shopify.engineering/scaling-inventory-reservations",
+      "url": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/",
       "source": "Hacker News",
-      "score": 245,
-      "comments": 155
+      "score": 430,
+      "comments": 249
     },
     {
-      "id": "hn:49226923",
-      "title": "Os8088: A powerful Mac-like OS for the IBM XT, 286, 386",
-      "summary": "",
-      "url": "https://os8088.com/",
+      "id": "hn:49230477",
+      "title": "Everything you do is being recorded",
+      "summary": "<a href=\"https:&#x2F;&#x2F;archive.is&#x2F;JxaZ7\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.is&#x2F;JxaZ7</a>",
+      "url": "https://www.theatlantic.com/technology/2026/05/ai-wearable-surveillance-countermeasures/687203/",
       "source": "Hacker News",
-      "score": 197,
-      "comments": 118
+      "score": 215,
+      "comments": 171
     },
     {
-      "id": "hn:49223082",
-      "title": "Fastmail offers EU data region",
+      "id": "hn:49232253",
+      "title": "Taxi drivers rarely die of Alzheimer's",
       "summary": "",
-      "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
+      "url": "https://theconversation.com/taxi-drivers-rarely-die-of-alzheimers-how-complex-mental-maps-and-spatial-reasoning-protect-your-brain-286650",
       "source": "Hacker News",
-      "score": 452,
-      "comments": 247
+      "score": 186,
+      "comments": 139
     },
     {
-      "id": "hn:49226636",
-      "title": "My server is a phone now",
+      "id": "hn:49231154",
+      "title": "Mea Culpa – Dark Hours",
       "summary": "",
-      "url": "https://seg6.space/posts/phone-server/",
+      "url": "https://blog.terrygodier.com/2026/08/09/mea-culpa-dark-hours.html",
       "source": "Hacker News",
-      "score": 378,
-      "comments": 158
+      "score": 561,
+      "comments": 254
     },
     {
       "id": "lob:cmrfrj",
@@ -69,45 +69,58 @@
       "summary": "<p>Not tagged as video but contains mostly links to videos</p>\n",
       "url": "https://char.lt/blog/2026/08/talks-i-like/",
       "source": "Lobste.rs",
-      "score": 75,
-      "comments": 16,
+      "score": 87,
+      "comments": 17,
       "tags": [
         "programming"
       ]
     },
     {
-      "id": "lob:9cv8me",
-      "title": "The Nixpkgs core team has disbanded",
-      "summary": "",
-      "url": "https://discourse.nixos.org/t/the-nixpkgs-core-team-has-disbanded/79413",
+      "id": "lob:he9j7y",
+      "title": "I think the vibecoding tag has gotten out of hand",
+      "summary": "<p>I was reading <a href=\"https://lobste.rs/s/x0jlp7/tracking_down_zsh_history_data_loss_bug\" rel=\"ugc\">this post</a> and noticed the <code>vibecoding</code> had been applied. I’m not sure if this was applied by the lobste.rs team or by the author, but after reading the post it’s pretty clear that t",
+      "url": "https://lobste.rs/s/he9j7y/i_think_vibecoding_tag_has_gotten_out_hand",
       "source": "Lobste.rs",
-      "score": 101,
-      "comments": 15,
+      "score": 34,
+      "comments": 32,
       "tags": [
-        "nix"
+        "meta",
+        "vibecoding"
       ]
     },
     {
-      "id": "lob:uny1fo",
-      "title": "They don’t make ’em like Sublime Text anymore",
-      "summary": "",
-      "url": "https://dbushell.com/2026/08/07/sublime-text/",
-      "source": "Lobste.rs",
-      "score": 101,
-      "comments": 49,
-      "tags": [
-        "editors",
-        "rant"
-      ]
-    },
-    {
-      "id": "hn:49079995",
-      "title": "Improving Heuristics for A* Pathfinding",
-      "summary": "",
-      "url": "https://www.redblobgames.com/pathfinding/heuristics/differential.html",
+      "id": "hn:49233423",
+      "title": "Ask HN: What are you working on? (August 2026)",
+      "summary": "What are you working on?  What have you been curious about lately?",
+      "url": "https://news.ycombinator.com/item?id=49233423",
       "source": "Hacker News",
-      "score": 281,
-      "comments": 29
+      "score": 174,
+      "comments": 655
+    },
+    {
+      "id": "lob:x0jlp7",
+      "title": "Tracking down a Zsh history data loss bug",
+      "summary": "",
+      "url": "https://michael.stapelberg.ch/posts/2026-08-09-zsh-history-truncation-bug/",
+      "source": "Lobste.rs",
+      "score": 54,
+      "comments": 10,
+      "tags": [
+        "debugging"
+      ]
+    },
+    {
+      "id": "lob:rsztog",
+      "title": "Who Should Pay For Source Code Availability?",
+      "summary": "",
+      "url": "https://kristoff.it/blog/source-code-availability/",
+      "source": "Lobste.rs",
+      "score": 55,
+      "comments": 35,
+      "tags": [
+        "vcs",
+        "zig"
+      ]
     },
     {
       "id": "lob:iixlsm",
@@ -115,70 +128,73 @@
       "summary": "",
       "url": "https://blog.senko.net/code-was-never-the-hard-part-is-an-insult-to-all-programmers",
       "source": "Lobste.rs",
-      "score": 37,
-      "comments": 21,
+      "score": 53,
+      "comments": 27,
       "tags": [
         "practices",
         "vibecoding"
       ]
     },
     {
-      "id": "arxiv:2608.06362v1",
-      "title": "AV-AIVAT: 74x Cheaper Agent Evaluation with Certified Anytime-Valid Stopping in Imperfect-Information Games",
-      "summary": "Deciding which of two agents is stronger means playing games until skill outweighs luck, and every game costs money, model inference, or expert time. Since the number of games needed is unknown, fixed-budget evaluations either keep paying after the result is settled or stop before the agents can be ",
-      "url": "https://arxiv.org/abs/2608.06362v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.GT",
-        "cs.AI",
-        "cs.CL",
-        "cs.LG",
-        "cs.MA"
-      ],
-      "arxiv_id": "2608.06362v1"
-    },
-    {
-      "id": "hn:49228663",
-      "title": "Microsoft Word for Windows 1.1a, Native X64 Port",
+      "id": "hn:49231809",
+      "title": "Cool URIs Don't Change (1998)",
       "summary": "",
-      "url": "https://github.com/jmarshall23/msword",
+      "url": "https://www.w3.org/Provider/Style/URI",
       "source": "Hacker News",
-      "score": 102,
-      "comments": 44
+      "score": 187,
+      "comments": 43
     },
     {
-      "id": "hn:49226742",
-      "title": "Dithered QR Codes",
+      "id": "hn:49233448",
+      "title": "OpenChamber: An Agentic Development Environment",
       "summary": "",
-      "url": "https://www.andrewt.net/dithered-qr-codes/wtf/",
+      "url": "https://openchamber.dev/",
       "source": "Hacker News",
-      "score": 249,
-      "comments": 21
+      "score": 108,
+      "comments": 55
     },
     {
-      "id": "arxiv:2608.06377v1",
-      "title": "Learning When to Trust via Selective Context Preference Optimization",
-      "summary": "Language models increasingly condition their answers on external signals, and a single misleading one can turn a correct answer wrong. The obvious remedy, training models to resist such signals, hides a failure mode: a model that ignores all context looks robust yet is useless when the context is wo",
-      "url": "https://arxiv.org/abs/2608.06377v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2608.06377v1"
+      "id": "lob:paryb7",
+      "title": "Rails is done",
+      "summary": "",
+      "url": "https://lucas.dohmen.io/posts/2026/08/09/rails-is-done/",
+      "source": "Lobste.rs",
+      "score": 63,
+      "comments": 38,
+      "tags": [
+        "culture",
+        "ruby"
+      ]
     },
     {
-      "id": "arxiv:2608.06366v1",
-      "title": "Tracing the Heart: An Evidence-Linked Pipeline for Heart-Failure Feature Engineering",
-      "summary": "Electronic health record (EHR) feature engineering is a major bottleneck in clinical research and AI, accounting for 39-45% of data scientists' workload. This is especially pronounced in heart failure, which affects an estimated 6.7 million U.S. adults and requires integrating fragmented EHR data wi",
-      "url": "https://arxiv.org/abs/2608.06366v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2608.06366v1"
+      "id": "hn:49235641",
+      "title": "New Zealand lost its music media, and what we're building to replace it",
+      "summary": "",
+      "url": "https://propelmusic.co.nz/articles/the-sound-went-quiet-nz-music-media",
+      "source": "Hacker News",
+      "score": 78,
+      "comments": 43
+    },
+    {
+      "id": "lob:u0ks1k",
+      "title": "IRC technology news from the first half of 2026",
+      "summary": "",
+      "url": "https://www.ilmarilauhakangas.fi/irc_technology_news_from_the_first_half_of_2026/",
+      "source": "Lobste.rs",
+      "score": 39,
+      "comments": 7,
+      "tags": [
+        "networking"
+      ]
+    },
+    {
+      "id": "hn:49235011",
+      "title": "The tragedy of the commons, AI edition",
+      "summary": "",
+      "url": "https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition",
+      "source": "Hacker News",
+      "score": 76,
+      "comments": 41
     },
     {
       "id": "rss:746141012f",
@@ -205,43 +221,17 @@
       "score": 0
     },
     {
-      "id": "lob:x0jlp7",
-      "title": "Tracking down a Zsh history data loss bug",
+      "id": "lob:urdoby",
+      "title": "Dithered QR codes",
       "summary": "",
-      "url": "https://michael.stapelberg.ch/posts/2026-08-09-zsh-history-truncation-bug/",
+      "url": "https://www.andrewt.net/dithered-qr-codes/wtf/",
       "source": "Lobste.rs",
-      "score": 13,
-      "comments": 8,
+      "score": 68,
+      "comments": 3,
       "tags": [
-        "debugging",
-        "vibecoding"
+        "art",
+        "graphics"
       ]
-    },
-    {
-      "id": "arxiv:2608.06363v1",
-      "title": "An Optimal Agnostic PAC Algorithm",
-      "summary": "Let $H\\subseteq\\{-1,+1\\}^X$ be a class of finite VC dimension $d\\ge1$. Writing $L$ for the binary risk and $L^*=\\min_{h\\in H}L(h)$, we construct a learner achieving the statistically optimal risk bound: from an i.i.d.\\ sample of size $n$, for every $0<δ\\le 1/2$, with probability at least $1-δ$, \\[ L",
-      "url": "https://arxiv.org/abs/2608.06363v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.DS",
-        "math.ST"
-      ],
-      "arxiv_id": "2608.06363v1"
-    },
-    {
-      "id": "arxiv:2608.06352v1",
-      "title": "CalibForge: Adversarial Solver Calibration for Scaling Learnable Terminal Tasks",
-      "summary": "Training terminal agents requires executable and verifiable tasks that are not merely solvable, but appropriately challenging for learning. Executable validation establishes feasibility, yet does not reveal how a task behaves relative to a given solver setting. In this paper, we present CalibForge, ",
-      "url": "https://arxiv.org/abs/2608.06352v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.CL"
-      ],
-      "arxiv_id": "2608.06352v1"
     }
   ],
   "ai_curated": true
