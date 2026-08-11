@@ -1,105 +1,85 @@
 {
-  "date": "2026-08-10",
-  "update_time": "2026-08-10 13:12:49",
+  "date": "2026-08-11",
+  "update_time": "2026-08-11 02:01:26",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-10\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Docker Sandboxes：给 AI Agent 的\"一次性隔离盒\" (来源: Hacker News, 330分)\n- **核心干货**：Docker 正式发布了面向 AI Agent 的沙箱产品，主打\"用完即焚\"的隔离环境。这解决了 Agent 在自主执行任务时可能引发的安全问题——比如乱跑命令、污染宿主环境。本质上是给 AI 的\"手\"戴上一次性手套，防止它在你服务器上乱搞。\n- **毒舌/硬核点评**：AI Agent 终于有自己的\"安全套\"了，但这玩意儿到底是保护用户，还是保护 Docker 的云业务？反正隔离了，出事儿别找我。\n- **🔗 传送门**：[点击直达原链接](https://www.docker.com/products/docker-sandboxes/)\n\n---\n\n### 2. 📌 Meta Muse Glimmer：30B 开源编程模型，重拳出击 (来源: Hacker News, 301分)\n- **核心干货**：Meta 推出开源（open weights）的 30B 参数本地编程模型，专攻代码生成与 Agent 任务。30B 的规模意味着可以在不错的消费级硬件上本地运行，对隐私敏感和离线开发场景是重大利好，直接对标闭源大厂的云端代码模型。\n- **毒舌/硬核点评**：Meta 这波是\"开源界的内卷之王\"，30B 就把活儿干漂亮了。看来以后\"本地跑大模型\"不再是极客的玩具，而是程序员的标配了。\n- **🔗 传送门**：[点击直达原链接](https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model)\n\n---\n\n### 3. 📌 Metabase 零日漏洞：满分 10 分，无认证直接当管理员 (来源: Tech RSS)\n- **核心干货**：Metabase 曝出 CVSS 10.0 的最高危零日漏洞，且已被在野利用。攻击者无需任何认证即可获取管理员权限，直接接管你的 BI 和数据可视化系统。连 CVE 编号都还没分配，说明是刚被发现就被打穿了。\n- **毒舌/硬核点评**：这可能是今年最\"朴实无华\"的漏洞——不整花活儿，直接让你裸奔。赶紧去查你的 Metabase 实例，没打补丁的等于把数据库钥匙挂在大门口。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\"技术债务像脂肪，不运动（重构）就会堆积；但今天，先看看你的 Metabase 补丁打了没。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-11\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Muse Glimmer: Meta 的 30B 参数“常驻 AI 管家” (来源: Hacker News, 1045 分)\n- **核心干货**：Meta 开源了 Muse Glimmer，一个专为“永远在线”的本地 Agent 工作流优化的 30B 参数模型。它主打低延迟、低功耗，瞄准的是那种不依赖云端、在本地设备上持续运行的智能体场景，让 AI 真正成为你设备的“后台进程”而非一次性问答工具。\n- **毒舌/硬核点评**：扎克伯格一边骂着“封闭的 AI 对手”，一边甩出这玩意儿。30B 参数想跑在本地，这不仅是技术内卷，更是对英伟达显卡销量的“精准打击”。建议改名叫“Glimmer of Hope”，毕竟它让我的钱包看到了不用买 A100 的希望。\n- **🔗 传送门**：[点击直达原链接](https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model)\n\n---\n\n### 2. 📌 Needle2: 14MB 的“蚁人”级 AI，专治物联网不服 (来源: Hacker News, 177 分)\n- **核心干货**：Cactus 推出了 Needle2，一个仅 14MB 的 Agentic LLM，专为手机、可穿戴设备、智能家居和机器人设计。它主打工具调用和结构化数据提取，让你家扫地机器人不再只会“阿巴阿巴”，而是能听懂“去把猫粮碗加满”这种复杂指令。\n- **毒舌/硬核点评**：14MB 的模型，比一张高清猫图还小，却要在微控制器上跑 Agent 工作流。这简直是 AI 界的“螺蛳壳里做道场”，让那些动辄几百 GB 的大模型显得像在“用大炮打蚊子”。不过，我很好奇它会不会在关键时刻“死机”，然后你的智能家居集体“装死”。\n- **🔗 传送门**：[点击直达原链接](https://cactuscompute.com/needle)\n\n---\n\n### 3. 📌 Metabase 0-Day 漏洞：CVSS 10.0，管理员权限“免费送” (来源: Tech RSS)\n- **核心干货**：Metabase 曝出最高严重级别的 0-Day 漏洞（CVSS 10.0），无需任何认证即可让远程攻击者获得管理员权限。该漏洞已在野外被利用，影响其商业智能和数据可视化软件，堪称数据仓库的“万能钥匙”。\n- **毒舌/硬核点评**：CVSS 10.0 的“满分”漏洞，这可不是“及格分”，这是直接“保送清北”。Metabase 这回是“留级”了，提醒所有用 BI 工具的朋友：你的数据报表可能正在被黑客当“年度财报”看。赶紧打补丁，别等数据裸奔了才想起来穿衣服。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html)\n\n---\n\n### 🗣️ 今日顶男金句\n“真正的极客不是看谁跑分高，而是看谁能把 14MB 的模型塞进冰箱，让它在零下 18 度还能帮你算出今晚该吃啥。”",
   "briefing_items": [
     {
-      "title": "Docker Sandboxes：给 AI Agent 的\"一次性隔离盒\"",
-      "source": "Hacker News, 330分",
-      "summary": "Docker 正式发布了面向 AI Agent 的沙箱产品，主打\"用完即焚\"的隔离环境。这解决了 Agent 在自主执行任务时可能引发的安全问题——比如乱跑命令、污染宿主环境。本质上是给 AI 的\"手\"戴上一次性手套，防止它在你服务器上乱搞。",
-      "commentary": "AI Agent 终于有自己的\"安全套\"了，但这玩意儿到底是保护用户，还是保护 Docker 的云业务？反正隔离了，出事儿别找我。",
-      "url": "https://www.docker.com/products/docker-sandboxes/"
-    },
-    {
-      "title": "Meta Muse Glimmer：30B 开源编程模型，重拳出击",
-      "source": "Hacker News, 301分",
-      "summary": "Meta 推出开源（open weights）的 30B 参数本地编程模型，专攻代码生成与 Agent 任务。30B 的规模意味着可以在不错的消费级硬件上本地运行，对隐私敏感和离线开发场景是重大利好，直接对标闭源大厂的云端代码模型。",
-      "commentary": "Meta 这波是\"开源界的内卷之王\"，30B 就把活儿干漂亮了。看来以后\"本地跑大模型\"不再是极客的玩具，而是程序员的标配了。",
+      "title": "Muse Glimmer: Meta 的 30B 参数“常驻 AI 管家”",
+      "source": "Hacker News, 1045 分",
+      "summary": "Meta 开源了 Muse Glimmer，一个专为“永远在线”的本地 Agent 工作流优化的 30B 参数模型。它主打低延迟、低功耗，瞄准的是那种不依赖云端、在本地设备上持续运行的智能体场景，让 AI 真正成为你设备的“后台进程”而非一次性问答工具。",
+      "commentary": "扎克伯格一边骂着“封闭的 AI 对手”，一边甩出这玩意儿。30B 参数想跑在本地，这不仅是技术内卷，更是对英伟达显卡销量的“精准打击”。建议改名叫“Glimmer of Hope”，毕竟它让我的钱包看到了不用买 A100 的希望。",
       "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model"
     },
     {
-      "title": "Metabase 零日漏洞：满分 10 分，无认证直接当管理员",
+      "title": "Needle2: 14MB 的“蚁人”级 AI，专治物联网不服",
+      "source": "Hacker News, 177 分",
+      "summary": "Cactus 推出了 Needle2，一个仅 14MB 的 Agentic LLM，专为手机、可穿戴设备、智能家居和机器人设计。它主打工具调用和结构化数据提取，让你家扫地机器人不再只会“阿巴阿巴”，而是能听懂“去把猫粮碗加满”这种复杂指令。",
+      "commentary": "14MB 的模型，比一张高清猫图还小，却要在微控制器上跑 Agent 工作流。这简直是 AI 界的“螺蛳壳里做道场”，让那些动辄几百 GB 的大模型显得像在“用大炮打蚊子”。不过，我很好奇它会不会在关键时刻“死机”，然后你的智能家居集体“装死”。",
+      "url": "https://cactuscompute.com/needle"
+    },
+    {
+      "title": "Metabase 0-Day 漏洞：CVSS 10.0，管理员权限“免费送”",
       "source": "Tech RSS",
-      "summary": "Metabase 曝出 CVSS 10.0 的最高危零日漏洞，且已被在野利用。攻击者无需任何认证即可获取管理员权限，直接接管你的 BI 和数据可视化系统。连 CVE 编号都还没分配，说明是刚被发现就被打穿了。",
-      "commentary": "这可能是今年最\"朴实无华\"的漏洞——不整花活儿，直接让你裸奔。赶紧去查你的 Metabase 实例，没打补丁的等于把数据库钥匙挂在大门口。",
+      "summary": "Metabase 曝出最高严重级别的 0-Day 漏洞（CVSS 10.0），无需任何认证即可让远程攻击者获得管理员权限。该漏洞已在野外被利用，影响其商业智能和数据可视化软件，堪称数据仓库的“万能钥匙”。",
+      "commentary": "CVSS 10.0 的“满分”漏洞，这可不是“及格分”，这是直接“保送清北”。Metabase 这回是“留级”了，提醒所有用 BI 工具的朋友：你的数据报表可能正在被黑客当“年度财报”看。赶紧打补丁，别等数据裸奔了才想起来穿衣服。",
       "url": "https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49239751",
-      "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
-      "summary": "",
-      "url": "https://www.docker.com/products/docker-sandboxes/",
+      "id": "hn:49246804",
+      "title": "Show HN: Needle2: 14MB agentic LLM for phones, wearables, smart home and robots",
+      "summary": "Hey HN,<p>Henry from Cactus here!<p>We previously released Cactus Needle, a 14MB agentic LLM for tool call, device use, and structured extraction for phones, wearables, smart homes, small robots and microcontrollers. We got really great feedback here, and have now incorporated the suggestions to rel",
+      "url": "https://cactuscompute.com/needle",
       "source": "Hacker News",
-      "score": 330,
-      "comments": 194
+      "score": 177,
+      "comments": 77
     },
     {
       "id": "hn:49241679",
-      "title": "Meta Muse Glimmer – open weights 30B local coding model",
+      "title": "Muse Glimmer: 30B-parameter model optimized for always-on local agent workflows",
       "summary": "",
       "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
       "source": "Hacker News",
-      "score": 301,
-      "comments": 121
+      "score": 1045,
+      "comments": 579
     },
     {
-      "id": "lob:x0jlp7",
-      "title": "Tracking down a Zsh history data loss bug",
-      "summary": "",
-      "url": "https://michael.stapelberg.ch/posts/2026-08-09-zsh-history-truncation-bug/",
-      "source": "Lobste.rs",
-      "score": 65,
-      "comments": 14,
-      "tags": [
-        "debugging"
-      ]
-    },
-    {
-      "id": "hn:49238561",
-      "title": "What Happened to HackerOne?",
-      "summary": "",
-      "url": "https://blog.teknogeek.io/posts/what-happened-to-hackerone/",
+      "id": "hn:49243880",
+      "title": "Mark Zuckerberg attacks 'closed' AI rivals as Meta returns to open models",
+      "summary": "<a href=\"https:&#x2F;&#x2F;archive.is&#x2F;20LOJ\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.is&#x2F;20LOJ</a><p><a href=\"https:&#x2F;&#x2F;www.meta.com&#x2F;thefutureisforeveryone&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.meta.com&#x2F;thefutureisforeveryone&#x2F;</a>",
+      "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
       "source": "Hacker News",
-      "score": 285,
-      "comments": 145
+      "score": 370,
+      "comments": 386
     },
     {
-      "id": "hn:49238851",
-      "title": "Show HN: Voice driven murder mystery, Interview AI suspects with your voice",
-      "summary": "Hey HN!<p>I&#x27;m excited to show off this really fun project I put together. I originally built this project 2-3 years ago, AI was already booming at the time, however voice AI agents were still very early. I loved my proof of concept at the time, but wasn&#x27;t quite happy with it.<p>I recently ",
-      "url": "https://www.whodunnitai.com/",
+      "id": "hn:49251411",
+      "title": "The UK's War on Anonymity Has Come to America",
+      "summary": "",
+      "url": "https://www.effort.news/uk-lobby",
       "source": "Hacker News",
-      "score": 125,
-      "comments": 52
+      "score": 189,
+      "comments": 111
     },
     {
-      "id": "lob:rsztog",
-      "title": "Who Should Pay For Source Code Availability?",
+      "id": "hn:49208296",
+      "title": "Sonic Pi v5",
       "summary": "",
-      "url": "https://kristoff.it/blog/source-code-availability/",
-      "source": "Lobste.rs",
-      "score": 74,
-      "comments": 48,
-      "tags": [
-        "vcs",
-        "zig"
-      ]
+      "url": "https://www.patreon.com/samaaron/posts/sonic-pi-v5-166001392",
+      "source": "Hacker News",
+      "score": 311,
+      "comments": 79
     },
     {
-      "id": "lob:vowt4d",
-      "title": "I got an email about resistance",
+      "id": "hn:49249481",
+      "title": "Stop Killing Games: It's time to sue Sony, join us",
       "summary": "",
-      "url": "https://www.seangoedecke.com/i-got-an-email-about-resistance/",
-      "source": "Lobste.rs",
-      "score": 38,
-      "comments": 21,
-      "tags": [
-        "culture",
-        "vibecoding"
-      ]
+      "url": "https://www.massaschadeconsument.nl/collectieve-acties/playstation/",
+      "source": "Hacker News",
+      "score": 169,
+      "comments": 77
     },
     {
       "id": "lob:u0ks1k",
@@ -107,8 +87,8 @@
       "summary": "",
       "url": "https://www.ilmarilauhakangas.fi/irc_technology_news_from_the_first_half_of_2026/",
       "source": "Lobste.rs",
-      "score": 67,
-      "comments": 11,
+      "score": 86,
+      "comments": 15,
       "tags": [
         "networking"
       ]
@@ -119,85 +99,92 @@
       "summary": "",
       "url": "https://fzakaria.com/2026/08/09/nixpkgs-multiverse-every-version-that-ever-existed",
       "source": "Lobste.rs",
-      "score": 35,
-      "comments": 13,
+      "score": 60,
+      "comments": 16,
       "tags": [
         "nix"
       ]
     },
     {
-      "id": "lob:jnbujx",
-      "title": "Mea Culpa - Dark Hours",
-      "summary": "<p>Vibecoded website plagiarizes existing free software program.</p>\n",
-      "url": "https://blog.terrygodier.com/2026/08/09/mea-culpa-dark-hours.html",
-      "source": "Lobste.rs",
-      "score": 44,
-      "comments": 11,
-      "tags": [
-        "vibecoding"
-      ]
-    },
-    {
-      "id": "arxiv:2608.07458v1",
-      "title": "CoinRAG: Contextualized Information Nugget KV Cache Reuse for Long-Context RAG",
-      "summary": "Recent optimization studies on Retrieval-Augmented Generation (RAG) have exploited chunk-level KV cache reuse to avoid processing long retrieved contexts for higher efficiency, while significant information redundancy and noise still remain in the coarse-grained chunks. This paper optimizes the Pare",
-      "url": "https://arxiv.org/abs/2608.07458v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.IR",
-        "cs.LG"
-      ],
-      "arxiv_id": "2608.07458v1"
-    },
-    {
-      "id": "lob:1ygxcp",
-      "title": "Relying on Go",
+      "id": "hn:49247477",
+      "title": "Rust SIMD on the GPU",
       "summary": "",
-      "url": "https://antonz.org/relying-on-go/",
+      "url": "https://www.vectorware.com/blog/simd-on-gpu/",
+      "source": "Hacker News",
+      "score": 123,
+      "comments": 60
+    },
+    {
+      "id": "lob:ulinck",
+      "title": "Toggles Considered Harmful",
+      "summary": "",
+      "url": "https://ignorethecode.net/blog/2026/08/09/toggles_considered_harmful/",
       "source": "Lobste.rs",
-      "score": 32,
-      "comments": 10,
+      "score": 89,
+      "comments": 23,
       "tags": [
-        "go"
+        "design"
       ]
     },
     {
-      "id": "arxiv:2608.07460v1",
-      "title": "CreativeInstruct: Scalably Teaching LLMs to Balance Quality, Creativity, and Diversity",
-      "summary": "While post-training improves the capabilities of large language models (LLMs), it generally lowers their output diversity and creativity, negatively impacting tasks that explicitly require creativity (e.g., story generation) as well as those that require it implicitly, e.g., reinforcement learning (",
-      "url": "https://arxiv.org/abs/2608.07460v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "arxiv_id": "2608.07460v1"
+      "id": "lob:ja2gzr",
+      "title": "Firefox Containers Preview",
+      "summary": "",
+      "url": "https://blog.mozilla.org/en/firefox/firefox-containers-preview/",
+      "source": "Lobste.rs",
+      "score": 74,
+      "comments": 20,
+      "tags": [
+        "browsers"
+      ]
     },
     {
-      "id": "arxiv:2608.07449v1",
-      "title": "SkillProx: Self-Evolving Agent Skills via Proximal Textual Gradient Descent",
-      "summary": "LLM agents increasingly adapt to recurring tasks by accumulating procedural knowledge in skills. These skills are lightweight, reusable textual artifacts that are loaded into the agent's context without weight updates. Recent methods refine skills through iterative task execution, failure diagnosis,",
-      "url": "https://arxiv.org/abs/2608.07449v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_id": "2608.07449v1"
+      "id": "lob:cn7jyo",
+      "title": "Django is moving to an annual release cycle",
+      "summary": "",
+      "url": "https://www.djangoproject.com/weblog/2026/aug/10/annual-release-cycle/",
+      "source": "Lobste.rs",
+      "score": 42,
+      "comments": 1,
+      "tags": [
+        "python",
+        "release",
+        "web"
+      ]
     },
     {
-      "id": "arxiv:2608.07436v1",
-      "title": "Post-Grokking Collapse at the Representation-Readout Interface in Muon-Trained Transformers",
-      "summary": "Under the standard split, Muon gets hidden matrices and AdamW embeddings/output head. Muon groks modular addition faster, but its solutions do not hold. All nine configurations on $(a+b) \\bmod 113$ grok and later lose generalization. Across five seeds the selected AdamW reference falls below thresho",
-      "url": "https://arxiv.org/abs/2608.07436v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2608.07436v1"
+      "id": "lob:ipt1em",
+      "title": "GitHub Actions needs OIDC audience constraints",
+      "summary": "",
+      "url": "https://blog.yossarian.net/2026/08/10/github-actions-needs-oidc-audience-constraints",
+      "source": "Lobste.rs",
+      "score": 36,
+      "comments": 6,
+      "tags": [
+        "security"
+      ]
+    },
+    {
+      "id": "lob:lkp7x3",
+      "title": "a pure css implementation of some sunlight streaming in through the window",
+      "summary": "",
+      "url": "https://github.com/jackyzha0/sunlit",
+      "source": "Lobste.rs",
+      "score": 46,
+      "comments": 2,
+      "tags": [
+        "css",
+        "design",
+        "web"
+      ]
+    },
+    {
+      "id": "rss:7ea6ee6abb",
+      "title": "⚡ Weekly Recap: AI Goes Rogue, Metabase 0-Day, MCP Supply-Chain Attacks, and Router Backdoors",
+      "summary": "A lot of security problems still begin with someone doing a completely normal thing. Cloning a repo. Answering a call. Leaving a box exposed. Trusting the default.\n\nThat pretty much covers the mood this week. Old bugs are back, supply chains are getting stranger, and some exploit paths are so short",
+      "url": "https://thehackernews.com/2026/08/weekly-recap-ai-goes-rogue-metabase-0.html",
+      "source": "Tech RSS",
+      "score": 0
     },
     {
       "id": "rss:746141012f",
@@ -208,42 +195,47 @@
       "score": 0
     },
     {
-      "id": "rss:398276f398",
-      "title": "AI titans to tidy agent frontier with plugin prescription",
-      "summary": "Agent Plugins 1.0 defines a write-once-run-anywhere container for passing tools and skills across different agent platforms",
-      "url": "https://www.theregister.com/devops/2026/08/07/ai-titans-to-tidy-agent-frontier-with-plugin-prescription/5285017",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "hn:49209132",
-      "title": "Tail-Call Interpreters in Rust – Jimmy Ostler",
+      "id": "lob:p3mmqr",
+      "title": "an ambiguity in c89 which will never be fixed",
       "summary": "",
-      "url": "https://lordgoati.us/blog/tail-call/",
-      "source": "Hacker News",
-      "score": 45,
-      "comments": 16
-    },
-    {
-      "id": "lob:ulinck",
-      "title": "Toggles Considered Harmful",
-      "summary": "",
-      "url": "https://ignorethecode.net/blog/2026/08/09/toggles_considered_harmful/",
+      "url": "https://sebsite.pw/w/20260810-c89ambiguity.html",
       "source": "Lobste.rs",
-      "score": 34,
-      "comments": 6,
+      "score": 23,
+      "comments": 8,
       "tags": [
-        "design"
+        "c"
       ]
     },
     {
-      "id": "hn:49238818",
-      "title": "Run Android ARM64 VR APKs on Apple Vision Pro",
+      "id": "hn:49212449",
+      "title": "Publishing Schematics Before “Open Source” Was a Word",
       "summary": "",
-      "url": "https://github.com/shinyquagsire23/Klepton",
+      "url": "https://fabscene.medium.com/publishing-schematics-before-open-source-was-a-word-55-years-of-akizuki-denshi-japans-be7ca9629704",
       "source": "Hacker News",
-      "score": 116,
-      "comments": 18
+      "score": 66,
+      "comments": 17
+    },
+    {
+      "id": "hn:49209918",
+      "title": "Stowaway – Take the window seat on any plane or satellite overhead",
+      "summary": "",
+      "url": "https://stowaway.live/",
+      "source": "Hacker News",
+      "score": 118,
+      "comments": 11
+    },
+    {
+      "id": "lob:3qwloh",
+      "title": "What are you doing this week?",
+      "summary": "<p>What are you doing this week? Feel free to share!</p>\n<p>Keep in mind it’s OK to do nothing at all, too.</p>\n",
+      "url": "https://lobste.rs/s/3qwloh/what_are_you_doing_this_week",
+      "source": "Lobste.rs",
+      "score": 15,
+      "comments": 14,
+      "tags": [
+        "ask",
+        "programming"
+      ]
     }
   ],
   "ai_curated": true
