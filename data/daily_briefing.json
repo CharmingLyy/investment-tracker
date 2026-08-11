@@ -1,29 +1,29 @@
 {
   "date": "2026-08-11",
-  "update_time": "2026-08-11 02:01:26",
+  "update_time": "2026-08-11 13:09:40",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-11\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Muse Glimmer: Meta 的 30B 参数“常驻 AI 管家” (来源: Hacker News, 1045 分)\n- **核心干货**：Meta 开源了 Muse Glimmer，一个专为“永远在线”的本地 Agent 工作流优化的 30B 参数模型。它主打低延迟、低功耗，瞄准的是那种不依赖云端、在本地设备上持续运行的智能体场景，让 AI 真正成为你设备的“后台进程”而非一次性问答工具。\n- **毒舌/硬核点评**：扎克伯格一边骂着“封闭的 AI 对手”，一边甩出这玩意儿。30B 参数想跑在本地，这不仅是技术内卷，更是对英伟达显卡销量的“精准打击”。建议改名叫“Glimmer of Hope”，毕竟它让我的钱包看到了不用买 A100 的希望。\n- **🔗 传送门**：[点击直达原链接](https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model)\n\n---\n\n### 2. 📌 Needle2: 14MB 的“蚁人”级 AI，专治物联网不服 (来源: Hacker News, 177 分)\n- **核心干货**：Cactus 推出了 Needle2，一个仅 14MB 的 Agentic LLM，专为手机、可穿戴设备、智能家居和机器人设计。它主打工具调用和结构化数据提取，让你家扫地机器人不再只会“阿巴阿巴”，而是能听懂“去把猫粮碗加满”这种复杂指令。\n- **毒舌/硬核点评**：14MB 的模型，比一张高清猫图还小，却要在微控制器上跑 Agent 工作流。这简直是 AI 界的“螺蛳壳里做道场”，让那些动辄几百 GB 的大模型显得像在“用大炮打蚊子”。不过，我很好奇它会不会在关键时刻“死机”，然后你的智能家居集体“装死”。\n- **🔗 传送门**：[点击直达原链接](https://cactuscompute.com/needle)\n\n---\n\n### 3. 📌 Metabase 0-Day 漏洞：CVSS 10.0，管理员权限“免费送” (来源: Tech RSS)\n- **核心干货**：Metabase 曝出最高严重级别的 0-Day 漏洞（CVSS 10.0），无需任何认证即可让远程攻击者获得管理员权限。该漏洞已在野外被利用，影响其商业智能和数据可视化软件，堪称数据仓库的“万能钥匙”。\n- **毒舌/硬核点评**：CVSS 10.0 的“满分”漏洞，这可不是“及格分”，这是直接“保送清北”。Metabase 这回是“留级”了，提醒所有用 BI 工具的朋友：你的数据报表可能正在被黑客当“年度财报”看。赶紧打补丁，别等数据裸奔了才想起来穿衣服。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html)\n\n---\n\n### 🗣️ 今日顶男金句\n“真正的极客不是看谁跑分高，而是看谁能把 14MB 的模型塞进冰箱，让它在零下 18 度还能帮你算出今晚该吃啥。”",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-11\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 [Needle2：把智能塞进你的微波炉] (来源: Hacker News)\n- **核心干货**：Cactus 团队推出的 14MB 级 Agentic LLM，专为手机、可穿戴设备、智能家居和微型机器人设计。它擅长工具调用、设备操作和结构化数据提取，让\"边缘设备\"不再只是傻乎乎的传感器。14MB 的体积意味着它可以在没有云连接的情况下离线运行，隐私和延迟问题一并解决。\n- **毒舌/硬核点评**：大模型们还在云端卷参数，Needle2 已经准备好在你的冰箱里开party了。这才是\"AI 民主化\"该有的样子——不是每个人都需要一个会写诗的模型，但每个人都想要一个能听懂\"把空调调到 22 度\"的管家。\n- **🔗 传送门**：[点击直达原链接](https://cactuscompute.com/needle)\n\n---\n\n### 2. 📌 [H3-metal：在苹果芯片上驯服 MiniMax-H3] (来源: Hacker News)\n- **核心干货**：Redis 之父 antirez 开源了 MiniMax-H3 架构的纯原生推理库，专为 Apple Silicon 优化。MiniMax-H3 是线性注意力机制的变体，在长上下文任务上有着出色的性能表现。这个库的出现意味着你可以在自己的 MacBook 上高效运行这种前沿模型，不必依赖云端 API。\n- **毒舌/硬核点评**：antirez 从数据库转战 AI 推理库，这波跨界操作比他的博客文章还丝滑。苹果用户终于不用看着 NVIDIA 用户跑模型流口水了——虽然你们可能还是在用这台 MacBook 写 PPT。\n- **🔗 传送门**：[点击直达原链接](https://github.com/antirez/h3.c)\n\n---\n\n### 3. 📌 [扎克伯格炮轰\"封闭\"AI，Meta 重回开源阵营] (来源: Hacker News)\n- **核心干货**：马克·扎克伯格公开抨击闭源 AI 竞争对手，宣布 Meta 全面回归开源模型路线。这一战略转向意味着 Llama 系列将继续保持开放生态，而不是像传闻中那样走向闭源。Meta 试图通过开源策略在 AI 军备竞赛中抢占开发者心智，同时削弱 OpenAI 和 Google 的护城河。\n- **毒舌/硬核点评**：扎克伯格这波操作，颇有\"打不过就加入，加入不了就开源\"的意味。不过话说回来，Meta 的开源策略确实是 AI 领域最真诚的\"阳谋\"——毕竟，当年 Android 也是这么干翻 iOS 生态的。只是不知道这次，开发者们还愿意相信一个靠卖用户数据起家的公司吗？\n- **🔗 传送门**：[点击直达原链接](https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878)\n\n---\n\n### 🗣️ 今日顶男金句\n\"开源不是慈善，是最高级的军备竞赛——当你的竞争对手还在闭门造车时，你已经让全世界帮你写代码了。\"",
   "briefing_items": [
     {
-      "title": "Muse Glimmer: Meta 的 30B 参数“常驻 AI 管家”",
-      "source": "Hacker News, 1045 分",
-      "summary": "Meta 开源了 Muse Glimmer，一个专为“永远在线”的本地 Agent 工作流优化的 30B 参数模型。它主打低延迟、低功耗，瞄准的是那种不依赖云端、在本地设备上持续运行的智能体场景，让 AI 真正成为你设备的“后台进程”而非一次性问答工具。",
-      "commentary": "扎克伯格一边骂着“封闭的 AI 对手”，一边甩出这玩意儿。30B 参数想跑在本地，这不仅是技术内卷，更是对英伟达显卡销量的“精准打击”。建议改名叫“Glimmer of Hope”，毕竟它让我的钱包看到了不用买 A100 的希望。",
-      "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model"
-    },
-    {
-      "title": "Needle2: 14MB 的“蚁人”级 AI，专治物联网不服",
-      "source": "Hacker News, 177 分",
-      "summary": "Cactus 推出了 Needle2，一个仅 14MB 的 Agentic LLM，专为手机、可穿戴设备、智能家居和机器人设计。它主打工具调用和结构化数据提取，让你家扫地机器人不再只会“阿巴阿巴”，而是能听懂“去把猫粮碗加满”这种复杂指令。",
-      "commentary": "14MB 的模型，比一张高清猫图还小，却要在微控制器上跑 Agent 工作流。这简直是 AI 界的“螺蛳壳里做道场”，让那些动辄几百 GB 的大模型显得像在“用大炮打蚊子”。不过，我很好奇它会不会在关键时刻“死机”，然后你的智能家居集体“装死”。",
+      "title": "[Needle2：把智能塞进你的微波炉]",
+      "source": "Hacker News",
+      "summary": "Cactus 团队推出的 14MB 级 Agentic LLM，专为手机、可穿戴设备、智能家居和微型机器人设计。它擅长工具调用、设备操作和结构化数据提取，让\"边缘设备\"不再只是傻乎乎的传感器。14MB 的体积意味着它可以在没有云连接的情况下离线运行，隐私和延迟问题一并解决。",
+      "commentary": "大模型们还在云端卷参数，Needle2 已经准备好在你的冰箱里开party了。这才是\"AI 民主化\"该有的样子——不是每个人都需要一个会写诗的模型，但每个人都想要一个能听懂\"把空调调到 22 度\"的管家。",
       "url": "https://cactuscompute.com/needle"
     },
     {
-      "title": "Metabase 0-Day 漏洞：CVSS 10.0，管理员权限“免费送”",
-      "source": "Tech RSS",
-      "summary": "Metabase 曝出最高严重级别的 0-Day 漏洞（CVSS 10.0），无需任何认证即可让远程攻击者获得管理员权限。该漏洞已在野外被利用，影响其商业智能和数据可视化软件，堪称数据仓库的“万能钥匙”。",
-      "commentary": "CVSS 10.0 的“满分”漏洞，这可不是“及格分”，这是直接“保送清北”。Metabase 这回是“留级”了，提醒所有用 BI 工具的朋友：你的数据报表可能正在被黑客当“年度财报”看。赶紧打补丁，别等数据裸奔了才想起来穿衣服。",
-      "url": "https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html"
+      "title": "[H3-metal：在苹果芯片上驯服 MiniMax-H3]",
+      "source": "Hacker News",
+      "summary": "Redis 之父 antirez 开源了 MiniMax-H3 架构的纯原生推理库，专为 Apple Silicon 优化。MiniMax-H3 是线性注意力机制的变体，在长上下文任务上有着出色的性能表现。这个库的出现意味着你可以在自己的 MacBook 上高效运行这种前沿模型，不必依赖云端 API。",
+      "commentary": "antirez 从数据库转战 AI 推理库，这波跨界操作比他的博客文章还丝滑。苹果用户终于不用看着 NVIDIA 用户跑模型流口水了——虽然你们可能还是在用这台 MacBook 写 PPT。",
+      "url": "https://github.com/antirez/h3.c"
+    },
+    {
+      "title": "[扎克伯格炮轰\"封闭\"AI，Meta 重回开源阵营]",
+      "source": "Hacker News",
+      "summary": "马克·扎克伯格公开抨击闭源 AI 竞争对手，宣布 Meta 全面回归开源模型路线。这一战略转向意味着 Llama 系列将继续保持开放生态，而不是像传闻中那样走向闭源。Meta 试图通过开源策略在 AI 军备竞赛中抢占开发者心智，同时削弱 OpenAI 和 Google 的护城河。",
+      "commentary": "扎克伯格这波操作，颇有\"打不过就加入，加入不了就开源\"的意味。不过话说回来，Meta 的开源策略确实是 AI 领域最真诚的\"阳谋\"——毕竟，当年 Android 也是这么干翻 iOS 生态的。只是不知道这次，开发者们还愿意相信一个靠卖用户数据起家的公司吗？",
+      "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878"
     }
   ],
   "candidates": [
@@ -33,17 +33,17 @@
       "summary": "Hey HN,<p>Henry from Cactus here!<p>We previously released Cactus Needle, a 14MB agentic LLM for tool call, device use, and structured extraction for phones, wearables, smart homes, small robots and microcontrollers. We got really great feedback here, and have now incorporated the suggestions to rel",
       "url": "https://cactuscompute.com/needle",
       "source": "Hacker News",
-      "score": 177,
-      "comments": 77
+      "score": 393,
+      "comments": 147
     },
     {
-      "id": "hn:49241679",
-      "title": "Muse Glimmer: 30B-parameter model optimized for always-on local agent workflows",
+      "id": "hn:49252179",
+      "title": "H3-metal – Native MiniMax-H3 inference for Apple Silicon",
       "summary": "",
-      "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
+      "url": "https://github.com/antirez/h3.c",
       "source": "Hacker News",
-      "score": 1045,
-      "comments": 579
+      "score": 333,
+      "comments": 74
     },
     {
       "id": "hn:49243880",
@@ -51,68 +51,62 @@
       "summary": "<a href=\"https:&#x2F;&#x2F;archive.is&#x2F;20LOJ\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.is&#x2F;20LOJ</a><p><a href=\"https:&#x2F;&#x2F;www.meta.com&#x2F;thefutureisforeveryone&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.meta.com&#x2F;thefutureisforeveryone&#x2F;</a>",
       "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
       "source": "Hacker News",
-      "score": 370,
-      "comments": 386
+      "score": 551,
+      "comments": 506
     },
     {
-      "id": "hn:49251411",
-      "title": "The UK's War on Anonymity Has Come to America",
+      "id": "hn:49254880",
+      "title": "France to ban unsolicited telemarketing calls",
       "summary": "",
-      "url": "https://www.effort.news/uk-lobby",
+      "url": "https://www.lemonde.fr/en/france/article/2026/08/06/france-to-ban-unsolicited-telemarketing-calls-from-august-11_6756208_7.html",
       "source": "Hacker News",
-      "score": 189,
-      "comments": 111
+      "score": 501,
+      "comments": 298
     },
     {
-      "id": "hn:49208296",
-      "title": "Sonic Pi v5",
+      "id": "hn:49250836",
+      "title": "As AI eats the web, the internet’s collective memory is disappearing",
       "summary": "",
-      "url": "https://www.patreon.com/samaaron/posts/sonic-pi-v5-166001392",
+      "url": "https://thewalrus.ca/google-search-is-dying/",
       "source": "Hacker News",
-      "score": 311,
-      "comments": 79
+      "score": 452,
+      "comments": 536
     },
     {
-      "id": "hn:49249481",
-      "title": "Stop Killing Games: It's time to sue Sony, join us",
+      "id": "hn:49251179",
+      "title": "Show HN: Scroll through all 43252003274489856000 Rubik's Cube states",
       "summary": "",
-      "url": "https://www.massaschadeconsument.nl/collectieve-acties/playstation/",
+      "url": "https://everycube.alen.is/",
       "source": "Hacker News",
-      "score": 169,
-      "comments": 77
+      "score": 228,
+      "comments": 78
     },
     {
-      "id": "lob:u0ks1k",
-      "title": "IRC technology news from the first half of 2026",
+      "id": "hn:49250109",
+      "title": "How Claude marks AI-generated content",
       "summary": "",
-      "url": "https://www.ilmarilauhakangas.fi/irc_technology_news_from_the_first_half_of_2026/",
-      "source": "Lobste.rs",
-      "score": 86,
-      "comments": 15,
-      "tags": [
-        "networking"
-      ]
-    },
-    {
-      "id": "lob:09l5py",
-      "title": "nixpkgs-multiverse: every version that ever existed",
-      "summary": "",
-      "url": "https://fzakaria.com/2026/08/09/nixpkgs-multiverse-every-version-that-ever-existed",
-      "source": "Lobste.rs",
-      "score": 60,
-      "comments": 16,
-      "tags": [
-        "nix"
-      ]
-    },
-    {
-      "id": "hn:49247477",
-      "title": "Rust SIMD on the GPU",
-      "summary": "",
-      "url": "https://www.vectorware.com/blog/simd-on-gpu/",
+      "url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
       "source": "Hacker News",
-      "score": 123,
-      "comments": 60
+      "score": 244,
+      "comments": 207
+    },
+    {
+      "id": "hn:49184220",
+      "title": "The “mechanical miracle” that ruined Mark Twain’s life",
+      "summary": "",
+      "url": "https://resobscura.substack.com/p/the-mechanical-miracle-that-ruined",
+      "source": "Hacker News",
+      "score": 159,
+      "comments": 84
+    },
+    {
+      "id": "hn:49251702",
+      "title": "Chicken Scheme 6.0",
+      "summary": "",
+      "url": "https://code.call-cc.org/releases/6.0.0/NEWS",
+      "source": "Hacker News",
+      "score": 226,
+      "comments": 31
     },
     {
       "id": "lob:ulinck",
@@ -120,8 +114,8 @@
       "summary": "",
       "url": "https://ignorethecode.net/blog/2026/08/09/toggles_considered_harmful/",
       "source": "Lobste.rs",
-      "score": 89,
-      "comments": 23,
+      "score": 101,
+      "comments": 31,
       "tags": [
         "design"
       ]
@@ -132,24 +126,10 @@
       "summary": "",
       "url": "https://blog.mozilla.org/en/firefox/firefox-containers-preview/",
       "source": "Lobste.rs",
-      "score": 74,
-      "comments": 20,
+      "score": 88,
+      "comments": 23,
       "tags": [
         "browsers"
-      ]
-    },
-    {
-      "id": "lob:cn7jyo",
-      "title": "Django is moving to an annual release cycle",
-      "summary": "",
-      "url": "https://www.djangoproject.com/weblog/2026/aug/10/annual-release-cycle/",
-      "source": "Lobste.rs",
-      "score": 42,
-      "comments": 1,
-      "tags": [
-        "python",
-        "release",
-        "web"
       ]
     },
     {
@@ -158,11 +138,25 @@
       "summary": "",
       "url": "https://blog.yossarian.net/2026/08/10/github-actions-needs-oidc-audience-constraints",
       "source": "Lobste.rs",
-      "score": 36,
-      "comments": 6,
+      "score": 43,
+      "comments": 10,
       "tags": [
         "security"
       ]
+    },
+    {
+      "id": "arxiv:2608.09928v1",
+      "title": "Multimodal Model Diffing for Feature Discovery and Control",
+      "summary": "Multimodal Large Language Models (MLLMs) exhibit strong visual understanding, yet the internal features that cause these behaviors remain difficult to identify, audit, or control. While applicable to post-hoc inspection, hidden states that are decomposed into interpretable feature directions using s",
+      "url": "https://arxiv.org/abs/2608.09928v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_id": "2608.09928v1"
     },
     {
       "id": "lob:lkp7x3",
@@ -170,13 +164,22 @@
       "summary": "",
       "url": "https://github.com/jackyzha0/sunlit",
       "source": "Lobste.rs",
-      "score": 46,
-      "comments": 2,
+      "score": 68,
+      "comments": 5,
       "tags": [
         "css",
         "design",
         "web"
       ]
+    },
+    {
+      "id": "hn:49219679",
+      "title": "To Save C, We Must Save ABI (2022)",
+      "summary": "",
+      "url": "https://thephd.dev/to-save-c-we-must-save-abi-fixing-c-function-abi",
+      "source": "Hacker News",
+      "score": 88,
+      "comments": 78
     },
     {
       "id": "rss:7ea6ee6abb",
@@ -187,55 +190,50 @@
       "score": 0
     },
     {
-      "id": "rss:746141012f",
-      "title": "Metabase Zero-Day Exploited in Wild Allows Admin Access Without Authentication",
-      "summary": "Metabase has warned that a maximum-severity security flaw impacting its business intelligence and data visualization software package has been exploited in the wild as a zero-day.\n\nThe vulnerability (CVSS score: 10.0), which does not carry a CVE identifier, allows an unauthenticated remote attacker",
-      "url": "https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html",
-      "source": "Tech RSS",
-      "score": 0
+      "id": "hn:49173107",
+      "title": "LFM2.5 2.6B model competitive with 4x larger models",
+      "summary": "",
+      "url": "https://huggingface.co/LiquidAI/LFM2.5-2.6B",
+      "source": "Hacker News",
+      "score": 99,
+      "comments": 27
     },
     {
-      "id": "lob:p3mmqr",
-      "title": "an ambiguity in c89 which will never be fixed",
+      "id": "lob:kkqqdn",
+      "title": "No, local models will not win",
       "summary": "",
-      "url": "https://sebsite.pw/w/20260810-c89ambiguity.html",
+      "url": "https://www.seangoedecke.com/local-models-will-not-win/",
       "source": "Lobste.rs",
-      "score": 23,
-      "comments": 8,
+      "score": 11,
+      "comments": 26,
       "tags": [
-        "c"
+        "vibecoding"
       ]
     },
     {
-      "id": "hn:49212449",
-      "title": "Publishing Schematics Before “Open Source” Was a Word",
-      "summary": "",
-      "url": "https://fabscene.medium.com/publishing-schematics-before-open-source-was-a-word-55-years-of-akizuki-denshi-japans-be7ca9629704",
-      "source": "Hacker News",
-      "score": 66,
-      "comments": 17
+      "id": "arxiv:2608.09930v1",
+      "title": "Beyond Naturalness: Probing Automated Text-To-Speech Evaluators on Linguistically Grounded Dimensions",
+      "summary": "Automated Text-to-Speech (TTS) evaluation methods (Mean Opinion Score (MOS) predictors and Audio Large Language Models (Audio-LLM) judges) are expected to reflect human perception, yet it is unclear how well they capture the distinct aspects of speech that listeners actually perceive. We deconstruct",
+      "url": "https://arxiv.org/abs/2608.09930v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.SD",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_id": "2608.09930v1"
     },
     {
-      "id": "hn:49209918",
-      "title": "Stowaway – Take the window seat on any plane or satellite overhead",
-      "summary": "",
-      "url": "https://stowaway.live/",
-      "source": "Hacker News",
-      "score": 118,
-      "comments": 11
-    },
-    {
-      "id": "lob:3qwloh",
-      "title": "What are you doing this week?",
-      "summary": "<p>What are you doing this week? Feel free to share!</p>\n<p>Keep in mind it’s OK to do nothing at all, too.</p>\n",
-      "url": "https://lobste.rs/s/3qwloh/what_are_you_doing_this_week",
-      "source": "Lobste.rs",
-      "score": 15,
-      "comments": 14,
-      "tags": [
-        "ask",
-        "programming"
-      ]
+      "id": "arxiv:2608.09902v1",
+      "title": "DSLE: A Learning Environment for Dark Souls Boss Encounters",
+      "summary": "We introduce the Dark Souls Learning Environment (DSLE), a containerized platform that presents all 22 boss encounters of Dark Souls: Remastered as game-playing agent benchmarks through a Gymnasium-style interface. DSLE combines real-time combat, high-dimensional visual input, and sparse terminal re",
+      "url": "https://arxiv.org/abs/2608.09902v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.NE"
+      ],
+      "arxiv_id": "2608.09902v1"
     }
   ],
   "ai_curated": true
