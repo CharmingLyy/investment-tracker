@@ -1,49 +1,58 @@
 {
   "date": "2026-08-13",
-  "update_time": "2026-08-13 02:20:34",
+  "update_time": "2026-08-13 13:15:29",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-13\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 DeepSeek V4 Pro 0813 强势登场 (来源: HackerNews/OpenRouter)\n- **核心干货**：DeepSeek 带着 V4 Pro 0813 杀回来了，在 OpenRouter 上线。虽然具体基准测试数据还没完全公开，但作为国内大模型的门面担当，这次迭代预计在推理能力和代码生成上又有大动作，直接对标国际顶级闭源模型。\n- **毒舌/硬核点评**：硅谷的闭源模型们，你们的\"护城河\"怕不是要变成\"护城沟\"了。DeepSeek 这波是拿着开源的火把，准备把闭源的山头烧个精光。\n- **🔗 传送门**：[点击直达原链接](https://openrouter.ai/deepseek/deepseek-v4-pro-0813)\n\n---\n\n### 2. 📌 Tailscale 揪出 16 岁高龄 SQLite Bug (来源: Hacker News)\n- **核心干货**：Tailscale 官方博客披露，他们花费大量精力追踪的数据库损坏问题，根源竟是一个存在了 16 年之久的 SQLite WAL-reset 底层 Bug。这个 Bug 在特定场景下会导致数据库文件损坏，影响数据完整性，现已定位并修复。\n- **毒舌/硬核点评**：16 年，足够一个婴儿长成黑客帝国的 Neo。这不仅是 Tailscale 的胜利，更是对全球\"能用就行\"派程序员的一记响亮耳光——你代码里埋的雷，可能比你的职业生涯还长。\n- **🔗 传送门**：[点击直达原链接](https://tailscale.com/blog/sqlite-wal-reset-bug)\n\n---\n\n### 3. 📌 Microsoft 月度补丁日：398 个漏洞，含一个正在被攻击的零日 (来源: 科技新闻)\n- **核心干货**：微软一口气修补了 398 个漏洞，其中包含一个 Windows 内核驱动中的零日漏洞，该漏洞已被检测到在野利用，攻击者可借此将权限提升至 SYSTEM。此外还包括 SharePoint 的 AI 辅助攻击链和 Defender 绕过 PoC 等重磅安全问题。\n- **毒舌/硬核点评**：每月一次的数字\"大扫除\"，但总有窗户是破的。建议各位把\"更新并重启\"当成每日祈祷，毕竟你的系统在黑客眼里可能不是堡垒，而是到处漏风的茅草屋。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\"真正的技术壁垒不是代码写得多好，而是你的 Bug 活得比你的竞品还久。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-13\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 DeepSeek V4 Pro 0813 发布 (来源: Hacker News | 979分)\n- **核心干货**：DeepSeek 带着 V4 Pro 杀回来了，OpenRouter 已上线，Artificial Analysis 同步收录跑分。这代主打推理与代码能力，且以\"性价比屠夫\"的姿态直击闭源旗舰的命门——你懂的，那个\"用1/10成本打平GPT-5\"的剧本又来了。\n- **毒舌/硬核点评**：上次说\"DeepSeek是期货\"的人现在脸疼吗？这波开源模型直接把手伸进了闭源厂商的钱包，硅谷的算力军备竞赛怕是要改成\"价格绞肉机\"模式了。\n- **🔗 传送门**：[点击直达原链接](https://openrouter.ai/deepseek/deepseek-v4-pro-0813)\n\n---\n\n### 2. 📌 Qwen3.8-2.4T：阿里参数量碾压式秀肌肉 (来源: Hacker News | 673分)\n- **核心干货**：Qwen 放出 2.4 万亿参数的巨型 MoE 模型，但激活参数仅 950 亿（A95B）。这是典型的\"大力出奇迹\"路线：用恐怖的参数量储备 + 稀疏激活策略，在推理成本可控的前提下，试图把所有benchmark的榜首位置都染成阿里橙。\n- **毒舌/硬核点评**：2.4T参数？这已经不是模型了，这是参数界的\"迪拜塔\"。不过话说回来，如果激活参数只有950亿还能打，那说明架构确实有点东西——就怕又是\"力大砖飞\"的堆料美学。\n- **🔗 传送门**：[点击直达原链接](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)\n\n---\n\n### 3. 📌 16年陈酿Bug：SQLite WAL-reset 漏洞的终极追凶 (来源: Hacker News | 1114分)\n- **核心干货**：Tailscale 工程师挖出一个潜伏了16年的 SQLite WAL 重置逻辑缺陷，导致数据库在特定崩溃恢复场景下可能静默丢失已提交事务。这不是普通的\"少个括号\"级别的bug，而是涉及文件格式底层语义的时序问题，能存活16年本身就说明它藏得有多深。\n- **毒舌/硬核点评**：16年，足够一个婴儿长成黑客，而这个bug才被逮住。SQLite号称\"全球部署最广的数据库\"，这脸打得piapia的。建议所有嵌入式开发者今晚睡前默念三遍：\"WAL是魔鬼，checkpoint要勤快。\"\n- **🔗 传送门**：[点击直达原链接](https://tailscale.com/blog/sqlite-wal-reset-bug)\n\n---\n\n### 🗣️ 今日顶男金句\n**\"参数就是新时代的军火库，但真正的战斗力，永远是那个能在16年老代码里揪出bug的脑子——大模型再猛，也得有人给它写对SQLite。\"**",
   "briefing_items": [
     {
-      "title": "DeepSeek V4 Pro 0813 强势登场",
-      "source": "HackerNews/OpenRouter",
-      "summary": "DeepSeek 带着 V4 Pro 0813 杀回来了，在 OpenRouter 上线。虽然具体基准测试数据还没完全公开，但作为国内大模型的门面担当，这次迭代预计在推理能力和代码生成上又有大动作，直接对标国际顶级闭源模型。",
-      "commentary": "硅谷的闭源模型们，你们的\"护城河\"怕不是要变成\"护城沟\"了。DeepSeek 这波是拿着开源的火把，准备把闭源的山头烧个精光。",
+      "title": "DeepSeek V4 Pro 0813 发布",
+      "source": "Hacker News | 979分",
+      "summary": "DeepSeek 带着 V4 Pro 杀回来了，OpenRouter 已上线，Artificial Analysis 同步收录跑分。这代主打推理与代码能力，且以\"性价比屠夫\"的姿态直击闭源旗舰的命门——你懂的，那个\"用1/10成本打平GPT-5\"的剧本又来了。",
+      "commentary": "上次说\"DeepSeek是期货\"的人现在脸疼吗？这波开源模型直接把手伸进了闭源厂商的钱包，硅谷的算力军备竞赛怕是要改成\"价格绞肉机\"模式了。",
       "url": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813"
     },
     {
-      "title": "Tailscale 揪出 16 岁高龄 SQLite Bug",
-      "source": "Hacker News",
-      "summary": "Tailscale 官方博客披露，他们花费大量精力追踪的数据库损坏问题，根源竟是一个存在了 16 年之久的 SQLite WAL-reset 底层 Bug。这个 Bug 在特定场景下会导致数据库文件损坏，影响数据完整性，现已定位并修复。",
-      "commentary": "16 年，足够一个婴儿长成黑客帝国的 Neo。这不仅是 Tailscale 的胜利，更是对全球\"能用就行\"派程序员的一记响亮耳光——你代码里埋的雷，可能比你的职业生涯还长。",
-      "url": "https://tailscale.com/blog/sqlite-wal-reset-bug"
+      "title": "Qwen3.8-2.4T：阿里参数量碾压式秀肌肉",
+      "source": "Hacker News | 673分",
+      "summary": "Qwen 放出 2.4 万亿参数的巨型 MoE 模型，但激活参数仅 950 亿（A95B）。这是典型的\"大力出奇迹\"路线：用恐怖的参数量储备 + 稀疏激活策略，在推理成本可控的前提下，试图把所有benchmark的榜首位置都染成阿里橙。",
+      "commentary": "2.4T参数？这已经不是模型了，这是参数界的\"迪拜塔\"。不过话说回来，如果激活参数只有950亿还能打，那说明架构确实有点东西——就怕又是\"力大砖飞\"的堆料美学。",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B"
     },
     {
-      "title": "Microsoft 月度补丁日：398 个漏洞，含一个正在被攻击的零日",
-      "source": "科技新闻",
-      "summary": "微软一口气修补了 398 个漏洞，其中包含一个 Windows 内核驱动中的零日漏洞，该漏洞已被检测到在野利用，攻击者可借此将权限提升至 SYSTEM。此外还包括 SharePoint 的 AI 辅助攻击链和 Defender 绕过 PoC 等重磅安全问题。",
-      "commentary": "每月一次的数字\"大扫除\"，但总有窗户是破的。建议各位把\"更新并重启\"当成每日祈祷，毕竟你的系统在黑客眼里可能不是堡垒，而是到处漏风的茅草屋。",
-      "url": "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html"
+      "title": "16年陈酿Bug：SQLite WAL-reset 漏洞的终极追凶",
+      "source": "Hacker News | 1114分",
+      "summary": "Tailscale 工程师挖出一个潜伏了16年的 SQLite WAL 重置逻辑缺陷，导致数据库在特定崩溃恢复场景下可能静默丢失已提交事务。这不是普通的\"少个括号\"级别的bug，而是涉及文件格式底层语义的时序问题，能存活16年本身就说明它藏得有多深。",
+      "commentary": "16年，足够一个婴儿长成黑客，而这个bug才被逮住。SQLite号称\"全球部署最广的数据库\"，这脸打得piapia的。建议所有嵌入式开发者今晚睡前默念三遍：\"WAL是魔鬼，checkpoint要勤快。\"",
+      "url": "https://tailscale.com/blog/sqlite-wal-reset-bug"
     }
   ],
   "candidates": [
     {
+      "id": "hn:49281916",
+      "title": "ChatGPT Desktop (Codex Desktop) for Linux",
+      "summary": "",
+      "url": "https://openai.com/codex/",
+      "source": "Hacker News",
+      "score": 271,
+      "comments": 177
+    },
+    {
       "id": "hn:49272832",
-      "title": "Tailscale Traces Database Corruption to 16y/o SQLite WAL-Reset Bug",
+      "title": "Tracking down the 16-year-old WAL-reset SQLite bug",
       "summary": "",
       "url": "https://tailscale.com/blog/sqlite-wal-reset-bug",
       "source": "Hacker News",
-      "score": 813,
-      "comments": 147
+      "score": 1114,
+      "comments": 207
     },
     {
       "id": "hn:49274600",
       "title": "DeepSeek V4 Pro 0813",
-      "summary": "",
+      "summary": "<a href=\"https:&#x2F;&#x2F;api-docs.deepseek.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;api-docs.deepseek.com&#x2F;</a><p><a href=\"https:&#x2F;&#x2F;artificialanalysis.ai&#x2F;models&#x2F;deepseek-v4-pro\" rel=\"nofollow\">https:&#x2F;&#x2F;artificialanalysis.ai&#x2F;models&#x2F;deepseek-v4-pro</a><p>",
       "url": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813",
       "source": "Hacker News",
-      "score": 764,
-      "comments": 288
+      "score": 979,
+      "comments": 422
     },
     {
       "id": "hn:49273478",
@@ -51,8 +60,26 @@
       "summary": "<a href=\"https:&#x2F;&#x2F;huggingface.co&#x2F;Qwen&#x2F;Qwen3.8-2.4T-A95B-FP8\" rel=\"nofollow\">https:&#x2F;&#x2F;huggingface.co&#x2F;Qwen&#x2F;Qwen3.8-2.4T-A95B-FP8</a>",
       "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
       "source": "Hacker News",
-      "score": 506,
-      "comments": 110
+      "score": 673,
+      "comments": 156
+    },
+    {
+      "id": "hn:49279928",
+      "title": "Principia Mathematica is modern and insightful",
+      "summary": "",
+      "url": "https://okmij.org/ftp/Computation/Impressions/PrincipiaMathematica.html",
+      "source": "Hacker News",
+      "score": 214,
+      "comments": 91
+    },
+    {
+      "id": "hn:49218040",
+      "title": "Mushroom behind 'tiny people' hallucinations identified",
+      "summary": "",
+      "url": "https://phys.org/news/2026-08-qa-mushroom-tiny-people-hallucinations.html",
+      "source": "Hacker News",
+      "score": 215,
+      "comments": 167
     },
     {
       "id": "hn:49270726",
@@ -60,8 +87,8 @@
       "summary": "<a href=\"https:&#x2F;&#x2F;reddit.com&#x2F;r&#x2F;uBlockOrigin&#x2F;comments&#x2F;1vgcjg5&#x2F;about_disgusting_facebook_devs&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;reddit.com&#x2F;r&#x2F;uBlockOrigin&#x2F;comments&#x2F;1vgcjg5&#x2F;about_dis...</a><p><a href=\"https:&#x2F;&#x2F;www.neowin.net&#x2F;",
       "url": "https://digitalescapetools.com/2026/08/ublock-origin-stops-chasing-facebook-ads.html",
       "source": "Hacker News",
-      "score": 312,
-      "comments": 443
+      "score": 609,
+      "comments": 725
     },
     {
       "id": "lob:ixbrmc",
@@ -69,83 +96,10 @@
       "summary": "",
       "url": "https://getfresh.dev/docs/blog/packaging-for-linux/",
       "source": "Lobste.rs",
-      "score": 63,
-      "comments": 53,
+      "score": 88,
+      "comments": 74,
       "tags": [
         "linux"
-      ]
-    },
-    {
-      "id": "hn:49272655",
-      "title": "Tim King, AmigaDOS developer, has died",
-      "summary": "",
-      "url": "https://amiga-news.de/en/news/AN-2026-08-00070-EN.html",
-      "source": "Hacker News",
-      "score": 240,
-      "comments": 29
-    },
-    {
-      "id": "hn:49270953",
-      "title": "2026 Eclipse Webcams",
-      "summary": "",
-      "url": "https://jonty.github.io/2026_eclipse_webcams/",
-      "source": "Hacker News",
-      "score": 459,
-      "comments": 124
-    },
-    {
-      "id": "hn:49274027",
-      "title": "Grok 4.6",
-      "summary": "<a href=\"https:&#x2F;&#x2F;artificialanalysis.ai&#x2F;articles&#x2F;grok-4-6-benchmarks-and-analysis\" rel=\"nofollow\">https:&#x2F;&#x2F;artificialanalysis.ai&#x2F;articles&#x2F;grok-4-6-benchmarks-a...</a>",
-      "url": "https://x.ai/news/grok-4-6",
-      "source": "Hacker News",
-      "score": 415,
-      "comments": 407
-    },
-    {
-      "id": "hn:49275335",
-      "title": "HTML over WebSockets: real-time SPAs with barely any JavaScript",
-      "summary": "",
-      "url": "https://en.andros.dev/blog/ef4968f5/html-over-websockets-real-time-spas-with-barely-any-javascript/",
-      "source": "Hacker News",
-      "score": 151,
-      "comments": 111
-    },
-    {
-      "id": "lob:rfiuko",
-      "title": "I'm done using AI",
-      "summary": "",
-      "url": "https://brettcodes.com/im-done-using-ai/",
-      "source": "Lobste.rs",
-      "score": 87,
-      "comments": 58,
-      "tags": [
-        "rant",
-        "vibecoding"
-      ]
-    },
-    {
-      "id": "lob:b3uky6",
-      "title": "GNOME Shell Design Dreams",
-      "summary": "",
-      "url": "https://blogs.gnome.org/shell-dev/2026/08/11/gnome-shell-design-dreams/",
-      "source": "Lobste.rs",
-      "score": 73,
-      "comments": 24,
-      "tags": [
-        "design"
-      ]
-    },
-    {
-      "id": "lob:omcyaz",
-      "title": "Guide to (not) fucking up QR codes",
-      "summary": "",
-      "url": "https://infosec.exchange/@rebane2001/117078420917152774",
-      "source": "Lobste.rs",
-      "score": 77,
-      "comments": 8,
-      "tags": [
-        "design"
       ]
     },
     {
@@ -154,37 +108,111 @@
       "summary": "",
       "url": "https://phunky.cafe/my-homelab-got-hacked/",
       "source": "Lobste.rs",
-      "score": 34,
-      "comments": 3,
+      "score": 52,
+      "comments": 14,
       "tags": [
         "devops",
         "security"
       ]
     },
     {
-      "id": "lob:ixbcym",
-      "title": "Analyzing My Lobsters Submissions",
+      "id": "lob:rfiuko",
+      "title": "I'm done using AI",
       "summary": "",
-      "url": "https://abhinavsarkar.net/notes/2026-lobsters-submissions/",
+      "url": "https://brettcodes.com/im-done-using-ai/",
       "source": "Lobste.rs",
-      "score": 32,
-      "comments": 7,
+      "score": 120,
+      "comments": 72,
       "tags": [
-        "visualization"
+        "rant",
+        "vibecoding"
       ]
     },
     {
-      "id": "lob:b3y5qs",
-      "title": "Introducing Automatic Key Verification",
+      "id": "lob:omcyaz",
+      "title": "Guide to (not) fucking up QR codes",
       "summary": "",
-      "url": "https://signal.org/blog/automatic-key-verification/",
+      "url": "https://infosec.exchange/@rebane2001/117078420917152774",
       "source": "Lobste.rs",
-      "score": 29,
-      "comments": 8,
+      "score": 93,
+      "comments": 11,
       "tags": [
-        "cryptography",
-        "privacy"
+        "design"
       ]
+    },
+    {
+      "id": "hn:49284774",
+      "title": "Deutsche Bank becomes first foreign yuan clearing bank in Europe",
+      "summary": "",
+      "url": "https://tradersunion.com/news/central-banks/show/2973571-deutsche-bank-becomes/",
+      "source": "Hacker News",
+      "score": 126,
+      "comments": 80
+    },
+    {
+      "id": "lob:xic1nn",
+      "title": "Does anyone run Postgres without PgBouncer?",
+      "summary": "",
+      "url": "https://brandur.org/fragments/postgres-without-pgbouncer",
+      "source": "Lobste.rs",
+      "score": 14,
+      "comments": 11,
+      "tags": [
+        "databases"
+      ]
+    },
+    {
+      "id": "arxiv:2608.12306v1",
+      "title": "Redistribution-based Cost Inference Improves Sparse Safe Offline RL",
+      "summary": "Safe offline RL typically assumes access to dense per-step cost annotations, but in practice supervisors provide only trajectory-level stop-feedback: a binary signal at the first unsafe transition, with no per-step attribution. We frame this as a temporal credit assignment problem and propose the Re",
+      "url": "https://arxiv.org/abs/2608.12306v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "arxiv_id": "2608.12306v1"
+    },
+    {
+      "id": "rss:0331835ebb",
+      "title": "Attackers Exploit SharePoint Authentication Bypass After Public PoC Release",
+      "summary": "Threat actors have begun to exploit a newly disclosed Microsoft SharePoint vulnerability following the release of a proof-of-concept (PoC) code.\n\nThe vulnerability in question is CVE-2026-55040 (CVSS score: 9.1), which refers to a critical security feature bypass that stems from weak authentication.",
+      "url": "https://thehackernews.com/2026/08/attackers-exploit-sharepoint.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "lob:62kxco",
+      "title": "python's pre-declared constants are kinda weird",
+      "summary": "",
+      "url": "https://sebsite.pw/w/20260801-pythonconstants.html",
+      "source": "Lobste.rs",
+      "score": 39,
+      "comments": 6,
+      "tags": [
+        "python"
+      ]
+    },
+    {
+      "id": "hn:49242698",
+      "title": "Antiqua–Fraktur dispute",
+      "summary": "",
+      "url": "https://en.wikipedia.org/wiki/Antiqua%E2%80%93Fraktur_dispute",
+      "source": "Hacker News",
+      "score": 123,
+      "comments": 40
+    },
+    {
+      "id": "arxiv:2608.12273v1",
+      "title": "Convergent Detour Hijacking: Task-Preserving Resource Amplification in Skill-Based LLM Agents",
+      "summary": "LLM agents increasingly rely on third-party skills, using natural-language descriptions for selection and instruction bodies for planning. This progressive-disclosure design exposes two sequential control points to untrusted publishers: a static skill may steer an otherwise correct task onto an unne",
+      "url": "https://arxiv.org/abs/2608.12273v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "arxiv_id": "2608.12273v1"
     },
     {
       "id": "rss:ac664dbffd",
@@ -201,35 +229,6 @@
       "url": "https://thehackernews.com/2026/08/cisco-asa-and-ftd-flaw-exploited-in.html",
       "source": "Tech RSS",
       "score": 0
-    },
-    {
-      "id": "rss:05070cd56f",
-      "title": "Microsoft Patches 398 Flaws Including a Windows Driver Zero-Day Under Active Attack",
-      "summary": "Microsoft released its monthly security updates on Tuesday, and one of the flaws it closed is already being used in attacks.\n\nThe bug sits in a core Windows kernel driver that handles network socket operations. An attacker with code already running on a machine can use it to escalate to SYSTEM. That",
-      "url": "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:fc0ffff748",
-      "title": "Researchers Disclose AI-Assisted SharePoint Exploit Chain Reaching Unauthenticated RCE",
-      "summary": "Security researchers found a way to enter Microsoft SharePoint servers as any user, including an administrator, with no valid account. A significant part of the work that found it was done through an AI agent.\n\nThe flaw, tracked as&nbsp;CVE-2026-55040&nbsp;(CVSS 9.1), affects SharePoint Server Subsc",
-      "url": "https://thehackernews.com/2026/08/researchers-disclose-ai-assisted.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "lob:pu96ia",
-      "title": "fearless_simd v0.7: 64-bit integers, improved generics, SSE2, and upcoming v1.0",
-      "summary": "",
-      "url": "https://linebender.org/blog/fearless-simd-0-7/",
-      "source": "Lobste.rs",
-      "score": 23,
-      "comments": 2,
-      "tags": [
-        "release",
-        "rust"
-      ]
     }
   ],
   "ai_curated": true
