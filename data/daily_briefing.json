@@ -1,218 +1,190 @@
 {
-  "date": "2026-08-12",
-  "update_time": "2026-08-12 13:13:17",
+  "date": "2026-08-13",
+  "update_time": "2026-08-13 02:20:34",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-12\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 WorldClaw：腾讯把3D开放世界生成玩成了\"一键造物\" (来源: HackerNews)\n- **核心干货**：腾讯混元团队发布WorldClaw框架，能在大规模场景下进行**智能体式3D开放世界生成**。它不是简单堆砌资产，而是让AI像\"上帝\"一样规划、布局并动态生成连贯的3D世界，解决了一直以来\"生成单个物体容易、生成完整世界难\"的行业痛点。\n- **毒舌/硬核点评**：当别人还在用AI捏手办，腾讯已经开始用AI造星球了。建议某开放世界游戏厂商赶紧去抄作业，别老让玩家在\"空气墙\"里怀疑人生。\n- **🔗 传送门**：[点击直达原链接](https://tencent-hunyuan.github.io/Hunyuan3D-WorldClaw/)\n\n---\n\n### 2. 📌 \"压缩即预测\"：ngrok 这篇博客把AI的底裤扒了个精光 (来源: HackerNews | 590分)\n- **核心干货**：ngrok 官方博客深度论证了\"压缩即预测\"（Compression is Prediction）这一核心观点：任何高效的压缩器本质上都在构建一个隐式的预测模型。文章将信息论、数据压缩与大模型原理打通，解释了为何LLM本质上是\"世界压缩器\"，并探讨了这对模型设计、数据管道和AI安全的影响。\n- **毒舌/硬核点评**：一句话点醒梦中人：你每天用的ChatGPT，本质是个超级无敌解压软件。别再吹\"涌现能力\"了，先学会把数据压缩到极致再说。\n- **🔗 传送门**：[点击直达原文](https://ngrok.com/blog/compression-is-prediction)\n\n---\n\n### 3. 📌 微软\"月度全家桶\"：398个漏洞，包含一个已被在野利用的Windows内核零日漏洞 (来源: Tech RSS)\n- **核心干货**：微软8月安全更新一口气修补了398个安全漏洞，其中包含一个**已在真实攻击中被利用的Windows内核驱动零日漏洞**（涉及网络套接字操作）。攻击者一旦获得低权限代码执行，即可利用该漏洞提权至SYSTEM。此外，Cisco ASA/FTD 也爆出被在野利用的远程DoS漏洞（CVE-2026-20349）。\n- **毒舌/硬核点评**：一个月修398个洞，这哪是\"补丁日\"，这是\"打地鼠日\"。微软的漏洞挖掘速度，永远追不上黑客的脑洞速度——建议把\"安全默认开启\"的口号改成\"安全默认跑路\"。\n- **🔗 传送门**：[微软补丁详情](https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html) | [Cisco漏洞预警](https://thehackernews.com/2026/08/cisco-asa-and-ftd-flaw-exploited-in.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"真正的技术壁垒不是知道多少，而是能在信息洪流中，一眼认出那1%的真相——剩下的99%，叫噪音，也叫别人的焦虑。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-13\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 DeepSeek V4 Pro 0813 强势登场 (来源: HackerNews/OpenRouter)\n- **核心干货**：DeepSeek 带着 V4 Pro 0813 杀回来了，在 OpenRouter 上线。虽然具体基准测试数据还没完全公开，但作为国内大模型的门面担当，这次迭代预计在推理能力和代码生成上又有大动作，直接对标国际顶级闭源模型。\n- **毒舌/硬核点评**：硅谷的闭源模型们，你们的\"护城河\"怕不是要变成\"护城沟\"了。DeepSeek 这波是拿着开源的火把，准备把闭源的山头烧个精光。\n- **🔗 传送门**：[点击直达原链接](https://openrouter.ai/deepseek/deepseek-v4-pro-0813)\n\n---\n\n### 2. 📌 Tailscale 揪出 16 岁高龄 SQLite Bug (来源: Hacker News)\n- **核心干货**：Tailscale 官方博客披露，他们花费大量精力追踪的数据库损坏问题，根源竟是一个存在了 16 年之久的 SQLite WAL-reset 底层 Bug。这个 Bug 在特定场景下会导致数据库文件损坏，影响数据完整性，现已定位并修复。\n- **毒舌/硬核点评**：16 年，足够一个婴儿长成黑客帝国的 Neo。这不仅是 Tailscale 的胜利，更是对全球\"能用就行\"派程序员的一记响亮耳光——你代码里埋的雷，可能比你的职业生涯还长。\n- **🔗 传送门**：[点击直达原链接](https://tailscale.com/blog/sqlite-wal-reset-bug)\n\n---\n\n### 3. 📌 Microsoft 月度补丁日：398 个漏洞，含一个正在被攻击的零日 (来源: 科技新闻)\n- **核心干货**：微软一口气修补了 398 个漏洞，其中包含一个 Windows 内核驱动中的零日漏洞，该漏洞已被检测到在野利用，攻击者可借此将权限提升至 SYSTEM。此外还包括 SharePoint 的 AI 辅助攻击链和 Defender 绕过 PoC 等重磅安全问题。\n- **毒舌/硬核点评**：每月一次的数字\"大扫除\"，但总有窗户是破的。建议各位把\"更新并重启\"当成每日祈祷，毕竟你的系统在黑客眼里可能不是堡垒，而是到处漏风的茅草屋。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\"真正的技术壁垒不是代码写得多好，而是你的 Bug 活得比你的竞品还久。\"",
   "briefing_items": [
     {
-      "title": "WorldClaw：腾讯把3D开放世界生成玩成了\"一键造物\"",
-      "source": "HackerNews",
-      "summary": "腾讯混元团队发布WorldClaw框架，能在大规模场景下进行**智能体式3D开放世界生成**。它不是简单堆砌资产，而是让AI像\"上帝\"一样规划、布局并动态生成连贯的3D世界，解决了一直以来\"生成单个物体容易、生成完整世界难\"的行业痛点。",
-      "commentary": "当别人还在用AI捏手办，腾讯已经开始用AI造星球了。建议某开放世界游戏厂商赶紧去抄作业，别老让玩家在\"空气墙\"里怀疑人生。",
-      "url": "https://tencent-hunyuan.github.io/Hunyuan3D-WorldClaw/"
+      "title": "DeepSeek V4 Pro 0813 强势登场",
+      "source": "HackerNews/OpenRouter",
+      "summary": "DeepSeek 带着 V4 Pro 0813 杀回来了，在 OpenRouter 上线。虽然具体基准测试数据还没完全公开，但作为国内大模型的门面担当，这次迭代预计在推理能力和代码生成上又有大动作，直接对标国际顶级闭源模型。",
+      "commentary": "硅谷的闭源模型们，你们的\"护城河\"怕不是要变成\"护城沟\"了。DeepSeek 这波是拿着开源的火把，准备把闭源的山头烧个精光。",
+      "url": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813"
     },
     {
-      "title": "\"压缩即预测\"：ngrok 这篇博客把AI的底裤扒了个精光",
-      "source": "HackerNews | 590分",
-      "summary": "ngrok 官方博客深度论证了\"压缩即预测\"（Compression is Prediction）这一核心观点：任何高效的压缩器本质上都在构建一个隐式的预测模型。文章将信息论、数据压缩与大模型原理打通，解释了为何LLM本质上是\"世界压缩器\"，并探讨了这对模型设计、数据管道和AI安全的影响。",
-      "commentary": "一句话点醒梦中人：你每天用的ChatGPT，本质是个超级无敌解压软件。别再吹\"涌现能力\"了，先学会把数据压缩到极致再说。",
-      "url": ""
+      "title": "Tailscale 揪出 16 岁高龄 SQLite Bug",
+      "source": "Hacker News",
+      "summary": "Tailscale 官方博客披露，他们花费大量精力追踪的数据库损坏问题，根源竟是一个存在了 16 年之久的 SQLite WAL-reset 底层 Bug。这个 Bug 在特定场景下会导致数据库文件损坏，影响数据完整性，现已定位并修复。",
+      "commentary": "16 年，足够一个婴儿长成黑客帝国的 Neo。这不仅是 Tailscale 的胜利，更是对全球\"能用就行\"派程序员的一记响亮耳光——你代码里埋的雷，可能比你的职业生涯还长。",
+      "url": "https://tailscale.com/blog/sqlite-wal-reset-bug"
     },
     {
-      "title": "微软\"月度全家桶\"：398个漏洞，包含一个已被在野利用的Windows内核零日漏洞",
-      "source": "Tech RSS",
-      "summary": "微软8月安全更新一口气修补了398个安全漏洞，其中包含一个**已在真实攻击中被利用的Windows内核驱动零日漏洞**（涉及网络套接字操作）。攻击者一旦获得低权限代码执行，即可利用该漏洞提权至SYSTEM。此外，Cisco ASA/FTD 也爆出被在野利用的远程DoS漏洞（CVE-2026-20349）。",
-      "commentary": "一个月修398个洞，这哪是\"补丁日\"，这是\"打地鼠日\"。微软的漏洞挖掘速度，永远追不上黑客的脑洞速度——建议把\"安全默认开启\"的口号改成\"安全默认跑路\"。",
-      "url": ""
-    },
-    {
-      "quote": "\"真正的技术壁垒不是知道多少，而是能在信息洪流中，一眼认出那1%的真相——剩下的99%，叫噪音，也叫别人的焦虑。\""
+      "title": "Microsoft 月度补丁日：398 个漏洞，含一个正在被攻击的零日",
+      "source": "科技新闻",
+      "summary": "微软一口气修补了 398 个漏洞，其中包含一个 Windows 内核驱动中的零日漏洞，该漏洞已被检测到在野利用，攻击者可借此将权限提升至 SYSTEM。此外还包括 SharePoint 的 AI 辅助攻击链和 Defender 绕过 PoC 等重磅安全问题。",
+      "commentary": "每月一次的数字\"大扫除\"，但总有窗户是破的。建议各位把\"更新并重启\"当成每日祈祷，毕竟你的系统在黑客眼里可能不是堡垒，而是到处漏风的茅草屋。",
+      "url": "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49269818",
-      "title": "Facebook is paying controversial creators to produce rage-bait content",
+      "id": "hn:49272832",
+      "title": "Tailscale Traces Database Corruption to 16y/o SQLite WAL-Reset Bug",
       "summary": "",
-      "url": "https://www.abc.net.au/news/2026-08-06/ragebait-how-facebook-is-paying-controversial-creators/106940696",
+      "url": "https://tailscale.com/blog/sqlite-wal-reset-bug",
       "source": "Hacker News",
-      "score": 271,
+      "score": 813,
       "comments": 147
     },
     {
-      "id": "hn:49265051",
-      "title": "WorldClaw Agentic 3D open-world generation at scale",
+      "id": "hn:49274600",
+      "title": "DeepSeek V4 Pro 0813",
       "summary": "",
-      "url": "https://tencent-hunyuan.github.io/Hunyuan3D-WorldClaw/",
+      "url": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813",
       "source": "Hacker News",
-      "score": 251,
-      "comments": 74
+      "score": 764,
+      "comments": 288
     },
     {
-      "id": "lob:rdufwa",
-      "title": "Google’s “Fuchsia” smartphone OS dumps Linux, has a wild new UI",
+      "id": "hn:49273478",
+      "title": "Qwen3.8-2.4T",
+      "summary": "<a href=\"https:&#x2F;&#x2F;huggingface.co&#x2F;Qwen&#x2F;Qwen3.8-2.4T-A95B-FP8\" rel=\"nofollow\">https:&#x2F;&#x2F;huggingface.co&#x2F;Qwen&#x2F;Qwen3.8-2.4T-A95B-FP8</a>",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+      "source": "Hacker News",
+      "score": 506,
+      "comments": 110
+    },
+    {
+      "id": "hn:49270726",
+      "title": "uBlock Origin Is Giving Up the Fight to Keep Ads Off Facebook",
+      "summary": "<a href=\"https:&#x2F;&#x2F;reddit.com&#x2F;r&#x2F;uBlockOrigin&#x2F;comments&#x2F;1vgcjg5&#x2F;about_disgusting_facebook_devs&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;reddit.com&#x2F;r&#x2F;uBlockOrigin&#x2F;comments&#x2F;1vgcjg5&#x2F;about_dis...</a><p><a href=\"https:&#x2F;&#x2F;www.neowin.net&#x2F;",
+      "url": "https://digitalescapetools.com/2026/08/ublock-origin-stops-chasing-facebook-ads.html",
+      "source": "Hacker News",
+      "score": 312,
+      "comments": 443
+    },
+    {
+      "id": "lob:ixbrmc",
+      "title": "I hate packaging my software for Linux",
       "summary": "",
-      "url": "https://arstechnica.com/gadgets/2017/05/googles-fuchsia-smartphone-os-dumps-linux-has-a-wild-new-ui/",
+      "url": "https://getfresh.dev/docs/blog/packaging-for-linux/",
       "source": "Lobste.rs",
-      "score": 36,
+      "score": 63,
+      "comments": 53,
+      "tags": [
+        "linux"
+      ]
+    },
+    {
+      "id": "hn:49272655",
+      "title": "Tim King, AmigaDOS developer, has died",
+      "summary": "",
+      "url": "https://amiga-news.de/en/news/AN-2026-08-00070-EN.html",
+      "source": "Hacker News",
+      "score": 240,
+      "comments": 29
+    },
+    {
+      "id": "hn:49270953",
+      "title": "2026 Eclipse Webcams",
+      "summary": "",
+      "url": "https://jonty.github.io/2026_eclipse_webcams/",
+      "source": "Hacker News",
+      "score": 459,
+      "comments": 124
+    },
+    {
+      "id": "hn:49274027",
+      "title": "Grok 4.6",
+      "summary": "<a href=\"https:&#x2F;&#x2F;artificialanalysis.ai&#x2F;articles&#x2F;grok-4-6-benchmarks-and-analysis\" rel=\"nofollow\">https:&#x2F;&#x2F;artificialanalysis.ai&#x2F;articles&#x2F;grok-4-6-benchmarks-a...</a>",
+      "url": "https://x.ai/news/grok-4-6",
+      "source": "Hacker News",
+      "score": 415,
+      "comments": 407
+    },
+    {
+      "id": "hn:49275335",
+      "title": "HTML over WebSockets: real-time SPAs with barely any JavaScript",
+      "summary": "",
+      "url": "https://en.andros.dev/blog/ef4968f5/html-over-websockets-real-time-spas-with-barely-any-javascript/",
+      "source": "Hacker News",
+      "score": 151,
+      "comments": 111
+    },
+    {
+      "id": "lob:rfiuko",
+      "title": "I'm done using AI",
+      "summary": "",
+      "url": "https://brettcodes.com/im-done-using-ai/",
+      "source": "Lobste.rs",
+      "score": 87,
+      "comments": 58,
+      "tags": [
+        "rant",
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "lob:b3uky6",
+      "title": "GNOME Shell Design Dreams",
+      "summary": "",
+      "url": "https://blogs.gnome.org/shell-dev/2026/08/11/gnome-shell-design-dreams/",
+      "source": "Lobste.rs",
+      "score": 73,
       "comments": 24,
       "tags": [
-        "android",
-        "mobile"
+        "design"
       ]
     },
     {
-      "id": "lob:k60dzm",
-      "title": "The tragedy of 100% code coverage",
+      "id": "lob:omcyaz",
+      "title": "Guide to (not) fucking up QR codes",
       "summary": "",
-      "url": "http://labs.ig.com/code-coverage-100-percent-tragedy",
+      "url": "https://infosec.exchange/@rebane2001/117078420917152774",
       "source": "Lobste.rs",
-      "score": 44,
-      "comments": 20,
+      "score": 77,
+      "comments": 8,
       "tags": [
-        "programming",
-        "testing"
+        "design"
       ]
     },
     {
-      "id": "hn:49268564",
-      "title": "LinkedIn CringeBot 3000",
+      "id": "lob:ugkhor",
+      "title": "My Homelab Got Hacked - A Postmortem",
       "summary": "",
-      "url": "https://www.cringebot3000.com/",
-      "source": "Hacker News",
-      "score": 357,
-      "comments": 140
-    },
-    {
-      "id": "hn:49201953",
-      "title": "The hardest working font in Manhattan (2025)",
-      "summary": "",
-      "url": "https://aresluna.org/the-hardest-working-font-in-manhattan/",
-      "source": "Hacker News",
-      "score": 268,
-      "comments": 40
-    },
-    {
-      "id": "hn:49263497",
-      "title": "Compression is prediction",
-      "summary": "",
-      "url": "https://ngrok.com/blog/compression-is-prediction",
-      "source": "Hacker News",
-      "score": 590,
-      "comments": 242
-    },
-    {
-      "id": "hn:49270040",
-      "title": "Show HN: Woxi - Open-source Mathematica / Wolfram Language reimplementation",
-      "summary": "Woxi is an interpreter for the Wolfram Language written in Rust.<p>It comes with Woxi Studio, a Mathematica-like GUI built with iced, but you can also use Woxi through a CLI, Jupyter kernel, Python package, npm package, or WASM module.<p>Compared with wolframscript &#x2F; Mathematica, the main diffe",
-      "url": "https://woxi.ad-si.com",
-      "source": "Hacker News",
-      "score": 112,
-      "comments": 6
-    },
-    {
-      "id": "hn:49270022",
-      "title": "What sort of maths are LLMs good at?",
-      "summary": "",
-      "url": "https://gowers.wordpress.com/2026/08/12/what-sort-of-maths-are-llms-good-at/",
-      "source": "Hacker News",
-      "score": 126,
-      "comments": 56
-    },
-    {
-      "id": "arxiv:2608.11171v1",
-      "title": "From Interpretability to Control: Insights from Six Years of the TrustNLP Workshop",
-      "summary": "The Workshop on Trustworthy Natural Language Processing (TrustNLP), co-located with major ACL conferences since 2021, has grown from 8 proceedings papers to 41 over six editions, documenting a field-wide transition from post-hoc interpretability of static models to mechanistic understanding and proa",
-      "url": "https://arxiv.org/abs/2608.11171v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.CY"
-      ],
-      "arxiv_id": "2608.11171v1"
-    },
-    {
-      "id": "hn:49260250",
-      "title": "U of Michigan drops first-semester grades to ‘curb mental health crisis’",
-      "summary": "<a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;FBFjJ\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;FBFjJ</a>",
-      "url": "https://www.wsj.com/us-news/education/university-of-michigan-grades-mental-health-1a5701d4",
-      "source": "Hacker News",
-      "score": 83,
-      "comments": 162
-    },
-    {
-      "id": "hn:49208693",
-      "title": "Worms: The Future of Yesterday's Worms Today",
-      "summary": "",
-      "url": "https://worm.net/",
-      "source": "Hacker News",
-      "score": 101,
-      "comments": 34
-    },
-    {
-      "id": "lob:g3dfeu",
-      "title": "A markdown-enabled comment engine for static sites/blogs",
-      "summary": "<p>Did a 1-week sprint to implement it.\nFeedback appreciated!</p>\n",
-      "url": "https://dyu.github.io/comments/",
+      "url": "https://phunky.cafe/my-homelab-got-hacked/",
       "source": "Lobste.rs",
-      "score": 17,
-      "comments": 43,
+      "score": 34,
+      "comments": 3,
       "tags": [
-        "show",
-        "web"
+        "devops",
+        "security"
       ]
     },
     {
-      "id": "lob:azwbrg",
-      "title": "Stand up for net neutrality",
-      "summary": "<p>Related mozilla blog post: <a href=\"https://blog.mozilla.org/blog/2017/05/08/next-10-days-critical-internets-future/\" rel=\"ugc\">Why the Next 10 Days Are Critical to the Internet’s Future</a>.</p>\n",
-      "url": "https://advocacy.mozilla.org/en-US/net-neutrality",
+      "id": "lob:ixbcym",
+      "title": "Analyzing My Lobsters Submissions",
+      "summary": "",
+      "url": "https://abhinavsarkar.net/notes/2026-lobsters-submissions/",
       "source": "Lobste.rs",
-      "score": 27,
-      "comments": 5,
+      "score": 32,
+      "comments": 7,
       "tags": [
-        "law",
-        "web"
+        "visualization"
       ]
     },
     {
-      "id": "arxiv:2608.11200v1",
-      "title": "ConVAWG: A Retrieval-Grounded Framework for Controlled Synthetic Dialogue Generation in Violence Against Women and Girls",
-      "summary": "Synthetic dialogue generation offers a way to study conversational dynamics in sensitive domains where real data are difficult to access, release, or annotate. The underlying abuse may occur online or offline: threats and coercion can appear directly in messages, while behaviours such as surveillanc",
-      "url": "https://arxiv.org/abs/2608.11200v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2608.11200v1"
-    },
-    {
-      "id": "arxiv:2608.11191v1",
-      "title": "Test-Time Self-Evolving GUI Visual Grounding via Reflection-Guided On-Policy Self-Distillation",
-      "summary": "GUI Visual Grounding is a fundamental capability for GUI agents. Existing models typically freeze their parameters after deployment, limiting their ability to adapt to unseen interfaces. Although recent methods attempt to adapt models via test-time reinforcement learning, they cannot reflect upon fa",
-      "url": "https://arxiv.org/abs/2608.11191v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_id": "2608.11191v1"
-    },
-    {
-      "id": "arxiv:2608.11152v1",
-      "title": "Scheduling Mixed RL Rollouts Beyond Prefix Locality",
-      "summary": "Modern reinforcement learning (RL) post-training pipelines for large language models (LLMs) increasingly combine rollout workloads across multiple domains and feedback paradigms. Prefix-aware routing improves inference efficiency through cache reuse and load balancing, but it does not control how he",
-      "url": "https://arxiv.org/abs/2608.11152v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.DC",
-        "cs.LG"
-      ],
-      "arxiv_id": "2608.11152v1"
+      "id": "lob:b3y5qs",
+      "title": "Introducing Automatic Key Verification",
+      "summary": "",
+      "url": "https://signal.org/blog/automatic-key-verification/",
+      "source": "Lobste.rs",
+      "score": 29,
+      "comments": 8,
+      "tags": [
+        "cryptography",
+        "privacy"
+      ]
     },
     {
       "id": "rss:ac664dbffd",
@@ -237,6 +209,27 @@
       "url": "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html",
       "source": "Tech RSS",
       "score": 0
+    },
+    {
+      "id": "rss:fc0ffff748",
+      "title": "Researchers Disclose AI-Assisted SharePoint Exploit Chain Reaching Unauthenticated RCE",
+      "summary": "Security researchers found a way to enter Microsoft SharePoint servers as any user, including an administrator, with no valid account. A significant part of the work that found it was done through an AI agent.\n\nThe flaw, tracked as&nbsp;CVE-2026-55040&nbsp;(CVSS 9.1), affects SharePoint Server Subsc",
+      "url": "https://thehackernews.com/2026/08/researchers-disclose-ai-assisted.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "lob:pu96ia",
+      "title": "fearless_simd v0.7: 64-bit integers, improved generics, SSE2, and upcoming v1.0",
+      "summary": "",
+      "url": "https://linebender.org/blog/fearless-simd-0-7/",
+      "source": "Lobste.rs",
+      "score": 23,
+      "comments": 2,
+      "tags": [
+        "release",
+        "rust"
+      ]
     }
   ],
   "ai_curated": true
