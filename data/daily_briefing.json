@@ -1,52 +1,40 @@
 {
   "date": "2026-08-14",
-  "update_time": "2026-08-14 02:15:52",
+  "update_time": "2026-08-14 13:10:02",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-14\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 DeepSeek Harness 开发者预览版亮相 (来源: GitHub/HackerNews | HN 分数: 562)\n- **核心干货**：DeepSeek 正式推出 Harness 开发者工具链，直指 AI 应用开发的工程化痛点——模型部署、编排与监控的一体化工作流。不是又一个聊天机器人套壳，而是面向生产级 AI 系统的底层基础设施，意味着国产大模型开始卷\"AI 时代的 DevOps\"了。\n- **毒舌/硬核点评**：OpenAI 还在忙着给模型起花里胡哨的名字，DeepSeek 已经默默把铲子递给了开发者。AI 圈的下半场，拼的不是谁的模型参数大，而是谁能把模型跑进生产环境不崩。\n- **🔗 传送门**：[点击直达原链接](https://deepseek.com/harness/en/)\n\n---\n\n### 2. 📌 微软月度更新修复 398 个漏洞，含遭主动利用的 Windows 内核驱动零日 (来源: 安全新闻)\n- **核心干货**：8 月补丁日一口气堵上 398 个漏洞，其中一枚位于核心网络套接字内核驱动中的零日漏洞已被在野利用——攻击者拿到普通用户权限即可直接提权至 SYSTEM。微软这次是\"扫雷式\"打补丁，但问题在于：补丁永远追着攻击跑。\n- **毒舌/硬核点评**：398 个漏洞？这数字比我衣柜里的衣服还多。微软每次发布会都像在玩打地鼠，可惜地鼠学会了用 AI 自动生成漏洞。安全圈的真相永远是：你不是被黑，你只是在给微软的漏洞当分母。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html)\n\n---\n\n### 3. 📌 研究揭示：追踪 657,607 个链接，旧互联网正在系统性消失 (来源: Hacker News | HN 分数: 133)\n- **核心干货**：一项大规模研究追踪了超过 65 万个历史网页链接，发现\"链接腐烂\"（Link Rot）现象正以惊人的速度吞噬早期互联网——大量 90 年代末到 2000 年代初的网页内容已彻底消失或变为死链。这不是情怀问题，而是数字文化遗产的系统性丢失，连政府网站和学术论文引用都未能幸免。\n- **毒舌/硬核点评**：互联网号称\"信息永不消亡\"，结果 25 年就烂得千疮百孔。数字时代最大的讽刺是：我们连自己刚发的朋友圈都找不回来，却还指望 Web3 和元宇宙能永垂不朽。赶紧把你的博客备份到三块硬盘上，谢谢。\n- **🔗 传送门**：[点击直达原链接](https://0.mk/blog/link-rot)\n\n---\n\n### 🗣️ 今日顶男金句\n**\"技术演进的本质不是淘汰旧事物，而是给旧问题换一套更贵的解决方案。但真正的顶男，永远在找那套便宜且能打的。\"**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-14\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 DeepSeek Harness 开发者预览版 (来源: Hacker News)\n- **核心干货**：DeepSeek 正式推出 Harness 开发者预览版，这是一个面向 Agent 的全链路编排与沙箱执行框架。简单说，它让 AI Agent 从\"只会聊天\"进化到\"能安全地干活\"，内置了工具调用、代码执行、环境隔离等关键能力，直指当前 Agent 落地的工程化痛点。\n- **毒舌/硬核点评**：各大厂还在卷模型参数，DeepSeek 已经转头开始卖\"铲子\"了。这个 Harness 要是真能降低 Agent 上手的门槛，那它卖的不是代码，是未来程序员的新岗位说明书。\n- **🔗 传送门**：[点击直达原链接](https://deepseek.com/harness/en/)\n\n---\n\n### 2. 📌 Spaghettifying DRAM (来源: Hacker News)\n- **核心干货**：一个硬核到没朋友的硬件安全研究项目——通过物理手段（激光、电压故障注入等）对 DRAM 芯片进行\"意面化\"处理，精确操纵内存比特位，实现底层攻击或逆向工程。这基本是硬件黑客的\"手术刀级\"操作指南，把 DRAM 的物理脆弱性暴露得淋漓尽致。\n- **毒舌/硬核点评**：别人玩的是软件漏洞，这哥们直接物理超度内存芯片。看完我只想说：原来\"蓝屏死机\"也可以是被精心策划的艺术。\n- **🔗 传送门**：[点击直达原链接](https://github.com/xoreaxeaxeax/skitter-creek-bath-salts)\n\n---\n\n### 3. 📌 Vero: AI Agent 的形式化验证代码生成 (来源: ArXiv)\n- **核心干货**：这篇论文直击 AI 编程的最大软肋——生成的代码没有正确性保证。Vero 让 Agent 同时产出实现代码和机器可验证的证明，相当于给 AI 写代码加了一道\"数学级\"的质检保险，把\"能跑\"变成\"可证明正确\"。\n- **毒舌/硬核点评**：当别的 AI 还在闭眼写 bug 的时候，Vero 已经开始要求 AI 写\"保证书\"了。虽然这会让 AI 的交付速度慢得像蜗牛，但至少它交付的不是定时炸弹。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2608.13522v1)\n\n---\n\n### 🗣️ 今日顶男金句\n\"别抱怨 AI 抢你饭碗，先去学学怎么给 AI 的饭碗上锁——形式化验证和硬件安全，才是未来十年的护城河。\"",
   "briefing_items": [
     {
-      "title": "DeepSeek Harness 开发者预览版亮相",
-      "source": "GitHub/HackerNews | HN 分数: 562",
-      "summary": "DeepSeek 正式推出 Harness 开发者工具链，直指 AI 应用开发的工程化痛点——模型部署、编排与监控的一体化工作流。不是又一个聊天机器人套壳，而是面向生产级 AI 系统的底层基础设施，意味着国产大模型开始卷\"AI 时代的 DevOps\"了。",
-      "commentary": "OpenAI 还在忙着给模型起花里胡哨的名字，DeepSeek 已经默默把铲子递给了开发者。AI 圈的下半场，拼的不是谁的模型参数大，而是谁能把模型跑进生产环境不崩。",
+      "title": "DeepSeek Harness 开发者预览版",
+      "source": "Hacker News",
+      "summary": "DeepSeek 正式推出 Harness 开发者预览版，这是一个面向 Agent 的全链路编排与沙箱执行框架。简单说，它让 AI Agent 从\"只会聊天\"进化到\"能安全地干活\"，内置了工具调用、代码执行、环境隔离等关键能力，直指当前 Agent 落地的工程化痛点。",
+      "commentary": "各大厂还在卷模型参数，DeepSeek 已经转头开始卖\"铲子\"了。这个 Harness 要是真能降低 Agent 上手的门槛，那它卖的不是代码，是未来程序员的新岗位说明书。",
       "url": "https://deepseek.com/harness/en/"
     },
     {
-      "title": "微软月度更新修复 398 个漏洞，含遭主动利用的 Windows 内核驱动零日",
-      "source": "安全新闻",
-      "summary": "8 月补丁日一口气堵上 398 个漏洞，其中一枚位于核心网络套接字内核驱动中的零日漏洞已被在野利用——攻击者拿到普通用户权限即可直接提权至 SYSTEM。微软这次是\"扫雷式\"打补丁，但问题在于：补丁永远追着攻击跑。",
-      "commentary": "398 个漏洞？这数字比我衣柜里的衣服还多。微软每次发布会都像在玩打地鼠，可惜地鼠学会了用 AI 自动生成漏洞。安全圈的真相永远是：你不是被黑，你只是在给微软的漏洞当分母。",
-      "url": "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html"
+      "title": "Spaghettifying DRAM",
+      "source": "Hacker News",
+      "summary": "一个硬核到没朋友的硬件安全研究项目——通过物理手段（激光、电压故障注入等）对 DRAM 芯片进行\"意面化\"处理，精确操纵内存比特位，实现底层攻击或逆向工程。这基本是硬件黑客的\"手术刀级\"操作指南，把 DRAM 的物理脆弱性暴露得淋漓尽致。",
+      "commentary": "别人玩的是软件漏洞，这哥们直接物理超度内存芯片。看完我只想说：原来\"蓝屏死机\"也可以是被精心策划的艺术。",
+      "url": "https://github.com/xoreaxeaxeax/skitter-creek-bath-salts"
     },
     {
-      "title": "研究揭示：追踪 657,607 个链接，旧互联网正在系统性消失",
-      "source": "Hacker News | HN 分数: 133",
-      "summary": "一项大规模研究追踪了超过 65 万个历史网页链接，发现\"链接腐烂\"（Link Rot）现象正以惊人的速度吞噬早期互联网——大量 90 年代末到 2000 年代初的网页内容已彻底消失或变为死链。这不是情怀问题，而是数字文化遗产的系统性丢失，连政府网站和学术论文引用都未能幸免。",
-      "commentary": "互联网号称\"信息永不消亡\"，结果 25 年就烂得千疮百孔。数字时代最大的讽刺是：我们连自己刚发的朋友圈都找不回来，却还指望 Web3 和元宇宙能永垂不朽。赶紧把你的博客备份到三块硬盘上，谢谢。",
-      "url": "https://0.mk/blog/link-rot"
+      "title": "Vero: AI Agent 的形式化验证代码生成",
+      "source": "ArXiv",
+      "summary": "这篇论文直击 AI 编程的最大软肋——生成的代码没有正确性保证。Vero 让 Agent 同时产出实现代码和机器可验证的证明，相当于给 AI 写代码加了一道\"数学级\"的质检保险，把\"能跑\"变成\"可证明正确\"。",
+      "commentary": "当别的 AI 还在闭眼写 bug 的时候，Vero 已经开始要求 AI 写\"保证书\"了。虽然这会让 AI 的交付速度慢得像蜗牛，但至少它交付的不是定时炸弹。",
+      "url": "https://arxiv.org/abs/2608.13522v1"
     }
   ],
   "candidates": [
-    {
-      "id": "lob:e0lkmi",
-      "title": "How Tailscale helped find the SQLite WAL-Reset bug",
-      "summary": "<p>Previously, the <a href=\"https://lobste.rs/s/mqpba7/sqlite_wal_reset_database_corruption_bug\" rel=\"ugc\">SQLite release fixing this bug</a>.</p>\n",
-      "url": "https://tailscale.com/blog/sqlite-wal-reset-bug",
-      "source": "Lobste.rs",
-      "score": 130,
-      "comments": 16,
-      "tags": [
-        "databases"
-      ]
-    },
     {
       "id": "hn:49289844",
       "title": "Accelerating GPT-5.6 Sol Ultrafast",
       "summary": "",
       "url": "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai",
       "source": "Hacker News",
-      "score": 433,
-      "comments": 182
+      "score": 649,
+      "comments": 253
     },
     {
       "id": "hn:49285244",
@@ -54,59 +42,26 @@
       "summary": "<a href=\"https:&#x2F;&#x2F;github.com&#x2F;deepseek-ai&#x2F;deepseek-harness\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;deepseek-ai&#x2F;deepseek-harness</a><p><a href=\"https:&#x2F;&#x2F;deepseek-harness.github.io&#x2F;deepseek-harness&#x2F;en&#x2F;guide&#x2F;quickstart\" rel=\"nofollow\">https:",
       "url": "https://deepseek.com/harness/en/",
       "source": "Hacker News",
-      "score": 562,
-      "comments": 246
+      "score": 691,
+      "comments": 281
     },
     {
-      "id": "hn:49289512",
-      "title": "Choose Boring Technology (2015)",
+      "id": "hn:49294997",
+      "title": "GLM-5.3: Frontier coding with emergent cyber capabilities",
       "summary": "",
-      "url": "https://mcfunley.com/choose-boring-technology",
+      "url": "https://z.ai/blog/glm-5.3",
       "source": "Hacker News",
-      "score": 257,
-      "comments": 137
+      "score": 677,
+      "comments": 333
     },
     {
-      "id": "lob:xic1nn",
-      "title": "Does anyone run Postgres without PgBouncer?",
+      "id": "hn:49296740",
+      "title": "Why does Opus 5 feel worse to work with?",
       "summary": "",
-      "url": "https://brandur.org/fragments/postgres-without-pgbouncer",
-      "source": "Lobste.rs",
-      "score": 31,
-      "comments": 36,
-      "tags": [
-        "databases"
-      ]
-    },
-    {
-      "id": "hn:49290299",
-      "title": "Understanding is the new bottleneck",
-      "summary": "",
-      "url": "https://www.geoffreylitt.com/2026/07/02/understanding-is-the-new-bottleneck",
-      "source": "Hacker News",
-      "score": 211,
-      "comments": 117
-    },
-    {
-      "id": "lob:ixbrmc",
-      "title": "I hate packaging my software for Linux",
-      "summary": "",
-      "url": "https://getfresh.dev/docs/blog/packaging-for-linux/",
-      "source": "Lobste.rs",
-      "score": 103,
-      "comments": 90,
-      "tags": [
-        "linux"
-      ]
-    },
-    {
-      "id": "hn:49289465",
-      "title": "Donkey.bas is 45 Years Old – 131 line of Glory",
-      "summary": "",
-      "url": "https://donkeybas.com/",
+      "url": "https://mun-logadan.github.io/why-does-opus-5-feel-worse/",
       "source": "Hacker News",
       "score": 193,
-      "comments": 83
+      "comments": 172
     },
     {
       "id": "hn:49289112",
@@ -114,17 +69,17 @@
       "summary": "<a href=\"https:&#x2F;&#x2F;ai.google.dev&#x2F;gemini-api&#x2F;docs&#x2F;models&#x2F;gemini-3.7-flash\" rel=\"nofollow\">https:&#x2F;&#x2F;ai.google.dev&#x2F;gemini-api&#x2F;docs&#x2F;models&#x2F;gemini-3.7-flas...</a>",
       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
       "source": "Hacker News",
-      "score": 627,
-      "comments": 353
+      "score": 894,
+      "comments": 451
     },
     {
-      "id": "hn:49288889",
-      "title": "Mistral OCR 4.1",
+      "id": "hn:49290166",
+      "title": "Hello, me. It's been a while",
       "summary": "",
-      "url": "https://docs.mistral.ai/models/ocr-4-1",
+      "url": "https://themech.net/2026/08/hello-me-its-been-a-while/",
       "source": "Hacker News",
-      "score": 254,
-      "comments": 102
+      "score": 281,
+      "comments": 153
     },
     {
       "id": "hn:49286341",
@@ -132,8 +87,17 @@
       "summary": "",
       "url": "https://github.com/xoreaxeaxeax/skitter-creek-bath-salts",
       "source": "Hacker News",
-      "score": 501,
-      "comments": 140
+      "score": 662,
+      "comments": 167
+    },
+    {
+      "id": "hn:49288889",
+      "title": "Mistral OCR 4.1",
+      "summary": "",
+      "url": "https://docs.mistral.ai/models/ocr-4-1",
+      "source": "Hacker News",
+      "score": 381,
+      "comments": 153
     },
     {
       "id": "lob:62kxco",
@@ -141,41 +105,82 @@
       "summary": "",
       "url": "https://sebsite.pw/w/20260801-pythonconstants.html",
       "source": "Lobste.rs",
-      "score": 87,
-      "comments": 14,
+      "score": 97,
+      "comments": 15,
       "tags": [
         "python"
       ]
     },
     {
-      "id": "lob:keiw21",
-      "title": "GitHub Stacks in Jujutsu",
+      "id": "hn:49293324",
+      "title": "Bluesky Protocol Services",
       "summary": "",
-      "url": "https://alan.norbauer.com/articles/github-stacks-with-jujutsu/",
+      "url": "https://atproto.com/blog/introducing-bluesky-protocol-services",
+      "source": "Hacker News",
+      "score": 182,
+      "comments": 47
+    },
+    {
+      "id": "lob:tssf5y",
+      "title": "I want extern \"fil-c\"",
+      "summary": "",
+      "url": "https://domenkozar.com/2026/08/13/i-want-extern-fil-c/",
       "source": "Lobste.rs",
-      "score": 43,
-      "comments": 16,
+      "score": 62,
+      "comments": 31,
       "tags": [
-        "vcs"
+        "c",
+        "rust"
       ]
     },
     {
-      "id": "hn:49291268",
-      "title": "NP-overrated",
+      "id": "lob:xk3ley",
+      "title": "AI is removing the middle class of software engineering",
       "summary": "",
-      "url": "https://gruhn.me/blog/2026-08-13/",
-      "source": "Hacker News",
-      "score": 154,
-      "comments": 96
+      "url": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html",
+      "source": "Lobste.rs",
+      "score": 38,
+      "comments": 11,
+      "tags": [
+        "practices",
+        "vibecoding"
+      ]
     },
     {
-      "id": "hn:49289532",
-      "title": "Where did the old web go? We followed 657,607 links to find out",
+      "id": "lob:dnlhah",
+      "title": "Let's not call it \"tech debt,\" it's just \"mess\"",
       "summary": "",
-      "url": "https://0.mk/blog/link-rot",
+      "url": "https://www.simplermachines.com/lets-not-call-it-tech-debt-its-just-mess/",
+      "source": "Lobste.rs",
+      "score": 36,
+      "comments": 12,
+      "tags": [
+        "practices"
+      ]
+    },
+    {
+      "id": "hn:49296627",
+      "title": "DeepSeek peak/off-peak pricing update",
+      "summary": "",
+      "url": "https://api-docs.deepseek.com/news/news260813/",
       "source": "Hacker News",
-      "score": 133,
-      "comments": 117
+      "score": 95,
+      "comments": 44
+    },
+    {
+      "id": "arxiv:2608.13522v1",
+      "title": "Vero: Can AI Agents Build Formally Verified Software Repositories?",
+      "summary": "AI agents are increasingly used for programming, but do not provide any guarantee on the correctness of generated code. Verified code generation, in which an agent produces both an implementation and a machine-checked proof of its specification, offers a stronger path toward trustworthy AI-generated",
+      "url": "https://arxiv.org/abs/2608.13522v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.LO",
+        "cs.PL",
+        "cs.SE"
+      ],
+      "arxiv_id": "2608.13522v1"
     },
     {
       "id": "rss:0331835ebb",
@@ -186,41 +191,50 @@
       "score": 0
     },
     {
+      "id": "lob:xi7txx",
+      "title": "OxiSH: SSH server written in Rust",
+      "summary": "",
+      "url": "https://github.com/djc/oxish",
+      "source": "Lobste.rs",
+      "score": 27,
+      "comments": 2,
+      "tags": [
+        "rust"
+      ]
+    },
+    {
+      "id": "arxiv:2608.13560v1",
+      "title": "AutoDesign: Meta-Harness Optimization for Long-Horizon Agentic Design",
+      "summary": "Transforming multimodal sources into condensed and structured media outputs can be fundamentally conceptualized as a long-horizon agentic process centered on a model-harness system. While an ideal harness system should align with human design priors and accumulate reusable experience through empiric",
+      "url": "https://arxiv.org/abs/2608.13560v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_id": "2608.13560v1"
+    },
+    {
+      "id": "arxiv:2608.13545v1",
+      "title": "LittleLearner: Language Models Under Pedagogically Controlled Knowledge Exposure",
+      "summary": "Modern language models are trained on heterogeneous web-scale text corpora. Consequently, studying knowledge and skill acquisition is difficult, as prior exposure to related content is hard to characterize. To address this challenge, we introduce LITTLECURRICULUM, a curated 88B-token pretraining cor",
+      "url": "https://arxiv.org/abs/2608.13545v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_id": "2608.13545v1"
+    },
+    {
       "id": "rss:ac664dbffd",
       "title": "ShieldBreak Zero-Day PoC Claims Microsoft Defender Patch Bypass With SYSTEM Access",
       "summary": "The security researcher going by the name Chaotic Eclipse (aka INFINITE NIGHTMARE, MSNightmare, and Nightmare-Eclipse) has released a proof-of-concept (PoC) for a new Microsoft zero-day called ShieldBreak.\n\nThe vulnerability, rooted in Microsoft Defender for Windows, demonstrates a patch bypass for",
       "url": "https://thehackernews.com/2026/08/shieldbreak-zero-day-poc-claims.html",
       "source": "Tech RSS",
       "score": 0
-    },
-    {
-      "id": "rss:4cb7814aa5",
-      "title": "Cisco ASA and FTD Flaw Exploited in the Wild Can Trigger Remote DoS",
-      "summary": "Cisco has warned that a new vulnerability impacting Secure Firewall Adaptive Security Appliance (ASA) Software and Secure Firewall Threat Defense (FTD) Software has been exploited in the wild.\n\nThe high-severity flaw, tracked as CVE-2026-20349 (CVSS score: 8.6), is a case of insufficient error check",
-      "url": "https://thehackernews.com/2026/08/cisco-asa-and-ftd-flaw-exploited-in.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:05070cd56f",
-      "title": "Microsoft Patches 398 Flaws Including a Windows Driver Zero-Day Under Active Attack",
-      "summary": "Microsoft released its monthly security updates on Tuesday, and one of the flaws it closed is already being used in attacks.\n\nThe bug sits in a core Windows kernel driver that handles network socket operations. An attacker with code already running on a machine can use it to escalate to SYSTEM. That",
-      "url": "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "lob:xk3ley",
-      "title": "AI is removing the middle class of software engineering",
-      "summary": "",
-      "url": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html",
-      "source": "Lobste.rs",
-      "score": 22,
-      "comments": 7,
-      "tags": [
-        "practices",
-        "vibecoding"
-      ]
     }
   ],
   "ai_curated": true
