@@ -1,58 +1,58 @@
 {
-  "date": "2026-08-14",
-  "update_time": "2026-08-14 13:10:02",
+  "date": "2026-08-15",
+  "update_time": "2026-08-15 01:26:45",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-14\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 DeepSeek Harness 开发者预览版 (来源: Hacker News)\n- **核心干货**：DeepSeek 正式推出 Harness 开发者预览版，这是一个面向 Agent 的全链路编排与沙箱执行框架。简单说，它让 AI Agent 从\"只会聊天\"进化到\"能安全地干活\"，内置了工具调用、代码执行、环境隔离等关键能力，直指当前 Agent 落地的工程化痛点。\n- **毒舌/硬核点评**：各大厂还在卷模型参数，DeepSeek 已经转头开始卖\"铲子\"了。这个 Harness 要是真能降低 Agent 上手的门槛，那它卖的不是代码，是未来程序员的新岗位说明书。\n- **🔗 传送门**：[点击直达原链接](https://deepseek.com/harness/en/)\n\n---\n\n### 2. 📌 Spaghettifying DRAM (来源: Hacker News)\n- **核心干货**：一个硬核到没朋友的硬件安全研究项目——通过物理手段（激光、电压故障注入等）对 DRAM 芯片进行\"意面化\"处理，精确操纵内存比特位，实现底层攻击或逆向工程。这基本是硬件黑客的\"手术刀级\"操作指南，把 DRAM 的物理脆弱性暴露得淋漓尽致。\n- **毒舌/硬核点评**：别人玩的是软件漏洞，这哥们直接物理超度内存芯片。看完我只想说：原来\"蓝屏死机\"也可以是被精心策划的艺术。\n- **🔗 传送门**：[点击直达原链接](https://github.com/xoreaxeaxeax/skitter-creek-bath-salts)\n\n---\n\n### 3. 📌 Vero: AI Agent 的形式化验证代码生成 (来源: ArXiv)\n- **核心干货**：这篇论文直击 AI 编程的最大软肋——生成的代码没有正确性保证。Vero 让 Agent 同时产出实现代码和机器可验证的证明，相当于给 AI 写代码加了一道\"数学级\"的质检保险，把\"能跑\"变成\"可证明正确\"。\n- **毒舌/硬核点评**：当别的 AI 还在闭眼写 bug 的时候，Vero 已经开始要求 AI 写\"保证书\"了。虽然这会让 AI 的交付速度慢得像蜗牛，但至少它交付的不是定时炸弹。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2608.13522v1)\n\n---\n\n### 🗣️ 今日顶男金句\n\"别抱怨 AI 抢你饭碗，先去学学怎么给 AI 的饭碗上锁——形式化验证和硬件安全，才是未来十年的护城河。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-15\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Qwen 3.8 27B 发布 (来源: HuggingFace/HackerNews)\n- **核心干货**：通义千问最新力作，27B 参数且以 FP8 精度发布。这个规模卡在了一个甜蜜点：性能逼近百亿级大模型，但显存和推理成本却控制在了消费级硬件能勉强够到的边缘。这不是挤牙膏，这是精准卡位。\n- **毒舌点评**：闭源模型还在卷参数数量当 KPI，开源这边已经用 FP8 把成本打下来了。格局高下，立判。\n- **🔗 传送门**：[HuggingFace 模型页](https://huggingface.co/Qwen/Qwen3.8-27B-FP8)\n\n---\n\n### 2. 📌 Google 将同态加密推向实用 (来源: Google Blog/HackerNews)\n- **核心干货**：Google 宣布在部分产品中落地同态加密（HE），让 AI 能在**不解密**的密文上直接做推理和计算。这解决了 AI 落地最大的合规痛点：数据隐私与算力不可兼得。目前性能仍有损耗，但这是\"从实验室玩具到生产工具\"的关键一步。\n- **毒舌点评**：以前同态加密是密码学界的\"永动机\"——理论上完美，实际上跑不动。Google 这次至少让它从永动机变成了能用的\"电动车\"，虽然续航还是有点虚。\n- **🔗 传送门**：[Google 官方博客](https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/)\n\n---\n\n### 3. 📌 Firefox 成为 uBlock Origin 最后避风港 (来源: PCWorld/HackerNews)\n- **核心干货**：随着 Chrome 强制推进 Manifest V3 扩展规范，uBlock Origin 在 Chrome 生态已被彻底阉割，Firefox 成了唯一完整支持该拦截器的现代主流浏览器。这不仅是广告拦截的胜利，更是 Mozilla 作为\"非营利异类\"在市场夹缝中存活下来的差异化筹码。\n- **毒舌点评**：Chrome 用\"性能和安全\"当借口砍掉广告拦截，实际是给自家广告业务清场。Firefox 此刻攥着 uBlock Origin，手里握着的不是代码，是用户对\"不作恶\"最后的信任票。\n- **🔗 传送门**：[PCWorld 报道原文](https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\"真正的护城河不是模型参数，而是你手里那个能跑得动模型的破显卡。\"",
   "briefing_items": [
     {
-      "title": "DeepSeek Harness 开发者预览版",
-      "source": "Hacker News",
-      "summary": "DeepSeek 正式推出 Harness 开发者预览版，这是一个面向 Agent 的全链路编排与沙箱执行框架。简单说，它让 AI Agent 从\"只会聊天\"进化到\"能安全地干活\"，内置了工具调用、代码执行、环境隔离等关键能力，直指当前 Agent 落地的工程化痛点。",
-      "commentary": "各大厂还在卷模型参数，DeepSeek 已经转头开始卖\"铲子\"了。这个 Harness 要是真能降低 Agent 上手的门槛，那它卖的不是代码，是未来程序员的新岗位说明书。",
-      "url": "https://deepseek.com/harness/en/"
+      "title": "Qwen 3.8 27B 发布",
+      "source": "HuggingFace/HackerNews",
+      "summary": "通义千问最新力作，27B 参数且以 FP8 精度发布。这个规模卡在了一个甜蜜点：性能逼近百亿级大模型，但显存和推理成本却控制在了消费级硬件能勉强够到的边缘。这不是挤牙膏，这是精准卡位。",
+      "commentary": "闭源模型还在卷参数数量当 KPI，开源这边已经用 FP8 把成本打下来了。格局高下，立判。",
+      "url": ""
     },
     {
-      "title": "Spaghettifying DRAM",
-      "source": "Hacker News",
-      "summary": "一个硬核到没朋友的硬件安全研究项目——通过物理手段（激光、电压故障注入等）对 DRAM 芯片进行\"意面化\"处理，精确操纵内存比特位，实现底层攻击或逆向工程。这基本是硬件黑客的\"手术刀级\"操作指南，把 DRAM 的物理脆弱性暴露得淋漓尽致。",
-      "commentary": "别人玩的是软件漏洞，这哥们直接物理超度内存芯片。看完我只想说：原来\"蓝屏死机\"也可以是被精心策划的艺术。",
-      "url": "https://github.com/xoreaxeaxeax/skitter-creek-bath-salts"
+      "title": "Google 将同态加密推向实用",
+      "source": "Google Blog/HackerNews",
+      "summary": "Google 宣布在部分产品中落地同态加密（HE），让 AI 能在**不解密**的密文上直接做推理和计算。这解决了 AI 落地最大的合规痛点：数据隐私与算力不可兼得。目前性能仍有损耗，但这是\"从实验室玩具到生产工具\"的关键一步。",
+      "commentary": "以前同态加密是密码学界的\"永动机\"——理论上完美，实际上跑不动。Google 这次至少让它从永动机变成了能用的\"电动车\"，虽然续航还是有点虚。",
+      "url": ""
     },
     {
-      "title": "Vero: AI Agent 的形式化验证代码生成",
-      "source": "ArXiv",
-      "summary": "这篇论文直击 AI 编程的最大软肋——生成的代码没有正确性保证。Vero 让 Agent 同时产出实现代码和机器可验证的证明，相当于给 AI 写代码加了一道\"数学级\"的质检保险，把\"能跑\"变成\"可证明正确\"。",
-      "commentary": "当别的 AI 还在闭眼写 bug 的时候，Vero 已经开始要求 AI 写\"保证书\"了。虽然这会让 AI 的交付速度慢得像蜗牛，但至少它交付的不是定时炸弹。",
-      "url": "https://arxiv.org/abs/2608.13522v1"
+      "title": "Firefox 成为 uBlock Origin 最后避风港",
+      "source": "PCWorld/HackerNews",
+      "summary": "随着 Chrome 强制推进 Manifest V3 扩展规范，uBlock Origin 在 Chrome 生态已被彻底阉割，Firefox 成了唯一完整支持该拦截器的现代主流浏览器。这不仅是广告拦截的胜利，更是 Mozilla 作为\"非营利异类\"在市场夹缝中存活下来的差异化筹码。",
+      "commentary": "Chrome 用\"性能和安全\"当借口砍掉广告拦截，实际是给自家广告业务清场。Firefox 此刻攥着 uBlock Origin，手里握着的不是代码，是用户对\"不作恶\"最后的信任票。",
+      "url": ""
     }
   ],
   "candidates": [
     {
-      "id": "hn:49289844",
-      "title": "Accelerating GPT-5.6 Sol Ultrafast",
+      "id": "hn:49300759",
+      "title": "RustDesk now supports true unattended remote access on Wayland",
       "summary": "",
-      "url": "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai",
+      "url": "https://rustdesk.com/blog/unattended-remote-access-wayland/",
       "source": "Hacker News",
-      "score": 649,
-      "comments": 253
+      "score": 216,
+      "comments": 94
     },
     {
-      "id": "hn:49285244",
-      "title": "DeepSeek Harness developer preview",
-      "summary": "<a href=\"https:&#x2F;&#x2F;github.com&#x2F;deepseek-ai&#x2F;deepseek-harness\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;deepseek-ai&#x2F;deepseek-harness</a><p><a href=\"https:&#x2F;&#x2F;deepseek-harness.github.io&#x2F;deepseek-harness&#x2F;en&#x2F;guide&#x2F;quickstart\" rel=\"nofollow\">https:",
-      "url": "https://deepseek.com/harness/en/",
+      "id": "hn:49303202",
+      "title": "Firefox is now the last major browser that still supports uBlock Origin",
+      "summary": "",
+      "url": "https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html",
       "source": "Hacker News",
-      "score": 691,
-      "comments": 281
+      "score": 387,
+      "comments": 152
     },
     {
-      "id": "hn:49294997",
-      "title": "GLM-5.3: Frontier coding with emergent cyber capabilities",
+      "id": "hn:49299605",
+      "title": "Qwen 3.8 27B",
       "summary": "",
-      "url": "https://z.ai/blog/glm-5.3",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8",
       "source": "Hacker News",
-      "score": 677,
-      "comments": 333
+      "score": 895,
+      "comments": 583
     },
     {
       "id": "hn:49296740",
@@ -60,91 +60,26 @@
       "summary": "",
       "url": "https://mun-logadan.github.io/why-does-opus-5-feel-worse/",
       "source": "Hacker News",
+      "score": 779,
+      "comments": 718
+    },
+    {
+      "id": "hn:49300314",
+      "title": "Google is making private AI practical with homomorphic encryption",
+      "summary": "",
+      "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
+      "source": "Hacker News",
+      "score": 276,
+      "comments": 166
+    },
+    {
+      "id": "hn:49304447",
+      "title": "Going Dark, and the era of law enforcement hacking",
+      "summary": "",
+      "url": "https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/",
+      "source": "Hacker News",
       "score": 193,
-      "comments": 172
-    },
-    {
-      "id": "hn:49289112",
-      "title": "Gemini 3.7 Flash",
-      "summary": "<a href=\"https:&#x2F;&#x2F;ai.google.dev&#x2F;gemini-api&#x2F;docs&#x2F;models&#x2F;gemini-3.7-flash\" rel=\"nofollow\">https:&#x2F;&#x2F;ai.google.dev&#x2F;gemini-api&#x2F;docs&#x2F;models&#x2F;gemini-3.7-flas...</a>",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
-      "source": "Hacker News",
-      "score": 894,
-      "comments": 451
-    },
-    {
-      "id": "hn:49290166",
-      "title": "Hello, me. It's been a while",
-      "summary": "",
-      "url": "https://themech.net/2026/08/hello-me-its-been-a-while/",
-      "source": "Hacker News",
-      "score": 281,
-      "comments": 153
-    },
-    {
-      "id": "hn:49286341",
-      "title": "Spaghettifying DRAM",
-      "summary": "",
-      "url": "https://github.com/xoreaxeaxeax/skitter-creek-bath-salts",
-      "source": "Hacker News",
-      "score": 662,
-      "comments": 167
-    },
-    {
-      "id": "hn:49288889",
-      "title": "Mistral OCR 4.1",
-      "summary": "",
-      "url": "https://docs.mistral.ai/models/ocr-4-1",
-      "source": "Hacker News",
-      "score": 381,
-      "comments": 153
-    },
-    {
-      "id": "lob:62kxco",
-      "title": "python's pre-declared constants are kinda weird",
-      "summary": "",
-      "url": "https://sebsite.pw/w/20260801-pythonconstants.html",
-      "source": "Lobste.rs",
-      "score": 97,
-      "comments": 15,
-      "tags": [
-        "python"
-      ]
-    },
-    {
-      "id": "hn:49293324",
-      "title": "Bluesky Protocol Services",
-      "summary": "",
-      "url": "https://atproto.com/blog/introducing-bluesky-protocol-services",
-      "source": "Hacker News",
-      "score": 182,
-      "comments": 47
-    },
-    {
-      "id": "lob:tssf5y",
-      "title": "I want extern \"fil-c\"",
-      "summary": "",
-      "url": "https://domenkozar.com/2026/08/13/i-want-extern-fil-c/",
-      "source": "Lobste.rs",
-      "score": 62,
-      "comments": 31,
-      "tags": [
-        "c",
-        "rust"
-      ]
-    },
-    {
-      "id": "lob:xk3ley",
-      "title": "AI is removing the middle class of software engineering",
-      "summary": "",
-      "url": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html",
-      "source": "Lobste.rs",
-      "score": 38,
-      "comments": 11,
-      "tags": [
-        "practices",
-        "vibecoding"
-      ]
+      "comments": 116
     },
     {
       "id": "lob:dnlhah",
@@ -152,35 +87,64 @@
       "summary": "",
       "url": "https://www.simplermachines.com/lets-not-call-it-tech-debt-its-just-mess/",
       "source": "Lobste.rs",
-      "score": 36,
-      "comments": 12,
+      "score": 53,
+      "comments": 20,
       "tags": [
         "practices"
       ]
     },
     {
-      "id": "hn:49296627",
-      "title": "DeepSeek peak/off-peak pricing update",
+      "id": "hn:49299746",
+      "title": "Introducing Toast 1",
       "summary": "",
-      "url": "https://api-docs.deepseek.com/news/news260813/",
+      "url": "https://www.mixedbread.com/blog/toast-1",
       "source": "Hacker News",
-      "score": 95,
-      "comments": 44
+      "score": 175,
+      "comments": 58
     },
     {
-      "id": "arxiv:2608.13522v1",
-      "title": "Vero: Can AI Agents Build Formally Verified Software Repositories?",
-      "summary": "AI agents are increasingly used for programming, but do not provide any guarantee on the correctness of generated code. Verified code generation, in which an agent produces both an implementation and a machine-checked proof of its specification, offers a stronger path toward trustworthy AI-generated",
-      "url": "https://arxiv.org/abs/2608.13522v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.LO",
-        "cs.PL",
-        "cs.SE"
-      ],
-      "arxiv_id": "2608.13522v1"
+      "id": "lob:tssf5y",
+      "title": "I want extern \"fil-c\"",
+      "summary": "",
+      "url": "https://domenkozar.com/2026/08/13/i-want-extern-fil-c/",
+      "source": "Lobste.rs",
+      "score": 76,
+      "comments": 41,
+      "tags": [
+        "c",
+        "rust"
+      ]
+    },
+    {
+      "id": "lob:lf4syc",
+      "title": "SlopScan: Displays a \"slop score\" when viewing public git repositories",
+      "summary": "<p>Uses <a href=\"https://slopscan.ava.pet\" rel=\"ugc\">https://slopscan.ava.pet</a> internally (previously discussed at: <a href=\"https://lobste.rs/s/7s8fwa/repo_slopscore_detecting_ai_llm\" rel=\"ugc\">https://lobste.rs/s/7s8fwa/repo_slopscore_detecting_ai_llm</a>)</p>\n",
+      "url": "https://addons.mozilla.org/en-US/firefox/addon/slopscan/",
+      "source": "Lobste.rs",
+      "score": 19,
+      "comments": 15,
+      "tags": [
+        "browsers",
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "hn:49305492",
+      "title": "RISC-V: They should have known better",
+      "summary": "",
+      "url": "https://dmitry.gr/?r=06.%20Thoughts&proj=12.%20RV",
+      "source": "Hacker News",
+      "score": 113,
+      "comments": 67
+    },
+    {
+      "id": "hn:49300568",
+      "title": "AI by Hand",
+      "summary": "",
+      "url": "https://www.byhand.ai/",
+      "source": "Hacker News",
+      "score": 200,
+      "comments": 16
     },
     {
       "id": "rss:0331835ebb",
@@ -191,42 +155,17 @@
       "score": 0
     },
     {
-      "id": "lob:xi7txx",
-      "title": "OxiSH: SSH server written in Rust",
-      "summary": "",
-      "url": "https://github.com/djc/oxish",
+      "id": "lob:n3pkuh",
+      "title": "What are you doing this weekend?",
+      "summary": "<p>Feel free to tell what you plan on doing this weekend and even ask for help or feedback.</p>\n<p>Please keep in mind it’s more than OK to do nothing at all too!</p>\n",
+      "url": "https://lobste.rs/s/n3pkuh/what_are_you_doing_this_weekend",
       "source": "Lobste.rs",
-      "score": 27,
-      "comments": 2,
+      "score": 16,
+      "comments": 35,
       "tags": [
-        "rust"
+        "ask",
+        "programming"
       ]
-    },
-    {
-      "id": "arxiv:2608.13560v1",
-      "title": "AutoDesign: Meta-Harness Optimization for Long-Horizon Agentic Design",
-      "summary": "Transforming multimodal sources into condensed and structured media outputs can be fundamentally conceptualized as a long-horizon agentic process centered on a model-harness system. While an ideal harness system should align with human design priors and accumulate reusable experience through empiric",
-      "url": "https://arxiv.org/abs/2608.13560v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_id": "2608.13560v1"
-    },
-    {
-      "id": "arxiv:2608.13545v1",
-      "title": "LittleLearner: Language Models Under Pedagogically Controlled Knowledge Exposure",
-      "summary": "Modern language models are trained on heterogeneous web-scale text corpora. Consequently, studying knowledge and skill acquisition is difficult, as prior exposure to related content is hard to characterize. To address this challenge, we introduce LITTLECURRICULUM, a curated 88B-token pretraining cor",
-      "url": "https://arxiv.org/abs/2608.13545v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2608.13545v1"
     },
     {
       "id": "rss:ac664dbffd",
@@ -235,6 +174,59 @@
       "url": "https://thehackernews.com/2026/08/shieldbreak-zero-day-poc-claims.html",
       "source": "Tech RSS",
       "score": 0
+    },
+    {
+      "id": "rss:4cb7814aa5",
+      "title": "Cisco ASA and FTD Flaw Exploited in the Wild Can Trigger Remote DoS",
+      "summary": "Cisco has warned that a new vulnerability impacting Secure Firewall Adaptive Security Appliance (ASA) Software and Secure Firewall Threat Defense (FTD) Software has been exploited in the wild.\n\nThe high-severity flaw, tracked as CVE-2026-20349 (CVSS score: 8.6), is a case of insufficient error check",
+      "url": "https://thehackernews.com/2026/08/cisco-asa-and-ftd-flaw-exploited-in.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:05070cd56f",
+      "title": "Microsoft Patches 398 Flaws Including a Windows Driver Zero-Day Under Active Attack",
+      "summary": "Microsoft released its monthly security updates on Tuesday, and one of the flaws it closed is already being used in attacks.\n\nThe bug sits in a core Windows kernel driver that handles network socket operations. An attacker with code already running on a machine can use it to escalate to SYSTEM. That",
+      "url": "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "lob:avjfxw",
+      "title": "Curl Performance",
+      "summary": "",
+      "url": "https://daniel.haxx.se/blog/2026/08/14/curl-performance-2/",
+      "source": "Lobste.rs",
+      "score": 34,
+      "comments": 6,
+      "tags": [
+        "performance"
+      ]
+    },
+    {
+      "id": "lob:aqmagt",
+      "title": "The Art of CHIP-8",
+      "summary": "",
+      "url": "https://beyondloom.com/blog/artofchip8.html",
+      "source": "Lobste.rs",
+      "score": 30,
+      "comments": 8,
+      "tags": [
+        "retrocomputing"
+      ]
+    },
+    {
+      "id": "lob:2dsufc",
+      "title": "Comments in the code vs PR description",
+      "summary": "",
+      "url": "https://devblogs.microsoft.com/oldnewthing/20260812-00/?p=112607",
+      "source": "Lobste.rs",
+      "score": 13,
+      "comments": 20,
+      "tags": [
+        "practices",
+        "vcs"
+      ]
     }
   ],
   "ai_curated": true
