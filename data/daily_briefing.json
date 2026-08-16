@@ -1,112 +1,106 @@
 {
-  "date": "2026-08-15",
-  "update_time": "2026-08-15 12:40:13",
+  "date": "2026-08-16",
+  "update_time": "2026-08-16 01:38:05",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-15\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Qwen 3.8 27B 开源发布 (来源: Hacker News)\n- **核心干货**：阿里开源了 Qwen 3.8 系列旗舰模型 27B 的 FP8 量化版本。这不仅是参数规模的提升，更关键的是在 MoE 架构下用 FP8 精度实现了接近原版 BF16 的性能，这意味着更低显存占用和推理成本，让小团队也能在消费级硬件上跑起一线大模型。\n- **毒舌/硬核点评**：开源社区的\"价格屠夫\"又出手了。闭源大模型们，你们的护城河是越来越窄，还是准备改行卖铲子？\n- **🔗 传送门**：[点击直达 HuggingFace 模型页](https://huggingface.co/Qwen/Qwen3.8-27B-FP8)\n\n---\n\n### 2. 📌 Firefox 成主流浏览器中唯一支持 uBlock Origin 的\"独苗\" (来源: Hacker News)\n- **核心干货**：随着 Chrome 全面转向 Manifest V3 并逐步禁用 uBlock Origin，Firefox 成为主流浏览器中唯一还能完整支持该广告拦截扩展的阵地。对于把\"清净上网\"当刚需的用户来说，这可能是压倒性的迁移理由。\n- **毒舌/硬核点评**：Chrome 这波操作，不是技术演进，是给广告商递刀。感谢 Firefox 还在守门，不然我们真要活在\"广告就是内容\"的赛博朋克里了。\n- **🔗 传送门**：[点击直达原文](https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html)\n\n---\n\n### 3. 📌 Vero: AI Agent 构建形式化验证软件仓库的探索 (来源: ArXiv)\n- **核心干货**：这篇论文提出 Vero，一个能让 AI 在生成代码的同时，附带机器可验证的正确性证明的框架。它试图解决大模型写代码\"看着像能跑，一跑就崩\"的信任危机，为 AI 生成的代码提供数学级别的\"质量保险\"。\n- **毒舌/硬核点评**：这要是真成了，程序员的\"代码能跑就行\"哲学将遭到降维打击。以后 AI 写代码不只是\"能用\"，还得\"能证明\"——这到底是福音还是新一轮内卷？\n- **🔗 传送门**：[点击直达论文摘要](https://arxiv.org/abs/2608.13522v1)\n\n---\n\n### 🗣️ 今日硬核金句\n\"别光顾着让 AI 写代码，先让它学会给自己写的代码上保险——不然你离 '屎山代码' 的尽头，就差一个 '它能编译' 的错觉。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-16\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Auto-research with Codex：AI 帮你把内核提速 232 倍 (来源: Hacker News)\n- **核心干货**：一位开发者利用 Codex 进行自动化研究，成功将 Linux 内核中的某个关键路径性能提升了 232 倍。这不是简单的调参，而是让 AI 自主分析瓶颈、生成优化方案并验证结果，展示了\"AI 驱动的研发\"从概念走向生产力的实际案例。\n- **毒舌/硬核点评**：232 倍？我怀疑 Codex 是不是把代码删到只剩 `return 0` 了。不过说真的，当 AI 开始自己读内核源码找优化点时，那些只会写 CRUD 的\"工程师\"真该看看窗外了。\n- **🔗 传送门**：[点击直达原链接](https://sankalp.bearblog.dev/autoresearch/)\n\n---\n\n### 2. 📌 Lazarus 再用 Windows 零日漏洞：这次专打国防与航天 (来源: Tech RSS)\n- **核心干货**：朝鲜 Lazarus 组织利用微软刚修复的一个 Windows 零日漏洞（CVE-2026-xxxxx），成功获取 SYSTEM 权限并部署新型后门，目标直指法国、德国、巴西和印度的国防与航空航天企业。攻击链完整、隐蔽性极强，典型的 APT 级操作。\n- **毒舌/硬核点评**：Lazarus 的字典里大概没有\"休息\"两个字。微软这边补丁刚出，那边漏洞已经被打成筛子——这速度，比某些公司的 DevOps 发布流程还快。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html)\n\n---\n\n### 3. 📌 AI 的\"工作记忆\"远超人类大脑，但数学家暂时还安全 (来源: Hacker News)\n- **核心干货**：文章指出 AI 系统拥有比人脑大得多的上下文窗口（工作记忆），这让它在处理复杂、多步骤推理时具备天然优势。但作者也冷静分析：AI 目前在数学发现和深层抽象思维上仍无法超越顶尖数学家，更像是\"超级计算器\"而非\"超级大脑\"。\n- **毒舌/硬核点评**：AI 现在就像个记忆力超群但缺乏灵感的学霸——你让它背下整个图书馆没问题，但要它写出《论语》，怕是把硬盘烧了也难。数学家们，你们的饭碗暂时还是铁的。\n- **🔗 传送门**：[点击直达原链接](https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians)\n\n---\n\n### 🗣️ 今日顶男金句\n\"别担心 AI 会取代你，先担心那些会用 AI 的同行——他们已经在 232 倍速的路上了。\"",
   "briefing_items": [
     {
-      "title": "Qwen 3.8 27B 开源发布",
+      "title": "Auto-research with Codex：AI 帮你把内核提速 232 倍",
       "source": "Hacker News",
-      "summary": "阿里开源了 Qwen 3.8 系列旗舰模型 27B 的 FP8 量化版本。这不仅是参数规模的提升，更关键的是在 MoE 架构下用 FP8 精度实现了接近原版 BF16 的性能，这意味着更低显存占用和推理成本，让小团队也能在消费级硬件上跑起一线大模型。",
-      "commentary": "开源社区的\"价格屠夫\"又出手了。闭源大模型们，你们的护城河是越来越窄，还是准备改行卖铲子？",
-      "url": ""
+      "summary": "一位开发者利用 Codex 进行自动化研究，成功将 Linux 内核中的某个关键路径性能提升了 232 倍。这不是简单的调参，而是让 AI 自主分析瓶颈、生成优化方案并验证结果，展示了\"AI 驱动的研发\"从概念走向生产力的实际案例。",
+      "commentary": "232 倍？我怀疑 Codex 是不是把代码删到只剩 `return 0` 了。不过说真的，当 AI 开始自己读内核源码找优化点时，那些只会写 CRUD 的\"工程师\"真该看看窗外了。",
+      "url": "https://sankalp.bearblog.dev/autoresearch/"
     },
     {
-      "title": "Firefox 成主流浏览器中唯一支持 uBlock Origin 的\"独苗\"",
-      "source": "Hacker News",
-      "summary": "随着 Chrome 全面转向 Manifest V3 并逐步禁用 uBlock Origin，Firefox 成为主流浏览器中唯一还能完整支持该广告拦截扩展的阵地。对于把\"清净上网\"当刚需的用户来说，这可能是压倒性的迁移理由。",
-      "commentary": "Chrome 这波操作，不是技术演进，是给广告商递刀。感谢 Firefox 还在守门，不然我们真要活在\"广告就是内容\"的赛博朋克里了。",
-      "url": ""
+      "title": "Lazarus 再用 Windows 零日漏洞：这次专打国防与航天",
+      "source": "Tech RSS",
+      "summary": "朝鲜 Lazarus 组织利用微软刚修复的一个 Windows 零日漏洞（CVE-2026-xxxxx），成功获取 SYSTEM 权限并部署新型后门，目标直指法国、德国、巴西和印度的国防与航空航天企业。攻击链完整、隐蔽性极强，典型的 APT 级操作。",
+      "commentary": "Lazarus 的字典里大概没有\"休息\"两个字。微软这边补丁刚出，那边漏洞已经被打成筛子——这速度，比某些公司的 DevOps 发布流程还快。",
+      "url": "https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html"
     },
     {
-      "title": "Vero: AI Agent 构建形式化验证软件仓库的探索",
-      "source": "ArXiv",
-      "summary": "这篇论文提出 Vero，一个能让 AI 在生成代码的同时，附带机器可验证的正确性证明的框架。它试图解决大模型写代码\"看着像能跑，一跑就崩\"的信任危机，为 AI 生成的代码提供数学级别的\"质量保险\"。",
-      "commentary": "这要是真成了，程序员的\"代码能跑就行\"哲学将遭到降维打击。以后 AI 写代码不只是\"能用\"，还得\"能证明\"——这到底是福音还是新一轮内卷？",
-      "url": ""
+      "title": "AI 的\"工作记忆\"远超人类大脑，但数学家暂时还安全",
+      "source": "Hacker News",
+      "summary": "文章指出 AI 系统拥有比人脑大得多的上下文窗口（工作记忆），这让它在处理复杂、多步骤推理时具备天然优势。但作者也冷静分析：AI 目前在数学发现和深层抽象思维上仍无法超越顶尖数学家，更像是\"超级计算器\"而非\"超级大脑\"。",
+      "commentary": "AI 现在就像个记忆力超群但缺乏灵感的学霸——你让它背下整个图书馆没问题，但要它写出《论语》，怕是把硬盘烧了也难。数学家们，你们的饭碗暂时还是铁的。",
+      "url": "https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49303202",
-      "title": "Firefox is now the last major browser that still supports uBlock Origin",
+      "id": "hn:49310682",
+      "title": "At-home test for infected ticks could improve Lyme Disease diagnosis",
       "summary": "",
-      "url": "https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html",
+      "url": "https://www.smithsonianmag.com/innovation/the-first-at-home-test-for-infected-ticks-could-improve-lyme-disease-diagnosis-180989235/",
       "source": "Hacker News",
-      "score": 1218,
-      "comments": 466
+      "score": 211,
+      "comments": 77
     },
     {
-      "id": "hn:49300759",
-      "title": "RustDesk now supports true unattended remote access on Wayland",
+      "id": "hn:49309549",
+      "title": "Auto-research with codex: How I achieved a 232x Faster Kernel",
       "summary": "",
-      "url": "https://rustdesk.com/blog/unattended-remote-access-wayland/",
+      "url": "https://sankalp.bearblog.dev/autoresearch/",
       "source": "Hacker News",
-      "score": 314,
-      "comments": 129
+      "score": 393,
+      "comments": 86
     },
     {
-      "id": "hn:49299605",
-      "title": "Qwen 3.8 27B",
+      "id": "hn:49311651",
+      "title": "Semaglutide linked to lower predicted dementia risk",
       "summary": "",
-      "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8",
+      "url": "https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/dad2.70432",
       "source": "Hacker News",
-      "score": 1202,
-      "comments": 718
+      "score": 346,
+      "comments": 240
     },
     {
-      "id": "hn:49307592",
-      "title": "The other Sean Byrne doesn't exist",
-      "summary": "",
-      "url": "https://conic.al/writing/the-other-sean-byrne-doesnt-exist/",
-      "source": "Hacker News",
-      "score": 241,
-      "comments": 119
-    },
-    {
-      "id": "hn:49304447",
-      "title": "Going Dark, and the era of law enforcement hacking",
-      "summary": "",
-      "url": "https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/",
-      "source": "Hacker News",
-      "score": 369,
-      "comments": 171
-    },
-    {
-      "id": "hn:49300314",
-      "title": "Google is making private AI practical with homomorphic encryption",
-      "summary": "",
-      "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
-      "source": "Hacker News",
-      "score": 424,
-      "comments": 257
-    },
-    {
-      "id": "lob:pu3yzg",
+      "id": "hn:49298035",
       "title": "RISC-V: They Should Have Known Better",
       "summary": "",
       "url": "https://dmitry.gr/?r=06.%20Thoughts&proj=12.%20RV",
+      "source": "Hacker News",
+      "score": 231,
+      "comments": 297
+    },
+    {
+      "id": "hn:49312845",
+      "title": "AI has access to a vastly larger working memory than the human brain",
+      "summary": "",
+      "url": "https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians",
+      "source": "Hacker News",
+      "score": 408,
+      "comments": 367
+    },
+    {
+      "id": "lob:lfmss9",
+      "title": "Firefox is now the last major browser that still supports uBlock Origin",
+      "summary": "",
+      "url": "https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html",
       "source": "Lobste.rs",
-      "score": 67,
-      "comments": 44,
+      "score": 141,
+      "comments": 36,
       "tags": [
-        "assembly",
-        "compilers",
-        "rant"
+        "browsers"
       ]
     },
     {
-      "id": "lob:lf4syc",
-      "title": "SlopScan: Displays a \"slop score\" when viewing public git repositories",
-      "summary": "<p>Uses <a href=\"https://slopscan.ava.pet\" rel=\"ugc\">https://slopscan.ava.pet</a> internally (previously discussed at: <a href=\"https://lobste.rs/s/7s8fwa/repo_slopscore_detecting_ai_llm\" rel=\"ugc\">https://lobste.rs/s/7s8fwa/repo_slopscore_detecting_ai_llm</a>)</p>\n",
-      "url": "https://addons.mozilla.org/en-US/firefox/addon/slopscan/",
-      "source": "Lobste.rs",
-      "score": 21,
-      "comments": 21,
-      "tags": [
-        "browsers",
-        "vibecoding"
-      ]
+      "id": "hn:49310926",
+      "title": "A spectre is haunting Unicode",
+      "summary": "",
+      "url": "https://www.dampfkraft.com/ghost-characters.html",
+      "source": "Hacker News",
+      "score": 166,
+      "comments": 57
+    },
+    {
+      "id": "hn:49314403",
+      "title": "Abdominal fat predicts heart disease risk better than BMI",
+      "summary": "",
+      "url": "https://www.acc.org/about-acc/press-releases/2026/08/11/14/59/abdominal-fat-predicts-heart-disease-risk-better-than-bmi",
+      "source": "Hacker News",
+      "score": 145,
+      "comments": 110
     },
     {
       "id": "lob:ngz2wn",
@@ -114,27 +108,12 @@
       "summary": "",
       "url": "https://o.ee/blog/activitypub-won-by-being-boring/",
       "source": "Lobste.rs",
-      "score": 29,
-      "comments": 18,
+      "score": 35,
+      "comments": 21,
       "tags": [
         "distributed",
         "web"
       ]
-    },
-    {
-      "id": "arxiv:2608.13522v1",
-      "title": "Vero: Can AI Agents Build Formally Verified Software Repositories?",
-      "summary": "AI agents are increasingly used for programming, but do not provide any guarantee on the correctness of generated code. Verified code generation, in which an agent produces both an implementation and a machine-checked proof of its specification, offers a stronger path toward trustworthy AI-generated",
-      "url": "https://arxiv.org/abs/2608.13522v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.LO",
-        "cs.PL",
-        "cs.SE"
-      ],
-      "arxiv_id": "2608.13522v1"
     },
     {
       "id": "rss:0331835ebb",
@@ -145,76 +124,26 @@
       "score": 0
     },
     {
-      "id": "lob:aqmagt",
-      "title": "The Art of CHIP-8",
+      "id": "lob:w5rmwi",
+      "title": "Everything is about to “go dark”",
       "summary": "",
-      "url": "https://beyondloom.com/blog/artofchip8.html",
+      "url": "https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/",
       "source": "Lobste.rs",
-      "score": 37,
-      "comments": 9,
+      "score": 31,
+      "comments": 8,
       "tags": [
-        "retrocomputing"
+        "security",
+        "vibecoding"
       ]
     },
     {
-      "id": "lob:avjfxw",
-      "title": "Curl Performance",
-      "summary": "",
-      "url": "https://daniel.haxx.se/blog/2026/08/14/curl-performance-2/",
-      "source": "Lobste.rs",
-      "score": 39,
-      "comments": 6,
-      "tags": [
-        "performance"
-      ]
-    },
-    {
-      "id": "lob:n3pkuh",
-      "title": "What are you doing this weekend?",
-      "summary": "<p>Feel free to tell what you plan on doing this weekend and even ask for help or feedback.</p>\n<p>Please keep in mind it’s more than OK to do nothing at all too!</p>\n",
-      "url": "https://lobste.rs/s/n3pkuh/what_are_you_doing_this_weekend",
-      "source": "Lobste.rs",
-      "score": 19,
-      "comments": 42,
-      "tags": [
-        "ask",
-        "programming"
-      ]
-    },
-    {
-      "id": "hn:49271382",
-      "title": "In 1962, Egypt's Missile Program Lost Its Key Scientist Without a Trace",
-      "summary": "",
-      "url": "https://www.popularmechanics.com/military/a73358518/nazi-rocket-scientist-disappearance/",
+      "id": "hn:49313367",
+      "title": "AI in drug discovery – what it is, where we stand and the path forward",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.nature.com&#x2F;articles&#x2F;s41573-026-01496-2\" rel=\"nofollow\">https:&#x2F;&#x2F;www.nature.com&#x2F;articles&#x2F;s41573-026-01496-2</a>",
+      "url": "https://www.science.org/content/blog-post/so-how-ai-drug-discovery-doing-really",
       "source": "Hacker News",
-      "score": 62,
-      "comments": 35
-    },
-    {
-      "id": "arxiv:2608.13560v1",
-      "title": "AutoDesign: Meta-Harness Optimization for Long-Horizon Agentic Design",
-      "summary": "Transforming multimodal sources into condensed and structured media outputs can be fundamentally conceptualized as a long-horizon agentic process centered on a model-harness system. While an ideal harness system should align with human design priors and accumulate reusable experience through empiric",
-      "url": "https://arxiv.org/abs/2608.13560v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_id": "2608.13560v1"
-    },
-    {
-      "id": "arxiv:2608.13545v1",
-      "title": "LittleLearner: Language Models Under Pedagogically Controlled Knowledge Exposure",
-      "summary": "Modern language models are trained on heterogeneous web-scale text corpora. Consequently, studying knowledge and skill acquisition is difficult, as prior exposure to related content is hard to characterize. To address this challenge, we introduce LITTLECURRICULUM, a curated 88B-token pretraining cor",
-      "url": "https://arxiv.org/abs/2608.13545v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2608.13545v1"
+      "score": 86,
+      "comments": 43
     },
     {
       "id": "rss:ac664dbffd",
@@ -237,6 +166,47 @@
       "title": "Microsoft Patches 398 Flaws Including a Windows Driver Zero-Day Under Active Attack",
       "summary": "Microsoft released its monthly security updates on Tuesday, and one of the flaws it closed is already being used in attacks.\n\nThe bug sits in a core Windows kernel driver that handles network socket operations. An attacker with code already running on a machine can use it to escalate to SYSTEM. That",
       "url": "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "hn:49313428",
+      "title": "Super El Niño Keeps Growing as New Forecasts Reach Record Territory Ahead Winter",
+      "summary": "",
+      "url": "https://www.severe-weather.eu/long-range-2/super-el-nino-growth-accelerating-to-record-strength-fall-winter-2026-2027-forecast-impact-united-states-canada-europe-fa/",
+      "source": "Hacker News",
+      "score": 69,
+      "comments": 26
+    },
+    {
+      "id": "rss:5fa8f95058",
+      "title": "Lazarus Exploits Windows Zero-Day to Gain SYSTEM Access and Deploy Backdoor",
+      "summary": "The North Korean threat actor known as Lazarus Group has been attributed to the zero-day exploitation of a newly patched security flaw impacting Microsoft Windows to deliver a never-before-seen backdoor targeting defense and aerospace companies across France, Germany, Brazil, and India.\n\nThe activit",
+      "url": "https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:281dcb1f3c",
+      "title": "Adobe Patches Three CVSS 10.0 ColdFusion and Campaign Classic Flaws",
+      "summary": "Adobe has shipped updates to address multiple critical security vulnerabilities impacting ColdFusion, Commerce, and Campaign Classic that, if successfully exploited, could result in arbitrary code execution and privilege escalation.\n\nThe most severe of the flaws are listed below -\n\n\n  CVE-2026-48362",
+      "url": "https://thehackernews.com/2026/08/adobe-patches-three-cvss-100-coldfusion.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:a900a5fc99",
+      "title": "Attackers Exploit VMware vCenter Vulnerability to Gain Persistent Remote Access",
+      "summary": "Threat actors have begun to actively exploit a recently patched critical security flaw in Broadcom VMware vCenter, according to new findings from QUIRSO.\n\nThe vulnerability in question is CVE-2026-59310 (CVSS score: 9.8), a directory-traversal vulnerability in the VMware vCenter server that a malici",
+      "url": "https://thehackernews.com/2026/08/attackers-exploit-vmware-vcenter.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:38cf51dcff",
+      "title": "Malicious LiteLLM Releases Tied to Trivy Hack May Have Exposed 2,100+ Organizations",
+      "summary": "Two malicious LiteLLM releases sat on PyPI for about 40 minutes in March carrying credential-stealing code capable of harvesting cloud keys, SSH keys, Kubernetes tokens, database passwords, and other secrets from systems that installed them.\n\nThreat intelligence firm CloudSEK now says a dataset it o",
+      "url": "https://thehackernews.com/2026/08/malicious-litellm-releases-tied-to.html",
       "source": "Tech RSS",
       "score": 0
     }
