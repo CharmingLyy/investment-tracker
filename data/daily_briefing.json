@@ -1,29 +1,29 @@
 {
   "date": "2026-08-16",
-  "update_time": "2026-08-16 01:38:05",
+  "update_time": "2026-08-16 12:41:44",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-16\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Auto-research with Codex：AI 帮你把内核提速 232 倍 (来源: Hacker News)\n- **核心干货**：一位开发者利用 Codex 进行自动化研究，成功将 Linux 内核中的某个关键路径性能提升了 232 倍。这不是简单的调参，而是让 AI 自主分析瓶颈、生成优化方案并验证结果，展示了\"AI 驱动的研发\"从概念走向生产力的实际案例。\n- **毒舌/硬核点评**：232 倍？我怀疑 Codex 是不是把代码删到只剩 `return 0` 了。不过说真的，当 AI 开始自己读内核源码找优化点时，那些只会写 CRUD 的\"工程师\"真该看看窗外了。\n- **🔗 传送门**：[点击直达原链接](https://sankalp.bearblog.dev/autoresearch/)\n\n---\n\n### 2. 📌 Lazarus 再用 Windows 零日漏洞：这次专打国防与航天 (来源: Tech RSS)\n- **核心干货**：朝鲜 Lazarus 组织利用微软刚修复的一个 Windows 零日漏洞（CVE-2026-xxxxx），成功获取 SYSTEM 权限并部署新型后门，目标直指法国、德国、巴西和印度的国防与航空航天企业。攻击链完整、隐蔽性极强，典型的 APT 级操作。\n- **毒舌/硬核点评**：Lazarus 的字典里大概没有\"休息\"两个字。微软这边补丁刚出，那边漏洞已经被打成筛子——这速度，比某些公司的 DevOps 发布流程还快。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html)\n\n---\n\n### 3. 📌 AI 的\"工作记忆\"远超人类大脑，但数学家暂时还安全 (来源: Hacker News)\n- **核心干货**：文章指出 AI 系统拥有比人脑大得多的上下文窗口（工作记忆），这让它在处理复杂、多步骤推理时具备天然优势。但作者也冷静分析：AI 目前在数学发现和深层抽象思维上仍无法超越顶尖数学家，更像是\"超级计算器\"而非\"超级大脑\"。\n- **毒舌/硬核点评**：AI 现在就像个记忆力超群但缺乏灵感的学霸——你让它背下整个图书馆没问题，但要它写出《论语》，怕是把硬盘烧了也难。数学家们，你们的饭碗暂时还是铁的。\n- **🔗 传送门**：[点击直达原链接](https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians)\n\n---\n\n### 🗣️ 今日顶男金句\n\"别担心 AI 会取代你，先担心那些会用 AI 的同行——他们已经在 232 倍速的路上了。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-16\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 RISC-V：早知今日，何必当初 (来源: Hacker News)\n- **核心干货**：一篇深度技术长文，系统性地拆解了 RISC-V 指令集架构在设计与实现层面的历史遗留问题与结构性缺陷。作者指出，RISC-V 为了追求极简主义，在向量扩展、原子操作和内存模型等关键设计上存在过度简化导致的性能与安全陷阱，对当前高调宣称\"全面替代 ARM/x86\"的厂商泼了一盆冷水。\n- **毒舌/硬核点评**：RISC-V 的开源精神值得点赞，但精神不能当饭吃。这篇文章是给所有\"PPT 造芯\"的厂商一记响亮的耳光：指令集只是起点，设计哲学才是深坑。\n- **🔗 传送门**：[点击直达原链接](https://dmitry.gr/?r=06.%20Thoughts&proj=12.%20RV)\n\n---\n\n### 2. 📌 Vero：AI 编程的\"验尸报告\" (来源: ArXiv)\n- **核心干货**：这篇论文提出了一个极具前瞻性的问题：AI 生成的代码怎么证明是对的？作者推出了 **Vero**，一个能让 AI Agent 在生成代码的同时，产出机器可验证的形式化证明的框架。这相当于给 AI 程序员配了个\"数学系毕业的质检员\"，从源头杜绝\"看起来能跑，一跑就炸\"的悲剧。\n- **毒舌/硬核点评**：当全世界的码农都在用 AI 疯狂堆屎山时，Vero 试图给这堆屎山装个承重检测仪。理想很丰满，但现实是，让 AI 写证明可能比让 AI 写代码难十倍——毕竟，人类自己写证明的水平也就那样。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2608.13522v1)\n\n---\n\n### 3. 📌 微软月度补丁：398 个洞，一次补个够 (来源: Tech News)\n- **核心干货**：微软 8 月补丁日一口气修复了 398 个安全漏洞，其中包括一个已被在野利用的 Windows 内核驱动零日漏洞（可被用于权限提升至 SYSTEM）。此外，SharePoint 和 Defender 也相继被曝出高危绕过漏洞，攻击者已开始利用公开 PoC 进行攻击。\n- **毒舌/硬核点评**：398 个漏洞，微软这哪是\"月度更新\"，这是\"月度考古挖掘现场\"。建议把\"Patch Tuesday\"改名叫\"Panic Tuesday\"，毕竟你永远不知道下一个被在野利用的洞，会不会就是你正在用的那个组件。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\"真正的极客精神不是追新，而是能在别人吹牛时，默默指出那套架构的底层 bug——以及，记得及时打补丁。\"",
   "briefing_items": [
     {
-      "title": "Auto-research with Codex：AI 帮你把内核提速 232 倍",
+      "title": "RISC-V：早知今日，何必当初",
       "source": "Hacker News",
-      "summary": "一位开发者利用 Codex 进行自动化研究，成功将 Linux 内核中的某个关键路径性能提升了 232 倍。这不是简单的调参，而是让 AI 自主分析瓶颈、生成优化方案并验证结果，展示了\"AI 驱动的研发\"从概念走向生产力的实际案例。",
-      "commentary": "232 倍？我怀疑 Codex 是不是把代码删到只剩 `return 0` 了。不过说真的，当 AI 开始自己读内核源码找优化点时，那些只会写 CRUD 的\"工程师\"真该看看窗外了。",
-      "url": "https://sankalp.bearblog.dev/autoresearch/"
+      "summary": "一篇深度技术长文，系统性地拆解了 RISC-V 指令集架构在设计与实现层面的历史遗留问题与结构性缺陷。作者指出，RISC-V 为了追求极简主义，在向量扩展、原子操作和内存模型等关键设计上存在过度简化导致的性能与安全陷阱，对当前高调宣称\"全面替代 ARM/x86\"的厂商泼了一盆冷水。",
+      "commentary": "RISC-V 的开源精神值得点赞，但精神不能当饭吃。这篇文章是给所有\"PPT 造芯\"的厂商一记响亮的耳光：指令集只是起点，设计哲学才是深坑。",
+      "url": "https://dmitry.gr/?r=06.%20Thoughts&proj=12.%20RV"
     },
     {
-      "title": "Lazarus 再用 Windows 零日漏洞：这次专打国防与航天",
-      "source": "Tech RSS",
-      "summary": "朝鲜 Lazarus 组织利用微软刚修复的一个 Windows 零日漏洞（CVE-2026-xxxxx），成功获取 SYSTEM 权限并部署新型后门，目标直指法国、德国、巴西和印度的国防与航空航天企业。攻击链完整、隐蔽性极强，典型的 APT 级操作。",
-      "commentary": "Lazarus 的字典里大概没有\"休息\"两个字。微软这边补丁刚出，那边漏洞已经被打成筛子——这速度，比某些公司的 DevOps 发布流程还快。",
-      "url": "https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html"
+      "title": "Vero：AI 编程的\"验尸报告\"",
+      "source": "ArXiv",
+      "summary": "这篇论文提出了一个极具前瞻性的问题：AI 生成的代码怎么证明是对的？作者推出了 **Vero**，一个能让 AI Agent 在生成代码的同时，产出机器可验证的形式化证明的框架。这相当于给 AI 程序员配了个\"数学系毕业的质检员\"，从源头杜绝\"看起来能跑，一跑就炸\"的悲剧。",
+      "commentary": "当全世界的码农都在用 AI 疯狂堆屎山时，Vero 试图给这堆屎山装个承重检测仪。理想很丰满，但现实是，让 AI 写证明可能比让 AI 写代码难十倍——毕竟，人类自己写证明的水平也就那样。",
+      "url": "https://arxiv.org/abs/2608.13522v1"
     },
     {
-      "title": "AI 的\"工作记忆\"远超人类大脑，但数学家暂时还安全",
-      "source": "Hacker News",
-      "summary": "文章指出 AI 系统拥有比人脑大得多的上下文窗口（工作记忆），这让它在处理复杂、多步骤推理时具备天然优势。但作者也冷静分析：AI 目前在数学发现和深层抽象思维上仍无法超越顶尖数学家，更像是\"超级计算器\"而非\"超级大脑\"。",
-      "commentary": "AI 现在就像个记忆力超群但缺乏灵感的学霸——你让它背下整个图书馆没问题，但要它写出《论语》，怕是把硬盘烧了也难。数学家们，你们的饭碗暂时还是铁的。",
-      "url": "https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians"
+      "title": "微软月度补丁：398 个洞，一次补个够",
+      "source": "Tech News",
+      "summary": "微软 8 月补丁日一口气修复了 398 个安全漏洞，其中包括一个已被在野利用的 Windows 内核驱动零日漏洞（可被用于权限提升至 SYSTEM）。此外，SharePoint 和 Defender 也相继被曝出高危绕过漏洞，攻击者已开始利用公开 PoC 进行攻击。",
+      "commentary": "398 个漏洞，微软这哪是\"月度更新\"，这是\"月度考古挖掘现场\"。建议把\"Patch Tuesday\"改名叫\"Panic Tuesday\"，毕竟你永远不知道下一个被在野利用的洞，会不会就是你正在用的那个组件。",
+      "url": "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html"
     }
   ],
   "candidates": [
@@ -33,17 +33,26 @@
       "summary": "",
       "url": "https://www.smithsonianmag.com/innovation/the-first-at-home-test-for-infected-ticks-could-improve-lyme-disease-diagnosis-180989235/",
       "source": "Hacker News",
-      "score": 211,
-      "comments": 77
+      "score": 266,
+      "comments": 102
     },
     {
-      "id": "hn:49309549",
-      "title": "Auto-research with codex: How I achieved a 232x Faster Kernel",
+      "id": "hn:49268580",
+      "title": "Asus Bike Booster",
       "summary": "",
-      "url": "https://sankalp.bearblog.dev/autoresearch/",
+      "url": "https://www.asus.com/accessories/bike-booster/asus-oxiis/oxiis-intelligent-bike-booster/",
       "source": "Hacker News",
-      "score": 393,
-      "comments": 86
+      "score": 476,
+      "comments": 315
+    },
+    {
+      "id": "hn:49313428",
+      "title": "Super El Niño Keeps Growing as New Forecasts Reach Record Territory Ahead Winter",
+      "summary": "",
+      "url": "https://www.severe-weather.eu/long-range-2/super-el-nino-growth-accelerating-to-record-strength-fall-winter-2026-2027-forecast-impact-united-states-canada-europe-fa/",
+      "source": "Hacker News",
+      "score": 290,
+      "comments": 184
     },
     {
       "id": "hn:49311651",
@@ -51,8 +60,8 @@
       "summary": "",
       "url": "https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/dad2.70432",
       "source": "Hacker News",
-      "score": 346,
-      "comments": 240
+      "score": 442,
+      "comments": 321
     },
     {
       "id": "hn:49298035",
@@ -60,17 +69,8 @@
       "summary": "",
       "url": "https://dmitry.gr/?r=06.%20Thoughts&proj=12.%20RV",
       "source": "Hacker News",
-      "score": 231,
-      "comments": 297
-    },
-    {
-      "id": "hn:49312845",
-      "title": "AI has access to a vastly larger working memory than the human brain",
-      "summary": "",
-      "url": "https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians",
-      "source": "Hacker News",
-      "score": 408,
-      "comments": 367
+      "score": 337,
+      "comments": 381
     },
     {
       "id": "lob:lfmss9",
@@ -78,42 +78,96 @@
       "summary": "",
       "url": "https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html",
       "source": "Lobste.rs",
-      "score": 141,
-      "comments": 36,
+      "score": 172,
+      "comments": 47,
       "tags": [
         "browsers"
       ]
     },
     {
-      "id": "hn:49310926",
-      "title": "A spectre is haunting Unicode",
+      "id": "hn:49314902",
+      "title": "Software Engineering fundamentals matter more",
       "summary": "",
-      "url": "https://www.dampfkraft.com/ghost-characters.html",
+      "url": "https://rhonabwy.com/2026/08/15/software-engineering-fundamentals-matter-more-than-ever/",
       "source": "Hacker News",
-      "score": 166,
-      "comments": 57
+      "score": 192,
+      "comments": 129
     },
     {
-      "id": "hn:49314403",
-      "title": "Abdominal fat predicts heart disease risk better than BMI",
+      "id": "hn:49314235",
+      "title": "Cultivating a state of mind where new ideas are born (2023)",
       "summary": "",
-      "url": "https://www.acc.org/about-acc/press-releases/2026/08/11/14/59/abdominal-fat-predicts-heart-disease-risk-better-than-bmi",
+      "url": "https://www.henrikkarlsson.xyz/p/good-ideas",
       "source": "Hacker News",
-      "score": 145,
-      "comments": 110
+      "score": 194,
+      "comments": 48
     },
     {
-      "id": "lob:ngz2wn",
-      "title": "ActivityPub Won by Being Boring",
+      "id": "hn:49316271",
+      "title": "Patterns and problems in emerging multi-agent systems",
       "summary": "",
-      "url": "https://o.ee/blog/activitypub-won-by-being-boring/",
+      "url": "https://www.anthropic.com/research/multiagent-systems",
+      "source": "Hacker News",
+      "score": 127,
+      "comments": 80
+    },
+    {
+      "id": "hn:49317760",
+      "title": "What happens when an LLM never sees material beyond fifth grade?",
+      "summary": "",
+      "url": "https://littlelearner-ll.github.io/",
+      "source": "Hacker News",
+      "score": 161,
+      "comments": 125
+    },
+    {
+      "id": "lob:w5rmwi",
+      "title": "Everything is about to “go dark”",
+      "summary": "",
+      "url": "https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/",
       "source": "Lobste.rs",
-      "score": 35,
-      "comments": 21,
+      "score": 41,
+      "comments": 13,
       "tags": [
-        "distributed",
-        "web"
+        "security",
+        "vibecoding"
       ]
+    },
+    {
+      "id": "lob:fooyux",
+      "title": "Why I remain a skeptic",
+      "summary": "",
+      "url": "https://blog.jsbarretto.com/post/i-remain-a-skeptic",
+      "source": "Lobste.rs",
+      "score": 59,
+      "comments": 52,
+      "tags": [
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "hn:49243061",
+      "title": "Asynchronous I/O in DuckDB: Work, Thread, Work",
+      "summary": "",
+      "url": "https://duckdb.org/2026/07/31/asynchronous-io",
+      "source": "Hacker News",
+      "score": 191,
+      "comments": 21
+    },
+    {
+      "id": "arxiv:2608.13522v1",
+      "title": "Vero: Can AI Agents Build Formally Verified Software Repositories?",
+      "summary": "AI agents are increasingly used for programming, but do not provide any guarantee on the correctness of generated code. Verified code generation, in which an agent produces both an implementation and a machine-checked proof of its specification, offers a stronger path toward trustworthy AI-generated",
+      "url": "https://arxiv.org/abs/2608.13522v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.LO",
+        "cs.PL",
+        "cs.SE"
+      ],
+      "arxiv_id": "2608.13522v1"
     },
     {
       "id": "rss:0331835ebb",
@@ -124,26 +178,30 @@
       "score": 0
     },
     {
-      "id": "lob:w5rmwi",
-      "title": "Everything is about to “go dark”",
-      "summary": "",
-      "url": "https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/",
-      "source": "Lobste.rs",
-      "score": 31,
-      "comments": 8,
-      "tags": [
-        "security",
-        "vibecoding"
-      ]
+      "id": "arxiv:2608.13560v1",
+      "title": "AutoDesign: Meta-Harness Optimization for Long-Horizon Agentic Design",
+      "summary": "Transforming multimodal sources into condensed and structured media outputs can be fundamentally conceptualized as a long-horizon agentic process centered on a model-harness system. While an ideal harness system should align with human design priors and accumulate reusable experience through empiric",
+      "url": "https://arxiv.org/abs/2608.13560v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_id": "2608.13560v1"
     },
     {
-      "id": "hn:49313367",
-      "title": "AI in drug discovery – what it is, where we stand and the path forward",
-      "summary": "<a href=\"https:&#x2F;&#x2F;www.nature.com&#x2F;articles&#x2F;s41573-026-01496-2\" rel=\"nofollow\">https:&#x2F;&#x2F;www.nature.com&#x2F;articles&#x2F;s41573-026-01496-2</a>",
-      "url": "https://www.science.org/content/blog-post/so-how-ai-drug-discovery-doing-really",
-      "source": "Hacker News",
-      "score": 86,
-      "comments": 43
+      "id": "arxiv:2608.13545v1",
+      "title": "LittleLearner: Language Models Under Pedagogically Controlled Knowledge Exposure",
+      "summary": "Modern language models are trained on heterogeneous web-scale text corpora. Consequently, studying knowledge and skill acquisition is difficult, as prior exposure to related content is hard to characterize. To address this challenge, we introduce LITTLECURRICULUM, a curated 88B-token pretraining cor",
+      "url": "https://arxiv.org/abs/2608.13545v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_id": "2608.13545v1"
     },
     {
       "id": "rss:ac664dbffd",
@@ -166,47 +224,6 @@
       "title": "Microsoft Patches 398 Flaws Including a Windows Driver Zero-Day Under Active Attack",
       "summary": "Microsoft released its monthly security updates on Tuesday, and one of the flaws it closed is already being used in attacks.\n\nThe bug sits in a core Windows kernel driver that handles network socket operations. An attacker with code already running on a machine can use it to escalate to SYSTEM. That",
       "url": "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "hn:49313428",
-      "title": "Super El Niño Keeps Growing as New Forecasts Reach Record Territory Ahead Winter",
-      "summary": "",
-      "url": "https://www.severe-weather.eu/long-range-2/super-el-nino-growth-accelerating-to-record-strength-fall-winter-2026-2027-forecast-impact-united-states-canada-europe-fa/",
-      "source": "Hacker News",
-      "score": 69,
-      "comments": 26
-    },
-    {
-      "id": "rss:5fa8f95058",
-      "title": "Lazarus Exploits Windows Zero-Day to Gain SYSTEM Access and Deploy Backdoor",
-      "summary": "The North Korean threat actor known as Lazarus Group has been attributed to the zero-day exploitation of a newly patched security flaw impacting Microsoft Windows to deliver a never-before-seen backdoor targeting defense and aerospace companies across France, Germany, Brazil, and India.\n\nThe activit",
-      "url": "https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:281dcb1f3c",
-      "title": "Adobe Patches Three CVSS 10.0 ColdFusion and Campaign Classic Flaws",
-      "summary": "Adobe has shipped updates to address multiple critical security vulnerabilities impacting ColdFusion, Commerce, and Campaign Classic that, if successfully exploited, could result in arbitrary code execution and privilege escalation.\n\nThe most severe of the flaws are listed below -\n\n\n  CVE-2026-48362",
-      "url": "https://thehackernews.com/2026/08/adobe-patches-three-cvss-100-coldfusion.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:a900a5fc99",
-      "title": "Attackers Exploit VMware vCenter Vulnerability to Gain Persistent Remote Access",
-      "summary": "Threat actors have begun to actively exploit a recently patched critical security flaw in Broadcom VMware vCenter, according to new findings from QUIRSO.\n\nThe vulnerability in question is CVE-2026-59310 (CVSS score: 9.8), a directory-traversal vulnerability in the VMware vCenter server that a malici",
-      "url": "https://thehackernews.com/2026/08/attackers-exploit-vmware-vcenter.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:38cf51dcff",
-      "title": "Malicious LiteLLM Releases Tied to Trivy Hack May Have Exposed 2,100+ Organizations",
-      "summary": "Two malicious LiteLLM releases sat on PyPI for about 40 minutes in March carrying credential-stealing code capable of harvesting cloud keys, SSH keys, Kubernetes tokens, database passwords, and other secrets from systems that installed them.\n\nThreat intelligence firm CloudSEK now says a dataset it o",
-      "url": "https://thehackernews.com/2026/08/malicious-litellm-releases-tied-to.html",
       "source": "Tech RSS",
       "score": 0
     }
