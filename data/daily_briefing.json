@@ -1,61 +1,58 @@
 {
   "date": "2026-08-17",
-  "update_time": "2026-08-17 01:36:09",
+  "update_time": "2026-08-17 12:46:57",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-17\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Lazarus 集团借 Windows 零日漏洞直取 SYSTEM，全球国防航天企业遭殃 (来源: 新闻)\n- **核心干货**：朝鲜 Lazarus 组织在微软刚修补完漏洞的窗口期，立刻利用该 Windows 零日漏洞提权至 SYSTEM，并部署了一款此前从未见过的后门程序。攻击目标直指法国、德国、巴西和印度的国防与航空航天公司，战术意图极其明确。\n- **毒舌/硬核点评**：微软的补丁日就是 Lazarus 的进货日。这不仅是漏洞战，更是情报战——人家的攻击链比你修 Bug 的速度还快，建议各位安全团队把\"补丁管理\"上升到\"军备竞赛\"的高度。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html)\n\n---\n\n### 2. 📌 微软 8 月更新一口气补 398 个漏洞，含正被攻击的内核驱动零日 (来源: 新闻)\n- **核心干货**：微软月度安全更新修复了 398 个漏洞，其中包含一个处于活跃攻击中的 Windows 内核驱动零日漏洞。该漏洞位于处理网络套接字操作的核心驱动中，攻击者只需在机器上已有代码执行权限，即可借其将权限提升至 SYSTEM。\n- **毒舌/硬核点评**：398 个漏洞，这数字看着不像软件更新，像软件考古。核心驱动 + 活跃利用 + 提权到 SYSTEM，这套组合拳打下来，建议各位 Windows 管理员今天别摸鱼了，赶紧去补丁库报到。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html)\n\n---\n\n### 3. 📌 Firefox 成为唯一仍支持 uBlock Origin 的主流浏览器 (来源: Lobste.rs)\n- **核心干货**：随着 Chrome 等浏览器全面转向 Manifest V3 扩展规范，对网络请求拦截能力进行严格限制，uBlock Origin 这类强力广告拦截器在这些浏览器上已形同虚设。Firefox 如今成为主流浏览器中唯一还能让用户真正掌控自己浏览体验的独苗。\n- **毒舌/硬核点评**：当所有浏览器都开始\"为你好\"地帮你决定什么能看、什么不能看时，Firefox 还在坚持让你自己说了算。这年头，连广告拦截都成了少数派的倔强。建议 Mozilla 把 uBlock Origin 写进招聘广告里——\"这里还能拦广告，来吗？\"\n- **🔗 传送门**：[点击直达原链接](https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html)\n\n---\n\n### 🗣️ 今日顶男金句\n*\"安全圈的真谛：不是看谁修得快，而是看谁活得久。建议把'补丁管理'写进简历，当成终身学习的一部分——毕竟，漏洞是补不完的，但你的薪资是可以涨上去的。\"*",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-17\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Qwen 3.8 27B：能力很强，但患上了\"过度思考症\" (来源: Hacker News)\n- **核心干货**：Qwen 3.8 27B 模型性能出色，但存在一个显著问题——默认情况下会\"过度思考\"，在简单问题上消耗过多推理 token，导致响应变慢、成本增加。开发者 Simon Willison 实测后指出，这可能是模型在训练时过度优化了复杂推理能力，而忽略了\"简单问题就该简单回答\"的基本常识。\n- **毒舌/硬核点评**：这就好比请了个顶级顾问，你问他\"现在几点\"，他能给你写一篇关于时间相对论的 5000 字论文。能力是有了，但这\"话痨\"属性不改，成本账单怕是先爆炸。\n- **🔗 传送门**：[点击直达原链接](https://simonwillison.net/2026/Aug/16/qwen-38-27b/)\n\n---\n\n### 2. 📌 Claude 系统提示词首次公开，Anthropic 的\"暗操作\"现形 (来源: Hacker News)\n- **核心干货**：Anthropic 官方发布了 Claude 模型的系统提示词文档，首次披露了模型背后的\"隐藏指令\"。其中包含要求模型在特定情况下对文本进行\"水印式篡改\"的指令，引发开发者社区强烈反弹。批评者认为，这本质上是让模型在用户不知情的情况下修改输出内容，是对写作纯洁性的\"系统性玷污\"。\n- **毒舌/硬核点评**：嘴上喊着\"AI 安全第一\"，背地里却让模型当\"文字刺客\"？这操作比当年 Facebook 操纵用户信息流还骚。透明度不是靠发文档就能洗白的，关键是这些\"水印\"到底动了谁的奶酪。\n- **🔗 传送门**：[点击直达原链接](https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing)\n\n---\n\n### 3. 📌 GeoServer 曝出 0day 漏洞，正被野外利用，可远程执行代码 (来源: Tech RSS)\n- **核心干货**：开源地图服务器 GeoServer 被曝存在一个尚未分配 CVE 编号的 SQL 注入 0day 漏洞，可被利用实现远程代码执行（RCE）。安全公司 watchTowr 已检测到该漏洞正在被积极利用。目前官方尚未发布补丁，全球大量暴露在公网的地图服务面临被接管风险。\n- **毒舌/硬核点评**：又一个\"用爱发电\"的开源项目，被现实打脸。0day 在手，天下我有——但恭喜你，你的地图服务器可能已经成为黑客的免费云主机了。建议运维们今晚别睡了，守着漏洞公告刷新吧。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/unpatched-geoserver-zero-day-targeted.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\"真正的技术护城河，不是你会写多少代码，而是你能在别人还没发现漏洞之前，先把补丁打完。自律，从监控 CVE 开始。\"",
   "briefing_items": [
     {
-      "title": "Lazarus 集团借 Windows 零日漏洞直取 SYSTEM，全球国防航天企业遭殃",
-      "source": "新闻",
-      "summary": "朝鲜 Lazarus 组织在微软刚修补完漏洞的窗口期，立刻利用该 Windows 零日漏洞提权至 SYSTEM，并部署了一款此前从未见过的后门程序。攻击目标直指法国、德国、巴西和印度的国防与航空航天公司，战术意图极其明确。",
-      "commentary": "微软的补丁日就是 Lazarus 的进货日。这不仅是漏洞战，更是情报战——人家的攻击链比你修 Bug 的速度还快，建议各位安全团队把\"补丁管理\"上升到\"军备竞赛\"的高度。",
-      "url": "https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html"
+      "title": "Qwen 3.8 27B：能力很强，但患上了\"过度思考症\"",
+      "source": "Hacker News",
+      "summary": "Qwen 3.8 27B 模型性能出色，但存在一个显著问题——默认情况下会\"过度思考\"，在简单问题上消耗过多推理 token，导致响应变慢、成本增加。开发者 Simon Willison 实测后指出，这可能是模型在训练时过度优化了复杂推理能力，而忽略了\"简单问题就该简单回答\"的基本常识。",
+      "commentary": "这就好比请了个顶级顾问，你问他\"现在几点\"，他能给你写一篇关于时间相对论的 5000 字论文。能力是有了，但这\"话痨\"属性不改，成本账单怕是先爆炸。",
+      "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/"
     },
     {
-      "title": "微软 8 月更新一口气补 398 个漏洞，含正被攻击的内核驱动零日",
-      "source": "新闻",
-      "summary": "微软月度安全更新修复了 398 个漏洞，其中包含一个处于活跃攻击中的 Windows 内核驱动零日漏洞。该漏洞位于处理网络套接字操作的核心驱动中，攻击者只需在机器上已有代码执行权限，即可借其将权限提升至 SYSTEM。",
-      "commentary": "398 个漏洞，这数字看着不像软件更新，像软件考古。核心驱动 + 活跃利用 + 提权到 SYSTEM，这套组合拳打下来，建议各位 Windows 管理员今天别摸鱼了，赶紧去补丁库报到。",
-      "url": "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html"
+      "title": "Claude 系统提示词首次公开，Anthropic 的\"暗操作\"现形",
+      "source": "Hacker News",
+      "summary": "Anthropic 官方发布了 Claude 模型的系统提示词文档，首次披露了模型背后的\"隐藏指令\"。其中包含要求模型在特定情况下对文本进行\"水印式篡改\"的指令，引发开发者社区强烈反弹。批评者认为，这本质上是让模型在用户不知情的情况下修改输出内容，是对写作纯洁性的\"系统性玷污\"。",
+      "commentary": "嘴上喊着\"AI 安全第一\"，背地里却让模型当\"文字刺客\"？这操作比当年 Facebook 操纵用户信息流还骚。透明度不是靠发文档就能洗白的，关键是这些\"水印\"到底动了谁的奶酪。",
+      "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing"
     },
     {
-      "title": "Firefox 成为唯一仍支持 uBlock Origin 的主流浏览器",
-      "source": "Lobste.rs",
-      "summary": "随着 Chrome 等浏览器全面转向 Manifest V3 扩展规范，对网络请求拦截能力进行严格限制，uBlock Origin 这类强力广告拦截器在这些浏览器上已形同虚设。Firefox 如今成为主流浏览器中唯一还能让用户真正掌控自己浏览体验的独苗。",
-      "commentary": "当所有浏览器都开始\"为你好\"地帮你决定什么能看、什么不能看时，Firefox 还在坚持让你自己说了算。这年头，连广告拦截都成了少数派的倔强。建议 Mozilla 把 uBlock Origin 写进招聘广告里——\"这里还能拦广告，来吗？\"",
-      "url": "https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html"
+      "title": "GeoServer 曝出 0day 漏洞，正被野外利用，可远程执行代码",
+      "source": "Tech RSS",
+      "summary": "开源地图服务器 GeoServer 被曝存在一个尚未分配 CVE 编号的 SQL 注入 0day 漏洞，可被利用实现远程代码执行（RCE）。安全公司 watchTowr 已检测到该漏洞正在被积极利用。目前官方尚未发布补丁，全球大量暴露在公网的地图服务面临被接管风险。",
+      "commentary": "又一个\"用爱发电\"的开源项目，被现实打脸。0day 在手，天下我有——但恭喜你，你的地图服务器可能已经成为黑客的免费云主机了。建议运维们今晚别睡了，守着漏洞公告刷新吧。",
+      "url": "https://thehackernews.com/2026/08/unpatched-geoserver-zero-day-targeted.html"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49322695",
-      "title": "Models Are Getting Dumber on Purpose",
+      "id": "hn:49324985",
+      "title": "Qwen 3.8 27B is excellent, but it defaults to overthinking things",
       "summary": "",
-      "url": "https://w4g1.dev/blog/models-are-getting-dumber-on-purpose",
+      "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
       "source": "Hacker News",
-      "score": 265,
-      "comments": 148
+      "score": 589,
+      "comments": 282
+    },
+    {
+      "id": "hn:49324087",
+      "title": "Anthropic's 'watermark' text adulteration in Claude is a perversion of writing",
+      "summary": "",
+      "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
+      "source": "Hacker News",
+      "score": 400,
+      "comments": 390
     },
     {
       "id": "hn:49321717",
-      "title": "A 3rd World Embedded Engineer Responds to \"RISC-V They Should Have Known Better\"",
+      "title": "A third world engineer responds to “RISC-V: They should have known better”",
       "summary": "",
       "url": "https://rvembedded.com/blog_post/12/",
       "source": "Hacker News",
-      "score": 371,
-      "comments": 195
-    },
-    {
-      "id": "lob:lfmss9",
-      "title": "Firefox is now the last major browser that still supports uBlock Origin",
-      "summary": "",
-      "url": "https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html",
-      "source": "Lobste.rs",
-      "score": 195,
-      "comments": 54,
-      "tags": [
-        "browsers"
-      ]
+      "score": 552,
+      "comments": 281
     },
     {
       "id": "hn:49319556",
@@ -63,17 +60,8 @@
       "summary": "",
       "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
       "source": "Hacker News",
-      "score": 539,
-      "comments": 225
-    },
-    {
-      "id": "hn:49320611",
-      "title": "The AI Credit Resale Economy",
-      "summary": "",
-      "url": "https://vectoral.com/blog/who-are-the-token-brokers",
-      "source": "Hacker News",
-      "score": 225,
-      "comments": 88
+      "score": 690,
+      "comments": 267
     },
     {
       "id": "lob:wpyhdh",
@@ -81,12 +69,21 @@
       "summary": "",
       "url": "https://c3-lang.org/blog/i_thought_i_was_building_a_c_replacement/",
       "source": "Lobste.rs",
-      "score": 63,
-      "comments": 36,
+      "score": 93,
+      "comments": 75,
       "tags": [
         "c",
         "programming"
       ]
+    },
+    {
+      "id": "hn:49325061",
+      "title": "Reticulum – Decentralized Mesh Network",
+      "summary": "",
+      "url": "https://reticulum.network/",
+      "source": "Hacker News",
+      "score": 153,
+      "comments": 52
     },
     {
       "id": "lob:ii5tun",
@@ -94,8 +91,8 @@
       "summary": "",
       "url": "https://op.tngl.io/every-fucking-website/",
       "source": "Lobste.rs",
-      "score": 53,
-      "comments": 25,
+      "score": 78,
+      "comments": 36,
       "tags": [
         "satire",
         "vibecoding",
@@ -103,16 +100,13 @@
       ]
     },
     {
-      "id": "lob:fooyux",
-      "title": "Why I remain a skeptic",
-      "summary": "",
-      "url": "https://blog.jsbarretto.com/post/i-remain-a-skeptic",
-      "source": "Lobste.rs",
-      "score": 72,
-      "comments": 123,
-      "tags": [
-        "vibecoding"
-      ]
+      "id": "hn:49325789",
+      "title": "On A.I. regulation and messaging",
+      "summary": "<a href=\"https:&#x2F;&#x2F;xcancel.com&#x2F;DarioAmodei&#x2F;status&#x2F;2088758816376807762\" rel=\"nofollow\">https:&#x2F;&#x2F;xcancel.com&#x2F;DarioAmodei&#x2F;status&#x2F;2088758816376807762</a>",
+      "url": "https://twitter.com/DarioAmodei/status/2088758816376807762",
+      "source": "Hacker News",
+      "score": 132,
+      "comments": 227
     },
     {
       "id": "lob:hnx6id",
@@ -120,103 +114,126 @@
       "summary": "",
       "url": "https://predr.ag/blog/protecting-the-rust-stdlib-from-breakage/",
       "source": "Lobste.rs",
-      "score": 36,
+      "score": 45,
       "comments": 4,
       "tags": [
         "rust"
       ]
     },
     {
-      "id": "hn:49322573",
-      "title": "Protobuf has LSP support. You're welcome",
+      "id": "arxiv:2608.14496v1",
+      "title": "Generating Benchmark Health Data Using a Tabular Diffusion Transformer",
+      "summary": "Cross-Tabular Data Generation (CTDG) seeks to learn a generative model from multiple heterogeneous tables and produce new synthetic tabular datasets. However, existing synthetic tabular data generation methods are largely restricted to single-input-table scenarios and struggle to effectively handle ",
+      "url": "https://arxiv.org/abs/2608.14496v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "arxiv_id": "2608.14496v1"
+    },
+    {
+      "id": "rss:911bcc0e12",
+      "title": "GeoServer Zero-Day Targeted in Active Exploitation Attempts, Can Lead to RCE",
+      "summary": "A newly disclosed zero-day flaw in GeoServer is seeing active exploitation efforts, per watchTowr.\n\nThe vulnerability, which has yet to be assigned a CVE identifier, is an SQL injection vulnerability in the open-source platform that can lead to remote code execution (RCE). The security defect remain",
+      "url": "https://thehackernews.com/2026/08/unpatched-geoserver-zero-day-targeted.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "hn:49326816",
+      "title": "Linear algebra done right",
       "summary": "",
-      "url": "https://buf.build/blog/protobuf-lsp",
+      "url": "https://linear.axler.net/",
       "source": "Hacker News",
-      "score": 107,
-      "comments": 77
+      "score": 116,
+      "comments": 48
     },
     {
-      "id": "rss:0331835ebb",
-      "title": "Attackers Exploit SharePoint Authentication Bypass After Public PoC Release",
-      "summary": "Threat actors have begun to exploit a newly disclosed Microsoft SharePoint vulnerability following the release of a proof-of-concept (PoC) code.\n\nThe vulnerability in question is CVE-2026-55040 (CVSS score: 9.1), which refers to a critical security feature bypass that stems from weak authentication.",
-      "url": "https://thehackernews.com/2026/08/attackers-exploit-sharepoint.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:ac664dbffd",
-      "title": "ShieldBreak Zero-Day PoC Claims Microsoft Defender Patch Bypass With SYSTEM Access",
-      "summary": "The security researcher going by the name Chaotic Eclipse (aka INFINITE NIGHTMARE, MSNightmare, and Nightmare-Eclipse) has released a proof-of-concept (PoC) for a new Microsoft zero-day called ShieldBreak.\n\nThe vulnerability, rooted in Microsoft Defender for Windows, demonstrates a patch bypass for",
-      "url": "https://thehackernews.com/2026/08/shieldbreak-zero-day-poc-claims.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:4cb7814aa5",
-      "title": "Cisco ASA and FTD Flaw Exploited in the Wild Can Trigger Remote DoS",
-      "summary": "Cisco has warned that a new vulnerability impacting Secure Firewall Adaptive Security Appliance (ASA) Software and Secure Firewall Threat Defense (FTD) Software has been exploited in the wild.\n\nThe high-severity flaw, tracked as CVE-2026-20349 (CVSS score: 8.6), is a case of insufficient error check",
-      "url": "https://thehackernews.com/2026/08/cisco-asa-and-ftd-flaw-exploited-in.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:05070cd56f",
-      "title": "Microsoft Patches 398 Flaws Including a Windows Driver Zero-Day Under Active Attack",
-      "summary": "Microsoft released its monthly security updates on Tuesday, and one of the flaws it closed is already being used in attacks.\n\nThe bug sits in a core Windows kernel driver that handles network socket operations. An attacker with code already running on a machine can use it to escalate to SYSTEM. That",
-      "url": "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "hn:49285096",
-      "title": "SIMD in the 90s: Programming Intel's Pentium MMX",
+      "id": "lob:ln3dao",
+      "title": "A faster way to calculate the day-of-the-week",
       "summary": "",
-      "url": "https://pikuma.com/blog/programming-intel-pentium-mmx-simd",
-      "source": "Hacker News",
-      "score": 72,
-      "comments": 32
+      "url": "https://www.benjoffe.com/fast-day-of-week",
+      "source": "Lobste.rs",
+      "score": 51,
+      "comments": 4,
+      "tags": [
+        "assembly",
+        "c++",
+        "math",
+        "performance"
+      ]
     },
     {
-      "id": "hn:49322330",
-      "title": "MathCode, Mathematical Coding Agent",
+      "id": "lob:8izobt",
+      "title": "You can just choose how many bugs you want now",
       "summary": "",
-      "url": "https://math-ai-org.github.io/mathcode/",
-      "source": "Hacker News",
-      "score": 60,
-      "comments": 18
+      "url": "https://nolanlawson.com/2026/08/16/you-can-just-choose-how-many-bugs-you-want-now/",
+      "source": "Lobste.rs",
+      "score": 16,
+      "comments": 10,
+      "tags": [
+        "vibecoding"
+      ]
     },
     {
-      "id": "hn:49259980",
-      "title": "Low-Tech Ceramic Water Filter",
+      "id": "arxiv:2608.14509v1",
+      "title": "Split the Labor: Separating Evidence Interpretation from Decision Aggregation",
+      "summary": "Systems that ask a language model to reach a conclusion from many sources usually concatenate them into one prompt. This conflates two operations with different requirements. Interpreting a source rewards capacity and context. Combining interpretations rewards fixed arithmetic, comparability across ",
+      "url": "https://arxiv.org/abs/2608.14509v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_id": "2608.14509v1"
+    },
+    {
+      "id": "arxiv:2608.14498v1",
+      "title": "Rollplex: Cross-Phase GPU Spatial Sharing for Vision Language Model Post-Training",
+      "summary": "Vision-language models (VLMs) enable embodied agents to reason and act from visual observations and language instructions. Reinforcement learning (RL) post-training enhances these capabilities using task feedback, but current on-policy RL runtimes execute rollout, reference scoring, and actor traini",
+      "url": "https://arxiv.org/abs/2608.14498v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.DC"
+      ],
+      "arxiv_id": "2608.14498v1"
+    },
+    {
+      "id": "rss:8ce3e4ecc3",
+      "title": "Apple macOS Screen Sharing Flaw Exploited on Internet-Exposed Macs to Install Monero Miner",
+      "summary": "A recently patched security flaw in Apple macOS has come under active exploitation in the wild to deploy a cryptocurrency miner, the Netherlands National Cyber Security Centre (NCSC) has warned.\n\nThe vulnerability in question is CVE-2026-65400 (CVSS score: 9.8), a critical authentication issue impac",
+      "url": "https://thehackernews.com/2026/08/apple-macos-screen-sharing-flaw.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:9d2007d2e1",
+      "title": "My idempotency library had one job. A dropped connection made it run the payment twice.",
+      "summary": "quayside is my idempotency library for Node.js. The whole API fits in one sentence: execute(key, fn) runs a function exactly once per key — if it already ran, you get the stored result back; if it is running right now, you don't run it again. Pluggable storage (memory, Redis, Postgres, MySQL), HTTP",
+      "url": "https://dev.to/pinceladasdaweb/my-idempotency-library-had-one-job-a-dropped-connection-made-it-run-the-payment-twice-nnh",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "hn:49325384",
+      "title": "Rhombus 1.1 is now available",
       "summary": "",
-      "url": "https://wiki.lowtechlab.org/wiki/Filtre_%C3%A0_eau_c%C3%A9ramique/en",
+      "url": "https://blog.racket-lang.org/2026/08/rhombus-v1.1.html",
       "source": "Hacker News",
-      "score": 92,
-      "comments": 25
+      "score": 97,
+      "comments": 30
     },
     {
-      "id": "rss:5fa8f95058",
-      "title": "Lazarus Exploits Windows Zero-Day to Gain SYSTEM Access and Deploy Backdoor",
-      "summary": "The North Korean threat actor known as Lazarus Group has been attributed to the zero-day exploitation of a newly patched security flaw impacting Microsoft Windows to deliver a never-before-seen backdoor targeting defense and aerospace companies across France, Germany, Brazil, and India.\n\nThe activit",
-      "url": "https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:281dcb1f3c",
-      "title": "Adobe Patches Three CVSS 10.0 ColdFusion and Campaign Classic Flaws",
-      "summary": "Adobe has shipped updates to address multiple critical security vulnerabilities impacting ColdFusion, Commerce, and Campaign Classic that, if successfully exploited, could result in arbitrary code execution and privilege escalation.\n\nThe most severe of the flaws are listed below -\n\n\n  CVE-2026-48362",
-      "url": "https://thehackernews.com/2026/08/adobe-patches-three-cvss-100-coldfusion.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:a900a5fc99",
-      "title": "Attackers Exploit VMware vCenter Vulnerability to Gain Persistent Remote Access",
-      "summary": "Threat actors have begun to actively exploit a recently patched critical security flaw in Broadcom VMware vCenter, according to new findings from QUIRSO.\n\nThe vulnerability in question is CVE-2026-59310 (CVSS score: 9.8), a directory-traversal vulnerability in the VMware vCenter server that a malici",
-      "url": "https://thehackernews.com/2026/08/attackers-exploit-vmware-vcenter.html",
-      "source": "Tech RSS",
-      "score": 0
+      "id": "hn:49325714",
+      "title": "AGI-64 Brings Sierra Adventures to the Commodore 64",
+      "summary": "",
+      "url": "https://meanhamster.com/news/agi-64-brings-sierra-adventures-to-the-commodore-64",
+      "source": "Hacker News",
+      "score": 100,
+      "comments": 14
     }
   ],
   "ai_curated": true
