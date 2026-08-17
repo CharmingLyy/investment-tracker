@@ -1,76 +1,49 @@
 {
-  "date": "2026-08-16",
-  "update_time": "2026-08-16 12:41:44",
+  "date": "2026-08-17",
+  "update_time": "2026-08-17 01:36:09",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-16\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 RISC-V：早知今日，何必当初 (来源: Hacker News)\n- **核心干货**：一篇深度技术长文，系统性地拆解了 RISC-V 指令集架构在设计与实现层面的历史遗留问题与结构性缺陷。作者指出，RISC-V 为了追求极简主义，在向量扩展、原子操作和内存模型等关键设计上存在过度简化导致的性能与安全陷阱，对当前高调宣称\"全面替代 ARM/x86\"的厂商泼了一盆冷水。\n- **毒舌/硬核点评**：RISC-V 的开源精神值得点赞，但精神不能当饭吃。这篇文章是给所有\"PPT 造芯\"的厂商一记响亮的耳光：指令集只是起点，设计哲学才是深坑。\n- **🔗 传送门**：[点击直达原链接](https://dmitry.gr/?r=06.%20Thoughts&proj=12.%20RV)\n\n---\n\n### 2. 📌 Vero：AI 编程的\"验尸报告\" (来源: ArXiv)\n- **核心干货**：这篇论文提出了一个极具前瞻性的问题：AI 生成的代码怎么证明是对的？作者推出了 **Vero**，一个能让 AI Agent 在生成代码的同时，产出机器可验证的形式化证明的框架。这相当于给 AI 程序员配了个\"数学系毕业的质检员\"，从源头杜绝\"看起来能跑，一跑就炸\"的悲剧。\n- **毒舌/硬核点评**：当全世界的码农都在用 AI 疯狂堆屎山时，Vero 试图给这堆屎山装个承重检测仪。理想很丰满，但现实是，让 AI 写证明可能比让 AI 写代码难十倍——毕竟，人类自己写证明的水平也就那样。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2608.13522v1)\n\n---\n\n### 3. 📌 微软月度补丁：398 个洞，一次补个够 (来源: Tech News)\n- **核心干货**：微软 8 月补丁日一口气修复了 398 个安全漏洞，其中包括一个已被在野利用的 Windows 内核驱动零日漏洞（可被用于权限提升至 SYSTEM）。此外，SharePoint 和 Defender 也相继被曝出高危绕过漏洞，攻击者已开始利用公开 PoC 进行攻击。\n- **毒舌/硬核点评**：398 个漏洞，微软这哪是\"月度更新\"，这是\"月度考古挖掘现场\"。建议把\"Patch Tuesday\"改名叫\"Panic Tuesday\"，毕竟你永远不知道下一个被在野利用的洞，会不会就是你正在用的那个组件。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\"真正的极客精神不是追新，而是能在别人吹牛时，默默指出那套架构的底层 bug——以及，记得及时打补丁。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-17\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Lazarus 集团借 Windows 零日漏洞直取 SYSTEM，全球国防航天企业遭殃 (来源: 新闻)\n- **核心干货**：朝鲜 Lazarus 组织在微软刚修补完漏洞的窗口期，立刻利用该 Windows 零日漏洞提权至 SYSTEM，并部署了一款此前从未见过的后门程序。攻击目标直指法国、德国、巴西和印度的国防与航空航天公司，战术意图极其明确。\n- **毒舌/硬核点评**：微软的补丁日就是 Lazarus 的进货日。这不仅是漏洞战，更是情报战——人家的攻击链比你修 Bug 的速度还快，建议各位安全团队把\"补丁管理\"上升到\"军备竞赛\"的高度。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html)\n\n---\n\n### 2. 📌 微软 8 月更新一口气补 398 个漏洞，含正被攻击的内核驱动零日 (来源: 新闻)\n- **核心干货**：微软月度安全更新修复了 398 个漏洞，其中包含一个处于活跃攻击中的 Windows 内核驱动零日漏洞。该漏洞位于处理网络套接字操作的核心驱动中，攻击者只需在机器上已有代码执行权限，即可借其将权限提升至 SYSTEM。\n- **毒舌/硬核点评**：398 个漏洞，这数字看着不像软件更新，像软件考古。核心驱动 + 活跃利用 + 提权到 SYSTEM，这套组合拳打下来，建议各位 Windows 管理员今天别摸鱼了，赶紧去补丁库报到。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html)\n\n---\n\n### 3. 📌 Firefox 成为唯一仍支持 uBlock Origin 的主流浏览器 (来源: Lobste.rs)\n- **核心干货**：随着 Chrome 等浏览器全面转向 Manifest V3 扩展规范，对网络请求拦截能力进行严格限制，uBlock Origin 这类强力广告拦截器在这些浏览器上已形同虚设。Firefox 如今成为主流浏览器中唯一还能让用户真正掌控自己浏览体验的独苗。\n- **毒舌/硬核点评**：当所有浏览器都开始\"为你好\"地帮你决定什么能看、什么不能看时，Firefox 还在坚持让你自己说了算。这年头，连广告拦截都成了少数派的倔强。建议 Mozilla 把 uBlock Origin 写进招聘广告里——\"这里还能拦广告，来吗？\"\n- **🔗 传送门**：[点击直达原链接](https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html)\n\n---\n\n### 🗣️ 今日顶男金句\n*\"安全圈的真谛：不是看谁修得快，而是看谁活得久。建议把'补丁管理'写进简历，当成终身学习的一部分——毕竟，漏洞是补不完的，但你的薪资是可以涨上去的。\"*",
   "briefing_items": [
     {
-      "title": "RISC-V：早知今日，何必当初",
-      "source": "Hacker News",
-      "summary": "一篇深度技术长文，系统性地拆解了 RISC-V 指令集架构在设计与实现层面的历史遗留问题与结构性缺陷。作者指出，RISC-V 为了追求极简主义，在向量扩展、原子操作和内存模型等关键设计上存在过度简化导致的性能与安全陷阱，对当前高调宣称\"全面替代 ARM/x86\"的厂商泼了一盆冷水。",
-      "commentary": "RISC-V 的开源精神值得点赞，但精神不能当饭吃。这篇文章是给所有\"PPT 造芯\"的厂商一记响亮的耳光：指令集只是起点，设计哲学才是深坑。",
-      "url": "https://dmitry.gr/?r=06.%20Thoughts&proj=12.%20RV"
+      "title": "Lazarus 集团借 Windows 零日漏洞直取 SYSTEM，全球国防航天企业遭殃",
+      "source": "新闻",
+      "summary": "朝鲜 Lazarus 组织在微软刚修补完漏洞的窗口期，立刻利用该 Windows 零日漏洞提权至 SYSTEM，并部署了一款此前从未见过的后门程序。攻击目标直指法国、德国、巴西和印度的国防与航空航天公司，战术意图极其明确。",
+      "commentary": "微软的补丁日就是 Lazarus 的进货日。这不仅是漏洞战，更是情报战——人家的攻击链比你修 Bug 的速度还快，建议各位安全团队把\"补丁管理\"上升到\"军备竞赛\"的高度。",
+      "url": "https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html"
     },
     {
-      "title": "Vero：AI 编程的\"验尸报告\"",
-      "source": "ArXiv",
-      "summary": "这篇论文提出了一个极具前瞻性的问题：AI 生成的代码怎么证明是对的？作者推出了 **Vero**，一个能让 AI Agent 在生成代码的同时，产出机器可验证的形式化证明的框架。这相当于给 AI 程序员配了个\"数学系毕业的质检员\"，从源头杜绝\"看起来能跑，一跑就炸\"的悲剧。",
-      "commentary": "当全世界的码农都在用 AI 疯狂堆屎山时，Vero 试图给这堆屎山装个承重检测仪。理想很丰满，但现实是，让 AI 写证明可能比让 AI 写代码难十倍——毕竟，人类自己写证明的水平也就那样。",
-      "url": "https://arxiv.org/abs/2608.13522v1"
-    },
-    {
-      "title": "微软月度补丁：398 个洞，一次补个够",
-      "source": "Tech News",
-      "summary": "微软 8 月补丁日一口气修复了 398 个安全漏洞，其中包括一个已被在野利用的 Windows 内核驱动零日漏洞（可被用于权限提升至 SYSTEM）。此外，SharePoint 和 Defender 也相继被曝出高危绕过漏洞，攻击者已开始利用公开 PoC 进行攻击。",
-      "commentary": "398 个漏洞，微软这哪是\"月度更新\"，这是\"月度考古挖掘现场\"。建议把\"Patch Tuesday\"改名叫\"Panic Tuesday\"，毕竟你永远不知道下一个被在野利用的洞，会不会就是你正在用的那个组件。",
+      "title": "微软 8 月更新一口气补 398 个漏洞，含正被攻击的内核驱动零日",
+      "source": "新闻",
+      "summary": "微软月度安全更新修复了 398 个漏洞，其中包含一个处于活跃攻击中的 Windows 内核驱动零日漏洞。该漏洞位于处理网络套接字操作的核心驱动中，攻击者只需在机器上已有代码执行权限，即可借其将权限提升至 SYSTEM。",
+      "commentary": "398 个漏洞，这数字看着不像软件更新，像软件考古。核心驱动 + 活跃利用 + 提权到 SYSTEM，这套组合拳打下来，建议各位 Windows 管理员今天别摸鱼了，赶紧去补丁库报到。",
       "url": "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html"
+    },
+    {
+      "title": "Firefox 成为唯一仍支持 uBlock Origin 的主流浏览器",
+      "source": "Lobste.rs",
+      "summary": "随着 Chrome 等浏览器全面转向 Manifest V3 扩展规范，对网络请求拦截能力进行严格限制，uBlock Origin 这类强力广告拦截器在这些浏览器上已形同虚设。Firefox 如今成为主流浏览器中唯一还能让用户真正掌控自己浏览体验的独苗。",
+      "commentary": "当所有浏览器都开始\"为你好\"地帮你决定什么能看、什么不能看时，Firefox 还在坚持让你自己说了算。这年头，连广告拦截都成了少数派的倔强。建议 Mozilla 把 uBlock Origin 写进招聘广告里——\"这里还能拦广告，来吗？\"",
+      "url": "https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49310682",
-      "title": "At-home test for infected ticks could improve Lyme Disease diagnosis",
+      "id": "hn:49322695",
+      "title": "Models Are Getting Dumber on Purpose",
       "summary": "",
-      "url": "https://www.smithsonianmag.com/innovation/the-first-at-home-test-for-infected-ticks-could-improve-lyme-disease-diagnosis-180989235/",
+      "url": "https://w4g1.dev/blog/models-are-getting-dumber-on-purpose",
       "source": "Hacker News",
-      "score": 266,
-      "comments": 102
+      "score": 265,
+      "comments": 148
     },
     {
-      "id": "hn:49268580",
-      "title": "Asus Bike Booster",
+      "id": "hn:49321717",
+      "title": "A 3rd World Embedded Engineer Responds to \"RISC-V They Should Have Known Better\"",
       "summary": "",
-      "url": "https://www.asus.com/accessories/bike-booster/asus-oxiis/oxiis-intelligent-bike-booster/",
+      "url": "https://rvembedded.com/blog_post/12/",
       "source": "Hacker News",
-      "score": 476,
-      "comments": 315
-    },
-    {
-      "id": "hn:49313428",
-      "title": "Super El Niño Keeps Growing as New Forecasts Reach Record Territory Ahead Winter",
-      "summary": "",
-      "url": "https://www.severe-weather.eu/long-range-2/super-el-nino-growth-accelerating-to-record-strength-fall-winter-2026-2027-forecast-impact-united-states-canada-europe-fa/",
-      "source": "Hacker News",
-      "score": 290,
-      "comments": 184
-    },
-    {
-      "id": "hn:49311651",
-      "title": "Semaglutide linked to lower predicted dementia risk",
-      "summary": "",
-      "url": "https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/dad2.70432",
-      "source": "Hacker News",
-      "score": 442,
-      "comments": 321
-    },
-    {
-      "id": "hn:49298035",
-      "title": "RISC-V: They Should Have Known Better",
-      "summary": "",
-      "url": "https://dmitry.gr/?r=06.%20Thoughts&proj=12.%20RV",
-      "source": "Hacker News",
-      "score": 337,
-      "comments": 381
+      "score": 371,
+      "comments": 195
     },
     {
       "id": "lob:lfmss9",
@@ -78,59 +51,55 @@
       "summary": "",
       "url": "https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html",
       "source": "Lobste.rs",
-      "score": 172,
-      "comments": 47,
+      "score": 195,
+      "comments": 54,
       "tags": [
         "browsers"
       ]
     },
     {
-      "id": "hn:49314902",
-      "title": "Software Engineering fundamentals matter more",
+      "id": "hn:49319556",
+      "title": "Claude: System Prompts",
       "summary": "",
-      "url": "https://rhonabwy.com/2026/08/15/software-engineering-fundamentals-matter-more-than-ever/",
+      "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
       "source": "Hacker News",
-      "score": 192,
-      "comments": 129
+      "score": 539,
+      "comments": 225
     },
     {
-      "id": "hn:49314235",
-      "title": "Cultivating a state of mind where new ideas are born (2023)",
+      "id": "hn:49320611",
+      "title": "The AI Credit Resale Economy",
       "summary": "",
-      "url": "https://www.henrikkarlsson.xyz/p/good-ideas",
+      "url": "https://vectoral.com/blog/who-are-the-token-brokers",
       "source": "Hacker News",
-      "score": 194,
-      "comments": 48
+      "score": 225,
+      "comments": 88
     },
     {
-      "id": "hn:49316271",
-      "title": "Patterns and problems in emerging multi-agent systems",
+      "id": "lob:wpyhdh",
+      "title": "I thought I was building a C replacement. I was wrong",
       "summary": "",
-      "url": "https://www.anthropic.com/research/multiagent-systems",
-      "source": "Hacker News",
-      "score": 127,
-      "comments": 80
-    },
-    {
-      "id": "hn:49317760",
-      "title": "What happens when an LLM never sees material beyond fifth grade?",
-      "summary": "",
-      "url": "https://littlelearner-ll.github.io/",
-      "source": "Hacker News",
-      "score": 161,
-      "comments": 125
-    },
-    {
-      "id": "lob:w5rmwi",
-      "title": "Everything is about to “go dark”",
-      "summary": "",
-      "url": "https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/",
+      "url": "https://c3-lang.org/blog/i_thought_i_was_building_a_c_replacement/",
       "source": "Lobste.rs",
-      "score": 41,
-      "comments": 13,
+      "score": 63,
+      "comments": 36,
       "tags": [
-        "security",
-        "vibecoding"
+        "c",
+        "programming"
+      ]
+    },
+    {
+      "id": "lob:ii5tun",
+      "title": "Every Fucking Website",
+      "summary": "",
+      "url": "https://op.tngl.io/every-fucking-website/",
+      "source": "Lobste.rs",
+      "score": 53,
+      "comments": 25,
+      "tags": [
+        "satire",
+        "vibecoding",
+        "web"
       ]
     },
     {
@@ -139,35 +108,32 @@
       "summary": "",
       "url": "https://blog.jsbarretto.com/post/i-remain-a-skeptic",
       "source": "Lobste.rs",
-      "score": 59,
-      "comments": 52,
+      "score": 72,
+      "comments": 123,
       "tags": [
         "vibecoding"
       ]
     },
     {
-      "id": "hn:49243061",
-      "title": "Asynchronous I/O in DuckDB: Work, Thread, Work",
+      "id": "lob:hnx6id",
+      "title": "Protecting the Rust standard library from accidental breakage",
       "summary": "",
-      "url": "https://duckdb.org/2026/07/31/asynchronous-io",
-      "source": "Hacker News",
-      "score": 191,
-      "comments": 21
+      "url": "https://predr.ag/blog/protecting-the-rust-stdlib-from-breakage/",
+      "source": "Lobste.rs",
+      "score": 36,
+      "comments": 4,
+      "tags": [
+        "rust"
+      ]
     },
     {
-      "id": "arxiv:2608.13522v1",
-      "title": "Vero: Can AI Agents Build Formally Verified Software Repositories?",
-      "summary": "AI agents are increasingly used for programming, but do not provide any guarantee on the correctness of generated code. Verified code generation, in which an agent produces both an implementation and a machine-checked proof of its specification, offers a stronger path toward trustworthy AI-generated",
-      "url": "https://arxiv.org/abs/2608.13522v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.LO",
-        "cs.PL",
-        "cs.SE"
-      ],
-      "arxiv_id": "2608.13522v1"
+      "id": "hn:49322573",
+      "title": "Protobuf has LSP support. You're welcome",
+      "summary": "",
+      "url": "https://buf.build/blog/protobuf-lsp",
+      "source": "Hacker News",
+      "score": 107,
+      "comments": 77
     },
     {
       "id": "rss:0331835ebb",
@@ -176,32 +142,6 @@
       "url": "https://thehackernews.com/2026/08/attackers-exploit-sharepoint.html",
       "source": "Tech RSS",
       "score": 0
-    },
-    {
-      "id": "arxiv:2608.13560v1",
-      "title": "AutoDesign: Meta-Harness Optimization for Long-Horizon Agentic Design",
-      "summary": "Transforming multimodal sources into condensed and structured media outputs can be fundamentally conceptualized as a long-horizon agentic process centered on a model-harness system. While an ideal harness system should align with human design priors and accumulate reusable experience through empiric",
-      "url": "https://arxiv.org/abs/2608.13560v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_id": "2608.13560v1"
-    },
-    {
-      "id": "arxiv:2608.13545v1",
-      "title": "LittleLearner: Language Models Under Pedagogically Controlled Knowledge Exposure",
-      "summary": "Modern language models are trained on heterogeneous web-scale text corpora. Consequently, studying knowledge and skill acquisition is difficult, as prior exposure to related content is hard to characterize. To address this challenge, we introduce LITTLECURRICULUM, a curated 88B-token pretraining cor",
-      "url": "https://arxiv.org/abs/2608.13545v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2608.13545v1"
     },
     {
       "id": "rss:ac664dbffd",
@@ -224,6 +164,57 @@
       "title": "Microsoft Patches 398 Flaws Including a Windows Driver Zero-Day Under Active Attack",
       "summary": "Microsoft released its monthly security updates on Tuesday, and one of the flaws it closed is already being used in attacks.\n\nThe bug sits in a core Windows kernel driver that handles network socket operations. An attacker with code already running on a machine can use it to escalate to SYSTEM. That",
       "url": "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "hn:49285096",
+      "title": "SIMD in the 90s: Programming Intel's Pentium MMX",
+      "summary": "",
+      "url": "https://pikuma.com/blog/programming-intel-pentium-mmx-simd",
+      "source": "Hacker News",
+      "score": 72,
+      "comments": 32
+    },
+    {
+      "id": "hn:49322330",
+      "title": "MathCode, Mathematical Coding Agent",
+      "summary": "",
+      "url": "https://math-ai-org.github.io/mathcode/",
+      "source": "Hacker News",
+      "score": 60,
+      "comments": 18
+    },
+    {
+      "id": "hn:49259980",
+      "title": "Low-Tech Ceramic Water Filter",
+      "summary": "",
+      "url": "https://wiki.lowtechlab.org/wiki/Filtre_%C3%A0_eau_c%C3%A9ramique/en",
+      "source": "Hacker News",
+      "score": 92,
+      "comments": 25
+    },
+    {
+      "id": "rss:5fa8f95058",
+      "title": "Lazarus Exploits Windows Zero-Day to Gain SYSTEM Access and Deploy Backdoor",
+      "summary": "The North Korean threat actor known as Lazarus Group has been attributed to the zero-day exploitation of a newly patched security flaw impacting Microsoft Windows to deliver a never-before-seen backdoor targeting defense and aerospace companies across France, Germany, Brazil, and India.\n\nThe activit",
+      "url": "https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:281dcb1f3c",
+      "title": "Adobe Patches Three CVSS 10.0 ColdFusion and Campaign Classic Flaws",
+      "summary": "Adobe has shipped updates to address multiple critical security vulnerabilities impacting ColdFusion, Commerce, and Campaign Classic that, if successfully exploited, could result in arbitrary code execution and privilege escalation.\n\nThe most severe of the flaws are listed below -\n\n\n  CVE-2026-48362",
+      "url": "https://thehackernews.com/2026/08/adobe-patches-three-cvss-100-coldfusion.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:a900a5fc99",
+      "title": "Attackers Exploit VMware vCenter Vulnerability to Gain Persistent Remote Access",
+      "summary": "Threat actors have begun to actively exploit a recently patched critical security flaw in Broadcom VMware vCenter, according to new findings from QUIRSO.\n\nThe vulnerability in question is CVE-2026-59310 (CVSS score: 9.8), a directory-traversal vulnerability in the VMware vCenter server that a malici",
+      "url": "https://thehackernews.com/2026/08/attackers-exploit-vmware-vcenter.html",
       "source": "Tech RSS",
       "score": 0
     }
