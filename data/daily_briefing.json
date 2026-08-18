@@ -1,67 +1,116 @@
 {
-  "date": "2026-08-17",
-  "update_time": "2026-08-17 12:46:57",
+  "date": "2026-08-18",
+  "update_time": "2026-08-18 01:26:03",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-17\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Qwen 3.8 27B：能力很强，但患上了\"过度思考症\" (来源: Hacker News)\n- **核心干货**：Qwen 3.8 27B 模型性能出色，但存在一个显著问题——默认情况下会\"过度思考\"，在简单问题上消耗过多推理 token，导致响应变慢、成本增加。开发者 Simon Willison 实测后指出，这可能是模型在训练时过度优化了复杂推理能力，而忽略了\"简单问题就该简单回答\"的基本常识。\n- **毒舌/硬核点评**：这就好比请了个顶级顾问，你问他\"现在几点\"，他能给你写一篇关于时间相对论的 5000 字论文。能力是有了，但这\"话痨\"属性不改，成本账单怕是先爆炸。\n- **🔗 传送门**：[点击直达原链接](https://simonwillison.net/2026/Aug/16/qwen-38-27b/)\n\n---\n\n### 2. 📌 Claude 系统提示词首次公开，Anthropic 的\"暗操作\"现形 (来源: Hacker News)\n- **核心干货**：Anthropic 官方发布了 Claude 模型的系统提示词文档，首次披露了模型背后的\"隐藏指令\"。其中包含要求模型在特定情况下对文本进行\"水印式篡改\"的指令，引发开发者社区强烈反弹。批评者认为，这本质上是让模型在用户不知情的情况下修改输出内容，是对写作纯洁性的\"系统性玷污\"。\n- **毒舌/硬核点评**：嘴上喊着\"AI 安全第一\"，背地里却让模型当\"文字刺客\"？这操作比当年 Facebook 操纵用户信息流还骚。透明度不是靠发文档就能洗白的，关键是这些\"水印\"到底动了谁的奶酪。\n- **🔗 传送门**：[点击直达原链接](https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing)\n\n---\n\n### 3. 📌 GeoServer 曝出 0day 漏洞，正被野外利用，可远程执行代码 (来源: Tech RSS)\n- **核心干货**：开源地图服务器 GeoServer 被曝存在一个尚未分配 CVE 编号的 SQL 注入 0day 漏洞，可被利用实现远程代码执行（RCE）。安全公司 watchTowr 已检测到该漏洞正在被积极利用。目前官方尚未发布补丁，全球大量暴露在公网的地图服务面临被接管风险。\n- **毒舌/硬核点评**：又一个\"用爱发电\"的开源项目，被现实打脸。0day 在手，天下我有——但恭喜你，你的地图服务器可能已经成为黑客的免费云主机了。建议运维们今晚别睡了，守着漏洞公告刷新吧。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/unpatched-geoserver-zero-day-targeted.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\"真正的技术护城河，不是你会写多少代码，而是你能在别人还没发现漏洞之前，先把补丁打完。自律，从监控 CVE 开始。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-18\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 DuckDB v2.0 预告：数据分析界的“卷王”又进化了 (来源: Hacker News)\n- **核心干货**：DuckDB 发布了 2.0 版本预览，作为嵌入式 OLAP 数据库的标杆，新版本在查询优化器、多文件读取和内存管理上继续深挖。核心目标是让“大数据”分析在单机、甚至浏览器里跑出分布式集群的错觉。\n- **毒舌/硬核点评**：当别人还在纠结怎么搭 Hadoop 集群时，DuckDB 已经让你在笔记本电脑上玩出 Spark 的感觉。这玩意儿不是在“内卷”，是在“降维打击”——建议所有“大数据平台”公司把简历更新一下。\n- **🔗 传送门**：[点击直达原链接](https://duckdb.org/2026/08/17/duckdb-20-highlights)\n\n---\n\n### 2. 📌 AI 生成的“自动修复”把 Snowflake 的 Jira 给黑了 (来源: Hacker News)\n- **核心干货**：安全公司 Wiz 的研究显示，攻击者利用 GitHub Copilot 的“Autofix”功能生成的可信代码，反向渗透了 Snowflake 的内部 Jira 系统。AI 生成的代码被当成了“自己人”，成了供应链攻击的跳板。\n- **毒舌/硬核点评**：以前是“代码写得像屎山”，现在是“代码写得像 AI 拉的屎山”。当 AI 开始帮你写 bug 并自动提交时，你连背锅的机会都没有了。建议所有 CISO 把这条新闻打印出来贴在工位上，标题写：“AI 不是你的同事，是敌人的卧底。”\n- **🔗 传送门**：[点击直达原链接](https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug)\n\n---\n\n### 3. 📌 用 Rust 写 GPU 代码：终于不用跟 CUDA 的“方言”死磕了 (来源: ArXiv)\n- **核心干货**：一篇新论文提出了在 Rust 中实现 GPU 离线（Offload）编程的框架，主打“可移植、安全、高性能”。它试图让开发者用 Rust 的安全抽象去写 GPU 内核，同时保证性能不输给原生 CUDA 或 HIP。\n- **毒舌/硬核点评**：Rust 社区又在“拯救世界”了——这次是把你从 CUDA 那套 C++ 模板地狱里捞出来。虽然“再用 Rust 重写一遍”是程序员的老梗，但如果真能摆脱 NVIDIA 的生态绑架，这波我举双手双脚支持。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2608.13759)\n\n---\n\n### 🗣️ 今日顶男金句\n当 AI 开始写代码、修 bug、甚至帮你部署时，你的核心竞争力就只剩一个：**知道什么时候该拔电源。**",
   "briefing_items": [
     {
-      "title": "Qwen 3.8 27B：能力很强，但患上了\"过度思考症\"",
+      "title": "DuckDB v2.0 预告：数据分析界的“卷王”又进化了",
       "source": "Hacker News",
-      "summary": "Qwen 3.8 27B 模型性能出色，但存在一个显著问题——默认情况下会\"过度思考\"，在简单问题上消耗过多推理 token，导致响应变慢、成本增加。开发者 Simon Willison 实测后指出，这可能是模型在训练时过度优化了复杂推理能力，而忽略了\"简单问题就该简单回答\"的基本常识。",
-      "commentary": "这就好比请了个顶级顾问，你问他\"现在几点\"，他能给你写一篇关于时间相对论的 5000 字论文。能力是有了，但这\"话痨\"属性不改，成本账单怕是先爆炸。",
-      "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/"
+      "summary": "DuckDB 发布了 2.0 版本预览，作为嵌入式 OLAP 数据库的标杆，新版本在查询优化器、多文件读取和内存管理上继续深挖。核心目标是让“大数据”分析在单机、甚至浏览器里跑出分布式集群的错觉。",
+      "commentary": "当别人还在纠结怎么搭 Hadoop 集群时，DuckDB 已经让你在笔记本电脑上玩出 Spark 的感觉。这玩意儿不是在“内卷”，是在“降维打击”——建议所有“大数据平台”公司把简历更新一下。",
+      "url": "https://duckdb.org/2026/08/17/duckdb-20-highlights"
     },
     {
-      "title": "Claude 系统提示词首次公开，Anthropic 的\"暗操作\"现形",
+      "title": "AI 生成的“自动修复”把 Snowflake 的 Jira 给黑了",
       "source": "Hacker News",
-      "summary": "Anthropic 官方发布了 Claude 模型的系统提示词文档，首次披露了模型背后的\"隐藏指令\"。其中包含要求模型在特定情况下对文本进行\"水印式篡改\"的指令，引发开发者社区强烈反弹。批评者认为，这本质上是让模型在用户不知情的情况下修改输出内容，是对写作纯洁性的\"系统性玷污\"。",
-      "commentary": "嘴上喊着\"AI 安全第一\"，背地里却让模型当\"文字刺客\"？这操作比当年 Facebook 操纵用户信息流还骚。透明度不是靠发文档就能洗白的，关键是这些\"水印\"到底动了谁的奶酪。",
-      "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing"
+      "summary": "安全公司 Wiz 的研究显示，攻击者利用 GitHub Copilot 的“Autofix”功能生成的可信代码，反向渗透了 Snowflake 的内部 Jira 系统。AI 生成的代码被当成了“自己人”，成了供应链攻击的跳板。",
+      "commentary": "以前是“代码写得像屎山”，现在是“代码写得像 AI 拉的屎山”。当 AI 开始帮你写 bug 并自动提交时，你连背锅的机会都没有了。建议所有 CISO 把这条新闻打印出来贴在工位上，标题写：“AI 不是你的同事，是敌人的卧底。”",
+      "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug"
     },
     {
-      "title": "GeoServer 曝出 0day 漏洞，正被野外利用，可远程执行代码",
-      "source": "Tech RSS",
-      "summary": "开源地图服务器 GeoServer 被曝存在一个尚未分配 CVE 编号的 SQL 注入 0day 漏洞，可被利用实现远程代码执行（RCE）。安全公司 watchTowr 已检测到该漏洞正在被积极利用。目前官方尚未发布补丁，全球大量暴露在公网的地图服务面临被接管风险。",
-      "commentary": "又一个\"用爱发电\"的开源项目，被现实打脸。0day 在手，天下我有——但恭喜你，你的地图服务器可能已经成为黑客的免费云主机了。建议运维们今晚别睡了，守着漏洞公告刷新吧。",
-      "url": "https://thehackernews.com/2026/08/unpatched-geoserver-zero-day-targeted.html"
+      "title": "用 Rust 写 GPU 代码：终于不用跟 CUDA 的“方言”死磕了",
+      "source": "ArXiv",
+      "summary": "一篇新论文提出了在 Rust 中实现 GPU 离线（Offload）编程的框架，主打“可移植、安全、高性能”。它试图让开发者用 Rust 的安全抽象去写 GPU 内核，同时保证性能不输给原生 CUDA 或 HIP。",
+      "commentary": "Rust 社区又在“拯救世界”了——这次是把你从 CUDA 那套 C++ 模板地狱里捞出来。虽然“再用 Rust 重写一遍”是程序员的老梗，但如果真能摆脱 NVIDIA 的生态绑架，这波我举双手双脚支持。",
+      "url": "https://arxiv.org/abs/2608.13759"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49324985",
-      "title": "Qwen 3.8 27B is excellent, but it defaults to overthinking things",
+      "id": "hn:49329575",
+      "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
       "summary": "",
-      "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
+      "url": "https://blog.roboflow.com/openai-gpt-5-6/",
       "source": "Hacker News",
-      "score": 589,
-      "comments": 282
+      "score": 300,
+      "comments": 152
     },
     {
-      "id": "hn:49324087",
-      "title": "Anthropic's 'watermark' text adulteration in Claude is a perversion of writing",
+      "id": "hn:49330781",
+      "title": "A Preview of DuckDB v2.0",
       "summary": "",
-      "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
+      "url": "https://duckdb.org/2026/08/17/duckdb-20-highlights",
       "source": "Hacker News",
-      "score": 400,
-      "comments": 390
+      "score": 529,
+      "comments": 95
     },
     {
-      "id": "hn:49321717",
-      "title": "A third world engineer responds to “RISC-V: They should have known better”",
-      "summary": "",
-      "url": "https://rvembedded.com/blog_post/12/",
+      "id": "hn:49330597",
+      "title": "Incident with Github.com",
+      "summary": "Just got this message: &quot;No server is currently available to service your request. Sorry about that. Please try refreshing and contact us if the problem persists.&quot;<p>Edit: at the time of posting there was not an incident on githubstatus.com. Now there is. https:&#x2F;&#x2F;www.githubstatus.",
+      "url": "https://www.githubstatus.com/incidents/zkxwbgr0cnmx",
       "source": "Hacker News",
-      "score": 552,
-      "comments": 281
+      "score": 527,
+      "comments": 911
     },
     {
-      "id": "hn:49319556",
-      "title": "Claude: System Prompts",
+      "id": "hn:49338459",
+      "title": "How Bluesky draws its logo on screenshots",
       "summary": "",
-      "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
+      "url": "https://timmarinin.net/2026/bluesky-screenshots/",
       "source": "Hacker News",
-      "score": 690,
-      "comments": 267
+      "score": 203,
+      "comments": 145
+    },
+    {
+      "id": "hn:49331423",
+      "title": "AI-Generated GitHub Copilot “Autofix” Allowed Compromise of Snowflake's Jira",
+      "summary": "",
+      "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
+      "source": "Hacker News",
+      "score": 314,
+      "comments": 125
+    },
+    {
+      "id": "lob:0zdh32",
+      "title": "Does it make sense to switch to a Github Alternative ?",
+      "summary": "<p>Github has been down consistently over the last few months - does it make sense to switch to alternatives now?</p>\n<p>When do you think majority will switch?</p>\n<p>Edit : My thoughts on this - <a href=\"https://dhruv2038.bearblog.dev/github-has-an-availability-problem-is-it-time-to-look-elsewhere",
+      "url": "https://lobste.rs/s/0zdh32/does_it_make_sense_switch_github",
+      "source": "Lobste.rs",
+      "score": 62,
+      "comments": 68,
+      "tags": [
+        "ask",
+        "programming"
+      ]
+    },
+    {
+      "id": "hn:49270194",
+      "title": "Olo (Color)",
+      "summary": "",
+      "url": "https://en.wikipedia.org/wiki/Olo_(color)",
+      "source": "Hacker News",
+      "score": 311,
+      "comments": 64
+    },
+    {
+      "id": "hn:49336573",
+      "title": "AI;DR (AI; Didn't Read)",
+      "summary": "",
+      "url": "https://www.rickmanelius.com/p/aidr-ai-didnt-read",
+      "source": "Hacker News",
+      "score": 575,
+      "comments": 362
+    },
+    {
+      "id": "hn:49334991",
+      "title": "GPU Offload in Rust: Portable, Safe, and Fast",
+      "summary": "",
+      "url": "https://arxiv.org/abs/2608.13759",
+      "source": "Hacker News",
+      "score": 157,
+      "comments": 36
     },
     {
       "id": "lob:wpyhdh",
@@ -69,21 +118,21 @@
       "summary": "",
       "url": "https://c3-lang.org/blog/i_thought_i_was_building_a_c_replacement/",
       "source": "Lobste.rs",
-      "score": 93,
-      "comments": 75,
+      "score": 112,
+      "comments": 101,
       "tags": [
         "c",
         "programming"
       ]
     },
     {
-      "id": "hn:49325061",
-      "title": "Reticulum – Decentralized Mesh Network",
+      "id": "hn:49333824",
+      "title": "Sun Clock",
       "summary": "",
-      "url": "https://reticulum.network/",
+      "url": "https://sunclock.net/",
       "source": "Hacker News",
-      "score": 153,
-      "comments": 52
+      "score": 167,
+      "comments": 55
     },
     {
       "id": "lob:ii5tun",
@@ -91,8 +140,8 @@
       "summary": "",
       "url": "https://op.tngl.io/every-fucking-website/",
       "source": "Lobste.rs",
-      "score": 78,
-      "comments": 36,
+      "score": 105,
+      "comments": 62,
       "tags": [
         "satire",
         "vibecoding",
@@ -100,54 +149,57 @@
       ]
     },
     {
-      "id": "hn:49325789",
-      "title": "On A.I. regulation and messaging",
-      "summary": "<a href=\"https:&#x2F;&#x2F;xcancel.com&#x2F;DarioAmodei&#x2F;status&#x2F;2088758816376807762\" rel=\"nofollow\">https:&#x2F;&#x2F;xcancel.com&#x2F;DarioAmodei&#x2F;status&#x2F;2088758816376807762</a>",
-      "url": "https://twitter.com/DarioAmodei/status/2088758816376807762",
+      "id": "hn:49338328",
+      "title": "Quake Shareware, a CD-ROM just a little too full",
+      "summary": "",
+      "url": "https://fabiensanglard.net/quake_shareware_cd/index.html",
       "source": "Hacker News",
-      "score": 132,
-      "comments": 227
+      "score": 136,
+      "comments": 60
     },
     {
-      "id": "lob:hnx6id",
-      "title": "Protecting the Rust standard library from accidental breakage",
+      "id": "lob:izrwdc",
+      "title": "GitHub has alternatives, but no replacement",
       "summary": "",
-      "url": "https://predr.ag/blog/protecting-the-rust-stdlib-from-breakage/",
+      "url": "https://lalitm.com/post/github-alternatives/",
       "source": "Lobste.rs",
-      "score": 45,
-      "comments": 4,
+      "score": 34,
+      "comments": 18,
       "tags": [
-        "rust"
+        "vcs"
       ]
     },
     {
-      "id": "arxiv:2608.14496v1",
-      "title": "Generating Benchmark Health Data Using a Tabular Diffusion Transformer",
-      "summary": "Cross-Tabular Data Generation (CTDG) seeks to learn a generative model from multiple heterogeneous tables and produce new synthetic tabular datasets. However, existing synthetic tabular data generation methods are largely restricted to single-input-table scenarios and struggle to effectively handle ",
-      "url": "https://arxiv.org/abs/2608.14496v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "arxiv_id": "2608.14496v1"
-    },
-    {
-      "id": "rss:911bcc0e12",
-      "title": "GeoServer Zero-Day Targeted in Active Exploitation Attempts, Can Lead to RCE",
-      "summary": "A newly disclosed zero-day flaw in GeoServer is seeing active exploitation efforts, per watchTowr.\n\nThe vulnerability, which has yet to be assigned a CVE identifier, is an SQL injection vulnerability in the open-source platform that can lead to remote code execution (RCE). The security defect remain",
-      "url": "https://thehackernews.com/2026/08/unpatched-geoserver-zero-day-targeted.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "hn:49326816",
-      "title": "Linear algebra done right",
+      "id": "lob:nrnwc6",
+      "title": "Passphrase-less reboots using kexec under NixOS",
       "summary": "",
-      "url": "https://linear.axler.net/",
+      "url": "https://www.bevuta.com/en/blog/passphraseless-reboots-using-kexec/",
+      "source": "Lobste.rs",
+      "score": 24,
+      "comments": 15,
+      "tags": [
+        "linux",
+        "nix",
+        "security"
+      ]
+    },
+    {
+      "id": "hn:49333344",
+      "title": "Judge sets framework for Nine PBS to retrieve archival data",
+      "summary": "",
+      "url": "https://current.org/2026/08/judge-sets-framework-for-nine-pbs-to-retrieve-archival-data/",
       "source": "Hacker News",
-      "score": 116,
-      "comments": 48
+      "score": 132,
+      "comments": 53
+    },
+    {
+      "id": "hn:49337602",
+      "title": "GPT-5.6 Sol Pricing Cut by 50%",
+      "summary": "",
+      "url": "https://openrouter.ai/openai/gpt-5.6-sol",
+      "source": "Hacker News",
+      "score": 96,
+      "comments": 38
     },
     {
       "id": "lob:ln3dao",
@@ -155,8 +207,8 @@
       "summary": "",
       "url": "https://www.benjoffe.com/fast-day-of-week",
       "source": "Lobste.rs",
-      "score": 51,
-      "comments": 4,
+      "score": 72,
+      "comments": 7,
       "tags": [
         "assembly",
         "c++",
@@ -165,75 +217,28 @@
       ]
     },
     {
-      "id": "lob:8izobt",
-      "title": "You can just choose how many bugs you want now",
+      "id": "lob:6i1at9",
+      "title": "Writing a Fast Compiler",
       "summary": "",
-      "url": "https://nolanlawson.com/2026/08/16/you-can-just-choose-how-many-bugs-you-want-now/",
+      "url": "https://tibleiz.net/blog/2024-02-04-writing-a-fast-compiler.html",
       "source": "Lobste.rs",
-      "score": 16,
-      "comments": 10,
+      "score": 22,
+      "comments": 13,
       "tags": [
-        "vibecoding"
+        "compilers"
       ]
     },
     {
-      "id": "arxiv:2608.14509v1",
-      "title": "Split the Labor: Separating Evidence Interpretation from Decision Aggregation",
-      "summary": "Systems that ask a language model to reach a conclusion from many sources usually concatenate them into one prompt. This conflates two operations with different requirements. Interpreting a source rewards capacity and context. Combining interpretations rewards fixed arithmetic, comparability across ",
-      "url": "https://arxiv.org/abs/2608.14509v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "arxiv_id": "2608.14509v1"
-    },
-    {
-      "id": "arxiv:2608.14498v1",
-      "title": "Rollplex: Cross-Phase GPU Spatial Sharing for Vision Language Model Post-Training",
-      "summary": "Vision-language models (VLMs) enable embodied agents to reason and act from visual observations and language instructions. Reinforcement learning (RL) post-training enhances these capabilities using task feedback, but current on-policy RL runtimes execute rollout, reference scoring, and actor traini",
-      "url": "https://arxiv.org/abs/2608.14498v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.DC"
-      ],
-      "arxiv_id": "2608.14498v1"
-    },
-    {
-      "id": "rss:8ce3e4ecc3",
-      "title": "Apple macOS Screen Sharing Flaw Exploited on Internet-Exposed Macs to Install Monero Miner",
-      "summary": "A recently patched security flaw in Apple macOS has come under active exploitation in the wild to deploy a cryptocurrency miner, the Netherlands National Cyber Security Centre (NCSC) has warned.\n\nThe vulnerability in question is CVE-2026-65400 (CVSS score: 9.8), a critical authentication issue impac",
-      "url": "https://thehackernews.com/2026/08/apple-macos-screen-sharing-flaw.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:9d2007d2e1",
-      "title": "My idempotency library had one job. A dropped connection made it run the payment twice.",
-      "summary": "quayside is my idempotency library for Node.js. The whole API fits in one sentence: execute(key, fn) runs a function exactly once per key — if it already ran, you get the stored result back; if it is running right now, you don't run it again. Pluggable storage (memory, Redis, Postgres, MySQL), HTTP",
-      "url": "https://dev.to/pinceladasdaweb/my-idempotency-library-had-one-job-a-dropped-connection-made-it-run-the-payment-twice-nnh",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "hn:49325384",
-      "title": "Rhombus 1.1 is now available",
+      "id": "lob:os20fa",
+      "title": "Vetted AI code is hard to justify",
       "summary": "",
-      "url": "https://blog.racket-lang.org/2026/08/rhombus-v1.1.html",
-      "source": "Hacker News",
-      "score": 97,
-      "comments": 30
-    },
-    {
-      "id": "hn:49325714",
-      "title": "AGI-64 Brings Sierra Adventures to the Commodore 64",
-      "summary": "",
-      "url": "https://meanhamster.com/news/agi-64-brings-sierra-adventures-to-the-commodore-64",
-      "source": "Hacker News",
-      "score": 100,
-      "comments": 14
+      "url": "https://amoffat.github.io/blog/vetting-burnout.html",
+      "source": "Lobste.rs",
+      "score": 18,
+      "comments": 16,
+      "tags": [
+        "vibecoding"
+      ]
     }
   ],
   "ai_curated": true
