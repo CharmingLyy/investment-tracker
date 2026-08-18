@@ -1,196 +1,40 @@
 {
   "date": "2026-08-18",
-  "update_time": "2026-08-18 01:26:03",
+  "update_time": "2026-08-18 12:50:03",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-18\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 DuckDB v2.0 预告：数据分析界的“卷王”又进化了 (来源: Hacker News)\n- **核心干货**：DuckDB 发布了 2.0 版本预览，作为嵌入式 OLAP 数据库的标杆，新版本在查询优化器、多文件读取和内存管理上继续深挖。核心目标是让“大数据”分析在单机、甚至浏览器里跑出分布式集群的错觉。\n- **毒舌/硬核点评**：当别人还在纠结怎么搭 Hadoop 集群时，DuckDB 已经让你在笔记本电脑上玩出 Spark 的感觉。这玩意儿不是在“内卷”，是在“降维打击”——建议所有“大数据平台”公司把简历更新一下。\n- **🔗 传送门**：[点击直达原链接](https://duckdb.org/2026/08/17/duckdb-20-highlights)\n\n---\n\n### 2. 📌 AI 生成的“自动修复”把 Snowflake 的 Jira 给黑了 (来源: Hacker News)\n- **核心干货**：安全公司 Wiz 的研究显示，攻击者利用 GitHub Copilot 的“Autofix”功能生成的可信代码，反向渗透了 Snowflake 的内部 Jira 系统。AI 生成的代码被当成了“自己人”，成了供应链攻击的跳板。\n- **毒舌/硬核点评**：以前是“代码写得像屎山”，现在是“代码写得像 AI 拉的屎山”。当 AI 开始帮你写 bug 并自动提交时，你连背锅的机会都没有了。建议所有 CISO 把这条新闻打印出来贴在工位上，标题写：“AI 不是你的同事，是敌人的卧底。”\n- **🔗 传送门**：[点击直达原链接](https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug)\n\n---\n\n### 3. 📌 用 Rust 写 GPU 代码：终于不用跟 CUDA 的“方言”死磕了 (来源: ArXiv)\n- **核心干货**：一篇新论文提出了在 Rust 中实现 GPU 离线（Offload）编程的框架，主打“可移植、安全、高性能”。它试图让开发者用 Rust 的安全抽象去写 GPU 内核，同时保证性能不输给原生 CUDA 或 HIP。\n- **毒舌/硬核点评**：Rust 社区又在“拯救世界”了——这次是把你从 CUDA 那套 C++ 模板地狱里捞出来。虽然“再用 Rust 重写一遍”是程序员的老梗，但如果真能摆脱 NVIDIA 的生态绑架，这波我举双手双脚支持。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2608.13759)\n\n---\n\n### 🗣️ 今日顶男金句\n当 AI 开始写代码、修 bug、甚至帮你部署时，你的核心竞争力就只剩一个：**知道什么时候该拔电源。**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-18\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 DuckDB v2.0 预览版发布 (来源: Hacker News | 666分)\n- **核心干货**：数据分析界的\"瑞士军刀\"DuckDB 放出 v2.0 预览，针对分析型工作负载的查询性能、内存管理和扩展性做了一轮硬核升级。这玩意儿是嵌入式数据库，不用装服务器，跑数据分析比 Pandas 快几个数量级，v2.0 显然是要把\"快\"字再刻进骨子里。\n- **毒舌/硬核点评**：Pandas 用户还在为内存爆炸抓头发，DuckDB 已经默默把\"数据分析\"做成了\"数据秒查\"。这波更新，建议所有 SQL 粉和 DataFrame 难民都去围观——毕竟，谁不想让 Jupyter Notebook 里的查询从\"泡杯咖啡\"变成\"眨个眼\"呢？\n- **🔗 传送门**：[点击直达原链接](https://duckdb.org/2026/08/17/duckdb-20-highlights)\n\n---\n\n### 2. 📌 GPT-5.6 Sol 定价腰斩50% (来源: Hacker News | 516分)\n- **核心干货**：OpenAI 将 GPT-5.6 Sol 的 API 调用价格直接砍半。这不仅是降价，更是把大模型推理成本卷到了新低，摆明了要抢中小开发者和高频调用场景的蛋糕。AI 应用的成本门槛再次被暴力拉低。\n- **毒舌/硬核点评**：价格战一响，黄金万两？OpenAI 这波\"自杀式降价\"，怕不是要把那些靠 API 差价吃饭的二道贩子直接送走。对开发者来说，这是好事——毕竟，AI 应用的算力成本终于从\"卖肾\"变成了\"卖血\"。\n- **🔗 传送门**：[点击直达原链接](https://openrouter.ai/openai/gpt-5.6-sol)\n\n---\n\n### 3. 📌 以色列伪造智库试图\"投喂\"AI聊天机器人 (来源: Hacker News | 701分)\n- **核心干货**：一份调查报告揭露，以色列疑似创建了一个虚假智库，目的是通过发布看似权威的\"研究内容\"来影响 ChatGPT 等 AI 模型的输出倾向。这揭示了 LLM 时代的新型信息战：直接污染AI的\"认知\"。\n- **毒舌/硬核点评**：以前是控制舆论，现在是直接篡改 AI 的\"脑回路\"。这操作堪称\"赛博认知战\"的教科书案例。所以下次 AI 跟你侃侃而谈时，记得想一想——它说的到底是真知灼见，还是被哪个\"影子智库\"喂的私货？\n- **🔗 传送门**：[点击直达原链接](https://responsiblestatecraft.org/israel-influence-chatgpt/)\n\n---\n\n### 🗣️ 今日顶男金句\n\"当 AI 开始有自己的立场时，别急着怪它，先查查它昨天吃了什么数据。\"",
   "briefing_items": [
     {
-      "title": "DuckDB v2.0 预告：数据分析界的“卷王”又进化了",
-      "source": "Hacker News",
-      "summary": "DuckDB 发布了 2.0 版本预览，作为嵌入式 OLAP 数据库的标杆，新版本在查询优化器、多文件读取和内存管理上继续深挖。核心目标是让“大数据”分析在单机、甚至浏览器里跑出分布式集群的错觉。",
-      "commentary": "当别人还在纠结怎么搭 Hadoop 集群时，DuckDB 已经让你在笔记本电脑上玩出 Spark 的感觉。这玩意儿不是在“内卷”，是在“降维打击”——建议所有“大数据平台”公司把简历更新一下。",
+      "title": "DuckDB v2.0 预览版发布",
+      "source": "Hacker News | 666分",
+      "summary": "数据分析界的\"瑞士军刀\"DuckDB 放出 v2.0 预览，针对分析型工作负载的查询性能、内存管理和扩展性做了一轮硬核升级。这玩意儿是嵌入式数据库，不用装服务器，跑数据分析比 Pandas 快几个数量级，v2.0 显然是要把\"快\"字再刻进骨子里。",
+      "commentary": "Pandas 用户还在为内存爆炸抓头发，DuckDB 已经默默把\"数据分析\"做成了\"数据秒查\"。这波更新，建议所有 SQL 粉和 DataFrame 难民都去围观——毕竟，谁不想让 Jupyter Notebook 里的查询从\"泡杯咖啡\"变成\"眨个眼\"呢？",
       "url": "https://duckdb.org/2026/08/17/duckdb-20-highlights"
     },
     {
-      "title": "AI 生成的“自动修复”把 Snowflake 的 Jira 给黑了",
-      "source": "Hacker News",
-      "summary": "安全公司 Wiz 的研究显示，攻击者利用 GitHub Copilot 的“Autofix”功能生成的可信代码，反向渗透了 Snowflake 的内部 Jira 系统。AI 生成的代码被当成了“自己人”，成了供应链攻击的跳板。",
-      "commentary": "以前是“代码写得像屎山”，现在是“代码写得像 AI 拉的屎山”。当 AI 开始帮你写 bug 并自动提交时，你连背锅的机会都没有了。建议所有 CISO 把这条新闻打印出来贴在工位上，标题写：“AI 不是你的同事，是敌人的卧底。”",
-      "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug"
+      "title": "GPT-5.6 Sol 定价腰斩50%",
+      "source": "Hacker News | 516分",
+      "summary": "OpenAI 将 GPT-5.6 Sol 的 API 调用价格直接砍半。这不仅是降价，更是把大模型推理成本卷到了新低，摆明了要抢中小开发者和高频调用场景的蛋糕。AI 应用的成本门槛再次被暴力拉低。",
+      "commentary": "价格战一响，黄金万两？OpenAI 这波\"自杀式降价\"，怕不是要把那些靠 API 差价吃饭的二道贩子直接送走。对开发者来说，这是好事——毕竟，AI 应用的算力成本终于从\"卖肾\"变成了\"卖血\"。",
+      "url": "https://openrouter.ai/openai/gpt-5.6-sol"
     },
     {
-      "title": "用 Rust 写 GPU 代码：终于不用跟 CUDA 的“方言”死磕了",
-      "source": "ArXiv",
-      "summary": "一篇新论文提出了在 Rust 中实现 GPU 离线（Offload）编程的框架，主打“可移植、安全、高性能”。它试图让开发者用 Rust 的安全抽象去写 GPU 内核，同时保证性能不输给原生 CUDA 或 HIP。",
-      "commentary": "Rust 社区又在“拯救世界”了——这次是把你从 CUDA 那套 C++ 模板地狱里捞出来。虽然“再用 Rust 重写一遍”是程序员的老梗，但如果真能摆脱 NVIDIA 的生态绑架，这波我举双手双脚支持。",
-      "url": "https://arxiv.org/abs/2608.13759"
+      "title": "以色列伪造智库试图\"投喂\"AI聊天机器人",
+      "source": "Hacker News | 701分",
+      "summary": "一份调查报告揭露，以色列疑似创建了一个虚假智库，目的是通过发布看似权威的\"研究内容\"来影响 ChatGPT 等 AI 模型的输出倾向。这揭示了 LLM 时代的新型信息战：直接污染AI的\"认知\"。",
+      "commentary": "以前是控制舆论，现在是直接篡改 AI 的\"脑回路\"。这操作堪称\"赛博认知战\"的教科书案例。所以下次 AI 跟你侃侃而谈时，记得想一想——它说的到底是真知灼见，还是被哪个\"影子智库\"喂的私货？",
+      "url": "https://responsiblestatecraft.org/israel-influence-chatgpt/"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49329575",
-      "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
+      "id": "hn:49342719",
+      "title": "Linux 7.3 improves performance when running out of vRAM",
       "summary": "",
-      "url": "https://blog.roboflow.com/openai-gpt-5-6/",
+      "url": "https://pixelcluster.dev/VRAM-Overcommit/",
       "source": "Hacker News",
-      "score": 300,
-      "comments": 152
-    },
-    {
-      "id": "hn:49330781",
-      "title": "A Preview of DuckDB v2.0",
-      "summary": "",
-      "url": "https://duckdb.org/2026/08/17/duckdb-20-highlights",
-      "source": "Hacker News",
-      "score": 529,
-      "comments": 95
-    },
-    {
-      "id": "hn:49330597",
-      "title": "Incident with Github.com",
-      "summary": "Just got this message: &quot;No server is currently available to service your request. Sorry about that. Please try refreshing and contact us if the problem persists.&quot;<p>Edit: at the time of posting there was not an incident on githubstatus.com. Now there is. https:&#x2F;&#x2F;www.githubstatus.",
-      "url": "https://www.githubstatus.com/incidents/zkxwbgr0cnmx",
-      "source": "Hacker News",
-      "score": 527,
-      "comments": 911
-    },
-    {
-      "id": "hn:49338459",
-      "title": "How Bluesky draws its logo on screenshots",
-      "summary": "",
-      "url": "https://timmarinin.net/2026/bluesky-screenshots/",
-      "source": "Hacker News",
-      "score": 203,
-      "comments": 145
-    },
-    {
-      "id": "hn:49331423",
-      "title": "AI-Generated GitHub Copilot “Autofix” Allowed Compromise of Snowflake's Jira",
-      "summary": "",
-      "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
-      "source": "Hacker News",
-      "score": 314,
-      "comments": 125
-    },
-    {
-      "id": "lob:0zdh32",
-      "title": "Does it make sense to switch to a Github Alternative ?",
-      "summary": "<p>Github has been down consistently over the last few months - does it make sense to switch to alternatives now?</p>\n<p>When do you think majority will switch?</p>\n<p>Edit : My thoughts on this - <a href=\"https://dhruv2038.bearblog.dev/github-has-an-availability-problem-is-it-time-to-look-elsewhere",
-      "url": "https://lobste.rs/s/0zdh32/does_it_make_sense_switch_github",
-      "source": "Lobste.rs",
-      "score": 62,
-      "comments": 68,
-      "tags": [
-        "ask",
-        "programming"
-      ]
-    },
-    {
-      "id": "hn:49270194",
-      "title": "Olo (Color)",
-      "summary": "",
-      "url": "https://en.wikipedia.org/wiki/Olo_(color)",
-      "source": "Hacker News",
-      "score": 311,
-      "comments": 64
-    },
-    {
-      "id": "hn:49336573",
-      "title": "AI;DR (AI; Didn't Read)",
-      "summary": "",
-      "url": "https://www.rickmanelius.com/p/aidr-ai-didnt-read",
-      "source": "Hacker News",
-      "score": 575,
-      "comments": 362
-    },
-    {
-      "id": "hn:49334991",
-      "title": "GPU Offload in Rust: Portable, Safe, and Fast",
-      "summary": "",
-      "url": "https://arxiv.org/abs/2608.13759",
-      "source": "Hacker News",
-      "score": 157,
-      "comments": 36
-    },
-    {
-      "id": "lob:wpyhdh",
-      "title": "I thought I was building a C replacement. I was wrong",
-      "summary": "",
-      "url": "https://c3-lang.org/blog/i_thought_i_was_building_a_c_replacement/",
-      "source": "Lobste.rs",
-      "score": 112,
-      "comments": 101,
-      "tags": [
-        "c",
-        "programming"
-      ]
-    },
-    {
-      "id": "hn:49333824",
-      "title": "Sun Clock",
-      "summary": "",
-      "url": "https://sunclock.net/",
-      "source": "Hacker News",
-      "score": 167,
-      "comments": 55
-    },
-    {
-      "id": "lob:ii5tun",
-      "title": "Every Fucking Website",
-      "summary": "",
-      "url": "https://op.tngl.io/every-fucking-website/",
-      "source": "Lobste.rs",
-      "score": 105,
-      "comments": 62,
-      "tags": [
-        "satire",
-        "vibecoding",
-        "web"
-      ]
-    },
-    {
-      "id": "hn:49338328",
-      "title": "Quake Shareware, a CD-ROM just a little too full",
-      "summary": "",
-      "url": "https://fabiensanglard.net/quake_shareware_cd/index.html",
-      "source": "Hacker News",
-      "score": 136,
-      "comments": 60
-    },
-    {
-      "id": "lob:izrwdc",
-      "title": "GitHub has alternatives, but no replacement",
-      "summary": "",
-      "url": "https://lalitm.com/post/github-alternatives/",
-      "source": "Lobste.rs",
-      "score": 34,
-      "comments": 18,
-      "tags": [
-        "vcs"
-      ]
-    },
-    {
-      "id": "lob:nrnwc6",
-      "title": "Passphrase-less reboots using kexec under NixOS",
-      "summary": "",
-      "url": "https://www.bevuta.com/en/blog/passphraseless-reboots-using-kexec/",
-      "source": "Lobste.rs",
-      "score": 24,
-      "comments": 15,
-      "tags": [
-        "linux",
-        "nix",
-        "security"
-      ]
-    },
-    {
-      "id": "hn:49333344",
-      "title": "Judge sets framework for Nine PBS to retrieve archival data",
-      "summary": "",
-      "url": "https://current.org/2026/08/judge-sets-framework-for-nine-pbs-to-retrieve-archival-data/",
-      "source": "Hacker News",
-      "score": 132,
-      "comments": 53
+      "score": 271,
+      "comments": 83
     },
     {
       "id": "hn:49337602",
@@ -198,23 +42,96 @@
       "summary": "",
       "url": "https://openrouter.ai/openai/gpt-5.6-sol",
       "source": "Hacker News",
-      "score": 96,
-      "comments": 38
+      "score": 516,
+      "comments": 330
     },
     {
-      "id": "lob:ln3dao",
-      "title": "A faster way to calculate the day-of-the-week",
+      "id": "hn:49338285",
+      "title": "Fairphone 6 and PostmarketOS working main camera",
       "summary": "",
-      "url": "https://www.benjoffe.com/fast-day-of-week",
+      "url": "https://catcrafts.net/posts/fairphone-6-postmarketos-working-main-camera",
+      "source": "Hacker News",
+      "score": 242,
+      "comments": 56
+    },
+    {
+      "id": "hn:49330781",
+      "title": "A Preview of DuckDB v2.0",
+      "summary": "",
+      "url": "https://duckdb.org/2026/08/17/duckdb-20-highlights",
+      "source": "Hacker News",
+      "score": 666,
+      "comments": 118
+    },
+    {
+      "id": "hn:49338459",
+      "title": "How Bluesky draws its logo on screenshots",
+      "summary": "",
+      "url": "https://timmarinin.net/2026/bluesky-screenshots/",
+      "source": "Hacker News",
+      "score": 590,
+      "comments": 375
+    },
+    {
+      "id": "hn:49338328",
+      "title": "Quake Shareware, a CD-ROM just a little too full",
+      "summary": "",
+      "url": "https://fabiensanglard.net/quake_shareware_cd/index.html",
+      "source": "Hacker News",
+      "score": 400,
+      "comments": 171
+    },
+    {
+      "id": "hn:49337392",
+      "title": "Israel creates fake think tank in likely attempt to dupe AI chatbots",
+      "summary": "",
+      "url": "https://responsiblestatecraft.org/israel-influence-chatgpt/",
+      "source": "Hacker News",
+      "score": 701,
+      "comments": 404
+    },
+    {
+      "id": "lob:0zdh32",
+      "title": "Does it make sense to switch to a Github Alternative ?",
+      "summary": "<p>Github has been down consistently over the last few months - does it make sense to switch to alternatives now?</p>\n<p>When do you think majority will switch?</p>\n<p>Edit : My thoughts on this - <a href=\"https://dhruv2038.bearblog.dev/github-has-an-availability-problem-is-it-time-to-look-elsewhere",
+      "url": "https://lobste.rs/s/0zdh32/does_it_make_sense_switch_github",
       "source": "Lobste.rs",
-      "score": 72,
-      "comments": 7,
+      "score": 76,
+      "comments": 77,
       "tags": [
-        "assembly",
-        "c++",
-        "math",
-        "performance"
+        "ask",
+        "programming"
       ]
+    },
+    {
+      "id": "hn:49343559",
+      "title": "Google buys crashed airline Spirit's data at auction, because AI",
+      "summary": "",
+      "url": "https://www.theregister.com/ai-and-ml/2026/08/18/google-buys-crashed-airline-spirits-data-at-auction-because-ai/5288962",
+      "source": "Hacker News",
+      "score": 188,
+      "comments": 108
+    },
+    {
+      "id": "lob:izrwdc",
+      "title": "GitHub has alternatives, but no replacement",
+      "summary": "",
+      "url": "https://lalitm.com/post/github-alternatives/",
+      "source": "Lobste.rs",
+      "score": 53,
+      "comments": 40,
+      "tags": [
+        "vcs"
+      ]
+    },
+    {
+      "id": "hn:49342530",
+      "title": "Rethinking Database Programming",
+      "summary": "",
+      "url": "https://acadia.engineering/blog/rethinking-database-programming",
+      "source": "Hacker News",
+      "score": 110,
+      "comments": 52
     },
     {
       "id": "lob:6i1at9",
@@ -222,10 +139,35 @@
       "summary": "",
       "url": "https://tibleiz.net/blog/2024-02-04-writing-a-fast-compiler.html",
       "source": "Lobste.rs",
-      "score": 22,
-      "comments": 13,
+      "score": 29,
+      "comments": 23,
       "tags": [
         "compilers"
+      ]
+    },
+    {
+      "id": "lob:gwc2me",
+      "title": "When the Down Arrow is not an Upside-Down Up Arrow (2022)",
+      "summary": "",
+      "url": "https://thefloatingcontinent.com/blog/upside-down-arrow-unicode/",
+      "source": "Lobste.rs",
+      "score": 34,
+      "comments": 11,
+      "tags": [
+        "web"
+      ]
+    },
+    {
+      "id": "lob:flcpeu",
+      "title": "We Tracked a Shipment of Rare Books. It Ended at an Amazon AI Training Facility",
+      "summary": "",
+      "url": "https://simonwillison.net/2026/Aug/17/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-tra/",
+      "source": "Lobste.rs",
+      "score": 24,
+      "comments": 14,
+      "tags": [
+        "ai",
+        "art"
       ]
     },
     {
@@ -234,11 +176,66 @@
       "summary": "",
       "url": "https://amoffat.github.io/blog/vetting-burnout.html",
       "source": "Lobste.rs",
-      "score": 18,
-      "comments": 16,
+      "score": 22,
+      "comments": 22,
       "tags": [
         "vibecoding"
       ]
+    },
+    {
+      "id": "lob:wya4zt",
+      "title": "A Preview of DuckDB v2.0",
+      "summary": "",
+      "url": "https://duckdb.org/2026/08/17/duckdb-20-highlights.html",
+      "source": "Lobste.rs",
+      "score": 52,
+      "comments": 0,
+      "tags": [
+        "databases"
+      ]
+    },
+    {
+      "id": "arxiv:2608.16844v1",
+      "title": "Proteus: Incremental Memory Activation for Long-Context Sequence Modeling",
+      "summary": "The quadratic cost of attention-based sequence models for long contexts has motivated a growing line of research on memory-based models that can compress context into a compact state. However, most existing memory models expose a static memory throughout the entire sequence. Because early tokens fac",
+      "url": "https://arxiv.org/abs/2608.16844v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_id": "2608.16844v1"
+    },
+    {
+      "id": "rss:dc7d72acd4",
+      "title": "Forminator WordPress Flaw Can Enable Unauthenticated RCE via Malicious PHP Uploads",
+      "summary": "A critical security flaw has been disclosed in Forminator Forms, a WordPress plugin with more than 600,000 active installations, that could be exploited to achieve arbitrary code execution on susceptible sites.\n\nThe vulnerability, tracked as CVE-2026-15748, is rated 9.8 out of 10.0 on the CVSS scori",
+      "url": "https://thehackernews.com/2026/08/forminator-wordpress-flaw-can-enable.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:8ce3e4ecc3",
+      "title": "Apple macOS Screen Sharing Flaw Exploited on Internet-Exposed Macs to Install Monero Miner",
+      "summary": "A recently patched security flaw in Apple macOS has come under active exploitation in the wild to deploy a cryptocurrency miner, the Netherlands National Cyber Security Centre (NCSC-NL) has warned.\n\nThe vulnerability in question is CVE-2026-65400 (CVSS score: 9.8), a critical authentication issue im",
+      "url": "https://thehackernews.com/2026/08/apple-macos-screen-sharing-flaw.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "arxiv:2608.16884v1",
+      "title": "Improving the matrix multiplication exponent with modern optimization and AlphaEvolve",
+      "summary": "The current best bounds on the matrix multiplication exponent $ω$ are obtained through a refinement of the laser method called combination loss analysis (Duan et al., 2022; Williams et al., 2024; Alman et al., 2025). In this note, we address the optimization problem at the core of this approach and ",
+      "url": "https://arxiv.org/abs/2608.16884v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.DS",
+        "cs.AI",
+        "cs.CC",
+        "cs.LG"
+      ],
+      "arxiv_id": "2608.16884v1"
     }
   ],
   "ai_curated": true
