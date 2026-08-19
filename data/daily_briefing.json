@@ -1,49 +1,52 @@
 {
   "date": "2026-08-19",
-  "update_time": "2026-08-19 01:27:34",
+  "update_time": "2026-08-19 12:51:02",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-19\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Cursor 发布 Origin，硬刚 GitHub (来源: Hacker News)\n- **核心干货**：AI 编程工具明星公司 Cursor 正式推出代码托管平台 Origin，直接对标 GitHub。这不仅是代码仓库，更是将 AI 辅助开发、代码审查和 CI/CD 深度整合的“AI 原生”开发闭环，摆明了要革了传统代码托管平台的命。\n- **毒舌/硬核点评**：GitHub 还在忙着数星星，Cursor 已经准备把整个开发流程焊死在 AI 上。这波不是“替代”，是“降维打击”——当 AI 成为 IDE 的核心，仓库只是它顺便收编的附属品。\n- **🔗 传送门**：[点击直达原链接](https://cursor.com/changelog/origin-code-hosting)\n\n---\n\n### 2. 📌 Mojo 正式开源，AI 基础设施迎来“性能猛兽” (来源: Lobste.rs)\n- **核心干货**：Modular 公司宣布其 AI 编程语言 Mojo 正式开源。作为 Python 的超集，它旨在解决 Python 在 AI 推理和高性能计算中的性能瓶颈，同时保持语法亲和力。开源意味着生态建设将全面提速，有望成为 AI 基础设施层的标准语言之一。\n- **毒舌/硬核点评**：Python 慢得像老太太散步，Mojo 这是直接给老太太装上了火箭推进器。开源是唯一正确的路，毕竟“让 AI 跑得更快”的饼，得让全世界的码农一起烙才够吃。\n- **🔗 传送门**：[点击直达原链接](https://www.modular.com/blog/mojo-open-source)\n\n---\n\n### 3. 📌 “亚马逊税”引热议，平台经济吸血模式遭清算 (来源: Hacker News)\n- **核心干货**：知名博主 Seth Godin 发文剖析“亚马逊税”——即商家为依赖亚马逊平台而付出的高额佣金、广告费和物流成本，导致利润被严重侵蚀。文章引发 900+ 讨论，直指平台经济下中小商户的生存困境与“流量税”的不可持续性。\n- **毒舌/硬核点评**：以前是“店大欺客”，现在是“客大欺店”。亚马逊这税种收得比 IRS 还狠，可惜没有退税补贴。所有把命运交给平台的商家，都是在给 Jeff Bezos 的火箭添砖加瓦。\n- **🔗 传送门**：[点击直达原链接](https://seths.blog/2026/08/the-amazon-tax/)\n\n---\n\n### 🗣️ 今日顶男金句\n**“别把平台当本事，别把风口当宿命。真正的护城河，是离开任何平台后，你还能独立赚钱的能力。”**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-19\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Cerebras CS-4：把“训练大模型”变成“吃自助餐” (来源: Hacker News)\n- **核心干货**：Cerebras 发布了新一代晶圆级AI芯片 CS-4。它延续了“把整个晶圆做成一颗芯片”的暴力美学路线，旨在解决大模型训练中“内存墙”和“通信瓶颈”的痛点。不用再拆成几千个小GPU搞分布式那套折磨人的活，一片晶圆就是一个超大的计算单元。\n- **毒舌/硬核点评**：当别人还在研究怎么用胶水把一万张显卡粘起来时，Cerebras 直接抡起一整块晶圆砸了过来。这不叫创新，这叫物理层面的“降维打击”——虽然贵得离谱，但“大力出奇迹”这事儿，在AI算力领域永远不过时。\n- **🔗 传送门**：[https://www.cerebras.ai/cs4](https://www.cerebras.ai/cs4)\n\n---\n\n### 2. 📌 Mojo 正式开源：AI 编程界的“性能狂魔”终于脱了马甲 (来源: GitHub/Hacker News)\n- **核心干货**：Modular（现属高通）宣布其 AI 编程语言 Mojo 正式开源。Mojo 旨在结合 Python 的易用性与 C++/Rust 的性能，解决 AI 模型开发中“写 Python 一时爽，部署性能火葬场”的核心痛点。它能让你用 Python 语法写出接近硬件极限的高速代码。\n- **毒舌/硬核点评**：以前是“Python 跑不动？那就用 C++ 重写”，现在是“Python 跑不动？加个 `fn` 试试”。开源意味着社区可以开始为它的“下一代”续命了。至于它能不能真的撼动 Python 的统治地位？先把生态搞起来再说吧，别又是雷声大雨点小。\n- **🔗 传送门**：[https://www.modular.com/blog/mojo-open-source](https://www.modular.com/blog/mojo-open-source)\n\n---\n\n### 3. 📌 Palomar：数学界的“GitHub”上线，陶哲轩亲自带货 (来源: ArXiv/Hacker News)\n- **核心干货**：著名数学家陶哲轩参与发布了 Palomar——一个 Lean 验证数学的注册表。这个项目旨在系统性地收录和整理所有经过 Lean 证明助手验证的数学定理，解决数学界“论文可能抄错、证明没法复现”的千年老问题。让“电脑说对”成为数学严谨性的新标准。\n- **毒舌/硬核点评**：数学家们终于开始用 Git 思维搞研究了？以后数学论文的结论不再是“显而易见”，而是“Lean 已验证”。这不仅是工具进步，更是把数学从“艺术”推向“工程学”的关键一步。建议那些还在用“由图易知”糊弄人的学者们赶紧学习一下，否则以后审稿人直接让你跑一遍代码。\n- **🔗 传送门**：[https://terrytao.wordpress.com/2026/08/18/palomar-a-registry-of-lean-verified-mathematics/](https://terrytao.wordpress.com/2026/08/18/palomar-a-registry-of-lean-verified-mathematics/)\n\n---\n\n### 🗣️ 今日顶男金句\n“真正的自律不是每天打鸡血，而是像训练大模型一样，把每一次迭代都变得更快、更稳、更便宜——毕竟，人生这场游戏，没人给你提供免费的 GPU。”",
   "briefing_items": [
     {
-      "title": "Cursor 发布 Origin，硬刚 GitHub",
+      "title": "Cerebras CS-4：把“训练大模型”变成“吃自助餐”",
       "source": "Hacker News",
-      "summary": "AI 编程工具明星公司 Cursor 正式推出代码托管平台 Origin，直接对标 GitHub。这不仅是代码仓库，更是将 AI 辅助开发、代码审查和 CI/CD 深度整合的“AI 原生”开发闭环，摆明了要革了传统代码托管平台的命。",
-      "commentary": "GitHub 还在忙着数星星，Cursor 已经准备把整个开发流程焊死在 AI 上。这波不是“替代”，是“降维打击”——当 AI 成为 IDE 的核心，仓库只是它顺便收编的附属品。",
-      "url": "https://cursor.com/changelog/origin-code-hosting"
+      "summary": "Cerebras 发布了新一代晶圆级AI芯片 CS-4。它延续了“把整个晶圆做成一颗芯片”的暴力美学路线，旨在解决大模型训练中“内存墙”和“通信瓶颈”的痛点。不用再拆成几千个小GPU搞分布式那套折磨人的活，一片晶圆就是一个超大的计算单元。",
+      "commentary": "当别人还在研究怎么用胶水把一万张显卡粘起来时，Cerebras 直接抡起一整块晶圆砸了过来。这不叫创新，这叫物理层面的“降维打击”——虽然贵得离谱，但“大力出奇迹”这事儿，在AI算力领域永远不过时。",
+      "url": ""
     },
     {
-      "title": "Mojo 正式开源，AI 基础设施迎来“性能猛兽”",
-      "source": "Lobste.rs",
-      "summary": "Modular 公司宣布其 AI 编程语言 Mojo 正式开源。作为 Python 的超集，它旨在解决 Python 在 AI 推理和高性能计算中的性能瓶颈，同时保持语法亲和力。开源意味着生态建设将全面提速，有望成为 AI 基础设施层的标准语言之一。",
-      "commentary": "Python 慢得像老太太散步，Mojo 这是直接给老太太装上了火箭推进器。开源是唯一正确的路，毕竟“让 AI 跑得更快”的饼，得让全世界的码农一起烙才够吃。",
-      "url": "https://www.modular.com/blog/mojo-open-source"
+      "title": "Mojo 正式开源：AI 编程界的“性能狂魔”终于脱了马甲",
+      "source": "GitHub/Hacker News",
+      "summary": "Modular（现属高通）宣布其 AI 编程语言 Mojo 正式开源。Mojo 旨在结合 Python 的易用性与 C++/Rust 的性能，解决 AI 模型开发中“写 Python 一时爽，部署性能火葬场”的核心痛点。它能让你用 Python 语法写出接近硬件极限的高速代码。",
+      "commentary": "以前是“Python 跑不动？那就用 C++ 重写”，现在是“Python 跑不动？加个 `fn` 试试”。开源意味着社区可以开始为它的“下一代”续命了。至于它能不能真的撼动 Python 的统治地位？先把生态搞起来再说吧，别又是雷声大雨点小。",
+      "url": ""
     },
     {
-      "title": "“亚马逊税”引热议，平台经济吸血模式遭清算",
-      "source": "Hacker News",
-      "summary": "知名博主 Seth Godin 发文剖析“亚马逊税”——即商家为依赖亚马逊平台而付出的高额佣金、广告费和物流成本，导致利润被严重侵蚀。文章引发 900+ 讨论，直指平台经济下中小商户的生存困境与“流量税”的不可持续性。",
-      "commentary": "以前是“店大欺客”，现在是“客大欺店”。亚马逊这税种收得比 IRS 还狠，可惜没有退税补贴。所有把命运交给平台的商家，都是在给 Jeff Bezos 的火箭添砖加瓦。",
-      "url": "https://seths.blog/2026/08/the-amazon-tax/"
+      "title": "Palomar：数学界的“GitHub”上线，陶哲轩亲自带货",
+      "source": "ArXiv/Hacker News",
+      "summary": "著名数学家陶哲轩参与发布了 Palomar——一个 Lean 验证数学的注册表。这个项目旨在系统性地收录和整理所有经过 Lean 证明助手验证的数学定理，解决数学界“论文可能抄错、证明没法复现”的千年老问题。让“电脑说对”成为数学严谨性的新标准。",
+      "commentary": "数学家们终于开始用 Git 思维搞研究了？以后数学论文的结论不再是“显而易见”，而是“Lean 已验证”。这不仅是工具进步，更是把数学从“艺术”推向“工程学”的关键一步。建议那些还在用“由图易知”糊弄人的学者们赶紧学习一下，否则以后审稿人直接让你跑一遍代码。",
+      "url": ""
     }
   ],
   "candidates": [
     {
-      "id": "hn:49349984",
-      "title": "How does IKEA come up with names for its products?",
+      "id": "hn:49353221",
+      "title": "A 3D fruit fly on macOS desktop powered by the real FlyWire connectome",
       "summary": "",
-      "url": "https://www.ikea.com/se/en/customer-service/knowledge/articles/6f564c4d-2ccc-46de-b643-545a3948dc79.html",
+      "url": "https://github.com/DenisSergeevitch/desktop-fly",
       "source": "Hacker News",
-      "score": 222,
-      "comments": 140
+      "score": 316,
+      "comments": 130
     },
     {
-      "id": "hn:49344825",
-      "title": "Using the railway network as a flatbed scanner",
+      "id": "lob:caubyr",
+      "title": "Bun 1.4 Rust rewrite is not looking good",
       "summary": "",
-      "url": "https://philo.gay/linecam/",
-      "source": "Hacker News",
-      "score": 397,
-      "comments": 64
+      "url": "https://tipiirai.com/writing/bun-rust-rewrite-worries",
+      "source": "Lobste.rs",
+      "score": 48,
+      "comments": 30,
+      "tags": [
+        "vibecoding"
+      ]
     },
     {
       "id": "hn:49321298",
@@ -51,26 +54,17 @@
       "summary": "",
       "url": "https://nicholascharriere.com/blog/being-ambitious-and-being-a-dad/",
       "source": "Hacker News",
-      "score": 261,
-      "comments": 143
+      "score": 640,
+      "comments": 440
     },
     {
-      "id": "hn:49334209",
-      "title": "Cursor launches Origin, GitHub alternative",
+      "id": "hn:49349984",
+      "title": "How does IKEA come up with names for its products?",
       "summary": "",
-      "url": "https://cursor.com/changelog/origin-code-hosting",
+      "url": "https://www.ikea.com/se/en/customer-service/knowledge/articles/6f564c4d-2ccc-46de-b643-545a3948dc79.html",
       "source": "Hacker News",
-      "score": 462,
-      "comments": 361
-    },
-    {
-      "id": "hn:49345220",
-      "title": "Fixing a bricked Framework laptop",
-      "summary": "",
-      "url": "https://quantum5.ca/2026/08/16/fixing-bricked-amd-7040-series-framework-13-laptop-with-20-tools/",
-      "source": "Hacker News",
-      "score": 354,
-      "comments": 241
+      "score": 384,
+      "comments": 268
     },
     {
       "id": "lob:ykq7ym",
@@ -78,8 +72,8 @@
       "summary": "",
       "url": "https://acadia.engineering/blog/rethinking-database-programming",
       "source": "Lobste.rs",
-      "score": 66,
-      "comments": 32,
+      "score": 75,
+      "comments": 33,
       "tags": [
         "databases",
         "elm",
@@ -87,87 +81,31 @@
       ]
     },
     {
-      "id": "lob:0zdh32",
-      "title": "Does it make sense to switch to a Github Alternative ?",
-      "summary": "<p>Github has been down consistently over the last few months - does it make sense to switch to alternatives now?</p>\n<p>When do you think majority will switch?</p>\n<p>Edit : My thoughts on this - <a href=\"https://dhruv2038.bearblog.dev/github-has-an-availability-problem-is-it-time-to-look-elsewhere",
-      "url": "https://lobste.rs/s/0zdh32/does_it_make_sense_switch_github",
-      "source": "Lobste.rs",
-      "score": 80,
-      "comments": 83,
-      "tags": [
-        "ask",
-        "programming"
-      ]
-    },
-    {
-      "id": "hn:49349898",
-      "title": "Turbovec – Google's TurboQuant for vector search in Rust",
+      "id": "hn:49354613",
+      "title": "Solo – a .so loader for static Linux binaries",
       "summary": "",
-      "url": "https://github.com/RyanCodrai/turbovec",
-      "source": "Hacker News",
-      "score": 202,
-      "comments": 27
-    },
-    {
-      "id": "hn:49345263",
-      "title": "The Amazon tax",
-      "summary": "",
-      "url": "https://seths.blog/2026/08/the-amazon-tax/",
-      "source": "Hacker News",
-      "score": 925,
-      "comments": 535
-    },
-    {
-      "id": "hn:49351324",
-      "title": "Beware Management Consultants",
-      "summary": "",
-      "url": "https://about.iceland.co.uk/our-story/the-dark-ages/beware-management-consultants/",
-      "source": "Hacker News",
-      "score": 437,
-      "comments": 122
-    },
-    {
-      "id": "lob:izrwdc",
-      "title": "GitHub has alternatives, but no replacement",
-      "summary": "",
-      "url": "https://lalitm.com/post/github-alternatives/",
-      "source": "Lobste.rs",
-      "score": 59,
-      "comments": 55,
-      "tags": [
-        "vcs"
-      ]
-    },
-    {
-      "id": "hn:49348912",
-      "title": "And then the men with guns tell you to do it anyway",
-      "summary": "",
-      "url": "https://shkspr.mobi/blog/2026/08/and-then-the-men-with-guns-tell-you-to-do-it-anyway/",
+      "url": "https://github.com/pg83/solo",
       "source": "Hacker News",
       "score": 157,
-      "comments": 84
+      "comments": 182
     },
     {
-      "id": "lob:ttxwdz",
-      "title": "What software do you use daily in 2026?",
-      "summary": "<p>There was a similar thread here six years ago, and I'm curious how people's daily setups have changed since then.</p>\n<p>What does the software side of your daily setup look like in 2026?</p>\n<p>Operating system, desktop environment or window manager, terminal, shell, editor, browser, and any oth",
-      "url": "https://lobste.rs/s/ttxwdz/what_software_do_you_use_daily_2026",
-      "source": "Lobste.rs",
-      "score": 38,
-      "comments": 66,
-      "tags": [
-        "ask",
-        "practices"
-      ]
-    },
-    {
-      "id": "hn:49353221",
-      "title": "A 3D fruit fly on macOS desktop powered by the real FlyWire connectome",
+      "id": "hn:49355606",
+      "title": "OpenLogi",
       "summary": "",
-      "url": "https://github.com/DenisSergeevitch/desktop-fly",
+      "url": "https://openlogi.org/en",
       "source": "Hacker News",
-      "score": 141,
-      "comments": 34
+      "score": 991,
+      "comments": 272
+    },
+    {
+      "id": "hn:49354949",
+      "title": "Cerebras CS-4",
+      "summary": "",
+      "url": "https://www.cerebras.ai/cs4",
+      "source": "Hacker News",
+      "score": 347,
+      "comments": 214
     },
     {
       "id": "lob:nsywuo",
@@ -175,23 +113,24 @@
       "summary": "",
       "url": "https://untrusem.party/blog/how-I-browse-the-web-with-Ublock-Hard-Mode.html",
       "source": "Lobste.rs",
-      "score": 45,
-      "comments": 13,
+      "score": 66,
+      "comments": 24,
       "tags": [
         "browsers",
         "privacy"
       ]
     },
     {
-      "id": "lob:05ocit",
-      "title": "How Bluesky draws its logo on screenshots",
-      "summary": "",
-      "url": "https://timmarinin.net/2026/bluesky-screenshots/",
+      "id": "lob:ttxwdz",
+      "title": "What software do you use daily in 2026?",
+      "summary": "<p>There was a similar thread here six years ago, and I'm curious how people's daily setups have changed since then.</p>\n<p>What does the software side of your daily setup look like in 2026?</p>\n<p>Operating system, desktop environment or window manager, terminal, shell, editor, browser, and any oth",
+      "url": "https://lobste.rs/s/ttxwdz/what_software_do_you_use_daily_2026",
       "source": "Lobste.rs",
-      "score": 87,
-      "comments": 9,
+      "score": 69,
+      "comments": 117,
       "tags": [
-        "ios"
+        "ask",
+        "practices"
       ]
     },
     {
@@ -200,28 +139,70 @@
       "summary": "",
       "url": "https://www.modular.com/blog/mojo-open-source",
       "source": "Lobste.rs",
-      "score": 36,
-      "comments": 8,
+      "score": 59,
+      "comments": 10,
       "tags": [
         "plt"
       ]
     },
     {
-      "id": "hn:49311814",
-      "title": "A 25-year-old video patent just expired, ending a legal headache for Linux",
+      "id": "hn:49306207",
+      "title": "Supersonic Trebuchet [video]",
       "summary": "",
-      "url": "https://www.xda-developers.com/25-year-old-brazilian-video-patent-expired-legal-headache-linux/",
+      "url": "https://www.youtube.com/watch?v=Co57SfcT-h0",
       "source": "Hacker News",
-      "score": 84,
-      "comments": 25
+      "score": 160,
+      "comments": 65
     },
     {
-      "id": "rss:dc7d72acd4",
-      "title": "Forminator WordPress Flaw Can Enable Unauthenticated RCE via Malicious PHP Uploads",
-      "summary": "A critical security flaw has been disclosed in Forminator Forms, a WordPress plugin with more than 600,000 active installations, that could be exploited to achieve arbitrary code execution on susceptible sites.\n\nThe vulnerability, tracked as CVE-2026-15748, is rated 9.8 out of 10.0 on the CVSS scori",
-      "url": "https://thehackernews.com/2026/08/forminator-wordpress-flaw-can-enable.html",
-      "source": "Tech RSS",
-      "score": 0
+      "id": "arxiv:2608.18066v1",
+      "title": "On the Fragility of Self-Improving Agents: Variance, Task Order, and Underspecification",
+      "summary": "Memory-based self-improving agents--those that learn from an online stream of tasks and improve over time by maintaining a textual memory bank--have shown great promise in recent literature. However, the reliability aspects of these methods have been critically overlooked. In this work, we conduct a",
+      "url": "https://arxiv.org/abs/2608.18066v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_id": "2608.18066v1"
+    },
+    {
+      "id": "lob:3dqrwr",
+      "title": "Kakoune code editor",
+      "summary": "",
+      "url": "https://kakoune.org/",
+      "source": "Lobste.rs",
+      "score": 39,
+      "comments": 17,
+      "tags": [
+        "editors"
+      ]
+    },
+    {
+      "id": "lob:phisnd",
+      "title": "Fixing a bricked AMD 7040 series Framework 13” laptop with $20 tools",
+      "summary": "",
+      "url": "https://quantum5.ca/2026/08/16/fixing-bricked-amd-7040-series-framework-13-laptop-with-20-tools/",
+      "source": "Lobste.rs",
+      "score": 47,
+      "comments": 9,
+      "tags": [
+        "hardware"
+      ]
+    },
+    {
+      "id": "lob:m0okh1",
+      "title": "Mastodon 5.0: Laying the foundation",
+      "summary": "",
+      "url": "https://blog.joinmastodon.org/2026/08/5.0-laying-the-foundation/",
+      "source": "Lobste.rs",
+      "score": 42,
+      "comments": 8,
+      "tags": [
+        "design",
+        "web"
+      ]
     },
     {
       "id": "lob:qo7eyx",
@@ -229,11 +210,38 @@
       "summary": "",
       "url": "https://portswigger.net/research/css-the-bomb-inside-your-inbox",
       "source": "Lobste.rs",
-      "score": 30,
-      "comments": 6,
+      "score": 46,
+      "comments": 8,
       "tags": [
         "security"
       ]
+    },
+    {
+      "id": "hn:49358327",
+      "title": "The Mojo language (by Modular, now Qualcomm) is now open-source",
+      "summary": "",
+      "url": "https://www.modular.com/blog/modcon-announcements",
+      "source": "Hacker News",
+      "score": 114,
+      "comments": 43
+    },
+    {
+      "id": "hn:49360242",
+      "title": "GrapheneOS in 2027 available on high-end Motorola phones",
+      "summary": "",
+      "url": "https://grapheneos.social/@GrapheneOS/117078064184215730",
+      "source": "Hacker News",
+      "score": 100,
+      "comments": 22
+    },
+    {
+      "id": "hn:49355968",
+      "title": "Palomar: A registry of Lean verified mathematics",
+      "summary": "",
+      "url": "https://terrytao.wordpress.com/2026/08/18/palomar-a-registry-of-lean-verified-mathematics/",
+      "source": "Hacker News",
+      "score": 128,
+      "comments": 25
     }
   ],
   "ai_curated": true
