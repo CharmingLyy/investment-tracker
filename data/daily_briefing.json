@@ -1,70 +1,70 @@
 {
   "date": "2026-08-20",
-  "update_time": "2026-08-20 01:26:35",
+  "update_time": "2026-08-20 12:52:52",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-20\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 OpenRouter 被 Stripe 以 70 亿美金收购并整合 (来源: Hacker News)\n- **核心干货**：AI 模型 API 聚合平台 OpenRouter 正式官宣加入 Stripe。这不仅是 70 亿美金的惊天交易，更标志着 AI 基础设施从\"开发者玩具\"迈入\"商业支付主权\"时代。Stripe 要的不是一个 API 网关，而是掌控 AI 应用变现的\"水龙头\"。\n- **毒舌/硬核点评**：开发者还在纠结选哪个模型，Stripe 直接选择了收过路费。这波操作，属实是\"淘金热里卖铲子\"的终极形态。\n- **🔗 传送门**：[点击直达原链接](https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/)\n\n---\n\n### 2. 📌 搞笑域名购买竟引发地缘政治网络战 (来源: Hacker News)\n- **核心干货**：安全研究员无意间购买的一个搞笑域名，意外切入了某国无人机数据基础设施的命脉，并演变成一场真实的数字对抗。文章详细复盘了从 OSINT 侦察到网络防御的全过程，揭示了现代战争如何从\"键盘侠\"的恶作剧开始。\n- **毒舌/硬核点评**：你以为你在买乐子，结果你买了个战场。这告诉我们：网络安全领域的蝴蝶效应，扇动翅膀的可能是一张 10 美元的域名账单。\n- **🔗 传送门**：[点击直达原链接](https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/)\n\n---\n\n### 3. 📌 Postgres 之父：Oracle 是 Postgres 遍布世界的最大功臣 (来源: Tech RSS)\n- **核心干货**：数据库传奇人物 Michael Stonebraker 语出惊人，直言 Oracle 当年收购 MySQL 的\"骚操作\"，反而把海量逃亡用户直接喂给了 PostgreSQL。这不仅是技术史，更是一出现代商业版的\"感谢对手送来的火箭\"。\n- **毒舌/硬核点评**：Oracle 用几十亿美金买来了 MySQL，却亲手为 Postgres 铺平了通往世界霸主的路。这波属于是：商业上的\"神助攻\"，比任何开源布道都管用。\n- **🔗 传送门**：[点击直达原链接](https://www.theregister.com/databases/2026/08/19/postgres-pioneer-credits-oracle-with-helping-his-database-take-over-the-world/5289087)\n\n---\n\n### 🗣️ 今日顶男金句\n**\"真正的护城河不是代码，而是你在别人抢着修 Bug 时，已经看透了谁在收租。\"**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-20\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 OpenRouter 并入 Stripe：AI 中介的终局是支付管道？ (来源: Hacker News)\n- **核心干货**：OpenRouter 官宣加入 Stripe，此前传闻收购价超 70 亿美金。这标志着 AI 模型聚合层的商业模式被彻底验证——与其在模型间做差价，不如直接拥抱金融基础设施，成为 AI 时代的“水电煤”计费系统。\n- **毒舌/硬核点评**：AI 圈的“军火商”最终发现自己其实是“收费站”的命。这波操作，既是套现离场，也是给整个 AI 中间层赛道立了个墓碑：要么成为基建，要么被基建吞掉。\n- **🔗 传送门**：[点击直达原链接](https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/)\n\n---\n\n### 2. 📌 一个玩笑域名的地缘政治大戏 (来源: Hacker News)\n- **核心干货**：作者因买下 SondeHub 相关域名，意外卷入了一场涉及无人机、气象数据与战争情报的博弈。文章详细复盘了域名指向、流量劫持与信息战的全过程，揭示现代冲突中数字资产作为“虚拟高地”的战略价值。\n- **毒舌/硬核点评**：你以为在玩域名投资，实际上是误入了《谍影重重》片场。这告诉我们，在互联网上，一个廉价的域名可能就是别人眼中的战略核按钮，千万别拿爱好挑战别人的饭碗。\n- **🔗 传送门**：[点击直达原链接](https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/)\n\n---\n\n### 3. 📌 Unsloth Dynamic 3.0 GGUF：量化界的“动态血糖监测” (来源: Hacker News)\n- **核心干货**：Unsloth 发布 Dynamic 3.0 GGUF 方案，不再使用静态量化，而是根据模型激活状态动态调整量化精度。这解决了低比特量化导致的关键层性能崩塌问题，让本地大模型在显存受限时依然保持“高智商”。\n- **毒舌/硬核点评**：以前量化是“一刀切”，现在成了“智能微创手术”。这技术让我的 4090 感觉自己又行了，感谢 Unsloth 让我在显存焦虑中看到了一丝曙光。\n- **🔗 传送门**：[点击直达原链接](https://unsloth.ai/docs/basics/dynamic-3.0-ggufs)\n\n---\n\n### 🗣️ 今日顶男金句\n**技术演进不是线性的，它是在“用完即弃”与“万世基业”之间反复横跳的混沌过程——别急着站队，先看看谁在收过路费。**",
   "briefing_items": [
     {
-      "title": "OpenRouter 被 Stripe 以 70 亿美金收购并整合",
+      "title": "OpenRouter 并入 Stripe：AI 中介的终局是支付管道？",
       "source": "Hacker News",
-      "summary": "AI 模型 API 聚合平台 OpenRouter 正式官宣加入 Stripe。这不仅是 70 亿美金的惊天交易，更标志着 AI 基础设施从\"开发者玩具\"迈入\"商业支付主权\"时代。Stripe 要的不是一个 API 网关，而是掌控 AI 应用变现的\"水龙头\"。",
-      "commentary": "开发者还在纠结选哪个模型，Stripe 直接选择了收过路费。这波操作，属实是\"淘金热里卖铲子\"的终极形态。",
+      "summary": "OpenRouter 官宣加入 Stripe，此前传闻收购价超 70 亿美金。这标志着 AI 模型聚合层的商业模式被彻底验证——与其在模型间做差价，不如直接拥抱金融基础设施，成为 AI 时代的“水电煤”计费系统。",
+      "commentary": "AI 圈的“军火商”最终发现自己其实是“收费站”的命。这波操作，既是套现离场，也是给整个 AI 中间层赛道立了个墓碑：要么成为基建，要么被基建吞掉。",
       "url": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/"
     },
     {
-      "title": "搞笑域名购买竟引发地缘政治网络战",
+      "title": "一个玩笑域名的地缘政治大戏",
       "source": "Hacker News",
-      "summary": "安全研究员无意间购买的一个搞笑域名，意外切入了某国无人机数据基础设施的命脉，并演变成一场真实的数字对抗。文章详细复盘了从 OSINT 侦察到网络防御的全过程，揭示了现代战争如何从\"键盘侠\"的恶作剧开始。",
-      "commentary": "你以为你在买乐子，结果你买了个战场。这告诉我们：网络安全领域的蝴蝶效应，扇动翅膀的可能是一张 10 美元的域名账单。",
+      "summary": "作者因买下 SondeHub 相关域名，意外卷入了一场涉及无人机、气象数据与战争情报的博弈。文章详细复盘了域名指向、流量劫持与信息战的全过程，揭示现代冲突中数字资产作为“虚拟高地”的战略价值。",
+      "commentary": "你以为在玩域名投资，实际上是误入了《谍影重重》片场。这告诉我们，在互联网上，一个廉价的域名可能就是别人眼中的战略核按钮，千万别拿爱好挑战别人的饭碗。",
       "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/"
     },
     {
-      "title": "Postgres 之父：Oracle 是 Postgres 遍布世界的最大功臣",
-      "source": "Tech RSS",
-      "summary": "数据库传奇人物 Michael Stonebraker 语出惊人，直言 Oracle 当年收购 MySQL 的\"骚操作\"，反而把海量逃亡用户直接喂给了 PostgreSQL。这不仅是技术史，更是一出现代商业版的\"感谢对手送来的火箭\"。",
-      "commentary": "Oracle 用几十亿美金买来了 MySQL，却亲手为 Postgres 铺平了通往世界霸主的路。这波属于是：商业上的\"神助攻\"，比任何开源布道都管用。",
-      "url": "https://www.theregister.com/databases/2026/08/19/postgres-pioneer-credits-oracle-with-helping-his-database-take-over-the-world/5289087"
+      "title": "Unsloth Dynamic 3.0 GGUF：量化界的“动态血糖监测”",
+      "source": "Hacker News",
+      "summary": "Unsloth 发布 Dynamic 3.0 GGUF 方案，不再使用静态量化，而是根据模型激活状态动态调整量化精度。这解决了低比特量化导致的关键层性能崩塌问题，让本地大模型在显存受限时依然保持“高智商”。",
+      "commentary": "以前量化是“一刀切”，现在成了“智能微创手术”。这技术让我的 4090 感觉自己又行了，感谢 Unsloth 让我在显存焦虑中看到了一丝曙光。",
+      "url": "https://unsloth.ai/docs/basics/dynamic-3.0-ggufs"
     }
   ],
   "candidates": [
-    {
-      "id": "hn:49361279",
-      "title": "PostgreSQL for Everything",
-      "summary": "",
-      "url": "https://www.raphaelbauer.com:443/posts/postgresql-everything/",
-      "source": "Hacker News",
-      "score": 301,
-      "comments": 187
-    },
-    {
-      "id": "hn:49360545",
-      "title": "Geolocating a random island using geometry and CUDA programming",
-      "summary": "",
-      "url": "https://yassa9.github.io/osint/gralhix-004/",
-      "source": "Hacker News",
-      "score": 402,
-      "comments": 75
-    },
     {
       "id": "lob:caubyr",
       "title": "Bun 1.4 Rust rewrite is not looking good",
       "summary": "",
       "url": "https://tipiirai.com/writing/bun-rust-rewrite-worries",
       "source": "Lobste.rs",
-      "score": 90,
-      "comments": 83,
+      "score": 101,
+      "comments": 87,
       "tags": [
         "vibecoding"
       ]
     },
     {
+      "id": "hn:49371006",
+      "title": "Windows brings out the Rorschach test in everyone (2003)",
+      "summary": "",
+      "url": "https://devblogs.microsoft.com/oldnewthing/20030825-00/?p=42803",
+      "source": "Hacker News",
+      "score": 253,
+      "comments": 97
+    },
+    {
+      "id": "hn:49369408",
+      "title": "Turns are Better than Radians (2022)",
+      "summary": "",
+      "url": "https://www.computerenhance.com/p/turns-are-better-than-radians",
+      "source": "Hacker News",
+      "score": 250,
+      "comments": 132
+    },
+    {
       "id": "hn:49364745",
-      "title": "Google replaced Git tags for certain source code with obtaining via Google Drive",
+      "title": "Google has stopped pushing Git tags for some Android source code",
       "summary": "",
       "url": "https://grapheneos.social/@GrapheneOS/117057099753905023",
       "source": "Hacker News",
-      "score": 286,
-      "comments": 119
+      "score": 682,
+      "comments": 265
     },
     {
       "id": "hn:49360015",
@@ -72,8 +72,44 @@
       "summary": "",
       "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
       "source": "Hacker News",
-      "score": 747,
-      "comments": 114
+      "score": 947,
+      "comments": 152
+    },
+    {
+      "id": "hn:49365841",
+      "title": "Unlocking a locked/deactivated e-waste Cricut Maker",
+      "summary": "",
+      "url": "https://sprocketfox.io/xssfox/2026/07/01/cricut-unlock/",
+      "source": "Hacker News",
+      "score": 234,
+      "comments": 56
+    },
+    {
+      "id": "hn:49372583",
+      "title": "AliExpress runs silent WebAudio fingerprinting that breaks Bluetooth multipoint",
+      "summary": "",
+      "url": "https://blog.laserphile.com/2026/08/aliexpress-webpage-keeping-multipoint.html",
+      "source": "Hacker News",
+      "score": 195,
+      "comments": 59
+    },
+    {
+      "id": "hn:49323795",
+      "title": "A faster way to calculate the day of the week",
+      "summary": "",
+      "url": "https://www.benjoffe.com/fast-day-of-week",
+      "source": "Hacker News",
+      "score": 196,
+      "comments": 46
+    },
+    {
+      "id": "hn:49371857",
+      "title": "Don't Paste the AI, please",
+      "summary": "",
+      "url": "https://dontpastetheai.com/",
+      "source": "Hacker News",
+      "score": 615,
+      "comments": 296
     },
     {
       "id": "hn:49364559",
@@ -81,17 +117,8 @@
       "summary": "Previously: Stripe will reportedly acquire OpenRouter for $7B+ <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49323381\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49323381</a>",
       "url": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/",
       "source": "Hacker News",
-      "score": 621,
-      "comments": 332
-    },
-    {
-      "id": "hn:49362887",
-      "title": "Casio F-B100W-1A",
-      "summary": "",
-      "url": "https://www.casio.com/uk/watches/casio/product.F-B100W-1A/",
-      "source": "Hacker News",
-      "score": 273,
-      "comments": 221
+      "score": 894,
+      "comments": 459
     },
     {
       "id": "hn:49365443",
@@ -99,21 +126,8 @@
       "summary": "",
       "url": "https://unsloth.ai/docs/basics/dynamic-3.0-ggufs",
       "source": "Hacker News",
-      "score": 183,
-      "comments": 66
-    },
-    {
-      "id": "lob:m0okh1",
-      "title": "Mastodon 5.0: Laying the foundation",
-      "summary": "",
-      "url": "https://blog.joinmastodon.org/2026/08/5.0-laying-the-foundation/",
-      "source": "Lobste.rs",
-      "score": 63,
-      "comments": 20,
-      "tags": [
-        "design",
-        "web"
-      ]
+      "score": 296,
+      "comments": 103
     },
     {
       "id": "lob:i4lxyt",
@@ -121,8 +135,8 @@
       "summary": "",
       "url": "https://sumnerevans.com/posts/money/plain-text-accounting/",
       "source": "Lobste.rs",
-      "score": 46,
-      "comments": 14,
+      "score": 78,
+      "comments": 32,
       "tags": [
         "finance"
       ]
@@ -133,23 +147,10 @@
       "summary": "",
       "url": "https://chrisburnell.com/html-can-do-that/",
       "source": "Lobste.rs",
-      "score": 141,
-      "comments": 34,
+      "score": 181,
+      "comments": 41,
       "tags": [
         "web"
-      ]
-    },
-    {
-      "id": "lob:dajsxn",
-      "title": "Solo: a .so loader for static Linux binaries",
-      "summary": "",
-      "url": "https://github.com/pg83/solo",
-      "source": "Lobste.rs",
-      "score": 20,
-      "comments": 18,
-      "tags": [
-        "linux",
-        "vibecoding"
       ]
     },
     {
@@ -158,8 +159,8 @@
       "summary": "",
       "url": "https://www.jvt.me/posts/2026/08/17/hand-write-commits/",
       "source": "Lobste.rs",
-      "score": 28,
-      "comments": 14,
+      "score": 35,
+      "comments": 16,
       "tags": [
         "practices",
         "vcs",
@@ -167,69 +168,64 @@
       ]
     },
     {
-      "id": "hn:49362728",
-      "title": "Mathematics in the age of AI",
-      "summary": "",
-      "url": "https://arxiv.org/abs/2608.16753",
-      "source": "Hacker News",
-      "score": 119,
-      "comments": 120
-    },
-    {
-      "id": "hn:49365841",
-      "title": "Unlocking a locked/deactivated e-waste Cricut Maker",
-      "summary": "",
-      "url": "https://sprocketfox.io/xssfox/2026/07/01/cricut-unlock/",
-      "source": "Hacker News",
-      "score": 128,
-      "comments": 34
-    },
-    {
       "id": "lob:gmherj",
       "title": "SQLite for Everything",
       "summary": "",
       "url": "https://joecode.com/2026-08-19-sqlite3/",
       "source": "Lobste.rs",
-      "score": 21,
-      "comments": 9,
+      "score": 29,
+      "comments": 16,
       "tags": [
         "databases"
       ]
     },
     {
-      "id": "rss:b556daff97",
-      "title": "Postgres pioneer credits Oracle with helping his database take over the world",
-      "summary": "Big Red's acquisition of MySQL sent users running toward the open source alternative, says Michael Stonebraker",
-      "url": "https://www.theregister.com/databases/2026/08/19/postgres-pioneer-credits-oracle-with-helping-his-database-take-over-the-world/5289087",
+      "id": "hn:49362001",
+      "title": "Manabu Kosaka's Handmade Paper Sculptures",
+      "summary": "",
+      "url": "https://coca11272000.wixsite.com/manabukosaka",
+      "source": "Hacker News",
+      "score": 153,
+      "comments": 19
+    },
+    {
+      "id": "arxiv:2608.19181v1",
+      "title": "Beyond Teacher Likelihood: Group-Calibrated On-Policy Distillation for Long-Context Reasoning",
+      "summary": "On-policy distillation (OPD) trains a student on its own responses using dense token-level guidance from a stronger teacher. In long-context tasks, however, token-level teacher support can favor locally plausible responses that omit evidence distributed across the input or violate global task constr",
+      "url": "https://arxiv.org/abs/2608.19181v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_id": "2608.19181v1"
+    },
+    {
+      "id": "lob:vpmzvx",
+      "title": "Ploopy A+ (external trackball)",
+      "summary": "",
+      "url": "https://blog.ploopy.co/the-aplus-is-finally-here-499",
+      "source": "Lobste.rs",
+      "score": 37,
+      "comments": 7,
+      "tags": [
+        "hardware"
+      ]
+    },
+    {
+      "id": "rss:3d2de49a57",
+      "title": "Elementor Pro Flaw Could Let Unauthenticated Attackers Upload PHP and Execute Code",
+      "summary": "Cybersecurity researchers have disclosed details of a critical flaw in the Elementor Pro WordPress plugin that, if successfully exploited, could lead to remote code execution.\n\nThe vulnerability, tracked as CVE-2026-32475, carries a CVSS score of 9.0 out of 10.0. It has been described as a case of u",
+      "url": "https://thehackernews.com/2026/08/elementor-pro-flaw-could-let.html",
       "source": "Tech RSS",
       "score": 0
     },
     {
-      "id": "lob:xftgtd",
-      "title": "a filename when none exists",
-      "summary": "",
-      "url": "https://daniel.haxx.se/blog/2024/08/19/a-filename-when-none-exists/",
-      "source": "Lobste.rs",
-      "score": 22,
-      "comments": 13,
-      "tags": [
-        "programming"
-      ]
-    },
-    {
-      "id": "hn:49367256",
-      "title": "Os8088.com: IBM XT OS now has a Browser, CP/M 2.2 with Z80 core and MS Word 1.1a",
-      "summary": "",
-      "url": "https://os8088.com/spotlight/",
-      "source": "Hacker News",
-      "score": 41,
-      "comments": 25
-    },
-    {
-      "id": "rss:13dad4f1a1",
-      "title": "Critical macOS, SharePoint, vCenter, and Microsoft IKE Flaws Under Active Exploitation",
-      "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added four critical vulnerabilities to its Known Exploited Vulnerabilities (KEV) catalog, stating they are being exploited in the wild.\n\nThe shortcomings added to the KEV catalog are listed below -\n\n\n  CVE-2026-65400 (CVSS s",
-      "url": "https://thehackernews.com/2026/08/critical-macos-sharepoint-vcenter-and.html",
+      "id": "rss:ac47d0d180",
+      "title": "A benchmark is only as good as the model you use to grade it",
+      "summary": "I built a pytest harness that runs the same set of questions through five language models at once - a free local Llama, plus GPT, DeepSeek, and two Claude models - and compares them on the three things a team pays for: cost per query, speed, and answer quality. The plan was simple. Run the grid, rea",
+      "url": "https://dev.to/sara_bezjak/a-benchmark-is-only-as-good-as-the-model-you-use-to-grade-it-4h01",
       "source": "Tech RSS",
       "score": 0
     }
