@@ -1,76 +1,40 @@
 {
   "date": "2026-08-21",
-  "update_time": "2026-08-21 01:37:18",
+  "update_time": "2026-08-21 12:51:42",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-21\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Rust 供应链攻击：Arrayref 等 crate 植入构建期恶意载荷 (来源: Hacker News / Rust Blog)\n- **核心干货**：Rust 官方紧急删除了三个恶意 crate 版本（累计下载量超 2.45 亿次）。攻击者通过攻陷维护者账号，在 crate 中塞入一个\"拼写相似\"的依赖，其构建脚本会偷偷下载并执行远程恶意代码。这相当于在建筑图纸里藏了个雷，施工队一开工，整栋楼就归黑客管了。\n- **毒舌/硬核点评**：下载量 2.45 亿的\"官方\"依赖都能下毒，这年头连 `cargo add` 都得先做背景调查。建议各位程序员把 `cargo audit` 焊死在 CI 流程里，不然下一个被焊死的可能就是你的服务器。\n- **🔗 传送门**：[Rust 官方安全公告](https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref/)\n\n---\n\n### 2. 📌 AliExpress 静默 WebAudio 指纹识别，直接干扰蓝牙多设备连接 (来源: Hacker News)\n- **核心干货**：安全研究员发现 AliExpress 网页端利用 WebAudio API 的隐秘指纹识别技术，在用户毫不知情的情况下采集设备信息。更阴损的是，这一操作会占用音频通道，直接破坏蓝牙的多点连接功能——就问你，逛个淘宝还能把耳机逛断连了，气不气？\n- **毒舌/硬核点评**：别人做指纹识别是为了广告精准投放，AliExpress 这波操作是直接对你的硬件动手。建议下次逛该网站时戴个锡纸帽，顺便把系统音量调成静音，看它还怎么\"演奏\"你的隐私数据。\n- **🔗 传送门**：[深度技术分析](https://blog.laserphile.com/2026/08/aliexpress-webpage-keeping-multipoint.html)\n\n---\n\n### 3. 📌 端侧 125M 钢琴自动续写模型 (来源: Hacker News)\n- **核心干货**：一位独立开发者训练了一个 1.25 亿参数的 Transformer 模型，可在 iPhone 15 上实时（约 108 音符/秒）为你的 MIDI 钢琴演奏进行\"自动续写\"。你弹几个音符，它帮你补全接下来的旋律，堪称音乐界的 Copilot，且完全离线运行。\n- **毒舌/硬核点评**：终于有人把 AI 用在正地方了——不是写垃圾代码，而是帮你假装会弹钢琴。等它学会自动编曲，估计下一个失业的就是音乐制作人了（但放心，贝多芬的棺材板还压得住）。\n- **🔗 传送门**：[项目演示与详解](https://simedw.com/2026/08/20/midi-autocomplete/)\n\n---\n\n### 🗣️ 今日顶男金句\n\"供应链攻击教会我们一个道理：别把'开源'当'开恩'，每次 `cargo build` 都是一场信任的豪赌——输的人，裤衩和数据一起没了。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-21\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Rust 生态遭供应链投毒：Arrayref 恶意 crate 植入构建期攻击 (来源: Hacker News/GitHub)\n- **核心干货**：Rust 官方确认热门 crate `arrayref` 被劫持，恶意版本会在构建时执行攻击载荷，标志着针对 Rust 生态的供应链攻击从\"偷数据\"升级到了\"劫持编译器\"。RustSec 已发布公告，建议所有受影响项目立即锁定版本并审计依赖树。\n- **毒舌/硬核点评**：以前是\"依赖地狱\"，现在是\"依赖鸿门宴\"。建议各位 Rustacean 今晚别急着睡，先把 `cargo tree` 翻个底朝天——毕竟你永远不知道下一个 `cargo build` 是在编译代码，还是在给黑客打工。\n- **🔗 传送门**：[Rust 官方安全公告](https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref/)\n\n---\n\n### 2. 📌 AI4AI-Bench：为\"递归自我改进\"立规矩的基准测试 (来源: ArXiv)\n- **核心干货**：这篇论文提出一个全新基准，专门评估 LLM Agent 在算法设计上的能力，直指\"递归自我改进\"的核心命题：AI 能否优化自己的训练算法，以实现算力-能力转化率的持续提升。这不再是纸上谈兵，而是给\"AI 造 AI\"画了一条可量化的起跑线。\n- **毒舌/硬核点评**：当 AI 开始研究怎么让自己变聪明，我们人类还在研究怎么让 AI 不抢我们饭碗。这波属于是\"内卷\"的终极形态——建议人类抓紧时间学会给 AI 拧螺丝，毕竟以后可能连写代码的活儿都得看 AI 心情。\n- **🔗 传送门**：[AI4AI-Bench 论文](https://arxiv.org/abs/2608.20318v1)\n\n---\n\n### 3. 📌 GitLab 高危漏洞 CVE-2026-19478 披露即遭利用 (来源: 科技新闻)\n- **核心干货**：GitLab 新披露的代码注入漏洞（CVSS 9.4）在几天内就被活跃利用，未认证攻击者可修改或删除公开项目数据。这不仅是补丁竞速，更是对 DevOps 平台安全信任的拷问。\n- **毒舌/硬核点评**：GitLab 的 SRE 团队估计已经体验了一把\"删库跑路\"的甲方视角。漏洞披露到利用只隔一个周末，这效率比大多数公司的敏捷开发还高。建议所有自托管用户：今天先别急着发版，把补丁打了再谈敏捷。\n- **🔗 传送门**：[漏洞详情与分析](https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html)\n\n---\n\n### 🗣️ 今日顶男金句\n真正的极客从不害怕新漏洞，他们只害怕自己不是第一个发现漏洞的人——毕竟在这个时代，能让你一夜暴富的除了加密货币，还有一份写得漂亮的漏洞报告。",
   "briefing_items": [
     {
-      "title": "Rust 供应链攻击：Arrayref 等 crate 植入构建期恶意载荷",
-      "source": "Hacker News / Rust Blog",
-      "summary": "Rust 官方紧急删除了三个恶意 crate 版本（累计下载量超 2.45 亿次）。攻击者通过攻陷维护者账号，在 crate 中塞入一个\"拼写相似\"的依赖，其构建脚本会偷偷下载并执行远程恶意代码。这相当于在建筑图纸里藏了个雷，施工队一开工，整栋楼就归黑客管了。",
-      "commentary": "下载量 2.45 亿的\"官方\"依赖都能下毒，这年头连 `cargo add` 都得先做背景调查。建议各位程序员把 `cargo audit` 焊死在 CI 流程里，不然下一个被焊死的可能就是你的服务器。",
+      "title": "Rust 生态遭供应链投毒：Arrayref 恶意 crate 植入构建期攻击",
+      "source": "Hacker News/GitHub",
+      "summary": "Rust 官方确认热门 crate `arrayref` 被劫持，恶意版本会在构建时执行攻击载荷，标志着针对 Rust 生态的供应链攻击从\"偷数据\"升级到了\"劫持编译器\"。RustSec 已发布公告，建议所有受影响项目立即锁定版本并审计依赖树。",
+      "commentary": "以前是\"依赖地狱\"，现在是\"依赖鸿门宴\"。建议各位 Rustacean 今晚别急着睡，先把 `cargo tree` 翻个底朝天——毕竟你永远不知道下一个 `cargo build` 是在编译代码，还是在给黑客打工。",
       "url": ""
     },
     {
-      "title": "AliExpress 静默 WebAudio 指纹识别，直接干扰蓝牙多设备连接",
-      "source": "Hacker News",
-      "summary": "安全研究员发现 AliExpress 网页端利用 WebAudio API 的隐秘指纹识别技术，在用户毫不知情的情况下采集设备信息。更阴损的是，这一操作会占用音频通道，直接破坏蓝牙的多点连接功能——就问你，逛个淘宝还能把耳机逛断连了，气不气？",
-      "commentary": "别人做指纹识别是为了广告精准投放，AliExpress 这波操作是直接对你的硬件动手。建议下次逛该网站时戴个锡纸帽，顺便把系统音量调成静音，看它还怎么\"演奏\"你的隐私数据。",
+      "title": "AI4AI-Bench：为\"递归自我改进\"立规矩的基准测试",
+      "source": "ArXiv",
+      "summary": "这篇论文提出一个全新基准，专门评估 LLM Agent 在算法设计上的能力，直指\"递归自我改进\"的核心命题：AI 能否优化自己的训练算法，以实现算力-能力转化率的持续提升。这不再是纸上谈兵，而是给\"AI 造 AI\"画了一条可量化的起跑线。",
+      "commentary": "当 AI 开始研究怎么让自己变聪明，我们人类还在研究怎么让 AI 不抢我们饭碗。这波属于是\"内卷\"的终极形态——建议人类抓紧时间学会给 AI 拧螺丝，毕竟以后可能连写代码的活儿都得看 AI 心情。",
       "url": ""
     },
     {
-      "title": "端侧 125M 钢琴自动续写模型",
-      "source": "Hacker News",
-      "summary": "一位独立开发者训练了一个 1.25 亿参数的 Transformer 模型，可在 iPhone 15 上实时（约 108 音符/秒）为你的 MIDI 钢琴演奏进行\"自动续写\"。你弹几个音符，它帮你补全接下来的旋律，堪称音乐界的 Copilot，且完全离线运行。",
-      "commentary": "终于有人把 AI 用在正地方了——不是写垃圾代码，而是帮你假装会弹钢琴。等它学会自动编曲，估计下一个失业的就是音乐制作人了（但放心，贝多芬的棺材板还压得住）。",
+      "title": "GitLab 高危漏洞 CVE-2026-19478 披露即遭利用",
+      "source": "科技新闻",
+      "summary": "GitLab 新披露的代码注入漏洞（CVSS 9.4）在几天内就被活跃利用，未认证攻击者可修改或删除公开项目数据。这不仅是补丁竞速，更是对 DevOps 平台安全信任的拷问。",
+      "commentary": "GitLab 的 SRE 团队估计已经体验了一把\"删库跑路\"的甲方视角。漏洞披露到利用只隔一个周末，这效率比大多数公司的敏捷开发还高。建议所有自托管用户：今天先别急着发版，把补丁打了再谈敏捷。",
       "url": ""
     }
   ],
   "candidates": [
-    {
-      "id": "hn:49378768",
-      "title": "Show HN: Huzzah – a novel approach to coding with AI",
-      "summary": "Hello everyone. I&#x27;ve been working on this experimental editor called Huzzah.<p>I&#x27;ve been working almost exclusively with coding agents since January of this year, and over the past few months I began to feel utterly exhausted by them. They&#x27;re great, but I&#x27;m finding it more and mo",
-      "url": "https://www.danielvaughn.dev/posts/huzzah/",
-      "source": "Hacker News",
-      "score": 220,
-      "comments": 119
-    },
-    {
-      "id": "hn:49379550",
-      "title": "Aaron Swartz was prosecuted for scraping, while Meta does it without consequence",
-      "summary": "",
-      "url": "https://blog.curiousquail.com/im-upset-again-about-a-co-creator-of-rss-being-prosecuted-for-something-meta-is-doing-with-little-consequence/",
-      "source": "Hacker News",
-      "score": 953,
-      "comments": 220
-    },
     {
       "id": "hn:49374269",
       "title": "Malicious Rust crate Arrayref runs a build-time payload",
       "summary": "<a href=\"https:&#x2F;&#x2F;blog.rust-lang.org&#x2F;2026&#x2F;08&#x2F;20&#x2F;supply-chain-attack-on-arrayref&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;blog.rust-lang.org&#x2F;2026&#x2F;08&#x2F;20&#x2F;supply-chain-attack-on...</a><p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;rustsec&#x2F;advisory-db&#",
       "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
       "source": "Hacker News",
-      "score": 393,
-      "comments": 364
-    },
-    {
-      "id": "hn:49373456",
-      "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
-      "summary": "I trained a 125M-parameter transformer to autocomplete piano performances in real time (~108 notes&#x2F;sec on an iPhone 15).<p>The idea is basically GitHub Copilot or Tabnine, except instead of prompting it with code, you prompt it by playing a few notes on a MIDI piano. The model then continues wh",
-      "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
-      "source": "Hacker News",
-      "score": 501,
-      "comments": 106
-    },
-    {
-      "id": "hn:49378957",
-      "title": "The August 17 outage, and the work ahead",
-      "summary": "",
-      "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
-      "source": "Hacker News",
-      "score": 312,
-      "comments": 353
+      "score": 518,
+      "comments": 448
     },
     {
       "id": "hn:49347543",
@@ -78,26 +42,8 @@
       "summary": "",
       "url": "https://www.experimental-history.com/p/i-like-em-thick",
       "source": "Hacker News",
-      "score": 558,
-      "comments": 258
-    },
-    {
-      "id": "hn:49372583",
-      "title": "AliExpress runs silent WebAudio fingerprinting that breaks Bluetooth multipoint",
-      "summary": "",
-      "url": "https://blog.laserphile.com/2026/08/aliexpress-webpage-keeping-multipoint.html",
-      "source": "Hacker News",
-      "score": 880,
-      "comments": 287
-    },
-    {
-      "id": "hn:49368886",
-      "title": "CIA funding helped keep NeXT afloat in the 80s",
-      "summary": "<a href=\"https:&#x2F;&#x2F;archive.is&#x2F;JfB5V\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.is&#x2F;JfB5V</a>",
-      "url": "https://www.wsj.com/tech/steve-jobs-apple-next-cia-161b65f9?st=NWWds1&reflink=desktopwebshare_permalink",
-      "source": "Hacker News",
-      "score": 330,
-      "comments": 207
+      "score": 781,
+      "comments": 320
     },
     {
       "id": "lob:dns8du",
@@ -105,8 +51,8 @@
       "summary": "",
       "url": "https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref/",
       "source": "Lobste.rs",
-      "score": 68,
-      "comments": 38,
+      "score": 80,
+      "comments": 44,
       "tags": [
         "rust",
         "security"
@@ -118,8 +64,8 @@
       "summary": "",
       "url": "https://besok.github.io/posts/what-zig-felt-like-coming-from-rust/",
       "source": "Lobste.rs",
-      "score": 55,
-      "comments": 23,
+      "score": 63,
+      "comments": 25,
       "tags": [
         "rust",
         "vibecoding",
@@ -127,13 +73,31 @@
       ]
     },
     {
-      "id": "hn:49377853",
-      "title": "I should have loved biology (2020)",
+      "id": "hn:49384896",
+      "title": "The Lost Treasure of Sid Meier's Pirates",
       "summary": "",
-      "url": "https://jsomers.net/i-should-have-loved-biology/",
+      "url": "https://remapradio.com/articles/the-lost-treasure-of-sid-meiers-pirates/",
       "source": "Hacker News",
-      "score": 198,
-      "comments": 74
+      "score": 148,
+      "comments": 78
+    },
+    {
+      "id": "hn:49386163",
+      "title": "DeepSeek-v4-flash-vision-exp",
+      "summary": "",
+      "url": "https://api-docs.deepseek.com/guides/vision/",
+      "source": "Hacker News",
+      "score": 182,
+      "comments": 42
+    },
+    {
+      "id": "hn:49378957",
+      "title": "The August 17 outage",
+      "summary": "",
+      "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
+      "source": "Hacker News",
+      "score": 576,
+      "comments": 637
     },
     {
       "id": "hn:49362689",
@@ -141,41 +105,76 @@
       "summary": "",
       "url": "https://chrisburnell.com/html-can-do-that/",
       "source": "Hacker News",
-      "score": 572,
-      "comments": 162
+      "score": 888,
+      "comments": 201
     },
     {
-      "id": "lob:i4lxyt",
-      "title": "Plain Text Accounting is Pretty Cool",
+      "id": "lob:wphnca",
+      "title": "Everyone Says Assembly Is Untyped—Everyone Is Wrong",
       "summary": "",
-      "url": "https://sumnerevans.com/posts/money/plain-text-accounting/",
+      "url": "https://www.gingerbill.org/article/2026/08/20/designing-odins-inline-asm/",
       "source": "Lobste.rs",
-      "score": 96,
-      "comments": 42,
+      "score": 56,
+      "comments": 17,
       "tags": [
-        "finance"
+        "assembly",
+        "plt"
       ]
     },
     {
-      "id": "hn:49378243",
-      "title": "Consumer Rights Wiki",
+      "id": "lob:hbjeir",
+      "title": "Announcing Rust 1.98.0",
       "summary": "",
-      "url": "https://consumerrights.wiki/w/Main_Page",
-      "source": "Hacker News",
-      "score": 213,
-      "comments": 31
+      "url": "https://blog.rust-lang.org/2026/08/20/Rust-1.98.0/",
+      "source": "Lobste.rs",
+      "score": 37,
+      "comments": 13,
+      "tags": [
+        "release",
+        "rust"
+      ]
     },
     {
-      "id": "lob:7v1wvd",
-      "title": "Reclaim the terminal",
+      "id": "hn:49384716",
+      "title": "We Rebuilt the Linux MicroVM Stack on Apple Silicon",
       "summary": "",
-      "url": "https://nishantjosh.dev/blogs/reclaim-the-terminal/",
+      "url": "https://encore.dev/blog/firecracker-apple-silicon",
+      "source": "Hacker News",
+      "score": 110,
+      "comments": 53
+    },
+    {
+      "id": "hn:49385994",
+      "title": "AI companies destroy physical books – let's scan rare books before it's too late",
+      "summary": "",
+      "url": "https://annas-archive.pk/blog/physical-destruction.html",
+      "source": "Hacker News",
+      "score": 141,
+      "comments": 80
+    },
+    {
+      "id": "lob:b0olmy",
+      "title": "AliExpress keeps multipoint Bluetooth headphones active with WebAudio fingerprinting",
+      "summary": "",
+      "url": "https://blog.laserphile.com/2026/08/aliexpress-webpage-keeping-multipoint.html",
       "source": "Lobste.rs",
-      "score": 43,
-      "comments": 14,
+      "score": 42,
+      "comments": 9,
       "tags": [
-        "rust",
-        "unix"
+        "browsers",
+        "privacy"
+      ]
+    },
+    {
+      "id": "lob:ikhwaz",
+      "title": "Emacs 31.1 will release on 8/24",
+      "summary": "<p>Biggest thing for me is that tree-sitter's ABI is being bumped to 15 -- fixes compatibility issues with <em>several</em> upstream grammars.</p>\n<p>For the impatient, RC1 has been posted: <a href=\"https://lists.gnu.org/archive/html/emacs-devel/2026-08/msg00599.html\" rel=\"ugc\">https://lists.gnu.org",
+      "url": "https://github.com/emacs-mirror/emacs/blob/062dcd2aead00c3b47c14ff5b6c40313f7a775f5/etc/HISTORY#L246",
+      "source": "Lobste.rs",
+      "score": 27,
+      "comments": 1,
+      "tags": [
+        "emacs"
       ]
     },
     {
@@ -184,53 +183,69 @@
       "summary": "",
       "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
       "source": "Lobste.rs",
-      "score": 72,
-      "comments": 3,
+      "score": 116,
+      "comments": 5,
       "tags": [
         "security"
       ]
     },
     {
-      "id": "lob:xgxp9m",
-      "title": "If this is true, the hyperscalers are toast",
-      "summary": "<p>The future of AI is not large language models (LLM), but small language models (SLM).</p>\n",
-      "url": "https://klementoninvesting.substack.com/p/if-this-is-true-the-hyperscalers",
+      "id": "lob:umey8v",
+      "title": "Btrfs Snapshot Integration in KDE",
+      "summary": "",
+      "url": "https://bharadwajraju.com/posts/btrfs-snapshots-in-kde/",
       "source": "Lobste.rs",
-      "score": 18,
-      "comments": 16,
+      "score": 27,
+      "comments": 8,
       "tags": [
-        "vibecoding"
+        "linux",
+        "osdev"
       ]
     },
     {
-      "id": "hn:49382041",
-      "title": "Copyright does not protect AI-generated content in EU",
-      "summary": "",
-      "url": "https://mathstodon.xyz/@maxpool/117128107757895678",
-      "source": "Hacker News",
-      "score": 66,
-      "comments": 65
+      "id": "arxiv:2608.20320v1",
+      "title": "An Agentic Approach for Active Data Collection, Travel Behavior Modeling, and Weather-Sensitive Demand Prediction",
+      "summary": "Travel behavior research increasingly combines digital data collection with predictive modeling, yet these stages are often developed and evaluated separately. This study proposes a three-agent workflow integrating conversational data collection, structured data processing, and behavioral prediction",
+      "url": "https://arxiv.org/abs/2608.20320v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_id": "2608.20320v1"
     },
     {
-      "id": "rss:a31ccb0c23",
-      "title": "Rust Supply Chain Attack Puts Build-Time Malware in Crates with 245 Million Downloads",
-      "summary": "The Rust Project has deleted malicious versions of three widely used Rust crates from crates.io after a compromised maintainer account published releases that added a typosquatted dependency whose build script downloaded and executed a remote payload during compilation.\n\nThe affected releases are ar",
-      "url": "https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html",
+      "id": "arxiv:2608.20318v1",
+      "title": "AI4AI-Bench: Benchmarking LLM Agents in Algorithmic Design for Recursive Self-Improvement",
+      "summary": "Recursive self-improvement (RSI) asks whether an AI system can improve the process that produces AI systems, so that the next system inherits the improvement. That process is the training algorithm: a better objective or update rule improves the compute\\mbox{-}capability exchange rate for every subs",
+      "url": "https://arxiv.org/abs/2608.20318v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_id": "2608.20318v1"
+    },
+    {
+      "id": "arxiv:2608.20281v1",
+      "title": "Inject, Align, Recover: Staged Post-Training for Retrieval-Free Document Knowledge Internalization",
+      "summary": "Large language models often fail to answer questions about a bounded document collection when the source documents are not retrieved at inference time. We study this setting as document knowledge internalization: converting a fixed corpus into usable parametric knowledge for retrieval-free question ",
+      "url": "https://arxiv.org/abs/2608.20281v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_id": "2608.20281v1"
+    },
+    {
+      "id": "rss:466c1e7ac5",
+      "title": "GitLab CVE-2026-19478 Comes Under Active Exploitation Within Days of Disclosure",
+      "summary": "A newly disclosed security flaw in GitLab has come under active exploitation within days of public disclosure, according to watchTowr.\n\nThe vulnerability in question is CVE-2026-19478 (CVSS score: 9.4), a case of code injection that allows an unauthenticated attacker to modify or delete publicly acc",
+      "url": "https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html",
       "source": "Tech RSS",
       "score": 0
-    },
-    {
-      "id": "lob:wphnca",
-      "title": "Everyone Says Assembly Is Untyped—Everyone Is Wrong",
-      "summary": "",
-      "url": "https://www.gingerbill.org/article/2026/08/20/designing-odins-inline-asm/",
-      "source": "Lobste.rs",
-      "score": 26,
-      "comments": 6,
-      "tags": [
-        "assembly",
-        "plt"
-      ]
     }
   ],
   "ai_curated": true
