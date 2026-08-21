@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-08-21 08:27:35",
+  "update_time": "2026-08-21 13:01:26",
   "stocks": {
     "a_stocks": [
       {
@@ -8,26 +8,26 @@
         "name": "三花智控",
         "symbol": "sz.002050",
         "industry": null,
-        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
-        "price": 36.14,
-        "open": 36.88,
-        "high": 37.14,
-        "low": 36.04,
-        "change_pct": -1.77,
-        "volume": 47466881,
-        "turnover": 17.27,
+        "business": null,
+        "price": 36.71,
+        "open": 35.98,
+        "high": 36.9,
+        "low": 35.9,
+        "change_pct": 1.58,
+        "volume": 37359869,
+        "turnover": 13.62,
         "market_cap": null,
-        "pe": 37.21,
-        "cash_flow": 50.92,
-        "macd": -0.7522,
-        "macd_signal": -0.8173,
-        "macd_histogram": 0.1302,
-        "rsi": 39.07,
+        "pe": 37.8,
+        "cash_flow": null,
+        "macd": -0.8093,
+        "macd_signal": -0.8157,
+        "macd_histogram": 0.0129,
+        "rsi": 41.66,
         "ma": {
-          "MA5": 37.97,
-          "MA10": 38.49,
-          "MA20": 37.79,
-          "MA60": 41.65
+          "MA5": 37.65,
+          "MA10": 38.25,
+          "MA20": 37.87,
+          "MA60": 41.46
         },
         "main_net_flow": null
       },
@@ -37,26 +37,26 @@
         "name": "上海电气",
         "symbol": "sh.601727",
         "industry": null,
-        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
-        "price": 6.52,
-        "open": 6.52,
-        "high": 6.56,
-        "low": 6.49,
-        "change_pct": 0.0,
-        "volume": 36698081,
+        "business": null,
+        "price": 6.53,
+        "open": 6.49,
+        "high": 6.54,
+        "low": 6.42,
+        "change_pct": 0.15,
+        "volume": 36830117,
         "turnover": 2.39,
         "market_cap": null,
-        "pe": 78.28,
-        "cash_flow": 105.67,
-        "macd": -0.0744,
-        "macd_signal": -0.052,
-        "macd_histogram": -0.0449,
-        "rsi": 37.21,
+        "pe": 78.4,
+        "cash_flow": null,
+        "macd": -0.0833,
+        "macd_signal": -0.0582,
+        "macd_histogram": -0.0502,
+        "rsi": 37.8,
         "ma": {
-          "MA5": 6.64,
-          "MA10": 6.73,
+          "MA5": 6.6,
+          "MA10": 6.7,
           "MA20": 6.79,
-          "MA60": 7.02
+          "MA60": 6.99
         },
         "main_net_flow": null
       }
@@ -108,7 +108,7 @@
         "volume": 92280600,
         "turnover": null,
         "market_cap": 52523.24,
-        "pe": 33.31,
+        "pe": 33.21,
         "cash_flow": 463.36,
         "macd": 4.2505,
         "macd_signal": 4.1614,
@@ -137,7 +137,7 @@
         "volume": 14166300,
         "turnover": null,
         "market_cap": 41361.64,
-        "pe": 17.15,
+        "pe": 16.98,
         "cash_flow": 226.65,
         "macd": -2.6633,
         "macd_signal": -1.6596,
@@ -166,7 +166,7 @@
         "volume": 22085200,
         "turnover": null,
         "market_cap": 228.05,
-        "pe": 15.76,
+        "pe": 16.77,
         "cash_flow": 2.06,
         "macd": 2.4661,
         "macd_signal": 0.3422,
@@ -253,7 +253,7 @@
         "volume": 16934700,
         "turnover": null,
         "market_cap": 1341.44,
-        "pe": 79.6,
+        "pe": 81.09,
         "cash_flow": 51.49,
         "macd": 5.3037,
         "macd_signal": 4.9127,
@@ -282,7 +282,7 @@
         "volume": 3172400,
         "turnover": null,
         "market_cap": 835.03,
-        "pe": 474.59,
+        "pe": 455.98,
         "cash_flow": 10.51,
         "macd": -3.3852,
         "macd_signal": -0.1774,
@@ -304,14 +304,14 @@
         "name": "Bitcoin",
         "symbol": "BTC",
         "industry": "Smart Contract Platform",
-        "price": 77058,
+        "price": 77159,
         "open": null,
-        "high": 76659,
-        "low": 71224,
-        "change_pct": 9.3,
-        "volume": 63365232539,
+        "high": 79320,
+        "low": 71399,
+        "change_pct": 7.3,
+        "volume": 68734426192,
         "turnover": null,
-        "market_cap": 15466.63,
+        "market_cap": 15486.65,
         "market_cap_rank": 1,
         "pe": null,
         "funding_rate": null,
@@ -319,24 +319,24 @@
         "etf_inflow": null,
         "etf_outflow": null,
         "etf_net_flow": null,
-        "macd": 1823.755,
-        "macd_signal": 528.6145,
-        "macd_histogram": 2590.2811,
-        "rsi": 85.12,
+        "macd": 1831.713,
+        "macd_signal": 530.2061,
+        "macd_histogram": 2603.0139,
+        "rsi": 85.21,
         "ma": {
-          "MA5": 69723.36,
-          "MA10": 66430.91,
-          "MA20": 65312.7,
-          "MA60": 63844.31
+          "MA5": 69743.31,
+          "MA10": 66440.89,
+          "MA20": 65317.69,
+          "MA60": 63845.97
         },
         "main_net_flow": null,
         "onchain": {
           "circulating_supply": 20071518.0,
           "total_supply": 20071518.0,
           "circ_ratio": 100.0,
-          "price_change_7d": 22.50874,
-          "price_change_30d": 17.00991,
-          "ath_pct": -38.88,
+          "price_change_7d": 23.14726,
+          "price_change_30d": 17.63942,
+          "ath_pct": -38.8,
           "ath_date": null,
           "categories": [
             "Smart Contract Platform",
@@ -357,14 +357,14 @@
         "name": "Ethereum",
         "symbol": "ETH",
         "industry": "Smart Contract Platform",
-        "price": 2380.51,
+        "price": 2387.25,
         "open": null,
-        "high": 2390.34,
-        "low": 2261.62,
-        "change_pct": 4.9,
-        "volume": 26228975537,
+        "high": 2443.66,
+        "low": 2271.2,
+        "change_pct": 3.9,
+        "volume": 27803520245,
         "turnover": null,
-        "market_cap": 2872.84,
+        "market_cap": 2881.23,
         "market_cap_rank": 2,
         "pe": null,
         "funding_rate": null,
@@ -372,24 +372,24 @@
         "etf_inflow": null,
         "etf_outflow": null,
         "etf_net_flow": null,
-        "macd": 90.8839,
-        "macd_signal": 39.8164,
-        "macd_histogram": 102.1349,
-        "rsi": 85.75,
+        "macd": 91.4388,
+        "macd_signal": 39.9274,
+        "macd_histogram": 103.0227,
+        "rsi": 85.9,
         "ma": {
-          "MA5": 2157.36,
-          "MA10": 2018.52,
-          "MA20": 1954.52,
-          "MA60": 1843.48
+          "MA5": 2158.75,
+          "MA10": 2019.22,
+          "MA20": 1954.87,
+          "MA60": 1843.59
         },
         "main_net_flow": null,
         "onchain": {
           "circulating_supply": 120681688.04317872,
           "total_supply": 120681688.0431787,
           "circ_ratio": 100.0,
-          "price_change_7d": 27.18839,
-          "price_change_30d": 24.46383,
-          "ath_pct": -51.87,
+          "price_change_7d": 27.55756,
+          "price_change_30d": 24.55445,
+          "ath_pct": -51.73,
           "ath_date": null,
           "categories": [
             "Smart Contract Platform",
@@ -416,6 +416,70 @@
       "published": ""
     },
     {
+      "id": "0e6f729eb2",
+      "title": "When it comes to stock buybacks, anything SK Hynix can do, Samsung can do bigger",
+      "summary": "As demand far outstrips supply in the memory-chip market, SK Hynix and Samsung Electronics are generating outsize profits and throwing off huge free cash flow. Now both companies plan to return lots o",
+      "link": "https://www.marketwatch.com/story/when-it-comes-to-returning-cash-to-shareholders-anything-sk-hynix-can-do-samsung-can-do-bigger-87db6ef4?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 21 Aug 2026 12:15:00 GMT"
+    },
+    {
+      "id": "b25e926838",
+      "title": "American consumers are delivering a retail reality check as they laser in on bargains",
+      "summary": "Recent earnings results suggest that the typical shopper is ‘employed, still spending, and increasingly disciplined about it.’",
+      "link": "https://www.marketwatch.com/story/american-consumers-are-delivering-a-retail-reality-check-as-they-laser-in-on-bargains-96816053?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 21 Aug 2026 12:00:00 GMT"
+    },
+    {
+      "id": "9d0946b852",
+      "title": "Moderna’s personalized mRNA shot could reshape the fight against skin cancer — but it may also be overhyped",
+      "summary": "Doctors and patients are excited about the possible breakthrough, but some analysts believe there’s too much hype.",
+      "link": "https://www.marketwatch.com/story/modernas-personalized-mrna-shot-could-reshape-the-fight-against-skin-cancer-but-it-may-also-be-overhyped-a6f1bc88?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 21 Aug 2026 11:22:00 GMT"
+    },
+    {
+      "id": "db3db4fe7f",
+      "title": "The U.S. government plans to crack down on its $40 trillion debt — but brace for a ‘wrenching time’ ahead",
+      "summary": "Washington has no shortage of options. None are easy.",
+      "link": "https://www.marketwatch.com/story/the-u-s-government-plans-to-crack-down-on-its-40-trillion-debt-but-brace-for-a-wrenching-time-ahead-b3fb76a8?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 21 Aug 2026 11:00:00 GMT"
+    },
+    {
+      "id": "1bff6f2863",
+      "title": "Nvidia earnings could rescue a stalled-out stock market — if the AI chip maker breaks this trend",
+      "summary": "Shares of Jensen Huang’s company have struggled to make headway since its previous results day.",
+      "link": "https://www.marketwatch.com/story/nvidia-earnings-could-rescue-a-stalling-stock-market-if-the-ai-chip-maker-breaks-this-trend-9b6504bc?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 21 Aug 2026 10:54:00 GMT"
+    },
+    {
+      "id": "acfaf07bf1",
+      "title": "‘It’s truly a tragedy’: My daughter hasn’t spoken to me for 4 years, but it has nothing to do with politics",
+      "summary": "“You’ll have to trust me when I tell you that she had love, support and opportunities.”",
+      "link": "https://www.marketwatch.com/story/its-truly-a-tragedy-my-daughter-hasnt-spoken-to-me-for-4-years-but-it-has-nothing-to-do-with-politics-86c4bcf6?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 21 Aug 2026 09:15:00 GMT"
+    },
+    {
+      "id": "0941ef5dd4",
+      "title": "Hedge funds are doubling down on Big Tech even after summer volatility triggered a massive portfolio cleanup",
+      "summary": "Hedge funds entered the second quarter all-in on the AI trade, but have begun to diversify their portfolios lately. They’re dipping into healthcare, energy and financials.",
+      "link": "https://www.marketwatch.com/story/hedge-funds-are-doubling-down-on-big-tech-even-after-summer-volatility-triggered-a-massive-portfolio-cleanup-57dbbf8a?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 21 Aug 2026 09:11:00 GMT"
+    },
+    {
+      "id": "42555c6bc2",
+      "title": "Legendary film editor Billy Weber of ‘Miss Congeniality’ and ‘Top Gun’ lists historic L.A. home for $4 million",
+      "summary": "Film editor Billy Weber’s tranquil Los Angeles home has hit the market for $3.99 million.",
+      "link": "https://www.marketwatch.com/story/legendary-film-editor-billy-weber-of-miss-congeniality-and-top-gun-lists-historic-l-a-home-for-4-million-465ee55b?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 21 Aug 2026 09:01:00 GMT"
+    },
+    {
       "id": "eb7a3067eb",
       "title": "My son does not work, yet pays $500 for Affordable Care Act health insurance. Is that fair?",
       "summary": "“I see people who have a lot of money but little or no taxable income who still qualify for ACA Marketplace subsidies.”",
@@ -432,223 +496,123 @@
       "published": "Thu, 20 Aug 2026 22:45:00 GMT"
     },
     {
-      "id": "19fb84e544",
-      "title": "Our 4-year-old son has $100,000 in his 529 account. Is a bull market a bad time to buy him stocks instead?",
-      "summary": "“I’d love for our son to be able to attend college without needing to take out student loans.”",
-      "link": "https://www.marketwatch.com/story/our-4-year-old-son-has-100-000-in-his-529-account-should-we-buy-him-stocks-instead-3ca745b2?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Thu, 20 Aug 2026 22:00:00 GMT"
-    },
-    {
-      "id": "b44bfa6dd3",
-      "title": "We’re in our 50s and have $1.5 million in traditional 401(k)s. Is it too early to start Roth conversions?",
-      "summary": "“The last adviser we worked with lost a significant portion of our portfolio.”",
-      "link": "https://www.marketwatch.com/story/were-in-our-50s-and-have-1-5-million-in-traditional-401-k-s-is-it-too-early-to-start-roth-conversions-2d0f9287?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Thu, 20 Aug 2026 21:01:00 GMT"
-    },
-    {
-      "id": "5b7154c7ff",
-      "title": "Anxious bond market sends troubling message to investors: There’s no easy fix for U.S. debt",
-      "summary": "Treasury Secretary Scott Bessent’s plan to calm markets is being short-circuited.",
-      "link": "https://www.marketwatch.com/story/treasury-rout-restarts-one-day-after-bessents-beefed-up-buyback-plan-972766a1?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Thu, 20 Aug 2026 19:40:00 GMT"
-    },
-    {
-      "id": "b867c5eeb1",
-      "title": "Sports betting to build wealth is becoming the new American dream",
-      "summary": "More people under 30 are using gambling as a shortcut to buying a home or paying student loans",
-      "link": "https://www.marketwatch.com/story/sports-betting-to-build-wealth-is-becoming-the-new-american-dream-1e29b728?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Thu, 20 Aug 2026 19:14:00 GMT"
-    },
-    {
-      "id": "b5ff63c805",
-      "title": "The bond market is going to burst the stock-market bubble",
-      "summary": "Rising yields threaten everything, especially  overextended equities.",
-      "link": "https://www.marketwatch.com/story/the-bond-market-is-going-to-burst-the-stock-market-bubble-1c6f0971?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Thu, 20 Aug 2026 19:06:00 GMT"
-    },
-    {
-      "id": "9d0946b852",
-      "title": "Moderna’s personalized mRNA shot could reshape the fight against skin cancer — but it may also be overhyped",
-      "summary": "Doctors and patients are excited about the possible breakthrough, but some analysts believe there’s too much hype.",
-      "link": "https://www.marketwatch.com/story/modernas-personalized-mrna-shot-could-reshape-the-fight-against-skin-cancer-but-it-may-also-be-overhyped-a6f1bc88?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Thu, 20 Aug 2026 19:01:00 GMT"
-    },
-    {
-      "id": "48feb3cff3",
-      "title": "Neocloud stocks like CoreWeave are having a moment — and time’s running out to cash in",
-      "summary": "The neoclouds are destined to be “cyclical leasing companies,” according to BCA analyst Noah Weisberger, which implies low valuations for the stocks.",
-      "link": "https://www.marketwatch.com/story/neocloud-stocks-like-coreweave-are-having-a-moment-and-times-running-out-to-cash-in-8aca34c8?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Thu, 20 Aug 2026 18:20:00 GMT"
-    },
-    {
-      "id": "cbb517e098",
-      "title": "‘There is considerable tension’: My grandmother, 99, wants to cut my mother out of her will. Should I intervene?",
-      "summary": "“Grandma feels that she was pressured by my mother into taking out a $50,000 HELOC.”",
-      "link": "https://www.marketwatch.com/story/there-is-considerable-tension-my-grandmother-99-wants-to-cut-my-mother-out-of-her-will-should-i-intervene-5e8f408e?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Thu, 20 Aug 2026 18:15:00 GMT"
-    },
-    {
-      "id": "70e8522fde",
-      "title": "Ross Stores shares rally as strong Q2 results drive outlook upgrade",
+      "id": "8bc683beb7",
+      "title": "Earnings call transcript: Dino Polska posts Q2 2026 EPS beat as stock rises 5.8%",
       "summary": "",
-      "link": "https://www.investing.com/news/earnings/ross-stores-raises-2026-outlook-after-strong-secondquarter-results-4870498",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-dino-polska-posts-q2-2026-eps-beat-as-stock-rises-58-93CH-4871620",
       "source": "www.investing.com",
-      "published": "2026-08-21 08:16:09"
+      "published": "2026-08-21 12:53:44"
     },
     {
-      "id": "877586e9d6",
-      "title": "Medistim Q2 2026 slides: record revenue tops NOK 200M, margins at 32%",
+      "id": "57120aed71",
+      "title": "Asure Software stock gains on AWS Marketplace expansion",
       "summary": "",
-      "link": "https://www.investing.com/news/company-news/medistim-q2-2026-slides-record-revenue-tops-nok-200m-margins-at-32-93CH-4871040",
+      "link": "https://www.investing.com/news/stock-market-news/asure-software-stock-gains-on-aws-marketplace-expansion-93CH-4871619",
       "source": "www.investing.com",
-      "published": "2026-08-21 08:12:28"
+      "published": "2026-08-21 12:52:20"
     },
     {
-      "id": "dc60aca50f",
-      "title": "Eurozone business activity rises in August on manufacturing strength",
+      "id": "3eba724a6c",
+      "title": "EOS Climbs 12% In a Green Day",
       "summary": "",
-      "link": "https://www.investing.com/news/economic-indicators/eurozone-business-activity-rises-in-august-on-manufacturing-strength-93CH-4871039",
+      "link": "https://www.investing.com/news/cryptocurrency-news/eos-climbs-12-in-a-green-day-4871617",
       "source": "www.investing.com",
-      "published": "2026-08-21 08:11:45"
+      "published": "2026-08-21 12:52:03"
     },
     {
-      "id": "ca0c744c49",
-      "title": "Siegfried tops H1 estimates on revenue and profit, confirms FY guidance; stock up",
+      "id": "85c897fbfb",
+      "title": "SATS Q1 FY27 slides: record cargo drives revenue amid margin pressure",
       "summary": "",
-      "link": "https://www.investing.com/news/earnings/siegfried-tops-h1-estimates-on-revenue-and-profit-confirms-fy-guidance-4870896",
+      "link": "https://www.investing.com/news/company-news/sats-q1-fy27-slides-record-cargo-drives-revenue-amid-margin-pressure-93CH-4871618",
       "source": "www.investing.com",
-      "published": "2026-08-21 08:11:44"
+      "published": "2026-08-21 12:52:02"
     },
     {
-      "id": "d2fe42669b",
-      "title": "NIBE shares jump 8% as strong margin recovery powers second-quarter profit",
+      "id": "022cfe6dd9",
+      "title": "Morgan Stanley sees India steel stocks continuing gains",
       "summary": "",
-      "link": "https://www.investing.com/news/earnings/nibe-shares-jump-8-as-strong-margin-recovery-powers-secondquarter-profit-4871038",
+      "link": "https://www.investing.com/news/stock-market-news/morgan-stanley-sees-india-steel-stocks-continuing-gains-93CH-4871616",
       "source": "www.investing.com",
-      "published": "2026-08-21 08:10:21"
+      "published": "2026-08-21 12:51:37"
     },
     {
-      "id": "cdff3bdd70",
-      "title": "Rothschild Redburn upgrades Equifax stock rating on cloud execution",
+      "id": "bc4fd93ca9",
+      "title": "Deutsche Bank monitors UK auto sales as Chinese exports grow",
       "summary": "",
-      "link": "https://www.investing.com/news/analyst-ratings/rothschild-redburn-upgrades-equifax-stock-rating-on-cloud-execution-93CH-4871035",
+      "link": "https://www.investing.com/news/stock-market-news/deutsche-bank-monitors-uk-auto-sales-as-chinese-exports-grow-93CH-4871615",
       "source": "www.investing.com",
-      "published": "2026-08-21 08:09:01"
+      "published": "2026-08-21 12:50:37"
     },
     {
-      "id": "0f569358cc",
-      "title": "Santander issues 329.8 million shares for Webster acquisition",
+      "id": "662977150a",
+      "title": "Eric Trump-backed Space-Eyes to appoint ex-Delta Force officer and ex-banker, sources say",
       "summary": "",
-      "link": "https://www.investing.com/news/company-news/santander-issues-3298-million-shares-for-webster-acquisition-93CH-4871034",
+      "link": "https://www.investing.com/news/stock-market-news/eric-trumpbacked-spaceeyes-to-appoint-exdelta-force-officer-and-exbanker-sources-say-4871527",
       "source": "www.investing.com",
-      "published": "2026-08-21 08:08:41"
+      "published": "2026-08-21 12:49:23"
     },
     {
-      "id": "1f77cd3a6f",
-      "title": "Euro zone business activity growth hits highest since November, PMI shows",
+      "id": "61b0fbf239",
+      "title": "Australia’s Steadfast agrees to $5.5 billion buyout bid by KKR-backed consortium",
       "summary": "",
-      "link": "https://www.investing.com/news/economy-news/euro-zone-business-activity-growth-hits-highest-since-november-pmi-shows-4871033",
+      "link": "https://www.investing.com/news/stock-market-news/australias-steadfast-agrees-to-551-billion-buyout-bid-by-kkrbacked-consortium-4871174",
       "source": "www.investing.com",
-      "published": "2026-08-21 08:07:31"
+      "published": "2026-08-21 12:49:02"
     },
     {
-      "id": "e8c5da0258",
-      "title": "Hyundai Motor’s South Korean union stages first full strike in a decade over pay",
+      "id": "873ad31854",
+      "title": "Why is Haverty Furniture stock slipping today?",
       "summary": "",
-      "link": "https://www.investing.com/news/stock-market-news/hyundai-motors-union-stages-first-full-strike-in-10-years-over-wage-talks-4870780",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-haverty-furniture-stock-slipping-today-93CH-4871610",
       "source": "www.investing.com",
-      "published": "2026-08-21 08:07:07"
+      "published": "2026-08-21 12:49:00"
     },
     {
-      "id": "b8ef2854ff",
-      "title": "Odfjell Q2 2026 slides: earnings surge on stronger spot rates",
+      "id": "b3b5e573d9",
+      "title": "KeyBanc raises Zscaler stock price target on security spend outlook",
       "summary": "",
-      "link": "https://www.investing.com/news/company-news/odfjell-q2-2026-slides-earnings-surge-on-stronger-spot-rates-93CH-4871012",
+      "link": "https://www.investing.com/news/analyst-ratings/keybanc-raises-zscaler-stock-price-target-on-security-spend-outlook-93CH-4871609",
       "source": "www.investing.com",
-      "published": "2026-08-21 08:06:48"
+      "published": "2026-08-21 12:48:55"
     }
   ],
   "briefing": {
     "date": "2026-08-21",
-    "update_time": "2026-08-21 01:37:18",
+    "update_time": "2026-08-21 12:51:42",
     "candidate_count": 20,
-    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-21\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Rust 供应链攻击：Arrayref 等 crate 植入构建期恶意载荷 (来源: Hacker News / Rust Blog)\n- **核心干货**：Rust 官方紧急删除了三个恶意 crate 版本（累计下载量超 2.45 亿次）。攻击者通过攻陷维护者账号，在 crate 中塞入一个\"拼写相似\"的依赖，其构建脚本会偷偷下载并执行远程恶意代码。这相当于在建筑图纸里藏了个雷，施工队一开工，整栋楼就归黑客管了。\n- **毒舌/硬核点评**：下载量 2.45 亿的\"官方\"依赖都能下毒，这年头连 `cargo add` 都得先做背景调查。建议各位程序员把 `cargo audit` 焊死在 CI 流程里，不然下一个被焊死的可能就是你的服务器。\n- **🔗 传送门**：[Rust 官方安全公告](https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref/)\n\n---\n\n### 2. 📌 AliExpress 静默 WebAudio 指纹识别，直接干扰蓝牙多设备连接 (来源: Hacker News)\n- **核心干货**：安全研究员发现 AliExpress 网页端利用 WebAudio API 的隐秘指纹识别技术，在用户毫不知情的情况下采集设备信息。更阴损的是，这一操作会占用音频通道，直接破坏蓝牙的多点连接功能——就问你，逛个淘宝还能把耳机逛断连了，气不气？\n- **毒舌/硬核点评**：别人做指纹识别是为了广告精准投放，AliExpress 这波操作是直接对你的硬件动手。建议下次逛该网站时戴个锡纸帽，顺便把系统音量调成静音，看它还怎么\"演奏\"你的隐私数据。\n- **🔗 传送门**：[深度技术分析](https://blog.laserphile.com/2026/08/aliexpress-webpage-keeping-multipoint.html)\n\n---\n\n### 3. 📌 端侧 125M 钢琴自动续写模型 (来源: Hacker News)\n- **核心干货**：一位独立开发者训练了一个 1.25 亿参数的 Transformer 模型，可在 iPhone 15 上实时（约 108 音符/秒）为你的 MIDI 钢琴演奏进行\"自动续写\"。你弹几个音符，它帮你补全接下来的旋律，堪称音乐界的 Copilot，且完全离线运行。\n- **毒舌/硬核点评**：终于有人把 AI 用在正地方了——不是写垃圾代码，而是帮你假装会弹钢琴。等它学会自动编曲，估计下一个失业的就是音乐制作人了（但放心，贝多芬的棺材板还压得住）。\n- **🔗 传送门**：[项目演示与详解](https://simedw.com/2026/08/20/midi-autocomplete/)\n\n---\n\n### 🗣️ 今日顶男金句\n\"供应链攻击教会我们一个道理：别把'开源'当'开恩'，每次 `cargo build` 都是一场信任的豪赌——输的人，裤衩和数据一起没了。\"",
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-21\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Rust 生态遭供应链投毒：Arrayref 恶意 crate 植入构建期攻击 (来源: Hacker News/GitHub)\n- **核心干货**：Rust 官方确认热门 crate `arrayref` 被劫持，恶意版本会在构建时执行攻击载荷，标志着针对 Rust 生态的供应链攻击从\"偷数据\"升级到了\"劫持编译器\"。RustSec 已发布公告，建议所有受影响项目立即锁定版本并审计依赖树。\n- **毒舌/硬核点评**：以前是\"依赖地狱\"，现在是\"依赖鸿门宴\"。建议各位 Rustacean 今晚别急着睡，先把 `cargo tree` 翻个底朝天——毕竟你永远不知道下一个 `cargo build` 是在编译代码，还是在给黑客打工。\n- **🔗 传送门**：[Rust 官方安全公告](https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref/)\n\n---\n\n### 2. 📌 AI4AI-Bench：为\"递归自我改进\"立规矩的基准测试 (来源: ArXiv)\n- **核心干货**：这篇论文提出一个全新基准，专门评估 LLM Agent 在算法设计上的能力，直指\"递归自我改进\"的核心命题：AI 能否优化自己的训练算法，以实现算力-能力转化率的持续提升。这不再是纸上谈兵，而是给\"AI 造 AI\"画了一条可量化的起跑线。\n- **毒舌/硬核点评**：当 AI 开始研究怎么让自己变聪明，我们人类还在研究怎么让 AI 不抢我们饭碗。这波属于是\"内卷\"的终极形态——建议人类抓紧时间学会给 AI 拧螺丝，毕竟以后可能连写代码的活儿都得看 AI 心情。\n- **🔗 传送门**：[AI4AI-Bench 论文](https://arxiv.org/abs/2608.20318v1)\n\n---\n\n### 3. 📌 GitLab 高危漏洞 CVE-2026-19478 披露即遭利用 (来源: 科技新闻)\n- **核心干货**：GitLab 新披露的代码注入漏洞（CVSS 9.4）在几天内就被活跃利用，未认证攻击者可修改或删除公开项目数据。这不仅是补丁竞速，更是对 DevOps 平台安全信任的拷问。\n- **毒舌/硬核点评**：GitLab 的 SRE 团队估计已经体验了一把\"删库跑路\"的甲方视角。漏洞披露到利用只隔一个周末，这效率比大多数公司的敏捷开发还高。建议所有自托管用户：今天先别急着发版，把补丁打了再谈敏捷。\n- **🔗 传送门**：[漏洞详情与分析](https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html)\n\n---\n\n### 🗣️ 今日顶男金句\n真正的极客从不害怕新漏洞，他们只害怕自己不是第一个发现漏洞的人——毕竟在这个时代，能让你一夜暴富的除了加密货币，还有一份写得漂亮的漏洞报告。",
     "briefing_items": [
       {
-        "title": "Rust 供应链攻击：Arrayref 等 crate 植入构建期恶意载荷",
-        "source": "Hacker News / Rust Blog",
-        "summary": "Rust 官方紧急删除了三个恶意 crate 版本（累计下载量超 2.45 亿次）。攻击者通过攻陷维护者账号，在 crate 中塞入一个\"拼写相似\"的依赖，其构建脚本会偷偷下载并执行远程恶意代码。这相当于在建筑图纸里藏了个雷，施工队一开工，整栋楼就归黑客管了。",
-        "commentary": "下载量 2.45 亿的\"官方\"依赖都能下毒，这年头连 `cargo add` 都得先做背景调查。建议各位程序员把 `cargo audit` 焊死在 CI 流程里，不然下一个被焊死的可能就是你的服务器。",
+        "title": "Rust 生态遭供应链投毒：Arrayref 恶意 crate 植入构建期攻击",
+        "source": "Hacker News/GitHub",
+        "summary": "Rust 官方确认热门 crate `arrayref` 被劫持，恶意版本会在构建时执行攻击载荷，标志着针对 Rust 生态的供应链攻击从\"偷数据\"升级到了\"劫持编译器\"。RustSec 已发布公告，建议所有受影响项目立即锁定版本并审计依赖树。",
+        "commentary": "以前是\"依赖地狱\"，现在是\"依赖鸿门宴\"。建议各位 Rustacean 今晚别急着睡，先把 `cargo tree` 翻个底朝天——毕竟你永远不知道下一个 `cargo build` 是在编译代码，还是在给黑客打工。",
         "url": ""
       },
       {
-        "title": "AliExpress 静默 WebAudio 指纹识别，直接干扰蓝牙多设备连接",
-        "source": "Hacker News",
-        "summary": "安全研究员发现 AliExpress 网页端利用 WebAudio API 的隐秘指纹识别技术，在用户毫不知情的情况下采集设备信息。更阴损的是，这一操作会占用音频通道，直接破坏蓝牙的多点连接功能——就问你，逛个淘宝还能把耳机逛断连了，气不气？",
-        "commentary": "别人做指纹识别是为了广告精准投放，AliExpress 这波操作是直接对你的硬件动手。建议下次逛该网站时戴个锡纸帽，顺便把系统音量调成静音，看它还怎么\"演奏\"你的隐私数据。",
+        "title": "AI4AI-Bench：为\"递归自我改进\"立规矩的基准测试",
+        "source": "ArXiv",
+        "summary": "这篇论文提出一个全新基准，专门评估 LLM Agent 在算法设计上的能力，直指\"递归自我改进\"的核心命题：AI 能否优化自己的训练算法，以实现算力-能力转化率的持续提升。这不再是纸上谈兵，而是给\"AI 造 AI\"画了一条可量化的起跑线。",
+        "commentary": "当 AI 开始研究怎么让自己变聪明，我们人类还在研究怎么让 AI 不抢我们饭碗。这波属于是\"内卷\"的终极形态——建议人类抓紧时间学会给 AI 拧螺丝，毕竟以后可能连写代码的活儿都得看 AI 心情。",
         "url": ""
       },
       {
-        "title": "端侧 125M 钢琴自动续写模型",
-        "source": "Hacker News",
-        "summary": "一位独立开发者训练了一个 1.25 亿参数的 Transformer 模型，可在 iPhone 15 上实时（约 108 音符/秒）为你的 MIDI 钢琴演奏进行\"自动续写\"。你弹几个音符，它帮你补全接下来的旋律，堪称音乐界的 Copilot，且完全离线运行。",
-        "commentary": "终于有人把 AI 用在正地方了——不是写垃圾代码，而是帮你假装会弹钢琴。等它学会自动编曲，估计下一个失业的就是音乐制作人了（但放心，贝多芬的棺材板还压得住）。",
+        "title": "GitLab 高危漏洞 CVE-2026-19478 披露即遭利用",
+        "source": "科技新闻",
+        "summary": "GitLab 新披露的代码注入漏洞（CVSS 9.4）在几天内就被活跃利用，未认证攻击者可修改或删除公开项目数据。这不仅是补丁竞速，更是对 DevOps 平台安全信任的拷问。",
+        "commentary": "GitLab 的 SRE 团队估计已经体验了一把\"删库跑路\"的甲方视角。漏洞披露到利用只隔一个周末，这效率比大多数公司的敏捷开发还高。建议所有自托管用户：今天先别急着发版，把补丁打了再谈敏捷。",
         "url": ""
       }
     ],
     "candidates": [
-      {
-        "id": "hn:49378768",
-        "title": "Show HN: Huzzah – a novel approach to coding with AI",
-        "summary": "Hello everyone. I&#x27;ve been working on this experimental editor called Huzzah.<p>I&#x27;ve been working almost exclusively with coding agents since January of this year, and over the past few months I began to feel utterly exhausted by them. They&#x27;re great, but I&#x27;m finding it more and mo",
-        "url": "https://www.danielvaughn.dev/posts/huzzah/",
-        "source": "Hacker News",
-        "score": 220,
-        "comments": 119
-      },
-      {
-        "id": "hn:49379550",
-        "title": "Aaron Swartz was prosecuted for scraping, while Meta does it without consequence",
-        "summary": "",
-        "url": "https://blog.curiousquail.com/im-upset-again-about-a-co-creator-of-rss-being-prosecuted-for-something-meta-is-doing-with-little-consequence/",
-        "source": "Hacker News",
-        "score": 953,
-        "comments": 220
-      },
       {
         "id": "hn:49374269",
         "title": "Malicious Rust crate Arrayref runs a build-time payload",
         "summary": "<a href=\"https:&#x2F;&#x2F;blog.rust-lang.org&#x2F;2026&#x2F;08&#x2F;20&#x2F;supply-chain-attack-on-arrayref&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;blog.rust-lang.org&#x2F;2026&#x2F;08&#x2F;20&#x2F;supply-chain-attack-on...</a><p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;rustsec&#x2F;advisory-db&#",
         "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
         "source": "Hacker News",
-        "score": 393,
-        "comments": 364
-      },
-      {
-        "id": "hn:49373456",
-        "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
-        "summary": "I trained a 125M-parameter transformer to autocomplete piano performances in real time (~108 notes&#x2F;sec on an iPhone 15).<p>The idea is basically GitHub Copilot or Tabnine, except instead of prompting it with code, you prompt it by playing a few notes on a MIDI piano. The model then continues wh",
-        "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
-        "source": "Hacker News",
-        "score": 501,
-        "comments": 106
-      },
-      {
-        "id": "hn:49378957",
-        "title": "The August 17 outage, and the work ahead",
-        "summary": "",
-        "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
-        "source": "Hacker News",
-        "score": 312,
-        "comments": 353
+        "score": 518,
+        "comments": 448
       },
       {
         "id": "hn:49347543",
@@ -656,26 +620,8 @@
         "summary": "",
         "url": "https://www.experimental-history.com/p/i-like-em-thick",
         "source": "Hacker News",
-        "score": 558,
-        "comments": 258
-      },
-      {
-        "id": "hn:49372583",
-        "title": "AliExpress runs silent WebAudio fingerprinting that breaks Bluetooth multipoint",
-        "summary": "",
-        "url": "https://blog.laserphile.com/2026/08/aliexpress-webpage-keeping-multipoint.html",
-        "source": "Hacker News",
-        "score": 880,
-        "comments": 287
-      },
-      {
-        "id": "hn:49368886",
-        "title": "CIA funding helped keep NeXT afloat in the 80s",
-        "summary": "<a href=\"https:&#x2F;&#x2F;archive.is&#x2F;JfB5V\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.is&#x2F;JfB5V</a>",
-        "url": "https://www.wsj.com/tech/steve-jobs-apple-next-cia-161b65f9?st=NWWds1&reflink=desktopwebshare_permalink",
-        "source": "Hacker News",
-        "score": 330,
-        "comments": 207
+        "score": 781,
+        "comments": 320
       },
       {
         "id": "lob:dns8du",
@@ -683,8 +629,8 @@
         "summary": "",
         "url": "https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref/",
         "source": "Lobste.rs",
-        "score": 68,
-        "comments": 38,
+        "score": 80,
+        "comments": 44,
         "tags": [
           "rust",
           "security"
@@ -696,8 +642,8 @@
         "summary": "",
         "url": "https://besok.github.io/posts/what-zig-felt-like-coming-from-rust/",
         "source": "Lobste.rs",
-        "score": 55,
-        "comments": 23,
+        "score": 63,
+        "comments": 25,
         "tags": [
           "rust",
           "vibecoding",
@@ -705,13 +651,31 @@
         ]
       },
       {
-        "id": "hn:49377853",
-        "title": "I should have loved biology (2020)",
+        "id": "hn:49384896",
+        "title": "The Lost Treasure of Sid Meier's Pirates",
         "summary": "",
-        "url": "https://jsomers.net/i-should-have-loved-biology/",
+        "url": "https://remapradio.com/articles/the-lost-treasure-of-sid-meiers-pirates/",
         "source": "Hacker News",
-        "score": 198,
-        "comments": 74
+        "score": 148,
+        "comments": 78
+      },
+      {
+        "id": "hn:49386163",
+        "title": "DeepSeek-v4-flash-vision-exp",
+        "summary": "",
+        "url": "https://api-docs.deepseek.com/guides/vision/",
+        "source": "Hacker News",
+        "score": 182,
+        "comments": 42
+      },
+      {
+        "id": "hn:49378957",
+        "title": "The August 17 outage",
+        "summary": "",
+        "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
+        "source": "Hacker News",
+        "score": 576,
+        "comments": 637
       },
       {
         "id": "hn:49362689",
@@ -719,41 +683,76 @@
         "summary": "",
         "url": "https://chrisburnell.com/html-can-do-that/",
         "source": "Hacker News",
-        "score": 572,
-        "comments": 162
+        "score": 888,
+        "comments": 201
       },
       {
-        "id": "lob:i4lxyt",
-        "title": "Plain Text Accounting is Pretty Cool",
+        "id": "lob:wphnca",
+        "title": "Everyone Says Assembly Is Untyped—Everyone Is Wrong",
         "summary": "",
-        "url": "https://sumnerevans.com/posts/money/plain-text-accounting/",
+        "url": "https://www.gingerbill.org/article/2026/08/20/designing-odins-inline-asm/",
         "source": "Lobste.rs",
-        "score": 96,
-        "comments": 42,
+        "score": 56,
+        "comments": 17,
         "tags": [
-          "finance"
+          "assembly",
+          "plt"
         ]
       },
       {
-        "id": "hn:49378243",
-        "title": "Consumer Rights Wiki",
+        "id": "lob:hbjeir",
+        "title": "Announcing Rust 1.98.0",
         "summary": "",
-        "url": "https://consumerrights.wiki/w/Main_Page",
-        "source": "Hacker News",
-        "score": 213,
-        "comments": 31
+        "url": "https://blog.rust-lang.org/2026/08/20/Rust-1.98.0/",
+        "source": "Lobste.rs",
+        "score": 37,
+        "comments": 13,
+        "tags": [
+          "release",
+          "rust"
+        ]
       },
       {
-        "id": "lob:7v1wvd",
-        "title": "Reclaim the terminal",
+        "id": "hn:49384716",
+        "title": "We Rebuilt the Linux MicroVM Stack on Apple Silicon",
         "summary": "",
-        "url": "https://nishantjosh.dev/blogs/reclaim-the-terminal/",
+        "url": "https://encore.dev/blog/firecracker-apple-silicon",
+        "source": "Hacker News",
+        "score": 110,
+        "comments": 53
+      },
+      {
+        "id": "hn:49385994",
+        "title": "AI companies destroy physical books – let's scan rare books before it's too late",
+        "summary": "",
+        "url": "https://annas-archive.pk/blog/physical-destruction.html",
+        "source": "Hacker News",
+        "score": 141,
+        "comments": 80
+      },
+      {
+        "id": "lob:b0olmy",
+        "title": "AliExpress keeps multipoint Bluetooth headphones active with WebAudio fingerprinting",
+        "summary": "",
+        "url": "https://blog.laserphile.com/2026/08/aliexpress-webpage-keeping-multipoint.html",
         "source": "Lobste.rs",
-        "score": 43,
-        "comments": 14,
+        "score": 42,
+        "comments": 9,
         "tags": [
-          "rust",
-          "unix"
+          "browsers",
+          "privacy"
+        ]
+      },
+      {
+        "id": "lob:ikhwaz",
+        "title": "Emacs 31.1 will release on 8/24",
+        "summary": "<p>Biggest thing for me is that tree-sitter's ABI is being bumped to 15 -- fixes compatibility issues with <em>several</em> upstream grammars.</p>\n<p>For the impatient, RC1 has been posted: <a href=\"https://lists.gnu.org/archive/html/emacs-devel/2026-08/msg00599.html\" rel=\"ugc\">https://lists.gnu.org",
+        "url": "https://github.com/emacs-mirror/emacs/blob/062dcd2aead00c3b47c14ff5b6c40313f7a775f5/etc/HISTORY#L246",
+        "source": "Lobste.rs",
+        "score": 27,
+        "comments": 1,
+        "tags": [
+          "emacs"
         ]
       },
       {
@@ -762,53 +761,69 @@
         "summary": "",
         "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
         "source": "Lobste.rs",
-        "score": 72,
-        "comments": 3,
+        "score": 116,
+        "comments": 5,
         "tags": [
           "security"
         ]
       },
       {
-        "id": "lob:xgxp9m",
-        "title": "If this is true, the hyperscalers are toast",
-        "summary": "<p>The future of AI is not large language models (LLM), but small language models (SLM).</p>\n",
-        "url": "https://klementoninvesting.substack.com/p/if-this-is-true-the-hyperscalers",
+        "id": "lob:umey8v",
+        "title": "Btrfs Snapshot Integration in KDE",
+        "summary": "",
+        "url": "https://bharadwajraju.com/posts/btrfs-snapshots-in-kde/",
         "source": "Lobste.rs",
-        "score": 18,
-        "comments": 16,
+        "score": 27,
+        "comments": 8,
         "tags": [
-          "vibecoding"
+          "linux",
+          "osdev"
         ]
       },
       {
-        "id": "hn:49382041",
-        "title": "Copyright does not protect AI-generated content in EU",
-        "summary": "",
-        "url": "https://mathstodon.xyz/@maxpool/117128107757895678",
-        "source": "Hacker News",
-        "score": 66,
-        "comments": 65
+        "id": "arxiv:2608.20320v1",
+        "title": "An Agentic Approach for Active Data Collection, Travel Behavior Modeling, and Weather-Sensitive Demand Prediction",
+        "summary": "Travel behavior research increasingly combines digital data collection with predictive modeling, yet these stages are often developed and evaluated separately. This study proposes a three-agent workflow integrating conversational data collection, structured data processing, and behavioral prediction",
+        "url": "https://arxiv.org/abs/2608.20320v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.AI",
+          "cs.CL"
+        ],
+        "arxiv_id": "2608.20320v1"
       },
       {
-        "id": "rss:a31ccb0c23",
-        "title": "Rust Supply Chain Attack Puts Build-Time Malware in Crates with 245 Million Downloads",
-        "summary": "The Rust Project has deleted malicious versions of three widely used Rust crates from crates.io after a compromised maintainer account published releases that added a typosquatted dependency whose build script downloaded and executed a remote payload during compilation.\n\nThe affected releases are ar",
-        "url": "https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html",
+        "id": "arxiv:2608.20318v1",
+        "title": "AI4AI-Bench: Benchmarking LLM Agents in Algorithmic Design for Recursive Self-Improvement",
+        "summary": "Recursive self-improvement (RSI) asks whether an AI system can improve the process that produces AI systems, so that the next system inherits the improvement. That process is the training algorithm: a better objective or update rule improves the compute\\mbox{-}capability exchange rate for every subs",
+        "url": "https://arxiv.org/abs/2608.20318v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.AI",
+          "cs.CL",
+          "cs.LG"
+        ],
+        "arxiv_id": "2608.20318v1"
+      },
+      {
+        "id": "arxiv:2608.20281v1",
+        "title": "Inject, Align, Recover: Staged Post-Training for Retrieval-Free Document Knowledge Internalization",
+        "summary": "Large language models often fail to answer questions about a bounded document collection when the source documents are not retrieved at inference time. We study this setting as document knowledge internalization: converting a fixed corpus into usable parametric knowledge for retrieval-free question ",
+        "url": "https://arxiv.org/abs/2608.20281v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.CL",
+          "cs.AI"
+        ],
+        "arxiv_id": "2608.20281v1"
+      },
+      {
+        "id": "rss:466c1e7ac5",
+        "title": "GitLab CVE-2026-19478 Comes Under Active Exploitation Within Days of Disclosure",
+        "summary": "A newly disclosed security flaw in GitLab has come under active exploitation within days of public disclosure, according to watchTowr.\n\nThe vulnerability in question is CVE-2026-19478 (CVSS score: 9.4), a case of code injection that allows an unauthenticated attacker to modify or delete publicly acc",
+        "url": "https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html",
         "source": "Tech RSS",
         "score": 0
-      },
-      {
-        "id": "lob:wphnca",
-        "title": "Everyone Says Assembly Is Untyped—Everyone Is Wrong",
-        "summary": "",
-        "url": "https://www.gingerbill.org/article/2026/08/20/designing-odins-inline-asm/",
-        "source": "Lobste.rs",
-        "score": 26,
-        "comments": 6,
-        "tags": [
-          "assembly",
-          "plt"
-        ]
       }
     ],
     "ai_curated": true

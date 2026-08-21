@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📊 投资观察面板 | 2026-08-21 08:27 UTC+8 (北京时间)</title>
+    <title>📊 投资观察面板 | 2026-08-21 13:01 UTC+8 (北京时间)</title>
     <style>
         /* ===== 全局样式 ===== */
         :root {
@@ -529,7 +529,7 @@
                     <span>港股 <span class="status-dot open"></span></span>
                     <span>美股 <span class="status-dot open"></span></span>
                 </div>
-                <span class="update-badge">🕐 更新: 2026-08-21 08:27 UTC+8 (北京时间)</span>
+                <span class="update-badge">🕐 更新: 2026-08-21 13:01 UTC+8 (北京时间)</span>
             </div>
         </div>
     </header>
@@ -558,13 +558,13 @@
             </div>
             <div class="summary-card">
                 <div class="card-label">🟢 今日上涨</div>
-                <div class="card-value up">5</div>
-                <div class="card-sub">占比 41.7%</div>
+                <div class="card-value up">7</div>
+                <div class="card-sub">占比 58.3%</div>
             </div>
             <div class="summary-card">
                 <div class="card-label">🔴 今日下跌</div>
-                <div class="card-value down">6</div>
-                <div class="card-sub">占比 50.0%</div>
+                <div class="card-value down">5</div>
+                <div class="card-sub">占比 41.7%</div>
             </div>
             
             
@@ -599,18 +599,18 @@
                 <div class="briefing-card">
                     <div class="briefing-card-header">
                         <span class="briefing-num">#1</span>
-                        <span class="briefing-source-tag">Hacker News / Rust Blog</span>
+                        <span class="briefing-source-tag">Hacker News/GitHub</span>
                     </div>
                     <a href="" target="_blank" rel="noopener" class="briefing-title-link">
-                        <div class="briefing-title">📌 Rust 供应链攻击：Arrayref 等 crate 植入构建期恶意载荷</div>
+                        <div class="briefing-title">📌 Rust 生态遭供应链投毒：Arrayref 恶意 crate 植入构建期攻击</div>
                     </a>
                     <div class="briefing-section">
                         <div class="briefing-label">💡 核心干货</div>
-                        <div class="briefing-text">Rust 官方紧急删除了三个恶意 crate 版本（累计下载量超 2.45 亿次）。攻击者通过攻陷维护者账号，在 crate 中塞入一个&#34;拼写相似&#34;的依赖，其构建脚本会偷偷下载并执行远程恶意代码。这相当于在建筑图纸里藏了个雷，施工队一开工，整栋楼就归黑客管了。</div>
+                        <div class="briefing-text">Rust 官方确认热门 crate `arrayref` 被劫持，恶意版本会在构建时执行攻击载荷，标志着针对 Rust 生态的供应链攻击从&#34;偷数据&#34;升级到了&#34;劫持编译器&#34;。RustSec 已发布公告，建议所有受影响项目立即锁定版本并审计依赖树。</div>
                     </div>
                     <div class="briefing-section">
                         <div class="briefing-label">🎯 毒舌点评</div>
-                        <div class="briefing-text briefing-commentary">下载量 2.45 亿的&#34;官方&#34;依赖都能下毒，这年头连 `cargo add` 都得先做背景调查。建议各位程序员把 `cargo audit` 焊死在 CI 流程里，不然下一个被焊死的可能就是你的服务器。</div>
+                        <div class="briefing-text briefing-commentary">以前是&#34;依赖地狱&#34;，现在是&#34;依赖鸿门宴&#34;。建议各位 Rustacean 今晚别急着睡，先把 `cargo tree` 翻个底朝天——毕竟你永远不知道下一个 `cargo build` 是在编译代码，还是在给黑客打工。</div>
                     </div>
                 </div>
                 
@@ -619,18 +619,18 @@
                 <div class="briefing-card">
                     <div class="briefing-card-header">
                         <span class="briefing-num">#2</span>
-                        <span class="briefing-source-tag">Hacker News</span>
+                        <span class="briefing-source-tag">ArXiv</span>
                     </div>
                     <a href="" target="_blank" rel="noopener" class="briefing-title-link">
-                        <div class="briefing-title">📌 AliExpress 静默 WebAudio 指纹识别，直接干扰蓝牙多设备连接</div>
+                        <div class="briefing-title">📌 AI4AI-Bench：为&#34;递归自我改进&#34;立规矩的基准测试</div>
                     </a>
                     <div class="briefing-section">
                         <div class="briefing-label">💡 核心干货</div>
-                        <div class="briefing-text">安全研究员发现 AliExpress 网页端利用 WebAudio API 的隐秘指纹识别技术，在用户毫不知情的情况下采集设备信息。更阴损的是，这一操作会占用音频通道，直接破坏蓝牙的多点连接功能——就问你，逛个淘宝还能把耳机逛断连了，气不气？</div>
+                        <div class="briefing-text">这篇论文提出一个全新基准，专门评估 LLM Agent 在算法设计上的能力，直指&#34;递归自我改进&#34;的核心命题：AI 能否优化自己的训练算法，以实现算力-能力转化率的持续提升。这不再是纸上谈兵，而是给&#34;AI 造 AI&#34;画了一条可量化的起跑线。</div>
                     </div>
                     <div class="briefing-section">
                         <div class="briefing-label">🎯 毒舌点评</div>
-                        <div class="briefing-text briefing-commentary">别人做指纹识别是为了广告精准投放，AliExpress 这波操作是直接对你的硬件动手。建议下次逛该网站时戴个锡纸帽，顺便把系统音量调成静音，看它还怎么&#34;演奏&#34;你的隐私数据。</div>
+                        <div class="briefing-text briefing-commentary">当 AI 开始研究怎么让自己变聪明，我们人类还在研究怎么让 AI 不抢我们饭碗。这波属于是&#34;内卷&#34;的终极形态——建议人类抓紧时间学会给 AI 拧螺丝，毕竟以后可能连写代码的活儿都得看 AI 心情。</div>
                     </div>
                 </div>
                 
@@ -639,18 +639,18 @@
                 <div class="briefing-card">
                     <div class="briefing-card-header">
                         <span class="briefing-num">#3</span>
-                        <span class="briefing-source-tag">Hacker News</span>
+                        <span class="briefing-source-tag">科技新闻</span>
                     </div>
                     <a href="" target="_blank" rel="noopener" class="briefing-title-link">
-                        <div class="briefing-title">📌 端侧 125M 钢琴自动续写模型</div>
+                        <div class="briefing-title">📌 GitLab 高危漏洞 CVE-2026-19478 披露即遭利用</div>
                     </a>
                     <div class="briefing-section">
                         <div class="briefing-label">💡 核心干货</div>
-                        <div class="briefing-text">一位独立开发者训练了一个 1.25 亿参数的 Transformer 模型，可在 iPhone 15 上实时（约 108 音符/秒）为你的 MIDI 钢琴演奏进行&#34;自动续写&#34;。你弹几个音符，它帮你补全接下来的旋律，堪称音乐界的 Copilot，且完全离线运行。</div>
+                        <div class="briefing-text">GitLab 新披露的代码注入漏洞（CVSS 9.4）在几天内就被活跃利用，未认证攻击者可修改或删除公开项目数据。这不仅是补丁竞速，更是对 DevOps 平台安全信任的拷问。</div>
                     </div>
                     <div class="briefing-section">
                         <div class="briefing-label">🎯 毒舌点评</div>
-                        <div class="briefing-text briefing-commentary">终于有人把 AI 用在正地方了——不是写垃圾代码，而是帮你假装会弹钢琴。等它学会自动编曲，估计下一个失业的就是音乐制作人了（但放心，贝多芬的棺材板还压得住）。</div>
+                        <div class="briefing-text briefing-commentary">GitLab 的 SRE 团队估计已经体验了一把&#34;删库跑路&#34;的甲方视角。漏洞披露到利用只隔一个周末，这效率比大多数公司的敏捷开发还高。建议所有自托管用户：今天先别急着发版，把补丁打了再谈敏捷。</div>
                     </div>
                 </div>
                 
@@ -691,29 +691,29 @@
                             <td>
                                 <span class="stock-name">三花智控</span>
                                 <span class="stock-code">002050</span>
-                                <span class="stock-industry" style="font-size:0.68rem"></span>
+                                
                             </td>
                             <td><span class="stock-industry">-</span></td>
-                            <td><span class="stock-business" title="冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。">冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。</span></td>
-                            <td class="price">¥36.14</td>
+                            <td><span class="stock-business" title="">-</span></td>
+                            <td class="price">¥36.71</td>
                             <td>
-                                <span class="change-badge negative">
-                                    -1.77%
+                                <span class="change-badge positive">
+                                    +1.58%
                                 </span>
                             </td>
                             <td>-</td>
-                            <td>37.21</td>
-                            <td class="up">
-                                50.92
+                            <td>37.8</td>
+                            <td class="">
+                                -
                             </td>
                             <td class="indicator bearish">
-                                -0.7522
+                                -0.8093
                             </td>
                             <td class="indicator bearish">
-                                39.07
+                                41.66
                             </td>
-                            <td>37.97</td>
-                            <td>37.79</td>
+                            <td>37.65</td>
+                            <td>37.87</td>
                             <td class="">
                                 -
                             </td>
@@ -723,28 +723,28 @@
                             <td>
                                 <span class="stock-name">上海电气</span>
                                 <span class="stock-code">601727</span>
-                                <span class="stock-industry" style="font-size:0.68rem"></span>
+                                
                             </td>
                             <td><span class="stock-industry">-</span></td>
-                            <td><span class="stock-business" title="新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。">新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。</span></td>
-                            <td class="price">¥6.52</td>
+                            <td><span class="stock-business" title="">-</span></td>
+                            <td class="price">¥6.53</td>
                             <td>
                                 <span class="change-badge positive">
-                                    +0.0%
+                                    +0.15%
                                 </span>
                             </td>
                             <td>-</td>
-                            <td>78.28</td>
-                            <td class="up">
-                                105.67
+                            <td>78.4</td>
+                            <td class="">
+                                -
                             </td>
                             <td class="indicator bearish">
-                                -0.0744
+                                -0.0833
                             </td>
                             <td class="indicator bearish">
-                                37.21
+                                37.8
                             </td>
-                            <td>6.64</td>
+                            <td>6.6</td>
                             <td>6.79</td>
                             <td class="">
                                 -
@@ -859,7 +859,7 @@
                                 </span>
                             </td>
                             <td>52523.24</td>
-                            <td>33.31</td>
+                            <td>33.21</td>
                             <td class="up">
                                 463.36
                             </td>
@@ -887,7 +887,7 @@
                                 </span>
                             </td>
                             <td>41361.64</td>
-                            <td>17.15</td>
+                            <td>16.98</td>
                             <td class="up">
                                 226.65
                             </td>
@@ -915,7 +915,7 @@
                                 </span>
                             </td>
                             <td>228.05</td>
-                            <td>15.76</td>
+                            <td>16.77</td>
                             <td class="up">
                                 2.06
                             </td>
@@ -999,7 +999,7 @@
                                 </span>
                             </td>
                             <td>1341.44</td>
-                            <td>79.6</td>
+                            <td>81.09</td>
                             <td class="up">
                                 51.49
                             </td>
@@ -1027,7 +1027,7 @@
                                 </span>
                             </td>
                             <td>835.03</td>
-                            <td>474.59</td>
+                            <td>455.98</td>
                             <td class="up">
                                 10.51
                             </td>
@@ -1081,13 +1081,13 @@
                                 <span class="stock-code">BTC</span>
                             </td>
                             <td><span class="stock-industry">Smart Contract Platform</span></td>
-                            <td class="price">$77058</td>
+                            <td class="price">$77159</td>
                             <td>
                                 <span class="change-badge positive">
-                                    +9.3%
+                                    +7.3%
                                 </span>
                             </td>
-                            <td>15466.63</td>
+                            <td>15486.65</td>
                             <td>#1</td>
                             <td class="">
                                 -
@@ -1096,19 +1096,19 @@
                                 -
                             </td>
                             <td class="indicator bullish">
-                                1823.755
+                                1831.713
                             </td>
                             <td class="indicator bullish">
-                                85.12
+                                85.21
                             </td>
                             <td class="up">
-                                +22.5%
+                                +23.1%
                             </td>
                             <td class="up">
-                                +17.0%
+                                +17.6%
                             </td>
                             <td class="down">
-                                -38.9%
+                                -38.8%
                             </td>
                         </tr>
                         
@@ -1118,13 +1118,13 @@
                                 <span class="stock-code">ETH</span>
                             </td>
                             <td><span class="stock-industry">Smart Contract Platform</span></td>
-                            <td class="price">$2380.51</td>
+                            <td class="price">$2387.25</td>
                             <td>
                                 <span class="change-badge positive">
-                                    +4.9%
+                                    +3.9%
                                 </span>
                             </td>
-                            <td>2872.84</td>
+                            <td>2881.23</td>
                             <td>#2</td>
                             <td class="">
                                 -
@@ -1133,19 +1133,19 @@
                                 -
                             </td>
                             <td class="indicator bullish">
-                                90.8839
+                                91.4388
                             </td>
                             <td class="indicator bullish">
-                                85.75
+                                85.9
                             </td>
                             <td class="up">
-                                +27.2%
+                                +27.6%
                             </td>
                             <td class="up">
-                                +24.5%
+                                +24.6%
                             </td>
                             <td class="down">
-                                -51.9%
+                                -51.7%
                             </td>
                         </tr>
                         
@@ -1232,6 +1232,94 @@
                 </div>
                 
                 <div class="news-card">
+                    <a href="https://www.marketwatch.com/story/when-it-comes-to-returning-cash-to-shareholders-anything-sk-hynix-can-do-samsung-can-do-bigger-87db6ef4?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">When it comes to stock buybacks, anything SK Hynix can do, Samsung can do bigger</div>
+                        <div class="news-summary">As demand far outstrips supply in the memory-chip market, SK Hynix and Samsung Electronics are generating outsize profits and throwing off huge free cash flow. Now both companies plan to return lots o</div>
+                        <div class="news-meta">
+                            <span class="news-source">feeds.marketwatch.com</span>
+                            <span>Fri, 21 Aug 2026 12:15:00 GMT</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.marketwatch.com/story/american-consumers-are-delivering-a-retail-reality-check-as-they-laser-in-on-bargains-96816053?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">American consumers are delivering a retail reality check as they laser in on bargains</div>
+                        <div class="news-summary">Recent earnings results suggest that the typical shopper is ‘employed, still spending, and increasingly disciplined about it.’</div>
+                        <div class="news-meta">
+                            <span class="news-source">feeds.marketwatch.com</span>
+                            <span>Fri, 21 Aug 2026 12:00:00 GMT</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.marketwatch.com/story/modernas-personalized-mrna-shot-could-reshape-the-fight-against-skin-cancer-but-it-may-also-be-overhyped-a6f1bc88?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">Moderna’s personalized mRNA shot could reshape the fight against skin cancer — but it may also be overhyped</div>
+                        <div class="news-summary">Doctors and patients are excited about the possible breakthrough, but some analysts believe there’s too much hype.</div>
+                        <div class="news-meta">
+                            <span class="news-source">feeds.marketwatch.com</span>
+                            <span>Fri, 21 Aug 2026 11:22:00 GMT</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.marketwatch.com/story/the-u-s-government-plans-to-crack-down-on-its-40-trillion-debt-but-brace-for-a-wrenching-time-ahead-b3fb76a8?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">The U.S. government plans to crack down on its $40 trillion debt — but brace for a ‘wrenching time’ ahead</div>
+                        <div class="news-summary">Washington has no shortage of options. None are easy.</div>
+                        <div class="news-meta">
+                            <span class="news-source">feeds.marketwatch.com</span>
+                            <span>Fri, 21 Aug 2026 11:00:00 GMT</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.marketwatch.com/story/nvidia-earnings-could-rescue-a-stalling-stock-market-if-the-ai-chip-maker-breaks-this-trend-9b6504bc?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">Nvidia earnings could rescue a stalled-out stock market — if the AI chip maker breaks this trend</div>
+                        <div class="news-summary">Shares of Jensen Huang’s company have struggled to make headway since its previous results day.</div>
+                        <div class="news-meta">
+                            <span class="news-source">feeds.marketwatch.com</span>
+                            <span>Fri, 21 Aug 2026 10:54:00 GMT</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.marketwatch.com/story/its-truly-a-tragedy-my-daughter-hasnt-spoken-to-me-for-4-years-but-it-has-nothing-to-do-with-politics-86c4bcf6?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">‘It’s truly a tragedy’: My daughter hasn’t spoken to me for 4 years, but it has nothing to do with politics</div>
+                        <div class="news-summary">“You’ll have to trust me when I tell you that she had love, support and opportunities.”</div>
+                        <div class="news-meta">
+                            <span class="news-source">feeds.marketwatch.com</span>
+                            <span>Fri, 21 Aug 2026 09:15:00 GMT</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.marketwatch.com/story/hedge-funds-are-doubling-down-on-big-tech-even-after-summer-volatility-triggered-a-massive-portfolio-cleanup-57dbbf8a?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">Hedge funds are doubling down on Big Tech even after summer volatility triggered a massive portfolio cleanup</div>
+                        <div class="news-summary">Hedge funds entered the second quarter all-in on the AI trade, but have begun to diversify their portfolios lately. They’re dipping into healthcare, energy and financials.</div>
+                        <div class="news-meta">
+                            <span class="news-source">feeds.marketwatch.com</span>
+                            <span>Fri, 21 Aug 2026 09:11:00 GMT</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
+                    <a href="https://www.marketwatch.com/story/legendary-film-editor-billy-weber-of-miss-congeniality-and-top-gun-lists-historic-l-a-home-for-4-million-465ee55b?mod=mw_rss_topstories" target="_blank" rel="noopener">
+                        <div class="news-title">Legendary film editor Billy Weber of ‘Miss Congeniality’ and ‘Top Gun’ lists historic L.A. home for $4 million</div>
+                        <div class="news-summary">Film editor Billy Weber’s tranquil Los Angeles home has hit the market for $3.99 million.</div>
+                        <div class="news-meta">
+                            <span class="news-source">feeds.marketwatch.com</span>
+                            <span>Fri, 21 Aug 2026 09:01:00 GMT</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news-card">
                     <a href="https://www.marketwatch.com/story/my-son-does-not-work-yet-he-pays-500-for-aca-health-insurance-how-is-that-fair-92f578c4?mod=mw_rss_topstories" target="_blank" rel="noopener">
                         <div class="news-title">My son does not work, yet pays $500 for Affordable Care Act health insurance. Is that fair?</div>
                         <div class="news-summary">“I see people who have a lot of money but little or no taxable income who still qualify for ACA Marketplace subsidies.”</div>
@@ -1254,199 +1342,111 @@
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.marketwatch.com/story/our-4-year-old-son-has-100-000-in-his-529-account-should-we-buy-him-stocks-instead-3ca745b2?mod=mw_rss_topstories" target="_blank" rel="noopener">
-                        <div class="news-title">Our 4-year-old son has $100,000 in his 529 account. Is a bull market a bad time to buy him stocks instead?</div>
-                        <div class="news-summary">“I’d love for our son to be able to attend college without needing to take out student loans.”</div>
-                        <div class="news-meta">
-                            <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Thu, 20 Aug 2026 22:00:00 GMT</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="news-card">
-                    <a href="https://www.marketwatch.com/story/were-in-our-50s-and-have-1-5-million-in-traditional-401-k-s-is-it-too-early-to-start-roth-conversions-2d0f9287?mod=mw_rss_topstories" target="_blank" rel="noopener">
-                        <div class="news-title">We’re in our 50s and have $1.5 million in traditional 401(k)s. Is it too early to start Roth conversions?</div>
-                        <div class="news-summary">“The last adviser we worked with lost a significant portion of our portfolio.”</div>
-                        <div class="news-meta">
-                            <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Thu, 20 Aug 2026 21:01:00 GMT</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="news-card">
-                    <a href="https://www.marketwatch.com/story/treasury-rout-restarts-one-day-after-bessents-beefed-up-buyback-plan-972766a1?mod=mw_rss_topstories" target="_blank" rel="noopener">
-                        <div class="news-title">Anxious bond market sends troubling message to investors: There’s no easy fix for U.S. debt</div>
-                        <div class="news-summary">Treasury Secretary Scott Bessent’s plan to calm markets is being short-circuited.</div>
-                        <div class="news-meta">
-                            <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Thu, 20 Aug 2026 19:40:00 GMT</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="news-card">
-                    <a href="https://www.marketwatch.com/story/sports-betting-to-build-wealth-is-becoming-the-new-american-dream-1e29b728?mod=mw_rss_topstories" target="_blank" rel="noopener">
-                        <div class="news-title">Sports betting to build wealth is becoming the new American dream</div>
-                        <div class="news-summary">More people under 30 are using gambling as a shortcut to buying a home or paying student loans</div>
-                        <div class="news-meta">
-                            <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Thu, 20 Aug 2026 19:14:00 GMT</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="news-card">
-                    <a href="https://www.marketwatch.com/story/the-bond-market-is-going-to-burst-the-stock-market-bubble-1c6f0971?mod=mw_rss_topstories" target="_blank" rel="noopener">
-                        <div class="news-title">The bond market is going to burst the stock-market bubble</div>
-                        <div class="news-summary">Rising yields threaten everything, especially  overextended equities.</div>
-                        <div class="news-meta">
-                            <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Thu, 20 Aug 2026 19:06:00 GMT</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="news-card">
-                    <a href="https://www.marketwatch.com/story/modernas-personalized-mrna-shot-could-reshape-the-fight-against-skin-cancer-but-it-may-also-be-overhyped-a6f1bc88?mod=mw_rss_topstories" target="_blank" rel="noopener">
-                        <div class="news-title">Moderna’s personalized mRNA shot could reshape the fight against skin cancer — but it may also be overhyped</div>
-                        <div class="news-summary">Doctors and patients are excited about the possible breakthrough, but some analysts believe there’s too much hype.</div>
-                        <div class="news-meta">
-                            <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Thu, 20 Aug 2026 19:01:00 GMT</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="news-card">
-                    <a href="https://www.marketwatch.com/story/neocloud-stocks-like-coreweave-are-having-a-moment-and-times-running-out-to-cash-in-8aca34c8?mod=mw_rss_topstories" target="_blank" rel="noopener">
-                        <div class="news-title">Neocloud stocks like CoreWeave are having a moment — and time’s running out to cash in</div>
-                        <div class="news-summary">The neoclouds are destined to be “cyclical leasing companies,” according to BCA analyst Noah Weisberger, which implies low valuations for the stocks.</div>
-                        <div class="news-meta">
-                            <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Thu, 20 Aug 2026 18:20:00 GMT</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="news-card">
-                    <a href="https://www.marketwatch.com/story/there-is-considerable-tension-my-grandmother-99-wants-to-cut-my-mother-out-of-her-will-should-i-intervene-5e8f408e?mod=mw_rss_topstories" target="_blank" rel="noopener">
-                        <div class="news-title">‘There is considerable tension’: My grandmother, 99, wants to cut my mother out of her will. Should I intervene?</div>
-                        <div class="news-summary">“Grandma feels that she was pressured by my mother into taking out a $50,000 HELOC.”</div>
-                        <div class="news-meta">
-                            <span class="news-source">feeds.marketwatch.com</span>
-                            <span>Thu, 20 Aug 2026 18:15:00 GMT</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="news-card">
-                    <a href="https://www.investing.com/news/earnings/ross-stores-raises-2026-outlook-after-strong-secondquarter-results-4870498" target="_blank" rel="noopener">
-                        <div class="news-title">Ross Stores shares rally as strong Q2 results drive outlook upgrade</div>
+                    <a href="https://www.investing.com/news/transcripts/earnings-call-transcript-dino-polska-posts-q2-2026-eps-beat-as-stock-rises-58-93CH-4871620" target="_blank" rel="noopener">
+                        <div class="news-title">Earnings call transcript: Dino Polska posts Q2 2026 EPS beat as stock rises 5.8%</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-08-21 08:16:09</span>
+                            <span>2026-08-21 12:53:44</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.investing.com/news/company-news/medistim-q2-2026-slides-record-revenue-tops-nok-200m-margins-at-32-93CH-4871040" target="_blank" rel="noopener">
-                        <div class="news-title">Medistim Q2 2026 slides: record revenue tops NOK 200M, margins at 32%</div>
+                    <a href="https://www.investing.com/news/stock-market-news/asure-software-stock-gains-on-aws-marketplace-expansion-93CH-4871619" target="_blank" rel="noopener">
+                        <div class="news-title">Asure Software stock gains on AWS Marketplace expansion</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-08-21 08:12:28</span>
+                            <span>2026-08-21 12:52:20</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.investing.com/news/economic-indicators/eurozone-business-activity-rises-in-august-on-manufacturing-strength-93CH-4871039" target="_blank" rel="noopener">
-                        <div class="news-title">Eurozone business activity rises in August on manufacturing strength</div>
+                    <a href="https://www.investing.com/news/cryptocurrency-news/eos-climbs-12-in-a-green-day-4871617" target="_blank" rel="noopener">
+                        <div class="news-title">EOS Climbs 12% In a Green Day</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-08-21 08:11:45</span>
+                            <span>2026-08-21 12:52:03</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.investing.com/news/earnings/siegfried-tops-h1-estimates-on-revenue-and-profit-confirms-fy-guidance-4870896" target="_blank" rel="noopener">
-                        <div class="news-title">Siegfried tops H1 estimates on revenue and profit, confirms FY guidance; stock up</div>
+                    <a href="https://www.investing.com/news/company-news/sats-q1-fy27-slides-record-cargo-drives-revenue-amid-margin-pressure-93CH-4871618" target="_blank" rel="noopener">
+                        <div class="news-title">SATS Q1 FY27 slides: record cargo drives revenue amid margin pressure</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-08-21 08:11:44</span>
+                            <span>2026-08-21 12:52:02</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.investing.com/news/earnings/nibe-shares-jump-8-as-strong-margin-recovery-powers-secondquarter-profit-4871038" target="_blank" rel="noopener">
-                        <div class="news-title">NIBE shares jump 8% as strong margin recovery powers second-quarter profit</div>
+                    <a href="https://www.investing.com/news/stock-market-news/morgan-stanley-sees-india-steel-stocks-continuing-gains-93CH-4871616" target="_blank" rel="noopener">
+                        <div class="news-title">Morgan Stanley sees India steel stocks continuing gains</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-08-21 08:10:21</span>
+                            <span>2026-08-21 12:51:37</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.investing.com/news/analyst-ratings/rothschild-redburn-upgrades-equifax-stock-rating-on-cloud-execution-93CH-4871035" target="_blank" rel="noopener">
-                        <div class="news-title">Rothschild Redburn upgrades Equifax stock rating on cloud execution</div>
+                    <a href="https://www.investing.com/news/stock-market-news/deutsche-bank-monitors-uk-auto-sales-as-chinese-exports-grow-93CH-4871615" target="_blank" rel="noopener">
+                        <div class="news-title">Deutsche Bank monitors UK auto sales as Chinese exports grow</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-08-21 08:09:01</span>
+                            <span>2026-08-21 12:50:37</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.investing.com/news/company-news/santander-issues-3298-million-shares-for-webster-acquisition-93CH-4871034" target="_blank" rel="noopener">
-                        <div class="news-title">Santander issues 329.8 million shares for Webster acquisition</div>
+                    <a href="https://www.investing.com/news/stock-market-news/eric-trumpbacked-spaceeyes-to-appoint-exdelta-force-officer-and-exbanker-sources-say-4871527" target="_blank" rel="noopener">
+                        <div class="news-title">Eric Trump-backed Space-Eyes to appoint ex-Delta Force officer and ex-banker, sources say</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-08-21 08:08:41</span>
+                            <span>2026-08-21 12:49:23</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.investing.com/news/economy-news/euro-zone-business-activity-growth-hits-highest-since-november-pmi-shows-4871033" target="_blank" rel="noopener">
-                        <div class="news-title">Euro zone business activity growth hits highest since November, PMI shows</div>
+                    <a href="https://www.investing.com/news/stock-market-news/australias-steadfast-agrees-to-551-billion-buyout-bid-by-kkrbacked-consortium-4871174" target="_blank" rel="noopener">
+                        <div class="news-title">Australia’s Steadfast agrees to $5.5 billion buyout bid by KKR-backed consortium</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-08-21 08:07:31</span>
+                            <span>2026-08-21 12:49:02</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.investing.com/news/stock-market-news/hyundai-motors-union-stages-first-full-strike-in-10-years-over-wage-talks-4870780" target="_blank" rel="noopener">
-                        <div class="news-title">Hyundai Motor’s South Korean union stages first full strike in a decade over pay</div>
+                    <a href="https://www.investing.com/news/stock-market-news/why-is-haverty-furniture-stock-slipping-today-93CH-4871610" target="_blank" rel="noopener">
+                        <div class="news-title">Why is Haverty Furniture stock slipping today?</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-08-21 08:07:07</span>
+                            <span>2026-08-21 12:49:00</span>
                         </div>
                     </a>
                 </div>
                 
                 <div class="news-card">
-                    <a href="https://www.investing.com/news/company-news/odfjell-q2-2026-slides-earnings-surge-on-stronger-spot-rates-93CH-4871012" target="_blank" rel="noopener">
-                        <div class="news-title">Odfjell Q2 2026 slides: earnings surge on stronger spot rates</div>
+                    <a href="https://www.investing.com/news/analyst-ratings/keybanc-raises-zscaler-stock-price-target-on-security-spend-outlook-93CH-4871609" target="_blank" rel="noopener">
+                        <div class="news-title">KeyBanc raises Zscaler stock price target on security spend outlook</div>
                         <div class="news-summary"></div>
                         <div class="news-meta">
                             <span class="news-source">www.investing.com</span>
-                            <span>2026-08-21 08:06:48</span>
+                            <span>2026-08-21 12:48:55</span>
                         </div>
                     </a>
                 </div>
@@ -1471,7 +1471,7 @@
 
         // ===== 状态 =====
         var autoRefreshEnabled = localStorage.getItem('auto-refresh') !== 'false';
-        var pageUpdateTime = '2026-08-21 08:27 UTC+8 (北京时间)';  // 页面生成时间
+        var pageUpdateTime = '2026-08-21 13:01 UTC+8 (北京时间)';  // 页面生成时间
         var countdownSeconds = REFRESH_INTERVAL;
         var dataCheckTimer = null;
         var countdownTimer = null;
