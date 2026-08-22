@@ -1,9 +1,14 @@
 {
-  "update_time": "2026-08-22 15:27:11",
-  "update_ts": 1787412431,
+  "update_time": "2026-08-22 15:41:30",
+  "update_ts": 1787413290,
   "data_sources": {
     "BTC": "Kraken",
     "ETH": "Kraken"
+  },
+  "fear_greed": {
+    "value": 71,
+    "classification": "Greed",
+    "timestamp": "2026-08-22 00:00:00"
   },
   "BTC": {
     "signal": {
@@ -13,13 +18,13 @@
       "totalScore": 0,
       "confidence": "观望",
       "winRateEst": 0,
-      "entryPrice": 76990.6,
-      "stopLoss": 76990.6,
-      "takeProfit": 76990.6,
-      "takeProfit1": 76990.6,
-      "takeProfit2": 76990.6,
+      "entryPrice": 77014.0,
+      "stopLoss": 77014.0,
+      "takeProfit": 77014.0,
+      "takeProfit1": 77014.0,
+      "takeProfit2": 77014.0,
       "positionPct1": 50,
-      "breakevenPrice": 76990.6,
+      "breakevenPrice": 77014.0,
       "rrRatio": 0,
       "riskPct": 0,
       "rewardPct": 0,
@@ -48,10 +53,10 @@
       "atrPct": 0,
       "trend1h": 0,
       "trend4h": 0,
-      "nearestSupport": 74680.882,
-      "nearestResistance": 79300.318,
-      "nextSupport": 73141.07,
-      "nextResistance": 80840.13,
+      "nearestSupport": 74703.58,
+      "nearestResistance": 79324.42,
+      "nextSupport": 73163.3,
+      "nextResistance": 80864.7,
       "trendSummary": "V4: 15min 数据不可用",
       "fundingRate": null,
       "fundingRatePct": null,
@@ -395,7 +400,7 @@
           77302.9,
           77286.3,
           76980.3,
-          76990.6
+          77014.0
         ],
         "highs": [
           65077.3,
@@ -733,7 +738,7 @@
           77362.0,
           77344.9,
           77286.3,
-          77069.8
+          77087.9
         ],
         "lows": [
           64991.5,
@@ -1159,7 +1164,7 @@
           78409.5,
           77266.2,
           77130.3,
-          76990.6
+          77014.0
         ],
         "highs": [
           65093.3,
@@ -1349,7 +1354,7 @@
           68539.7,
           72431.7,
           77185.7,
-          76990.6
+          77014.0
         ],
         "highs": [
           65221.0,
@@ -1394,13 +1399,13 @@
       "totalScore": 0,
       "confidence": "观望",
       "winRateEst": 0,
-      "entryPrice": 2409.67,
-      "stopLoss": 2409.67,
-      "takeProfit": 2409.67,
-      "takeProfit1": 2409.67,
-      "takeProfit2": 2409.67,
+      "entryPrice": 2411.36,
+      "stopLoss": 2411.36,
+      "takeProfit": 2411.36,
+      "takeProfit1": 2411.36,
+      "takeProfit2": 2411.36,
       "positionPct1": 50,
-      "breakevenPrice": 2409.67,
+      "breakevenPrice": 2411.36,
       "rrRatio": 0,
       "riskPct": 0,
       "rewardPct": 0,
@@ -1429,10 +1434,10 @@
       "atrPct": 0,
       "trend1h": 0,
       "trend4h": 0,
-      "nearestSupport": 2337.3799,
-      "nearestResistance": 2481.9601,
-      "nextSupport": 2289.1865,
-      "nextResistance": 2530.1535,
+      "nearestSupport": 2339.0192,
+      "nearestResistance": 2483.7008,
+      "nextSupport": 2290.792,
+      "nextResistance": 2531.928,
       "trendSummary": "V4: 15min 数据不可用",
       "fundingRate": null,
       "fundingRatePct": null,
@@ -1776,7 +1781,7 @@
           2428.43,
           2429.76,
           2413.34,
-          2409.67
+          2411.36
         ],
         "highs": [
           1923.6,
@@ -2540,7 +2545,7 @@
           2514.31,
           2432.22,
           2423.45,
-          2409.67
+          2411.36
         ],
         "highs": [
           1924.66,
@@ -2730,7 +2735,7 @@
           2084.12,
           2325.92,
           2391.91,
-          2409.67
+          2411.36
         ],
         "highs": [
           1925.5,
