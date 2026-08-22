@@ -1,85 +1,40 @@
 {
-  "date": "2026-08-21",
-  "update_time": "2026-08-21 12:51:42",
+  "date": "2026-08-22",
+  "update_time": "2026-08-22 01:25:50",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-21\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Rust 生态遭供应链投毒：Arrayref 恶意 crate 植入构建期攻击 (来源: Hacker News/GitHub)\n- **核心干货**：Rust 官方确认热门 crate `arrayref` 被劫持，恶意版本会在构建时执行攻击载荷，标志着针对 Rust 生态的供应链攻击从\"偷数据\"升级到了\"劫持编译器\"。RustSec 已发布公告，建议所有受影响项目立即锁定版本并审计依赖树。\n- **毒舌/硬核点评**：以前是\"依赖地狱\"，现在是\"依赖鸿门宴\"。建议各位 Rustacean 今晚别急着睡，先把 `cargo tree` 翻个底朝天——毕竟你永远不知道下一个 `cargo build` 是在编译代码，还是在给黑客打工。\n- **🔗 传送门**：[Rust 官方安全公告](https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref/)\n\n---\n\n### 2. 📌 AI4AI-Bench：为\"递归自我改进\"立规矩的基准测试 (来源: ArXiv)\n- **核心干货**：这篇论文提出一个全新基准，专门评估 LLM Agent 在算法设计上的能力，直指\"递归自我改进\"的核心命题：AI 能否优化自己的训练算法，以实现算力-能力转化率的持续提升。这不再是纸上谈兵，而是给\"AI 造 AI\"画了一条可量化的起跑线。\n- **毒舌/硬核点评**：当 AI 开始研究怎么让自己变聪明，我们人类还在研究怎么让 AI 不抢我们饭碗。这波属于是\"内卷\"的终极形态——建议人类抓紧时间学会给 AI 拧螺丝，毕竟以后可能连写代码的活儿都得看 AI 心情。\n- **🔗 传送门**：[AI4AI-Bench 论文](https://arxiv.org/abs/2608.20318v1)\n\n---\n\n### 3. 📌 GitLab 高危漏洞 CVE-2026-19478 披露即遭利用 (来源: 科技新闻)\n- **核心干货**：GitLab 新披露的代码注入漏洞（CVSS 9.4）在几天内就被活跃利用，未认证攻击者可修改或删除公开项目数据。这不仅是补丁竞速，更是对 DevOps 平台安全信任的拷问。\n- **毒舌/硬核点评**：GitLab 的 SRE 团队估计已经体验了一把\"删库跑路\"的甲方视角。漏洞披露到利用只隔一个周末，这效率比大多数公司的敏捷开发还高。建议所有自托管用户：今天先别急着发版，把补丁打了再谈敏捷。\n- **🔗 传送门**：[漏洞详情与分析](https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html)\n\n---\n\n### 🗣️ 今日顶男金句\n真正的极客从不害怕新漏洞，他们只害怕自己不是第一个发现漏洞的人——毕竟在这个时代，能让你一夜暴富的除了加密货币，还有一份写得漂亮的漏洞报告。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-22\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 DeepSeek 发布视觉版 Flash 模型，多模态推理进入「快闪」时代 (来源: Hacker News)\n- **核心干货**：DeepSeek 低调放出了 `deepseek-v4-flash-vision-exp` 实验性模型，主打视觉理解与快速推理的结合。这意味着在不牺牲速度的前提下，模型能够直接处理图像输入，为实时视频分析、智能体交互等场景提供了更廉价的解决方案。\n- **毒舌/硬核点评**：OpenAI 还在为 GPT-5 的发布会调参，DeepSeek 已经默默把「视觉+快思考」做成了白菜价。实验版都出来了，正式版还会远吗？建议友商抓紧点，别到时候连尾灯都看不见。\n- **🔗 传送门**：[点击直达 API 文档](https://api-docs.deepseek.com/guides/vision/)\n\n---\n\n### 2. 📌 Rust 供应链遭「投毒」，2.45 亿下载量的 crate 沦为恶意软件温床 (来源: Tech RSS)\n- **核心干货**：Rust 官方紧急下架了三个被攻破维护者账号发布的恶意 crate 版本。这些版本会在编译时通过一个拼写混淆的依赖下载并执行远程 payload，属于典型的供应链攻击。鉴于累计下载量高达 2.45 亿次，影响面极广。\n- **毒舌/硬核点评**：这提醒我们，`cargo install` 里的依赖树可能比前任的心眼还复杂。用 Rust 标榜「内存安全」的同时，也别忘了供应链安全。下次 `cargo update` 前，记得先看看是谁在给你递「毒苹果」。\n- **🔗 传送门**：[点击直达安全分析](https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html)\n\n---\n\n### 3. 📌 Kagi 搜索新增「一键屏蔽付费墙」，信息平权还是内容杀手？ (来源: Hacker News)\n- **核心干货**：付费搜索引擎 Kagi 在设置中新增了过滤付费墙链接的选项。用户开启后，搜索结果中将不再出现 NYT、WSJ 等网站的付费文章。这直击了「搜得到但读不起」的痛点，将内容可访问性作为核心卖点。\n- **毒舌/硬核点评**：当搜索引擎开始替用户「省钱」和「省心」，传统媒体集团的广告和订阅收入怕是要抖三抖。Kagi 这波操作，既是用户福音，也是给内容行业的「友情提示」：要么开放，要么沉没。\n- **🔗 传送门**：[点击直达更新日志](https://kagi.com/changelog#11296)\n\n---\n\n### 🗣️ 今日顶男金句\n**「别让你的知识库像旧版 Git 仓库——只会 `add`，不会 `rebase`。真正的成长，是学会在信息洪流里主动 `--force` 掉垃圾。」**",
   "briefing_items": [
     {
-      "title": "Rust 生态遭供应链投毒：Arrayref 恶意 crate 植入构建期攻击",
-      "source": "Hacker News/GitHub",
-      "summary": "Rust 官方确认热门 crate `arrayref` 被劫持，恶意版本会在构建时执行攻击载荷，标志着针对 Rust 生态的供应链攻击从\"偷数据\"升级到了\"劫持编译器\"。RustSec 已发布公告，建议所有受影响项目立即锁定版本并审计依赖树。",
-      "commentary": "以前是\"依赖地狱\"，现在是\"依赖鸿门宴\"。建议各位 Rustacean 今晚别急着睡，先把 `cargo tree` 翻个底朝天——毕竟你永远不知道下一个 `cargo build` 是在编译代码，还是在给黑客打工。",
+      "title": "DeepSeek 发布视觉版 Flash 模型，多模态推理进入「快闪」时代",
+      "source": "Hacker News",
+      "summary": "DeepSeek 低调放出了 `deepseek-v4-flash-vision-exp` 实验性模型，主打视觉理解与快速推理的结合。这意味着在不牺牲速度的前提下，模型能够直接处理图像输入，为实时视频分析、智能体交互等场景提供了更廉价的解决方案。",
+      "commentary": "OpenAI 还在为 GPT-5 的发布会调参，DeepSeek 已经默默把「视觉+快思考」做成了白菜价。实验版都出来了，正式版还会远吗？建议友商抓紧点，别到时候连尾灯都看不见。",
       "url": ""
     },
     {
-      "title": "AI4AI-Bench：为\"递归自我改进\"立规矩的基准测试",
-      "source": "ArXiv",
-      "summary": "这篇论文提出一个全新基准，专门评估 LLM Agent 在算法设计上的能力，直指\"递归自我改进\"的核心命题：AI 能否优化自己的训练算法，以实现算力-能力转化率的持续提升。这不再是纸上谈兵，而是给\"AI 造 AI\"画了一条可量化的起跑线。",
-      "commentary": "当 AI 开始研究怎么让自己变聪明，我们人类还在研究怎么让 AI 不抢我们饭碗。这波属于是\"内卷\"的终极形态——建议人类抓紧时间学会给 AI 拧螺丝，毕竟以后可能连写代码的活儿都得看 AI 心情。",
+      "title": "Rust 供应链遭「投毒」，2.45 亿下载量的 crate 沦为恶意软件温床",
+      "source": "Tech RSS",
+      "summary": "Rust 官方紧急下架了三个被攻破维护者账号发布的恶意 crate 版本。这些版本会在编译时通过一个拼写混淆的依赖下载并执行远程 payload，属于典型的供应链攻击。鉴于累计下载量高达 2.45 亿次，影响面极广。",
+      "commentary": "这提醒我们，`cargo install` 里的依赖树可能比前任的心眼还复杂。用 Rust 标榜「内存安全」的同时，也别忘了供应链安全。下次 `cargo update` 前，记得先看看是谁在给你递「毒苹果」。",
       "url": ""
     },
     {
-      "title": "GitLab 高危漏洞 CVE-2026-19478 披露即遭利用",
-      "source": "科技新闻",
-      "summary": "GitLab 新披露的代码注入漏洞（CVSS 9.4）在几天内就被活跃利用，未认证攻击者可修改或删除公开项目数据。这不仅是补丁竞速，更是对 DevOps 平台安全信任的拷问。",
-      "commentary": "GitLab 的 SRE 团队估计已经体验了一把\"删库跑路\"的甲方视角。漏洞披露到利用只隔一个周末，这效率比大多数公司的敏捷开发还高。建议所有自托管用户：今天先别急着发版，把补丁打了再谈敏捷。",
+      "title": "Kagi 搜索新增「一键屏蔽付费墙」，信息平权还是内容杀手？",
+      "source": "Hacker News",
+      "summary": "付费搜索引擎 Kagi 在设置中新增了过滤付费墙链接的选项。用户开启后，搜索结果中将不再出现 NYT、WSJ 等网站的付费文章。这直击了「搜得到但读不起」的痛点，将内容可访问性作为核心卖点。",
+      "commentary": "当搜索引擎开始替用户「省钱」和「省心」，传统媒体集团的广告和订阅收入怕是要抖三抖。Kagi 这波操作，既是用户福音，也是给内容行业的「友情提示」：要么开放，要么沉没。",
       "url": ""
     }
   ],
   "candidates": [
     {
-      "id": "hn:49374269",
-      "title": "Malicious Rust crate Arrayref runs a build-time payload",
-      "summary": "<a href=\"https:&#x2F;&#x2F;blog.rust-lang.org&#x2F;2026&#x2F;08&#x2F;20&#x2F;supply-chain-attack-on-arrayref&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;blog.rust-lang.org&#x2F;2026&#x2F;08&#x2F;20&#x2F;supply-chain-attack-on...</a><p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;rustsec&#x2F;advisory-db&#",
-      "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
+      "id": "hn:49357530",
+      "title": "AI boosted homework scores, then exam scores dropped: study",
+      "summary": "<a href=\"https:&#x2F;&#x2F;archive.is&#x2F;w1eng\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.is&#x2F;w1eng</a><p><a href=\"https:&#x2F;&#x2F;papers.ssrn.com&#x2F;sol3&#x2F;papers.cfm?abstract_id=6868618\" rel=\"nofollow\">https:&#x2F;&#x2F;papers.ssrn.com&#x2F;sol3&#x2F;papers.cfm?abstract_id=6868618</a>",
+      "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
       "source": "Hacker News",
-      "score": 518,
-      "comments": 448
-    },
-    {
-      "id": "hn:49347543",
-      "title": "I like 'em thick: an apology to my English teachers",
-      "summary": "",
-      "url": "https://www.experimental-history.com/p/i-like-em-thick",
-      "source": "Hacker News",
-      "score": 781,
-      "comments": 320
-    },
-    {
-      "id": "lob:dns8du",
-      "title": "Supply chain attack on arrayref",
-      "summary": "",
-      "url": "https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref/",
-      "source": "Lobste.rs",
-      "score": 80,
-      "comments": 44,
-      "tags": [
-        "rust",
-        "security"
-      ]
-    },
-    {
-      "id": "lob:oaybfe",
-      "title": "What Zig felt like, coming from Rust",
-      "summary": "",
-      "url": "https://besok.github.io/posts/what-zig-felt-like-coming-from-rust/",
-      "source": "Lobste.rs",
-      "score": 63,
-      "comments": 25,
-      "tags": [
-        "rust",
-        "vibecoding",
-        "zig"
-      ]
-    },
-    {
-      "id": "hn:49384896",
-      "title": "The Lost Treasure of Sid Meier's Pirates",
-      "summary": "",
-      "url": "https://remapradio.com/articles/the-lost-treasure-of-sid-meiers-pirates/",
-      "source": "Hacker News",
-      "score": 148,
-      "comments": 78
+      "score": 230,
+      "comments": 288
     },
     {
       "id": "hn:49386163",
@@ -87,39 +42,62 @@
       "summary": "",
       "url": "https://api-docs.deepseek.com/guides/vision/",
       "source": "Hacker News",
-      "score": 182,
-      "comments": 42
+      "score": 461,
+      "comments": 143
     },
     {
-      "id": "hn:49378957",
-      "title": "The August 17 outage",
+      "id": "hn:49388154",
+      "title": "Kagi added a setting for removing paywalled links from search results",
       "summary": "",
-      "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
+      "url": "https://kagi.com/changelog#11296",
       "source": "Hacker News",
-      "score": 576,
-      "comments": 637
+      "score": 1009,
+      "comments": 338
     },
     {
-      "id": "hn:49362689",
-      "title": "HTML Can Do That",
+      "id": "hn:49387570",
+      "title": "I accidentally logged hundreds of thousands of phone calls to military bases",
       "summary": "",
-      "url": "https://chrisburnell.com/html-can-do-that/",
+      "url": "https://lina.sh/blog/hijacking-e164-arpa",
       "source": "Hacker News",
-      "score": 888,
-      "comments": 201
+      "score": 442,
+      "comments": 50
     },
     {
-      "id": "lob:wphnca",
-      "title": "Everyone Says Assembly Is Untyped—Everyone Is Wrong",
+      "id": "hn:49386895",
+      "title": "Felony charges for citizen deleting phone data at US Border",
+      "summary": "<a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;SflVC\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;SflVC</a><p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=_2rokxux5cU\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=_2rokxux5cU</a>",
+      "url": "https://www.nytimes.com/2026/08/21/us/politics/samuel-tunick-deleted-phone-felony.html",
+      "source": "Hacker News",
+      "score": 549,
+      "comments": 722
+    },
+    {
+      "id": "hn:49390427",
+      "title": "Kobo can run apps now",
       "summary": "",
-      "url": "https://www.gingerbill.org/article/2026/08/20/designing-odins-inline-asm/",
-      "source": "Lobste.rs",
-      "score": 56,
-      "comments": 17,
-      "tags": [
-        "assembly",
-        "plt"
-      ]
+      "url": "https://bandarlabs.github.io/Cobalt/",
+      "source": "Hacker News",
+      "score": 426,
+      "comments": 144
+    },
+    {
+      "id": "hn:49389430",
+      "title": "Felony Bench",
+      "summary": "",
+      "url": "https://www.felonybench.com/",
+      "source": "Hacker News",
+      "score": 513,
+      "comments": 225
+    },
+    {
+      "id": "hn:49392200",
+      "title": "Scientists release biggest 2D map of the universe",
+      "summary": "Direct link to Legacy Survey Sky Viewer: <a href=\"https:&#x2F;&#x2F;viewer.legacysurvey.org\" rel=\"nofollow\">https:&#x2F;&#x2F;viewer.legacysurvey.org</a>",
+      "url": "https://newscenter.lbl.gov/2026/08/10/scientists-release-biggest-2d-map-of-the-universe/",
+      "source": "Hacker News",
+      "score": 146,
+      "comments": 46
     },
     {
       "id": "lob:hbjeir",
@@ -127,66 +105,11 @@
       "summary": "",
       "url": "https://blog.rust-lang.org/2026/08/20/Rust-1.98.0/",
       "source": "Lobste.rs",
-      "score": 37,
-      "comments": 13,
+      "score": 62,
+      "comments": 14,
       "tags": [
         "release",
         "rust"
-      ]
-    },
-    {
-      "id": "hn:49384716",
-      "title": "We Rebuilt the Linux MicroVM Stack on Apple Silicon",
-      "summary": "",
-      "url": "https://encore.dev/blog/firecracker-apple-silicon",
-      "source": "Hacker News",
-      "score": 110,
-      "comments": 53
-    },
-    {
-      "id": "hn:49385994",
-      "title": "AI companies destroy physical books – let's scan rare books before it's too late",
-      "summary": "",
-      "url": "https://annas-archive.pk/blog/physical-destruction.html",
-      "source": "Hacker News",
-      "score": 141,
-      "comments": 80
-    },
-    {
-      "id": "lob:b0olmy",
-      "title": "AliExpress keeps multipoint Bluetooth headphones active with WebAudio fingerprinting",
-      "summary": "",
-      "url": "https://blog.laserphile.com/2026/08/aliexpress-webpage-keeping-multipoint.html",
-      "source": "Lobste.rs",
-      "score": 42,
-      "comments": 9,
-      "tags": [
-        "browsers",
-        "privacy"
-      ]
-    },
-    {
-      "id": "lob:ikhwaz",
-      "title": "Emacs 31.1 will release on 8/24",
-      "summary": "<p>Biggest thing for me is that tree-sitter's ABI is being bumped to 15 -- fixes compatibility issues with <em>several</em> upstream grammars.</p>\n<p>For the impatient, RC1 has been posted: <a href=\"https://lists.gnu.org/archive/html/emacs-devel/2026-08/msg00599.html\" rel=\"ugc\">https://lists.gnu.org",
-      "url": "https://github.com/emacs-mirror/emacs/blob/062dcd2aead00c3b47c14ff5b6c40313f7a775f5/etc/HISTORY#L246",
-      "source": "Lobste.rs",
-      "score": 27,
-      "comments": 1,
-      "tags": [
-        "emacs"
-      ]
-    },
-    {
-      "id": "lob:sfi9te",
-      "title": "How a joke domain purchase turned into geopolitical warfare",
-      "summary": "",
-      "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
-      "source": "Lobste.rs",
-      "score": 116,
-      "comments": 5,
-      "tags": [
-        "security"
       ]
     },
     {
@@ -195,49 +118,86 @@
       "summary": "",
       "url": "https://bharadwajraju.com/posts/btrfs-snapshots-in-kde/",
       "source": "Lobste.rs",
-      "score": 27,
-      "comments": 8,
+      "score": 53,
+      "comments": 15,
       "tags": [
         "linux",
         "osdev"
       ]
     },
     {
-      "id": "arxiv:2608.20320v1",
-      "title": "An Agentic Approach for Active Data Collection, Travel Behavior Modeling, and Weather-Sensitive Demand Prediction",
-      "summary": "Travel behavior research increasingly combines digital data collection with predictive modeling, yet these stages are often developed and evaluated separately. This study proposes a three-agent workflow integrating conversational data collection, structured data processing, and behavioral prediction",
-      "url": "https://arxiv.org/abs/2608.20320v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_id": "2608.20320v1"
+      "id": "lob:wphnca",
+      "title": "Everyone Says Assembly Is Untyped—Everyone Is Wrong",
+      "summary": "",
+      "url": "https://www.gingerbill.org/article/2026/08/20/designing-odins-inline-asm/",
+      "source": "Lobste.rs",
+      "score": 66,
+      "comments": 37,
+      "tags": [
+        "assembly",
+        "plt"
+      ]
     },
     {
-      "id": "arxiv:2608.20318v1",
-      "title": "AI4AI-Bench: Benchmarking LLM Agents in Algorithmic Design for Recursive Self-Improvement",
-      "summary": "Recursive self-improvement (RSI) asks whether an AI system can improve the process that produces AI systems, so that the next system inherits the improvement. That process is the training algorithm: a better objective or update rule improves the compute\\mbox{-}capability exchange rate for every subs",
-      "url": "https://arxiv.org/abs/2608.20318v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "arxiv_id": "2608.20318v1"
+      "id": "lob:3giezs",
+      "title": "Enabling the next-generation trait solver on nightly",
+      "summary": "",
+      "url": "https://blog.rust-lang.org/2026/08/21/enabling-next-solver-on-nightly/",
+      "source": "Lobste.rs",
+      "score": 50,
+      "comments": 11,
+      "tags": [
+        "rust"
+      ]
     },
     {
-      "id": "arxiv:2608.20281v1",
-      "title": "Inject, Align, Recover: Staged Post-Training for Retrieval-Free Document Knowledge Internalization",
-      "summary": "Large language models often fail to answer questions about a bounded document collection when the source documents are not retrieved at inference time. We study this setting as document knowledge internalization: converting a fixed corpus into usable parametric knowledge for retrieval-free question ",
-      "url": "https://arxiv.org/abs/2608.20281v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "arxiv_id": "2608.20281v1"
+      "id": "lob:qxvz7f",
+      "title": "Better Batteries",
+      "summary": "",
+      "url": "https://matklad.github.io/2026/08/20/better-batteries.html",
+      "source": "Lobste.rs",
+      "score": 62,
+      "comments": 12,
+      "tags": [
+        "plt",
+        "programming"
+      ]
+    },
+    {
+      "id": "hn:49389441",
+      "title": "I ran Photoshop on a £0.60 computer chip",
+      "summary": "",
+      "url": "https://pointinthecloud.com/2026-08-19-144600.html",
+      "source": "Hacker News",
+      "score": 120,
+      "comments": 29
+    },
+    {
+      "id": "lob:mfo0fd",
+      "title": "Japan tried to build an operating system for the entire world, then the US government intervened",
+      "summary": "",
+      "url": "https://www.xda-developers.com/japan-tried-build-operating-system-entire-world-us-government-intervened/",
+      "source": "Lobste.rs",
+      "score": 58,
+      "comments": 8,
+      "tags": [
+        "historical",
+        "osdev",
+        "retrocomputing"
+      ]
+    },
+    {
+      "id": "lob:zcgvtz",
+      "title": "Music theory for programmers",
+      "summary": "",
+      "url": "https://runjs.app/blog/music-theory-for-programmers",
+      "source": "Lobste.rs",
+      "score": 22,
+      "comments": 24,
+      "tags": [
+        "art",
+        "math"
+      ]
     },
     {
       "id": "rss:466c1e7ac5",
@@ -246,6 +206,36 @@
       "url": "https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html",
       "source": "Tech RSS",
       "score": 0
+    },
+    {
+      "id": "rss:a31ccb0c23",
+      "title": "Rust Supply Chain Attack Puts Build-Time Malware in Crates with 245 Million Downloads",
+      "summary": "The Rust Project has deleted malicious versions of three widely used Rust crates from crates.io after a compromised maintainer account published releases that added a typosquatted dependency whose build script downloaded and executed a remote payload during compilation.\n\nThe affected releases are ar",
+      "url": "https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "hn:49389952",
+      "title": "How we made a text-to-speech model respond in sub-50 ms",
+      "summary": "",
+      "url": "https://nari-labs.com/blog/qwen3-tts-speed-cost-frontier/",
+      "source": "Hacker News",
+      "score": 102,
+      "comments": 28
+    },
+    {
+      "id": "lob:ittn74",
+      "title": "What are you doing this weekend?",
+      "summary": "<p>Feel free to tell what you plan on doing this weekend and even ask for help or feedback.</p>\n<p>Please keep in mind it’s more than OK to do nothing at all too!</p>\n",
+      "url": "https://lobste.rs/s/ittn74/what_are_you_doing_this_weekend",
+      "source": "Lobste.rs",
+      "score": 11,
+      "comments": 21,
+      "tags": [
+        "ask",
+        "programming"
+      ]
     }
   ],
   "ai_curated": true
