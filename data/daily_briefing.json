@@ -1,76 +1,52 @@
 {
   "date": "2026-08-23",
-  "update_time": "2026-08-23 01:39:30",
+  "update_time": "2026-08-23 12:43:07",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-23\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Rust 供应链攻击：245M 下载量的 crates 被投毒 (来源: The Hacker News)\n- **核心干货**：Rust 官方因维护者账号被盗，被迫从 crates.io 删除了三个广泛使用的 crate 的恶意版本。这些版本植入了拼写错误的依赖，其构建脚本会在编译时下载并执行远程恶意负载，属于典型的\"编译即中招\"攻击。涉及下载量高达 2.45 亿次，影响面极大。\n- **毒舌/硬核点评**：这波是\"依赖地狱\"的终极形态——你不仅要担心代码有没有 bug，还得担心维护者密码是不是 123456。2.45 亿次下载的\"信任链\"说断就断，建议各位把 `cargo update` 改成 `cargo pray`。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html)\n\n---\n\n### 2. 📌 GitLab 高危漏洞 CVE-2026-19478 遭积极利用 (来源: The Hacker News)\n- **核心干货**：GitLab 披露了一个 CVSS 9.4 分的代码注入漏洞（CVE-2026-19478），允许**未经认证**的攻击者修改或删除公开可访问的数据。漏洞公开后数天内就被 watchTowr 观测到活跃利用，暴露了从披露到打补丁之间的\"黄金窗口\"正在被攻击者极致压缩。\n- **毒舌/硬核点评**：CVSS 9.4 的\"未授权删库\"漏洞，公开即被利用，这已经不是打地鼠了，是打保龄球——一倒一大片。GitLab 管理员们，现在不是问\"要不要升级\"，而是问\"还来得及吗\"。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html)\n\n---\n\n### 3. 📌 ATProto Spaces：非公开数据扩展 (来源: AT Protocol Blog)\n- **核心干货**：Bluesky 背后的 AT Protocol 推出 \"Spaces\" 扩展，首次支持非公开数据。这意味着开发者可以在去中心化协议上构建私密/权限受限的应用场景（如私信、付费内容、内部数据），而不再局限于完全公开的帖子流。目前处于 Alpha 阶段。\n- **毒舌/硬核点评**：好家伙，去中心化社交终于想起了\"隐私\"这回事。不过话说回来，这套\"半公开\"方案如果没把加密和密钥管理做好，最后大概率变成\"公开的私密数据\"——到时候可不是社死那么简单，是社灭。\n- **🔗 传送门**：[点击直达原链接](https://atproto.com/blog/atproto-spaces-alpha)\n\n---\n\n### 🗣️ 今日顶男金句\n\"真正的工程师文化，不是把系统搞得多复杂，而是在别人的系统崩了的时候，你的还能跑——顺便收个保护费。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-23\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 本地 LLM 变笨？可能是你的锅 (来源: Hacker News | 388分)\n- **核心干货**：别再骂你的本地大模型是人工智障了。这篇帖子深入剖析了导致本地 LLM 表现不佳的常见原因，从量化精度损失、上下文窗口管理不当到采样参数配置错误，告诉你如何通过调优来榨干消费级显卡上模型的真实潜力。\n- **毒舌/硬核点评**：当你用 4-bit 量化还开着 8k 上下文时，就别怪模型连 1+1 都算错——这就像让一个喝醉的数学家做微积分，不是他笨，是你给的酒太多了。\n- **🔗 传送门**：[点击直达原链接](https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917)\n\n---\n\n### 2. 📌 AI 自我进化：算法设计的\"递归自举\" (来源: ArXiv | cs.AI, cs.CL, cs.LG)\n- **核心干货**：这篇论文提出了一个名为 **AI4AI-Bench** 的基准测试，专门用于评估 LLM Agent 在算法设计上的\"递归自我改进\"（RSI）能力。它测试的不再是模型能回答什么问题，而是模型能否设计出更好的训练算法，让下一代模型更强大——这才是真正意义上的\"自我进化\"。\n- **毒舌/硬核点评**：当别人还在卷 Prompt 时，这篇论文已经在研究如何让 AI 自己写\"武功秘籍\"了。很好，这很赛博朋克，也很危险——万一它哪天觉得我们人类是性能瓶颈怎么办？\n- **🔗 传送门**：[点击直达原论文](https://arxiv.org/abs/2608.20318v1)\n\n---\n\n### 3. 📌 GitLab 高危漏洞遭 0-day 攻击 (来源: Tech RSS | The Hacker News)\n- **核心干货**：GitLab 曝出严重代码注入漏洞 **CVE-2026-19478**（CVSS 9.4），未认证攻击者可直接修改或删除公开代码。该漏洞在披露后数日内就被大规模利用，所有自托管实例都处于危险之中。\n- **毒舌/硬核点评**：又是 GitLab？建议各位管理员赶紧检查版本并修复，别等代码被删光了再在群里发\"救救孩子\"。安全这事儿，从来都是\"要么主动修，要么被动哭\"。\n- **🔗 传送门**：[点击直达安全公告](https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> 真正的技术自由，不是随便选什么框架都行，而是你清楚地知道每个选择背后的代价——就像真正的自律，不是强迫自己早起，而是清楚晚睡的代价后，选择早睡。",
   "briefing_items": [
     {
-      "title": "Rust 供应链攻击：245M 下载量的 crates 被投毒",
-      "source": "The Hacker News",
-      "summary": "Rust 官方因维护者账号被盗，被迫从 crates.io 删除了三个广泛使用的 crate 的恶意版本。这些版本植入了拼写错误的依赖，其构建脚本会在编译时下载并执行远程恶意负载，属于典型的\"编译即中招\"攻击。涉及下载量高达 2.45 亿次，影响面极大。",
-      "commentary": "这波是\"依赖地狱\"的终极形态——你不仅要担心代码有没有 bug，还得担心维护者密码是不是 123456。2.45 亿次下载的\"信任链\"说断就断，建议各位把 `cargo update` 改成 `cargo pray`。",
-      "url": "https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html"
+      "title": "本地 LLM 变笨？可能是你的锅",
+      "source": "Hacker News | 388分",
+      "summary": "别再骂你的本地大模型是人工智障了。这篇帖子深入剖析了导致本地 LLM 表现不佳的常见原因，从量化精度损失、上下文窗口管理不当到采样参数配置错误，告诉你如何通过调优来榨干消费级显卡上模型的真实潜力。",
+      "commentary": "当你用 4-bit 量化还开着 8k 上下文时，就别怪模型连 1+1 都算错——这就像让一个喝醉的数学家做微积分，不是他笨，是你给的酒太多了。",
+      "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917"
     },
     {
-      "title": "GitLab 高危漏洞 CVE-2026-19478 遭积极利用",
-      "source": "The Hacker News",
-      "summary": "GitLab 披露了一个 CVSS 9.4 分的代码注入漏洞（CVE-2026-19478），允许**未经认证**的攻击者修改或删除公开可访问的数据。漏洞公开后数天内就被 watchTowr 观测到活跃利用，暴露了从披露到打补丁之间的\"黄金窗口\"正在被攻击者极致压缩。",
-      "commentary": "CVSS 9.4 的\"未授权删库\"漏洞，公开即被利用，这已经不是打地鼠了，是打保龄球——一倒一大片。GitLab 管理员们，现在不是问\"要不要升级\"，而是问\"还来得及吗\"。",
-      "url": "https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html"
+      "title": "AI 自我进化：算法设计的\"递归自举\"",
+      "source": "ArXiv | cs.AI, cs.CL, cs.LG",
+      "summary": "这篇论文提出了一个名为 **AI4AI-Bench** 的基准测试，专门用于评估 LLM Agent 在算法设计上的\"递归自我改进\"（RSI）能力。它测试的不再是模型能回答什么问题，而是模型能否设计出更好的训练算法，让下一代模型更强大——这才是真正意义上的\"自我进化\"。",
+      "commentary": "当别人还在卷 Prompt 时，这篇论文已经在研究如何让 AI 自己写\"武功秘籍\"了。很好，这很赛博朋克，也很危险——万一它哪天觉得我们人类是性能瓶颈怎么办？",
+      "url": ""
     },
     {
-      "title": "ATProto Spaces：非公开数据扩展",
-      "source": "AT Protocol Blog",
-      "summary": "Bluesky 背后的 AT Protocol 推出 \"Spaces\" 扩展，首次支持非公开数据。这意味着开发者可以在去中心化协议上构建私密/权限受限的应用场景（如私信、付费内容、内部数据），而不再局限于完全公开的帖子流。目前处于 Alpha 阶段。",
-      "commentary": "好家伙，去中心化社交终于想起了\"隐私\"这回事。不过话说回来，这套\"半公开\"方案如果没把加密和密钥管理做好，最后大概率变成\"公开的私密数据\"——到时候可不是社死那么简单，是社灭。",
-      "url": "https://atproto.com/blog/atproto-spaces-alpha"
+      "title": "GitLab 高危漏洞遭 0-day 攻击",
+      "source": "Tech RSS | The Hacker News",
+      "summary": "GitLab 曝出严重代码注入漏洞 **CVE-2026-19478**（CVSS 9.4），未认证攻击者可直接修改或删除公开代码。该漏洞在披露后数日内就被大规模利用，所有自托管实例都处于危险之中。",
+      "commentary": "又是 GitLab？建议各位管理员赶紧检查版本并修复，别等代码被删光了再在群里发\"救救孩子\"。安全这事儿，从来都是\"要么主动修，要么被动哭\"。",
+      "url": ""
+    },
+    {
+      "quote": "真正的技术自由，不是随便选什么框架都行，而是你清楚地知道每个选择背后的代价——就像真正的自律，不是强迫自己早起，而是清楚晚睡的代价后，选择早睡。"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49400408",
-      "title": "ElevenLabs, TwelveLabs, ThirteenLabs",
+      "id": "hn:49405816",
+      "title": "MartyPC is a cross-platform emulator of early PCs written in Rust",
       "summary": "",
-      "url": "https://quantumi.sh/public/labs.html",
+      "url": "https://martypc.net/",
       "source": "Hacker News",
-      "score": 303,
-      "comments": 101
+      "score": 137,
+      "comments": 49
     },
     {
-      "id": "hn:49351802",
-      "title": "Hister – A private, full content search index that you control",
+      "id": "hn:49405870",
+      "title": "To become a better writer, read as much as you can",
       "summary": "",
-      "url": "https://hister.org/",
+      "url": "https://nappertime.com/the-golden-rule-of-becoming-a-better-writer/",
       "source": "Hacker News",
-      "score": 231,
-      "comments": 66
-    },
-    {
-      "id": "hn:49402741",
-      "title": "hdiutil is deprecated in macOS 27 Golden Gate",
-      "summary": "",
-      "url": "https://lapcatsoftware.com/articles/2026/8/7.html",
-      "source": "Hacker News",
-      "score": 159,
-      "comments": 68
-    },
-    {
-      "id": "hn:49399898",
-      "title": "A Friendly Introduction to Racket",
-      "summary": "",
-      "url": "https://geometridae.bearblog.dev/a-friendly-introduction-to-racket/",
-      "source": "Hacker News",
-      "score": 192,
-      "comments": 97
-    },
-    {
-      "id": "hn:49402189",
-      "title": "Scrap (2006)",
-      "summary": "<a href=\"https:&#x2F;&#x2F;xcancel.com&#x2F;moxie&#x2F;status&#x2F;2091218652133732491\" rel=\"nofollow\">https:&#x2F;&#x2F;xcancel.com&#x2F;moxie&#x2F;status&#x2F;2091218652133732491</a>",
-      "url": "https://twitter.com/moxie/status/2091218652133732491",
-      "source": "Hacker News",
-      "score": 313,
-      "comments": 175
+      "score": 234,
+      "comments": 153
     },
     {
       "id": "hn:49402232",
@@ -78,8 +54,35 @@
       "summary": "",
       "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
       "source": "Hacker News",
-      "score": 176,
-      "comments": 58
+      "score": 388,
+      "comments": 151
+    },
+    {
+      "id": "hn:49400408",
+      "title": "ElevenLabs, TwelveLabs, ThirteenLabs",
+      "summary": "",
+      "url": "https://quantumi.sh/public/labs.html",
+      "source": "Hacker News",
+      "score": 420,
+      "comments": 129
+    },
+    {
+      "id": "hn:49351802",
+      "title": "Hister – A private, full content search index that you control",
+      "summary": "",
+      "url": "https://hister.org/",
+      "source": "Hacker News",
+      "score": 387,
+      "comments": 87
+    },
+    {
+      "id": "hn:49402189",
+      "title": "Scrap (2006)",
+      "summary": "<a href=\"https:&#x2F;&#x2F;xcancel.com&#x2F;moxie&#x2F;status&#x2F;2091218652133732491\" rel=\"nofollow\">https:&#x2F;&#x2F;xcancel.com&#x2F;moxie&#x2F;status&#x2F;2091218652133732491</a>",
+      "url": "https://twitter.com/moxie/status/2091218652133732491",
+      "source": "Hacker News",
+      "score": 382,
+      "comments": 201
     },
     {
       "id": "lob:mbmn1f",
@@ -87,36 +90,31 @@
       "summary": "",
       "url": "https://www.seangoedecke.com/you-should-never-be-angry-at-work/",
       "source": "Lobste.rs",
-      "score": 67,
-      "comments": 35,
+      "score": 86,
+      "comments": 53,
       "tags": [
         "practices"
       ]
     },
     {
-      "id": "lob:3giezs",
-      "title": "Enabling the next-generation trait solver on nightly",
+      "id": "hn:49402202",
+      "title": "Thinking in Python",
       "summary": "",
-      "url": "https://blog.rust-lang.org/2026/08/21/enabling-next-solver-on-nightly/",
-      "source": "Lobste.rs",
-      "score": 98,
-      "comments": 20,
-      "tags": [
-        "rust"
-      ]
+      "url": "https://thinkinginpython.com/",
+      "source": "Hacker News",
+      "score": 208,
+      "comments": 39
     },
     {
-      "id": "lob:mfo0fd",
-      "title": "Japan tried to build an operating system for the entire world, then the US government intervened",
+      "id": "lob:83yugk",
+      "title": "A 2026 Survey of Rust GUI Libraries",
       "summary": "",
-      "url": "https://www.xda-developers.com/japan-tried-build-operating-system-entire-world-us-government-intervened/",
+      "url": "https://blog.wybxc.cc/blog/rust-gui-survey-2026/",
       "source": "Lobste.rs",
-      "score": 101,
-      "comments": 15,
+      "score": 29,
+      "comments": 21,
       "tags": [
-        "historical",
-        "osdev",
-        "retrocomputing"
+        "rust"
       ]
     },
     {
@@ -125,21 +123,22 @@
       "summary": "",
       "url": "https://matduggan.com/otel-isnt-going-well-and-i-made-a-spreadsheet-about-it/",
       "source": "Lobste.rs",
-      "score": 38,
-      "comments": 17,
+      "score": 39,
+      "comments": 20,
       "tags": [
         "distributed"
       ]
     },
     {
-      "id": "lob:pywde0",
-      "title": "Felony Bench: Be AI, Do Crime",
+      "id": "lob:zibquu",
+      "title": "There continue to be reasons for software to be slow",
       "summary": "",
-      "url": "https://www.felonybench.com/",
+      "url": "https://typesanitizer.com/blog/performance-issues.html",
       "source": "Lobste.rs",
-      "score": 50,
-      "comments": 20,
+      "score": 31,
+      "comments": 21,
       "tags": [
+        "performance",
         "vibecoding"
       ]
     },
@@ -149,45 +148,88 @@
       "summary": "",
       "url": "https://a.baez.link/3mtdbbp2dmc27",
       "source": "Lobste.rs",
-      "score": 39,
+      "score": 46,
       "comments": 10,
       "tags": [
         "gleam"
       ]
     },
     {
-      "id": "lob:dyswyz",
-      "title": "I accidentally logged hundreds of thousands of phone calls to military bases",
+      "id": "hn:49405331",
+      "title": "The Art and Beauty of Blade Runner (2015)",
       "summary": "",
-      "url": "https://lina.sh/blog/hijacking-e164-arpa",
-      "source": "Lobste.rs",
-      "score": 162,
-      "comments": 6,
-      "tags": [
-        "security"
-      ]
-    },
-    {
-      "id": "hn:49387959",
-      "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
-      "summary": "",
-      "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
+      "url": "https://nappertime.com/the-art-of-and-beauty-of-blade-runner/",
       "source": "Hacker News",
       "score": 109,
-      "comments": 41
+      "comments": 46
     },
     {
-      "id": "lob:zibquu",
-      "title": "There continue to be reasons for software to be slow",
+      "id": "lob:eyaz5f",
+      "title": "Linus Torvalds uses AI to debug an Intel GPU driver bug",
       "summary": "",
-      "url": "https://typesanitizer.com/blog/performance-issues.html",
+      "url": "https://github.com/torvalds/linux/commit/818bebeb63dd6bf5f4e07e145f6cdbace520a34c",
       "source": "Lobste.rs",
-      "score": 17,
-      "comments": 16,
+      "score": 24,
+      "comments": 18,
       "tags": [
-        "performance",
+        "linux",
         "vibecoding"
       ]
+    },
+    {
+      "id": "hn:49406333",
+      "title": "The End of an Athlon",
+      "summary": "",
+      "url": "http://www.os2museum.com/wp/the-end-of-an-athlon/",
+      "source": "Hacker News",
+      "score": 124,
+      "comments": 40
+    },
+    {
+      "id": "hn:49406387",
+      "title": "JIT Compiling Code in 5μs",
+      "summary": "",
+      "url": "https://malisper.me/jit-compiling-code-in-5-us/",
+      "source": "Hacker News",
+      "score": 91,
+      "comments": 50
+    },
+    {
+      "id": "arxiv:2608.20320v1",
+      "title": "An Agentic Approach for Active Data Collection, Travel Behavior Modeling, and Weather-Sensitive Demand Prediction",
+      "summary": "Travel behavior research increasingly combines digital data collection with predictive modeling, yet these stages are often developed and evaluated separately. This study proposes a three-agent workflow integrating conversational data collection, structured data processing, and behavioral prediction",
+      "url": "https://arxiv.org/abs/2608.20320v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_id": "2608.20320v1"
+    },
+    {
+      "id": "arxiv:2608.20318v1",
+      "title": "AI4AI-Bench: Benchmarking LLM Agents in Algorithmic Design for Recursive Self-Improvement",
+      "summary": "Recursive self-improvement (RSI) asks whether an AI system can improve the process that produces AI systems, so that the next system inherits the improvement. That process is the training algorithm: a better objective or update rule improves the compute\\mbox{-}capability exchange rate for every subs",
+      "url": "https://arxiv.org/abs/2608.20318v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_id": "2608.20318v1"
+    },
+    {
+      "id": "arxiv:2608.20281v1",
+      "title": "Inject, Align, Recover: Staged Post-Training for Retrieval-Free Document Knowledge Internalization",
+      "summary": "Large language models often fail to answer questions about a bounded document collection when the source documents are not retrieved at inference time. We study this setting as document knowledge internalization: converting a fixed corpus into usable parametric knowledge for retrieval-free question ",
+      "url": "https://arxiv.org/abs/2608.20281v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_id": "2608.20281v1"
     },
     {
       "id": "rss:466c1e7ac5",
@@ -196,47 +238,6 @@
       "url": "https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html",
       "source": "Tech RSS",
       "score": 0
-    },
-    {
-      "id": "rss:a31ccb0c23",
-      "title": "Rust Supply Chain Attack Puts Build-Time Malware in Crates with 245 Million Downloads",
-      "summary": "The Rust Project has deleted malicious versions of three widely used Rust crates from crates.io after a compromised maintainer account published releases that added a typosquatted dependency whose build script downloaded and executed a remote payload during compilation.\n\nThe affected releases are ar",
-      "url": "https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "hn:49379732",
-      "title": "ATProto spaces: A new extension to ATProto that enables non-public data",
-      "summary": "",
-      "url": "https://atproto.com/blog/atproto-spaces-alpha",
-      "source": "Hacker News",
-      "score": 110,
-      "comments": 13
-    },
-    {
-      "id": "lob:ku4v3b",
-      "title": "Compile-Time Improvements in LLVM 23",
-      "summary": "",
-      "url": "https://aengelke.net/llvm23-ct.html",
-      "source": "Lobste.rs",
-      "score": 23,
-      "comments": 6,
-      "tags": [
-        "compilers"
-      ]
-    },
-    {
-      "id": "lob:83yugk",
-      "title": "A 2026 Survey of Rust GUI Libraries",
-      "summary": "",
-      "url": "https://blog.wybxc.cc/blog/rust-gui-survey-2026/",
-      "source": "Lobste.rs",
-      "score": 12,
-      "comments": 6,
-      "tags": [
-        "rust"
-      ]
     }
   ],
   "ai_curated": true
