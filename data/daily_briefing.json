@@ -1,121 +1,97 @@
 {
-  "date": "2026-08-22",
-  "update_time": "2026-08-22 12:41:54",
+  "date": "2026-08-23",
+  "update_time": "2026-08-23 01:39:30",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-22\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Rust Glancer：用 1% 的内存干翻 LSP 全家桶 (来源: Hacker News | 299分)\n- **核心干货**：Rust 官方团队核心成员 matklad 搞了个新东西，号称比现有 Rust LSP（rust-analyzer）少用 100 倍内存。核心思路是砍掉不必要的索引和缓存，只保留最核心的跳转和补全功能，把内存占用从 GB 级打到 MB 级。\n- **毒舌/硬核点评**：rust-analyzer 是功能齐全的瑞士军刀，Glancer 是把刀片拆下来磨尖了插你兜里。100 倍内存差距？说明之前的内存管理确实有亿点\"奢侈\"。\n- **🔗 传送门**：[点击直达原链接](https://rust-glancer.github.io/blog/hello-world/)\n\n---\n\n### 2. 📌 Kagi 推出\"屏蔽付费墙\"开关，搜索引擎终于学会说人话 (来源: Hacker News | 1162分)\n- **核心干货**：Kagi 在设置中加入了一个选项，可以自动将搜索结果中来自付费墙（paywall）网站的链接过滤掉。用户再也不用点进一个标题诱人的链接，然后撞上一堵\"订阅才能看\"的墙。\n- **毒舌/硬核点评**：谷歌和必应这么多年都在假装看不见付费墙的问题，Kagi 一个付费搜索引擎直接帮你把墙拆了。这波操作，堪称搜索界的\"付费去广告\"。\n- **🔗 传送门**：[点击直达原链接](https://kagi.com/changelog#11296)\n\n---\n\n### 3. 📌 误拨号到美军基地：一个 E.164 域名引发的\"惨案\" (来源: Hacker News | 581分)\n- **核心干货**：一位安全研究员 Lina 发现，自己无意间搭建的一个 E.164 反向域名解析服务（用于 ENUM），意外地开始记录大量拨往美国军事基地的号码映射查询，涉及数十万条真实通话路由数据。她随后公开了分析过程和潜在隐私风险。\n- **毒舌/硬核点评**：你以为你在打神秘电话，其实你的号码在互联网背后裸奔。这告诉我们一个道理：基础设施的安全漏洞，往往藏在最不起眼的协议里。\n- **🔗 传送门**：[点击直达原链接](https://lina.sh/blog/hijacking-e164-arpa)\n\n---\n\n### 🗣️ 今日顶男金句\n\"真正的性能优化不是把循环写快 10%，而是把整个软件的肌肉萎缩掉 90%。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-23\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Rust 供应链攻击：245M 下载量的 crates 被投毒 (来源: The Hacker News)\n- **核心干货**：Rust 官方因维护者账号被盗，被迫从 crates.io 删除了三个广泛使用的 crate 的恶意版本。这些版本植入了拼写错误的依赖，其构建脚本会在编译时下载并执行远程恶意负载，属于典型的\"编译即中招\"攻击。涉及下载量高达 2.45 亿次，影响面极大。\n- **毒舌/硬核点评**：这波是\"依赖地狱\"的终极形态——你不仅要担心代码有没有 bug，还得担心维护者密码是不是 123456。2.45 亿次下载的\"信任链\"说断就断，建议各位把 `cargo update` 改成 `cargo pray`。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html)\n\n---\n\n### 2. 📌 GitLab 高危漏洞 CVE-2026-19478 遭积极利用 (来源: The Hacker News)\n- **核心干货**：GitLab 披露了一个 CVSS 9.4 分的代码注入漏洞（CVE-2026-19478），允许**未经认证**的攻击者修改或删除公开可访问的数据。漏洞公开后数天内就被 watchTowr 观测到活跃利用，暴露了从披露到打补丁之间的\"黄金窗口\"正在被攻击者极致压缩。\n- **毒舌/硬核点评**：CVSS 9.4 的\"未授权删库\"漏洞，公开即被利用，这已经不是打地鼠了，是打保龄球——一倒一大片。GitLab 管理员们，现在不是问\"要不要升级\"，而是问\"还来得及吗\"。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html)\n\n---\n\n### 3. 📌 ATProto Spaces：非公开数据扩展 (来源: AT Protocol Blog)\n- **核心干货**：Bluesky 背后的 AT Protocol 推出 \"Spaces\" 扩展，首次支持非公开数据。这意味着开发者可以在去中心化协议上构建私密/权限受限的应用场景（如私信、付费内容、内部数据），而不再局限于完全公开的帖子流。目前处于 Alpha 阶段。\n- **毒舌/硬核点评**：好家伙，去中心化社交终于想起了\"隐私\"这回事。不过话说回来，这套\"半公开\"方案如果没把加密和密钥管理做好，最后大概率变成\"公开的私密数据\"——到时候可不是社死那么简单，是社灭。\n- **🔗 传送门**：[点击直达原链接](https://atproto.com/blog/atproto-spaces-alpha)\n\n---\n\n### 🗣️ 今日顶男金句\n\"真正的工程师文化，不是把系统搞得多复杂，而是在别人的系统崩了的时候，你的还能跑——顺便收个保护费。\"",
   "briefing_items": [
     {
-      "title": "Rust Glancer：用 1% 的内存干翻 LSP 全家桶",
-      "source": "Hacker News | 299分",
-      "summary": "Rust 官方团队核心成员 matklad 搞了个新东西，号称比现有 Rust LSP（rust-analyzer）少用 100 倍内存。核心思路是砍掉不必要的索引和缓存，只保留最核心的跳转和补全功能，把内存占用从 GB 级打到 MB 级。",
-      "commentary": "rust-analyzer 是功能齐全的瑞士军刀，Glancer 是把刀片拆下来磨尖了插你兜里。100 倍内存差距？说明之前的内存管理确实有亿点\"奢侈\"。",
-      "url": "https://rust-glancer.github.io/blog/hello-world/"
+      "title": "Rust 供应链攻击：245M 下载量的 crates 被投毒",
+      "source": "The Hacker News",
+      "summary": "Rust 官方因维护者账号被盗，被迫从 crates.io 删除了三个广泛使用的 crate 的恶意版本。这些版本植入了拼写错误的依赖，其构建脚本会在编译时下载并执行远程恶意负载，属于典型的\"编译即中招\"攻击。涉及下载量高达 2.45 亿次，影响面极大。",
+      "commentary": "这波是\"依赖地狱\"的终极形态——你不仅要担心代码有没有 bug，还得担心维护者密码是不是 123456。2.45 亿次下载的\"信任链\"说断就断，建议各位把 `cargo update` 改成 `cargo pray`。",
+      "url": "https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html"
     },
     {
-      "title": "Kagi 推出\"屏蔽付费墙\"开关，搜索引擎终于学会说人话",
-      "source": "Hacker News | 1162分",
-      "summary": "Kagi 在设置中加入了一个选项，可以自动将搜索结果中来自付费墙（paywall）网站的链接过滤掉。用户再也不用点进一个标题诱人的链接，然后撞上一堵\"订阅才能看\"的墙。",
-      "commentary": "谷歌和必应这么多年都在假装看不见付费墙的问题，Kagi 一个付费搜索引擎直接帮你把墙拆了。这波操作，堪称搜索界的\"付费去广告\"。",
-      "url": "https://kagi.com/changelog#11296"
+      "title": "GitLab 高危漏洞 CVE-2026-19478 遭积极利用",
+      "source": "The Hacker News",
+      "summary": "GitLab 披露了一个 CVSS 9.4 分的代码注入漏洞（CVE-2026-19478），允许**未经认证**的攻击者修改或删除公开可访问的数据。漏洞公开后数天内就被 watchTowr 观测到活跃利用，暴露了从披露到打补丁之间的\"黄金窗口\"正在被攻击者极致压缩。",
+      "commentary": "CVSS 9.4 的\"未授权删库\"漏洞，公开即被利用，这已经不是打地鼠了，是打保龄球——一倒一大片。GitLab 管理员们，现在不是问\"要不要升级\"，而是问\"还来得及吗\"。",
+      "url": "https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html"
     },
     {
-      "title": "误拨号到美军基地：一个 E.164 域名引发的\"惨案\"",
-      "source": "Hacker News | 581分",
-      "summary": "一位安全研究员 Lina 发现，自己无意间搭建的一个 E.164 反向域名解析服务（用于 ENUM），意外地开始记录大量拨往美国军事基地的号码映射查询，涉及数十万条真实通话路由数据。她随后公开了分析过程和潜在隐私风险。",
-      "commentary": "你以为你在打神秘电话，其实你的号码在互联网背后裸奔。这告诉我们一个道理：基础设施的安全漏洞，往往藏在最不起眼的协议里。",
-      "url": "https://lina.sh/blog/hijacking-e164-arpa"
+      "title": "ATProto Spaces：非公开数据扩展",
+      "source": "AT Protocol Blog",
+      "summary": "Bluesky 背后的 AT Protocol 推出 \"Spaces\" 扩展，首次支持非公开数据。这意味着开发者可以在去中心化协议上构建私密/权限受限的应用场景（如私信、付费内容、内部数据），而不再局限于完全公开的帖子流。目前处于 Alpha 阶段。",
+      "commentary": "好家伙，去中心化社交终于想起了\"隐私\"这回事。不过话说回来，这套\"半公开\"方案如果没把加密和密钥管理做好，最后大概率变成\"公开的私密数据\"——到时候可不是社死那么简单，是社灭。",
+      "url": "https://atproto.com/blog/atproto-spaces-alpha"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49393052",
-      "title": "Rust Glancer: Rust LSP using 100x less RAM",
-      "summary": "<a href=\"https:&#x2F;&#x2F;matklad.github.io&#x2F;2026&#x2F;08&#x2F;21&#x2F;rust-glancer.html\" rel=\"nofollow\">https:&#x2F;&#x2F;matklad.github.io&#x2F;2026&#x2F;08&#x2F;21&#x2F;rust-glancer.html</a>",
-      "url": "https://rust-glancer.github.io/blog/hello-world/",
+      "id": "hn:49400408",
+      "title": "ElevenLabs, TwelveLabs, ThirteenLabs",
+      "summary": "",
+      "url": "https://quantumi.sh/public/labs.html",
       "source": "Hacker News",
-      "score": 299,
+      "score": 303,
+      "comments": 101
+    },
+    {
+      "id": "hn:49351802",
+      "title": "Hister – A private, full content search index that you control",
+      "summary": "",
+      "url": "https://hister.org/",
+      "source": "Hacker News",
+      "score": 231,
+      "comments": 66
+    },
+    {
+      "id": "hn:49402741",
+      "title": "hdiutil is deprecated in macOS 27 Golden Gate",
+      "summary": "",
+      "url": "https://lapcatsoftware.com/articles/2026/8/7.html",
+      "source": "Hacker News",
+      "score": 159,
+      "comments": 68
+    },
+    {
+      "id": "hn:49399898",
+      "title": "A Friendly Introduction to Racket",
+      "summary": "",
+      "url": "https://geometridae.bearblog.dev/a-friendly-introduction-to-racket/",
+      "source": "Hacker News",
+      "score": 192,
+      "comments": 97
+    },
+    {
+      "id": "hn:49402189",
+      "title": "Scrap (2006)",
+      "summary": "<a href=\"https:&#x2F;&#x2F;xcancel.com&#x2F;moxie&#x2F;status&#x2F;2091218652133732491\" rel=\"nofollow\">https:&#x2F;&#x2F;xcancel.com&#x2F;moxie&#x2F;status&#x2F;2091218652133732491</a>",
+      "url": "https://twitter.com/moxie/status/2091218652133732491",
+      "source": "Hacker News",
+      "score": 313,
+      "comments": 175
+    },
+    {
+      "id": "hn:49402232",
+      "title": "Why your local LLM feels dumber than it is",
+      "summary": "",
+      "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
+      "source": "Hacker News",
+      "score": 176,
       "comments": 58
     },
     {
-      "id": "hn:49398304",
-      "title": "Canada suspends trade negotiations with USA and match tariffs dollar for dollar",
+      "id": "lob:mbmn1f",
+      "title": "You should never be angry at work",
       "summary": "",
-      "url": "https://www.pm.gc.ca/en/news/statements/2026/08/21/statement-prime-minister-carney-canada-us-trade-negotiations",
-      "source": "Hacker News",
-      "score": 343,
-      "comments": 217
-    },
-    {
-      "id": "hn:49386895",
-      "title": "Felony charges for citizen deleting phone data at US Border",
-      "summary": "<a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;SflVC\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;SflVC</a><p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=_2rokxux5cU\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=_2rokxux5cU</a>",
-      "url": "https://www.nytimes.com/2026/08/21/us/politics/samuel-tunick-deleted-phone-felony.html",
-      "source": "Hacker News",
-      "score": 859,
-      "comments": 984
-    },
-    {
-      "id": "hn:49395628",
-      "title": "There's no reason for software to be slow anymore",
-      "summary": "",
-      "url": "https://danluu.com/perf-opt/",
-      "source": "Hacker News",
-      "score": 484,
-      "comments": 336
-    },
-    {
-      "id": "hn:49387570",
-      "title": "I accidentally logged hundreds of thousands of phone calls to military bases",
-      "summary": "",
-      "url": "https://lina.sh/blog/hijacking-e164-arpa",
-      "source": "Hacker News",
-      "score": 581,
-      "comments": 71
-    },
-    {
-      "id": "hn:49388154",
-      "title": "Kagi added a setting for removing paywalled links from search results",
-      "summary": "",
-      "url": "https://kagi.com/changelog#11296",
-      "source": "Hacker News",
-      "score": 1162,
-      "comments": 370
-    },
-    {
-      "id": "hn:49389430",
-      "title": "Felony Bench",
-      "summary": "",
-      "url": "https://www.felonybench.com/",
-      "source": "Hacker News",
-      "score": 752,
-      "comments": 281
-    },
-    {
-      "id": "hn:49390427",
-      "title": "Kobo can run apps now",
-      "summary": "",
-      "url": "https://bandarlabs.github.io/Cobalt/",
-      "source": "Hacker News",
-      "score": 583,
-      "comments": 191
-    },
-    {
-      "id": "hn:49384210",
-      "title": "Stop Making TUIs",
-      "summary": "",
-      "url": "https://sockpuppet.org/blog/2026/08/20/stop-making-tuis/",
-      "source": "Hacker News",
-      "score": 191,
-      "comments": 273
-    },
-    {
-      "id": "hn:49394496",
-      "title": "Three important steps in my maturation process",
-      "summary": "",
-      "url": "https://thomasdullien.github.io/posts/2026-08-21-three-important-steps-in-my-maturation-process/",
-      "source": "Hacker News",
-      "score": 166,
-      "comments": 76
+      "url": "https://www.seangoedecke.com/you-should-never-be-angry-at-work/",
+      "source": "Lobste.rs",
+      "score": 67,
+      "comments": 35,
+      "tags": [
+        "practices"
+      ]
     },
     {
       "id": "lob:3giezs",
@@ -123,23 +99,10 @@
       "summary": "",
       "url": "https://blog.rust-lang.org/2026/08/21/enabling-next-solver-on-nightly/",
       "source": "Lobste.rs",
-      "score": 81,
-      "comments": 18,
+      "score": 98,
+      "comments": 20,
       "tags": [
         "rust"
-      ]
-    },
-    {
-      "id": "lob:umey8v",
-      "title": "Btrfs Snapshot Integration in KDE",
-      "summary": "",
-      "url": "https://bharadwajraju.com/posts/btrfs-snapshots-in-kde/",
-      "source": "Lobste.rs",
-      "score": 60,
-      "comments": 17,
-      "tags": [
-        "linux",
-        "osdev"
       ]
     },
     {
@@ -148,8 +111,8 @@
       "summary": "",
       "url": "https://www.xda-developers.com/japan-tried-build-operating-system-entire-world-us-government-intervened/",
       "source": "Lobste.rs",
-      "score": 82,
-      "comments": 12,
+      "score": 101,
+      "comments": 15,
       "tags": [
         "historical",
         "osdev",
@@ -157,81 +120,123 @@
       ]
     },
     {
-      "id": "lob:qxvz7f",
-      "title": "Better Batteries",
+      "id": "lob:ubeyqf",
+      "title": "OTel Isn't Going Well (And I Made A Spreadsheet About It)",
       "summary": "",
-      "url": "https://matklad.github.io/2026/08/20/better-batteries.html",
+      "url": "https://matduggan.com/otel-isnt-going-well-and-i-made-a-spreadsheet-about-it/",
       "source": "Lobste.rs",
-      "score": 70,
-      "comments": 15,
+      "score": 38,
+      "comments": 17,
       "tags": [
-        "plt",
-        "programming"
+        "distributed"
       ]
     },
     {
-      "id": "hn:49391553",
-      "title": "OTel isn’t going well",
+      "id": "lob:pywde0",
+      "title": "Felony Bench: Be AI, Do Crime",
       "summary": "",
-      "url": "https://matduggan.com/otel-isnt-going-well-and-i-made-a-spreadsheet-about-it/",
-      "source": "Hacker News",
-      "score": 145,
-      "comments": 58
+      "url": "https://www.felonybench.com/",
+      "source": "Lobste.rs",
+      "score": 50,
+      "comments": 20,
+      "tags": [
+        "vibecoding"
+      ]
     },
     {
-      "id": "rss:81992949c6",
-      "title": "How to Check Closed-Source Firmware for Known CVEs (No Source Code Needed)",
-      "summary": "A router, an IP camera, an industrial controller: somewhere in that device's firmware there's a Linux kernel with modules, a handful of statically linked binaries, and a userspace built from a dozen open source components. You don't have the vendor's source tree. What you have is a .bin file, or aft",
-      "url": "https://dev.to/rockyyy/how-to-check-closed-source-firmware-for-known-cves-no-source-code-needed-a0m",
+      "id": "lob:lzgbrv",
+      "title": "The cool things of Gleam",
+      "summary": "",
+      "url": "https://a.baez.link/3mtdbbp2dmc27",
+      "source": "Lobste.rs",
+      "score": 39,
+      "comments": 10,
+      "tags": [
+        "gleam"
+      ]
+    },
+    {
+      "id": "lob:dyswyz",
+      "title": "I accidentally logged hundreds of thousands of phone calls to military bases",
+      "summary": "",
+      "url": "https://lina.sh/blog/hijacking-e164-arpa",
+      "source": "Lobste.rs",
+      "score": 162,
+      "comments": 6,
+      "tags": [
+        "security"
+      ]
+    },
+    {
+      "id": "hn:49387959",
+      "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
+      "summary": "",
+      "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
+      "source": "Hacker News",
+      "score": 109,
+      "comments": 41
+    },
+    {
+      "id": "lob:zibquu",
+      "title": "There continue to be reasons for software to be slow",
+      "summary": "",
+      "url": "https://typesanitizer.com/blog/performance-issues.html",
+      "source": "Lobste.rs",
+      "score": 17,
+      "comments": 16,
+      "tags": [
+        "performance",
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "rss:466c1e7ac5",
+      "title": "GitLab CVE-2026-19478 Comes Under Active Exploitation Within Days of Disclosure",
+      "summary": "A newly disclosed security flaw in GitLab has come under active exploitation within days of public disclosure, according to watchTowr.\n\nThe vulnerability in question is CVE-2026-19478 (CVSS score: 9.4), a case of code injection that allows an unauthenticated attacker to modify or delete publicly acc",
+      "url": "https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html",
       "source": "Tech RSS",
       "score": 0
     },
     {
-      "id": "lob:zcgvtz",
-      "title": "Music theory for programmers",
+      "id": "rss:a31ccb0c23",
+      "title": "Rust Supply Chain Attack Puts Build-Time Malware in Crates with 245 Million Downloads",
+      "summary": "The Rust Project has deleted malicious versions of three widely used Rust crates from crates.io after a compromised maintainer account published releases that added a typosquatted dependency whose build script downloaded and executed a remote payload during compilation.\n\nThe affected releases are ar",
+      "url": "https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "hn:49379732",
+      "title": "ATProto spaces: A new extension to ATProto that enables non-public data",
       "summary": "",
-      "url": "https://runjs.app/blog/music-theory-for-programmers",
+      "url": "https://atproto.com/blog/atproto-spaces-alpha",
+      "source": "Hacker News",
+      "score": 110,
+      "comments": 13
+    },
+    {
+      "id": "lob:ku4v3b",
+      "title": "Compile-Time Improvements in LLVM 23",
+      "summary": "",
+      "url": "https://aengelke.net/llvm23-ct.html",
       "source": "Lobste.rs",
-      "score": 28,
-      "comments": 27,
+      "score": 23,
+      "comments": 6,
       "tags": [
-        "art",
-        "math"
+        "compilers"
       ]
     },
     {
-      "id": "hn:49388694",
-      "title": "Zig’s io.threaded is neat",
+      "id": "lob:83yugk",
+      "title": "A 2026 Survey of Rust GUI Libraries",
       "summary": "",
-      "url": "https://matklad.github.io/2026/08/06/neat-io-threaded.html",
-      "source": "Hacker News",
-      "score": 95,
-      "comments": 50
-    },
-    {
-      "id": "arxiv:2608.20320v1",
-      "title": "An Agentic Approach for Active Data Collection, Travel Behavior Modeling, and Weather-Sensitive Demand Prediction",
-      "summary": "Travel behavior research increasingly combines digital data collection with predictive modeling, yet these stages are often developed and evaluated separately. This study proposes a three-agent workflow integrating conversational data collection, structured data processing, and behavioral prediction",
-      "url": "https://arxiv.org/abs/2608.20320v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_id": "2608.20320v1"
-    },
-    {
-      "id": "arxiv:2608.20318v1",
-      "title": "AI4AI-Bench: Benchmarking LLM Agents in Algorithmic Design for Recursive Self-Improvement",
-      "summary": "Recursive self-improvement (RSI) asks whether an AI system can improve the process that produces AI systems, so that the next system inherits the improvement. That process is the training algorithm: a better objective or update rule improves the compute\\mbox{-}capability exchange rate for every subs",
-      "url": "https://arxiv.org/abs/2608.20318v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "arxiv_id": "2608.20318v1"
+      "url": "https://blog.wybxc.cc/blog/rust-gui-survey-2026/",
+      "source": "Lobste.rs",
+      "score": 12,
+      "comments": 6,
+      "tags": [
+        "rust"
+      ]
     }
   ],
   "ai_curated": true
