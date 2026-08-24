@@ -1,70 +1,58 @@
 {
   "date": "2026-08-24",
-  "update_time": "2026-08-24 01:38:00",
+  "update_time": "2026-08-24 12:53:21",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-24\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Rust 供应链攻击：245M 下载量的 Crates 被植入构建时恶意软件 (来源: The Hacker News)\n- **核心干货**：Rust 官方紧急从 crates.io 下架了三个广泛使用的 crate 的恶意版本。攻击者利用被盗的维护者账号，发布包含拼写错误依赖的更新，该依赖的构建脚本会在编译时远程下载并执行恶意负载——妥妥的\"编译即中招\"，直击软件供应链最信任的环节。\n- **毒舌/硬核点评**：这年头，连 `cargo build` 都成了高风险动作。245M 的下载量不是数字，是遍布全球的定时炸弹。建议各位开发者下次拉依赖时，先给维护者打个视频电话验明正身。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html)\n\n---\n\n### 2. 📌 GitLab CVE-2026-19478：未认证代码注入漏洞遭积极利用 (来源: The Hacker News)\n- **核心干货**：GitLab 曝出 CVSS 9.4 的严重漏洞，允许未认证攻击者通过代码注入修改或删除公开资源。watchTowr 预警该漏洞在披露后几天内就被武器化利用，这补丁速度基本是跟黑客赛跑还输在了起跑线上。\n- **毒舌/硬核点评**：GitLab 这效率，漏洞披露的新闻还没凉，利用代码已经热乎了。9.4 分的洞在野外被玩得飞起，建议各位 DevOps 今晚别睡，先把补丁打了再谈 DevOps 文化。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html)\n\n---\n\n### 3. 📌 Anthropic 最强模型叫好不叫座：用户被便宜工具收割 (来源: Financial Times)\n- **核心干货**：FT 报道 Anthropic 的旗舰 AI 模型虽在基准测试上表现顶尖，但用户增长乏力，大量用户转向性价比更高的竞品。这说明在 AI 赛道，单纯的\"最强\"已不是护城河，成本、易用性和生态才是决定生死的硬通货。\n- **毒舌/硬核点评**：技术领先但市场不买账，典型的\"叫好不叫座\"——这剧本在科技史上演过八百遍了。当你的模型贵到只有评测机构在用，那它最大的贡献就是提醒别人：该降价了。\n- **🔗 传送门**：[点击直达原链接](https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"别做最聪明的那个，要做活到最后那个——技术选型如此，搞钱亦然。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-24\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Rust 供应链攻击：三款 crate 被投毒，累计下载量 2.45 亿 (来源: The Hacker News)\n- **核心干货**：攻击者攻陷了 Rust 生态中三款流行 crate 的维护者账号，发布恶意版本。这些版本悄悄塞入一个拼写混淆的依赖，其构建脚本会在编译时下载并执行远程恶意负载。恶意版本已被从 crates.io 删除，但 2.45 亿的下载量意味着影响面可能极其庞大。\n- **毒舌/硬核点评**：号称\"内存安全\"的 Rust，在供应链安全上被上了一课。记住，语言再安全，也防不住一个被钓鱼的维护者。这波操作比 `unwrap()` 还让人心慌。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html)\n\n---\n\n### 2. 📌 你的可执行文件就是 SQLite 数据库 (来源: Hacker News | 178 分)\n- **核心干货**：一种脑洞大开的工程实践：将 ELF 可执行文件与 SQLite 数据库文件融合。程序代码和数据共存于同一文件，运行时通过 SQL 查询来读取或修改自身资源，实现极度简化的单文件分发和热更新。\n- **毒舌/硬核点评**：以后恶意软件分析师的噩梦清单里又多了一项：先挂载数据库，再逆向二进制。这操作是把\"万物皆文件\"升级成了\"万物皆可 SELECT\"。\n- **🔗 传送门**：[点击直达原链接](https://fzakaria.com/2026/08/23/your-executable-is-a-sqlite-database)\n\n---\n\n### 3. 📌 GitLab 高危漏洞 CVE-2026-19478 遭在野利用 (来源: Tech RSS)\n- **核心干货**：GitLab 一个 CVSS 9.4 分的代码注入漏洞，在公开披露后几天内就被攻击者盯上并大规模利用。该漏洞允许未认证的攻击者修改或删除公开可访问的数据，属于\"猫腻极大、门槛极低\"的典型。管理员们，是时候检查一下你们的实例了。\n- **毒舌/硬核点评**：GitLab 的 SRE 们今天起床看到警报的心情，大概和看到自己 `git push --force` 到 `main` 分支一样刺激。漏洞披露到在野利用的窗口期越来越短，打补丁的手速得跟上。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html)\n\n---\n\n### 🗣️ 今日顶男金句\n真正的极客不是不犯错，而是每次 `git commit` 之前，都假设自己的密码已经泄露、依赖已被投毒、代码终将被裁——然后依然选择优雅地写出每一行。",
   "briefing_items": [
     {
-      "title": "Rust 供应链攻击：245M 下载量的 Crates 被植入构建时恶意软件",
+      "title": "Rust 供应链攻击：三款 crate 被投毒，累计下载量 2.45 亿",
       "source": "The Hacker News",
-      "summary": "Rust 官方紧急从 crates.io 下架了三个广泛使用的 crate 的恶意版本。攻击者利用被盗的维护者账号，发布包含拼写错误依赖的更新，该依赖的构建脚本会在编译时远程下载并执行恶意负载——妥妥的\"编译即中招\"，直击软件供应链最信任的环节。",
-      "commentary": "这年头，连 `cargo build` 都成了高风险动作。245M 的下载量不是数字，是遍布全球的定时炸弹。建议各位开发者下次拉依赖时，先给维护者打个视频电话验明正身。",
+      "summary": "攻击者攻陷了 Rust 生态中三款流行 crate 的维护者账号，发布恶意版本。这些版本悄悄塞入一个拼写混淆的依赖，其构建脚本会在编译时下载并执行远程恶意负载。恶意版本已被从 crates.io 删除，但 2.45 亿的下载量意味着影响面可能极其庞大。",
+      "commentary": "号称\"内存安全\"的 Rust，在供应链安全上被上了一课。记住，语言再安全，也防不住一个被钓鱼的维护者。这波操作比 `unwrap()` 还让人心慌。",
       "url": "https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html"
     },
     {
-      "title": "GitLab CVE-2026-19478：未认证代码注入漏洞遭积极利用",
-      "source": "The Hacker News",
-      "summary": "GitLab 曝出 CVSS 9.4 的严重漏洞，允许未认证攻击者通过代码注入修改或删除公开资源。watchTowr 预警该漏洞在披露后几天内就被武器化利用，这补丁速度基本是跟黑客赛跑还输在了起跑线上。",
-      "commentary": "GitLab 这效率，漏洞披露的新闻还没凉，利用代码已经热乎了。9.4 分的洞在野外被玩得飞起，建议各位 DevOps 今晚别睡，先把补丁打了再谈 DevOps 文化。",
+      "title": "你的可执行文件就是 SQLite 数据库",
+      "source": "Hacker News | 178 分",
+      "summary": "一种脑洞大开的工程实践：将 ELF 可执行文件与 SQLite 数据库文件融合。程序代码和数据共存于同一文件，运行时通过 SQL 查询来读取或修改自身资源，实现极度简化的单文件分发和热更新。",
+      "commentary": "以后恶意软件分析师的噩梦清单里又多了一项：先挂载数据库，再逆向二进制。这操作是把\"万物皆文件\"升级成了\"万物皆可 SELECT\"。",
+      "url": "https://fzakaria.com/2026/08/23/your-executable-is-a-sqlite-database"
+    },
+    {
+      "title": "GitLab 高危漏洞 CVE-2026-19478 遭在野利用",
+      "source": "Tech RSS",
+      "summary": "GitLab 一个 CVSS 9.4 分的代码注入漏洞，在公开披露后几天内就被攻击者盯上并大规模利用。该漏洞允许未认证的攻击者修改或删除公开可访问的数据，属于\"猫腻极大、门槛极低\"的典型。管理员们，是时候检查一下你们的实例了。",
+      "commentary": "GitLab 的 SRE 们今天起床看到警报的心情，大概和看到自己 `git push --force` 到 `main` 分支一样刺激。漏洞披露到在野利用的窗口期越来越短，打补丁的手速得跟上。",
       "url": "https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html"
-    },
-    {
-      "title": "Anthropic 最强模型叫好不叫座：用户被便宜工具收割",
-      "source": "Financial Times",
-      "summary": "FT 报道 Anthropic 的旗舰 AI 模型虽在基准测试上表现顶尖，但用户增长乏力，大量用户转向性价比更高的竞品。这说明在 AI 赛道，单纯的\"最强\"已不是护城河，成本、易用性和生态才是决定生死的硬通货。",
-      "commentary": "技术领先但市场不买账，典型的\"叫好不叫座\"——这剧本在科技史上演过八百遍了。当你的模型贵到只有评测机构在用，那它最大的贡献就是提醒别人：该降价了。",
-      "url": "https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245"
-    },
-    {
-      "quote": "\"别做最聪明的那个，要做活到最后那个——技术选型如此，搞钱亦然。\""
     }
   ],
   "candidates": [
-    {
-      "id": "hn:49410362",
-      "title": "A website for debloated open source alternatives",
-      "summary": "",
-      "url": "https://debloat.dev/",
-      "source": "Hacker News",
-      "score": 264,
-      "comments": 91
-    },
     {
       "id": "hn:49413320",
       "title": "Everything I own, owned",
       "summary": "<a href=\"https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20260823225933&#x2F;https:&#x2F;&#x2F;schlarp.com&#x2F;posts&#x2F;everything-i-own-owned&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20260823225933&#x2F;https:&#x2F;&#x2F;schlarp.c...</a>",
       "url": "https://schlarp.com/posts/everything-i-own-owned/",
       "source": "Hacker News",
-      "score": 252,
-      "comments": 79
+      "score": 1076,
+      "comments": 294
     },
     {
-      "id": "hn:49410932",
-      "title": "My agent.md to improve LLM-assisted code quality",
+      "id": "hn:49415271",
+      "title": "Executable Is a SQLite Database",
       "summary": "",
-      "url": "https://fabiensanglard.net/agent.md/index.html",
+      "url": "https://fzakaria.com/2026/08/23/your-executable-is-a-sqlite-database",
       "source": "Hacker News",
-      "score": 161,
-      "comments": 79
+      "score": 178,
+      "comments": 22
     },
     {
-      "id": "hn:49411643",
-      "title": "How I find problems to solve as a staff engineer",
-      "summary": "",
-      "url": "https://lalitm.com/post/find-problems-staff-engineer/",
+      "id": "hn:49412396",
+      "title": "I were 17, I'd learn how to build LLMs from scratch",
+      "summary": "<a href=\"https:&#x2F;&#x2F;xcancel.com&#x2F;paulg&#x2F;status&#x2F;2091544343589060625\" rel=\"nofollow\">https:&#x2F;&#x2F;xcancel.com&#x2F;paulg&#x2F;status&#x2F;2091544343589060625</a>",
+      "url": "https://twitter.com/paulg/status/2091544343589060625",
       "source": "Hacker News",
-      "score": 263,
-      "comments": 103
+      "score": 242,
+      "comments": 349
     },
     {
       "id": "hn:49411102",
@@ -72,67 +60,35 @@
       "summary": "",
       "url": "https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245",
       "source": "Hacker News",
-      "score": 213,
-      "comments": 178
+      "score": 598,
+      "comments": 533
     },
     {
-      "id": "hn:49409473",
-      "title": "How Complex Systems Fail (1998)",
+      "id": "hn:49411643",
+      "title": "How I find problems to solve as a staff engineer",
       "summary": "",
-      "url": "https://how.complexsystems.fail/",
+      "url": "https://lalitm.com/post/find-problems-staff-engineer/",
       "source": "Hacker News",
-      "score": 238,
-      "comments": 62
+      "score": 445,
+      "comments": 136
     },
     {
-      "id": "hn:49408550",
-      "title": "Malware infects Android-based automotive head unit firmware",
+      "id": "hn:49416055",
+      "title": "Andreessen Horowitz is investing billions into a bleak future",
       "summary": "",
-      "url": "https://securelist.com/android-head-unit-malware/121106/",
+      "url": "https://www.modelrepublic.org/articles/a16z-portfolio",
+      "source": "Hacker News",
+      "score": 306,
+      "comments": 110
+    },
+    {
+      "id": "hn:49413561",
+      "title": "I built a low-latency AI companion that plays Skyrim with me",
+      "summary": "",
+      "url": "https://pantel.is/projects/ai-gaming-companion/",
       "source": "Hacker News",
       "score": 214,
-      "comments": 106
-    },
-    {
-      "id": "hn:49408858",
-      "title": "My favorite nonfiction books about cults, scams, and schemes",
-      "summary": "",
-      "url": "https://bookdna.com/best-books/nonfiction-about-cults-scams-and-schemes",
-      "source": "Hacker News",
-      "score": 194,
-      "comments": 67
-    },
-    {
-      "id": "hn:49409092",
-      "title": "What Is a Harness?",
-      "summary": "",
-      "url": "https://earendil.com/posts/what-is-a-harness/",
-      "source": "Hacker News",
-      "score": 303,
-      "comments": 133
-    },
-    {
-      "id": "hn:49411717",
-      "title": "Google Workspace thinks my domain is an email provider (2025)",
-      "summary": "",
-      "url": "https://blog.elis.cc/articles/google-workspace-thinks-my-domain-is-an-email-provider/",
-      "source": "Hacker News",
-      "score": 182,
-      "comments": 45
-    },
-    {
-      "id": "lob:u7v2sn",
-      "title": "And then the men with guns tell you to do it anyway",
-      "summary": "",
-      "url": "https://shkspr.mobi/blog/2026/08/and-then-the-men-with-guns-tell-you-to-do-it-anyway/",
-      "source": "Lobste.rs",
-      "score": 76,
-      "comments": 17,
-      "tags": [
-        "philosophy",
-        "privacy",
-        "security"
-      ]
+      "comments": 41
     },
     {
       "id": "lob:kxualw",
@@ -140,8 +96,8 @@
       "summary": "<p>Alternate title:How is there still no decent Linux replacement for Adobe Acrobat (pdf viewing and editing)?</p>\n<p>There are plenty of viewing programs, some page editing programs, but simply nothing that also allows actual image editing, outline creation, etc. PDF4QT does some of these but is no",
       "url": "https://lobste.rs/s/kxualw/are_there_any_decent_programs_for_pdf",
       "source": "Lobste.rs",
-      "score": 24,
-      "comments": 16,
+      "score": 33,
+      "comments": 19,
       "tags": [
         "ask",
         "linux",
@@ -149,13 +105,18 @@
       ]
     },
     {
-      "id": "hn:49409862",
-      "title": "Why Sal Khan't: On Learning by Making but Teaching by Telling",
+      "id": "lob:u7v2sn",
+      "title": "And then the men with guns tell you to do it anyway",
       "summary": "",
-      "url": "https://punyamishra.com/2026/04/16/why-sal-khant-on-learning-by-making-but-teaching-by-telling/",
-      "source": "Hacker News",
-      "score": 133,
-      "comments": 82
+      "url": "https://shkspr.mobi/blog/2026/08/and-then-the-men-with-guns-tell-you-to-do-it-anyway/",
+      "source": "Lobste.rs",
+      "score": 101,
+      "comments": 23,
+      "tags": [
+        "philosophy",
+        "privacy",
+        "security"
+      ]
     },
     {
       "id": "lob:dyxeyu",
@@ -163,24 +124,11 @@
       "summary": "<p>I've seen the author <a href=\"https://lobste.rs/~asciimoo\" rel=\"ugc\">@asciimoo</a> reply in the comments here recently, yet the project has never had a dedicated submission.<br>\nTaking inspiration from the orange cousin, here it is .</p>\n",
       "url": "https://hister.org/",
       "source": "Lobste.rs",
-      "score": 42,
-      "comments": 10,
+      "score": 54,
+      "comments": 18,
       "tags": [
         "browsers",
         "web"
-      ]
-    },
-    {
-      "id": "lob:9xglf3",
-      "title": "An Introduction to Canvas in GNU Emacs",
-      "summary": "",
-      "url": "https://monadicsheep.org/blog/an-introduction-to-canvas-in-emacs.html",
-      "source": "Lobste.rs",
-      "score": 47,
-      "comments": 9,
-      "tags": [
-        "emacs",
-        "graphics"
       ]
     },
     {
@@ -189,11 +137,63 @@
       "summary": "",
       "url": "https://ericpardee.github.io/fire-hd-ownership/",
       "source": "Lobste.rs",
-      "score": 32,
-      "comments": 11,
+      "score": 60,
+      "comments": 14,
       "tags": [
         "vibecoding"
       ]
+    },
+    {
+      "id": "lob:gybcec",
+      "title": "My favorite Computer Science books, and why",
+      "summary": "",
+      "url": "https://backtracking.github.io/en/2020/02/20/cs-books.html",
+      "source": "Lobste.rs",
+      "score": 42,
+      "comments": 14,
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "id": "lob:9xglf3",
+      "title": "An Introduction to Canvas in GNU Emacs",
+      "summary": "",
+      "url": "https://monadicsheep.org/blog/an-introduction-to-canvas-in-emacs.html",
+      "source": "Lobste.rs",
+      "score": 76,
+      "comments": 12,
+      "tags": [
+        "emacs",
+        "graphics"
+      ]
+    },
+    {
+      "id": "lob:ll6pak",
+      "title": "Replicating Reddit's best feature on other forums",
+      "summary": "",
+      "url": "https://xavd.id/blog/post/highlighting-users/",
+      "source": "Lobste.rs",
+      "score": 57,
+      "comments": 10,
+      "tags": [
+        "culture"
+      ]
+    },
+    {
+      "id": "arxiv:2608.21343v1",
+      "title": "TurboBias 2.0: Streaming Context-Biasing for Production-Efficient ASR Systems",
+      "summary": "Contextualization is essential for production automatic speech recognition (ASR) systems, where user-provided phrases must be recognized accurately under strict latency constraints. Although many context-biasing methods improve recognition accuracy, they often do not address the practical requiremen",
+      "url": "https://arxiv.org/abs/2608.21343v1",
+      "source": "ArXiv",
+      "categories": [
+        "eess.AS",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "cs.SD"
+      ],
+      "arxiv_id": "2608.21343v1"
     },
     {
       "id": "rss:466c1e7ac5",
@@ -212,25 +212,34 @@
       "score": 0
     },
     {
-      "id": "lob:gybcec",
-      "title": "My favorite Computer Science books, and why",
+      "id": "rss:cc4e5bdeb8",
+      "title": "Nowhere to Put the Disagreement: What a Memory Store Cannot Tell Your Agent",
+      "summary": "Ask a memory system what database production uses, and it can hand back two records that flatly contradict each other, each with a confident similarity score, and nothing else. Ken Alger opened his piece on this with exactly that shape: PostgreSQL at 0.94, MongoDB at 0.91, and a migration four month",
+      "url": "https://dev.to/izgorodin/nowhere-to-put-the-disagreement-what-a-memory-store-cannot-tell-your-agent-369l",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "lob:9i36rv",
+      "title": "The text mode lie: why modern TUIs are a nightmare for accessibility",
       "summary": "",
-      "url": "https://backtracking.github.io/en/2020/02/20/cs-books.html",
+      "url": "https://www.osnews.com/story/144892/the-text-mode-lie-why-modern-tuis-are-a-nightmare-for-accessibility/",
       "source": "Lobste.rs",
-      "score": 23,
-      "comments": 8,
+      "score": 26,
+      "comments": 5,
       "tags": [
-        "programming"
+        "a11y",
+        "design"
       ]
     },
     {
-      "id": "hn:49411020",
-      "title": "Explain it to me like I'm ten",
+      "id": "hn:49415893",
+      "title": "FDA clears blood test to aid evaluation for Alzheimer's disease",
       "summary": "",
-      "url": "https://timharford.com/2026/08/explain-it-to-me-like-im-ten/",
+      "url": "https://medicine.washu.edu/news/fda-clears-blood-test-to-aid-evaluation-for-alzheimers-disease/",
       "source": "Hacker News",
       "score": 78,
-      "comments": 41
+      "comments": 28
     }
   ],
   "ai_curated": true
