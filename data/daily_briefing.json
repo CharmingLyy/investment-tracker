@@ -1,171 +1,143 @@
 {
-  "date": "2026-08-24",
-  "update_time": "2026-08-24 12:53:21",
+  "date": "2026-08-25",
+  "update_time": "2026-08-25 01:27:27",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-24\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Rust 供应链攻击：三款 crate 被投毒，累计下载量 2.45 亿 (来源: The Hacker News)\n- **核心干货**：攻击者攻陷了 Rust 生态中三款流行 crate 的维护者账号，发布恶意版本。这些版本悄悄塞入一个拼写混淆的依赖，其构建脚本会在编译时下载并执行远程恶意负载。恶意版本已被从 crates.io 删除，但 2.45 亿的下载量意味着影响面可能极其庞大。\n- **毒舌/硬核点评**：号称\"内存安全\"的 Rust，在供应链安全上被上了一课。记住，语言再安全，也防不住一个被钓鱼的维护者。这波操作比 `unwrap()` 还让人心慌。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html)\n\n---\n\n### 2. 📌 你的可执行文件就是 SQLite 数据库 (来源: Hacker News | 178 分)\n- **核心干货**：一种脑洞大开的工程实践：将 ELF 可执行文件与 SQLite 数据库文件融合。程序代码和数据共存于同一文件，运行时通过 SQL 查询来读取或修改自身资源，实现极度简化的单文件分发和热更新。\n- **毒舌/硬核点评**：以后恶意软件分析师的噩梦清单里又多了一项：先挂载数据库，再逆向二进制。这操作是把\"万物皆文件\"升级成了\"万物皆可 SELECT\"。\n- **🔗 传送门**：[点击直达原链接](https://fzakaria.com/2026/08/23/your-executable-is-a-sqlite-database)\n\n---\n\n### 3. 📌 GitLab 高危漏洞 CVE-2026-19478 遭在野利用 (来源: Tech RSS)\n- **核心干货**：GitLab 一个 CVSS 9.4 分的代码注入漏洞，在公开披露后几天内就被攻击者盯上并大规模利用。该漏洞允许未认证的攻击者修改或删除公开可访问的数据，属于\"猫腻极大、门槛极低\"的典型。管理员们，是时候检查一下你们的实例了。\n- **毒舌/硬核点评**：GitLab 的 SRE 们今天起床看到警报的心情，大概和看到自己 `git push --force` 到 `main` 分支一样刺激。漏洞披露到在野利用的窗口期越来越短，打补丁的手速得跟上。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html)\n\n---\n\n### 🗣️ 今日顶男金句\n真正的极客不是不犯错，而是每次 `git commit` 之前，都假设自己的密码已经泄露、依赖已被投毒、代码终将被裁——然后依然选择优雅地写出每一行。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-25\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 微软画图与照片的隐形水印：你的本地文件也逃不过\"溯源\" (来源: Hacker News)\n- **核心干货**：逆向工程发现，Win11 自带的画图（MS Paint）和照片（Photos）应用即使处理纯本地生成的文件，也会在图像中嵌入包含 GUID 的隐形水印。这意味着你的截图、涂鸦、甚至随手 P 的图，都在无声无息地携带一串唯一指纹。\n- **毒舌/硬核点评**：你以为你只是画了个火柴人，微软却把它当成了证据链的起点。这波操作，与其说是保护创作者，不如说是给\"数字原住民\"集体纹了身——还是洗不掉的那种。\n- **🔗 传送门**：[点击直达原链接](https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/)\n\n---\n\n### 2. 📌 小米新 CPU 单核追平苹果，多核直接超车？ (来源: Hacker News)\n- **核心干货**：据 Daniel Lemire 转发称，小米新款 CPU 在单核性能上已与 Apple 核心持平，而多核性能则大幅领先。如果属实，这标志着手机 SoC 性能格局的又一次重大洗牌，尤其是在高通和联发科逐渐拉不开差距的当下。\n- **毒舌/硬核点评**：单核追平、多核反超？这剧本三年前在 PC 端刚演过一遍，现在轮到移动端了。苹果的\"挤牙膏\"终于把这群追赶者喂成了\"饿狼\"，不过建议先跑个 Geekbench 降降温，别让 PPT 先飞一会儿。\n- **🔗 传送门**：[点击直达原链接](https://twitter.com/lemire/status/2091894299289874926)\n\n---\n\n### 3. 📌 JPEG XL 终于要进 Firefox 了？Mozilla 发布 Intent to Ship (来源: Lobste.rs)\n- **核心干货**：Mozilla 宣布有意在 Firefox 中正式支持 JPEG XL 图片格式。这标志着这一高压缩率、支持无损和有损的现代格式在浏览器支持上迈出关键一步，有望打破 Chrome 长期以来\"不感兴趣\"导致的僵局。\n- **毒舌/硬核点评**：JPEG XL 等了这么多年，终于不是\"PPT 里的未来\"了。不过，在 Chrome 大爷点头之前，这最多算是在 Firefox 的\"艺术长廊\"里多挂了一幅画，真正的普及还得看隔壁脸色。\n- **🔗 传送门**：[点击直达原链接](https://hacks.mozilla.org/2026/08/intent-to-ship-jpeg-xl/)\n\n---\n\n### 🗣️ 今日顶男金句\n**\"别抱怨水印无处不在，先想想自己的代码里有没有留下别人的指纹。\"** —— 在数字世界，不追溯，即失联。",
   "briefing_items": [
     {
-      "title": "Rust 供应链攻击：三款 crate 被投毒，累计下载量 2.45 亿",
-      "source": "The Hacker News",
-      "summary": "攻击者攻陷了 Rust 生态中三款流行 crate 的维护者账号，发布恶意版本。这些版本悄悄塞入一个拼写混淆的依赖，其构建脚本会在编译时下载并执行远程恶意负载。恶意版本已被从 crates.io 删除，但 2.45 亿的下载量意味着影响面可能极其庞大。",
-      "commentary": "号称\"内存安全\"的 Rust，在供应链安全上被上了一课。记住，语言再安全，也防不住一个被钓鱼的维护者。这波操作比 `unwrap()` 还让人心慌。",
-      "url": "https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html"
+      "title": "微软画图与照片的隐形水印：你的本地文件也逃不过\"溯源\"",
+      "source": "Hacker News",
+      "summary": "逆向工程发现，Win11 自带的画图（MS Paint）和照片（Photos）应用即使处理纯本地生成的文件，也会在图像中嵌入包含 GUID 的隐形水印。这意味着你的截图、涂鸦、甚至随手 P 的图，都在无声无息地携带一串唯一指纹。",
+      "commentary": "你以为你只是画了个火柴人，微软却把它当成了证据链的起点。这波操作，与其说是保护创作者，不如说是给\"数字原住民\"集体纹了身——还是洗不掉的那种。",
+      "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/"
     },
     {
-      "title": "你的可执行文件就是 SQLite 数据库",
-      "source": "Hacker News | 178 分",
-      "summary": "一种脑洞大开的工程实践：将 ELF 可执行文件与 SQLite 数据库文件融合。程序代码和数据共存于同一文件，运行时通过 SQL 查询来读取或修改自身资源，实现极度简化的单文件分发和热更新。",
-      "commentary": "以后恶意软件分析师的噩梦清单里又多了一项：先挂载数据库，再逆向二进制。这操作是把\"万物皆文件\"升级成了\"万物皆可 SELECT\"。",
-      "url": "https://fzakaria.com/2026/08/23/your-executable-is-a-sqlite-database"
+      "title": "小米新 CPU 单核追平苹果，多核直接超车？",
+      "source": "Hacker News",
+      "summary": "据 Daniel Lemire 转发称，小米新款 CPU 在单核性能上已与 Apple 核心持平，而多核性能则大幅领先。如果属实，这标志着手机 SoC 性能格局的又一次重大洗牌，尤其是在高通和联发科逐渐拉不开差距的当下。",
+      "commentary": "单核追平、多核反超？这剧本三年前在 PC 端刚演过一遍，现在轮到移动端了。苹果的\"挤牙膏\"终于把这群追赶者喂成了\"饿狼\"，不过建议先跑个 Geekbench 降降温，别让 PPT 先飞一会儿。",
+      "url": "https://twitter.com/lemire/status/2091894299289874926"
     },
     {
-      "title": "GitLab 高危漏洞 CVE-2026-19478 遭在野利用",
-      "source": "Tech RSS",
-      "summary": "GitLab 一个 CVSS 9.4 分的代码注入漏洞，在公开披露后几天内就被攻击者盯上并大规模利用。该漏洞允许未认证的攻击者修改或删除公开可访问的数据，属于\"猫腻极大、门槛极低\"的典型。管理员们，是时候检查一下你们的实例了。",
-      "commentary": "GitLab 的 SRE 们今天起床看到警报的心情，大概和看到自己 `git push --force` 到 `main` 分支一样刺激。漏洞披露到在野利用的窗口期越来越短，打补丁的手速得跟上。",
-      "url": "https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html"
+      "title": "JPEG XL 终于要进 Firefox 了？Mozilla 发布 Intent to Ship",
+      "source": "Lobste.rs",
+      "summary": "Mozilla 宣布有意在 Firefox 中正式支持 JPEG XL 图片格式。这标志着这一高压缩率、支持无损和有损的现代格式在浏览器支持上迈出关键一步，有望打破 Chrome 长期以来\"不感兴趣\"导致的僵局。",
+      "commentary": "JPEG XL 等了这么多年，终于不是\"PPT 里的未来\"了。不过，在 Chrome 大爷点头之前，这最多算是在 Firefox 的\"艺术长廊\"里多挂了一幅画，真正的普及还得看隔壁脸色。",
+      "url": "https://hacks.mozilla.org/2026/08/intent-to-ship-jpeg-xl/"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49413320",
-      "title": "Everything I own, owned",
-      "summary": "<a href=\"https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20260823225933&#x2F;https:&#x2F;&#x2F;schlarp.com&#x2F;posts&#x2F;everything-i-own-owned&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20260823225933&#x2F;https:&#x2F;&#x2F;schlarp.c...</a>",
-      "url": "https://schlarp.com/posts/everything-i-own-owned/",
+      "id": "hn:49421158",
+      "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
+      "summary": "",
+      "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
       "source": "Hacker News",
-      "score": 1076,
-      "comments": 294
+      "score": 558,
+      "comments": 224
     },
     {
-      "id": "hn:49415271",
-      "title": "Executable Is a SQLite Database",
+      "id": "lob:8ttu5n",
+      "title": "Your executable is a SQLite database",
       "summary": "",
       "url": "https://fzakaria.com/2026/08/23/your-executable-is-a-sqlite-database",
-      "source": "Hacker News",
-      "score": 178,
-      "comments": 22
-    },
-    {
-      "id": "hn:49412396",
-      "title": "I were 17, I'd learn how to build LLMs from scratch",
-      "summary": "<a href=\"https:&#x2F;&#x2F;xcancel.com&#x2F;paulg&#x2F;status&#x2F;2091544343589060625\" rel=\"nofollow\">https:&#x2F;&#x2F;xcancel.com&#x2F;paulg&#x2F;status&#x2F;2091544343589060625</a>",
-      "url": "https://twitter.com/paulg/status/2091544343589060625",
-      "source": "Hacker News",
-      "score": 242,
-      "comments": 349
-    },
-    {
-      "id": "hn:49411102",
-      "title": "Anthropic's best AI model struggles to attract users as cheaper tools thrive",
-      "summary": "",
-      "url": "https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245",
-      "source": "Hacker News",
-      "score": 598,
-      "comments": 533
-    },
-    {
-      "id": "hn:49411643",
-      "title": "How I find problems to solve as a staff engineer",
-      "summary": "",
-      "url": "https://lalitm.com/post/find-problems-staff-engineer/",
-      "source": "Hacker News",
-      "score": 445,
-      "comments": 136
-    },
-    {
-      "id": "hn:49416055",
-      "title": "Andreessen Horowitz is investing billions into a bleak future",
-      "summary": "",
-      "url": "https://www.modelrepublic.org/articles/a16z-portfolio",
-      "source": "Hacker News",
-      "score": 306,
-      "comments": 110
-    },
-    {
-      "id": "hn:49413561",
-      "title": "I built a low-latency AI companion that plays Skyrim with me",
-      "summary": "",
-      "url": "https://pantel.is/projects/ai-gaming-companion/",
-      "source": "Hacker News",
-      "score": 214,
-      "comments": 41
-    },
-    {
-      "id": "lob:kxualw",
-      "title": "Are there any decent programs for pdf viewing and editing for Linux that replace Adobe Acrobat?",
-      "summary": "<p>Alternate title:How is there still no decent Linux replacement for Adobe Acrobat (pdf viewing and editing)?</p>\n<p>There are plenty of viewing programs, some page editing programs, but simply nothing that also allows actual image editing, outline creation, etc. PDF4QT does some of these but is no",
-      "url": "https://lobste.rs/s/kxualw/are_there_any_decent_programs_for_pdf",
       "source": "Lobste.rs",
-      "score": 33,
-      "comments": 19,
+      "score": 168,
+      "comments": 15,
       "tags": [
-        "ask",
+        "databases",
         "linux",
-        "programming"
-      ]
-    },
-    {
-      "id": "lob:u7v2sn",
-      "title": "And then the men with guns tell you to do it anyway",
-      "summary": "",
-      "url": "https://shkspr.mobi/blog/2026/08/and-then-the-men-with-guns-tell-you-to-do-it-anyway/",
-      "source": "Lobste.rs",
-      "score": 101,
-      "comments": 23,
-      "tags": [
-        "philosophy",
-        "privacy",
-        "security"
-      ]
-    },
-    {
-      "id": "lob:dyxeyu",
-      "title": "Hister - A private, full content search index that you control",
-      "summary": "<p>I've seen the author <a href=\"https://lobste.rs/~asciimoo\" rel=\"ugc\">@asciimoo</a> reply in the comments here recently, yet the project has never had a dedicated submission.<br>\nTaking inspiration from the orange cousin, here it is .</p>\n",
-      "url": "https://hister.org/",
-      "source": "Lobste.rs",
-      "score": 54,
-      "comments": 18,
-      "tags": [
-        "browsers",
-        "web"
-      ]
-    },
-    {
-      "id": "lob:fadbev",
-      "title": "Amazon kept shutting down my tablet, so I spent $266 on four AI models to own it",
-      "summary": "",
-      "url": "https://ericpardee.github.io/fire-hd-ownership/",
-      "source": "Lobste.rs",
-      "score": 60,
-      "comments": 14,
-      "tags": [
         "vibecoding"
       ]
     },
     {
-      "id": "lob:gybcec",
-      "title": "My favorite Computer Science books, and why",
+      "id": "hn:49420873",
+      "title": "Xiaomi: New CPU matches Apple cores single threaded, much faster multithreaded",
+      "summary": "<a href=\"https:&#x2F;&#x2F;xcancel.com&#x2F;lemire&#x2F;status&#x2F;2091894299289874926\" rel=\"nofollow\">https:&#x2F;&#x2F;xcancel.com&#x2F;lemire&#x2F;status&#x2F;2091894299289874926</a>",
+      "url": "https://twitter.com/lemire/status/2091894299289874926",
+      "source": "Hacker News",
+      "score": 722,
+      "comments": 487
+    },
+    {
+      "id": "hn:49422784",
+      "title": "The entire city of San Francisco as a video game",
+      "summary": "<a href=\"https:&#x2F;&#x2F;twitter.com&#x2F;cdngdev&#x2F;status&#x2F;2091909073038082139\" rel=\"nofollow\">https:&#x2F;&#x2F;twitter.com&#x2F;cdngdev&#x2F;status&#x2F;2091909073038082139</a>, <a href=\"https:&#x2F;&#x2F;xcancel.com&#x2F;cdngdev&#x2F;status&#x2F;2091909073038082139\" rel=\"nofollow\">https",
+      "url": "https://sf.thijs.gg/",
+      "source": "Hacker News",
+      "score": 337,
+      "comments": 118
+    },
+    {
+      "id": "hn:49419237",
+      "title": "How Europe is killing makers and micro-entrepreneurs",
       "summary": "",
-      "url": "https://backtracking.github.io/en/2020/02/20/cs-books.html",
+      "url": "https://lectronz.com/u/lectronz/articles/how-europe-is-killing-makers-and-micro-entrepreneurs",
+      "source": "Hacker News",
+      "score": 1053,
+      "comments": 654
+    },
+    {
+      "id": "hn:49424606",
+      "title": "Oceans hit highest temperature on record",
+      "summary": "",
+      "url": "https://www.bbc.com/news/articles/c62m4gpnp78o",
+      "source": "Hacker News",
+      "score": 389,
+      "comments": 283
+    },
+    {
+      "id": "hn:49426564",
+      "title": "iCloud+ Hide My Email addresses will remain on icloud.com",
+      "summary": "",
+      "url": "https://developer.apple.com/news/?id=1ptvdtcm",
+      "source": "Hacker News",
+      "score": 210,
+      "comments": 46
+    },
+    {
+      "id": "hn:49421489",
+      "title": "IPFS Maintainers Winding Down",
+      "summary": "",
+      "url": "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/",
+      "source": "Hacker News",
+      "score": 321,
+      "comments": 162
+    },
+    {
+      "id": "hn:49421536",
+      "title": "Jabber/XMPP: 25 Years of Digital Independence",
+      "summary": "",
+      "url": "https://gultsch.de/posts/25-years-of-digital-independence/",
+      "source": "Hacker News",
+      "score": 167,
+      "comments": 64
+    },
+    {
+      "id": "lob:plmwzl",
+      "title": "Perspec 1.0: A Haskell desktop app for perspective correction of document photos",
+      "summary": "",
+      "url": "https://adriansieber.com/announcing-perspec-1-0/",
       "source": "Lobste.rs",
-      "score": 42,
-      "comments": 14,
+      "score": 25,
+      "comments": 13,
       "tags": [
-        "programming"
+        "graphics",
+        "haskell",
+        "release"
       ]
     },
     {
-      "id": "lob:9xglf3",
-      "title": "An Introduction to Canvas in GNU Emacs",
+      "id": "lob:wxjtxq",
+      "title": "Can a blog post be handwritten?",
       "summary": "",
-      "url": "https://monadicsheep.org/blog/an-introduction-to-canvas-in-emacs.html",
+      "url": "https://diggingforfire.blog/posts/can-a-blog-post-be-handwritten/",
       "source": "Lobste.rs",
-      "score": 76,
-      "comments": 12,
+      "score": 31,
+      "comments": 17,
       "tags": [
-        "emacs",
-        "graphics"
+        "a11y",
+        "web"
       ]
     },
     {
@@ -174,72 +146,101 @@
       "summary": "",
       "url": "https://xavd.id/blog/post/highlighting-users/",
       "source": "Lobste.rs",
-      "score": 57,
-      "comments": 10,
+      "score": 76,
+      "comments": 18,
       "tags": [
         "culture"
       ]
     },
     {
-      "id": "arxiv:2608.21343v1",
-      "title": "TurboBias 2.0: Streaming Context-Biasing for Production-Efficient ASR Systems",
-      "summary": "Contextualization is essential for production automatic speech recognition (ASR) systems, where user-provided phrases must be recognized accurately under strict latency constraints. Although many context-biasing methods improve recognition accuracy, they often do not address the practical requiremen",
-      "url": "https://arxiv.org/abs/2608.21343v1",
-      "source": "ArXiv",
-      "categories": [
-        "eess.AS",
-        "cs.AI",
-        "cs.CL",
-        "cs.LG",
-        "cs.SD"
-      ],
-      "arxiv_id": "2608.21343v1"
-    },
-    {
-      "id": "rss:466c1e7ac5",
-      "title": "GitLab CVE-2026-19478 Comes Under Active Exploitation Within Days of Disclosure",
-      "summary": "A newly disclosed security flaw in GitLab has come under active exploitation within days of public disclosure, according to watchTowr.\n\nThe vulnerability in question is CVE-2026-19478 (CVSS score: 9.4), a case of code injection that allows an unauthenticated attacker to modify or delete publicly acc",
-      "url": "https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:a31ccb0c23",
-      "title": "Rust Supply Chain Attack Puts Build-Time Malware in Crates with 245 Million Downloads",
-      "summary": "The Rust Project has deleted malicious versions of three widely used Rust crates from crates.io after a compromised maintainer account published releases that added a typosquatted dependency whose build script downloaded and executed a remote payload during compilation.\n\nThe affected releases are ar",
-      "url": "https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:cc4e5bdeb8",
-      "title": "Nowhere to Put the Disagreement: What a Memory Store Cannot Tell Your Agent",
-      "summary": "Ask a memory system what database production uses, and it can hand back two records that flatly contradict each other, each with a confident similarity score, and nothing else. Ken Alger opened his piece on this with exactly that shape: PostgreSQL at 0.94, MongoDB at 0.91, and a migration four month",
-      "url": "https://dev.to/izgorodin/nowhere-to-put-the-disagreement-what-a-memory-store-cannot-tell-your-agent-369l",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "lob:9i36rv",
-      "title": "The text mode lie: why modern TUIs are a nightmare for accessibility",
+      "id": "hn:49422800",
+      "title": "Where did all the public bathrooms go?",
       "summary": "",
-      "url": "https://www.osnews.com/story/144892/the-text-mode-lie-why-modern-tuis-are-a-nightmare-for-accessibility/",
+      "url": "https://daily.jstor.org/where-did-all-the-public-bathrooms-go/",
+      "source": "Hacker News",
+      "score": 152,
+      "comments": 300
+    },
+    {
+      "id": "lob:0typpq",
+      "title": "I cannot survive from burnout",
+      "summary": "<p>I burned out two years ago, went through a divorce, and relocated to a new city. I live alone now and care for seven cats.</p>\n<p>Over the last two years, I’ve tried forcing discipline, making detailed plans, and restarting over and over. Despite this, I’m still carrying significant debt.</p>\n<p>",
+      "url": "https://lobste.rs/s/0typpq/i_cannot_survive_from_burnout",
       "source": "Lobste.rs",
-      "score": 26,
-      "comments": 5,
+      "score": 117,
+      "comments": 33,
       "tags": [
-        "a11y",
-        "design"
+        "person"
       ]
     },
     {
-      "id": "hn:49415893",
-      "title": "FDA clears blood test to aid evaluation for Alzheimer's disease",
+      "id": "lob:rehaa3",
+      "title": "Emacs 31.1 released",
       "summary": "",
-      "url": "https://medicine.washu.edu/news/fda-clears-blood-test-to-aid-evaluation-for-alzheimers-disease/",
+      "url": "https://lists.gnu.org/archive/html/info-gnu-emacs/2026-08/msg00004.html",
+      "source": "Lobste.rs",
+      "score": 79,
+      "comments": 9,
+      "tags": [
+        "emacs",
+        "release"
+      ]
+    },
+    {
+      "id": "lob:vcdk2q",
+      "title": "Everything I own, owned",
+      "summary": "",
+      "url": "https://schlarp.com/posts/everything-i-own-owned/",
+      "source": "Lobste.rs",
+      "score": 49,
+      "comments": 17,
+      "tags": [
+        "security",
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "lob:slaivx",
+      "title": "offgrid electric car (2025)",
+      "summary": "",
+      "url": "https://joeyh.name/blog/entry/offgrid_electric_car/",
+      "source": "Lobste.rs",
+      "score": 40,
+      "comments": 19,
+      "tags": [
+        "hardware"
+      ]
+    },
+    {
+      "id": "hn:49425819",
+      "title": "One corner of China’s internet is insisting that the Tang Dynasty never existed",
+      "summary": "",
+      "url": "https://www.cnn.com/2026/08/19/style/china-tang-dynasty-never-existed-hoax-intl-hnk",
+      "source": "Hacker News",
+      "score": 123,
+      "comments": 98
+    },
+    {
+      "id": "lob:26oj2u",
+      "title": "Intent to Ship: JPEG XL",
+      "summary": "",
+      "url": "https://hacks.mozilla.org/2026/08/intent-to-ship-jpeg-xl/",
+      "source": "Lobste.rs",
+      "score": 48,
+      "comments": 8,
+      "tags": [
+        "browsers",
+        "graphics"
+      ]
+    },
+    {
+      "id": "hn:49423539",
+      "title": "Octopus intelligence may be related to never-before-seen mutation",
+      "summary": "",
+      "url": "https://www.smithsonianmag.com/smart-news/why-are-some-octopuses-so-smart-the-answer-might-lie-in-a-never-before-seen-mutation-that-helps-them-accurately-build-proteins-180989319/",
       "source": "Hacker News",
       "score": 78,
-      "comments": 28
+      "comments": 45
     }
   ],
   "ai_curated": true
