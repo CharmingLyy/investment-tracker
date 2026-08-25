@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-08-25 08:31:40",
+  "update_time": "2026-08-25 12:59:03",
   "stocks": {
     "a_stocks": [
       {
@@ -9,25 +9,25 @@
         "symbol": "sz.002050",
         "industry": null,
         "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
-        "price": 35.71,
-        "open": 36.71,
-        "high": 37.05,
-        "low": 35.44,
-        "change_pct": -2.72,
-        "volume": 43571489,
-        "turnover": 15.66,
+        "price": 35.95,
+        "open": 35.48,
+        "high": 36.27,
+        "low": 35.13,
+        "change_pct": 0.67,
+        "volume": 33606067,
+        "turnover": 12.03,
         "market_cap": null,
-        "pe": 36.77,
+        "pe": 37.01,
         "cash_flow": 50.92,
-        "macd": -0.9245,
-        "macd_signal": -0.8375,
-        "macd_histogram": -0.1741,
-        "rsi": 38.56,
+        "macd": -0.9851,
+        "macd_signal": -0.867,
+        "macd_histogram": -0.2363,
+        "rsi": 39.72,
         "ma": {
-          "MA5": 36.99,
-          "MA10": 37.97,
-          "MA20": 37.85,
-          "MA60": 41.29
+          "MA5": 36.26,
+          "MA10": 37.59,
+          "MA20": 37.87,
+          "MA60": 41.15
         },
         "main_net_flow": null
       },
@@ -38,25 +38,25 @@
         "symbol": "sh.601727",
         "industry": null,
         "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
-        "price": 6.45,
-        "open": 6.53,
-        "high": 6.55,
+        "price": 6.5,
+        "open": 6.45,
+        "high": 6.51,
         "low": 6.42,
-        "change_pct": -1.23,
-        "volume": 39987984,
-        "turnover": 2.59,
+        "change_pct": 0.78,
+        "volume": 27938784,
+        "turnover": 1.81,
         "market_cap": null,
-        "pe": 77.44,
+        "pe": 78.04,
         "cash_flow": 105.67,
-        "macd": -0.0958,
-        "macd_signal": -0.0657,
-        "macd_histogram": -0.06,
-        "rsi": 34.99,
+        "macd": -0.1004,
+        "macd_signal": -0.0727,
+        "macd_histogram": -0.0555,
+        "rsi": 38.09,
         "ma": {
-          "MA5": 6.54,
-          "MA10": 6.66,
-          "MA20": 6.79,
-          "MA60": 6.96
+          "MA5": 6.5,
+          "MA10": 6.63,
+          "MA20": 6.77,
+          "MA60": 6.93
         },
         "main_net_flow": null
       }
@@ -108,7 +108,7 @@
         "volume": 134796300,
         "turnover": null,
         "market_cap": 50495.94,
-        "pe": 32.88,
+        "pe": 31.93,
         "cash_flow": 463.36,
         "macd": 2.6497,
         "macd_signal": 3.7778,
@@ -224,7 +224,7 @@
         "volume": 35034000,
         "turnover": null,
         "market_cap": 4226.74,
-        "pe": 154.29,
+        "pe": 149.06,
         "cash_flow": 21.59,
         "macd": 11.6886,
         "macd_signal": 11.1061,
@@ -304,14 +304,14 @@
         "name": "Bitcoin",
         "symbol": "BTC",
         "industry": "Smart Contract Platform",
-        "price": 80192,
+        "price": 78996,
         "open": null,
         "high": 81160,
-        "low": 77086,
-        "change_pct": 4.24,
-        "volume": 56498650298,
+        "low": 78011,
+        "change_pct": -0.28,
+        "volume": 53788637810,
         "turnover": null,
-        "market_cap": 16097.77,
+        "market_cap": 15860.33,
         "market_cap_rank": 1,
         "pe": null,
         "funding_rate": null,
@@ -319,24 +319,24 @@
         "etf_inflow": null,
         "etf_outflow": null,
         "etf_net_flow": null,
-        "macd": 3857.5778,
-        "macd_signal": 2193.817,
-        "macd_histogram": 3327.5216,
-        "rsi": 83.36,
+        "macd": 3762.4942,
+        "macd_signal": 2174.8003,
+        "macd_histogram": 3175.3878,
+        "rsi": 82.17,
         "ma": {
-          "MA5": 78474.86,
-          "MA10": 72686.3,
-          "MA20": 68304.72,
-          "MA60": 65044.18
+          "MA5": 78236.47,
+          "MA10": 72567.1,
+          "MA20": 68245.12,
+          "MA60": 65024.32
         },
         "main_net_flow": null,
         "onchain": {
-          "circulating_supply": 20074871.0,
-          "total_supply": 20074871.0,
+          "circulating_supply": 20074975.0,
+          "total_supply": 20075000.0,
           "circ_ratio": 100.0,
-          "price_change_7d": 24.96974,
-          "price_change_30d": 24.66567,
-          "ath_pct": -36.4,
+          "price_change_7d": 22.91094,
+          "price_change_30d": 22.49719,
+          "ath_pct": -37.34,
           "ath_date": null,
           "categories": [
             "Smart Contract Platform",
@@ -357,14 +357,14 @@
         "name": "Ethereum",
         "symbol": "ETH",
         "industry": "Smart Contract Platform",
-        "price": 2493.65,
+        "price": 2473.69,
         "open": null,
         "high": 2529.69,
-        "low": 2455.2,
-        "change_pct": 2.18,
-        "volume": 20776187882,
+        "low": 2456.8,
+        "change_pct": -1.6,
+        "volume": 18879618392,
         "turnover": null,
-        "market_cap": 3009.59,
+        "market_cap": 2985.44,
         "market_cap_rank": 2,
         "pe": null,
         "funding_rate": null,
@@ -372,24 +372,24 @@
         "etf_inflow": null,
         "etf_outflow": null,
         "etf_net_flow": null,
-        "macd": 161.171,
-        "macd_signal": 103.8277,
-        "macd_histogram": 114.6866,
-        "rsi": 79.87,
+        "macd": 159.5694,
+        "macd_signal": 103.5074,
+        "macd_histogram": 112.124,
+        "rsi": 78.6,
         "ma": {
-          "MA5": 2475.94,
-          "MA10": 2266.06,
-          "MA20": 2078.77,
-          "MA60": 1902.98
+          "MA5": 2471.92,
+          "MA10": 2264.05,
+          "MA20": 2077.77,
+          "MA60": 1902.64
         },
         "main_net_flow": null,
         "onchain": {
           "circulating_supply": 120681302.5213096,
           "total_supply": 120681302.5213096,
           "circ_ratio": 100.0,
-          "price_change_7d": 31.47881,
-          "price_change_30d": 32.6812,
-          "ath_pct": -49.58,
+          "price_change_7d": 30.15667,
+          "price_change_30d": 31.21797,
+          "ath_pct": -49.99,
           "ath_date": null,
           "categories": [
             "Smart Contract Platform",
@@ -416,28 +416,44 @@
       "published": ""
     },
     {
-      "id": "69468d7531",
-      "title": "Bitcoin has beaten stocks and gold over six months. Now it’s crossed the $80,000 mark.",
-      "summary": "Bitcoin was hovering around the $80,000 level Tuesday after the cryptocurrency surged last week on the Treasury Department’s plans to double its buy back of longer-dated Treasurys.",
-      "link": "https://www.marketwatch.com/story/bitcoin-has-beaten-stocks-and-gold-over-six-months-now-its-closing-in-on-80-000-b8aa48f9?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Tue, 25 Aug 2026 08:00:00 GMT"
-    },
-    {
       "id": "78be98798d",
       "title": "Investors poured into Canadian ETFs right before trade talks broke down",
       "summary": "Investors misread the mood music on U.S.-Canadian talks, in a big way.",
       "link": "https://www.marketwatch.com/story/investors-poured-into-canadian-etfs-right-before-trade-talks-broke-down-c8bea8ee?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Tue, 25 Aug 2026 07:57:00 GMT"
+      "published": "Tue, 25 Aug 2026 12:56:00 GMT"
     },
     {
-      "id": "6eb83f6050",
-      "title": "‘She looked into COBRA’: My friend was laid off and lost her health insurance. How can she find affordable coverage?",
-      "summary": "“The cost is absolutely ridiculous.”",
-      "link": "https://www.marketwatch.com/story/shes-desperate-my-friend-was-laid-off-and-lost-her-health-insurance-how-can-she-find-affordable-coverage-3b17b553?mod=mw_rss_topstories",
+      "id": "7c35f76550",
+      "title": "Stick with value stocks until everyone starts talking about them — they’re still under the radar, this Wall Street firm says",
+      "summary": "BofA says investors continue to overlook value stocks, which work particularly well in a new era of higher interest rates and inflation.",
+      "link": "https://www.marketwatch.com/story/stick-with-value-stocks-until-everyone-is-talking-about-them-and-they-are-still-under-the-radar-this-wall-street-firm-says-598183de?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Tue, 25 Aug 2026 00:15:00 GMT"
+      "published": "Tue, 25 Aug 2026 12:40:00 GMT"
+    },
+    {
+      "id": "a9e91477b0",
+      "title": "Trump’s trade war with Canada could lead the U.S. back to quantitative easing",
+      "summary": "That’s good for gold, stocks and long bonds. Eventually.",
+      "link": "https://www.marketwatch.com/story/trumps-canada-trade-war-could-lead-the-u-s-back-to-quantitative-easing-eef9be8b?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 25 Aug 2026 12:33:00 GMT"
+    },
+    {
+      "id": "d9e61341fa",
+      "title": "Yes, the government can take your home after a Medicaid recipient dies. Here’s how to protect yourself.",
+      "summary": "If you don’t defend against Medicaid estate recovery, states are required to go looking for reimbursement, and real estate is often the only asset left.",
+      "link": "https://www.marketwatch.com/story/yes-the-government-can-take-your-home-after-a-medicaid-recipient-dies-heres-how-to-protect-yourself-fab0aafa?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 25 Aug 2026 12:30:00 GMT"
+    },
+    {
+      "id": "a7942e92be",
+      "title": "Major Alibaba figures make purchases as Chinese giant sells $10 billion of stock",
+      "summary": "Major Alibaba shareholders have made big share purchases ahead of vital secondary market offering",
+      "link": "https://www.marketwatch.com/story/major-alibaba-figures-make-purchases-as-chinese-giant-sells-10-billion-of-stock-879b52ec?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 25 Aug 2026 12:22:00 GMT"
     },
     {
       "id": "efab50d6d7",
@@ -445,7 +461,31 @@
       "summary": "“We don’t know whether they have signed leases or are renting month to month.”",
       "link": "https://www.marketwatch.com/story/my-father-in-law-passed-away-leaving-a-house-with-tenants-do-i-evict-them-f974428c?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Tue, 25 Aug 2026 00:00:00 GMT"
+      "published": "Tue, 25 Aug 2026 12:16:00 GMT"
+    },
+    {
+      "id": "1b243dc8c2",
+      "title": "Oil prices decline as investors brush aside Bessent’s ‘economic D-Day’ threat against Iran",
+      "summary": "Oil prices declined on Tuesday as traders shrugged off U.S. threats of an ”economic D-Day” against Iran, while a flurry of headlines helped to renew hopes that the conflict could soon come to an end.",
+      "link": "https://www.marketwatch.com/story/oil-prices-decline-as-investors-brush-aside-bessents-economic-d-day-for-iran-f318b614?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 25 Aug 2026 12:14:00 GMT"
+    },
+    {
+      "id": "4b316ed8fb",
+      "title": "Why hire a warehouse worker for $30 per hour when a robot costs $10? JPMorgan expects booming humanoid demand.",
+      "summary": "The U.S. manufacturing industry will turn to robots to fill open jobs, according to JPMorgan research.",
+      "link": "https://www.marketwatch.com/story/why-hire-a-warehouse-worker-for-30-per-hour-when-a-robot-costs-10-jpmorgan-expects-booming-humanoid-demand-9cc6ddf4?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 25 Aug 2026 11:49:00 GMT"
+    },
+    {
+      "id": "04e6b77cb8",
+      "title": "The debt-fueled AI build-out may already be too big to fail",
+      "summary": "The Federal Reserve’s pandemic corporate credit facilities have capped downside risks and remain part of its tool kit, says BofA Global",
+      "link": "https://www.marketwatch.com/story/the-debt-fueled-ai-build-out-may-already-be-too-big-to-fail-02ed6dad?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 25 Aug 2026 11:12:00 GMT"
     },
     {
       "id": "4e3771aea1",
@@ -453,155 +493,115 @@
       "summary": "“I also own my home and an SUV outright, with no outstanding debt.”",
       "link": "https://www.marketwatch.com/story/my-main-goal-is-to-help-people-im-single-74-with-10-million-burning-a-hole-in-my-pocket-what-should-i-do-0e6112e1?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Mon, 24 Aug 2026 23:45:00 GMT"
+      "published": "Tue, 25 Aug 2026 10:01:00 GMT"
     },
     {
-      "id": "2eac9af80e",
-      "title": "Visa and Mastercard stocks hit fresh records, underscoring a resilient U.S. consumer",
-      "summary": "Aggregate spending has been strong, even if American shoppers are getting choosier about what they buy.",
-      "link": "https://www.marketwatch.com/story/visa-and-mastercard-shares-hit-fresh-records-underscoring-a-resilient-u-s-consumer-ef328548?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Mon, 24 Aug 2026 21:55:00 GMT"
-    },
-    {
-      "id": "08a588c092",
-      "title": "SpaceX plans to put Nvidia-powered AI satellites in orbit next year",
-      "summary": "Elon Musk’s company now plans to launch orbital data centers by the end of next year.",
-      "link": "https://www.marketwatch.com/story/spacex-plans-to-put-nvidia-powered-ai-satellites-in-orbit-next-year-ab57083c?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Mon, 24 Aug 2026 21:26:00 GMT"
-    },
-    {
-      "id": "2fafabd2d4",
-      "title": "Here’s how overvalued the stock market really is",
-      "summary": "Valuations today are so stretched that it may not take much more straw to break the camel’s back.",
-      "link": "https://www.marketwatch.com/story/heres-how-overvalued-the-stock-market-really-is-f26540c5?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Mon, 24 Aug 2026 20:54:00 GMT"
-    },
-    {
-      "id": "c440655a84",
-      "title": "It’s time to bet big on Nvidia’s stock, says this analyst who thinks the market has it all wrong",
-      "summary": "Nvidia’s controversial financial plays could actually keep the company on top, according to this analysis.",
-      "link": "https://www.marketwatch.com/story/its-time-to-bet-big-on-nvidias-stock-says-this-analyst-who-thinks-the-market-has-it-all-wrong-4388d3a6?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Mon, 24 Aug 2026 20:50:00 GMT"
-    },
-    {
-      "id": "b1ceed0191",
-      "title": "Ford’s $3 billion Canadian bet is getting caught in trade-war crosshairs",
-      "summary": "While certain U.S. sectors are facing headwinds from the new tariffs on Canadian goods, analysts have said the broad economic effects of the new 50% U.S. levies could be modest for the U.S. overall.",
-      "link": "https://www.marketwatch.com/story/u-s-automakers-and-home-builders-are-among-the-big-losers-as-trump-launches-a-trade-war-against-canada-063c1d4c?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Mon, 24 Aug 2026 20:22:00 GMT"
-    },
-    {
-      "id": "391355839c",
-      "title": "German business sentiment rises more than expected in August, Ifo survey finds",
+      "id": "d5a51d973b",
+      "title": "Earnings call transcript: Jacktel posts strong Q2 2026 revenue beat as shares rise",
       "summary": "",
-      "link": "https://www.investing.com/news/economic-indicators/german-business-sentiment-rises-more-than-expected-in-august-ifo-survey-finds-4874620",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-jacktel-posts-strong-q2-2026-revenue-beat-as-shares-rise-93CH-4875370",
       "source": "www.investing.com",
-      "published": "2026-08-25 08:12:41"
+      "published": "2026-08-25 12:45:46"
     },
     {
-      "id": "9cf03fb183",
-      "title": "Klaveness Q2 2026 slides: EBITDA surges 31% amid Middle East crisis",
+      "id": "4b5decba7c",
+      "title": "Earnings call transcript: Gabler Group tops H1 2026 sales guidance, shares rise",
       "summary": "",
-      "link": "https://www.investing.com/news/company-news/klaveness-q2-2026-slides-ebitda-surges-31-amid-middle-east-crisis-93CH-4874619",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-gabler-group-tops-h1-2026-sales-guidance-shares-rise-93CH-4875366",
       "source": "www.investing.com",
-      "published": "2026-08-25 08:12:22"
+      "published": "2026-08-25 12:44:18"
     },
     {
-      "id": "33c708bc0c",
-      "title": "Volex stock surges on upbeat fiscal 2027 profit forecast",
+      "id": "5b18426e57",
+      "title": "Wall Street set for a higher open amid falling oil prices and Treasury yields",
       "summary": "",
-      "link": "https://www.investing.com/news/stock-market-news/volex-stock-surges-on-upbeat-fiscal-2027-profit-forecast-93CH-4874613",
+      "link": "https://www.investing.com/news/stock-market-news/wall-st-futures-steady-as-investors-brace-for-nvidia-results-fed-signals-4874359",
       "source": "www.investing.com",
-      "published": "2026-08-25 08:10:24"
+      "published": "2026-08-25 12:39:47"
     },
     {
-      "id": "3335bbff49",
-      "title": "EPIC Suisse H1 2026 slides: profit rises, guidance lifted on disposal gain",
+      "id": "7b92a45257",
+      "title": "Earnings call transcript: Tuniu posts small profit in Q2 2026 as travel mix shifts",
       "summary": "",
-      "link": "https://www.investing.com/news/company-news/epic-suisse-h1-2026-slides-profit-rises-guidance-lifted-on-disposal-gain-93CH-4874609",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-tuniu-posts-small-profit-in-q2-2026-as-travel-mix-shifts-93CH-4875342",
       "source": "www.investing.com",
-      "published": "2026-08-25 08:08:42"
+      "published": "2026-08-25 12:39:44"
     },
     {
-      "id": "72fa2bacda",
-      "title": "Earnings call transcript: Solwers posts weaker Q2 2026 results as margins shrink",
+      "id": "381e7d69e1",
+      "title": "Average weekly U.S. private payrolls rise 11,750 in four weeks ending Aug 8 - ADP",
       "summary": "",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-solwers-posts-weaker-q2-2026-results-as-margins-shrink-93CH-4874608",
+      "link": "https://www.investing.com/news/economic-indicators/average-weekly-us-private-payrolls-rise-11750-in-four-weeks-ending-aug-8--adp-4875339",
       "source": "www.investing.com",
-      "published": "2026-08-25 08:07:58"
+      "published": "2026-08-25 12:37:37"
     },
     {
-      "id": "bd851de089",
-      "title": "Jefferies initiates Curbline Properties stock with buy on consolidation opportunity",
+      "id": "7f3349db16",
+      "title": "Building permits rise 4.3%, missing forecast but showing improvement",
       "summary": "",
-      "link": "https://www.investing.com/news/analyst-ratings/jefferies-initiates-curbline-properties-stock-with-buy-on-consolidation-opportunity-93CH-4874607",
+      "link": "https://www.investing.com/news/economic-indicators/building-permits-rise-43-missing-forecast-but-showing-improvement-93CH-4875335",
       "source": "www.investing.com",
-      "published": "2026-08-25 08:07:28"
+      "published": "2026-08-25 12:34:38"
     },
     {
-      "id": "ba5f4f461f",
-      "title": "Natural gas rally pauses after ’D-Day’ Iran threats fail to shock supply",
+      "id": "b4a02c8aba",
+      "title": "Morgan Stanley Ranks These EU Diagnostics Stocks by China Reform Risk",
       "summary": "",
-      "link": "https://www.investing.com/news/commodities-news/natural-gas-rally-pauses-after-dday-iran-threats-fail-to-shock-supply-4874606",
+      "link": "https://www.investing.com/news/stock-market-news/morgan-stanley-ranks-these-eu-diagnostics-stocks-by-china-reform-risk-93CH-4875334",
       "source": "www.investing.com",
-      "published": "2026-08-25 08:07:01"
+      "published": "2026-08-25 12:34:11"
     },
     {
-      "id": "6584dc36ed",
-      "title": "EPIC Suisse H1 2026 slides: profit rises, guidance lifted on rental growth",
+      "id": "8ad26440f6",
+      "title": "Earnings call transcript: BMO tops Q3 2026 estimates as profit rises 22%",
       "summary": "",
-      "link": "https://www.investing.com/news/company-news/epic-suisse-h1-2026-slides-profit-rises-guidance-lifted-on-rental-growth-93CH-4874605",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-bmo-tops-q3-2026-estimates-as-profit-rises-22-93CH-4875332",
       "source": "www.investing.com",
-      "published": "2026-08-25 08:06:47"
+      "published": "2026-08-25 12:33:43"
     },
     {
-      "id": "9783949f57",
-      "title": "Why is DIGI Spain Telecom stock surging to a new 52-week high today?",
+      "id": "d73aa66215",
+      "title": "Earnings call transcript: FluoGuide advances U.S. cancer trial setup in H1 2026",
       "summary": "",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-digi-spain-telecom-stock-surging-to-a-new-52week-high-today-93CH-4874604",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-fluoguide-advances-us-cancer-trial-setup-in-h1-2026-93CH-4875331",
       "source": "www.investing.com",
-      "published": "2026-08-25 08:06:13"
+      "published": "2026-08-25 12:33:35"
     },
     {
-      "id": "cd8c15afef",
-      "title": "DAX squeezed at key resistance cluster: Live levels",
+      "id": "c730955f8f",
+      "title": "Earnings call transcript: Vipshop Q2 2026 profit miss weighs on shares",
       "summary": "",
-      "link": "https://www.investing.com/news/stock-market-news/dax-trapped-in-tight-range-near-26133-hourly-levels-93CH-4872815",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-vipshop-q2-2026-profit-miss-weighs-on-shares-93CH-4875316",
       "source": "www.investing.com",
-      "published": "2026-08-25 08:05:38"
+      "published": "2026-08-25 12:32:30"
     }
   ],
   "briefing": {
     "date": "2026-08-25",
-    "update_time": "2026-08-25 01:27:27",
+    "update_time": "2026-08-25 12:50:32",
     "candidate_count": 20,
-    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-25\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 微软画图与照片的隐形水印：你的本地文件也逃不过\"溯源\" (来源: Hacker News)\n- **核心干货**：逆向工程发现，Win11 自带的画图（MS Paint）和照片（Photos）应用即使处理纯本地生成的文件，也会在图像中嵌入包含 GUID 的隐形水印。这意味着你的截图、涂鸦、甚至随手 P 的图，都在无声无息地携带一串唯一指纹。\n- **毒舌/硬核点评**：你以为你只是画了个火柴人，微软却把它当成了证据链的起点。这波操作，与其说是保护创作者，不如说是给\"数字原住民\"集体纹了身——还是洗不掉的那种。\n- **🔗 传送门**：[点击直达原链接](https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/)\n\n---\n\n### 2. 📌 小米新 CPU 单核追平苹果，多核直接超车？ (来源: Hacker News)\n- **核心干货**：据 Daniel Lemire 转发称，小米新款 CPU 在单核性能上已与 Apple 核心持平，而多核性能则大幅领先。如果属实，这标志着手机 SoC 性能格局的又一次重大洗牌，尤其是在高通和联发科逐渐拉不开差距的当下。\n- **毒舌/硬核点评**：单核追平、多核反超？这剧本三年前在 PC 端刚演过一遍，现在轮到移动端了。苹果的\"挤牙膏\"终于把这群追赶者喂成了\"饿狼\"，不过建议先跑个 Geekbench 降降温，别让 PPT 先飞一会儿。\n- **🔗 传送门**：[点击直达原链接](https://twitter.com/lemire/status/2091894299289874926)\n\n---\n\n### 3. 📌 JPEG XL 终于要进 Firefox 了？Mozilla 发布 Intent to Ship (来源: Lobste.rs)\n- **核心干货**：Mozilla 宣布有意在 Firefox 中正式支持 JPEG XL 图片格式。这标志着这一高压缩率、支持无损和有损的现代格式在浏览器支持上迈出关键一步，有望打破 Chrome 长期以来\"不感兴趣\"导致的僵局。\n- **毒舌/硬核点评**：JPEG XL 等了这么多年，终于不是\"PPT 里的未来\"了。不过，在 Chrome 大爷点头之前，这最多算是在 Firefox 的\"艺术长廊\"里多挂了一幅画，真正的普及还得看隔壁脸色。\n- **🔗 传送门**：[点击直达原链接](https://hacks.mozilla.org/2026/08/intent-to-ship-jpeg-xl/)\n\n---\n\n### 🗣️ 今日顶男金句\n**\"别抱怨水印无处不在，先想想自己的代码里有没有留下别人的指纹。\"** —— 在数字世界，不追溯，即失联。",
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-25\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 微软画图/照片应用暗藏隐形水印，连本地生成的图片都不放过 (来源: Hacker News)\n- **核心干货**：安全研究员逆向发现，Windows 自带的画图和照片应用会在本地生成的图片中嵌入不可见的 GUID 水印。这意味着即使是完全离线、AI 生成的图片，也可能被追溯到具体的设备和应用实例。\n- **毒舌/硬核点评**：微软这波操作堪称\"数字时代的纹身\"，你以为你在本地创作，其实系统早就给你盖了隐形戳。建议改名叫\"微软牌数字狗皮膏药\"，专治各种隐私妄想症。\n- **🔗 传送门**：[点击直达原链接](https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/)\n\n---\n\n### 2. 📌 你的可执行文件就是一个 SQLite 数据库 (来源: Lobste.rs)\n- **核心干货**：一种新颖的构建思路：将 SQLite 数据库直接作为可执行文件格式。代码和资源以表结构存储，运行时动态解析执行，理论上可以实现零依赖、可查询、可热更新的二进制。这为软件分发和模块化带来了全新的想象空间。\n- **毒舌/硬核点评**：以后排查 bug 不用再 `gdb` 了，直接 `SELECT * FROM stack_trace WHERE error = 'segfault'`。这波操作是把程序当数据库玩，建议命名为\"SQLite 成精计划\"。\n- **🔗 传送门**：[点击直达原链接](https://fzakaria.com/2026/08/23/your-executable-is-a-sqlite-database)\n\n---\n\n### 3. 📌 小米新 CPU 单核追平苹果，多核性能大幅领先 (来源: Hacker News)\n- **核心干货**：据可靠性能测试者爆料，小米新款自研 CPU 在单线程性能上已与苹果 A 系列旗舰核心持平，而多线程性能则实现大幅超越。这标志着国产自研芯片在微架构设计上取得了里程碑式的突破。\n- **毒舌/硬核点评**：苹果的\"挤牙膏\"式升级终于遇到了\"破壁人\"。不过建议小米先别急着开香槟，先看看功耗是不是也\"大幅领先\"了——毕竟性能跑分再好看，发热降频一秒回到解放前。\n- **🔗 传送门**：[点击直达原链接](https://twitter.com/lemire/status/2091894299289874926)\n\n---\n\n### 🗣️ 今日顶男金句\n**\"芯片要自研，程序要自举，人生要自律——别总想着走捷径，否则你连被隐形水印标记的资格都没有。\"**",
     "briefing_items": [
       {
-        "title": "微软画图与照片的隐形水印：你的本地文件也逃不过\"溯源\"",
+        "title": "微软画图/照片应用暗藏隐形水印，连本地生成的图片都不放过",
         "source": "Hacker News",
-        "summary": "逆向工程发现，Win11 自带的画图（MS Paint）和照片（Photos）应用即使处理纯本地生成的文件，也会在图像中嵌入包含 GUID 的隐形水印。这意味着你的截图、涂鸦、甚至随手 P 的图，都在无声无息地携带一串唯一指纹。",
-        "commentary": "你以为你只是画了个火柴人，微软却把它当成了证据链的起点。这波操作，与其说是保护创作者，不如说是给\"数字原住民\"集体纹了身——还是洗不掉的那种。",
+        "summary": "安全研究员逆向发现，Windows 自带的画图和照片应用会在本地生成的图片中嵌入不可见的 GUID 水印。这意味着即使是完全离线、AI 生成的图片，也可能被追溯到具体的设备和应用实例。",
+        "commentary": "微软这波操作堪称\"数字时代的纹身\"，你以为你在本地创作，其实系统早就给你盖了隐形戳。建议改名叫\"微软牌数字狗皮膏药\"，专治各种隐私妄想症。",
         "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/"
       },
       {
-        "title": "小米新 CPU 单核追平苹果，多核直接超车？",
-        "source": "Hacker News",
-        "summary": "据 Daniel Lemire 转发称，小米新款 CPU 在单核性能上已与 Apple 核心持平，而多核性能则大幅领先。如果属实，这标志着手机 SoC 性能格局的又一次重大洗牌，尤其是在高通和联发科逐渐拉不开差距的当下。",
-        "commentary": "单核追平、多核反超？这剧本三年前在 PC 端刚演过一遍，现在轮到移动端了。苹果的\"挤牙膏\"终于把这群追赶者喂成了\"饿狼\"，不过建议先跑个 Geekbench 降降温，别让 PPT 先飞一会儿。",
-        "url": "https://twitter.com/lemire/status/2091894299289874926"
+        "title": "你的可执行文件就是一个 SQLite 数据库",
+        "source": "Lobste.rs",
+        "summary": "一种新颖的构建思路：将 SQLite 数据库直接作为可执行文件格式。代码和资源以表结构存储，运行时动态解析执行，理论上可以实现零依赖、可查询、可热更新的二进制。这为软件分发和模块化带来了全新的想象空间。",
+        "commentary": "以后排查 bug 不用再 `gdb` 了，直接 `SELECT * FROM stack_trace WHERE error = 'segfault'`。这波操作是把程序当数据库玩，建议命名为\"SQLite 成精计划\"。",
+        "url": "https://fzakaria.com/2026/08/23/your-executable-is-a-sqlite-database"
       },
       {
-        "title": "JPEG XL 终于要进 Firefox 了？Mozilla 发布 Intent to Ship",
-        "source": "Lobste.rs",
-        "summary": "Mozilla 宣布有意在 Firefox 中正式支持 JPEG XL 图片格式。这标志着这一高压缩率、支持无损和有损的现代格式在浏览器支持上迈出关键一步，有望打破 Chrome 长期以来\"不感兴趣\"导致的僵局。",
-        "commentary": "JPEG XL 等了这么多年，终于不是\"PPT 里的未来\"了。不过，在 Chrome 大爷点头之前，这最多算是在 Firefox 的\"艺术长廊\"里多挂了一幅画，真正的普及还得看隔壁脸色。",
-        "url": "https://hacks.mozilla.org/2026/08/intent-to-ship-jpeg-xl/"
+        "title": "小米新 CPU 单核追平苹果，多核性能大幅领先",
+        "source": "Hacker News",
+        "summary": "据可靠性能测试者爆料，小米新款自研 CPU 在单线程性能上已与苹果 A 系列旗舰核心持平，而多线程性能则实现大幅超越。这标志着国产自研芯片在微架构设计上取得了里程碑式的突破。",
+        "commentary": "苹果的\"挤牙膏\"式升级终于遇到了\"破壁人\"。不过建议小米先别急着开香槟，先看看功耗是不是也\"大幅领先\"了——毕竟性能跑分再好看，发热降频一秒回到解放前。",
+        "url": "https://twitter.com/lemire/status/2091894299289874926"
       }
     ],
     "candidates": [
@@ -611,8 +611,8 @@
         "summary": "",
         "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
         "source": "Hacker News",
-        "score": 558,
-        "comments": 224
+        "score": 756,
+        "comments": 365
       },
       {
         "id": "lob:8ttu5n",
@@ -620,8 +620,8 @@
         "summary": "",
         "url": "https://fzakaria.com/2026/08/23/your-executable-is-a-sqlite-database",
         "source": "Lobste.rs",
-        "score": 168,
-        "comments": 15,
+        "score": 186,
+        "comments": 17,
         "tags": [
           "databases",
           "linux",
@@ -629,76 +629,13 @@
         ]
       },
       {
-        "id": "hn:49420873",
-        "title": "Xiaomi: New CPU matches Apple cores single threaded, much faster multithreaded",
-        "summary": "<a href=\"https:&#x2F;&#x2F;xcancel.com&#x2F;lemire&#x2F;status&#x2F;2091894299289874926\" rel=\"nofollow\">https:&#x2F;&#x2F;xcancel.com&#x2F;lemire&#x2F;status&#x2F;2091894299289874926</a>",
-        "url": "https://twitter.com/lemire/status/2091894299289874926",
-        "source": "Hacker News",
-        "score": 722,
-        "comments": 487
-      },
-      {
-        "id": "hn:49422784",
-        "title": "The entire city of San Francisco as a video game",
-        "summary": "<a href=\"https:&#x2F;&#x2F;twitter.com&#x2F;cdngdev&#x2F;status&#x2F;2091909073038082139\" rel=\"nofollow\">https:&#x2F;&#x2F;twitter.com&#x2F;cdngdev&#x2F;status&#x2F;2091909073038082139</a>, <a href=\"https:&#x2F;&#x2F;xcancel.com&#x2F;cdngdev&#x2F;status&#x2F;2091909073038082139\" rel=\"nofollow\">https",
-        "url": "https://sf.thijs.gg/",
-        "source": "Hacker News",
-        "score": 337,
-        "comments": 118
-      },
-      {
-        "id": "hn:49419237",
-        "title": "How Europe is killing makers and micro-entrepreneurs",
-        "summary": "",
-        "url": "https://lectronz.com/u/lectronz/articles/how-europe-is-killing-makers-and-micro-entrepreneurs",
-        "source": "Hacker News",
-        "score": 1053,
-        "comments": 654
-      },
-      {
-        "id": "hn:49424606",
-        "title": "Oceans hit highest temperature on record",
-        "summary": "",
-        "url": "https://www.bbc.com/news/articles/c62m4gpnp78o",
-        "source": "Hacker News",
-        "score": 389,
-        "comments": 283
-      },
-      {
-        "id": "hn:49426564",
-        "title": "iCloud+ Hide My Email addresses will remain on icloud.com",
-        "summary": "",
-        "url": "https://developer.apple.com/news/?id=1ptvdtcm",
-        "source": "Hacker News",
-        "score": 210,
-        "comments": 46
-      },
-      {
-        "id": "hn:49421489",
-        "title": "IPFS Maintainers Winding Down",
-        "summary": "",
-        "url": "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/",
-        "source": "Hacker News",
-        "score": 321,
-        "comments": 162
-      },
-      {
-        "id": "hn:49421536",
-        "title": "Jabber/XMPP: 25 Years of Digital Independence",
-        "summary": "",
-        "url": "https://gultsch.de/posts/25-years-of-digital-independence/",
-        "source": "Hacker News",
-        "score": 167,
-        "comments": 64
-      },
-      {
         "id": "lob:plmwzl",
         "title": "Perspec 1.0: A Haskell desktop app for perspective correction of document photos",
         "summary": "",
         "url": "https://adriansieber.com/announcing-perspec-1-0/",
         "source": "Lobste.rs",
-        "score": 25,
-        "comments": 13,
+        "score": 34,
+        "comments": 17,
         "tags": [
           "graphics",
           "haskell",
@@ -706,29 +643,40 @@
         ]
       },
       {
-        "id": "lob:wxjtxq",
-        "title": "Can a blog post be handwritten?",
+        "id": "hn:49426564",
+        "title": "iCloud+ Hide My Email addresses will remain on icloud.com",
         "summary": "",
-        "url": "https://diggingforfire.blog/posts/can-a-blog-post-be-handwritten/",
-        "source": "Lobste.rs",
-        "score": 31,
-        "comments": 17,
-        "tags": [
-          "a11y",
-          "web"
-        ]
+        "url": "https://developer.apple.com/news/?id=1ptvdtcm",
+        "source": "Hacker News",
+        "score": 512,
+        "comments": 155
       },
       {
-        "id": "lob:ll6pak",
-        "title": "Replicating Reddit's best feature on other forums",
+        "id": "hn:49420873",
+        "title": "Xiaomi: New CPU matches Apple cores single threaded, much faster multithreaded",
+        "summary": "<a href=\"https:&#x2F;&#x2F;xcancel.com&#x2F;lemire&#x2F;status&#x2F;2091894299289874926\" rel=\"nofollow\">https:&#x2F;&#x2F;xcancel.com&#x2F;lemire&#x2F;status&#x2F;2091894299289874926</a>",
+        "url": "https://twitter.com/lemire/status/2091894299289874926",
+        "source": "Hacker News",
+        "score": 914,
+        "comments": 654
+      },
+      {
+        "id": "hn:49419237",
+        "title": "How Europe is killing makers and micro-entrepreneurs",
         "summary": "",
-        "url": "https://xavd.id/blog/post/highlighting-users/",
-        "source": "Lobste.rs",
-        "score": 76,
-        "comments": 18,
-        "tags": [
-          "culture"
-        ]
+        "url": "https://lectronz.com/u/lectronz/articles/how-europe-is-killing-makers-and-micro-entrepreneurs",
+        "source": "Hacker News",
+        "score": 1460,
+        "comments": 917
+      },
+      {
+        "id": "hn:49422784",
+        "title": "The entire city of San Francisco as a video game",
+        "summary": "<a href=\"https:&#x2F;&#x2F;twitter.com&#x2F;cdngdev&#x2F;status&#x2F;2091909073038082139\" rel=\"nofollow\">https:&#x2F;&#x2F;twitter.com&#x2F;cdngdev&#x2F;status&#x2F;2091909073038082139</a>, <a href=\"https:&#x2F;&#x2F;xcancel.com&#x2F;cdngdev&#x2F;status&#x2F;2091909073038082139\" rel=\"nofollow\">https",
+        "url": "https://sf.thijs.gg/",
+        "source": "Hacker News",
+        "score": 516,
+        "comments": 149
       },
       {
         "id": "hn:49422800",
@@ -736,20 +684,39 @@
         "summary": "",
         "url": "https://daily.jstor.org/where-did-all-the-public-bathrooms-go/",
         "source": "Hacker News",
-        "score": 152,
-        "comments": 300
+        "score": 277,
+        "comments": 593
       },
       {
-        "id": "lob:0typpq",
-        "title": "I cannot survive from burnout",
-        "summary": "<p>I burned out two years ago, went through a divorce, and relocated to a new city. I live alone now and care for seven cats.</p>\n<p>Over the last two years, I’ve tried forcing discipline, making detailed plans, and restarting over and over. Despite this, I’m still carrying significant debt.</p>\n<p>",
-        "url": "https://lobste.rs/s/0typpq/i_cannot_survive_from_burnout",
+        "id": "lob:wxjtxq",
+        "title": "Can a blog post be handwritten?",
+        "summary": "",
+        "url": "https://diggingforfire.blog/posts/can-a-blog-post-be-handwritten/",
         "source": "Lobste.rs",
-        "score": 117,
-        "comments": 33,
+        "score": 55,
+        "comments": 24,
         "tags": [
-          "person"
+          "a11y",
+          "web"
         ]
+      },
+      {
+        "id": "hn:49427001",
+        "title": "Bookshelf – Self-hosted eBook library that runs on object storage",
+        "summary": "",
+        "url": "https://github.com/murerkinn/bookshelf",
+        "source": "Hacker News",
+        "score": 121,
+        "comments": 46
+      },
+      {
+        "id": "hn:49428121",
+        "title": "How Universities Should Prepare Founders",
+        "summary": "",
+        "url": "https://paulgraham.com/prepare.html",
+        "source": "Hacker News",
+        "score": 163,
+        "comments": 194
       },
       {
         "id": "lob:rehaa3",
@@ -757,46 +724,54 @@
         "summary": "",
         "url": "https://lists.gnu.org/archive/html/info-gnu-emacs/2026-08/msg00004.html",
         "source": "Lobste.rs",
-        "score": 79,
-        "comments": 9,
+        "score": 90,
+        "comments": 12,
         "tags": [
           "emacs",
           "release"
         ]
       },
       {
-        "id": "lob:vcdk2q",
-        "title": "Everything I own, owned",
+        "id": "hn:49426466",
+        "title": "Moon (2024)",
         "summary": "",
-        "url": "https://schlarp.com/posts/everything-i-own-owned/",
+        "url": "https://ciechanow.ski/moon/",
+        "source": "Hacker News",
+        "score": 217,
+        "comments": 38
+      },
+      {
+        "id": "hn:49419252",
+        "title": "What's new in Emacs 31.1",
+        "summary": "",
+        "url": "https://www.masteringemacs.org/article/whats-new-in-emacs-311",
+        "source": "Hacker News",
+        "score": 186,
+        "comments": 42
+      },
+      {
+        "id": "lob:gzddgr",
+        "title": "AI Coding will Prevent Expertise",
+        "summary": "",
+        "url": "https://larsfaye.com/articles/ai-coding-will-prevent-expertise",
         "source": "Lobste.rs",
-        "score": 49,
-        "comments": 17,
+        "score": 46,
+        "comments": 13,
         "tags": [
-          "security",
           "vibecoding"
         ]
       },
       {
-        "id": "lob:slaivx",
-        "title": "offgrid electric car (2025)",
-        "summary": "",
-        "url": "https://joeyh.name/blog/entry/offgrid_electric_car/",
+        "id": "lob:0typpq",
+        "title": "I cannot survive from burnout",
+        "summary": "<p>I burned out two years ago, went through a divorce, and relocated to a new city. I live alone now and care for seven cats.</p>\n<p>Over the last two years, I’ve tried forcing discipline, making detailed plans, and restarting over and over. Despite this, I’m still carrying significant debt.</p>\n<p>",
+        "url": "https://lobste.rs/s/0typpq/i_cannot_survive_from_burnout",
         "source": "Lobste.rs",
-        "score": 40,
-        "comments": 19,
+        "score": 183,
+        "comments": 70,
         "tags": [
-          "hardware"
+          "person"
         ]
-      },
-      {
-        "id": "hn:49425819",
-        "title": "One corner of China’s internet is insisting that the Tang Dynasty never existed",
-        "summary": "",
-        "url": "https://www.cnn.com/2026/08/19/style/china-tang-dynasty-never-existed-hoax-intl-hnk",
-        "source": "Hacker News",
-        "score": 123,
-        "comments": 98
       },
       {
         "id": "lob:26oj2u",
@@ -804,21 +779,44 @@
         "summary": "",
         "url": "https://hacks.mozilla.org/2026/08/intent-to-ship-jpeg-xl/",
         "source": "Lobste.rs",
-        "score": 48,
-        "comments": 8,
+        "score": 80,
+        "comments": 15,
         "tags": [
           "browsers",
           "graphics"
         ]
       },
       {
-        "id": "hn:49423539",
-        "title": "Octopus intelligence may be related to never-before-seen mutation",
+        "id": "arxiv:2608.23551v1",
+        "title": "ConvergeFlow: Language Flow with Provable Convergence to Token Embeddings",
+        "summary": "Recent advances in continuous diffusion and flow-based language models (LMs) have achieved performance competitive with discrete LMs. However, existing continuous frameworks still rely on decoders supervised with cross entropy (CE) because the flow trajectories are not guaranteed to terminate at val",
+        "url": "https://arxiv.org/abs/2608.23551v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.CL",
+          "cs.AI",
+          "cs.LG",
+          "stat.ML"
+        ],
+        "arxiv_id": "2608.23551v1"
+      },
+      {
+        "id": "hn:49428882",
+        "title": "Headlong: A Microharness for Persistent Agents",
         "summary": "",
-        "url": "https://www.smithsonianmag.com/smart-news/why-are-some-octopuses-so-smart-the-answer-might-lie-in-a-never-before-seen-mutation-that-helps-them-accurately-build-proteins-180989319/",
+        "url": "https://www.laude.org/updates/headlong-a-microharness-for-persistent-agents",
         "source": "Hacker News",
-        "score": 78,
-        "comments": 45
+        "score": 88,
+        "comments": 35
+      },
+      {
+        "id": "hn:49425800",
+        "title": "Vintage Artificial Intelligence: Before It Got Awkward",
+        "summary": "",
+        "url": "https://blog.archive.org/2026/08/16/vintage-artificial-intelligence-before-it-got-awkward/",
+        "source": "Hacker News",
+        "score": 121,
+        "comments": 23
       }
     ],
     "ai_curated": true
