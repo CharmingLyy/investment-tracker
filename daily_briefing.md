@@ -4,26 +4,26 @@
 
 ---
 
-### 1. 📌 OpenAI Jalapeño：自研芯片叫板 Blackwell (来源: Hacker News/SemiAnalysis)
-- **核心干货**：OpenAI 发布自研 AI 芯片 "Jalapeño"，在基准测试中宣称性能超越英伟达 Blackwell。这标志着 AI 巨头从"买芯片"转向"造芯片"，意图摆脱对英伟达的算力依赖，直接掌控 AI 时代的核心命脉。
-- **毒舌/硬核点评**：ChatGPT 的母公司终于不满足于只当"炼金术士"，开始自己挖矿了。嘴上喊着"超越 Blackwell"，但生态兼容性和大规模量产才是真正的"辣"点，别到时候又是 PPT 首发。
-- **🔗 传送门**：[点击直达原链接](https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia)
+### 1. 📌 Apple 发布 M6 与 M5 Ultra：库克牌"算力印钞机"又升级了 (来源: Hacker News | 1208 分)
+- **核心干货**：苹果正式发布 M6 芯片与 M5 Ultra，宣称在性能和 AI 算力上实现"大跃进"。M5 Ultra 瞄准工作站级算力，M6 则是为下一代 AI 推理与端侧大模型准备的"核弹"。这不仅是硬件迭代，更是苹果在端侧 AI 赛道上对 Nvidia 和高通发起的正面冲锋。
+- **毒舌/硬核点评**：苹果的芯片发布会总是这样——"我们不讲武德，但我们讲瓦数"。M6 一出，隔壁的 Nvidia 和 AMD 估计得连夜翻一翻自己的功耗墙，看看还能不能挤出几滴性能。毕竟，在端侧 AI 这桌牌局上，苹果手里的牌不仅有算力，还有那个让所有对手眼红的统一内存架构。
+- **🔗 传送门**：[Apple Newsroom 官方发布](https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/)
 
 ---
 
-### 2. 📌 Apple M6 & M5 Ultra：库克式"挤牙膏"终于挤出了大招 (来源: Hacker News/Apple)
-- **核心干货**：Apple 正式发布 M6 芯片与 M5 Ultra，专为"性能与 AI 算力"的跃升设计。苹果正试图将 Mac 系列彻底打造为本地 AI 计算的核心硬件，进一步模糊移动端与桌面端、乃至服务器端的算力边界。
-- **毒舌/硬核点评**：看到"大跃升"三个字，我下意识摸了摸钱包。M 系列芯片每年都在"改变世界"，但我的老 Intel Mac 还在等着我含泪升级。不过话说回来，这波 AI 算力提升，确实让隔壁"等等党"的耐心受到了终极考验。
-- **🔗 传送门**：[点击直达原链接](https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/)
+### 2. 📌 OpenAI "Jalapeño"芯片曝光：宣称性能超越 Nvidia Blackwell (来源: Hacker News | 526 分)
+- **核心干货**：OpenAI 自研的 AI 芯片 "Jalapeño" 浮出水面，且据称在测试中性能优于 Nvidia 的 Blackwell 系列。这标志着 OpenAI 正式从 Nvidia 的最大客户，转变为最具威慑力的潜在对手。如果消息属实，AI 算力市场的定价权和话语权将面临一次大洗牌。
+- **毒舌/硬核点评**：Sam Altman 这是把 "Don't be evil" 刻在了硅片上？虽然性能数据目前还像玄学一样神秘，但这条消息的震撼力不亚于当年谷歌造 TPU。Nvidia 的护城河很深，但 OpenAI 手里握着 "需求定义权"——知道自己需要什么算力，比单纯堆晶体管重要得多。Jalapeño 够不够辣，还得看它能不能量产。
+- **🔗 传送门**：[SemiAnalysis 深度分析](https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia)
 
 ---
 
-### 3. 📌 FDA 批准首款连续监测酮体与血糖的可穿戴设备 (来源: Hacker News/FDA)
-- **核心干货**：FDA 批准了首款可同时连续监测酮体和血糖水平的穿戴设备。这不仅是生酮饮食爱好者的福音，更是代谢健康管理从"主观感觉"走向"实时数据驱动"的里程碑，尤其对糖尿病和减重人群意义重大。
-- **毒舌/硬核点评**：以后低碳水饮食失败，终于不能赖"体质"了，数据会无情地打脸。这是硅谷"量化自我"运动对医疗级硬件的又一次成功策反，建议各大健身房直接把这玩意儿列为标配。
-- **🔗 传送门**：[点击直达原链接](https://www.fda.gov/news-events/press-announcements/fda-authorizes-first-wearable-device-continuously-monitors-both-ketone-levels-and-blood-sugar)
+### 3. 📌 LAION-BVD：1000 万小时开放视频数据集，喂饱下一代多模态模型 (来源: ArXiv | cs.CV)
+- **核心干货**：LAION 团队发布了 BVD 数据集，包含 1000 万小时的视频数据（由 8000 万个视频组成）。这是目前最大的开放视频数据集之一，专为多模态预训练设计。对于所有研究视频理解、具身智能和世界模型的团队来说，这简直是"天上掉馅饼"级别的资源，直接省去了爬取和清洗数据的痛苦。
+- **毒舌/硬核点评**：1000 万小时？这得让多少标注员和爬虫工程师瞬间失业。但换个角度看，这可能是未来 5 年最值钱的"数据石油"。毕竟，谁掌握了视频数据，谁就掌握了理解物理世界的钥匙。建议各位研究员先放下手里的论文，赶紧去下载一份，晚了可能连服务器带宽都抢不到。
+- **🔗 传送门**：[ArXiv 论文链接](https://arxiv.org/abs/2608.24845v1)
 
 ---
 
 ### 🗣️ 今日顶男金句
-"技术演进的本质，就是把昨天的'不可思议'，变成今天的'理所当然'，再变成明天的'祖传代码'。别只顾着升级硬件，记得同步升级你的认知。"
+"算力是燃料，数据是地图。当你手握 1000 万小时视频和一颗自研芯片时，别问路在何方——路就在你脚下，而且是你自己铺的。"

@@ -1,54 +1,49 @@
 {
   "date": "2026-08-26",
-  "update_time": "2026-08-26 01:38:05",
+  "update_time": "2026-08-26 12:55:18",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-26\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 OpenAI Jalapeño：自研芯片叫板 Blackwell (来源: Hacker News/SemiAnalysis)\n- **核心干货**：OpenAI 发布自研 AI 芯片 \"Jalapeño\"，在基准测试中宣称性能超越英伟达 Blackwell。这标志着 AI 巨头从\"买芯片\"转向\"造芯片\"，意图摆脱对英伟达的算力依赖，直接掌控 AI 时代的核心命脉。\n- **毒舌/硬核点评**：ChatGPT 的母公司终于不满足于只当\"炼金术士\"，开始自己挖矿了。嘴上喊着\"超越 Blackwell\"，但生态兼容性和大规模量产才是真正的\"辣\"点，别到时候又是 PPT 首发。\n- **🔗 传送门**：[点击直达原链接](https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia)\n\n---\n\n### 2. 📌 Apple M6 & M5 Ultra：库克式\"挤牙膏\"终于挤出了大招 (来源: Hacker News/Apple)\n- **核心干货**：Apple 正式发布 M6 芯片与 M5 Ultra，专为\"性能与 AI 算力\"的跃升设计。苹果正试图将 Mac 系列彻底打造为本地 AI 计算的核心硬件，进一步模糊移动端与桌面端、乃至服务器端的算力边界。\n- **毒舌/硬核点评**：看到\"大跃升\"三个字，我下意识摸了摸钱包。M 系列芯片每年都在\"改变世界\"，但我的老 Intel Mac 还在等着我含泪升级。不过话说回来，这波 AI 算力提升，确实让隔壁\"等等党\"的耐心受到了终极考验。\n- **🔗 传送门**：[点击直达原链接](https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/)\n\n---\n\n### 3. 📌 FDA 批准首款连续监测酮体与血糖的可穿戴设备 (来源: Hacker News/FDA)\n- **核心干货**：FDA 批准了首款可同时连续监测酮体和血糖水平的穿戴设备。这不仅是生酮饮食爱好者的福音，更是代谢健康管理从\"主观感觉\"走向\"实时数据驱动\"的里程碑，尤其对糖尿病和减重人群意义重大。\n- **毒舌/硬核点评**：以后低碳水饮食失败，终于不能赖\"体质\"了，数据会无情地打脸。这是硅谷\"量化自我\"运动对医疗级硬件的又一次成功策反，建议各大健身房直接把这玩意儿列为标配。\n- **🔗 传送门**：[点击直达原链接](https://www.fda.gov/news-events/press-announcements/fda-authorizes-first-wearable-device-continuously-monitors-both-ketone-levels-and-blood-sugar)\n\n---\n\n### 🗣️ 今日顶男金句\n\"技术演进的本质，就是把昨天的'不可思议'，变成今天的'理所当然'，再变成明天的'祖传代码'。别只顾着升级硬件，记得同步升级你的认知。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-26\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Apple 发布 M6 与 M5 Ultra：库克牌\"算力印钞机\"又升级了 (来源: Hacker News | 1208 分)\n- **核心干货**：苹果正式发布 M6 芯片与 M5 Ultra，宣称在性能和 AI 算力上实现\"大跃进\"。M5 Ultra 瞄准工作站级算力，M6 则是为下一代 AI 推理与端侧大模型准备的\"核弹\"。这不仅是硬件迭代，更是苹果在端侧 AI 赛道上对 Nvidia 和高通发起的正面冲锋。\n- **毒舌/硬核点评**：苹果的芯片发布会总是这样——\"我们不讲武德，但我们讲瓦数\"。M6 一出，隔壁的 Nvidia 和 AMD 估计得连夜翻一翻自己的功耗墙，看看还能不能挤出几滴性能。毕竟，在端侧 AI 这桌牌局上，苹果手里的牌不仅有算力，还有那个让所有对手眼红的统一内存架构。\n- **🔗 传送门**：[Apple Newsroom 官方发布](https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/)\n\n---\n\n### 2. 📌 OpenAI \"Jalapeño\"芯片曝光：宣称性能超越 Nvidia Blackwell (来源: Hacker News | 526 分)\n- **核心干货**：OpenAI 自研的 AI 芯片 \"Jalapeño\" 浮出水面，且据称在测试中性能优于 Nvidia 的 Blackwell 系列。这标志着 OpenAI 正式从 Nvidia 的最大客户，转变为最具威慑力的潜在对手。如果消息属实，AI 算力市场的定价权和话语权将面临一次大洗牌。\n- **毒舌/硬核点评**：Sam Altman 这是把 \"Don't be evil\" 刻在了硅片上？虽然性能数据目前还像玄学一样神秘，但这条消息的震撼力不亚于当年谷歌造 TPU。Nvidia 的护城河很深，但 OpenAI 手里握着 \"需求定义权\"——知道自己需要什么算力，比单纯堆晶体管重要得多。Jalapeño 够不够辣，还得看它能不能量产。\n- **🔗 传送门**：[SemiAnalysis 深度分析](https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia)\n\n---\n\n### 3. 📌 LAION-BVD：1000 万小时开放视频数据集，喂饱下一代多模态模型 (来源: ArXiv | cs.CV)\n- **核心干货**：LAION 团队发布了 BVD 数据集，包含 1000 万小时的视频数据（由 8000 万个视频组成）。这是目前最大的开放视频数据集之一，专为多模态预训练设计。对于所有研究视频理解、具身智能和世界模型的团队来说，这简直是\"天上掉馅饼\"级别的资源，直接省去了爬取和清洗数据的痛苦。\n- **毒舌/硬核点评**：1000 万小时？这得让多少标注员和爬虫工程师瞬间失业。但换个角度看，这可能是未来 5 年最值钱的\"数据石油\"。毕竟，谁掌握了视频数据，谁就掌握了理解物理世界的钥匙。建议各位研究员先放下手里的论文，赶紧去下载一份，晚了可能连服务器带宽都抢不到。\n- **🔗 传送门**：[ArXiv 论文链接](https://arxiv.org/abs/2608.24845v1)\n\n---\n\n### 🗣️ 今日顶男金句\n\"算力是燃料，数据是地图。当你手握 1000 万小时视频和一颗自研芯片时，别问路在何方——路就在你脚下，而且是你自己铺的。\"",
   "briefing_items": [
     {
-      "title": "OpenAI Jalapeño：自研芯片叫板 Blackwell",
-      "source": "Hacker News/SemiAnalysis",
-      "summary": "OpenAI 发布自研 AI 芯片 \"Jalapeño\"，在基准测试中宣称性能超越英伟达 Blackwell。这标志着 AI 巨头从\"买芯片\"转向\"造芯片\"，意图摆脱对英伟达的算力依赖，直接掌控 AI 时代的核心命脉。",
-      "commentary": "ChatGPT 的母公司终于不满足于只当\"炼金术士\"，开始自己挖矿了。嘴上喊着\"超越 Blackwell\"，但生态兼容性和大规模量产才是真正的\"辣\"点，别到时候又是 PPT 首发。",
-      "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia"
+      "title": "Apple 发布 M6 与 M5 Ultra：库克牌\"算力印钞机\"又升级了",
+      "source": "Hacker News | 1208 分",
+      "summary": "苹果正式发布 M6 芯片与 M5 Ultra，宣称在性能和 AI 算力上实现\"大跃进\"。M5 Ultra 瞄准工作站级算力，M6 则是为下一代 AI 推理与端侧大模型准备的\"核弹\"。这不仅是硬件迭代，更是苹果在端侧 AI 赛道上对 Nvidia 和高通发起的正面冲锋。",
+      "commentary": "苹果的芯片发布会总是这样——\"我们不讲武德，但我们讲瓦数\"。M6 一出，隔壁的 Nvidia 和 AMD 估计得连夜翻一翻自己的功耗墙，看看还能不能挤出几滴性能。毕竟，在端侧 AI 这桌牌局上，苹果手里的牌不仅有算力，还有那个让所有对手眼红的统一内存架构。",
+      "url": ""
     },
     {
-      "title": "Apple M6 & M5 Ultra：库克式\"挤牙膏\"终于挤出了大招",
-      "source": "Hacker News/Apple",
-      "summary": "Apple 正式发布 M6 芯片与 M5 Ultra，专为\"性能与 AI 算力\"的跃升设计。苹果正试图将 Mac 系列彻底打造为本地 AI 计算的核心硬件，进一步模糊移动端与桌面端、乃至服务器端的算力边界。",
-      "commentary": "看到\"大跃升\"三个字，我下意识摸了摸钱包。M 系列芯片每年都在\"改变世界\"，但我的老 Intel Mac 还在等着我含泪升级。不过话说回来，这波 AI 算力提升，确实让隔壁\"等等党\"的耐心受到了终极考验。",
-      "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/"
+      "title": "OpenAI \"Jalapeño\"芯片曝光：宣称性能超越 Nvidia Blackwell",
+      "source": "Hacker News | 526 分",
+      "summary": "OpenAI 自研的 AI 芯片 \"Jalapeño\" 浮出水面，且据称在测试中性能优于 Nvidia 的 Blackwell 系列。这标志着 OpenAI 正式从 Nvidia 的最大客户，转变为最具威慑力的潜在对手。如果消息属实，AI 算力市场的定价权和话语权将面临一次大洗牌。",
+      "commentary": "Sam Altman 这是把 \"Don't be evil\" 刻在了硅片上？虽然性能数据目前还像玄学一样神秘，但这条消息的震撼力不亚于当年谷歌造 TPU。Nvidia 的护城河很深，但 OpenAI 手里握着 \"需求定义权\"——知道自己需要什么算力，比单纯堆晶体管重要得多。Jalapeño 够不够辣，还得看它能不能量产。",
+      "url": ""
     },
     {
-      "title": "FDA 批准首款连续监测酮体与血糖的可穿戴设备",
-      "source": "Hacker News/FDA",
-      "summary": "FDA 批准了首款可同时连续监测酮体和血糖水平的穿戴设备。这不仅是生酮饮食爱好者的福音，更是代谢健康管理从\"主观感觉\"走向\"实时数据驱动\"的里程碑，尤其对糖尿病和减重人群意义重大。",
-      "commentary": "以后低碳水饮食失败，终于不能赖\"体质\"了，数据会无情地打脸。这是硅谷\"量化自我\"运动对医疗级硬件的又一次成功策反，建议各大健身房直接把这玩意儿列为标配。",
-      "url": "https://www.fda.gov/news-events/press-announcements/fda-authorizes-first-wearable-device-continuously-monitors-both-ketone-levels-and-blood-sugar"
+      "title": "LAION-BVD：1000 万小时开放视频数据集，喂饱下一代多模态模型",
+      "source": "ArXiv | cs.CV",
+      "summary": "LAION 团队发布了 BVD 数据集，包含 1000 万小时的视频数据（由 8000 万个视频组成）。这是目前最大的开放视频数据集之一，专为多模态预训练设计。对于所有研究视频理解、具身智能和世界模型的团队来说，这简直是\"天上掉馅饼\"级别的资源，直接省去了爬取和清洗数据的痛苦。",
+      "commentary": "1000 万小时？这得让多少标注员和爬虫工程师瞬间失业。但换个角度看，这可能是未来 5 年最值钱的\"数据石油\"。毕竟，谁掌握了视频数据，谁就掌握了理解物理世界的钥匙。建议各位研究员先放下手里的论文，赶紧去下载一份，晚了可能连服务器带宽都抢不到。",
+      "url": ""
     }
   ],
   "candidates": [
+    {
+      "id": "hn:49446422",
+      "title": "Z.ai confirms Ox Alpha is a new GLM-series model and will release its weights",
+      "summary": "",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-26/china-s-z-ai-made-ox-alpha-stealth-model-that-rivals-deepseek",
+      "source": "Hacker News",
+      "score": 200,
+      "comments": 87
+    },
     {
       "id": "hn:49433292",
       "title": "Apple introduces M6 and M5 Ultra",
       "summary": "<a href=\"https:&#x2F;&#x2F;techcrunch.com&#x2F;2026&#x2F;08&#x2F;25&#x2F;apple-debuts-its-most-powerful-chip-ever-in-m5-ultra-and-m6&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;techcrunch.com&#x2F;2026&#x2F;08&#x2F;25&#x2F;apple-debuts-its-most-powe...</a><p><a href=\"https:&#x2F;&#x2F;9to5mac.com&#x2F;2",
       "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
       "source": "Hacker News",
-      "score": 956,
-      "comments": 899
-    },
-    {
-      "id": "lob:8ttu5n",
-      "title": "Your executable is a SQLite database",
-      "summary": "",
-      "url": "https://fzakaria.com/2026/08/23/your-executable-is-a-sqlite-database",
-      "source": "Lobste.rs",
-      "score": 200,
-      "comments": 24,
-      "tags": [
-        "databases",
-        "linux",
-        "vibecoding"
-      ]
+      "score": 1208,
+      "comments": 1168
     },
     {
       "id": "hn:49439017",
@@ -56,8 +51,8 @@
       "summary": "",
       "url": "https://www.fda.gov/news-events/press-announcements/fda-authorizes-first-wearable-device-continuously-monitors-both-ketone-levels-and-blood-sugar",
       "source": "Hacker News",
-      "score": 255,
-      "comments": 145
+      "score": 449,
+      "comments": 209
     },
     {
       "id": "hn:49434378",
@@ -65,8 +60,8 @@
       "summary": "<a href=\"https:&#x2F;&#x2F;www.bloomberg.com&#x2F;news&#x2F;articles&#x2F;2026-08-25&#x2F;openai-claims-its-new-chips-can-outperform-nvidia-processors-in-tests\" rel=\"nofollow\">https:&#x2F;&#x2F;www.bloomberg.com&#x2F;news&#x2F;articles&#x2F;2026-08-25&#x2F;openai-cl...</a>, <a href=\"https:&#x2F;&#x2",
       "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
       "source": "Hacker News",
-      "score": 324,
-      "comments": 222
+      "score": 526,
+      "comments": 334
     },
     {
       "id": "hn:49433316",
@@ -74,57 +69,26 @@
       "summary": "",
       "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/",
       "source": "Hacker News",
-      "score": 702,
-      "comments": 447
+      "score": 788,
+      "comments": 525
     },
     {
-      "id": "hn:49433450",
-      "title": "New Mac mini, featuring M6 and M5 Pro",
+      "id": "hn:49445727",
+      "title": "RAG Is Simpler Than You Think",
       "summary": "",
-      "url": "https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/",
+      "url": "https://www.lighthousenewsletter.com/p/rag-is-simpler-than-you-think",
       "source": "Hacker News",
-      "score": 424,
-      "comments": 255
+      "score": 168,
+      "comments": 83
     },
     {
-      "id": "hn:49434820",
-      "title": "Bomb fishing is wreaking havoc on Indonesia's coral reefs",
+      "id": "hn:49442589",
+      "title": "Queryable Executables",
       "summary": "",
-      "url": "https://e360.yale.edu/digest/bomb-fishing-coral-reefs",
+      "url": "https://fzakaria.com/2026/08/24/actually-queryable-executables",
       "source": "Hacker News",
-      "score": 266,
-      "comments": 141
-    },
-    {
-      "id": "hn:49437283",
-      "title": "Nitter and XCancel receive cease and desist notices",
-      "summary": "<a href=\"https:&#x2F;&#x2F;github.com&#x2F;zedeus&#x2F;nitter&#x2F;issues&#x2F;1442\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;zedeus&#x2F;nitter&#x2F;issues&#x2F;1442</a><p><a href=\"https:&#x2F;&#x2F;xcancel.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;xcancel.com&#x2F;</a>",
-      "url": "https://github.com/zedeus/nitter/issues/1442",
-      "source": "Hacker News",
-      "score": 628,
-      "comments": 533
-    },
-    {
-      "id": "lob:wxjtxq",
-      "title": "Can a blog post be handwritten?",
-      "summary": "",
-      "url": "https://diggingforfire.blog/posts/can-a-blog-post-be-handwritten/",
-      "source": "Lobste.rs",
-      "score": 67,
-      "comments": 29,
-      "tags": [
-        "a11y",
-        "web"
-      ]
-    },
-    {
-      "id": "hn:49437210",
-      "title": "Black hole singularity is a surface not a point",
-      "summary": "",
-      "url": "https://arxiv.org/abs/2608.21590",
-      "source": "Hacker News",
-      "score": 184,
-      "comments": 125
+      "score": 245,
+      "comments": 67
     },
     {
       "id": "lob:jjspxh",
@@ -132,20 +96,20 @@
       "summary": "",
       "url": "https://www.crowdsupply.com/mnt-research/mnt-station",
       "source": "Lobste.rs",
-      "score": 55,
-      "comments": 22,
+      "score": 66,
+      "comments": 36,
       "tags": [
         "hardware"
       ]
     },
     {
-      "id": "hn:49441033",
-      "title": "Python's pre-declared constants are kinda weird",
+      "id": "hn:49447682",
+      "title": "Omarchy is full of security holes",
       "summary": "",
-      "url": "https://sebsite.pw/w/20260801-pythonconstants.html",
+      "url": "https://blog.happyfellow.dev/merchants-of-insecurity/",
       "source": "Hacker News",
-      "score": 140,
-      "comments": 111
+      "score": 142,
+      "comments": 121
     },
     {
       "id": "lob:e1oalq",
@@ -153,35 +117,10 @@
       "summary": "",
       "url": "https://www.eveonline.com/news/view/the-move-to-python-3-begins",
       "source": "Lobste.rs",
-      "score": 67,
-      "comments": 17,
+      "score": 115,
+      "comments": 31,
       "tags": [
         "python"
-      ]
-    },
-    {
-      "id": "lob:0typpq",
-      "title": "I cannot survive from burnout",
-      "summary": "<p>I burned out two years ago, went through a divorce, and relocated to a new city. I live alone now and care for seven cats.</p>\n<p>Over the last two years, I’ve tried forcing discipline, making detailed plans, and restarting over and over. Despite this, I’m still carrying significant debt.</p>\n<p>",
-      "url": "https://lobste.rs/s/0typpq/i_cannot_survive_from_burnout",
-      "source": "Lobste.rs",
-      "score": 223,
-      "comments": 92,
-      "tags": [
-        "person"
-      ]
-    },
-    {
-      "id": "lob:26oj2u",
-      "title": "Intent to Ship: JPEG XL",
-      "summary": "",
-      "url": "https://hacks.mozilla.org/2026/08/intent-to-ship-jpeg-xl/",
-      "source": "Lobste.rs",
-      "score": 106,
-      "comments": 16,
-      "tags": [
-        "browsers",
-        "graphics"
       ]
     },
     {
@@ -190,49 +129,115 @@
       "summary": "",
       "url": "https://blog.ihatereality.space/0C-never-type/",
       "source": "Lobste.rs",
-      "score": 79,
-      "comments": 13,
+      "score": 123,
+      "comments": 26,
       "tags": [
         "rust"
       ]
     },
     {
-      "id": "hn:49437483",
-      "title": "Run OpenBSD on DigitalOcean for $4/month",
-      "summary": "",
-      "url": "https://nil.wallyjones.com/run-openbsd-on-digitalocean-for-4month/",
-      "source": "Hacker News",
-      "score": 122,
-      "comments": 57
-    },
-    {
-      "id": "rss:522e167e04",
-      "title": "I built free, no-code Bluesky feeds for dev topics (Postgres, Redis, Docker) — no login, no LLM",
-      "summary": "Bluesky lets anyone publish a custom feed — a little server that decides which posts show up when someone opens it. The catch: building one normally means running a firehose consumer, a database, and a hosting bill, then hand-registering an app.bsky.feed.generator record. That's a lot of yak-shaving",
-      "url": "https://dev.to/snaplink/i-built-free-no-code-bluesky-feeds-for-dev-topics-postgres-redis-docker-no-login-no-llm-5b1a",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "hn:49440410",
-      "title": "When str.lower() is a security vulnerability in Python – Seth Larson",
-      "summary": "",
-      "url": "https://sethmlarson.dev/when-str-lower-is-a-security-vulnerability",
-      "source": "Hacker News",
-      "score": 58,
-      "comments": 29
-    },
-    {
-      "id": "lob:k5feqe",
-      "title": "Solving the 1+N query problem",
-      "summary": "",
-      "url": "https://acadia.engineering/blog/solving-the-1-plus-N-query-problem",
+      "id": "lob:0typpq",
+      "title": "I cannot survive from burnout",
+      "summary": "<p>I burned out two years ago, went through a divorce, and relocated to a new city. I live alone now and care for seven cats.</p>\n<p>Over the last two years, I’ve tried forcing discipline, making detailed plans, and restarting over and over. Despite this, I’m still carrying significant debt.</p>\n<p>",
+      "url": "https://lobste.rs/s/0typpq/i_cannot_survive_from_burnout",
       "source": "Lobste.rs",
-      "score": 18,
-      "comments": 25,
+      "score": 237,
+      "comments": 97,
       "tags": [
-        "databases"
+        "person"
       ]
+    },
+    {
+      "id": "hn:49395802",
+      "title": "Stalking the Wily Hacker: 40 years later – Cliff Stoll [video]",
+      "summary": "",
+      "url": "https://www.youtube.com/watch?v=656058JxTM0",
+      "source": "Hacker News",
+      "score": 151,
+      "comments": 44
+    },
+    {
+      "id": "hn:49446210",
+      "title": "XCancel and Nitter are receiving C&D letters from XCorp",
+      "summary": "https:&#x2F;&#x2F;xcancel.com\n&quot;On Monday 24th August at 8PM EST, we received at letter from X Corp. asking to cease and desist the service XCancel.\nThe service XCancel is stopped until further notice.\nWe are seeking legal advice and won&#x27;t share more details for now.\nThank you for the trust",
+      "url": "https://news.ycombinator.com/item?id=49446210",
+      "source": "Hacker News",
+      "score": 105,
+      "comments": 36
+    },
+    {
+      "id": "lob:4netv1",
+      "title": "C2PA Cameras Do Not Survive Contact With Reality",
+      "summary": "",
+      "url": "https://www.da.vidbuchanan.co.uk/blog/android-c2pa.html",
+      "source": "Lobste.rs",
+      "score": 53,
+      "comments": 7,
+      "tags": [
+        "android",
+        "cryptography",
+        "security"
+      ]
+    },
+    {
+      "id": "lob:ozkoqo",
+      "title": "Adding CPU affinity in a 24-core build machine made builds take longer",
+      "summary": "",
+      "url": "https://infosec.exchange/@david_chisnall/117156204452541109",
+      "source": "Lobste.rs",
+      "score": 50,
+      "comments": 5,
+      "tags": [
+        "hardware"
+      ]
+    },
+    {
+      "id": "lob:4wh5ng",
+      "title": "Migrating from Codeberg Pages to an OpenBSD VPS",
+      "summary": "",
+      "url": "https://nemin.hu/vps/index.html",
+      "source": "Lobste.rs",
+      "score": 36,
+      "comments": 4,
+      "tags": [
+        "openbsd",
+        "web"
+      ]
+    },
+    {
+      "id": "arxiv:2608.24870v1",
+      "title": "SPO++: Stream-Aligned Policy Optimization for Asynchronous Agentic RL",
+      "summary": "Group-relative reinforcement learning waits for sibling rollouts of the same prompt, which is costly for long and variable tool-use trajectories. Single-stream Policy Optimization (SPO) removes this dependency with a persistent prompt-level value estimate, but its recipe whitens one advantage per tr",
+      "url": "https://arxiv.org/abs/2608.24870v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI"
+      ],
+      "arxiv_id": "2608.24870v1"
+    },
+    {
+      "id": "arxiv:2608.24848v1",
+      "title": "BrowserForge: Scaling Web Episode via Parallel Browser Sandboxes",
+      "summary": "Web agents that act from rendered pixels avoid the fragility and heavy token cost of reading a page's HTML or accessibility tree, but training them depends on large amounts of high-quality interaction trajectories, and how to produce such data at scale remains an open problem. Public datasets typica",
+      "url": "https://arxiv.org/abs/2608.24848v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_id": "2608.24848v1"
+    },
+    {
+      "id": "arxiv:2608.24845v1",
+      "title": "LAION-BVD: A 10-Million-Hour Open Video Dataset for Multimodal Pre-training",
+      "summary": "We present LAION-BVD, a large-scale open video dataset for multimodal learning, which contains 1.3B platform-specific video URLs collected from CommonCrawl. From these, we download 80M videos with a total duration of 10 million hours. The dataset is designed for multimodal pre-training across the vi",
+      "url": "https://arxiv.org/abs/2608.24845v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_id": "2608.24845v1"
     }
   ],
   "ai_curated": true
