@@ -1,163 +1,49 @@
 {
   "date": "2026-08-28",
-  "update_time": "2026-08-27 21:56:20",
+  "update_time": "2026-08-28 10:26:46",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-28\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 小型模型时代已至 (来源: Hacker News | 348分)\n- **核心干货**：文章论证了一个反直觉的趋势——在特定任务上，精心调优的小参数模型（<10B）正在逼近甚至超越通用大模型（>100B）的表现。核心逻辑是：数据质量与训练策略的进步，让\"小而美\"成为比\"大而全\"更经济高效的落地方案。这直接挑战了\"参数即正义\"的军备竞赛路线。\n- **毒舌/硬核点评**：大模型厂商还在卷千亿参数，小模型已经悄悄把活儿干完了。这就像健身房里的肌肉猛男和体操选手——你举得起300公斤，但翻跟头还得看人家。算力军备竞赛的性价比拐点，到了。\n- **🔗 传送门**：[点击直达原链接](https://calv.info/small-models-have-arrived)\n\n---\n\n### 2. 📌 Microduck：模块化四足机器人平台 (来源: Hacker News | 439分)\n- **核心干货**：Pollen Robotics 开源了一款名为 Microduck 的四足机器人，核心卖点是模块化、低成本（<500美元）和强扩展性。它采用轻量化设计，支持用户自定义传感器和执行器，目标是让机器人研究从\"实验室专属\"下沉到\"创客级\"普及。配套的模拟环境和ROS2支持，大幅降低了入门门槛。\n- **毒舌/硬核点评**：当年波士顿动力让你望而却步，现在Microduck让你在客厅就能玩转足式机器人。虽然它不会后空翻，但至少它便宜到你摔坏了不心疼。这才是\"机器人民主化\"该有的样子，而不是在PPT里。\n- **🔗 传送门**：[点击直达原链接](https://pollen-robotics.com/microduck/)\n\n---\n\n### 3. 📌 让机器人学会\"思考\"：R³ 自然语言推理框架 (来源: ArXiv | cs.RO, cs.AI)\n- **核心干货**：这篇论文提出用强化学习（RL）直接训练机器人的\"语言推理\"能力，让模型在执行长时序物理任务时，通过自然语言进行任务分解、约束跟踪和结果预测。实验表明，引入语言推理的机器人策略在复杂操作任务上的成功率显著提升，且具备更强的泛化能力。\n- **毒舌/硬核点评**：以前机器人是\"四肢发达，头脑简单\"，现在终于开始教它们\"谋定而后动\"了。不过，等它学会用语言跟你讨价还价\"再干一次活能不能多给点电\"，那才是真·智能。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2608.26053v1)\n\n---\n\n### 🗣️ 今日顶男金句\n\"大模型是面子，小模型是里子；能落地的技术才是好技术，能赚钱的模型才是好模型——别被参数忽悠瘸了。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-28\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 1.1.1.1 DNS 缓存大瘦身：省下 100TB 内存 (来源: Hacker News)\n- **核心干货**：Cloudflare 对自家 1.1.1.1 DNS 服务的缓存系统做了深度优化，省出了 **100TB** 内存。这相当于把几万台服务器的内存条给拔了，性能还一点没缩水。核心思路是更聪明的数据结构与淘汰策略，让缓存命中率不降反升。\n- **毒舌/硬核点评**：当别人还在纠结怎么加内存条的时候，Cloudflare 在琢磨怎么把内存条抽走。这才是真正的\"内存自由\"——不是买得起，是用得省。\n- **🔗 传送门**：[点击直达原链接](https://blog.cloudflare.com/dns-cache-memory-optimization-1111/)\n\n---\n\n### 2. 📌 小模型时代正式降临 (来源: Hacker News)\n- **核心干货**：一篇深度长文指出，参数规模不再是决定模型能力的唯一指标，经过精心设计的小模型（如 7B-13B 级别）在特定任务上已能追平甚至超越早期的大模型。文章聚焦于架构改进、推理效率以及硬件适配带来的\"小钢炮\"效应。\n- **毒舌/硬核点评**：大模型玩家还在烧钱堆参数，小模型已经在用\"性价比\"教做人了。别总盯着肌肉块头，能打赢比赛的才是好拳手。\n- **🔗 传送门**：[点击直达原链接](https://calv.info/small-models-have-arrived)\n\n---\n\n### 3. 📌 Microduck：模拟世界里的微型机器人军团 (来源: Hacker News)\n- **核心干货**：Pollen Robotics 开源了 **Microduck**——一个可在模拟环境中大规模训练、并能低成本迁移到实体硬件的微型机器人平台。它把强化学习的训练成本打下来一个数量级，让\"千人千面\"的机器人集群研究不再是巨头专属。\n- **毒舌/硬核点评**：一群小鸭子，可能比那些动辄百万美元的\"人形花瓶\"更快游进现实。有时候，赢在身量小，而不是嗓门大。\n- **🔗 传送门**：[点击直达原链接](https://pollen-robotics.com/microduck/)\n\n---\n\n### 🗣️ 今日顶男金句\n**\"别把'堆料'当'创新'。真正的硬核，是在物理极限的边缘跳舞，而不是在预算表上画饼。\"**",
   "briefing_items": [
     {
-      "title": "小型模型时代已至",
-      "source": "Hacker News | 348分",
-      "summary": "文章论证了一个反直觉的趋势——在特定任务上，精心调优的小参数模型（<10B）正在逼近甚至超越通用大模型（>100B）的表现。核心逻辑是：数据质量与训练策略的进步，让\"小而美\"成为比\"大而全\"更经济高效的落地方案。这直接挑战了\"参数即正义\"的军备竞赛路线。",
-      "commentary": "大模型厂商还在卷千亿参数，小模型已经悄悄把活儿干完了。这就像健身房里的肌肉猛男和体操选手——你举得起300公斤，但翻跟头还得看人家。算力军备竞赛的性价比拐点，到了。",
+      "title": "1.1.1.1 DNS 缓存大瘦身：省下 100TB 内存",
+      "source": "Hacker News",
+      "summary": "Cloudflare 对自家 1.1.1.1 DNS 服务的缓存系统做了深度优化，省出了 **100TB** 内存。这相当于把几万台服务器的内存条给拔了，性能还一点没缩水。核心思路是更聪明的数据结构与淘汰策略，让缓存命中率不降反升。",
+      "commentary": "当别人还在纠结怎么加内存条的时候，Cloudflare 在琢磨怎么把内存条抽走。这才是真正的\"内存自由\"——不是买得起，是用得省。",
+      "url": "https://blog.cloudflare.com/dns-cache-memory-optimization-1111/"
+    },
+    {
+      "title": "小模型时代正式降临",
+      "source": "Hacker News",
+      "summary": "一篇深度长文指出，参数规模不再是决定模型能力的唯一指标，经过精心设计的小模型（如 7B-13B 级别）在特定任务上已能追平甚至超越早期的大模型。文章聚焦于架构改进、推理效率以及硬件适配带来的\"小钢炮\"效应。",
+      "commentary": "大模型玩家还在烧钱堆参数，小模型已经在用\"性价比\"教做人了。别总盯着肌肉块头，能打赢比赛的才是好拳手。",
       "url": "https://calv.info/small-models-have-arrived"
     },
     {
-      "title": "Microduck：模块化四足机器人平台",
-      "source": "Hacker News | 439分",
-      "summary": "Pollen Robotics 开源了一款名为 Microduck 的四足机器人，核心卖点是模块化、低成本（<500美元）和强扩展性。它采用轻量化设计，支持用户自定义传感器和执行器，目标是让机器人研究从\"实验室专属\"下沉到\"创客级\"普及。配套的模拟环境和ROS2支持，大幅降低了入门门槛。",
-      "commentary": "当年波士顿动力让你望而却步，现在Microduck让你在客厅就能玩转足式机器人。虽然它不会后空翻，但至少它便宜到你摔坏了不心疼。这才是\"机器人民主化\"该有的样子，而不是在PPT里。",
+      "title": "Microduck：模拟世界里的微型机器人军团",
+      "source": "Hacker News",
+      "summary": "Pollen Robotics 开源了 **Microduck**——一个可在模拟环境中大规模训练、并能低成本迁移到实体硬件的微型机器人平台。它把强化学习的训练成本打下来一个数量级，让\"千人千面\"的机器人集群研究不再是巨头专属。",
+      "commentary": "一群小鸭子，可能比那些动辄百万美元的\"人形花瓶\"更快游进现实。有时候，赢在身量小，而不是嗓门大。",
       "url": "https://pollen-robotics.com/microduck/"
-    },
-    {
-      "title": "让机器人学会\"思考\"：R³ 自然语言推理框架",
-      "source": "ArXiv | cs.RO, cs.AI",
-      "summary": "这篇论文提出用强化学习（RL）直接训练机器人的\"语言推理\"能力，让模型在执行长时序物理任务时，通过自然语言进行任务分解、约束跟踪和结果预测。实验表明，引入语言推理的机器人策略在复杂操作任务上的成功率显著提升，且具备更强的泛化能力。",
-      "commentary": "以前机器人是\"四肢发达，头脑简单\"，现在终于开始教它们\"谋定而后动\"了。不过，等它学会用语言跟你讨价还价\"再干一次活能不能多给点电\"，那才是真·智能。",
-      "url": "https://arxiv.org/abs/2608.26053v1"
     }
   ],
   "candidates": [
+    {
+      "id": "hn:49471407",
+      "title": "Show HN: We built open OpenRouter that turns usage into a better model",
+      "summary": "Hi HN, we built an open source model gateway. It&#x27;s a single place to manage our own self hosted, frontier, and open source models in one place.<p>It’s is rust native, built for concurrency, and implements all the config quirks across models and providers (streaming formats, tool calls, model pa",
+      "url": "https://github.com/experientiallabs/experiential",
+      "source": "Hacker News",
+      "score": 182,
+      "comments": 35
+    },
     {
       "id": "hn:49468083",
       "title": "Saving 100 terabytes of memory by optimizing 1.1.1.1's DNS cache",
       "summary": "",
       "url": "https://blog.cloudflare.com/dns-cache-memory-optimization-1111/",
       "source": "Hacker News",
-      "score": 358,
-      "comments": 102
-    },
-    {
-      "id": "hn:49466917",
-      "title": "Small Models Have Arrived",
-      "summary": "",
-      "url": "https://calv.info/small-models-have-arrived",
-      "source": "Hacker News",
-      "score": 348,
-      "comments": 150
-    },
-    {
-      "id": "hn:49465169",
-      "title": "507 Mechanical Movements",
-      "summary": "Book (1868): <a href=\"https:&#x2F;&#x2F;archive.org&#x2F;details&#x2F;fivehundredseven00browiala\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.org&#x2F;details&#x2F;fivehundredseven00browiala</a>",
-      "url": "https://507movements.com/",
-      "source": "Hacker News",
-      "score": 411,
-      "comments": 62
-    },
-    {
-      "id": "hn:49462763",
-      "title": "Microduck",
-      "summary": "",
-      "url": "https://pollen-robotics.com/microduck/",
-      "source": "Hacker News",
-      "score": 439,
-      "comments": 172
-    },
-    {
-      "id": "lob:iqgrsx",
-      "title": "Changes to SourceHut's terms of service regarding LLMs",
-      "summary": "",
-      "url": "https://sourcehut.org/blog/2026-08-27-tos-changes-and-llms/",
-      "source": "Lobste.rs",
-      "score": 134,
-      "comments": 114,
-      "tags": [
-        "vibecoding"
-      ]
-    },
-    {
-      "id": "hn:49466006",
-      "title": "Decompiling a Nintendo 64 game in 84 days",
-      "summary": "",
-      "url": "https://blog.chrislewis.au/decompiling-a-nintendo-64-game-in-84-days/",
-      "source": "Hacker News",
-      "score": 151,
-      "comments": 67
-    },
-    {
-      "id": "lob:6qxd8g",
-      "title": "Asahi Linux Progress Report: Linux 7.2",
-      "summary": "",
-      "url": "https://asahilinux.org/2026/08/progress-report-7-2/",
-      "source": "Lobste.rs",
-      "score": 60,
-      "comments": 7,
-      "tags": [
-        "linux",
-        "mac",
-        "reversing"
-      ]
-    },
-    {
-      "id": "hn:49466894",
-      "title": "Suica, Japan's First IC Transit Card",
-      "summary": "",
-      "url": "https://www.tokyodev.com/articles/the-story-of-suica",
-      "source": "Hacker News",
-      "score": 145,
-      "comments": 112
-    },
-    {
-      "id": "lob:lt9i0j",
-      "title": "Haiku R1/beta6 released",
-      "summary": "",
-      "url": "https://www.haiku-os.org/get-haiku/r1beta6/release-notes/",
-      "source": "Lobste.rs",
-      "score": 115,
-      "comments": 9,
-      "tags": [
-        "osdev",
-        "release"
-      ]
-    },
-    {
-      "id": "hn:49467922",
-      "title": "Gemini Omni 1.1 Flash",
-      "summary": "",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/",
-      "source": "Hacker News",
-      "score": 159,
-      "comments": 108
-    },
-    {
-      "id": "hn:49464543",
-      "title": "Emacs 31: An unofficial guide to Markdown-ts-mode",
-      "summary": "",
-      "url": "https://rahuljuliato.com/posts/markdown-ts-mode-emacs-31",
-      "source": "Hacker News",
-      "score": 136,
-      "comments": 56
-    },
-    {
-      "id": "hn:49447057",
-      "title": "The turbulent AI era is here",
-      "summary": "",
-      "url": "https://www.gatesnotes.com/work/make-ai-work-for-everyone/reader/a-turbulent-ai-era-and-critical-choices-to-make?WT.mc_id=20260826_ai-overture-2026-med-med",
-      "source": "Hacker News",
-      "score": 150,
-      "comments": 422
-    },
-    {
-      "id": "lob:rzvdqo",
-      "title": "Please stop flooding our projects with AI slop to furnish your CV",
-      "summary": "",
-      "url": "https://neilalexander.dev/2026/06/30/flooding-contributions.html",
-      "source": "Lobste.rs",
-      "score": 44,
-      "comments": 10,
-      "tags": [
-        "vibecoding"
-      ]
+      "score": 769,
+      "comments": 225
     },
     {
       "id": "hn:49468642",
@@ -165,83 +51,183 @@
       "summary": "",
       "url": "https://code.ffmpeg.org/FFmpeg/FFmpeg/issues/24290",
       "source": "Hacker News",
-      "score": 118,
-      "comments": 86
+      "score": 248,
+      "comments": 194
     },
     {
-      "id": "arxiv:2608.26081v1",
-      "title": "SwarmWorld: Stigmergic technological evolution in societies of language-model agents",
-      "summary": "Collective intelligence can emerge when individuals coordinate through a shared environment, allowing local actions to accumulate into durable social organization. Language-model agents offer a new substrate for this process, yet most multi-agent systems rely on direct conversation, predefined roles",
-      "url": "https://arxiv.org/abs/2608.26081v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cond-mat.mtrl-sci",
-        "cs.CL"
-      ],
-      "arxiv_id": "2608.26081v1"
-    },
-    {
-      "id": "arxiv:2608.26053v1",
-      "title": "$R^3$: Training Robots to Reason in Natural Language via Reinforcement Learning",
-      "summary": "Reasoning in language allows foundation models to spend more test-time compute on hard problems, such as those requiring decomposition, constraint tracking, and prediction of future consequences. Whether this mechanism can improve robotic manipulation remains unclear, where long-horizon tasks requir",
-      "url": "https://arxiv.org/abs/2608.26053v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "arxiv_id": "2608.26053v1"
-    },
-    {
-      "id": "lob:zt8abs",
-      "title": "If I release it, you won’t get the same experience I get",
+      "id": "hn:49461817",
+      "title": "Show HN: The load-bearing vocabulary of Claude",
       "summary": "",
-      "url": "https://notes.highlysuspect.agency/cant-release-that.html",
+      "url": "https://louisabraham.github.io/load-bearing/",
+      "source": "Hacker News",
+      "score": 531,
+      "comments": 254
+    },
+    {
+      "id": "hn:49466917",
+      "title": "Small Models Have Arrived",
+      "summary": "",
+      "url": "https://calv.info/small-models-have-arrived",
+      "source": "Hacker News",
+      "score": 648,
+      "comments": 296
+    },
+    {
+      "id": "hn:49465169",
+      "title": "507 Mechanical Movements",
+      "summary": "Book (1868): <a href=\"https:&#x2F;&#x2F;archive.org&#x2F;details&#x2F;fivehundredseven00browiala\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.org&#x2F;details&#x2F;fivehundredseven00browiala</a>",
+      "url": "https://507movements.com/",
+      "source": "Hacker News",
+      "score": 587,
+      "comments": 74
+    },
+    {
+      "id": "hn:49468818",
+      "title": "Gemini-3.5-Transcribe",
+      "summary": "",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/",
+      "source": "Hacker News",
+      "score": 289,
+      "comments": 92
+    },
+    {
+      "id": "hn:49462763",
+      "title": "Microduck",
+      "summary": "",
+      "url": "https://pollen-robotics.com/microduck/",
+      "source": "Hacker News",
+      "score": 664,
+      "comments": 214
+    },
+    {
+      "id": "hn:49467922",
+      "title": "Gemini Omni 1.1 Flash",
+      "summary": "",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/",
+      "source": "Hacker News",
+      "score": 256,
+      "comments": 191
+    },
+    {
+      "id": "lob:iqgrsx",
+      "title": "Changes to SourceHut's terms of service regarding LLMs",
+      "summary": "",
+      "url": "https://sourcehut.org/blog/2026-08-27-tos-changes-and-llms/",
       "source": "Lobste.rs",
-      "score": 32,
-      "comments": 3,
+      "score": 172,
+      "comments": 158,
       "tags": [
-        "programming"
+        "vibecoding"
       ]
     },
     {
-      "id": "lob:bkiqnf",
-      "title": "Nebula Sans",
+      "id": "lob:rzvdqo",
+      "title": "Please stop flooding our projects with AI slop to furnish your CV",
       "summary": "",
-      "url": "https://www.nebulasans.com/",
+      "url": "https://neilalexander.dev/2026/06/30/flooding-contributions.html",
+      "source": "Lobste.rs",
+      "score": 69,
+      "comments": 22,
+      "tags": [
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "hn:49471965",
+      "title": "Show HN: OpenTIE and OpenXWA, Modern Ports of Tie Fighter and X-Wing Alliance",
+      "summary": "",
+      "url": "https://github.com/elyosh/OpenTIE/",
+      "source": "Hacker News",
+      "score": 165,
+      "comments": 38
+    },
+    {
+      "id": "hn:49474786",
+      "title": "Sovereign Tech Agency invests €500k in Flatpak",
+      "summary": "",
+      "url": "https://modal.cx/blog/announcing-flatpak-sta/",
+      "source": "Hacker News",
+      "score": 130,
+      "comments": 75
+    },
+    {
+      "id": "hn:49472090",
+      "title": "Doctors are finally learning to manage antidepressant withdrawal",
+      "summary": "<a href=\"https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20260826205502&#x2F;https:&#x2F;&#x2F;www.newscientist.com&#x2F;article&#x2F;2584861-antidepressant-withdrawal-symptoms-are-prompting-a-radical-rethink-of-how-we-treat-depression&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;web.archive.org&#x2F;web",
+      "url": "https://www.newscientist.com/article/2584861-antidepressant-withdrawal-symptoms-are-prompting-a-radical-rethink-of-how-we-treat-depression/",
+      "source": "Hacker News",
+      "score": 130,
+      "comments": 121
+    },
+    {
+      "id": "lob:ir1jkh",
+      "title": "A Million Kakapos",
+      "summary": "",
+      "url": "https://blog.mempko.com/a-million-kakapos/",
+      "source": "Lobste.rs",
+      "score": 24,
+      "comments": 17,
+      "tags": [
+        "culture",
+        "finance",
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "lob:pdvxvf",
+      "title": "tailcat: like netcat, but over Tailscale's data plane, without Tailscale's control plane",
+      "summary": "",
+      "url": "https://github.com/tailscale/tailcat",
+      "source": "Lobste.rs",
+      "score": 47,
+      "comments": 5,
+      "tags": [
+        "networking"
+      ]
+    },
+    {
+      "id": "lob:gscm11",
+      "title": "The Server Called Paranoia: Defend Autistici/Inventati Before September 25",
+      "summary": "",
+      "url": "https://cavallette.noblogs.org/2026/08/10083/2",
+      "source": "Lobste.rs",
+      "score": 50,
+      "comments": 4,
+      "tags": [
+        "culture"
+      ]
+    },
+    {
+      "id": "hn:49472820",
+      "title": "Terminal-Bench-Science: Evaluating AI agents on scientific research workflows",
+      "summary": "",
+      "url": "https://www.terminal-bench-science.ai/announcement",
+      "source": "Hacker News",
+      "score": 92,
+      "comments": 27
+    },
+    {
+      "id": "lob:p9kpp9",
+      "title": "UNIX V4 workshop at Low Resource Computing",
+      "summary": "",
+      "url": "https://github.com/thaliaarchi/unix-v4-demo/blob/main/README.md",
       "source": "Lobste.rs",
       "score": 39,
-      "comments": 7,
+      "comments": 4,
       "tags": [
-        "design"
+        "unix"
       ]
     },
     {
-      "id": "arxiv:2608.26088v1",
-      "title": "Planetary Prediction Engine: Autonomous Geospatial Prediction via Intelligent Data Selection and Foundation Model Embeddings",
-      "summary": "Addressing critical global challenges, from food security and disaster risk to disease outbreaks and socio-economic vulnerability, demands high-fidelity geospatial modeling. However, building predictive planetary models remains bottlenecked by a fragmented data ecosystem, requiring manual data retri",
-      "url": "https://arxiv.org/abs/2608.26088v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2608.26088v1"
-    },
-    {
-      "id": "lob:a5qr8n",
-      "title": "Why Free Software usability tends to suck (2002)",
+      "id": "lob:oshbjt",
+      "title": "Announcing our first Maintainers in Residence",
       "summary": "",
-      "url": "https://web.archive.org/web/20030201183139/http://mpt.phrasewise.com/discuss/msgReader$173",
+      "url": "https://blog.rust-lang.org/2026/08/26/announcing-our-first-maintainers-in-residence/",
       "source": "Lobste.rs",
-      "score": 25,
-      "comments": 12,
+      "score": 89,
+      "comments": 3,
       "tags": [
-        "design",
-        "philosophy"
+        "rust"
       ]
     }
   ],
