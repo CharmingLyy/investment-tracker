@@ -1,29 +1,32 @@
 {
   "date": "2026-08-29",
-  "update_time": "2026-08-28 21:48:54",
+  "update_time": "2026-08-29 06:28:11",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-29\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 GLM-5.3 全面开源权重 (来源: Hacker News)\n- **核心干货**：智谱 AI 正式发布 GLM-5.3 并开放全部权重。这不仅是模型参数的公开，更意味着开发者可以在本地或私有云上部署这个级别的模型，彻底摆脱 API 调用时的数据隐私顾虑和成本枷锁。对于追求模型可控性和定制化的团队来说，这是一记重磅炸弹。\n- **毒舌/硬核点评**：开源是最高级的商业策略，当别人还在靠 API 收费时，智谱直接把底牌亮出来了。这波操作，要么是技术自信爆棚，要么是准备用生态碾压，不管哪种，都够 OpenAI 喝一壶的。\n- **🔗 传送门**：[HuggingFace 模型仓库](https://huggingface.co/zai-org/GLM-5.3)\n\n---\n\n### 2. 📌 法院裁定：美国政府将 Anthropic 列入黑名单属违法 (来源: Hacker News)\n- **核心干货**：联邦法官裁定，特朗普政府将 AI 公司 Anthropic 列入黑名单的行为非法。这起案件为政府滥用安全审查权力干预科技公司运营划下了一条法律红线，对 AI 行业的合规与自由发展具有里程碑意义，直接影响所有在美科技企业的政策风险评估。\n- **毒舌/硬核点评**：美国政府这手\"行政黑箱\"被法院狠狠打脸，看来在法治社会，连\"国家安全\"也不能成为无限扩张的橡皮图章。这对科技巨头们来说，无异于一场及时雨——毕竟没人想成为下一个被\"莫须有\"制裁的倒霉蛋。\n- **🔗 传送门**：[NYT 报道原文](https://www.nytimes.com/2026/08/27/technology/anthropic-government-blacklisting-ruling.html)\n\n---\n\n### 3. 📌 Htmx 4.0 正式发布 (来源: Hacker News)\n- **核心干货**：Htmx 4.0 发布，这个\"回到 HTML 本质\"的库又向前迈了一大步。新版本在保留\"极简、无构建步骤\"哲学的基础上，强化了服务端交互能力，让开发者用更少的 JavaScript 构建更复杂的交互。它正在用实际行动证明，复杂的前端工程化并非唯一解。\n- **毒舌/硬核点评**：在 React 和 Vue 的重型工程化世界里，Htmx 就像个穿草鞋的武林高手，一招\"返璞归真\"打得花架子们满地找牙。4.0 的发布再次证明：有时候，最简单的方案才是最能解决问题的方案，别让你的构建工具比你的业务还复杂。\n- **🔗 传送门**：[官方发布公告](https://four.htmx.org/announcements/2026-08-28-htmx-4.0.0-is-released)\n\n---\n\n### 🗣️ 今日顶男金句\n\"真正的自由不是为所欲为，而是能随时把模型权重拉下来本地跑——这跟搞钱一个道理，手里有粮，心中不慌，别把命根子攥在别人手里。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-29\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Cosmos EVM 共享模块被利用盗币，官方早已知情 (来源: Tech RSS)\n- **核心干货**：Cosmos Labs 披露，其共享的 Cosmos EVM 模块存在一个严重余额处理漏洞（GHSA-7g4w-cg88-2cq2），已在 8 月 20 日至 25 日期间被利用，从六条区块链上盗走资金。最扎心的是，官方在漏洞被利用前就已获悉所有运行该模块的链都存在风险，但显然没能阻止悲剧发生。\n- **毒舌/硬核点评**：这波操作堪称\"共享经济\"的终极噩梦——共享单车倒闭至少还能退押金，共享一个高危漏洞的后果，是六条链的流动性一起归零。建议 Cosmos Labs 下次发布共享模块前，先自问一下：这条链的共识机制，扛得住黑客的 F5 吗？\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html)\n\n---\n\n### 2. 📌 Cloudflare 通过优化 1.1.1.1 DNS 缓存，省下 100 TB 内存 (来源: Lobste.rs)\n- **核心干货**：Cloudflare 团队分享了对 1.1.1.1 DNS 解析器缓存架构的深度优化，成功节省了惊人的 100 TB 内存。这不仅仅是内存省钱了，更是通过重新设计缓存的数据结构和生命周期管理，大幅提升了缓存命中率和整体性能。\n- **毒舌/硬核点评**：100 TB 内存是什么概念？够你开 10 万个 Chrome 标签页然后卡死。Cloudflare 用实际行动证明：真正的工程师文化，不是把功能堆上去，而是把浪费抠下来。建议某些\"内存不够就加服务器\"的团队把这篇博客打印出来贴在工位上。\n- **🔗 传送门**：[点击直达原链接](https://blog.cloudflare.com/dns-cache-memory-optimization-1111/)\n\n---\n\n### 3. 📌 SWE-Prime: 用更少的轨迹数据，训练出更强的代码修复模型 (来源: ArXiv)\n- **核心干货**：这篇论文（cs.SE/cs.AI/cs.CL）打破了一个行业惯性认知：以往提升 LLM 修复软件问题的能力，靠堆海量 agent 轨迹数据集进行 SFT。但 SWE-Prime 指出，任务成功 ≠ 数据质量高，筛选出高质量的\"成功轨迹\"比盲目堆量更有效，最终用更少的数据达到了更优的性能。\n- **毒舌/硬核点评**：这给 AI 圈子上了一课：喂再多的\"成功案例\"，不如想清楚什么是真正的\"优质教学\"。就像健身教练说的，练 100 个不标准的卧推，不如来 10 个标准的。数据集的\"保质期\"比\"保质期\"更重要。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2608.27449v1)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"真正的技术壁垒，不是你能跑多快的模型，而是你能在别人踩坑之前，把坑填平——顺便把他们的铲子也收了。\"",
   "briefing_items": [
     {
-      "title": "GLM-5.3 全面开源权重",
-      "source": "Hacker News",
-      "summary": "智谱 AI 正式发布 GLM-5.3 并开放全部权重。这不仅是模型参数的公开，更意味着开发者可以在本地或私有云上部署这个级别的模型，彻底摆脱 API 调用时的数据隐私顾虑和成本枷锁。对于追求模型可控性和定制化的团队来说，这是一记重磅炸弹。",
-      "commentary": "开源是最高级的商业策略，当别人还在靠 API 收费时，智谱直接把底牌亮出来了。这波操作，要么是技术自信爆棚，要么是准备用生态碾压，不管哪种，都够 OpenAI 喝一壶的。",
-      "url": ""
+      "title": "Cosmos EVM 共享模块被利用盗币，官方早已知情",
+      "source": "Tech RSS",
+      "summary": "Cosmos Labs 披露，其共享的 Cosmos EVM 模块存在一个严重余额处理漏洞（GHSA-7g4w-cg88-2cq2），已在 8 月 20 日至 25 日期间被利用，从六条区块链上盗走资金。最扎心的是，官方在漏洞被利用前就已获悉所有运行该模块的链都存在风险，但显然没能阻止悲剧发生。",
+      "commentary": "这波操作堪称\"共享经济\"的终极噩梦——共享单车倒闭至少还能退押金，共享一个高危漏洞的后果，是六条链的流动性一起归零。建议 Cosmos Labs 下次发布共享模块前，先自问一下：这条链的共识机制，扛得住黑客的 F5 吗？",
+      "url": "https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html"
     },
     {
-      "title": "法院裁定：美国政府将 Anthropic 列入黑名单属违法",
-      "source": "Hacker News",
-      "summary": "联邦法官裁定，特朗普政府将 AI 公司 Anthropic 列入黑名单的行为非法。这起案件为政府滥用安全审查权力干预科技公司运营划下了一条法律红线，对 AI 行业的合规与自由发展具有里程碑意义，直接影响所有在美科技企业的政策风险评估。",
-      "commentary": "美国政府这手\"行政黑箱\"被法院狠狠打脸，看来在法治社会，连\"国家安全\"也不能成为无限扩张的橡皮图章。这对科技巨头们来说，无异于一场及时雨——毕竟没人想成为下一个被\"莫须有\"制裁的倒霉蛋。",
-      "url": ""
+      "title": "Cloudflare 通过优化 1.1.1.1 DNS 缓存，省下 100 TB 内存",
+      "source": "Lobste.rs",
+      "summary": "Cloudflare 团队分享了对 1.1.1.1 DNS 解析器缓存架构的深度优化，成功节省了惊人的 100 TB 内存。这不仅仅是内存省钱了，更是通过重新设计缓存的数据结构和生命周期管理，大幅提升了缓存命中率和整体性能。",
+      "commentary": "100 TB 内存是什么概念？够你开 10 万个 Chrome 标签页然后卡死。Cloudflare 用实际行动证明：真正的工程师文化，不是把功能堆上去，而是把浪费抠下来。建议某些\"内存不够就加服务器\"的团队把这篇博客打印出来贴在工位上。",
+      "url": "https://blog.cloudflare.com/dns-cache-memory-optimization-1111/"
     },
     {
-      "title": "Htmx 4.0 正式发布",
-      "source": "Hacker News",
-      "summary": "Htmx 4.0 发布，这个\"回到 HTML 本质\"的库又向前迈了一大步。新版本在保留\"极简、无构建步骤\"哲学的基础上，强化了服务端交互能力，让开发者用更少的 JavaScript 构建更复杂的交互。它正在用实际行动证明，复杂的前端工程化并非唯一解。",
-      "commentary": "在 React 和 Vue 的重型工程化世界里，Htmx 就像个穿草鞋的武林高手，一招\"返璞归真\"打得花架子们满地找牙。4.0 的发布再次证明：有时候，最简单的方案才是最能解决问题的方案，别让你的构建工具比你的业务还复杂。",
-      "url": ""
+      "title": "SWE-Prime: 用更少的轨迹数据，训练出更强的代码修复模型",
+      "source": "ArXiv",
+      "summary": "这篇论文（cs.SE/cs.AI/cs.CL）打破了一个行业惯性认知：以往提升 LLM 修复软件问题的能力，靠堆海量 agent 轨迹数据集进行 SFT。但 SWE-Prime 指出，任务成功 ≠ 数据质量高，筛选出高质量的\"成功轨迹\"比盲目堆量更有效，最终用更少的数据达到了更优的性能。",
+      "commentary": "这给 AI 圈子上了一课：喂再多的\"成功案例\"，不如想清楚什么是真正的\"优质教学\"。就像健身教练说的，练 100 个不标准的卧推，不如来 10 个标准的。数据集的\"保质期\"比\"保质期\"更重要。",
+      "url": "https://arxiv.org/abs/2608.27449v1"
+    },
+    {
+      "quote": "\"真正的技术壁垒，不是你能跑多快的模型，而是你能在别人踩坑之前，把坑填平——顺便把他们的铲子也收了。\""
     }
   ],
   "candidates": [
@@ -33,17 +36,8 @@
       "summary": "Earlier:<p><i>US Government designates host of noblogs.org a &quot;global terrorist&quot;</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49464391\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49464391</a> -  (131 comments)<p><i>US sanctions Italian hosting provider Autisti",
       "url": "https://www.inventati.org/",
       "source": "Hacker News",
-      "score": 405,
-      "comments": 358
-    },
-    {
-      "id": "hn:49473522",
-      "title": "Judge rules Trump administration’s blacklisting of Anthropic was illegal",
-      "summary": "<a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;ni6I3\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;ni6I3</a><p><a href=\"https:&#x2F;&#x2F;storage.courtlistener.com&#x2F;recap&#x2F;gov.uscourts.cand.465515&#x2F;gov.uscourts.cand.465515.250.0.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;storage.courtlistener",
-      "url": "https://www.nytimes.com/2026/08/27/technology/anthropic-government-blacklisting-ruling.html",
-      "source": "Hacker News",
-      "score": 442,
-      "comments": 328
+      "score": 548,
+      "comments": 544
     },
     {
       "id": "hn:49480466",
@@ -51,8 +45,26 @@
       "summary": "",
       "url": "https://anil.recoil.org/notes/rumour-is-the-exploit",
       "source": "Hacker News",
-      "score": 188,
-      "comments": 64
+      "score": 288,
+      "comments": 102
+    },
+    {
+      "id": "hn:49486172",
+      "title": "Our decision on Cursor following its acquisition by SpaceX",
+      "summary": "",
+      "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/",
+      "source": "Hacker News",
+      "score": 357,
+      "comments": 148
+    },
+    {
+      "id": "hn:49485267",
+      "title": "Boot a Virtual iPhone via Apple's Virtualization.framework",
+      "summary": "",
+      "url": "https://github.com/Lakr233/vphone-cli",
+      "source": "Hacker News",
+      "score": 209,
+      "comments": 67
     },
     {
       "id": "hn:49479837",
@@ -60,8 +72,8 @@
       "summary": "",
       "url": "https://ckardaris.com/blog/2026/08/28/keyboard-driven-guis.html",
       "source": "Hacker News",
-      "score": 448,
-      "comments": 239
+      "score": 723,
+      "comments": 357
     },
     {
       "id": "hn:49477564",
@@ -69,8 +81,8 @@
       "summary": "",
       "url": "https://www.orbify.eu/demo/",
       "source": "Hacker News",
-      "score": 363,
-      "comments": 125
+      "score": 470,
+      "comments": 154
     },
     {
       "id": "hn:49478178",
@@ -78,26 +90,8 @@
       "summary": "",
       "url": "https://four.htmx.org/announcements/2026-08-28-htmx-4.0.0-is-released",
       "source": "Hacker News",
-      "score": 410,
-      "comments": 99
-    },
-    {
-      "id": "hn:49479878",
-      "title": "GLM-5.3 is now open-weight",
-      "summary": "<a href=\"https:&#x2F;&#x2F;twitter.com&#x2F;Zai_org&#x2F;status&#x2F;2093354097122455713\" rel=\"nofollow\">https:&#x2F;&#x2F;twitter.com&#x2F;Zai_org&#x2F;status&#x2F;2093354097122455713</a><p><a href=\"https:&#x2F;&#x2F;z.ai&#x2F;blog&#x2F;glm-5.3\" rel=\"nofollow\">https:&#x2F;&#x2F;z.ai&#x2F;blog&#x2F;",
-      "url": "https://huggingface.co/zai-org/GLM-5.3",
-      "source": "Hacker News",
-      "score": 491,
-      "comments": 178
-    },
-    {
-      "id": "hn:49472216",
-      "title": "The Twelve-Factor App (2025)",
-      "summary": "",
-      "url": "https://12factor.net/",
-      "source": "Hacker News",
-      "score": 192,
-      "comments": 99
+      "score": 607,
+      "comments": 150
     },
     {
       "id": "lob:p6kxjh",
@@ -105,57 +99,10 @@
       "summary": "",
       "url": "https://nesbitt.io/2026/08/28/now-hiring-senior-open-source-maintainer.html",
       "source": "Lobste.rs",
-      "score": 66,
-      "comments": 9,
+      "score": 81,
+      "comments": 12,
       "tags": [
         "satire"
-      ]
-    },
-    {
-      "id": "lob:iqgrsx",
-      "title": "Changes to SourceHut's terms of service regarding LLMs",
-      "summary": "",
-      "url": "https://sourcehut.org/blog/2026-08-27-tos-changes-and-llms/",
-      "source": "Lobste.rs",
-      "score": 196,
-      "comments": 174,
-      "tags": [
-        "vibecoding"
-      ]
-    },
-    {
-      "id": "hn:49483182",
-      "title": "25,000 Lbs. Of Chicken Products Recalled in 5 States: USDA",
-      "summary": "",
-      "url": "https://www.thehealthy.com/news/chicken-recall-fsis-august-2026/",
-      "source": "Hacker News",
-      "score": 148,
-      "comments": 102
-    },
-    {
-      "id": "lob:im3eeh",
-      "title": "OpenOffice does not print on Tuesdays (2009)",
-      "summary": "",
-      "url": "https://beza1e1.tuxen.de/lore/print_on_tuesday.html",
-      "source": "Lobste.rs",
-      "score": 48,
-      "comments": 11,
-      "tags": [
-        "linux"
-      ]
-    },
-    {
-      "id": "lob:zfhall",
-      "title": "Nitter, XCancel Shutdown Over Cease-And-Desist",
-      "summary": "<p>Nitter is an alternative front-end for X. XCancel is/was a redirect service.</p>\n<p>Please let me know if I need to change tags, URLs, or update the description.</p>\n<p>EDIT: adding 'privacy' tag</p>\n",
-      "url": "https://github.com/zedeus/nitter",
-      "source": "Lobste.rs",
-      "score": 77,
-      "comments": 11,
-      "tags": [
-        "culture",
-        "privacy",
-        "web"
       ]
     },
     {
@@ -164,11 +111,23 @@
       "summary": "",
       "url": "https://mckayla.blog/posts/yap.html",
       "source": "Lobste.rs",
-      "score": 33,
-      "comments": 14,
+      "score": 48,
+      "comments": 16,
       "tags": [
         "practices",
         "vibecoding"
+      ]
+    },
+    {
+      "id": "lob:im3eeh",
+      "title": "OpenOffice does not print on Tuesdays (2009)",
+      "summary": "",
+      "url": "https://beza1e1.tuxen.de/lore/print_on_tuesday.html",
+      "source": "Lobste.rs",
+      "score": 58,
+      "comments": 12,
+      "tags": [
+        "linux"
       ]
     },
     {
@@ -177,32 +136,11 @@
       "summary": "",
       "url": "https://inferara.com/blog/rust-tagless-final-gadt/",
       "source": "Lobste.rs",
-      "score": 17,
+      "score": 21,
       "comments": 8,
       "tags": [
         "rust"
       ]
-    },
-    {
-      "id": "lob:kvlafj",
-      "title": "Announcing Sovereign Tech Agency Investment in Flatpak",
-      "summary": "",
-      "url": "https://modal.cx/blog/announcing-flatpak-sta/",
-      "source": "Lobste.rs",
-      "score": 38,
-      "comments": 6,
-      "tags": [
-        "linux"
-      ]
-    },
-    {
-      "id": "hn:49479072",
-      "title": "Verschlimmbesserung: The Word Your Software Updates Need",
-      "summary": "",
-      "url": "https://geekyschmidt.com/post/2026-08-25-verschlimmbesserung/",
-      "source": "Hacker News",
-      "score": 91,
-      "comments": 54
     },
     {
       "id": "lob:ulkqhi",
@@ -210,11 +148,71 @@
       "summary": "",
       "url": "https://noahlev.org/blog/2026/08/27/making-rustdoc-faster/",
       "source": "Lobste.rs",
-      "score": 23,
+      "score": 32,
       "comments": 7,
       "tags": [
         "performance",
         "rust"
+      ]
+    },
+    {
+      "id": "hn:49485452",
+      "title": "9th Circuit sides with states in Kalshi gambling fight",
+      "summary": "",
+      "url": "https://azmirror.com/2026/08/28/9th-circuit-sides-with-states-in-kalshi-gambling-fight-potentially-reviving-arizonas-prosecution/",
+      "source": "Hacker News",
+      "score": 113,
+      "comments": 85
+    },
+    {
+      "id": "lob:kvlafj",
+      "title": "Announcing Sovereign Tech Agency Investment in Flatpak",
+      "summary": "",
+      "url": "https://modal.cx/blog/announcing-flatpak-sta/",
+      "source": "Lobste.rs",
+      "score": 43,
+      "comments": 7,
+      "tags": [
+        "linux"
+      ]
+    },
+    {
+      "id": "lob:lvspri",
+      "title": "Quest for eternal dock on Wayland - lambdock (C + GTK4 + Lisp GNU Guile Scheme)",
+      "summary": "",
+      "url": "https://jointhefreeworld.org/blog/articles/gnu-linux/quest-for-eternal-dock/index.html",
+      "source": "Lobste.rs",
+      "score": 38,
+      "comments": 5,
+      "tags": [
+        "c",
+        "lisp"
+      ]
+    },
+    {
+      "id": "lob:oveaa3",
+      "title": "What are you doing this weekend?",
+      "summary": "<p>Feel free to tell what you plan on doing this weekend and even ask for help or feedback.</p>\n<p>Please keep in mind it’s more than OK to do nothing at all too!</p>\n",
+      "url": "https://lobste.rs/s/oveaa3/what_are_you_doing_this_weekend",
+      "source": "Lobste.rs",
+      "score": 17,
+      "comments": 43,
+      "tags": [
+        "ask",
+        "programming"
+      ]
+    },
+    {
+      "id": "lob:p7solr",
+      "title": "How we saved 100 terabytes of memory by optimizing 1.1.1.1’s DNS cache",
+      "summary": "",
+      "url": "https://blog.cloudflare.com/dns-cache-memory-optimization-1111/",
+      "source": "Lobste.rs",
+      "score": 31,
+      "comments": 6,
+      "tags": [
+        "distributed",
+        "performance"
       ]
     },
     {
@@ -240,6 +238,14 @@
         "cs.CL"
       ],
       "arxiv_id": "2608.27420v1"
+    },
+    {
+      "id": "rss:4e84432a96",
+      "title": "Cosmos EVM Flaw Exploited After Cosmos Labs Knew Every Blockchain Running It Was Vulnerable",
+      "summary": "Cosmos Labs has warned that a critical balance-handling flaw in the shared Cosmos EVM module was exploited to drain funds from six blockchains between August 20 and August 25, 2026.\n\nThe vulnerability, designated GHSA-7g4w-cg88-2cq2, is rated Critical by Cosmos Labs and was published without a CVE i",
+      "url": "https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html",
+      "source": "Tech RSS",
+      "score": 0
     }
   ],
   "ai_curated": true
