@@ -1,97 +1,90 @@
 {
   "date": "2026-08-30",
-  "update_time": "2026-08-29 16:22:33",
+  "update_time": "2026-08-30 04:38:20",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-30\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Cosmos EVM 共享模块被曝致命漏洞，六条链惨遭洗劫 (来源: The Hacker News)\n- **核心干货**：Cosmos Labs 在明知所有运行 Cosmos EVM 模块的链都存在高危余额处理漏洞（GHSA-7g4w-cg88-2cq2，评级 Critical，且未分配 CVE）的情况下，未及时公开警告。8月20日至25日期间，攻击者利用该漏洞从六条区块链上盗走大量资金。这不仅是技术缺陷，更是一次严重的安全披露流程失误。\n- **毒舌/硬核点评**：安全公告发得比黑客攻击还慢，这波是\"漏洞管理\"和\"漏洞利用\"的赛跑，后者完胜。建议 Cosmos Labs 把\"知情不报\"也写进漏洞报告里。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html)\n\n---\n\n### 2. 📌 SWE-Prime: 少即是多，高质量轨迹才是真王道 (来源: ArXiv)\n- **核心干货**：针对大模型解决真实软件问题，以往研究热衷于堆砌海量智能体轨迹数据做SFT。SWE-Prime 反其道而行之，证明了\"任务成功\"不等于\"监督信号优质\"，通过筛选更少但更高质量的轨迹进行微调，性能反而显著提升。这给当下\"数据军备竞赛\"浇了一盆清醒的冷水。\n- **毒舌/硬核点评**：当别人都在卷数据量时，这论文在卷数据质量。事实证明，喂给模型一堆\"成功但笨拙\"的解题过程，不如给它看几遍\"优雅的解法\"。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2608.27449v1)\n\n---\n\n### 3. 📌 Htmx 4.0 正式发布，继续用 HTML 属性 \"羞辱\" 前端框架 (来源: Hacker News)\n- **核心干货**：Htmx 4.0 带来了一系列更新，继续践行其\"在HTML中直接实现AJAX、CSS过渡和WebSocket\"的极简理念，让服务端渲染重回C位。在SPA（单页应用）复杂度爆炸的今天，Htmx 提供了一条\"返璞归真\"的路径，此次大版本更新进一步强化了其表达能力。\n- **毒舌/硬核点评**：当整个前端圈都在卷 bundle size 时，Htmx 告诉你：其实你只需要一个 `<button hx-post=\"/clicked\">`。4.0 来了，React 的 \"useEffect\" 噩梦可以醒醒了。\n- **🔗 传送门**：[点击直达原链接](https://four.htmx.org/announcements/2026-08-28-htmx-4.0.0-is-released)\n\n---\n\n### 🗣️ 今日顶男金句\n\"真正的极客精神，不是把所有技术栈都塞进项目里，而是知道什么时候该用一行 HTML 属性解决问题，以及什么时候该在漏洞被黑之前先发公告。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-30\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 腾讯开源 Hy4：大模型界的\"重量级拳王\"登场 (来源: HackerNews)\n- **核心干货**：腾讯正式发布并开源了 Hy4 预览版，这不仅是又一个\"国产大模型\"，而是直接在基础架构和推理效率上对标国际顶尖闭源模型的重磅选手。对于开发者而言，这意味着在 Llama、Mistral 之外，多了一个由中国顶级大厂背书、具备完整生态潜力的新选择。\n- **毒舌/硬核点评**：国内大模型\"百花齐放\"的PPT时代可以落幕了。腾讯这次是直接把家底亮出来，用开源告诉全世界：我们不只是会做微信和氪金游戏，硬核技术同样玩得转。这波，建议友商们连夜开会。\n- **🔗 传送门**：[点击直达原链接](https://www.tencent.com/tencent-releases-and-open-sources-tencent-hy4-preview/)\n\n---\n\n### 2. 📌 安全连环爆：PaperCut 与 cPanel 漏洞遭猛烈攻击 (来源: Tech RSS)\n- **核心干货**：本周安全圈迎来\"夺命连环call\"。PaperCut 曝出无需认证即可远程执行代码的零日漏洞，且已被大规模利用；紧接着 cPanel 也发布高危补丁，一个漏洞能让单个虚拟主机用户直接夺取服务器的 Root 权限。一个是打印管理软件，一个是主机控制面板，都是企业IT环境里的\"老黄牛\"，如今却成了攻击者的后花园。\n- **毒舌/硬核点评**：以前说\"攻击面\"是抽象概念，现在看就是\"遍地开花\"。这些老牌软件平时默默无闻，一出事就是服务器裸奔。建议所有运维今天别干别的，先把补丁打了，否则明天你的服务器可能就不是你的了。\n- **🔗 传送门**：[PaperCut 漏洞详情](https://thehackernews.com/2026/08/papercut-zero-day-exploited-in-attacks.html) | [cPanel 漏洞详情](https://thehackernews.com/2026/08/critical-cpanel-flaw-could-let-one.html)\n\n---\n\n### 3. 📌 SWE-Prime：给大模型\"开小灶\"，用更少数据教会它写代码 (来源: ArXiv)\n- **核心干货**：来自 ArXiv 的新研究。现有方法疯狂给大模型灌海量\"成功轨迹\"数据来提升其编程能力，但 SWE-Prime 反其道而行之，认为\"任务成功\"不等于\"数据优质\"。它通过筛选更精炼、更高质量的轨迹进行微调，在软件工程任务上取得了更优的性能表现。简单说，告别题海战术，讲究精讲精练。\n- **毒舌/硬核点评**：当所有人都在卷\"数据规模\"时，这篇论文告诉你\"质量才是王道\"。这就像学渣刷一万道题不如学霸做透一道综合题。给AI界的内卷提供了一个全新的\"降本增效\"思路，值得所有研究SFT的人仔细品品。\n- **🔗 传送门**：[点击直达论文](https://arxiv.org/abs/2608.27449v1)\n\n---\n\n### 🗣️ 今日顶男金句\n技术演进不是看谁嗓门大，而是看谁能在别人都在堆料时，先把\"内功\"练好。搞钱和写代码一样，精准打击永远比无效勤奋更性感。",
   "briefing_items": [
     {
-      "title": "Cosmos EVM 共享模块被曝致命漏洞，六条链惨遭洗劫",
-      "source": "The Hacker News",
-      "summary": "Cosmos Labs 在明知所有运行 Cosmos EVM 模块的链都存在高危余额处理漏洞（GHSA-7g4w-cg88-2cq2，评级 Critical，且未分配 CVE）的情况下，未及时公开警告。8月20日至25日期间，攻击者利用该漏洞从六条区块链上盗走大量资金。这不仅是技术缺陷，更是一次严重的安全披露流程失误。",
-      "commentary": "安全公告发得比黑客攻击还慢，这波是\"漏洞管理\"和\"漏洞利用\"的赛跑，后者完胜。建议 Cosmos Labs 把\"知情不报\"也写进漏洞报告里。",
-      "url": "https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html"
+      "title": "腾讯开源 Hy4：大模型界的\"重量级拳王\"登场",
+      "source": "HackerNews",
+      "summary": "腾讯正式发布并开源了 Hy4 预览版，这不仅是又一个\"国产大模型\"，而是直接在基础架构和推理效率上对标国际顶尖闭源模型的重磅选手。对于开发者而言，这意味着在 Llama、Mistral 之外，多了一个由中国顶级大厂背书、具备完整生态潜力的新选择。",
+      "commentary": "国内大模型\"百花齐放\"的PPT时代可以落幕了。腾讯这次是直接把家底亮出来，用开源告诉全世界：我们不只是会做微信和氪金游戏，硬核技术同样玩得转。这波，建议友商们连夜开会。",
+      "url": "https://www.tencent.com/tencent-releases-and-open-sources-tencent-hy4-preview/"
     },
     {
-      "title": "SWE-Prime: 少即是多，高质量轨迹才是真王道",
+      "title": "安全连环爆：PaperCut 与 cPanel 漏洞遭猛烈攻击",
+      "source": "Tech RSS",
+      "summary": "本周安全圈迎来\"夺命连环call\"。PaperCut 曝出无需认证即可远程执行代码的零日漏洞，且已被大规模利用；紧接着 cPanel 也发布高危补丁，一个漏洞能让单个虚拟主机用户直接夺取服务器的 Root 权限。一个是打印管理软件，一个是主机控制面板，都是企业IT环境里的\"老黄牛\"，如今却成了攻击者的后花园。",
+      "commentary": "以前说\"攻击面\"是抽象概念，现在看就是\"遍地开花\"。这些老牌软件平时默默无闻，一出事就是服务器裸奔。建议所有运维今天别干别的，先把补丁打了，否则明天你的服务器可能就不是你的了。",
+      "url": ""
+    },
+    {
+      "title": "SWE-Prime：给大模型\"开小灶\"，用更少数据教会它写代码",
       "source": "ArXiv",
-      "summary": "针对大模型解决真实软件问题，以往研究热衷于堆砌海量智能体轨迹数据做SFT。SWE-Prime 反其道而行之，证明了\"任务成功\"不等于\"监督信号优质\"，通过筛选更少但更高质量的轨迹进行微调，性能反而显著提升。这给当下\"数据军备竞赛\"浇了一盆清醒的冷水。",
-      "commentary": "当别人都在卷数据量时，这论文在卷数据质量。事实证明，喂给模型一堆\"成功但笨拙\"的解题过程，不如给它看几遍\"优雅的解法\"。",
-      "url": "https://arxiv.org/abs/2608.27449v1"
-    },
-    {
-      "title": "Htmx 4.0 正式发布，继续用 HTML 属性 \"羞辱\" 前端框架",
-      "source": "Hacker News",
-      "summary": "Htmx 4.0 带来了一系列更新，继续践行其\"在HTML中直接实现AJAX、CSS过渡和WebSocket\"的极简理念，让服务端渲染重回C位。在SPA（单页应用）复杂度爆炸的今天，Htmx 提供了一条\"返璞归真\"的路径，此次大版本更新进一步强化了其表达能力。",
-      "commentary": "当整个前端圈都在卷 bundle size 时，Htmx 告诉你：其实你只需要一个 `<button hx-post=\"/clicked\">`。4.0 来了，React 的 \"useEffect\" 噩梦可以醒醒了。",
-      "url": "https://four.htmx.org/announcements/2026-08-28-htmx-4.0.0-is-released"
+      "summary": "来自 ArXiv 的新研究。现有方法疯狂给大模型灌海量\"成功轨迹\"数据来提升其编程能力，但 SWE-Prime 反其道而行之，认为\"任务成功\"不等于\"数据优质\"。它通过筛选更精炼、更高质量的轨迹进行微调，在软件工程任务上取得了更优的性能表现。简单说，告别题海战术，讲究精讲精练。",
+      "commentary": "当所有人都在卷\"数据规模\"时，这篇论文告诉你\"质量才是王道\"。这就像学渣刷一万道题不如学霸做透一道综合题。给AI界的内卷提供了一个全新的\"降本增效\"思路，值得所有研究SFT的人仔细品品。",
+      "url": ""
     }
   ],
   "candidates": [
     {
-      "id": "hn:49477854",
-      "title": "U.S. sanctions against the A/I Collective",
-      "summary": "Earlier:<p><i>US Government designates host of noblogs.org a &quot;global terrorist&quot;</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49464391\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49464391</a> -  (131 comments)<p><i>US sanctions Italian hosting provider Autisti",
-      "url": "https://www.inventati.org/",
+      "id": "hn:49426995",
+      "title": "SQLite as a Document Database (2020)",
+      "summary": "",
+      "url": "https://dgl.cx/2020/06/sqlite-json-support",
       "source": "Hacker News",
-      "score": 671,
-      "comments": 690
+      "score": 187,
+      "comments": 47
     },
     {
-      "id": "hn:49489982",
-      "title": "Debian votes to allow \"responsible use of generative AI\"",
+      "id": "hn:49415386",
+      "title": "Tether: iMessage, SMS, etc. on Linux",
       "summary": "",
-      "url": "https://lwn.net/Articles/1091231/",
+      "url": "https://zackbartel.com/blog/2026/08/tether/",
       "source": "Hacker News",
-      "score": 251,
-      "comments": 195
+      "score": 395,
+      "comments": 165
     },
     {
-      "id": "hn:49479837",
-      "title": "GUIs should be fully keyboard-driven",
+      "id": "hn:49494182",
+      "title": "Lawmakers added $1 to car insurance policies. That money paid for Flock cameras",
       "summary": "",
-      "url": "https://ckardaris.com/blog/2026/08/28/keyboard-driven-guis.html",
+      "url": "https://www.texastribune.org/2026/08/28/texas-flock-cameras-auto-insurance-fee-mvcpa-grants/",
       "source": "Hacker News",
-      "score": 946,
-      "comments": 465
+      "score": 195,
+      "comments": 88
     },
     {
-      "id": "hn:49485267",
-      "title": "Boot a Virtual iPhone via Apple's Virtualization.framework",
+      "id": "hn:49492632",
+      "title": "Hy4 preview",
       "summary": "",
-      "url": "https://github.com/Lakr233/vphone-cli",
+      "url": "https://www.tencent.com/tencent-releases-and-open-sources-tencent-hy4-preview/",
       "source": "Hacker News",
-      "score": 345,
-      "comments": 90
+      "score": 229,
+      "comments": 137
     },
     {
-      "id": "lob:zhnpv1",
-      "title": "EasyEffects should be part of every Linux distribution to improve laptop speaker sound quality",
+      "id": "lob:77uge9",
+      "title": "htmx 4.0.0 has been released",
       "summary": "",
-      "url": "https://www.osnews.com/story/145883/easyeffects-should-be-part-of-every-linux-distribution-and-desktop-environment-to-massively-improve-laptop-speaker-sound-quality/",
+      "url": "https://four.htmx.org/announcements/2026-08-28-htmx-4.0.0-is-released",
       "source": "Lobste.rs",
-      "score": 61,
-      "comments": 23,
+      "score": 78,
+      "comments": 17,
       "tags": [
-        "linux"
+        "release",
+        "vibecoding",
+        "web"
       ]
     },
     {
-      "id": "hn:49487341",
-      "title": "Samsung's Processing-in-Memory (PIM)",
-      "summary": "",
-      "url": "https://chipsandcheese.com/p/hot-chips-2026-samsungs-processing",
+      "id": "hn:49490870",
+      "title": "Nancy Grace Roman Space Telescope",
+      "summary": "<a href=\"https:&#x2F;&#x2F;nextspaceflight.com&#x2F;launches&#x2F;details&#x2F;6983&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;nextspaceflight.com&#x2F;launches&#x2F;details&#x2F;6983&#x2F;</a><p><a href=\"https:&#x2F;&#x2F;www.npr.org&#x2F;2026&#x2F;08&#x2F;28&#x2F;nx-s1-5905370&#x2F;nasa-nancy-grace-r",
+      "url": "https://science.nasa.gov/mission/roman-space-telescope/",
       "source": "Hacker News",
-      "score": 186,
-      "comments": 65
-    },
-    {
-      "id": "hn:49478178",
-      "title": "Htmx 4.0",
-      "summary": "",
-      "url": "https://four.htmx.org/announcements/2026-08-28-htmx-4.0.0-is-released",
-      "source": "Hacker News",
-      "score": 749,
-      "comments": 185
+      "score": 160,
+      "comments": 68
     },
     {
       "id": "lob:mroowi",
@@ -99,8 +92,8 @@
       "summary": "",
       "url": "https://www.jacky.wtf/essays/2026/kicked-out/",
       "source": "Lobste.rs",
-      "score": 81,
-      "comments": 39,
+      "score": 128,
+      "comments": 89,
       "tags": [
         "person"
       ]
@@ -111,36 +104,11 @@
       "summary": "",
       "url": "https://mckayla.blog/posts/yap.html",
       "source": "Lobste.rs",
-      "score": 65,
-      "comments": 16,
+      "score": 72,
+      "comments": 17,
       "tags": [
         "practices",
         "vibecoding"
-      ]
-    },
-    {
-      "id": "lob:ulkqhi",
-      "title": "How I made Rustdoc 33% faster in one week",
-      "summary": "",
-      "url": "https://noahlev.org/blog/2026/08/27/making-rustdoc-faster/",
-      "source": "Lobste.rs",
-      "score": 41,
-      "comments": 7,
-      "tags": [
-        "performance",
-        "rust"
-      ]
-    },
-    {
-      "id": "lob:im3eeh",
-      "title": "OpenOffice does not print on Tuesdays (2009)",
-      "summary": "",
-      "url": "https://beza1e1.tuxen.de/lore/print_on_tuesday.html",
-      "source": "Lobste.rs",
-      "score": 72,
-      "comments": 13,
-      "tags": [
-        "linux"
       ]
     },
     {
@@ -149,56 +117,73 @@
       "summary": "<p>The official announcement with the breakdown of votes is <a href=\"https://lists.debian.org/debian-vote/2026/08/msg00360.html\" rel=\"ugc\">here</a>, but option 5 has won.</p>\n",
       "url": "https://www.debian.org/vote/2026/vote_002#texte",
       "source": "Lobste.rs",
-      "score": 32,
-      "comments": 19,
+      "score": 48,
+      "comments": 29,
       "tags": [
         "linux",
         "vibecoding"
       ]
     },
     {
-      "id": "hn:49433328",
-      "title": "EVE Online moves to Python 3",
+      "id": "lob:nbjo0i",
+      "title": "Creepy crawlies",
       "summary": "",
-      "url": "https://www.eveonline.com/news/view/the-move-to-python-3-begins",
-      "source": "Hacker News",
-      "score": 142,
-      "comments": 77
+      "url": "https://people.kernel.org/monsieuricon/creepy-crawlies",
+      "source": "Lobste.rs",
+      "score": 60,
+      "comments": 17,
+      "tags": [
+        "devops",
+        "linux"
+      ]
     },
     {
-      "id": "lob:suwcbt",
-      "title": "How cats.txt showed llms.txt evidence is GEO astrology",
+      "id": "lob:k9uxu5",
+      "title": "Parsing the Infamous Japanese Postal CSV (2020)",
       "summary": "",
-      "url": "https://markwilliamscook.substack.com/p/how-catstxt-showed-llmstxt-evidence",
+      "url": "https://www.dampfkraft.com/posuto.html",
       "source": "Lobste.rs",
-      "score": 40,
+      "score": 34,
       "comments": 6,
       "tags": [
-        "practices",
+        "programming"
+      ]
+    },
+    {
+      "id": "hn:49494520",
+      "title": "Bug Blindness",
+      "summary": "",
+      "url": "https://danluu.com/bug-blind/",
+      "source": "Hacker News",
+      "score": 128,
+      "comments": 51
+    },
+    {
+      "id": "lob:pxmp9r",
+      "title": "Debian and the sirens",
+      "summary": "",
+      "url": "https://joeyh.name/blog/entry/Debian_and_the_sirens/",
+      "source": "Lobste.rs",
+      "score": 40,
+      "comments": 9,
+      "tags": [
+        "linux",
         "vibecoding"
       ]
     },
     {
-      "id": "lob:lvspri",
-      "title": "Quest for eternal dock on Wayland - lambdock (C + GTK4 + Lisp GNU Guile Scheme)",
+      "id": "lob:5lz0zd",
+      "title": "I naively tried vibe-coding a memory tool for agents and stared into the abyss of unsolved problems in philosophy",
       "summary": "",
-      "url": "https://jointhefreeworld.org/blog/articles/gnu-linux/quest-for-eternal-dock/index.html",
+      "url": "https://arbustoemchamas.substack.com/p/i-naively-tried-vibe-coding-a-memory",
       "source": "Lobste.rs",
-      "score": 43,
+      "score": 21,
       "comments": 5,
       "tags": [
-        "c",
-        "lisp"
+        "philosophy",
+        "practices",
+        "vibecoding"
       ]
-    },
-    {
-      "id": "hn:49424320",
-      "title": "Glacier Mice",
-      "summary": "",
-      "url": "https://en.wikipedia.org/wiki/Glacier_mice",
-      "source": "Hacker News",
-      "score": 140,
-      "comments": 28
     },
     {
       "id": "arxiv:2608.27449v1",
@@ -237,6 +222,22 @@
       "title": "Attackers Chain Two PaperCut Flaws to Execute Code Without Authentication",
       "summary": "Malicious actors are exploiting a newly patched security flaw in PaperCut NG and MF to execute arbitrary code on susceptible instances, as the company released a fresh emergency fix with additional hardening.\n\n\"This vulnerability gives an unauthenticated attacker remote control over PaperCut's trust",
       "url": "https://thehackernews.com/2026/08/attackers-chain-two-papercut-flaws-to.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:c8466e4aef",
+      "title": "Critical cPanel Flaw Could Let One Hosting Customer Take Root Control of a Whole Server",
+      "summary": "cPanel has released patches for a security flaw affecting domain parking and addon domain functionality in cPanel and WebHost Manager (WHM), which could allow code execution as the root user.\n\nThe vulnerability, assigned the CVE identifier CVE-2026-65643, impacts all supported versions of cPanel &am",
+      "url": "https://thehackernews.com/2026/08/critical-cpanel-flaw-could-let-one.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:a368d083fc",
+      "title": "PaperCut Zero-Day Exploited in Attacks, Affecting All NG and MF Versions",
+      "summary": "PaperCut has alerted customers that bad actors are actively exploiting a vulnerability impacting all versions of its PaperCut NG and PaperCut MF print management software in zero-day attacks.\n\nThe company has released an emergency patch for v25 and v26 to address the issue. It said it's \"aware of co",
+      "url": "https://thehackernews.com/2026/08/papercut-zero-day-exploited-in-attacks.html",
       "source": "Tech RSS",
       "score": 0
     }
