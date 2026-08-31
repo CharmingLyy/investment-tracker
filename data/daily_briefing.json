@@ -1,94 +1,63 @@
 {
-  "date": "2026-08-31",
-  "update_time": "2026-08-31 04:42:17",
+  "date": "2026-09-01",
+  "update_time": "2026-08-31 18:55:14",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-31\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Cosmos EVM 漏洞被利用：六条链资金被抽干，官方早就知道？ (来源: HackerNews/TheHackerNews)\n- **核心干货**：Cosmos Labs 在 8 月 20 日至 25 日期间，其共享的 Cosmos EVM 模块（漏洞编号 GHSA-7g4w-cg88-2cq2）被攻击者利用，导致六条区块链上的资金被直接盗走。官方评级为\"严重\"，但**最骚的是**，他们承认在漏洞被利用前就已经知道所有基于该模块的链都存在风险。这属于典型的\"知道会出事，但没想到这么快\"。\n- **毒舌/硬核点评**：都说区块链是去中心化的，结果一个共享模块出了漏洞，六条链集体裸奔。这波操作下来，Cosmos 的\"安全性\"比它的跨链通信还\"透明\"。建议下次把漏洞公告直接写成：*\"我们很早就知道门是坏的，但没想到小偷比我们勤快。\"*\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html)\n\n---\n\n### 2. 📌 cPanel 又双叒叕爆\"Root 级\"漏洞，一个客户就能掀翻整个服务器 (来源: Tech RSS)\n- **核心干货**：cPanel 发布紧急补丁，修复了其域名停放（Domain Parking）和附加域功能中的致命缺陷（CVE-2026-65643）。该漏洞允许**任何一个托管客户**在无需高级权限的情况下，直接以 root 用户身份在服务器上执行任意代码。换句话说，你隔壁那个建站卖茶叶蛋的客户，理论上可以一键格式化整台服务器。\n- **毒舌/硬核点评**：cPanel 这波是\"Service Provider 的噩梦\"续集。虽然漏洞细节很硬核，但更值得玩味的是：为什么这种\"一个客户打穿一台服务器\"的漏洞，到现在还在 cPanel 的更新日志里反复出现？建议把 cPanel 的 Slogan 改为：*\"让你的服务器每一天都是新的（指重装系统）。\"*\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/critical-cpanel-flaw-could-let-one.html)\n\n---\n\n### 3. 📌 加州通过 AB-1856：开源软件终于不用给\"年龄验证\"背锅了 (来源: Phoronix)\n- **核心干货**：加州正式通过 AB-1856 法案，为开源开发者提供了关于\"年龄验证\"要求的法律豁免。此前，一些模糊的法案可能要求开发者强制收集用户年龄数据甚至身份证件，这对注重隐私的开源项目简直是灾难。该法案明确了：如果你不主要负责内容的生成或分发，就不用被迫植入这种破坏隐私的机制。\n- **毒舌/硬核点评**：这波不是技术突破，而是\"法律护城河\"的胜利。在大家都在用 AI 生成擦边内容的时候，让程序员去验证用户年龄，就好比让卖菜刀的证明买刀的人不会砍人——荒谬至极。加州这波操作，总算让开源社区在隐私问题上喘了口气。给立法者加个鸡腿，但别加太多，毕竟他们昨天还在为\"AI 会不会毁灭人类\"开会。\n- **🔗 传送门**：[点击直达原链接](https://www.phoronix.com/news/California-AB-1856-Passes)\n\n---\n\n### 🗣️ 今日顶男金句\n\"当你以为区块链是去中心化的时候，一个共享库的漏洞告诉你：**去中心化的是风险，不是责任。**\" —— 别问，问就是今天也要记得备份。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-01\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Cosmos EVM 连锁爆雷，六个链被薅秃 (来源: Tech RSS)\n- **核心干货**：Cosmos Labs 确认其共享 EVM 模块存在严重余额处理漏洞（GHSA-7g4w-cg88-2cq2），且官方早已知情。结果 8 月 20 日至 25 日期间，六个基于该模块的区块链被攻击者利用漏洞直接抽干资金。这不仅是技术漏洞，更是典型的\"明知山有虎，偏向虎山行\"的运营灾难。\n- **毒舌/硬核点评**：共享模块的初衷是\"一次审计，处处安全\"，结果变成了\"一次漏洞，处处遭殃\"。建议 Cosmos 下次发布安全公告时，顺便附上受害链的\"墓地地图\"。\n- 🔗 [传送门](https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html)\n\n---\n\n### 2. 📌 Apple 被 AI 浪潮打了个措手不及 (来源: Hacker News | 116分)\n- **核心干货**：苹果对 Mac Mini 和 Mac Studio 的需求预估严重失算，被本地 AI 推理和开发者的疯狂采购打了个措手不及。供应链产能吃紧，交付周期被迫拉长。这侧面印证了本地化 AI 算力需求正以远高于行业预期的速度爆发，而苹果的\"库存管理魔法\"这次失灵了。\n- **毒舌/硬核点评**：库克引以为傲的供应链魔法，在 AI 军备竞赛面前变成了\"占卜术\"。建议下次预测需求前，先看一眼 GitHub 上有多少个正在跑 Llama 的 repo。\n- 🔗 [传送门](https://www.macrumors.com/2026/08/30/apple-unexpected-mac-mini-and-studio-demand/)\n\n---\n\n### 3. 📌 PaperCut 双漏洞链式利用：未认证远程代码执行 (来源: Tech RSS)\n- **核心干货**：攻击者正在利用 PaperCut NG/MF 中两个新修补的漏洞进行链式利用，无需任何凭据即可在受影响服务器上执行任意代码。PaperCut 已发布紧急修复补丁和额外加固措施。考虑到 PaperCut 在打印管理领域的渗透率，这基本是给企业内网开了一扇\"免钥匙后门\"。\n- **毒舌/硬核点评**：打印服务器一直是内网安全的\"法外之地\"，这次漏洞再次证明：攻击者不需要最先进的技术，只需要一个没打补丁的打印机。\n- 🔗 [传送门](https://thehackernews.com/2026/08/attackers-chain-two-papercut-flaws-to.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\"真正的护城河不是用最新的框架，而是把旧漏洞的补丁打齐。毕竟，黑客们最爱的不是0day，而是你的'已过期'。\"",
   "briefing_items": [
     {
-      "title": "Cosmos EVM 漏洞被利用：六条链资金被抽干，官方早就知道？",
-      "source": "HackerNews/TheHackerNews",
-      "summary": "Cosmos Labs 在 8 月 20 日至 25 日期间，其共享的 Cosmos EVM 模块（漏洞编号 GHSA-7g4w-cg88-2cq2）被攻击者利用，导致六条区块链上的资金被直接盗走。官方评级为\"严重\"，但**最骚的是**，他们承认在漏洞被利用前就已经知道所有基于该模块的链都存在风险。这属于典型的\"知道会出事，但没想到这么快\"。",
-      "commentary": "都说区块链是去中心化的，结果一个共享模块出了漏洞，六条链集体裸奔。这波操作下来，Cosmos 的\"安全性\"比它的跨链通信还\"透明\"。建议下次把漏洞公告直接写成：*\"我们很早就知道门是坏的，但没想到小偷比我们勤快。\"*",
-      "url": "https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html"
-    },
-    {
-      "title": "cPanel 又双叒叕爆\"Root 级\"漏洞，一个客户就能掀翻整个服务器",
+      "title": "Cosmos EVM 连锁爆雷，六个链被薅秃",
       "source": "Tech RSS",
-      "summary": "cPanel 发布紧急补丁，修复了其域名停放（Domain Parking）和附加域功能中的致命缺陷（CVE-2026-65643）。该漏洞允许**任何一个托管客户**在无需高级权限的情况下，直接以 root 用户身份在服务器上执行任意代码。换句话说，你隔壁那个建站卖茶叶蛋的客户，理论上可以一键格式化整台服务器。",
-      "commentary": "cPanel 这波是\"Service Provider 的噩梦\"续集。虽然漏洞细节很硬核，但更值得玩味的是：为什么这种\"一个客户打穿一台服务器\"的漏洞，到现在还在 cPanel 的更新日志里反复出现？建议把 cPanel 的 Slogan 改为：*\"让你的服务器每一天都是新的（指重装系统）。\"*",
-      "url": "https://thehackernews.com/2026/08/critical-cpanel-flaw-could-let-one.html"
+      "summary": "Cosmos Labs 确认其共享 EVM 模块存在严重余额处理漏洞（GHSA-7g4w-cg88-2cq2），且官方早已知情。结果 8 月 20 日至 25 日期间，六个基于该模块的区块链被攻击者利用漏洞直接抽干资金。这不仅是技术漏洞，更是典型的\"明知山有虎，偏向虎山行\"的运营灾难。",
+      "commentary": "共享模块的初衷是\"一次审计，处处安全\"，结果变成了\"一次漏洞，处处遭殃\"。建议 Cosmos 下次发布安全公告时，顺便附上受害链的\"墓地地图\"。",
+      "url": ""
     },
     {
-      "title": "加州通过 AB-1856：开源软件终于不用给\"年龄验证\"背锅了",
-      "source": "Phoronix",
-      "summary": "加州正式通过 AB-1856 法案，为开源开发者提供了关于\"年龄验证\"要求的法律豁免。此前，一些模糊的法案可能要求开发者强制收集用户年龄数据甚至身份证件，这对注重隐私的开源项目简直是灾难。该法案明确了：如果你不主要负责内容的生成或分发，就不用被迫植入这种破坏隐私的机制。",
-      "commentary": "这波不是技术突破，而是\"法律护城河\"的胜利。在大家都在用 AI 生成擦边内容的时候，让程序员去验证用户年龄，就好比让卖菜刀的证明买刀的人不会砍人——荒谬至极。加州这波操作，总算让开源社区在隐私问题上喘了口气。给立法者加个鸡腿，但别加太多，毕竟他们昨天还在为\"AI 会不会毁灭人类\"开会。",
-      "url": "https://www.phoronix.com/news/California-AB-1856-Passes"
+      "title": "Apple 被 AI 浪潮打了个措手不及",
+      "source": "Hacker News | 116分",
+      "summary": "苹果对 Mac Mini 和 Mac Studio 的需求预估严重失算，被本地 AI 推理和开发者的疯狂采购打了个措手不及。供应链产能吃紧，交付周期被迫拉长。这侧面印证了本地化 AI 算力需求正以远高于行业预期的速度爆发，而苹果的\"库存管理魔法\"这次失灵了。",
+      "commentary": "库克引以为傲的供应链魔法，在 AI 军备竞赛面前变成了\"占卜术\"。建议下次预测需求前，先看一眼 GitHub 上有多少个正在跑 Llama 的 repo。",
+      "url": ""
+    },
+    {
+      "title": "PaperCut 双漏洞链式利用：未认证远程代码执行",
+      "source": "Tech RSS",
+      "summary": "攻击者正在利用 PaperCut NG/MF 中两个新修补的漏洞进行链式利用，无需任何凭据即可在受影响服务器上执行任意代码。PaperCut 已发布紧急修复补丁和额外加固措施。考虑到 PaperCut 在打印管理领域的渗透率，这基本是给企业内网开了一扇\"免钥匙后门\"。",
+      "commentary": "打印服务器一直是内网安全的\"法外之地\"，这次漏洞再次证明：攻击者不需要最先进的技术，只需要一个没打补丁的打印机。",
+      "url": ""
     }
   ],
   "candidates": [
     {
-      "id": "hn:49503601",
-      "title": "“I just chose words carefully”",
+      "id": "lob:zzn47c",
+      "title": "VibeCoded AI-Slop License v1.0",
       "summary": "",
-      "url": "https://unsung.aresluna.org/i-just-chose-words-carefully/",
-      "source": "Hacker News",
-      "score": 446,
-      "comments": 109
-    },
-    {
-      "id": "hn:49499867",
-      "title": "Haiku R1/beta6 has been released",
-      "summary": "",
-      "url": "https://www.haiku-os.org/news/2026-08-26_haiku_r1_beta6",
-      "source": "Hacker News",
-      "score": 272,
-      "comments": 83
-    },
-    {
-      "id": "lob:rikfb5",
-      "title": "Rust Function Overloading - Call for Experimentation",
-      "summary": "",
-      "url": "https://blog.rust-lang.org/inside-rust/2026/08/19/overloading-experiment/",
+      "url": "https://gist.github.com/NicolasCARPi/3fd349ed1ed52ae6b835d5364cda4cd6",
       "source": "Lobste.rs",
-      "score": 36,
-      "comments": 25,
+      "score": 43,
+      "comments": 22,
       "tags": [
-        "rust"
-      ]
-    },
-    {
-      "id": "hn:49491791",
-      "title": "Creepy Crawlies",
-      "summary": "",
-      "url": "https://people.kernel.org/monsieuricon/creepy-crawlies",
-      "source": "Hacker News",
-      "score": 992,
-      "comments": 489
-    },
-    {
-      "id": "lob:9y9jo6",
-      "title": "There's no such thing as Just a Tool",
-      "summary": "",
-      "url": "https://deadsimpletech.com/blog/no-such-thing-as-just-a-tool",
-      "source": "Lobste.rs",
-      "score": 103,
-      "comments": 21,
-      "tags": [
-        "philosophy",
         "vibecoding"
       ]
     },
     {
-      "id": "lob:mroowi",
-      "title": "Being kicked out of the tech industry",
+      "id": "hn:49510514",
+      "title": "Playa Phone",
       "summary": "",
-      "url": "https://www.jacky.wtf/essays/2026/kicked-out/",
+      "url": "https://playaphone.com/",
+      "source": "Hacker News",
+      "score": 302,
+      "comments": 124
+    },
+    {
+      "id": "lob:1pdfex",
+      "title": "curl: a CVE dispute",
+      "summary": "",
+      "url": "https://daniel.haxx.se/blog/2026/06/24/a-cve-dispute/",
       "source": "Lobste.rs",
-      "score": 158,
-      "comments": 143,
+      "score": 48,
+      "comments": 20,
       "tags": [
-        "person"
+        "security"
       ]
     },
     {
@@ -97,23 +66,29 @@
       "summary": "",
       "url": "https://0xcc.io/posts/omarchy-root-creds/",
       "source": "Lobste.rs",
-      "score": 59,
-      "comments": 14,
+      "score": 106,
+      "comments": 50,
       "tags": [
         "security"
       ]
     },
     {
-      "id": "lob:mgwfjc",
-      "title": "Transfer files over an ethernet patch cable",
+      "id": "hn:49510000",
+      "title": "ChatGPT Work Tool and Skill Reference",
       "summary": "",
-      "url": "https://maurycyz.com/misc/etherfiles/",
-      "source": "Lobste.rs",
-      "score": 31,
-      "comments": 20,
-      "tags": [
-        "networking"
-      ]
+      "url": "https://codex-tool-reference.simonw.chatgpt.site/",
+      "source": "Hacker News",
+      "score": 122,
+      "comments": 45
+    },
+    {
+      "id": "hn:49511856",
+      "title": "I turned my security cameras into an automatic bird identification system",
+      "summary": "",
+      "url": "https://jasontucker.blog/how-i-turned-my-security-cameras-into-an-automatic-bird-identification-system-with-birdnet-go/",
+      "source": "Hacker News",
+      "score": 147,
+      "comments": 49
     },
     {
       "id": "lob:9naffr",
@@ -121,85 +96,68 @@
       "summary": "",
       "url": "https://dustycloud.org/blog/but-where-does-taste-come-from/",
       "source": "Lobste.rs",
-      "score": 39,
-      "comments": 7,
+      "score": 57,
+      "comments": 10,
       "tags": [
         "vibecoding"
       ]
     },
     {
-      "id": "lob:rr2irk",
-      "title": "Gram Editor 3.3.0 Released",
+      "id": "hn:49511534",
+      "title": "ravynOS: Pre-alpha open-source OS based on Darwin, FreeBSD, Apple open-source",
       "summary": "",
-      "url": "https://gram-editor.com/posts/release-3.3.0/",
+      "url": "https://ravynos.com/",
+      "source": "Hacker News",
+      "score": 81,
+      "comments": 53
+    },
+    {
+      "id": "hn:49508982",
+      "title": "Apple caught off guard by AI demand for Mac Mini and Mac Studio",
+      "summary": "",
+      "url": "https://www.macrumors.com/2026/08/30/apple-unexpected-mac-mini-and-studio-demand/",
+      "source": "Hacker News",
+      "score": 116,
+      "comments": 133
+    },
+    {
+      "id": "lob:qn7jtv",
+      "title": "I attended a conference recently and AI use by academics was absurd",
+      "summary": "<p>As we listened to talks most people were stuck doing pointless tasks on their phones and computers. Less than 10%, likely 5%, were listening attentively. This was quite sad for me.</p>\n<p>The thing I would like to share the most, that shocked me more than any AI use I've seen ever—when I was on s",
+      "url": "https://lobste.rs/s/qn7jtv/i_attended_conference_recently_ai_use_by",
       "source": "Lobste.rs",
-      "score": 62,
-      "comments": 2,
+      "score": 25,
+      "comments": 10,
       "tags": [
-        "editors",
-        "release",
-        "rust"
+        "ai",
+        "event",
+        "rant"
       ]
     },
     {
-      "id": "lob:pcldcc",
-      "title": "California Passes AB-1856 For Open-Source Relief Over Age Verification",
+      "id": "lob:xnljk9",
+      "title": "A Better SQL in 11 Lines of Code",
       "summary": "",
-      "url": "https://www.phoronix.com/news/California-AB-1856-Passes",
+      "url": "https://prela-lang.org/tutorial/",
       "source": "Lobste.rs",
-      "score": 42,
-      "comments": 3,
+      "score": 33,
+      "comments": 9,
       "tags": [
-        "law"
+        "databases"
       ]
     },
     {
-      "id": "hn:49504625",
-      "title": "Understanding ChatGPT Work",
+      "id": "lob:uueocw",
+      "title": "Repeating Ourselves Less with M4",
       "summary": "",
-      "url": "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/",
-      "source": "Hacker News",
-      "score": 96,
-      "comments": 31
-    },
-    {
-      "id": "hn:49435285",
-      "title": "Sort branches by last commit date",
-      "summary": "",
-      "url": "https://ryangreenberg.com/til/git-branches-by-commit-date/",
-      "source": "Hacker News",
-      "score": 102,
-      "comments": 35
-    },
-    {
-      "id": "lob:ktbweg",
-      "title": "Prompt Injection in Claude Code Opus 5 Auto Mode",
-      "summary": "",
-      "url": "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/",
+      "url": "https://nemin.hu/httpd-macros/index.html",
       "source": "Lobste.rs",
-      "score": 18,
-      "comments": 20,
+      "score": 22,
+      "comments": 19,
       "tags": [
-        "vibecoding"
+        "openbsd",
+        "unix"
       ]
-    },
-    {
-      "id": "hn:49502611",
-      "title": "Continuous Diffusion Language Models (CDLM's)",
-      "summary": "",
-      "url": "https://sander.ai/2026/08/24/continuous-dlms.html",
-      "source": "Hacker News",
-      "score": 69,
-      "comments": 29
-    },
-    {
-      "id": "hn:49505288",
-      "title": "UC Berkeley indefinitely suspends international student work authorizations",
-      "summary": "",
-      "url": "https://www.dailycal.org/news/campus/after-second-ice-threat-uc-berkeley-indefinitely-suspends-international-student-work-authorizations/article_0e9ae0c0-dd4d-4455-a25b-e8be7b47e350.html",
-      "source": "Hacker News",
-      "score": 48,
-      "comments": 36
     },
     {
       "id": "arxiv:2608.28576v1",
@@ -232,12 +190,55 @@
       "score": 0
     },
     {
-      "id": "rss:c8466e4aef",
-      "title": "Critical cPanel Flaw Could Let One Hosting Customer Take Root Control of a Whole Server",
-      "summary": "cPanel has released patches for a security flaw affecting domain parking and addon domain functionality in cPanel and WebHost Manager (WHM), which could allow code execution as the root user.\n\nThe vulnerability, assigned the CVE identifier CVE-2026-65643, impacts all supported versions of cPanel &am",
-      "url": "https://thehackernews.com/2026/08/critical-cpanel-flaw-could-let-one.html",
-      "source": "Tech RSS",
-      "score": 0
+      "id": "lob:8gved6",
+      "title": "July in Servo: more platforms, faster canvas, web fonts in SVG, and more",
+      "summary": "",
+      "url": "https://servo.org/blog/2026/08/31/july-in-servo/",
+      "source": "Lobste.rs",
+      "score": 38,
+      "comments": 1,
+      "tags": [
+        "browsers"
+      ]
+    },
+    {
+      "id": "lob:ngqpa1",
+      "title": "The U.S. is more than just the US (according to the ISO)",
+      "summary": "",
+      "url": "https://trevmex.com/post/826439929093636096/the-us-is-more-than-just-the-us-according-to",
+      "source": "Lobste.rs",
+      "score": 20,
+      "comments": 9,
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "id": "hn:49495171",
+      "title": "No country for mediocre mathematicians",
+      "summary": "",
+      "url": "https://garvvee.substack.com/p/no-country-for-mediocre-mathematicians",
+      "source": "Hacker News",
+      "score": 61,
+      "comments": 34
+    },
+    {
+      "id": "hn:49510511",
+      "title": "C++26: Standard Library Hardening Experiments",
+      "summary": "",
+      "url": "https://www.cppstories.com/2026/hardening-experiments/",
+      "source": "Hacker News",
+      "score": 58,
+      "comments": 35
+    },
+    {
+      "id": "hn:49511007",
+      "title": "Launch HN: Almanac (YC S26) – AI that knows your company",
+      "summary": "Hi HN, I&#x27;m Kushagra, one of three founders of Almanac, a Hermes with a brain that knows everything about your company.<p>We started our journey with setting up Hermes for our company, thinking it must be easy. We wanted an agent that would know every context about our company, so we could ask q",
+      "url": "https://usealmanac.com/",
+      "source": "Hacker News",
+      "score": 24,
+      "comments": 31
     }
   ],
   "ai_curated": true
