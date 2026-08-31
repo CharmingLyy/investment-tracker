@@ -1,140 +1,49 @@
 {
   "date": "2026-08-31",
-  "update_time": "2026-08-30 16:15:40",
+  "update_time": "2026-08-31 04:42:17",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-31\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 CPython 官方支持 RISC-V (来源: Hacker News)\n- **核心干货**：Python 官方宣布 RISC-V 架构正式成为 CPython 的受支持平台。这意味着这个开源指令集架构从\"玩具/极客圈\"正式迈入 Python 生态的主流支持行列，对嵌入式、边缘计算和自主可控芯片的开发者来说是个实打实的基建利好。\n- **毒舌/硬核点评**：x86 和 ARM 打了几十年，RISC-V 闷声搞基建，现在连 Python 都\"上车\"了。这波是开源硬件的\"农村包围城市\"，下一步是不是该轮到 Windows 了？\n- **🔗 传送门**：[点击直达原链接](https://blog.python.org/2026/08/riscv-now-officially-supported/)\n\n---\n\n### 2. 📌 QubesOS 爆出\"复制到VM\"后门级漏洞 (来源: Hacker News)\n- **核心干货**：QubesOS 披露了一个通过 copy-to-VM 错误报告通道实现任意代码执行的安全漏洞（QSB-118）。该漏洞允许恶意 VM 利用错误报告反向通道逃逸到管理域，威胁整个系统的隔离模型——而 QubesOS 的核心卖点恰恰就是\"基于隔离的安全性\"。\n- **毒舌/硬核点评**：号称\"安全到偏执\"的 QubesOS 自己翻了车，这波属于是\"堡垒从内部被攻破\"。建议各位安全洁癖用户先别急着 copy 文件，稳一手等补丁。\n- **🔗 传送门**：[点击直达原链接](https://www.qubes-os.org/news/2026/08/29/qsb-118/)\n\n---\n\n### 3. 📌 Cosmos EVM 漏洞被利用，六条链遭殃 (来源: Tech RSS)\n- **核心干货**：Cosmos Labs 披露了一个在共享 Cosmos EVM 模块中的关键余额处理漏洞（GHSA-7g4w-cg88-2cq2），8月20日至25日期间已被利用，从六条区块链上抽走资金。Cosmos Labs 表示他们事先知道所有运行该模块的链都受影响，但漏洞仍被利用——这波属于\"知情不报\"的教科书级反面案例。\n- **毒舌/硬核点评**：知道自家门锁是坏的，还不赶紧换，等着小偷来敲门？DeFi 圈的钱包深度，永远赶不上漏洞利用者的手速。建议各位链上玩家把\"审计报告\"当\"免责声明\"看。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\"真正的安全感不是'我觉得没问题'，而是'我知道哪里有问题并且已经堵上了'——代码如此，人生亦然。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-08-31\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Cosmos EVM 漏洞被利用：六条链资金被抽干，官方早就知道？ (来源: HackerNews/TheHackerNews)\n- **核心干货**：Cosmos Labs 在 8 月 20 日至 25 日期间，其共享的 Cosmos EVM 模块（漏洞编号 GHSA-7g4w-cg88-2cq2）被攻击者利用，导致六条区块链上的资金被直接盗走。官方评级为\"严重\"，但**最骚的是**，他们承认在漏洞被利用前就已经知道所有基于该模块的链都存在风险。这属于典型的\"知道会出事，但没想到这么快\"。\n- **毒舌/硬核点评**：都说区块链是去中心化的，结果一个共享模块出了漏洞，六条链集体裸奔。这波操作下来，Cosmos 的\"安全性\"比它的跨链通信还\"透明\"。建议下次把漏洞公告直接写成：*\"我们很早就知道门是坏的，但没想到小偷比我们勤快。\"*\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html)\n\n---\n\n### 2. 📌 cPanel 又双叒叕爆\"Root 级\"漏洞，一个客户就能掀翻整个服务器 (来源: Tech RSS)\n- **核心干货**：cPanel 发布紧急补丁，修复了其域名停放（Domain Parking）和附加域功能中的致命缺陷（CVE-2026-65643）。该漏洞允许**任何一个托管客户**在无需高级权限的情况下，直接以 root 用户身份在服务器上执行任意代码。换句话说，你隔壁那个建站卖茶叶蛋的客户，理论上可以一键格式化整台服务器。\n- **毒舌/硬核点评**：cPanel 这波是\"Service Provider 的噩梦\"续集。虽然漏洞细节很硬核，但更值得玩味的是：为什么这种\"一个客户打穿一台服务器\"的漏洞，到现在还在 cPanel 的更新日志里反复出现？建议把 cPanel 的 Slogan 改为：*\"让你的服务器每一天都是新的（指重装系统）。\"*\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/critical-cpanel-flaw-could-let-one.html)\n\n---\n\n### 3. 📌 加州通过 AB-1856：开源软件终于不用给\"年龄验证\"背锅了 (来源: Phoronix)\n- **核心干货**：加州正式通过 AB-1856 法案，为开源开发者提供了关于\"年龄验证\"要求的法律豁免。此前，一些模糊的法案可能要求开发者强制收集用户年龄数据甚至身份证件，这对注重隐私的开源项目简直是灾难。该法案明确了：如果你不主要负责内容的生成或分发，就不用被迫植入这种破坏隐私的机制。\n- **毒舌/硬核点评**：这波不是技术突破，而是\"法律护城河\"的胜利。在大家都在用 AI 生成擦边内容的时候，让程序员去验证用户年龄，就好比让卖菜刀的证明买刀的人不会砍人——荒谬至极。加州这波操作，总算让开源社区在隐私问题上喘了口气。给立法者加个鸡腿，但别加太多，毕竟他们昨天还在为\"AI 会不会毁灭人类\"开会。\n- **🔗 传送门**：[点击直达原链接](https://www.phoronix.com/news/California-AB-1856-Passes)\n\n---\n\n### 🗣️ 今日顶男金句\n\"当你以为区块链是去中心化的时候，一个共享库的漏洞告诉你：**去中心化的是风险，不是责任。**\" —— 别问，问就是今天也要记得备份。",
   "briefing_items": [
     {
-      "title": "CPython 官方支持 RISC-V",
-      "source": "Hacker News",
-      "summary": "Python 官方宣布 RISC-V 架构正式成为 CPython 的受支持平台。这意味着这个开源指令集架构从\"玩具/极客圈\"正式迈入 Python 生态的主流支持行列，对嵌入式、边缘计算和自主可控芯片的开发者来说是个实打实的基建利好。",
-      "commentary": "x86 和 ARM 打了几十年，RISC-V 闷声搞基建，现在连 Python 都\"上车\"了。这波是开源硬件的\"农村包围城市\"，下一步是不是该轮到 Windows 了？",
-      "url": "https://blog.python.org/2026/08/riscv-now-officially-supported/"
-    },
-    {
-      "title": "QubesOS 爆出\"复制到VM\"后门级漏洞",
-      "source": "Hacker News",
-      "summary": "QubesOS 披露了一个通过 copy-to-VM 错误报告通道实现任意代码执行的安全漏洞（QSB-118）。该漏洞允许恶意 VM 利用错误报告反向通道逃逸到管理域，威胁整个系统的隔离模型——而 QubesOS 的核心卖点恰恰就是\"基于隔离的安全性\"。",
-      "commentary": "号称\"安全到偏执\"的 QubesOS 自己翻了车，这波属于是\"堡垒从内部被攻破\"。建议各位安全洁癖用户先别急着 copy 文件，稳一手等补丁。",
-      "url": "https://www.qubes-os.org/news/2026/08/29/qsb-118/"
-    },
-    {
-      "title": "Cosmos EVM 漏洞被利用，六条链遭殃",
-      "source": "Tech RSS",
-      "summary": "Cosmos Labs 披露了一个在共享 Cosmos EVM 模块中的关键余额处理漏洞（GHSA-7g4w-cg88-2cq2），8月20日至25日期间已被利用，从六条区块链上抽走资金。Cosmos Labs 表示他们事先知道所有运行该模块的链都受影响，但漏洞仍被利用——这波属于\"知情不报\"的教科书级反面案例。",
-      "commentary": "知道自家门锁是坏的，还不赶紧换，等着小偷来敲门？DeFi 圈的钱包深度，永远赶不上漏洞利用者的手速。建议各位链上玩家把\"审计报告\"当\"免责声明\"看。",
+      "title": "Cosmos EVM 漏洞被利用：六条链资金被抽干，官方早就知道？",
+      "source": "HackerNews/TheHackerNews",
+      "summary": "Cosmos Labs 在 8 月 20 日至 25 日期间，其共享的 Cosmos EVM 模块（漏洞编号 GHSA-7g4w-cg88-2cq2）被攻击者利用，导致六条区块链上的资金被直接盗走。官方评级为\"严重\"，但**最骚的是**，他们承认在漏洞被利用前就已经知道所有基于该模块的链都存在风险。这属于典型的\"知道会出事，但没想到这么快\"。",
+      "commentary": "都说区块链是去中心化的，结果一个共享模块出了漏洞，六条链集体裸奔。这波操作下来，Cosmos 的\"安全性\"比它的跨链通信还\"透明\"。建议下次把漏洞公告直接写成：*\"我们很早就知道门是坏的，但没想到小偷比我们勤快。\"*",
       "url": "https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html"
+    },
+    {
+      "title": "cPanel 又双叒叕爆\"Root 级\"漏洞，一个客户就能掀翻整个服务器",
+      "source": "Tech RSS",
+      "summary": "cPanel 发布紧急补丁，修复了其域名停放（Domain Parking）和附加域功能中的致命缺陷（CVE-2026-65643）。该漏洞允许**任何一个托管客户**在无需高级权限的情况下，直接以 root 用户身份在服务器上执行任意代码。换句话说，你隔壁那个建站卖茶叶蛋的客户，理论上可以一键格式化整台服务器。",
+      "commentary": "cPanel 这波是\"Service Provider 的噩梦\"续集。虽然漏洞细节很硬核，但更值得玩味的是：为什么这种\"一个客户打穿一台服务器\"的漏洞，到现在还在 cPanel 的更新日志里反复出现？建议把 cPanel 的 Slogan 改为：*\"让你的服务器每一天都是新的（指重装系统）。\"*",
+      "url": "https://thehackernews.com/2026/08/critical-cpanel-flaw-could-let-one.html"
+    },
+    {
+      "title": "加州通过 AB-1856：开源软件终于不用给\"年龄验证\"背锅了",
+      "source": "Phoronix",
+      "summary": "加州正式通过 AB-1856 法案，为开源开发者提供了关于\"年龄验证\"要求的法律豁免。此前，一些模糊的法案可能要求开发者强制收集用户年龄数据甚至身份证件，这对注重隐私的开源项目简直是灾难。该法案明确了：如果你不主要负责内容的生成或分发，就不用被迫植入这种破坏隐私的机制。",
+      "commentary": "这波不是技术突破，而是\"法律护城河\"的胜利。在大家都在用 AI 生成擦边内容的时候，让程序员去验证用户年龄，就好比让卖菜刀的证明买刀的人不会砍人——荒谬至极。加州这波操作，总算让开源社区在隐私问题上喘了口气。给立法者加个鸡腿，但别加太多，毕竟他们昨天还在为\"AI 会不会毁灭人类\"开会。",
+      "url": "https://www.phoronix.com/news/California-AB-1856-Passes"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49497063",
-      "title": "Brits would quite like their private messages to stay private",
+      "id": "hn:49503601",
+      "title": "“I just chose words carefully”",
       "summary": "",
-      "url": "https://www.theregister.com/security/2026/08/30/turns-out-brits-would-quite-like-their-private-messages-to-stay-private/5292994",
+      "url": "https://unsung.aresluna.org/i-just-chose-words-carefully/",
       "source": "Hacker News",
-      "score": 289,
-      "comments": 212
+      "score": 446,
+      "comments": 109
     },
     {
-      "id": "hn:49425252",
-      "title": "RISC-V is now officially supported by CPython",
+      "id": "hn:49499867",
+      "title": "Haiku R1/beta6 has been released",
       "summary": "",
-      "url": "https://blog.python.org/2026/08/riscv-now-officially-supported/",
+      "url": "https://www.haiku-os.org/news/2026-08-26_haiku_r1_beta6",
       "source": "Hacker News",
-      "score": 253,
-      "comments": 44
-    },
-    {
-      "id": "hn:49496918",
-      "title": "Arbitrary code execution in QubesOS via copy-to-VM error reporting backchannel",
-      "summary": "",
-      "url": "https://www.qubes-os.org/news/2026/08/29/qsb-118/",
-      "source": "Hacker News",
-      "score": 143,
-      "comments": 59
-    },
-    {
-      "id": "hn:49491791",
-      "title": "Creepy Crawlies",
-      "summary": "",
-      "url": "https://people.kernel.org/monsieuricon/creepy-crawlies",
-      "source": "Hacker News",
-      "score": 222,
-      "comments": 79
-    },
-    {
-      "id": "hn:49498095",
-      "title": "No AI Fridays",
-      "summary": "",
-      "url": "https://noaifridays.com/",
-      "source": "Hacker News",
-      "score": 208,
-      "comments": 107
-    },
-    {
-      "id": "hn:49463888",
-      "title": "Casey Muratori – The Root of the Root of All Evil – BSC 2026 [video]",
-      "summary": "",
-      "url": "https://www.youtube.com/watch?v=hpj6r6CjJf8",
-      "source": "Hacker News",
-      "score": 173,
-      "comments": 68
-    },
-    {
-      "id": "lob:mroowi",
-      "title": "Being kicked out of the tech industry",
-      "summary": "",
-      "url": "https://www.jacky.wtf/essays/2026/kicked-out/",
-      "source": "Lobste.rs",
-      "score": 145,
-      "comments": 125,
-      "tags": [
-        "person"
-      ]
-    },
-    {
-      "id": "hn:49496782",
-      "title": "Longest Straight Line Paths on Water or Land on the Earth (2018)",
-      "summary": "",
-      "url": "https://arxiv.org/abs/1804.07389",
-      "source": "Hacker News",
-      "score": 158,
-      "comments": 44
-    },
-    {
-      "id": "lob:pxmp9r",
-      "title": "Debian and the sirens",
-      "summary": "",
-      "url": "https://joeyh.name/blog/entry/Debian_and_the_sirens/",
-      "source": "Lobste.rs",
-      "score": 52,
-      "comments": 18,
-      "tags": [
-        "linux",
-        "vibecoding"
-      ]
-    },
-    {
-      "id": "hn:49497810",
-      "title": "Hacking IKEA Furniture",
-      "summary": "",
-      "url": "https://greenlightning.eu/diy/hacking-ikea-furniture/",
-      "source": "Hacker News",
-      "score": 135,
-      "comments": 72
-    },
-    {
-      "id": "lob:9y9jo6",
-      "title": "There's no such thing as Just a Tool",
-      "summary": "",
-      "url": "https://deadsimpletech.com/blog/no-such-thing-as-just-a-tool",
-      "source": "Lobste.rs",
-      "score": 70,
-      "comments": 4,
-      "tags": [
-        "philosophy"
-      ]
+      "score": 272,
+      "comments": 83
     },
     {
       "id": "lob:rikfb5",
@@ -142,10 +51,80 @@
       "summary": "",
       "url": "https://blog.rust-lang.org/inside-rust/2026/08/19/overloading-experiment/",
       "source": "Lobste.rs",
-      "score": 14,
-      "comments": 11,
+      "score": 36,
+      "comments": 25,
       "tags": [
         "rust"
+      ]
+    },
+    {
+      "id": "hn:49491791",
+      "title": "Creepy Crawlies",
+      "summary": "",
+      "url": "https://people.kernel.org/monsieuricon/creepy-crawlies",
+      "source": "Hacker News",
+      "score": 992,
+      "comments": 489
+    },
+    {
+      "id": "lob:9y9jo6",
+      "title": "There's no such thing as Just a Tool",
+      "summary": "",
+      "url": "https://deadsimpletech.com/blog/no-such-thing-as-just-a-tool",
+      "source": "Lobste.rs",
+      "score": 103,
+      "comments": 21,
+      "tags": [
+        "philosophy",
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "lob:mroowi",
+      "title": "Being kicked out of the tech industry",
+      "summary": "",
+      "url": "https://www.jacky.wtf/essays/2026/kicked-out/",
+      "source": "Lobste.rs",
+      "score": 158,
+      "comments": 143,
+      "tags": [
+        "person"
+      ]
+    },
+    {
+      "id": "lob:bxihn3",
+      "title": "Omarchy: Any User Process Can Escalate to Root",
+      "summary": "",
+      "url": "https://0xcc.io/posts/omarchy-root-creds/",
+      "source": "Lobste.rs",
+      "score": 59,
+      "comments": 14,
+      "tags": [
+        "security"
+      ]
+    },
+    {
+      "id": "lob:mgwfjc",
+      "title": "Transfer files over an ethernet patch cable",
+      "summary": "",
+      "url": "https://maurycyz.com/misc/etherfiles/",
+      "source": "Lobste.rs",
+      "score": 31,
+      "comments": 20,
+      "tags": [
+        "networking"
+      ]
+    },
+    {
+      "id": "lob:9naffr",
+      "title": "But where does taste come from?",
+      "summary": "",
+      "url": "https://dustycloud.org/blog/but-where-does-taste-come-from/",
+      "source": "Lobste.rs",
+      "score": 39,
+      "comments": 7,
+      "tags": [
+        "vibecoding"
       ]
     },
     {
@@ -154,8 +133,8 @@
       "summary": "",
       "url": "https://gram-editor.com/posts/release-3.3.0/",
       "source": "Lobste.rs",
-      "score": 37,
-      "comments": 0,
+      "score": 62,
+      "comments": 2,
       "tags": [
         "editors",
         "release",
@@ -163,41 +142,78 @@
       ]
     },
     {
-      "id": "lob:flcppv",
-      "title": "Introducing ReactOS 0.4.16",
+      "id": "lob:pcldcc",
+      "title": "California Passes AB-1856 For Open-Source Relief Over Age Verification",
       "summary": "",
-      "url": "https://reactos.org/project-news/reactos-0416-released/",
+      "url": "https://www.phoronix.com/news/California-AB-1856-Passes",
       "source": "Lobste.rs",
-      "score": 33,
-      "comments": 2,
+      "score": 42,
+      "comments": 3,
       "tags": [
-        "osdev",
-        "release"
+        "law"
       ]
     },
     {
-      "id": "arxiv:2608.27449v1",
-      "title": "SWE-Prime: Fewer Trajectories, Better Performance",
-      "summary": "To improve large language models' ability to resolve real-world software issues, prior work has focused on constructing large-scale agent trajectory datasets and performing supervised fine-tuning (SFT) on successful trajectories. However, task success does not guarantee high-quality supervision: suc",
-      "url": "https://arxiv.org/abs/2608.27449v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.SE",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_id": "2608.27449v1"
+      "id": "hn:49504625",
+      "title": "Understanding ChatGPT Work",
+      "summary": "",
+      "url": "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/",
+      "source": "Hacker News",
+      "score": 96,
+      "comments": 31
     },
     {
-      "id": "arxiv:2608.27420v1",
-      "title": "Boosting LLM Exploration via Weak-Model Guidance in RLVR",
-      "summary": "Reinforcement Learning with Verifiable Rewards (RLVR) significantly improves LLM reasoning but often causes a drop in policy entropy, leading to narrowed reasoning coverage and degraded pass@$k$ for large $k$. While existing methods mitigate this entropy collapse through algorithmic regularizations,",
-      "url": "https://arxiv.org/abs/2608.27420v1",
+      "id": "hn:49435285",
+      "title": "Sort branches by last commit date",
+      "summary": "",
+      "url": "https://ryangreenberg.com/til/git-branches-by-commit-date/",
+      "source": "Hacker News",
+      "score": 102,
+      "comments": 35
+    },
+    {
+      "id": "lob:ktbweg",
+      "title": "Prompt Injection in Claude Code Opus 5 Auto Mode",
+      "summary": "",
+      "url": "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/",
+      "source": "Lobste.rs",
+      "score": 18,
+      "comments": 20,
+      "tags": [
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "hn:49502611",
+      "title": "Continuous Diffusion Language Models (CDLM's)",
+      "summary": "",
+      "url": "https://sander.ai/2026/08/24/continuous-dlms.html",
+      "source": "Hacker News",
+      "score": 69,
+      "comments": 29
+    },
+    {
+      "id": "hn:49505288",
+      "title": "UC Berkeley indefinitely suspends international student work authorizations",
+      "summary": "",
+      "url": "https://www.dailycal.org/news/campus/after-second-ice-threat-uc-berkeley-indefinitely-suspends-international-student-work-authorizations/article_0e9ae0c0-dd4d-4455-a25b-e8be7b47e350.html",
+      "source": "Hacker News",
+      "score": 48,
+      "comments": 36
+    },
+    {
+      "id": "arxiv:2608.28576v1",
+      "title": "Learning a Size-Weight Frontier for Synthetic-Augmented Inference",
+      "summary": "Synthetic data can improve statistical inference when real data are scarce, but naively treating synthetic samples as real data can introduce bias and lead to unreliable inference. We develop a general framework for synthetic-augmented inference across a population of related tasks. It characterizes",
+      "url": "https://arxiv.org/abs/2608.28576v1",
       "source": "ArXiv",
       "categories": [
-        "cs.CL"
+        "stat.ME",
+        "cs.AI",
+        "cs.LG",
+        "stat.ML"
       ],
-      "arxiv_id": "2608.27420v1"
+      "arxiv_id": "2608.28576v1"
     },
     {
       "id": "rss:4e84432a96",
@@ -220,14 +236,6 @@
       "title": "Critical cPanel Flaw Could Let One Hosting Customer Take Root Control of a Whole Server",
       "summary": "cPanel has released patches for a security flaw affecting domain parking and addon domain functionality in cPanel and WebHost Manager (WHM), which could allow code execution as the root user.\n\nThe vulnerability, assigned the CVE identifier CVE-2026-65643, impacts all supported versions of cPanel &am",
       "url": "https://thehackernews.com/2026/08/critical-cpanel-flaw-could-let-one.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:a368d083fc",
-      "title": "PaperCut Zero-Day Exploited in Attacks, Affecting All NG and MF Versions",
-      "summary": "PaperCut has alerted customers that bad actors are actively exploiting a vulnerability impacting all versions of its PaperCut NG and PaperCut MF print management software in zero-day attacks.\n\nThe company has released an emergency patch for v25 and v26 to address the issue. It said it's \"aware of co",
-      "url": "https://thehackernews.com/2026/08/papercut-zero-day-exploited-in-attacks.html",
       "source": "Tech RSS",
       "score": 0
     }
