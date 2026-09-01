@@ -1,41 +1,76 @@
 {
   "date": "2026-09-01",
-  "update_time": "2026-08-31 18:55:14",
+  "update_time": "2026-09-01 04:23:00",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-01\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Cosmos EVM 连锁爆雷，六个链被薅秃 (来源: Tech RSS)\n- **核心干货**：Cosmos Labs 确认其共享 EVM 模块存在严重余额处理漏洞（GHSA-7g4w-cg88-2cq2），且官方早已知情。结果 8 月 20 日至 25 日期间，六个基于该模块的区块链被攻击者利用漏洞直接抽干资金。这不仅是技术漏洞，更是典型的\"明知山有虎，偏向虎山行\"的运营灾难。\n- **毒舌/硬核点评**：共享模块的初衷是\"一次审计，处处安全\"，结果变成了\"一次漏洞，处处遭殃\"。建议 Cosmos 下次发布安全公告时，顺便附上受害链的\"墓地地图\"。\n- 🔗 [传送门](https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html)\n\n---\n\n### 2. 📌 Apple 被 AI 浪潮打了个措手不及 (来源: Hacker News | 116分)\n- **核心干货**：苹果对 Mac Mini 和 Mac Studio 的需求预估严重失算，被本地 AI 推理和开发者的疯狂采购打了个措手不及。供应链产能吃紧，交付周期被迫拉长。这侧面印证了本地化 AI 算力需求正以远高于行业预期的速度爆发，而苹果的\"库存管理魔法\"这次失灵了。\n- **毒舌/硬核点评**：库克引以为傲的供应链魔法，在 AI 军备竞赛面前变成了\"占卜术\"。建议下次预测需求前，先看一眼 GitHub 上有多少个正在跑 Llama 的 repo。\n- 🔗 [传送门](https://www.macrumors.com/2026/08/30/apple-unexpected-mac-mini-and-studio-demand/)\n\n---\n\n### 3. 📌 PaperCut 双漏洞链式利用：未认证远程代码执行 (来源: Tech RSS)\n- **核心干货**：攻击者正在利用 PaperCut NG/MF 中两个新修补的漏洞进行链式利用，无需任何凭据即可在受影响服务器上执行任意代码。PaperCut 已发布紧急修复补丁和额外加固措施。考虑到 PaperCut 在打印管理领域的渗透率，这基本是给企业内网开了一扇\"免钥匙后门\"。\n- **毒舌/硬核点评**：打印服务器一直是内网安全的\"法外之地\"，这次漏洞再次证明：攻击者不需要最先进的技术，只需要一个没打补丁的打印机。\n- 🔗 [传送门](https://thehackernews.com/2026/08/attackers-chain-two-papercut-flaws-to.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\"真正的护城河不是用最新的框架，而是把旧漏洞的补丁打齐。毕竟，黑客们最爱的不是0day，而是你的'已过期'。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-01\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Cosmos EVM 漏洞遭利用，六条链被洗劫 (来源: The Hacker News)\n- **核心干货**：Cosmos Labs 早在漏洞公开前就知道其共享 EVM 模块存在一个关键余额处理缺陷（GHSA-7g4w-cg88-2cq2），但直到 8 月 20-25 日期间该漏洞已被实际利用、从六条区块链上盗走资金后才发出警告。评级为 Critical，且未发布 CVE 编号——这种\"先炸后报\"的操作，在 DeFi 世界简直是把\"不透明\"写在了脸上。\n- **毒舌/硬核点评**：共享模块 = 共享灾难。一个漏洞六条链一起陪葬，这不叫模块化，这叫\"多米诺骨牌化\"。Cosmos Labs 这波\"我们知道但没吭声\"的操作，建议直接改名为 \"Cosmos Labs → Cosplay 风控\"。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html)\n\n---\n\n### 2. 📌 PaperCut 双漏洞链式利用，未认证远程代码执行 (来源: The Hacker News)\n- **核心干货**：攻击者将 PaperCut NG/MF 的两个新修补漏洞串联使用，实现无需任何认证即可远程执行任意代码。厂商已发布紧急修复，但这是继此前多起 PaperCut 0day 后的又一轮\"猫鼠游戏\"——该产品已成为攻击者的头号靶子。对企业来说，不更新 = 裸奔，更新 = 被迫营业。\n- **毒舌/硬核点评**：PaperCut 这名字起得好，因为它确实在\"割\"你的安全预算。未认证 RCE 还能更离谱吗？建议打印店老板们把\"升级补丁\"四个字直接贴在打印机上，比贴\"请勿关机\"有用一万倍。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/08/attackers-chain-two-papercut-flaws-to.html)\n\n---\n\n### 3. 📌 Omarchy: 任意用户进程可直接提权至 Root (来源: Lobste.rs)\n- **核心干货**：安全研究员 0xcc 披露了 Omarchy 系统（一个以极简/哲学化设计著称的 Linux 发行版）中的一个致命设计缺陷：系统中的任何用户进程都可以毫无障碍地获得 root 权限。文章详细分析了该问题的根源，并直指其宣称的\"安全哲学\"实际上完全站不住脚。这不是一个简单的 bug，而是整个权限模型的设计崩塌。\n- **毒舌/硬核点评**：\"任何用户都能提权到 root\"——这哪里是安全漏洞，这分明是 Omarchy 在设计一种\"人人平等\"的乌托邦。只是这个乌托邦里，没有秘密，也没有安全可言。建议该项目将\"安全哲学\"更名为\"信任社会学\"。\n- **🔗 传送门**：[点击直达原链接](https://0xcc.io/posts/omarchy-root-creds/)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"漏洞不可怕，可怕的是你明明知道有洞，还非要穿着开裆裤上街——毕竟，区块链的透明性，不该用你的钱包来体现。\"",
   "briefing_items": [
     {
-      "title": "Cosmos EVM 连锁爆雷，六个链被薅秃",
-      "source": "Tech RSS",
-      "summary": "Cosmos Labs 确认其共享 EVM 模块存在严重余额处理漏洞（GHSA-7g4w-cg88-2cq2），且官方早已知情。结果 8 月 20 日至 25 日期间，六个基于该模块的区块链被攻击者利用漏洞直接抽干资金。这不仅是技术漏洞，更是典型的\"明知山有虎，偏向虎山行\"的运营灾难。",
-      "commentary": "共享模块的初衷是\"一次审计，处处安全\"，结果变成了\"一次漏洞，处处遭殃\"。建议 Cosmos 下次发布安全公告时，顺便附上受害链的\"墓地地图\"。",
-      "url": ""
+      "title": "Cosmos EVM 漏洞遭利用，六条链被洗劫",
+      "source": "The Hacker News",
+      "summary": "Cosmos Labs 早在漏洞公开前就知道其共享 EVM 模块存在一个关键余额处理缺陷（GHSA-7g4w-cg88-2cq2），但直到 8 月 20-25 日期间该漏洞已被实际利用、从六条区块链上盗走资金后才发出警告。评级为 Critical，且未发布 CVE 编号——这种\"先炸后报\"的操作，在 DeFi 世界简直是把\"不透明\"写在了脸上。",
+      "commentary": "共享模块 = 共享灾难。一个漏洞六条链一起陪葬，这不叫模块化，这叫\"多米诺骨牌化\"。Cosmos Labs 这波\"我们知道但没吭声\"的操作，建议直接改名为 \"Cosmos Labs → Cosplay 风控\"。",
+      "url": "https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html"
     },
     {
-      "title": "Apple 被 AI 浪潮打了个措手不及",
-      "source": "Hacker News | 116分",
-      "summary": "苹果对 Mac Mini 和 Mac Studio 的需求预估严重失算，被本地 AI 推理和开发者的疯狂采购打了个措手不及。供应链产能吃紧，交付周期被迫拉长。这侧面印证了本地化 AI 算力需求正以远高于行业预期的速度爆发，而苹果的\"库存管理魔法\"这次失灵了。",
-      "commentary": "库克引以为傲的供应链魔法，在 AI 军备竞赛面前变成了\"占卜术\"。建议下次预测需求前，先看一眼 GitHub 上有多少个正在跑 Llama 的 repo。",
-      "url": ""
+      "title": "PaperCut 双漏洞链式利用，未认证远程代码执行",
+      "source": "The Hacker News",
+      "summary": "攻击者将 PaperCut NG/MF 的两个新修补漏洞串联使用，实现无需任何认证即可远程执行任意代码。厂商已发布紧急修复，但这是继此前多起 PaperCut 0day 后的又一轮\"猫鼠游戏\"——该产品已成为攻击者的头号靶子。对企业来说，不更新 = 裸奔，更新 = 被迫营业。",
+      "commentary": "PaperCut 这名字起得好，因为它确实在\"割\"你的安全预算。未认证 RCE 还能更离谱吗？建议打印店老板们把\"升级补丁\"四个字直接贴在打印机上，比贴\"请勿关机\"有用一万倍。",
+      "url": "https://thehackernews.com/2026/08/attackers-chain-two-papercut-flaws-to.html"
     },
     {
-      "title": "PaperCut 双漏洞链式利用：未认证远程代码执行",
-      "source": "Tech RSS",
-      "summary": "攻击者正在利用 PaperCut NG/MF 中两个新修补的漏洞进行链式利用，无需任何凭据即可在受影响服务器上执行任意代码。PaperCut 已发布紧急修复补丁和额外加固措施。考虑到 PaperCut 在打印管理领域的渗透率，这基本是给企业内网开了一扇\"免钥匙后门\"。",
-      "commentary": "打印服务器一直是内网安全的\"法外之地\"，这次漏洞再次证明：攻击者不需要最先进的技术，只需要一个没打补丁的打印机。",
-      "url": ""
+      "title": "Omarchy: 任意用户进程可直接提权至 Root",
+      "source": "Lobste.rs",
+      "summary": "安全研究员 0xcc 披露了 Omarchy 系统（一个以极简/哲学化设计著称的 Linux 发行版）中的一个致命设计缺陷：系统中的任何用户进程都可以毫无障碍地获得 root 权限。文章详细分析了该问题的根源，并直指其宣称的\"安全哲学\"实际上完全站不住脚。这不是一个简单的 bug，而是整个权限模型的设计崩塌。",
+      "commentary": "\"任何用户都能提权到 root\"——这哪里是安全漏洞，这分明是 Omarchy 在设计一种\"人人平等\"的乌托邦。只是这个乌托邦里，没有秘密，也没有安全可言。建议该项目将\"安全哲学\"更名为\"信任社会学\"。",
+      "url": "https://0xcc.io/posts/omarchy-root-creds/"
+    },
+    {
+      "quote": "\"漏洞不可怕，可怕的是你明明知道有洞，还非要穿着开裆裤上街——毕竟，区块链的透明性，不该用你的钱包来体现。\""
     }
   ],
   "candidates": [
+    {
+      "id": "hn:49511856",
+      "title": "I turned my security cameras into an automatic bird identification system",
+      "summary": "",
+      "url": "https://jasontucker.blog/how-i-turned-my-security-cameras-into-an-automatic-bird-identification-system-with-birdnet-go/",
+      "source": "Hacker News",
+      "score": 406,
+      "comments": 99
+    },
+    {
+      "id": "hn:49467636",
+      "title": "Dwarf Fortress is getting the mother of all magic updates",
+      "summary": "",
+      "url": "https://www.rockpapershotgun.com/dwarf-fortress-is-getting-the-mother-of-all-magic-updates-extending-to-the-fundamental-cosmological-makeup-of-the-universe",
+      "source": "Hacker News",
+      "score": 335,
+      "comments": 126
+    },
     {
       "id": "lob:zzn47c",
       "title": "VibeCoded AI-Slop License v1.0",
       "summary": "",
       "url": "https://gist.github.com/NicolasCARPi/3fd349ed1ed52ae6b835d5364cda4cd6",
       "source": "Lobste.rs",
-      "score": 43,
-      "comments": 22,
+      "score": 58,
+      "comments": 37,
       "tags": [
+        "satire",
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "lob:qn7jtv",
+      "title": "I attended a conference recently and AI use by academics was absurd",
+      "summary": "<p>As we listened to talks most people were stuck doing pointless tasks on their phones and computers. Less than 10%, likely 5%, were listening attentively. This was quite sad for me.</p>\n<p>The thing I would like to share the most, that shocked me more than any AI use I've seen ever—when I was on s",
+      "url": "https://lobste.rs/s/qn7jtv/i_attended_conference_recently_ai_use_by",
+      "source": "Lobste.rs",
+      "score": 83,
+      "comments": 31,
+      "tags": [
+        "rant",
         "vibecoding"
       ]
     },
@@ -45,8 +80,8 @@
       "summary": "",
       "url": "https://playaphone.com/",
       "source": "Hacker News",
-      "score": 302,
-      "comments": 124
+      "score": 543,
+      "comments": 197
     },
     {
       "id": "lob:1pdfex",
@@ -54,11 +89,29 @@
       "summary": "",
       "url": "https://daniel.haxx.se/blog/2026/06/24/a-cve-dispute/",
       "source": "Lobste.rs",
-      "score": 48,
-      "comments": 20,
+      "score": 69,
+      "comments": 22,
       "tags": [
         "security"
       ]
+    },
+    {
+      "id": "hn:49512975",
+      "title": "A walkable ASCII cyberpunk city in one HTML file [video]",
+      "summary": "<i>ASCII City: Traffic and Detail Update</i> - <a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=DSRooHo_HSI\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=DSRooHo_HSI</a><p><i>ASCII City Update: Interiors, Elevation and Skyscrapers</i> - <a href=\"https:&#x2F;&#x2F;www.youtube.",
+      "url": "https://www.youtube.com/watch?v=3YtygAx_C6A",
+      "source": "Hacker News",
+      "score": 253,
+      "comments": 33
+    },
+    {
+      "id": "hn:49503521",
+      "title": "Terence Tao explains 6 essential mathematical concepts [video]",
+      "summary": "",
+      "url": "https://www.youtube.com/watch?v=OOMx2BHHWtE",
+      "source": "Hacker News",
+      "score": 284,
+      "comments": 32
     },
     {
       "id": "lob:bxihn3",
@@ -66,72 +119,10 @@
       "summary": "",
       "url": "https://0xcc.io/posts/omarchy-root-creds/",
       "source": "Lobste.rs",
-      "score": 106,
-      "comments": 50,
+      "score": 109,
+      "comments": 55,
       "tags": [
         "security"
-      ]
-    },
-    {
-      "id": "hn:49510000",
-      "title": "ChatGPT Work Tool and Skill Reference",
-      "summary": "",
-      "url": "https://codex-tool-reference.simonw.chatgpt.site/",
-      "source": "Hacker News",
-      "score": 122,
-      "comments": 45
-    },
-    {
-      "id": "hn:49511856",
-      "title": "I turned my security cameras into an automatic bird identification system",
-      "summary": "",
-      "url": "https://jasontucker.blog/how-i-turned-my-security-cameras-into-an-automatic-bird-identification-system-with-birdnet-go/",
-      "source": "Hacker News",
-      "score": 147,
-      "comments": 49
-    },
-    {
-      "id": "lob:9naffr",
-      "title": "But where does taste come from?",
-      "summary": "",
-      "url": "https://dustycloud.org/blog/but-where-does-taste-come-from/",
-      "source": "Lobste.rs",
-      "score": 57,
-      "comments": 10,
-      "tags": [
-        "vibecoding"
-      ]
-    },
-    {
-      "id": "hn:49511534",
-      "title": "ravynOS: Pre-alpha open-source OS based on Darwin, FreeBSD, Apple open-source",
-      "summary": "",
-      "url": "https://ravynos.com/",
-      "source": "Hacker News",
-      "score": 81,
-      "comments": 53
-    },
-    {
-      "id": "hn:49508982",
-      "title": "Apple caught off guard by AI demand for Mac Mini and Mac Studio",
-      "summary": "",
-      "url": "https://www.macrumors.com/2026/08/30/apple-unexpected-mac-mini-and-studio-demand/",
-      "source": "Hacker News",
-      "score": 116,
-      "comments": 133
-    },
-    {
-      "id": "lob:qn7jtv",
-      "title": "I attended a conference recently and AI use by academics was absurd",
-      "summary": "<p>As we listened to talks most people were stuck doing pointless tasks on their phones and computers. Less than 10%, likely 5%, were listening attentively. This was quite sad for me.</p>\n<p>The thing I would like to share the most, that shocked me more than any AI use I've seen ever—when I was on s",
-      "url": "https://lobste.rs/s/qn7jtv/i_attended_conference_recently_ai_use_by",
-      "source": "Lobste.rs",
-      "score": 25,
-      "comments": 10,
-      "tags": [
-        "ai",
-        "event",
-        "rant"
       ]
     },
     {
@@ -140,38 +131,64 @@
       "summary": "",
       "url": "https://prela-lang.org/tutorial/",
       "source": "Lobste.rs",
-      "score": 33,
-      "comments": 9,
+      "score": 38,
+      "comments": 10,
       "tags": [
         "databases"
       ]
     },
     {
-      "id": "lob:uueocw",
-      "title": "Repeating Ourselves Less with M4",
+      "id": "hn:49516199",
+      "title": "Evidence of Fraud in an Influential Study About Procrastination",
       "summary": "",
-      "url": "https://nemin.hu/httpd-macros/index.html",
+      "url": "https://datacolada.org/138",
+      "source": "Hacker News",
+      "score": 111,
+      "comments": 82
+    },
+    {
+      "id": "lob:ngqpa1",
+      "title": "The U.S. is more than just the US (according to the ISO)",
+      "summary": "",
+      "url": "https://trevmex.com/post/826439929093636096/the-us-is-more-than-just-the-us-according-to",
       "source": "Lobste.rs",
-      "score": 22,
-      "comments": 19,
+      "score": 24,
+      "comments": 16,
       "tags": [
-        "openbsd",
-        "unix"
+        "programming"
       ]
     },
     {
-      "id": "arxiv:2608.28576v1",
-      "title": "Learning a Size-Weight Frontier for Synthetic-Augmented Inference",
-      "summary": "Synthetic data can improve statistical inference when real data are scarce, but naively treating synthetic samples as real data can introduce bias and lead to unreliable inference. We develop a general framework for synthetic-augmented inference across a population of related tasks. It characterizes",
-      "url": "https://arxiv.org/abs/2608.28576v1",
+      "id": "lob:8gved6",
+      "title": "July in Servo: more platforms, faster canvas, web fonts in SVG, and more",
+      "summary": "",
+      "url": "https://servo.org/blog/2026/08/31/july-in-servo/",
+      "source": "Lobste.rs",
+      "score": 67,
+      "comments": 5,
+      "tags": [
+        "browsers"
+      ]
+    },
+    {
+      "id": "hn:49515662",
+      "title": "Develop Cross-Platform CLI and GUI Tools with Tcl/Tk",
+      "summary": "",
+      "url": "https://cgicoffee.com/blog/2026/04/tcl-tk-develop-cross-platform-cli-gui-tools-tutorial-guide",
+      "source": "Hacker News",
+      "score": 65,
+      "comments": 34
+    },
+    {
+      "id": "arxiv:2608.31118v1",
+      "title": "When Does Bigger Help? A Controlled Study of LLM Scale for Ontology Learning",
+      "summary": "The effect of Large Language Model (LLM) scale on ontology learning (OL) performance remains insufficiently characterized. We present a controlled evaluation of 13 models spanning dense and Mixture-of-Experts variants from the Qwen3.5 and Qwen3.6 lineages, together with proprietary GPT release varia",
+      "url": "https://arxiv.org/abs/2608.31118v1",
       "source": "ArXiv",
       "categories": [
-        "stat.ME",
-        "cs.AI",
-        "cs.LG",
-        "stat.ML"
+        "cs.AI"
       ],
-      "arxiv_id": "2608.28576v1"
+      "arxiv_id": "2608.31118v1"
     },
     {
       "id": "rss:4e84432a96",
@@ -190,55 +207,36 @@
       "score": 0
     },
     {
-      "id": "lob:8gved6",
-      "title": "July in Servo: more platforms, faster canvas, web fonts in SVG, and more",
+      "id": "lob:hyn2bt",
+      "title": "RangeFrom, Part 2..: What I think is wrong about the design",
       "summary": "",
-      "url": "https://servo.org/blog/2026/08/31/july-in-servo/",
+      "url": "https://erk.dev/2026/08/30/rangefrom-part-2",
       "source": "Lobste.rs",
-      "score": 38,
-      "comments": 1,
+      "score": 15,
+      "comments": 12,
       "tags": [
-        "browsers"
+        "rust"
       ]
     },
     {
-      "id": "lob:ngqpa1",
-      "title": "The U.S. is more than just the US (according to the ISO)",
+      "id": "hn:49516699",
+      "title": "2004 RuneScape fit a multiplayer RPG into 56k dial-up",
       "summary": "",
-      "url": "https://trevmex.com/post/826439929093636096/the-us-is-more-than-just-the-us-according-to",
-      "source": "Lobste.rs",
-      "score": 20,
-      "comments": 9,
-      "tags": [
-        "programming"
-      ]
+      "url": "https://jkm.dev/posts/how-2004-runescape-fit-a-multiplayer-rpg-into-56k-dialup/",
+      "source": "Hacker News",
+      "score": 65,
+      "comments": 37
     },
     {
-      "id": "hn:49495171",
-      "title": "No country for mediocre mathematicians",
-      "summary": "",
-      "url": "https://garvvee.substack.com/p/no-country-for-mediocre-mathematicians",
-      "source": "Hacker News",
-      "score": 61,
-      "comments": 34
-    },
-    {
-      "id": "hn:49510511",
-      "title": "C++26: Standard Library Hardening Experiments",
-      "summary": "",
-      "url": "https://www.cppstories.com/2026/hardening-experiments/",
-      "source": "Hacker News",
-      "score": 58,
-      "comments": 35
-    },
-    {
-      "id": "hn:49511007",
-      "title": "Launch HN: Almanac (YC S26) – AI that knows your company",
-      "summary": "Hi HN, I&#x27;m Kushagra, one of three founders of Almanac, a Hermes with a brain that knows everything about your company.<p>We started our journey with setting up Hermes for our company, thinking it must be easy. We wanted an agent that would know every context about our company, so we could ask q",
-      "url": "https://usealmanac.com/",
-      "source": "Hacker News",
-      "score": 24,
-      "comments": 31
+      "id": "arxiv:2608.31170v1",
+      "title": "Context-Aware Interleaved Batching for WhisperX",
+      "summary": "While WhisperX accelerates speech transcription via intra-audio batching, it isolates audio segments, losing the historical context needed for coherent punctuation and terminology transcription. Conversely, standard Whisper retains context sequentially but suffers from slow inference and hallucinati",
+      "url": "https://arxiv.org/abs/2608.31170v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_id": "2608.31170v1"
     }
   ],
   "ai_curated": true
