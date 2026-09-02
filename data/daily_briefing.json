@@ -1,97 +1,82 @@
 {
-  "date": "2026-09-02",
-  "update_time": "2026-09-02 03:46:03",
+  "date": "2026-09-03",
+  "update_time": "2026-09-02 16:10:06",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-02\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Claude Fable 5.1 & Mythos 5.1 发布 (来源: Hacker News / Anthropic)\n- **核心干货**：Anthropic 发布两款新模型——Fable 5.1 与 Mythos 5.1，并同步放出 System Card。HN 热度爆炸（991 分、929 评论），说明这不仅是版本号小步快跑，而是在推理能力、安全对齐或特定领域能力上有实质升级。\n- **毒舌/硬核点评**：上次叫\"Sonnet\"，这次叫\"Mythos\"——Anthropic 这是要集齐希腊神话全家桶？名字越来越玄学，希望性能别只是\"神话\"。\n- **🔗 传送门**：[点击直达原链接](https://www.anthropic.com/claude-fable-and-mythos-5-1)\n\n---\n\n### 2. 📌 Codex 应用捆绑完整版 LibreOffice (来源: Hacker News / Simon Willison)\n- **核心干货**：开发者 Simon Willison 发现 ChatGPT/Codex 的桌面应用内置了一整套 LibreOffice。这意味着 AI Agent 可以直接读写 `.docx`、`.xlsx`、`.pptx` 文件，无需依赖外部 API 转换，为文档处理类任务提供了完全本地化、离线可用的能力。\n- **毒舌/硬核点评**：OpenAI 这波操作属实\"闷声干大事\"——别人在搞插件生态，它直接把一个办公套件塞进安装包里。这是要让 Agent 帮你做 PPT，还是让 Agent 帮你入职行政岗？\n- **🔗 传送门**：[点击直达原链接](https://simonwillison.net/2026/Sep/1/codex-libreoffice/)\n\n---\n\n### 3. 📌 Nori Robotics：1688 美元的双手移动机器人 (来源: Hacker News / YC S26)\n- **核心干货**：YC 孵化项目 Nori Robotics 推出售价仅 $1,688 的双臂移动机器人，面向开发者与研究人员。创始人在哥伦比亚大学做机器人研究时发现行业痛点：现有平台要么贵到离谱，要么封闭难改。Nori 试图用极低的入门门槛，让更多实验室和个人开发者能上手搞具身智能。\n- **毒舌/硬核点评**：1688 美元——这个价格比一台 MacBook Pro 还便宜，比波士顿动力的 Spot 便宜 99%。虽然大概率是\"玩具级\"负载，但别忘了，iPhone 刚出来时也被叫\"玩具\"。具身智能的\"安卓时刻\"，可能就从这种价格屠夫开始。\n- **🔗 传送门**：[点击直达原链接](https://www.norirobotics.com/)\n\n---\n\n### 🗣️ 今日顶男金句\n\"别人在讨论 AI 会不会取代你，真正的狠人已经在研究怎么用 AI 把 PPT、Excel 和机器人全包了。技术演进的本质就一句话：**要么你驾驭工具，要么你变成被工具驾驭的旧物种。**\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-03\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 AI 推荐背后的\"内容军火商\"：21.5 万页垃圾内容的工业化生产 (来源: Hacker News)\n- **核心干货**：调查揭露了仅 3 个网站就制造了超过 215,000 页\"最佳软件\"清单，这些 AI 生成的内容农场专门瞄准 Perplexity 等 AI 搜索的引用机制。本质上，这是 SEO 黑产针对生成式搜索引擎的新型投毒，让 AI 在不知情的情况下为垃圾内容站台背书。\n- **毒舌点评**：当 AI 开始引用 AI 生成的内容，人类离\"信息近亲繁殖\"的末日也就不远了。这不仅是 SEO 作弊，这是在给大模型的\"大脑\"喂垃圾食品。\n- **🔗 传送门**：[点击直达原链接](https://trellner.com/reports/manufactured-sources-behind-ai-recommendations/)\n\n---\n\n### 2. 📌 开源界的\"付费墙\"争议：1200 万美元砸向 DHH 引发的\"法西斯主义\"论战 (来源: Lobste.rs)\n- **核心干货**：一篇极具煽动性的文章将开源界的资金集中现象（如 1200 万美元流向 DHH）称为\"常态化的法西斯主义\"。文章触及了开源社区最敏感的神经：当极少数明星项目与人物垄断了绝大多数资源，那些真正需要支持的小型基础设施项目却在干涸中挣扎，生态的\"多样性\"正在被资本重新定义。\n- **毒舌点评**：说\"法西斯主义\"是有点上纲上线，但这确实是一场\"赢家通吃\"的残酷选秀。开源精神若被资本异化为造神运动，那下一个被\"赐死\"的可能就是你正在用的那个无名小库。\n- **🔗 传送门**：[点击直达原链接](https://brennan.day/normalized-fascism-in-open-source-12-million-given-to-dhh/)\n\n---\n\n### 3. 📌 打破量化\"玄学\"：为什么大模型量化的下一比特应该\"花在刀刃上\" (来源: ArXiv)\n- **核心干货**：这篇论文系统性地研究了量化（PTQ）对大模型的破坏机制，发现损害并非均匀分布。通过因果混合精度分析，作者提出了一种全局分配额外精度预算的策略，而非传统的逐层调参。这为在资源受限环境下最大化模型性能提供了更科学的理论指导，不再靠直觉和蛮力。\n- **毒舌点评**：以前量化模型像\"闭眼拆盲盒\"，现在终于有人递上了一张 CT 扫描图。这告诉我们一个朴素的道理：预算有限时，与其雨露均沾，不如把钱花在真正的\"痛点\"上。\n- **🔗 传送门**：[点击直达原文](https://arxiv.org/abs/2609.01587v1)\n\n---\n\n### 🗣️ 今日顶男金句\n当 AI 都在用别人的垃圾内容\"学习\"时，你真正的护城河，就是你脑子里那些无法被算法复制的、独立且批判的思考。**别让你的大脑，变成下一个内容农场。**",
   "briefing_items": [
     {
-      "title": "Claude Fable 5.1 & Mythos 5.1 发布",
-      "source": "Hacker News / Anthropic",
-      "summary": "Anthropic 发布两款新模型——Fable 5.1 与 Mythos 5.1，并同步放出 System Card。HN 热度爆炸（991 分、929 评论），说明这不仅是版本号小步快跑，而是在推理能力、安全对齐或特定领域能力上有实质升级。",
-      "commentary": "上次叫\"Sonnet\"，这次叫\"Mythos\"——Anthropic 这是要集齐希腊神话全家桶？名字越来越玄学，希望性能别只是\"神话\"。",
-      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+      "title": "AI 推荐背后的\"内容军火商\"：21.5 万页垃圾内容的工业化生产",
+      "source": "Hacker News",
+      "summary": "调查揭露了仅 3 个网站就制造了超过 215,000 页\"最佳软件\"清单，这些 AI 生成的内容农场专门瞄准 Perplexity 等 AI 搜索的引用机制。本质上，这是 SEO 黑产针对生成式搜索引擎的新型投毒，让 AI 在不知情的情况下为垃圾内容站台背书。",
+      "commentary": "当 AI 开始引用 AI 生成的内容，人类离\"信息近亲繁殖\"的末日也就不远了。这不仅是 SEO 作弊，这是在给大模型的\"大脑\"喂垃圾食品。",
+      "url": "https://trellner.com/reports/manufactured-sources-behind-ai-recommendations/"
     },
     {
-      "title": "Codex 应用捆绑完整版 LibreOffice",
-      "source": "Hacker News / Simon Willison",
-      "summary": "开发者 Simon Willison 发现 ChatGPT/Codex 的桌面应用内置了一整套 LibreOffice。这意味着 AI Agent 可以直接读写 `.docx`、`.xlsx`、`.pptx` 文件，无需依赖外部 API 转换，为文档处理类任务提供了完全本地化、离线可用的能力。",
-      "commentary": "OpenAI 这波操作属实\"闷声干大事\"——别人在搞插件生态，它直接把一个办公套件塞进安装包里。这是要让 Agent 帮你做 PPT，还是让 Agent 帮你入职行政岗？",
-      "url": "https://simonwillison.net/2026/Sep/1/codex-libreoffice/"
+      "title": "开源界的\"付费墙\"争议：1200 万美元砸向 DHH 引发的\"法西斯主义\"论战",
+      "source": "Lobste.rs",
+      "summary": "一篇极具煽动性的文章将开源界的资金集中现象（如 1200 万美元流向 DHH）称为\"常态化的法西斯主义\"。文章触及了开源社区最敏感的神经：当极少数明星项目与人物垄断了绝大多数资源，那些真正需要支持的小型基础设施项目却在干涸中挣扎，生态的\"多样性\"正在被资本重新定义。",
+      "commentary": "说\"法西斯主义\"是有点上纲上线，但这确实是一场\"赢家通吃\"的残酷选秀。开源精神若被资本异化为造神运动，那下一个被\"赐死\"的可能就是你正在用的那个无名小库。",
+      "url": "https://brennan.day/normalized-fascism-in-open-source-12-million-given-to-dhh/"
     },
     {
-      "title": "Nori Robotics：1688 美元的双手移动机器人",
-      "source": "Hacker News / YC S26",
-      "summary": "YC 孵化项目 Nori Robotics 推出售价仅 $1,688 的双臂移动机器人，面向开发者与研究人员。创始人在哥伦比亚大学做机器人研究时发现行业痛点：现有平台要么贵到离谱，要么封闭难改。Nori 试图用极低的入门门槛，让更多实验室和个人开发者能上手搞具身智能。",
-      "commentary": "1688 美元——这个价格比一台 MacBook Pro 还便宜，比波士顿动力的 Spot 便宜 99%。虽然大概率是\"玩具级\"负载，但别忘了，iPhone 刚出来时也被叫\"玩具\"。具身智能的\"安卓时刻\"，可能就从这种价格屠夫开始。",
-      "url": "https://www.norirobotics.com/"
+      "title": "打破量化\"玄学\"：为什么大模型量化的下一比特应该\"花在刀刃上\"",
+      "source": "ArXiv",
+      "summary": "这篇论文系统性地研究了量化（PTQ）对大模型的破坏机制，发现损害并非均匀分布。通过因果混合精度分析，作者提出了一种全局分配额外精度预算的策略，而非传统的逐层调参。这为在资源受限环境下最大化模型性能提供了更科学的理论指导，不再靠直觉和蛮力。",
+      "commentary": "以前量化模型像\"闭眼拆盲盒\"，现在终于有人递上了一张 CT 扫描图。这告诉我们一个朴素的道理：预算有限时，与其雨露均沾，不如把钱花在真正的\"痛点\"上。",
+      "url": ""
     }
   ],
   "candidates": [
     {
-      "id": "hn:49525378",
-      "title": "Claude Fable 5.1 and Claude Mythos 5.1",
-      "summary": "What&#x27;s new in Claude Fable 5.1\n – <a href=\"https:&#x2F;&#x2F;platform.claude.com&#x2F;docs&#x2F;en&#x2F;models&#x2F;fable-5-1&#x2F;whats-new-fable-5-1\" rel=\"nofollow\">https:&#x2F;&#x2F;platform.claude.com&#x2F;docs&#x2F;en&#x2F;models&#x2F;fable-5-1&#x2F;whats-n...</a><p>System Card: <a href=\"h",
-      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "id": "hn:49533497",
+      "title": "Commodore 64 released September 1, 1982",
+      "summary": "",
+      "url": "https://dfarq.homeip.net/commodore-64-released-september-1-1982/",
       "source": "Hacker News",
-      "score": 991,
-      "comments": 929
+      "score": 237,
+      "comments": 120
     },
     {
-      "id": "hn:49521973",
-      "title": "Introducing Ad Blocker for Firefox on iOS",
+      "id": "lob:ipy9xw",
+      "title": "Normalized Fascism in Open Source: $12 Million Given to DHH",
       "summary": "",
-      "url": "https://blog.mozilla.org/en/firefox/ad-blocker-on-ios/",
-      "source": "Hacker News",
-      "score": 345,
-      "comments": 115
-    },
-    {
-      "id": "hn:49527396",
-      "title": "The ChatGPT/Codex app bundles a full copy of LibreOffice",
-      "summary": "",
-      "url": "https://simonwillison.net/2026/Sep/1/codex-libreoffice/",
-      "source": "Hacker News",
-      "score": 285,
-      "comments": 123
-    },
-    {
-      "id": "hn:49526069",
-      "title": "How accurate have Ed Zitron's AI skeptic predictions been?",
-      "summary": "",
-      "url": "https://danluu.com/zitron/",
-      "source": "Hacker News",
-      "score": 494,
-      "comments": 574
-    },
-    {
-      "id": "hn:49525297",
-      "title": "The creator of Jujutsu has joined ERSC",
-      "summary": "",
-      "url": "https://ersc.io/blog/martin-joins-ersc",
-      "source": "Hacker News",
-      "score": 201,
-      "comments": 153
-    },
-    {
-      "id": "hn:49523387",
-      "title": "Ambient CSS v3 – Blender meets CSS",
-      "summary": "",
-      "url": "https://ambientcss.vercel.app/",
-      "source": "Hacker News",
-      "score": 215,
-      "comments": 69
-    },
-    {
-      "id": "lob:jbgnwk",
-      "title": "Janet 1.42.0",
-      "summary": "",
-      "url": "https://github.com/janet-lang/janet/releases/tag/v1.42.0",
+      "url": "https://brennan.day/normalized-fascism-in-open-source-12-million-given-to-dhh/",
       "source": "Lobste.rs",
-      "score": 61,
-      "comments": 19,
+      "score": 259,
+      "comments": 186,
       "tags": [
-        "lisp",
-        "release"
+        "culture"
+      ]
+    },
+    {
+      "id": "hn:49535752",
+      "title": "A Note from LWN",
+      "summary": "",
+      "url": "https://lwn.net/Articles/1090585/",
+      "source": "Hacker News",
+      "score": 428,
+      "comments": 90
+    },
+    {
+      "id": "hn:49535284",
+      "title": "Mistral now trains on user input by default, except on enterprise tier",
+      "summary": "",
+      "url": "https://help.mistral.ai/en/articles/455207-can-i-opt-out-of-my-input-or-output-data-being-used-for-training",
+      "source": "Hacker News",
+      "score": 161,
+      "comments": 73
+    },
+    {
+      "id": "lob:gbucyj",
+      "title": "Is Minifying CSS Necessary? (2023)",
+      "summary": "",
+      "url": "https://shivjm.blog/is-minifying-css-necessary/",
+      "source": "Lobste.rs",
+      "score": 60,
+      "comments": 18,
+      "tags": [
+        "css",
+        "web"
       ]
     },
     {
@@ -100,21 +85,33 @@
       "summary": "",
       "url": "https://dbushell.com/2026/09/01/text-editor/",
       "source": "Lobste.rs",
-      "score": 69,
-      "comments": 20,
+      "score": 84,
+      "comments": 24,
       "tags": [
         "editors",
         "web"
       ]
     },
     {
-      "id": "hn:49525153",
-      "title": "Launch HN: Nori Robotics (YC S26) – A low-cost humanoid robot for development",
-      "summary": "Hey HN, I’m Antonio from Nori Robotics (<a href=\"https:&#x2F;&#x2F;norirobotics.com\">https:&#x2F;&#x2F;norirobotics.com</a>). We build a $1,688 bimanual mobile robot in San Francisco for robotics developers and researchers.<p>I started working on Nori while doing robotics research at Columbia. I was",
-      "url": "https://www.norirobotics.com/",
+      "id": "hn:49537553",
+      "title": "Gemini 3.8 Flash",
+      "summary": "",
+      "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
       "source": "Hacker News",
-      "score": 123,
-      "comments": 41
+      "score": 179,
+      "comments": 88
+    },
+    {
+      "id": "lob:6ejigt",
+      "title": "Zuzai, a new word, indicates the absence of AI",
+      "summary": "",
+      "url": "https://zuzai.org/",
+      "source": "Lobste.rs",
+      "score": 36,
+      "comments": 36,
+      "tags": [
+        "vibecoding"
+      ]
     },
     {
       "id": "arxiv:2609.01573v1",
@@ -130,92 +127,81 @@
       "arxiv_id": "2609.01573v1"
     },
     {
-      "id": "hn:49527232",
-      "title": "Refurbishing a Tektronix TDS7104 Oscilloscope",
+      "id": "hn:49536375",
+      "title": "Three sites made 215,128 “best software” pages for AI. Perplexity cites them",
       "summary": "",
-      "url": "https://tomverbeure.github.io/2026/08/23/Tektronix-TDS7104-Refurbishing.html",
+      "url": "https://trellner.com/reports/manufactured-sources-behind-ai-recommendations/",
       "source": "Hacker News",
-      "score": 99,
-      "comments": 47
+      "score": 132,
+      "comments": 74
     },
     {
-      "id": "lob:fjpexo",
-      "title": "\"iT woRKs BeTter in THe aPp!!\"",
+      "id": "hn:49536384",
+      "title": "GrapheneOS says Pixel 11 has MTE support after all",
       "summary": "",
-      "url": "https://shkspr.mobi/blog/2026/08/it-works-better-in-the-app/",
+      "url": "https://grapheneos.social/@GrapheneOS/117194007157499435",
+      "source": "Hacker News",
+      "score": 85,
+      "comments": 57
+    },
+    {
+      "id": "lob:4gzijx",
+      "title": "The load-bearing vocabulary of Claude",
+      "summary": "",
+      "url": "https://louisabraham.github.io/load-bearing/",
       "source": "Lobste.rs",
-      "score": 51,
-      "comments": 10,
+      "score": 30,
+      "comments": 24,
       "tags": [
-        "mobile",
-        "rant"
+        "vibecoding",
+        "visualization"
       ]
     },
     {
-      "id": "lob:gbucyj",
-      "title": "Is Minifying CSS Necessary? (2023)",
+      "id": "lob:qnffyn",
+      "title": "The Endless Temptation of Claude",
       "summary": "",
-      "url": "https://shivjm.blog/is-minifying-css-necessary/",
+      "url": "https://discardpile.pika.page/posts/the-endless-temptation-of-claude",
       "source": "Lobste.rs",
-      "score": 39,
-      "comments": 7,
-      "tags": [
-        "css",
-        "web"
-      ]
-    },
-    {
-      "id": "hn:49527595",
-      "title": "Path to Astra: critical capabilities and frontier safeguards",
-      "summary": "",
-      "url": "https://openai.com/index/path-to-astra/",
-      "source": "Hacker News",
-      "score": 103,
-      "comments": 48
-    },
-    {
-      "id": "lob:6ejigt",
-      "title": "Zuzai, a new word, indicates the absence of AI",
-      "summary": "",
-      "url": "https://zuzai.org/",
-      "source": "Lobste.rs",
-      "score": 23,
-      "comments": 23,
+      "score": 25,
+      "comments": 32,
       "tags": [
         "vibecoding"
       ]
     },
     {
-      "id": "hn:49529132",
-      "title": "My local model setup on an M4 Pro Mac Mini",
+      "id": "lob:rwqtzs",
+      "title": "A Crash Course in Predicate Logic",
       "summary": "",
-      "url": "https://lws.io/blog/my-local-model-setup/",
-      "source": "Hacker News",
-      "score": 96,
-      "comments": 43
-    },
-    {
-      "id": "hn:49528895",
-      "title": "Show HN: Weedout – Safari extension that hides YouTube AI-labeled videos",
-      "summary": "I&#x27;m the developer. I built this because AI-generated conspiracy videos were getting out of control in my own YouTube feed. Weedout is a $1.99 Safari extension for macOS that removes videos YouTube labels “Made with AI” from feed, search, related videos, playlists and Shorts. It uses YouTube&#x2",
-      "url": "https://masteranza.github.io/weedout/",
-      "source": "Hacker News",
-      "score": 80,
-      "comments": 25
-    },
-    {
-      "id": "lob:sccfuu",
-      "title": "Wasmi 2.0 - Engineering of the Fastest Wasm Interpreters",
-      "summary": "",
-      "url": "https://wasmi-labs.github.io/blog/posts/wasmi-v2.0/",
+      "url": "https://www.hillelwayne.com/post/predicate-logic/",
       "source": "Lobste.rs",
-      "score": 18,
-      "comments": 2,
+      "score": 46,
+      "comments": 5,
       "tags": [
-        "performance",
-        "release",
-        "wasm"
+        "math"
       ]
+    },
+    {
+      "id": "lob:y58e86",
+      "title": "A bicycle for the mind",
+      "summary": "",
+      "url": "https://pulkomandy.tk/_/_Life/_A%20bicycle%20for%20the%20mind",
+      "source": "Lobste.rs",
+      "score": 27,
+      "comments": 17,
+      "tags": [
+        "programming",
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "hn:49536114",
+      "title": "Six curl CVEs after OpenAI and Anthropic came back with zero",
+      "summary": "",
+      "url": "https://aisle.com/blog/aisle-discovered-six-curl-cves-after-openai-and-anthropic-found-zero",
+      "source": "Hacker News",
+      "score": 88,
+      "comments": 28
     },
     {
       "id": "arxiv:2609.01603v1",
@@ -241,6 +227,31 @@
         "cs.AI"
       ],
       "arxiv_id": "2609.01597v1"
+    },
+    {
+      "id": "arxiv:2609.01587v1",
+      "title": "The Structure of Quantization Damage in LLMs: Why the Next Bit Should Be Spent Globally",
+      "summary": "Post-training quantization (PTQ) is widely used to reduce the cost of serving large language models (LLMs), but its accuracy cost is uneven and is often tuned per model. We study where quantization damage occurs and how to allocate a small additional precision budget. Using causal mixed-precision in",
+      "url": "https://arxiv.org/abs/2609.01587v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "arxiv_id": "2609.01587v1"
+    },
+    {
+      "id": "arxiv:2609.01567v1",
+      "title": "Selective Agent Guidance via Entropy: Learning Autonomous Policies from Imperfect VLM Teachers",
+      "summary": "Vision-Language Models (VLMs) provide useful priors for interactive decision-making, but using them directly as policies is expensive and brittle: they must be queried at every step, do not improve from environment interaction, and can repeat systematic errors. We study how to learn a cheap autonomo",
+      "url": "https://arxiv.org/abs/2609.01567v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_id": "2609.01567v1"
     }
   ],
   "ai_curated": true
