@@ -1,76 +1,58 @@
 {
   "date": "2026-09-03",
-  "update_time": "2026-09-03 03:45:25",
+  "update_time": "2026-09-03 15:59:23",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-03\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Gemini 3.8 Flash & Cyber 发布：谷歌把\"闪电侠\"和\"网警\"塞进了一个模型 (来源: Hacker News)\n- **核心干货**：DeepMind 发布 Gemini 3.8 Flash 系列，主打低延迟和高吞吐，同时推出专门的 **Cyber** 版本，针对安全分析、漏洞挖掘等任务做了强化微调。这标志着通用小模型与垂直安全大模型的融合进入\"开箱即用\"阶段。\n- **毒舌/硬核点评**：以前搞渗透测试得养一屋子白帽，现在一个 API Key 就能当\"数字保安\"。不过建议谷歌先拿它给自己家的广告竞价系统做做漏洞扫描，毕竟刚在法庭上保住了这块肥肉。\n- **🔗 传送门**：[点击直达原链接](https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/)\n\n---\n\n### 2. 📌 谷歌险胜反垄断诉讼：广告帝国逃过强制拆分一劫 (来源: Hacker News)\n- **核心干货**：美国法院驳回了司法部要求谷歌出售其广告技术业务（Ad Tech）的强制令。这意味着谷歌依然牢牢掌控着数字广告的\"印钞机\"全链路，从卖方工具到买方平台通吃。\n- **毒舌/硬核点评**：看来谷歌的律师费比广告费还值。这场胜利让谷歌的\"围墙花园\"又多了一圈护城河，只是不知道监管机构下次会从哪个墙角开始挖。\n- **🔗 传送门**：[点击直达原链接](https://www.nytimes.com/2026/09/02/technology/google-ad-tech-remedies.html)\n\n---\n\n### 3. 📌 曝光：AI 推荐算法背后的\"内容农场\"黑产链 (来源: Hacker News)\n- **核心干货**：调查显示，仅 3 个网站就批量生成了超过 21 万条\"最佳软件\"推荐文章，而这些低质、机器生成的垃圾内容，正在被 Perplexity 等 AI 搜索工具当作权威信源引用。AI 在\"吃\"自己制造的\"数据饲料\"，正在形成严重的幻觉闭环。\n- **毒舌/硬核点评**：当 AI 学会\"自产自销\"信息垃圾，我们离\"赛博精神病\"就不远了。建议 Perplexity 下次引用前先查查域名注册时间，别让 2005 年的 SEO 垃圾内容借尸还魂。\n- **🔗 传送门**：[点击直达原链接](https://trellner.com/reports/manufactured-sources-behind-ai-recommendations/)\n\n---\n\n### 🗣️ 今日顶男金句\n\"当别人还在争论 AI 是否取代程序员时，聪明人已经在用 AI 生成的漏洞报告去薅谷歌的漏洞赏金了。时代抛弃你时，连一句‘404 Not Found’都不会说。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-03\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Polars 2.0 预发布：数据框架界的\"复仇者联盟\"集结完毕 (来源: Hacker News)\n- **核心干货**：Polars 2.0 预发布，这不仅仅是版本号跳动。作为 Rust 编写的极速 DataFrame 库，2.0 版本预计将带来 API 稳定性承诺、更激进的多线程调度优化以及查询计划器的深度重构。核心目标是进一步碾压 Pandas 在大型数据集上的内存与性能瓶颈，让\"大数据\"处理在单机上变得更加硬核。\n- **毒舌/硬核点评**：Pandas 用户还在为 `apply` 函数的龟速祈祷，Polars 已经开着 V8 引擎准备把赛道都掀了。2.0 要是真能把 API 冻结了，Python 数据生态的\"版本地狱\"怕是要提前终结。\n- **🔗 传送门**：[点击直达原链接](https://pola.rs/posts/announcing-polars-2/)\n\n---\n\n### 2. 📌 告别红帽，拥抱 Debian：CERN 的\"科技树\"点歪了？ (来源: Lobste.rs)\n- **核心干货**：欧洲核子研究中心（CERN）宣布将其工业计算机系统从长期使用的 RHEL（红帽企业 Linux）迁移至 Debian。这背后是 RHEL 近年来收紧源码访问和订阅策略的直接反弹。CERN 作为全球顶尖科研机构，此举是对开源社区版 Linux 发行版投下的重量级信任票，也是对红帽商业化路径的响亮质疑。\n- **毒舌/硬核点评**：红帽以为掐住源码就能掐住企业的脖子，结果 CERN 直接掀桌子换桌吃饭。这波操作不仅是对 IBM 商业策略的打脸，更是给所有\"开源但不完全开源\"的厂商上了一课：惹毛了科学家，他们能把你从根上优化掉。\n- **🔗 传送门**：[点击直达原链接](https://www.phoronix.com/news/CERN-Goes-Debian-Leaving-RHEL)\n\n---\n\n### 3. 📌 金牌级竞技编程模型：LLM 的\"奥赛集训队\"冲刺方案 (来源: ArXiv)\n- **核心干货**：论文提出一套端到端的特化流水线，旨在让 LLM 在国际信息学奥赛（IOI）和 ICPC 这类顶级编程竞赛中冲击金牌。方法包括大规模问题筛选、合成推理轨迹和监督微调，目标直指当前模型在复杂算法推理上的短板。这不是简单的\"刷题\"，而是构建一个从问题理解到代码生成的完整推理引擎。\n- **毒舌/硬核点评**：当人类还在为 LeetCode Medium 抓耳挠腮时，这玩意儿已经瞄准了国际奥赛的金牌。虽然离\"取代程序员\"还差十个图灵奖，但至少说明 AI 在\"卷竞赛\"这件事上，已经比大多数人类更懂套路了。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2609.02849v1)\n\n---\n\n### 🗣️ 今日顶男金句\n\"红帽教会我们：免费的不是最贵的，失去源码控制权的才是。今天你'优化'了开源，明天开源就'优化'掉你。\"",
   "briefing_items": [
     {
-      "title": "Gemini 3.8 Flash & Cyber 发布：谷歌把\"闪电侠\"和\"网警\"塞进了一个模型",
+      "title": "Polars 2.0 预发布：数据框架界的\"复仇者联盟\"集结完毕",
       "source": "Hacker News",
-      "summary": "DeepMind 发布 Gemini 3.8 Flash 系列，主打低延迟和高吞吐，同时推出专门的 **Cyber** 版本，针对安全分析、漏洞挖掘等任务做了强化微调。这标志着通用小模型与垂直安全大模型的融合进入\"开箱即用\"阶段。",
-      "commentary": "以前搞渗透测试得养一屋子白帽，现在一个 API Key 就能当\"数字保安\"。不过建议谷歌先拿它给自己家的广告竞价系统做做漏洞扫描，毕竟刚在法庭上保住了这块肥肉。",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
+      "summary": "Polars 2.0 预发布，这不仅仅是版本号跳动。作为 Rust 编写的极速 DataFrame 库，2.0 版本预计将带来 API 稳定性承诺、更激进的多线程调度优化以及查询计划器的深度重构。核心目标是进一步碾压 Pandas 在大型数据集上的内存与性能瓶颈，让\"大数据\"处理在单机上变得更加硬核。",
+      "commentary": "Pandas 用户还在为 `apply` 函数的龟速祈祷，Polars 已经开着 V8 引擎准备把赛道都掀了。2.0 要是真能把 API 冻结了，Python 数据生态的\"版本地狱\"怕是要提前终结。",
+      "url": "https://pola.rs/posts/announcing-polars-2/"
     },
     {
-      "title": "谷歌险胜反垄断诉讼：广告帝国逃过强制拆分一劫",
-      "source": "Hacker News",
-      "summary": "美国法院驳回了司法部要求谷歌出售其广告技术业务（Ad Tech）的强制令。这意味着谷歌依然牢牢掌控着数字广告的\"印钞机\"全链路，从卖方工具到买方平台通吃。",
-      "commentary": "看来谷歌的律师费比广告费还值。这场胜利让谷歌的\"围墙花园\"又多了一圈护城河，只是不知道监管机构下次会从哪个墙角开始挖。",
-      "url": "https://www.nytimes.com/2026/09/02/technology/google-ad-tech-remedies.html"
+      "title": "告别红帽，拥抱 Debian：CERN 的\"科技树\"点歪了？",
+      "source": "Lobste.rs",
+      "summary": "欧洲核子研究中心（CERN）宣布将其工业计算机系统从长期使用的 RHEL（红帽企业 Linux）迁移至 Debian。这背后是 RHEL 近年来收紧源码访问和订阅策略的直接反弹。CERN 作为全球顶尖科研机构，此举是对开源社区版 Linux 发行版投下的重量级信任票，也是对红帽商业化路径的响亮质疑。",
+      "commentary": "红帽以为掐住源码就能掐住企业的脖子，结果 CERN 直接掀桌子换桌吃饭。这波操作不仅是对 IBM 商业策略的打脸，更是给所有\"开源但不完全开源\"的厂商上了一课：惹毛了科学家，他们能把你从根上优化掉。",
+      "url": "https://www.phoronix.com/news/CERN-Goes-Debian-Leaving-RHEL"
     },
     {
-      "title": "曝光：AI 推荐算法背后的\"内容农场\"黑产链",
-      "source": "Hacker News",
-      "summary": "调查显示，仅 3 个网站就批量生成了超过 21 万条\"最佳软件\"推荐文章，而这些低质、机器生成的垃圾内容，正在被 Perplexity 等 AI 搜索工具当作权威信源引用。AI 在\"吃\"自己制造的\"数据饲料\"，正在形成严重的幻觉闭环。",
-      "commentary": "当 AI 学会\"自产自销\"信息垃圾，我们离\"赛博精神病\"就不远了。建议 Perplexity 下次引用前先查查域名注册时间，别让 2005 年的 SEO 垃圾内容借尸还魂。",
-      "url": "https://trellner.com/reports/manufactured-sources-behind-ai-recommendations/"
+      "title": "金牌级竞技编程模型：LLM 的\"奥赛集训队\"冲刺方案",
+      "source": "ArXiv",
+      "summary": "论文提出一套端到端的特化流水线，旨在让 LLM 在国际信息学奥赛（IOI）和 ICPC 这类顶级编程竞赛中冲击金牌。方法包括大规模问题筛选、合成推理轨迹和监督微调，目标直指当前模型在复杂算法推理上的短板。这不是简单的\"刷题\"，而是构建一个从问题理解到代码生成的完整推理引擎。",
+      "commentary": "当人类还在为 LeetCode Medium 抓耳挠腮时，这玩意儿已经瞄准了国际奥赛的金牌。虽然离\"取代程序员\"还差十个图灵奖，但至少说明 AI 在\"卷竞赛\"这件事上，已经比大多数人类更懂套路了。",
+      "url": "https://arxiv.org/abs/2609.02849v1"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49537553",
-      "title": "Gemini 3.8 Flash and 3.8 Flash Cyber",
-      "summary": "<a href=\"https:&#x2F;&#x2F;deepmind.google&#x2F;models&#x2F;model-cards&#x2F;gemini-3-8-flash&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;deepmind.google&#x2F;models&#x2F;model-cards&#x2F;gemini-3-8-flash&#x2F;</a>",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
-      "source": "Hacker News",
-      "score": 869,
-      "comments": 508
-    },
-    {
-      "id": "hn:49537131",
-      "title": "Google avoids a breakup of its ad tech business",
-      "summary": "<a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;rlAbY\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;rlAbY</a><p><a href=\"https:&#x2F;&#x2F;www.reuters.com&#x2F;legal&#x2F;litigation&#x2F;google-defeats-us-bid-force-ad-tech-sale-2026-09-02&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.reuters.com&#x2F;l",
-      "url": "https://www.nytimes.com/2026/09/02/technology/google-ad-tech-remedies.html",
-      "source": "Hacker News",
-      "score": 295,
-      "comments": 213
-    },
-    {
-      "id": "hn:49536375",
-      "title": "Three sites made 215,128 “best software” pages for AI. Perplexity cites them",
+      "id": "hn:49546753",
+      "title": "Pre-Release of Polars 2.0",
       "summary": "",
-      "url": "https://trellner.com/reports/manufactured-sources-behind-ai-recommendations/",
+      "url": "https://pola.rs/posts/announcing-polars-2/",
       "source": "Hacker News",
-      "score": 327,
-      "comments": 158
+      "score": 310,
+      "comments": 105
     },
     {
-      "id": "hn:49535284",
-      "title": "Can I opt out of my input or output data being used for training?",
+      "id": "hn:49550614",
+      "title": "ChatGPT Is Throwing 404",
       "summary": "",
-      "url": "https://help.mistral.ai/en/articles/455207-can-i-opt-out-of-my-input-or-output-data-being-used-for-training",
+      "url": "https://chatgpt.com/",
       "source": "Hacker News",
-      "score": 387,
-      "comments": 168
+      "score": 313,
+      "comments": 249
     },
     {
-      "id": "hn:49536079",
-      "title": "Biggest dark matter detector spots a single weird particle",
+      "id": "hn:49522137",
+      "title": "The Browser's Main Thread Is Expensive",
       "summary": "",
-      "url": "https://www.science.org/content/article/world-s-biggest-dark-matter-detector-spots-single-weird-particle",
+      "url": "https://kciter.so/posts/the-expensive-main-thread/en/",
       "source": "Hacker News",
-      "score": 259,
-      "comments": 85
+      "score": 280,
+      "comments": 99
     },
     {
       "id": "lob:ipy9xw",
@@ -78,80 +60,29 @@
       "summary": "",
       "url": "https://brennan.day/normalized-fascism-in-open-source-12-million-given-to-dhh/",
       "source": "Lobste.rs",
-      "score": 390,
-      "comments": 300,
+      "score": 452,
+      "comments": 371,
       "tags": [
         "culture"
       ]
     },
     {
-      "id": "hn:49541256",
-      "title": "Muse Spark 1.3",
-      "summary": "<a href=\"https:&#x2F;&#x2F;research.meta.ai&#x2F;blog&#x2F;introducing-muse-spark-1-3\" rel=\"nofollow\">https:&#x2F;&#x2F;research.meta.ai&#x2F;blog&#x2F;introducing-muse-spark-1-3</a>",
-      "url": "https://developer.meta.com/ai/models/muse-spark/",
+      "id": "hn:49548395",
+      "title": "Audacity 4.0",
+      "summary": "",
+      "url": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0",
       "source": "Hacker News",
-      "score": 435,
-      "comments": 292
+      "score": 679,
+      "comments": 161
     },
     {
-      "id": "lob:4gzijx",
-      "title": "The load-bearing vocabulary of Claude",
+      "id": "hn:49549676",
+      "title": "Elevated Errors for Multiple Models",
       "summary": "",
-      "url": "https://louisabraham.github.io/load-bearing/",
-      "source": "Lobste.rs",
-      "score": 40,
-      "comments": 25,
-      "tags": [
-        "vibecoding",
-        "visualization"
-      ]
-    },
-    {
-      "id": "lob:gbucyj",
-      "title": "Is Minifying CSS Necessary? (2023)",
-      "summary": "",
-      "url": "https://shivjm.blog/is-minifying-css-necessary/",
-      "source": "Lobste.rs",
-      "score": 62,
-      "comments": 25,
-      "tags": [
-        "css",
-        "web"
-      ]
-    },
-    {
-      "id": "lob:nh1uij",
-      "title": "I Don’t Have a Smartphone…",
-      "summary": "",
-      "url": "https://ploum.net/2026-09-02-i_dont_have_a_smartphone.html",
-      "source": "Lobste.rs",
-      "score": 51,
-      "comments": 20,
-      "tags": [
-        "culture"
-      ]
-    },
-    {
-      "id": "hn:49541458",
-      "title": "Fable 5.1 World Modeling",
-      "summary": "",
-      "url": "https://github.com/PhiloLabs/fable51-worlds",
+      "url": "https://status.claude.com/incidents/461yvfrzpwtt",
       "source": "Hacker News",
-      "score": 159,
-      "comments": 54
-    },
-    {
-      "id": "lob:oieyk7",
-      "title": "What will you do after tech?",
-      "summary": "<p>I don’t know anyone who’s retired from the technology industry, do you? <em>In my experience, it's very rare.</em> It seems like most people burn out and then go and do something else.</p>\n",
-      "url": "https://lobste.rs/s/oieyk7/what_will_you_do_after_tech",
-      "source": "Lobste.rs",
-      "score": 22,
-      "comments": 63,
-      "tags": [
-        "ask",
-        "culture"
-      ]
+      "score": 177,
+      "comments": 145
     },
     {
       "id": "lob:krcehd",
@@ -159,20 +90,68 @@
       "summary": "",
       "url": "https://lwn.net/Articles/1090585/",
       "source": "Lobste.rs",
-      "score": 67,
-      "comments": 3,
+      "score": 102,
+      "comments": 12,
       "tags": [
         "linux"
       ]
     },
     {
-      "id": "hn:49508608",
-      "title": "Reverse Engineering Unknown File Formats with ImHex",
+      "id": "lob:m4iwq4",
+      "title": "Static Allocation, Constant Work",
       "summary": "",
-      "url": "https://werwolv.net/posts/file_format_reverse_engineering/",
+      "url": "https://matklad.github.io/2026/09/02/static-allocation-constant-work.html",
+      "source": "Lobste.rs",
+      "score": 41,
+      "comments": 9,
+      "tags": [
+        "zig"
+      ]
+    },
+    {
+      "id": "lob:6tsncg",
+      "title": ".name Termination",
+      "summary": "",
+      "url": "https://neil.fraser.name/news/2026/09/03/",
+      "source": "Lobste.rs",
+      "score": 62,
+      "comments": 10,
+      "tags": [
+        "web"
+      ]
+    },
+    {
+      "id": "hn:49492796",
+      "title": "What I Learned from My Mom (1941-2026)",
+      "summary": "",
+      "url": "https://experimentalliving.substack.com/p/what-i-learned-from-my-mom-1941-2026",
       "source": "Hacker News",
-      "score": 126,
-      "comments": 25
+      "score": 184,
+      "comments": 8
+    },
+    {
+      "id": "lob:fxk56i",
+      "title": "CERN transitioning industrial computers to Debian after being a longtime RHEL institution",
+      "summary": "",
+      "url": "https://www.phoronix.com/news/CERN-Goes-Debian-Leaving-RHEL",
+      "source": "Lobste.rs",
+      "score": 45,
+      "comments": 5,
+      "tags": [
+        "linux"
+      ]
+    },
+    {
+      "id": "lob:ygjo0g",
+      "title": "I Think the Military Commissary Freezers Were Hacked",
+      "summary": "",
+      "url": "https://signalandsilence.substack.com/p/i-think-someone-hacked-the-commissary",
+      "source": "Lobste.rs",
+      "score": 30,
+      "comments": 11,
+      "tags": [
+        "security"
+      ]
     },
     {
       "id": "arxiv:2609.02849v1",
@@ -198,46 +177,67 @@
       "score": 0
     },
     {
-      "id": "rss:23623d80d9",
-      "title": "Attackers Exploit Critical JFrog Artifactory Flaw to Mint Admin Tokens Days After Disclosure",
-      "summary": "Threat actors are exploiting a newly patched critical security flaw impacting JFrog Artifactory merely days after public disclosure, according to watchTowr.\n\nThe vulnerability in question is CVE-2026-82329 (CVSS score: 9.8), a case of authentication bypass that could lead to administrative access in",
-      "url": "https://thehackernews.com/2026/09/attackers-exploit-critical-jfrog.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "lob:qq9jpo",
-      "title": "Implementing FMA and finding bugs in C and Rust standard libraries",
+      "id": "hn:49551589",
+      "title": "Grok Outage",
       "summary": "",
-      "url": "https://shnatsel.github.io/implementing-fma-finding-bugs-in-std/",
-      "source": "Lobste.rs",
-      "score": 21,
-      "comments": 3,
-      "tags": [
-        "c",
-        "rust"
-      ]
-    },
-    {
-      "id": "hn:49497996",
-      "title": "The shrinking landscape of linguistic diversity in the age of LLMs",
-      "summary": "",
-      "url": "https://www.nature.com/articles/s41562-026-02550-0",
+      "url": "https://status.x.ai/",
       "source": "Hacker News",
-      "score": 60,
-      "comments": 34
+      "score": 79,
+      "comments": 55
     },
     {
-      "id": "lob:m4iwq4",
-      "title": "Static Allocation, Constant Work",
+      "id": "lob:yomxcl",
+      "title": "Dependent if expressions without dependent types",
       "summary": "",
-      "url": "https://matklad.github.io/2026/09/02/static-allocation-constant-work.html",
+      "url": "https://haskellforall.com/2026/09/dependent-if-expressions",
       "source": "Lobste.rs",
-      "score": 22,
-      "comments": 5,
+      "score": 35,
+      "comments": 2,
       "tags": [
-        "zig"
+        "plt"
       ]
+    },
+    {
+      "id": "lob:307nji",
+      "title": "What's in the Emacs newcomers-presets theme?",
+      "summary": "",
+      "url": "https://sachachua.com/blog/2026/04/what-s-in-the-emacs-newcomers-presets-theme/",
+      "source": "Lobste.rs",
+      "score": 34,
+      "comments": 2,
+      "tags": [
+        "emacs"
+      ]
+    },
+    {
+      "id": "hn:49521264",
+      "title": "Invisible Companies",
+      "summary": "",
+      "url": "https://colossus.com/article/invisible-companies/",
+      "source": "Hacker News",
+      "score": 103,
+      "comments": 33
+    },
+    {
+      "id": "hn:49550698",
+      "title": "Any Human Ever – One life, drawn at random from all who have ever lived",
+      "summary": "",
+      "url": "https://anyhumanever.com/",
+      "source": "Hacker News",
+      "score": 54,
+      "comments": 33
+    },
+    {
+      "id": "arxiv:2609.02885v1",
+      "title": "Discriminative World Models for Web Agents",
+      "summary": "Recent web agents use world models for test-time action selection by sampling candidate actions, predicting the resulting web states, and ranking them with a ranker model or a Process Reward Model (PRM). These world models are typically trained via supervised next-state prediction to generate fixed ",
+      "url": "https://arxiv.org/abs/2609.02885v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_id": "2609.02885v1"
     }
   ],
   "ai_curated": true
