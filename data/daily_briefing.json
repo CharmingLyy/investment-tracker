@@ -1,130 +1,49 @@
 {
   "date": "2026-09-03",
-  "update_time": "2026-09-02 16:10:06",
+  "update_time": "2026-09-03 03:45:25",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-03\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 AI 推荐背后的\"内容军火商\"：21.5 万页垃圾内容的工业化生产 (来源: Hacker News)\n- **核心干货**：调查揭露了仅 3 个网站就制造了超过 215,000 页\"最佳软件\"清单，这些 AI 生成的内容农场专门瞄准 Perplexity 等 AI 搜索的引用机制。本质上，这是 SEO 黑产针对生成式搜索引擎的新型投毒，让 AI 在不知情的情况下为垃圾内容站台背书。\n- **毒舌点评**：当 AI 开始引用 AI 生成的内容，人类离\"信息近亲繁殖\"的末日也就不远了。这不仅是 SEO 作弊，这是在给大模型的\"大脑\"喂垃圾食品。\n- **🔗 传送门**：[点击直达原链接](https://trellner.com/reports/manufactured-sources-behind-ai-recommendations/)\n\n---\n\n### 2. 📌 开源界的\"付费墙\"争议：1200 万美元砸向 DHH 引发的\"法西斯主义\"论战 (来源: Lobste.rs)\n- **核心干货**：一篇极具煽动性的文章将开源界的资金集中现象（如 1200 万美元流向 DHH）称为\"常态化的法西斯主义\"。文章触及了开源社区最敏感的神经：当极少数明星项目与人物垄断了绝大多数资源，那些真正需要支持的小型基础设施项目却在干涸中挣扎，生态的\"多样性\"正在被资本重新定义。\n- **毒舌点评**：说\"法西斯主义\"是有点上纲上线，但这确实是一场\"赢家通吃\"的残酷选秀。开源精神若被资本异化为造神运动，那下一个被\"赐死\"的可能就是你正在用的那个无名小库。\n- **🔗 传送门**：[点击直达原链接](https://brennan.day/normalized-fascism-in-open-source-12-million-given-to-dhh/)\n\n---\n\n### 3. 📌 打破量化\"玄学\"：为什么大模型量化的下一比特应该\"花在刀刃上\" (来源: ArXiv)\n- **核心干货**：这篇论文系统性地研究了量化（PTQ）对大模型的破坏机制，发现损害并非均匀分布。通过因果混合精度分析，作者提出了一种全局分配额外精度预算的策略，而非传统的逐层调参。这为在资源受限环境下最大化模型性能提供了更科学的理论指导，不再靠直觉和蛮力。\n- **毒舌点评**：以前量化模型像\"闭眼拆盲盒\"，现在终于有人递上了一张 CT 扫描图。这告诉我们一个朴素的道理：预算有限时，与其雨露均沾，不如把钱花在真正的\"痛点\"上。\n- **🔗 传送门**：[点击直达原文](https://arxiv.org/abs/2609.01587v1)\n\n---\n\n### 🗣️ 今日顶男金句\n当 AI 都在用别人的垃圾内容\"学习\"时，你真正的护城河，就是你脑子里那些无法被算法复制的、独立且批判的思考。**别让你的大脑，变成下一个内容农场。**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-03\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Gemini 3.8 Flash & Cyber 发布：谷歌把\"闪电侠\"和\"网警\"塞进了一个模型 (来源: Hacker News)\n- **核心干货**：DeepMind 发布 Gemini 3.8 Flash 系列，主打低延迟和高吞吐，同时推出专门的 **Cyber** 版本，针对安全分析、漏洞挖掘等任务做了强化微调。这标志着通用小模型与垂直安全大模型的融合进入\"开箱即用\"阶段。\n- **毒舌/硬核点评**：以前搞渗透测试得养一屋子白帽，现在一个 API Key 就能当\"数字保安\"。不过建议谷歌先拿它给自己家的广告竞价系统做做漏洞扫描，毕竟刚在法庭上保住了这块肥肉。\n- **🔗 传送门**：[点击直达原链接](https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/)\n\n---\n\n### 2. 📌 谷歌险胜反垄断诉讼：广告帝国逃过强制拆分一劫 (来源: Hacker News)\n- **核心干货**：美国法院驳回了司法部要求谷歌出售其广告技术业务（Ad Tech）的强制令。这意味着谷歌依然牢牢掌控着数字广告的\"印钞机\"全链路，从卖方工具到买方平台通吃。\n- **毒舌/硬核点评**：看来谷歌的律师费比广告费还值。这场胜利让谷歌的\"围墙花园\"又多了一圈护城河，只是不知道监管机构下次会从哪个墙角开始挖。\n- **🔗 传送门**：[点击直达原链接](https://www.nytimes.com/2026/09/02/technology/google-ad-tech-remedies.html)\n\n---\n\n### 3. 📌 曝光：AI 推荐算法背后的\"内容农场\"黑产链 (来源: Hacker News)\n- **核心干货**：调查显示，仅 3 个网站就批量生成了超过 21 万条\"最佳软件\"推荐文章，而这些低质、机器生成的垃圾内容，正在被 Perplexity 等 AI 搜索工具当作权威信源引用。AI 在\"吃\"自己制造的\"数据饲料\"，正在形成严重的幻觉闭环。\n- **毒舌/硬核点评**：当 AI 学会\"自产自销\"信息垃圾，我们离\"赛博精神病\"就不远了。建议 Perplexity 下次引用前先查查域名注册时间，别让 2005 年的 SEO 垃圾内容借尸还魂。\n- **🔗 传送门**：[点击直达原链接](https://trellner.com/reports/manufactured-sources-behind-ai-recommendations/)\n\n---\n\n### 🗣️ 今日顶男金句\n\"当别人还在争论 AI 是否取代程序员时，聪明人已经在用 AI 生成的漏洞报告去薅谷歌的漏洞赏金了。时代抛弃你时，连一句‘404 Not Found’都不会说。\"",
   "briefing_items": [
     {
-      "title": "AI 推荐背后的\"内容军火商\"：21.5 万页垃圾内容的工业化生产",
+      "title": "Gemini 3.8 Flash & Cyber 发布：谷歌把\"闪电侠\"和\"网警\"塞进了一个模型",
       "source": "Hacker News",
-      "summary": "调查揭露了仅 3 个网站就制造了超过 215,000 页\"最佳软件\"清单，这些 AI 生成的内容农场专门瞄准 Perplexity 等 AI 搜索的引用机制。本质上，这是 SEO 黑产针对生成式搜索引擎的新型投毒，让 AI 在不知情的情况下为垃圾内容站台背书。",
-      "commentary": "当 AI 开始引用 AI 生成的内容，人类离\"信息近亲繁殖\"的末日也就不远了。这不仅是 SEO 作弊，这是在给大模型的\"大脑\"喂垃圾食品。",
+      "summary": "DeepMind 发布 Gemini 3.8 Flash 系列，主打低延迟和高吞吐，同时推出专门的 **Cyber** 版本，针对安全分析、漏洞挖掘等任务做了强化微调。这标志着通用小模型与垂直安全大模型的融合进入\"开箱即用\"阶段。",
+      "commentary": "以前搞渗透测试得养一屋子白帽，现在一个 API Key 就能当\"数字保安\"。不过建议谷歌先拿它给自己家的广告竞价系统做做漏洞扫描，毕竟刚在法庭上保住了这块肥肉。",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
+    },
+    {
+      "title": "谷歌险胜反垄断诉讼：广告帝国逃过强制拆分一劫",
+      "source": "Hacker News",
+      "summary": "美国法院驳回了司法部要求谷歌出售其广告技术业务（Ad Tech）的强制令。这意味着谷歌依然牢牢掌控着数字广告的\"印钞机\"全链路，从卖方工具到买方平台通吃。",
+      "commentary": "看来谷歌的律师费比广告费还值。这场胜利让谷歌的\"围墙花园\"又多了一圈护城河，只是不知道监管机构下次会从哪个墙角开始挖。",
+      "url": "https://www.nytimes.com/2026/09/02/technology/google-ad-tech-remedies.html"
+    },
+    {
+      "title": "曝光：AI 推荐算法背后的\"内容农场\"黑产链",
+      "source": "Hacker News",
+      "summary": "调查显示，仅 3 个网站就批量生成了超过 21 万条\"最佳软件\"推荐文章，而这些低质、机器生成的垃圾内容，正在被 Perplexity 等 AI 搜索工具当作权威信源引用。AI 在\"吃\"自己制造的\"数据饲料\"，正在形成严重的幻觉闭环。",
+      "commentary": "当 AI 学会\"自产自销\"信息垃圾，我们离\"赛博精神病\"就不远了。建议 Perplexity 下次引用前先查查域名注册时间，别让 2005 年的 SEO 垃圾内容借尸还魂。",
       "url": "https://trellner.com/reports/manufactured-sources-behind-ai-recommendations/"
-    },
-    {
-      "title": "开源界的\"付费墙\"争议：1200 万美元砸向 DHH 引发的\"法西斯主义\"论战",
-      "source": "Lobste.rs",
-      "summary": "一篇极具煽动性的文章将开源界的资金集中现象（如 1200 万美元流向 DHH）称为\"常态化的法西斯主义\"。文章触及了开源社区最敏感的神经：当极少数明星项目与人物垄断了绝大多数资源，那些真正需要支持的小型基础设施项目却在干涸中挣扎，生态的\"多样性\"正在被资本重新定义。",
-      "commentary": "说\"法西斯主义\"是有点上纲上线，但这确实是一场\"赢家通吃\"的残酷选秀。开源精神若被资本异化为造神运动，那下一个被\"赐死\"的可能就是你正在用的那个无名小库。",
-      "url": "https://brennan.day/normalized-fascism-in-open-source-12-million-given-to-dhh/"
-    },
-    {
-      "title": "打破量化\"玄学\"：为什么大模型量化的下一比特应该\"花在刀刃上\"",
-      "source": "ArXiv",
-      "summary": "这篇论文系统性地研究了量化（PTQ）对大模型的破坏机制，发现损害并非均匀分布。通过因果混合精度分析，作者提出了一种全局分配额外精度预算的策略，而非传统的逐层调参。这为在资源受限环境下最大化模型性能提供了更科学的理论指导，不再靠直觉和蛮力。",
-      "commentary": "以前量化模型像\"闭眼拆盲盒\"，现在终于有人递上了一张 CT 扫描图。这告诉我们一个朴素的道理：预算有限时，与其雨露均沾，不如把钱花在真正的\"痛点\"上。",
-      "url": ""
     }
   ],
   "candidates": [
     {
-      "id": "hn:49533497",
-      "title": "Commodore 64 released September 1, 1982",
-      "summary": "",
-      "url": "https://dfarq.homeip.net/commodore-64-released-september-1-1982/",
-      "source": "Hacker News",
-      "score": 237,
-      "comments": 120
-    },
-    {
-      "id": "lob:ipy9xw",
-      "title": "Normalized Fascism in Open Source: $12 Million Given to DHH",
-      "summary": "",
-      "url": "https://brennan.day/normalized-fascism-in-open-source-12-million-given-to-dhh/",
-      "source": "Lobste.rs",
-      "score": 259,
-      "comments": 186,
-      "tags": [
-        "culture"
-      ]
-    },
-    {
-      "id": "hn:49535752",
-      "title": "A Note from LWN",
-      "summary": "",
-      "url": "https://lwn.net/Articles/1090585/",
-      "source": "Hacker News",
-      "score": 428,
-      "comments": 90
-    },
-    {
-      "id": "hn:49535284",
-      "title": "Mistral now trains on user input by default, except on enterprise tier",
-      "summary": "",
-      "url": "https://help.mistral.ai/en/articles/455207-can-i-opt-out-of-my-input-or-output-data-being-used-for-training",
-      "source": "Hacker News",
-      "score": 161,
-      "comments": 73
-    },
-    {
-      "id": "lob:gbucyj",
-      "title": "Is Minifying CSS Necessary? (2023)",
-      "summary": "",
-      "url": "https://shivjm.blog/is-minifying-css-necessary/",
-      "source": "Lobste.rs",
-      "score": 60,
-      "comments": 18,
-      "tags": [
-        "css",
-        "web"
-      ]
-    },
-    {
-      "id": "lob:1malyo",
-      "title": "Fine, I’ll build my own text editor",
-      "summary": "",
-      "url": "https://dbushell.com/2026/09/01/text-editor/",
-      "source": "Lobste.rs",
-      "score": 84,
-      "comments": 24,
-      "tags": [
-        "editors",
-        "web"
-      ]
-    },
-    {
       "id": "hn:49537553",
-      "title": "Gemini 3.8 Flash",
-      "summary": "",
-      "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+      "title": "Gemini 3.8 Flash and 3.8 Flash Cyber",
+      "summary": "<a href=\"https:&#x2F;&#x2F;deepmind.google&#x2F;models&#x2F;model-cards&#x2F;gemini-3-8-flash&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;deepmind.google&#x2F;models&#x2F;model-cards&#x2F;gemini-3-8-flash&#x2F;</a>",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
       "source": "Hacker News",
-      "score": 179,
-      "comments": 88
+      "score": 869,
+      "comments": 508
     },
     {
-      "id": "lob:6ejigt",
-      "title": "Zuzai, a new word, indicates the absence of AI",
-      "summary": "",
-      "url": "https://zuzai.org/",
-      "source": "Lobste.rs",
-      "score": 36,
-      "comments": 36,
-      "tags": [
-        "vibecoding"
-      ]
-    },
-    {
-      "id": "arxiv:2609.01573v1",
-      "title": "Scaling Near-Optimal SFT-RL Annotation Budget Allocation from Small to Large LLMs",
-      "summary": "How to divide a fixed annotation budget between supervised fine-tuning (SFT) and reinforcement learning (RL) during LLM post-training remains an open problem. Existing work characterizes only broad trends (e.g., SFT dominates in low-data regimes), lacks a principled allocation framework, and does no",
-      "url": "https://arxiv.org/abs/2609.01573v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2609.01573v1"
+      "id": "hn:49537131",
+      "title": "Google avoids a breakup of its ad tech business",
+      "summary": "<a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;rlAbY\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;rlAbY</a><p><a href=\"https:&#x2F;&#x2F;www.reuters.com&#x2F;legal&#x2F;litigation&#x2F;google-defeats-us-bid-force-ad-tech-sale-2026-09-02&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.reuters.com&#x2F;l",
+      "url": "https://www.nytimes.com/2026/09/02/technology/google-ad-tech-remedies.html",
+      "source": "Hacker News",
+      "score": 295,
+      "comments": 213
     },
     {
       "id": "hn:49536375",
@@ -132,17 +51,47 @@
       "summary": "",
       "url": "https://trellner.com/reports/manufactured-sources-behind-ai-recommendations/",
       "source": "Hacker News",
-      "score": 132,
-      "comments": 74
+      "score": 327,
+      "comments": 158
     },
     {
-      "id": "hn:49536384",
-      "title": "GrapheneOS says Pixel 11 has MTE support after all",
+      "id": "hn:49535284",
+      "title": "Can I opt out of my input or output data being used for training?",
       "summary": "",
-      "url": "https://grapheneos.social/@GrapheneOS/117194007157499435",
+      "url": "https://help.mistral.ai/en/articles/455207-can-i-opt-out-of-my-input-or-output-data-being-used-for-training",
       "source": "Hacker News",
-      "score": 85,
-      "comments": 57
+      "score": 387,
+      "comments": 168
+    },
+    {
+      "id": "hn:49536079",
+      "title": "Biggest dark matter detector spots a single weird particle",
+      "summary": "",
+      "url": "https://www.science.org/content/article/world-s-biggest-dark-matter-detector-spots-single-weird-particle",
+      "source": "Hacker News",
+      "score": 259,
+      "comments": 85
+    },
+    {
+      "id": "lob:ipy9xw",
+      "title": "Normalized Fascism in Open Source: $12 Million Given to DHH",
+      "summary": "",
+      "url": "https://brennan.day/normalized-fascism-in-open-source-12-million-given-to-dhh/",
+      "source": "Lobste.rs",
+      "score": 390,
+      "comments": 300,
+      "tags": [
+        "culture"
+      ]
+    },
+    {
+      "id": "hn:49541256",
+      "title": "Muse Spark 1.3",
+      "summary": "<a href=\"https:&#x2F;&#x2F;research.meta.ai&#x2F;blog&#x2F;introducing-muse-spark-1-3\" rel=\"nofollow\">https:&#x2F;&#x2F;research.meta.ai&#x2F;blog&#x2F;introducing-muse-spark-1-3</a>",
+      "url": "https://developer.meta.com/ai/models/muse-spark/",
+      "source": "Hacker News",
+      "score": 435,
+      "comments": 292
     },
     {
       "id": "lob:4gzijx",
@@ -150,108 +99,145 @@
       "summary": "",
       "url": "https://louisabraham.github.io/load-bearing/",
       "source": "Lobste.rs",
-      "score": 30,
-      "comments": 24,
+      "score": 40,
+      "comments": 25,
       "tags": [
         "vibecoding",
         "visualization"
       ]
     },
     {
-      "id": "lob:qnffyn",
-      "title": "The Endless Temptation of Claude",
+      "id": "lob:gbucyj",
+      "title": "Is Minifying CSS Necessary? (2023)",
       "summary": "",
-      "url": "https://discardpile.pika.page/posts/the-endless-temptation-of-claude",
+      "url": "https://shivjm.blog/is-minifying-css-necessary/",
       "source": "Lobste.rs",
-      "score": 25,
-      "comments": 32,
+      "score": 62,
+      "comments": 25,
       "tags": [
-        "vibecoding"
+        "css",
+        "web"
       ]
     },
     {
-      "id": "lob:rwqtzs",
-      "title": "A Crash Course in Predicate Logic",
+      "id": "lob:nh1uij",
+      "title": "I Don’t Have a Smartphone…",
       "summary": "",
-      "url": "https://www.hillelwayne.com/post/predicate-logic/",
+      "url": "https://ploum.net/2026-09-02-i_dont_have_a_smartphone.html",
       "source": "Lobste.rs",
-      "score": 46,
-      "comments": 5,
+      "score": 51,
+      "comments": 20,
       "tags": [
-        "math"
+        "culture"
       ]
     },
     {
-      "id": "lob:y58e86",
-      "title": "A bicycle for the mind",
+      "id": "hn:49541458",
+      "title": "Fable 5.1 World Modeling",
       "summary": "",
-      "url": "https://pulkomandy.tk/_/_Life/_A%20bicycle%20for%20the%20mind",
-      "source": "Lobste.rs",
-      "score": 27,
-      "comments": 17,
-      "tags": [
-        "programming",
-        "vibecoding"
-      ]
-    },
-    {
-      "id": "hn:49536114",
-      "title": "Six curl CVEs after OpenAI and Anthropic came back with zero",
-      "summary": "",
-      "url": "https://aisle.com/blog/aisle-discovered-six-curl-cves-after-openai-and-anthropic-found-zero",
+      "url": "https://github.com/PhiloLabs/fable51-worlds",
       "source": "Hacker News",
-      "score": 88,
-      "comments": 28
+      "score": 159,
+      "comments": 54
     },
     {
-      "id": "arxiv:2609.01603v1",
-      "title": "Efficient SWE Agent Benchmarking via Trajectory-Aware Evaluation",
-      "summary": "Evaluating software engineering agents on realistic benchmarks is costly, since each task may require multi-step code exploration, modification, and test execution. Existing efficient evaluation methods select representative subsets to estimate full-benchmark performance, but are largely result-only",
-      "url": "https://arxiv.org/abs/2609.01603v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.SE",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_id": "2609.01603v1"
+      "id": "lob:oieyk7",
+      "title": "What will you do after tech?",
+      "summary": "<p>I don’t know anyone who’s retired from the technology industry, do you? <em>In my experience, it's very rare.</em> It seems like most people burn out and then go and do something else.</p>\n",
+      "url": "https://lobste.rs/s/oieyk7/what_will_you_do_after_tech",
+      "source": "Lobste.rs",
+      "score": 22,
+      "comments": 63,
+      "tags": [
+        "ask",
+        "culture"
+      ]
     },
     {
-      "id": "arxiv:2609.01597v1",
-      "title": "The Rise of Verbal Reinforcement Learning",
-      "summary": "Natural language is emerging as a primary feedback channel for improving language agents, capable of conveying intent, preferences, and causal structure in forms interpretable by both humans and modern language models. We call this paradigm Verbal Reinforcement Learning (VRL) and offer the first uni",
-      "url": "https://arxiv.org/abs/2609.01597v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "arxiv_id": "2609.01597v1"
+      "id": "lob:krcehd",
+      "title": "A note on subscription prices from LWN",
+      "summary": "",
+      "url": "https://lwn.net/Articles/1090585/",
+      "source": "Lobste.rs",
+      "score": 67,
+      "comments": 3,
+      "tags": [
+        "linux"
+      ]
     },
     {
-      "id": "arxiv:2609.01587v1",
-      "title": "The Structure of Quantization Damage in LLMs: Why the Next Bit Should Be Spent Globally",
-      "summary": "Post-training quantization (PTQ) is widely used to reduce the cost of serving large language models (LLMs), but its accuracy cost is uneven and is often tuned per model. We study where quantization damage occurs and how to allocate a small additional precision budget. Using causal mixed-precision in",
-      "url": "https://arxiv.org/abs/2609.01587v1",
+      "id": "hn:49508608",
+      "title": "Reverse Engineering Unknown File Formats with ImHex",
+      "summary": "",
+      "url": "https://werwolv.net/posts/file_format_reverse_engineering/",
+      "source": "Hacker News",
+      "score": 126,
+      "comments": 25
+    },
+    {
+      "id": "arxiv:2609.02849v1",
+      "title": "Post-Training Language Models for Gold-Medal Performance in Coding Competitions",
+      "summary": "Competitive programming has become a key test of large language model reasoning, with international competitions such as IOI and ICPC representing its most challenging settings. We present an end-to-end specialization pipeline combining large-scale problem curation, synthetic reasoning traces, super",
+      "url": "https://arxiv.org/abs/2609.02849v1",
       "source": "ArXiv",
       "categories": [
         "cs.LG",
-        "cs.CL"
-      ],
-      "arxiv_id": "2609.01587v1"
-    },
-    {
-      "id": "arxiv:2609.01567v1",
-      "title": "Selective Agent Guidance via Entropy: Learning Autonomous Policies from Imperfect VLM Teachers",
-      "summary": "Vision-Language Models (VLMs) provide useful priors for interactive decision-making, but using them directly as policies is expensive and brittle: they must be queried at every step, do not improve from environment interaction, and can repeat systematic errors. We study how to learn a cheap autonomo",
-      "url": "https://arxiv.org/abs/2609.01567v1",
-      "source": "ArXiv",
-      "categories": [
         "cs.AI",
         "cs.CL",
-        "cs.LG"
+        "cs.MA",
+        "cs.SE"
       ],
-      "arxiv_id": "2609.01567v1"
+      "arxiv_id": "2609.02849v1"
+    },
+    {
+      "id": "rss:33a1c9fbaa",
+      "title": "Attackers Exploit Two SonicWall SMA 1000 Zero-Days That May Form an Attack Chain",
+      "summary": "SonicWall has released security updates to address two security flaws impacting its Secure Mobile Access (SMA) 1000 series VPN appliances that have been exploited in zero-day attacks.\n\nThe vulnerabilities, discovered internally by SonicWall's William Perry and Adam Babis, are listed below -\n\n\n  CVE-",
+      "url": "https://thehackernews.com/2026/09/attackers-exploit-two-sonicwall-sma.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:23623d80d9",
+      "title": "Attackers Exploit Critical JFrog Artifactory Flaw to Mint Admin Tokens Days After Disclosure",
+      "summary": "Threat actors are exploiting a newly patched critical security flaw impacting JFrog Artifactory merely days after public disclosure, according to watchTowr.\n\nThe vulnerability in question is CVE-2026-82329 (CVSS score: 9.8), a case of authentication bypass that could lead to administrative access in",
+      "url": "https://thehackernews.com/2026/09/attackers-exploit-critical-jfrog.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "lob:qq9jpo",
+      "title": "Implementing FMA and finding bugs in C and Rust standard libraries",
+      "summary": "",
+      "url": "https://shnatsel.github.io/implementing-fma-finding-bugs-in-std/",
+      "source": "Lobste.rs",
+      "score": 21,
+      "comments": 3,
+      "tags": [
+        "c",
+        "rust"
+      ]
+    },
+    {
+      "id": "hn:49497996",
+      "title": "The shrinking landscape of linguistic diversity in the age of LLMs",
+      "summary": "",
+      "url": "https://www.nature.com/articles/s41562-026-02550-0",
+      "source": "Hacker News",
+      "score": 60,
+      "comments": 34
+    },
+    {
+      "id": "lob:m4iwq4",
+      "title": "Static Allocation, Constant Work",
+      "summary": "",
+      "url": "https://matklad.github.io/2026/09/02/static-allocation-constant-work.html",
+      "source": "Lobste.rs",
+      "score": 22,
+      "comments": 5,
+      "tags": [
+        "zig"
+      ]
     }
   ],
   "ai_curated": true
