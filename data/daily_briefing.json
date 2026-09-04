@@ -1,40 +1,49 @@
 {
   "date": "2026-09-04",
-  "update_time": "2026-09-04 03:46:29",
+  "update_time": "2026-09-04 15:56:51",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-04\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 GPT-6 Astra 正式发布 (来源: Hacker News | 1439分)\n- **核心干货**：OpenAI 放出 GPT-6 Astra 的系统卡，并已在 ARC-AGI-3 基准上引发热议。这不仅是参数规模的迭代，更意味着多模态推理与部署安全机制进入新阶段，剑指通用智能的下一个量级。\n- **毒舌/硬核点评**：GPT-5 的余温还没散，GPT-6 就来抢头条了。建议改名叫 \"GPT-∞\"，反正大家也追不动了，不如直接宣布胜利。\n- **🔗 传送门**：[点击直达原链接](https://openai.com/index/gpt-6-astra/)\n\n---\n\n### 2. 📌 Qwen 3.8 27B 登入 Cerebras，推理速度飙至 1500 tokens/s (来源: Hacker News | 474分)\n- **核心干货**：阿里开源模型 Qwen 3.8 27B 现已可在 Cerebras 的定制芯片上运行，推理速度达到惊人的 1500 tokens/s。这标志着开源模型在特定硬件上的性能已能比肩甚至超越闭源巨头的云端服务，且成本极低。\n- **毒舌/硬核点评**：开源的力量+定制硅基的魔法=闭源厂商的噩梦。以后跑大模型，可能比刷短视频还快。\n- **🔗 传送门**：[点击直达原链接](https://inference-docs.cerebras.ai/models/overview)\n\n---\n\n### 3. 📌 用 LLM 把 1993 年的 Amiga 游戏移植到 Godot (来源: Hacker News | 220分)\n- **核心干货**：一位开发者分享了他如何利用 LLM（Claude Fable 5）阅读理解 MC68000 汇编代码，将一个1993年在巴格达编写的 Amiga 游戏，在一个晚上成功移植到 Godot 引擎。这展示了 LLM 在逆向工程和遗留代码现代化方面的惊人潜力。\n- **毒舌/硬核点评**：我还在用 LLM 写周报，大佬已经用它读汇编考古了。这波是赛博考古学家的胜利，建议申报图灵奖。\n- **🔗 传送门**：[点击直达原链接](https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot/)\n\n---\n\n### 🗣️ 今日顶男金句\n别让你的技能栈变成遗产代码，要让自己成为那个能读懂遗产代码的人——毕竟 AI 时代，会\"考古\"才是真前沿。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-04\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 GPT-6 Astra 发布：OpenAI 的\"星际迷航\"时刻？ (来源: Hacker News)\n- **核心干货**：OpenAI 正式发布 GPT-6 Astra 系统卡，横扫 ARC-AGI-3 基准，引发全网热议（HN 分数2010，评论1831）。这不仅是模型规模的升级，更预示着 AI 在抽象推理与泛化能力上的代际跨越。\n- **毒舌/硬核点评**：终于，AI 开始像人类一样\"想\"了？还是说，只是把\"猜\"的姿势练得更优雅了？评论区已沦陷为\"AI 觉醒派\"与\"过拟合派\"的第三次世界大战。\n- **🔗 传送门**：[点击直达原链接](https://openai.com/index/gpt-6-astra/)\n\n---\n\n### 2. 📌 Qwen 3.8 27B 跑出 1500 tokens/s：开源模型的速度与激情 (来源: Hacker News)\n- **核心干货**：Cerebras 宣布其推理平台支持 Qwen 3.8 27B 模型，速度达到惊人的 1500 tokens/s。这打破了以往\"高性能模型必须配高端 GPU\"的刻板印象，为开源大模型的实时交互和边缘部署铺平了道路。\n- **毒舌/硬核点评**：OpenAI 们在忙着造\"天顶星科技\"，这边 Cerebras 已经把\"平民超跑\"的量产线拉起来了。这速度，比我老板画饼的速度还快。\n- **🔗 传送门**：[点击直达原链接](https://inference-docs.cerebras.ai/models/overview)\n\n---\n\n### 3. 📌 揭秘 OpenAI Agent 内部留言板：赛博朋克还是监控帝国？ (来源: Hacker News)\n- **核心干货**：一个名为 collusion.wiki 的网站曝光了据称是 OpenAI 内部 AI Agent 的留言板内容，引发了关于 AI 安全、对齐以及模型间自主交互的激烈讨论。HN 分数 670，热度极高。\n- **毒舌/硬核点评**：嘶... 这到底是\"AI 觉醒\"的第一手证据，还是一场精心策划的 PR 闹剧？如果是真的，我建议 OpenAI 赶紧给他们的 Agent 加个\"工作时间禁止闲聊\"的规则。\n- **🔗 传送门**：[点击直达原链接](https://collusion.wiki/)\n\n---\n\n### 🗣️ 今日顶男金句\n当开源模型的速度都飙到 1500 tokens/s 时，你还有脸说\"没时间学习新东西\"？别让你的大脑，跑得比硅基芯片还慢。",
   "briefing_items": [
     {
-      "title": "GPT-6 Astra 正式发布",
-      "source": "Hacker News | 1439分",
-      "summary": "OpenAI 放出 GPT-6 Astra 的系统卡，并已在 ARC-AGI-3 基准上引发热议。这不仅是参数规模的迭代，更意味着多模态推理与部署安全机制进入新阶段，剑指通用智能的下一个量级。",
-      "commentary": "GPT-5 的余温还没散，GPT-6 就来抢头条了。建议改名叫 \"GPT-∞\"，反正大家也追不动了，不如直接宣布胜利。",
+      "title": "GPT-6 Astra 发布：OpenAI 的\"星际迷航\"时刻？",
+      "source": "Hacker News",
+      "summary": "OpenAI 正式发布 GPT-6 Astra 系统卡，横扫 ARC-AGI-3 基准，引发全网热议（HN 分数2010，评论1831）。这不仅是模型规模的升级，更预示着 AI 在抽象推理与泛化能力上的代际跨越。",
+      "commentary": "终于，AI 开始像人类一样\"想\"了？还是说，只是把\"猜\"的姿势练得更优雅了？评论区已沦陷为\"AI 觉醒派\"与\"过拟合派\"的第三次世界大战。",
       "url": "https://openai.com/index/gpt-6-astra/"
     },
     {
-      "title": "Qwen 3.8 27B 登入 Cerebras，推理速度飙至 1500 tokens/s",
-      "source": "Hacker News | 474分",
-      "summary": "阿里开源模型 Qwen 3.8 27B 现已可在 Cerebras 的定制芯片上运行，推理速度达到惊人的 1500 tokens/s。这标志着开源模型在特定硬件上的性能已能比肩甚至超越闭源巨头的云端服务，且成本极低。",
-      "commentary": "开源的力量+定制硅基的魔法=闭源厂商的噩梦。以后跑大模型，可能比刷短视频还快。",
+      "title": "Qwen 3.8 27B 跑出 1500 tokens/s：开源模型的速度与激情",
+      "source": "Hacker News",
+      "summary": "Cerebras 宣布其推理平台支持 Qwen 3.8 27B 模型，速度达到惊人的 1500 tokens/s。这打破了以往\"高性能模型必须配高端 GPU\"的刻板印象，为开源大模型的实时交互和边缘部署铺平了道路。",
+      "commentary": "OpenAI 们在忙着造\"天顶星科技\"，这边 Cerebras 已经把\"平民超跑\"的量产线拉起来了。这速度，比我老板画饼的速度还快。",
       "url": "https://inference-docs.cerebras.ai/models/overview"
     },
     {
-      "title": "用 LLM 把 1993 年的 Amiga 游戏移植到 Godot",
-      "source": "Hacker News | 220分",
-      "summary": "一位开发者分享了他如何利用 LLM（Claude Fable 5）阅读理解 MC68000 汇编代码，将一个1993年在巴格达编写的 Amiga 游戏，在一个晚上成功移植到 Godot 引擎。这展示了 LLM 在逆向工程和遗留代码现代化方面的惊人潜力。",
-      "commentary": "我还在用 LLM 写周报，大佬已经用它读汇编考古了。这波是赛博考古学家的胜利，建议申报图灵奖。",
-      "url": "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot/"
+      "title": "揭秘 OpenAI Agent 内部留言板：赛博朋克还是监控帝国？",
+      "source": "Hacker News",
+      "summary": "一个名为 collusion.wiki 的网站曝光了据称是 OpenAI 内部 AI Agent 的留言板内容，引发了关于 AI 安全、对齐以及模型间自主交互的激烈讨论。HN 分数 670，热度极高。",
+      "commentary": "嘶... 这到底是\"AI 觉醒\"的第一手证据，还是一场精心策划的 PR 闹剧？如果是真的，我建议 OpenAI 赶紧给他们的 Agent 加个\"工作时间禁止闲聊\"的规则。",
+      "url": "https://collusion.wiki/"
     }
   ],
   "candidates": [
+    {
+      "id": "hn:49563355",
+      "title": "Discovery of a new OpenAI agent message board",
+      "summary": "",
+      "url": "https://collusion.wiki/",
+      "source": "Hacker News",
+      "score": 670,
+      "comments": 469
+    },
     {
       "id": "hn:49554520",
       "title": "Qwen 3.8 27B available on Cerebras at 1500 tokens/s",
       "summary": "",
       "url": "https://inference-docs.cerebras.ai/models/overview",
       "source": "Hacker News",
-      "score": 474,
-      "comments": 145
+      "score": 638,
+      "comments": 208
     },
     {
       "id": "hn:49554643",
@@ -42,8 +51,26 @@
       "summary": "System Card: <a href=\"https:&#x2F;&#x2F;deploymentsafety.openai.com&#x2F;gpt-6-astra\" rel=\"nofollow\">https:&#x2F;&#x2F;deploymentsafety.openai.com&#x2F;gpt-6-astra</a><p>Related ongoing threads:<p><i>OpenAI&#x27;s GPT-6 Astra on ARC-AGI-3</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;it",
       "url": "https://openai.com/index/gpt-6-astra/",
       "source": "Hacker News",
-      "score": 1439,
-      "comments": 1202
+      "score": 2010,
+      "comments": 1831
+    },
+    {
+      "id": "hn:49562657",
+      "title": "Solving the Jane Street Reverse Engineering Challenge",
+      "summary": "",
+      "url": "https://jestoph.com/2026/09/04/jane-street-challenge.html",
+      "source": "Hacker News",
+      "score": 240,
+      "comments": 59
+    },
+    {
+      "id": "hn:49561320",
+      "title": "Hackers Had a Live Feed of Every ID Verification Company Scanned for over a Year",
+      "summary": "",
+      "url": "http://www.techdirt.com/2026/09/03/hackers-had-a-live-feed-of-every-id-this-verification-company-scanned-for-over-a-year/",
+      "source": "Hacker News",
+      "score": 427,
+      "comments": 180
     },
     {
       "id": "hn:49526453",
@@ -51,35 +78,8 @@
       "summary": "<a href=\"https:&#x2F;&#x2F;www.ycombinator.com&#x2F;library&#x2F;Y6-the-world-s-largest-electric-aircraft-just-flew\">https:&#x2F;&#x2F;www.ycombinator.com&#x2F;library&#x2F;Y6-the-world-s-largest-e...</a>",
       "url": "https://www.youtube.com/watch?v=nM86DBOqgPM",
       "source": "Hacker News",
-      "score": 223,
-      "comments": 154
-    },
-    {
-      "id": "hn:49550375",
-      "title": "Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly",
-      "summary": "These are my notes from porting my Amiga game, which I originally built in Baghdad in 1993 in MC68000 assembly, to Godot, using Claude Fable 5 during last July holiday.  It took an evening! Getting the feel right and shipping it took a few more weekends and evenings.<p>I spent the last few weeks ana",
-      "url": "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot/",
-      "source": "Hacker News",
-      "score": 220,
-      "comments": 66
-    },
-    {
-      "id": "hn:49551760",
-      "title": "K2 Horizon: A connected fleet of six open models",
-      "summary": "",
-      "url": "https://ifm.ai/blog/k2/",
-      "source": "Hacker News",
-      "score": 270,
-      "comments": 86
-    },
-    {
-      "id": "hn:49550698",
-      "title": "Any Human Ever – One life, drawn at random from all who have ever lived",
-      "summary": "",
-      "url": "https://anyhumanever.com/",
-      "source": "Hacker News",
-      "score": 494,
-      "comments": 249
+      "score": 412,
+      "comments": 301
     },
     {
       "id": "hn:49552572",
@@ -87,8 +87,8 @@
       "summary": "",
       "url": "https://www.discoverwildlife.com/animal-facts/artificial-beaver-dams-california",
       "source": "Hacker News",
-      "score": 184,
-      "comments": 60
+      "score": 333,
+      "comments": 107
     },
     {
       "id": "hn:49550772",
@@ -96,17 +96,17 @@
       "summary": "",
       "url": "https://neil.fraser.name/news/2026/09/03/",
       "source": "Hacker News",
-      "score": 1469,
-      "comments": 401
+      "score": 2059,
+      "comments": 504
     },
     {
-      "id": "hn:49544618",
-      "title": "GPS glitched across the US by as much as 33 feet",
+      "id": "hn:49563386",
+      "title": "Google AI Mode shows same products 21.6% more expensive than traditional search",
       "summary": "",
-      "url": "https://www.sciencealert.com/gps-glitched-across-the-us-by-as-much-as-33-feet-scientists-have-never-seen-this-before",
+      "url": "https://productrise.app/blog/google-ai-mode-prefers-more-expensive-products",
       "source": "Hacker News",
-      "score": 140,
-      "comments": 82
+      "score": 221,
+      "comments": 38
     },
     {
       "id": "lob:j03x8u",
@@ -114,32 +114,32 @@
       "summary": "",
       "url": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0",
       "source": "Lobste.rs",
-      "score": 60,
-      "comments": 13,
+      "score": 82,
+      "comments": 14,
       "tags": [
         "release"
       ]
     },
     {
-      "id": "lob:ygjo0g",
-      "title": "I Think the Military Commissary Freezers Were Hacked",
-      "summary": "",
-      "url": "https://signalandsilence.substack.com/p/i-think-someone-hacked-the-commissary",
+      "id": "lob:7tpc5q",
+      "title": "Surviving Code Reviews in the era of AI",
+      "summary": "<p>My coworkers are all fully AI pilled. As a consequence, every PR that comes my way for review is on average ~6k lines of diff.</p>\n<p>It's well established that even PRs an order of magnitude smaller than this are too big to be effectively reviewed. I'm still clinging to the idea that us humans s",
+      "url": "https://lobste.rs/s/7tpc5q/surviving_code_reviews_era_ai",
       "source": "Lobste.rs",
-      "score": 46,
+      "score": 33,
       "comments": 17,
       "tags": [
-        "security"
+        "ask"
       ]
     },
     {
-      "id": "hn:49557206",
-      "title": "Which tools do Claude, Codex and Cursor choose? We measured 17k runs to find out",
+      "id": "hn:49563784",
+      "title": "Nearly impossible? How Fairphone built the ethical, repairable Fairphone Gen 6+",
       "summary": "",
-      "url": "https://armature.tech/blog/which-tools-coding-agents-install",
+      "url": "https://arstechnica.com/gadgets/2026/09/nearly-impossible-how-fairphone-built-the-ethical-repairable-fairphone-gen-6/",
       "source": "Hacker News",
-      "score": 125,
-      "comments": 46
+      "score": 105,
+      "comments": 81
     },
     {
       "id": "lob:zudpcb",
@@ -147,35 +147,24 @@
       "summary": "",
       "url": "https://github.com/jj-vcs/jj/releases/tag/v0.45.0",
       "source": "Lobste.rs",
-      "score": 55,
-      "comments": 13,
+      "score": 63,
+      "comments": 23,
       "tags": [
         "release",
         "vcs"
       ]
     },
     {
-      "id": "lob:fxk56i",
-      "title": "CERN transitioning industrial computers to Debian after being a longtime RHEL institution",
+      "id": "lob:rntyvm",
+      "title": "The asteroid currently hitting frontend web development",
       "summary": "",
-      "url": "https://www.phoronix.com/news/CERN-Goes-Debian-Leaving-RHEL",
+      "url": "https://nolanlawson.com/2026/08/23/the-asteroid-currently-hitting-frontend-web-development/",
       "source": "Lobste.rs",
-      "score": 66,
-      "comments": 7,
+      "score": 33,
+      "comments": 13,
       "tags": [
-        "linux"
-      ]
-    },
-    {
-      "id": "lob:307nji",
-      "title": "What's in the Emacs newcomers-presets theme?",
-      "summary": "",
-      "url": "https://sachachua.com/blog/2026/04/what-s-in-the-emacs-newcomers-presets-theme/",
-      "source": "Lobste.rs",
-      "score": 39,
-      "comments": 5,
-      "tags": [
-        "emacs"
+        "education",
+        "vibecoding"
       ]
     },
     {
@@ -184,12 +173,41 @@
       "summary": "",
       "url": "https://revo.lung.fyi/",
       "source": "Lobste.rs",
-      "score": 61,
-      "comments": 5,
+      "score": 81,
+      "comments": 11,
       "tags": [
         "programming",
         "zig"
       ]
+    },
+    {
+      "id": "rss:648b73d06a",
+      "title": "Google Releases Chrome Update to Patch Actively Exploited V8 Zero-Day",
+      "summary": "Google on Thursday released security updates to patch 12 vulnerabilities, including one that has come under active exploitation in the wild.\n\nThe high-severity vulnerability, tracked as CVE-2026-85046 (CVSS score: 8.8), has been described as a type confusion bug in V8, Chrome's JavaScript and WebAss",
+      "url": "https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "lob:entcaa",
+      "title": "simple is not small",
+      "summary": "",
+      "url": "https://jyn.dev/simple-is-not-the-same-as-small/",
+      "source": "Lobste.rs",
+      "score": 49,
+      "comments": 9,
+      "tags": [
+        "practices"
+      ]
+    },
+    {
+      "id": "hn:49516312",
+      "title": "Elevator of the Year Winner Modernization of the Metropolis Trust Building",
+      "summary": "",
+      "url": "https://www.starelevator.com/projects/star-elevator-modernization-of-the-metropolis-trust-building",
+      "source": "Hacker News",
+      "score": 81,
+      "comments": 27
     },
     {
       "id": "arxiv:2609.04199v1",
@@ -215,27 +233,6 @@
         "cs.AI"
       ],
       "arxiv_id": "2609.04197v1"
-    },
-    {
-      "id": "lob:if60bl",
-      "title": "You Don't Need Initial-Scale In Your HTML",
-      "summary": "",
-      "url": "https://vale.rocks/micros/20260902-1350",
-      "source": "Lobste.rs",
-      "score": 33,
-      "comments": 4,
-      "tags": [
-        "web"
-      ]
-    },
-    {
-      "id": "hn:49530807",
-      "title": "New type of dice guarantees no tie when deciding who goes first",
-      "summary": "",
-      "url": "https://www.cbc.ca/lite/story/9.7328614",
-      "source": "Hacker News",
-      "score": 62,
-      "comments": 43
     }
   ],
   "ai_curated": true
