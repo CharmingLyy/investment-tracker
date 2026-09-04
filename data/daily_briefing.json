@@ -1,144 +1,123 @@
 {
-  "date": "2026-09-03",
-  "update_time": "2026-09-03 15:59:23",
+  "date": "2026-09-04",
+  "update_time": "2026-09-04 03:46:29",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-03\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Polars 2.0 预发布：数据框架界的\"复仇者联盟\"集结完毕 (来源: Hacker News)\n- **核心干货**：Polars 2.0 预发布，这不仅仅是版本号跳动。作为 Rust 编写的极速 DataFrame 库，2.0 版本预计将带来 API 稳定性承诺、更激进的多线程调度优化以及查询计划器的深度重构。核心目标是进一步碾压 Pandas 在大型数据集上的内存与性能瓶颈，让\"大数据\"处理在单机上变得更加硬核。\n- **毒舌/硬核点评**：Pandas 用户还在为 `apply` 函数的龟速祈祷，Polars 已经开着 V8 引擎准备把赛道都掀了。2.0 要是真能把 API 冻结了，Python 数据生态的\"版本地狱\"怕是要提前终结。\n- **🔗 传送门**：[点击直达原链接](https://pola.rs/posts/announcing-polars-2/)\n\n---\n\n### 2. 📌 告别红帽，拥抱 Debian：CERN 的\"科技树\"点歪了？ (来源: Lobste.rs)\n- **核心干货**：欧洲核子研究中心（CERN）宣布将其工业计算机系统从长期使用的 RHEL（红帽企业 Linux）迁移至 Debian。这背后是 RHEL 近年来收紧源码访问和订阅策略的直接反弹。CERN 作为全球顶尖科研机构，此举是对开源社区版 Linux 发行版投下的重量级信任票，也是对红帽商业化路径的响亮质疑。\n- **毒舌/硬核点评**：红帽以为掐住源码就能掐住企业的脖子，结果 CERN 直接掀桌子换桌吃饭。这波操作不仅是对 IBM 商业策略的打脸，更是给所有\"开源但不完全开源\"的厂商上了一课：惹毛了科学家，他们能把你从根上优化掉。\n- **🔗 传送门**：[点击直达原链接](https://www.phoronix.com/news/CERN-Goes-Debian-Leaving-RHEL)\n\n---\n\n### 3. 📌 金牌级竞技编程模型：LLM 的\"奥赛集训队\"冲刺方案 (来源: ArXiv)\n- **核心干货**：论文提出一套端到端的特化流水线，旨在让 LLM 在国际信息学奥赛（IOI）和 ICPC 这类顶级编程竞赛中冲击金牌。方法包括大规模问题筛选、合成推理轨迹和监督微调，目标直指当前模型在复杂算法推理上的短板。这不是简单的\"刷题\"，而是构建一个从问题理解到代码生成的完整推理引擎。\n- **毒舌/硬核点评**：当人类还在为 LeetCode Medium 抓耳挠腮时，这玩意儿已经瞄准了国际奥赛的金牌。虽然离\"取代程序员\"还差十个图灵奖，但至少说明 AI 在\"卷竞赛\"这件事上，已经比大多数人类更懂套路了。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2609.02849v1)\n\n---\n\n### 🗣️ 今日顶男金句\n\"红帽教会我们：免费的不是最贵的，失去源码控制权的才是。今天你'优化'了开源，明天开源就'优化'掉你。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-04\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 GPT-6 Astra 正式发布 (来源: Hacker News | 1439分)\n- **核心干货**：OpenAI 放出 GPT-6 Astra 的系统卡，并已在 ARC-AGI-3 基准上引发热议。这不仅是参数规模的迭代，更意味着多模态推理与部署安全机制进入新阶段，剑指通用智能的下一个量级。\n- **毒舌/硬核点评**：GPT-5 的余温还没散，GPT-6 就来抢头条了。建议改名叫 \"GPT-∞\"，反正大家也追不动了，不如直接宣布胜利。\n- **🔗 传送门**：[点击直达原链接](https://openai.com/index/gpt-6-astra/)\n\n---\n\n### 2. 📌 Qwen 3.8 27B 登入 Cerebras，推理速度飙至 1500 tokens/s (来源: Hacker News | 474分)\n- **核心干货**：阿里开源模型 Qwen 3.8 27B 现已可在 Cerebras 的定制芯片上运行，推理速度达到惊人的 1500 tokens/s。这标志着开源模型在特定硬件上的性能已能比肩甚至超越闭源巨头的云端服务，且成本极低。\n- **毒舌/硬核点评**：开源的力量+定制硅基的魔法=闭源厂商的噩梦。以后跑大模型，可能比刷短视频还快。\n- **🔗 传送门**：[点击直达原链接](https://inference-docs.cerebras.ai/models/overview)\n\n---\n\n### 3. 📌 用 LLM 把 1993 年的 Amiga 游戏移植到 Godot (来源: Hacker News | 220分)\n- **核心干货**：一位开发者分享了他如何利用 LLM（Claude Fable 5）阅读理解 MC68000 汇编代码，将一个1993年在巴格达编写的 Amiga 游戏，在一个晚上成功移植到 Godot 引擎。这展示了 LLM 在逆向工程和遗留代码现代化方面的惊人潜力。\n- **毒舌/硬核点评**：我还在用 LLM 写周报，大佬已经用它读汇编考古了。这波是赛博考古学家的胜利，建议申报图灵奖。\n- **🔗 传送门**：[点击直达原链接](https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot/)\n\n---\n\n### 🗣️ 今日顶男金句\n别让你的技能栈变成遗产代码，要让自己成为那个能读懂遗产代码的人——毕竟 AI 时代，会\"考古\"才是真前沿。",
   "briefing_items": [
     {
-      "title": "Polars 2.0 预发布：数据框架界的\"复仇者联盟\"集结完毕",
-      "source": "Hacker News",
-      "summary": "Polars 2.0 预发布，这不仅仅是版本号跳动。作为 Rust 编写的极速 DataFrame 库，2.0 版本预计将带来 API 稳定性承诺、更激进的多线程调度优化以及查询计划器的深度重构。核心目标是进一步碾压 Pandas 在大型数据集上的内存与性能瓶颈，让\"大数据\"处理在单机上变得更加硬核。",
-      "commentary": "Pandas 用户还在为 `apply` 函数的龟速祈祷，Polars 已经开着 V8 引擎准备把赛道都掀了。2.0 要是真能把 API 冻结了，Python 数据生态的\"版本地狱\"怕是要提前终结。",
-      "url": "https://pola.rs/posts/announcing-polars-2/"
+      "title": "GPT-6 Astra 正式发布",
+      "source": "Hacker News | 1439分",
+      "summary": "OpenAI 放出 GPT-6 Astra 的系统卡，并已在 ARC-AGI-3 基准上引发热议。这不仅是参数规模的迭代，更意味着多模态推理与部署安全机制进入新阶段，剑指通用智能的下一个量级。",
+      "commentary": "GPT-5 的余温还没散，GPT-6 就来抢头条了。建议改名叫 \"GPT-∞\"，反正大家也追不动了，不如直接宣布胜利。",
+      "url": "https://openai.com/index/gpt-6-astra/"
     },
     {
-      "title": "告别红帽，拥抱 Debian：CERN 的\"科技树\"点歪了？",
-      "source": "Lobste.rs",
-      "summary": "欧洲核子研究中心（CERN）宣布将其工业计算机系统从长期使用的 RHEL（红帽企业 Linux）迁移至 Debian。这背后是 RHEL 近年来收紧源码访问和订阅策略的直接反弹。CERN 作为全球顶尖科研机构，此举是对开源社区版 Linux 发行版投下的重量级信任票，也是对红帽商业化路径的响亮质疑。",
-      "commentary": "红帽以为掐住源码就能掐住企业的脖子，结果 CERN 直接掀桌子换桌吃饭。这波操作不仅是对 IBM 商业策略的打脸，更是给所有\"开源但不完全开源\"的厂商上了一课：惹毛了科学家，他们能把你从根上优化掉。",
-      "url": "https://www.phoronix.com/news/CERN-Goes-Debian-Leaving-RHEL"
+      "title": "Qwen 3.8 27B 登入 Cerebras，推理速度飙至 1500 tokens/s",
+      "source": "Hacker News | 474分",
+      "summary": "阿里开源模型 Qwen 3.8 27B 现已可在 Cerebras 的定制芯片上运行，推理速度达到惊人的 1500 tokens/s。这标志着开源模型在特定硬件上的性能已能比肩甚至超越闭源巨头的云端服务，且成本极低。",
+      "commentary": "开源的力量+定制硅基的魔法=闭源厂商的噩梦。以后跑大模型，可能比刷短视频还快。",
+      "url": "https://inference-docs.cerebras.ai/models/overview"
     },
     {
-      "title": "金牌级竞技编程模型：LLM 的\"奥赛集训队\"冲刺方案",
-      "source": "ArXiv",
-      "summary": "论文提出一套端到端的特化流水线，旨在让 LLM 在国际信息学奥赛（IOI）和 ICPC 这类顶级编程竞赛中冲击金牌。方法包括大规模问题筛选、合成推理轨迹和监督微调，目标直指当前模型在复杂算法推理上的短板。这不是简单的\"刷题\"，而是构建一个从问题理解到代码生成的完整推理引擎。",
-      "commentary": "当人类还在为 LeetCode Medium 抓耳挠腮时，这玩意儿已经瞄准了国际奥赛的金牌。虽然离\"取代程序员\"还差十个图灵奖，但至少说明 AI 在\"卷竞赛\"这件事上，已经比大多数人类更懂套路了。",
-      "url": "https://arxiv.org/abs/2609.02849v1"
+      "title": "用 LLM 把 1993 年的 Amiga 游戏移植到 Godot",
+      "source": "Hacker News | 220分",
+      "summary": "一位开发者分享了他如何利用 LLM（Claude Fable 5）阅读理解 MC68000 汇编代码，将一个1993年在巴格达编写的 Amiga 游戏，在一个晚上成功移植到 Godot 引擎。这展示了 LLM 在逆向工程和遗留代码现代化方面的惊人潜力。",
+      "commentary": "我还在用 LLM 写周报，大佬已经用它读汇编考古了。这波是赛博考古学家的胜利，建议申报图灵奖。",
+      "url": "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot/"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49546753",
-      "title": "Pre-Release of Polars 2.0",
+      "id": "hn:49554520",
+      "title": "Qwen 3.8 27B available on Cerebras at 1500 tokens/s",
       "summary": "",
-      "url": "https://pola.rs/posts/announcing-polars-2/",
+      "url": "https://inference-docs.cerebras.ai/models/overview",
       "source": "Hacker News",
-      "score": 310,
-      "comments": 105
-    },
-    {
-      "id": "hn:49550614",
-      "title": "ChatGPT Is Throwing 404",
-      "summary": "",
-      "url": "https://chatgpt.com/",
-      "source": "Hacker News",
-      "score": 313,
-      "comments": 249
-    },
-    {
-      "id": "hn:49522137",
-      "title": "The Browser's Main Thread Is Expensive",
-      "summary": "",
-      "url": "https://kciter.so/posts/the-expensive-main-thread/en/",
-      "source": "Hacker News",
-      "score": 280,
-      "comments": 99
-    },
-    {
-      "id": "lob:ipy9xw",
-      "title": "Normalized Fascism in Open Source: $12 Million Given to DHH",
-      "summary": "",
-      "url": "https://brennan.day/normalized-fascism-in-open-source-12-million-given-to-dhh/",
-      "source": "Lobste.rs",
-      "score": 452,
-      "comments": 371,
-      "tags": [
-        "culture"
-      ]
-    },
-    {
-      "id": "hn:49548395",
-      "title": "Audacity 4.0",
-      "summary": "",
-      "url": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0",
-      "source": "Hacker News",
-      "score": 679,
-      "comments": 161
-    },
-    {
-      "id": "hn:49549676",
-      "title": "Elevated Errors for Multiple Models",
-      "summary": "",
-      "url": "https://status.claude.com/incidents/461yvfrzpwtt",
-      "source": "Hacker News",
-      "score": 177,
+      "score": 474,
       "comments": 145
     },
     {
-      "id": "lob:krcehd",
-      "title": "A note on subscription prices from LWN",
-      "summary": "",
-      "url": "https://lwn.net/Articles/1090585/",
-      "source": "Lobste.rs",
-      "score": 102,
-      "comments": 12,
-      "tags": [
-        "linux"
-      ]
+      "id": "hn:49554643",
+      "title": "GPT-6 Astra",
+      "summary": "System Card: <a href=\"https:&#x2F;&#x2F;deploymentsafety.openai.com&#x2F;gpt-6-astra\" rel=\"nofollow\">https:&#x2F;&#x2F;deploymentsafety.openai.com&#x2F;gpt-6-astra</a><p>Related ongoing threads:<p><i>OpenAI&#x27;s GPT-6 Astra on ARC-AGI-3</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;it",
+      "url": "https://openai.com/index/gpt-6-astra/",
+      "source": "Hacker News",
+      "score": 1439,
+      "comments": 1202
     },
     {
-      "id": "lob:m4iwq4",
-      "title": "Static Allocation, Constant Work",
-      "summary": "",
-      "url": "https://matklad.github.io/2026/09/02/static-allocation-constant-work.html",
-      "source": "Lobste.rs",
-      "score": 41,
-      "comments": 9,
-      "tags": [
-        "zig"
-      ]
+      "id": "hn:49526453",
+      "title": "The largest electric aircraft just flew [video]",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.ycombinator.com&#x2F;library&#x2F;Y6-the-world-s-largest-electric-aircraft-just-flew\">https:&#x2F;&#x2F;www.ycombinator.com&#x2F;library&#x2F;Y6-the-world-s-largest-e...</a>",
+      "url": "https://www.youtube.com/watch?v=nM86DBOqgPM",
+      "source": "Hacker News",
+      "score": 223,
+      "comments": 154
     },
     {
-      "id": "lob:6tsncg",
+      "id": "hn:49550375",
+      "title": "Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly",
+      "summary": "These are my notes from porting my Amiga game, which I originally built in Baghdad in 1993 in MC68000 assembly, to Godot, using Claude Fable 5 during last July holiday.  It took an evening! Getting the feel right and shipping it took a few more weekends and evenings.<p>I spent the last few weeks ana",
+      "url": "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot/",
+      "source": "Hacker News",
+      "score": 220,
+      "comments": 66
+    },
+    {
+      "id": "hn:49551760",
+      "title": "K2 Horizon: A connected fleet of six open models",
+      "summary": "",
+      "url": "https://ifm.ai/blog/k2/",
+      "source": "Hacker News",
+      "score": 270,
+      "comments": 86
+    },
+    {
+      "id": "hn:49550698",
+      "title": "Any Human Ever – One life, drawn at random from all who have ever lived",
+      "summary": "",
+      "url": "https://anyhumanever.com/",
+      "source": "Hacker News",
+      "score": 494,
+      "comments": 249
+    },
+    {
+      "id": "hn:49552572",
+      "title": "Artificial beaver dams saw juvenile coho salmon survival rates go from 8% to 60%",
+      "summary": "",
+      "url": "https://www.discoverwildlife.com/animal-facts/artificial-beaver-dams-california",
+      "source": "Hacker News",
+      "score": 184,
+      "comments": 60
+    },
+    {
+      "id": "hn:49550772",
       "title": ".name Termination",
       "summary": "",
       "url": "https://neil.fraser.name/news/2026/09/03/",
-      "source": "Lobste.rs",
-      "score": 62,
-      "comments": 10,
-      "tags": [
-        "web"
-      ]
-    },
-    {
-      "id": "hn:49492796",
-      "title": "What I Learned from My Mom (1941-2026)",
-      "summary": "",
-      "url": "https://experimentalliving.substack.com/p/what-i-learned-from-my-mom-1941-2026",
       "source": "Hacker News",
-      "score": 184,
-      "comments": 8
+      "score": 1469,
+      "comments": 401
     },
     {
-      "id": "lob:fxk56i",
-      "title": "CERN transitioning industrial computers to Debian after being a longtime RHEL institution",
+      "id": "hn:49544618",
+      "title": "GPS glitched across the US by as much as 33 feet",
       "summary": "",
-      "url": "https://www.phoronix.com/news/CERN-Goes-Debian-Leaving-RHEL",
+      "url": "https://www.sciencealert.com/gps-glitched-across-the-us-by-as-much-as-33-feet-scientists-have-never-seen-this-before",
+      "source": "Hacker News",
+      "score": 140,
+      "comments": 82
+    },
+    {
+      "id": "lob:j03x8u",
+      "title": "Audacity 4.0.0 Released",
+      "summary": "",
+      "url": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0",
       "source": "Lobste.rs",
-      "score": 45,
-      "comments": 5,
+      "score": 60,
+      "comments": 13,
       "tags": [
-        "linux"
+        "release"
       ]
     },
     {
@@ -147,54 +126,44 @@
       "summary": "",
       "url": "https://signalandsilence.substack.com/p/i-think-someone-hacked-the-commissary",
       "source": "Lobste.rs",
-      "score": 30,
-      "comments": 11,
+      "score": 46,
+      "comments": 17,
       "tags": [
         "security"
       ]
     },
     {
-      "id": "arxiv:2609.02849v1",
-      "title": "Post-Training Language Models for Gold-Medal Performance in Coding Competitions",
-      "summary": "Competitive programming has become a key test of large language model reasoning, with international competitions such as IOI and ICPC representing its most challenging settings. We present an end-to-end specialization pipeline combining large-scale problem curation, synthetic reasoning traces, super",
-      "url": "https://arxiv.org/abs/2609.02849v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL",
-        "cs.MA",
-        "cs.SE"
-      ],
-      "arxiv_id": "2609.02849v1"
-    },
-    {
-      "id": "rss:33a1c9fbaa",
-      "title": "Attackers Exploit Two SonicWall SMA 1000 Zero-Days That May Form an Attack Chain",
-      "summary": "SonicWall has released security updates to address two security flaws impacting its Secure Mobile Access (SMA) 1000 series VPN appliances that have been exploited in zero-day attacks.\n\nThe vulnerabilities, discovered internally by SonicWall's William Perry and Adam Babis, are listed below -\n\n\n  CVE-",
-      "url": "https://thehackernews.com/2026/09/attackers-exploit-two-sonicwall-sma.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "hn:49551589",
-      "title": "Grok Outage",
+      "id": "hn:49557206",
+      "title": "Which tools do Claude, Codex and Cursor choose? We measured 17k runs to find out",
       "summary": "",
-      "url": "https://status.x.ai/",
+      "url": "https://armature.tech/blog/which-tools-coding-agents-install",
       "source": "Hacker News",
-      "score": 79,
-      "comments": 55
+      "score": 125,
+      "comments": 46
     },
     {
-      "id": "lob:yomxcl",
-      "title": "Dependent if expressions without dependent types",
+      "id": "lob:zudpcb",
+      "title": "jujutsu 0.45.0",
       "summary": "",
-      "url": "https://haskellforall.com/2026/09/dependent-if-expressions",
+      "url": "https://github.com/jj-vcs/jj/releases/tag/v0.45.0",
       "source": "Lobste.rs",
-      "score": 35,
-      "comments": 2,
+      "score": 55,
+      "comments": 13,
       "tags": [
-        "plt"
+        "release",
+        "vcs"
+      ]
+    },
+    {
+      "id": "lob:fxk56i",
+      "title": "CERN transitioning industrial computers to Debian after being a longtime RHEL institution",
+      "summary": "",
+      "url": "https://www.phoronix.com/news/CERN-Goes-Debian-Leaving-RHEL",
+      "source": "Lobste.rs",
+      "score": 66,
+      "comments": 7,
+      "tags": [
+        "linux"
       ]
     },
     {
@@ -203,41 +172,70 @@
       "summary": "",
       "url": "https://sachachua.com/blog/2026/04/what-s-in-the-emacs-newcomers-presets-theme/",
       "source": "Lobste.rs",
-      "score": 34,
-      "comments": 2,
+      "score": 39,
+      "comments": 5,
       "tags": [
         "emacs"
       ]
     },
     {
-      "id": "hn:49521264",
-      "title": "Invisible Companies",
+      "id": "lob:towfrz",
+      "title": "Revo Programming language",
       "summary": "",
-      "url": "https://colossus.com/article/invisible-companies/",
-      "source": "Hacker News",
-      "score": 103,
-      "comments": 33
+      "url": "https://revo.lung.fyi/",
+      "source": "Lobste.rs",
+      "score": 61,
+      "comments": 5,
+      "tags": [
+        "programming",
+        "zig"
+      ]
     },
     {
-      "id": "hn:49550698",
-      "title": "Any Human Ever – One life, drawn at random from all who have ever lived",
-      "summary": "",
-      "url": "https://anyhumanever.com/",
-      "source": "Hacker News",
-      "score": 54,
-      "comments": 33
-    },
-    {
-      "id": "arxiv:2609.02885v1",
-      "title": "Discriminative World Models for Web Agents",
-      "summary": "Recent web agents use world models for test-time action selection by sampling candidate actions, predicting the resulting web states, and ranking them with a ranker model or a Process Reward Model (PRM). These world models are typically trained via supervised next-state prediction to generate fixed ",
-      "url": "https://arxiv.org/abs/2609.02885v1",
+      "id": "arxiv:2609.04199v1",
+      "title": "Compile by Training: Turning Natural-Language Specifications into Local Neural Functions",
+      "summary": "Many recurring text functions are easy to describe but difficult to implement with rules, while calling a large remote model for every input introduces repeated cost, latency, and dependency on a provider. We present compile by training, which turns a natural-language specification into a reusable n",
+      "url": "https://arxiv.org/abs/2609.04199v1",
       "source": "ArXiv",
       "categories": [
+        "cs.CL",
         "cs.AI",
         "cs.LG"
       ],
-      "arxiv_id": "2609.02885v1"
+      "arxiv_id": "2609.04199v1"
+    },
+    {
+      "id": "arxiv:2609.04197v1",
+      "title": "ESPO: Error-Structured Prompt Optimization via Diagnose, Diversify, and Stabilize",
+      "summary": "Evolutionary prompt optimizers such as GEPA suffer from prompt bloat: each iteration appends rules and caveats, producing prompts up to 3$\\times$ longer yet no more accurate. We trace this to three deficiencies - incomplete error observation, limited search diversity, and unreliable selection - and ",
+      "url": "https://arxiv.org/abs/2609.04197v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_id": "2609.04197v1"
+    },
+    {
+      "id": "lob:if60bl",
+      "title": "You Don't Need Initial-Scale In Your HTML",
+      "summary": "",
+      "url": "https://vale.rocks/micros/20260902-1350",
+      "source": "Lobste.rs",
+      "score": 33,
+      "comments": 4,
+      "tags": [
+        "web"
+      ]
+    },
+    {
+      "id": "hn:49530807",
+      "title": "New type of dice guarantees no tie when deciding who goes first",
+      "summary": "",
+      "url": "https://www.cbc.ca/lite/story/9.7328614",
+      "source": "Hacker News",
+      "score": 62,
+      "comments": 43
     }
   ],
   "ai_curated": true
