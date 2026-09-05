@@ -1,29 +1,32 @@
 {
   "date": "2026-09-05",
-  "update_time": "2026-09-05 03:45:20",
+  "update_time": "2026-09-05 14:47:43",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-05\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 形式化费马大定理：Anthropic 的 AI 数学极限冲刺 (来源: HackerNews/Anthropic)\n- **核心干货**：Anthropic 宣布成功用形式化证明工具（Lean 等）将费马大定理的证明进行了机器验证。这不止是数学界的里程碑，更意味着 AI 在**长程逻辑推理**和**复杂证明生成**上取得了突破，AI 已经从\"做题家\"进化成了\"数学家\"。项目负责人甚至吐槽说，原本以为这是留给人类数学家的\"终极难题\"，结果被 AI 抢先了。\n- **毒舌/硬核点评**：恭喜 AI 正式迈入\"我证明了你大爷还是你大爷\"的领域。人类数学家们，是时候考虑转行去教 AI 学哲学了，不然连\"为什么证明是对的\"这个饭碗都要被抢了。\n- **🔗 传送门**：[点击直达原链接](https://www.anthropic.com/research/formalizing-fermats-last-theorem)\n\n---\n\n### 2. 📌 史诗级漏洞！Chrome 全版本遭主动利用的沙箱逃逸 (来源: HackerNews/NVD)\n- **核心干货**：编号 CVE-2026-85046 的高危漏洞（CVSS 8.8），影响所有 Chromium 内核浏览器版本。攻击者能通过恶意网页实现**沙箱逃逸**，直接拿下你的系统权限。官方已确认存在主动利用，Google 已紧急发布补丁，但别以为你用的是 Edge 或 Opera 就没事——只要是 Chromium 的壳，统统中招。\n- **毒舌/硬核点评**：Chrome 的沙箱再次证明了它是个\"精致的筛子\"。我赌五毛，这个漏洞的发现者是个用 Firefox 的勇士，毕竟只有不用 Chrome 的人才有时间去挖 Chrome 的坟。\n- **🔗 传送门**：[点击直达原链接](https://nvd.nist.gov/vuln/detail/cve-2026-85046)\n\n---\n\n### 3. 📌 开源 eInk 自行车码表：极客的浪漫对抗训练台 (来源: Hacker News)\n- **核心干货**：一个名为 Open Trailpaper 的开源项目，用 eInk 屏幕打造了超低功耗的自行车码表。它支持 ANT+ 协议连接心率带、速度传感器等设备，续航逆天。更有趣的是，开发者透露在开发过程中，AI 通过\"瞎鼓捣\"未公开寄存器，意外帮 ESP32 实现了完整的 ANT 协议栈——这波是 AI 在硬件逆向领域的意外开荒。\n- **毒舌/硬核点评**：当别人还在用两千块的码表记录数据发朋友圈时，真正的极客已经骑着车在野外刷开源代码了。建议把这个项目推荐给所有骑行爱好者，至少它不会像某品牌一样，骑到一半逼你付费解锁\"爬坡模式\"。\n- **🔗 传送门**：[点击直达原链接](https://opentrailpaper.com)\n\n---\n\n### 🗣️ 今日顶男金句\n\"别让你的浏览器成为你最后一道防线——真正的硬核玩家，从默认关闭 JavaScript 开始新的一天。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-05\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Anthropic 用 AI 形式化证明了费马大定理 (来源: Anthropic Research / Hacker News)\n- **核心干货**：Anthropic 的研究团队成功将费马大定理（FLT）的证明进行了完全形式化，这意味着数学界最著名的难题之一现在可以被机器验证。形式化证明不仅是数学里程碑，更意味着 AI 在**深度推理**和**长链条逻辑**上已经能处理人类数学家都望而生畏的复杂度。\n- **毒舌点评**：人类用了358年才证明的定理，AI 现在直接把它变成\"可编译的代码\"了。建议怀尔斯教授赶紧去学一下 Prompts，不然下次工作都没了。\n- **🔗 传送门**：[点击直达原链接](https://www.anthropic.com/research/formalizing-fermats-last-theorem)\n\n---\n\n### 2. 📌 针对整个 Linux 发行版的\"信任信任\"攻击 (来源: ArXiv)\n- **核心干货**：论文展示了 Ken Thompson 经典的\"信任信任\"攻击（编译器后门）可以扩展到**整个发行版**——通过感染 `strip` 工具（而非编译器）就能实现类似的自复制后门传播。这打破了\"只有编译器才容易受此攻击\"的普遍认知，对供应链安全构成重大威胁。\n- **毒舌点评**：你以为只有编译器能下毒？现在连\"清洁工\"（strip）都能给你把脏东西扫进内核。建议各发行版维护者别光盯着编译器，把工具链里每个二进制都当潜在间谍审一遍。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2607.24888)\n\n---\n\n### 3. 📌 Chrome 全版本沙箱逃逸漏洞被积极利用 (来源: Hacker News / NVD)\n- **核心干货**：CVE-2026-85046，一个影响**所有 Chromium 版本**的沙箱远程代码执行漏洞，已被发现在野积极利用。类型混淆 bug 位于 V8 引擎中，CVSS 评分 8.8，攻击者可借此完全逃逸沙箱并执行任意代码。Google 已紧急发布补丁。\n- **毒舌点评**：Chrome 的沙箱号称\"铜墙铁壁\"，结果一个类型混淆就让攻击者登堂入室。建议各位趁更新的时候顺便把密码管理器也检查一遍，毕竟浏览器都裸奔了，密码留着还有什么用？\n- **🔗 传送门**：[点击直达原链接](https://nvd.nist.gov/vuln/detail/cve-2026-85046)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"AI 都能证明费马大定理了，你还有什么理由说自己'学不会'？——别拿智商当借口，你只是不够自律。\"",
   "briefing_items": [
     {
-      "title": "形式化费马大定理：Anthropic 的 AI 数学极限冲刺",
-      "source": "HackerNews/Anthropic",
-      "summary": "Anthropic 宣布成功用形式化证明工具（Lean 等）将费马大定理的证明进行了机器验证。这不止是数学界的里程碑，更意味着 AI 在**长程逻辑推理**和**复杂证明生成**上取得了突破，AI 已经从\"做题家\"进化成了\"数学家\"。项目负责人甚至吐槽说，原本以为这是留给人类数学家的\"终极难题\"，结果被 AI 抢先了。",
-      "commentary": "恭喜 AI 正式迈入\"我证明了你大爷还是你大爷\"的领域。人类数学家们，是时候考虑转行去教 AI 学哲学了，不然连\"为什么证明是对的\"这个饭碗都要被抢了。",
+      "title": "Anthropic 用 AI 形式化证明了费马大定理",
+      "source": "Anthropic Research / Hacker News",
+      "summary": "Anthropic 的研究团队成功将费马大定理（FLT）的证明进行了完全形式化，这意味着数学界最著名的难题之一现在可以被机器验证。形式化证明不仅是数学里程碑，更意味着 AI 在**深度推理**和**长链条逻辑**上已经能处理人类数学家都望而生畏的复杂度。",
+      "commentary": "人类用了358年才证明的定理，AI 现在直接把它变成\"可编译的代码\"了。建议怀尔斯教授赶紧去学一下 Prompts，不然下次工作都没了。",
       "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem"
     },
     {
-      "title": "史诗级漏洞！Chrome 全版本遭主动利用的沙箱逃逸",
-      "source": "HackerNews/NVD",
-      "summary": "编号 CVE-2026-85046 的高危漏洞（CVSS 8.8），影响所有 Chromium 内核浏览器版本。攻击者能通过恶意网页实现**沙箱逃逸**，直接拿下你的系统权限。官方已确认存在主动利用，Google 已紧急发布补丁，但别以为你用的是 Edge 或 Opera 就没事——只要是 Chromium 的壳，统统中招。",
-      "commentary": "Chrome 的沙箱再次证明了它是个\"精致的筛子\"。我赌五毛，这个漏洞的发现者是个用 Firefox 的勇士，毕竟只有不用 Chrome 的人才有时间去挖 Chrome 的坟。",
+      "title": "针对整个 Linux 发行版的\"信任信任\"攻击",
+      "source": "ArXiv",
+      "summary": "论文展示了 Ken Thompson 经典的\"信任信任\"攻击（编译器后门）可以扩展到**整个发行版**——通过感染 `strip` 工具（而非编译器）就能实现类似的自复制后门传播。这打破了\"只有编译器才容易受此攻击\"的普遍认知，对供应链安全构成重大威胁。",
+      "commentary": "你以为只有编译器能下毒？现在连\"清洁工\"（strip）都能给你把脏东西扫进内核。建议各发行版维护者别光盯着编译器，把工具链里每个二进制都当潜在间谍审一遍。",
+      "url": "https://arxiv.org/abs/2607.24888"
+    },
+    {
+      "title": "Chrome 全版本沙箱逃逸漏洞被积极利用",
+      "source": "Hacker News / NVD",
+      "summary": "CVE-2026-85046，一个影响**所有 Chromium 版本**的沙箱远程代码执行漏洞，已被发现在野积极利用。类型混淆 bug 位于 V8 引擎中，CVSS 评分 8.8，攻击者可借此完全逃逸沙箱并执行任意代码。Google 已紧急发布补丁。",
+      "commentary": "Chrome 的沙箱号称\"铜墙铁壁\"，结果一个类型混淆就让攻击者登堂入室。建议各位趁更新的时候顺便把密码管理器也检查一遍，毕竟浏览器都裸奔了，密码留着还有什么用？",
       "url": "https://nvd.nist.gov/vuln/detail/cve-2026-85046"
     },
     {
-      "title": "开源 eInk 自行车码表：极客的浪漫对抗训练台",
-      "source": "Hacker News",
-      "summary": "一个名为 Open Trailpaper 的开源项目，用 eInk 屏幕打造了超低功耗的自行车码表。它支持 ANT+ 协议连接心率带、速度传感器等设备，续航逆天。更有趣的是，开发者透露在开发过程中，AI 通过\"瞎鼓捣\"未公开寄存器，意外帮 ESP32 实现了完整的 ANT 协议栈——这波是 AI 在硬件逆向领域的意外开荒。",
-      "commentary": "当别人还在用两千块的码表记录数据发朋友圈时，真正的极客已经骑着车在野外刷开源代码了。建议把这个项目推荐给所有骑行爱好者，至少它不会像某品牌一样，骑到一半逼你付费解锁\"爬坡模式\"。",
-      "url": "https://opentrailpaper.com"
+      "quote": "\"AI 都能证明费马大定理了，你还有什么理由说自己'学不会'？——别拿智商当借口，你只是不够自律。\""
     }
   ],
   "candidates": [
@@ -33,8 +36,8 @@
       "summary": "<a href=\"https:&#x2F;&#x2F;www.reuters.com&#x2F;world&#x2F;europe&#x2F;openai-agents-hijacked-german-website-previously-undisclosed-ai-breakout-this-2026-09-04&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.reuters.com&#x2F;world&#x2F;europe&#x2F;openai-agents-hijacked-...</a>",
       "url": "https://collusion.wiki/",
       "source": "Hacker News",
-      "score": 1532,
-      "comments": 1224
+      "score": 1853,
+      "comments": 1418
     },
     {
       "id": "hn:49570669",
@@ -42,8 +45,8 @@
       "summary": "",
       "url": "https://nvd.nist.gov/vuln/detail/cve-2026-85046",
       "source": "Hacker News",
-      "score": 309,
-      "comments": 174
+      "score": 621,
+      "comments": 347
     },
     {
       "id": "hn:49569896",
@@ -51,8 +54,26 @@
       "summary": "",
       "url": "https://www.statichost.eu/",
       "source": "Hacker News",
-      "score": 187,
-      "comments": 63
+      "score": 363,
+      "comments": 166
+    },
+    {
+      "id": "hn:49574167",
+      "title": "AI handles incidents, engineers lose touch with their systems",
+      "summary": "",
+      "url": "https://www.sylvainkalache.com/blog/ai-handles-incidents-engineers-lose-touch-with-their-systems",
+      "source": "Hacker News",
+      "score": 251,
+      "comments": 214
+    },
+    {
+      "id": "hn:49571634",
+      "title": "Nitter has more working instances than before the takedowns",
+      "summary": "",
+      "url": "https://codeberg.org/mv12star/shitter/wiki/Instances",
+      "source": "Hacker News",
+      "score": 390,
+      "comments": 155
     },
     {
       "id": "hn:49568506",
@@ -60,89 +81,84 @@
       "summary": "<a href=\"https:&#x2F;&#x2F;xenaproject.wordpress.com&#x2F;2026&#x2F;09&#x2F;04&#x2F;flt-anthropic-has-beaten-me-to-it&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;xenaproject.wordpress.com&#x2F;2026&#x2F;09&#x2F;04&#x2F;flt-anthropic-h...</a>",
       "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
       "source": "Hacker News",
-      "score": 525,
-      "comments": 330
+      "score": 668,
+      "comments": 423
     },
     {
-      "id": "hn:49568579",
-      "title": "Shutting down our public encrypted DNS",
-      "summary": "",
-      "url": "https://mullvad.net/en/blog/shutting-down-our-public-encrypted-dns-servers-and-sponsoring-quad9-instead",
-      "source": "Hacker News",
-      "score": 271,
-      "comments": 121
-    },
-    {
-      "id": "hn:49567437",
-      "title": "Show HN: Open-Source eInk Bike Computer",
-      "summary": "Hey all, i just launched my Eink Bike computer project and think it is cool.<p>Another tidbit, in the crazy things that AI has done... It has helped create a ANT (common sensor wireless protocol used in workout&#x2F;biking) implementation for ESP32 by messing around with undocumented registers: <a h",
-      "url": "https://opentrailpaper.com",
-      "source": "Hacker News",
-      "score": 248,
-      "comments": 87
-    },
-    {
-      "id": "hn:49570772",
-      "title": "Record-High 89% in U.S. Say Government Corruption Widespread",
-      "summary": "",
-      "url": "https://news.gallup.com/poll/713933/record-high-say-government-corruption-widespread.aspx",
-      "source": "Hacker News",
-      "score": 250,
-      "comments": 194
-    },
-    {
-      "id": "hn:49569366",
-      "title": "Can AI design circuit boards yet?",
-      "summary": "",
-      "url": "https://eebench.org/blog/can-ai-design-circuit-boards-yet/",
-      "source": "Hacker News",
-      "score": 186,
-      "comments": 120
-    },
-    {
-      "id": "hn:49570545",
-      "title": "GPT-6 Astra on OpenRouter",
-      "summary": "",
-      "url": "https://openrouter.ai/openai/gpt-6-astra",
-      "source": "Hacker News",
-      "score": 146,
-      "comments": 75
-    },
-    {
-      "id": "lob:fxk56i",
-      "title": "CERN transitioning industrial computers to Debian after being a longtime RHEL institution",
-      "summary": "",
-      "url": "https://www.phoronix.com/news/CERN-Goes-Debian-Leaving-RHEL",
+      "id": "lob:7tpc5q",
+      "title": "Surviving Code Reviews in the era of AI",
+      "summary": "<p>My coworkers are all fully AI pilled. As a consequence, every PR that comes my way for review is on average ~6k lines of diff.</p>\n<p>It's well established that even PRs an order of magnitude smaller than this are too big to be effectively reviewed. I'm still clinging to the idea that us humans s",
+      "url": "https://lobste.rs/s/7tpc5q/surviving_code_reviews_era_ai",
       "source": "Lobste.rs",
-      "score": 78,
-      "comments": 13,
+      "score": 121,
+      "comments": 81,
       "tags": [
-        "linux"
+        "ask"
       ]
     },
     {
-      "id": "lob:zudpcb",
-      "title": "jujutsu 0.45.0",
+      "id": "hn:49573680",
+      "title": "Git hosting that never leaves Europe",
       "summary": "",
-      "url": "https://github.com/jj-vcs/jj/releases/tag/v0.45.0",
+      "url": "https://pushin.eu",
+      "source": "Hacker News",
+      "score": 157,
+      "comments": 88
+    },
+    {
+      "id": "hn:49575034",
+      "title": "Netherlands pulls gold out of the US for fears of 'geopolitical unrest'",
+      "summary": "",
+      "url": "https://www.abc.net.au/news/2026-09-04/why-the-netherlands-moved-its-gold-from-us-and-canada/107111990",
+      "source": "Hacker News",
+      "score": 184,
+      "comments": 114
+    },
+    {
+      "id": "lob:utloro",
+      "title": "Is AI ruining my brain?",
+      "summary": "",
+      "url": "https://thoughtbot.com/blog/is-ai-ruining-my-brain",
       "source": "Lobste.rs",
-      "score": 66,
-      "comments": 28,
+      "score": 56,
+      "comments": 18,
       "tags": [
-        "release",
-        "vcs"
+        "vibecoding"
       ]
     },
     {
-      "id": "lob:if60bl",
-      "title": "You Don't Need Initial-Scale In Your HTML",
+      "id": "lob:6tsncg",
+      "title": ".name Termination",
       "summary": "",
-      "url": "https://vale.rocks/micros/20260902-1350",
+      "url": "https://neil.fraser.name/news/2026/09/03/",
       "source": "Lobste.rs",
-      "score": 43,
-      "comments": 9,
+      "score": 366,
+      "comments": 76,
       "tags": [
         "web"
+      ]
+    },
+    {
+      "id": "hn:49576196",
+      "title": "Pentagon rescinds new testosterone screening policy without explanation",
+      "summary": "",
+      "url": "https://arstechnica.com/health/2026/09/pentagon-releases-then-quickly-removes-testosterone-screening-policy/",
+      "source": "Hacker News",
+      "score": 76,
+      "comments": 59
+    },
+    {
+      "id": "lob:p5w5j6",
+      "title": "Trusting-Trust Attack against an Entire Linux Distribution (via the strip utility)",
+      "summary": "<p>\"Ken Thompson's trusting-trust attack, in which a compromised compiler backdoors the programs it builds and reproduces the backdoor in subsequent rebuilds of itself, is widely regarded as a threat specific to compilers. We show that it is not.\"</p>\n<p>A few weeks ago I came across this <a href=\"h",
+      "url": "https://arxiv.org/abs/2607.24888",
+      "source": "Lobste.rs",
+      "score": 14,
+      "comments": 0,
+      "tags": [
+        "linux",
+        "nix",
+        "security"
       ]
     },
     {
@@ -160,6 +176,19 @@
       "url": "https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html",
       "source": "Tech RSS",
       "score": 0
+    },
+    {
+      "id": "lob:5iacaa",
+      "title": "FLT: Anthropic has beaten me to it",
+      "summary": "",
+      "url": "https://xenaproject.wordpress.com/2026/09/04/flt-anthropic-has-beaten-me-to-it/",
+      "source": "Lobste.rs",
+      "score": 41,
+      "comments": 6,
+      "tags": [
+        "math",
+        "vibecoding"
+      ]
     },
     {
       "id": "arxiv:2609.04199v1",
@@ -187,14 +216,6 @@
       "arxiv_id": "2609.04197v1"
     },
     {
-      "id": "rss:d08580b55f",
-      "title": "Show HN: Moadim.io – A scheduler for agents",
-      "summary": "Why can't we get an agent scheduler that supports all of the following:- git compatible- agent agnostic- 100% open source- os and system-agnostic- multi-runner support- support mcp/ui/http- unlimited routines/cronsSo I built one, moadim.io is a local Rust daemon you install in the target machine, gi",
-      "url": "https://moadim.io/",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
       "id": "rss:b6ba17e506",
       "title": "Over 440,000 Exploit Attempts Target Super Forms and Elementor Pro RCE Flaws",
       "summary": "Threat actors are exploiting two critical security flaws in WordPress plugins Super Forms and Elementor Pro, according to findings from Wordfence.\n\nThe vulnerabilities in question are -\n\n\n  CVE-2026-14894 (CVSS score: 9.8) - A missing file type validation vulnerability in Super Forms – Drag &amp; Dr",
@@ -203,26 +224,12 @@
       "score": 0
     },
     {
-      "id": "lob:4vsl2j",
-      "title": "WTF is going on with R7RS Large? 2026 edition",
-      "summary": "",
-      "url": "https://crumbles.blog/posts/2026-09-04-r7rs-wtf.html",
-      "source": "Lobste.rs",
-      "score": 25,
-      "comments": 6,
-      "tags": [
-        "culture",
-        "lisp"
-      ]
-    },
-    {
-      "id": "hn:49546284",
-      "title": "RSA-260 Factorized",
-      "summary": "<a href=\"https:&#x2F;&#x2F;lilting.ch&#x2F;en&#x2F;articles&#x2F;rsa-260-factored-how-computed\" rel=\"nofollow\">https:&#x2F;&#x2F;lilting.ch&#x2F;en&#x2F;articles&#x2F;rsa-260-factored-how-computed</a><p><a href=\"https:&#x2F;&#x2F;www.scientificamerican.com&#x2F;article&#x2F;whats-the-tech-behind-the",
-      "url": "https://twitter.com/penlume/status/2095372672356212876",
-      "source": "Hacker News",
-      "score": 79,
-      "comments": 35
+      "id": "rss:a2b5ed1d80",
+      "title": "AWS & SRE Field Manual (Part 7): Amazon RDS Deep Dive: Architecture and High Availability",
+      "summary": "1. TL;DR &amp; Problem Statement\n\n\n\n\nDefinition: A fully managed database service providing automated provisioning, high availability, patching, backups, and horizontal read scalability for relational engines (PostgreSQL, MySQL, MariaDB, Oracle, SQL Server, and Amazon Aurora).\n\nProblem Solv",
+      "url": "https://dev.to/enesguler/aws-sre-filed-part-7-amazon-rds-deep-dive-architecture-and-high-availability-421n",
+      "source": "Tech RSS",
+      "score": 0
     }
   ],
   "ai_curated": true
