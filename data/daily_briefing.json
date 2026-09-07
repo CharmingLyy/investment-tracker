@@ -1,111 +1,117 @@
 {
-  "date": "2026-09-06",
-  "update_time": "2026-09-06 15:06:35",
+  "date": "2026-09-07",
+  "update_time": "2026-09-07 03:47:38",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-06\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 European Spaceflight 历史性突破：Isar Aerospace 入轨成功 (来源: Hacker News)\n- **核心干货**：德国初创公司 Isar Aerospace 在第二次飞行中成功入轨并部署载荷，成为欧洲首家实现轨道发射的私营航天企业。这打破了欧洲航天对 Arianespace 等传统机构或国家队的高度依赖，为欧洲商业航天开启了新纪元。\n- **毒舌/硬核点评**：欧洲航天局还在会议室里讨论\"可行性\"的时候，德国人已经把火箭射上去了。这给欧洲航天官僚体系狠狠上了一课：商业化的速度，不靠PPT靠发射台。\n- **🔗 传送门**：[点击直达原链接](https://isaraerospace.com/press/history-for-european-spaceflight-isar-aerospace-reaches-orbit-and-deploys-payloads-on-second-flight)\n\n---\n\n### 2. 📌 编译器信任链崩坏：strip 工具也能植入后门 (来源: ArXiv)\n- **核心干货**：论文扩展了 Ken Thompson 经典的\"trusting trust\"攻击，证明该攻击不只局限于编译器——连 `strip` 这类二进制处理工具也能被植入自复制后门。这意味着任何可执行文件处理链路都可能被污染，整个软件供应链的信任模型需要重新审视。\n- **毒舌/硬核点评**：你以为删掉符号表就干净了？黑客告诉你，你连\"清理\"的工具本身都不该信任。建议下次审计供应链，先把审计工具自己也审一遍，无限套娃，不信治不了你。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2607.24888)\n\n---\n\n### 3. 📌 零日连环爆：Magento/Adobe Commerce 遭无认证 RCE 利用 (来源: The Hacker News)\n- **核心干货**：荷兰安全公司 Sansec 披露，Magento Open Source 和 Adobe Commerce 存在未修复的零日漏洞，攻击者无需登录即可在服务器上执行任意代码并植入后门。电商平台又一次成为\"提款机\"，官方补丁尚未发布。\n- **毒舌/硬核点评**：又是 Magento？这系统简直是黑客界的\"公共厕所\"，谁来都能方便一下。如果你还在用没打补丁的 Magento，建议把服务器密码直接贴门上，省得黑客还得费劲绕WAF。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\"航天靠发射、代码靠信任、安全靠运气？不——真正的强者靠的是：永远假设自己会被黑，然后提前把对手的套路卷死。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-07\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 PostgreSQL 修复潜伏 12 年的高危漏洞：复制权限可提权到系统命令执行 (来源: The Hacker News)\n- **核心干货**：PostgreSQL 发布更新，修复了 CVE-2026-6471（CVSS 7.2）。该漏洞自逻辑解码功能引入时就存在，允许拥有 `REPLICATION` 属性的低权限账号以数据库服务运行用户的身份执行任意系统代码。横跨 12 年的权限边界，一夜之间被焊死。\n- **毒舌/硬核点评**：逻辑解码爽了 12 年，现在告诉你\"权限一时爽，提权火葬场\"。这提醒所有 DBA：备份账号和复制账号的权限管理，别等到变成别人家的肉鸡才想起来。\n- **🔗 传送门**: [点击直达原链接](https://thehackernews.com/2026/09/postgresql-fixes-12-year-old-logical.html)\n\n---\n\n### 2. 📌 [Asahi Linux on M3] —— 别问，问就是 M2 只是序章 (来源: Lobste.rs)\n- **核心干货**：Asahi Linux 项目发布新进展，成功将 Linux 移植到 Apple M3 芯片。这不仅是驱动支持，而是对整个 Apple Silicon 生态的系统级逆袭——包括 GPU、雷电接口等核心硬件的逆向工程与适配。\n- **毒舌/硬核点评**：苹果的芯片战略是\"库克式封闭花园\"，Asahi 团队则是拿着撬棍的极客园丁。M3 的 Linux 支持来了，M4/M5 还远吗？建议库克看看，什么叫真正的\"生态开放\"。\n- **🔗 传送门**: [点击直达原链接](https://asahilinux.org/2026/09/m2-episode-1/)\n\n---\n\n### 3. 📌 [Chrome 紧急修复 V8 引擎 0day] —— 浏览器战场的日常\"打地鼠\" (来源: The Hacker News)\n- **核心干货**：Google 发布 Chrome 紧急安全更新，修复 12 个漏洞，其中包括一个已被在野利用的高危 V8 引擎类型混淆漏洞（CVE-2026-85046，CVSS 8.8）。攻击者可通过恶意网页实现远程代码执行。\n- **毒舌/硬核点评**：V8 的 0day 已经是浏览器安全界的\"月经贴\"了。每次修复都像在打地鼠，可惜地鼠是 JS 引擎，永远打不完。用户唯一能做的，就是别把\"自动更新\"关掉——除非你想当\"活体漏洞演示靶场\"。\n- **🔗 传送门**: [点击直达原链接](https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"真正的极客精神，不是等别人给你开一扇门，而是自己拆掉整面墙——就像 Asahi 对 Apple Silicon 做的那样。\"",
   "briefing_items": [
     {
-      "title": "European Spaceflight 历史性突破：Isar Aerospace 入轨成功",
-      "source": "Hacker News",
-      "summary": "德国初创公司 Isar Aerospace 在第二次飞行中成功入轨并部署载荷，成为欧洲首家实现轨道发射的私营航天企业。这打破了欧洲航天对 Arianespace 等传统机构或国家队的高度依赖，为欧洲商业航天开启了新纪元。",
-      "commentary": "欧洲航天局还在会议室里讨论\"可行性\"的时候，德国人已经把火箭射上去了。这给欧洲航天官僚体系狠狠上了一课：商业化的速度，不靠PPT靠发射台。",
-      "url": "https://isaraerospace.com/press/history-for-european-spaceflight-isar-aerospace-reaches-orbit-and-deploys-payloads-on-second-flight"
-    },
-    {
-      "title": "编译器信任链崩坏：strip 工具也能植入后门",
-      "source": "ArXiv",
-      "summary": "论文扩展了 Ken Thompson 经典的\"trusting trust\"攻击，证明该攻击不只局限于编译器——连 `strip` 这类二进制处理工具也能被植入自复制后门。这意味着任何可执行文件处理链路都可能被污染，整个软件供应链的信任模型需要重新审视。",
-      "commentary": "你以为删掉符号表就干净了？黑客告诉你，你连\"清理\"的工具本身都不该信任。建议下次审计供应链，先把审计工具自己也审一遍，无限套娃，不信治不了你。",
-      "url": "https://arxiv.org/abs/2607.24888"
-    },
-    {
-      "title": "零日连环爆：Magento/Adobe Commerce 遭无认证 RCE 利用",
+      "title": "PostgreSQL 修复潜伏 12 年的高危漏洞：复制权限可提权到系统命令执行",
       "source": "The Hacker News",
-      "summary": "荷兰安全公司 Sansec 披露，Magento Open Source 和 Adobe Commerce 存在未修复的零日漏洞，攻击者无需登录即可在服务器上执行任意代码并植入后门。电商平台又一次成为\"提款机\"，官方补丁尚未发布。",
-      "commentary": "又是 Magento？这系统简直是黑客界的\"公共厕所\"，谁来都能方便一下。如果你还在用没打补丁的 Magento，建议把服务器密码直接贴门上，省得黑客还得费劲绕WAF。",
-      "url": "https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html"
+      "summary": "PostgreSQL 发布更新，修复了 CVE-2026-6471（CVSS 7.2）。该漏洞自逻辑解码功能引入时就存在，允许拥有 `REPLICATION` 属性的低权限账号以数据库服务运行用户的身份执行任意系统代码。横跨 12 年的权限边界，一夜之间被焊死。",
+      "commentary": "逻辑解码爽了 12 年，现在告诉你\"权限一时爽，提权火葬场\"。这提醒所有 DBA：备份账号和复制账号的权限管理，别等到变成别人家的肉鸡才想起来。",
+      "url": "https://thehackernews.com/2026/09/postgresql-fixes-12-year-old-logical.html"
+    },
+    {
+      "title": "[Asahi Linux on M3] —— 别问，问就是 M2 只是序章",
+      "source": "Lobste.rs",
+      "summary": "Asahi Linux 项目发布新进展，成功将 Linux 移植到 Apple M3 芯片。这不仅是驱动支持，而是对整个 Apple Silicon 生态的系统级逆袭——包括 GPU、雷电接口等核心硬件的逆向工程与适配。",
+      "commentary": "苹果的芯片战略是\"库克式封闭花园\"，Asahi 团队则是拿着撬棍的极客园丁。M3 的 Linux 支持来了，M4/M5 还远吗？建议库克看看，什么叫真正的\"生态开放\"。",
+      "url": "https://asahilinux.org/2026/09/m2-episode-1/"
+    },
+    {
+      "title": "[Chrome 紧急修复 V8 引擎 0day] —— 浏览器战场的日常\"打地鼠\"",
+      "source": "The Hacker News",
+      "summary": "Google 发布 Chrome 紧急安全更新，修复 12 个漏洞，其中包括一个已被在野利用的高危 V8 引擎类型混淆漏洞（CVE-2026-85046，CVSS 8.8）。攻击者可通过恶意网页实现远程代码执行。",
+      "commentary": "V8 的 0day 已经是浏览器安全界的\"月经贴\"了。每次修复都像在打地鼠，可惜地鼠是 JS 引擎，永远打不完。用户唯一能做的，就是别把\"自动更新\"关掉——除非你想当\"活体漏洞演示靶场\"。",
+      "url": "https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html"
+    },
+    {
+      "quote": "\"真正的极客精神，不是等别人给你开一扇门，而是自己拆掉整面墙——就像 Asahi 对 Apple Silicon 做的那样。\""
     }
   ],
   "candidates": [
     {
-      "id": "lob:p5w5j6",
-      "title": "Trusting-Trust Attack against an Entire Linux Distribution (via the strip utility)",
-      "summary": "<p>\"Ken Thompson's trusting-trust attack, in which a compromised compiler backdoors the programs it builds and reproduces the backdoor in subsequent rebuilds of itself, is widely regarded as a threat specific to compilers. We show that it is not.\"</p>\n<p>A few weeks ago I came across this <a href=\"h",
-      "url": "https://arxiv.org/abs/2607.24888",
-      "source": "Lobste.rs",
-      "score": 62,
-      "comments": 12,
-      "tags": [
-        "linux",
-        "nix",
-        "security"
-      ]
-    },
-    {
-      "id": "hn:49584083",
-      "title": "Isar Aerospace reaches orbit and deploys payloads on second flight",
-      "summary": "",
-      "url": "https://isaraerospace.com/press/history-for-european-spaceflight-isar-aerospace-reaches-orbit-and-deploys-payloads-on-second-flight",
-      "source": "Hacker News",
-      "score": 379,
-      "comments": 106
-    },
-    {
-      "id": "hn:49582000",
-      "title": "Cloud in a Bottle: making self-hosting accessible to everyone",
-      "summary": "",
-      "url": "https://cloudinabottle.org/blog/launch-post",
-      "source": "Hacker News",
-      "score": 518,
-      "comments": 256
-    },
-    {
       "id": "hn:49585644",
-      "title": "Intellectual Fly Is Open (2025)",
+      "title": "Your intellectual fly is open when you use an LLM to author a post (2025)",
       "summary": "",
       "url": "https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open/",
       "source": "Hacker News",
-      "score": 223,
-      "comments": 123
+      "score": 577,
+      "comments": 385
     },
     {
-      "id": "hn:49580939",
+      "id": "hn:49588988",
+      "title": "Nitter and XCancel resume service after legal advice",
+      "summary": "<a href=\"https:&#x2F;&#x2F;github.com&#x2F;zedeus&#x2F;nitter\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;zedeus&#x2F;nitter</a><p><a href=\"https:&#x2F;&#x2F;xcancel.com&#x2F;cdclegal\" rel=\"nofollow\">https:&#x2F;&#x2F;xcancel.com&#x2F;cdclegal</a><p><a href=\"https:&#x2F;&#x2F;nitter.net&#x2F;\"",
+      "url": "https://github.com/zedeus/nitter/commit/1428b4c2b4246f92a7e5b2673438e5fb39fcc4a3",
+      "source": "Hacker News",
+      "score": 533,
+      "comments": 271
+    },
+    {
+      "id": "hn:49590611",
+      "title": "It took a year to ship WebAssembly in Anubis",
+      "summary": "",
+      "url": "https://anubis.techaro.lol/blog/2026/anubis-wasm/",
+      "source": "Hacker News",
+      "score": 174,
+      "comments": 99
+    },
+    {
+      "id": "lob:rfn2mn",
+      "title": "There's No Limit to How Bad Code Can Get",
+      "summary": "",
+      "url": "https://zachkehs.com/blog/theres_no_limit_to_how_bad_code_can_get/",
+      "source": "Lobste.rs",
+      "score": 39,
+      "comments": 17,
+      "tags": [
+        "practices"
+      ]
+    },
+    {
+      "id": "lob:xnqxqe",
       "title": "The revolt of the reader",
       "summary": "",
       "url": "https://bcantrill.dtrace.org/2026/09/05/the-revolt-of-the-reader/",
-      "source": "Hacker News",
-      "score": 482,
-      "comments": 224
-    },
-    {
-      "id": "hn:49541888",
-      "title": "Music Theory for Programmers",
-      "summary": "",
-      "url": "https://runjs.app/blog/music-theory-for-programmers",
-      "source": "Hacker News",
-      "score": 244,
-      "comments": 143
-    },
-    {
-      "id": "hn:49585627",
-      "title": "Doomscrolling Ourselves to Death",
-      "summary": "",
-      "url": "https://www.edwest.co.uk/p/doomscrolling-ourselves-to-death",
-      "source": "Hacker News",
-      "score": 159,
-      "comments": 102
-    },
-    {
-      "id": "lob:64n3wp",
-      "title": "zopt: low-ceremony command line parsing for Zig",
-      "summary": "",
-      "url": "https://codeberg.org/hgrsd/zopt",
       "source": "Lobste.rs",
-      "score": 30,
+      "score": 137,
       "comments": 18,
       "tags": [
-        "show",
-        "zig"
+        "practices",
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "hn:49591876",
+      "title": "Making a Python interpreter in 1024 bytes",
+      "summary": "",
+      "url": "https://austinhenley.com/blog/python1024.html",
+      "source": "Hacker News",
+      "score": 137,
+      "comments": 54
+    },
+    {
+      "id": "hn:49554622",
+      "title": "Babylonian Lamb Stew with Beets (1750–1730 BCE)",
+      "summary": "",
+      "url": "https://babylonian-collection.yale.edu/about/babylonian-cooking",
+      "source": "Hacker News",
+      "score": 118,
+      "comments": 58
+    },
+    {
+      "id": "lob:ceuque",
+      "title": "Debian Code Search: Fast TurboPFor with Go SIMD",
+      "summary": "",
+      "url": "https://michael.stapelberg.ch/posts/2026-09-06-dcs-fast-turbopfor-go-simd/",
+      "source": "Lobste.rs",
+      "score": 47,
+      "comments": 8,
+      "tags": [
+        "go",
+        "performance",
+        "vibecoding"
       ]
     },
     {
@@ -133,12 +139,25 @@
       "score": 0
     },
     {
+      "id": "lob:nohdoj",
+      "title": "Terence Tao on “prematurely solving [a maths] problem by purely AI-powered methods”",
+      "summary": "<p>I recommend reading the whole thread, but I linked to the part I found the most relevant. I believe the same is true for programming.</p>\n",
+      "url": "https://mathstodon.xyz/@tao/117207856734787448",
+      "source": "Lobste.rs",
+      "score": 70,
+      "comments": 0,
+      "tags": [
+        "math",
+        "vibecoding"
+      ]
+    },
+    {
       "id": "lob:ben6a4",
       "title": "M2: Episode 1 (or, Asahi Linux on M3)",
       "summary": "",
       "url": "https://asahilinux.org/2026/09/m2-episode-1/",
       "source": "Lobste.rs",
-      "score": 45,
+      "score": 65,
       "comments": 0,
       "tags": [
         "linux",
@@ -147,51 +166,53 @@
       ]
     },
     {
-      "id": "lob:wk38d2",
-      "title": "What filesystem are you running on your NAS/Backups, and why?",
-      "summary": "<p>What filesystem are you running on your NAS/Backups, and why?</p>\n<p>And if you're using multiple disks/devices, how do you manage them (filesystem's RAID, mdadm or other software solutions, hardware RAID)?</p>\n",
-      "url": "https://lobste.rs/s/wk38d2/what_filesystem_are_you_running_on_your",
+      "id": "lob:i9zp2x",
+      "title": "Any Nix package, live in your browser",
+      "summary": "",
+      "url": "https://fzakaria.com/2026/09/04/any-nix-package-live-in-your-browser",
       "source": "Lobste.rs",
-      "score": 25,
-      "comments": 51,
+      "score": 49,
+      "comments": 3,
       "tags": [
-        "ask",
-        "linux"
+        "nix",
+        "vibecoding"
       ]
     },
     {
-      "id": "hn:49531619",
-      "title": "M-DISC – DVD/Blu-ray compatible discs that may last up to 1000 years",
-      "summary": "",
-      "url": "https://en.wikipedia.org/wiki/M-DISC",
-      "source": "Hacker News",
-      "score": 106,
-      "comments": 41
-    },
-    {
-      "id": "arxiv:2609.04199v1",
-      "title": "Compile by Training: Turning Natural-Language Specifications into Local Neural Functions",
-      "summary": "Many recurring text functions are easy to describe but difficult to implement with rules, while calling a large remote model for every input introduces repeated cost, latency, and dependency on a provider. We present compile by training, which turns a natural-language specification into a reusable n",
-      "url": "https://arxiv.org/abs/2609.04199v1",
+      "id": "arxiv:2609.05395v1",
+      "title": "Multi-Step Tool-Calling over Korean Open Public APIs: A Benchmark and a Data-Synthesis Recipe",
+      "summary": "Data-sovereignty regulations increasingly require public institutions to deploy open-source, on-premise LLM agents that chain multiple tool-calls across live government APIs. However, open-source models consistently underperform in this multi-step setting, and no existing benchmark measures the gap.",
+      "url": "https://arxiv.org/abs/2609.05395v1",
       "source": "ArXiv",
       "categories": [
-        "cs.CL",
         "cs.AI",
-        "cs.LG"
+        "cs.CL"
       ],
-      "arxiv_id": "2609.04199v1"
+      "arxiv_id": "2609.05395v1"
     },
     {
-      "id": "arxiv:2609.04197v1",
-      "title": "ESPO: Error-Structured Prompt Optimization via Diagnose, Diversify, and Stabilize",
-      "summary": "Evolutionary prompt optimizers such as GEPA suffer from prompt bloat: each iteration appends rules and caveats, producing prompts up to 3$\\times$ longer yet no more accurate. We trace this to three deficiencies - incomplete error observation, limited search diversity, and unreliable selection - and ",
-      "url": "https://arxiv.org/abs/2609.04197v1",
+      "id": "arxiv:2609.05382v1",
+      "title": "Reflection-aware Generative Novel View Synthesis",
+      "summary": "We propose Ref-GeNVS, a training-free, reflection-aware method for generative novel view synthesis (NVS) in mirror scenes. Existing multi-view diffusion models often fail to recognize the mirror in the scene and cannot exploit reflected content for scene generation. To fix this issue without additio",
+      "url": "https://arxiv.org/abs/2609.05382v1",
       "source": "ArXiv",
       "categories": [
-        "cs.CL",
+        "cs.CV",
         "cs.AI"
       ],
-      "arxiv_id": "2609.04197v1"
+      "arxiv_id": "2609.05382v1"
+    },
+    {
+      "id": "arxiv:2609.05370v1",
+      "title": "When LLM Decompilers Recompile More and Preserve Less",
+      "summary": "Decompilation recovers high-level source from compiled machine code and serves as a foundation for security tasks such as vulnerability detection and malware analysis. Traditional decompilers like Ghidra and Hex-Rays expose whatever they cannot resolve as visible placeholders and often emit pseudoco",
+      "url": "https://arxiv.org/abs/2609.05370v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "arxiv_id": "2609.05370v1"
     },
     {
       "id": "rss:b61107aa35",
@@ -210,28 +231,15 @@
       "score": 0
     },
     {
-      "id": "lob:rfn2mn",
-      "title": "There's No Limit to How Bad Code Can Get",
+      "id": "lob:be5lrk",
+      "title": "NetBSD 11 from scratch",
       "summary": "",
-      "url": "https://zachkehs.com/blog/theres_no_limit_to_how_bad_code_can_get/",
+      "url": "https://meanmicio.org/2026/09/06/netbsd-11-from-scratch/",
       "source": "Lobste.rs",
-      "score": 20,
-      "comments": 10,
-      "tags": [
-        "practices"
-      ]
-    },
-    {
-      "id": "lob:dxjvcc",
-      "title": "It matters who teaches you",
-      "summary": "",
-      "url": "https://bastiangruber.ca/posts/it-matters-who-teaches-you/",
-      "source": "Lobste.rs",
-      "score": 35,
+      "score": 41,
       "comments": 3,
       "tags": [
-        "education",
-        "vibecoding"
+        "netbsd"
       ]
     }
   ],
