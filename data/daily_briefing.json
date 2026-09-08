@@ -1,106 +1,110 @@
 {
-  "date": "2026-09-08",
-  "update_time": "2026-09-08 03:52:00",
+  "date": "2026-09-09",
+  "update_time": "2026-09-08 16:13:20",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-08\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 WeatherNext 3：AI 天气预报的\"满血版\" (来源: Hacker News/DeepMind)\n- **核心干货**：DeepMind 发布新一代天气预测模型，在现有预报基础上引入更高分辨率和更长的预测周期，并针对极端天气的捕捉能力做了专门优化。一句话：让 AI 不仅知道明天会不会下雨，还能告诉你台风路径是不是又飘了。\n- **毒舌/硬核点评**：传统数值预报的\"超级计算机\"们可以开始考虑转行做别的了——这玩意儿跑得比你快，算得比你准，还不烧电费。\n- **🔗 传送门**：[点击直达原链接](https://deepmind.google/science/weathernext/)\n\n---\n\n### 2. 📌 216M 台 LG 智能电视被曝\"间谍门\" (来源: Hacker News)\n- **核心干货**：安全研究员曝光 LG 智能电视在屏幕关闭状态下仍持续记录音频，并扫描同一局域网内的其他设备。涉及全球约 2.16 亿台设备，隐私风险触目惊心。这不是阴谋论，是实锤。\n- **毒舌/硬核点评**：你以为关掉电视是\"下班\"，对 LG 来说那是\"上班打卡\"。建议所有智能电视用户默念三遍：我不是目标客户，我是产品本身。\n- **🔗 传送门**：[点击直达视频](https://www.youtube.com/watch?v=6IFVTcM28KA)\n\n---\n\n### 3. 📌 RSA 密钥破解：90 年代 CA 机构被\"考古\" (来源: Hacker News)\n- **核心干货**：安全研究员成功分解了一台 90 年代证书颁发机构（CA）的 RSA 密钥。该密钥因生成时使用了弱随机数，导致可被现代算法轻松还原。这等于给\"过去的安全\"上了一堂现场解剖课。\n- **毒舌/硬核点评**：那个年代的人大概觉得 1024 位 RSA 是\"绝对安全\"，现在看就像用纸糊的保险箱存金条。密码学领域没有\"一劳永逸\"，只有\"暂时没被攻破\"。\n- **🔗 传送门**：[点击直达原链接](https://mcpherrin.ca/2026/09/07/rsa.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\"技术债务和健身卡一样——你越晚面对，补起来越疼。今天不重构，明天就重构人生。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-09\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 LibreOffice 下载量破纪录，摊牌：老子没有 AI (来源: Hacker News)\n- **核心干货**：LibreOffice 官方宣布其版本不含任何 AI 功能后，下载量直接爆炸式增长，创下历史新高。这波反向操作精准狙击了用户对\"AI 全家桶\"式软件的反感情绪，用极简主义打出了一张差异化的王牌。\n- **毒舌点评**：当全球软件厂商都在给计算器强行加装\"神经网络引擎\"时，LibreOffice 用一次\"去 AI 化\"的营销证明：用户要的不是聪明，是清净。这波啊，是给 AI 泡沫的棺材板又钉上了一颗钉子。\n- **🔗 传送门**：[点击直达原链接](https://manualdousuario.net/en/libreoffice-download-record-no-ai/)\n\n---\n\n### 2. 📌 Adobe 紧急修复 Magento 零日漏洞，黑客已部署 Rust 后门 (来源: Tech RSS)\n- **核心干货**：Adobe 发布了针对 Adobe Commerce 和 Magento Open Source 的紧急安全补丁，修复一个 CVSS 满分 10.0 的零日漏洞（CVE-2026-75650，代号 StyleSmuggler）。该漏洞已在野外被积极利用，攻击者成功植入了 Rust 编写的后门和 PHP Web Shell，电商平台用户需立即行动。\n- **毒舌点评**：CVSS 10.0 不是开玩笑的，这等于给黑客递了一把能直接打开电商金库的万能钥匙。用 Rust 写后门？攻击者比某些开发者的技术栈还时髦。赶紧打补丁，别让你的购物车变成黑客的提款机。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/adobe-patches-magento-zero-day.html)\n\n---\n\n### 3. 📌 Google DeepMind 发布 AlphaGenome Atlas，基因组的 Google Maps 来了 (来源: Hacker News)\n- **核心干货**：DeepMind 推出 AlphaGenome Atlas，一个旨在绘制和解读人类基因组的 AI 驱动的交互式图谱平台。它有望极大加速遗传病研究和药物发现，将复杂的基因组数据转化为可视化的、可探索的\"活地图\"。\n- **毒舌点评**：继 AlphaFold 攻克蛋白质折叠后，DeepMind 又把目光投向了人类基因组的\"全景图\"。这不仅仅是科学进步，这是在给未来的精准医疗提前铺高速公路。留给其他基因测序公司的时间，可能不多了。\n- **🔗 传送门**：[点击直达原链接](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/)\n\n---\n\n### 🗣️ 今日顶男金句\n\"真正的护城河不是你能集成多少 AI，而是你能在 AI 的狂潮中，清晰地知道自己*不需要*什么。\"",
   "briefing_items": [
     {
-      "title": "WeatherNext 3：AI 天气预报的\"满血版\"",
-      "source": "Hacker News/DeepMind",
-      "summary": "DeepMind 发布新一代天气预测模型，在现有预报基础上引入更高分辨率和更长的预测周期，并针对极端天气的捕捉能力做了专门优化。一句话：让 AI 不仅知道明天会不会下雨，还能告诉你台风路径是不是又飘了。",
-      "commentary": "传统数值预报的\"超级计算机\"们可以开始考虑转行做别的了——这玩意儿跑得比你快，算得比你准，还不烧电费。",
-      "url": "https://deepmind.google/science/weathernext/"
+      "title": "LibreOffice 下载量破纪录，摊牌：老子没有 AI",
+      "source": "Hacker News",
+      "summary": "LibreOffice 官方宣布其版本不含任何 AI 功能后，下载量直接爆炸式增长，创下历史新高。这波反向操作精准狙击了用户对\"AI 全家桶\"式软件的反感情绪，用极简主义打出了一张差异化的王牌。",
+      "commentary": "当全球软件厂商都在给计算器强行加装\"神经网络引擎\"时，LibreOffice 用一次\"去 AI 化\"的营销证明：用户要的不是聪明，是清净。这波啊，是给 AI 泡沫的棺材板又钉上了一颗钉子。",
+      "url": "https://manualdousuario.net/en/libreoffice-download-record-no-ai/"
     },
     {
-      "title": "216M 台 LG 智能电视被曝\"间谍门\"",
-      "source": "Hacker News",
-      "summary": "安全研究员曝光 LG 智能电视在屏幕关闭状态下仍持续记录音频，并扫描同一局域网内的其他设备。涉及全球约 2.16 亿台设备，隐私风险触目惊心。这不是阴谋论，是实锤。",
-      "commentary": "你以为关掉电视是\"下班\"，对 LG 来说那是\"上班打卡\"。建议所有智能电视用户默念三遍：我不是目标客户，我是产品本身。",
-      "url": ""
+      "title": "Adobe 紧急修复 Magento 零日漏洞，黑客已部署 Rust 后门",
+      "source": "Tech RSS",
+      "summary": "Adobe 发布了针对 Adobe Commerce 和 Magento Open Source 的紧急安全补丁，修复一个 CVSS 满分 10.0 的零日漏洞（CVE-2026-75650，代号 StyleSmuggler）。该漏洞已在野外被积极利用，攻击者成功植入了 Rust 编写的后门和 PHP Web Shell，电商平台用户需立即行动。",
+      "commentary": "CVSS 10.0 不是开玩笑的，这等于给黑客递了一把能直接打开电商金库的万能钥匙。用 Rust 写后门？攻击者比某些开发者的技术栈还时髦。赶紧打补丁，别让你的购物车变成黑客的提款机。",
+      "url": "https://thehackernews.com/2026/09/adobe-patches-magento-zero-day.html"
     },
     {
-      "title": "RSA 密钥破解：90 年代 CA 机构被\"考古\"",
+      "title": "Google DeepMind 发布 AlphaGenome Atlas，基因组的 Google Maps 来了",
       "source": "Hacker News",
-      "summary": "安全研究员成功分解了一台 90 年代证书颁发机构（CA）的 RSA 密钥。该密钥因生成时使用了弱随机数，导致可被现代算法轻松还原。这等于给\"过去的安全\"上了一堂现场解剖课。",
-      "commentary": "那个年代的人大概觉得 1024 位 RSA 是\"绝对安全\"，现在看就像用纸糊的保险箱存金条。密码学领域没有\"一劳永逸\"，只有\"暂时没被攻破\"。",
-      "url": "https://mcpherrin.ca/2026/09/07/rsa.html"
+      "summary": "DeepMind 推出 AlphaGenome Atlas，一个旨在绘制和解读人类基因组的 AI 驱动的交互式图谱平台。它有望极大加速遗传病研究和药物发现，将复杂的基因组数据转化为可视化的、可探索的\"活地图\"。",
+      "commentary": "继 AlphaFold 攻克蛋白质折叠后，DeepMind 又把目光投向了人类基因组的\"全景图\"。这不仅仅是科学进步，这是在给未来的精准医疗提前铺高速公路。留给其他基因测序公司的时间，可能不多了。",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49601655",
-      "title": "Watch Los Angeles get built, one building at a time (1880–2026)",
+      "id": "rss:e4dda5ed34",
+      "title": "Adobe Patches Magento Zero-Day Exploited to Deploy Rust Backdoor and PHP Web Shell",
+      "summary": "Adobe on Monday released security patches to address a maximum-severity flaw impacting Adobe Commerce and Magento Open Source that has come under active exploitation in the wild.\n\nThe vulnerability, now tracked as CVE-2026-75650 (CVSS score: 10.0), has been codenamed StyleSmuggler by Sansec, which d",
+      "url": "https://thehackernews.com/2026/09/adobe-patches-magento-zero-day.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "hn:49610538",
+      "title": "LibreOffice breaks download records after declaring it has no AI features",
       "summary": "",
-      "url": "https://lax-skyline.parcelscope.net/",
+      "url": "https://manualdousuario.net/en/libreoffice-download-record-no-ai/",
       "source": "Hacker News",
-      "score": 242,
-      "comments": 125
+      "score": 425,
+      "comments": 135
     },
     {
-      "id": "hn:49575515",
-      "title": "Trusting-Trust Attack against an Entire Linux Distribution",
+      "id": "hn:49607443",
+      "title": "Among European Companies That Use a CDN, Nearly 9 in 10 Use Cloudflare",
       "summary": "",
-      "url": "https://arxiv.org/abs/2607.24888",
+      "url": "https://ciphercue.com/blog/european-cdn-concentration-cloudflare-nine-in-ten",
       "source": "Hacker News",
-      "score": 171,
-      "comments": 37
+      "score": 348,
+      "comments": 303
     },
     {
-      "id": "hn:49552299",
-      "title": "WeatherNext 3",
-      "summary": "Paper [pdf]: <a href=\"https:&#x2F;&#x2F;storage.googleapis.com&#x2F;deepmind-media&#x2F;papers&#x2F;weathernext_3.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;storage.googleapis.com&#x2F;deepmind-media&#x2F;papers&#x2F;weather...</a>",
-      "url": "https://deepmind.google/science/weathernext/",
-      "source": "Hacker News",
-      "score": 259,
-      "comments": 62
-    },
-    {
-      "id": "hn:49592375",
-      "title": "216M Spy TVs – The LG Smart TV Problem [video]",
-      "summary": "<a href=\"https:&#x2F;&#x2F;www.notebookcheck.net&#x2F;LG-smart-TVs-caught-logging-audio-with-screen-off-and-snooping-on-local-devices.1391214.0.html\" rel=\"nofollow\">https:&#x2F;&#x2F;www.notebookcheck.net&#x2F;LG-smart-TVs-caught-logging-au...</a>",
-      "url": "https://www.youtube.com/watch?v=6IFVTcM28KA",
-      "source": "Hacker News",
-      "score": 597,
-      "comments": 833
-    },
-    {
-      "id": "hn:49569838",
-      "title": "Scientists observe Einstein's gravity in the quantum world",
-      "summary": "<a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=CfjnTJos_no\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=CfjnTJos_no</a>",
-      "url": "https://www.ox.ac.uk/news/2026-08-28-scientists-observe-einsteins-gravity-in-the-quantum-world",
-      "source": "Hacker News",
-      "score": 166,
-      "comments": 42
-    },
-    {
-      "id": "hn:49604861",
+      "id": "lob:blba3b",
       "title": "Jellyfin 12.0",
       "summary": "",
-      "url": "https://jellyfin.org/posts/jellyfin-release-12.0/",
-      "source": "Hacker News",
-      "score": 135,
-      "comments": 51
-    },
-    {
-      "id": "hn:49603546",
-      "title": "Show HN: Stuxnet – A reconstructed source code of the infamous cyber-weapon",
-      "summary": "Stuxnet! Here reproduced by me. Only researchs educations purposes.",
-      "url": "https://github.com/Sadpainy/Stuxnet",
-      "source": "Hacker News",
-      "score": 120,
-      "comments": 42
-    },
-    {
-      "id": "lob:aokzbg",
-      "title": "It took a year to ship WebAssembly in Anubis",
-      "summary": "",
-      "url": "https://anubis.techaro.lol/blog/2026/anubis-wasm/",
+      "url": "https://jellyfin.org/posts/jellyfin-release-12.0",
       "source": "Lobste.rs",
-      "score": 93,
-      "comments": 11,
+      "score": 44,
+      "comments": 17,
       "tags": [
-        "rust",
-        "wasm"
+        "release"
+      ]
+    },
+    {
+      "id": "hn:49607991",
+      "title": "Antiquated HTML Snippets and Artefacts",
+      "summary": "",
+      "url": "https://vale.rocks/posts/html-relics",
+      "source": "Hacker News",
+      "score": 173,
+      "comments": 55
+    },
+    {
+      "id": "lob:6licoy",
+      "title": "The state of European cloud providers in 2026",
+      "summary": "",
+      "url": "https://crescentro.se/posts/euro-cloud-providers-2026/",
+      "source": "Lobste.rs",
+      "score": 42,
+      "comments": 22,
+      "tags": [
+        "scaling"
+      ]
+    },
+    {
+      "id": "hn:49610181",
+      "title": "DaVinci Resolve 21.1",
+      "summary": "",
+      "url": "https://www.blackmagicdesign.com/media/release/20260908-03",
+      "source": "Hacker News",
+      "score": 176,
+      "comments": 71
+    },
+    {
+      "id": "lob:4ntizu",
+      "title": "I changed my license to EUPL",
+      "summary": "",
+      "url": "https://bergie.iki.fi/blog/eupl/",
+      "source": "Lobste.rs",
+      "score": 84,
+      "comments": 30,
+      "tags": [
+        "law"
       ]
     },
     {
@@ -109,20 +113,11 @@
       "summary": "",
       "url": "https://ache.one/notes/vanity-ipv6",
       "source": "Lobste.rs",
-      "score": 37,
-      "comments": 16,
+      "score": 49,
+      "comments": 17,
       "tags": [
         "networking"
       ]
-    },
-    {
-      "id": "hn:49602699",
-      "title": "Leaving VMware just got harder after Broadcom pulled VDDK downloads",
-      "summary": "",
-      "url": "https://www.virtualizationhowto.com/2026/09/leaving-vmware-just-got-harder-after-broadcom-pulled-vddk-downloads/",
-      "source": "Hacker News",
-      "score": 127,
-      "comments": 55
     },
     {
       "id": "lob:wolwwd",
@@ -130,7 +125,7 @@
       "summary": "",
       "url": "https://www.benjoffe.com/fast-time-of-day",
       "source": "Lobste.rs",
-      "score": 90,
+      "score": 113,
       "comments": 10,
       "tags": [
         "c++",
@@ -138,34 +133,54 @@
       ]
     },
     {
-      "id": "hn:49604637",
-      "title": "I've factored the RSA keys of a Certificate Authority from the 90s",
+      "id": "hn:49610059",
+      "title": "Show HN: Copperhead – Hardware as Fast as Software",
       "summary": "",
-      "url": "https://mcpherrin.ca/2026/09/07/rsa.html",
+      "url": "https://copperhead.sh/",
       "source": "Hacker News",
-      "score": 144,
-      "comments": 28
+      "score": 109,
+      "comments": 42
     },
     {
-      "id": "rss:088029740d",
-      "title": "Unpatched Magento and Adobe Commerce Zero-Day Exploited to Backdoor Online Stores",
-      "summary": "Attackers are exploiting a new unpatched vulnerability in Magento Open Source and Adobe Commerce that lets them run malicious code on an online store's server without logging in, Dutch e-commerce security company Sansec said in an&nbsp;advisory published on September 5.\n\nSansec, which discovered the",
-      "url": "https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "lob:xv6z4r",
-      "title": "Python Iceberg",
+      "id": "lob:sukgeg",
+      "title": "Emacs Bedrock 2.0 Released",
       "summary": "",
-      "url": "https://aleyan.com/projects/python-iceberg/",
+      "url": "https://lambdaland.org/posts/2026-09-06-bedrock-v2/",
       "source": "Lobste.rs",
       "score": 27,
-      "comments": 22,
+      "comments": 3,
       "tags": [
-        "python",
-        "vibecoding",
-        "visualization"
+        "emacs"
+      ]
+    },
+    {
+      "id": "hn:49611251",
+      "title": "Google DeepMind Releases AlphaGenome Atlas",
+      "summary": "",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/",
+      "source": "Hacker News",
+      "score": 111,
+      "comments": 18
+    },
+    {
+      "id": "hn:49610988",
+      "title": "DHS 'Predictive Policing' Unit Is Analyzing Americans' Financial Habits",
+      "summary": "",
+      "url": "https://www.404media.co/a-secretive-dhs-predictive-policing-unit-is-analyzing-americans-financial-habits-and-pulling-them-over/",
+      "source": "Hacker News",
+      "score": 114,
+      "comments": 36
+    },
+    {
+      "id": "lob:npyzwy",
+      "title": "This Month in Ladybird - August 2026",
+      "summary": "",
+      "url": "https://ladybird.org/newsletter/2026-08-31/",
+      "source": "Lobste.rs",
+      "score": 17,
+      "comments": 15,
+      "tags": [
+        "browsers"
       ]
     },
     {
@@ -205,36 +220,22 @@
       "arxiv_id": "2609.05370v1"
     },
     {
-      "id": "rss:b61107aa35",
-      "title": "Critical VMware Workstation and Fusion Flaw Lets VM Admins Execute Host Code",
-      "summary": "Broadcom has released security updates for two security flaws impacting VMware Workstation and Fusion, including one critical bug that could result in arbitrary code execution under certain conditions.\n\nThe vulnerability, tracked as CVE-2026-59346 (CVSS score: 9.3), is an integer-overflow vulnerabil",
-      "url": "https://thehackernews.com/2026/09/critical-vmware-workstation-and-fusion.html",
-      "source": "Tech RSS",
-      "score": 0
+      "id": "hn:49610900",
+      "title": "Paramount Caught Using 'Astroturf' Group to Drum Up Fake Support for Merger",
+      "summary": "",
+      "url": "https://www.techdirt.com/2026/09/08/paramount-caught-using-astroturf-group-to-drum-up-fake-support-for-merger/",
+      "source": "Hacker News",
+      "score": 97,
+      "comments": 24
     },
     {
-      "id": "lob:ku4hwg",
-      "title": "Rust debugging survey 2026 results",
+      "id": "hn:49611128",
+      "title": "Benchmarking Qwen3.8 27B quantizations: 4-bit holds up, 1-bit collapses",
       "summary": "",
-      "url": "https://blog.rust-lang.org/2026/09/07/rust-debugging-survey-2026-results/",
-      "source": "Lobste.rs",
-      "score": 22,
-      "comments": 1,
-      "tags": [
-        "rust"
-      ]
-    },
-    {
-      "id": "lob:mqbqbz",
-      "title": "Internationalization and Localization",
-      "summary": "",
-      "url": "https://www.kashyapsuhas.com/blog/i18n-l10n",
-      "source": "Lobste.rs",
-      "score": 16,
-      "comments": 9,
-      "tags": [
-        "web"
-      ]
+      "url": "https://quesma.com/blog/qwen38-27b-quantizations-benchmarked/",
+      "source": "Hacker News",
+      "score": 33,
+      "comments": 11
     }
   ],
   "ai_curated": true
