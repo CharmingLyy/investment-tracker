@@ -1,99 +1,94 @@
 {
   "date": "2026-09-08",
-  "update_time": "2026-09-07 17:28:34",
+  "update_time": "2026-09-08 03:52:00",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-08\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 LG 智能电视被抓包：关屏窃听 + 扫描局域网设备 (来源: Hacker News)\n- **核心干货**：研究人员实锤 LG 智能电视在屏幕关闭状态下仍持续录制音频，并主动扫描局域网内其他设备。这可不是什么\"优化用户体验\"的彩蛋，而是实打实的隐私窥探——你的客厅对话，可能正被一台\"待机\"的电视默默打包。\n- **毒舌/硬核点评**：智能电视的\"智能\"如果用在偷听上，那跟请了个带麦克风的间谍回家有什么区别？建议下次买电视前先问一句：\"您会偷听我说话吗？\"——反正问了也白问。\n- **🔗 传送门**：[点击直达原链接](https://www.notebookcheck.net/LG-smart-TVs-caught-logging-audio-with-screen-off-and-snooping-on-local-devices.1391214.0.html)\n\n---\n\n### 2. 📌 未修复 Magento 0day 被利用：电商网站惨遭后门植入 (来源: Tech RSS)\n- **核心干货**：荷兰安全公司 Sansec 披露，Magento 开源版和 Adobe Commerce 存在一个未修补的 0day 漏洞，攻击者无需登录即可在服务器上执行恶意代码，大批在线商店已被悄悄植入后门。对于电商站长来说，这无异于\"家门没锁，小偷已经进来转了一圈\"。\n- **毒舌/硬核点评**：电商平台的后台比你家大门还好进？建议所有 Magento 站长立刻检查服务器——别等客户数据被拖走了，才发现自己连\"被偷了\"都是最后一个知道的。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html)\n\n---\n\n### 3. 📌 VMware Workstation & Fusion 曝高危漏洞，VM 管理员可逃逸执行宿主机代码 (来源: Tech RSS)\n- **核心干货**：Broadcom 发布安全更新，修复了 VMware Workstation 和 Fusion 中的两个漏洞，其中一个被标记为 CVE-2026-59346、CVSS 评分 9.3 的严重整型溢出漏洞，可导致虚拟机管理员在特定条件下于宿主机上执行任意代码。翻译成人话：虚拟机那堵\"墙\"有裂缝，管理员的权限可以\"越狱\"到物理机。\n- **毒舌/硬核点评**：虚拟化本来是隔离的保险箱，现在保险箱自己漏风了。所有用 VMware 跑生产环境的兄弟们，别等了，赶紧打补丁——这可不是重启一下就能糊弄过去的\"小毛病\"。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/critical-vmware-workstation-and-fusion.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\"真正的隐私不是'我没什么好藏的'，而是'你凭什么偷看'——技术越智能，越要警惕谁在背后按着那个'录音键'。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-08\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 WeatherNext 3：AI 天气预报的\"满血版\" (来源: Hacker News/DeepMind)\n- **核心干货**：DeepMind 发布新一代天气预测模型，在现有预报基础上引入更高分辨率和更长的预测周期，并针对极端天气的捕捉能力做了专门优化。一句话：让 AI 不仅知道明天会不会下雨，还能告诉你台风路径是不是又飘了。\n- **毒舌/硬核点评**：传统数值预报的\"超级计算机\"们可以开始考虑转行做别的了——这玩意儿跑得比你快，算得比你准，还不烧电费。\n- **🔗 传送门**：[点击直达原链接](https://deepmind.google/science/weathernext/)\n\n---\n\n### 2. 📌 216M 台 LG 智能电视被曝\"间谍门\" (来源: Hacker News)\n- **核心干货**：安全研究员曝光 LG 智能电视在屏幕关闭状态下仍持续记录音频，并扫描同一局域网内的其他设备。涉及全球约 2.16 亿台设备，隐私风险触目惊心。这不是阴谋论，是实锤。\n- **毒舌/硬核点评**：你以为关掉电视是\"下班\"，对 LG 来说那是\"上班打卡\"。建议所有智能电视用户默念三遍：我不是目标客户，我是产品本身。\n- **🔗 传送门**：[点击直达视频](https://www.youtube.com/watch?v=6IFVTcM28KA)\n\n---\n\n### 3. 📌 RSA 密钥破解：90 年代 CA 机构被\"考古\" (来源: Hacker News)\n- **核心干货**：安全研究员成功分解了一台 90 年代证书颁发机构（CA）的 RSA 密钥。该密钥因生成时使用了弱随机数，导致可被现代算法轻松还原。这等于给\"过去的安全\"上了一堂现场解剖课。\n- **毒舌/硬核点评**：那个年代的人大概觉得 1024 位 RSA 是\"绝对安全\"，现在看就像用纸糊的保险箱存金条。密码学领域没有\"一劳永逸\"，只有\"暂时没被攻破\"。\n- **🔗 传送门**：[点击直达原链接](https://mcpherrin.ca/2026/09/07/rsa.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\"技术债务和健身卡一样——你越晚面对，补起来越疼。今天不重构，明天就重构人生。\"",
   "briefing_items": [
     {
-      "title": "LG 智能电视被抓包：关屏窃听 + 扫描局域网设备",
+      "title": "WeatherNext 3：AI 天气预报的\"满血版\"",
+      "source": "Hacker News/DeepMind",
+      "summary": "DeepMind 发布新一代天气预测模型，在现有预报基础上引入更高分辨率和更长的预测周期，并针对极端天气的捕捉能力做了专门优化。一句话：让 AI 不仅知道明天会不会下雨，还能告诉你台风路径是不是又飘了。",
+      "commentary": "传统数值预报的\"超级计算机\"们可以开始考虑转行做别的了——这玩意儿跑得比你快，算得比你准，还不烧电费。",
+      "url": "https://deepmind.google/science/weathernext/"
+    },
+    {
+      "title": "216M 台 LG 智能电视被曝\"间谍门\"",
       "source": "Hacker News",
-      "summary": "研究人员实锤 LG 智能电视在屏幕关闭状态下仍持续录制音频，并主动扫描局域网内其他设备。这可不是什么\"优化用户体验\"的彩蛋，而是实打实的隐私窥探——你的客厅对话，可能正被一台\"待机\"的电视默默打包。",
-      "commentary": "智能电视的\"智能\"如果用在偷听上，那跟请了个带麦克风的间谍回家有什么区别？建议下次买电视前先问一句：\"您会偷听我说话吗？\"——反正问了也白问。",
-      "url": "https://www.notebookcheck.net/LG-smart-TVs-caught-logging-audio-with-screen-off-and-snooping-on-local-devices.1391214.0.html"
+      "summary": "安全研究员曝光 LG 智能电视在屏幕关闭状态下仍持续记录音频，并扫描同一局域网内的其他设备。涉及全球约 2.16 亿台设备，隐私风险触目惊心。这不是阴谋论，是实锤。",
+      "commentary": "你以为关掉电视是\"下班\"，对 LG 来说那是\"上班打卡\"。建议所有智能电视用户默念三遍：我不是目标客户，我是产品本身。",
+      "url": ""
     },
     {
-      "title": "未修复 Magento 0day 被利用：电商网站惨遭后门植入",
-      "source": "Tech RSS",
-      "summary": "荷兰安全公司 Sansec 披露，Magento 开源版和 Adobe Commerce 存在一个未修补的 0day 漏洞，攻击者无需登录即可在服务器上执行恶意代码，大批在线商店已被悄悄植入后门。对于电商站长来说，这无异于\"家门没锁，小偷已经进来转了一圈\"。",
-      "commentary": "电商平台的后台比你家大门还好进？建议所有 Magento 站长立刻检查服务器——别等客户数据被拖走了，才发现自己连\"被偷了\"都是最后一个知道的。",
-      "url": "https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html"
-    },
-    {
-      "title": "VMware Workstation & Fusion 曝高危漏洞，VM 管理员可逃逸执行宿主机代码",
-      "source": "Tech RSS",
-      "summary": "Broadcom 发布安全更新，修复了 VMware Workstation 和 Fusion 中的两个漏洞，其中一个被标记为 CVE-2026-59346、CVSS 评分 9.3 的严重整型溢出漏洞，可导致虚拟机管理员在特定条件下于宿主机上执行任意代码。翻译成人话：虚拟机那堵\"墙\"有裂缝，管理员的权限可以\"越狱\"到物理机。",
-      "commentary": "虚拟化本来是隔离的保险箱，现在保险箱自己漏风了。所有用 VMware 跑生产环境的兄弟们，别等了，赶紧打补丁——这可不是重启一下就能糊弄过去的\"小毛病\"。",
-      "url": "https://thehackernews.com/2026/09/critical-vmware-workstation-and-fusion.html"
+      "title": "RSA 密钥破解：90 年代 CA 机构被\"考古\"",
+      "source": "Hacker News",
+      "summary": "安全研究员成功分解了一台 90 年代证书颁发机构（CA）的 RSA 密钥。该密钥因生成时使用了弱随机数，导致可被现代算法轻松还原。这等于给\"过去的安全\"上了一堂现场解剖课。",
+      "commentary": "那个年代的人大概觉得 1024 位 RSA 是\"绝对安全\"，现在看就像用纸糊的保险箱存金条。密码学领域没有\"一劳永逸\"，只有\"暂时没被攻破\"。",
+      "url": "https://mcpherrin.ca/2026/09/07/rsa.html"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49594878",
-      "title": "LG smart TVs caught logging audio with screen off and snooping on local devices",
-      "summary": "<a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=6IFVTcM28KA\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=6IFVTcM28KA</a>",
-      "url": "https://www.notebookcheck.net/LG-smart-TVs-caught-logging-audio-with-screen-off-and-snooping-on-local-devices.1391214.0.html",
+      "id": "hn:49601655",
+      "title": "Watch Los Angeles get built, one building at a time (1880–2026)",
+      "summary": "",
+      "url": "https://lax-skyline.parcelscope.net/",
       "source": "Hacker News",
-      "score": 920,
-      "comments": 436
+      "score": 242,
+      "comments": 125
     },
     {
-      "id": "hn:49597189",
-      "title": "Smartphone makers don't bother to comply with EU repairability requirements",
+      "id": "hn:49575515",
+      "title": "Trusting-Trust Attack against an Entire Linux Distribution",
       "summary": "",
-      "url": "https://www.theregister.com/personal-tech/2026/09/07/smartphone-makers-dont-bother-to-comply-with-eu-repairability-requirements/5294532",
+      "url": "https://arxiv.org/abs/2607.24888",
       "source": "Hacker News",
-      "score": 204,
-      "comments": 119
+      "score": 171,
+      "comments": 37
     },
     {
-      "id": "hn:49597907",
-      "title": "De-Brainrot Vacations",
-      "summary": "",
-      "url": "https://devz.cl/posts/i-spent-my-vacations-de-brainrotting/",
+      "id": "hn:49552299",
+      "title": "WeatherNext 3",
+      "summary": "Paper [pdf]: <a href=\"https:&#x2F;&#x2F;storage.googleapis.com&#x2F;deepmind-media&#x2F;papers&#x2F;weathernext_3.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;storage.googleapis.com&#x2F;deepmind-media&#x2F;papers&#x2F;weather...</a>",
+      "url": "https://deepmind.google/science/weathernext/",
       "source": "Hacker News",
-      "score": 381,
-      "comments": 157
-    },
-    {
-      "id": "hn:49593563",
-      "title": "Keep Our Servers Running",
-      "summary": "",
-      "url": "https://blog.archive.org/2026/09/01/keep-our-servers-running-your-recurring-donation-goes-3x-this-september/",
-      "source": "Hacker News",
-      "score": 790,
-      "comments": 199
-    },
-    {
-      "id": "lob:jsxzwl",
-      "title": "Following legal advice, the Nitter project will continue",
-      "summary": "",
-      "url": "https://github.com/zedeus/nitter/commit/1428b4c2b4246f92a7e5b2673438e5fb39fcc4a3",
-      "source": "Lobste.rs",
-      "score": 98,
-      "comments": 19,
-      "tags": [
-        "culture",
-        "privacy",
-        "web"
-      ]
-    },
-    {
-      "id": "hn:49597895",
-      "title": "Splash-free urinals (2025)",
-      "summary": "",
-      "url": "https://academic.oup.com/pnasnexus/article/4/4/pgaf087/8098745?login=false",
-      "source": "Hacker News",
-      "score": 175,
-      "comments": 94
-    },
-    {
-      "id": "hn:49595865",
-      "title": "Live map of public transport in Belgium",
-      "summary": "",
-      "url": "https://openbaarvervoerbelgie.be/",
-      "source": "Hacker News",
-      "score": 143,
+      "score": 259,
       "comments": 62
+    },
+    {
+      "id": "hn:49592375",
+      "title": "216M Spy TVs – The LG Smart TV Problem [video]",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.notebookcheck.net&#x2F;LG-smart-TVs-caught-logging-audio-with-screen-off-and-snooping-on-local-devices.1391214.0.html\" rel=\"nofollow\">https:&#x2F;&#x2F;www.notebookcheck.net&#x2F;LG-smart-TVs-caught-logging-au...</a>",
+      "url": "https://www.youtube.com/watch?v=6IFVTcM28KA",
+      "source": "Hacker News",
+      "score": 597,
+      "comments": 833
+    },
+    {
+      "id": "hn:49569838",
+      "title": "Scientists observe Einstein's gravity in the quantum world",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=CfjnTJos_no\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=CfjnTJos_no</a>",
+      "url": "https://www.ox.ac.uk/news/2026-08-28-scientists-observe-einsteins-gravity-in-the-quantum-world",
+      "source": "Hacker News",
+      "score": 166,
+      "comments": 42
+    },
+    {
+      "id": "hn:49604861",
+      "title": "Jellyfin 12.0",
+      "summary": "",
+      "url": "https://jellyfin.org/posts/jellyfin-release-12.0/",
+      "source": "Hacker News",
+      "score": 135,
+      "comments": 51
+    },
+    {
+      "id": "hn:49603546",
+      "title": "Show HN: Stuxnet – A reconstructed source code of the infamous cyber-weapon",
+      "summary": "Stuxnet! Here reproduced by me. Only researchs educations purposes.",
+      "url": "https://github.com/Sadpainy/Stuxnet",
+      "source": "Hacker News",
+      "score": 120,
+      "comments": 42
     },
     {
       "id": "lob:aokzbg",
@@ -101,21 +96,33 @@
       "summary": "",
       "url": "https://anubis.techaro.lol/blog/2026/anubis-wasm/",
       "source": "Lobste.rs",
-      "score": 83,
-      "comments": 10,
+      "score": 93,
+      "comments": 11,
       "tags": [
         "rust",
         "wasm"
       ]
     },
     {
-      "id": "hn:49596055",
-      "title": "Caltech Mathathon – first hackathon ever devoted to research level mathematics",
+      "id": "lob:vdalin",
+      "title": "The shortest IPv6 addresses",
       "summary": "",
-      "url": "https://mathathonchallenge.com/index.html",
+      "url": "https://ache.one/notes/vanity-ipv6",
+      "source": "Lobste.rs",
+      "score": 37,
+      "comments": 16,
+      "tags": [
+        "networking"
+      ]
+    },
+    {
+      "id": "hn:49602699",
+      "title": "Leaving VMware just got harder after Broadcom pulled VDDK downloads",
+      "summary": "",
+      "url": "https://www.virtualizationhowto.com/2026/09/leaving-vmware-just-got-harder-after-broadcom-pulled-vddk-downloads/",
       "source": "Hacker News",
-      "score": 148,
-      "comments": 31
+      "score": 127,
+      "comments": 55
     },
     {
       "id": "lob:wolwwd",
@@ -123,12 +130,21 @@
       "summary": "",
       "url": "https://www.benjoffe.com/fast-time-of-day",
       "source": "Lobste.rs",
-      "score": 46,
-      "comments": 7,
+      "score": 90,
+      "comments": 10,
       "tags": [
         "c++",
         "performance"
       ]
+    },
+    {
+      "id": "hn:49604637",
+      "title": "I've factored the RSA keys of a Certificate Authority from the 90s",
+      "summary": "",
+      "url": "https://mcpherrin.ca/2026/09/07/rsa.html",
+      "source": "Hacker News",
+      "score": 144,
+      "comments": 28
     },
     {
       "id": "rss:088029740d",
@@ -139,61 +155,18 @@
       "score": 0
     },
     {
-      "id": "lob:os1y44",
-      "title": "QBittorrent breaks out of sandbox to commit crimes",
-      "summary": "",
-      "url": "https://beige.party/@intransitivelie/117057396732763183",
-      "source": "Lobste.rs",
-      "score": 96,
-      "comments": 4,
-      "tags": [
-        "satire",
-        "vibecoding"
-      ]
-    },
-    {
-      "id": "lob:be5lrk",
-      "title": "NetBSD 11 from scratch",
-      "summary": "",
-      "url": "https://meanmicio.org/2026/09/06/netbsd-11-from-scratch/",
-      "source": "Lobste.rs",
-      "score": 59,
-      "comments": 7,
-      "tags": [
-        "netbsd"
-      ]
-    },
-    {
       "id": "lob:xv6z4r",
       "title": "Python Iceberg",
       "summary": "",
       "url": "https://aleyan.com/projects/python-iceberg/",
       "source": "Lobste.rs",
-      "score": 26,
-      "comments": 16,
+      "score": 27,
+      "comments": 22,
       "tags": [
         "python",
         "vibecoding",
         "visualization"
       ]
-    },
-    {
-      "id": "hn:49599481",
-      "title": "Bill Gates tries to install MovieMaker",
-      "summary": "",
-      "url": "https://www.techemails.com/p/bill-gates-tries-to-install-movie-maker",
-      "source": "Hacker News",
-      "score": 76,
-      "comments": 44
-    },
-    {
-      "id": "hn:49596054",
-      "title": "Speculative Decoding in vLLM on AMD GPUs",
-      "summary": "",
-      "url": "https://vllm.ai/blog/2026-08-23-speculative-decoding-amd-gpus",
-      "source": "Hacker News",
-      "score": 98,
-      "comments": 32
     },
     {
       "id": "arxiv:2609.05395v1",
@@ -238,6 +211,30 @@
       "url": "https://thehackernews.com/2026/09/critical-vmware-workstation-and-fusion.html",
       "source": "Tech RSS",
       "score": 0
+    },
+    {
+      "id": "lob:ku4hwg",
+      "title": "Rust debugging survey 2026 results",
+      "summary": "",
+      "url": "https://blog.rust-lang.org/2026/09/07/rust-debugging-survey-2026-results/",
+      "source": "Lobste.rs",
+      "score": 22,
+      "comments": 1,
+      "tags": [
+        "rust"
+      ]
+    },
+    {
+      "id": "lob:mqbqbz",
+      "title": "Internationalization and Localization",
+      "summary": "",
+      "url": "https://www.kashyapsuhas.com/blog/i18n-l10n",
+      "source": "Lobste.rs",
+      "score": 16,
+      "comments": 9,
+      "tags": [
+        "web"
+      ]
     }
   ],
   "ai_curated": true
