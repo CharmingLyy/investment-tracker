@@ -1,43 +1,40 @@
 {
-  "date": "2026-09-09",
-  "update_time": "2026-09-09 03:56:33",
+  "date": "2026-09-10",
+  "update_time": "2026-09-09 16:07:18",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-09\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 AlphaGenome Atlas：DeepMind 给人类 DNA 做了张\"全量地图\" (来源: Hacker News)\n- **核心干货**：DeepMind 发布了人类基因组高分辨率预测图谱，不再是静态序列，而是覆盖了几乎每一种可能的单碱基突变及其功能影响。这相当于把\"基因词典\"升级成了\"基因气象预报\"，对遗传病研究、药物靶点发现是基础设施级的飞跃。\n- **毒舌/硬核点评**：这玩意儿比大部分\"AI 算命\"靠谱一万倍——它不是预测你什么时候发财，而是预测你哪个碱基突变会要命。精准医疗的军火库，又多了一枚核弹。\n- **🔗 传送门**：[点击直达原链接](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/)\n\n---\n\n### 2. 📌 Navier-Stokes 千禧年大奖难题：OpenAI 下场\"跳大神\"? (来源: Hacker News)\n- **核心干货**：OpenAI 声称发表了对 Navier–Stokes 方程千禧年大奖难题的研究，同时纽约大学数学家 Tristan Buckmaster 也发布了相关声明。流体力学的终极理论难题，突然被两拨人同时\"碰瓷\"，一场关于光滑性与存在性的世纪大对决似乎被点燃了。\n- **毒舌/硬核点评**：一边是卖 API 的想证明自己懂流体，一边是学术界大佬说\"我还没死\"。建议双方先打一场水仗，用实验结果说话，别光靠 preprint 嘴炮。\n- **🔗 传送门**：[OpenAI 声明](https://openai.com/index/navier-stokes-solution/) | [Buckmaster 论文](https://cims.nyu.edu/~tristanb/statement.pdf)\n\n---\n\n### 3. 📌 CVE-2026-75650 (CVSS 10.0)：Adobe 的 Magento 又双叒叕被捅了 (来源: 安全新闻)\n- **核心干货**：Adobe 修复了一个被野外利用的 Magento 零日漏洞，攻击者借此部署了 Rust 后门和 PHP Web Shell，CVSS 满分 10.0。电商网站又成重灾区，这已经是 Magento 今年第 N 次\"裸奔\"了。\n- **毒舌/硬核点评**：CVSS 10.0 意味着什么？意味着漏洞利用难度约等于\"把门踹开\"。Magento 用户要是还没打补丁，建议直接把服务器泡在福尔马林里，至少还能留个全尸。\n- **🔗 传送门**：[点击直达安全通告](https://thehackernews.com/2026/09/adobe-patches-magento-zero-day.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"真正的硬核不是追着每个新模型跑，而是能一眼看穿哪些是 AlphaGenome，哪些只是 AlphaZero 换皮。认知的护城河，才是这个时代最稀缺的算力。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-10\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Tailwind Labs 正式并入 Shopify (来源: Hacker News | 596 分)\n- **核心干货**：在\"全民 AI 写代码\"的时代，Tailwind 这个 CSS 框架界的顶流选择投奔电商巨头 Shopify。这不是简单的收购，而是 Shopify 在开发者体验和前端基础设施上的一次重注——毕竟，独立开发者生态正在被 AI 工具链彻底重塑。\n- **毒舌/硬核点评**：在 AI 都能写 CSS 的 2026 年，与其苟延残喘，不如找个好码头。Shopify 这波是\"钞能力\"买断前端话语权，Tailwind 则是从\"给开发者工具\"转型为\"给电商帝国修路\"。\n- **🔗 传送门**：[点击直达原链接](https://tailwindcss.com/blog/tailwind-is-joining-shopify)\n\n---\n\n### 2. 📌 Meta 发布个人 AI 代理 \"Muse\" (来源: Hacker News | 596 分)\n- **核心干货**：Meta 正式下场做\"个人 AI 助理\"，不再玩\"聊天机器人\"这种低端局。Muse 的核心卖点是\"代理\"——能主动执行跨应用任务，而非被动对话。这是从\"你说我做\"到\"我替你想到并做完\"的关键跃迁，也是 Meta 在 AI 消费端最重要的落子。\n- **毒舌/硬核点评**：扎克伯格终于想明白了，与其在元宇宙里烧钱造虚拟人，不如在现实世界里给你配个数字管家。不过，这玩意儿要是连你的购物记录和社交动态都管，那隐私泄露的姿势可就更花样百出了。\n- **🔗 传送门**：[点击直达原链接](https://ai.meta.com/muse/)\n\n---\n\n### 3. 📌 DeepSeek V4.1 Flash 全面碾压自家 Pro？ (来源: Hacker News | 296 分)\n- **核心干货**：DeepSeek 官宣 V4.1 Flash 在性能、成本、速度等核心指标上\"全面超越\" V4 Pro。这延续了\"Flash/Pro\"双轨路线：用极致性价比的 Flash 版本抢占高频调用场景，把 Pro 留给硬核任务。这是典型的\"错位竞争\"打法，用更低的成本打穿市场。\n- **毒舌/硬核点评**：自己的 Pro 被自己的 Flash 秒了，这叫什么？这叫\"自我革命\"式内卷。对于想用 AI 干活的团队来说，这绝对是福音——毕竟，谁跟钱过不去呢？建议友商们学学，别老想着涨价，先想想怎么把价格打下来。\n- **🔗 传送门**：[点击直达原链接](https://news.ycombinator.com/item?id=49624603)\n\n---\n\n### 🗣️ 今日顶男金句\n\"当 AI 开始替你写代码、调样式、管日程时，你唯一不可替代的竞争力，就是那个**敢于说'这功能很蠢'的人类大脑**。\"",
   "briefing_items": [
     {
-      "title": "AlphaGenome Atlas：DeepMind 给人类 DNA 做了张\"全量地图\"",
-      "source": "Hacker News",
-      "summary": "DeepMind 发布了人类基因组高分辨率预测图谱，不再是静态序列，而是覆盖了几乎每一种可能的单碱基突变及其功能影响。这相当于把\"基因词典\"升级成了\"基因气象预报\"，对遗传病研究、药物靶点发现是基础设施级的飞跃。",
-      "commentary": "这玩意儿比大部分\"AI 算命\"靠谱一万倍——它不是预测你什么时候发财，而是预测你哪个碱基突变会要命。精准医疗的军火库，又多了一枚核弹。",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/"
+      "title": "Tailwind Labs 正式并入 Shopify",
+      "source": "Hacker News | 596 分",
+      "summary": "在\"全民 AI 写代码\"的时代，Tailwind 这个 CSS 框架界的顶流选择投奔电商巨头 Shopify。这不是简单的收购，而是 Shopify 在开发者体验和前端基础设施上的一次重注——毕竟，独立开发者生态正在被 AI 工具链彻底重塑。",
+      "commentary": "在 AI 都能写 CSS 的 2026 年，与其苟延残喘，不如找个好码头。Shopify 这波是\"钞能力\"买断前端话语权，Tailwind 则是从\"给开发者工具\"转型为\"给电商帝国修路\"。",
+      "url": "https://tailwindcss.com/blog/tailwind-is-joining-shopify"
     },
     {
-      "title": "Navier-Stokes 千禧年大奖难题：OpenAI 下场\"跳大神\"?",
-      "source": "Hacker News",
-      "summary": "OpenAI 声称发表了对 Navier–Stokes 方程千禧年大奖难题的研究，同时纽约大学数学家 Tristan Buckmaster 也发布了相关声明。流体力学的终极理论难题，突然被两拨人同时\"碰瓷\"，一场关于光滑性与存在性的世纪大对决似乎被点燃了。",
-      "commentary": "一边是卖 API 的想证明自己懂流体，一边是学术界大佬说\"我还没死\"。建议双方先打一场水仗，用实验结果说话，别光靠 preprint 嘴炮。",
-      "url": ""
+      "title": "Meta 发布个人 AI 代理 \"Muse\"",
+      "source": "Hacker News | 596 分",
+      "summary": "Meta 正式下场做\"个人 AI 助理\"，不再玩\"聊天机器人\"这种低端局。Muse 的核心卖点是\"代理\"——能主动执行跨应用任务，而非被动对话。这是从\"你说我做\"到\"我替你想到并做完\"的关键跃迁，也是 Meta 在 AI 消费端最重要的落子。",
+      "commentary": "扎克伯格终于想明白了，与其在元宇宙里烧钱造虚拟人，不如在现实世界里给你配个数字管家。不过，这玩意儿要是连你的购物记录和社交动态都管，那隐私泄露的姿势可就更花样百出了。",
+      "url": "https://ai.meta.com/muse/"
     },
     {
-      "title": "CVE-2026-75650 (CVSS 10.0)：Adobe 的 Magento 又双叒叕被捅了",
-      "source": "安全新闻",
-      "summary": "Adobe 修复了一个被野外利用的 Magento 零日漏洞，攻击者借此部署了 Rust 后门和 PHP Web Shell，CVSS 满分 10.0。电商网站又成重灾区，这已经是 Magento 今年第 N 次\"裸奔\"了。",
-      "commentary": "CVSS 10.0 意味着什么？意味着漏洞利用难度约等于\"把门踹开\"。Magento 用户要是还没打补丁，建议直接把服务器泡在福尔马林里，至少还能留个全尸。",
-      "url": ""
-    },
-    {
-      "quote": "\"真正的硬核不是追着每个新模型跑，而是能一眼看穿哪些是 AlphaGenome，哪些只是 AlphaZero 换皮。认知的护城河，才是这个时代最稀缺的算力。\""
+      "title": "DeepSeek V4.1 Flash 全面碾压自家 Pro？",
+      "source": "Hacker News | 296 分",
+      "summary": "DeepSeek 官宣 V4.1 Flash 在性能、成本、速度等核心指标上\"全面超越\" V4 Pro。这延续了\"Flash/Pro\"双轨路线：用极致性价比的 Flash 版本抢占高频调用场景，把 Pro 留给硬核任务。这是典型的\"错位竞争\"打法，用更低的成本打穿市场。",
+      "commentary": "自己的 Pro 被自己的 Flash 秒了，这叫什么？这叫\"自我革命\"式内卷。对于想用 AI 干活的团队来说，这绝对是福音——毕竟，谁跟钱过不去呢？建议友商们学学，别老想着涨价，先想想怎么把价格打下来。",
+      "url": "https://news.ycombinator.com/item?id=49624603"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49611128",
-      "title": "Benchmarking Qwen3.8 27B quantizations: 4-bit holds up, 1-bit collapses",
-      "summary": "",
-      "url": "https://quesma.com/blog/qwen38-27b-quantizations-benchmarked/",
+      "id": "hn:49624603",
+      "title": "DeepSeek launching v4.1 flash cheaper and more capable than v4 pro",
+      "summary": "DSeek plans to officially release the V4.1 Flash model around September 10, 2026 (Beijing Time). After extensive internal and external testing, V4.1 Flash has comprehensively surpassed V4 Pro across all key metrics, including performance, cost, speed, and task completion time. In keeping with our co",
+      "url": "https://news.ycombinator.com/item?id=49624603",
       "source": "Hacker News",
-      "score": 224,
-      "comments": 110
+      "score": 296,
+      "comments": 152
     },
     {
       "id": "hn:49615537",
@@ -45,82 +42,44 @@
       "summary": "",
       "url": "https://ai.meta.com/muse/",
       "source": "Hacker News",
-      "score": 366,
-      "comments": 384
+      "score": 596,
+      "comments": 650
     },
     {
-      "id": "hn:49611251",
-      "title": "AlphaGenome Atlas: a high-resolution map of human DNA",
-      "summary": "<a href=\"https:&#x2F;&#x2F;deepmind.google&#x2F;blog&#x2F;alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;deepmind.google&#x2F;blog&#x2F;alphagenome-atlas-a-predictive-...</a><p><a href=\"https:&#x2F;&#x2F;deepmind.goo",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/",
-      "source": "Hacker News",
-      "score": 508,
-      "comments": 117
-    },
-    {
-      "id": "hn:49610631",
-      "title": "I-have-ADHD: A skill to stop coding agents from burying the answer",
+      "id": "hn:49626190",
+      "title": "Tailwind Labs is joining Shopify",
       "summary": "",
-      "url": "https://github.com/ayghri/i-have-adhd",
+      "url": "https://tailwindcss.com/blog/tailwind-is-joining-shopify",
       "source": "Hacker News",
-      "score": 346,
-      "comments": 266
+      "score": 417,
+      "comments": 160
     },
     {
-      "id": "rss:e4dda5ed34",
-      "title": "Adobe Patches Magento Zero-Day Exploited to Deploy Rust Backdoor and PHP Web Shell",
-      "summary": "Adobe on Monday released security patches to address a maximum-severity flaw impacting Adobe Commerce and Magento Open Source that has come under active exploitation in the wild.\n\nThe vulnerability, now tracked as CVE-2026-75650 (CVSS score: 10.0), has been codenamed StyleSmuggler by Sansec, which d",
-      "url": "https://thehackernews.com/2026/09/adobe-patches-magento-zero-day.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "hn:49613262",
-      "title": "On the Navier–Stokes Millennium Prize Problem",
+      "id": "hn:49624823",
+      "title": "Desert Ant Labs: local, fast models that run on device",
       "summary": "",
-      "url": "https://openai.com/index/navier-stokes-solution/",
+      "url": "https://desertant.com/blog/introducing-desert-ant-labs/",
       "source": "Hacker News",
-      "score": 1178,
-      "comments": 1013
+      "score": 238,
+      "comments": 62
     },
     {
-      "id": "hn:49616968",
-      "title": "Tao: Open math problems being non-renewably mined by AI",
+      "id": "hn:49623754",
+      "title": "Claude, change the \"Add to Cart\" button to blue",
       "summary": "",
-      "url": "https://mathstodon.xyz/@tao/117237320796901560",
+      "url": "https://opusfived.dev/",
       "source": "Hacker News",
-      "score": 218,
-      "comments": 153
+      "score": 540,
+      "comments": 210
     },
     {
-      "id": "hn:49605915",
-      "title": "Navier-Stokes – Tristan Buckmaster [pdf]",
+      "id": "hn:49624856",
+      "title": "I advertise malicious software on Google Ads",
       "summary": "",
-      "url": "https://cims.nyu.edu/~tristanb/statement.pdf",
+      "url": "https://xlii.space/eng/malicious-software-on-google-ads/",
       "source": "Hacker News",
-      "score": 1371,
-      "comments": 589
-    },
-    {
-      "id": "hn:49610181",
-      "title": "DaVinci Resolve 21.1",
-      "summary": "",
-      "url": "https://www.blackmagicdesign.com/media/release/20260908-03",
-      "source": "Hacker News",
-      "score": 367,
-      "comments": 163
-    },
-    {
-      "id": "lob:blba3b",
-      "title": "Jellyfin 12.0",
-      "summary": "",
-      "url": "https://jellyfin.org/posts/jellyfin-release-12.0",
-      "source": "Lobste.rs",
-      "score": 72,
-      "comments": 29,
-      "tags": [
-        "release"
-      ]
+      "score": 232,
+      "comments": 139
     },
     {
       "id": "lob:ikzvtv",
@@ -128,8 +87,8 @@
       "summary": "",
       "url": "https://rmondello.com/2026/09/07/switching-password-managers-2026/",
       "source": "Lobste.rs",
-      "score": 65,
-      "comments": 28,
+      "score": 85,
+      "comments": 42,
       "tags": [
         "practices",
         "security"
@@ -141,20 +100,25 @@
       "summary": "",
       "url": "https://crescentro.se/posts/euro-cloud-providers-2026/",
       "source": "Lobste.rs",
-      "score": 65,
-      "comments": 25,
+      "score": 88,
+      "comments": 34,
       "tags": [
         "scaling"
       ]
     },
     {
-      "id": "hn:49617255",
-      "title": "How to build a printer",
+      "id": "lob:pdr2bo",
+      "title": "Reverse engineering my e-scooter and rewriting the firmware in rust",
       "summary": "",
-      "url": "https://nishantjosh.dev/blogs/how-to-build-a-fking-printer/",
-      "source": "Hacker News",
-      "score": 191,
-      "comments": 38
+      "url": "https://bensimms.moe/reverse-engineering-scooter/",
+      "source": "Lobste.rs",
+      "score": 43,
+      "comments": 7,
+      "tags": [
+        "hardware",
+        "reversing",
+        "rust"
+      ]
     },
     {
       "id": "lob:4ntizu",
@@ -162,8 +126,8 @@
       "summary": "",
       "url": "https://bergie.iki.fi/blog/eupl/",
       "source": "Lobste.rs",
-      "score": 126,
-      "comments": 55,
+      "score": 136,
+      "comments": 74,
       "tags": [
         "law"
       ]
@@ -174,70 +138,114 @@
       "summary": "",
       "url": "https://www.scd31.com/posts/extreme-server-side-rendering",
       "source": "Lobste.rs",
-      "score": 44,
-      "comments": 21,
+      "score": 57,
+      "comments": 26,
       "tags": [
         "browsers",
         "web"
       ]
     },
     {
-      "id": "hn:49617581",
-      "title": "Large language models develop novel social biases through adaptive exploration",
+      "id": "lob:pxreik",
+      "title": "How to build a f**king printer",
       "summary": "",
-      "url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3Dpc7fqaOcAH",
-      "source": "Hacker News",
-      "score": 115,
-      "comments": 56
-    },
-    {
-      "id": "lob:npyzwy",
-      "title": "This Month in Ladybird - August 2026",
-      "summary": "",
-      "url": "https://ladybird.org/newsletter/2026-08-31/",
+      "url": "https://nishantjosh.dev/blogs/how-to-build-a-fking-printer/",
       "source": "Lobste.rs",
-      "score": 23,
-      "comments": 51,
+      "score": 80,
+      "comments": 10,
       "tags": [
-        "browsers"
-      ]
-    },
-    {
-      "id": "lob:eu78rh",
-      "title": "How to get a free .arpa domain",
-      "summary": "",
-      "url": "https://hawksley.dev/blog/get-free-arpa-domain",
-      "source": "Lobste.rs",
-      "score": 35,
-      "comments": 7,
-      "tags": [
-        "networking"
-      ]
-    },
-    {
-      "id": "lob:ki3ylq",
-      "title": "Finite-time blowup with smooth forcing for 3D incompressible Euler, Boussinesq, and IPM",
-      "summary": "",
-      "url": "https://mastodon.social/@tristanbuckmaster/117233413705701198",
-      "source": "Lobste.rs",
-      "score": 21,
-      "comments": 35,
-      "tags": [
-        "math",
+        "c++",
+        "hardware",
+        "networking",
         "vibecoding"
       ]
     },
     {
-      "id": "lob:3cfr3a",
-      "title": "CERN's migration path from CentOS Linux to Debian",
+      "id": "rss:e261efb08c",
+      "title": "Chrome V8 Zero-Day Exploited in the Wild Enables Code Execution Inside Sandbox",
+      "summary": "Google on Thursday released updates to patch 230 security vulnerabilities, including one that has come under active exploitation in the wild.\n\nThe medium-severity vulnerability, assigned the CVE identifier CVE-2026-87491 (CVSS score: N/A), has been described as an out-of-bounds bug in V8, Chrome's J",
+      "url": "https://thehackernews.com/2026/09/chrome-v8-zero-day-exploited-in-wild.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "lob:8mgfan",
+      "title": "software for humans",
       "summary": "",
-      "url": "https://lwn.net/SubscriberLink/1092512/0772b817c369632b/",
+      "url": "https://clankerfree.org",
       "source": "Lobste.rs",
-      "score": 21,
-      "comments": 2,
+      "score": 29,
+      "comments": 24,
       "tags": [
-        "linux"
+        "culture"
       ]
+    },
+    {
+      "id": "lob:lf3est",
+      "title": "Rust: When Empty Isn't Bottom",
+      "summary": "",
+      "url": "https://ettolrach.com/blog/rust_when_empty_isnt_bottom.html",
+      "source": "Lobste.rs",
+      "score": 24,
+      "comments": 7,
+      "tags": [
+        "plt",
+        "rust"
+      ]
+    },
+    {
+      "id": "arxiv:2609.09153v1",
+      "title": "Procedural Graphs: Self-Evolving Execution Structures for LLM Agents",
+      "summary": "Large language models are increasingly deployed as agents that plan over long horizons and act through external tools. Most agents select actions through unconstrained generation over an accumulating history, leaving implicit the procedural knowledge of what to do, in what order, and under which con",
+      "url": "https://arxiv.org/abs/2609.09153v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.MA"
+      ],
+      "arxiv_id": "2609.09153v1"
+    },
+    {
+      "id": "arxiv:2609.09140v1",
+      "title": "NOAH: Learning the Full Patient Journey. A Longitudinal Multimodal Time-Aware Model for Representation and Forecasting",
+      "summary": "The digitization of healthcare has generated vast, longitudinal, and multimodal patient records over a lifetime, yet fully exploiting these data to represent and predict patient state trajectories remains a critical challenge. Current AI models often struggle to capture the complex, irregular tempor",
+      "url": "https://arxiv.org/abs/2609.09140v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "arxiv_id": "2609.09140v1"
+    },
+    {
+      "id": "arxiv:2609.09133v1",
+      "title": "ExecCritic: Learn to Test, Test to Improve for Coding Agents",
+      "summary": "Execution feedback can guide coding agents toward correct repository repairs, but only when the tests capture the behavior requested by the issue. Agent-generated tests can encode incomplete or incorrect behavioral targets; when the same trajectory writes both the patch and the test, their errors ca",
+      "url": "https://arxiv.org/abs/2609.09133v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.SE"
+      ],
+      "arxiv_id": "2609.09133v1"
+    },
+    {
+      "id": "rss:847ccf558c",
+      "title": "Researcher Drops New Microsoft Defender PoC Showing ShieldBreak Patch Can Be Bypassed",
+      "summary": "The security researcher known as Chaotic Eclipse has dropped a proof-of-concept (PoC) for yet another zero-day in Microsoft Defender.\n\nThe vulnerability, codenamed ShieldCrash, is assessed to be a patch bypass for CVE-2026-69414 (CVSS score: 7.8), also called ShieldBreak, which the researcher report",
+      "url": "https://thehackernews.com/2026/09/researcher-drops-new-microsoft-defender.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:8aaa955738",
+      "title": "SAP Patches CVSS 10.0 Kernel Flaw Enabling Unauthenticated Remote Code Execution",
+      "summary": "SAP has released security updates to address multiple vulnerabilities, including a maximum-severity flaw in SAP Extended Passport (EPP) Processing that could have a severe impact on the confidentiality, integrity, and availability of the application\n\nThe vulnerability, tracked as CVE-2026-44756 (CVS",
+      "url": "https://thehackernews.com/2026/09/sap-patches-cvss-100-kernel-flaw.html",
+      "source": "Tech RSS",
+      "score": 0
     }
   ],
   "ai_curated": true
