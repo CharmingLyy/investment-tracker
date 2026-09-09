@@ -4,26 +4,26 @@
 
 ---
 
-### 1. 📌 LibreOffice 下载量破纪录，摊牌：老子没有 AI (来源: Hacker News)
-- **核心干货**：LibreOffice 官方宣布其版本不含任何 AI 功能后，下载量直接爆炸式增长，创下历史新高。这波反向操作精准狙击了用户对"AI 全家桶"式软件的反感情绪，用极简主义打出了一张差异化的王牌。
-- **毒舌点评**：当全球软件厂商都在给计算器强行加装"神经网络引擎"时，LibreOffice 用一次"去 AI 化"的营销证明：用户要的不是聪明，是清净。这波啊，是给 AI 泡沫的棺材板又钉上了一颗钉子。
-- **🔗 传送门**：[点击直达原链接](https://manualdousuario.net/en/libreoffice-download-record-no-ai/)
-
----
-
-### 2. 📌 Adobe 紧急修复 Magento 零日漏洞，黑客已部署 Rust 后门 (来源: Tech RSS)
-- **核心干货**：Adobe 发布了针对 Adobe Commerce 和 Magento Open Source 的紧急安全补丁，修复一个 CVSS 满分 10.0 的零日漏洞（CVE-2026-75650，代号 StyleSmuggler）。该漏洞已在野外被积极利用，攻击者成功植入了 Rust 编写的后门和 PHP Web Shell，电商平台用户需立即行动。
-- **毒舌点评**：CVSS 10.0 不是开玩笑的，这等于给黑客递了一把能直接打开电商金库的万能钥匙。用 Rust 写后门？攻击者比某些开发者的技术栈还时髦。赶紧打补丁，别让你的购物车变成黑客的提款机。
-- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/adobe-patches-magento-zero-day.html)
-
----
-
-### 3. 📌 Google DeepMind 发布 AlphaGenome Atlas，基因组的 Google Maps 来了 (来源: Hacker News)
-- **核心干货**：DeepMind 推出 AlphaGenome Atlas，一个旨在绘制和解读人类基因组的 AI 驱动的交互式图谱平台。它有望极大加速遗传病研究和药物发现，将复杂的基因组数据转化为可视化的、可探索的"活地图"。
-- **毒舌点评**：继 AlphaFold 攻克蛋白质折叠后，DeepMind 又把目光投向了人类基因组的"全景图"。这不仅仅是科学进步，这是在给未来的精准医疗提前铺高速公路。留给其他基因测序公司的时间，可能不多了。
+### 1. 📌 AlphaGenome Atlas：DeepMind 给人类 DNA 做了张"全量地图" (来源: Hacker News)
+- **核心干货**：DeepMind 发布了人类基因组高分辨率预测图谱，不再是静态序列，而是覆盖了几乎每一种可能的单碱基突变及其功能影响。这相当于把"基因词典"升级成了"基因气象预报"，对遗传病研究、药物靶点发现是基础设施级的飞跃。
+- **毒舌/硬核点评**：这玩意儿比大部分"AI 算命"靠谱一万倍——它不是预测你什么时候发财，而是预测你哪个碱基突变会要命。精准医疗的军火库，又多了一枚核弹。
 - **🔗 传送门**：[点击直达原链接](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/)
 
 ---
 
+### 2. 📌 Navier-Stokes 千禧年大奖难题：OpenAI 下场"跳大神"? (来源: Hacker News)
+- **核心干货**：OpenAI 声称发表了对 Navier–Stokes 方程千禧年大奖难题的研究，同时纽约大学数学家 Tristan Buckmaster 也发布了相关声明。流体力学的终极理论难题，突然被两拨人同时"碰瓷"，一场关于光滑性与存在性的世纪大对决似乎被点燃了。
+- **毒舌/硬核点评**：一边是卖 API 的想证明自己懂流体，一边是学术界大佬说"我还没死"。建议双方先打一场水仗，用实验结果说话，别光靠 preprint 嘴炮。
+- **🔗 传送门**：[OpenAI 声明](https://openai.com/index/navier-stokes-solution/) | [Buckmaster 论文](https://cims.nyu.edu/~tristanb/statement.pdf)
+
+---
+
+### 3. 📌 CVE-2026-75650 (CVSS 10.0)：Adobe 的 Magento 又双叒叕被捅了 (来源: 安全新闻)
+- **核心干货**：Adobe 修复了一个被野外利用的 Magento 零日漏洞，攻击者借此部署了 Rust 后门和 PHP Web Shell，CVSS 满分 10.0。电商网站又成重灾区，这已经是 Magento 今年第 N 次"裸奔"了。
+- **毒舌/硬核点评**：CVSS 10.0 意味着什么？意味着漏洞利用难度约等于"把门踹开"。Magento 用户要是还没打补丁，建议直接把服务器泡在福尔马林里，至少还能留个全尸。
+- **🔗 传送门**：[点击直达安全通告](https://thehackernews.com/2026/09/adobe-patches-magento-zero-day.html)
+
+---
+
 ### 🗣️ 今日顶男金句
-"真正的护城河不是你能集成多少 AI，而是你能在 AI 的狂潮中，清晰地知道自己*不需要*什么。"
+> "真正的硬核不是追着每个新模型跑，而是能一眼看穿哪些是 AlphaGenome，哪些只是 AlphaZero 换皮。认知的护城河，才是这个时代最稀缺的算力。"
