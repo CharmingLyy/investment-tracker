@@ -1,79 +1,61 @@
 {
-  "date": "2026-09-11",
-  "update_time": "2026-09-11 03:51:50",
+  "date": "2026-09-12",
+  "update_time": "2026-09-11 16:04:00",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-11\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Shopify 从 React Native 撤回 Swift 和 Kotlin (来源: HackerNews)\n- **核心干货**：Shopify 工程团队正式宣布放弃 React Native 跨平台方案，回归原生 Swift 与 Kotlin 开发。这不是小打小闹的\"局部优化\"，而是整个移动端技术栈的战略级回撤。核心痛点直指跨平台框架在性能敏感场景下的天花板——当你的 App 承载千万级商家的实时交易，JavaScript Bridge 的每一毫秒延迟都是真金白银。\n- **毒舌/硬核点评**：跨平台框架的叙事永远是\"一次编写，到处运行\"，但现实是\"一次编写，到处调试，最后到处重写\"。Shopify 这波操作等于用生产环境的血泪给 React Native 又刻了一块墓碑——Meta 自己都还没把 RN 从自家 App 里彻底拔干净呢。\n- **🔗 传送门**：[点击直达原链接](https://shopify.engineering/back-to-native)\n\n---\n\n### 2. 📌 Cognition 发布 SWE-2 模型，叫板 Fable 5.1 与 GPT-Astra (来源: HackerNews)\n- **核心干货**：Cognition（Devin 的母公司）推出新一代软件工程专用模型 SWE-2，声称在代码生成与工程任务上直接对标当前最强的 Fable 5.1 和 GPT-Astra。这不是又一个\"代码补全\"玩具，而是瞄准端到端软件工程自动化——从理解 Issue 到提交 PR，意图把 AI 编程从\"副驾驶\"升级为\"代驾\"。\n- **毒舌/硬核点评**：AI 编程赛道的卷法已经从\"谁的 benchmark 高\"进化到\"谁敢让自家模型直接往生产仓库推代码\"。SWE-2 的对手不是别的模型，是 Code Review 时人类工程师的白眼。\n- **🔗 传送门**：[点击直达原链接](https://cognition.com/blog/swe-2)\n\n---\n\n### 3. 📌 研究者质疑：OpenAI 是否值得托付未发表的数学成果？(来源: HackerNews)\n- **核心干货**：数学研究者公开质疑将未发表的原创数学成果交由 OpenAI 处理的信任问题，引发学术圈广泛讨论（HN 733 分、674 条评论）。核心矛盾在于：OpenAI 的服务条款是否隐含了对用户输入内容的训练使用权？当你的未发表定理成为模型权重的一部分，学术优先权还保得住吗？这不仅是隐私问题，更是学术伦理与知识产权的地震带。\n- **毒舌/硬核点评**：你把定理交给 AI 帮你证明，AI 转头用你的定理去证明它比你强。学术界终于意识到，和 AI 公司签用户协议，跟把论文草稿扔进碎纸机再让碎纸机去投稿，区别不大。\n- **🔗 传送门**：[点击直达原链接](https://mathstodon.xyz/@andreasthom/117240535270608201)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> **\"跨平台框架省下的开发时间，最终都会以迁移成本的形式，连本带利地还回去。\"**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-12\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Shopify 从 React Native 撤回原生开发 (来源: HackerNews)\n- **核心干货**：Shopify 工程团队正式宣布将主力 App 从 React Native 迁回 Swift 和 Kotlin 原生开发。核心原因在于跨平台方案在复杂业务场景下的性能瓶颈、调试地狱以及对平台新特性（如实时活动、灵动岛）的适配延迟，已经严重拖累了迭代速度。这是继 Airbnb、Dropbox 之后，又一家巨头用脚投票的\"回头是岸\"案例。\n- **毒舌/硬核点评**：跨平台框架的经典生命周期——\"Write once, debug everywhere, rewrite natively\"。Meta 自己都在给 RN 团队缩编，你还指望它替你扛住日活千万的电商流量？省下来的那点人力成本，最后都加倍还给了用户流失率。\n- **🔗 传送门**：[点击直达原链接](https://shopify.engineering/back-to-native)\n\n---\n\n### 2. 📌 Cisco FMC 满分漏洞遭在野利用，Qilin 勒索软件趁火打劫 (来源: 科技新闻)\n- **核心干货**：Cisco Secure Firewall Management Center 爆出 CVSS 10.0 满分的认证绕过漏洞（CVE-2026-20079），已被至少三个威胁团伙用于窃取凭证并投递 Qilin 勒索软件，其中包含国家背景 APT。安全设备自己成了最大的攻击入口——这已经不是黑色幽默，而是行业常态。\n- **毒舌/硬核点评**：防火墙管理平台被打穿，相当于你请的保镖自己先把门打开了。CVSS 10.0 的漏洞配上\"已修复但你没打补丁\"的经典剧本，建议各位运维今天别摸鱼了，先去把 FMC 的补丁打上，不然明天摸鱼的就是勒索软件了。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/cisco-fmc-flaws-exploited-to-steal.html)\n\n---\n\n### 3. 📌 微软将 Rust 列为一级语言 (来源: Lobste.rs)\n- **核心干货**：Rust 基金会发文确认，微软内部已将 Rust 提升为 Tier-1 语言，与 C#、C++ 平起平坐。这意味着 Windows 内核、Azure 基础设施、Office 核心组件等关键路径将大规模采用 Rust 重构。考虑到微软过去几年在 Windows 内核中用 Rust 重写组件、以及 Azure 上 Rust 服务的扩张，这一步更像是\"官宣既成事实\"。\n- **毒舌/硬核点评**：C++ 在微软的地位，大概就像当年的 IE——还在用，但没人想维护了。Rust 的借用检查器虽然让程序员写代码时痛不欲生，但总比半夜被内存安全漏洞的 P0 告警叫醒要强。微软这波操作，本质上是给过去二十年 C++ 留下的技术债买了一份保险。\n- **🔗 传送门**：[点击直达原链接](https://rustfoundation.org/media/guest-post-rust-is-tier-1-language-at-microsoft/)\n\n---\n\n### 🗣️ 今日顶男金句\n**\"技术选型最大的陷阱不是选错了框架，而是选了一个让你在第三年才发现选错的框架——那时候，重写成本已经够你再选错三次了。\"**",
   "briefing_items": [
     {
-      "title": "Shopify 从 React Native 撤回 Swift 和 Kotlin",
+      "title": "Shopify 从 React Native 撤回原生开发",
       "source": "HackerNews",
-      "summary": "Shopify 工程团队正式宣布放弃 React Native 跨平台方案，回归原生 Swift 与 Kotlin 开发。这不是小打小闹的\"局部优化\"，而是整个移动端技术栈的战略级回撤。核心痛点直指跨平台框架在性能敏感场景下的天花板——当你的 App 承载千万级商家的实时交易，JavaScript Bridge 的每一毫秒延迟都是真金白银。",
-      "commentary": "跨平台框架的叙事永远是\"一次编写，到处运行\"，但现实是\"一次编写，到处调试，最后到处重写\"。Shopify 这波操作等于用生产环境的血泪给 React Native 又刻了一块墓碑——Meta 自己都还没把 RN 从自家 App 里彻底拔干净呢。",
+      "summary": "Shopify 工程团队正式宣布将主力 App 从 React Native 迁回 Swift 和 Kotlin 原生开发。核心原因在于跨平台方案在复杂业务场景下的性能瓶颈、调试地狱以及对平台新特性（如实时活动、灵动岛）的适配延迟，已经严重拖累了迭代速度。这是继 Airbnb、Dropbox 之后，又一家巨头用脚投票的\"回头是岸\"案例。",
+      "commentary": "跨平台框架的经典生命周期——\"Write once, debug everywhere, rewrite natively\"。Meta 自己都在给 RN 团队缩编，你还指望它替你扛住日活千万的电商流量？省下来的那点人力成本，最后都加倍还给了用户流失率。",
       "url": "https://shopify.engineering/back-to-native"
     },
     {
-      "title": "Cognition 发布 SWE-2 模型，叫板 Fable 5.1 与 GPT-Astra",
-      "source": "HackerNews",
-      "summary": "Cognition（Devin 的母公司）推出新一代软件工程专用模型 SWE-2，声称在代码生成与工程任务上直接对标当前最强的 Fable 5.1 和 GPT-Astra。这不是又一个\"代码补全\"玩具，而是瞄准端到端软件工程自动化——从理解 Issue 到提交 PR，意图把 AI 编程从\"副驾驶\"升级为\"代驾\"。",
-      "commentary": "AI 编程赛道的卷法已经从\"谁的 benchmark 高\"进化到\"谁敢让自家模型直接往生产仓库推代码\"。SWE-2 的对手不是别的模型，是 Code Review 时人类工程师的白眼。",
-      "url": "https://cognition.com/blog/swe-2"
+      "title": "Cisco FMC 满分漏洞遭在野利用，Qilin 勒索软件趁火打劫",
+      "source": "科技新闻",
+      "summary": "Cisco Secure Firewall Management Center 爆出 CVSS 10.0 满分的认证绕过漏洞（CVE-2026-20079），已被至少三个威胁团伙用于窃取凭证并投递 Qilin 勒索软件，其中包含国家背景 APT。安全设备自己成了最大的攻击入口——这已经不是黑色幽默，而是行业常态。",
+      "commentary": "防火墙管理平台被打穿，相当于你请的保镖自己先把门打开了。CVSS 10.0 的漏洞配上\"已修复但你没打补丁\"的经典剧本，建议各位运维今天别摸鱼了，先去把 FMC 的补丁打上，不然明天摸鱼的就是勒索软件了。",
+      "url": "https://thehackernews.com/2026/09/cisco-fmc-flaws-exploited-to-steal.html"
     },
     {
-      "title": "研究者质疑：OpenAI 是否值得托付未发表的数学成果？",
-      "source": "HackerNews",
-      "summary": "数学研究者公开质疑将未发表的原创数学成果交由 OpenAI 处理的信任问题，引发学术圈广泛讨论（HN 733 分、674 条评论）。核心矛盾在于：OpenAI 的服务条款是否隐含了对用户输入内容的训练使用权？当你的未发表定理成为模型权重的一部分，学术优先权还保得住吗？这不仅是隐私问题，更是学术伦理与知识产权的地震带。",
-      "commentary": "你把定理交给 AI 帮你证明，AI 转头用你的定理去证明它比你强。学术界终于意识到，和 AI 公司签用户协议，跟把论文草稿扔进碎纸机再让碎纸机去投稿，区别不大。",
-      "url": "https://mathstodon.xyz/@andreasthom/117240535270608201"
+      "title": "微软将 Rust 列为一级语言",
+      "source": "Lobste.rs",
+      "summary": "Rust 基金会发文确认，微软内部已将 Rust 提升为 Tier-1 语言，与 C#、C++ 平起平坐。这意味着 Windows 内核、Azure 基础设施、Office 核心组件等关键路径将大规模采用 Rust 重构。考虑到微软过去几年在 Windows 内核中用 Rust 重写组件、以及 Azure 上 Rust 服务的扩张，这一步更像是\"官宣既成事实\"。",
+      "commentary": "C++ 在微软的地位，大概就像当年的 IE——还在用，但没人想维护了。Rust 的借用检查器虽然让程序员写代码时痛不欲生，但总比半夜被内存安全漏洞的 P0 告警叫醒要强。微软这波操作，本质上是给过去二十年 C++ 留下的技术债买了一份保险。",
+      "url": "https://rustfoundation.org/media/guest-post-rust-is-tier-1-language-at-microsoft/"
     }
   ],
   "candidates": [
-    {
-      "id": "hn:49645686",
-      "title": "Neki – Sharded Postgres",
-      "summary": "",
-      "url": "https://planetscale.com/blog/introducing-neki",
-      "source": "Hacker News",
-      "score": 213,
-      "comments": 114
-    },
-    {
-      "id": "hn:49639408",
-      "title": "More questions about whether researchers can trust OpenAI with unpublished math",
-      "summary": "<a href=\"https:&#x2F;&#x2F;mathstodon.xyz&#x2F;@andreasthom&#x2F;117240536885387540\" rel=\"nofollow\">https:&#x2F;&#x2F;mathstodon.xyz&#x2F;@andreasthom&#x2F;117240536885387540</a><p><a href=\"https:&#x2F;&#x2F;mathstodon.xyz&#x2F;@andreasthom&#x2F;117240537520615623\" rel=\"nofollow\">https:&#x2F;&#x2F;m",
-      "url": "https://mathstodon.xyz/@andreasthom/117240535270608201",
-      "source": "Hacker News",
-      "score": 733,
-      "comments": 674
-    },
-    {
-      "id": "hn:49645443",
-      "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
-      "summary": "",
-      "url": "https://cognition.com/blog/swe-2",
-      "source": "Hacker News",
-      "score": 366,
-      "comments": 155
-    },
     {
       "id": "lob:eerwba",
       "title": "Rust Is Tier-1 Language at Microsoft",
       "summary": "",
       "url": "https://rustfoundation.org/media/guest-post-rust-is-tier-1-language-at-microsoft/",
       "source": "Lobste.rs",
-      "score": 62,
-      "comments": 37,
+      "score": 79,
+      "comments": 75,
       "tags": [
         "rust"
       ]
     },
     {
-      "id": "hn:49645437",
-      "title": "Technique for Manipulating Satellite Photos Now Reveals Ancient Images (2025)",
-      "summary": "<a href=\"https:&#x2F;&#x2F;dstretch.com&#x2F;DecorrelationStretch.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;dstretch.com&#x2F;DecorrelationStretch.pdf</a><p><a href=\"https:&#x2F;&#x2F;www.nasa.gov&#x2F;technology&#x2F;tech-transfer-spinoffs&#x2F;nasa-technique-for-manipulating-satellite-photos-now-revea",
-      "url": "https://spinoff.nasa.gov/Manipulating_Satellite_Photos_Now_Reveals_Ancient_Images",
+      "id": "hn:49621546",
+      "title": "So you want to use OpenRouter?",
+      "summary": "",
+      "url": "https://mmoustafa.com/blog/so-you-want-to-use-openrouter/",
       "source": "Hacker News",
-      "score": 287,
-      "comments": 45
+      "score": 456,
+      "comments": 118
+    },
+    {
+      "id": "hn:49658299",
+      "title": "Houthis 'take control' of key island in global shipping route",
+      "summary": "",
+      "url": "https://www.bbc.com/news/live/cmd683p01eljt",
+      "source": "Hacker News",
+      "score": 233,
+      "comments": 285
     },
     {
       "id": "hn:49643982",
@@ -81,8 +63,17 @@
       "summary": "",
       "url": "https://shopify.engineering/back-to-native",
       "source": "Hacker News",
-      "score": 857,
-      "comments": 576
+      "score": 1194,
+      "comments": 880
+    },
+    {
+      "id": "hn:49656225",
+      "title": "Claude is only available to people over 18 years",
+      "summary": "",
+      "url": "https://support.claude.com/en/articles/15171100-age-assurance-on-claude",
+      "source": "Hacker News",
+      "score": 298,
+      "comments": 373
     },
     {
       "id": "hn:49645393",
@@ -90,26 +81,17 @@
       "summary": "",
       "url": "https://blog.jim-nielsen.com/2026/hands-off-my-cables/",
       "source": "Hacker News",
-      "score": 366,
-      "comments": 274
+      "score": 699,
+      "comments": 423
     },
     {
-      "id": "hn:49649213",
-      "title": "OpenAI Agents API",
+      "id": "hn:49655286",
+      "title": "Cherenkov Radiation - traveling faster than light",
       "summary": "",
-      "url": "https://developers.openai.com/api/docs/guides/agents-api/overview",
+      "url": "http://www.iaea.org/newscenter/news/what-is-cherenkov-radiation",
       "source": "Hacker News",
-      "score": 171,
-      "comments": 104
-    },
-    {
-      "id": "hn:49647134",
-      "title": "Music Theory for the 21st-Century Classroom",
-      "summary": "",
-      "url": "https://musictheory.pugetsound.edu/mt21c/MusicTheory.html",
-      "source": "Hacker News",
-      "score": 178,
-      "comments": 80
+      "score": 167,
+      "comments": 81
     },
     {
       "id": "lob:9szn91",
@@ -117,80 +99,11 @@
       "summary": "",
       "url": "https://maurycyz.com/misc/domains/",
       "source": "Lobste.rs",
-      "score": 58,
-      "comments": 15,
+      "score": 82,
+      "comments": 23,
       "tags": [
         "security",
         "web"
-      ]
-    },
-    {
-      "id": "lob:k99ryf",
-      "title": "It Breaks a Village: Bevy's 6th Birthday",
-      "summary": "",
-      "url": "https://blog.fallible.net/it-breaks-a-village/",
-      "source": "Lobste.rs",
-      "score": 90,
-      "comments": 42,
-      "tags": [
-        "culture",
-        "vibecoding"
-      ]
-    },
-    {
-      "id": "hn:49649124",
-      "title": "The Deathray: A simple way for an untrusted site to freeze a Mac",
-      "summary": "",
-      "url": "https://auberon.xyz/blog/posts/deathray/",
-      "source": "Hacker News",
-      "score": 108,
-      "comments": 69
-    },
-    {
-      "id": "lob:7lii0g",
-      "title": "Review a pull request by booting it",
-      "summary": "",
-      "url": "https://fzakaria.com/2026/09/09/review-a-pull-request-by-booting-it",
-      "source": "Lobste.rs",
-      "score": 36,
-      "comments": 18,
-      "tags": [
-        "nix",
-        "vibecoding"
-      ]
-    },
-    {
-      "id": "hn:49652105",
-      "title": "Google will buy half the electricity of a nuclear power plant",
-      "summary": "",
-      "url": "https://www.bbc.com/news/articles/c8r6y4me2g6o",
-      "source": "Hacker News",
-      "score": 120,
-      "comments": 92
-    },
-    {
-      "id": "lob:aiikt1",
-      "title": "Xteink X4 Pro review",
-      "summary": "",
-      "url": "https://abstractnonsense.xyz/microblog/2026-09-07-xteink-x4-pro-review/",
-      "source": "Lobste.rs",
-      "score": 32,
-      "comments": 17,
-      "tags": [
-        "hardware"
-      ]
-    },
-    {
-      "id": "lob:izt4a2",
-      "title": "What algorithm did Windows XP use to choose your initial user picture?",
-      "summary": "",
-      "url": "https://devblogs.microsoft.com/oldnewthing/20260909-00/?p=112683",
-      "source": "Lobste.rs",
-      "score": 27,
-      "comments": 8,
-      "tags": [
-        "historical",
-        "windows"
       ]
     },
     {
@@ -199,29 +112,108 @@
       "summary": "",
       "url": "https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/16.0.4.md",
       "source": "Lobste.rs",
-      "score": 25,
-      "comments": 12,
+      "score": 40,
+      "comments": 26,
       "tags": [
         "security"
       ]
     },
     {
-      "id": "hn:49650418",
-      "title": "NTSB issues investigative update on B-767 runway excursion accident in Miami",
+      "id": "lob:bsvc7a",
+      "title": "It's not the YAML spec's fault, but",
       "summary": "",
-      "url": "https://www.ntsb.gov:443/news/press-releases/Pages/NR20260909.aspx",
-      "source": "Hacker News",
-      "score": 73,
-      "comments": 119
+      "url": "https://slugcat.systems/post/26-09-10-yaml-spec/",
+      "source": "Lobste.rs",
+      "score": 40,
+      "comments": 23,
+      "tags": [
+        "historical"
+      ]
     },
     {
-      "id": "hn:49651372",
-      "title": "Thelio Mira AI Linux Workstation: 192 GB GPU Memory",
+      "id": "lob:izt4a2",
+      "title": "What algorithm did Windows XP use to choose your initial user picture?",
       "summary": "",
-      "url": "https://system76.com/workstations/thelio-mira-ai",
+      "url": "https://devblogs.microsoft.com/oldnewthing/20260909-00/?p=112683",
+      "source": "Lobste.rs",
+      "score": 44,
+      "comments": 8,
+      "tags": [
+        "historical",
+        "windows"
+      ]
+    },
+    {
+      "id": "lob:7guove",
+      "title": "Feeling sad about AI",
+      "summary": "",
+      "url": "https://artificialworlds.net/blog/2026/09/11/feeling-sad-about-ai/",
+      "source": "Lobste.rs",
+      "score": 51,
+      "comments": 15,
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "id": "lob:aiikt1",
+      "title": "Xteink X4 Pro review",
+      "summary": "",
+      "url": "https://abstractnonsense.xyz/microblog/2026-09-07-xteink-x4-pro-review/",
+      "source": "Lobste.rs",
+      "score": 42,
+      "comments": 26,
+      "tags": [
+        "hardware"
+      ]
+    },
+    {
+      "id": "hn:49656471",
+      "title": "RTK reports token savings, but our cost benchmarks disagree",
+      "summary": "",
+      "url": "https://quesma.com/blog/does-rtk-make-ai-coding-cheaper/",
       "source": "Hacker News",
-      "score": 57,
-      "comments": 35
+      "score": 90,
+      "comments": 51
+    },
+    {
+      "id": "lob:gtvx0w",
+      "title": "How CHERIoT Provides Strong and Usable Isolation Without an MMU",
+      "summary": "",
+      "url": "https://queue.acm.org/doi/10.1145/3831361",
+      "source": "Lobste.rs",
+      "score": 32,
+      "comments": 12,
+      "tags": [
+        "hardware",
+        "osdev",
+        "security"
+      ]
+    },
+    {
+      "id": "lob:0i492m",
+      "title": "Models Don't Go Rogue",
+      "summary": "",
+      "url": "https://mail.cyberneticforests.com/models-dont-go-rogue/",
+      "source": "Lobste.rs",
+      "score": 34,
+      "comments": 10,
+      "tags": [
+        "security",
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "lob:u7dr96",
+      "title": "Soft-deprecating re.match()",
+      "summary": "",
+      "url": "https://hugovk.dev/blog/2026/soft-deprecating-re.match/",
+      "source": "Lobste.rs",
+      "score": 48,
+      "comments": 4,
+      "tags": [
+        "python"
+      ]
     },
     {
       "id": "arxiv:2609.11913v1",
@@ -233,6 +225,27 @@
         "cs.CL"
       ],
       "arxiv_id": "2609.11913v1"
+    },
+    {
+      "id": "arxiv:2609.11878v1",
+      "title": "Domain-Specific Hallucination Detection in Large Language Models",
+      "summary": "Large language models generate fluent text that can contain unfaithful claims -- a phenomenon known as hallucination. We present a multi-signal detection pipeline combining fine-tuned DeBERTa-v3 classification, Monte Carlo (MC) Dropout uncertainty quantification, and temperature-scaled calibration f",
+      "url": "https://arxiv.org/abs/2609.11878v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_id": "2609.11878v1"
+    },
+    {
+      "id": "rss:8d09a46f90",
+      "title": "Cisco FMC Flaws Exploited to Steal Credentials and Deploy Qilin Ransomware",
+      "summary": "Cisco has revealed that three distinct threat clusters linked to ransomware and state-sponsored attacks have been exploiting two recently patched Secure Firewall Management Center (FMC) vulnerabilities.\n\nThe attacks leverage CVE-2026-20079 (CVSS score: 10.0), an authentication bypass vulnerability i",
+      "url": "https://thehackernews.com/2026/09/cisco-fmc-flaws-exploited-to-steal.html",
+      "source": "Tech RSS",
+      "score": 0
     }
   ],
   "ai_curated": true
