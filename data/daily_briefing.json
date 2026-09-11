@@ -1,112 +1,128 @@
 {
   "date": "2026-09-11",
-  "update_time": "2026-09-10 16:00:28",
+  "update_time": "2026-09-11 03:51:50",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-11\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 DeepSeek V4.1 Flash 发布 (来源: HackerNews)\n- **核心干货**：DeepSeek 在 HuggingFace 上悄无声息地甩出了 V4.1 Flash 模型，HN 热度直接炸到 720 分、377 条评论。从命名看，\"Flash\"大概率指向推理速度优化版本，延续了 DeepSeek 一贯的\"低成本高性能\"打法，继续在开源模型赛道上给闭源巨头们上强度。\n- **毒舌/硬核点评**：OpenAI 还在被扒训练数据的老底，DeepSeek 已经默默把下一张牌拍桌上了。开源阵营的节奏是：你开发布会，我发模型；你发模型，我发更便宜的模型。卷到最后，只有英伟达在笑。\n- **🔗 传送门**：[点击直达原链接](https://twitter.com/deepseek_ai/status/2097930608790167907)\n\n---\n\n### 2. 📌 Rust 成为微软一级语言 (来源: HackerNews)\n- **核心干货**：Rust 基金会官宣，Rust 正式被微软列为 Tier-1 语言——这意味着 Windows、Azure 等核心产品线将把 Rust 作为一等公民对待，工具链、CI/CD、内部培训全面跟进。结合同日 CUDA Rust 的消息，Rust 正在从\"系统编程新贵\"变成\"基础设施默认选项\"。\n- **毒舌/硬核点评**：C++ 花了四十年建立的内存安全债，Rust 用一纸公文就开始收账了。微软这波操作翻译成人话就是：\"蓝屏的锅，我们不想再背了。\" 只是苦了那些还在写 `unsafe` 的老哥——你们现在是重点观察对象。\n- **🔗 传送门**：[点击直达原链接](https://rustfoundation.org/media/guest-post-rust-is-tier-1-language-at-microsoft/)\n\n---\n\n### 3. 📌 Shopify 从 React Native 迁回原生开发 (来源: HackerNews)\n- **核心干货**：Shopify 工程团队发文详述从 React Native 回归原生开发的完整历程。核心原因不新鲜：性能瓶颈、调试地狱、跨平台抽象带来的维护成本最终超过了收益。作为曾经 React Native 的标杆用户，Shopify 的\"叛逃\"对整个跨平台方案生态是一次标志性打击。\n- **毒舌/硬核点评**：\"Write once, debug everywhere\" 的诅咒又一次应验了。每次有大厂从跨平台框架迁回原生，都像是一场公开处刑——处刑对象是当年信了\"一套代码跑两端\"的 CTO。当然，Flutter 和 RN 的拥趸们会继续说：\"那是他们用得不对。\"\n- **🔗 传送门**：[点击直达原链接](https://shopify.engineering/back-to-native)\n\n---\n\n### 🗣️ 今日顶男金句\n**\"技术选型最大的幻觉，就是以为抽象层的成本会消失——它只是从写代码的时候，转移到了凌晨三点排查诡异 bug 的时候。\"**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-11\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Shopify 从 React Native 撤回 Swift 和 Kotlin (来源: HackerNews)\n- **核心干货**：Shopify 工程团队正式宣布放弃 React Native 跨平台方案，回归原生 Swift 与 Kotlin 开发。这不是小打小闹的\"局部优化\"，而是整个移动端技术栈的战略级回撤。核心痛点直指跨平台框架在性能敏感场景下的天花板——当你的 App 承载千万级商家的实时交易，JavaScript Bridge 的每一毫秒延迟都是真金白银。\n- **毒舌/硬核点评**：跨平台框架的叙事永远是\"一次编写，到处运行\"，但现实是\"一次编写，到处调试，最后到处重写\"。Shopify 这波操作等于用生产环境的血泪给 React Native 又刻了一块墓碑——Meta 自己都还没把 RN 从自家 App 里彻底拔干净呢。\n- **🔗 传送门**：[点击直达原链接](https://shopify.engineering/back-to-native)\n\n---\n\n### 2. 📌 Cognition 发布 SWE-2 模型，叫板 Fable 5.1 与 GPT-Astra (来源: HackerNews)\n- **核心干货**：Cognition（Devin 的母公司）推出新一代软件工程专用模型 SWE-2，声称在代码生成与工程任务上直接对标当前最强的 Fable 5.1 和 GPT-Astra。这不是又一个\"代码补全\"玩具，而是瞄准端到端软件工程自动化——从理解 Issue 到提交 PR，意图把 AI 编程从\"副驾驶\"升级为\"代驾\"。\n- **毒舌/硬核点评**：AI 编程赛道的卷法已经从\"谁的 benchmark 高\"进化到\"谁敢让自家模型直接往生产仓库推代码\"。SWE-2 的对手不是别的模型，是 Code Review 时人类工程师的白眼。\n- **🔗 传送门**：[点击直达原链接](https://cognition.com/blog/swe-2)\n\n---\n\n### 3. 📌 研究者质疑：OpenAI 是否值得托付未发表的数学成果？(来源: HackerNews)\n- **核心干货**：数学研究者公开质疑将未发表的原创数学成果交由 OpenAI 处理的信任问题，引发学术圈广泛讨论（HN 733 分、674 条评论）。核心矛盾在于：OpenAI 的服务条款是否隐含了对用户输入内容的训练使用权？当你的未发表定理成为模型权重的一部分，学术优先权还保得住吗？这不仅是隐私问题，更是学术伦理与知识产权的地震带。\n- **毒舌/硬核点评**：你把定理交给 AI 帮你证明，AI 转头用你的定理去证明它比你强。学术界终于意识到，和 AI 公司签用户协议，跟把论文草稿扔进碎纸机再让碎纸机去投稿，区别不大。\n- **🔗 传送门**：[点击直达原链接](https://mathstodon.xyz/@andreasthom/117240535270608201)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> **\"跨平台框架省下的开发时间，最终都会以迁移成本的形式，连本带利地还回去。\"**",
   "briefing_items": [
     {
-      "title": "DeepSeek V4.1 Flash 发布",
+      "title": "Shopify 从 React Native 撤回 Swift 和 Kotlin",
       "source": "HackerNews",
-      "summary": "DeepSeek 在 HuggingFace 上悄无声息地甩出了 V4.1 Flash 模型，HN 热度直接炸到 720 分、377 条评论。从命名看，\"Flash\"大概率指向推理速度优化版本，延续了 DeepSeek 一贯的\"低成本高性能\"打法，继续在开源模型赛道上给闭源巨头们上强度。",
-      "commentary": "OpenAI 还在被扒训练数据的老底，DeepSeek 已经默默把下一张牌拍桌上了。开源阵营的节奏是：你开发布会，我发模型；你发模型，我发更便宜的模型。卷到最后，只有英伟达在笑。",
-      "url": "https://twitter.com/deepseek_ai/status/2097930608790167907"
-    },
-    {
-      "title": "Rust 成为微软一级语言",
-      "source": "HackerNews",
-      "summary": "Rust 基金会官宣，Rust 正式被微软列为 Tier-1 语言——这意味着 Windows、Azure 等核心产品线将把 Rust 作为一等公民对待，工具链、CI/CD、内部培训全面跟进。结合同日 CUDA Rust 的消息，Rust 正在从\"系统编程新贵\"变成\"基础设施默认选项\"。",
-      "commentary": "C++ 花了四十年建立的内存安全债，Rust 用一纸公文就开始收账了。微软这波操作翻译成人话就是：\"蓝屏的锅，我们不想再背了。\" 只是苦了那些还在写 `unsafe` 的老哥——你们现在是重点观察对象。",
-      "url": "https://rustfoundation.org/media/guest-post-rust-is-tier-1-language-at-microsoft/"
-    },
-    {
-      "title": "Shopify 从 React Native 迁回原生开发",
-      "source": "HackerNews",
-      "summary": "Shopify 工程团队发文详述从 React Native 回归原生开发的完整历程。核心原因不新鲜：性能瓶颈、调试地狱、跨平台抽象带来的维护成本最终超过了收益。作为曾经 React Native 的标杆用户，Shopify 的\"叛逃\"对整个跨平台方案生态是一次标志性打击。",
-      "commentary": "\"Write once, debug everywhere\" 的诅咒又一次应验了。每次有大厂从跨平台框架迁回原生，都像是一场公开处刑——处刑对象是当年信了\"一套代码跑两端\"的 CTO。当然，Flutter 和 RN 的拥趸们会继续说：\"那是他们用得不对。\"",
+      "summary": "Shopify 工程团队正式宣布放弃 React Native 跨平台方案，回归原生 Swift 与 Kotlin 开发。这不是小打小闹的\"局部优化\"，而是整个移动端技术栈的战略级回撤。核心痛点直指跨平台框架在性能敏感场景下的天花板——当你的 App 承载千万级商家的实时交易，JavaScript Bridge 的每一毫秒延迟都是真金白银。",
+      "commentary": "跨平台框架的叙事永远是\"一次编写，到处运行\"，但现实是\"一次编写，到处调试，最后到处重写\"。Shopify 这波操作等于用生产环境的血泪给 React Native 又刻了一块墓碑——Meta 自己都还没把 RN 从自家 App 里彻底拔干净呢。",
       "url": "https://shopify.engineering/back-to-native"
+    },
+    {
+      "title": "Cognition 发布 SWE-2 模型，叫板 Fable 5.1 与 GPT-Astra",
+      "source": "HackerNews",
+      "summary": "Cognition（Devin 的母公司）推出新一代软件工程专用模型 SWE-2，声称在代码生成与工程任务上直接对标当前最强的 Fable 5.1 和 GPT-Astra。这不是又一个\"代码补全\"玩具，而是瞄准端到端软件工程自动化——从理解 Issue 到提交 PR，意图把 AI 编程从\"副驾驶\"升级为\"代驾\"。",
+      "commentary": "AI 编程赛道的卷法已经从\"谁的 benchmark 高\"进化到\"谁敢让自家模型直接往生产仓库推代码\"。SWE-2 的对手不是别的模型，是 Code Review 时人类工程师的白眼。",
+      "url": "https://cognition.com/blog/swe-2"
+    },
+    {
+      "title": "研究者质疑：OpenAI 是否值得托付未发表的数学成果？",
+      "source": "HackerNews",
+      "summary": "数学研究者公开质疑将未发表的原创数学成果交由 OpenAI 处理的信任问题，引发学术圈广泛讨论（HN 733 分、674 条评论）。核心矛盾在于：OpenAI 的服务条款是否隐含了对用户输入内容的训练使用权？当你的未发表定理成为模型权重的一部分，学术优先权还保得住吗？这不仅是隐私问题，更是学术伦理与知识产权的地震带。",
+      "commentary": "你把定理交给 AI 帮你证明，AI 转头用你的定理去证明它比你强。学术界终于意识到，和 AI 公司签用户协议，跟把论文草稿扔进碎纸机再让碎纸机去投稿，区别不大。",
+      "url": "https://mathstodon.xyz/@andreasthom/117240535270608201"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49643546",
+      "id": "hn:49645686",
+      "title": "Neki – Sharded Postgres",
+      "summary": "",
+      "url": "https://planetscale.com/blog/introducing-neki",
+      "source": "Hacker News",
+      "score": 213,
+      "comments": 114
+    },
+    {
+      "id": "hn:49639408",
+      "title": "More questions about whether researchers can trust OpenAI with unpublished math",
+      "summary": "<a href=\"https:&#x2F;&#x2F;mathstodon.xyz&#x2F;@andreasthom&#x2F;117240536885387540\" rel=\"nofollow\">https:&#x2F;&#x2F;mathstodon.xyz&#x2F;@andreasthom&#x2F;117240536885387540</a><p><a href=\"https:&#x2F;&#x2F;mathstodon.xyz&#x2F;@andreasthom&#x2F;117240537520615623\" rel=\"nofollow\">https:&#x2F;&#x2F;m",
+      "url": "https://mathstodon.xyz/@andreasthom/117240535270608201",
+      "source": "Hacker News",
+      "score": 733,
+      "comments": 674
+    },
+    {
+      "id": "hn:49645443",
+      "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
+      "summary": "",
+      "url": "https://cognition.com/blog/swe-2",
+      "source": "Hacker News",
+      "score": 366,
+      "comments": 155
+    },
+    {
+      "id": "lob:eerwba",
       "title": "Rust Is Tier-1 Language at Microsoft",
       "summary": "",
       "url": "https://rustfoundation.org/media/guest-post-rust-is-tier-1-language-at-microsoft/",
-      "source": "Hacker News",
-      "score": 208,
-      "comments": 97
+      "source": "Lobste.rs",
+      "score": 62,
+      "comments": 37,
+      "tags": [
+        "rust"
+      ]
     },
     {
-      "id": "hn:49640646",
-      "title": "What algorithm did Windows XP use to choose your initial user picture?",
-      "summary": "",
-      "url": "https://devblogs.microsoft.com/oldnewthing/20260909-00/?p=112683",
+      "id": "hn:49645437",
+      "title": "Technique for Manipulating Satellite Photos Now Reveals Ancient Images (2025)",
+      "summary": "<a href=\"https:&#x2F;&#x2F;dstretch.com&#x2F;DecorrelationStretch.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;dstretch.com&#x2F;DecorrelationStretch.pdf</a><p><a href=\"https:&#x2F;&#x2F;www.nasa.gov&#x2F;technology&#x2F;tech-transfer-spinoffs&#x2F;nasa-technique-for-manipulating-satellite-photos-now-revea",
+      "url": "https://spinoff.nasa.gov/Manipulating_Satellite_Photos_Now_Reveals_Ancient_Images",
       "source": "Hacker News",
-      "score": 249,
-      "comments": 118
-    },
-    {
-      "id": "hn:49639090",
-      "title": "DeepSeek v4.1 Flash",
-      "summary": "<a href=\"https:&#x2F;&#x2F;huggingface.co&#x2F;deepseek-ai&#x2F;DeepSeek-V4.1-Flash\" rel=\"nofollow\">https:&#x2F;&#x2F;huggingface.co&#x2F;deepseek-ai&#x2F;DeepSeek-V4.1-Flash</a>",
-      "url": "https://twitter.com/deepseek_ai/status/2097930608790167907",
-      "source": "Hacker News",
-      "score": 720,
-      "comments": 377
+      "score": 287,
+      "comments": 45
     },
     {
       "id": "hn:49643982",
-      "title": "Shopify moves back to Native from React Native",
+      "title": "Shopify is moving from React Native back to Swift and Kotlin",
       "summary": "",
       "url": "https://shopify.engineering/back-to-native",
       "source": "Hacker News",
-      "score": 274,
-      "comments": 187
+      "score": 857,
+      "comments": 576
     },
     {
-      "id": "hn:49643112",
-      "title": "Another researcher says OpenAI trained on conversations, then claimed breakthrou",
+      "id": "hn:49645393",
+      "title": "Don't let anyone take away your big box of cables",
       "summary": "",
-      "url": "https://bsky.app/profile/did:plc:ckaz32jwl6t2cno6fmuw2nhn/post/3mv4mt4ikss2d",
+      "url": "https://blog.jim-nielsen.com/2026/hands-off-my-cables/",
       "source": "Hacker News",
-      "score": 240,
-      "comments": 115
+      "score": 366,
+      "comments": 274
     },
     {
-      "id": "hn:49637385",
-      "title": "Show HN: What if the speed of light was 5 km/h?",
-      "summary": "I&#x27;ve always wanted to make a visualization where the speed of light was scaled down to human speeds, so that we could intuit relativistic effects with everyday objects. Here is the first version of it!",
-      "url": "https://rivendell.dmitrybrant.com/relativity/",
-      "source": "Hacker News",
-      "score": 512,
-      "comments": 215
-    },
-    {
-      "id": "hn:49642531",
-      "title": "List of references on Sony websites to players \"owning\" their digital games",
+      "id": "hn:49649213",
+      "title": "OpenAI Agents API",
       "summary": "",
-      "url": "https://consumerrights.wiki/w/Sony_PlayStation_digital_game_ownership_lawsuit",
+      "url": "https://developers.openai.com/api/docs/guides/agents-api/overview",
       "source": "Hacker News",
-      "score": 191,
-      "comments": 55
+      "score": 171,
+      "comments": 104
     },
     {
-      "id": "hn:49630931",
-      "title": "iPhone Duo",
+      "id": "hn:49647134",
+      "title": "Music Theory for the 21st-Century Classroom",
       "summary": "",
-      "url": "https://www.apple.com/iphone-duo/",
-      "source": "Hacker News",
-      "score": 1327,
-      "comments": 2304
-    },
-    {
-      "id": "hn:49627634",
-      "title": "Hitachi launches CO2 heat pump water heaters with solar-friendly tariff controls",
-      "summary": "",
-      "url": "https://www.pv-magazine.com/2026/09/07/hitachi-launches-co2-heat-pump-water-heaters-with-solar-friendly-tariff-controls/",
+      "url": "https://musictheory.pugetsound.edu/mt21c/MusicTheory.html",
       "source": "Hacker News",
       "score": 178,
-      "comments": 139
+      "comments": 80
+    },
+    {
+      "id": "lob:9szn91",
+      "title": "A rant about phishing: It's not the user's fault (and not DNS either)",
+      "summary": "",
+      "url": "https://maurycyz.com/misc/domains/",
+      "source": "Lobste.rs",
+      "score": 58,
+      "comments": 15,
+      "tags": [
+        "security",
+        "web"
+      ]
     },
     {
       "id": "lob:k99ryf",
@@ -114,90 +130,21 @@
       "summary": "",
       "url": "https://blog.fallible.net/it-breaks-a-village/",
       "source": "Lobste.rs",
-      "score": 50,
-      "comments": 19,
+      "score": 90,
+      "comments": 42,
       "tags": [
-        "culture"
-      ]
-    },
-    {
-      "id": "lob:zj6mij",
-      "title": "Apple Event for September 9th, 2026",
-      "summary": "<p>Out with the Tim, in with the John. Who knows if they'll fold?</p>\n",
-      "url": "https://www.apple.com/apple-events/event-stream/",
-      "source": "Lobste.rs",
-      "score": 69,
-      "comments": 31,
-      "tags": [
-        "event",
-        "hardware",
-        "ios",
-        "mac",
-        "video"
-      ]
-    },
-    {
-      "id": "lob:rdhsu9",
-      "title": "I Don’t Want to Interact With Stochastic Parrots",
-      "summary": "",
-      "url": "https://ploum.net/2026-09-09-ai_policy.html",
-      "source": "Lobste.rs",
-      "score": 104,
-      "comments": 62,
-      "tags": [
-        "rant",
+        "culture",
         "vibecoding"
       ]
     },
     {
-      "id": "lob:veafpx",
-      "title": "The purpose of DNS is to spread scams",
+      "id": "hn:49649124",
+      "title": "The Deathray: A simple way for an untrusted site to freeze a Mac",
       "summary": "",
-      "url": "https://shkspr.mobi/blog/2026/09/the-purpose-of-dns-is-to-spread-scams/",
-      "source": "Lobste.rs",
-      "score": 29,
-      "comments": 40,
-      "tags": [
-        "web"
-      ]
-    },
-    {
-      "id": "hn:49599992",
-      "title": "Stockfish 19",
-      "summary": "",
-      "url": "https://stockfishchess.org/blog/2026/stockfish-19/",
+      "url": "https://auberon.xyz/blog/posts/deathray/",
       "source": "Hacker News",
-      "score": 174,
-      "comments": 114
-    },
-    {
-      "id": "lob:rghafd",
-      "title": "A Design Space Exploration of Async/Await",
-      "summary": "",
-      "url": "https://cel.cs.brown.edu/blog/design-space-async-await/",
-      "source": "Lobste.rs",
-      "score": 42,
-      "comments": 13,
-      "tags": [
-        "plt"
-      ]
-    },
-    {
-      "id": "hn:49644047",
-      "title": "Amazon pilots ad services in ChatGPT",
-      "summary": "",
-      "url": "https://www.marketingdive.com/news/amazon-pilots-ad-services-in-chatgpt-what-marketers-need-to-know/829945/",
-      "source": "Hacker News",
-      "score": 74,
-      "comments": 67
-    },
-    {
-      "id": "rss:e261efb08c",
-      "title": "Chrome V8 Zero-Day Exploited in the Wild Enables Code Execution Inside Sandbox",
-      "summary": "Google on Tuesday released updates to patch 230 security vulnerabilities, including one that has come under active exploitation in the wild.\n\nThe medium-severity vulnerability, assigned the CVE identifier CVE-2026-87491 (CVSS score: N/A), has been described as an out-of-bounds bug in V8, Chrome's Ja",
-      "url": "https://thehackernews.com/2026/09/chrome-v8-zero-day-exploited-in-wild.html",
-      "source": "Tech RSS",
-      "score": 0
+      "score": 108,
+      "comments": 69
     },
     {
       "id": "lob:7lii0g",
@@ -205,31 +152,87 @@
       "summary": "",
       "url": "https://fzakaria.com/2026/09/09/review-a-pull-request-by-booting-it",
       "source": "Lobste.rs",
-      "score": 24,
-      "comments": 16,
+      "score": 36,
+      "comments": 18,
       "tags": [
         "nix",
         "vibecoding"
       ]
     },
     {
-      "id": "rss:684b00daf3",
-      "title": "Introducing CUDA Rust: Two Tracks for Writing GPU Kernels",
-      "summary": "&#32; submitted by &#32;  /u/unixmachine   [link] &#32; [comments]",
-      "url": "https://www.reddit.com/r/programming/comments/1wblvwx/introducing_cuda_rust_two_tracks_for_writing_gpu/",
-      "source": "Tech RSS",
-      "score": 0
+      "id": "hn:49652105",
+      "title": "Google will buy half the electricity of a nuclear power plant",
+      "summary": "",
+      "url": "https://www.bbc.com/news/articles/c8r6y4me2g6o",
+      "source": "Hacker News",
+      "score": 120,
+      "comments": 92
     },
     {
-      "id": "arxiv:2609.10539v1",
-      "title": "IdeaAMBIG: Benchmarking Implementation-Critical Gaps in Research-Idea Specifications",
-      "summary": "A research idea may be novel, coherent, and scientifically plausible, yet its proposed method may remain insufficiently specified for faithful implementation. We study the codification readiness of implementation-facing research-method specifications, defined by whether they provide sufficient metho",
-      "url": "https://arxiv.org/abs/2609.10539v1",
+      "id": "lob:aiikt1",
+      "title": "Xteink X4 Pro review",
+      "summary": "",
+      "url": "https://abstractnonsense.xyz/microblog/2026-09-07-xteink-x4-pro-review/",
+      "source": "Lobste.rs",
+      "score": 32,
+      "comments": 17,
+      "tags": [
+        "hardware"
+      ]
+    },
+    {
+      "id": "lob:izt4a2",
+      "title": "What algorithm did Windows XP use to choose your initial user picture?",
+      "summary": "",
+      "url": "https://devblogs.microsoft.com/oldnewthing/20260909-00/?p=112683",
+      "source": "Lobste.rs",
+      "score": 27,
+      "comments": 8,
+      "tags": [
+        "historical",
+        "windows"
+      ]
+    },
+    {
+      "id": "lob:b3cqyr",
+      "title": "Forgejo 16.0.4 has a critical security bug fix (RCE - Remote Code Execution)",
+      "summary": "",
+      "url": "https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/16.0.4.md",
+      "source": "Lobste.rs",
+      "score": 25,
+      "comments": 12,
+      "tags": [
+        "security"
+      ]
+    },
+    {
+      "id": "hn:49650418",
+      "title": "NTSB issues investigative update on B-767 runway excursion accident in Miami",
+      "summary": "",
+      "url": "https://www.ntsb.gov:443/news/press-releases/Pages/NR20260909.aspx",
+      "source": "Hacker News",
+      "score": 73,
+      "comments": 119
+    },
+    {
+      "id": "hn:49651372",
+      "title": "Thelio Mira AI Linux Workstation: 192 GB GPU Memory",
+      "summary": "",
+      "url": "https://system76.com/workstations/thelio-mira-ai",
+      "source": "Hacker News",
+      "score": 57,
+      "comments": 35
+    },
+    {
+      "id": "arxiv:2609.11913v1",
+      "title": "Distance generalization in transformers: why bother with positional encoding?",
+      "summary": "Out-of-distribution length generalization, namely to extrapolate a task from short to longer context, has been studied intensively for transformers. Here we focus on distance generalization, which probes performance when inter-token distances are changed between training and inference, while keeping",
+      "url": "https://arxiv.org/abs/2609.11913v1",
       "source": "ArXiv",
       "categories": [
         "cs.CL"
       ],
-      "arxiv_id": "2609.10539v1"
+      "arxiv_id": "2609.11913v1"
     }
   ],
   "ai_curated": true
