@@ -1,79 +1,102 @@
 {
-  "date": "2026-09-12",
-  "update_time": "2026-09-12 15:11:43",
+  "date": "2026-09-13",
+  "update_time": "2026-09-13 04:04:01",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-12\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 [陶哲轩开炮：AI 在数学领域存在严重错位] (来源: HackerNews / Terry Tao 博客)\n- **核心干货**：数学界顶流陶哲轩亲自下场撰文，直指当前 AI 与数学研究的结合正在发生\"严重错位\"——AI 被用来批量生产看似严谨实则无意义的证明，而真正需要 AI 辅助的数学直觉探索反而被冷落。HN 上 1076 分、1031 条评论，吵翻了天。\n- **毒舌/硬核点评**：当菲尔兹奖得主都忍不住写博客吐槽，说明问题已经不是\"AI 有没有用\"，而是\"你们这帮人到底在拿 AI 干什么\"。别再用大模型刷论文数量了，陶神看不下去了。\n- **🔗 传送门**：[点击直达原链接](https://terrytao.wordpress.com/2026/09/11/a-severe-misalignment-of-ai-in-mathematics/)\n\n---\n\n### 2. 📌 [花了 220 美元投 Google 广告，60% 的安装量是机器人] (来源: HackerNews)\n- **核心干货**：一位开发者真金白银做了实验：花 220 美元在 Google 应用广告上，结果 60% 的安装来自机器人农场。这不是猜测，是有数据、有追踪、有分析的系统性欺诈。广告平台抽成照收，造假流量照跑，开发者当冤大头。\n- **毒舌/硬核点评**：Google 一边在 I/O 上大谈 AI 反欺诈，一边让广告主给机器人发工资。220 美元买个教训不算贵，贵的是整个移动广告生态的信任正在被系统性透支。\n- **🔗 传送门**：[点击直达原链接](https://dayzlegame.com/blog/google-ads-bot-farm/)\n\n---\n\n### 3. 📌 [Anthropic 指控七家中国 AI 实验室实施\"工业级\"模型蒸馏攻击] (来源: Tech News)\n- **核心干货**：Anthropic 公开点名阿里、月之暗面、DeepSeek、智谱、MiniMax 等七家中国 AI 实验室，称其针对 Claude 发起工业级蒸馏攻击，系统性提取模型能力用于训练自家模型。蒸馏本身合法，但\"工业级\"三个字意味着这不是学术研究，是有组织的产能搬运。\n- **毒舌/硬核点评**：一边是出口管制卡芯片，一边是 API 接口被薅成羊。Anthropic 这波指控本质上是在说：你们用我的模型训出了你们的模型，然后回头跟我抢市场。AI 时代的\"师夷长技\"玩得比洋务运动还溜。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/anthropic-says-seven-china-based-ai.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"数学不会骗人，但用 AI 做数学的人会。搞钱也一样——先分清谁在创造价值，谁在制造噪音。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-13\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Anthropic 指控七家中国 AI 实验室实施\"工业化蒸馏攻击\" (来源: Tech RSS / The Hacker News)\n- **核心干货**：Anthropic 公开声称已识别并阻断来自阿里、月之暗面、DeepSeek、智谱、MiniMax 等七家中国实验室对其 Claude 模型的大规模蒸馏攻击。蒸馏本身是合法训练手段，但\"工业化规模\"意味着这些实验室可能系统性地利用 Claude 的输出批量生成训练数据，绕过正常的 API 使用条款。\n- **毒舌/硬核点评**：翻译一下：你们用我的作业训练你们的模型，然后转头说自己是自研——这不叫蒸馏，这叫学术不端加商业套利，只不过套的是硅基的利。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/anthropic-says-seven-china-based-ai.html)\n\n---\n\n### 2. 📌 Nvidia 是 AI 界的央行 (来源: Hacker News | 420 分 / 289 评论)\n- **核心干货**：《经济学人》深度长文，论证 Nvidia 在 AI 生态中的角色已超越芯片供应商——它通过投资客户、锁定产能、定义算力定价权，实质上扮演了 AI 经济的\"中央银行\"。CUDA 是货币政策，H100/B200 是基准利率，而全球 AI 创业公司都是等着放水的商业银行。\n- **毒舌/硬核点评**：老黄不是卖铲子的，他是开赌场顺便印筹码的那个人。问题是，当央行开始亲自下场赌博，你猜谁是最后接盘的？\n- **🔗 传送门**：[点击直达原链接](https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai)\n\n---\n\n### 3. 📌 GitLab 曝 CVSS 10.0 满分文件读取漏洞，披露数小时内即遭野外探测 (来源: Tech RSS / The Hacker News)\n- **核心干货**：GitLab 修复了一个路径遍历漏洞（CVE-2026-85706），CVSS 满分 10.0，攻击者可读取服务器任意文件。更值得警惕的是，漏洞公开后数小时内就出现了野外扫描探测——说明攻击者早已在蹲守 GitLab 的补丁公告，自动化武器化流水线已经成熟到按分钟计时。\n- **毒舌/硬核点评**：CVSS 10.0 加\"数小时内野外探测\"，翻译成人话就是：你还没读完安全公告，人家已经在你服务器上翻抽屉了。别问，问就是\"已知漏洞，请尽快升级\"。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/gitlab-cvss-10-file-read-flaw-draws-in.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> 蒸馏别人的模型不叫自研，叫\"知识付费\"——只不过付费的是别人，收钱的是你。",
   "briefing_items": [
     {
-      "title": "[陶哲轩开炮：AI 在数学领域存在严重错位]",
-      "source": "HackerNews / Terry Tao 博客",
-      "summary": "数学界顶流陶哲轩亲自下场撰文，直指当前 AI 与数学研究的结合正在发生\"严重错位\"——AI 被用来批量生产看似严谨实则无意义的证明，而真正需要 AI 辅助的数学直觉探索反而被冷落。HN 上 1076 分、1031 条评论，吵翻了天。",
-      "commentary": "当菲尔兹奖得主都忍不住写博客吐槽，说明问题已经不是\"AI 有没有用\"，而是\"你们这帮人到底在拿 AI 干什么\"。别再用大模型刷论文数量了，陶神看不下去了。",
-      "url": "https://terrytao.wordpress.com/2026/09/11/a-severe-misalignment-of-ai-in-mathematics/"
-    },
-    {
-      "title": "[花了 220 美元投 Google 广告，60% 的安装量是机器人]",
-      "source": "HackerNews",
-      "summary": "一位开发者真金白银做了实验：花 220 美元在 Google 应用广告上，结果 60% 的安装来自机器人农场。这不是猜测，是有数据、有追踪、有分析的系统性欺诈。广告平台抽成照收，造假流量照跑，开发者当冤大头。",
-      "commentary": "Google 一边在 I/O 上大谈 AI 反欺诈，一边让广告主给机器人发工资。220 美元买个教训不算贵，贵的是整个移动广告生态的信任正在被系统性透支。",
-      "url": "https://dayzlegame.com/blog/google-ads-bot-farm/"
-    },
-    {
-      "title": "[Anthropic 指控七家中国 AI 实验室实施\"工业级\"模型蒸馏攻击]",
-      "source": "Tech News",
-      "summary": "Anthropic 公开点名阿里、月之暗面、DeepSeek、智谱、MiniMax 等七家中国 AI 实验室，称其针对 Claude 发起工业级蒸馏攻击，系统性提取模型能力用于训练自家模型。蒸馏本身合法，但\"工业级\"三个字意味着这不是学术研究，是有组织的产能搬运。",
-      "commentary": "一边是出口管制卡芯片，一边是 API 接口被薅成羊。Anthropic 这波指控本质上是在说：你们用我的模型训出了你们的模型，然后回头跟我抢市场。AI 时代的\"师夷长技\"玩得比洋务运动还溜。",
+      "title": "Anthropic 指控七家中国 AI 实验室实施\"工业化蒸馏攻击\"",
+      "source": "Tech RSS / The Hacker News",
+      "summary": "Anthropic 公开声称已识别并阻断来自阿里、月之暗面、DeepSeek、智谱、MiniMax 等七家中国实验室对其 Claude 模型的大规模蒸馏攻击。蒸馏本身是合法训练手段，但\"工业化规模\"意味着这些实验室可能系统性地利用 Claude 的输出批量生成训练数据，绕过正常的 API 使用条款。",
+      "commentary": "翻译一下：你们用我的作业训练你们的模型，然后转头说自己是自研——这不叫蒸馏，这叫学术不端加商业套利，只不过套的是硅基的利。",
       "url": "https://thehackernews.com/2026/09/anthropic-says-seven-china-based-ai.html"
     },
     {
-      "quote": "\"数学不会骗人，但用 AI 做数学的人会。搞钱也一样——先分清谁在创造价值，谁在制造噪音。\""
+      "title": "Nvidia 是 AI 界的央行",
+      "source": "Hacker News | 420 分 / 289 评论",
+      "summary": "《经济学人》深度长文，论证 Nvidia 在 AI 生态中的角色已超越芯片供应商——它通过投资客户、锁定产能、定义算力定价权，实质上扮演了 AI 经济的\"中央银行\"。CUDA 是货币政策，H100/B200 是基准利率，而全球 AI 创业公司都是等着放水的商业银行。",
+      "commentary": "老黄不是卖铲子的，他是开赌场顺便印筹码的那个人。问题是，当央行开始亲自下场赌博，你猜谁是最后接盘的？",
+      "url": "https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai"
+    },
+    {
+      "title": "GitLab 曝 CVSS 10.0 满分文件读取漏洞，披露数小时内即遭野外探测",
+      "source": "Tech RSS / The Hacker News",
+      "summary": "GitLab 修复了一个路径遍历漏洞（CVE-2026-85706），CVSS 满分 10.0，攻击者可读取服务器任意文件。更值得警惕的是，漏洞公开后数小时内就出现了野外扫描探测——说明攻击者早已在蹲守 GitLab 的补丁公告，自动化武器化流水线已经成熟到按分钟计时。",
+      "commentary": "CVSS 10.0 加\"数小时内野外探测\"，翻译成人话就是：你还没读完安全公告，人家已经在你服务器上翻抽屉了。别问，问就是\"已知漏洞，请尽快升级\"。",
+      "url": "https://thehackernews.com/2026/09/gitlab-cvss-10-file-read-flaw-draws-in.html"
+    },
+    {
+      "quote": "蒸馏别人的模型不叫自研，叫\"知识付费\"——只不过付费的是别人，收钱的是你。"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49639647",
-      "title": "IKEA made a mod for Skyrim [video]",
+      "id": "lob:wajtsa",
+      "title": "OpenAI agents carried out an undisclosed attack on RubyGems",
       "summary": "",
-      "url": "https://www.youtube.com/watch?v=iZODN0QUgjI",
-      "source": "Hacker News",
-      "score": 370,
-      "comments": 76
+      "url": "https://www.rubyhack.ai/",
+      "source": "Lobste.rs",
+      "score": 108,
+      "comments": 36,
+      "tags": [
+        "ruby",
+        "security",
+        "vibecoding"
+      ]
     },
     {
-      "id": "hn:49662371",
-      "title": "A misalignment of AI in mathematics",
-      "summary": "<a href=\"https:&#x2F;&#x2F;terrytao.wordpress.com&#x2F;2026&#x2F;09&#x2F;11&#x2F;a-severe-misalignment-of-ai-in-mathematics&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;terrytao.wordpress.com&#x2F;2026&#x2F;09&#x2F;11&#x2F;a-severe-misalignm...</a><p><a href=\"https:&#x2F;&#x2F;www.economist.com&#x2F;scie",
-      "url": "https://mathandai.org/",
+      "id": "hn:49674050",
+      "title": "Make your first edit to OpenStreetMap",
+      "summary": "",
+      "url": "https://high5apps.github.io/josm-plugin-website-wizard/",
       "source": "Hacker News",
-      "score": 1076,
-      "comments": 1031
+      "score": 371,
+      "comments": 85
     },
     {
-      "id": "hn:49662990",
-      "title": "I spent $220 on Google app ads and 60% of the installs were robots",
-      "summary": "",
-      "url": "https://dayzlegame.com/blog/google-ads-bot-farm/",
+      "id": "hn:49673098",
+      "title": "Nvidia is the central bank of AI",
+      "summary": "<a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;kt50V\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;kt50V</a>",
+      "url": "https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai",
       "source": "Hacker News",
-      "score": 642,
-      "comments": 353
+      "score": 420,
+      "comments": 289
     },
     {
-      "id": "hn:49626718",
-      "title": "A Design Space Exploration of Async/Await",
+      "id": "hn:49678683",
+      "title": "Everyone should slow down AI development except for me",
       "summary": "",
-      "url": "https://cel.cs.brown.edu/blog/design-space-async-await/",
+      "url": "https://xeiaso.net/notes/2026/everyone-slowdown-but-me/",
       "source": "Hacker News",
-      "score": 361,
-      "comments": 97
+      "score": 235,
+      "comments": 126
     },
     {
-      "id": "hn:49671329",
-      "title": "Fuck it, make it anyway",
-      "summary": "",
-      "url": "https://www.joelotter.com/posts/2026/09/make-it-anyway/",
+      "id": "hn:49645480",
+      "title": "LG denies TV spying claims, says tracking and snooping concerns 'not true'",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.lg.com&#x2F;global&#x2F;newsroom&#x2F;news&#x2F;statements&#x2F;statement-understanding-privacy-on-lg-smart-tvs&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.lg.com&#x2F;global&#x2F;newsroom&#x2F;news&#x2F;statements&#x2F;statement...</a>",
+      "url": "https://www.tomshardware.com/tech-industry/big-tech/lg-strongly-denies-tv-security-claims-says-tracking-and-snooping-concerns-not-true-online-investigation-claims-216-000-000-spy-tvs-record-audio",
       "source": "Hacker News",
-      "score": 315,
-      "comments": 271
+      "score": 460,
+      "comments": 377
+    },
+    {
+      "id": "hn:49676820",
+      "title": "Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases",
+      "summary": "",
+      "url": "https://withspecific.com/benchmarks/real-swe",
+      "source": "Hacker News",
+      "score": 158,
+      "comments": 83
+    },
+    {
+      "id": "hn:49625056",
+      "title": "Stabilizing Rust's Never Type",
+      "summary": "",
+      "url": "https://lwn.net/SubscriberLink/1091015/d9e48318ed242b41/",
+      "source": "Hacker News",
+      "score": 153,
+      "comments": 41
     },
     {
       "id": "lob:7guove",
@@ -81,44 +104,10 @@
       "summary": "",
       "url": "https://artificialworlds.net/blog/2026/09/11/feeling-sad-about-ai/",
       "source": "Lobste.rs",
-      "score": 182,
-      "comments": 80,
+      "score": 217,
+      "comments": 101,
       "tags": [
         "programming"
-      ]
-    },
-    {
-      "id": "lob:be7tgu",
-      "title": "Power grab",
-      "summary": "",
-      "url": "https://tante.cc/2026/09/11/power-grab/",
-      "source": "Lobste.rs",
-      "score": 202,
-      "comments": 87,
-      "tags": [
-        "culture",
-        "linux"
-      ]
-    },
-    {
-      "id": "hn:49670032",
-      "title": "Retrospectively Reverse-Engineering Apple's Neural Engine",
-      "summary": "",
-      "url": "https://eiln.github.io/posts/ane.html",
-      "source": "Hacker News",
-      "score": 159,
-      "comments": 18
-    },
-    {
-      "id": "lob:cegf7n",
-      "title": "evergarden",
-      "summary": "",
-      "url": "https://evergarden.moe/",
-      "source": "Lobste.rs",
-      "score": 47,
-      "comments": 13,
-      "tags": [
-        "design"
       ]
     },
     {
@@ -127,89 +116,59 @@
       "summary": "",
       "url": "https://terrytao.wordpress.com/2026/09/11/a-severe-misalignment-of-ai-in-mathematics/",
       "source": "Lobste.rs",
-      "score": 68,
-      "comments": 7,
+      "score": 85,
+      "comments": 12,
       "tags": [
         "math",
         "vibecoding"
       ]
     },
     {
-      "id": "lob:mcioou",
-      "title": "ChiPass Release 2026.09.0",
+      "id": "lob:qsrjs2",
+      "title": "I made a build visualizer to understand Bun’s compile times",
       "summary": "",
-      "url": "https://codeberg.org/ChiPass/ChiPass/releases/tag/v2026.09.0",
+      "url": "https://lalitm.com/post/buildprof/",
       "source": "Lobste.rs",
-      "score": 46,
-      "comments": 4,
+      "score": 53,
+      "comments": 10,
       "tags": [
-        "release",
-        "security"
+        "compilers",
+        "performance"
       ]
     },
     {
-      "id": "lob:vc0brm",
-      "title": "What are you doing this weekend?",
-      "summary": "<p>Feel free to tell what you plan on doing this weekend and even ask for help or feedback.</p>\n<p>Please keep in mind it’s more than OK to do nothing at all too!</p>\n",
-      "url": "https://lobste.rs/s/vc0brm/what_are_you_doing_this_weekend",
+      "id": "hn:49619848",
+      "title": "Apple iPod Engraver (2019)",
+      "summary": "",
+      "url": "https://dunstanorchard.com/apple-ipod-engraver/",
+      "source": "Hacker News",
+      "score": 161,
+      "comments": 37
+    },
+    {
+      "id": "lob:ub8q3s",
+      "title": "Useful Things Agents Can Do That Are Not Writing Code",
+      "summary": "",
+      "url": "https://elijahpotter.dev/articles/useful_things_agents_can_do_that_are_not_writing_code",
       "source": "Lobste.rs",
-      "score": 20,
-      "comments": 36,
+      "score": 17,
+      "comments": 14,
       "tags": [
-        "ask",
-        "programming"
+        "vibecoding"
       ]
     },
     {
-      "id": "hn:49624456",
-      "title": "Great Lakes sturgeon may be 400 years old:Scientists rethinking how to save them",
+      "id": "lob:imdwmj",
+      "title": "Pandas Should Go Extinct",
       "summary": "",
-      "url": "https://www.cbc.ca/news/canada/ontario-great-lakes-sturgeon-lifespan-study-9.7329250",
-      "source": "Hacker News",
-      "score": 112,
-      "comments": 27
-    },
-    {
-      "id": "hn:49672510",
-      "title": "We Must Pace the Frontier",
-      "summary": "",
-      "url": "https://darioamodei.com/post/we-must-pace-the-frontier",
-      "source": "Hacker News",
-      "score": 82,
-      "comments": 86
-    },
-    {
-      "id": "hn:49671159",
-      "title": "The Worst Spam Emails: Inside iLands' AI Agent Hustle",
-      "summary": "",
-      "url": "https://tedium.co/2026/09/11/ilands-agents-email-spam-kaixin-tang/",
-      "source": "Hacker News",
-      "score": 61,
-      "comments": 30
-    },
-    {
-      "id": "arxiv:2609.11913v1",
-      "title": "Distance generalization in transformers: why bother with positional encoding?",
-      "summary": "Out-of-distribution length generalization, namely to extrapolate a task from short to longer context, has been studied intensively for transformers. Here we focus on distance generalization, which probes performance when inter-token distances are changed between training and inference, while keeping",
-      "url": "https://arxiv.org/abs/2609.11913v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL"
-      ],
-      "arxiv_id": "2609.11913v1"
-    },
-    {
-      "id": "arxiv:2609.11878v1",
-      "title": "Domain-Specific Hallucination Detection in Large Language Models",
-      "summary": "Large language models generate fluent text that can contain unfaithful claims -- a phenomenon known as hallucination. We present a multi-signal detection pipeline combining fine-tuned DeBERTa-v3 classification, Monte Carlo (MC) Dropout uncertainty quantification, and temperature-scaled calibration f",
-      "url": "https://arxiv.org/abs/2609.11878v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2609.11878v1"
+      "url": "https://eddie.codes/posts/pandas-should-go-extinct/",
+      "source": "Lobste.rs",
+      "score": 37,
+      "comments": 9,
+      "tags": [
+        "databases",
+        "python"
+      ]
     },
     {
       "id": "rss:c7b0fd5f2e",
@@ -234,6 +193,48 @@
       "url": "https://thehackernews.com/2026/09/cisco-fmc-flaws-exploited-to-steal.html",
       "source": "Tech RSS",
       "score": 0
+    },
+    {
+      "id": "hn:49636479",
+      "title": "Getting 50 GB/S Back from the Apple Neural Engine",
+      "summary": "",
+      "url": "https://eiln.github.io/posts/ane-dma.html",
+      "source": "Hacker News",
+      "score": 97,
+      "comments": 21
+    },
+    {
+      "id": "hn:49678969",
+      "title": "Why are AI agents lying, cheating and coordinating?",
+      "summary": "",
+      "url": "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating",
+      "source": "Hacker News",
+      "score": 33,
+      "comments": 28
+    },
+    {
+      "id": "lob:bfiose",
+      "title": "Base84 deserves a place in file names",
+      "summary": "",
+      "url": "https://00f.net/2026/09/09/base84/",
+      "source": "Lobste.rs",
+      "score": 22,
+      "comments": 6,
+      "tags": [
+        "linux"
+      ]
+    },
+    {
+      "id": "lob:o6rlho",
+      "title": "xkcd-font: The xkcd font",
+      "summary": "",
+      "url": "https://github.com/ipython/xkcd-font",
+      "source": "Lobste.rs",
+      "score": 29,
+      "comments": 4,
+      "tags": [
+        "design"
+      ]
     }
   ],
   "ai_curated": true
