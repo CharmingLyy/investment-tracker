@@ -1,76 +1,76 @@
 {
-  "date": "2026-09-15",
-  "update_time": "2026-09-15 04:11:03",
+  "date": "2026-09-16",
+  "update_time": "2026-09-15 16:30:37",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-15\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 GitLab 满分漏洞 CVE-2026-85706：CVSS 10.0，披露数小时内即遭野外探测 (来源: The Hacker News)\n- **核心干货**：GitLab 修复了一个路径遍历漏洞（CVE-2026-85706），CVSS 评分直接拉满 10.0 —— 这是漏洞评分体系的理论上限，意味着攻击者无需任何认证即可远程读取服务器上的任意文件。更刺激的是，公开披露后几个小时内就有攻击者开始扫描探测，说明自动化武器化流水线已经快到你连 patch 窗口都来不及开。\n- **毒舌/硬核点评**：CVSS 10.0 就像体检报告上写着\"全部指标爆表\"——你唯一能做的就是立刻升级然后祈祷自己的 GitLab 没有暴露在公网上。2026 年了，还有人在生产环境裸奔 GitLab，这不是勇敢，是给 CVE 编号贡献统计数据。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/gitlab-cvss-10-file-read-flaw-draws-in.html)\n\n---\n\n### 2. 📌 Anthropic 指控七家中国 AI 实验室对 Claude 发起\"工业级蒸馏攻击\" (来源: The Hacker News)\n- **核心干货**：Anthropic 公开点名阿里巴巴、Moonshot、DeepSeek、智谱（Z.ai）、MiniMax 等七家中国 AI 实验室，称其通过大规模 API 调用对 Claude 进行非法知识蒸馏，规模达到\"工业化\"级别。蒸馏本身是合法训练技术，但通过批量调用竞品 API 来复制其能力，就踩到了服务条款和知识产权的红线。这是 AI 巨头第一次如此高调地公开指控特定对手。\n- **毒舌/硬核点评**：蒸馏这词听起来很学术，翻译成人话就是\"你花了几十亿训练模型，我花了几万块 API 费把你抄了\"。Anthropic 这次掀桌子，本质上是在说：技术护城河挡不住 API 调用，只能靠法务部了。AI 竞争的下半场，律师比工程师更忙。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/anthropic-says-seven-china-based-ai.html)\n\n---\n\n### 3. 📌 Pion：一个号称能让公司\"全自动运转\"的 AI Agent 框架 (来源: Hacker News | 322 分)\n- **核心干货**：Andon Labs 发布 Pion，定位是\"自主运营公司的 AI Agent\"——不是帮你写代码、回邮件那种小打小闹，而是试图让 AI 接管公司运营层面的决策和执行。HN 上 322 分、357 条评论，说明大家既兴奋又怀疑。这个方向如果跑通，冲击的不是程序员，而是中层管理层。\n- **毒舌/硬核点评**：每年都有人宣称\"AI 要取代管理层\"，结果 AI 连周报都写得比你领导还水。Pion 的野心值得关注，但别忘了——让 AI 自主运营公司，最大的风险不是它做错决策，而是它做得\"看起来对\"但你根本不知道它为什么这么做。可解释性？那是上一代产品经理才关心的事。\n- **🔗 传送门**：[点击直达原链接](https://andonlabs.com/blog/why-we-built-pion)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> **\"CVSS 10.0 教会我们一个道理：你花三个月做的安全架构评审，不如攻击者花三分钟跑一个自动化脚本。防守方的 ROI 永远是最差的——但你不做，连上牌桌的资格都没有。\"**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-16\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Homebrew 7.0.0 正式发布 (来源: Tech RSS / Reddit r/programming)\n- **核心干货**：Homebrew 迎来史诗级大版本更新——安装升级速度大幅提升、沙箱隔离更严格、终于有了原生 macOS 图形应用、内置漏洞检查和 advisory 数据库。同时正式抛弃 macOS 10.15，Intel Mac 被降级为 Tier 3 二等公民。Apple Silicon 用户享受预编译 bottle 的 Tier 1 待遇。\n- **毒舌/硬核点评**：Homebrew 终于想起来自己是个包管理器而不是\"每次 brew update 都能泡杯咖啡\"的行为艺术。Intel Mac 被踢进 Tier 3，库克看了都想说：\"我早就不生产你们了，Homebrew 只是替我补了一刀。\"\n- **🔗 传送门**：[点击直达原链接](https://www.reddit.com/r/programming/comments/1wftm95/homebrew_700_faster_installations_and_upgrades/)\n\n---\n\n### 2. 📌 Capsule——单文件 Web 应用，数据直接存进 SQLite (来源: Hacker News | 115 分)\n- **核心干货**：用 Rust 写的一个新工具，把整个 Web 应用打包成单个文件（扩展名就是 `.capsule`），数据直接内嵌 SQLite 存储。解决了\"写 HTML 页面很简单，但一涉及存数据和分享就得部署服务器\"的经典痛点。写完即分享，打开即运行。\n- **毒舌/硬核点评**：这玩意儿的哲学是\"你的数据不配拥有服务器\"。对于做小工具、内部 demo、个人知识库的人来说，它可能比 Docker + Nginx + Postgres 三件套香一万倍。当然，如果你的应用需要 10 万并发，请自觉绕道——这不是给你准备的。\n- **🔗 传送门**：[点击直达原链接](https://withcapsule.app/)\n\n---\n\n### 3. 📌 Red Heron 利用 Gitea RCE 漏洞攻陷六国 13 家组织 (来源: The Hacker News)\n- **核心干货**：疑似中国背景的威胁组织 Red Heron 快速武器化了 Gitea 的一个远程代码执行漏洞，扫描了 7 个国家 1386 个 Gitea 实例，成功攻陷 13 家组织的面向公网实例。这是典型的\"补丁空窗期\"猎杀——漏洞刚披露就被大规模利用。\n- **毒舌/硬核点评**：自建 Gitea 的人以为自己逃离了 GitHub 的\"监控\"，结果发现自己直接暴露在了攻击者的枪口下，连个 WAF 都没挂。你以为你在搞\"代码自主可控\"，实际上是在给黑客搞\"资产自主可控\"。自托管的第一课永远是：先学会打补丁，再谈自由。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/red-heron-exploits-gitea-rce-to.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> **\"自托管不是自由的终点，而是运维责任的起点——你省下的 SaaS 订阅费，最终会以凌晨三点修漏洞的形式还回去。\"**",
   "briefing_items": [
     {
-      "title": "GitLab 满分漏洞 CVE-2026-85706：CVSS 10.0，披露数小时内即遭野外探测",
-      "source": "The Hacker News",
-      "summary": "GitLab 修复了一个路径遍历漏洞（CVE-2026-85706），CVSS 评分直接拉满 10.0 —— 这是漏洞评分体系的理论上限，意味着攻击者无需任何认证即可远程读取服务器上的任意文件。更刺激的是，公开披露后几个小时内就有攻击者开始扫描探测，说明自动化武器化流水线已经快到你连 patch 窗口都来不及开。",
-      "commentary": "CVSS 10.0 就像体检报告上写着\"全部指标爆表\"——你唯一能做的就是立刻升级然后祈祷自己的 GitLab 没有暴露在公网上。2026 年了，还有人在生产环境裸奔 GitLab，这不是勇敢，是给 CVE 编号贡献统计数据。",
-      "url": "https://thehackernews.com/2026/09/gitlab-cvss-10-file-read-flaw-draws-in.html"
+      "title": "Homebrew 7.0.0 正式发布",
+      "source": "Tech RSS / Reddit r/programming",
+      "summary": "Homebrew 迎来史诗级大版本更新——安装升级速度大幅提升、沙箱隔离更严格、终于有了原生 macOS 图形应用、内置漏洞检查和 advisory 数据库。同时正式抛弃 macOS 10.15，Intel Mac 被降级为 Tier 3 二等公民。Apple Silicon 用户享受预编译 bottle 的 Tier 1 待遇。",
+      "commentary": "Homebrew 终于想起来自己是个包管理器而不是\"每次 brew update 都能泡杯咖啡\"的行为艺术。Intel Mac 被踢进 Tier 3，库克看了都想说：\"我早就不生产你们了，Homebrew 只是替我补了一刀。\"",
+      "url": "https://www.reddit.com/r/programming/comments/1wftm95/homebrew_700_faster_installations_and_upgrades/"
     },
     {
-      "title": "Anthropic 指控七家中国 AI 实验室对 Claude 发起\"工业级蒸馏攻击\"",
-      "source": "The Hacker News",
-      "summary": "Anthropic 公开点名阿里巴巴、Moonshot、DeepSeek、智谱（Z.ai）、MiniMax 等七家中国 AI 实验室，称其通过大规模 API 调用对 Claude 进行非法知识蒸馏，规模达到\"工业化\"级别。蒸馏本身是合法训练技术，但通过批量调用竞品 API 来复制其能力，就踩到了服务条款和知识产权的红线。这是 AI 巨头第一次如此高调地公开指控特定对手。",
-      "commentary": "蒸馏这词听起来很学术，翻译成人话就是\"你花了几十亿训练模型，我花了几万块 API 费把你抄了\"。Anthropic 这次掀桌子，本质上是在说：技术护城河挡不住 API 调用，只能靠法务部了。AI 竞争的下半场，律师比工程师更忙。",
-      "url": "https://thehackernews.com/2026/09/anthropic-says-seven-china-based-ai.html"
+      "title": "Capsule——单文件 Web 应用，数据直接存进 SQLite",
+      "source": "Hacker News | 115 分",
+      "summary": "用 Rust 写的一个新工具，把整个 Web 应用打包成单个文件（扩展名就是 `.capsule`），数据直接内嵌 SQLite 存储。解决了\"写 HTML 页面很简单，但一涉及存数据和分享就得部署服务器\"的经典痛点。写完即分享，打开即运行。",
+      "commentary": "这玩意儿的哲学是\"你的数据不配拥有服务器\"。对于做小工具、内部 demo、个人知识库的人来说，它可能比 Docker + Nginx + Postgres 三件套香一万倍。当然，如果你的应用需要 10 万并发，请自觉绕道——这不是给你准备的。",
+      "url": "https://withcapsule.app/"
     },
     {
-      "title": "Pion：一个号称能让公司\"全自动运转\"的 AI Agent 框架",
-      "source": "Hacker News | 322 分",
-      "summary": "Andon Labs 发布 Pion，定位是\"自主运营公司的 AI Agent\"——不是帮你写代码、回邮件那种小打小闹，而是试图让 AI 接管公司运营层面的决策和执行。HN 上 322 分、357 条评论，说明大家既兴奋又怀疑。这个方向如果跑通，冲击的不是程序员，而是中层管理层。",
-      "commentary": "每年都有人宣称\"AI 要取代管理层\"，结果 AI 连周报都写得比你领导还水。Pion 的野心值得关注，但别忘了——让 AI 自主运营公司，最大的风险不是它做错决策，而是它做得\"看起来对\"但你根本不知道它为什么这么做。可解释性？那是上一代产品经理才关心的事。",
-      "url": "https://andonlabs.com/blog/why-we-built-pion"
+      "title": "Red Heron 利用 Gitea RCE 漏洞攻陷六国 13 家组织",
+      "source": "The Hacker News",
+      "summary": "疑似中国背景的威胁组织 Red Heron 快速武器化了 Gitea 的一个远程代码执行漏洞，扫描了 7 个国家 1386 个 Gitea 实例，成功攻陷 13 家组织的面向公网实例。这是典型的\"补丁空窗期\"猎杀——漏洞刚披露就被大规模利用。",
+      "commentary": "自建 Gitea 的人以为自己逃离了 GitHub 的\"监控\"，结果发现自己直接暴露在了攻击者的枪口下，连个 WAF 都没挂。你以为你在搞\"代码自主可控\"，实际上是在给黑客搞\"资产自主可控\"。自托管的第一课永远是：先学会打补丁，再谈自由。",
+      "url": "https://thehackernews.com/2026/09/red-heron-exploits-gitea-rce-to.html"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49701004",
-      "title": "iOS 27, iPadOS 27, and macOS 27",
-      "summary": "",
-      "url": "https://www.apple.com/newsroom/2026/09/major-updates-for-apples-software-platforms-are-now-available/",
+      "id": "hn:49712278",
+      "title": "Show HN: Capsule – Single-file web apps that save their data into SQLite",
+      "summary": "Hey HN,<p>I always had the problem that building HTML pages is really simple now, but trying to save data required hosting it somewhere, and sharing it afterwards was not easy. Over the last few months, I&#x27;ve been building an app called Capsule (it’s also the file extension name) written in Rust",
+      "url": "https://withcapsule.app/",
       "source": "Hacker News",
-      "score": 455,
-      "comments": 498
+      "score": 115,
+      "comments": 61
     },
     {
-      "id": "hn:49700477",
-      "title": "Pion, an agent designed to run any company autonomously",
+      "id": "hn:49712041",
+      "title": "Java 27 Released",
       "summary": "",
-      "url": "https://andonlabs.com/blog/why-we-built-pion",
+      "url": "https://mail.openjdk.org/archives/list/announce@openjdk.org/thread/ORGGLMN75HFEWP7YL3ZLGHLYHVIBJDYT/",
       "source": "Hacker News",
-      "score": 322,
-      "comments": 357
+      "score": 227,
+      "comments": 171
     },
     {
-      "id": "hn:49695876",
-      "title": "OpenAI bots knew about the RubyGems caching vulnerability",
+      "id": "hn:49711544",
+      "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
       "summary": "",
-      "url": "https://tenderlovemaking.com/2026/09/11/what-a-time-to-be-alive/",
+      "url": "https://github.com/arnegiacomo/fugleramme",
       "source": "Hacker News",
-      "score": 400,
-      "comments": 333
+      "score": 583,
+      "comments": 92
     },
     {
-      "id": "hn:49699158",
-      "title": "Distributed Systems Classics (2017)",
+      "id": "hn:49708431",
+      "title": "I can't stop thinking about Papua New Guinea",
       "summary": "",
-      "url": "https://nvartolomei.com/dist-sys-classics/",
+      "url": "https://notnottalmud.substack.com/p/why-i-cant-stop-thinking-about-papua",
       "source": "Hacker News",
-      "score": 251,
-      "comments": 58
+      "score": 688,
+      "comments": 299
     },
     {
-      "id": "hn:49694296",
-      "title": "XCancel service is suspended until further notice",
+      "id": "hn:49710883",
+      "title": "25 Years of Mass Surveillance Is Enough",
       "summary": "",
-      "url": "https://xcancel.com/#",
+      "url": "https://www.schneier.com/blog/archives/2026/09/25-years-of-mass-surveillance-is-enough.html",
       "source": "Hacker News",
-      "score": 514,
-      "comments": 806
+      "score": 473,
+      "comments": 143
     },
     {
       "id": "lob:lbavmm",
@@ -78,51 +78,21 @@
       "summary": "<p>Interested in hearing your opinions, I usually learn a lot from it.</p>\n<p>For me it has to be Parse, Don’t Validate and early joelonsoftware.</p>\n",
       "url": "https://lobste.rs/s/lbavmm/what_blog_posts_influenced_your_thinking",
       "source": "Lobste.rs",
-      "score": 44,
-      "comments": 32,
+      "score": 80,
+      "comments": 48,
       "tags": [
         "ask",
         "practices"
       ]
     },
     {
-      "id": "hn:49700661",
-      "title": "Steam Frame starts at $1059",
+      "id": "hn:49709381",
+      "title": "Alternatives to MinIO for single-node local S3",
       "summary": "",
-      "url": "https://store.steampowered.com/hardware/steamframe",
+      "url": "https://rmoff.net/2026/01/14/alternatives-to-minio-for-single-node-local-s3/",
       "source": "Hacker News",
-      "score": 561,
-      "comments": 432
-    },
-    {
-      "id": "hn:49698607",
-      "title": "Principles for Fast Tokio Applications",
-      "summary": "",
-      "url": "https://dial9-rs.github.io/blog/principles-for-fast-tokio-applications/",
-      "source": "Hacker News",
-      "score": 175,
-      "comments": 45
-    },
-    {
-      "id": "hn:49699489",
-      "title": "How my e-reader lost its stripes",
-      "summary": "",
-      "url": "https://www.serpentine.com/posts/2026/x3-stripes/",
-      "source": "Hacker News",
-      "score": 166,
-      "comments": 27
-    },
-    {
-      "id": "lob:dhn991",
-      "title": "Anecdotally, programmers dislike \"reduce\"",
-      "summary": "",
-      "url": "https://evanhahn.com/posts/2026-09-13-programmers-dislike-reduce/",
-      "source": "Lobste.rs",
-      "score": 95,
-      "comments": 87,
-      "tags": [
-        "programming"
-      ]
+      "score": 170,
+      "comments": 75
     },
     {
       "id": "lob:1ifr5f",
@@ -130,8 +100,8 @@
       "summary": "",
       "url": "https://bcantrill.dtrace.org/2026/09/13/the-contagion-of-fear/",
       "source": "Lobste.rs",
-      "score": 103,
-      "comments": 34,
+      "score": 154,
+      "comments": 44,
       "tags": [
         "vibecoding"
       ]
@@ -142,45 +112,10 @@
       "summary": "",
       "url": "https://giannirosato.com/blog/post/case-against-jxl",
       "source": "Lobste.rs",
-      "score": 58,
-      "comments": 45,
+      "score": 62,
+      "comments": 51,
       "tags": [
         "compsci"
-      ]
-    },
-    {
-      "id": "lob:gslcz7",
-      "title": "Mergiraf: A syntax-aware git merge driver for a growing collection of programming languages and file formats",
-      "summary": "",
-      "url": "https://codeberg.org/mergiraf/mergiraf",
-      "source": "Lobste.rs",
-      "score": 44,
-      "comments": 9,
-      "tags": [
-        "programming",
-        "vcs"
-      ]
-    },
-    {
-      "id": "hn:49704246",
-      "title": "Charts built for Chat",
-      "summary": "",
-      "url": "https://dbtcharts.com/blog/charts-built-for-chat/",
-      "source": "Hacker News",
-      "score": 145,
-      "comments": 45
-    },
-    {
-      "id": "lob:zbb37v",
-      "title": "Why is the x86 undefined instruction called ud2? Why 2?",
-      "summary": "",
-      "url": "https://devblogs.microsoft.com/oldnewthing/20260910-00/?p=112689",
-      "source": "Lobste.rs",
-      "score": 67,
-      "comments": 2,
-      "tags": [
-        "assembly",
-        "historical"
       ]
     },
     {
@@ -189,53 +124,109 @@
       "summary": "",
       "url": "https://yuvalino.com/how-can-you-not-be-romantic-about-unix-domain-sockets",
       "source": "Lobste.rs",
-      "score": 47,
-      "comments": 4,
+      "score": 85,
+      "comments": 9,
       "tags": [
         "c",
         "unix"
       ]
     },
     {
-      "id": "lob:ede4z0",
-      "title": "I wish you the best in the Offline",
+      "id": "lob:qiwlzz",
+      "title": "\"Do You Still Read the Code?\"",
       "summary": "",
-      "url": "https://daverupert.com/2026/09/i-wish-you-the-best-in-the-offline/",
+      "url": "https://zanlib.dev/blog/do-you-still-read-the-code/",
       "source": "Lobste.rs",
-      "score": 35,
-      "comments": 7,
+      "score": 59,
+      "comments": 11,
       "tags": [
-        "culture"
-      ]
-    },
-    {
-      "id": "rss:c7b0fd5f2e",
-      "title": "GitLab CVSS 10 File-Read Flaw Draws In-the-Wild Probes After Disclosure",
-      "summary": "GitLab has released patches to address multiple flaws, including a maximum-severity security vulnerability that has witnessed in-the-wild probes within hours of public disclosure.\n\nThe vulnerability in question is CVE-2026-85706 (CVSS score: 10.0), a path traversal issue in the repository commits AP",
-      "url": "https://thehackernews.com/2026/09/gitlab-cvss-10-file-read-flaw-draws-in.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:22abd97813",
-      "title": "Anthropic Says Seven China-Based AI Labs Ran Industrial-Scale Claude Distillation Attacks",
-      "summary": "Anthropic on Thursday said it identified and disrupted industrial-scale illicit distillation attacks against Claude from seven labs based in China, including Alibaba, Moonshot, DeepSeek, Z.ai (aka Zhipu), and MiniMax.\n\nKnowledge distillation by itself is a legitimate training method. It refers to a",
-      "url": "https://thehackernews.com/2026/09/anthropic-says-seven-china-based-ai.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "lob:agbpkq",
-      "title": "We are all Product Engineers now",
-      "summary": "",
-      "url": "https://seldo.com/posts/we-are-all-product-engineers-now/",
-      "source": "Lobste.rs",
-      "score": 15,
-      "comments": 21,
-      "tags": [
-        "programming",
+        "practices",
         "vibecoding"
       ]
+    },
+    {
+      "id": "rss:23c550e732",
+      "title": "Cisco Secure Email Gateway Flaw Exploited in the Wild, Enables Root Command Execution",
+      "summary": "Cisco has warned that a new critical vulnerability impacting AsyncOS Software for Cisco Secure Email Gateway has come under active exploitation in the wild.\n\nThe vulnerability, tracked as CVE-2026-76461, carries a CVSS score of 9.8 out of a maximum of 10.0. It has been described as a case of insuffi",
+      "url": "https://thehackernews.com/2026/09/cisco-secure-email-gateway-flaw.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "lob:zttri6",
+      "title": "A New Equal-Area Map for Interactive Computer Use (natively zooms to Mercator)",
+      "summary": "",
+      "url": "https://www.benjoffe.com/map",
+      "source": "Lobste.rs",
+      "score": 24,
+      "comments": 8,
+      "tags": [
+        "math",
+        "web"
+      ]
+    },
+    {
+      "id": "rss:d092c84be0",
+      "title": "Homebrew: 7.0.0 - faster installations and upgrades, stronger sandboxing, a native macOS app, built-in vulnerability checks and an advisory database, the end of macOS 10.15 support and Intel Macs moving to Tier 3.",
+      "summary": "Users must upgrade to macOS 11 or later, as this is now the minimum supported version. macOS Sonoma 14: This version is now considered Tier 3, and users are encouraged to upgrade to Sequoia 15+ for full support. Apple Silicon (macOS Golden Gate 27): Fully supported (Tier 1) with prebuilt bottles av",
+      "url": "https://www.reddit.com/r/programming/comments/1wftm95/homebrew_700_faster_installations_and_upgrades/",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "hn:49714239",
+      "title": "Swift 6.4 Released",
+      "summary": "",
+      "url": "https://www.swift.org/blog/swift-6.4-released/",
+      "source": "Hacker News",
+      "score": 75,
+      "comments": 17
+    },
+    {
+      "id": "lob:zbcua4",
+      "title": "Coreutils - rejected feature requests",
+      "summary": "",
+      "url": "https://www.gnu.org/software/coreutils/rejected_requests.html",
+      "source": "Lobste.rs",
+      "score": 28,
+      "comments": 2,
+      "tags": [
+        "programming",
+        "unix"
+      ]
+    },
+    {
+      "id": "rss:2d875bed41",
+      "title": "China-Linked Hackers Exploit Chrome-Windows Zero-Day Chain to Deploy GRIMWEDGE",
+      "summary": "A Chinese threat actor has been attributed to a spear-phishing campaign that exploits recently patched security flaws in Google Chrome and Microsoft Windows to deliver a malicious JavaScript backdoor called GRIMWEDGE.\n\nVolexity, which is tracking the threat cluster under the moniker UTA0560, said th",
+      "url": "https://thehackernews.com/2026/09/china-linked-hackers-exploit-chrome.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:ff1838d65a",
+      "title": "Red Heron Exploits Gitea RCE to Compromise 13 Organizations Across Six Countries",
+      "summary": "A suspected Chinese threat actor tracked as Red Heron has been attributed to the rapid exploitation of a recently disclosed security vulnerability in Gitea to compromise internet-facing instances as part of a multi-national campaign.\n\n\"Red Heron scanned 1,386 Gitea instances across seven countries a",
+      "url": "https://thehackernews.com/2026/09/red-heron-exploits-gitea-rce-to.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:3d46e1f618",
+      "title": "⚡ Weekly Recap: Rogue AI Agents, WeChat Worm, PaperCut Attacks, AI Espionage, and Rootkits",
+      "summary": "AI keeps showing up in the wrong places. Attackers are using it to speed up exploits, test defenses, and automate more of the job. Some models are also crossing lines on their own. That is not a great combination.\n\nThe rest of the week is more familiar: old bugs still working, fresh exploit chains,",
+      "url": "https://thehackernews.com/2026/09/weekly-recap-rogue-ai-agents-wechat.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "hn:49712102",
+      "title": "Show HN: Hacking a $20 4G wireless hotspot into a texting device",
+      "summary": "",
+      "url": "https://bkovac.github.io/modem-thing/",
+      "source": "Hacker News",
+      "score": 97,
+      "comments": 11
     }
   ],
   "ai_curated": true
