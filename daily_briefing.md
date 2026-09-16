@@ -4,27 +4,27 @@
 
 ---
 
-### 1. 📌 Homebrew 7.0.0 正式发布 (来源: Tech RSS / Reddit r/programming)
-- **核心干货**：Homebrew 迎来史诗级大版本更新——安装升级速度大幅提升、沙箱隔离更严格、终于有了原生 macOS 图形应用、内置漏洞检查和 advisory 数据库。同时正式抛弃 macOS 10.15，Intel Mac 被降级为 Tier 3 二等公民。Apple Silicon 用户享受预编译 bottle 的 Tier 1 待遇。
-- **毒舌/硬核点评**：Homebrew 终于想起来自己是个包管理器而不是"每次 brew update 都能泡杯咖啡"的行为艺术。Intel Mac 被踢进 Tier 3，库克看了都想说："我早就不生产你们了，Homebrew 只是替我补了一刀。"
-- **🔗 传送门**：[点击直达原链接](https://www.reddit.com/r/programming/comments/1wftm95/homebrew_700_faster_installations_and_upgrades/)
+### 1. 📌 [Baseten 生产环境 GitHub 权限 25 分钟沦陷] (来源: HackerNews)
+- **核心干货**：安全团队 Strix 披露了一次针对 AI 推理平台 Baseten 的完整攻击链——通过泄露的 GitHub Personal Access Token，25 分钟内从外部一路打穿到生产环境的管理员权限。这不是理论推演，是有完整时间线的实战复盘。对任何把 CI/CD 权限和代码仓库混在一起管理的团队来说，这是一份免费的尸检报告。
+- **毒舌/硬核点评**：25 分钟拿下一个 AI 独角兽的生产 GitHub，攻击者的效率比大多数公司的 onboarding 流程还高。你的 PAT 权限有多大，你的攻击面就有多大——这不是安全建议，这是物理定律。
+- **🔗 传送门**：[点击直达原链接](https://www.strix.ai/blog/baseten-harbor-github-pat-takeover)
 
 ---
 
-### 2. 📌 Capsule——单文件 Web 应用，数据直接存进 SQLite (来源: Hacker News | 115 分)
-- **核心干货**：用 Rust 写的一个新工具，把整个 Web 应用打包成单个文件（扩展名就是 `.capsule`），数据直接内嵌 SQLite 存储。解决了"写 HTML 页面很简单，但一涉及存数据和分享就得部署服务器"的经典痛点。写完即分享，打开即运行。
-- **毒舌/硬核点评**：这玩意儿的哲学是"你的数据不配拥有服务器"。对于做小工具、内部 demo、个人知识库的人来说，它可能比 Docker + Nginx + Postgres 三件套香一万倍。当然，如果你的应用需要 10 万并发，请自觉绕道——这不是给你准备的。
-- **🔗 传送门**：[点击直达原链接](https://withcapsule.app/)
+### 2. 📌 [System One Models 与 Jev 发布] (来源: HackerNews)
+- **核心干货**：typesafe.ai 发布了 System One Models 和配套的 Jev 工具链，HN 上 932 分、295 条评论，讨论热度远超同期 Gemini 更新。从命名和定位来看，这是冲着"系统级 AI 推理"去的——不是聊天机器人，是让 AI 模型直接参与系统行为决策。具体技术细节需要看原文，但 HN 的讨论烈度说明这东西踩到了某种真实的行业痛点。
+- **毒舌/硬核点评**：又一个"重新定义 AI"的发布会？不过 932 分说明至少不是纯营销。建议先看评论区吵架，再看技术文档——HN 的老哥们骂得越狠，说明东西越有料。
+- **🔗 传送门**：[点击直达原链接](https://typesafe.ai/blog/introducing-system-one-models-and-jev)
 
 ---
 
-### 3. 📌 Red Heron 利用 Gitea RCE 漏洞攻陷六国 13 家组织 (来源: The Hacker News)
-- **核心干货**：疑似中国背景的威胁组织 Red Heron 快速武器化了 Gitea 的一个远程代码执行漏洞，扫描了 7 个国家 1386 个 Gitea 实例，成功攻陷 13 家组织的面向公网实例。这是典型的"补丁空窗期"猎杀——漏洞刚披露就被大规模利用。
-- **毒舌/硬核点评**：自建 Gitea 的人以为自己逃离了 GitHub 的"监控"，结果发现自己直接暴露在了攻击者的枪口下，连个 WAF 都没挂。你以为你在搞"代码自主可控"，实际上是在给黑客搞"资产自主可控"。自托管的第一课永远是：先学会打补丁，再谈自由。
-- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/red-heron-exploits-gitea-rce-to.html)
+### 3. 📌 [Rheinmetall 开源其 Battlesuite 武器系统协议] (来源: HackerNews)
+- **核心干货**：德国军工巨头 Rheinmetall 把 Battlesuite 互联武器系统的通信协议文档开源了。一家造坦克炮和防空系统的公司，开始用 GitHub Pages 托管武器 API 文档——这个画面本身就值得玩味。从技术角度看，这可能推动军用系统互操作性的标准化；从行业角度看，军工开源的边界正在被重新定义。
+- **毒舌/硬核点评**：当军工巨头开始写 API 文档，说明现代战争已经变成了一场大型分布式系统集成项目。下一步是不是该给导弹写 OpenAPI Spec 了？`POST /fire` 返回 200 OK，附带 Swagger UI。
+- **🔗 传送门**：[点击直达原链接](https://rheinmetall.github.io/onboardapi-documentation/9.10.0/index.html)
 
 ---
 
 ### 🗣️ 今日顶男金句
 
-> **"自托管不是自由的终点，而是运维责任的起点——你省下的 SaaS 订阅费，最终会以凌晨三点修漏洞的形式还回去。"**
+> *"你的 PAT 权限有多大，你的攻击面就有多大；你的文档写得多清楚，你的系统就多容易被别人打穿——安全从来不是功能，是纪律。"*

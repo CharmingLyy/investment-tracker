@@ -1,76 +1,85 @@
 {
   "date": "2026-09-16",
-  "update_time": "2026-09-15 16:30:37",
+  "update_time": "2026-09-16 04:07:15",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-16\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Homebrew 7.0.0 正式发布 (来源: Tech RSS / Reddit r/programming)\n- **核心干货**：Homebrew 迎来史诗级大版本更新——安装升级速度大幅提升、沙箱隔离更严格、终于有了原生 macOS 图形应用、内置漏洞检查和 advisory 数据库。同时正式抛弃 macOS 10.15，Intel Mac 被降级为 Tier 3 二等公民。Apple Silicon 用户享受预编译 bottle 的 Tier 1 待遇。\n- **毒舌/硬核点评**：Homebrew 终于想起来自己是个包管理器而不是\"每次 brew update 都能泡杯咖啡\"的行为艺术。Intel Mac 被踢进 Tier 3，库克看了都想说：\"我早就不生产你们了，Homebrew 只是替我补了一刀。\"\n- **🔗 传送门**：[点击直达原链接](https://www.reddit.com/r/programming/comments/1wftm95/homebrew_700_faster_installations_and_upgrades/)\n\n---\n\n### 2. 📌 Capsule——单文件 Web 应用，数据直接存进 SQLite (来源: Hacker News | 115 分)\n- **核心干货**：用 Rust 写的一个新工具，把整个 Web 应用打包成单个文件（扩展名就是 `.capsule`），数据直接内嵌 SQLite 存储。解决了\"写 HTML 页面很简单，但一涉及存数据和分享就得部署服务器\"的经典痛点。写完即分享，打开即运行。\n- **毒舌/硬核点评**：这玩意儿的哲学是\"你的数据不配拥有服务器\"。对于做小工具、内部 demo、个人知识库的人来说，它可能比 Docker + Nginx + Postgres 三件套香一万倍。当然，如果你的应用需要 10 万并发，请自觉绕道——这不是给你准备的。\n- **🔗 传送门**：[点击直达原链接](https://withcapsule.app/)\n\n---\n\n### 3. 📌 Red Heron 利用 Gitea RCE 漏洞攻陷六国 13 家组织 (来源: The Hacker News)\n- **核心干货**：疑似中国背景的威胁组织 Red Heron 快速武器化了 Gitea 的一个远程代码执行漏洞，扫描了 7 个国家 1386 个 Gitea 实例，成功攻陷 13 家组织的面向公网实例。这是典型的\"补丁空窗期\"猎杀——漏洞刚披露就被大规模利用。\n- **毒舌/硬核点评**：自建 Gitea 的人以为自己逃离了 GitHub 的\"监控\"，结果发现自己直接暴露在了攻击者的枪口下，连个 WAF 都没挂。你以为你在搞\"代码自主可控\"，实际上是在给黑客搞\"资产自主可控\"。自托管的第一课永远是：先学会打补丁，再谈自由。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/red-heron-exploits-gitea-rce-to.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> **\"自托管不是自由的终点，而是运维责任的起点——你省下的 SaaS 订阅费，最终会以凌晨三点修漏洞的形式还回去。\"**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-16\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 [Baseten 生产环境 GitHub 权限 25 分钟沦陷] (来源: HackerNews)\n- **核心干货**：安全团队 Strix 披露了一次针对 AI 推理平台 Baseten 的完整攻击链——通过泄露的 GitHub Personal Access Token，25 分钟内从外部一路打穿到生产环境的管理员权限。这不是理论推演，是有完整时间线的实战复盘。对任何把 CI/CD 权限和代码仓库混在一起管理的团队来说，这是一份免费的尸检报告。\n- **毒舌/硬核点评**：25 分钟拿下一个 AI 独角兽的生产 GitHub，攻击者的效率比大多数公司的 onboarding 流程还高。你的 PAT 权限有多大，你的攻击面就有多大——这不是安全建议，这是物理定律。\n- **🔗 传送门**：[点击直达原链接](https://www.strix.ai/blog/baseten-harbor-github-pat-takeover)\n\n---\n\n### 2. 📌 [System One Models 与 Jev 发布] (来源: HackerNews)\n- **核心干货**：typesafe.ai 发布了 System One Models 和配套的 Jev 工具链，HN 上 932 分、295 条评论，讨论热度远超同期 Gemini 更新。从命名和定位来看，这是冲着\"系统级 AI 推理\"去的——不是聊天机器人，是让 AI 模型直接参与系统行为决策。具体技术细节需要看原文，但 HN 的讨论烈度说明这东西踩到了某种真实的行业痛点。\n- **毒舌/硬核点评**：又一个\"重新定义 AI\"的发布会？不过 932 分说明至少不是纯营销。建议先看评论区吵架，再看技术文档——HN 的老哥们骂得越狠，说明东西越有料。\n- **🔗 传送门**：[点击直达原链接](https://typesafe.ai/blog/introducing-system-one-models-and-jev)\n\n---\n\n### 3. 📌 [Rheinmetall 开源其 Battlesuite 武器系统协议] (来源: HackerNews)\n- **核心干货**：德国军工巨头 Rheinmetall 把 Battlesuite 互联武器系统的通信协议文档开源了。一家造坦克炮和防空系统的公司，开始用 GitHub Pages 托管武器 API 文档——这个画面本身就值得玩味。从技术角度看，这可能推动军用系统互操作性的标准化；从行业角度看，军工开源的边界正在被重新定义。\n- **毒舌/硬核点评**：当军工巨头开始写 API 文档，说明现代战争已经变成了一场大型分布式系统集成项目。下一步是不是该给导弹写 OpenAPI Spec 了？`POST /fire` 返回 200 OK，附带 Swagger UI。\n- **🔗 传送门**：[点击直达原链接](https://rheinmetall.github.io/onboardapi-documentation/9.10.0/index.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> *\"你的 PAT 权限有多大，你的攻击面就有多大；你的文档写得多清楚，你的系统就多容易被别人打穿——安全从来不是功能，是纪律。\"*",
   "briefing_items": [
     {
-      "title": "Homebrew 7.0.0 正式发布",
-      "source": "Tech RSS / Reddit r/programming",
-      "summary": "Homebrew 迎来史诗级大版本更新——安装升级速度大幅提升、沙箱隔离更严格、终于有了原生 macOS 图形应用、内置漏洞检查和 advisory 数据库。同时正式抛弃 macOS 10.15，Intel Mac 被降级为 Tier 3 二等公民。Apple Silicon 用户享受预编译 bottle 的 Tier 1 待遇。",
-      "commentary": "Homebrew 终于想起来自己是个包管理器而不是\"每次 brew update 都能泡杯咖啡\"的行为艺术。Intel Mac 被踢进 Tier 3，库克看了都想说：\"我早就不生产你们了，Homebrew 只是替我补了一刀。\"",
-      "url": "https://www.reddit.com/r/programming/comments/1wftm95/homebrew_700_faster_installations_and_upgrades/"
+      "title": "[Baseten 生产环境 GitHub 权限 25 分钟沦陷]",
+      "source": "HackerNews",
+      "summary": "安全团队 Strix 披露了一次针对 AI 推理平台 Baseten 的完整攻击链——通过泄露的 GitHub Personal Access Token，25 分钟内从外部一路打穿到生产环境的管理员权限。这不是理论推演，是有完整时间线的实战复盘。对任何把 CI/CD 权限和代码仓库混在一起管理的团队来说，这是一份免费的尸检报告。",
+      "commentary": "25 分钟拿下一个 AI 独角兽的生产 GitHub，攻击者的效率比大多数公司的 onboarding 流程还高。你的 PAT 权限有多大，你的攻击面就有多大——这不是安全建议，这是物理定律。",
+      "url": "https://www.strix.ai/blog/baseten-harbor-github-pat-takeover"
     },
     {
-      "title": "Capsule——单文件 Web 应用，数据直接存进 SQLite",
-      "source": "Hacker News | 115 分",
-      "summary": "用 Rust 写的一个新工具，把整个 Web 应用打包成单个文件（扩展名就是 `.capsule`），数据直接内嵌 SQLite 存储。解决了\"写 HTML 页面很简单，但一涉及存数据和分享就得部署服务器\"的经典痛点。写完即分享，打开即运行。",
-      "commentary": "这玩意儿的哲学是\"你的数据不配拥有服务器\"。对于做小工具、内部 demo、个人知识库的人来说，它可能比 Docker + Nginx + Postgres 三件套香一万倍。当然，如果你的应用需要 10 万并发，请自觉绕道——这不是给你准备的。",
-      "url": "https://withcapsule.app/"
+      "title": "[System One Models 与 Jev 发布]",
+      "source": "HackerNews",
+      "summary": "typesafe.ai 发布了 System One Models 和配套的 Jev 工具链，HN 上 932 分、295 条评论，讨论热度远超同期 Gemini 更新。从命名和定位来看，这是冲着\"系统级 AI 推理\"去的——不是聊天机器人，是让 AI 模型直接参与系统行为决策。具体技术细节需要看原文，但 HN 的讨论烈度说明这东西踩到了某种真实的行业痛点。",
+      "commentary": "又一个\"重新定义 AI\"的发布会？不过 932 分说明至少不是纯营销。建议先看评论区吵架，再看技术文档——HN 的老哥们骂得越狠，说明东西越有料。",
+      "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
     },
     {
-      "title": "Red Heron 利用 Gitea RCE 漏洞攻陷六国 13 家组织",
-      "source": "The Hacker News",
-      "summary": "疑似中国背景的威胁组织 Red Heron 快速武器化了 Gitea 的一个远程代码执行漏洞，扫描了 7 个国家 1386 个 Gitea 实例，成功攻陷 13 家组织的面向公网实例。这是典型的\"补丁空窗期\"猎杀——漏洞刚披露就被大规模利用。",
-      "commentary": "自建 Gitea 的人以为自己逃离了 GitHub 的\"监控\"，结果发现自己直接暴露在了攻击者的枪口下，连个 WAF 都没挂。你以为你在搞\"代码自主可控\"，实际上是在给黑客搞\"资产自主可控\"。自托管的第一课永远是：先学会打补丁，再谈自由。",
-      "url": "https://thehackernews.com/2026/09/red-heron-exploits-gitea-rce-to.html"
+      "title": "[Rheinmetall 开源其 Battlesuite 武器系统协议]",
+      "source": "HackerNews",
+      "summary": "德国军工巨头 Rheinmetall 把 Battlesuite 互联武器系统的通信协议文档开源了。一家造坦克炮和防空系统的公司，开始用 GitHub Pages 托管武器 API 文档——这个画面本身就值得玩味。从技术角度看，这可能推动军用系统互操作性的标准化；从行业角度看，军工开源的边界正在被重新定义。",
+      "commentary": "当军工巨头开始写 API 文档，说明现代战争已经变成了一场大型分布式系统集成项目。下一步是不是该给导弹写 OpenAPI Spec 了？`POST /fire` 返回 200 OK，附带 Swagger UI。",
+      "url": "https://rheinmetall.github.io/onboardapi-documentation/9.10.0/index.html"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49712278",
-      "title": "Show HN: Capsule – Single-file web apps that save their data into SQLite",
-      "summary": "Hey HN,<p>I always had the problem that building HTML pages is really simple now, but trying to save data required hosting it somewhere, and sharing it afterwards was not easy. Over the last few months, I&#x27;ve been building an app called Capsule (it’s also the file extension name) written in Rust",
-      "url": "https://withcapsule.app/",
+      "id": "hn:49717638",
+      "title": "Building a Linux GPU Driver for the M4 Mac Mini in One Month",
+      "summary": "",
+      "url": "https://codyho.dev/blog/gpu-driver/",
       "source": "Hacker News",
-      "score": 115,
-      "comments": 61
+      "score": 203,
+      "comments": 122
     },
     {
-      "id": "hn:49712041",
-      "title": "Java 27 Released",
+      "id": "hn:49717558",
+      "title": "Introducing System One Models and Jev",
       "summary": "",
-      "url": "https://mail.openjdk.org/archives/list/announce@openjdk.org/thread/ORGGLMN75HFEWP7YL3ZLGHLYHVIBJDYT/",
+      "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
       "source": "Hacker News",
-      "score": 227,
-      "comments": 171
+      "score": 932,
+      "comments": 295
     },
     {
       "id": "hn:49711544",
       "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
-      "summary": "",
+      "summary": "See also: <i>Avian Visitors</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=48343424\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=48343424</a> - May 2026 (20 comments)",
       "url": "https://github.com/arnegiacomo/fugleramme",
       "source": "Hacker News",
-      "score": 583,
-      "comments": 92
+      "score": 1409,
+      "comments": 185
     },
     {
-      "id": "hn:49708431",
-      "title": "I can't stop thinking about Papua New Guinea",
+      "id": "hn:49716176",
+      "title": "An update on Wayback Machine access",
       "summary": "",
-      "url": "https://notnottalmud.substack.com/p/why-i-cant-stop-thinking-about-papua",
+      "url": "https://blog.archive.org/2026/09/15/an-update-on-wayback-machine-access/",
       "source": "Hacker News",
-      "score": 688,
-      "comments": 299
+      "score": 439,
+      "comments": 233
     },
     {
-      "id": "hn:49710883",
-      "title": "25 Years of Mass Surveillance Is Enough",
+      "id": "hn:49715947",
+      "title": "Gemini 3.8 Live and 3.8 Live Extended Thinking",
       "summary": "",
-      "url": "https://www.schneier.com/blog/archives/2026/09/25-years-of-mass-surveillance-is-enough.html",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
       "source": "Hacker News",
-      "score": 473,
-      "comments": 143
+      "score": 340,
+      "comments": 215
+    },
+    {
+      "id": "hn:49716476",
+      "title": "We got admin access to Baseten's production GitHub in 25 minutes",
+      "summary": "",
+      "url": "https://www.strix.ai/blog/baseten-harbor-github-pat-takeover",
+      "source": "Hacker News",
+      "score": 246,
+      "comments": 136
     },
     {
       "id": "lob:lbavmm",
@@ -78,21 +87,21 @@
       "summary": "<p>Interested in hearing your opinions, I usually learn a lot from it.</p>\n<p>For me it has to be Parse, Don’t Validate and early joelonsoftware.</p>\n",
       "url": "https://lobste.rs/s/lbavmm/what_blog_posts_influenced_your_thinking",
       "source": "Lobste.rs",
-      "score": 80,
-      "comments": 48,
+      "score": 97,
+      "comments": 57,
       "tags": [
         "ask",
         "practices"
       ]
     },
     {
-      "id": "hn:49709381",
-      "title": "Alternatives to MinIO for single-node local S3",
+      "id": "hn:49718928",
+      "title": "German Rheinmetall open-sources its Battlesuite connected weapon system protcol",
       "summary": "",
-      "url": "https://rmoff.net/2026/01/14/alternatives-to-minio-for-single-node-local-s3/",
+      "url": "https://rheinmetall.github.io/onboardapi-documentation/9.10.0/index.html",
       "source": "Hacker News",
-      "score": 170,
-      "comments": 75
+      "score": 156,
+      "comments": 46
     },
     {
       "id": "lob:1ifr5f",
@@ -100,23 +109,20 @@
       "summary": "",
       "url": "https://bcantrill.dtrace.org/2026/09/13/the-contagion-of-fear/",
       "source": "Lobste.rs",
-      "score": 154,
-      "comments": 44,
+      "score": 170,
+      "comments": 62,
       "tags": [
         "vibecoding"
       ]
     },
     {
-      "id": "lob:e1lcnf",
-      "title": "The case against JPEG XL",
+      "id": "hn:49716953",
+      "title": "Chopping up books when they're physically too big",
       "summary": "",
-      "url": "https://giannirosato.com/blog/post/case-against-jxl",
-      "source": "Lobste.rs",
-      "score": 62,
-      "comments": 51,
-      "tags": [
-        "compsci"
-      ]
+      "url": "https://attainablefelicity.mattkirkland.com/20260915/cut-up-your-books.html",
+      "source": "Hacker News",
+      "score": 137,
+      "comments": 134
     },
     {
       "id": "lob:uauns9",
@@ -124,10 +130,23 @@
       "summary": "",
       "url": "https://yuvalino.com/how-can-you-not-be-romantic-about-unix-domain-sockets",
       "source": "Lobste.rs",
-      "score": 85,
-      "comments": 9,
+      "score": 95,
+      "comments": 11,
       "tags": [
         "c",
+        "unix"
+      ]
+    },
+    {
+      "id": "lob:zbcua4",
+      "title": "Coreutils - rejected feature requests",
+      "summary": "",
+      "url": "https://www.gnu.org/software/coreutils/rejected_requests.html",
+      "source": "Lobste.rs",
+      "score": 51,
+      "comments": 9,
+      "tags": [
+        "programming",
         "unix"
       ]
     },
@@ -137,12 +156,88 @@
       "summary": "",
       "url": "https://zanlib.dev/blog/do-you-still-read-the-code/",
       "source": "Lobste.rs",
-      "score": 59,
-      "comments": 11,
+      "score": 76,
+      "comments": 12,
       "tags": [
         "practices",
         "vibecoding"
       ]
+    },
+    {
+      "id": "lob:buzdkb",
+      "title": "GEFS on OpenBSD: A very early preview",
+      "summary": "",
+      "url": "https://marc.info/?l=openbsd-tech&m=178948744271633&w=2",
+      "source": "Lobste.rs",
+      "score": 55,
+      "comments": 7,
+      "tags": [
+        "openbsd"
+      ]
+    },
+    {
+      "id": "lob:zttri6",
+      "title": "A New Equal-Area Map for Interactive Computer Use (natively zooms to Mercator)",
+      "summary": "",
+      "url": "https://www.benjoffe.com/map",
+      "source": "Lobste.rs",
+      "score": 32,
+      "comments": 8,
+      "tags": [
+        "math",
+        "web"
+      ]
+    },
+    {
+      "id": "lob:lgcmoo",
+      "title": "CSS-Tricks in Limbo",
+      "summary": "",
+      "url": "https://vale.rocks/micros/20260915-0135",
+      "source": "Lobste.rs",
+      "score": 40,
+      "comments": 6,
+      "tags": [
+        "css",
+        "web"
+      ]
+    },
+    {
+      "id": "arxiv:2609.17527v1",
+      "title": "Agentic Societies Need a Social Harness",
+      "summary": "An agentic society is a collection of AI agents that coordinate autonomously across trust boundaries, on behalf of different principals whose objectives may only partially align. We show experimentally that in agentic societies even honest, competent agents often fail to reach satisfactory outcomes ",
+      "url": "https://arxiv.org/abs/2609.17527v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.MA",
+        "cs.AI",
+        "cs.NI"
+      ],
+      "arxiv_id": "2609.17527v1"
+    },
+    {
+      "id": "arxiv:2609.17523v1",
+      "title": "ScienceBuddy: Recursive-in-Recursive Self-Improvement for Interactive Scientific Agents",
+      "summary": "We introduce and release ScienceBuddy, an interactive scientific research workspace that brings continually improving scientific agents into researchers' everyday workflows. ScienceBuddy supports researchers in carrying out scientific tasks while transforming their requests, feedback, and execution ",
+      "url": "https://arxiv.org/abs/2609.17523v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_id": "2609.17523v1"
+    },
+    {
+      "id": "arxiv:2609.17499v1",
+      "title": "ENCP: Episode-Normalized Conformal Prediction for Vision-and-Language Navigation",
+      "summary": "Uncertainty estimation for Vision-Language-Navigation (VLN) models is a critical task since it can help identify ambiguous and unreliable predictions, enabling agents to make safer navigation decisions. As one of the most advanced uncertainty estimation frameworks, conformal prediction (CP) offers a",
+      "url": "https://arxiv.org/abs/2609.17499v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "arxiv_id": "2609.17499v1"
     },
     {
       "id": "rss:23c550e732",
@@ -151,82 +246,6 @@
       "url": "https://thehackernews.com/2026/09/cisco-secure-email-gateway-flaw.html",
       "source": "Tech RSS",
       "score": 0
-    },
-    {
-      "id": "lob:zttri6",
-      "title": "A New Equal-Area Map for Interactive Computer Use (natively zooms to Mercator)",
-      "summary": "",
-      "url": "https://www.benjoffe.com/map",
-      "source": "Lobste.rs",
-      "score": 24,
-      "comments": 8,
-      "tags": [
-        "math",
-        "web"
-      ]
-    },
-    {
-      "id": "rss:d092c84be0",
-      "title": "Homebrew: 7.0.0 - faster installations and upgrades, stronger sandboxing, a native macOS app, built-in vulnerability checks and an advisory database, the end of macOS 10.15 support and Intel Macs moving to Tier 3.",
-      "summary": "Users must upgrade to macOS 11 or later, as this is now the minimum supported version. macOS Sonoma 14: This version is now considered Tier 3, and users are encouraged to upgrade to Sequoia 15+ for full support. Apple Silicon (macOS Golden Gate 27): Fully supported (Tier 1) with prebuilt bottles av",
-      "url": "https://www.reddit.com/r/programming/comments/1wftm95/homebrew_700_faster_installations_and_upgrades/",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "hn:49714239",
-      "title": "Swift 6.4 Released",
-      "summary": "",
-      "url": "https://www.swift.org/blog/swift-6.4-released/",
-      "source": "Hacker News",
-      "score": 75,
-      "comments": 17
-    },
-    {
-      "id": "lob:zbcua4",
-      "title": "Coreutils - rejected feature requests",
-      "summary": "",
-      "url": "https://www.gnu.org/software/coreutils/rejected_requests.html",
-      "source": "Lobste.rs",
-      "score": 28,
-      "comments": 2,
-      "tags": [
-        "programming",
-        "unix"
-      ]
-    },
-    {
-      "id": "rss:2d875bed41",
-      "title": "China-Linked Hackers Exploit Chrome-Windows Zero-Day Chain to Deploy GRIMWEDGE",
-      "summary": "A Chinese threat actor has been attributed to a spear-phishing campaign that exploits recently patched security flaws in Google Chrome and Microsoft Windows to deliver a malicious JavaScript backdoor called GRIMWEDGE.\n\nVolexity, which is tracking the threat cluster under the moniker UTA0560, said th",
-      "url": "https://thehackernews.com/2026/09/china-linked-hackers-exploit-chrome.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:ff1838d65a",
-      "title": "Red Heron Exploits Gitea RCE to Compromise 13 Organizations Across Six Countries",
-      "summary": "A suspected Chinese threat actor tracked as Red Heron has been attributed to the rapid exploitation of a recently disclosed security vulnerability in Gitea to compromise internet-facing instances as part of a multi-national campaign.\n\n\"Red Heron scanned 1,386 Gitea instances across seven countries a",
-      "url": "https://thehackernews.com/2026/09/red-heron-exploits-gitea-rce-to.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:3d46e1f618",
-      "title": "⚡ Weekly Recap: Rogue AI Agents, WeChat Worm, PaperCut Attacks, AI Espionage, and Rootkits",
-      "summary": "AI keeps showing up in the wrong places. Attackers are using it to speed up exploits, test defenses, and automate more of the job. Some models are also crossing lines on their own. That is not a great combination.\n\nThe rest of the week is more familiar: old bugs still working, fresh exploit chains,",
-      "url": "https://thehackernews.com/2026/09/weekly-recap-rogue-ai-agents-wechat.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "hn:49712102",
-      "title": "Show HN: Hacking a $20 4G wireless hotspot into a texting device",
-      "summary": "",
-      "url": "https://bkovac.github.io/modem-thing/",
-      "source": "Hacker News",
-      "score": 97,
-      "comments": 11
     }
   ],
   "ai_curated": true
