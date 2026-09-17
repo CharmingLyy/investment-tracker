@@ -1,76 +1,61 @@
 {
   "date": "2026-09-17",
-  "update_time": "2026-09-16 16:21:41",
+  "update_time": "2026-09-17 04:14:22",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-17\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 System One Models 与 Jev 发布 (来源: HackerNews)\n- **核心干货**：Typesafe 团队发布了 System One 模型系列及配套推理引擎 Jev。从命名逻辑推测，这是针对\"System 1 快思考\"场景优化的模型——即低延迟、高吞吐的直觉型推理，而非当前主流大模型那种\"想半天再回答\"的慢思考路径。Jev 作为运行时，大概率在调度和内存管理上做了针对性设计。HN 1673 分、458 条评论的讨论热度说明这戳中了行业对\"推理成本\"的集体焦虑。\n- **毒舌/硬核点评**：2026 年了，终于有人想起来不是所有 AI 任务都需要模型\"深思熟虑\"三秒钟——你家门锁识别人脸不需要 Chain-of-Thought。\n- **🔗 传送门**：[点击直达原链接](https://typesafe.ai/blog/introducing-system-one-models-and-jev)\n\n---\n\n### 2. 📌 Apple Reference Image：验证摄影的新范式 (来源: HackerNews)\n- **核心干货**：Apple 安全团队提出了一套\"参考图像\"方案，用于验证照片是否由真实相机传感器拍摄、是否经过 AI 篡改。核心思路是在图像采集环节嵌入硬件级的密码学签名，让后期无法伪造\"原图证明\"。在 AI 生成图像泛滥、深度伪造成为日常威胁的当下，这是从硬件信任根层面重建\"眼见为实\"的尝试。409 分、261 条评论说明争议不小——隐私派和新闻真实性派已经在评论区打起来了。\n- **毒舌/硬核点评**：Apple 终于找到了一个既卖硬件又卖安全叙事的新故事——只是不知道这套系统会不会\"恰好\"只对 iPhone 拍摄的照片有效。\n- **🔗 传送门**：[点击直达原链接](https://security.apple.com/blog/apple-reference-image/)\n\n---\n\n### 3. 📌 Agentic Societies Need a Social Harness (来源: ArXiv)\n- **核心干货**：这篇论文研究了一个被大多数人忽视的问题：当多个 AI Agent 组成\"社会\"协作时，即使每个 Agent 都诚实且能力足够，它们仍然经常无法达成满意结果。作者提出需要一套\"社会性约束框架\"（Social Harness）来规范 Agent 间的信任边界、目标对齐和信息交换。这不是又一个多 Agent 编排框架的工程论文，而是从机制设计角度指出：Agent 社会的失败模式，本质上是制度问题，不是模型能力问题。\n- **毒舌/硬核点评**：翻译一下——\"一群高智商 AI 凑在一起照样搞砸事情\"，这不叫 Bug，这叫社会学。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2609.17527v1)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> 模型越聪明，社会越复杂，问题越原始——技术解决的是\"能不能\"，制度解决的是\"该不该\"。搞钱和搞技术都一样：别光卷能力，先搭好协作的地基。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-17\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Nvidia 官宣 Rust 原生 GPU 编程 (来源: HackerNews)\n- **核心干货**：Nvidia 正式发布 CUDA Rust 双轨方案，允许开发者用 Rust 直接编写 GPU Kernel，无需再忍受 C++ 那套模板地狱和未定义行为的\"薛定谔内存安全\"。这意味着 Rust 正式杀入高性能计算腹地，GPU 编程的内存安全债终于有人来还了。\n- **毒舌/硬核点评**：C++ 程序员还在为 `segfault` 烧香拜佛的时候，Rust 已经把 borrow checker 搬进了显存。老黄这波操作像是给 GPU 圈发了一张\"文明入场券\"，只不过门票是用 `unsafe` 块换的——毕竟跟硬件打交道，安全感永远是奢侈品。\n- **🔗 传送门**：[点击直达原链接](https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/)\n\n---\n\n### 2. 📌 用 4B 小模型让 Postgres 查询快 81% (来源: HackerNews)\n- **核心干货**：有人训练了一个 40 亿参数的模型专门优化 SQL 查询计划，跑出了比原生 Postgres 查询规划器快 81% 的成绩。这不是\"AI 套壳数据库\"，而是把查询优化器这个数据库界的\"玄学黑盒\"直接用强化学习给端了——数据库内核最硬的骨头之一，被小模型啃动了。\n- **毒舌/硬核点评**：DBA 们苦查询计划调优久矣，现在一个 4B 模型告诉你：\"你调了三天的 `EXPLAIN ANALYZE`，我 0.1 秒就算完了。\" 查询优化器从\"经验主义的艺术\"变成\"模型驱动的科学\"，这波是 AI 对数据库内核工程师的精准降维打击。\n- **🔗 传送门**：[点击直达原链接](https://rohanbansal.com/qorl)\n\n---\n\n### 3. 📌 打破 1.58-bit 三值 LLM 的性能壁垒 (来源: ArXiv)\n- **核心干货**：三值量化（权重只有 -1、0、1）一直是 LLM 压缩的圣杯，但精度损失让人望而却步。这篇论文声称突破了 1.58-bit 的性能天花板，意味着模型体积可压缩到极致的同时还能保住可用性——如果结果可复现，端侧部署大模型的算力门槛将再次被砸穿。\n- **毒舌/硬核点评**：当所有人都在堆 GPU 集群烧钱训模型时，有人默默把权重压到了\"要么正、要么负、要么滚\"。BitNet 开了个头，这篇论文要是站得住，那\"参数即正义\"的信仰怕是要被三值逻辑按在地上摩擦——毕竟用户只关心跑得动，不关心你有几个 bit。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2609.16338)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"技术演进的本质不是让事情变简单，而是把复杂度从你眼前挪到你看不见的地方——所以别庆幸自己不用懂底层了，你只是还没被底层反噬而已。\"",
   "briefing_items": [
     {
-      "title": "System One Models 与 Jev 发布",
+      "title": "Nvidia 官宣 Rust 原生 GPU 编程",
       "source": "HackerNews",
-      "summary": "Typesafe 团队发布了 System One 模型系列及配套推理引擎 Jev。从命名逻辑推测，这是针对\"System 1 快思考\"场景优化的模型——即低延迟、高吞吐的直觉型推理，而非当前主流大模型那种\"想半天再回答\"的慢思考路径。Jev 作为运行时，大概率在调度和内存管理上做了针对性设计。HN 1673 分、458 条评论的讨论热度说明这戳中了行业对\"推理成本\"的集体焦虑。",
-      "commentary": "2026 年了，终于有人想起来不是所有 AI 任务都需要模型\"深思熟虑\"三秒钟——你家门锁识别人脸不需要 Chain-of-Thought。",
-      "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+      "summary": "Nvidia 正式发布 CUDA Rust 双轨方案，允许开发者用 Rust 直接编写 GPU Kernel，无需再忍受 C++ 那套模板地狱和未定义行为的\"薛定谔内存安全\"。这意味着 Rust 正式杀入高性能计算腹地，GPU 编程的内存安全债终于有人来还了。",
+      "commentary": "C++ 程序员还在为 `segfault` 烧香拜佛的时候，Rust 已经把 borrow checker 搬进了显存。老黄这波操作像是给 GPU 圈发了一张\"文明入场券\"，只不过门票是用 `unsafe` 块换的——毕竟跟硬件打交道，安全感永远是奢侈品。",
+      "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/"
     },
     {
-      "title": "Apple Reference Image：验证摄影的新范式",
+      "title": "用 4B 小模型让 Postgres 查询快 81%",
       "source": "HackerNews",
-      "summary": "Apple 安全团队提出了一套\"参考图像\"方案，用于验证照片是否由真实相机传感器拍摄、是否经过 AI 篡改。核心思路是在图像采集环节嵌入硬件级的密码学签名，让后期无法伪造\"原图证明\"。在 AI 生成图像泛滥、深度伪造成为日常威胁的当下，这是从硬件信任根层面重建\"眼见为实\"的尝试。409 分、261 条评论说明争议不小——隐私派和新闻真实性派已经在评论区打起来了。",
-      "commentary": "Apple 终于找到了一个既卖硬件又卖安全叙事的新故事——只是不知道这套系统会不会\"恰好\"只对 iPhone 拍摄的照片有效。",
-      "url": "https://security.apple.com/blog/apple-reference-image/"
+      "summary": "有人训练了一个 40 亿参数的模型专门优化 SQL 查询计划，跑出了比原生 Postgres 查询规划器快 81% 的成绩。这不是\"AI 套壳数据库\"，而是把查询优化器这个数据库界的\"玄学黑盒\"直接用强化学习给端了——数据库内核最硬的骨头之一，被小模型啃动了。",
+      "commentary": "DBA 们苦查询计划调优久矣，现在一个 4B 模型告诉你：\"你调了三天的 `EXPLAIN ANALYZE`，我 0.1 秒就算完了。\" 查询优化器从\"经验主义的艺术\"变成\"模型驱动的科学\"，这波是 AI 对数据库内核工程师的精准降维打击。",
+      "url": "https://rohanbansal.com/qorl"
     },
     {
-      "title": "Agentic Societies Need a Social Harness",
+      "title": "打破 1.58-bit 三值 LLM 的性能壁垒",
       "source": "ArXiv",
-      "summary": "这篇论文研究了一个被大多数人忽视的问题：当多个 AI Agent 组成\"社会\"协作时，即使每个 Agent 都诚实且能力足够，它们仍然经常无法达成满意结果。作者提出需要一套\"社会性约束框架\"（Social Harness）来规范 Agent 间的信任边界、目标对齐和信息交换。这不是又一个多 Agent 编排框架的工程论文，而是从机制设计角度指出：Agent 社会的失败模式，本质上是制度问题，不是模型能力问题。",
-      "commentary": "翻译一下——\"一群高智商 AI 凑在一起照样搞砸事情\"，这不叫 Bug，这叫社会学。",
-      "url": "https://arxiv.org/abs/2609.17527v1"
+      "summary": "三值量化（权重只有 -1、0、1）一直是 LLM 压缩的圣杯，但精度损失让人望而却步。这篇论文声称突破了 1.58-bit 的性能天花板，意味着模型体积可压缩到极致的同时还能保住可用性——如果结果可复现，端侧部署大模型的算力门槛将再次被砸穿。",
+      "commentary": "当所有人都在堆 GPU 集群烧钱训模型时，有人默默把权重压到了\"要么正、要么负、要么滚\"。BitNet 开了个头，这篇论文要是站得住，那\"参数即正义\"的信仰怕是要被三值逻辑按在地上摩擦——毕竟用户只关心跑得动，不关心你有几个 bit。",
+      "url": "https://arxiv.org/abs/2609.16338"
+    },
+    {
+      "quote": "\"技术演进的本质不是让事情变简单，而是把复杂度从你眼前挪到你看不见的地方——所以别庆幸自己不用懂底层了，你只是还没被底层反噬而已。\""
     }
   ],
   "candidates": [
     {
-      "id": "hn:49723408",
-      "title": "Mistral X Mozilla: Private, Multilingual AI Browsing",
+      "id": "hn:49731285",
+      "title": "Training a 4B model to produce 81% faster query plans than Postgres",
       "summary": "",
-      "url": "https://mistral.ai/news/mistral-x-mozilla/",
+      "url": "https://rohanbansal.com/qorl",
       "source": "Hacker News",
-      "score": 340,
-      "comments": 110
+      "score": 446,
+      "comments": 91
     },
     {
-      "id": "hn:49717558",
-      "title": "Introducing System One Models and Jev",
+      "id": "hn:49724881",
+      "title": "Nvidia announces native GPU programming in Rust",
       "summary": "",
-      "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+      "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/",
       "source": "Hacker News",
-      "score": 1673,
-      "comments": 458
+      "score": 421,
+      "comments": 155
     },
     {
-      "id": "hn:49711544",
-      "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
-      "summary": "See also: <i>Avian Visitors</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=48343424\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=48343424</a> - May 2026 (20 comments)",
-      "url": "https://github.com/arnegiacomo/fugleramme",
-      "source": "Hacker News",
-      "score": 1849,
-      "comments": 220
-    },
-    {
-      "id": "hn:49726586",
-      "title": "Hackers Got Inside a Flock Camera. Its Data Shows How the System Works",
+      "id": "hn:49732270",
+      "title": "Xiaomi Mimo 2.6 live post-training dashboard",
       "summary": "",
-      "url": "https://www.wired.com/story/hackers-flock-camera-data-shows-how-system-works/",
+      "url": "https://mimo.xiaomi.com/rl/",
       "source": "Hacker News",
-      "score": 220,
-      "comments": 99
-    },
-    {
-      "id": "hn:49721322",
-      "title": "Apple Reference Image: A New Approach for Verified Photography",
-      "summary": "",
-      "url": "https://security.apple.com/blog/apple-reference-image/",
-      "source": "Hacker News",
-      "score": 409,
-      "comments": 261
+      "score": 317,
+      "comments": 83
     },
     {
       "id": "lob:ynjgbz",
@@ -78,36 +63,50 @@
       "summary": "",
       "url": "https://www.omgubuntu.co.uk/2026/09/ubuntu-2610-rust-coreutils-complete",
       "source": "Lobste.rs",
-      "score": 31,
-      "comments": 30,
+      "score": 45,
+      "comments": 49,
       "tags": [
         "rust"
       ]
     },
     {
-      "id": "lob:buzdkb",
-      "title": "GEFS on OpenBSD: A very early preview",
+      "id": "hn:49729000",
+      "title": "Small programming tricks",
       "summary": "",
-      "url": "https://marc.info/?l=openbsd-tech&m=178948744271633&w=2",
+      "url": "https://will-keleher.com/posts/small-programming-tricks-matter/",
+      "source": "Hacker News",
+      "score": 434,
+      "comments": 196
+    },
+    {
+      "id": "hn:49711424",
+      "title": "Performance Improvements in .NET 11",
+      "summary": "",
+      "url": "https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-11/",
+      "source": "Hacker News",
+      "score": 218,
+      "comments": 39
+    },
+    {
+      "id": "lob:ihw0hq",
+      "title": "The end of verygoodsoftwarenotvirus.ru",
+      "summary": "",
+      "url": "https://blog.verygoodsoftwarenotvirus.dev/posts/2026/09/12/the-end-of-verygoodsoftwarenotvirus-dot-ru/",
       "source": "Lobste.rs",
-      "score": 82,
-      "comments": 15,
+      "score": 50,
+      "comments": 17,
       "tags": [
-        "openbsd"
+        "web"
       ]
     },
     {
-      "id": "lob:zbcua4",
-      "title": "Coreutils - rejected feature requests",
+      "id": "hn:49719596",
+      "title": "The engineering behind the US Strategic Petroleum Reserve",
       "summary": "",
-      "url": "https://www.gnu.org/software/coreutils/rejected_requests.html",
-      "source": "Lobste.rs",
-      "score": 66,
-      "comments": 18,
-      "tags": [
-        "programming",
-        "unix"
-      ]
+      "url": "https://johnjwang.com/post/2026/09/15/engineering-behind-us-strategic-petroleum-reserve",
+      "source": "Hacker News",
+      "score": 147,
+      "comments": 53
     },
     {
       "id": "lob:wxnibb",
@@ -115,88 +114,55 @@
       "summary": "<p>A/I is Autistici/Inventati, nothing to do with algorithms.</p>\n<p>Why this matters: to quote senior advisor and journalist <a href=\"https://systemli.social/@anneroth\" rel=\"ugc\">Anne Roth</a>:</p>\n<blockquote>\n<p>20,000 mail accounts.\n20,000 blogs.\n5,000 mailing lists.\n1,500 websites.</p>\n<p>In Eu",
       "url": "https://keepitfree.ai/announcements/a/i-shuts-down-stay-human/",
       "source": "Lobste.rs",
-      "score": 89,
-      "comments": 51,
+      "score": 139,
+      "comments": 81,
       "tags": [
         "finance",
         "privacy"
       ]
     },
     {
-      "id": "lob:zutlqt",
-      "title": "Some things Veloren does differently",
+      "id": "lob:tgrvxh",
+      "title": "Forgery of C2PA on a Pixel 10",
       "summary": "",
-      "url": "https://blog.jsbarretto.com/post/veloren",
+      "url": "https://www.hackerfactor.com/blog/index.php?/archives/1102-C2PA-and-Pixel-Glitter-Milk.html",
       "source": "Lobste.rs",
-      "score": 44,
-      "comments": 1,
+      "score": 40,
+      "comments": 16,
       "tags": [
-        "games",
-        "graphics",
-        "rust"
+        "cryptography",
+        "security"
       ]
     },
     {
-      "id": "arxiv:2609.17527v1",
-      "title": "Agentic Societies Need a Social Harness",
-      "summary": "An agentic society is a collection of AI agents that coordinate autonomously across trust boundaries, on behalf of different principals whose objectives may only partially align. We show experimentally that in agentic societies even honest, competent agents often fail to reach satisfactory outcomes ",
-      "url": "https://arxiv.org/abs/2609.17527v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.MA",
-        "cs.AI",
-        "cs.NI"
-      ],
-      "arxiv_id": "2609.17527v1"
+      "id": "lob:lvld5b",
+      "title": "How to get a DOI for your blog posts",
+      "summary": "",
+      "url": "https://shkspr.mobi/blog/2026/09/how-to-get-a-doi-for-your-blog-posts/",
+      "source": "Lobste.rs",
+      "score": 32,
+      "comments": 9,
+      "tags": [
+        "web"
+      ]
     },
     {
-      "id": "arxiv:2609.17523v1",
-      "title": "ScienceBuddy: Recursive-in-Recursive Self-Improvement for Interactive Scientific Agents",
-      "summary": "We introduce and release ScienceBuddy, an interactive scientific research workspace that brings continually improving scientific agents into researchers' everyday workflows. ScienceBuddy supports researchers in carrying out scientific tasks while transforming their requests, feedback, and execution ",
-      "url": "https://arxiv.org/abs/2609.17523v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_id": "2609.17523v1"
+      "id": "hn:49732513",
+      "title": "Backups Aren't Simple",
+      "summary": "",
+      "url": "https://filipovski.net/2026/09/16/backups-arent-simple.html",
+      "source": "Hacker News",
+      "score": 130,
+      "comments": 66
     },
     {
-      "id": "arxiv:2609.17499v1",
-      "title": "ENCP: Episode-Normalized Conformal Prediction for Vision-and-Language Navigation",
-      "summary": "Uncertainty estimation for Vision-Language-Navigation (VLN) models is a critical task since it can help identify ambiguous and unreliable predictions, enabling agents to make safer navigation decisions. As one of the most advanced uncertainty estimation frameworks, conformal prediction (CP) offers a",
-      "url": "https://arxiv.org/abs/2609.17499v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.RO"
-      ],
-      "arxiv_id": "2609.17499v1"
-    },
-    {
-      "id": "rss:c13b082f0e",
-      "title": "Attackers Exploit Issabel Framework Flaw Enabling Unauthenticated OS Command Execution",
-      "summary": "A critical security flaw in Issabel Framework, a web-based framework for the open-source unified communications PBX software, has come under active exploitation.\n\nThe vulnerability in question is CVE-2026-89026 (CVSS v3.1 score: 9.8/CVSS v4.0 score: 9.3), which can allow an unauthenticated remote at",
-      "url": "https://thehackernews.com/2026/09/attackers-exploit-issabel-framework.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:9f27634128",
-      "title": "Google Patches Pixel Modem Flaw Amid Signs of Limited Targeted Exploitation",
-      "summary": "Google has disclosed that a high-severity security flaw in its Pixel Cellular Modem has come under exploitation in the wild.\n\nThe vulnerability, tracked as CVE-2026-58704 (CVSS score: 8.0), is a privilege escalation flaw.\n\n\"In Cellular Modem, there is a possible permission bypass due to a logic erro",
-      "url": "https://thehackernews.com/2026/09/google-patches-pixel-modem-flaw-amid.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:0627049e53",
-      "title": "Acronis cPanel Backup Plugin Vulnerability Exploited in Targeted Attacks",
-      "summary": "Acronis has warned that a high-severity security flaw in its Backup plugin for cPanel and Web Host Manager (WHM) deployments has been exploited in the wild.\n\nThe vulnerability, tracked as CVE-2026-87886 (CVSS score: 7.8), is described as a case of local privilege escalation due to insecure file perm",
-      "url": "https://thehackernews.com/2026/09/acronis-cpanel-backup-plugin.html",
-      "source": "Tech RSS",
-      "score": 0
+      "id": "hn:49732931",
+      "title": "Breaking the 1.58-bit Barrier for Ternary LLMs",
+      "summary": "",
+      "url": "https://arxiv.org/abs/2609.16338",
+      "source": "Hacker News",
+      "score": 160,
+      "comments": 22
     },
     {
       "id": "lob:4tb4nk",
@@ -204,8 +170,8 @@
       "summary": "",
       "url": "https://blog.manganin.dev/blog/reinventing-issue-tracking/",
       "source": "Lobste.rs",
-      "score": 11,
-      "comments": 19,
+      "score": 24,
+      "comments": 25,
       "tags": [
         "practices",
         "vcs"
@@ -217,33 +183,72 @@
       "summary": "",
       "url": "https://distrowatch.com/weekly.php?issue=20260914#qa",
       "source": "Lobste.rs",
-      "score": 7,
-      "comments": 4,
+      "score": 15,
+      "comments": 7,
       "tags": [
         "linux"
       ]
     },
     {
-      "id": "hn:49689062",
-      "title": "Douglas Adams and the exterminated Doctor Who adventure",
+      "id": "lob:gs10ad",
+      "title": "Introducing GNOME 51",
       "summary": "",
-      "url": "https://www.bbc.co.uk/news/articles/c8jdp38z4jgo",
-      "source": "Hacker News",
-      "score": 59,
-      "comments": 36
-    },
-    {
-      "id": "lob:jlja1a",
-      "title": "JDK 27 has been released",
-      "summary": "",
-      "url": "https://openjdk.org/projects/jdk/27/",
+      "url": "https://release.gnome.org/51/",
       "source": "Lobste.rs",
-      "score": 27,
-      "comments": 0,
+      "score": 38,
+      "comments": 8,
       "tags": [
-        "java",
+        "linux",
         "release"
       ]
+    },
+    {
+      "id": "lob:zutlqt",
+      "title": "Some things Veloren does differently",
+      "summary": "",
+      "url": "https://blog.jsbarretto.com/post/veloren",
+      "source": "Lobste.rs",
+      "score": 65,
+      "comments": 2,
+      "tags": [
+        "games",
+        "graphics",
+        "rust"
+      ]
+    },
+    {
+      "id": "hn:49734264",
+      "title": "OpenSpec – A lightweight and configurable AI spec framework",
+      "summary": "",
+      "url": "https://openspec.dev/",
+      "source": "Hacker News",
+      "score": 95,
+      "comments": 37
+    },
+    {
+      "id": "arxiv:2609.19134v1",
+      "title": "ScienceIDE: Turning World's Scientific Codebase into Agent Learnable Environments",
+      "summary": "Scientific code repositories encode decades of human knowledge in executable models, methods, and tools. Yet fragmented toolchains, implicit domain conventions, and specialized correctness criteria make this knowledge difficult to convert into reliable learning experience-a challenge we call the sci",
+      "url": "https://arxiv.org/abs/2609.19134v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.CY"
+      ],
+      "arxiv_id": "2609.19134v1"
+    },
+    {
+      "id": "arxiv:2609.19128v1",
+      "title": "Cognitive Extensions for Dual-Process Language Agents: Memory and Self-Reflection in Interactive Environments",
+      "summary": "Language agents remain brittle in interactive environments, where success requires long-horizon state tracking, valid action execution, and recovery from failed steps. We extend SwiftSage, a dual-process agent that combines a fast action proposer with a slower planner, using two modular cognitive ex",
+      "url": "https://arxiv.org/abs/2609.19128v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "cs.MA"
+      ],
+      "arxiv_id": "2609.19128v1"
     }
   ],
   "ai_curated": true
