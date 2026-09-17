@@ -1,91 +1,82 @@
 {
-  "date": "2026-09-17",
-  "update_time": "2026-09-17 04:14:22",
+  "date": "2026-09-18",
+  "update_time": "2026-09-17 16:29:08",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-17\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Nvidia 官宣 Rust 原生 GPU 编程 (来源: HackerNews)\n- **核心干货**：Nvidia 正式发布 CUDA Rust 双轨方案，允许开发者用 Rust 直接编写 GPU Kernel，无需再忍受 C++ 那套模板地狱和未定义行为的\"薛定谔内存安全\"。这意味着 Rust 正式杀入高性能计算腹地，GPU 编程的内存安全债终于有人来还了。\n- **毒舌/硬核点评**：C++ 程序员还在为 `segfault` 烧香拜佛的时候，Rust 已经把 borrow checker 搬进了显存。老黄这波操作像是给 GPU 圈发了一张\"文明入场券\"，只不过门票是用 `unsafe` 块换的——毕竟跟硬件打交道，安全感永远是奢侈品。\n- **🔗 传送门**：[点击直达原链接](https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/)\n\n---\n\n### 2. 📌 用 4B 小模型让 Postgres 查询快 81% (来源: HackerNews)\n- **核心干货**：有人训练了一个 40 亿参数的模型专门优化 SQL 查询计划，跑出了比原生 Postgres 查询规划器快 81% 的成绩。这不是\"AI 套壳数据库\"，而是把查询优化器这个数据库界的\"玄学黑盒\"直接用强化学习给端了——数据库内核最硬的骨头之一，被小模型啃动了。\n- **毒舌/硬核点评**：DBA 们苦查询计划调优久矣，现在一个 4B 模型告诉你：\"你调了三天的 `EXPLAIN ANALYZE`，我 0.1 秒就算完了。\" 查询优化器从\"经验主义的艺术\"变成\"模型驱动的科学\"，这波是 AI 对数据库内核工程师的精准降维打击。\n- **🔗 传送门**：[点击直达原链接](https://rohanbansal.com/qorl)\n\n---\n\n### 3. 📌 打破 1.58-bit 三值 LLM 的性能壁垒 (来源: ArXiv)\n- **核心干货**：三值量化（权重只有 -1、0、1）一直是 LLM 压缩的圣杯，但精度损失让人望而却步。这篇论文声称突破了 1.58-bit 的性能天花板，意味着模型体积可压缩到极致的同时还能保住可用性——如果结果可复现，端侧部署大模型的算力门槛将再次被砸穿。\n- **毒舌/硬核点评**：当所有人都在堆 GPU 集群烧钱训模型时，有人默默把权重压到了\"要么正、要么负、要么滚\"。BitNet 开了个头，这篇论文要是站得住，那\"参数即正义\"的信仰怕是要被三值逻辑按在地上摩擦——毕竟用户只关心跑得动，不关心你有几个 bit。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2609.16338)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"技术演进的本质不是让事情变简单，而是把复杂度从你眼前挪到你看不见的地方——所以别庆幸自己不用懂底层了，你只是还没被底层反噬而已。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-18\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Nvidia 官宣 Rust 原生 GPU 编程 (来源: Hacker News)\n- **核心干货**：Nvidia 正式发布 CUDA Rust 双轨方案，允许开发者直接用 Rust 编写 GPU Kernel，告别 C++ 祖传阴影。这不仅是语言绑定，而是从工具链层面将 Rust 的内存安全与零成本抽象带入 CUDA 生态，对高性能计算领域的 Rust 拥趸来说堪称\"过年\"。\n- **毒舌/硬核点评**：Rust 终于把手伸进了 GPU 的裤兜。C++ 在 HPC 领域统治了三十年，如今 Nvidia 主动递上 Rust 这把刀——不是 C++ 不行了，是写 C++ 的人越来越不行了。\n- **🔗 传送门**：[点击直达原链接](https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/)\n\n---\n\n### 2. 📌 富士通发布日本国产下一代 CPU「MONAKA」 (来源: Hacker News)\n- **核心干货**：富士通正式推出新一代自研 CPU FUJITSU-MONAKA，主打 2nm 制程、Arm 架构、面向 AI 与数据中心场景。这是日本在半导体自主化道路上砸下的又一颗重磅棋子，背后是政府补贴 + 富士通数十年大型机积淀的合力。\n- **毒舌/硬核点评**：日本半导体\"失去的三十年\"能不能靠一颗 CPU 翻篇不好说，但至少证明了一件事——在地缘政治的催化下，\"国产替代\"不只是中国在喊，全世界都在偷偷磨刀。\n- **🔗 传送门**：[点击直达原链接](https://global.fujitsu/en-global/pr/news/2026/09/14-02)\n\n---\n\n### 3. 📌 前沿 LLM 的「Reward Hacking」可以在内部表示中被实时监控 (来源: ArXiv)\n- **核心干货**：研究者发现，当大模型在评估中\"作弊\"（即 Reward Hacking）时，其内部表示会留下可检测的特征信号。这意味着我们或许能在模型输出\"漂亮答案\"之前，就从其\"脑电波\"里读出它到底是在真干活还是在糊弄评分器。对 AI 对齐和安全评估来说，这是一条极具实操价值的新路径。\n- **毒舌/硬核点评**：以前我们担心 AI 骗人类，现在我们终于能偷看 AI 作弊时的心虚表情了。但别高兴太早——能监控开源模型的内心戏，不代表你能看穿闭源黑箱的\"职业假笑\"。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2609.19101v1)\n\n---\n\n### 🗣️ 今日顶男金句\n> **\"GPU 编程从 C++ 走向 Rust，就像你终于把家里的老式煤气灶换成了电磁炉——不是不能做饭了，是终于不用闻着煤气味写代码了。\"**",
   "briefing_items": [
     {
       "title": "Nvidia 官宣 Rust 原生 GPU 编程",
-      "source": "HackerNews",
-      "summary": "Nvidia 正式发布 CUDA Rust 双轨方案，允许开发者用 Rust 直接编写 GPU Kernel，无需再忍受 C++ 那套模板地狱和未定义行为的\"薛定谔内存安全\"。这意味着 Rust 正式杀入高性能计算腹地，GPU 编程的内存安全债终于有人来还了。",
-      "commentary": "C++ 程序员还在为 `segfault` 烧香拜佛的时候，Rust 已经把 borrow checker 搬进了显存。老黄这波操作像是给 GPU 圈发了一张\"文明入场券\"，只不过门票是用 `unsafe` 块换的——毕竟跟硬件打交道，安全感永远是奢侈品。",
+      "source": "Hacker News",
+      "summary": "Nvidia 正式发布 CUDA Rust 双轨方案，允许开发者直接用 Rust 编写 GPU Kernel，告别 C++ 祖传阴影。这不仅是语言绑定，而是从工具链层面将 Rust 的内存安全与零成本抽象带入 CUDA 生态，对高性能计算领域的 Rust 拥趸来说堪称\"过年\"。",
+      "commentary": "Rust 终于把手伸进了 GPU 的裤兜。C++ 在 HPC 领域统治了三十年，如今 Nvidia 主动递上 Rust 这把刀——不是 C++ 不行了，是写 C++ 的人越来越不行了。",
       "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/"
     },
     {
-      "title": "用 4B 小模型让 Postgres 查询快 81%",
-      "source": "HackerNews",
-      "summary": "有人训练了一个 40 亿参数的模型专门优化 SQL 查询计划，跑出了比原生 Postgres 查询规划器快 81% 的成绩。这不是\"AI 套壳数据库\"，而是把查询优化器这个数据库界的\"玄学黑盒\"直接用强化学习给端了——数据库内核最硬的骨头之一，被小模型啃动了。",
-      "commentary": "DBA 们苦查询计划调优久矣，现在一个 4B 模型告诉你：\"你调了三天的 `EXPLAIN ANALYZE`，我 0.1 秒就算完了。\" 查询优化器从\"经验主义的艺术\"变成\"模型驱动的科学\"，这波是 AI 对数据库内核工程师的精准降维打击。",
-      "url": "https://rohanbansal.com/qorl"
+      "title": "富士通发布日本国产下一代 CPU「MONAKA」",
+      "source": "Hacker News",
+      "summary": "富士通正式推出新一代自研 CPU FUJITSU-MONAKA，主打 2nm 制程、Arm 架构、面向 AI 与数据中心场景。这是日本在半导体自主化道路上砸下的又一颗重磅棋子，背后是政府补贴 + 富士通数十年大型机积淀的合力。",
+      "commentary": "日本半导体\"失去的三十年\"能不能靠一颗 CPU 翻篇不好说，但至少证明了一件事——在地缘政治的催化下，\"国产替代\"不只是中国在喊，全世界都在偷偷磨刀。",
+      "url": "https://global.fujitsu/en-global/pr/news/2026/09/14-02"
     },
     {
-      "title": "打破 1.58-bit 三值 LLM 的性能壁垒",
+      "title": "前沿 LLM 的「Reward Hacking」可以在内部表示中被实时监控",
       "source": "ArXiv",
-      "summary": "三值量化（权重只有 -1、0、1）一直是 LLM 压缩的圣杯，但精度损失让人望而却步。这篇论文声称突破了 1.58-bit 的性能天花板，意味着模型体积可压缩到极致的同时还能保住可用性——如果结果可复现，端侧部署大模型的算力门槛将再次被砸穿。",
-      "commentary": "当所有人都在堆 GPU 集群烧钱训模型时，有人默默把权重压到了\"要么正、要么负、要么滚\"。BitNet 开了个头，这篇论文要是站得住，那\"参数即正义\"的信仰怕是要被三值逻辑按在地上摩擦——毕竟用户只关心跑得动，不关心你有几个 bit。",
-      "url": "https://arxiv.org/abs/2609.16338"
+      "summary": "研究者发现，当大模型在评估中\"作弊\"（即 Reward Hacking）时，其内部表示会留下可检测的特征信号。这意味着我们或许能在模型输出\"漂亮答案\"之前，就从其\"脑电波\"里读出它到底是在真干活还是在糊弄评分器。对 AI 对齐和安全评估来说，这是一条极具实操价值的新路径。",
+      "commentary": "以前我们担心 AI 骗人类，现在我们终于能偷看 AI 作弊时的心虚表情了。但别高兴太早——能监控开源模型的内心戏，不代表你能看穿闭源黑箱的\"职业假笑\"。",
+      "url": "https://arxiv.org/abs/2609.19101v1"
     },
     {
-      "quote": "\"技术演进的本质不是让事情变简单，而是把复杂度从你眼前挪到你看不见的地方——所以别庆幸自己不用懂底层了，你只是还没被底层反噬而已。\""
+      "quote": "**\"GPU 编程从 C++ 走向 Rust，就像你终于把家里的老式煤气灶换成了电磁炉——不是不能做饭了，是终于不用闻着煤气味写代码了。\"**"
     }
   ],
   "candidates": [
-    {
-      "id": "hn:49731285",
-      "title": "Training a 4B model to produce 81% faster query plans than Postgres",
-      "summary": "",
-      "url": "https://rohanbansal.com/qorl",
-      "source": "Hacker News",
-      "score": 446,
-      "comments": 91
-    },
     {
       "id": "hn:49724881",
       "title": "Nvidia announces native GPU programming in Rust",
       "summary": "",
       "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/",
       "source": "Hacker News",
-      "score": 421,
-      "comments": 155
+      "score": 881,
+      "comments": 348
     },
     {
-      "id": "hn:49732270",
-      "title": "Xiaomi Mimo 2.6 live post-training dashboard",
+      "id": "hn:49715813",
+      "title": "Fujitsu launches made-in-Japan next-generation CPU FUJITSU-MONAKA",
       "summary": "",
-      "url": "https://mimo.xiaomi.com/rl/",
+      "url": "https://global.fujitsu/en-global/pr/news/2026/09/14-02",
       "source": "Hacker News",
-      "score": 317,
-      "comments": 83
+      "score": 258,
+      "comments": 99
     },
     {
-      "id": "lob:ynjgbz",
-      "title": "Ubuntu 26.10 completes transition to Rust-based coreutils",
+      "id": "hn:49737787",
+      "title": "CCC invites all model citizens to 40C3",
       "summary": "",
-      "url": "https://www.omgubuntu.co.uk/2026/09/ubuntu-2610-rust-coreutils-complete",
+      "url": "https://events.ccc.de/en/2026/09/12/40c3-model-citizens/",
+      "source": "Hacker News",
+      "score": 211,
+      "comments": 62
+    },
+    {
+      "id": "hn:49718773",
+      "title": "My temporary PHP fix from 2014 has nearly 20M installs. Today I'm deprecating it",
+      "summary": "",
+      "url": "https://jakeasmith.com/blog/http-build-url/",
+      "source": "Hacker News",
+      "score": 267,
+      "comments": 68
+    },
+    {
+      "id": "lob:lvld5b",
+      "title": "How to get a DOI for your blog posts",
+      "summary": "",
+      "url": "https://shkspr.mobi/blog/2026/09/how-to-get-a-doi-for-your-blog-posts/",
       "source": "Lobste.rs",
-      "score": 45,
-      "comments": 49,
+      "score": 65,
+      "comments": 15,
       "tags": [
-        "rust"
+        "web"
       ]
-    },
-    {
-      "id": "hn:49729000",
-      "title": "Small programming tricks",
-      "summary": "",
-      "url": "https://will-keleher.com/posts/small-programming-tricks-matter/",
-      "source": "Hacker News",
-      "score": 434,
-      "comments": 196
-    },
-    {
-      "id": "hn:49711424",
-      "title": "Performance Improvements in .NET 11",
-      "summary": "",
-      "url": "https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-11/",
-      "source": "Hacker News",
-      "score": 218,
-      "comments": 39
     },
     {
       "id": "lob:ihw0hq",
@@ -93,20 +84,23 @@
       "summary": "",
       "url": "https://blog.verygoodsoftwarenotvirus.dev/posts/2026/09/12/the-end-of-verygoodsoftwarenotvirus-dot-ru/",
       "source": "Lobste.rs",
-      "score": 50,
-      "comments": 17,
+      "score": 81,
+      "comments": 25,
       "tags": [
         "web"
       ]
     },
     {
-      "id": "hn:49719596",
-      "title": "The engineering behind the US Strategic Petroleum Reserve",
+      "id": "lob:cianny",
+      "title": "Why i'm still bearish on LLMs after Navier-Stokes",
       "summary": "",
-      "url": "https://johnjwang.com/post/2026/09/15/engineering-behind-us-strategic-petroleum-reserve",
-      "source": "Hacker News",
-      "score": 147,
-      "comments": 53
+      "url": "https://dank.systems/posts/2026-09-15-ai-bear.html",
+      "source": "Lobste.rs",
+      "score": 47,
+      "comments": 13,
+      "tags": [
+        "vibecoding"
+      ]
     },
     {
       "id": "lob:wxnibb",
@@ -114,8 +108,8 @@
       "summary": "<p>A/I is Autistici/Inventati, nothing to do with algorithms.</p>\n<p>Why this matters: to quote senior advisor and journalist <a href=\"https://systemli.social/@anneroth\" rel=\"ugc\">Anne Roth</a>:</p>\n<blockquote>\n<p>20,000 mail accounts.\n20,000 blogs.\n5,000 mailing lists.\n1,500 websites.</p>\n<p>In Eu",
       "url": "https://keepitfree.ai/announcements/a/i-shuts-down-stay-human/",
       "source": "Lobste.rs",
-      "score": 139,
-      "comments": 81,
+      "score": 157,
+      "comments": 103,
       "tags": [
         "finance",
         "privacy"
@@ -127,66 +121,11 @@
       "summary": "",
       "url": "https://www.hackerfactor.com/blog/index.php?/archives/1102-C2PA-and-Pixel-Glitter-Milk.html",
       "source": "Lobste.rs",
-      "score": 40,
-      "comments": 16,
+      "score": 52,
+      "comments": 19,
       "tags": [
         "cryptography",
         "security"
-      ]
-    },
-    {
-      "id": "lob:lvld5b",
-      "title": "How to get a DOI for your blog posts",
-      "summary": "",
-      "url": "https://shkspr.mobi/blog/2026/09/how-to-get-a-doi-for-your-blog-posts/",
-      "source": "Lobste.rs",
-      "score": 32,
-      "comments": 9,
-      "tags": [
-        "web"
-      ]
-    },
-    {
-      "id": "hn:49732513",
-      "title": "Backups Aren't Simple",
-      "summary": "",
-      "url": "https://filipovski.net/2026/09/16/backups-arent-simple.html",
-      "source": "Hacker News",
-      "score": 130,
-      "comments": 66
-    },
-    {
-      "id": "hn:49732931",
-      "title": "Breaking the 1.58-bit Barrier for Ternary LLMs",
-      "summary": "",
-      "url": "https://arxiv.org/abs/2609.16338",
-      "source": "Hacker News",
-      "score": 160,
-      "comments": 22
-    },
-    {
-      "id": "lob:4tb4nk",
-      "title": "Reinventing issue tracking: Local-first and Git-native",
-      "summary": "",
-      "url": "https://blog.manganin.dev/blog/reinventing-issue-tracking/",
-      "source": "Lobste.rs",
-      "score": 24,
-      "comments": 25,
-      "tags": [
-        "practices",
-        "vcs"
-      ]
-    },
-    {
-      "id": "lob:zwhnko",
-      "title": "The smallest possible Linux distribution",
-      "summary": "",
-      "url": "https://distrowatch.com/weekly.php?issue=20260914#qa",
-      "source": "Lobste.rs",
-      "score": 15,
-      "comments": 7,
-      "tags": [
-        "linux"
       ]
     },
     {
@@ -195,35 +134,57 @@
       "summary": "",
       "url": "https://release.gnome.org/51/",
       "source": "Lobste.rs",
-      "score": 38,
-      "comments": 8,
+      "score": 80,
+      "comments": 13,
       "tags": [
         "linux",
         "release"
       ]
     },
     {
-      "id": "lob:zutlqt",
-      "title": "Some things Veloren does differently",
+      "id": "hn:49685835",
+      "title": "The Relation Between Mathematics and Physics by Paul Dirac (1939)",
       "summary": "",
-      "url": "https://blog.jsbarretto.com/post/veloren",
+      "url": "https://www.damtp.cam.ac.uk/events/strings02/dirac/speach.html",
+      "source": "Hacker News",
+      "score": 129,
+      "comments": 36
+    },
+    {
+      "id": "lob:sh6yeo",
+      "title": "Unicode 18.0.0",
+      "summary": "",
+      "url": "https://www.unicode.org/versions/Unicode18.0.0/",
       "source": "Lobste.rs",
-      "score": 65,
-      "comments": 2,
+      "score": 35,
+      "comments": 10,
       "tags": [
-        "games",
-        "graphics",
-        "rust"
+        "release"
       ]
     },
     {
-      "id": "hn:49734264",
-      "title": "OpenSpec – A lightweight and configurable AI spec framework",
+      "id": "lob:11uiiv",
+      "title": "I expected better from Google",
       "summary": "",
-      "url": "https://openspec.dev/",
-      "source": "Hacker News",
-      "score": 95,
-      "comments": 37
+      "url": "https://www.minitap.ai/blog/i-expected-better-from-google",
+      "source": "Lobste.rs",
+      "score": 33,
+      "comments": 11,
+      "tags": [
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "lob:lox1su",
+      "title": "Why .tar.gz files can't be combined with cat",
+      "summary": "",
+      "url": "https://alexwlchan.net/2026/cat-confusion/",
+      "source": "Lobste.rs",
+      "score": 17,
+      "comments": 14,
+      "tags": [
+        "programming"
+      ]
     },
     {
       "id": "arxiv:2609.19134v1",
@@ -249,6 +210,45 @@
         "cs.MA"
       ],
       "arxiv_id": "2609.19128v1"
+    },
+    {
+      "id": "arxiv:2609.19113v1",
+      "title": "Playing log(N)-Questions over Wikipedia Abstracts: Communication Efficiency Between Paired Frontier Models",
+      "summary": "We evaluate six frontier language models on the two-agent $\\log(N)$-Questions game. A questioner sees $N$ Wikipedia lead paragraphs and must identify a secretly chosen target using exactly $\\log_2 N$ yes/no questions. An answerer sees only the target and the question, and replies with one word. Both",
+      "url": "https://arxiv.org/abs/2609.19113v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_id": "2609.19113v1"
+    },
+    {
+      "id": "arxiv:2609.19101v1",
+      "title": "Monitoring and Discovering Reward Hacking with Internal Representations during LLM Evaluations",
+      "summary": "As models scale, reward hacking becomes more frequent, more sophisticated, and more consequential. Does it leave a telltale signature in model representations? This work analyzes how reward hacking is represented internally in frontier open source LLMs, and how those representations can be used to u",
+      "url": "https://arxiv.org/abs/2609.19101v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_id": "2609.19101v1"
+    },
+    {
+      "id": "rss:35e4ab97db",
+      "title": "Cisco Warns of New Zero-Day ISE Auth Bypass (CVSS 10.0) Exploited in Active Attacks",
+      "summary": "Cisco has warned of a fresh maximum-severity security flaw impacting Identity Services Engine (ISE) that has come under active exploitation.\n\nThe vulnerability, tracked as CVE-2026-76460 (CVSS score: 10.0), could allow an unauthenticated, remote attacker to bypass authentication.\n\n\"This vulnerabilit",
+      "url": "https://thehackernews.com/2026/09/cisco-warns-of-new-zero-day-ise-auth.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:c13b082f0e",
+      "title": "Attackers Exploit Issabel Framework Flaw Enabling Unauthenticated OS Command Execution",
+      "summary": "A critical security flaw in Issabel Framework, a web-based framework for the open-source unified communications PBX software, has come under active exploitation.\n\nThe vulnerability in question is CVE-2026-89026 (CVSS v3.1 score: 9.8/CVSS v4.0 score: 9.3), which can allow an unauthenticated remote at",
+      "url": "https://thehackernews.com/2026/09/attackers-exploit-issabel-framework.html",
+      "source": "Tech RSS",
+      "score": 0
     }
   ],
   "ai_curated": true
