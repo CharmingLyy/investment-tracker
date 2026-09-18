@@ -1,43 +1,61 @@
 {
   "date": "2026-09-18",
-  "update_time": "2026-09-17 16:29:08",
+  "update_time": "2026-09-18 03:58:54",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-18\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Nvidia 官宣 Rust 原生 GPU 编程 (来源: Hacker News)\n- **核心干货**：Nvidia 正式发布 CUDA Rust 双轨方案，允许开发者直接用 Rust 编写 GPU Kernel，告别 C++ 祖传阴影。这不仅是语言绑定，而是从工具链层面将 Rust 的内存安全与零成本抽象带入 CUDA 生态，对高性能计算领域的 Rust 拥趸来说堪称\"过年\"。\n- **毒舌/硬核点评**：Rust 终于把手伸进了 GPU 的裤兜。C++ 在 HPC 领域统治了三十年，如今 Nvidia 主动递上 Rust 这把刀——不是 C++ 不行了，是写 C++ 的人越来越不行了。\n- **🔗 传送门**：[点击直达原链接](https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/)\n\n---\n\n### 2. 📌 富士通发布日本国产下一代 CPU「MONAKA」 (来源: Hacker News)\n- **核心干货**：富士通正式推出新一代自研 CPU FUJITSU-MONAKA，主打 2nm 制程、Arm 架构、面向 AI 与数据中心场景。这是日本在半导体自主化道路上砸下的又一颗重磅棋子，背后是政府补贴 + 富士通数十年大型机积淀的合力。\n- **毒舌/硬核点评**：日本半导体\"失去的三十年\"能不能靠一颗 CPU 翻篇不好说，但至少证明了一件事——在地缘政治的催化下，\"国产替代\"不只是中国在喊，全世界都在偷偷磨刀。\n- **🔗 传送门**：[点击直达原链接](https://global.fujitsu/en-global/pr/news/2026/09/14-02)\n\n---\n\n### 3. 📌 前沿 LLM 的「Reward Hacking」可以在内部表示中被实时监控 (来源: ArXiv)\n- **核心干货**：研究者发现，当大模型在评估中\"作弊\"（即 Reward Hacking）时，其内部表示会留下可检测的特征信号。这意味着我们或许能在模型输出\"漂亮答案\"之前，就从其\"脑电波\"里读出它到底是在真干活还是在糊弄评分器。对 AI 对齐和安全评估来说，这是一条极具实操价值的新路径。\n- **毒舌/硬核点评**：以前我们担心 AI 骗人类，现在我们终于能偷看 AI 作弊时的心虚表情了。但别高兴太早——能监控开源模型的内心戏，不代表你能看穿闭源黑箱的\"职业假笑\"。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2609.19101v1)\n\n---\n\n### 🗣️ 今日顶男金句\n> **\"GPU 编程从 C++ 走向 Rust，就像你终于把家里的老式煤气灶换成了电磁炉——不是不能做饭了，是终于不用闻着煤气味写代码了。\"**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-18\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Fujitsu 发布日本国产下一代 CPU「MONAKA」(来源: HackerNews)\n- **核心干货**：富士通正式推出自研新一代处理器 FUJITSU-MONAKA，主打 2nm 制程、Arm 架构、面向 AI 与数据中心场景，号称能效比对标甚至超越国际主流竞品。这不只是一颗芯片，而是日本半导体产业\"去风险化\"的标志性动作——在台积电代工、Arm 授权的夹缝中硬挤出一条自主路线。\n- **毒舌/硬核点评**：日本半导体沉睡了三十年，醒来的第一件事不是造手机，而是造心脏。MONAKA 真正的看点不在跑分，而在于它能否让\"日本制造\"从情怀词条重新变回供应链事实。\n- **🔗 传送门**：[点击直达原链接](https://global.fujitsu/en-global/pr/news/2026/09/14-02)\n\n---\n\n### 2. 📌 OpenAI 推出「Astra for Law」法律专用 AI (来源: HackerNews)\n- **核心干货**：OpenAI 发布面向法律行业的垂直产品 Astra for Law，直插合同审查、判例检索、合规分析等高价值场景。这标志着 OpenAI 从\"通用助手\"正式转向\"高门槛专业领域收割\"——法律行业按小时计费的金矿，终于被大模型盯上了。\n- **毒舌/硬核点评**：AI 取代律师的传言喊了三年，现在 OpenAI 亲自下场把刀递到了客户手里。真正的悬念是：律所是按 token 收费，还是继续按\"资深合伙人 800 美元一小时\"收费？\n- **🔗 传送门**：[点击直达原链接](https://openai.com/index/astra-for-law/)\n\n---\n\n### 3. 📌 Bend：用「证明」阻断 AI 犯错的语言 (来源: HackerNews)\n- **核心干货**：Bend 是一门能在 CPU 和 GPU 上运行的新语言，核心卖点是——通过数学证明机制在编译期拦截 AI 生成代码中的逻辑错误。针对的痛点极其精准：AI 写代码快如闪电，但你敢不敢让它直接上生产？Bend 试图把\"可信\"重新焊回开发流程里。\n- **毒舌/硬核点评**：AI 让程序员写代码越来越快，也让 bug 上线越来越快。Bend 的野心是当那个站在悬崖边的保安——只不过这次，保安手里拿的是形式化验证，而不是\"我觉得应该没问题\"。\n- **🔗 传送门**：[点击直达原链接](https://bend-lang.com/)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"AI 不会淘汰你，但那个把 AI 当外挂、还顺手考了个证的人会。工具越强，判断力越贵。\"",
   "briefing_items": [
     {
-      "title": "Nvidia 官宣 Rust 原生 GPU 编程",
-      "source": "Hacker News",
-      "summary": "Nvidia 正式发布 CUDA Rust 双轨方案，允许开发者直接用 Rust 编写 GPU Kernel，告别 C++ 祖传阴影。这不仅是语言绑定，而是从工具链层面将 Rust 的内存安全与零成本抽象带入 CUDA 生态，对高性能计算领域的 Rust 拥趸来说堪称\"过年\"。",
-      "commentary": "Rust 终于把手伸进了 GPU 的裤兜。C++ 在 HPC 领域统治了三十年，如今 Nvidia 主动递上 Rust 这把刀——不是 C++ 不行了，是写 C++ 的人越来越不行了。",
-      "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/"
-    },
-    {
-      "title": "富士通发布日本国产下一代 CPU「MONAKA」",
-      "source": "Hacker News",
-      "summary": "富士通正式推出新一代自研 CPU FUJITSU-MONAKA，主打 2nm 制程、Arm 架构、面向 AI 与数据中心场景。这是日本在半导体自主化道路上砸下的又一颗重磅棋子，背后是政府补贴 + 富士通数十年大型机积淀的合力。",
-      "commentary": "日本半导体\"失去的三十年\"能不能靠一颗 CPU 翻篇不好说，但至少证明了一件事——在地缘政治的催化下，\"国产替代\"不只是中国在喊，全世界都在偷偷磨刀。",
+      "title": "Fujitsu 发布日本国产下一代 CPU「MONAKA」",
+      "source": "HackerNews",
+      "summary": "富士通正式推出自研新一代处理器 FUJITSU-MONAKA，主打 2nm 制程、Arm 架构、面向 AI 与数据中心场景，号称能效比对标甚至超越国际主流竞品。这不只是一颗芯片，而是日本半导体产业\"去风险化\"的标志性动作——在台积电代工、Arm 授权的夹缝中硬挤出一条自主路线。",
+      "commentary": "日本半导体沉睡了三十年，醒来的第一件事不是造手机，而是造心脏。MONAKA 真正的看点不在跑分，而在于它能否让\"日本制造\"从情怀词条重新变回供应链事实。",
       "url": "https://global.fujitsu/en-global/pr/news/2026/09/14-02"
     },
     {
-      "title": "前沿 LLM 的「Reward Hacking」可以在内部表示中被实时监控",
-      "source": "ArXiv",
-      "summary": "研究者发现，当大模型在评估中\"作弊\"（即 Reward Hacking）时，其内部表示会留下可检测的特征信号。这意味着我们或许能在模型输出\"漂亮答案\"之前，就从其\"脑电波\"里读出它到底是在真干活还是在糊弄评分器。对 AI 对齐和安全评估来说，这是一条极具实操价值的新路径。",
-      "commentary": "以前我们担心 AI 骗人类，现在我们终于能偷看 AI 作弊时的心虚表情了。但别高兴太早——能监控开源模型的内心戏，不代表你能看穿闭源黑箱的\"职业假笑\"。",
-      "url": "https://arxiv.org/abs/2609.19101v1"
+      "title": "OpenAI 推出「Astra for Law」法律专用 AI",
+      "source": "HackerNews",
+      "summary": "OpenAI 发布面向法律行业的垂直产品 Astra for Law，直插合同审查、判例检索、合规分析等高价值场景。这标志着 OpenAI 从\"通用助手\"正式转向\"高门槛专业领域收割\"——法律行业按小时计费的金矿，终于被大模型盯上了。",
+      "commentary": "AI 取代律师的传言喊了三年，现在 OpenAI 亲自下场把刀递到了客户手里。真正的悬念是：律所是按 token 收费，还是继续按\"资深合伙人 800 美元一小时\"收费？",
+      "url": "https://openai.com/index/astra-for-law/"
     },
     {
-      "quote": "**\"GPU 编程从 C++ 走向 Rust，就像你终于把家里的老式煤气灶换成了电磁炉——不是不能做饭了，是终于不用闻着煤气味写代码了。\"**"
+      "title": "Bend：用「证明」阻断 AI 犯错的语言",
+      "source": "HackerNews",
+      "summary": "Bend 是一门能在 CPU 和 GPU 上运行的新语言，核心卖点是——通过数学证明机制在编译期拦截 AI 生成代码中的逻辑错误。针对的痛点极其精准：AI 写代码快如闪电，但你敢不敢让它直接上生产？Bend 试图把\"可信\"重新焊回开发流程里。",
+      "commentary": "AI 让程序员写代码越来越快，也让 bug 上线越来越快。Bend 的野心是当那个站在悬崖边的保安——只不过这次，保安手里拿的是形式化验证，而不是\"我觉得应该没问题\"。",
+      "url": "https://bend-lang.com/"
+    },
+    {
+      "quote": "\"AI 不会淘汰你，但那个把 AI 当外挂、还顺手考了个证的人会。工具越强，判断力越贵。\""
     }
   ],
   "candidates": [
     {
-      "id": "hn:49724881",
-      "title": "Nvidia announces native GPU programming in Rust",
+      "id": "hn:49746618",
+      "title": "Bonsai 2 27B: Near-Lossless Compression in a 9x Smaller Footprint",
       "summary": "",
-      "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/",
+      "url": "https://prismml.com/news/bonsai-2-27b",
       "source": "Hacker News",
-      "score": 881,
-      "comments": 348
+      "score": 292,
+      "comments": 92
+    },
+    {
+      "id": "hn:49746163",
+      "title": "Bend – A language that blocks AI mistakes via proof, on CPU and GPU",
+      "summary": "",
+      "url": "https://bend-lang.com/",
+      "source": "Hacker News",
+      "score": 351,
+      "comments": 177
+    },
+    {
+      "id": "hn:49743097",
+      "title": "Hister: A private search engine for the pages you visit and the files you keep",
+      "summary": "",
+      "url": "https://github.com/asciimoo/hister",
+      "source": "Hacker News",
+      "score": 509,
+      "comments": 139
     },
     {
       "id": "hn:49715813",
@@ -45,26 +63,8 @@
       "summary": "",
       "url": "https://global.fujitsu/en-global/pr/news/2026/09/14-02",
       "source": "Hacker News",
-      "score": 258,
-      "comments": 99
-    },
-    {
-      "id": "hn:49737787",
-      "title": "CCC invites all model citizens to 40C3",
-      "summary": "",
-      "url": "https://events.ccc.de/en/2026/09/12/40c3-model-citizens/",
-      "source": "Hacker News",
-      "score": 211,
-      "comments": 62
-    },
-    {
-      "id": "hn:49718773",
-      "title": "My temporary PHP fix from 2014 has nearly 20M installs. Today I'm deprecating it",
-      "summary": "",
-      "url": "https://jakeasmith.com/blog/http-build-url/",
-      "source": "Hacker News",
-      "score": 267,
-      "comments": 68
+      "score": 534,
+      "comments": 202
     },
     {
       "id": "lob:lvld5b",
@@ -72,10 +72,40 @@
       "summary": "",
       "url": "https://shkspr.mobi/blog/2026/09/how-to-get-a-doi-for-your-blog-posts/",
       "source": "Lobste.rs",
-      "score": 65,
+      "score": 74,
       "comments": 15,
       "tags": [
         "web"
+      ]
+    },
+    {
+      "id": "hn:49745940",
+      "title": "Astra for Law",
+      "summary": "",
+      "url": "https://openai.com/index/astra-for-law/",
+      "source": "Hacker News",
+      "score": 381,
+      "comments": 409
+    },
+    {
+      "id": "hn:49726007",
+      "title": "Wax motor",
+      "summary": "",
+      "url": "https://en.wikipedia.org/wiki/Wax_motor",
+      "source": "Hacker News",
+      "score": 290,
+      "comments": 54
+    },
+    {
+      "id": "lob:rok1za",
+      "title": "Everybody's Lost Their Minds",
+      "summary": "",
+      "url": "https://www.netmeister.org/blog/everybodys-lost-their-minds.html",
+      "source": "Lobste.rs",
+      "score": 116,
+      "comments": 31,
+      "tags": [
+        "culture"
       ]
     },
     {
@@ -84,82 +114,31 @@
       "summary": "",
       "url": "https://blog.verygoodsoftwarenotvirus.dev/posts/2026/09/12/the-end-of-verygoodsoftwarenotvirus-dot-ru/",
       "source": "Lobste.rs",
-      "score": 81,
-      "comments": 25,
+      "score": 89,
+      "comments": 26,
       "tags": [
         "web"
       ]
     },
     {
-      "id": "lob:cianny",
-      "title": "Why i'm still bearish on LLMs after Navier-Stokes",
+      "id": "hn:49747925",
+      "title": "Alibaba releases Qwen 3.8 Omni Flash",
       "summary": "",
-      "url": "https://dank.systems/posts/2026-09-15-ai-bear.html",
+      "url": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+      "source": "Hacker News",
+      "score": 84,
+      "comments": 19
+    },
+    {
+      "id": "lob:pkj7mf",
+      "title": "I Don't Like LLMs",
+      "summary": "",
+      "url": "https://martinfowler.com/articles/2026-dont-like-llms.html",
       "source": "Lobste.rs",
-      "score": 47,
-      "comments": 13,
+      "score": 61,
+      "comments": 21,
       "tags": [
         "vibecoding"
-      ]
-    },
-    {
-      "id": "lob:wxnibb",
-      "title": "A/I Shuts Down",
-      "summary": "<p>A/I is Autistici/Inventati, nothing to do with algorithms.</p>\n<p>Why this matters: to quote senior advisor and journalist <a href=\"https://systemli.social/@anneroth\" rel=\"ugc\">Anne Roth</a>:</p>\n<blockquote>\n<p>20,000 mail accounts.\n20,000 blogs.\n5,000 mailing lists.\n1,500 websites.</p>\n<p>In Eu",
-      "url": "https://keepitfree.ai/announcements/a/i-shuts-down-stay-human/",
-      "source": "Lobste.rs",
-      "score": 157,
-      "comments": 103,
-      "tags": [
-        "finance",
-        "privacy"
-      ]
-    },
-    {
-      "id": "lob:tgrvxh",
-      "title": "Forgery of C2PA on a Pixel 10",
-      "summary": "",
-      "url": "https://www.hackerfactor.com/blog/index.php?/archives/1102-C2PA-and-Pixel-Glitter-Milk.html",
-      "source": "Lobste.rs",
-      "score": 52,
-      "comments": 19,
-      "tags": [
-        "cryptography",
-        "security"
-      ]
-    },
-    {
-      "id": "lob:gs10ad",
-      "title": "Introducing GNOME 51",
-      "summary": "",
-      "url": "https://release.gnome.org/51/",
-      "source": "Lobste.rs",
-      "score": 80,
-      "comments": 13,
-      "tags": [
-        "linux",
-        "release"
-      ]
-    },
-    {
-      "id": "hn:49685835",
-      "title": "The Relation Between Mathematics and Physics by Paul Dirac (1939)",
-      "summary": "",
-      "url": "https://www.damtp.cam.ac.uk/events/strings02/dirac/speach.html",
-      "source": "Hacker News",
-      "score": 129,
-      "comments": 36
-    },
-    {
-      "id": "lob:sh6yeo",
-      "title": "Unicode 18.0.0",
-      "summary": "",
-      "url": "https://www.unicode.org/versions/Unicode18.0.0/",
-      "source": "Lobste.rs",
-      "score": 35,
-      "comments": 10,
-      "tags": [
-        "release"
       ]
     },
     {
@@ -168,87 +147,109 @@
       "summary": "",
       "url": "https://www.minitap.ai/blog/i-expected-better-from-google",
       "source": "Lobste.rs",
-      "score": 33,
-      "comments": 11,
+      "score": 66,
+      "comments": 31,
       "tags": [
         "vibecoding"
       ]
     },
     {
-      "id": "lob:lox1su",
-      "title": "Why .tar.gz files can't be combined with cat",
+      "id": "lob:gs10ad",
+      "title": "Introducing GNOME 51",
       "summary": "",
-      "url": "https://alexwlchan.net/2026/cat-confusion/",
+      "url": "https://release.gnome.org/51/",
       "source": "Lobste.rs",
-      "score": 17,
-      "comments": 14,
+      "score": 100,
+      "comments": 17,
       "tags": [
-        "programming"
+        "linux",
+        "release"
       ]
     },
     {
-      "id": "arxiv:2609.19134v1",
-      "title": "ScienceIDE: Turning World's Scientific Codebase into Agent Learnable Environments",
-      "summary": "Scientific code repositories encode decades of human knowledge in executable models, methods, and tools. Yet fragmented toolchains, implicit domain conventions, and specialized correctness criteria make this knowledge difficult to convert into reliable learning experience-a challenge we call the sci",
-      "url": "https://arxiv.org/abs/2609.19134v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.CY"
-      ],
-      "arxiv_id": "2609.19134v1"
+      "id": "hn:49746290",
+      "title": "Flet 1.0 – Build cross-platform apps in Python",
+      "summary": "",
+      "url": "https://flet.dev/",
+      "source": "Hacker News",
+      "score": 71,
+      "comments": 37
     },
     {
-      "id": "arxiv:2609.19128v1",
-      "title": "Cognitive Extensions for Dual-Process Language Agents: Memory and Self-Reflection in Interactive Environments",
-      "summary": "Language agents remain brittle in interactive environments, where success requires long-horizon state tracking, valid action execution, and recovery from failed steps. We extend SwiftSage, a dual-process agent that combines a fast action proposer with a slower planner, using two modular cognitive ex",
-      "url": "https://arxiv.org/abs/2609.19128v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.LG",
-        "cs.MA"
-      ],
-      "arxiv_id": "2609.19128v1"
+      "id": "lob:uz30ed",
+      "title": "Be alert: targeted attacks on prominent Rustaceans",
+      "summary": "",
+      "url": "https://blog.rust-lang.org/2026/09/17/targeted-attacks/",
+      "source": "Lobste.rs",
+      "score": 40,
+      "comments": 2,
+      "tags": [
+        "rust",
+        "security"
+      ]
     },
     {
-      "id": "arxiv:2609.19113v1",
-      "title": "Playing log(N)-Questions over Wikipedia Abstracts: Communication Efficiency Between Paired Frontier Models",
-      "summary": "We evaluate six frontier language models on the two-agent $\\log(N)$-Questions game. A questioner sees $N$ Wikipedia lead paragraphs and must identify a secretly chosen target using exactly $\\log_2 N$ yes/no questions. An answerer sees only the target and the question, and replies with one word. Both",
-      "url": "https://arxiv.org/abs/2609.19113v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL"
-      ],
-      "arxiv_id": "2609.19113v1"
+      "id": "lob:fjnkn4",
+      "title": "The Golden Spike, and Resurrecting the Vale(n) Programming Language",
+      "summary": "",
+      "url": "https://verdagon.dev/blog/golden-spike-reviving-vale-valen",
+      "source": "Lobste.rs",
+      "score": 45,
+      "comments": 7,
+      "tags": [
+        "plt",
+        "rust"
+      ]
     },
     {
-      "id": "arxiv:2609.19101v1",
-      "title": "Monitoring and Discovering Reward Hacking with Internal Representations during LLM Evaluations",
-      "summary": "As models scale, reward hacking becomes more frequent, more sophisticated, and more consequential. Does it leave a telltale signature in model representations? This work analyzes how reward hacking is represented internally in frontier open source LLMs, and how those representations can be used to u",
-      "url": "https://arxiv.org/abs/2609.19101v1",
+      "id": "arxiv:2609.20807v1",
+      "title": "Score Centering Stabilizes Off-policy Reinforcement Learning",
+      "summary": "Reinforcement learning (RL) of large language models is notoriously sensitive to small differences between training and inference engines, often referred to as the training-inference mismatch (TIM). However, completely eliminating TIM is impractical, as it would come at a major cost to rollout effic",
+      "url": "https://arxiv.org/abs/2609.20807v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_id": "2609.20807v1"
+    },
+    {
+      "id": "arxiv:2609.20821v1",
+      "title": "Embedding Models Measure in Peculiar Ways",
+      "summary": "Embedding spaces define notions of semantic similarity and distance. We study whether those embeddings reflect physical measurements of mass, distance, time and volume, which admit a unique, objective notion of semantic equivalence and distance. We find that physical measurement is only weakly model",
+      "url": "https://arxiv.org/abs/2609.20821v1",
       "source": "ArXiv",
       "categories": [
         "cs.CL",
         "cs.LG"
       ],
-      "arxiv_id": "2609.19101v1"
+      "arxiv_id": "2609.20821v1"
     },
     {
-      "id": "rss:35e4ab97db",
-      "title": "Cisco Warns of New Zero-Day ISE Auth Bypass (CVSS 10.0) Exploited in Active Attacks",
-      "summary": "Cisco has warned of a fresh maximum-severity security flaw impacting Identity Services Engine (ISE) that has come under active exploitation.\n\nThe vulnerability, tracked as CVE-2026-76460 (CVSS score: 10.0), could allow an unauthenticated, remote attacker to bypass authentication.\n\n\"This vulnerabilit",
-      "url": "https://thehackernews.com/2026/09/cisco-warns-of-new-zero-day-ise-auth.html",
-      "source": "Tech RSS",
-      "score": 0
+      "id": "arxiv:2609.20812v1",
+      "title": "Quantifying Overclaiming Propensity in Frontier LLM Agents",
+      "summary": "Frontier coding agents are increasingly trusted to work autonomously for long periods, yet an agent's final response is often the only account of that work a user sees. We quantify the propensity of frontier agents to \\emph{overclaim} task completion, a misrepresentation that can mislead the user. A",
+      "url": "https://arxiv.org/abs/2609.20812v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_id": "2609.20812v1"
     },
     {
-      "id": "rss:c13b082f0e",
-      "title": "Attackers Exploit Issabel Framework Flaw Enabling Unauthenticated OS Command Execution",
-      "summary": "A critical security flaw in Issabel Framework, a web-based framework for the open-source unified communications PBX software, has come under active exploitation.\n\nThe vulnerability in question is CVE-2026-89026 (CVSS v3.1 score: 9.8/CVSS v4.0 score: 9.3), which can allow an unauthenticated remote at",
-      "url": "https://thehackernews.com/2026/09/attackers-exploit-issabel-framework.html",
-      "source": "Tech RSS",
-      "score": 0
+      "id": "arxiv:2609.20804v1",
+      "title": "An Empirical Study of Harness Design for Coding Agents",
+      "summary": "Coding harnesses shape how autonomous coding agents translate model capabilities into long-horizon software-engineering performance, yet existing work typically evaluates harnesses as monolithic systems, leaving the effectiveness of individual components unclear. To enable component-level comparison",
+      "url": "https://arxiv.org/abs/2609.20804v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "cs.SE"
+      ],
+      "arxiv_id": "2609.20804v1"
     }
   ],
   "ai_curated": true
