@@ -1,58 +1,58 @@
 {
-  "date": "2026-09-22",
-  "update_time": "2026-09-22 04:07:50",
+  "date": "2026-09-23",
+  "update_time": "2026-09-22 16:30:50",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-22\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 NASA 火星采样返回任务，正式宣告死亡 (来源: HackerNews)\n- **核心干货**：耗资百亿美元、折腾了快十年的火星采样返回计划被官方判了死刑。预算超支到连 NASA 自己都不好意思再要钱，只能眼睁睁看着毅力号辛辛苦苦钻的样本管在火星上吃灰。这标志着人类\"把火星泥土带回地球\"的梦想至少推迟一代人。\n- **毒舌/硬核点评**：花几百亿把石头丢在火星上，再花几百亿想办法捡回来——这不是航天工程，这是史上最贵的\"丢手绢\"游戏，最后手绢没捡回来，钱倒是烧没了。\n- **🔗 传送门**：[点击直达原链接](https://www.science.org/content/article/nasa-s-mars-sample-return-mission-dead)\n\n---\n\n### 2. 📌 小米 MiMo v2.6 发布，杀入开源大模型第一梯队 (来源: HackerNews)\n- **核心干货**：小米甩出 MiMo v2.6，HN 上 645 分、318 条评论炸锅。这不是又一个\"套壳 Qwen\"，从社区反应看，其在推理与多模态能力上拿出了实打实的硬货，标志着手机厂商正式从\"模型调用方\"变成\"模型供给侧\"。\n- **毒舌/硬核点评**：以前小米发布会吹的是骁龙首发，现在开始吹自研大模型了。手机厂商卷完影像卷模型，下一步是不是该卷\"端侧 AGI 能不能帮我抢茅台\"了？\n- **🔗 传送门**：[点击直达原链接](https://mimo.xiaomi.com/mimo-v2-6)\n\n---\n\n### 3. 📌 CISA 拉响警报：Linux 内核三个漏洞正被野外利用 (来源: Tech RSS)\n- **核心干货**：CISA 把三个 Linux 内核漏洞（含 CVSS 9.8 的 CVE-2025-39682）塞进\"已知被利用\"目录，实锤正在被攻击者主动利用。Linux 撑起了全球大半个云和关键基础设施，这波不是\"理论风险\"，是\"已经在挨打\"。\n- **毒舌/硬核点评**：那些天天喊着\"我们用 Linux 所以天然安全\"的运维老哥，该从\"开源信仰\"里醒醒了——内核漏洞可不管你信不信开源，它只认你补丁打没打。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/cisa-flags-three-linux-kernel.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\"技术圈最大的幻觉，是以为'开源'等于'安全'，'大厂'等于'靠谱'，'明年'等于'会做'——现实是，漏洞在野外跑，火星的样本在土里烂，而你还在等下一个 PR 合并。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-23\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 [小米 MiMo v2.6 发布，HN 破千分屠榜] (来源: Hacker News)\n- **核心干货**：小米的 MiMo v2.6 在 HN 上以 1027 分、458 条评论的恐怖热度登顶。从分数和评论比来看，这不是一次常规的版本迭代——大概率在推理效率或端侧部署上有实质性突破，否则不至于让这帮见惯了大模型的 HN 老油条集体高潮。\n- **毒舌/硬核点评**：雷总造车之余顺手把大模型也卷了，OpenAI 和 Anthropic 看了连夜加班的理由又多了一个。建议硅谷同行重新审视\"中国公司只会做套壳\"这个刻板印象。\n- **🔗 传送门**：[点击直达原链接](https://mimo.xiaomi.com/mimo-v2-6)\n\n---\n\n### 2. 📌 [GPT-6 Astra 攻破 21 年悬而未决的 Enigma 密文] (来源: Hacker News)\n- **核心干货**：GPT-6 Astra 成功破解了一段自 2005 年起就无人能解的 Enigma 加密消息。这不只是一道\"历史谜题被解开\"，更重要的是它展示了前沿模型在密码分析领域的实际能力——推理链条的长度和组合搜索空间，已经超出了传统暴力破解或人工分析的范畴。\n- **毒舌/硬核点评**：人类密码学家啃了 21 年没啃下来的硬骨头，AI 一顿推理就搞定了。这哪是语言模型，分明是图灵从坟里爬出来给 OpenAI 站台。\n- **🔗 传送门**：[点击直达原链接](https://www.cryptocellar.org/bgac/the-mvueh-break.html)\n\n---\n\n### 3. 📌 [Linux 内核 ARM64 KVM 严重漏洞：Guest 可直接读写宿主机内存] (来源: Tech News / The Hacker News)\n- **核心干货**：CVE-2026-89775，ARM64 架构下 KVM 虚拟化代码存在释放后使用（UAF）漏洞，在启用嵌套虚拟化的宿主机上，Guest VM 可以直接读写宿主内核内存。这意味着云厂商的多租户隔离模型在 ARM 实例上出现了一道致命裂缝——隔壁租户理论上能摸到你的数据。\n- **毒舌/硬核点评**：搞了半天，虚拟机隔离的\"墙\"是纸糊的。建议所有跑 ARM 实例的云厂商连夜打补丁，不然明天热搜就是\"某云厂商用户数据泄露\"。ARM 服务器刚在数据中心站稳脚跟，这一刀捅得真是时候。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/new-linux-kernel-flaw-gives-arm64-kvm.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> **\"密码学家花 21 年没解开的谜，AI 几小时搞定；你花 21 天没看完的技术书，AI 几秒总结。区别在于——AI 不会拖延症，而你会。\"**",
   "briefing_items": [
     {
-      "title": "NASA 火星采样返回任务，正式宣告死亡",
-      "source": "HackerNews",
-      "summary": "耗资百亿美元、折腾了快十年的火星采样返回计划被官方判了死刑。预算超支到连 NASA 自己都不好意思再要钱，只能眼睁睁看着毅力号辛辛苦苦钻的样本管在火星上吃灰。这标志着人类\"把火星泥土带回地球\"的梦想至少推迟一代人。",
-      "commentary": "花几百亿把石头丢在火星上，再花几百亿想办法捡回来——这不是航天工程，这是史上最贵的\"丢手绢\"游戏，最后手绢没捡回来，钱倒是烧没了。",
-      "url": "https://www.science.org/content/article/nasa-s-mars-sample-return-mission-dead"
-    },
-    {
-      "title": "小米 MiMo v2.6 发布，杀入开源大模型第一梯队",
-      "source": "HackerNews",
-      "summary": "小米甩出 MiMo v2.6，HN 上 645 分、318 条评论炸锅。这不是又一个\"套壳 Qwen\"，从社区反应看，其在推理与多模态能力上拿出了实打实的硬货，标志着手机厂商正式从\"模型调用方\"变成\"模型供给侧\"。",
-      "commentary": "以前小米发布会吹的是骁龙首发，现在开始吹自研大模型了。手机厂商卷完影像卷模型，下一步是不是该卷\"端侧 AGI 能不能帮我抢茅台\"了？",
+      "title": "[小米 MiMo v2.6 发布，HN 破千分屠榜]",
+      "source": "Hacker News",
+      "summary": "小米的 MiMo v2.6 在 HN 上以 1027 分、458 条评论的恐怖热度登顶。从分数和评论比来看，这不是一次常规的版本迭代——大概率在推理效率或端侧部署上有实质性突破，否则不至于让这帮见惯了大模型的 HN 老油条集体高潮。",
+      "commentary": "雷总造车之余顺手把大模型也卷了，OpenAI 和 Anthropic 看了连夜加班的理由又多了一个。建议硅谷同行重新审视\"中国公司只会做套壳\"这个刻板印象。",
       "url": "https://mimo.xiaomi.com/mimo-v2-6"
     },
     {
-      "title": "CISA 拉响警报：Linux 内核三个漏洞正被野外利用",
-      "source": "Tech RSS",
-      "summary": "CISA 把三个 Linux 内核漏洞（含 CVSS 9.8 的 CVE-2025-39682）塞进\"已知被利用\"目录，实锤正在被攻击者主动利用。Linux 撑起了全球大半个云和关键基础设施，这波不是\"理论风险\"，是\"已经在挨打\"。",
-      "commentary": "那些天天喊着\"我们用 Linux 所以天然安全\"的运维老哥，该从\"开源信仰\"里醒醒了——内核漏洞可不管你信不信开源，它只认你补丁打没打。",
-      "url": "https://thehackernews.com/2026/09/cisa-flags-three-linux-kernel.html"
+      "title": "[GPT-6 Astra 攻破 21 年悬而未决的 Enigma 密文]",
+      "source": "Hacker News",
+      "summary": "GPT-6 Astra 成功破解了一段自 2005 年起就无人能解的 Enigma 加密消息。这不只是一道\"历史谜题被解开\"，更重要的是它展示了前沿模型在密码分析领域的实际能力——推理链条的长度和组合搜索空间，已经超出了传统暴力破解或人工分析的范畴。",
+      "commentary": "人类密码学家啃了 21 年没啃下来的硬骨头，AI 一顿推理就搞定了。这哪是语言模型，分明是图灵从坟里爬出来给 OpenAI 站台。",
+      "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html"
+    },
+    {
+      "title": "[Linux 内核 ARM64 KVM 严重漏洞：Guest 可直接读写宿主机内存]",
+      "source": "Tech News / The Hacker News",
+      "summary": "CVE-2026-89775，ARM64 架构下 KVM 虚拟化代码存在释放后使用（UAF）漏洞，在启用嵌套虚拟化的宿主机上，Guest VM 可以直接读写宿主内核内存。这意味着云厂商的多租户隔离模型在 ARM 实例上出现了一道致命裂缝——隔壁租户理论上能摸到你的数据。",
+      "commentary": "搞了半天，虚拟机隔离的\"墙\"是纸糊的。建议所有跑 ARM 实例的云厂商连夜打补丁，不然明天热搜就是\"某云厂商用户数据泄露\"。ARM 服务器刚在数据中心站稳脚跟，这一刀捅得真是时候。",
+      "url": "https://thehackernews.com/2026/09/new-linux-kernel-flaw-gives-arm64-kvm.html"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49792342",
-      "title": "Transformers Explained Visually",
+      "id": "hn:49801324",
+      "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
       "summary": "",
-      "url": "https://poloclub.github.io/transformer-explainer/",
+      "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
       "source": "Hacker News",
-      "score": 242,
-      "comments": 41
+      "score": 252,
+      "comments": 246
     },
     {
-      "id": "hn:49794330",
-      "title": "I don't want to read what you didn't write",
+      "id": "hn:49801939",
+      "title": "Apple has added persistent 'ads' to iOS, and it's driving users crazy",
       "summary": "",
-      "url": "https://blog.colinbreck.com/i-dont-want-to-read-what-you-didnt-write/",
+      "url": "https://www.techradar.com/phones/iphone/i-wish-apple-would-just-stop-that-crap-apple-has-added-persistent-ads-to-ios-and-its-driving-users-crazy",
       "source": "Hacker News",
-      "score": 405,
-      "comments": 137
+      "score": 278,
+      "comments": 195
     },
     {
-      "id": "hn:49791939",
-      "title": "NASA’s Mars Sample Return mission is dead",
+      "id": "hn:49797323",
+      "title": "Can gzip be a language model?",
       "summary": "",
-      "url": "https://www.science.org/content/article/nasa-s-mars-sample-return-mission-dead",
+      "url": "https://nathan.rs/posts/gzip-lm/",
       "source": "Hacker News",
-      "score": 331,
-      "comments": 270
+      "score": 316,
+      "comments": 119
     },
     {
       "id": "hn:49792730",
@@ -60,35 +60,8 @@
       "summary": "",
       "url": "https://mimo.xiaomi.com/mimo-v2-6",
       "source": "Hacker News",
-      "score": 645,
-      "comments": 318
-    },
-    {
-      "id": "hn:49787436",
-      "title": "What Sun got wrong",
-      "summary": "",
-      "url": "https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong/",
-      "source": "Hacker News",
-      "score": 531,
-      "comments": 311
-    },
-    {
-      "id": "hn:49787726",
-      "title": "Attention is all you have",
-      "summary": "",
-      "url": "https://alicegg.tech/2026/09/21/attention",
-      "source": "Hacker News",
-      "score": 633,
-      "comments": 190
-    },
-    {
-      "id": "hn:49792067",
-      "title": "AI coding has made CI a bottleneck, so we reworked ours to keep up",
-      "summary": "",
-      "url": "https://linear.app/now/ci-bottleneck-reworked",
-      "source": "Hacker News",
-      "score": 167,
-      "comments": 176
+      "score": 1027,
+      "comments": 458
     },
     {
       "id": "hn:49794615",
@@ -96,39 +69,8 @@
       "summary": "",
       "url": "https://brand.io/article/spymarks/",
       "source": "Hacker News",
-      "score": 211,
-      "comments": 40
-    },
-    {
-      "id": "hn:49791997",
-      "title": "The Advisory Group on Mathematics and Artificial Intelligence",
-      "summary": "",
-      "url": "https://terrytao.wordpress.com/2026/09/21/advisory-group-on-mathematics-and-artificial-intelligence/",
-      "source": "Hacker News",
-      "score": 107,
-      "comments": 52
-    },
-    {
-      "id": "hn:49795579",
-      "title": "Claude Status – Elevated errors for multiple models",
-      "summary": "",
-      "url": "https://status.claude.com/incidents/7g1qpkyz5gxh",
-      "source": "Hacker News",
-      "score": 76,
-      "comments": 60
-    },
-    {
-      "id": "lob:34xsdg",
-      "title": "Do you use :visited on links?",
-      "summary": "",
-      "url": "https://kevquirk.com/do-you-use-visited-on-links",
-      "source": "Lobste.rs",
-      "score": 23,
-      "comments": 25,
-      "tags": [
-        "a11y",
-        "web"
-      ]
+      "score": 607,
+      "comments": 154
     },
     {
       "id": "lob:sus08k",
@@ -136,73 +78,11 @@
       "summary": "",
       "url": "https://david.alvarezrosa.com/posts/self-hosting-behind-cgnat/",
       "source": "Lobste.rs",
-      "score": 19,
-      "comments": 10,
+      "score": 48,
+      "comments": 35,
       "tags": [
         "linux",
         "networking"
-      ]
-    },
-    {
-      "id": "rss:fc6f471fd5",
-      "title": "SolarWinds Patches ARM Hard-Coded Key Flaw Enabling Unauthenticated RCE",
-      "summary": "SolarWinds has released security updates to address a high-severity flaw in Access Rights Manager (ARM) that, if successfully exploited, could lead to an unauthenticated remote code execution vulnerability.\n\nThe vulnerability, tracked as CVE-2026-28326, is rated 8.8 out of 10.0 on the CVSS scoring s",
-      "url": "https://thehackernews.com/2026/09/solarwinds-patches-arm-hard-coded-key.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:cf46650249",
-      "title": "CISA Flags Three Linux Kernel Vulnerabilities Exploited in the Wild",
-      "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added three security flaws impacting the Linux kernel to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation.\n\nThe vulnerabilities are listed below -\n\n\n  CVE-2025-39682 (CVSS score: 9.8)",
-      "url": "https://thehackernews.com/2026/09/cisa-flags-three-linux-kernel.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "lob:fyngrv",
-      "title": "What are you doing this week?",
-      "summary": "<p>What are you doing this week? Feel free to share!</p>\n<p>Keep in mind it’s OK to do nothing at all, too.</p>\n",
-      "url": "https://lobste.rs/s/fyngrv/what_are_you_doing_this_week",
-      "source": "Lobste.rs",
-      "score": 16,
-      "comments": 35,
-      "tags": [
-        "ask",
-        "programming"
-      ]
-    },
-    {
-      "id": "lob:73ei6g",
-      "title": "Textbook review: Is Parallel Programming Hard, And, If So, What Can You Do About It?",
-      "summary": "",
-      "url": "https://ahelwer.ca/post/2026-09-21-concurrency-textbook/",
-      "source": "Lobste.rs",
-      "score": 34,
-      "comments": 0,
-      "tags": [
-        "programming"
-      ]
-    },
-    {
-      "id": "hn:49769561",
-      "title": "Divide by depth for instant 3D",
-      "summary": "",
-      "url": "https://gabrieloc.com/2026/09/15/perspective.html",
-      "source": "Hacker News",
-      "score": 101,
-      "comments": 17
-    },
-    {
-      "id": "lob:qxzjqt",
-      "title": "Creating a Blog in Gemini://",
-      "summary": "",
-      "url": "https://brennan.day/creating-a-blog-in-gemini/",
-      "source": "Lobste.rs",
-      "score": 28,
-      "comments": 6,
-      "tags": [
-        "web"
       ]
     },
     {
@@ -211,8 +91,8 @@
       "summary": "",
       "url": "https://github.com/acsandmann/rift/",
       "source": "Lobste.rs",
-      "score": 20,
-      "comments": 1,
+      "score": 37,
+      "comments": 12,
       "tags": [
         "mac",
         "rust"
@@ -224,12 +104,144 @@
       "summary": "",
       "url": "https://botahamec.dev/named-optional-args",
       "source": "Lobste.rs",
-      "score": 19,
-      "comments": 7,
+      "score": 49,
+      "comments": 24,
       "tags": [
         "plt",
         "rust"
       ]
+    },
+    {
+      "id": "lob:vwl2kn",
+      "title": "What Sun got wrong",
+      "summary": "",
+      "url": "https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong/",
+      "source": "Lobste.rs",
+      "score": 116,
+      "comments": 62,
+      "tags": [
+        "historical"
+      ]
+    },
+    {
+      "id": "hn:49802161",
+      "title": "OpenAI is well positioned to fast-follow Jev",
+      "summary": "",
+      "url": "https://arcturus-labs.com/blog/2026/09/21/will-openai-eat-jevs-lunch/",
+      "source": "Hacker News",
+      "score": 99,
+      "comments": 80
+    },
+    {
+      "id": "hn:49802871",
+      "title": "I asked Meta’s Muse for its filesystem and it sent me 6.8GB",
+      "summary": "",
+      "url": "https://mouse.dev/blog/muse-runtime-export/",
+      "source": "Hacker News",
+      "score": 129,
+      "comments": 69
+    },
+    {
+      "id": "lob:liey8q",
+      "title": "Looking forward to Git 2.56 - and 3.0",
+      "summary": "",
+      "url": "https://lwn.net/SubscriberLink/1094575/2385e98583715c2b/",
+      "source": "Lobste.rs",
+      "score": 50,
+      "comments": 7,
+      "tags": [
+        "vcs"
+      ]
+    },
+    {
+      "id": "arxiv:2609.24972v1",
+      "title": "RRSI: Regularized Recursive Self-Improvement of Agent Harnesses",
+      "summary": "An LLM agent's capability is largely magnified by its harness, namely the prompts, control flow, tooling, memory, and context management surrounding the frozen backbone model. Recent methods increasingly automate this process by iteratively proposing and selecting component-wise edits of an agent ha",
+      "url": "https://arxiv.org/abs/2609.24972v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_id": "2609.24972v1"
+    },
+    {
+      "id": "lob:bvrhgq",
+      "title": "Arguing about arguments",
+      "summary": "",
+      "url": "https://steveklabnik.com/writing/arguing-about-arguments/",
+      "source": "Lobste.rs",
+      "score": 29,
+      "comments": 19,
+      "tags": [
+        "programming",
+        "rust"
+      ]
+    },
+    {
+      "id": "hn:49801329",
+      "title": "Show HN: Drop – a rootless Linux sandbox with gVisor support",
+      "summary": "I created Drop because I always felt uneasy installing and running third-party programs using my main user account. A single compromised dependency means a full compromise of the system. What is even worse, because I ship software from my computer, a single compromised dependency can lead to comprom",
+      "url": "https://droprun.sh/",
+      "source": "Hacker News",
+      "score": 81,
+      "comments": 23
+    },
+    {
+      "id": "hn:49780622",
+      "title": "Line Scan Photos from MUNI Heritage Weekend in San Francisco",
+      "summary": "",
+      "url": "https://daniel.lawrence.lu/blog/2026-09-20-muni-heritage-weekend/",
+      "source": "Hacker News",
+      "score": 94,
+      "comments": 16
+    },
+    {
+      "id": "lob:wx3qsm",
+      "title": "Fearless SIMD v1.0 is here",
+      "summary": "",
+      "url": "https://linebender.org/blog/fearless-simd-1-0/",
+      "source": "Lobste.rs",
+      "score": 34,
+      "comments": 1,
+      "tags": [
+        "release",
+        "rust"
+      ]
+    },
+    {
+      "id": "arxiv:2609.24974v1",
+      "title": "Harness-Zero: Harness Distillation via Agent-as-Harness",
+      "summary": "Agent harnesses, the external systems that mediate model-environment interaction, can substantially improve agent performance, but their gains remain tied to the harness at deployment. Because the best harness varies across domains, instances, and models, a general-purpose agent must either settle f",
+      "url": "https://arxiv.org/abs/2609.24974v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.NE"
+      ],
+      "arxiv_id": "2609.24974v1"
+    },
+    {
+      "id": "arxiv:2609.24971v1",
+      "title": "DolphinBench: Mapping the Pareto Frontier of Agent Memory",
+      "summary": "Agents today often take real-world actions that depend on long-term memory and context recall over time. However, most current memory benchmarks are built for a conversational question-answer format, where the question itself signals that some fact must be retrieved, and often which one. Moreover, b",
+      "url": "https://arxiv.org/abs/2609.24971v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_id": "2609.24971v1"
+    },
+    {
+      "id": "rss:5453b350ce",
+      "title": "New Linux Kernel Flaw Gives ARM64 KVM Guests Read-Write Access to Host Memory",
+      "summary": "A new flaw in the Linux kernel's KVM virtualization code for ARM64 processors can leave a freed piece of host memory exposed to a guest virtual machine on hosts with nested virtualization enabled.\n\nThe bug, tracked as&nbsp;CVE-2026-89775, allows a guest to read and write host kernel memory, and the",
+      "url": "https://thehackernews.com/2026/09/new-linux-kernel-flaw-gives-arm64-kvm.html",
+      "source": "Tech RSS",
+      "score": 0
     }
   ],
   "ai_curated": true
