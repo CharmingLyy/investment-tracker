@@ -1,67 +1,67 @@
 {
   "date": "2026-09-22",
-  "update_time": "2026-09-21 17:59:26",
+  "update_time": "2026-09-22 04:07:50",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-22\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 [AX – Google 开放智能体编排器] (来源: HackerNews)\n- **核心干货**：Google 开源了 Agentic Orchestrator（AX），一套用于编排多智能体协作的框架。它试图解决当前 Agent 开发中\"各自为政、无法互操作\"的碎片化问题，提供统一的调度、通信与任务分解层。606 分、282 条评论的热度说明整个行业都在等一个\"Agent 界的 Kubernetes\"。\n- **毒舌/硬核点评**：Agent 框架的坟场又多了一块金光闪闪的墓碑——Google 出品，未必精品，但至少比那些套壳 LangChain 的创业公司靠谱半个身位。真正的看点是它会不会变成下一个被自己 KPI 杀死的 Google 项目。\n- **🔗 传送门**：[点击直达原链接](https://agentexecutor.io)\n\n---\n\n### 2. 📌 [M5 Ultra Mac Studio 评测：本地 AI Agent 的梦想机] (来源: HackerNews)\n- **核心干货**：MacStories 发布了 M5 Ultra Mac Studio 深度评测，核心结论是：统一内存架构 + M5 Ultra 的神经网络引擎，让本地跑大模型推理和 Agent 工作流终于从\"能跑\"进化到\"好用\"。对于不想把数据喂给云端 API 的开发者和隐私敏感场景，这可能是目前最务实的硬件选择。\n- **毒舌/硬核点评**：Apple 终于把\"本地 AI\"从发布会 PPT 里拽到了桌面上。但别忘了，你花几万块买的\"隐私\"，本质上是在为不愿交 OpenAI 月费找的体面借口——不过话说回来，这借口确实挺香的。\n- **🔗 传送门**：[点击直达原链接](https://www.macstories.net/stories/m5-ultra-mac-studio-review-the-dream-mac-for-local-ai-agents/)\n\n---\n\n### 3. 📌 [SolarWinds ARM 硬编码密钥漏洞：未授权 RCE，CVSS 8.8] (来源: Tech RSS)\n- **核心干货**：SolarWinds Access Rights Manager 被曝出硬编码密钥漏洞（CVE-2026-28326），攻击者可未授权远程执行代码，CVSS 评分 8.8。考虑到 SolarWinds 在 2020 年那场震惊全球的供应链攻击中的\"前科\"，这次又是权限管理产品出事——历史不会重复，但会押韵。\n- **毒舌/硬核点评**：SolarWinds 的安全团队大概是把\"硬编码密钥\"当成了企业文化传承。建议下次直接把密钥刻在官网上，至少省得黑客反编译了。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/solarwinds-patches-arm-hard-coded-key.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> \"Agent 框架年年有，今年特别多。但记住：能编排别人的叫平台，被平台编排的叫 API 调用费。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-22\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 NASA 火星采样返回任务，正式宣告死亡 (来源: HackerNews)\n- **核心干货**：耗资百亿美元、折腾了快十年的火星采样返回计划被官方判了死刑。预算超支到连 NASA 自己都不好意思再要钱，只能眼睁睁看着毅力号辛辛苦苦钻的样本管在火星上吃灰。这标志着人类\"把火星泥土带回地球\"的梦想至少推迟一代人。\n- **毒舌/硬核点评**：花几百亿把石头丢在火星上，再花几百亿想办法捡回来——这不是航天工程，这是史上最贵的\"丢手绢\"游戏，最后手绢没捡回来，钱倒是烧没了。\n- **🔗 传送门**：[点击直达原链接](https://www.science.org/content/article/nasa-s-mars-sample-return-mission-dead)\n\n---\n\n### 2. 📌 小米 MiMo v2.6 发布，杀入开源大模型第一梯队 (来源: HackerNews)\n- **核心干货**：小米甩出 MiMo v2.6，HN 上 645 分、318 条评论炸锅。这不是又一个\"套壳 Qwen\"，从社区反应看，其在推理与多模态能力上拿出了实打实的硬货，标志着手机厂商正式从\"模型调用方\"变成\"模型供给侧\"。\n- **毒舌/硬核点评**：以前小米发布会吹的是骁龙首发，现在开始吹自研大模型了。手机厂商卷完影像卷模型，下一步是不是该卷\"端侧 AGI 能不能帮我抢茅台\"了？\n- **🔗 传送门**：[点击直达原链接](https://mimo.xiaomi.com/mimo-v2-6)\n\n---\n\n### 3. 📌 CISA 拉响警报：Linux 内核三个漏洞正被野外利用 (来源: Tech RSS)\n- **核心干货**：CISA 把三个 Linux 内核漏洞（含 CVSS 9.8 的 CVE-2025-39682）塞进\"已知被利用\"目录，实锤正在被攻击者主动利用。Linux 撑起了全球大半个云和关键基础设施，这波不是\"理论风险\"，是\"已经在挨打\"。\n- **毒舌/硬核点评**：那些天天喊着\"我们用 Linux 所以天然安全\"的运维老哥，该从\"开源信仰\"里醒醒了——内核漏洞可不管你信不信开源，它只认你补丁打没打。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/cisa-flags-three-linux-kernel.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\"技术圈最大的幻觉，是以为'开源'等于'安全'，'大厂'等于'靠谱'，'明年'等于'会做'——现实是，漏洞在野外跑，火星的样本在土里烂，而你还在等下一个 PR 合并。\"",
   "briefing_items": [
     {
-      "title": "[AX – Google 开放智能体编排器]",
+      "title": "NASA 火星采样返回任务，正式宣告死亡",
       "source": "HackerNews",
-      "summary": "Google 开源了 Agentic Orchestrator（AX），一套用于编排多智能体协作的框架。它试图解决当前 Agent 开发中\"各自为政、无法互操作\"的碎片化问题，提供统一的调度、通信与任务分解层。606 分、282 条评论的热度说明整个行业都在等一个\"Agent 界的 Kubernetes\"。",
-      "commentary": "Agent 框架的坟场又多了一块金光闪闪的墓碑——Google 出品，未必精品，但至少比那些套壳 LangChain 的创业公司靠谱半个身位。真正的看点是它会不会变成下一个被自己 KPI 杀死的 Google 项目。",
-      "url": "https://agentexecutor.io"
+      "summary": "耗资百亿美元、折腾了快十年的火星采样返回计划被官方判了死刑。预算超支到连 NASA 自己都不好意思再要钱，只能眼睁睁看着毅力号辛辛苦苦钻的样本管在火星上吃灰。这标志着人类\"把火星泥土带回地球\"的梦想至少推迟一代人。",
+      "commentary": "花几百亿把石头丢在火星上，再花几百亿想办法捡回来——这不是航天工程，这是史上最贵的\"丢手绢\"游戏，最后手绢没捡回来，钱倒是烧没了。",
+      "url": "https://www.science.org/content/article/nasa-s-mars-sample-return-mission-dead"
     },
     {
-      "title": "[M5 Ultra Mac Studio 评测：本地 AI Agent 的梦想机]",
+      "title": "小米 MiMo v2.6 发布，杀入开源大模型第一梯队",
       "source": "HackerNews",
-      "summary": "MacStories 发布了 M5 Ultra Mac Studio 深度评测，核心结论是：统一内存架构 + M5 Ultra 的神经网络引擎，让本地跑大模型推理和 Agent 工作流终于从\"能跑\"进化到\"好用\"。对于不想把数据喂给云端 API 的开发者和隐私敏感场景，这可能是目前最务实的硬件选择。",
-      "commentary": "Apple 终于把\"本地 AI\"从发布会 PPT 里拽到了桌面上。但别忘了，你花几万块买的\"隐私\"，本质上是在为不愿交 OpenAI 月费找的体面借口——不过话说回来，这借口确实挺香的。",
-      "url": "https://www.macstories.net/stories/m5-ultra-mac-studio-review-the-dream-mac-for-local-ai-agents/"
+      "summary": "小米甩出 MiMo v2.6，HN 上 645 分、318 条评论炸锅。这不是又一个\"套壳 Qwen\"，从社区反应看，其在推理与多模态能力上拿出了实打实的硬货，标志着手机厂商正式从\"模型调用方\"变成\"模型供给侧\"。",
+      "commentary": "以前小米发布会吹的是骁龙首发，现在开始吹自研大模型了。手机厂商卷完影像卷模型，下一步是不是该卷\"端侧 AGI 能不能帮我抢茅台\"了？",
+      "url": "https://mimo.xiaomi.com/mimo-v2-6"
     },
     {
-      "title": "[SolarWinds ARM 硬编码密钥漏洞：未授权 RCE，CVSS 8.8]",
+      "title": "CISA 拉响警报：Linux 内核三个漏洞正被野外利用",
       "source": "Tech RSS",
-      "summary": "SolarWinds Access Rights Manager 被曝出硬编码密钥漏洞（CVE-2026-28326），攻击者可未授权远程执行代码，CVSS 评分 8.8。考虑到 SolarWinds 在 2020 年那场震惊全球的供应链攻击中的\"前科\"，这次又是权限管理产品出事——历史不会重复，但会押韵。",
-      "commentary": "SolarWinds 的安全团队大概是把\"硬编码密钥\"当成了企业文化传承。建议下次直接把密钥刻在官网上，至少省得黑客反编译了。",
-      "url": "https://thehackernews.com/2026/09/solarwinds-patches-arm-hard-coded-key.html"
+      "summary": "CISA 把三个 Linux 内核漏洞（含 CVSS 9.8 的 CVE-2025-39682）塞进\"已知被利用\"目录，实锤正在被攻击者主动利用。Linux 撑起了全球大半个云和关键基础设施，这波不是\"理论风险\"，是\"已经在挨打\"。",
+      "commentary": "那些天天喊着\"我们用 Linux 所以天然安全\"的运维老哥，该从\"开源信仰\"里醒醒了——内核漏洞可不管你信不信开源，它只认你补丁打没打。",
+      "url": "https://thehackernews.com/2026/09/cisa-flags-three-linux-kernel.html"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49783999",
-      "title": "Kev: Tiny Jev-like family of decision models built on top of Qwen3.5",
+      "id": "hn:49792342",
+      "title": "Transformers Explained Visually",
       "summary": "",
-      "url": "https://github.com/jaredpalmer/kev/tree/main",
+      "url": "https://poloclub.github.io/transformer-explainer/",
       "source": "Hacker News",
-      "score": 316,
-      "comments": 149
+      "score": 242,
+      "comments": 41
     },
     {
-      "id": "hn:49780797",
-      "title": "AX – Google’s Open Agentic Orchestrator",
+      "id": "hn:49794330",
+      "title": "I don't want to read what you didn't write",
       "summary": "",
-      "url": "https://agentexecutor.io",
+      "url": "https://blog.colinbreck.com/i-dont-want-to-read-what-you-didnt-write/",
       "source": "Hacker News",
-      "score": 606,
-      "comments": 282
+      "score": 405,
+      "comments": 137
     },
     {
-      "id": "hn:49783495",
-      "title": "Grim Fandango Puzzle Document (1996) [pdf]",
+      "id": "hn:49791939",
+      "title": "NASA’s Mars Sample Return mission is dead",
       "summary": "",
-      "url": "http://gameshelf.jmac.org/2008/11/13/GrimPuzzleDoc_small.pdf",
+      "url": "https://www.science.org/content/article/nasa-s-mars-sample-return-mission-dead",
       "source": "Hacker News",
-      "score": 328,
-      "comments": 72
+      "score": 331,
+      "comments": 270
     },
     {
-      "id": "hn:49780820",
-      "title": "What happened to the Snowden archive",
+      "id": "hn:49792730",
+      "title": "MiMo v2.6",
       "summary": "",
-      "url": "https://libroot.org/posts/what-happened-to-the-snowden-archive",
+      "url": "https://mimo.xiaomi.com/mimo-v2-6",
       "source": "Hacker News",
-      "score": 612,
-      "comments": 428
+      "score": 645,
+      "comments": 318
     },
     {
       "id": "hn:49787436",
@@ -69,8 +69,8 @@
       "summary": "",
       "url": "https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong/",
       "source": "Hacker News",
-      "score": 308,
-      "comments": 172
+      "score": 531,
+      "comments": 311
     },
     {
       "id": "hn:49787726",
@@ -78,125 +78,70 @@
       "summary": "",
       "url": "https://alicegg.tech/2026/09/21/attention",
       "source": "Hacker News",
-      "score": 238,
+      "score": 633,
+      "comments": 190
+    },
+    {
+      "id": "hn:49792067",
+      "title": "AI coding has made CI a bottleneck, so we reworked ours to keep up",
+      "summary": "",
+      "url": "https://linear.app/now/ci-bottleneck-reworked",
+      "source": "Hacker News",
+      "score": 167,
+      "comments": 176
+    },
+    {
+      "id": "hn:49794615",
+      "title": "Spymarks, Not Watermarks",
+      "summary": "",
+      "url": "https://brand.io/article/spymarks/",
+      "source": "Hacker News",
+      "score": 211,
+      "comments": 40
+    },
+    {
+      "id": "hn:49791997",
+      "title": "The Advisory Group on Mathematics and Artificial Intelligence",
+      "summary": "",
+      "url": "https://terrytao.wordpress.com/2026/09/21/advisory-group-on-mathematics-and-artificial-intelligence/",
+      "source": "Hacker News",
+      "score": 107,
+      "comments": 52
+    },
+    {
+      "id": "hn:49795579",
+      "title": "Claude Status – Elevated errors for multiple models",
+      "summary": "",
+      "url": "https://status.claude.com/incidents/7g1qpkyz5gxh",
+      "source": "Hacker News",
+      "score": 76,
       "comments": 60
     },
     {
-      "id": "hn:49788838",
-      "title": "Grok 4.7",
+      "id": "lob:34xsdg",
+      "title": "Do you use :visited on links?",
       "summary": "",
-      "url": "https://x.ai/news/grok-4-7",
-      "source": "Hacker News",
-      "score": 235,
-      "comments": 189
-    },
-    {
-      "id": "lob:brptxb",
-      "title": "Software sandboxing: The basics (2025)",
-      "summary": "",
-      "url": "https://blog.emilua.org/2025/01/12/software-sandboxing-basics/",
+      "url": "https://kevquirk.com/do-you-use-visited-on-links",
       "source": "Lobste.rs",
-      "score": 48,
+      "score": 23,
       "comments": 25,
       "tags": [
-        "programming",
-        "security",
-        "unix"
-      ]
-    },
-    {
-      "id": "lob:xrnbcn",
-      "title": "An actively maintained and updated Motif fork actually exists",
-      "summary": "",
-      "url": "https://www.osnews.com/story/145877/an-actively-maintained-and-updated-motif-fork-actually-exists/",
-      "source": "Lobste.rs",
-      "score": 39,
-      "comments": 18,
-      "tags": [
-        "unix"
-      ]
-    },
-    {
-      "id": "hn:49787313",
-      "title": "M5 Ultra Mac Studio Review",
-      "summary": "",
-      "url": "https://www.macstories.net/stories/m5-ultra-mac-studio-review-the-dream-mac-for-local-ai-agents/",
-      "source": "Hacker News",
-      "score": 163,
-      "comments": 123
-    },
-    {
-      "id": "lob:jbnmj9",
-      "title": "ChatGPT now knows what you do on other websites via ad collector",
-      "summary": "",
-      "url": "https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector/",
-      "source": "Lobste.rs",
-      "score": 56,
-      "comments": 6,
-      "tags": [
-        "ai",
-        "privacy"
-      ]
-    },
-    {
-      "id": "hn:49789224",
-      "title": "Fable 5 – Median thinking declined in August",
-      "summary": "",
-      "url": "https://twitter.com/Lon/status/2101793422487204027",
-      "source": "Hacker News",
-      "score": 130,
-      "comments": 70
-    },
-    {
-      "id": "lob:vpvdlw",
-      "title": "Are we really going to use the same Desktop UX forever?",
-      "summary": "",
-      "url": "https://www.youtube.com/watch?v=V7AfAcQwLW0",
-      "source": "Lobste.rs",
-      "score": 38,
-      "comments": 10,
-      "tags": [
-        "design",
-        "video"
-      ]
-    },
-    {
-      "id": "lob:1xxu7n",
-      "title": "Bot-free self-hosted analytics with GoatCounter on NixOS",
-      "summary": "",
-      "url": "https://vincent.bernat.ch/en/blog/2026-goatcounter",
-      "source": "Lobste.rs",
-      "score": 18,
-      "comments": 8,
-      "tags": [
-        "privacy",
+        "a11y",
         "web"
       ]
     },
     {
-      "id": "arxiv:2609.22064v1",
-      "title": "BrainWideBench: Benchmarking large-scale pretraining and across-animal transfer in multi-region neural recordings",
-      "summary": "Advances in large-scale neural recording have made it possible to collect data across many animals and distributed brain regions, raising the question of whether this scale can be exploited to learn general-purpose neural representations transferable across diverse downstream tasks. Yet, progress to",
-      "url": "https://arxiv.org/abs/2609.22064v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "q-bio.NC"
-      ],
-      "arxiv_id": "2609.22064v1"
-    },
-    {
-      "id": "arxiv:2609.22056v1",
-      "title": "Predictable Failure in Multi-Hop Retrieval: Score-Distributional Confidence Scoring and Abstention",
-      "summary": "Multi-hop retrieval failures are not uniformly distributed across queries: they cluster in structurally predictable subpopulations. We prove two results formalizing this structure. First (CWAR Reducibility): confident-failure reduction is achievable if and only if retrieval features carry mutual inf",
-      "url": "https://arxiv.org/abs/2609.22056v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.IR",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "arxiv_id": "2609.22056v1"
+      "id": "lob:sus08k",
+      "title": "Self-Hosting Behind CGNAT",
+      "summary": "",
+      "url": "https://david.alvarezrosa.com/posts/self-hosting-behind-cgnat/",
+      "source": "Lobste.rs",
+      "score": 19,
+      "comments": 10,
+      "tags": [
+        "linux",
+        "networking"
+      ]
     },
     {
       "id": "rss:fc6f471fd5",
@@ -215,21 +160,76 @@
       "score": 0
     },
     {
-      "id": "rss:35363cd75f",
-      "title": "Public Exploits Released for Four Linux Kernel Flaws That Enable Local Root",
-      "summary": "A security researcher has released working exploit code for four Linux kernel flaws that each let a local user gain root, the highest level of access on a machine.\n\nKernel maintainers have fixed all four over the past few weeks, so a system running an up-to-date kernel is not affected. But the explo",
-      "url": "https://thehackernews.com/2026/09/public-exploits-released-for-four-linux.html",
-      "source": "Tech RSS",
-      "score": 0
+      "id": "lob:fyngrv",
+      "title": "What are you doing this week?",
+      "summary": "<p>What are you doing this week? Feel free to share!</p>\n<p>Keep in mind it’s OK to do nothing at all, too.</p>\n",
+      "url": "https://lobste.rs/s/fyngrv/what_are_you_doing_this_week",
+      "source": "Lobste.rs",
+      "score": 16,
+      "comments": 35,
+      "tags": [
+        "ask",
+        "programming"
+      ]
     },
     {
-      "id": "hn:49788773",
-      "title": "A restored PDP-11/83 serving this page on 211BSD Unix",
-      "summary": "The box is a restored Q-bus PDP-11&#x2F;83 named minerva: Mentec M11 CPU, two chassis tied with M9404&#x2F;M9405, RQDX3, 2xEmulex UC07, KDA50, RLV12, DEQNA, M3104. Storage is RA82 + dual RA92, MFM boot&#x2F;swap, dual RL02, RX50s, and a TKZ50. OS is 2.11BSD.<p>The live panel is top. &#x2F;cgi-bin&#x",
-      "url": "http://pdp1173.com/",
+      "id": "lob:73ei6g",
+      "title": "Textbook review: Is Parallel Programming Hard, And, If So, What Can You Do About It?",
+      "summary": "",
+      "url": "https://ahelwer.ca/post/2026-09-21-concurrency-textbook/",
+      "source": "Lobste.rs",
+      "score": 34,
+      "comments": 0,
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "id": "hn:49769561",
+      "title": "Divide by depth for instant 3D",
+      "summary": "",
+      "url": "https://gabrieloc.com/2026/09/15/perspective.html",
       "source": "Hacker News",
-      "score": 45,
-      "comments": 14
+      "score": 101,
+      "comments": 17
+    },
+    {
+      "id": "lob:qxzjqt",
+      "title": "Creating a Blog in Gemini://",
+      "summary": "",
+      "url": "https://brennan.day/creating-a-blog-in-gemini/",
+      "source": "Lobste.rs",
+      "score": 28,
+      "comments": 6,
+      "tags": [
+        "web"
+      ]
+    },
+    {
+      "id": "lob:bcbuqk",
+      "title": "rift - a tiling window manager for macos",
+      "summary": "",
+      "url": "https://github.com/acsandmann/rift/",
+      "source": "Lobste.rs",
+      "score": 20,
+      "comments": 1,
+      "tags": [
+        "mac",
+        "rust"
+      ]
+    },
+    {
+      "id": "lob:xlbphk",
+      "title": "Named and Optional Arguments are Awesome",
+      "summary": "",
+      "url": "https://botahamec.dev/named-optional-args",
+      "source": "Lobste.rs",
+      "score": 19,
+      "comments": 7,
+      "tags": [
+        "plt",
+        "rust"
+      ]
     }
   ],
   "ai_curated": true
