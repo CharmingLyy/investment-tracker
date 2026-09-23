@@ -1,29 +1,29 @@
 {
   "date": "2026-09-23",
-  "update_time": "2026-09-22 16:30:50",
+  "update_time": "2026-09-23 04:04:24",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-23\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 [小米 MiMo v2.6 发布，HN 破千分屠榜] (来源: Hacker News)\n- **核心干货**：小米的 MiMo v2.6 在 HN 上以 1027 分、458 条评论的恐怖热度登顶。从分数和评论比来看，这不是一次常规的版本迭代——大概率在推理效率或端侧部署上有实质性突破，否则不至于让这帮见惯了大模型的 HN 老油条集体高潮。\n- **毒舌/硬核点评**：雷总造车之余顺手把大模型也卷了，OpenAI 和 Anthropic 看了连夜加班的理由又多了一个。建议硅谷同行重新审视\"中国公司只会做套壳\"这个刻板印象。\n- **🔗 传送门**：[点击直达原链接](https://mimo.xiaomi.com/mimo-v2-6)\n\n---\n\n### 2. 📌 [GPT-6 Astra 攻破 21 年悬而未决的 Enigma 密文] (来源: Hacker News)\n- **核心干货**：GPT-6 Astra 成功破解了一段自 2005 年起就无人能解的 Enigma 加密消息。这不只是一道\"历史谜题被解开\"，更重要的是它展示了前沿模型在密码分析领域的实际能力——推理链条的长度和组合搜索空间，已经超出了传统暴力破解或人工分析的范畴。\n- **毒舌/硬核点评**：人类密码学家啃了 21 年没啃下来的硬骨头，AI 一顿推理就搞定了。这哪是语言模型，分明是图灵从坟里爬出来给 OpenAI 站台。\n- **🔗 传送门**：[点击直达原链接](https://www.cryptocellar.org/bgac/the-mvueh-break.html)\n\n---\n\n### 3. 📌 [Linux 内核 ARM64 KVM 严重漏洞：Guest 可直接读写宿主机内存] (来源: Tech News / The Hacker News)\n- **核心干货**：CVE-2026-89775，ARM64 架构下 KVM 虚拟化代码存在释放后使用（UAF）漏洞，在启用嵌套虚拟化的宿主机上，Guest VM 可以直接读写宿主内核内存。这意味着云厂商的多租户隔离模型在 ARM 实例上出现了一道致命裂缝——隔壁租户理论上能摸到你的数据。\n- **毒舌/硬核点评**：搞了半天，虚拟机隔离的\"墙\"是纸糊的。建议所有跑 ARM 实例的云厂商连夜打补丁，不然明天热搜就是\"某云厂商用户数据泄露\"。ARM 服务器刚在数据中心站稳脚跟，这一刀捅得真是时候。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/new-linux-kernel-flaw-gives-arm64-kvm.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> **\"密码学家花 21 年没解开的谜，AI 几小时搞定；你花 21 天没看完的技术书，AI 几秒总结。区别在于——AI 不会拖延症，而你会。\"**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-23\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 OpenAI 发布 GPT-6 Sol 与 Luna 双模型 (来源: HackerNews)\n- **核心干货**：OpenAI 一次性甩出两个新模型——Sol 和 Luna，从命名来看大概率是\"大而强\"与\"小而快\"的双线布局。结合同日另一条情报（GPT-6 Astra 攻破了自 2005 年以来无人能解的 Enigma 密文），这波发布显然不只是刷榜，而是在推理深度和密码分析等硬核场景上秀肌肉。\n- **毒舌/硬核点评**：OpenAI 现在发模型像手机厂商发新机——一年两场发布会，型号比 iPhone 还多。但能顺手把 20 年没人破的 Enigma 密文给解了，这波确实不是挤牙膏，是直接把牙膏管炸了。\n- **🔗 传送门**：[点击直达原链接](https://openai.com/index/introducing-gpt-6-sol-and-luna/)\n\n---\n\n### 2. 📌 Claude Opus 5.5 发布，性价比之战白热化 (来源: HackerNews / Artificial Analysis)\n- **核心干货**：Anthropic 推出 Claude Opus 5.5，HN 热度直接飙到 1300+，评论区 860 条吵成一锅粥。Artificial Analysis 的独立评测同步出炉，而更大的看点是 DeepSeek V4.1-Flash 以零头的价格在编码 Agent 场景上打平了 Opus 5——这意味着闭源巨头的高价护城河正在被开源模型用性价比硬生生凿穿。\n- **毒舌/硬核点评**：Anthropic 还在讲\"安全与智能并重\"的故事，DeepSeek 已经在旁边举着价目表微笑了。2026 年 LLM 赛道的主旋律不再是\"谁更聪明\"，而是\"谁更便宜还不蠢\"——这对开发者是好事，对估值是噩耗。\n- **🔗 传送门**：[点击直达原链接](https://www.anthropic.com/claude-opus-5-5)\n\n---\n\n### 3. 📌 五角大楼承认：过度依赖 AI 导致伊朗学校遭导弹误击 (来源: Bloomberg / HackerNews)\n- **核心干货**：五角大楼罕见公开承认，一次针对伊朗学校的致命导弹打击中，AI 辅助目标识别系统的过度依赖是重要原因。这不是科幻电影的桥段，而是真实发生的\"算法杀人\"事件——当 AI 给出错误推荐而人类操作员选择无条件信任时，后果是不可逆的物理毁灭。\n- **毒舌/硬核点评**：科技圈天天聊 AI 对齐（Alignment），结果最该对齐的是\"人类别偷懒把按钮交给模型\"。这不是 AI 的失败，是把 AI 当万能背锅侠的失败。希望这能成为行业的一记闷棍——不是让 AI 更聪明，而是让人更清醒。\n- **🔗 传送门**：[点击直达原链接](https://www.bloomberg.com/graphics/2026-iran-school-attack/)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> **\"AI 能帮你解 20 年的密码，却解不了人类偷懒的本性。工具越强，越考验用工具的人——别让算法替你思考，更别让它替你背锅。\"**",
   "briefing_items": [
     {
-      "title": "[小米 MiMo v2.6 发布，HN 破千分屠榜]",
-      "source": "Hacker News",
-      "summary": "小米的 MiMo v2.6 在 HN 上以 1027 分、458 条评论的恐怖热度登顶。从分数和评论比来看，这不是一次常规的版本迭代——大概率在推理效率或端侧部署上有实质性突破，否则不至于让这帮见惯了大模型的 HN 老油条集体高潮。",
-      "commentary": "雷总造车之余顺手把大模型也卷了，OpenAI 和 Anthropic 看了连夜加班的理由又多了一个。建议硅谷同行重新审视\"中国公司只会做套壳\"这个刻板印象。",
-      "url": "https://mimo.xiaomi.com/mimo-v2-6"
+      "title": "OpenAI 发布 GPT-6 Sol 与 Luna 双模型",
+      "source": "HackerNews",
+      "summary": "OpenAI 一次性甩出两个新模型——Sol 和 Luna，从命名来看大概率是\"大而强\"与\"小而快\"的双线布局。结合同日另一条情报（GPT-6 Astra 攻破了自 2005 年以来无人能解的 Enigma 密文），这波发布显然不只是刷榜，而是在推理深度和密码分析等硬核场景上秀肌肉。",
+      "commentary": "OpenAI 现在发模型像手机厂商发新机——一年两场发布会，型号比 iPhone 还多。但能顺手把 20 年没人破的 Enigma 密文给解了，这波确实不是挤牙膏，是直接把牙膏管炸了。",
+      "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
     },
     {
-      "title": "[GPT-6 Astra 攻破 21 年悬而未决的 Enigma 密文]",
-      "source": "Hacker News",
-      "summary": "GPT-6 Astra 成功破解了一段自 2005 年起就无人能解的 Enigma 加密消息。这不只是一道\"历史谜题被解开\"，更重要的是它展示了前沿模型在密码分析领域的实际能力——推理链条的长度和组合搜索空间，已经超出了传统暴力破解或人工分析的范畴。",
-      "commentary": "人类密码学家啃了 21 年没啃下来的硬骨头，AI 一顿推理就搞定了。这哪是语言模型，分明是图灵从坟里爬出来给 OpenAI 站台。",
-      "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html"
+      "title": "Claude Opus 5.5 发布，性价比之战白热化",
+      "source": "HackerNews / Artificial Analysis",
+      "summary": "Anthropic 推出 Claude Opus 5.5，HN 热度直接飙到 1300+，评论区 860 条吵成一锅粥。Artificial Analysis 的独立评测同步出炉，而更大的看点是 DeepSeek V4.1-Flash 以零头的价格在编码 Agent 场景上打平了 Opus 5——这意味着闭源巨头的高价护城河正在被开源模型用性价比硬生生凿穿。",
+      "commentary": "Anthropic 还在讲\"安全与智能并重\"的故事，DeepSeek 已经在旁边举着价目表微笑了。2026 年 LLM 赛道的主旋律不再是\"谁更聪明\"，而是\"谁更便宜还不蠢\"——这对开发者是好事，对估值是噩耗。",
+      "url": "https://www.anthropic.com/claude-opus-5-5"
     },
     {
-      "title": "[Linux 内核 ARM64 KVM 严重漏洞：Guest 可直接读写宿主机内存]",
-      "source": "Tech News / The Hacker News",
-      "summary": "CVE-2026-89775，ARM64 架构下 KVM 虚拟化代码存在释放后使用（UAF）漏洞，在启用嵌套虚拟化的宿主机上，Guest VM 可以直接读写宿主内核内存。这意味着云厂商的多租户隔离模型在 ARM 实例上出现了一道致命裂缝——隔壁租户理论上能摸到你的数据。",
-      "commentary": "搞了半天，虚拟机隔离的\"墙\"是纸糊的。建议所有跑 ARM 实例的云厂商连夜打补丁，不然明天热搜就是\"某云厂商用户数据泄露\"。ARM 服务器刚在数据中心站稳脚跟，这一刀捅得真是时候。",
-      "url": "https://thehackernews.com/2026/09/new-linux-kernel-flaw-gives-arm64-kvm.html"
+      "title": "五角大楼承认：过度依赖 AI 导致伊朗学校遭导弹误击",
+      "source": "Bloomberg / HackerNews",
+      "summary": "五角大楼罕见公开承认，一次针对伊朗学校的致命导弹打击中，AI 辅助目标识别系统的过度依赖是重要原因。这不是科幻电影的桥段，而是真实发生的\"算法杀人\"事件——当 AI 给出错误推荐而人类操作员选择无条件信任时，后果是不可逆的物理毁灭。",
+      "commentary": "科技圈天天聊 AI 对齐（Alignment），结果最该对齐的是\"人类别偷懒把按钮交给模型\"。这不是 AI 的失败，是把 AI 当万能背锅侠的失败。希望这能成为行业的一记闷棍——不是让 AI 更聪明，而是让人更清醒。",
+      "url": "https://www.bloomberg.com/graphics/2026-iran-school-attack/"
     }
   ],
   "candidates": [
@@ -33,57 +33,62 @@
       "summary": "",
       "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
       "source": "Hacker News",
-      "score": 252,
-      "comments": 246
+      "score": 590,
+      "comments": 371
     },
     {
-      "id": "hn:49801939",
-      "title": "Apple has added persistent 'ads' to iOS, and it's driving users crazy",
-      "summary": "",
-      "url": "https://www.techradar.com/phones/iphone/i-wish-apple-would-just-stop-that-crap-apple-has-added-persistent-ads-to-ios-and-its-driving-users-crazy",
+      "id": "hn:49808023",
+      "title": "Microsoft killed FoxPro in 2007. Anyway, here's FoxPro revived",
+      "summary": "Visual FoxPro stopped at version 9 in 2007. A surprising amount of it is still running, in 32 bits, because rewriting a 20-year-old business app is how you lose the business. A customer wanted to keep milking their app for the foreseeable future, so here it is: the same language on a new runtime (Ru",
+      "url": "https://foxscript.org/",
       "source": "Hacker News",
-      "score": 278,
-      "comments": 195
+      "score": 222,
+      "comments": 145
     },
     {
-      "id": "hn:49797323",
-      "title": "Can gzip be a language model?",
+      "id": "hn:49805509",
+      "title": "GPT-6 Sol and Luna",
       "summary": "",
-      "url": "https://nathan.rs/posts/gzip-lm/",
+      "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
       "source": "Hacker News",
-      "score": 316,
-      "comments": 119
+      "score": 1294,
+      "comments": 646
     },
     {
-      "id": "hn:49792730",
-      "title": "MiMo v2.6",
-      "summary": "",
-      "url": "https://mimo.xiaomi.com/mimo-v2-6",
+      "id": "hn:49805278",
+      "title": "'We hacked the FBI:' Hackers say they have data on all FBI employees",
+      "summary": "<a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;96YBP\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;96YBP</a>",
+      "url": "https://www.404media.co/we-hacked-the-fbi-hackers-say-they-have-data-on-all-fbi-employees/",
       "source": "Hacker News",
-      "score": 1027,
-      "comments": 458
+      "score": 479,
+      "comments": 345
     },
     {
-      "id": "hn:49794615",
-      "title": "Spymarks, Not Watermarks",
+      "id": "hn:49804316",
+      "title": "Claude Opus 5.5 Intelligence, Performance and Price Analysis (Max)",
       "summary": "",
-      "url": "https://brand.io/article/spymarks/",
+      "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
       "source": "Hacker News",
-      "score": 607,
-      "comments": 154
+      "score": 248,
+      "comments": 77
     },
     {
-      "id": "lob:sus08k",
-      "title": "Self-Hosting Behind CGNAT",
+      "id": "hn:49758709",
+      "title": "How did AMD Ryzen get 50% faster in two years?",
       "summary": "",
-      "url": "https://david.alvarezrosa.com/posts/self-hosting-behind-cgnat/",
-      "source": "Lobste.rs",
-      "score": 48,
-      "comments": 35,
-      "tags": [
-        "linux",
-        "networking"
-      ]
+      "url": "https://lemire.me/blog/2026/09/18/how-did-amd-ryzen-get-50-faster-in-two-years/",
+      "source": "Hacker News",
+      "score": 250,
+      "comments": 94
+    },
+    {
+      "id": "hn:49806430",
+      "title": "Pentagon says overreliance on AI contributed to missile strike on Iran school",
+      "summary": "<a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;0V37g\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;0V37g</a>",
+      "url": "https://www.bloomberg.com/graphics/2026-iran-school-attack/",
+      "source": "Hacker News",
+      "score": 495,
+      "comments": 245
     },
     {
       "id": "lob:bcbuqk",
@@ -91,12 +96,52 @@
       "summary": "",
       "url": "https://github.com/acsandmann/rift/",
       "source": "Lobste.rs",
-      "score": 37,
-      "comments": 12,
+      "score": 44,
+      "comments": 23,
       "tags": [
         "mac",
         "rust"
       ]
+    },
+    {
+      "id": "hn:49803892",
+      "title": "Claude Opus 5.5",
+      "summary": "",
+      "url": "https://www.anthropic.com/claude-opus-5-5",
+      "source": "Hacker News",
+      "score": 1306,
+      "comments": 860
+    },
+    {
+      "id": "lob:sus08k",
+      "title": "Self-Hosting Behind CGNAT",
+      "summary": "",
+      "url": "https://david.alvarezrosa.com/posts/self-hosting-behind-cgnat/",
+      "source": "Lobste.rs",
+      "score": 58,
+      "comments": 37,
+      "tags": [
+        "linux",
+        "networking"
+      ]
+    },
+    {
+      "id": "hn:49803959",
+      "title": "WordPress: Unauthenticated path traversal leading to conditional RCE",
+      "summary": "",
+      "url": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-7hp8-65ch-5whp",
+      "source": "Hacker News",
+      "score": 167,
+      "comments": 87
+    },
+    {
+      "id": "hn:49806335",
+      "title": "SAML: A fractal of bad design",
+      "summary": "",
+      "url": "https://blog.trailofbits.com/2026/09/21/saml-a-fractal-of-bad-design/",
+      "source": "Hacker News",
+      "score": 184,
+      "comments": 106
     },
     {
       "id": "lob:xlbphk",
@@ -104,98 +149,21 @@
       "summary": "",
       "url": "https://botahamec.dev/named-optional-args",
       "source": "Lobste.rs",
-      "score": 49,
-      "comments": 24,
+      "score": 60,
+      "comments": 33,
       "tags": [
         "plt",
         "rust"
       ]
     },
     {
-      "id": "lob:vwl2kn",
-      "title": "What Sun got wrong",
+      "id": "hn:49796379",
+      "title": "What California is learning from solar panels built over irrigation canals",
       "summary": "",
-      "url": "https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong/",
-      "source": "Lobste.rs",
-      "score": 116,
-      "comments": 62,
-      "tags": [
-        "historical"
-      ]
-    },
-    {
-      "id": "hn:49802161",
-      "title": "OpenAI is well positioned to fast-follow Jev",
-      "summary": "",
-      "url": "https://arcturus-labs.com/blog/2026/09/21/will-openai-eat-jevs-lunch/",
+      "url": "https://www.kqed.org/science/2002033/heres-what-california-is-learning-from-solar-panels-built-over-irrigation-canals",
       "source": "Hacker News",
-      "score": 99,
-      "comments": 80
-    },
-    {
-      "id": "hn:49802871",
-      "title": "I asked Meta’s Muse for its filesystem and it sent me 6.8GB",
-      "summary": "",
-      "url": "https://mouse.dev/blog/muse-runtime-export/",
-      "source": "Hacker News",
-      "score": 129,
-      "comments": 69
-    },
-    {
-      "id": "lob:liey8q",
-      "title": "Looking forward to Git 2.56 - and 3.0",
-      "summary": "",
-      "url": "https://lwn.net/SubscriberLink/1094575/2385e98583715c2b/",
-      "source": "Lobste.rs",
-      "score": 50,
-      "comments": 7,
-      "tags": [
-        "vcs"
-      ]
-    },
-    {
-      "id": "arxiv:2609.24972v1",
-      "title": "RRSI: Regularized Recursive Self-Improvement of Agent Harnesses",
-      "summary": "An LLM agent's capability is largely magnified by its harness, namely the prompts, control flow, tooling, memory, and context management surrounding the frozen backbone model. Recent methods increasingly automate this process by iteratively proposing and selecting component-wise edits of an agent ha",
-      "url": "https://arxiv.org/abs/2609.24972v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_id": "2609.24972v1"
-    },
-    {
-      "id": "lob:bvrhgq",
-      "title": "Arguing about arguments",
-      "summary": "",
-      "url": "https://steveklabnik.com/writing/arguing-about-arguments/",
-      "source": "Lobste.rs",
-      "score": 29,
-      "comments": 19,
-      "tags": [
-        "programming",
-        "rust"
-      ]
-    },
-    {
-      "id": "hn:49801329",
-      "title": "Show HN: Drop – a rootless Linux sandbox with gVisor support",
-      "summary": "I created Drop because I always felt uneasy installing and running third-party programs using my main user account. A single compromised dependency means a full compromise of the system. What is even worse, because I ship software from my computer, a single compromised dependency can lead to comprom",
-      "url": "https://droprun.sh/",
-      "source": "Hacker News",
-      "score": 81,
-      "comments": 23
-    },
-    {
-      "id": "hn:49780622",
-      "title": "Line Scan Photos from MUNI Heritage Weekend in San Francisco",
-      "summary": "",
-      "url": "https://daniel.lawrence.lu/blog/2026-09-20-muni-heritage-weekend/",
-      "source": "Hacker News",
-      "score": 94,
-      "comments": 16
+      "score": 150,
+      "comments": 232
     },
     {
       "id": "lob:wx3qsm",
@@ -203,45 +171,70 @@
       "summary": "",
       "url": "https://linebender.org/blog/fearless-simd-1-0/",
       "source": "Lobste.rs",
-      "score": 34,
-      "comments": 1,
+      "score": 50,
+      "comments": 9,
       "tags": [
         "release",
         "rust"
       ]
     },
     {
-      "id": "arxiv:2609.24974v1",
-      "title": "Harness-Zero: Harness Distillation via Agent-as-Harness",
-      "summary": "Agent harnesses, the external systems that mediate model-environment interaction, can substantially improve agent performance, but their gains remain tied to the harness at deployment. Because the best harness varies across domains, instances, and models, a general-purpose agent must either settle f",
-      "url": "https://arxiv.org/abs/2609.24974v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.NE"
-      ],
-      "arxiv_id": "2609.24974v1"
+      "id": "lob:bvrhgq",
+      "title": "Arguing about arguments",
+      "summary": "",
+      "url": "https://steveklabnik.com/writing/arguing-about-arguments/",
+      "source": "Lobste.rs",
+      "score": 49,
+      "comments": 36,
+      "tags": [
+        "programming",
+        "rust"
+      ]
     },
     {
-      "id": "arxiv:2609.24971v1",
-      "title": "DolphinBench: Mapping the Pareto Frontier of Agent Memory",
-      "summary": "Agents today often take real-world actions that depend on long-term memory and context recall over time. However, most current memory benchmarks are built for a conversational question-answer format, where the question itself signals that some fact must be retrieved, and often which one. Moreover, b",
-      "url": "https://arxiv.org/abs/2609.24971v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "arxiv_id": "2609.24971v1"
+      "id": "lob:liey8q",
+      "title": "Looking forward to Git 2.56 - and 3.0",
+      "summary": "",
+      "url": "https://lwn.net/SubscriberLink/1094575/2385e98583715c2b/",
+      "source": "Lobste.rs",
+      "score": 77,
+      "comments": 10,
+      "tags": [
+        "vcs"
+      ]
     },
     {
-      "id": "rss:5453b350ce",
-      "title": "New Linux Kernel Flaw Gives ARM64 KVM Guests Read-Write Access to Host Memory",
-      "summary": "A new flaw in the Linux kernel's KVM virtualization code for ARM64 processors can leave a freed piece of host memory exposed to a guest virtual machine on hosts with nested virtualization enabled.\n\nThe bug, tracked as&nbsp;CVE-2026-89775, allows a guest to read and write host kernel memory, and the",
-      "url": "https://thehackernews.com/2026/09/new-linux-kernel-flaw-gives-arm64-kvm.html",
+      "id": "lob:2ym3yg",
+      "title": "Why 0xCAFEBABE?",
+      "summary": "",
+      "url": "https://www.artima.com/insidejvm/whyCAFEBABE.html",
+      "source": "Lobste.rs",
+      "score": 40,
+      "comments": 13,
+      "tags": [
+        "historical",
+        "java"
+      ]
+    },
+    {
+      "id": "rss:12d49fbb4c",
+      "title": "DeepSeek V4.1-Flash Wins on Coding Agent Cost",
+      "summary": "Verdict: For coding agents, DeepSeek V4.1-Flash is the best open source LLM right now, because it lands level with Claude Opus 5 on software engineering while costing a fraction as much per million tokens. On DeepSeek's own release numbers it scores 74.2 on DeepSWE v1.1 against Claude Opus 5's 74.0",
+      "url": "https://dev.to/shaam_ai/deepseek-v41-flash-wins-on-coding-agent-cost-4347",
       "source": "Tech RSS",
       "score": 0
+    },
+    {
+      "id": "lob:fdgccx",
+      "title": "Design your programming languages right (2024)",
+      "summary": "",
+      "url": "https://blog.veritates.love/design-it-right",
+      "source": "Lobste.rs",
+      "score": 25,
+      "comments": 19,
+      "tags": [
+        "plt"
+      ]
     }
   ],
   "ai_curated": true
