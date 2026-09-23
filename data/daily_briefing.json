@@ -1,49 +1,40 @@
 {
-  "date": "2026-09-23",
-  "update_time": "2026-09-23 04:04:24",
+  "date": "2026-09-24",
+  "update_time": "2026-09-23 16:20:19",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-23\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 OpenAI 发布 GPT-6 Sol 与 Luna 双模型 (来源: HackerNews)\n- **核心干货**：OpenAI 一次性甩出两个新模型——Sol 和 Luna，从命名来看大概率是\"大而强\"与\"小而快\"的双线布局。结合同日另一条情报（GPT-6 Astra 攻破了自 2005 年以来无人能解的 Enigma 密文），这波发布显然不只是刷榜，而是在推理深度和密码分析等硬核场景上秀肌肉。\n- **毒舌/硬核点评**：OpenAI 现在发模型像手机厂商发新机——一年两场发布会，型号比 iPhone 还多。但能顺手把 20 年没人破的 Enigma 密文给解了，这波确实不是挤牙膏，是直接把牙膏管炸了。\n- **🔗 传送门**：[点击直达原链接](https://openai.com/index/introducing-gpt-6-sol-and-luna/)\n\n---\n\n### 2. 📌 Claude Opus 5.5 发布，性价比之战白热化 (来源: HackerNews / Artificial Analysis)\n- **核心干货**：Anthropic 推出 Claude Opus 5.5，HN 热度直接飙到 1300+，评论区 860 条吵成一锅粥。Artificial Analysis 的独立评测同步出炉，而更大的看点是 DeepSeek V4.1-Flash 以零头的价格在编码 Agent 场景上打平了 Opus 5——这意味着闭源巨头的高价护城河正在被开源模型用性价比硬生生凿穿。\n- **毒舌/硬核点评**：Anthropic 还在讲\"安全与智能并重\"的故事，DeepSeek 已经在旁边举着价目表微笑了。2026 年 LLM 赛道的主旋律不再是\"谁更聪明\"，而是\"谁更便宜还不蠢\"——这对开发者是好事，对估值是噩耗。\n- **🔗 传送门**：[点击直达原链接](https://www.anthropic.com/claude-opus-5-5)\n\n---\n\n### 3. 📌 五角大楼承认：过度依赖 AI 导致伊朗学校遭导弹误击 (来源: Bloomberg / HackerNews)\n- **核心干货**：五角大楼罕见公开承认，一次针对伊朗学校的致命导弹打击中，AI 辅助目标识别系统的过度依赖是重要原因。这不是科幻电影的桥段，而是真实发生的\"算法杀人\"事件——当 AI 给出错误推荐而人类操作员选择无条件信任时，后果是不可逆的物理毁灭。\n- **毒舌/硬核点评**：科技圈天天聊 AI 对齐（Alignment），结果最该对齐的是\"人类别偷懒把按钮交给模型\"。这不是 AI 的失败，是把 AI 当万能背锅侠的失败。希望这能成为行业的一记闷棍——不是让 AI 更聪明，而是让人更清醒。\n- **🔗 传送门**：[点击直达原链接](https://www.bloomberg.com/graphics/2026-iran-school-attack/)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> **\"AI 能帮你解 20 年的密码，却解不了人类偷懒的本性。工具越强，越考验用工具的人——别让算法替你思考，更别让它替你背锅。\"**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-24\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Claude Opus 5.5 发布 (来源: HackerNews)\n- **核心干货**：Anthropic 扔出了 Opus 5.5，HN 上一天之内炸出 1031 条评论、1688 分，热度直接拉满。从讨论密度来看，这次升级大概率在推理深度、长上下文稳定性或 Agent 任务执行上动了真格——毕竟评论区吵架越凶，说明越多人真的在用。\n- **毒舌/硬核点评**：OpenAI 和 Anthropic 现在的发版节奏像极了手机厂商一年一旗舰，区别是手机还能说\"感知不强\"，模型这玩意儿是真能让你第二天发现自己写的 Prompt 全是废纸。\n- **🔗 传送门**：[点击直达原链接](https://www.anthropic.com/claude-opus-5-5)\n\n---\n\n### 2. 📌 Ubuntu 未修补内核漏洞被公开 Exploit：容器逃逸拿到宿主机 Root (来源: Tech RSS / HackerNews)\n- **核心干货**：Linux 内核 AF_UNIX socket 子系统存在 use-after-free（CVE-2026-80521，CVSS 7.8），攻击者可利用它从容器内逃逸并在宿主机上获取 root 权限。上游 8 月 6 日已修复，但 Ubuntu 尚未推送补丁，Exploit 已公开——这意味着所有跑 Ubuntu 容器的生产环境现在就是敞着门的金库。\n- **毒舌/硬核点评**：8 月修了、9 月还没发补丁、Exploit 已经满天飞——Ubuntu 的安全团队是在用\"下个 LTS 再说\"的节奏管理 CVE 吗？跑容器的兄弟们，今天别摸鱼了，先 `apt` 一下或者上 livepatch。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/exploit-released-for-unpatched-ubuntu.html)\n\n---\n\n### 3. 📌 CliffCompaction：长周期编码 Agent 的上下文压缩术，成本直降 50% (来源: ArXiv)\n- **核心干货**：长周期 Coding Agent 动辄需要几百万 token 的上下文，窗口不够就得跨 session 压缩。这篇论文提出的自动压缩技术 CliffCompaction，在有界上下文下把成本砍掉最多 50%，同时保持甚至提升任务表现。对于所有在做 Agent 产品的团队来说，这不是学术玩具，是直接能省真金白银的工程方案。\n- **毒舌/硬核点评**：现在做 Agent 的最大成本不是模型调用费，是你为了让它\"记住\"之前干了啥而烧掉的上下文 token。谁先把压缩做到无损，谁就能在 Agent 赛道里多活两个季度。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2609.26779v1)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> 模型每半年换代一次，你的学习速度要是跟不上它的发版节奏，那你不是在搞 AI，你是在被 AI 搞。",
   "briefing_items": [
     {
-      "title": "OpenAI 发布 GPT-6 Sol 与 Luna 双模型",
+      "title": "Claude Opus 5.5 发布",
       "source": "HackerNews",
-      "summary": "OpenAI 一次性甩出两个新模型——Sol 和 Luna，从命名来看大概率是\"大而强\"与\"小而快\"的双线布局。结合同日另一条情报（GPT-6 Astra 攻破了自 2005 年以来无人能解的 Enigma 密文），这波发布显然不只是刷榜，而是在推理深度和密码分析等硬核场景上秀肌肉。",
-      "commentary": "OpenAI 现在发模型像手机厂商发新机——一年两场发布会，型号比 iPhone 还多。但能顺手把 20 年没人破的 Enigma 密文给解了，这波确实不是挤牙膏，是直接把牙膏管炸了。",
-      "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
-    },
-    {
-      "title": "Claude Opus 5.5 发布，性价比之战白热化",
-      "source": "HackerNews / Artificial Analysis",
-      "summary": "Anthropic 推出 Claude Opus 5.5，HN 热度直接飙到 1300+，评论区 860 条吵成一锅粥。Artificial Analysis 的独立评测同步出炉，而更大的看点是 DeepSeek V4.1-Flash 以零头的价格在编码 Agent 场景上打平了 Opus 5——这意味着闭源巨头的高价护城河正在被开源模型用性价比硬生生凿穿。",
-      "commentary": "Anthropic 还在讲\"安全与智能并重\"的故事，DeepSeek 已经在旁边举着价目表微笑了。2026 年 LLM 赛道的主旋律不再是\"谁更聪明\"，而是\"谁更便宜还不蠢\"——这对开发者是好事，对估值是噩耗。",
+      "summary": "Anthropic 扔出了 Opus 5.5，HN 上一天之内炸出 1031 条评论、1688 分，热度直接拉满。从讨论密度来看，这次升级大概率在推理深度、长上下文稳定性或 Agent 任务执行上动了真格——毕竟评论区吵架越凶，说明越多人真的在用。",
+      "commentary": "OpenAI 和 Anthropic 现在的发版节奏像极了手机厂商一年一旗舰，区别是手机还能说\"感知不强\"，模型这玩意儿是真能让你第二天发现自己写的 Prompt 全是废纸。",
       "url": "https://www.anthropic.com/claude-opus-5-5"
     },
     {
-      "title": "五角大楼承认：过度依赖 AI 导致伊朗学校遭导弹误击",
-      "source": "Bloomberg / HackerNews",
-      "summary": "五角大楼罕见公开承认，一次针对伊朗学校的致命导弹打击中，AI 辅助目标识别系统的过度依赖是重要原因。这不是科幻电影的桥段，而是真实发生的\"算法杀人\"事件——当 AI 给出错误推荐而人类操作员选择无条件信任时，后果是不可逆的物理毁灭。",
-      "commentary": "科技圈天天聊 AI 对齐（Alignment），结果最该对齐的是\"人类别偷懒把按钮交给模型\"。这不是 AI 的失败，是把 AI 当万能背锅侠的失败。希望这能成为行业的一记闷棍——不是让 AI 更聪明，而是让人更清醒。",
-      "url": "https://www.bloomberg.com/graphics/2026-iran-school-attack/"
+      "title": "Ubuntu 未修补内核漏洞被公开 Exploit：容器逃逸拿到宿主机 Root",
+      "source": "Tech RSS / HackerNews",
+      "summary": "Linux 内核 AF_UNIX socket 子系统存在 use-after-free（CVE-2026-80521，CVSS 7.8），攻击者可利用它从容器内逃逸并在宿主机上获取 root 权限。上游 8 月 6 日已修复，但 Ubuntu 尚未推送补丁，Exploit 已公开——这意味着所有跑 Ubuntu 容器的生产环境现在就是敞着门的金库。",
+      "commentary": "8 月修了、9 月还没发补丁、Exploit 已经满天飞——Ubuntu 的安全团队是在用\"下个 LTS 再说\"的节奏管理 CVE 吗？跑容器的兄弟们，今天别摸鱼了，先 `apt` 一下或者上 livepatch。",
+      "url": "https://thehackernews.com/2026/09/exploit-released-for-unpatched-ubuntu.html"
+    },
+    {
+      "title": "CliffCompaction：长周期编码 Agent 的上下文压缩术，成本直降 50%",
+      "source": "ArXiv",
+      "summary": "长周期 Coding Agent 动辄需要几百万 token 的上下文，窗口不够就得跨 session 压缩。这篇论文提出的自动压缩技术 CliffCompaction，在有界上下文下把成本砍掉最多 50%，同时保持甚至提升任务表现。对于所有在做 Agent 产品的团队来说，这不是学术玩具，是直接能省真金白银的工程方案。",
+      "commentary": "现在做 Agent 的最大成本不是模型调用费，是你为了让它\"记住\"之前干了啥而烧掉的上下文 token。谁先把压缩做到无损，谁就能在 Agent 赛道里多活两个季度。",
+      "url": "https://arxiv.org/abs/2609.26779v1"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49801324",
-      "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
+      "id": "hn:49814947",
+      "title": "Claude Code reads AGENTS.md only when telemetry is on [fixed]",
       "summary": "",
-      "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
+      "url": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/",
       "source": "Hacker News",
-      "score": 590,
-      "comments": 371
-    },
-    {
-      "id": "hn:49808023",
-      "title": "Microsoft killed FoxPro in 2007. Anyway, here's FoxPro revived",
-      "summary": "Visual FoxPro stopped at version 9 in 2007. A surprising amount of it is still running, in 32 bits, because rewriting a 20-year-old business app is how you lose the business. A customer wanted to keep milking their app for the foreseeable future, so here it is: the same language on a new runtime (Ru",
-      "url": "https://foxscript.org/",
-      "source": "Hacker News",
-      "score": 222,
-      "comments": 145
+      "score": 344,
+      "comments": 185
     },
     {
       "id": "hn:49805509",
@@ -51,57 +42,17 @@
       "summary": "",
       "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
       "source": "Hacker News",
-      "score": 1294,
-      "comments": 646
+      "score": 1666,
+      "comments": 800
     },
     {
-      "id": "hn:49805278",
-      "title": "'We hacked the FBI:' Hackers say they have data on all FBI employees",
-      "summary": "<a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;96YBP\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;96YBP</a>",
-      "url": "https://www.404media.co/we-hacked-the-fbi-hackers-say-they-have-data-on-all-fbi-employees/",
-      "source": "Hacker News",
-      "score": 479,
-      "comments": 345
-    },
-    {
-      "id": "hn:49804316",
-      "title": "Claude Opus 5.5 Intelligence, Performance and Price Analysis (Max)",
+      "id": "hn:49812769",
+      "title": "Jev in 25 Lines of Python",
       "summary": "",
-      "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
+      "url": "https://www.nobodywho.ai/posts/jev-in-25-lines/",
       "source": "Hacker News",
-      "score": 248,
-      "comments": 77
-    },
-    {
-      "id": "hn:49758709",
-      "title": "How did AMD Ryzen get 50% faster in two years?",
-      "summary": "",
-      "url": "https://lemire.me/blog/2026/09/18/how-did-amd-ryzen-get-50-faster-in-two-years/",
-      "source": "Hacker News",
-      "score": 250,
-      "comments": 94
-    },
-    {
-      "id": "hn:49806430",
-      "title": "Pentagon says overreliance on AI contributed to missile strike on Iran school",
-      "summary": "<a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;0V37g\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;0V37g</a>",
-      "url": "https://www.bloomberg.com/graphics/2026-iran-school-attack/",
-      "source": "Hacker News",
-      "score": 495,
-      "comments": 245
-    },
-    {
-      "id": "lob:bcbuqk",
-      "title": "rift - a tiling window manager for macos",
-      "summary": "",
-      "url": "https://github.com/acsandmann/rift/",
-      "source": "Lobste.rs",
-      "score": 44,
-      "comments": 23,
-      "tags": [
-        "mac",
-        "rust"
-      ]
+      "score": 466,
+      "comments": 139
     },
     {
       "id": "hn:49803892",
@@ -109,87 +60,8 @@
       "summary": "",
       "url": "https://www.anthropic.com/claude-opus-5-5",
       "source": "Hacker News",
-      "score": 1306,
-      "comments": 860
-    },
-    {
-      "id": "lob:sus08k",
-      "title": "Self-Hosting Behind CGNAT",
-      "summary": "",
-      "url": "https://david.alvarezrosa.com/posts/self-hosting-behind-cgnat/",
-      "source": "Lobste.rs",
-      "score": 58,
-      "comments": 37,
-      "tags": [
-        "linux",
-        "networking"
-      ]
-    },
-    {
-      "id": "hn:49803959",
-      "title": "WordPress: Unauthenticated path traversal leading to conditional RCE",
-      "summary": "",
-      "url": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-7hp8-65ch-5whp",
-      "source": "Hacker News",
-      "score": 167,
-      "comments": 87
-    },
-    {
-      "id": "hn:49806335",
-      "title": "SAML: A fractal of bad design",
-      "summary": "",
-      "url": "https://blog.trailofbits.com/2026/09/21/saml-a-fractal-of-bad-design/",
-      "source": "Hacker News",
-      "score": 184,
-      "comments": 106
-    },
-    {
-      "id": "lob:xlbphk",
-      "title": "Named and Optional Arguments are Awesome",
-      "summary": "",
-      "url": "https://botahamec.dev/named-optional-args",
-      "source": "Lobste.rs",
-      "score": 60,
-      "comments": 33,
-      "tags": [
-        "plt",
-        "rust"
-      ]
-    },
-    {
-      "id": "hn:49796379",
-      "title": "What California is learning from solar panels built over irrigation canals",
-      "summary": "",
-      "url": "https://www.kqed.org/science/2002033/heres-what-california-is-learning-from-solar-panels-built-over-irrigation-canals",
-      "source": "Hacker News",
-      "score": 150,
-      "comments": 232
-    },
-    {
-      "id": "lob:wx3qsm",
-      "title": "Fearless SIMD v1.0 is here",
-      "summary": "",
-      "url": "https://linebender.org/blog/fearless-simd-1-0/",
-      "source": "Lobste.rs",
-      "score": 50,
-      "comments": 9,
-      "tags": [
-        "release",
-        "rust"
-      ]
-    },
-    {
-      "id": "lob:bvrhgq",
-      "title": "Arguing about arguments",
-      "summary": "",
-      "url": "https://steveklabnik.com/writing/arguing-about-arguments/",
-      "source": "Lobste.rs",
-      "score": 49,
-      "comments": 36,
-      "tags": [
-        "programming",
-        "rust"
-      ]
+      "score": 1688,
+      "comments": 1031
     },
     {
       "id": "lob:liey8q",
@@ -197,43 +69,178 @@
       "summary": "",
       "url": "https://lwn.net/SubscriberLink/1094575/2385e98583715c2b/",
       "source": "Lobste.rs",
-      "score": 77,
-      "comments": 10,
+      "score": 85,
+      "comments": 16,
       "tags": [
         "vcs"
       ]
     },
     {
-      "id": "lob:2ym3yg",
-      "title": "Why 0xCAFEBABE?",
+      "id": "lob:vvg9ue",
+      "title": "That About Wraps It Up for Stock Mac UI",
       "summary": "",
-      "url": "https://www.artima.com/insidejvm/whyCAFEBABE.html",
+      "url": "https://inessential.com/2026/09/22/that-about-wraps-it-up-for.html",
       "source": "Lobste.rs",
-      "score": 40,
-      "comments": 13,
+      "score": 46,
+      "comments": 14,
       "tags": [
-        "historical",
-        "java"
+        "design",
+        "mac"
       ]
     },
     {
-      "id": "rss:12d49fbb4c",
-      "title": "DeepSeek V4.1-Flash Wins on Coding Agent Cost",
-      "summary": "Verdict: For coding agents, DeepSeek V4.1-Flash is the best open source LLM right now, because it lands level with Claude Opus 5 on software engineering while costing a fraction as much per million tokens. On DeepSeek's own release numbers it scores 74.2 on DeepSWE v1.1 against Claude Opus 5's 74.0",
-      "url": "https://dev.to/shaam_ai/deepseek-v41-flash-wins-on-coding-agent-cost-4347",
+      "id": "rss:47f69c7f3c",
+      "title": "Exploit Released for Unpatched Ubuntu Linux Flaw Enabling Host-Root Container Escape",
+      "summary": "A use-after-free in the Linux kernel's AF_UNIX socket subsystem can be used to escape a container and gain root on the host, security firm DepthFirst&nbsp;said in research published September 22.\n\nThe flaw, tracked as&nbsp;CVE-2026-80521&nbsp;(CVSS score: 7.8), was fixed upstream on August 6, but Ub",
+      "url": "https://thehackernews.com/2026/09/exploit-released-for-unpatched-ubuntu.html",
       "source": "Tech RSS",
       "score": 0
     },
     {
-      "id": "lob:fdgccx",
-      "title": "Design your programming languages right (2024)",
+      "id": "lob:hburvt",
+      "title": "No Sloptober",
       "summary": "",
-      "url": "https://blog.veritates.love/design-it-right",
+      "url": "https://no-sloptober.com/",
+      "source": "Lobste.rs",
+      "score": 71,
+      "comments": 14,
+      "tags": [
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "hn:49817404",
+      "title": "GPT-6 Astra has gained the ability to drive a car",
+      "summary": "",
+      "url": "https://drivingbench.com/",
+      "source": "Hacker News",
+      "score": 93,
+      "comments": 66
+    },
+    {
+      "id": "lob:kras1h",
+      "title": "The GNOME LLM Policy That I Want",
+      "summary": "",
+      "url": "https://blogs.gnome.org/alatiera/2026/09/23/the-gnome-llm-policy-that-i-want/",
+      "source": "Lobste.rs",
+      "score": 31,
+      "comments": 31,
+      "tags": [
+        "linux",
+        "practices",
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "lob:ph1g2v",
+      "title": "Plain-text files are at risk",
+      "summary": "",
+      "url": "https://paste.sr.ht/~awal/b76caf6f213a96a634454fa7292c035a10035b49",
+      "source": "Lobste.rs",
+      "score": 34,
+      "comments": 47,
+      "tags": [
+        "editors",
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "rss:96fbbc25de",
+      "title": "Add Model Spend Behind a Budget Row, Not a Browser Agent",
+      "summary": "The support console fired a rewrite request at 4:11 p.m., and the widget treated a model response like a database grant. The browser held a provider key in local storage, posted a completion, then PATCHed the invoice with whatever paragraph came back. Did anyone ask whether that tenant still had inf",
+      "url": "https://dev.to/kongkong1/add-model-spend-behind-a-budget-row-not-a-browser-agent-3ah",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "hn:49813482",
+      "title": "Tokens Too Cheap to Meter",
+      "summary": "",
+      "url": "https://jyn.dev/tokens-too-cheap-to-meter/",
+      "source": "Hacker News",
+      "score": 104,
+      "comments": 73
+    },
+    {
+      "id": "hn:49815982",
+      "title": "Stripe's Knowledge AI Platform",
+      "summary": "",
+      "url": "https://stripe.dev/blog/meet-stripes-knowledge-ai-platform",
+      "source": "Hacker News",
+      "score": 91,
+      "comments": 46
+    },
+    {
+      "id": "arxiv:2609.26779v1",
+      "title": "CliffCompaction: Cost-Efficient Compaction for Long-Horizon Coding Agents",
+      "summary": "Agents often work on complex problems that require millions of tokens of context, which necessitates compacting across sessions due to limited context windows. We develop CliffCompaction, an autocompaction technique that reduces cost by up to 50% under a bounded context while maintaining or improvin",
+      "url": "https://arxiv.org/abs/2609.26779v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "cs.SE"
+      ],
+      "arxiv_id": "2609.26779v1"
+    },
+    {
+      "id": "arxiv:2609.26777v1",
+      "title": "SWE-Serve: Benchmarking Agentic Engineering For Production Inference Serving",
+      "summary": "We introduce SWE-Serve, a benchmark for evaluating agents on production inference engineering tasks. Implementing an inference feature can require coordinating multiple changes across the serving stack, including model support, runtime execution, and public APIs. Existing benchmarks provide limited ",
+      "url": "https://arxiv.org/abs/2609.26777v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.SE"
+      ],
+      "arxiv_id": "2609.26777v1"
+    },
+    {
+      "id": "rss:9bd1a129f4",
+      "title": "Chinese Hackers Exploit Chrome-Windows Zero-Day Chain to Deploy CLEANGULP Malware",
+      "summary": "A Chinese threat actor codenamed UTA0565 has been observed exploiting the recently disclosed Google Chrome-Microsoft Windows exploit chain as zero-days through fake websites.\n\nThe attacks, detected on September 3 and 4, 2026, involved the chaining of two vulnerabilities in Chrome (CVE-2026-85046, CV",
+      "url": "https://thehackernews.com/2026/09/chinese-hackers-exploit-chrome-windows.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "lob:ad5vwg",
+      "title": "Radicle: Disclosure of Vulnerability in the Network Protocol",
+      "summary": "",
+      "url": "https://radicle.dev/2026/09/23/disclosure-of-vulnerability-in-network-protocol.html",
+      "source": "Lobste.rs",
+      "score": 17,
+      "comments": 1,
+      "tags": [
+        "distributed",
+        "security",
+        "vcs"
+      ]
+    },
+    {
+      "id": "lob:oqipmz",
+      "title": "How to talk about \"AI\" without adding to the anthropomorphization",
+      "summary": "",
+      "url": "https://buttondown.com/maiht3k/archive/how-to-talk-about-ai-without-adding-to-the/",
+      "source": "Lobste.rs",
+      "score": 22,
+      "comments": 10,
+      "tags": [
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "lob:qysrps",
+      "title": "Abandoning Scientific Linux Was a Mistake",
+      "summary": "",
+      "url": "https://blog.melashri.net/posts/scientific-linux-mistake/",
       "source": "Lobste.rs",
       "score": 25,
-      "comments": 19,
+      "comments": 0,
       "tags": [
-        "plt"
+        "linux",
+        "practices",
+        "science"
       ]
     }
   ],
