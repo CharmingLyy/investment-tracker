@@ -1,63 +1,49 @@
 {
-  "date": "2026-09-25",
-  "update_time": "2026-09-25 04:14:06",
+  "date": "2026-09-26",
+  "update_time": "2026-09-25 16:47:31",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-25\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 F-Droid 2.0 正式发布 (来源: HackerNews)\n- **核心干货**：开源安卓应用商店 F-Droid 迎来 2.0 大版本，从底层重构了客户端架构与仓库索引机制，提升了应用发现、更新效率和签名验证流程。这是安卓去谷歌化生态中最重要的基础设施之一，直接关系到数百万用户能否脱离 Play Store 独立生存。\n- **毒舌/硬核点评**：Google 那边忙着把 AI 数据中心送上太空，这边 F-Droid 默默把\"数字主权\"四个字刻进了代码里。你以为自由是免费的？人家维护了十几年的仓库索引，比某些大厂的生命周期还长。\n- **🔗 传送门**：[点击直达原链接](https://f-droid.org/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html)\n\n---\n\n### 2. 📌 Google Project Suncatcher：把 ML 基础设施射上太空 (来源: HackerNews / Google Blog)\n- **核心干货**：Google 正式披露 Project Suncatcher，计划将机器学习训练与推理基础设施部署到太空轨道。核心逻辑是利用太空的太阳能密度和辐射散热优势，绕过地面数据中心的能耗与冷却瓶颈。NYT 报道后 HN 评论区直接吵翻——257 条评论里一半在算发射成本，一半在骂\"这是给股东看的 PPT\"。\n- **毒舌/硬核点评**：地面数据中心电费太贵怎么办？答案是——把服务器扔到离太阳更近的地方。这思路堪比\"房租太贵所以住桥洞\"，只不过桥洞换成了近地轨道，月租换成了火箭发射费。马斯克看了沉默，贝索斯看了流泪。\n- **🔗 传送门**：[点击直达原链接](https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/)\n\n---\n\n### 3. 📌 PoEM：用现有策略预测 RL 训练结果，告别\"炼丹\"式后训练 (来源: ArXiv)\n- **核心干货**：论文提出 PoEM 框架，能在不完整跑完 RL 后训练流程的前提下，从已有策略直接预测训练结果。这解决了当前基础模型 RL 后训练中最大的痛点——每次换 reward model 就得从头再来，算力烧得像无底洞，还不一定收敛。PoEM 让研究者可以在几分钟内评估数十种 reward 配置，而不是花几周烧完 GPU 再发现方向错了。\n- **毒舌/硬核点评**：RL 后训练的本质是\"用几百万美元赌一个 reward function 没写错\"，PoEM 的出现相当于给炼丹炉装了个温度计——虽然不能保证炼出仙丹，但至少能告诉你这炉大概率要炸，省得你把整栋楼点了。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2609.30226v1)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> **\"真正的技术乐观主义者，不是相信一切都会变好，而是相信一切糟糕的现状都可以被一行代码重构——哪怕那行代码跑在太空里。\"**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-26\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 荷兰政府基于 NixOS 打造微软替代方案 (来源: Hacker News)\n- **核心干货**：荷兰政府正在构建一套基于 NixOS 的桌面/办公替代方案，目标是从操作系统层面摆脱对微软生态的依赖。这不是又一个\"国产 Linux 换皮\"，而是选择了声明式配置管理这条硬核路线——部署可复现、系统状态可审计，天然契合政府对安全合规的需求。\n- **毒舌/硬核点评**：欧洲政府终于想明白了：与其每年给雷德蒙德交保护费，不如把钱花在 Nix 上——至少 Nix 的报错信息比蓝屏有信息量。但说真的，让公务员用 NixOS，这本身就是一场社会学实验。\n- **🔗 传送门**：[点击直达原链接](https://www.dawo.community/en/)\n\n---\n\n### 2. 📌 F-Droid 2.0 正式发布 (来源: Hacker News)\n- **核心干货**：开源 Android 应用商店 F-Droid 迎来 2.0 大版本，这是该项目多年来最大规模的重构。在 Google Play 持续收紧侧载政策、Android 生态日益封闭的背景下，F-Droid 2.0 的意义不只是版本号——它代表着 Android 开放分发渠道的最后一道防线还在自我进化。\n- **毒舌/硬核点评**：Google 每收紧一次侧载，F-Droid 就多一批用户。感谢 Google 的产品经理们，用最傲慢的方式为开源社区做最有效的拉新。这波叫\"竞品自残式增长\"。\n- **🔗 传送门**：[点击直达原链接](https://f-droid.org/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html)\n\n---\n\n### 3. 📌 美国上诉法院维持将 Anthropic 列为供应链风险的裁定 (来源: CNBC / Hacker News)\n- **核心干货**：美国上诉法院裁定维持五角大楼将 Anthropic 标记为\"供应链风险\"的决定。这意味着 AI 大模型公司首次被正式纳入国家安全审查框架，AI 供应链的\"脱钩\"从芯片层蔓延到了模型层。对整个 AI 行业的政企合作模式将产生深远影响。\n- **毒舌/硬核点评**：昨天还在比谁的 benchmark 高，今天就要比谁的律师团强了。AI 公司们该醒醒了——模型能力是入场券，地缘政治才是终极 boss 战。顺便问一句：下一个被\"供应链风险\"的会是谁？建议各家 CTO 提前把合规预算拉满。\n- **🔗 传送门**：[点击直达原链接](https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> 技术人的终极安全感，不是掌握某个框架，而是随时能换掉它的能力。",
   "briefing_items": [
     {
+      "title": "荷兰政府基于 NixOS 打造微软替代方案",
+      "source": "Hacker News",
+      "summary": "荷兰政府正在构建一套基于 NixOS 的桌面/办公替代方案，目标是从操作系统层面摆脱对微软生态的依赖。这不是又一个\"国产 Linux 换皮\"，而是选择了声明式配置管理这条硬核路线——部署可复现、系统状态可审计，天然契合政府对安全合规的需求。",
+      "commentary": "欧洲政府终于想明白了：与其每年给雷德蒙德交保护费，不如把钱花在 Nix 上——至少 Nix 的报错信息比蓝屏有信息量。但说真的，让公务员用 NixOS，这本身就是一场社会学实验。",
+      "url": "https://www.dawo.community/en/"
+    },
+    {
       "title": "F-Droid 2.0 正式发布",
-      "source": "HackerNews",
-      "summary": "开源安卓应用商店 F-Droid 迎来 2.0 大版本，从底层重构了客户端架构与仓库索引机制，提升了应用发现、更新效率和签名验证流程。这是安卓去谷歌化生态中最重要的基础设施之一，直接关系到数百万用户能否脱离 Play Store 独立生存。",
-      "commentary": "Google 那边忙着把 AI 数据中心送上太空，这边 F-Droid 默默把\"数字主权\"四个字刻进了代码里。你以为自由是免费的？人家维护了十几年的仓库索引，比某些大厂的生命周期还长。",
+      "source": "Hacker News",
+      "summary": "开源 Android 应用商店 F-Droid 迎来 2.0 大版本，这是该项目多年来最大规模的重构。在 Google Play 持续收紧侧载政策、Android 生态日益封闭的背景下，F-Droid 2.0 的意义不只是版本号——它代表着 Android 开放分发渠道的最后一道防线还在自我进化。",
+      "commentary": "Google 每收紧一次侧载，F-Droid 就多一批用户。感谢 Google 的产品经理们，用最傲慢的方式为开源社区做最有效的拉新。这波叫\"竞品自残式增长\"。",
       "url": "https://f-droid.org/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html"
     },
     {
-      "title": "Google Project Suncatcher：把 ML 基础设施射上太空",
-      "source": "HackerNews / Google Blog",
-      "summary": "Google 正式披露 Project Suncatcher，计划将机器学习训练与推理基础设施部署到太空轨道。核心逻辑是利用太空的太阳能密度和辐射散热优势，绕过地面数据中心的能耗与冷却瓶颈。NYT 报道后 HN 评论区直接吵翻——257 条评论里一半在算发射成本，一半在骂\"这是给股东看的 PPT\"。",
-      "commentary": "地面数据中心电费太贵怎么办？答案是——把服务器扔到离太阳更近的地方。这思路堪比\"房租太贵所以住桥洞\"，只不过桥洞换成了近地轨道，月租换成了火箭发射费。马斯克看了沉默，贝索斯看了流泪。",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/"
-    },
-    {
-      "title": "PoEM：用现有策略预测 RL 训练结果，告别\"炼丹\"式后训练",
-      "source": "ArXiv",
-      "summary": "论文提出 PoEM 框架，能在不完整跑完 RL 后训练流程的前提下，从已有策略直接预测训练结果。这解决了当前基础模型 RL 后训练中最大的痛点——每次换 reward model 就得从头再来，算力烧得像无底洞，还不一定收敛。PoEM 让研究者可以在几分钟内评估数十种 reward 配置，而不是花几周烧完 GPU 再发现方向错了。",
-      "commentary": "RL 后训练的本质是\"用几百万美元赌一个 reward function 没写错\"，PoEM 的出现相当于给炼丹炉装了个温度计——虽然不能保证炼出仙丹，但至少能告诉你这炉大概率要炸，省得你把整栋楼点了。",
-      "url": "https://arxiv.org/abs/2609.30226v1"
+      "title": "美国上诉法院维持将 Anthropic 列为供应链风险的裁定",
+      "source": "CNBC / Hacker News",
+      "summary": "美国上诉法院裁定维持五角大楼将 Anthropic 标记为\"供应链风险\"的决定。这意味着 AI 大模型公司首次被正式纳入国家安全审查框架，AI 供应链的\"脱钩\"从芯片层蔓延到了模型层。对整个 AI 行业的政企合作模式将产生深远影响。",
+      "commentary": "昨天还在比谁的 benchmark 高，今天就要比谁的律师团强了。AI 公司们该醒醒了——模型能力是入场券，地缘政治才是终极 boss 战。顺便问一句：下一个被\"供应链风险\"的会是谁？建议各家 CTO 提前把合规预算拉满。",
+      "url": "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html"
     }
   ],
   "candidates": [
+    {
+      "id": "hn:49841563",
+      "title": "Dutch governments builds alternative for Microsoft based on NixOS",
+      "summary": "",
+      "url": "https://www.dawo.community/en/",
+      "source": "Hacker News",
+      "score": 789,
+      "comments": 450
+    },
     {
       "id": "hn:49823738",
       "title": "Show HN: Make cursed fonts like Times New Bastard",
       "summary": "A joke tool that abuses OpenType&#x27;s ligature feature to mix fonts. It works pretty fast on client-side by loading Python in WASM.",
       "url": "https://bastardica.mitpit.com",
       "source": "Hacker News",
-      "score": 532,
-      "comments": 77
-    },
-    {
-      "id": "hn:49833867",
-      "title": "Show HN: Whiteboard (YC W26) – An open-source IDE for thoughtful software design",
-      "summary": "Hello! We’re Sid, Alex, Ketan, and Milan. We’re building Whiteboard (<a href=\"https:&#x2F;&#x2F;whiteboard.dev.fast&#x2F;\">https:&#x2F;&#x2F;whiteboard.dev.fast&#x2F;</a>), an open-source desktop app where humans and agents can architect software together in a common workspace. Here’s our repo: <a h",
-      "url": "https://github.com/devdotfast/whiteboard",
-      "source": "Hacker News",
-      "score": 232,
-      "comments": 87
-    },
-    {
-      "id": "lob:ad5vwg",
-      "title": "Radicle: Disclosure of Vulnerability in the Network Protocol",
-      "summary": "",
-      "url": "https://radicle.dev/2026/09/23/disclosure-of-vulnerability-in-network-protocol.html",
-      "source": "Lobste.rs",
-      "score": 138,
-      "comments": 57,
-      "tags": [
-        "distributed",
-        "security",
-        "vcs"
-      ]
+      "score": 809,
+      "comments": 115
     },
     {
       "id": "hn:49831968",
@@ -65,73 +51,47 @@
       "summary": "",
       "url": "https://f-droid.org/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html",
       "source": "Hacker News",
-      "score": 1027,
-      "comments": 277
+      "score": 1387,
+      "comments": 397
     },
     {
-      "id": "hn:49832938",
-      "title": "Why is the liver so weirdly regenerative?",
+      "id": "hn:49843174",
+      "title": "Git-bug: Distributed, offline-first bug tracker embedded in Git",
       "summary": "",
-      "url": "https://dynomight.substack.com/p/liver",
+      "url": "https://github.com/git-bug/git-bug",
       "source": "Hacker News",
-      "score": 307,
-      "comments": 167
+      "score": 173,
+      "comments": 47
     },
     {
-      "id": "hn:49817680",
-      "title": "Rails World 2026 Opening Keynote [video]",
+      "id": "hn:49843269",
+      "title": "Platform-Independent SIMD in Go",
       "summary": "",
-      "url": "https://www.youtube.com/watch?v=vDjW_dRyKXY",
+      "url": "https://go.dev/blog/simd-experiment",
       "source": "Hacker News",
-      "score": 283,
-      "comments": 296
+      "score": 196,
+      "comments": 74
     },
     {
-      "id": "hn:49823568",
-      "title": "Toyota is taking the Corolla electric",
+      "id": "hn:49841285",
+      "title": "Pentium II at 600Mhz with Voodoo 3 Emulated on 86Box with M6 Mac Mini",
       "summary": "",
-      "url": "https://electrek.co/2026/09/23/toyota-best-selling-corolla-electric/",
+      "url": "https://nyaa.sh/reviews/mac-mini-m6-emulation",
       "source": "Hacker News",
-      "score": 264,
-      "comments": 436
+      "score": 186,
+      "comments": 86
     },
     {
-      "id": "hn:49805344",
-      "title": "My weird new hobby: Wandering around Tokyo on Google Maps",
+      "id": "lob:68n22g",
+      "title": "Lobsters: Rename vibecoding to llms (Greasemonkey script)",
       "summary": "",
-      "url": "https://ahmedhossamdev.com/writing/my-weird-new-hobby-wandering-around-tokyo/",
-      "source": "Hacker News",
-      "score": 255,
-      "comments": 108
-    },
-    {
-      "id": "hn:49800085",
-      "title": "Fearless SIMD v1.0",
-      "summary": "",
-      "url": "https://linebender.org/blog/fearless-simd-1-0/",
-      "source": "Hacker News",
-      "score": 212,
-      "comments": 32
-    },
-    {
-      "id": "hn:49828731",
-      "title": "Two-tier encryption in the UK",
-      "summary": "",
-      "url": "https://macanorak.com/two-tier-encryption-in-the-uk/",
-      "source": "Hacker News",
-      "score": 397,
-      "comments": 382
-    },
-    {
-      "id": "lob:aaq59w",
-      "title": "Ideas on modernizing the open-source desktop",
-      "summary": "",
-      "url": "https://lwn.net/SubscriberLink/1095425/2d9f411252325784/",
+      "url": "https://greasyfork.org/en/scripts?by=1646191",
       "source": "Lobste.rs",
-      "score": 57,
+      "score": 54,
       "comments": 19,
       "tags": [
-        "design"
+        "meta",
+        "vibecoding"
       ]
     },
     {
@@ -140,33 +100,11 @@
       "summary": "",
       "url": "https://gultsch.de/posts/breaking-up-with-google-play/",
       "source": "Lobste.rs",
-      "score": 78,
-      "comments": 12,
+      "score": 139,
+      "comments": 19,
       "tags": [
         "android"
       ]
-    },
-    {
-      "id": "lob:wf4wid",
-      "title": "The Story of Mel",
-      "summary": "",
-      "url": "https://users.cs.utah.edu/~elb/folklore/mel.html",
-      "source": "Lobste.rs",
-      "score": 65,
-      "comments": 16,
-      "tags": [
-        "assembly",
-        "historical"
-      ]
-    },
-    {
-      "id": "hn:49830606",
-      "title": "Google’s Project Suncatcher to put ML infrastructure in space",
-      "summary": "<a href=\"https:&#x2F;&#x2F;www.nytimes.com&#x2F;2026&#x2F;09&#x2F;24&#x2F;technology&#x2F;google-suncatcher-ai-data-center-space.html\" rel=\"nofollow\">https:&#x2F;&#x2F;www.nytimes.com&#x2F;2026&#x2F;09&#x2F;24&#x2F;technology&#x2F;google-suncatc...</a> (<a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;BGF",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/",
-      "source": "Hacker News",
-      "score": 139,
-      "comments": 257
     },
     {
       "id": "lob:mdczxv",
@@ -174,11 +112,20 @@
       "summary": "",
       "url": "https://mouse.dev/blog/muse-runtime-export/",
       "source": "Lobste.rs",
-      "score": 43,
-      "comments": 8,
+      "score": 67,
+      "comments": 11,
       "tags": [
         "vibecoding"
       ]
+    },
+    {
+      "id": "hn:49844786",
+      "title": "Allow Carriers on Planes",
+      "summary": "",
+      "url": "https://www.jefftk.com/p/allow-carriers-on-planes",
+      "source": "Hacker News",
+      "score": 139,
+      "comments": 150
     },
     {
       "id": "arxiv:2609.30227v1",
@@ -209,34 +156,94 @@
       "arxiv_id": "2609.30226v1"
     },
     {
-      "id": "lob:xg8zbk",
-      "title": "Clankers Made Me Build a Second Brain",
+      "id": "lob:ky1cr0",
+      "title": "SourceHut account takeover via build logs (XSS in ansi2html.py)",
       "summary": "",
-      "url": "https://jadarma.github.io/blog/posts/2026/09/clankers-made-me-build-a-second-brain/",
+      "url": "https://blog.arusekk.pl/posts/srht-account-takeover/",
       "source": "Lobste.rs",
-      "score": 31,
-      "comments": 10,
+      "score": 85,
+      "comments": 5,
+      "tags": [
+        "security"
+      ]
+    },
+    {
+      "id": "lob:sxlf4a",
+      "title": "Goodbye Google",
+      "summary": "",
+      "url": "https://robert.ocallahan.org/2026/09/goodbye-google.html",
+      "source": "Lobste.rs",
+      "score": 47,
+      "comments": 7,
+      "tags": [
+        "ai",
+        "person"
+      ]
+    },
+    {
+      "id": "lob:v6nizc",
+      "title": "LLM Policies: Progress At All Costs",
+      "summary": "",
+      "url": "https://diegoe.be/2026/09/25/llm-policies-progress-at-all-costs/",
+      "source": "Lobste.rs",
+      "score": 13,
+      "comments": 14,
       "tags": [
         "vibecoding"
       ]
     },
     {
-      "id": "hn:49787759",
-      "title": "Book review: Is parallel programming hard, and, if so, what can you do about it?",
+      "id": "hn:49842270",
+      "title": "Ink and Switch Interactive Homepage",
       "summary": "",
-      "url": "https://ahelwer.ca/post/2026-09-21-concurrency-textbook/",
+      "url": "https://www.inkandswitch.com/",
       "source": "Hacker News",
-      "score": 102,
-      "comments": 30
+      "score": 143,
+      "comments": 19
     },
     {
-      "id": "hn:49801436",
-      "title": "2DWillNeverDie",
+      "id": "lob:x6yjrc",
+      "title": "File Notification Attacks: Side-Channel Leakage from the File-Notification System on Linux, Android, Windows, and macOS",
       "summary": "",
-      "url": "https://2dwillneverdie.com/",
+      "url": "https://inoti.fyi/",
+      "source": "Lobste.rs",
+      "score": 19,
+      "comments": 3,
+      "tags": [
+        "security"
+      ]
+    },
+    {
+      "id": "arxiv:2609.30258v1",
+      "title": "Temporal Gradient Inversion for Private Trajectory Reconstruction in Embodied Reinforcement Learning",
+      "summary": "Distributed learning in embodied reinforcement-learning agents offers a degree of privacy by retaining raw sensor data on-device and transmitting only policy gradients to the server. Yet temporal structure can amplify this leakage beyond single-frame attacks. We introduce Temporal Reconstruction Att",
+      "url": "https://arxiv.org/abs/2609.30258v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_id": "2609.30258v1"
+    },
+    {
+      "id": "arxiv:2609.30233v1",
+      "title": "Coding Agents for Generalized Task and Motion Planning Problems",
+      "summary": "Task and motion planning (TAMP) problems remain difficult even with full observability and object-centric states because discrete decisions are tightly coupled to geometric, kinematic, and dynamic constraints. Generalized TAMP addresses this difficulty by exploiting regularities across problem insta",
+      "url": "https://arxiv.org/abs/2609.30233v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "arxiv_id": "2609.30233v1"
+    },
+    {
+      "id": "hn:49845977",
+      "title": "U.S. appeals court upholds designation of Anthropic as supply chain risk",
+      "summary": "",
+      "url": "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html",
       "source": "Hacker News",
-      "score": 151,
-      "comments": 15
+      "score": 65,
+      "comments": 22
     }
   ],
   "ai_curated": true
