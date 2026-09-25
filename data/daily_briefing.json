@@ -1,49 +1,49 @@
 {
   "date": "2026-09-25",
-  "update_time": "2026-09-24 16:42:24",
+  "update_time": "2026-09-25 04:14:06",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-25\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 高通骁龙 X2 系列即将支持 Linux (来源: HackerNews)\n- **核心干货**：高通在骁龙峰会上正式宣布，Snapdragon X2 系列芯片将提供 Linux 支持。这意味着继苹果 M 系列被 Asahi Linux 社区啃下之后，ARM 阵营的另一座山头终于主动开门迎客。对于长期被\"买芯片送 Windows 锁死\"折磨的开发者来说，这是 ARM PC 生态真正走向开放的信号弹。\n- **毒舌/硬核点评**：高通终于想通了——与其指望 Windows on ARM 把生态做起来，不如让 Linux 极客帮自己免费测驱动。毕竟 Geekbench 跑分再高，装不上你想要的系统，那也只是块昂贵的电子镇纸。\n- **🔗 传送门**：[点击直达原链接](https://www.qualcomm.com/news/onq/2026/09/snapdragon-summit-agentic-ai-pcs-linux)\n\n---\n\n### 2. 📌 ArXiv 获得多年期资金承诺，正式转型独立非营利组织 (来源: HackerNews)\n- **核心干货**：预印本论文的\"宇宙中心\" ArXiv 拿到了多年期资金承诺，脱离康奈尔大学图书馆的托管，成为独立非营利机构。这意味着这个每天承载全球 AI/物理/数学前沿成果的平台，终于不用再靠\"教授用爱发电 + 偶尔众筹\"续命了。对学术界而言，这是一次基础设施级别的稳定化升级。\n- **毒舌/硬核点评**：全世界最卷的 AI 论文都往这儿塞，结果运营经费一直紧巴巴——这就像让一个每天处理上亿请求的数据库跑在一台二手服务器上。现在终于有人掏钱给它换机柜了，同行评审的\"最后一公里\"却还是没修好。\n- **🔗 传送门**：[点击直达原链接](https://blog.arxiv.org/2026/09/23/arxiv-receives-multiyear-investment/)\n\n---\n\n### 3. 📌 WordPress 严重漏洞 CVE-2026-87902 披露数小时内即遭在野利用 (来源: Tech RSS)\n- **核心干货**：WordPress 爆出 CVSS 9.2 的未授权远程代码执行漏洞，攻击者在公开披露后数小时内就开始大规模扫描利用。全球超过 40% 的网站跑在 WordPress 上，这基本等于给半个互联网的门锁贴了张\"钥匙在脚垫下\"的便利贴。\n- **毒舌/硬核点评**：从\"漏洞披露\"到\"在野利用\"的时间窗口已经压缩到小时级——这不是安全公告，这是倒计时炸弹。还在用 WordPress 又没开自动更新的朋友，你的网站现在可能已经是别人的肉鸡了，建议立刻去后台点一下那个被你忽略了一百次的\"立即更新\"按钮。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/attackers-exploit-wordpress-cve-2026.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> \"漏洞不会等你打完补丁再发作，市场不会等你准备好再启动，时代不会等你学完新框架再往前走——所以别再'准备'了，边跑边修才是成年人唯一的姿势。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-25\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 F-Droid 2.0 正式发布 (来源: HackerNews)\n- **核心干货**：开源安卓应用商店 F-Droid 迎来 2.0 大版本，从底层重构了客户端架构与仓库索引机制，提升了应用发现、更新效率和签名验证流程。这是安卓去谷歌化生态中最重要的基础设施之一，直接关系到数百万用户能否脱离 Play Store 独立生存。\n- **毒舌/硬核点评**：Google 那边忙着把 AI 数据中心送上太空，这边 F-Droid 默默把\"数字主权\"四个字刻进了代码里。你以为自由是免费的？人家维护了十几年的仓库索引，比某些大厂的生命周期还长。\n- **🔗 传送门**：[点击直达原链接](https://f-droid.org/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html)\n\n---\n\n### 2. 📌 Google Project Suncatcher：把 ML 基础设施射上太空 (来源: HackerNews / Google Blog)\n- **核心干货**：Google 正式披露 Project Suncatcher，计划将机器学习训练与推理基础设施部署到太空轨道。核心逻辑是利用太空的太阳能密度和辐射散热优势，绕过地面数据中心的能耗与冷却瓶颈。NYT 报道后 HN 评论区直接吵翻——257 条评论里一半在算发射成本，一半在骂\"这是给股东看的 PPT\"。\n- **毒舌/硬核点评**：地面数据中心电费太贵怎么办？答案是——把服务器扔到离太阳更近的地方。这思路堪比\"房租太贵所以住桥洞\"，只不过桥洞换成了近地轨道，月租换成了火箭发射费。马斯克看了沉默，贝索斯看了流泪。\n- **🔗 传送门**：[点击直达原链接](https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/)\n\n---\n\n### 3. 📌 PoEM：用现有策略预测 RL 训练结果，告别\"炼丹\"式后训练 (来源: ArXiv)\n- **核心干货**：论文提出 PoEM 框架，能在不完整跑完 RL 后训练流程的前提下，从已有策略直接预测训练结果。这解决了当前基础模型 RL 后训练中最大的痛点——每次换 reward model 就得从头再来，算力烧得像无底洞，还不一定收敛。PoEM 让研究者可以在几分钟内评估数十种 reward 配置，而不是花几周烧完 GPU 再发现方向错了。\n- **毒舌/硬核点评**：RL 后训练的本质是\"用几百万美元赌一个 reward function 没写错\"，PoEM 的出现相当于给炼丹炉装了个温度计——虽然不能保证炼出仙丹，但至少能告诉你这炉大概率要炸，省得你把整栋楼点了。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2609.30226v1)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> **\"真正的技术乐观主义者，不是相信一切都会变好，而是相信一切糟糕的现状都可以被一行代码重构——哪怕那行代码跑在太空里。\"**",
   "briefing_items": [
     {
-      "title": "高通骁龙 X2 系列即将支持 Linux",
+      "title": "F-Droid 2.0 正式发布",
       "source": "HackerNews",
-      "summary": "高通在骁龙峰会上正式宣布，Snapdragon X2 系列芯片将提供 Linux 支持。这意味着继苹果 M 系列被 Asahi Linux 社区啃下之后，ARM 阵营的另一座山头终于主动开门迎客。对于长期被\"买芯片送 Windows 锁死\"折磨的开发者来说，这是 ARM PC 生态真正走向开放的信号弹。",
-      "commentary": "高通终于想通了——与其指望 Windows on ARM 把生态做起来，不如让 Linux 极客帮自己免费测驱动。毕竟 Geekbench 跑分再高，装不上你想要的系统，那也只是块昂贵的电子镇纸。",
-      "url": "https://www.qualcomm.com/news/onq/2026/09/snapdragon-summit-agentic-ai-pcs-linux"
+      "summary": "开源安卓应用商店 F-Droid 迎来 2.0 大版本，从底层重构了客户端架构与仓库索引机制，提升了应用发现、更新效率和签名验证流程。这是安卓去谷歌化生态中最重要的基础设施之一，直接关系到数百万用户能否脱离 Play Store 独立生存。",
+      "commentary": "Google 那边忙着把 AI 数据中心送上太空，这边 F-Droid 默默把\"数字主权\"四个字刻进了代码里。你以为自由是免费的？人家维护了十几年的仓库索引，比某些大厂的生命周期还长。",
+      "url": "https://f-droid.org/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html"
     },
     {
-      "title": "ArXiv 获得多年期资金承诺，正式转型独立非营利组织",
-      "source": "HackerNews",
-      "summary": "预印本论文的\"宇宙中心\" ArXiv 拿到了多年期资金承诺，脱离康奈尔大学图书馆的托管，成为独立非营利机构。这意味着这个每天承载全球 AI/物理/数学前沿成果的平台，终于不用再靠\"教授用爱发电 + 偶尔众筹\"续命了。对学术界而言，这是一次基础设施级别的稳定化升级。",
-      "commentary": "全世界最卷的 AI 论文都往这儿塞，结果运营经费一直紧巴巴——这就像让一个每天处理上亿请求的数据库跑在一台二手服务器上。现在终于有人掏钱给它换机柜了，同行评审的\"最后一公里\"却还是没修好。",
-      "url": "https://blog.arxiv.org/2026/09/23/arxiv-receives-multiyear-investment/"
+      "title": "Google Project Suncatcher：把 ML 基础设施射上太空",
+      "source": "HackerNews / Google Blog",
+      "summary": "Google 正式披露 Project Suncatcher，计划将机器学习训练与推理基础设施部署到太空轨道。核心逻辑是利用太空的太阳能密度和辐射散热优势，绕过地面数据中心的能耗与冷却瓶颈。NYT 报道后 HN 评论区直接吵翻——257 条评论里一半在算发射成本，一半在骂\"这是给股东看的 PPT\"。",
+      "commentary": "地面数据中心电费太贵怎么办？答案是——把服务器扔到离太阳更近的地方。这思路堪比\"房租太贵所以住桥洞\"，只不过桥洞换成了近地轨道，月租换成了火箭发射费。马斯克看了沉默，贝索斯看了流泪。",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/"
     },
     {
-      "title": "WordPress 严重漏洞 CVE-2026-87902 披露数小时内即遭在野利用",
-      "source": "Tech RSS",
-      "summary": "WordPress 爆出 CVSS 9.2 的未授权远程代码执行漏洞，攻击者在公开披露后数小时内就开始大规模扫描利用。全球超过 40% 的网站跑在 WordPress 上，这基本等于给半个互联网的门锁贴了张\"钥匙在脚垫下\"的便利贴。",
-      "commentary": "从\"漏洞披露\"到\"在野利用\"的时间窗口已经压缩到小时级——这不是安全公告，这是倒计时炸弹。还在用 WordPress 又没开自动更新的朋友，你的网站现在可能已经是别人的肉鸡了，建议立刻去后台点一下那个被你忽略了一百次的\"立即更新\"按钮。",
-      "url": "https://thehackernews.com/2026/09/attackers-exploit-wordpress-cve-2026.html"
+      "title": "PoEM：用现有策略预测 RL 训练结果，告别\"炼丹\"式后训练",
+      "source": "ArXiv",
+      "summary": "论文提出 PoEM 框架，能在不完整跑完 RL 后训练流程的前提下，从已有策略直接预测训练结果。这解决了当前基础模型 RL 后训练中最大的痛点——每次换 reward model 就得从头再来，算力烧得像无底洞，还不一定收敛。PoEM 让研究者可以在几分钟内评估数十种 reward 配置，而不是花几周烧完 GPU 再发现方向错了。",
+      "commentary": "RL 后训练的本质是\"用几百万美元赌一个 reward function 没写错\"，PoEM 的出现相当于给炼丹炉装了个温度计——虽然不能保证炼出仙丹，但至少能告诉你这炉大概率要炸，省得你把整栋楼点了。",
+      "url": "https://arxiv.org/abs/2609.30226v1"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49823582",
-      "title": "Linux support is coming to Snapdragon X2 Series",
-      "summary": "",
-      "url": "https://www.qualcomm.com/news/onq/2026/09/snapdragon-summit-agentic-ai-pcs-linux",
+      "id": "hn:49823738",
+      "title": "Show HN: Make cursed fonts like Times New Bastard",
+      "summary": "A joke tool that abuses OpenType&#x27;s ligature feature to mix fonts. It works pretty fast on client-side by loading Python in WASM.",
+      "url": "https://bastardica.mitpit.com",
       "source": "Hacker News",
-      "score": 564,
-      "comments": 236
+      "score": 532,
+      "comments": 77
     },
     {
-      "id": "hn:49831968",
-      "title": "F-Droid 2.0: A New Chapter for Android Freedom",
-      "summary": "",
-      "url": "https://f-droid.org/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html",
+      "id": "hn:49833867",
+      "title": "Show HN: Whiteboard (YC W26) – An open-source IDE for thoughtful software design",
+      "summary": "Hello! We’re Sid, Alex, Ketan, and Milan. We’re building Whiteboard (<a href=\"https:&#x2F;&#x2F;whiteboard.dev.fast&#x2F;\">https:&#x2F;&#x2F;whiteboard.dev.fast&#x2F;</a>), an open-source desktop app where humans and agents can architect software together in a common workspace. Here’s our repo: <a h",
+      "url": "https://github.com/devdotfast/whiteboard",
       "source": "Hacker News",
-      "score": 224,
-      "comments": 57
+      "score": 232,
+      "comments": 87
     },
     {
       "id": "lob:ad5vwg",
@@ -51,8 +51,8 @@
       "summary": "",
       "url": "https://radicle.dev/2026/09/23/disclosure-of-vulnerability-in-network-protocol.html",
       "source": "Lobste.rs",
-      "score": 132,
-      "comments": 50,
+      "score": 138,
+      "comments": 57,
       "tags": [
         "distributed",
         "security",
@@ -60,57 +60,90 @@
       ]
     },
     {
-      "id": "hn:49825642",
+      "id": "hn:49831968",
+      "title": "F-Droid 2.0",
+      "summary": "",
+      "url": "https://f-droid.org/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html",
+      "source": "Hacker News",
+      "score": 1027,
+      "comments": 277
+    },
+    {
+      "id": "hn:49832938",
+      "title": "Why is the liver so weirdly regenerative?",
+      "summary": "",
+      "url": "https://dynomight.substack.com/p/liver",
+      "source": "Hacker News",
+      "score": 307,
+      "comments": 167
+    },
+    {
+      "id": "hn:49817680",
+      "title": "Rails World 2026 Opening Keynote [video]",
+      "summary": "",
+      "url": "https://www.youtube.com/watch?v=vDjW_dRyKXY",
+      "source": "Hacker News",
+      "score": 283,
+      "comments": 296
+    },
+    {
+      "id": "hn:49823568",
+      "title": "Toyota is taking the Corolla electric",
+      "summary": "",
+      "url": "https://electrek.co/2026/09/23/toyota-best-selling-corolla-electric/",
+      "source": "Hacker News",
+      "score": 264,
+      "comments": 436
+    },
+    {
+      "id": "hn:49805344",
+      "title": "My weird new hobby: Wandering around Tokyo on Google Maps",
+      "summary": "",
+      "url": "https://ahmedhossamdev.com/writing/my-weird-new-hobby-wandering-around-tokyo/",
+      "source": "Hacker News",
+      "score": 255,
+      "comments": 108
+    },
+    {
+      "id": "hn:49800085",
+      "title": "Fearless SIMD v1.0",
+      "summary": "",
+      "url": "https://linebender.org/blog/fearless-simd-1-0/",
+      "source": "Hacker News",
+      "score": 212,
+      "comments": 32
+    },
+    {
+      "id": "hn:49828731",
+      "title": "Two-tier encryption in the UK",
+      "summary": "",
+      "url": "https://macanorak.com/two-tier-encryption-in-the-uk/",
+      "source": "Hacker News",
+      "score": 397,
+      "comments": 382
+    },
+    {
+      "id": "lob:aaq59w",
       "title": "Ideas on modernizing the open-source desktop",
       "summary": "",
       "url": "https://lwn.net/SubscriberLink/1095425/2d9f411252325784/",
-      "source": "Hacker News",
-      "score": 312,
-      "comments": 371
-    },
-    {
-      "id": "hn:49823664",
-      "title": "ArXiv receives multiyear commitments to support it as an independent nonprofit",
-      "summary": "",
-      "url": "https://blog.arxiv.org/2026/09/23/arxiv-receives-multiyear-investment/",
-      "source": "Hacker News",
-      "score": 275,
-      "comments": 37
-    },
-    {
-      "id": "lob:kras1h",
-      "title": "The GNOME LLM Policy That I Want",
-      "summary": "",
-      "url": "https://blogs.gnome.org/alatiera/2026/09/23/the-gnome-llm-policy-that-i-want/",
       "source": "Lobste.rs",
-      "score": 51,
-      "comments": 63,
+      "score": 57,
+      "comments": 19,
       "tags": [
-        "linux",
-        "practices",
-        "vibecoding"
+        "design"
       ]
     },
     {
-      "id": "hn:49828385",
-      "title": "Nokia Design Archive (2025)",
+      "id": "lob:4jqfz1",
+      "title": "Breaking Up with Google Play: Why Conversations Is Now Free",
       "summary": "",
-      "url": "https://nokiadesignarchive.aalto.fi/index.html",
-      "source": "Hacker News",
-      "score": 166,
-      "comments": 86
-    },
-    {
-      "id": "lob:r3ydgj",
-      "title": "I want my mesh networks to be signed, not encrypted",
-      "summary": "",
-      "url": "https://andanti.no/blog/SignedMesh.html",
+      "url": "https://gultsch.de/posts/breaking-up-with-google-play/",
       "source": "Lobste.rs",
-      "score": 35,
-      "comments": 20,
+      "score": 78,
+      "comments": 12,
       "tags": [
-        "cryptography",
-        "networking"
+        "android"
       ]
     },
     {
@@ -119,136 +152,91 @@
       "summary": "",
       "url": "https://users.cs.utah.edu/~elb/folklore/mel.html",
       "source": "Lobste.rs",
-      "score": 51,
-      "comments": 12,
+      "score": 65,
+      "comments": 16,
       "tags": [
         "assembly",
         "historical"
       ]
     },
     {
-      "id": "hn:49805806",
-      "title": "Enjoy Every Sandwich",
-      "summary": "",
-      "url": "https://bradmontague.substack.com/p/enjoy-every-sandwich",
+      "id": "hn:49830606",
+      "title": "Google’s Project Suncatcher to put ML infrastructure in space",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.nytimes.com&#x2F;2026&#x2F;09&#x2F;24&#x2F;technology&#x2F;google-suncatcher-ai-data-center-space.html\" rel=\"nofollow\">https:&#x2F;&#x2F;www.nytimes.com&#x2F;2026&#x2F;09&#x2F;24&#x2F;technology&#x2F;google-suncatc...</a> (<a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;BGF",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/",
       "source": "Hacker News",
-      "score": 127,
-      "comments": 51
+      "score": 139,
+      "comments": 257
     },
     {
-      "id": "hn:49831774",
-      "title": "Disney+ and Hulu raise prices by up to 13 percent after doubling profits",
+      "id": "lob:mdczxv",
+      "title": "I asked Meta’s Muse for its filesystem and it sent me 6.8 GB",
       "summary": "",
-      "url": "https://arstechnica.com/gadgets/2026/09/disney-and-hulu-raise-prices-by-up-to-13-percent-after-doubling-profits/",
-      "source": "Hacker News",
-      "score": 103,
-      "comments": 118
+      "url": "https://mouse.dev/blog/muse-runtime-export/",
+      "source": "Lobste.rs",
+      "score": 43,
+      "comments": 8,
+      "tags": [
+        "vibecoding"
+      ]
     },
     {
-      "id": "arxiv:2609.28416v1",
-      "title": "Agent-Editing World Model: Rethinking World Modeling for LLM Agents",
-      "summary": "Recent advances in large language models (LLMs) have enabled agents to tackle long-horizon tasks across diverse environments. To further improve agent performance, existing language world models typically predict environment observations, yet reconstructing high-entropy, execution-dependent tool res",
-      "url": "https://arxiv.org/abs/2609.28416v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2609.28416v1"
-    },
-    {
-      "id": "arxiv:2609.28442v1",
-      "title": "Order-Invariant Answers, Order-Sensitive Representations in Mathematical Reasoning",
-      "summary": "Reordering a set of mathematical rules without changing its meaning should preserve the correct answer, but must a model's internal representations stay invariant too? We investigate this question using synthetic multi-step function-composition problems, each presented under multiple rule orderings ",
-      "url": "https://arxiv.org/abs/2609.28442v1",
+      "id": "arxiv:2609.30227v1",
+      "title": "To Trust or Not to Trust: Retrieval-Augmented Fact Checking in Speech",
+      "summary": "Online misinformation increasingly appears in spoken formats such as news clips, podcasts, interviews, political speeches, and social media videos, creating a need for fact-checking systems that can verify claims directly from speech. We introduce VeriSpeak, a probe benchmark for studying speech-bas",
+      "url": "https://arxiv.org/abs/2609.30227v1",
       "source": "ArXiv",
       "categories": [
         "cs.LG",
         "cs.AI",
         "cs.CL",
-        "cs.SC"
+        "cs.SD"
       ],
-      "arxiv_id": "2609.28442v1"
+      "arxiv_id": "2609.30227v1"
     },
     {
-      "id": "rss:52096e9cb5",
-      "title": "Attackers Exploit WordPress CVE-2026-87902 Within Hours of Disclosure",
-      "summary": "Threat actors have begun to actively exploit a critical security flaw in WordPress within hours of public disclosure.\n\nThe vulnerability in question is CVE-2026-87902 (CVSS score: 9.2), which could allow an unauthenticated attacker to obtain remote code execution (RCE).\n\n\"An unauthenticated attacker",
-      "url": "https://thehackernews.com/2026/09/attackers-exploit-wordpress-cve-2026.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "hn:49831201",
-      "title": "Dynamic Abliteration: Non-Destructive Refusal Suppression via Engram Steering",
-      "summary": "",
-      "url": "https://blog.madhukaraphatak.in/non-destructive-refusal-supression-using-engram",
-      "source": "Hacker News",
-      "score": 85,
-      "comments": 29
-    },
-    {
-      "id": "arxiv:2609.28430v1",
-      "title": "Cross-Scale Transfer Learning for Depression Severity Prediction: From PHQ-8 to HAMD-17 Across Languages and Clinical Paradigms",
-      "summary": "This work addresses continuous depression-severity score prediction from clinical interview transcripts under data scarcity. We propose a sequential low-rank adaptation (LoRA) protocol for cross-scale transfer: a Qwen3 backbone with a bounded regression head is first fine-tuned on the English DAIC-W",
-      "url": "https://arxiv.org/abs/2609.28430v1",
+      "id": "arxiv:2609.30226v1",
+      "title": "PoEM: Predicting RL Outcomes from Existing Policies",
+      "summary": "Foundation models are post-trained with reinforcement learning (RL) to maximize specific rewards, such as human alignment, correctness, or instruction following. This post-training process is computationally intensive, sometimes unstable, and has to be run from scratch every time the reward model ch",
+      "url": "https://arxiv.org/abs/2609.30226v1",
       "source": "ArXiv",
       "categories": [
-        "cs.CL"
-      ],
-      "arxiv_id": "2609.28430v1"
-    },
-    {
-      "id": "lob:1skdhv",
-      "title": "Pick OS is a Living Fossil of Computer History",
-      "summary": "",
-      "url": "https://csixty4.medium.com/pick-is-a-living-fossil-of-computer-history-36d74408d557",
-      "source": "Lobste.rs",
-      "score": 19,
-      "comments": 3,
-      "tags": [
-        "databases",
-        "historical",
-        "osdev"
-      ]
-    },
-    {
-      "id": "lob:kjqjse",
-      "title": "A brief history of Windows scroll bar shortcuts",
-      "summary": "",
-      "url": "https://devblogs.microsoft.com/oldnewthing/20260922-00/?p=112719/",
-      "source": "Lobste.rs",
-      "score": 17,
-      "comments": 9,
-      "tags": [
-        "windows"
-      ]
-    },
-    {
-      "id": "arxiv:2609.28471v1",
-      "title": "Contrastive Learning for Authorship Verification",
-      "summary": "Our results show that contrastive learning outperforms a classification-based approach to authorship verification under the tested settings. We identify loss function, batch size, training duration, pre-trained model, input context length, and random text span data augmentation as important factors ",
-      "url": "https://arxiv.org/abs/2609.28471v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.LG"
-      ],
-      "arxiv_id": "2609.28471v1"
-    },
-    {
-      "id": "arxiv:2609.28449v1",
-      "title": "Can LLMs Reason About Runtime Behavior? A Repository-Level Dynamic Benchmark",
-      "summary": "Large language models (LLMs) are increasingly used in coding tasks, but their ability to reason about code execution remains unclear. Existing repository-level QA benchmarks mainly evaluate static code understanding and often rely on LLM-based evaluation, while execution-reasoning benchmarks are mos",
-      "url": "https://arxiv.org/abs/2609.28449v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.SE",
+        "cs.LG",
         "cs.AI",
-        "cs.CL"
+        "cs.CL",
+        "cs.CV"
       ],
-      "arxiv_id": "2609.28449v1"
+      "arxiv_id": "2609.30226v1"
+    },
+    {
+      "id": "lob:xg8zbk",
+      "title": "Clankers Made Me Build a Second Brain",
+      "summary": "",
+      "url": "https://jadarma.github.io/blog/posts/2026/09/clankers-made-me-build-a-second-brain/",
+      "source": "Lobste.rs",
+      "score": 31,
+      "comments": 10,
+      "tags": [
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "hn:49787759",
+      "title": "Book review: Is parallel programming hard, and, if so, what can you do about it?",
+      "summary": "",
+      "url": "https://ahelwer.ca/post/2026-09-21-concurrency-textbook/",
+      "source": "Hacker News",
+      "score": 102,
+      "comments": 30
+    },
+    {
+      "id": "hn:49801436",
+      "title": "2DWillNeverDie",
+      "summary": "",
+      "url": "https://2dwillneverdie.com/",
+      "source": "Hacker News",
+      "score": 151,
+      "comments": 15
     }
   ],
   "ai_curated": true
