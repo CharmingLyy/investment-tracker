@@ -1,157 +1,116 @@
 {
   "date": "2026-09-28",
-  "update_time": "2026-09-27 16:36:16",
+  "update_time": "2026-09-28 04:36:11",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-28\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Plugin4Shell：AI 编程助手的插件商店，正在重演 npm 供应链灾难 (来源: Tech RSS / Dev.to)\n- **核心干货**：安全团队在 Claude Code、Codex、Copilot、Gemini CLI 等主流 AI 编程代理的插件市场中发现了零点击 RCE 漏洞，波及超过 26,000 个代理实例。攻击者无需诱导用户点击，只要插件被加载即可执行任意代码——本质上是把 npm/PyPI 时代的供应链攻击模式原封不动搬进了 AI Agent 生态，还附赠了\"代理自主调用工具链\"这个全新攻击面。\n- **毒舌/硬核点评**：人类花了十年才学会给 npm 加 lockfile 和审计，AI 代理插件市场三个月就把所有坑重新踩了一遍。更讽刺的是，这些代理号称能帮你\"自动修复安全漏洞\"，结果自己就是最大的漏洞。\n- **🔗 传送门**：[点击直达原链接](https://dev.to/numbpill3d/plugin4shell-hit-26000-agents-before-anyone-noticed-your-coding-agents-plugin-store-is-the-new-5hlg)\n\n---\n\n### 2. 📌 PoEM：用已有策略预测 RL 训练结果，省下百万美元算力 (来源: ArXiv cs.LG)\n- **核心干货**：基础模型的 RL 后训练（对齐、正确性、指令遵循）算力消耗巨大且经常不稳定，每次换奖励模型都得从零重跑。这篇论文提出 PoEM 方法，能从已有策略直接预测 RL 训练的结果，相当于给 RL 后训练装了个\"沙盘推演\"系统——在真正烧 GPU 之前就能判断这轮训练值不值得跑。\n- **毒舌/硬核点评**：终于有人意识到\"先跑再看结果\"是二十一世纪最贵的赌博。如果这方法靠谱，以后 RL 训练团队开会第一句话不再是\"再给我 512 张 H100\"，而是\"先跑个 PoEM 看看\"。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2609.30226v1)\n\n---\n\n### 3. 📌 Valve 发布 Pyrowave 视频编解码器 Beta，专为低延迟串流而生 (来源: Lobste.rs / Phoronix)\n- **核心干货**：Valve 在 Steam Beta 中推出自研 Pyrowave 编解码器，针对低延迟游戏串流场景优化。这不是又一个\"通用视频压缩\"方案，而是明确瞄准 Steam Link / Steam Deck 远程串流体验——延迟优先、画质其次，直接挑战现有串流编解码方案在高动态游戏画面下的延迟瓶颈。\n- **毒舌/硬核点评**：当全世界都在卷 AI 生成视频时，Valve 默默在解决\"如何让《CS3》的子弹飞到你屏幕上时不卡半帧\"这个更朴素但更刚需的问题。硬核玩家的痛点，终究还得硬核公司来治。\n- **🔗 传送门**：[点击直达原链接](https://www.phoronix.com/news/Valve-Steam-Beta-Pyrowave)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"AI 代理能帮你写代码、修 bug、部署上线——唯独不能帮你承担它自己捅的篓子。所以在你把 root 权限交给一个插件市场之前，先想想 npm 当年是怎么教做人的。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-28\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Rust 的 SIMD 生态，终于不再是个笑话了 (来源: HackerNews)\n- **核心干货**：一篇系统性梳理 Rust SIMD 现状的长文，覆盖了 `std::simd` 的稳定化进展、可移植性与性能取舍、以及各架构下的实际表现。简单说：Rust 想在数值计算和高性能场景里跟 C++ 抢饭碗，SIMD 这块短板终于补得七七八八了。\n- **毒舌/硬核点评**：曾经 Rust 程序员写 SIMD 的体验，约等于用筷子吃牛排——能用，但看着隔壁 C++ 用刀叉优雅切肉，血压直接拉满。现在终于发刀叉了，就是不知道 stable 之后又要等几个 edition 才敢用。\n- **🔗 传送门**：[点击直达原链接](https://shnatsel.github.io/state-of-simd-rust-2026/)\n\n---\n\n### 2. 📌 Valve 掏出自研视频编解码器 Pyrowave，游戏串流要变天？ (来源: Lobste.rs / Phoronix)\n- **核心干货**：Valve 在 Steam Beta 中引入了自研的低延迟视频编解码器 Pyrowave，专门针对游戏串流场景优化。这意味着 Steam Link / Steam Deck 远程串流的延迟和画质可能迎来质变——而且是 Valve 自己掌控的底层技术栈，不依赖第三方编解码方案。\n- **毒舌/硬核点评**：别的公司做串流是「调调参数、套个壳」，Valve 直接下场造编解码器。G胖不会数 3，但搞底层技术这件事上，他是真的不讲武德。NVIDIA 的 GameStream 棺材板怕是要压不住了。\n- **🔗 传送门**：[点击直达原链接](https://www.phoronix.com/news/Valve-Steam-Beta-Pyrowave)\n\n---\n\n### 3. 📌 AI 让律所效率暴涨，客户灵魂发问：我的折扣呢？ (来源: HackerNews / NYT)\n- **核心干货**：NYT 报道了一个正在撕裂法律行业的现实问题——AI 大幅提升了律所的工作效率，但按小时计费的商业模式意味着：效率越高，律所赚得越多，客户账单纹丝不动。客户开始集体质疑「按小时收费」的合理性，整个法律服务的定价逻辑正在被 AI 逼到墙角。\n- **毒舌/硬核点评**：AI 提效的红利全被中间商吃了，这剧本我熟——这不就是 SaaS 版的「你降本增效，我涨价续费」吗？律所合伙人现在的心情大概是：感谢 AI，让我用更少的时间赚更多的钱，顺便祈祷客户别太聪明。\n- **🔗 传送门**：[点击直达原链接](https://www.nytimes.com/2026/09/26/business/dealbook/ai-law-discount-billable-hour.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> **\"AI 不会取代你，但会用 AI 的律所合伙人，正在取代不会算账的你。\"**",
   "briefing_items": [
     {
-      "title": "Plugin4Shell：AI 编程助手的插件商店，正在重演 npm 供应链灾难",
-      "source": "Tech RSS / Dev.to",
-      "summary": "安全团队在 Claude Code、Codex、Copilot、Gemini CLI 等主流 AI 编程代理的插件市场中发现了零点击 RCE 漏洞，波及超过 26,000 个代理实例。攻击者无需诱导用户点击，只要插件被加载即可执行任意代码——本质上是把 npm/PyPI 时代的供应链攻击模式原封不动搬进了 AI Agent 生态，还附赠了\"代理自主调用工具链\"这个全新攻击面。",
-      "commentary": "人类花了十年才学会给 npm 加 lockfile 和审计，AI 代理插件市场三个月就把所有坑重新踩了一遍。更讽刺的是，这些代理号称能帮你\"自动修复安全漏洞\"，结果自己就是最大的漏洞。",
-      "url": "https://dev.to/numbpill3d/plugin4shell-hit-26000-agents-before-anyone-noticed-your-coding-agents-plugin-store-is-the-new-5hlg"
+      "title": "Rust 的 SIMD 生态，终于不再是个笑话了",
+      "source": "HackerNews",
+      "summary": "一篇系统性梳理 Rust SIMD 现状的长文，覆盖了 `std::simd` 的稳定化进展、可移植性与性能取舍、以及各架构下的实际表现。简单说：Rust 想在数值计算和高性能场景里跟 C++ 抢饭碗，SIMD 这块短板终于补得七七八八了。",
+      "commentary": "曾经 Rust 程序员写 SIMD 的体验，约等于用筷子吃牛排——能用，但看着隔壁 C++ 用刀叉优雅切肉，血压直接拉满。现在终于发刀叉了，就是不知道 stable 之后又要等几个 edition 才敢用。",
+      "url": "https://shnatsel.github.io/state-of-simd-rust-2026/"
     },
     {
-      "title": "PoEM：用已有策略预测 RL 训练结果，省下百万美元算力",
-      "source": "ArXiv cs.LG",
-      "summary": "基础模型的 RL 后训练（对齐、正确性、指令遵循）算力消耗巨大且经常不稳定，每次换奖励模型都得从零重跑。这篇论文提出 PoEM 方法，能从已有策略直接预测 RL 训练的结果，相当于给 RL 后训练装了个\"沙盘推演\"系统——在真正烧 GPU 之前就能判断这轮训练值不值得跑。",
-      "commentary": "终于有人意识到\"先跑再看结果\"是二十一世纪最贵的赌博。如果这方法靠谱，以后 RL 训练团队开会第一句话不再是\"再给我 512 张 H100\"，而是\"先跑个 PoEM 看看\"。",
-      "url": "https://arxiv.org/abs/2609.30226v1"
-    },
-    {
-      "title": "Valve 发布 Pyrowave 视频编解码器 Beta，专为低延迟串流而生",
+      "title": "Valve 掏出自研视频编解码器 Pyrowave，游戏串流要变天？",
       "source": "Lobste.rs / Phoronix",
-      "summary": "Valve 在 Steam Beta 中推出自研 Pyrowave 编解码器，针对低延迟游戏串流场景优化。这不是又一个\"通用视频压缩\"方案，而是明确瞄准 Steam Link / Steam Deck 远程串流体验——延迟优先、画质其次，直接挑战现有串流编解码方案在高动态游戏画面下的延迟瓶颈。",
-      "commentary": "当全世界都在卷 AI 生成视频时，Valve 默默在解决\"如何让《CS3》的子弹飞到你屏幕上时不卡半帧\"这个更朴素但更刚需的问题。硬核玩家的痛点，终究还得硬核公司来治。",
+      "summary": "Valve 在 Steam Beta 中引入了自研的低延迟视频编解码器 Pyrowave，专门针对游戏串流场景优化。这意味着 Steam Link / Steam Deck 远程串流的延迟和画质可能迎来质变——而且是 Valve 自己掌控的底层技术栈，不依赖第三方编解码方案。",
+      "commentary": "别的公司做串流是「调调参数、套个壳」，Valve 直接下场造编解码器。G胖不会数 3，但搞底层技术这件事上，他是真的不讲武德。NVIDIA 的 GameStream 棺材板怕是要压不住了。",
       "url": "https://www.phoronix.com/news/Valve-Steam-Beta-Pyrowave"
     },
     {
-      "quote": "\"AI 代理能帮你写代码、修 bug、部署上线——唯独不能帮你承担它自己捅的篓子。所以在你把 root 权限交给一个插件市场之前，先想想 npm 当年是怎么教做人的。\""
+      "title": "AI 让律所效率暴涨，客户灵魂发问：我的折扣呢？",
+      "source": "HackerNews / NYT",
+      "summary": "NYT 报道了一个正在撕裂法律行业的现实问题——AI 大幅提升了律所的工作效率，但按小时计费的商业模式意味着：效率越高，律所赚得越多，客户账单纹丝不动。客户开始集体质疑「按小时收费」的合理性，整个法律服务的定价逻辑正在被 AI 逼到墙角。",
+      "commentary": "AI 提效的红利全被中间商吃了，这剧本我熟——这不就是 SaaS 版的「你降本增效，我涨价续费」吗？律所合伙人现在的心情大概是：感谢 AI，让我用更少的时间赚更多的钱，顺便祈祷客户别太聪明。",
+      "url": "https://www.nytimes.com/2026/09/26/business/dealbook/ai-law-discount-billable-hour.html"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49867067",
-      "title": "\"They had no concept of a duty of care to their users.\"",
+      "id": "hn:49872723",
+      "title": "Owed a billion dollars in Nvidia stock",
+      "summary": "",
+      "url": "https://colo.to/nvidia-stock-narrative.html",
+      "source": "Hacker News",
+      "score": 265,
+      "comments": 137
+    },
+    {
+      "id": "hn:49869574",
+      "title": "Show HN: Lofi Cities – Pixel-art city nights with browser-generated lofi",
+      "summary": "",
+      "url": "https://loficities.com/",
+      "source": "Hacker News",
+      "score": 200,
+      "comments": 87
+    },
+    {
+      "id": "lob:uvmajz",
+      "title": "Rusty thoughts on \"Parse, don't validate\"",
+      "summary": "",
+      "url": "https://eli.thegreenplace.net/2026/rusty-thoughts-on-parse-dont-validate/",
+      "source": "Lobste.rs",
+      "score": 51,
+      "comments": 52,
+      "tags": [
+        "programming",
+        "rust"
+      ]
+    },
+    {
+      "id": "hn:49870367",
+      "title": "When did Google get so weird?",
+      "summary": "",
+      "url": "https://sancho.bearblog.dev/google-weird/",
+      "source": "Hacker News",
+      "score": 948,
+      "comments": 514
+    },
+    {
+      "id": "hn:49868404",
+      "title": "Don't couple your Go code to GitHub",
+      "summary": "",
+      "url": "https://iain.rocks/blog/dont-couple-your-go-code-to-github",
+      "source": "Hacker News",
+      "score": 174,
+      "comments": 85
+    },
+    {
+      "id": "lob:1colyy",
+      "title": "“They had no concept of a duty of care to their users.”",
       "summary": "",
       "url": "https://unsung.aresluna.org/they-had-no-concept-of-a-duty-of-care-to-their-users/",
-      "source": "Hacker News",
-      "score": 212,
-      "comments": 152
-    },
-    {
-      "id": "hn:49844657",
-      "title": "Does Georgism work? Five years later",
-      "summary": "",
-      "url": "https://www.astralcodexten.com/p/does-georgism-work-five-years-later",
-      "source": "Hacker News",
-      "score": 459,
-      "comments": 370
-    },
-    {
-      "id": "hn:49856988",
-      "title": "Go Concurrency Distilled",
-      "summary": "",
-      "url": "https://antonz.org/go-concurrency-distilled/",
-      "source": "Hacker News",
-      "score": 314,
-      "comments": 134
-    },
-    {
-      "id": "lob:zoproh",
-      "title": "This is a modern motherfucking website",
-      "summary": "",
-      "url": "https://modernmotherfuckingwebsite.dreamstation.systems/",
       "source": "Lobste.rs",
-      "score": 56,
-      "comments": 34,
+      "score": 123,
+      "comments": 22,
       "tags": [
-        "satire",
-        "vibecoding",
-        "web"
+        "vim"
       ]
     },
     {
-      "id": "lob:p3iq7v",
-      "title": "If we do not stop to help each other, what do we become?",
+      "id": "lob:fpk9gq",
+      "title": "Ten Lines Of Code That Changed My World",
       "summary": "",
-      "url": "https://blog.codinghorror.com/if-we-do-not-stop-to-help-each-other-what-do-we-become/",
+      "url": "https://pixelambacht.nl/2026/ten-lines-of-code/",
       "source": "Lobste.rs",
-      "score": 159,
-      "comments": 19,
+      "score": 39,
+      "comments": 11,
       "tags": [
-        "culture"
+        "programming"
       ]
     },
     {
-      "id": "hn:49854219",
-      "title": "Flip Fluid on Flip Dots",
+      "id": "lob:msjitj",
+      "title": "postmarketOS rebrands as Nura",
       "summary": "",
-      "url": "https://mitxela.com/projects/flipflip",
-      "source": "Hacker News",
-      "score": 274,
-      "comments": 18
-    },
-    {
-      "id": "lob:wpv5ed",
-      "title": "Infecting the Steam Link with NixOS",
-      "summary": "",
-      "url": "https://feyor.sh/blog/infecting-the-steam-link-with-nixos/",
+      "url": "https://nura.eco/blog/2026/09/27/nura-rename/",
       "source": "Lobste.rs",
-      "score": 41,
-      "comments": 2,
+      "score": 45,
+      "comments": 5,
       "tags": [
-        "hardware",
-        "nix"
+        "linux"
       ]
-    },
-    {
-      "id": "lob:iqqqbg",
-      "title": "AI Agents Push Humans Out of the Loop",
-      "summary": "<p>Abstract: AI agents pose significant risks as they are granted increasing autonomy. A commonly proposed solution is human oversight and keeping a ''human in the loop'', but this is not a simple solution: Not only do current approaches to AI agent design impede effective human oversight, but the c",
-      "url": "https://arxiv.org/abs/2608.23642",
-      "source": "Lobste.rs",
-      "score": 26,
-      "comments": 3,
-      "tags": [
-        "vibecoding"
-      ]
-    },
-    {
-      "id": "arxiv:2609.30227v1",
-      "title": "To Trust or Not to Trust: Retrieval-Augmented Fact Checking in Speech",
-      "summary": "Online misinformation increasingly appears in spoken formats such as news clips, podcasts, interviews, political speeches, and social media videos, creating a need for fact-checking systems that can verify claims directly from speech. We introduce VeriSpeak, a probe benchmark for studying speech-bas",
-      "url": "https://arxiv.org/abs/2609.30227v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL",
-        "cs.SD"
-      ],
-      "arxiv_id": "2609.30227v1"
-    },
-    {
-      "id": "arxiv:2609.30226v1",
-      "title": "PoEM: Predicting RL Outcomes from Existing Policies",
-      "summary": "Foundation models are post-trained with reinforcement learning (RL) to maximize specific rewards, such as human alignment, correctness, or instruction following. This post-training process is computationally intensive, sometimes unstable, and has to be run from scratch every time the reward model ch",
-      "url": "https://arxiv.org/abs/2609.30226v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL",
-        "cs.CV"
-      ],
-      "arxiv_id": "2609.30226v1"
-    },
-    {
-      "id": "rss:07a6973be8",
-      "title": "Plugin4Shell Hit 26,000 Agents Before Anyone Noticed. Your Coding Agent’s Plugin Store Is the New npm.",
-      "summary": "A zero-click RCE vulnerability across Claude Code, Codex, Copilot, and Gemini CLI proves that AI coding agent plugin marketplaces have inherited every supply chain attack pattern from package managers, plus some new ones.\n\n\n\n\nIn May 2026, researchers at Air Security discovered that every major AI co",
-      "url": "https://dev.to/numbpill3d/plugin4shell-hit-26000-agents-before-anyone-noticed-your-coding-agents-plugin-store-is-the-new-5hlg",
-      "source": "Tech RSS",
-      "score": 0
     },
     {
       "id": "lob:ivbx5f",
@@ -159,34 +118,33 @@
       "summary": "",
       "url": "https://blog.bustikiller.com/2026/09/25/one-month-without-ai.html",
       "source": "Lobste.rs",
-      "score": 49,
-      "comments": 6,
+      "score": 76,
+      "comments": 11,
       "tags": [
         "vibecoding"
       ]
     },
     {
-      "id": "arxiv:2609.30258v1",
-      "title": "Temporal Gradient Inversion for Private Trajectory Reconstruction in Embodied Reinforcement Learning",
-      "summary": "Distributed learning in embodied reinforcement-learning agents offers a degree of privacy by retaining raw sensor data on-device and transmitting only policy gradients to the server. Yet temporal structure can amplify this leakage beyond single-frame attacks. We introduce Temporal Reconstruction Att",
-      "url": "https://arxiv.org/abs/2609.30258v1",
+      "id": "arxiv:2609.31619v1",
+      "title": "Learning to Stop without Learning to Stop: Self-Supervised Confidence Training Improves Reasoning Efficiency",
+      "summary": "Reasoning models often generate very long reasoning traces, making inference computationally expensive. Existing approaches typically improve efficiency either through inference-time early-stopping mechanisms or by explicitly encouraging shorter reasoning during training, for example through reinfor",
+      "url": "https://arxiv.org/abs/2609.31619v1",
       "source": "ArXiv",
       "categories": [
+        "cs.AI",
+        "cs.CL",
         "cs.LG"
       ],
-      "arxiv_id": "2609.30258v1"
+      "arxiv_id": "2609.31619v1"
     },
     {
-      "id": "arxiv:2609.30233v1",
-      "title": "Coding Agents for Generalized Task and Motion Planning Problems",
-      "summary": "Task and motion planning (TAMP) problems remain difficult even with full observability and object-centric states because discrete decisions are tightly coupled to geometric, kinematic, and dynamic constraints. Generalized TAMP addresses this difficulty by exploiting regularities across problem insta",
-      "url": "https://arxiv.org/abs/2609.30233v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "arxiv_id": "2609.30233v1"
+      "id": "hn:49844629",
+      "title": "The state of SIMD in Rust in 2026",
+      "summary": "",
+      "url": "https://shnatsel.github.io/state-of-simd-rust-2026/",
+      "source": "Hacker News",
+      "score": 109,
+      "comments": 23
     },
     {
       "id": "lob:hq6xj2",
@@ -194,69 +152,96 @@
       "summary": "",
       "url": "https://www.phoronix.com/news/Valve-Steam-Beta-Pyrowave",
       "source": "Lobste.rs",
-      "score": 34,
-      "comments": 3,
+      "score": 48,
+      "comments": 5,
       "tags": [
         "graphics"
       ]
     },
     {
-      "id": "arxiv:2609.30250v1",
-      "title": "Agentic Detection of Online Conspiracies",
-      "summary": "Conspiratorial discourse on social media is not always expressed through explicit claims or stable lexical markers. The same surface content may express endorsement, legitimate concerns, criticism, satire, or mockery. The main challenge is therefore not only recognizing conspiracy-related claims, bu",
-      "url": "https://arxiv.org/abs/2609.30250v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.LG"
-      ],
-      "arxiv_id": "2609.30250v1"
+      "id": "hn:49870070",
+      "title": "Alan Kay's answer to “Did the ENIAC have a BIOS”?",
+      "summary": "",
+      "url": "https://www.quora.com/Did-the-ENIAC-have-a-BIOS/answer/Alan-Kay-11",
+      "source": "Hacker News",
+      "score": 90,
+      "comments": 31
     },
     {
-      "id": "arxiv:2609.30249v1",
-      "title": "RAPID: Robot Agentic Programming from Demonstrations",
-      "summary": "Coding agents have demonstrated enormous success in solving complex programming problems. To leverage their potential for robot systems, this work introduces Robot Agentic Programming from Demonstrations (RAPID), which automatically generates, verifies, and refines robot programs, given a single vis",
-      "url": "https://arxiv.org/abs/2609.30249v1",
+      "id": "hn:49857281",
+      "title": "There is more to code review than (automatable) detection",
+      "summary": "",
+      "url": "https://www.adaptivecapacitylabs.com/2026/08/24/there-is-more-to-code-review-than-automatable-detection/",
+      "source": "Hacker News",
+      "score": 90,
+      "comments": 49
+    },
+    {
+      "id": "hn:49870295",
+      "title": "Self-Hosting on the Dark Web",
+      "summary": "",
+      "url": "https://david.alvarezrosa.com/posts/self-hosting-on-the-dark-web/",
+      "source": "Hacker News",
+      "score": 95,
+      "comments": 33
+    },
+    {
+      "id": "hn:49872522",
+      "title": "As A.I. makes law firms more efficient, clients ask: 'Where's my discount?'",
+      "summary": "",
+      "url": "https://www.nytimes.com/2026/09/26/business/dealbook/ai-law-discount-billable-hour.html",
+      "source": "Hacker News",
+      "score": 76,
+      "comments": 58
+    },
+    {
+      "id": "hn:49872766",
+      "title": "Musk, the Movie",
+      "summary": "",
+      "url": "https://bleeckerstreetmedia.com/musk",
+      "source": "Hacker News",
+      "score": 111,
+      "comments": 31
+    },
+    {
+      "id": "lob:apoyxs",
+      "title": "LuaRocks Security Incident September 2026",
+      "summary": "",
+      "url": "https://luarocks.org/security-incident-september-2026",
+      "source": "Lobste.rs",
+      "score": 29,
+      "comments": 5,
+      "tags": [
+        "lua",
+        "security"
+      ]
+    },
+    {
+      "id": "arxiv:2609.31607v1",
+      "title": "Statistical attribute alignment for black-box generative AI via output post-processing",
+      "summary": "Generative AI systems are increasingly used, but aligning their outputs with user requirements poses a continuing challenge. Here, we aim to ensure that the distribution of an attribute of an AI-generated output aligns with a user-specified target. This is motivated by examples such as fairness, whe",
+      "url": "https://arxiv.org/abs/2609.31607v1",
       "source": "ArXiv",
       "categories": [
-        "cs.RO",
+        "stat.ME",
         "cs.AI",
-        "cs.CV"
-      ],
-      "arxiv_id": "2609.30249v1"
-    },
-    {
-      "id": "arxiv:2609.30238v1",
-      "title": "SemMSA: Latent Semantic-Aided Robust Multimodal Sentiment Analysis with Incomplete Data",
-      "summary": "Recent research on Multimodal Sentiment Analysis (MSA) has focused on learning from language, visual, and acoustic modalities with incomplete data to infer human sentiment. Most studies typically compensate for missing information by reconstructing modality features or designing complicated fusion m",
-      "url": "https://arxiv.org/abs/2609.30238v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.CV",
-        "cs.MM"
-      ],
-      "arxiv_id": "2609.30238v1"
-    },
-    {
-      "id": "arxiv:2609.30218v1",
-      "title": "Minimally Invasive Steering of Language Models",
-      "summary": "Pre-logit steering adapts a frozen language model to a test-time reward by adding vectors to its final hidden states. Unregularized reward optimization can substantially alter the output distribution and degrade generation quality. We propose Minimally Invasive Steering Vector Optimization (MISVO), ",
-      "url": "https://arxiv.org/abs/2609.30218v1",
-      "source": "ArXiv",
-      "categories": [
         "cs.LG",
-        "cs.AI"
+        "math.ST"
       ],
-      "arxiv_id": "2609.30218v1"
+      "arxiv_id": "2609.31607v1"
     },
     {
-      "id": "rss:cfdfc94481",
-      "title": "Attackers Bypass WAFs to Exploit Oracle PeopleSoft Flaw and Deploy Web Shells",
-      "summary": "Google is warning of renewed mass exploitation of a known security vulnerability in Oracle PeopleSoft as part of a campaign targeting multiple sectors globally.\n\nThe ShinyHunters-linked activity involves the weaponization of CVE-2026-35273 (CVSS score: 9.8), a critical security flaw that could resul",
-      "url": "https://thehackernews.com/2026/09/attackers-bypass-wafs-to-exploit-oracle.html",
-      "source": "Tech RSS",
-      "score": 0
+      "id": "arxiv:2609.31587v1",
+      "title": "Compact Documentation for Coding Agents: A Benchmark, an Optimizer, and Why It Does Not Transfer",
+      "summary": "We investigate whether natural-language documentation helps coding agents resolve software issues, and we build the tools to construct and evaluate it. We introduce a roundtrip benchmark that scores code descriptions by whether code regenerated from them passes the original tests, and show that comp",
+      "url": "https://arxiv.org/abs/2609.31587v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_id": "2609.31587v1"
     }
   ],
   "ai_curated": true
