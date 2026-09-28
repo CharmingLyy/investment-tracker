@@ -1,62 +1,58 @@
 {
-  "date": "2026-09-28",
-  "update_time": "2026-09-28 04:36:11",
+  "date": "2026-09-29",
+  "update_time": "2026-09-28 19:23:17",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-28\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Rust 的 SIMD 生态，终于不再是个笑话了 (来源: HackerNews)\n- **核心干货**：一篇系统性梳理 Rust SIMD 现状的长文，覆盖了 `std::simd` 的稳定化进展、可移植性与性能取舍、以及各架构下的实际表现。简单说：Rust 想在数值计算和高性能场景里跟 C++ 抢饭碗，SIMD 这块短板终于补得七七八八了。\n- **毒舌/硬核点评**：曾经 Rust 程序员写 SIMD 的体验，约等于用筷子吃牛排——能用，但看着隔壁 C++ 用刀叉优雅切肉，血压直接拉满。现在终于发刀叉了，就是不知道 stable 之后又要等几个 edition 才敢用。\n- **🔗 传送门**：[点击直达原链接](https://shnatsel.github.io/state-of-simd-rust-2026/)\n\n---\n\n### 2. 📌 Valve 掏出自研视频编解码器 Pyrowave，游戏串流要变天？ (来源: Lobste.rs / Phoronix)\n- **核心干货**：Valve 在 Steam Beta 中引入了自研的低延迟视频编解码器 Pyrowave，专门针对游戏串流场景优化。这意味着 Steam Link / Steam Deck 远程串流的延迟和画质可能迎来质变——而且是 Valve 自己掌控的底层技术栈，不依赖第三方编解码方案。\n- **毒舌/硬核点评**：别的公司做串流是「调调参数、套个壳」，Valve 直接下场造编解码器。G胖不会数 3，但搞底层技术这件事上，他是真的不讲武德。NVIDIA 的 GameStream 棺材板怕是要压不住了。\n- **🔗 传送门**：[点击直达原链接](https://www.phoronix.com/news/Valve-Steam-Beta-Pyrowave)\n\n---\n\n### 3. 📌 AI 让律所效率暴涨，客户灵魂发问：我的折扣呢？ (来源: HackerNews / NYT)\n- **核心干货**：NYT 报道了一个正在撕裂法律行业的现实问题——AI 大幅提升了律所的工作效率，但按小时计费的商业模式意味着：效率越高，律所赚得越多，客户账单纹丝不动。客户开始集体质疑「按小时收费」的合理性，整个法律服务的定价逻辑正在被 AI 逼到墙角。\n- **毒舌/硬核点评**：AI 提效的红利全被中间商吃了，这剧本我熟——这不就是 SaaS 版的「你降本增效，我涨价续费」吗？律所合伙人现在的心情大概是：感谢 AI，让我用更少的时间赚更多的钱，顺便祈祷客户别太聪明。\n- **🔗 传送门**：[点击直达原链接](https://www.nytimes.com/2026/09/26/business/dealbook/ai-law-discount-billable-hour.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> **\"AI 不会取代你，但会用 AI 的律所合伙人，正在取代不会算账的你。\"**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-29\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Anthropic 发布 Claude Sonnet 5.5 (来源: HackerNews)\n- **核心干货**：Anthropic 悄然上线 Sonnet 5.5，距上一代仅隔数月。从 HN 241 分、164 条评论的讨论热度来看，这次升级大概率在推理效率与代码能力上做了实质性优化——毕竟 Anthropic 向来不搞\"版本号+0.1、能力原地踏步\"那套把戏。\n- **毒舌/硬核点评**：OpenAI 还在预热下一个\"震撼发布\"的预告片，Anthropic 已经把模型迭代做成了 CI/CD 流水线。卷，是真的卷，但用户是赢家。\n- **🔗 传送门**：[点击直达原链接](https://www.anthropic.com/claude-sonnet-5-5)\n\n---\n\n### 2. 📌 MongoDB CEO 跳槽 Meta，执掌企业平台 (来源: HackerNews / Reuters)\n- **核心干货**：MongoDB CEO Dev Ittycheria 宣布辞职，转身加入 Meta 领导企业平台业务。数据库赛道掌门人直接空降社交巨头搞企业级产品，这背后的信号很明确：Meta 要在 B 端市场认真落子了，而且需要一个懂基础设施的人来操盘。\n- **毒舌/硬核点评**：MongoDB 的 CEO 去 Meta 做企业平台——翻译一下就是\"文档数据库之王决定去教社交网络怎么伺候甲方爸爸\"。Meta 的 B 端野心，终于不再是扎克伯格元宇宙 PPT 里的边角料了。\n- **🔗 传送门**：[点击直达原链接](https://www.reuters.com/technology/mongodb-ceo-desai-steps-down-lead-metas-enterprise-platform-2026-09-28/)\n\n---\n\n### 3. 📌 arXiv 论文：不学\"停\"也能学会\"停\"——自监督置信度训练优化推理效率 (来源: ArXiv cs.AI)\n- **核心干货**：推理模型（o1、R1 这类）最大的槽点就是\"想太多\"——一道小学数学题能生成三千 token 的思维链。这篇论文提出一种自监督置信度训练方法，不需要显式教模型\"什么时候该停\"，而是让模型自己学会在置信度足够时收敛，从而在训练阶段就压缩推理长度、降低推理成本。\n- **毒舌/硬核点评**：终于有人管管推理模型的\"话痨病\"了。当前大模型推理就像你那个开会永远不闭嘴的同事——说了很多，有用的就最后一句。这篇论文的价值在于：让 AI 学会在沉默中爆发，而不是在废话中消亡。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2609.31619v1)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> **\"模型迭代的速度已经超过了你写 prompt 的速度——所以别卷提示词了，卷判断力。知道什么值得做，永远比知道怎么做更稀缺。\"**",
   "briefing_items": [
     {
-      "title": "Rust 的 SIMD 生态，终于不再是个笑话了",
+      "title": "Anthropic 发布 Claude Sonnet 5.5",
       "source": "HackerNews",
-      "summary": "一篇系统性梳理 Rust SIMD 现状的长文，覆盖了 `std::simd` 的稳定化进展、可移植性与性能取舍、以及各架构下的实际表现。简单说：Rust 想在数值计算和高性能场景里跟 C++ 抢饭碗，SIMD 这块短板终于补得七七八八了。",
-      "commentary": "曾经 Rust 程序员写 SIMD 的体验，约等于用筷子吃牛排——能用，但看着隔壁 C++ 用刀叉优雅切肉，血压直接拉满。现在终于发刀叉了，就是不知道 stable 之后又要等几个 edition 才敢用。",
-      "url": "https://shnatsel.github.io/state-of-simd-rust-2026/"
+      "summary": "Anthropic 悄然上线 Sonnet 5.5，距上一代仅隔数月。从 HN 241 分、164 条评论的讨论热度来看，这次升级大概率在推理效率与代码能力上做了实质性优化——毕竟 Anthropic 向来不搞\"版本号+0.1、能力原地踏步\"那套把戏。",
+      "commentary": "OpenAI 还在预热下一个\"震撼发布\"的预告片，Anthropic 已经把模型迭代做成了 CI/CD 流水线。卷，是真的卷，但用户是赢家。",
+      "url": "https://www.anthropic.com/claude-sonnet-5-5"
     },
     {
-      "title": "Valve 掏出自研视频编解码器 Pyrowave，游戏串流要变天？",
-      "source": "Lobste.rs / Phoronix",
-      "summary": "Valve 在 Steam Beta 中引入了自研的低延迟视频编解码器 Pyrowave，专门针对游戏串流场景优化。这意味着 Steam Link / Steam Deck 远程串流的延迟和画质可能迎来质变——而且是 Valve 自己掌控的底层技术栈，不依赖第三方编解码方案。",
-      "commentary": "别的公司做串流是「调调参数、套个壳」，Valve 直接下场造编解码器。G胖不会数 3，但搞底层技术这件事上，他是真的不讲武德。NVIDIA 的 GameStream 棺材板怕是要压不住了。",
-      "url": "https://www.phoronix.com/news/Valve-Steam-Beta-Pyrowave"
+      "title": "MongoDB CEO 跳槽 Meta，执掌企业平台",
+      "source": "HackerNews / Reuters",
+      "summary": "MongoDB CEO Dev Ittycheria 宣布辞职，转身加入 Meta 领导企业平台业务。数据库赛道掌门人直接空降社交巨头搞企业级产品，这背后的信号很明确：Meta 要在 B 端市场认真落子了，而且需要一个懂基础设施的人来操盘。",
+      "commentary": "MongoDB 的 CEO 去 Meta 做企业平台——翻译一下就是\"文档数据库之王决定去教社交网络怎么伺候甲方爸爸\"。Meta 的 B 端野心，终于不再是扎克伯格元宇宙 PPT 里的边角料了。",
+      "url": "https://www.reuters.com/technology/mongodb-ceo-desai-steps-down-lead-metas-enterprise-platform-2026-09-28/"
     },
     {
-      "title": "AI 让律所效率暴涨，客户灵魂发问：我的折扣呢？",
-      "source": "HackerNews / NYT",
-      "summary": "NYT 报道了一个正在撕裂法律行业的现实问题——AI 大幅提升了律所的工作效率，但按小时计费的商业模式意味着：效率越高，律所赚得越多，客户账单纹丝不动。客户开始集体质疑「按小时收费」的合理性，整个法律服务的定价逻辑正在被 AI 逼到墙角。",
-      "commentary": "AI 提效的红利全被中间商吃了，这剧本我熟——这不就是 SaaS 版的「你降本增效，我涨价续费」吗？律所合伙人现在的心情大概是：感谢 AI，让我用更少的时间赚更多的钱，顺便祈祷客户别太聪明。",
-      "url": "https://www.nytimes.com/2026/09/26/business/dealbook/ai-law-discount-billable-hour.html"
+      "title": "arXiv 论文：不学\"停\"也能学会\"停\"——自监督置信度训练优化推理效率",
+      "source": "ArXiv cs.AI",
+      "summary": "推理模型（o1、R1 这类）最大的槽点就是\"想太多\"——一道小学数学题能生成三千 token 的思维链。这篇论文提出一种自监督置信度训练方法，不需要显式教模型\"什么时候该停\"，而是让模型自己学会在置信度足够时收敛，从而在训练阶段就压缩推理长度、降低推理成本。",
+      "commentary": "终于有人管管推理模型的\"话痨病\"了。当前大模型推理就像你那个开会永远不闭嘴的同事——说了很多，有用的就最后一句。这篇论文的价值在于：让 AI 学会在沉默中爆发，而不是在废话中消亡。",
+      "url": "https://arxiv.org/abs/2609.31619v1"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49872723",
-      "title": "Owed a billion dollars in Nvidia stock",
+      "id": "hn:49875913",
+      "title": "Parley: Federated, decentralised chat that speaks plain IRC",
       "summary": "",
-      "url": "https://colo.to/nvidia-stock-narrative.html",
+      "url": "https://git.mills.io/prologic/parley",
       "source": "Hacker News",
-      "score": 265,
-      "comments": 137
+      "score": 249,
+      "comments": 124
     },
     {
-      "id": "hn:49869574",
-      "title": "Show HN: Lofi Cities – Pixel-art city nights with browser-generated lofi",
+      "id": "hn:49879000",
+      "title": "MongoDB CEO resigns to join Meta",
       "summary": "",
-      "url": "https://loficities.com/",
+      "url": "https://www.reuters.com/technology/mongodb-ceo-desai-steps-down-lead-metas-enterprise-platform-2026-09-28/",
       "source": "Hacker News",
-      "score": 200,
-      "comments": 87
+      "score": 210,
+      "comments": 193
     },
     {
-      "id": "lob:uvmajz",
-      "title": "Rusty thoughts on \"Parse, don't validate\"",
+      "id": "hn:49880036",
+      "title": "Pirating the Pirates",
       "summary": "",
-      "url": "https://eli.thegreenplace.net/2026/rusty-thoughts-on-parse-dont-validate/",
-      "source": "Lobste.rs",
-      "score": 51,
-      "comments": 52,
-      "tags": [
-        "programming",
-        "rust"
-      ]
+      "url": "https://mubi.com/en/notebook/posts/pirating-the-pirates",
+      "source": "Hacker News",
+      "score": 205,
+      "comments": 67
     },
     {
       "id": "hn:49870367",
@@ -64,41 +60,26 @@
       "summary": "",
       "url": "https://sancho.bearblog.dev/google-weird/",
       "source": "Hacker News",
-      "score": 948,
-      "comments": 514
+      "score": 1739,
+      "comments": 956
     },
     {
-      "id": "hn:49868404",
-      "title": "Don't couple your Go code to GitHub",
+      "id": "hn:49881747",
+      "title": "Windows 11½",
       "summary": "",
-      "url": "https://iain.rocks/blog/dont-couple-your-go-code-to-github",
+      "url": "https://definitelynotwindows.com/",
       "source": "Hacker News",
-      "score": 174,
-      "comments": 85
+      "score": 213,
+      "comments": 62
     },
     {
-      "id": "lob:1colyy",
-      "title": "“They had no concept of a duty of care to their users.”",
+      "id": "hn:49881850",
+      "title": "Sonnet 5.5",
       "summary": "",
-      "url": "https://unsung.aresluna.org/they-had-no-concept-of-a-duty-of-care-to-their-users/",
-      "source": "Lobste.rs",
-      "score": 123,
-      "comments": 22,
-      "tags": [
-        "vim"
-      ]
-    },
-    {
-      "id": "lob:fpk9gq",
-      "title": "Ten Lines Of Code That Changed My World",
-      "summary": "",
-      "url": "https://pixelambacht.nl/2026/ten-lines-of-code/",
-      "source": "Lobste.rs",
-      "score": 39,
-      "comments": 11,
-      "tags": [
-        "programming"
-      ]
+      "url": "https://www.anthropic.com/claude-sonnet-5-5",
+      "source": "Hacker News",
+      "score": 241,
+      "comments": 164
     },
     {
       "id": "lob:msjitj",
@@ -106,22 +87,46 @@
       "summary": "",
       "url": "https://nura.eco/blog/2026/09/27/nura-rename/",
       "source": "Lobste.rs",
-      "score": 45,
-      "comments": 5,
+      "score": 78,
+      "comments": 15,
       "tags": [
         "linux"
       ]
     },
     {
-      "id": "lob:ivbx5f",
-      "title": "One month without AI",
+      "id": "lob:fqype1",
+      "title": "What makes Lisp difficult to read?",
       "summary": "",
-      "url": "https://blog.bustikiller.com/2026/09/25/one-month-without-ai.html",
+      "url": "https://paultm.nl/paren-thesis",
       "source": "Lobste.rs",
-      "score": 76,
-      "comments": 11,
+      "score": 56,
+      "comments": 31,
       "tags": [
-        "vibecoding"
+        "plt"
+      ]
+    },
+    {
+      "id": "lob:1colyy",
+      "title": "“They had no concept of a duty of care to their users.”",
+      "summary": "",
+      "url": "https://unsung.aresluna.org/they-had-no-concept-of-a-duty-of-care-to-their-users/",
+      "source": "Lobste.rs",
+      "score": 172,
+      "comments": 56,
+      "tags": [
+        "vim"
+      ]
+    },
+    {
+      "id": "lob:e5vf6k",
+      "title": "Don't couple your Go code to GitHub",
+      "summary": "",
+      "url": "https://iain.rocks/blog/dont-couple-your-go-code-to-github",
+      "source": "Lobste.rs",
+      "score": 42,
+      "comments": 19,
+      "tags": [
+        "go"
       ]
     },
     {
@@ -138,110 +143,97 @@
       "arxiv_id": "2609.31619v1"
     },
     {
-      "id": "hn:49844629",
-      "title": "The state of SIMD in Rust in 2026",
+      "id": "lob:h3igdh",
+      "title": "Leaving them behind",
       "summary": "",
-      "url": "https://shnatsel.github.io/state-of-simd-rust-2026/",
+      "url": "https://dbushell.com/2026/09/28/leaving-them-behind/",
+      "source": "Lobste.rs",
+      "score": 38,
+      "comments": 10,
+      "tags": [
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "lob:sxcz4v",
+      "title": "Yes, no AI is now a feature",
+      "summary": "",
+      "url": "https://blog.documentfoundation.org/blog/2026/09/03/yes-no-ai-is-now-a-feature/",
+      "source": "Lobste.rs",
+      "score": 81,
+      "comments": 7,
+      "tags": [
+        "practices",
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "hn:49879401",
+      "title": "Show HN: HN.watch – Videos of all Hacker News posts",
+      "summary": "Hi HN, I’m Per, founder of Scrimba (YC S20). We’ve spent the last decade teaching people how to code with an HTML-based video format. We’ve now plugged an LLM into it, so that people can create explainer videos about anything. It’s called “Scrimba Explain”.<p>To demo this technology for Hacker News,",
+      "url": "https://hn.watch/",
       "source": "Hacker News",
-      "score": 109,
+      "score": 85,
       "comments": 23
     },
     {
-      "id": "lob:hq6xj2",
-      "title": "Valve Introduces Pyrowave Video Codec In Beta For Low Latency Streaming",
+      "id": "rss:3f95d21507",
+      "title": "PostgreSQL Table Bloat and Defragmentation: Autovacuum vs VACUUM vs VACUUM FULL",
+      "summary": "When rows are updated or deleted in PostgreSQL, the database does not immediately remove the old row versions from the table. Instead, PostgreSQL uses MVCC (Multi-Version Concurrency Control) and creates new row versions when necessary.\n\nAs a result, a table can contain dead tuples and occupy signif",
+      "url": "https://dev.to/vahidusefzadeh/postgresql-table-bloat-and-defragmentation-autovacuum-vs-vacuum-vs-vacuum-full-3jfm",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "hn:49881951",
+      "title": "So long Google, and thanks for all the nudes",
       "summary": "",
-      "url": "https://www.phoronix.com/news/Valve-Steam-Beta-Pyrowave",
+      "url": "https://lecaro.me/20260921-google-less.html",
+      "source": "Hacker News",
+      "score": 91,
+      "comments": 34
+    },
+    {
+      "id": "hn:49879702",
+      "title": "Hijacking the PS5's RTMP stream",
+      "summary": "",
+      "url": "https://yashgarg.dev/posts/hijacking-ps5-rtmp-stream/",
+      "source": "Hacker News",
+      "score": 105,
+      "comments": 25
+    },
+    {
+      "id": "lob:hjkktn",
+      "title": "Fool's Expertise",
+      "summary": "",
+      "url": "https://bcantrill.dtrace.org/2026/09/27/fools-expertise/",
       "source": "Lobste.rs",
+      "score": 28,
+      "comments": 7,
+      "tags": [
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "lob:6p91by",
+      "title": "Rickrolling with a Pharmacy cross",
+      "summary": "",
+      "url": "https://hugoarnal.com/blog/rickroll-pharmacy-cross/",
+      "source": "Lobste.rs",
+      "score": 23,
+      "comments": 1,
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "id": "hn:49879577",
+      "title": "Cf: The Agentic CLI for the Cloudflare API",
+      "summary": "",
+      "url": "https://blog.cloudflare.com/cloudflare-cf-cli-launch/",
+      "source": "Hacker News",
       "score": 48,
-      "comments": 5,
-      "tags": [
-        "graphics"
-      ]
-    },
-    {
-      "id": "hn:49870070",
-      "title": "Alan Kay's answer to “Did the ENIAC have a BIOS”?",
-      "summary": "",
-      "url": "https://www.quora.com/Did-the-ENIAC-have-a-BIOS/answer/Alan-Kay-11",
-      "source": "Hacker News",
-      "score": 90,
-      "comments": 31
-    },
-    {
-      "id": "hn:49857281",
-      "title": "There is more to code review than (automatable) detection",
-      "summary": "",
-      "url": "https://www.adaptivecapacitylabs.com/2026/08/24/there-is-more-to-code-review-than-automatable-detection/",
-      "source": "Hacker News",
-      "score": 90,
-      "comments": 49
-    },
-    {
-      "id": "hn:49870295",
-      "title": "Self-Hosting on the Dark Web",
-      "summary": "",
-      "url": "https://david.alvarezrosa.com/posts/self-hosting-on-the-dark-web/",
-      "source": "Hacker News",
-      "score": 95,
-      "comments": 33
-    },
-    {
-      "id": "hn:49872522",
-      "title": "As A.I. makes law firms more efficient, clients ask: 'Where's my discount?'",
-      "summary": "",
-      "url": "https://www.nytimes.com/2026/09/26/business/dealbook/ai-law-discount-billable-hour.html",
-      "source": "Hacker News",
-      "score": 76,
-      "comments": 58
-    },
-    {
-      "id": "hn:49872766",
-      "title": "Musk, the Movie",
-      "summary": "",
-      "url": "https://bleeckerstreetmedia.com/musk",
-      "source": "Hacker News",
-      "score": 111,
-      "comments": 31
-    },
-    {
-      "id": "lob:apoyxs",
-      "title": "LuaRocks Security Incident September 2026",
-      "summary": "",
-      "url": "https://luarocks.org/security-incident-september-2026",
-      "source": "Lobste.rs",
-      "score": 29,
-      "comments": 5,
-      "tags": [
-        "lua",
-        "security"
-      ]
-    },
-    {
-      "id": "arxiv:2609.31607v1",
-      "title": "Statistical attribute alignment for black-box generative AI via output post-processing",
-      "summary": "Generative AI systems are increasingly used, but aligning their outputs with user requirements poses a continuing challenge. Here, we aim to ensure that the distribution of an attribute of an AI-generated output aligns with a user-specified target. This is motivated by examples such as fairness, whe",
-      "url": "https://arxiv.org/abs/2609.31607v1",
-      "source": "ArXiv",
-      "categories": [
-        "stat.ME",
-        "cs.AI",
-        "cs.LG",
-        "math.ST"
-      ],
-      "arxiv_id": "2609.31607v1"
-    },
-    {
-      "id": "arxiv:2609.31587v1",
-      "title": "Compact Documentation for Coding Agents: A Benchmark, an Optimizer, and Why It Does Not Transfer",
-      "summary": "We investigate whether natural-language documentation helps coding agents resolve software issues, and we build the tools to construct and evaluate it. We introduce a roundtrip benchmark that scores code descriptions by whether code regenerated from them passes the original tests, and show that comp",
-      "url": "https://arxiv.org/abs/2609.31587v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.SE",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_id": "2609.31587v1"
+      "comments": 19
     }
   ],
   "ai_curated": true
