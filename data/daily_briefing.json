@@ -1,49 +1,58 @@
 {
   "date": "2026-09-29",
-  "update_time": "2026-09-28 19:23:17",
+  "update_time": "2026-09-29 05:03:59",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-29\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Anthropic 发布 Claude Sonnet 5.5 (来源: HackerNews)\n- **核心干货**：Anthropic 悄然上线 Sonnet 5.5，距上一代仅隔数月。从 HN 241 分、164 条评论的讨论热度来看，这次升级大概率在推理效率与代码能力上做了实质性优化——毕竟 Anthropic 向来不搞\"版本号+0.1、能力原地踏步\"那套把戏。\n- **毒舌/硬核点评**：OpenAI 还在预热下一个\"震撼发布\"的预告片，Anthropic 已经把模型迭代做成了 CI/CD 流水线。卷，是真的卷，但用户是赢家。\n- **🔗 传送门**：[点击直达原链接](https://www.anthropic.com/claude-sonnet-5-5)\n\n---\n\n### 2. 📌 MongoDB CEO 跳槽 Meta，执掌企业平台 (来源: HackerNews / Reuters)\n- **核心干货**：MongoDB CEO Dev Ittycheria 宣布辞职，转身加入 Meta 领导企业平台业务。数据库赛道掌门人直接空降社交巨头搞企业级产品，这背后的信号很明确：Meta 要在 B 端市场认真落子了，而且需要一个懂基础设施的人来操盘。\n- **毒舌/硬核点评**：MongoDB 的 CEO 去 Meta 做企业平台——翻译一下就是\"文档数据库之王决定去教社交网络怎么伺候甲方爸爸\"。Meta 的 B 端野心，终于不再是扎克伯格元宇宙 PPT 里的边角料了。\n- **🔗 传送门**：[点击直达原链接](https://www.reuters.com/technology/mongodb-ceo-desai-steps-down-lead-metas-enterprise-platform-2026-09-28/)\n\n---\n\n### 3. 📌 arXiv 论文：不学\"停\"也能学会\"停\"——自监督置信度训练优化推理效率 (来源: ArXiv cs.AI)\n- **核心干货**：推理模型（o1、R1 这类）最大的槽点就是\"想太多\"——一道小学数学题能生成三千 token 的思维链。这篇论文提出一种自监督置信度训练方法，不需要显式教模型\"什么时候该停\"，而是让模型自己学会在置信度足够时收敛，从而在训练阶段就压缩推理长度、降低推理成本。\n- **毒舌/硬核点评**：终于有人管管推理模型的\"话痨病\"了。当前大模型推理就像你那个开会永远不闭嘴的同事——说了很多，有用的就最后一句。这篇论文的价值在于：让 AI 学会在沉默中爆发，而不是在废话中消亡。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2609.31619v1)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> **\"模型迭代的速度已经超过了你写 prompt 的速度——所以别卷提示词了，卷判断力。知道什么值得做，永远比知道怎么做更稀缺。\"**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-29\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Sonnet 5.5 发布 (来源: HackerNews)\n- **核心干货**：Anthropic 推出 Claude Sonnet 5.5，HN 热度飙到 681 分、454 条评论，堪称今日最大流量池。作为 Sonnet 系列的中端主力，这次迭代大概率在推理效率、代码能力或上下文处理上做了实质性升级——毕竟 Anthropic 不会闲着没事发个\"小数点版本号\"来糊弄人。\n- **毒舌/硬核点评**：每次模型版本号+0.5，全网就集体高潮一次。但说真的，现在大模型迭代的速度已经快到让\"评测跑分\"变成一种行为艺术了——你还没来得及把 5.0 集成进生产环境，5.5 已经在你 CI/CD 流水线门口敲门了。\n- **🔗 传送门**：[点击直达原链接](https://www.anthropic.com/claude-sonnet-5-5)\n\n---\n\n### 2. 📌 Jeff – 家用训练的 0.8B 决策模型，推理延迟约 30ms (来源: GitHub / HackerNews)\n- **核心干货**：有人在自家机器上训练了一个 0.8B 参数量的 Jev 兼容决策模型，推理延迟压到约 30 毫秒。这意味着：不依赖云端 API、不需要 GPU 集群，个人开发者用消费级硬件就能跑一个实时决策模型。对于边缘计算、游戏 AI、自动化交易等对延迟敏感的场景，这是一个极具参考价值的范式验证。\n- **毒舌/硬核点评**：当大厂还在比谁的模型参数多到能绕地球三圈时，真正的狠人在自家书房里用 0.8B 的\"小钢炮\"跑出了 30ms 的响应速度。这再次证明：参数规模是给投资人看的，推理延迟才是给用户用的。\n- **🔗 传送门**：[点击直达原链接](https://github.com/firelex/jeff)\n\n---\n\n### 3. 📌 TokenCast：预测 LLM Agent 执行过程中的 Token 消耗 (来源: ArXiv)\n- **核心干货**：这篇论文直击一个被严重低估的痛点——同一个任务交给 LLM Agent 执行，不同 run 之间的 Token 消耗可以差出一个数量级。TokenCast 提出了一种在执行过程中预测 Token 消耗的方法，让开发者和企业能在 Agent 跑飞之前就预判成本。对于正在把 Agent 推向生产环境的团队来说，这不是学术玩具，这是财务报表的救命稻草。\n- **毒舌/硬核点评**：所有人都在教你怎么让 Agent 更聪明，终于有人来教你怎么让 Agent 别把公司 API 预算烧穿了。毕竟，一个能自主思考但账单失控的 Agent，和一个月薪五万但刷爆你信用卡的实习生，本质上没有区别。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2609.35760v1)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> **\"模型参数是面子，推理延迟是里子，Token 账单是命根子——搞 AI 的人，三样都得硬。\"**",
   "briefing_items": [
     {
-      "title": "Anthropic 发布 Claude Sonnet 5.5",
+      "title": "Sonnet 5.5 发布",
       "source": "HackerNews",
-      "summary": "Anthropic 悄然上线 Sonnet 5.5，距上一代仅隔数月。从 HN 241 分、164 条评论的讨论热度来看，这次升级大概率在推理效率与代码能力上做了实质性优化——毕竟 Anthropic 向来不搞\"版本号+0.1、能力原地踏步\"那套把戏。",
-      "commentary": "OpenAI 还在预热下一个\"震撼发布\"的预告片，Anthropic 已经把模型迭代做成了 CI/CD 流水线。卷，是真的卷，但用户是赢家。",
+      "summary": "Anthropic 推出 Claude Sonnet 5.5，HN 热度飙到 681 分、454 条评论，堪称今日最大流量池。作为 Sonnet 系列的中端主力，这次迭代大概率在推理效率、代码能力或上下文处理上做了实质性升级——毕竟 Anthropic 不会闲着没事发个\"小数点版本号\"来糊弄人。",
+      "commentary": "每次模型版本号+0.5，全网就集体高潮一次。但说真的，现在大模型迭代的速度已经快到让\"评测跑分\"变成一种行为艺术了——你还没来得及把 5.0 集成进生产环境，5.5 已经在你 CI/CD 流水线门口敲门了。",
       "url": "https://www.anthropic.com/claude-sonnet-5-5"
     },
     {
-      "title": "MongoDB CEO 跳槽 Meta，执掌企业平台",
-      "source": "HackerNews / Reuters",
-      "summary": "MongoDB CEO Dev Ittycheria 宣布辞职，转身加入 Meta 领导企业平台业务。数据库赛道掌门人直接空降社交巨头搞企业级产品，这背后的信号很明确：Meta 要在 B 端市场认真落子了，而且需要一个懂基础设施的人来操盘。",
-      "commentary": "MongoDB 的 CEO 去 Meta 做企业平台——翻译一下就是\"文档数据库之王决定去教社交网络怎么伺候甲方爸爸\"。Meta 的 B 端野心，终于不再是扎克伯格元宇宙 PPT 里的边角料了。",
-      "url": "https://www.reuters.com/technology/mongodb-ceo-desai-steps-down-lead-metas-enterprise-platform-2026-09-28/"
+      "title": "Jeff – 家用训练的 0.8B 决策模型，推理延迟约 30ms",
+      "source": "GitHub / HackerNews",
+      "summary": "有人在自家机器上训练了一个 0.8B 参数量的 Jev 兼容决策模型，推理延迟压到约 30 毫秒。这意味着：不依赖云端 API、不需要 GPU 集群，个人开发者用消费级硬件就能跑一个实时决策模型。对于边缘计算、游戏 AI、自动化交易等对延迟敏感的场景，这是一个极具参考价值的范式验证。",
+      "commentary": "当大厂还在比谁的模型参数多到能绕地球三圈时，真正的狠人在自家书房里用 0.8B 的\"小钢炮\"跑出了 30ms 的响应速度。这再次证明：参数规模是给投资人看的，推理延迟才是给用户用的。",
+      "url": "https://github.com/firelex/jeff"
     },
     {
-      "title": "arXiv 论文：不学\"停\"也能学会\"停\"——自监督置信度训练优化推理效率",
-      "source": "ArXiv cs.AI",
-      "summary": "推理模型（o1、R1 这类）最大的槽点就是\"想太多\"——一道小学数学题能生成三千 token 的思维链。这篇论文提出一种自监督置信度训练方法，不需要显式教模型\"什么时候该停\"，而是让模型自己学会在置信度足够时收敛，从而在训练阶段就压缩推理长度、降低推理成本。",
-      "commentary": "终于有人管管推理模型的\"话痨病\"了。当前大模型推理就像你那个开会永远不闭嘴的同事——说了很多，有用的就最后一句。这篇论文的价值在于：让 AI 学会在沉默中爆发，而不是在废话中消亡。",
-      "url": "https://arxiv.org/abs/2609.31619v1"
+      "title": "TokenCast：预测 LLM Agent 执行过程中的 Token 消耗",
+      "source": "ArXiv",
+      "summary": "这篇论文直击一个被严重低估的痛点——同一个任务交给 LLM Agent 执行，不同 run 之间的 Token 消耗可以差出一个数量级。TokenCast 提出了一种在执行过程中预测 Token 消耗的方法，让开发者和企业能在 Agent 跑飞之前就预判成本。对于正在把 Agent 推向生产环境的团队来说，这不是学术玩具，这是财务报表的救命稻草。",
+      "commentary": "所有人都在教你怎么让 Agent 更聪明，终于有人来教你怎么让 Agent 别把公司 API 预算烧穿了。毕竟，一个能自主思考但账单失控的 Agent，和一个月薪五万但刷爆你信用卡的实习生，本质上没有区别。",
+      "url": "https://arxiv.org/abs/2609.35760v1"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49875913",
-      "title": "Parley: Federated, decentralised chat that speaks plain IRC",
+      "id": "hn:49883844",
+      "title": "Jeff – Jev-compatible 0.8B decision models, trained at home, ~30 ms",
       "summary": "",
-      "url": "https://git.mills.io/prologic/parley",
+      "url": "https://github.com/firelex/jeff",
       "source": "Hacker News",
-      "score": 249,
-      "comments": 124
+      "score": 396,
+      "comments": 153
     },
     {
-      "id": "hn:49879000",
-      "title": "MongoDB CEO resigns to join Meta",
+      "id": "hn:49879702",
+      "title": "Hijacking the PS5's RTMP stream",
       "summary": "",
-      "url": "https://www.reuters.com/technology/mongodb-ceo-desai-steps-down-lead-metas-enterprise-platform-2026-09-28/",
+      "url": "https://yashgarg.dev/posts/hijacking-ps5-rtmp-stream/",
       "source": "Hacker News",
-      "score": 210,
-      "comments": 193
+      "score": 227,
+      "comments": 72
+    },
+    {
+      "id": "hn:49882781",
+      "title": "MicroLLM Lab – Try 7 tiny LLM's in the browser",
+      "summary": "",
+      "url": "https://stateofutopia.com/experiments/microllmlab/",
+      "source": "Hacker News",
+      "score": 183,
+      "comments": 70
     },
     {
       "id": "hn:49880036",
@@ -51,26 +60,8 @@
       "summary": "",
       "url": "https://mubi.com/en/notebook/posts/pirating-the-pirates",
       "source": "Hacker News",
-      "score": 205,
-      "comments": 67
-    },
-    {
-      "id": "hn:49870367",
-      "title": "When did Google get so weird?",
-      "summary": "",
-      "url": "https://sancho.bearblog.dev/google-weird/",
-      "source": "Hacker News",
-      "score": 1739,
-      "comments": 956
-    },
-    {
-      "id": "hn:49881747",
-      "title": "Windows 11½",
-      "summary": "",
-      "url": "https://definitelynotwindows.com/",
-      "source": "Hacker News",
-      "score": 213,
-      "comments": 62
+      "score": 479,
+      "comments": 242
     },
     {
       "id": "hn:49881850",
@@ -78,8 +69,8 @@
       "summary": "",
       "url": "https://www.anthropic.com/claude-sonnet-5-5",
       "source": "Hacker News",
-      "score": 241,
-      "comments": 164
+      "score": 681,
+      "comments": 454
     },
     {
       "id": "lob:msjitj",
@@ -87,7 +78,7 @@
       "summary": "",
       "url": "https://nura.eco/blog/2026/09/27/nura-rename/",
       "source": "Lobste.rs",
-      "score": 78,
+      "score": 83,
       "comments": 15,
       "tags": [
         "linux"
@@ -99,8 +90,8 @@
       "summary": "",
       "url": "https://paultm.nl/paren-thesis",
       "source": "Lobste.rs",
-      "score": 56,
-      "comments": 31,
+      "score": 66,
+      "comments": 41,
       "tags": [
         "plt"
       ]
@@ -111,36 +102,11 @@
       "summary": "",
       "url": "https://unsung.aresluna.org/they-had-no-concept-of-a-duty-of-care-to-their-users/",
       "source": "Lobste.rs",
-      "score": 172,
-      "comments": 56,
+      "score": 183,
+      "comments": 55,
       "tags": [
         "vim"
       ]
-    },
-    {
-      "id": "lob:e5vf6k",
-      "title": "Don't couple your Go code to GitHub",
-      "summary": "",
-      "url": "https://iain.rocks/blog/dont-couple-your-go-code-to-github",
-      "source": "Lobste.rs",
-      "score": 42,
-      "comments": 19,
-      "tags": [
-        "go"
-      ]
-    },
-    {
-      "id": "arxiv:2609.31619v1",
-      "title": "Learning to Stop without Learning to Stop: Self-Supervised Confidence Training Improves Reasoning Efficiency",
-      "summary": "Reasoning models often generate very long reasoning traces, making inference computationally expensive. Existing approaches typically improve efficiency either through inference-time early-stopping mechanisms or by explicitly encouraging shorter reasoning during training, for example through reinfor",
-      "url": "https://arxiv.org/abs/2609.31619v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "arxiv_id": "2609.31619v1"
     },
     {
       "id": "lob:h3igdh",
@@ -148,10 +114,31 @@
       "summary": "",
       "url": "https://dbushell.com/2026/09/28/leaving-them-behind/",
       "source": "Lobste.rs",
-      "score": 38,
-      "comments": 10,
+      "score": 53,
+      "comments": 19,
       "tags": [
         "vibecoding"
+      ]
+    },
+    {
+      "id": "hn:49883539",
+      "title": "California farmers are struggling to sell grapes as demand for wine drops",
+      "summary": "",
+      "url": "https://www.kqed.org/news/12101534/california-farmers-are-struggling-to-sell-grapes-as-demand-for-wine-drops",
+      "source": "Hacker News",
+      "score": 122,
+      "comments": 284
+    },
+    {
+      "id": "lob:lfqtgh",
+      "title": "Bill Gates tries to install Movie Maker",
+      "summary": "",
+      "url": "https://www.techemails.com/p/bill-gates-tries-to-install-movie-maker",
+      "source": "Lobste.rs",
+      "score": 66,
+      "comments": 7,
+      "tags": [
+        "windows"
       ]
     },
     {
@@ -160,80 +147,101 @@
       "summary": "",
       "url": "https://blog.documentfoundation.org/blog/2026/09/03/yes-no-ai-is-now-a-feature/",
       "source": "Lobste.rs",
-      "score": 81,
-      "comments": 7,
+      "score": 112,
+      "comments": 10,
       "tags": [
         "practices",
         "vibecoding"
       ]
     },
     {
-      "id": "hn:49879401",
-      "title": "Show HN: HN.watch – Videos of all Hacker News posts",
-      "summary": "Hi HN, I’m Per, founder of Scrimba (YC S20). We’ve spent the last decade teaching people how to code with an HTML-based video format. We’ve now plugged an LLM into it, so that people can create explainer videos about anything. It’s called “Scrimba Explain”.<p>To demo this technology for Hacker News,",
-      "url": "https://hn.watch/",
-      "source": "Hacker News",
-      "score": 85,
-      "comments": 23
-    },
-    {
-      "id": "rss:3f95d21507",
-      "title": "PostgreSQL Table Bloat and Defragmentation: Autovacuum vs VACUUM vs VACUUM FULL",
-      "summary": "When rows are updated or deleted in PostgreSQL, the database does not immediately remove the old row versions from the table. Instead, PostgreSQL uses MVCC (Multi-Version Concurrency Control) and creates new row versions when necessary.\n\nAs a result, a table can contain dead tuples and occupy signif",
-      "url": "https://dev.to/vahidusefzadeh/postgresql-table-bloat-and-defragmentation-autovacuum-vs-vacuum-vs-vacuum-full-3jfm",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "hn:49881951",
-      "title": "So long Google, and thanks for all the nudes",
+      "id": "lob:aig5tr",
+      "title": "When did Google get so weird?",
       "summary": "",
-      "url": "https://lecaro.me/20260921-google-less.html",
-      "source": "Hacker News",
-      "score": 91,
-      "comments": 34
-    },
-    {
-      "id": "hn:49879702",
-      "title": "Hijacking the PS5's RTMP stream",
-      "summary": "",
-      "url": "https://yashgarg.dev/posts/hijacking-ps5-rtmp-stream/",
-      "source": "Hacker News",
-      "score": 105,
-      "comments": 25
-    },
-    {
-      "id": "lob:hjkktn",
-      "title": "Fool's Expertise",
-      "summary": "",
-      "url": "https://bcantrill.dtrace.org/2026/09/27/fools-expertise/",
+      "url": "https://sancho.bearblog.dev/google-weird/",
       "source": "Lobste.rs",
-      "score": 28,
-      "comments": 7,
+      "score": 55,
+      "comments": 10,
       "tags": [
         "vibecoding"
       ]
     },
     {
-      "id": "lob:6p91by",
-      "title": "Rickrolling with a Pharmacy cross",
+      "id": "arxiv:2609.35750v1",
+      "title": "KV-streams for Efficient Compaction in Agentic Reinforcement Learning",
+      "summary": "Scaling the horizon of agentic LLMs is bottlenecked by the need to fit ever longer context traces in GPU memory. Context compaction has been the most popular mechanism to alleviate this issue, keeping GPU memory constant for a given trace. Unfortunately, most compaction strategies rely on prefilling",
+      "url": "https://arxiv.org/abs/2609.35750v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "arxiv_id": "2609.35750v1"
+    },
+    {
+      "id": "rss:fc3a442dc3",
+      "title": "Apple Patches CoreGraphics Flaw Possibly Exploited in Targeted Attacks",
+      "summary": "Apple has released security updates to address a vulnerability in older versions of iOS, iPadOS, and macOS that it said may have been exploited in targeted attacks.\n\nThe vulnerability, tracked as CVE-2026-86950, refers to an out-of-bounds write impacting the CoreGraphics component that could lead to",
+      "url": "https://thehackernews.com/2026/09/apple-patches-coregraphics-flaw.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "lob:q2rymh",
+      "title": "What Would A Serious AI Product Look Like?",
       "summary": "",
-      "url": "https://hugoarnal.com/blog/rickroll-pharmacy-cross/",
+      "url": "https://blog.glyph.im/2026/09/serious-ai-product.html",
       "source": "Lobste.rs",
-      "score": 23,
-      "comments": 1,
+      "score": 54,
+      "comments": 6,
       "tags": [
-        "programming"
+        "a11y",
+        "design",
+        "vibecoding"
       ]
     },
     {
-      "id": "hn:49879577",
-      "title": "Cf: The Agentic CLI for the Cloudflare API",
+      "id": "hn:49883536",
+      "title": "Scientists solve 1840s space weather mystery",
       "summary": "",
-      "url": "https://blog.cloudflare.com/cloudflare-cf-cli-launch/",
+      "url": "https://arstechnica.com/science/2026/09/scientists-solve-1840s-space-weather-mystery/",
       "source": "Hacker News",
-      "score": 48,
-      "comments": 19
+      "score": 88,
+      "comments": 41
+    },
+    {
+      "id": "hn:49855059",
+      "title": "12,000-year-old Göbeklitepe burials explain scattered bones",
+      "summary": "",
+      "url": "https://archaeologymag.com/2026/09/gobeklitepe-burials-hundreds-of-scattered-bones/",
+      "source": "Hacker News",
+      "score": 111,
+      "comments": 27
+    },
+    {
+      "id": "arxiv:2609.35767v1",
+      "title": "Learning Native Reflection in Unified Models with Interleaved Reinforcement Learning",
+      "summary": "Unified multimodal models can both look at and render images, so in principle they can repair their own generations: diagnose what an image gets wrong, revise it, observe the result, and diagnose again. Whether a revision helps is known only after it is rendered, so the reflection text and the image",
+      "url": "https://arxiv.org/abs/2609.35767v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "arxiv_id": "2609.35767v1"
+    },
+    {
+      "id": "arxiv:2609.35760v1",
+      "title": "TokenCast: Forecasting Token Consumption During LLM Agent Execution",
+      "summary": "When a large language model (LLM) agent executes the same task, token consumption can vary by over an order of magnitude across runs. The agent chooses its next steps based on tool feedback and intermediate results, while the growing context steadily inflates the input size of every subsequent call.",
+      "url": "https://arxiv.org/abs/2609.35760v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.SE"
+      ],
+      "arxiv_id": "2609.35760v1"
     }
   ],
   "ai_curated": true
