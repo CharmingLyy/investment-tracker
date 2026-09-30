@@ -1,135 +1,97 @@
 {
   "date": "2026-09-30",
-  "update_time": "2026-09-29 17:49:38",
+  "update_time": "2026-09-30 04:51:05",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-30\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 GPT-6.1 Sol 发布 (来源: HackerNews)\n- **核心干货**：OpenAI 甩出 GPT-6.1 Sol，命名从\"版本号\"跳到\"恒星名\"，暗示这不是常规迭代而是架构级跃迁。Sol 主打长程推理与工具调用的稳定性，正面狙击 Agent 场景下\"跑着跑着就失忆\"的老毛病。\n- **毒舌/硬核点评**：名字越取越玄学，从 GPT 到 Sol，下一步是不是要叫 GPT-6.2 超新星？不过 HN 评论区 496 条吵翻天说明一件事——大家真正焦虑的不是模型多强，而是自己的饭碗还剩几厘米。版本号是营销，token 账单才是现实。\n- **🔗 传送门**：[点击直达原链接](https://openai.com/index/introducing-gpt-6-1-sol/)\n\n---\n\n### 2. 📌 DraftKings 用 AI 精准猎杀病态赌徒 (来源: HackerNews / EFF)\n- **核心干货**：EFF 曝光 DraftKings 利用行为定向 AI，专门识别并加码\"慢性赌徒\"——那些已经失控的用户，反而成了算法眼里最肥的转化目标。这不是推荐系统，是把成瘾性当 KPI 来优化的工业级作恶。\n- **毒舌/硬核点评**：科技圈天天喊\"AI for Good\"，现实是\"AI for 赌狗的钱包\"。推荐算法最诚实的地方在于：它从不假装自己有道德，只忠实地把人性弱点换算成季度营收。监管再不来，下一个被\"精准服务\"的可能就是刷短视频停不下来的你。\n- **🔗 传送门**：[点击直达原链接](https://www.eff.org/deeplinks/2026/09/draftkings-using-ai-supercharge-harms-online-behavioral-advertising)\n\n---\n\n### 3. 📌 TokenCast：预测 LLM Agent 的 token 消耗 (来源: ArXiv)\n- **核心干货**：同一个任务交给 LLM Agent，不同 run 之间 token 消耗能差一个数量级——这让成本预算彻底变成玄学。TokenCast 提出在执行过程中预测 token 消耗，等于给 Agent 装了个\"油表\"，让烧钱速度从盲盒变成可观测指标。\n- **毒舌/硬核点评**：2026 年最性感的技能不是 prompt engineering，是 token 会计学。当 Agent 变成公司最大成本中心，能提前算清楚\"这活要烧多少钱\"的人，比会写 prompt 的人值钱十倍。省钱才是这个行业最后的硬核浪漫。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2609.35760v1)\n\n---\n\n### 🗣️ 今日顶男金句\n> 模型会过时，版本号会通胀，唯一不贬值的是你判断\"什么值得学\"的那根神经——毕竟 AI 再强，也得有人决定它去烧谁的钱。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-30\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 GPT-6.1 Sol：用五分之一的价格，买到\"准 Astra 级\"智能 (来源: HackerNews)\n- **核心干货**：OpenAI 发布 GPT-6.1 Sol，官方口径是\"Near-Astra intelligence\"——即逼近其旗舰 Astra 模型的推理能力，但定价仅为后者的 20%。这基本等于把上一代顶级模型的智商，塞进了这一代中端模型的价格带里。\n- **毒舌/硬核点评**：翻译一下就是：旗舰模型的护城河保质期，已经短到按季度计算了。\"接近旗舰\"这四个字，是 OpenAI 对上一代旗舰最体面的死刑判决书。\n- **🔗 传送门**：[点击直达原链接](https://openai.com/index/introducing-gpt-6-1-sol/)\n\n---\n\n### 2. 📌 德里把电网线损从 50% 干到 5% (来源: HackerNews / IEEE Spectrum)\n- **核心干货**：德里完成了电力系统史上堪称奇迹的改造——输配电损耗从骇人的 50% 压到 5%。这不是换了几根电线的事，而是智能电表、实时计量、反窃电执法与配电网络重构的系统性工程，直接让一座巨型城市从\"电不够用\"变成\"电够用还便宜\"。\n- **毒舌/硬核点评**：比起硅谷天天喊的\"AI 改变世界\"，德里用电表+执法把物理世界的 45% 浪费直接干掉——这才是真正的降本增效，且没有一行大模型代码。\n- **🔗 传送门**：[点击直达原链接](https://spectrum.ieee.org/delhi-electricity-loss)\n\n---\n\n### 3. 📌 NASA 秘密重启 SR-71 项目，请回退休老工程师 (来源: HackerNews / Aviation Week)\n- **核心干货**：NASA 被曝邀请多位已退休的 SR-71A\"黑鸟\"项目老员工，协助一项秘密的高速/高超声速飞行器重启计划。当年的工程经验、材料工艺与气动数据，许多根本没留下完整文档，只能靠人脑\"逆向考古\"。\n- **毒舌/硬核点评**：最硬核的技术债，是老工程师的脑子——人一走，知识就进了焚化炉。这次重启与其说是造飞机，不如说是抢救一份即将失传的手艺。\n- **🔗 传送门**：[点击直达原链接](https://aviationweek.com/defense/aircraft-propulsion/nasa-asked-several-former-sr-71a-staffers-help-secret-restart)\n\n---\n\n### 🗣️ 今日顶男金句\n> 真正的技术护城河，不是领先的那一年，而是别人连你怎么领先的都学不会——所以趁脑子还热，赶紧把知识写成文档，别等退休了才被高价请回来\"口述历史\"。",
   "briefing_items": [
     {
-      "title": "GPT-6.1 Sol 发布",
+      "title": "GPT-6.1 Sol：用五分之一的价格，买到\"准 Astra 级\"智能",
       "source": "HackerNews",
-      "summary": "OpenAI 甩出 GPT-6.1 Sol，命名从\"版本号\"跳到\"恒星名\"，暗示这不是常规迭代而是架构级跃迁。Sol 主打长程推理与工具调用的稳定性，正面狙击 Agent 场景下\"跑着跑着就失忆\"的老毛病。",
-      "commentary": "名字越取越玄学，从 GPT 到 Sol，下一步是不是要叫 GPT-6.2 超新星？不过 HN 评论区 496 条吵翻天说明一件事——大家真正焦虑的不是模型多强，而是自己的饭碗还剩几厘米。版本号是营销，token 账单才是现实。",
+      "summary": "OpenAI 发布 GPT-6.1 Sol，官方口径是\"Near-Astra intelligence\"——即逼近其旗舰 Astra 模型的推理能力，但定价仅为后者的 20%。这基本等于把上一代顶级模型的智商，塞进了这一代中端模型的价格带里。",
+      "commentary": "翻译一下就是：旗舰模型的护城河保质期，已经短到按季度计算了。\"接近旗舰\"这四个字，是 OpenAI 对上一代旗舰最体面的死刑判决书。",
       "url": "https://openai.com/index/introducing-gpt-6-1-sol/"
     },
     {
-      "title": "DraftKings 用 AI 精准猎杀病态赌徒",
-      "source": "HackerNews / EFF",
-      "summary": "EFF 曝光 DraftKings 利用行为定向 AI，专门识别并加码\"慢性赌徒\"——那些已经失控的用户，反而成了算法眼里最肥的转化目标。这不是推荐系统，是把成瘾性当 KPI 来优化的工业级作恶。",
-      "commentary": "科技圈天天喊\"AI for Good\"，现实是\"AI for 赌狗的钱包\"。推荐算法最诚实的地方在于：它从不假装自己有道德，只忠实地把人性弱点换算成季度营收。监管再不来，下一个被\"精准服务\"的可能就是刷短视频停不下来的你。",
-      "url": "https://www.eff.org/deeplinks/2026/09/draftkings-using-ai-supercharge-harms-online-behavioral-advertising"
+      "title": "德里把电网线损从 50% 干到 5%",
+      "source": "HackerNews / IEEE Spectrum",
+      "summary": "德里完成了电力系统史上堪称奇迹的改造——输配电损耗从骇人的 50% 压到 5%。这不是换了几根电线的事，而是智能电表、实时计量、反窃电执法与配电网络重构的系统性工程，直接让一座巨型城市从\"电不够用\"变成\"电够用还便宜\"。",
+      "commentary": "比起硅谷天天喊的\"AI 改变世界\"，德里用电表+执法把物理世界的 45% 浪费直接干掉——这才是真正的降本增效，且没有一行大模型代码。",
+      "url": "https://spectrum.ieee.org/delhi-electricity-loss"
     },
     {
-      "title": "TokenCast：预测 LLM Agent 的 token 消耗",
-      "source": "ArXiv",
-      "summary": "同一个任务交给 LLM Agent，不同 run 之间 token 消耗能差一个数量级——这让成本预算彻底变成玄学。TokenCast 提出在执行过程中预测 token 消耗，等于给 Agent 装了个\"油表\"，让烧钱速度从盲盒变成可观测指标。",
-      "commentary": "2026 年最性感的技能不是 prompt engineering，是 token 会计学。当 Agent 变成公司最大成本中心，能提前算清楚\"这活要烧多少钱\"的人，比会写 prompt 的人值钱十倍。省钱才是这个行业最后的硬核浪漫。",
-      "url": "https://arxiv.org/abs/2609.35760v1"
+      "title": "NASA 秘密重启 SR-71 项目，请回退休老工程师",
+      "source": "HackerNews / Aviation Week",
+      "summary": "NASA 被曝邀请多位已退休的 SR-71A\"黑鸟\"项目老员工，协助一项秘密的高速/高超声速飞行器重启计划。当年的工程经验、材料工艺与气动数据，许多根本没留下完整文档，只能靠人脑\"逆向考古\"。",
+      "commentary": "最硬核的技术债，是老工程师的脑子——人一走，知识就进了焚化炉。这次重启与其说是造飞机，不如说是抢救一份即将失传的手艺。",
+      "url": "https://aviationweek.com/defense/aircraft-propulsion/nasa-asked-several-former-sr-71a-staffers-help-secret-restart"
     },
     {
-      "quote": "模型会过时，版本号会通胀，唯一不贬值的是你判断\"什么值得学\"的那根神经——毕竟 AI 再强，也得有人决定它去烧谁的钱。"
+      "quote": "真正的技术护城河，不是领先的那一年，而是别人连你怎么领先的都学不会——所以趁脑子还热，赶紧把知识写成文档，别等退休了才被高价请回来\"口述历史\"。"
     }
   ],
   "candidates": [
+    {
+      "id": "hn:49896586",
+      "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
+      "summary": "",
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+      "source": "Hacker News",
+      "score": 844,
+      "comments": 761
+    },
     {
       "id": "hn:49892245",
       "title": "How Delhi cut electricity loss from 50 to 5 percent",
       "summary": "",
       "url": "https://spectrum.ieee.org/delhi-electricity-loss",
       "source": "Hacker News",
-      "score": 314,
-      "comments": 186
+      "score": 469,
+      "comments": 272
     },
     {
-      "id": "hn:49890226",
-      "title": "A Privacy Analysis of Web and Mobile Conversational AI Agents [pdf]",
+      "id": "hn:49899090",
+      "title": "U.S. postal inspectors shut down website selling counterfeit postage labels",
       "summary": "",
-      "url": "https://jorgegarciaherrero.com/wp-content/interactivos/20260916-Prompt-like-a-butterfly-sting-like-a-tracker-(clean).pdf",
+      "url": "https://postalemployeenetwork.com/news/2026/09/26/u-s-postal-inspectors-shut-down-website-selling-millions-of-counterfeit-postage-labels/",
       "source": "Hacker News",
-      "score": 377,
-      "comments": 121
+      "score": 194,
+      "comments": 117
     },
     {
-      "id": "hn:49896586",
-      "title": "GPT 6.1 Sol",
+      "id": "hn:49896604",
+      "title": "Dots: Always-on agents",
       "summary": "",
-      "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+      "url": "https://openai.com/index/introducing-dots/",
       "source": "Hacker News",
-      "score": 250,
-      "comments": 173
+      "score": 505,
+      "comments": 378
     },
     {
-      "id": "hn:49891295",
-      "title": "You are no longer invited to dinner",
+      "id": "hn:49895304",
+      "title": "PS5 Relapse Exploit",
       "summary": "",
-      "url": "https://www.derekthompson.org/p/the-death-of-the-american-host",
+      "url": "https://github.com/ntfargo/Relapse-Exploit",
       "source": "Hacker News",
-      "score": 569,
-      "comments": 496
+      "score": 263,
+      "comments": 145
     },
     {
-      "id": "hn:49891290",
-      "title": "Jeeves. Reasoning improves Jev-like decision models",
+      "id": "hn:49901736",
+      "title": "Livenerf: Has Opus 5.5 been nerfed yet?",
       "summary": "",
-      "url": "https://github.com/PostHog/jeeves",
+      "url": "https://github.com/ninjahawk/livenerf",
       "source": "Hacker News",
-      "score": 182,
-      "comments": 76
+      "score": 379,
+      "comments": 157
     },
     {
-      "id": "hn:49880411",
-      "title": "Phyllotaxis: An audio-reactive LED display",
+      "id": "hn:49893509",
+      "title": "America.gov",
       "summary": "",
-      "url": "https://jagi.studio/posts/phyllotaxis/",
+      "url": "https://america.gov/",
       "source": "Hacker News",
-      "score": 219,
-      "comments": 34
-    },
-    {
-      "id": "lob:lfqtgh",
-      "title": "Bill Gates tries to install Movie Maker",
-      "summary": "",
-      "url": "https://www.techemails.com/p/bill-gates-tries-to-install-movie-maker",
-      "source": "Lobste.rs",
-      "score": 125,
-      "comments": 22,
-      "tags": [
-        "windows"
-      ]
-    },
-    {
-      "id": "lob:fqype1",
-      "title": "What makes Lisp difficult to read?",
-      "summary": "",
-      "url": "https://paultm.nl/paren-thesis",
-      "source": "Lobste.rs",
-      "score": 80,
-      "comments": 53,
-      "tags": [
-        "plt"
-      ]
-    },
-    {
-      "id": "hn:49896050",
-      "title": "DraftKings Is Using AI to Behaviorally Target Chronic Gamblers",
-      "summary": "",
-      "url": "https://www.eff.org/deeplinks/2026/09/draftkings-using-ai-supercharge-harms-online-behavioral-advertising",
-      "source": "Hacker News",
-      "score": 153,
-      "comments": 102
-    },
-    {
-      "id": "lob:q2rymh",
-      "title": "What Would A Serious AI Product Look Like?",
-      "summary": "",
-      "url": "https://blog.glyph.im/2026/09/serious-ai-product.html",
-      "source": "Lobste.rs",
-      "score": 88,
-      "comments": 13,
-      "tags": [
-        "a11y",
-        "design",
-        "vibecoding"
-      ]
+      "score": 463,
+      "comments": 369
     },
     {
       "id": "lob:tyivfg",
@@ -137,73 +99,67 @@
       "summary": "",
       "url": "https://cow-wm.codeberg.page/cow/",
       "source": "Lobste.rs",
-      "score": 73,
-      "comments": 12,
+      "score": 109,
+      "comments": 17,
       "tags": [
         "freebsd",
         "linux"
       ]
     },
     {
-      "id": "lob:sxcz4v",
-      "title": "Yes, no AI is now a feature",
+      "id": "lob:lfqtgh",
+      "title": "Bill Gates tries to install Movie Maker",
       "summary": "",
-      "url": "https://blog.documentfoundation.org/blog/2026/09/03/yes-no-ai-is-now-a-feature/",
+      "url": "https://www.techemails.com/p/bill-gates-tries-to-install-movie-maker",
       "source": "Lobste.rs",
-      "score": 119,
-      "comments": 19,
+      "score": 138,
+      "comments": 27,
       "tags": [
-        "practices",
-        "vibecoding"
+        "windows"
       ]
     },
     {
-      "id": "lob:h3igdh",
-      "title": "Leaving them behind",
+      "id": "hn:49898778",
+      "title": "Show HN: Real-time Solar System with 526k asteroids and all tracked satellites",
       "summary": "",
-      "url": "https://dbushell.com/2026/09/28/leaving-them-behind/",
-      "source": "Lobste.rs",
-      "score": 73,
-      "comments": 22,
-      "tags": [
-        "vibecoding"
-      ]
+      "url": "https://space.bl2.net/",
+      "source": "Hacker News",
+      "score": 168,
+      "comments": 38
     },
     {
-      "id": "lob:8oyww7",
-      "title": "Hijacking the PS5's RTMP Stream",
+      "id": "lob:dayzwt",
+      "title": "Pining for Arc Downcasting in Rust",
       "summary": "",
-      "url": "https://yashgarg.dev/posts/hijacking-ps5-rtmp-stream/",
+      "url": "https://wolfgirl.dev/blog/2026-09-29-pining-for-arc-downcasting-in-rust/",
       "source": "Lobste.rs",
-      "score": 57,
+      "score": 31,
       "comments": 11,
       "tags": [
-        "networking"
+        "rust"
       ]
     },
     {
-      "id": "lob:aig5tr",
-      "title": "When did Google get so weird?",
+      "id": "hn:49897993",
+      "title": "Vermont replacing power plants with home batteries",
+      "summary": "See also <a href=\"https:&#x2F;&#x2F;electrek.co&#x2F;2026&#x2F;07&#x2F;28&#x2F;vermonts-largest-energy-source-is-now-a-virtual-power-plant&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;electrek.co&#x2F;2026&#x2F;07&#x2F;28&#x2F;vermonts-largest-energy-sourc...</a>",
+      "url": "https://www.bbc.com/future/article/20260928-a-virtual-power-plant-hidden-in-vermont-homes-is-keeping-the-lights-on-during-storms",
+      "source": "Hacker News",
+      "score": 124,
+      "comments": 111
+    },
+    {
+      "id": "lob:vlywx2",
+      "title": "My experience writing automated tests for a SPA",
       "summary": "",
-      "url": "https://sancho.bearblog.dev/google-weird/",
+      "url": "https://reecoute.fr/tech_blog/2026-09-28_my-experience-writing-automated-tests-for-a-spa",
       "source": "Lobste.rs",
-      "score": 71,
-      "comments": 13,
+      "score": 34,
+      "comments": 10,
       "tags": [
-        "vibecoding"
+        "testing",
+        "web"
       ]
-    },
-    {
-      "id": "arxiv:2609.35750v1",
-      "title": "KV-streams for Efficient Compaction in Agentic Reinforcement Learning",
-      "summary": "Scaling the horizon of agentic LLMs is bottlenecked by the need to fit ever longer context traces in GPU memory. Context compaction has been the most popular mechanism to alleviate this issue, keeping GPU memory constant for a given trace. Unfortunately, most compaction strategies rely on prefilling",
-      "url": "https://arxiv.org/abs/2609.35750v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "arxiv_id": "2609.35750v1"
     },
     {
       "id": "rss:fc3a442dc3",
@@ -214,38 +170,73 @@
       "score": 0
     },
     {
-      "id": "hn:49892175",
-      "title": "Without the Hot Air",
+      "id": "lob:s0x5nd",
+      "title": "Aho-Corasick Algorithm",
       "summary": "",
-      "url": "https://www.withouthotair.com/",
+      "url": "https://compiler.club/aho-corasick/",
+      "source": "Lobste.rs",
+      "score": 41,
+      "comments": 8,
+      "tags": [
+        "compsci"
+      ]
+    },
+    {
+      "id": "hn:49890733",
+      "title": "NASA asked several former SR-71A staffers to help secret restart",
+      "summary": "",
+      "url": "https://aviationweek.com/defense/aircraft-propulsion/nasa-asked-several-former-sr-71a-staffers-help-secret-restart",
       "source": "Hacker News",
-      "score": 98,
-      "comments": 48
+      "score": 80,
+      "comments": 91
     },
     {
-      "id": "arxiv:2609.35767v1",
-      "title": "Learning Native Reflection in Unified Models with Interleaved Reinforcement Learning",
-      "summary": "Unified multimodal models can both look at and render images, so in principle they can repair their own generations: diagnose what an image gets wrong, revise it, observe the result, and diagnose again. Whether a revision helps is known only after it is rendered, so the reflection text and the image",
-      "url": "https://arxiv.org/abs/2609.35767v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ],
-      "arxiv_id": "2609.35767v1"
+      "id": "hn:49893002",
+      "title": "Backblaze drive stats for Q2 2026",
+      "summary": "",
+      "url": "https://www.backblaze.com/blog/backblaze-drive-stats-for-q2-2026/",
+      "source": "Hacker News",
+      "score": 122,
+      "comments": 27
     },
     {
-      "id": "arxiv:2609.35760v1",
-      "title": "TokenCast: Forecasting Token Consumption During LLM Agent Execution",
-      "summary": "When a large language model (LLM) agent executes the same task, token consumption can vary by over an order of magnitude across runs. The agent chooses its next steps based on tool feedback and intermediate results, while the growing context steadily inflates the input size of every subsequent call.",
-      "url": "https://arxiv.org/abs/2609.35760v1",
+      "id": "lob:bctr1m",
+      "title": "Switching To Emacs as a Neovim User",
+      "summary": "",
+      "url": "https://eliasebner.com/blog/thoughts/switching-to-emacs-as-a-neovim-user/",
+      "source": "Lobste.rs",
+      "score": 35,
+      "comments": 4,
+      "tags": [
+        "emacs",
+        "vim"
+      ]
+    },
+    {
+      "id": "arxiv:2609.38178v1",
+      "title": "Skill-Space Shooting for Autonomous Robot Policy Improvement",
+      "summary": "Robots deployed in the physical world must be able to improve beyond their initial training as they encounter new situations and failures. For this improvement to scale across tasks, it must make effective use of experience without requiring human demonstration of each correction. Recent agentic sys",
+      "url": "https://arxiv.org/abs/2609.38178v1",
       "source": "ArXiv",
       "categories": [
-        "cs.LG",
+        "cs.RO",
         "cs.AI",
-        "cs.SE"
+        "cs.LG"
       ],
-      "arxiv_id": "2609.35760v1"
+      "arxiv_id": "2609.38178v1"
+    },
+    {
+      "id": "arxiv:2609.38169v1",
+      "title": "STEPQuant: When and Where Errors Matter in Delta-Rule Recurrent State Quantization",
+      "summary": "Linear attention replaces growing KV caches with fixed-size recurrent states, yet these persistent states can become a substantial memory bottleneck under concurrent serving. Directly quantizing recurrent states to low precision often leads to severe accuracy degradation, as quantization errors prop",
+      "url": "https://arxiv.org/abs/2609.38169v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_id": "2609.38169v1"
     }
   ],
   "ai_curated": true
