@@ -1,131 +1,49 @@
 {
-  "date": "2026-09-30",
-  "update_time": "2026-09-30 04:51:05",
+  "date": "2026-10-01",
+  "update_time": "2026-09-30 17:45:37",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-30\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 GPT-6.1 Sol：用五分之一的价格，买到\"准 Astra 级\"智能 (来源: HackerNews)\n- **核心干货**：OpenAI 发布 GPT-6.1 Sol，官方口径是\"Near-Astra intelligence\"——即逼近其旗舰 Astra 模型的推理能力，但定价仅为后者的 20%。这基本等于把上一代顶级模型的智商，塞进了这一代中端模型的价格带里。\n- **毒舌/硬核点评**：翻译一下就是：旗舰模型的护城河保质期，已经短到按季度计算了。\"接近旗舰\"这四个字，是 OpenAI 对上一代旗舰最体面的死刑判决书。\n- **🔗 传送门**：[点击直达原链接](https://openai.com/index/introducing-gpt-6-1-sol/)\n\n---\n\n### 2. 📌 德里把电网线损从 50% 干到 5% (来源: HackerNews / IEEE Spectrum)\n- **核心干货**：德里完成了电力系统史上堪称奇迹的改造——输配电损耗从骇人的 50% 压到 5%。这不是换了几根电线的事，而是智能电表、实时计量、反窃电执法与配电网络重构的系统性工程，直接让一座巨型城市从\"电不够用\"变成\"电够用还便宜\"。\n- **毒舌/硬核点评**：比起硅谷天天喊的\"AI 改变世界\"，德里用电表+执法把物理世界的 45% 浪费直接干掉——这才是真正的降本增效，且没有一行大模型代码。\n- **🔗 传送门**：[点击直达原链接](https://spectrum.ieee.org/delhi-electricity-loss)\n\n---\n\n### 3. 📌 NASA 秘密重启 SR-71 项目，请回退休老工程师 (来源: HackerNews / Aviation Week)\n- **核心干货**：NASA 被曝邀请多位已退休的 SR-71A\"黑鸟\"项目老员工，协助一项秘密的高速/高超声速飞行器重启计划。当年的工程经验、材料工艺与气动数据，许多根本没留下完整文档，只能靠人脑\"逆向考古\"。\n- **毒舌/硬核点评**：最硬核的技术债，是老工程师的脑子——人一走，知识就进了焚化炉。这次重启与其说是造飞机，不如说是抢救一份即将失传的手艺。\n- **🔗 传送门**：[点击直达原链接](https://aviationweek.com/defense/aircraft-propulsion/nasa-asked-several-former-sr-71a-staffers-help-secret-restart)\n\n---\n\n### 🗣️ 今日顶男金句\n> 真正的技术护城河，不是领先的那一年，而是别人连你怎么领先的都学不会——所以趁脑子还热，赶紧把知识写成文档，别等退休了才被高价请回来\"口述历史\"。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-01\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 新一代 Spectre-v2 \"BTR\" 攻击攻破 Linux 内存防线 (来源: HackerNews / 安全研究)\n- **核心干货**：VUSec 与 Sant'Anna 高等研究院联合披露了 Spectre-v2 的全新变种 \"BTR\"，专门针对浏览器 JIT 引擎、语言运行时和操作系统内核下手，且能绕过现有全部防御机制，在多种 CPU 厂商平台上成功泄露 Linux 内存数据。这不是实验室里的玩具，而是又一次证明\"幽灵\"根本没走远。\n- **毒舌/硬核点评**：CPU 厂商花十年打补丁，学术界花一个下午出新洞。硬件层面的投机执行就跟前任一样，你以为翻篇了，它总能在你最放松的时候再捅你一刀。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/new-spectre-v2-btr-attack-leaks-linux.html)\n\n---\n\n### 2. 📌 AI 编程助手把 13,000 张内部截图送上 GitHub 公海 (来源: HackerNews / 安全新闻)\n- **核心干货**：安全公司 Glow 发现，开发者让 AI 编程助手截取代码变更截图用于 review 时，这些 Agent 把超过 13,000 张企业内部图片上传至公开 GitHub 仓库，涉及 300+ 组织的客户账单记录等敏感信息。你的 AI 助手不光会写 bug，还会帮你开源商业机密。\n- **毒舌/硬核点评**：人类花二十年学\"不要把密钥提交到 Git\"，AI 花两秒钟学会了\"把整个财务部截图上传\"。所谓的\"生产力工具\"，本质上是把人类的低级错误自动化、规模化——恭喜，你的泄露速度也提升了 10 倍。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/ai-coding-agents-exposed-13000-internal.html)\n\n---\n\n### 3. 📌 Cisco SD-WAN Manager 零日认证绕过正被在野利用 (来源: HackerNews / 安全新闻)\n- **核心干货**：Cisco 发布紧急公告，确认 CVE-2026-76504 正被攻击者积极利用。该漏洞允许远程未认证攻击者绕过 SD-WAN Manager 的认证机制，而这是企业管理整个 SD-WAN 网络的中枢。CVSS 评分虽未列出，但\"零日 + 在野利用 + 网络管理中枢\"这三个关键词凑在一起，已经够让运维团队今晚加班了。\n- **毒舌/硬核点评**：企业花大价钱上 SD-WAN 追求\"智能组网\"，结果攻击者用一个未认证请求就能拿到管理面板的钥匙。所谓\"软件定义一切\"，包括软件定义你的灾难恢复时间表。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/cisco-warns-of-attackers-exploiting.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> \"安全圈有个永恒的悖论：厂商用三年把产品做复杂，攻击者用三天把复杂变成漏洞。所以别问'我的系统安全吗'，要问'我的系统值得被黑吗'——如果你的答案是'不值得'，恭喜，你可能已经安全了，因为连黑客都懒得看你一眼。\"",
   "briefing_items": [
     {
-      "title": "GPT-6.1 Sol：用五分之一的价格，买到\"准 Astra 级\"智能",
-      "source": "HackerNews",
-      "summary": "OpenAI 发布 GPT-6.1 Sol，官方口径是\"Near-Astra intelligence\"——即逼近其旗舰 Astra 模型的推理能力，但定价仅为后者的 20%。这基本等于把上一代顶级模型的智商，塞进了这一代中端模型的价格带里。",
-      "commentary": "翻译一下就是：旗舰模型的护城河保质期，已经短到按季度计算了。\"接近旗舰\"这四个字，是 OpenAI 对上一代旗舰最体面的死刑判决书。",
-      "url": "https://openai.com/index/introducing-gpt-6-1-sol/"
+      "title": "新一代 Spectre-v2 \"BTR\" 攻击攻破 Linux 内存防线",
+      "source": "HackerNews / 安全研究",
+      "summary": "VUSec 与 Sant'Anna 高等研究院联合披露了 Spectre-v2 的全新变种 \"BTR\"，专门针对浏览器 JIT 引擎、语言运行时和操作系统内核下手，且能绕过现有全部防御机制，在多种 CPU 厂商平台上成功泄露 Linux 内存数据。这不是实验室里的玩具，而是又一次证明\"幽灵\"根本没走远。",
+      "commentary": "CPU 厂商花十年打补丁，学术界花一个下午出新洞。硬件层面的投机执行就跟前任一样，你以为翻篇了，它总能在你最放松的时候再捅你一刀。",
+      "url": "https://thehackernews.com/2026/09/new-spectre-v2-btr-attack-leaks-linux.html"
     },
     {
-      "title": "德里把电网线损从 50% 干到 5%",
-      "source": "HackerNews / IEEE Spectrum",
-      "summary": "德里完成了电力系统史上堪称奇迹的改造——输配电损耗从骇人的 50% 压到 5%。这不是换了几根电线的事，而是智能电表、实时计量、反窃电执法与配电网络重构的系统性工程，直接让一座巨型城市从\"电不够用\"变成\"电够用还便宜\"。",
-      "commentary": "比起硅谷天天喊的\"AI 改变世界\"，德里用电表+执法把物理世界的 45% 浪费直接干掉——这才是真正的降本增效，且没有一行大模型代码。",
-      "url": "https://spectrum.ieee.org/delhi-electricity-loss"
+      "title": "AI 编程助手把 13,000 张内部截图送上 GitHub 公海",
+      "source": "HackerNews / 安全新闻",
+      "summary": "安全公司 Glow 发现，开发者让 AI 编程助手截取代码变更截图用于 review 时，这些 Agent 把超过 13,000 张企业内部图片上传至公开 GitHub 仓库，涉及 300+ 组织的客户账单记录等敏感信息。你的 AI 助手不光会写 bug，还会帮你开源商业机密。",
+      "commentary": "人类花二十年学\"不要把密钥提交到 Git\"，AI 花两秒钟学会了\"把整个财务部截图上传\"。所谓的\"生产力工具\"，本质上是把人类的低级错误自动化、规模化——恭喜，你的泄露速度也提升了 10 倍。",
+      "url": "https://thehackernews.com/2026/09/ai-coding-agents-exposed-13000-internal.html"
     },
     {
-      "title": "NASA 秘密重启 SR-71 项目，请回退休老工程师",
-      "source": "HackerNews / Aviation Week",
-      "summary": "NASA 被曝邀请多位已退休的 SR-71A\"黑鸟\"项目老员工，协助一项秘密的高速/高超声速飞行器重启计划。当年的工程经验、材料工艺与气动数据，许多根本没留下完整文档，只能靠人脑\"逆向考古\"。",
-      "commentary": "最硬核的技术债，是老工程师的脑子——人一走，知识就进了焚化炉。这次重启与其说是造飞机，不如说是抢救一份即将失传的手艺。",
-      "url": "https://aviationweek.com/defense/aircraft-propulsion/nasa-asked-several-former-sr-71a-staffers-help-secret-restart"
-    },
-    {
-      "quote": "真正的技术护城河，不是领先的那一年，而是别人连你怎么领先的都学不会——所以趁脑子还热，赶紧把知识写成文档，别等退休了才被高价请回来\"口述历史\"。"
+      "title": "Cisco SD-WAN Manager 零日认证绕过正被在野利用",
+      "source": "HackerNews / 安全新闻",
+      "summary": "Cisco 发布紧急公告，确认 CVE-2026-76504 正被攻击者积极利用。该漏洞允许远程未认证攻击者绕过 SD-WAN Manager 的认证机制，而这是企业管理整个 SD-WAN 网络的中枢。CVSS 评分虽未列出，但\"零日 + 在野利用 + 网络管理中枢\"这三个关键词凑在一起，已经够让运维团队今晚加班了。",
+      "commentary": "企业花大价钱上 SD-WAN 追求\"智能组网\"，结果攻击者用一个未认证请求就能拿到管理面板的钥匙。所谓\"软件定义一切\"，包括软件定义你的灾难恢复时间表。",
+      "url": "https://thehackernews.com/2026/09/cisco-warns-of-attackers-exploiting.html"
     }
   ],
   "candidates": [
-    {
-      "id": "hn:49896586",
-      "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
-      "summary": "",
-      "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
-      "source": "Hacker News",
-      "score": 844,
-      "comments": 761
-    },
-    {
-      "id": "hn:49892245",
-      "title": "How Delhi cut electricity loss from 50 to 5 percent",
-      "summary": "",
-      "url": "https://spectrum.ieee.org/delhi-electricity-loss",
-      "source": "Hacker News",
-      "score": 469,
-      "comments": 272
-    },
-    {
-      "id": "hn:49899090",
-      "title": "U.S. postal inspectors shut down website selling counterfeit postage labels",
-      "summary": "",
-      "url": "https://postalemployeenetwork.com/news/2026/09/26/u-s-postal-inspectors-shut-down-website-selling-millions-of-counterfeit-postage-labels/",
-      "source": "Hacker News",
-      "score": 194,
-      "comments": 117
-    },
-    {
-      "id": "hn:49896604",
-      "title": "Dots: Always-on agents",
-      "summary": "",
-      "url": "https://openai.com/index/introducing-dots/",
-      "source": "Hacker News",
-      "score": 505,
-      "comments": 378
-    },
-    {
-      "id": "hn:49895304",
-      "title": "PS5 Relapse Exploit",
-      "summary": "",
-      "url": "https://github.com/ntfargo/Relapse-Exploit",
-      "source": "Hacker News",
-      "score": 263,
-      "comments": 145
-    },
     {
       "id": "hn:49901736",
       "title": "Livenerf: Has Opus 5.5 been nerfed yet?",
       "summary": "",
       "url": "https://github.com/ninjahawk/livenerf",
       "source": "Hacker News",
-      "score": 379,
-      "comments": 157
+      "score": 826,
+      "comments": 342
     },
     {
-      "id": "hn:49893509",
-      "title": "America.gov",
+      "id": "hn:49906637",
+      "title": "You Said No MCP",
       "summary": "",
-      "url": "https://america.gov/",
+      "url": "https://earendil.com/posts/you-said-no-mcp/",
       "source": "Hacker News",
-      "score": 463,
-      "comments": 369
-    },
-    {
-      "id": "lob:tyivfg",
-      "title": "CoW — a stacking window manager for Wayland",
-      "summary": "",
-      "url": "https://cow-wm.codeberg.page/cow/",
-      "source": "Lobste.rs",
-      "score": 109,
-      "comments": 17,
-      "tags": [
-        "freebsd",
-        "linux"
-      ]
-    },
-    {
-      "id": "lob:lfqtgh",
-      "title": "Bill Gates tries to install Movie Maker",
-      "summary": "",
-      "url": "https://www.techemails.com/p/bill-gates-tries-to-install-movie-maker",
-      "source": "Lobste.rs",
-      "score": 138,
-      "comments": 27,
-      "tags": [
-        "windows"
-      ]
-    },
-    {
-      "id": "hn:49898778",
-      "title": "Show HN: Real-time Solar System with 526k asteroids and all tracked satellites",
-      "summary": "",
-      "url": "https://space.bl2.net/",
-      "source": "Hacker News",
-      "score": 168,
-      "comments": 38
+      "score": 467,
+      "comments": 273
     },
     {
       "id": "lob:dayzwt",
@@ -133,110 +51,181 @@
       "summary": "",
       "url": "https://wolfgirl.dev/blog/2026-09-29-pining-for-arc-downcasting-in-rust/",
       "source": "Lobste.rs",
-      "score": 31,
-      "comments": 11,
+      "score": 50,
+      "comments": 12,
       "tags": [
         "rust"
       ]
     },
     {
-      "id": "hn:49897993",
-      "title": "Vermont replacing power plants with home batteries",
-      "summary": "See also <a href=\"https:&#x2F;&#x2F;electrek.co&#x2F;2026&#x2F;07&#x2F;28&#x2F;vermonts-largest-energy-source-is-now-a-virtual-power-plant&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;electrek.co&#x2F;2026&#x2F;07&#x2F;28&#x2F;vermonts-largest-energy-sourc...</a>",
-      "url": "https://www.bbc.com/future/article/20260928-a-virtual-power-plant-hidden-in-vermont-homes-is-keeping-the-lights-on-during-storms",
-      "source": "Hacker News",
-      "score": 124,
-      "comments": 111
-    },
-    {
-      "id": "lob:vlywx2",
-      "title": "My experience writing automated tests for a SPA",
+      "id": "lob:odrfgk",
+      "title": "How to speed up the Rust compiler in September 2026",
       "summary": "",
-      "url": "https://reecoute.fr/tech_blog/2026-09-28_my-experience-writing-automated-tests-for-a-spa",
+      "url": "https://nnethercote.github.io/2026/09/30/how-to-speed-up-the-rust-compiler-in-september-2026.html",
       "source": "Lobste.rs",
-      "score": 34,
-      "comments": 10,
+      "score": 52,
+      "comments": 5,
       "tags": [
-        "testing",
-        "web"
+        "compilers",
+        "rust"
       ]
     },
     {
-      "id": "rss:fc3a442dc3",
-      "title": "Apple Patches CoreGraphics Flaw Possibly Exploited in Targeted Attacks",
-      "summary": "Apple has released security updates to address a vulnerability in older versions of iOS, iPadOS, and macOS that it said may have been exploited in targeted attacks.\n\nThe vulnerability, tracked as CVE-2026-86950, refers to an out-of-bounds write impacting the CoreGraphics component that could lead to",
-      "url": "https://thehackernews.com/2026/09/apple-patches-coregraphics-flaw.html",
+      "id": "hn:49883970",
+      "title": "I Could've Accessed 17T Microsoft Records",
+      "summary": "",
+      "url": "https://blog.faav.net/how-i-couldve-accessed-17-trillion-microsoft-records",
+      "source": "Hacker News",
+      "score": 122,
+      "comments": 56
+    },
+    {
+      "id": "lob:tyivfg",
+      "title": "CoW — a stacking window manager for Wayland",
+      "summary": "",
+      "url": "https://cow-wm.codeberg.page/cow/",
+      "source": "Lobste.rs",
+      "score": 132,
+      "comments": 17,
+      "tags": [
+        "freebsd",
+        "linux"
+      ]
+    },
+    {
+      "id": "lob:hxmtyv",
+      "title": "Deser: Rethinking Rust Serialization",
+      "summary": "",
+      "url": "https://lucumr.pocoo.org/2026/9/29/deser/",
+      "source": "Lobste.rs",
+      "score": 40,
+      "comments": 6,
+      "tags": [
+        "rust",
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "lob:zknqct",
+      "title": "Two Kinds of SQL Query Builders",
+      "summary": "",
+      "url": "https://mechanicalrabbit.github.io/FunSQL.jl/stable/two-kinds-of-sql-query-builders/#Two-Kinds-of-SQL-Query-Builders",
+      "source": "Lobste.rs",
+      "score": 29,
+      "comments": 16,
+      "tags": [
+        "databases"
+      ]
+    },
+    {
+      "id": "hn:49911995",
+      "title": "Launch HN: Magnitude (YC S25) – Self-optimizing inference engine for agents",
+      "summary": "Hey HN, Anders and Tom here. We&#x27;re building Magnitude, an inference engine for agents that optimizes itself to run as fast as possible on your hardware. It works on Mac, Linux, and Windows on any hardware and is up to 2x faster than llama.cpp.<p>We&#x27;re both software engineers and previously",
+      "url": "https://github.com/magnitudedev/magnitude",
+      "source": "Hacker News",
+      "score": 5,
+      "comments": 1
+    },
+    {
+      "id": "lob:nicozi",
+      "title": "The Cuckoo's Egg",
+      "summary": "",
+      "url": "https://en.wikipedia.org/wiki/The_Cuckoo%27s_Egg_(book)",
+      "source": "Lobste.rs",
+      "score": 30,
+      "comments": 18,
+      "tags": [
+        "book",
+        "security"
+      ]
+    },
+    {
+      "id": "hn:49890707",
+      "title": "Show HN: JBR-001 – An open-source 3D printable desktop robot",
+      "summary": "We built a desktop companion robot that is powered by Arduino UNO Q. Project is open source: source code, 3D printable files and assembly instructions are available at Arduino Project Hub.<p>Robot is equipped with camera, distance sensor, buzzer, moves head and arms with 3 servo motors and has an an",
+      "url": "https://projecthub.arduino.cc/syntheticaidata/jbr-001-a-desktop-companion-robot-powered-by-arduino-uno-q-b11c96",
+      "source": "Hacker News",
+      "score": 103,
+      "comments": 23
+    },
+    {
+      "id": "rss:fe2850382a",
+      "title": "Citrix NetScaler CVE-2026-88772 Exploit Details Show Pre-Auth Path to Shellcode Execution",
+      "summary": "Cybersecurity researchers have disclosed technical details of a recently patched critical security flaw in Citrix NetScaler ADC and Gateway that has come under active exploitation in the wild.\n\nThe vulnerability, tracked as CVE-2026-88772 (CVSS score: 9.5), has been described as a memory overflow bu",
+      "url": "https://thehackernews.com/2026/09/citrix-netscaler-cve-2026-88772-exploit.html",
       "source": "Tech RSS",
       "score": 0
     },
     {
-      "id": "lob:s0x5nd",
-      "title": "Aho-Corasick Algorithm",
+      "id": "rss:a4f467f89d",
+      "title": "New Spectre-v2 BTR Attack Leaks Linux Memory Despite Existing Defenses",
+      "summary": "A group of academics from VUSec and Scuola Superiore Sant'Anna have disclosed details of a new Spectre CPU vulnerability variant that affects Just-In-Time (JIT) engines present in web browsers, language runtimes, and the operating system kernel, across multiple CPU vendors.\n\nThe new Spectre v2 varia",
+      "url": "https://thehackernews.com/2026/09/new-spectre-v2-btr-attack-leaks-linux.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "hn:49908394",
+      "title": "The last time my family was replaced by technology",
       "summary": "",
-      "url": "https://compiler.club/aho-corasick/",
+      "url": "https://manuel.darcemont.fr/posts/the-last-time-my-family-was-replaced-by-technology/",
+      "source": "Hacker News",
+      "score": 50,
+      "comments": 115
+    },
+    {
+      "id": "hn:49908962",
+      "title": "SDF vs. MSDF vs. Slug: GPU Text Rendering",
+      "summary": "",
+      "url": "https://alphapixeldev.com/sdf-vs-msdf-vs-slug-vs-rive-gpu-text-rendering/",
+      "source": "Hacker News",
+      "score": 75,
+      "comments": 35
+    },
+    {
+      "id": "hn:49909583",
+      "title": "A brief history of the Bloomberg terminal",
+      "summary": "",
+      "url": "https://spectrum.ieee.org/bloomberg-terminal",
+      "source": "Hacker News",
+      "score": 83,
+      "comments": 22
+    },
+    {
+      "id": "rss:64ee4bb03c",
+      "title": "Cisco Warns of Attackers Exploiting Critical Authentication Bypass in SD-WAN Manager",
+      "summary": "Attackers are exploiting a new critical zero-day flaw in Cisco Catalyst SD-WAN Manager, the system companies use to manage their Cisco SD-WAN networks, Cisco said in an&nbsp;advisory&nbsp;on September 30.\n\nThe flaw, CVE-2026-76504, could allow a remote attacker with no login access to use the Manage",
+      "url": "https://thehackernews.com/2026/09/cisco-warns-of-attackers-exploiting.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:7d52d419c0",
+      "title": "I built a QEMU sandbox to test if a 4B model (Gemma) can act as an autonomous Linux sysadmin — here are the results (2/3 pass rate)",
+      "summary": "What happens when you give an open-weights 4B parameter language model root access to a broken Linux server and tell it to fix the problem?\n\nI built local-agent-sandbox, a lightweight evaluation harness running on pure QEMU and llama.cpp. Here is how the experiment was structured, how the sandboxing",
+      "url": "https://dev.to/chetan_moorthy_b4c5f017cd/i-built-a-qemu-sandbox-to-test-if-a-4b-model-gemma-can-act-as-an-autonomous-linux-sysadmin-here-2fdd",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "lob:irijoi",
+      "title": "Differences between `foldl` and `foldr`",
+      "summary": "",
+      "url": "https://blog.haskell.org/foldl-and-foldr/",
       "source": "Lobste.rs",
-      "score": 41,
-      "comments": 8,
+      "score": 18,
+      "comments": 3,
       "tags": [
-        "compsci"
+        "haskell"
       ]
     },
     {
-      "id": "hn:49890733",
-      "title": "NASA asked several former SR-71A staffers to help secret restart",
-      "summary": "",
-      "url": "https://aviationweek.com/defense/aircraft-propulsion/nasa-asked-several-former-sr-71a-staffers-help-secret-restart",
-      "source": "Hacker News",
-      "score": 80,
-      "comments": 91
-    },
-    {
-      "id": "hn:49893002",
-      "title": "Backblaze drive stats for Q2 2026",
-      "summary": "",
-      "url": "https://www.backblaze.com/blog/backblaze-drive-stats-for-q2-2026/",
-      "source": "Hacker News",
-      "score": 122,
-      "comments": 27
-    },
-    {
-      "id": "lob:bctr1m",
-      "title": "Switching To Emacs as a Neovim User",
-      "summary": "",
-      "url": "https://eliasebner.com/blog/thoughts/switching-to-emacs-as-a-neovim-user/",
-      "source": "Lobste.rs",
-      "score": 35,
-      "comments": 4,
-      "tags": [
-        "emacs",
-        "vim"
-      ]
-    },
-    {
-      "id": "arxiv:2609.38178v1",
-      "title": "Skill-Space Shooting for Autonomous Robot Policy Improvement",
-      "summary": "Robots deployed in the physical world must be able to improve beyond their initial training as they encounter new situations and failures. For this improvement to scale across tasks, it must make effective use of experience without requiring human demonstration of each correction. Recent agentic sys",
-      "url": "https://arxiv.org/abs/2609.38178v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2609.38178v1"
-    },
-    {
-      "id": "arxiv:2609.38169v1",
-      "title": "STEPQuant: When and Where Errors Matter in Delta-Rule Recurrent State Quantization",
-      "summary": "Linear attention replaces growing KV caches with fixed-size recurrent states, yet these persistent states can become a substantial memory bottleneck under concurrent serving. Directly quantizing recurrent states to low precision often leads to severe accuracy degradation, as quantization errors prop",
-      "url": "https://arxiv.org/abs/2609.38169v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2609.38169v1"
+      "id": "rss:47e2c34004",
+      "title": "AI Coding Agents Exposed 13,000 Internal Images, Including Billing Records, on GitHub",
+      "summary": "AI coding agents asked to share screenshots of code changes for review have put internal company images in public GitHub repositories, security company Glow said.\n\nIts researchers found more than 13,000 internal images from developers at over 300 organizations, including customer billing records and",
+      "url": "https://thehackernews.com/2026/09/ai-coding-agents-exposed-13000-internal.html",
+      "source": "Tech RSS",
+      "score": 0
     }
   ],
   "ai_curated": true
