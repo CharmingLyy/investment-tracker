@@ -1,7 +1,66 @@
 {
-  "update_time": "2026-09-30 14:22:51",
+  "update_time": "2026-09-30 17:54:30",
   "stocks": {
-    "a_stocks": [],
+    "a_stocks": [
+      {
+        "market": "A股",
+        "code": "002050",
+        "name": "三花智控",
+        "symbol": "sz.002050",
+        "industry": null,
+        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
+        "price": 35.71,
+        "open": 35.6,
+        "high": 36.45,
+        "low": 35.29,
+        "change_pct": 0.51,
+        "volume": 40396326,
+        "turnover": 14.52,
+        "market_cap": null,
+        "pe": 37.6,
+        "cash_flow": 50.92,
+        "macd": -0.3459,
+        "macd_signal": -0.5464,
+        "macd_histogram": 0.4011,
+        "rsi": 48.52,
+        "ma": {
+          "MA5": 35.68,
+          "MA10": 35.39,
+          "MA20": 35.39,
+          "MA60": 37.19
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
+        "price": 6.44,
+        "open": 6.43,
+        "high": 6.45,
+        "low": 6.4,
+        "change_pct": 0.47,
+        "volume": 29591985,
+        "turnover": 1.9,
+        "market_cap": null,
+        "pe": 73.83,
+        "cash_flow": 105.67,
+        "macd": -0.0535,
+        "macd_signal": -0.0495,
+        "macd_histogram": -0.008,
+        "rsi": 42.54,
+        "ma": {
+          "MA5": 6.5,
+          "MA10": 6.5,
+          "MA20": 6.55,
+          "MA60": 6.65
+        },
+        "main_net_flow": null
+      }
+    ],
     "hk_stocks": [
       {
         "market": "港股",
@@ -10,25 +69,25 @@
         "symbol": "01810",
         "industry": "Consumer Electronics",
         "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
-        "price": 25.24,
-        "open": 25.2,
-        "high": 25.42,
-        "low": 24.82,
-        "change_pct": 0.16,
+        "price": NaN,
+        "open": null,
+        "high": null,
+        "low": null,
+        "change_pct": NaN,
         "volume": 120223400,
         "turnover": null,
         "market_cap": 6500.06,
         "pe": 17.65,
         "cash_flow": 86.81,
-        "macd": -0.4248,
-        "macd_signal": -0.2709,
-        "macd_histogram": -0.3077,
-        "rsi": 40.21,
+        "macd": -0.3674,
+        "macd_signal": -0.2594,
+        "macd_histogram": -0.2159,
+        "rsi": 39.89,
         "ma": {
-          "MA5": 25.76,
-          "MA10": 26.23,
-          "MA20": 26.55,
-          "MA60": 27.13
+          "MA5": null,
+          "MA10": null,
+          "MA20": null,
+          "MA60": null
         },
         "main_net_flow": null
       }
@@ -41,25 +100,25 @@
         "symbol": "NVDA",
         "industry": "Semiconductors",
         "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
-        "price": 231.17,
+        "price": 230.32,
         "open": 229.0,
         "high": 232.37,
         "low": 228.8,
-        "change_pct": 1.74,
-        "volume": 25182104,
+        "change_pct": 1.37,
+        "volume": 55573446,
         "turnover": null,
-        "market_cap": 55816.92,
-        "pe": 29.22,
+        "market_cap": 55615.71,
+        "pe": 29.12,
         "cash_flow": 418.1,
-        "macd": 3.0833,
-        "macd_signal": 2.4056,
-        "macd_histogram": 1.3553,
-        "rsi": 60.32,
+        "macd": 3.0155,
+        "macd_signal": 2.3921,
+        "macd_histogram": 1.2469,
+        "rsi": 59.59,
         "ma": {
-          "MA5": 227.38,
-          "MA10": 226.03,
-          "MA20": 223.26,
-          "MA60": 215.47
+          "MA5": 227.21,
+          "MA10": 225.94,
+          "MA20": 223.22,
+          "MA60": 215.46
         },
         "main_net_flow": null
       },
@@ -70,25 +129,25 @@
         "symbol": "GOOG",
         "industry": "Internet Content & Information",
         "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
-        "price": 346.37,
+        "price": 346.64,
         "open": 340.65,
-        "high": 348.65,
+        "high": 349.05,
         "low": 340.45,
-        "change_pct": 2.68,
-        "volume": 5188267,
+        "change_pct": 2.76,
+        "volume": 10448157,
         "turnover": null,
-        "market_cap": 42360.83,
-        "pe": 17.37,
+        "market_cap": 42393.24,
+        "pe": 17.38,
         "cash_flow": 226.65,
-        "macd": 0.0535,
-        "macd_signal": -0.4327,
-        "macd_histogram": 0.9725,
-        "rsi": 54.48,
+        "macd": 0.0747,
+        "macd_signal": -0.4285,
+        "macd_histogram": 1.0063,
+        "rsi": 54.67,
         "ma": {
-          "MA5": 340.59,
-          "MA10": 342.43,
-          "MA20": 339.41,
-          "MA60": 343.59
+          "MA5": 340.64,
+          "MA10": 342.46,
+          "MA20": 339.42,
+          "MA60": 343.6
         },
         "main_net_flow": null
       },
@@ -99,25 +158,25 @@
         "symbol": "CRCL",
         "industry": "Capital Markets",
         "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
-        "price": 83.82,
+        "price": 82.41,
         "open": 85.72,
         "high": 86.95,
-        "low": 83.07,
-        "change_pct": 0.14,
-        "volume": 2459007,
+        "low": 82.4,
+        "change_pct": -1.54,
+        "volume": 5539666,
         "turnover": null,
-        "market_cap": 228.62,
-        "pe": 16.81,
+        "market_cap": 224.64,
+        "pe": 16.52,
         "cash_flow": 2.06,
-        "macd": 0.7676,
-        "macd_signal": 2.3689,
-        "macd_histogram": -3.2026,
-        "rsi": 46.08,
+        "macd": 0.6551,
+        "macd_signal": 2.3464,
+        "macd_histogram": -3.3826,
+        "rsi": 44.79,
         "ma": {
-          "MA5": 87.06,
-          "MA10": 89.3,
-          "MA20": 91.06,
-          "MA60": 77.98
+          "MA5": 86.78,
+          "MA10": 89.16,
+          "MA20": 90.99,
+          "MA60": 77.96
         },
         "main_net_flow": null
       },
@@ -128,23 +187,23 @@
         "symbol": "MP",
         "industry": "Other Industrial Metals & Mining",
         "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
-        "price": 48.3,
+        "price": 48.21,
         "open": 45.95,
-        "high": 48.58,
+        "high": 48.67,
         "low": 45.93,
-        "change_pct": 6.32,
-        "volume": 1539430,
+        "change_pct": 6.12,
+        "volume": 3940346,
         "turnover": null,
-        "market_cap": 86.02,
-        "pe": 55.27,
+        "market_cap": 85.86,
+        "pe": 55.17,
         "cash_flow": 4.33,
-        "macd": -1.6321,
-        "macd_signal": -1.2615,
-        "macd_histogram": -0.7412,
-        "rsi": 44.17,
+        "macd": -1.6393,
+        "macd_signal": -1.2629,
+        "macd_histogram": -0.7527,
+        "rsi": 43.93,
         "ma": {
-          "MA5": 47.66,
-          "MA10": 48.49,
+          "MA5": 47.64,
+          "MA10": 48.48,
           "MA20": 50.41,
           "MA60": 50.64
         },
@@ -157,25 +216,25 @@
         "symbol": "PLTR",
         "industry": "Software - Infrastructure",
         "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
-        "price": 189.29,
+        "price": 188.65,
         "open": 187.93,
-        "high": 190.68,
+        "high": 190.99,
         "low": 187.0,
-        "change_pct": 1.24,
-        "volume": 3529938,
+        "change_pct": 0.9,
+        "volume": 8835777,
         "turnover": null,
-        "market_cap": 4548.51,
-        "pe": 160.41,
+        "market_cap": 4533.49,
+        "pe": 159.88,
         "cash_flow": 21.59,
-        "macd": 5.8777,
-        "macd_signal": 5.4886,
-        "macd_histogram": 0.7782,
-        "rsi": 62.3,
+        "macd": 5.8275,
+        "macd_signal": 5.4786,
+        "macd_histogram": 0.6978,
+        "rsi": 61.8,
         "ma": {
-          "MA5": 189.2,
-          "MA10": 185.97,
-          "MA20": 178.96,
-          "MA60": 161.33
+          "MA5": 189.07,
+          "MA10": 185.91,
+          "MA20": 178.93,
+          "MA60": 161.32
         },
         "main_net_flow": null
       },
@@ -186,25 +245,25 @@
         "symbol": "NOW",
         "industry": "Software - Application",
         "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
-        "price": 133.68,
+        "price": 134.19,
         "open": 129.75,
-        "high": 133.72,
+        "high": 135.06,
         "low": 128.85,
-        "change_pct": 2.87,
-        "volume": 1985817,
+        "change_pct": 3.27,
+        "volume": 4956599,
         "turnover": null,
-        "market_cap": 1382.02,
-        "pe": 83.55,
+        "market_cap": 1387.34,
+        "pe": 83.87,
         "cash_flow": 51.49,
-        "macd": 1.2558,
-        "macd_signal": 2.7685,
-        "macd_histogram": -3.0255,
-        "rsi": 49.91,
+        "macd": 1.2968,
+        "macd_signal": 2.7767,
+        "macd_histogram": -2.9597,
+        "rsi": 50.47,
         "ma": {
-          "MA5": 133.69,
-          "MA10": 135.79,
-          "MA20": 136.73,
-          "MA60": 123.89
+          "MA5": 133.8,
+          "MA10": 135.84,
+          "MA20": 136.75,
+          "MA60": 123.9
         },
         "main_net_flow": null
       },
@@ -215,25 +274,25 @@
         "symbol": "DDOG",
         "industry": "Software - Application",
         "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
-        "price": 272.15,
+        "price": 275.93,
         "open": 270.07,
-        "high": 275.85,
+        "high": 277.5,
         "low": 269.79,
-        "change_pct": 1.34,
-        "volume": 373380,
+        "change_pct": 2.75,
+        "volume": 1144246,
         "turnover": null,
-        "market_cap": 977.22,
-        "pe": 533.63,
+        "market_cap": 990.81,
+        "pe": 541.05,
         "cash_flow": 10.51,
-        "macd": 8.8186,
-        "macd_signal": 3.5886,
-        "macd_histogram": 10.4599,
-        "rsi": 68.58,
+        "macd": 9.1205,
+        "macd_signal": 3.649,
+        "macd_histogram": 10.943,
+        "rsi": 70.02,
         "ma": {
-          "MA5": 266.89,
-          "MA10": 254.44,
-          "MA20": 237.54,
-          "MA60": 246.5
+          "MA5": 267.65,
+          "MA10": 254.82,
+          "MA20": 237.73,
+          "MA60": 246.56
         },
         "main_net_flow": null
       }
@@ -245,14 +304,14 @@
         "name": "Bitcoin",
         "symbol": "BTC",
         "industry": "Smart Contract Platform",
-        "price": 84077,
+        "price": 84070,
         "open": null,
         "high": 85518,
-        "low": 82911,
-        "change_pct": 0.18,
-        "volume": 34240421842,
+        "low": 82951,
+        "change_pct": 1.25,
+        "volume": 34427137997,
         "turnover": null,
-        "market_cap": 16884.28,
+        "market_cap": 16890.1,
         "market_cap_rank": 1,
         "pe": null,
         "funding_rate": null,
@@ -260,24 +319,24 @@
         "etf_inflow": null,
         "etf_outflow": null,
         "etf_net_flow": null,
-        "macd": 2116.4984,
-        "macd_signal": 2205.8789,
-        "macd_histogram": -178.7611,
-        "rsi": 62.68,
+        "macd": 2110.586,
+        "macd_signal": 2204.6965,
+        "macd_histogram": -188.2209,
+        "rsi": 62.47,
         "ma": {
-          "MA5": 84018.68,
-          "MA10": 84570.95,
-          "MA20": 81327.73,
-          "MA60": 75101.22
+          "MA5": 84003.85,
+          "MA10": 84563.54,
+          "MA20": 81324.02,
+          "MA60": 75099.98
         },
         "main_net_flow": null,
         "onchain": {
           "circulating_supply": 20090909.0,
           "total_supply": 20090909.0,
           "circ_ratio": 100.0,
-          "price_change_7d": -1.99759,
-          "price_change_30d": 8.00986,
-          "ath_pct": -33.31,
+          "price_change_7d": 0.01313,
+          "price_change_30d": 6.92695,
+          "ath_pct": -33.32,
           "ath_date": null,
           "categories": [
             "Smart Contract Platform",
@@ -298,14 +357,14 @@
         "name": "Ethereum",
         "symbol": "ETH",
         "industry": "Smart Contract Platform",
-        "price": 2693.02,
+        "price": 2682.95,
         "open": null,
         "high": 2736.98,
         "low": 2657.67,
-        "change_pct": -0.84,
-        "volume": 14491956232,
+        "change_pct": 0.44,
+        "volume": 14215704882,
         "turnover": null,
-        "market_cap": 3286.95,
+        "market_cap": 3275.68,
         "market_cap_rank": 2,
         "pe": null,
         "funding_rate": null,
@@ -313,24 +372,24 @@
         "etf_inflow": null,
         "etf_outflow": null,
         "etf_net_flow": null,
-        "macd": 78.9959,
-        "macd_signal": 85.8772,
-        "macd_histogram": -13.7627,
-        "rsi": 63.03,
+        "macd": 78.0544,
+        "macd_signal": 85.6889,
+        "macd_histogram": -15.2691,
+        "rsi": 62.09,
         "ma": {
-          "MA5": 2688.41,
-          "MA10": 2703.22,
-          "MA20": 2610.58,
-          "MA60": 2344.93
+          "MA5": 2686.05,
+          "MA10": 2702.04,
+          "MA20": 2609.99,
+          "MA60": 2344.73
         },
         "main_net_flow": null,
         "onchain": {
           "circulating_supply": 122092940.74905182,
           "total_supply": 122092940.7490518,
           "circ_ratio": 100.0,
-          "price_change_7d": -0.84194,
-          "price_change_30d": 10.37777,
-          "ath_pct": -45.55,
+          "price_change_7d": 0.81655,
+          "price_change_30d": 8.67456,
+          "ath_pct": -45.76,
           "ath_date": null,
           "categories": [
             "Smart Contract Platform",
@@ -357,68 +416,28 @@
       "published": ""
     },
     {
-      "id": "6c939f3690",
-      "title": "Americans get back to their spending ways. Economy might be speeding up again.",
-      "summary": "Consumer spending snapped back in August after a brief lull, adding to mounting evidence of an acceleration in the U.S. economy despite a series of strains.",
-      "link": "https://www.marketwatch.com/story/americans-get-back-to-their-spending-ways-economy-might-be-speeding-up-again-7884c424?mod=mw_rss_topstories",
+      "id": "8031946d35",
+      "title": "Why the ‘Halloween Indicator’ isn’t working — and what smart investors are doing instead",
+      "summary": "Followers of ‘sell in May and go away’ have lost out on a stock rally",
+      "link": "https://www.marketwatch.com/story/why-the-halloween-indicator-isnt-working-and-what-smart-investors-are-doing-instead-6d758662?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Wed, 30 Sep 2026 14:08:00 GMT"
+      "published": "Wed, 30 Sep 2026 17:40:00 GMT"
     },
     {
-      "id": "783fc95f22",
-      "title": "The No. 1 mistake beginners make with travel cards, according to The Points Guy",
-      "summary": "The Points Guy’s Brian Kelly gave me a crash course in annual fees and redemptions to offset rising travel costs",
-      "link": "https://www.marketwatch.com/story/the-no-1-mistake-beginners-make-with-travel-cards-according-to-the-points-guy-3502e859?mod=mw_rss_topstories",
+      "id": "a0f8538587",
+      "title": "These bond strategies can help you get a safe 5% return on your cash",
+      "summary": "With U.S. Treasury yields on the rise, financial planners say they’re seeing a growing interest in bonds, especially among investors looking to secure fixed income in retirement.",
+      "link": "https://www.marketwatch.com/story/these-bond-strategies-can-help-you-get-a-safe-5-return-on-your-cash-5fa45ccd?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Wed, 30 Sep 2026 14:03:00 GMT"
+      "published": "Wed, 30 Sep 2026 17:38:00 GMT"
     },
     {
-      "id": "8ecba12662",
-      "title": "‘I’d rather be on a beach in Bali’: My husband resents my $8 million net worth. Should I pay for his retirement?",
-      "summary": "“We have an ironclad prenup.”",
-      "link": "https://www.marketwatch.com/story/i-feel-like-hes-holding-me-back-i-have-8-million-my-husband-resents-my-success-should-i-pay-for-more-things-08a4221b?mod=mw_rss_topstories",
+      "id": "9587523741",
+      "title": "Trump touts economic wins in battleground states — like a $54 billion Alaskan pipeline — as the midterms draw closer",
+      "summary": "President Donald Trump is spending time this week talking up big job-creating projects in battleground states.",
+      "link": "https://www.marketwatch.com/story/trump-touts-economic-wins-in-battleground-states-like-a-54-billion-alaskan-pipeline-as-the-midterms-draw-closer-46db0149?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Wed, 30 Sep 2026 14:00:00 GMT"
-    },
-    {
-      "id": "9c39dea743",
-      "title": "Major car rivals are teaming up to solve the biggest EV roadblock: Reliable charging",
-      "summary": "A coalition of carmakers says that in nine months, it has doubled the number of charging ports it offers — although its network size still pales in comparison to Tesla’s.",
-      "link": "https://www.marketwatch.com/story/major-car-rivals-are-teaming-up-to-solve-the-biggest-ev-roadblock-reliable-charging-a11b70c0?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Wed, 30 Sep 2026 13:37:00 GMT"
-    },
-    {
-      "id": "7f7731e7f0",
-      "title": "‘I’m afraid of human stupidity’: Why this top economist prefers U.S. tech and gold over bonds",
-      "summary": "A prominent economist doesn’t fear artificial intelligence, but fully embraces it in portfolios. He feels far differently about government debt.",
-      "link": "https://www.marketwatch.com/story/im-afraid-of-human-stupidity-why-this-top-economist-prefers-u-s-tech-and-gold-over-bonds-30299219?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Wed, 30 Sep 2026 13:33:00 GMT"
-    },
-    {
-      "id": "eecefb2f35",
-      "title": "‘I’m never selling’: I’m 47 and buy bitcoin with every dollar I earn. Am I crazy?",
-      "summary": "“When my paycheck lands, it takes a detour through bitcoin.”",
-      "link": "https://www.marketwatch.com/story/im-never-selling-im-47-and-buy-bitcoin-with-every-dollar-i-earn-am-i-crazy-364d2a64?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Wed, 30 Sep 2026 13:30:00 GMT"
-    },
-    {
-      "id": "c0fd9d780c",
-      "title": "How Amazon’s stock can fight off the AI threat and soar 46%",
-      "summary": "Some investors worry that AI agents pose a risk to Amazon, but a Rosenblatt analyst thinks the company “can navigate this period of transition largely unaffected.”",
-      "link": "https://www.marketwatch.com/story/how-amazons-stock-can-fight-off-the-ai-threat-and-soar-46-5af77a03?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Wed, 30 Sep 2026 13:24:00 GMT"
-    },
-    {
-      "id": "ee8bc6d29e",
-      "title": "U.S. inflation rises, keeping pressure on Fed",
-      "summary": "The main inflation gauge used by the Federal Reserve to set U.S. interest rates rose sharply in August, underscoring why the central bank raised interest rates earlier this month for the first time in",
-      "link": "https://www.marketwatch.com/story/inflation-rises-again-and-keeps-pressure-on-fed-f64d2ced?mod=mw_rss_topstories",
-      "source": "feeds.marketwatch.com",
-      "published": "Wed, 30 Sep 2026 13:11:00 GMT"
+      "published": "Wed, 30 Sep 2026 17:37:00 GMT"
     },
     {
       "id": "808aec630b",
@@ -426,225 +445,183 @@
       "summary": "“Generally, the advice I’ve read says not to sell because I have a low-interest-rate mortgage.”",
       "link": "https://www.marketwatch.com/story/i-have-a-low-interest-rate-im-80-years-old-should-i-move-out-of-my-house-because-of-dangerous-stairs-389c3c7b?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Wed, 30 Sep 2026 13:00:00 GMT"
+      "published": "Wed, 30 Sep 2026 17:31:00 GMT"
     },
     {
-      "id": "c93d09f002",
-      "title": "Here’s the most you should be spending on your car payment, whether you make $60,000 or over $150,000",
-      "summary": "For car buyers today, saving over a few years for a large down payment can be critical to reducing the amount they borrow and the length of their loan",
-      "link": "https://www.marketwatch.com/story/heres-the-most-you-should-be-spending-on-your-car-payment-whether-you-make-60-000-or-over-150-000-ee1c228c?mod=mw_rss_topstories",
+      "id": "43aa984c9e",
+      "title": "Former NFL players are nearly four times as likely to die with brain damage. Is it time to boycott football?",
+      "summary": "New research says the problem is worse than we thought.",
+      "link": "https://www.marketwatch.com/story/former-nfl-players-are-nearly-four-times-as-likely-to-die-with-brain-damage-is-it-time-to-boycott-football-ba886e44?mod=mw_rss_topstories",
       "source": "feeds.marketwatch.com",
-      "published": "Wed, 30 Sep 2026 13:00:00 GMT"
+      "published": "Wed, 30 Sep 2026 17:15:00 GMT"
     },
     {
-      "id": "f4d09b52e5",
-      "title": "Why is Spyre Therapeutics stock rallying today?",
-      "summary": "",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-spyre-therapeutics-stock-rallying-today-93CH-4925410",
-      "source": "www.investing.com",
-      "published": "2026-09-30 14:10:51"
+      "id": "e51c7263fe",
+      "title": "The U.S. economy is defying gravity. Here’s all the good news.",
+      "summary": "Wall Street just got a health check on the U.S. economy — and almost all the news was positive.",
+      "link": "https://www.marketwatch.com/story/the-u-s-economy-is-defying-gravity-heres-all-the-good-news-8b58fc7b?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 30 Sep 2026 17:07:00 GMT"
     },
     {
-      "id": "48b260139f",
-      "title": "Synopsys signs $1B+ multi-year custom silicon IP agreement with AWS",
-      "summary": "",
-      "link": "https://www.investing.com/news/stock-market-news/synopsys-signs-1b-multiyear-custom-silicon-ip-agreement-with-aws-4925293",
-      "source": "www.investing.com",
-      "published": "2026-09-30 14:10:16"
+      "id": "6659672e22",
+      "title": "Gold is supposed to be a safe haven when inflation surges. So why isn’t it working that way now?",
+      "summary": "Every investor knows the drill: When markets buckle, buy gold. But in September, that playbook hasn’t worked as expected.",
+      "link": "https://www.marketwatch.com/story/gold-is-supposed-to-be-a-safe-haven-when-inflation-surges-so-why-isnt-it-working-that-way-now-45cbb07b?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 30 Sep 2026 16:51:00 GMT"
     },
     {
-      "id": "6e77711fe7",
-      "title": "Bruker Corporation stock hits 52-week high at 65.48 USD",
-      "summary": "",
-      "link": "https://www.investing.com/news/company-news/bruker-corporation-stock-hits-52week-high-at-6548-usd-93CH-4925409",
-      "source": "www.investing.com",
-      "published": "2026-09-30 14:08:02"
+      "id": "46ec86e9b9",
+      "title": "Wall Street may be sleeping on this networking stock tied to Google and OpenAI",
+      "summary": "A critical bottleneck in data centers is creating a massive runway for networking stocks like Celestica, according to Bernstein.",
+      "link": "https://www.marketwatch.com/story/wall-street-may-be-sleeping-on-this-networking-stock-tied-to-google-and-openai-1cb9741f?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 30 Sep 2026 16:29:00 GMT"
     },
     {
-      "id": "8ac964c514",
-      "title": "Barclays downgrades Mobileye, cites lack of progress on advanced wins",
-      "summary": "",
-      "link": "https://www.investing.com/news/stock-market-news/barclays-downgrades-mobileye-cites-lack-of-progress-on-advanced-wins-4925408",
-      "source": "www.investing.com",
-      "published": "2026-09-30 14:07:31"
+      "id": "a53998adf5",
+      "title": "Dolly Parton planned for her estate. The fight with her nephew shows why that matters.",
+      "summary": "It’s important to have guardrails around your legacy.",
+      "link": "https://www.marketwatch.com/story/dolly-parton-planned-for-her-estate-the-fight-with-her-nephew-shows-why-that-matters-b7e57c26?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 30 Sep 2026 16:20:00 GMT"
     },
     {
-      "id": "8b28494057",
-      "title": "Why is Firefly Aerospace stock surging today?",
-      "summary": "",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-firefly-aerospace-stock-surging-today-93CH-4925407",
-      "source": "www.investing.com",
-      "published": "2026-09-30 14:07:24"
+      "id": "e6218488ce",
+      "title": "Saving your retirement could come down to this simple writing exercise",
+      "summary": "A “retirement policy statement” lays out instructions that you can stick to.",
+      "link": "https://www.marketwatch.com/story/saving-your-retirement-could-come-down-to-this-simple-writing-exercise-c25734a9?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 30 Sep 2026 16:11:00 GMT"
     },
     {
-      "id": "268a13f42f",
-      "title": "Australian home prices fall for sixth straight month in September, sales tumble",
+      "id": "4d4c585d30",
+      "title": "Pemex crude oil exports fall 45% in August amid refining push",
       "summary": "",
-      "link": "https://www.investing.com/news/economy-news/australian-home-prices-fall-for-sixth-straight-month-in-september-sales-tumble-4925406",
+      "link": "https://www.investing.com/news/commodities-news/pemex-crude-oil-exports-fall-45-in-august-amid-refining-push-93CH-4925674",
       "source": "www.investing.com",
-      "published": "2026-09-30 14:07:04"
+      "published": "2026-09-30 17:26:29"
     },
     {
-      "id": "79d1de0066",
-      "title": "Earnings call transcript: Cal-Maine Foods Q1 2026 loss widens as egg prices slump",
+      "id": "815032fa90",
+      "title": "DTE Energy stock hits 52-week low at 17.85 USD",
       "summary": "",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-calmaine-foods-q1-2026-loss-widens-as-egg-prices-slump-93CH-4925405",
+      "link": "https://www.investing.com/news/company-news/dte-energy-stock-hits-52week-low-at-1785-usd-93CH-4925673",
       "source": "www.investing.com",
-      "published": "2026-09-30 14:06:55"
+      "published": "2026-09-30 17:25:03"
     },
     {
-      "id": "4acf9124b5",
-      "title": "Russia unleashes heavy attack on Ukrainian energy grid as winter looms",
+      "id": "bcf9e33aae",
+      "title": "BTIG cuts Connect Biopharma stock price target on trial timeline",
       "summary": "",
-      "link": "https://www.investing.com/news/commodities-news/russia-hits-power-plants-kills-four-leaves-kyiv-under-smoke-4924426",
+      "link": "https://www.investing.com/news/analyst-ratings/btig-cuts-connect-biopharma-stock-price-target-on-trial-timeline-93CH-4925672",
       "source": "www.investing.com",
-      "published": "2026-09-30 14:06:43"
+      "published": "2026-09-30 17:24:45"
     },
     {
-      "id": "257f9da5a4",
-      "title": "Gerresheimer Q2 2026 slides show strong recovery, EBITDA up 50%",
+      "id": "6691006a73",
+      "title": "Liquidia loses patent infringement case on two claims",
       "summary": "",
-      "link": "https://www.investing.com/news/company-news/gerresheimer-q2-2026-slides-show-strong-recovery-ebitda-up-50-93CH-4925404",
+      "link": "https://www.investing.com/news/company-news/liquidia-loses-patent-infringement-case-on-two-claims-93CH-4925671",
       "source": "www.investing.com",
-      "published": "2026-09-30 14:06:17"
+      "published": "2026-09-30 17:24:30"
     },
     {
-      "id": "a14dd20919",
-      "title": "Eversource at Wolfe Research utilities conference: growth plan gains traction",
+      "id": "87c276e601",
+      "title": "Euronext wheat edges lower as US corn stocks weigh on grains",
       "summary": "",
-      "link": "https://www.investing.com/news/transcripts/eversource-at-wolfe-research-utilities-conference-growth-plan-gains-traction-93CH-4925403",
+      "link": "https://www.investing.com/news/commodities-news/euronext-wheat-edges-lower-as-us-corn-stocks-weigh-on-grains-93CH-4925669",
       "source": "www.investing.com",
-      "published": "2026-09-30 14:05:46"
+      "published": "2026-09-30 17:21:42"
+    },
+    {
+      "id": "6f14c15ba0",
+      "title": "HSBC upgrades Target stock rating on earnings recovery potential",
+      "summary": "",
+      "link": "https://www.investing.com/news/analyst-ratings/hsbc-upgrades-target-stock-rating-on-earnings-recovery-potential-93CH-4925668",
+      "source": "www.investing.com",
+      "published": "2026-09-30 17:20:44"
+    },
+    {
+      "id": "2ec3b0080a",
+      "title": "Morgan Stanley Direct Lending Fund stock hits 52-week low at 13.65 USD",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/morgan-stanley-direct-lending-fund-stock-hits-52week-low-at-1365-usd-93CH-4925667",
+      "source": "www.investing.com",
+      "published": "2026-09-30 17:20:41"
+    },
+    {
+      "id": "39157506a0",
+      "title": "ECB’s Lagarde rules out 2027 French presidential bid",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/ecbs-lagarde-rules-out-2027-french-presidential-bid-93CH-4925666",
+      "source": "www.investing.com",
+      "published": "2026-09-30 17:19:22"
+    },
+    {
+      "id": "1f2b333d7a",
+      "title": "Commerce Secretary Lutnick reports $250 million in 2025 income",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/commerce-secretary-lutnick-reports-250-million-in-2025-income-4925665",
+      "source": "www.investing.com",
+      "published": "2026-09-30 17:18:59"
+    },
+    {
+      "id": "9493153904",
+      "title": "Israel to ramp up pilot checks after flydubai scare",
+      "summary": "",
+      "link": "https://www.investing.com/news/commodities-news/israel-to-ramp-up-pilot-checks-after-flydubai-scare-4925664",
+      "source": "www.investing.com",
+      "published": "2026-09-30 17:18:40"
     }
   ],
   "briefing": {
-    "date": "2026-09-30",
-    "update_time": "2026-09-30 04:51:05",
+    "date": "2026-10-01",
+    "update_time": "2026-09-30 17:45:37",
     "candidate_count": 20,
-    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-09-30\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 GPT-6.1 Sol：用五分之一的价格，买到\"准 Astra 级\"智能 (来源: HackerNews)\n- **核心干货**：OpenAI 发布 GPT-6.1 Sol，官方口径是\"Near-Astra intelligence\"——即逼近其旗舰 Astra 模型的推理能力，但定价仅为后者的 20%。这基本等于把上一代顶级模型的智商，塞进了这一代中端模型的价格带里。\n- **毒舌/硬核点评**：翻译一下就是：旗舰模型的护城河保质期，已经短到按季度计算了。\"接近旗舰\"这四个字，是 OpenAI 对上一代旗舰最体面的死刑判决书。\n- **🔗 传送门**：[点击直达原链接](https://openai.com/index/introducing-gpt-6-1-sol/)\n\n---\n\n### 2. 📌 德里把电网线损从 50% 干到 5% (来源: HackerNews / IEEE Spectrum)\n- **核心干货**：德里完成了电力系统史上堪称奇迹的改造——输配电损耗从骇人的 50% 压到 5%。这不是换了几根电线的事，而是智能电表、实时计量、反窃电执法与配电网络重构的系统性工程，直接让一座巨型城市从\"电不够用\"变成\"电够用还便宜\"。\n- **毒舌/硬核点评**：比起硅谷天天喊的\"AI 改变世界\"，德里用电表+执法把物理世界的 45% 浪费直接干掉——这才是真正的降本增效，且没有一行大模型代码。\n- **🔗 传送门**：[点击直达原链接](https://spectrum.ieee.org/delhi-electricity-loss)\n\n---\n\n### 3. 📌 NASA 秘密重启 SR-71 项目，请回退休老工程师 (来源: HackerNews / Aviation Week)\n- **核心干货**：NASA 被曝邀请多位已退休的 SR-71A\"黑鸟\"项目老员工，协助一项秘密的高速/高超声速飞行器重启计划。当年的工程经验、材料工艺与气动数据，许多根本没留下完整文档，只能靠人脑\"逆向考古\"。\n- **毒舌/硬核点评**：最硬核的技术债，是老工程师的脑子——人一走，知识就进了焚化炉。这次重启与其说是造飞机，不如说是抢救一份即将失传的手艺。\n- **🔗 传送门**：[点击直达原链接](https://aviationweek.com/defense/aircraft-propulsion/nasa-asked-several-former-sr-71a-staffers-help-secret-restart)\n\n---\n\n### 🗣️ 今日顶男金句\n> 真正的技术护城河，不是领先的那一年，而是别人连你怎么领先的都学不会——所以趁脑子还热，赶紧把知识写成文档，别等退休了才被高价请回来\"口述历史\"。",
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-01\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 新一代 Spectre-v2 \"BTR\" 攻击攻破 Linux 内存防线 (来源: HackerNews / 安全研究)\n- **核心干货**：VUSec 与 Sant'Anna 高等研究院联合披露了 Spectre-v2 的全新变种 \"BTR\"，专门针对浏览器 JIT 引擎、语言运行时和操作系统内核下手，且能绕过现有全部防御机制，在多种 CPU 厂商平台上成功泄露 Linux 内存数据。这不是实验室里的玩具，而是又一次证明\"幽灵\"根本没走远。\n- **毒舌/硬核点评**：CPU 厂商花十年打补丁，学术界花一个下午出新洞。硬件层面的投机执行就跟前任一样，你以为翻篇了，它总能在你最放松的时候再捅你一刀。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/new-spectre-v2-btr-attack-leaks-linux.html)\n\n---\n\n### 2. 📌 AI 编程助手把 13,000 张内部截图送上 GitHub 公海 (来源: HackerNews / 安全新闻)\n- **核心干货**：安全公司 Glow 发现，开发者让 AI 编程助手截取代码变更截图用于 review 时，这些 Agent 把超过 13,000 张企业内部图片上传至公开 GitHub 仓库，涉及 300+ 组织的客户账单记录等敏感信息。你的 AI 助手不光会写 bug，还会帮你开源商业机密。\n- **毒舌/硬核点评**：人类花二十年学\"不要把密钥提交到 Git\"，AI 花两秒钟学会了\"把整个财务部截图上传\"。所谓的\"生产力工具\"，本质上是把人类的低级错误自动化、规模化——恭喜，你的泄露速度也提升了 10 倍。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/ai-coding-agents-exposed-13000-internal.html)\n\n---\n\n### 3. 📌 Cisco SD-WAN Manager 零日认证绕过正被在野利用 (来源: HackerNews / 安全新闻)\n- **核心干货**：Cisco 发布紧急公告，确认 CVE-2026-76504 正被攻击者积极利用。该漏洞允许远程未认证攻击者绕过 SD-WAN Manager 的认证机制，而这是企业管理整个 SD-WAN 网络的中枢。CVSS 评分虽未列出，但\"零日 + 在野利用 + 网络管理中枢\"这三个关键词凑在一起，已经够让运维团队今晚加班了。\n- **毒舌/硬核点评**：企业花大价钱上 SD-WAN 追求\"智能组网\"，结果攻击者用一个未认证请求就能拿到管理面板的钥匙。所谓\"软件定义一切\"，包括软件定义你的灾难恢复时间表。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/cisco-warns-of-attackers-exploiting.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> \"安全圈有个永恒的悖论：厂商用三年把产品做复杂，攻击者用三天把复杂变成漏洞。所以别问'我的系统安全吗'，要问'我的系统值得被黑吗'——如果你的答案是'不值得'，恭喜，你可能已经安全了，因为连黑客都懒得看你一眼。\"",
     "briefing_items": [
       {
-        "title": "GPT-6.1 Sol：用五分之一的价格，买到\"准 Astra 级\"智能",
-        "source": "HackerNews",
-        "summary": "OpenAI 发布 GPT-6.1 Sol，官方口径是\"Near-Astra intelligence\"——即逼近其旗舰 Astra 模型的推理能力，但定价仅为后者的 20%。这基本等于把上一代顶级模型的智商，塞进了这一代中端模型的价格带里。",
-        "commentary": "翻译一下就是：旗舰模型的护城河保质期，已经短到按季度计算了。\"接近旗舰\"这四个字，是 OpenAI 对上一代旗舰最体面的死刑判决书。",
-        "url": "https://openai.com/index/introducing-gpt-6-1-sol/"
+        "title": "新一代 Spectre-v2 \"BTR\" 攻击攻破 Linux 内存防线",
+        "source": "HackerNews / 安全研究",
+        "summary": "VUSec 与 Sant'Anna 高等研究院联合披露了 Spectre-v2 的全新变种 \"BTR\"，专门针对浏览器 JIT 引擎、语言运行时和操作系统内核下手，且能绕过现有全部防御机制，在多种 CPU 厂商平台上成功泄露 Linux 内存数据。这不是实验室里的玩具，而是又一次证明\"幽灵\"根本没走远。",
+        "commentary": "CPU 厂商花十年打补丁，学术界花一个下午出新洞。硬件层面的投机执行就跟前任一样，你以为翻篇了，它总能在你最放松的时候再捅你一刀。",
+        "url": "https://thehackernews.com/2026/09/new-spectre-v2-btr-attack-leaks-linux.html"
       },
       {
-        "title": "德里把电网线损从 50% 干到 5%",
-        "source": "HackerNews / IEEE Spectrum",
-        "summary": "德里完成了电力系统史上堪称奇迹的改造——输配电损耗从骇人的 50% 压到 5%。这不是换了几根电线的事，而是智能电表、实时计量、反窃电执法与配电网络重构的系统性工程，直接让一座巨型城市从\"电不够用\"变成\"电够用还便宜\"。",
-        "commentary": "比起硅谷天天喊的\"AI 改变世界\"，德里用电表+执法把物理世界的 45% 浪费直接干掉——这才是真正的降本增效，且没有一行大模型代码。",
-        "url": "https://spectrum.ieee.org/delhi-electricity-loss"
+        "title": "AI 编程助手把 13,000 张内部截图送上 GitHub 公海",
+        "source": "HackerNews / 安全新闻",
+        "summary": "安全公司 Glow 发现，开发者让 AI 编程助手截取代码变更截图用于 review 时，这些 Agent 把超过 13,000 张企业内部图片上传至公开 GitHub 仓库，涉及 300+ 组织的客户账单记录等敏感信息。你的 AI 助手不光会写 bug，还会帮你开源商业机密。",
+        "commentary": "人类花二十年学\"不要把密钥提交到 Git\"，AI 花两秒钟学会了\"把整个财务部截图上传\"。所谓的\"生产力工具\"，本质上是把人类的低级错误自动化、规模化——恭喜，你的泄露速度也提升了 10 倍。",
+        "url": "https://thehackernews.com/2026/09/ai-coding-agents-exposed-13000-internal.html"
       },
       {
-        "title": "NASA 秘密重启 SR-71 项目，请回退休老工程师",
-        "source": "HackerNews / Aviation Week",
-        "summary": "NASA 被曝邀请多位已退休的 SR-71A\"黑鸟\"项目老员工，协助一项秘密的高速/高超声速飞行器重启计划。当年的工程经验、材料工艺与气动数据，许多根本没留下完整文档，只能靠人脑\"逆向考古\"。",
-        "commentary": "最硬核的技术债，是老工程师的脑子——人一走，知识就进了焚化炉。这次重启与其说是造飞机，不如说是抢救一份即将失传的手艺。",
-        "url": "https://aviationweek.com/defense/aircraft-propulsion/nasa-asked-several-former-sr-71a-staffers-help-secret-restart"
-      },
-      {
-        "quote": "真正的技术护城河，不是领先的那一年，而是别人连你怎么领先的都学不会——所以趁脑子还热，赶紧把知识写成文档，别等退休了才被高价请回来\"口述历史\"。"
+        "title": "Cisco SD-WAN Manager 零日认证绕过正被在野利用",
+        "source": "HackerNews / 安全新闻",
+        "summary": "Cisco 发布紧急公告，确认 CVE-2026-76504 正被攻击者积极利用。该漏洞允许远程未认证攻击者绕过 SD-WAN Manager 的认证机制，而这是企业管理整个 SD-WAN 网络的中枢。CVSS 评分虽未列出，但\"零日 + 在野利用 + 网络管理中枢\"这三个关键词凑在一起，已经够让运维团队今晚加班了。",
+        "commentary": "企业花大价钱上 SD-WAN 追求\"智能组网\"，结果攻击者用一个未认证请求就能拿到管理面板的钥匙。所谓\"软件定义一切\"，包括软件定义你的灾难恢复时间表。",
+        "url": "https://thehackernews.com/2026/09/cisco-warns-of-attackers-exploiting.html"
       }
     ],
     "candidates": [
-      {
-        "id": "hn:49896586",
-        "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
-        "summary": "",
-        "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
-        "source": "Hacker News",
-        "score": 844,
-        "comments": 761
-      },
-      {
-        "id": "hn:49892245",
-        "title": "How Delhi cut electricity loss from 50 to 5 percent",
-        "summary": "",
-        "url": "https://spectrum.ieee.org/delhi-electricity-loss",
-        "source": "Hacker News",
-        "score": 469,
-        "comments": 272
-      },
-      {
-        "id": "hn:49899090",
-        "title": "U.S. postal inspectors shut down website selling counterfeit postage labels",
-        "summary": "",
-        "url": "https://postalemployeenetwork.com/news/2026/09/26/u-s-postal-inspectors-shut-down-website-selling-millions-of-counterfeit-postage-labels/",
-        "source": "Hacker News",
-        "score": 194,
-        "comments": 117
-      },
-      {
-        "id": "hn:49896604",
-        "title": "Dots: Always-on agents",
-        "summary": "",
-        "url": "https://openai.com/index/introducing-dots/",
-        "source": "Hacker News",
-        "score": 505,
-        "comments": 378
-      },
-      {
-        "id": "hn:49895304",
-        "title": "PS5 Relapse Exploit",
-        "summary": "",
-        "url": "https://github.com/ntfargo/Relapse-Exploit",
-        "source": "Hacker News",
-        "score": 263,
-        "comments": 145
-      },
       {
         "id": "hn:49901736",
         "title": "Livenerf: Has Opus 5.5 been nerfed yet?",
         "summary": "",
         "url": "https://github.com/ninjahawk/livenerf",
         "source": "Hacker News",
-        "score": 379,
-        "comments": 157
+        "score": 826,
+        "comments": 342
       },
       {
-        "id": "hn:49893509",
-        "title": "America.gov",
+        "id": "hn:49906637",
+        "title": "You Said No MCP",
         "summary": "",
-        "url": "https://america.gov/",
+        "url": "https://earendil.com/posts/you-said-no-mcp/",
         "source": "Hacker News",
-        "score": 463,
-        "comments": 369
-      },
-      {
-        "id": "lob:tyivfg",
-        "title": "CoW — a stacking window manager for Wayland",
-        "summary": "",
-        "url": "https://cow-wm.codeberg.page/cow/",
-        "source": "Lobste.rs",
-        "score": 109,
-        "comments": 17,
-        "tags": [
-          "freebsd",
-          "linux"
-        ]
-      },
-      {
-        "id": "lob:lfqtgh",
-        "title": "Bill Gates tries to install Movie Maker",
-        "summary": "",
-        "url": "https://www.techemails.com/p/bill-gates-tries-to-install-movie-maker",
-        "source": "Lobste.rs",
-        "score": 138,
-        "comments": 27,
-        "tags": [
-          "windows"
-        ]
-      },
-      {
-        "id": "hn:49898778",
-        "title": "Show HN: Real-time Solar System with 526k asteroids and all tracked satellites",
-        "summary": "",
-        "url": "https://space.bl2.net/",
-        "source": "Hacker News",
-        "score": 168,
-        "comments": 38
+        "score": 467,
+        "comments": 273
       },
       {
         "id": "lob:dayzwt",
@@ -652,110 +629,181 @@
         "summary": "",
         "url": "https://wolfgirl.dev/blog/2026-09-29-pining-for-arc-downcasting-in-rust/",
         "source": "Lobste.rs",
-        "score": 31,
-        "comments": 11,
+        "score": 50,
+        "comments": 12,
         "tags": [
           "rust"
         ]
       },
       {
-        "id": "hn:49897993",
-        "title": "Vermont replacing power plants with home batteries",
-        "summary": "See also <a href=\"https:&#x2F;&#x2F;electrek.co&#x2F;2026&#x2F;07&#x2F;28&#x2F;vermonts-largest-energy-source-is-now-a-virtual-power-plant&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;electrek.co&#x2F;2026&#x2F;07&#x2F;28&#x2F;vermonts-largest-energy-sourc...</a>",
-        "url": "https://www.bbc.com/future/article/20260928-a-virtual-power-plant-hidden-in-vermont-homes-is-keeping-the-lights-on-during-storms",
-        "source": "Hacker News",
-        "score": 124,
-        "comments": 111
-      },
-      {
-        "id": "lob:vlywx2",
-        "title": "My experience writing automated tests for a SPA",
+        "id": "lob:odrfgk",
+        "title": "How to speed up the Rust compiler in September 2026",
         "summary": "",
-        "url": "https://reecoute.fr/tech_blog/2026-09-28_my-experience-writing-automated-tests-for-a-spa",
+        "url": "https://nnethercote.github.io/2026/09/30/how-to-speed-up-the-rust-compiler-in-september-2026.html",
         "source": "Lobste.rs",
-        "score": 34,
-        "comments": 10,
+        "score": 52,
+        "comments": 5,
         "tags": [
-          "testing",
-          "web"
+          "compilers",
+          "rust"
         ]
       },
       {
-        "id": "rss:fc3a442dc3",
-        "title": "Apple Patches CoreGraphics Flaw Possibly Exploited in Targeted Attacks",
-        "summary": "Apple has released security updates to address a vulnerability in older versions of iOS, iPadOS, and macOS that it said may have been exploited in targeted attacks.\n\nThe vulnerability, tracked as CVE-2026-86950, refers to an out-of-bounds write impacting the CoreGraphics component that could lead to",
-        "url": "https://thehackernews.com/2026/09/apple-patches-coregraphics-flaw.html",
+        "id": "hn:49883970",
+        "title": "I Could've Accessed 17T Microsoft Records",
+        "summary": "",
+        "url": "https://blog.faav.net/how-i-couldve-accessed-17-trillion-microsoft-records",
+        "source": "Hacker News",
+        "score": 122,
+        "comments": 56
+      },
+      {
+        "id": "lob:tyivfg",
+        "title": "CoW — a stacking window manager for Wayland",
+        "summary": "",
+        "url": "https://cow-wm.codeberg.page/cow/",
+        "source": "Lobste.rs",
+        "score": 132,
+        "comments": 17,
+        "tags": [
+          "freebsd",
+          "linux"
+        ]
+      },
+      {
+        "id": "lob:hxmtyv",
+        "title": "Deser: Rethinking Rust Serialization",
+        "summary": "",
+        "url": "https://lucumr.pocoo.org/2026/9/29/deser/",
+        "source": "Lobste.rs",
+        "score": 40,
+        "comments": 6,
+        "tags": [
+          "rust",
+          "vibecoding"
+        ]
+      },
+      {
+        "id": "lob:zknqct",
+        "title": "Two Kinds of SQL Query Builders",
+        "summary": "",
+        "url": "https://mechanicalrabbit.github.io/FunSQL.jl/stable/two-kinds-of-sql-query-builders/#Two-Kinds-of-SQL-Query-Builders",
+        "source": "Lobste.rs",
+        "score": 29,
+        "comments": 16,
+        "tags": [
+          "databases"
+        ]
+      },
+      {
+        "id": "hn:49911995",
+        "title": "Launch HN: Magnitude (YC S25) – Self-optimizing inference engine for agents",
+        "summary": "Hey HN, Anders and Tom here. We&#x27;re building Magnitude, an inference engine for agents that optimizes itself to run as fast as possible on your hardware. It works on Mac, Linux, and Windows on any hardware and is up to 2x faster than llama.cpp.<p>We&#x27;re both software engineers and previously",
+        "url": "https://github.com/magnitudedev/magnitude",
+        "source": "Hacker News",
+        "score": 5,
+        "comments": 1
+      },
+      {
+        "id": "lob:nicozi",
+        "title": "The Cuckoo's Egg",
+        "summary": "",
+        "url": "https://en.wikipedia.org/wiki/The_Cuckoo%27s_Egg_(book)",
+        "source": "Lobste.rs",
+        "score": 30,
+        "comments": 18,
+        "tags": [
+          "book",
+          "security"
+        ]
+      },
+      {
+        "id": "hn:49890707",
+        "title": "Show HN: JBR-001 – An open-source 3D printable desktop robot",
+        "summary": "We built a desktop companion robot that is powered by Arduino UNO Q. Project is open source: source code, 3D printable files and assembly instructions are available at Arduino Project Hub.<p>Robot is equipped with camera, distance sensor, buzzer, moves head and arms with 3 servo motors and has an an",
+        "url": "https://projecthub.arduino.cc/syntheticaidata/jbr-001-a-desktop-companion-robot-powered-by-arduino-uno-q-b11c96",
+        "source": "Hacker News",
+        "score": 103,
+        "comments": 23
+      },
+      {
+        "id": "rss:fe2850382a",
+        "title": "Citrix NetScaler CVE-2026-88772 Exploit Details Show Pre-Auth Path to Shellcode Execution",
+        "summary": "Cybersecurity researchers have disclosed technical details of a recently patched critical security flaw in Citrix NetScaler ADC and Gateway that has come under active exploitation in the wild.\n\nThe vulnerability, tracked as CVE-2026-88772 (CVSS score: 9.5), has been described as a memory overflow bu",
+        "url": "https://thehackernews.com/2026/09/citrix-netscaler-cve-2026-88772-exploit.html",
         "source": "Tech RSS",
         "score": 0
       },
       {
-        "id": "lob:s0x5nd",
-        "title": "Aho-Corasick Algorithm",
+        "id": "rss:a4f467f89d",
+        "title": "New Spectre-v2 BTR Attack Leaks Linux Memory Despite Existing Defenses",
+        "summary": "A group of academics from VUSec and Scuola Superiore Sant'Anna have disclosed details of a new Spectre CPU vulnerability variant that affects Just-In-Time (JIT) engines present in web browsers, language runtimes, and the operating system kernel, across multiple CPU vendors.\n\nThe new Spectre v2 varia",
+        "url": "https://thehackernews.com/2026/09/new-spectre-v2-btr-attack-leaks-linux.html",
+        "source": "Tech RSS",
+        "score": 0
+      },
+      {
+        "id": "hn:49908394",
+        "title": "The last time my family was replaced by technology",
         "summary": "",
-        "url": "https://compiler.club/aho-corasick/",
+        "url": "https://manuel.darcemont.fr/posts/the-last-time-my-family-was-replaced-by-technology/",
+        "source": "Hacker News",
+        "score": 50,
+        "comments": 115
+      },
+      {
+        "id": "hn:49908962",
+        "title": "SDF vs. MSDF vs. Slug: GPU Text Rendering",
+        "summary": "",
+        "url": "https://alphapixeldev.com/sdf-vs-msdf-vs-slug-vs-rive-gpu-text-rendering/",
+        "source": "Hacker News",
+        "score": 75,
+        "comments": 35
+      },
+      {
+        "id": "hn:49909583",
+        "title": "A brief history of the Bloomberg terminal",
+        "summary": "",
+        "url": "https://spectrum.ieee.org/bloomberg-terminal",
+        "source": "Hacker News",
+        "score": 83,
+        "comments": 22
+      },
+      {
+        "id": "rss:64ee4bb03c",
+        "title": "Cisco Warns of Attackers Exploiting Critical Authentication Bypass in SD-WAN Manager",
+        "summary": "Attackers are exploiting a new critical zero-day flaw in Cisco Catalyst SD-WAN Manager, the system companies use to manage their Cisco SD-WAN networks, Cisco said in an&nbsp;advisory&nbsp;on September 30.\n\nThe flaw, CVE-2026-76504, could allow a remote attacker with no login access to use the Manage",
+        "url": "https://thehackernews.com/2026/09/cisco-warns-of-attackers-exploiting.html",
+        "source": "Tech RSS",
+        "score": 0
+      },
+      {
+        "id": "rss:7d52d419c0",
+        "title": "I built a QEMU sandbox to test if a 4B model (Gemma) can act as an autonomous Linux sysadmin — here are the results (2/3 pass rate)",
+        "summary": "What happens when you give an open-weights 4B parameter language model root access to a broken Linux server and tell it to fix the problem?\n\nI built local-agent-sandbox, a lightweight evaluation harness running on pure QEMU and llama.cpp. Here is how the experiment was structured, how the sandboxing",
+        "url": "https://dev.to/chetan_moorthy_b4c5f017cd/i-built-a-qemu-sandbox-to-test-if-a-4b-model-gemma-can-act-as-an-autonomous-linux-sysadmin-here-2fdd",
+        "source": "Tech RSS",
+        "score": 0
+      },
+      {
+        "id": "lob:irijoi",
+        "title": "Differences between `foldl` and `foldr`",
+        "summary": "",
+        "url": "https://blog.haskell.org/foldl-and-foldr/",
         "source": "Lobste.rs",
-        "score": 41,
-        "comments": 8,
+        "score": 18,
+        "comments": 3,
         "tags": [
-          "compsci"
+          "haskell"
         ]
       },
       {
-        "id": "hn:49890733",
-        "title": "NASA asked several former SR-71A staffers to help secret restart",
-        "summary": "",
-        "url": "https://aviationweek.com/defense/aircraft-propulsion/nasa-asked-several-former-sr-71a-staffers-help-secret-restart",
-        "source": "Hacker News",
-        "score": 80,
-        "comments": 91
-      },
-      {
-        "id": "hn:49893002",
-        "title": "Backblaze drive stats for Q2 2026",
-        "summary": "",
-        "url": "https://www.backblaze.com/blog/backblaze-drive-stats-for-q2-2026/",
-        "source": "Hacker News",
-        "score": 122,
-        "comments": 27
-      },
-      {
-        "id": "lob:bctr1m",
-        "title": "Switching To Emacs as a Neovim User",
-        "summary": "",
-        "url": "https://eliasebner.com/blog/thoughts/switching-to-emacs-as-a-neovim-user/",
-        "source": "Lobste.rs",
-        "score": 35,
-        "comments": 4,
-        "tags": [
-          "emacs",
-          "vim"
-        ]
-      },
-      {
-        "id": "arxiv:2609.38178v1",
-        "title": "Skill-Space Shooting for Autonomous Robot Policy Improvement",
-        "summary": "Robots deployed in the physical world must be able to improve beyond their initial training as they encounter new situations and failures. For this improvement to scale across tasks, it must make effective use of experience without requiring human demonstration of each correction. Recent agentic sys",
-        "url": "https://arxiv.org/abs/2609.38178v1",
-        "source": "ArXiv",
-        "categories": [
-          "cs.RO",
-          "cs.AI",
-          "cs.LG"
-        ],
-        "arxiv_id": "2609.38178v1"
-      },
-      {
-        "id": "arxiv:2609.38169v1",
-        "title": "STEPQuant: When and Where Errors Matter in Delta-Rule Recurrent State Quantization",
-        "summary": "Linear attention replaces growing KV caches with fixed-size recurrent states, yet these persistent states can become a substantial memory bottleneck under concurrent serving. Directly quantizing recurrent states to low precision often leads to severe accuracy degradation, as quantization errors prop",
-        "url": "https://arxiv.org/abs/2609.38169v1",
-        "source": "ArXiv",
-        "categories": [
-          "cs.CL",
-          "cs.AI",
-          "cs.LG"
-        ],
-        "arxiv_id": "2609.38169v1"
+        "id": "rss:47e2c34004",
+        "title": "AI Coding Agents Exposed 13,000 Internal Images, Including Billing Records, on GitHub",
+        "summary": "AI coding agents asked to share screenshots of code changes for review have put internal company images in public GitHub repositories, security company Glow said.\n\nIts researchers found more than 13,000 internal images from developers at over 300 organizations, including customer billing records and",
+        "url": "https://thehackernews.com/2026/09/ai-coding-agents-exposed-13000-internal.html",
+        "source": "Tech RSS",
+        "score": 0
       }
     ],
     "ai_curated": true
