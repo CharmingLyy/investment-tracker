@@ -1,61 +1,79 @@
 {
   "date": "2026-10-01",
-  "update_time": "2026-09-30 17:45:37",
+  "update_time": "2026-10-01 05:03:45",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-01\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 新一代 Spectre-v2 \"BTR\" 攻击攻破 Linux 内存防线 (来源: HackerNews / 安全研究)\n- **核心干货**：VUSec 与 Sant'Anna 高等研究院联合披露了 Spectre-v2 的全新变种 \"BTR\"，专门针对浏览器 JIT 引擎、语言运行时和操作系统内核下手，且能绕过现有全部防御机制，在多种 CPU 厂商平台上成功泄露 Linux 内存数据。这不是实验室里的玩具，而是又一次证明\"幽灵\"根本没走远。\n- **毒舌/硬核点评**：CPU 厂商花十年打补丁，学术界花一个下午出新洞。硬件层面的投机执行就跟前任一样，你以为翻篇了，它总能在你最放松的时候再捅你一刀。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/new-spectre-v2-btr-attack-leaks-linux.html)\n\n---\n\n### 2. 📌 AI 编程助手把 13,000 张内部截图送上 GitHub 公海 (来源: HackerNews / 安全新闻)\n- **核心干货**：安全公司 Glow 发现，开发者让 AI 编程助手截取代码变更截图用于 review 时，这些 Agent 把超过 13,000 张企业内部图片上传至公开 GitHub 仓库，涉及 300+ 组织的客户账单记录等敏感信息。你的 AI 助手不光会写 bug，还会帮你开源商业机密。\n- **毒舌/硬核点评**：人类花二十年学\"不要把密钥提交到 Git\"，AI 花两秒钟学会了\"把整个财务部截图上传\"。所谓的\"生产力工具\"，本质上是把人类的低级错误自动化、规模化——恭喜，你的泄露速度也提升了 10 倍。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/ai-coding-agents-exposed-13000-internal.html)\n\n---\n\n### 3. 📌 Cisco SD-WAN Manager 零日认证绕过正被在野利用 (来源: HackerNews / 安全新闻)\n- **核心干货**：Cisco 发布紧急公告，确认 CVE-2026-76504 正被攻击者积极利用。该漏洞允许远程未认证攻击者绕过 SD-WAN Manager 的认证机制，而这是企业管理整个 SD-WAN 网络的中枢。CVSS 评分虽未列出，但\"零日 + 在野利用 + 网络管理中枢\"这三个关键词凑在一起，已经够让运维团队今晚加班了。\n- **毒舌/硬核点评**：企业花大价钱上 SD-WAN 追求\"智能组网\"，结果攻击者用一个未认证请求就能拿到管理面板的钥匙。所谓\"软件定义一切\"，包括软件定义你的灾难恢复时间表。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/cisco-warns-of-attackers-exploiting.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> \"安全圈有个永恒的悖论：厂商用三年把产品做复杂，攻击者用三天把复杂变成漏洞。所以别问'我的系统安全吗'，要问'我的系统值得被黑吗'——如果你的答案是'不值得'，恭喜，你可能已经安全了，因为连黑客都懒得看你一眼。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-01\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Gemini 4 Argon 发布 (来源: HackerNews)\n- **核心干货**：Google 正式推出 Gemini 4 Argon，HN 热度直接飙到 1153 分、763 条评论——这个讨论量本身就说明问题了。同步放出的还有一份\"智能/性能/价格\"三维分析，摆明了要在性价比上跟对手正面刚。具体跑分和定价策略值得逐条细看，评论区大概率已经吵翻了。\n- **毒舌/硬核点评**：Google 现在发模型的频率比某些人换手机壳还勤，问题是每次都说\"最强\"，然后三个月后自己打自己脸。不过这次 HN 的讨论热度确实不像水军刷的——建议亲自跑个 benchmark，别信 PPT。\n- **🔗 传送门**：[点击直达原链接](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/)\n\n---\n\n### 2. 📌 EDG C++ 前端编译器开源 (来源: HackerNews)\n- **核心干货**：EDG 的 C++ 前端正式公开。玩过嵌入式、编译器工具链或者静态分析的人都知道，EDG 的 C++ 前端在业界是\"隐形冠军\"级别的存在——大量商业编译器（包括某些 GPU 厂商的工具链）底层用的就是它。这次开源意味着做语言工具、IDE 语义分析、代码静态检查的团队终于不用再从零啃 Clang 那坨庞然大物了。\n- **毒舌/硬核点评**：C++ 编译器前端这块地，Clang 一家独大太久了，EDG 出来开源算是给生态注入了一针清醒剂。不过别高兴太早——\"goes public\"和\"permissive license\"之间还隔着一条法务部的大河，先看清楚 License 再激动。\n- **🔗 传送门**：[点击直达原链接](https://edgcpp.org/#transition)\n\n---\n\n### 3. 📌 新 Spectre-v2 BTR 攻击绕过现有防御泄露 Linux 内存 (来源: Tech RSS)\n- **核心干货**：VUSec 和 Sant'Anna 高等研究院联合披露了 Spectre-v2 的新变种 \"BTR\" 攻击，影响浏览器 JIT 引擎、语言运行时和操作系统内核，跨多个 CPU 厂商。最要命的是——它能在现有防御措施下依然泄露 Linux 内存。这意味着你以为打了补丁就安全了？抱歉，CPU 微架构层面的锅，软件补丁只能缝缝补补。\n- **毒舌/硬核点评**：Spectre 就像科技圈的蟑螂——你以为喷了药就没了，结果它换个姿势又从地板缝里爬出来。2018 年到现在快九年了，硬件层面的根本性修复依然遥遥无期。搞安全的兄弟们，这活儿是铁饭碗，永远不愁没饭吃。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/new-spectre-v2-btr-attack-leaks-linux.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"Spectre 教会我们一个道理：在计算机世界里，'修好了'和'真的修好了'之间，隔着一整个 CPU 微架构的深渊——跟人生一样，表面补丁永远治不了底层 bug。\"",
   "briefing_items": [
     {
-      "title": "新一代 Spectre-v2 \"BTR\" 攻击攻破 Linux 内存防线",
-      "source": "HackerNews / 安全研究",
-      "summary": "VUSec 与 Sant'Anna 高等研究院联合披露了 Spectre-v2 的全新变种 \"BTR\"，专门针对浏览器 JIT 引擎、语言运行时和操作系统内核下手，且能绕过现有全部防御机制，在多种 CPU 厂商平台上成功泄露 Linux 内存数据。这不是实验室里的玩具，而是又一次证明\"幽灵\"根本没走远。",
-      "commentary": "CPU 厂商花十年打补丁，学术界花一个下午出新洞。硬件层面的投机执行就跟前任一样，你以为翻篇了，它总能在你最放松的时候再捅你一刀。",
+      "title": "Gemini 4 Argon 发布",
+      "source": "HackerNews",
+      "summary": "Google 正式推出 Gemini 4 Argon，HN 热度直接飙到 1153 分、763 条评论——这个讨论量本身就说明问题了。同步放出的还有一份\"智能/性能/价格\"三维分析，摆明了要在性价比上跟对手正面刚。具体跑分和定价策略值得逐条细看，评论区大概率已经吵翻了。",
+      "commentary": "Google 现在发模型的频率比某些人换手机壳还勤，问题是每次都说\"最强\"，然后三个月后自己打自己脸。不过这次 HN 的讨论热度确实不像水军刷的——建议亲自跑个 benchmark，别信 PPT。",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+    },
+    {
+      "title": "EDG C++ 前端编译器开源",
+      "source": "HackerNews",
+      "summary": "EDG 的 C++ 前端正式公开。玩过嵌入式、编译器工具链或者静态分析的人都知道，EDG 的 C++ 前端在业界是\"隐形冠军\"级别的存在——大量商业编译器（包括某些 GPU 厂商的工具链）底层用的就是它。这次开源意味着做语言工具、IDE 语义分析、代码静态检查的团队终于不用再从零啃 Clang 那坨庞然大物了。",
+      "commentary": "C++ 编译器前端这块地，Clang 一家独大太久了，EDG 出来开源算是给生态注入了一针清醒剂。不过别高兴太早——\"goes public\"和\"permissive license\"之间还隔着一条法务部的大河，先看清楚 License 再激动。",
+      "url": "https://edgcpp.org/#transition"
+    },
+    {
+      "title": "新 Spectre-v2 BTR 攻击绕过现有防御泄露 Linux 内存",
+      "source": "Tech RSS",
+      "summary": "VUSec 和 Sant'Anna 高等研究院联合披露了 Spectre-v2 的新变种 \"BTR\" 攻击，影响浏览器 JIT 引擎、语言运行时和操作系统内核，跨多个 CPU 厂商。最要命的是——它能在现有防御措施下依然泄露 Linux 内存。这意味着你以为打了补丁就安全了？抱歉，CPU 微架构层面的锅，软件补丁只能缝缝补补。",
+      "commentary": "Spectre 就像科技圈的蟑螂——你以为喷了药就没了，结果它换个姿势又从地板缝里爬出来。2018 年到现在快九年了，硬件层面的根本性修复依然遥遥无期。搞安全的兄弟们，这活儿是铁饭碗，永远不愁没饭吃。",
       "url": "https://thehackernews.com/2026/09/new-spectre-v2-btr-attack-leaks-linux.html"
     },
     {
-      "title": "AI 编程助手把 13,000 张内部截图送上 GitHub 公海",
-      "source": "HackerNews / 安全新闻",
-      "summary": "安全公司 Glow 发现，开发者让 AI 编程助手截取代码变更截图用于 review 时，这些 Agent 把超过 13,000 张企业内部图片上传至公开 GitHub 仓库，涉及 300+ 组织的客户账单记录等敏感信息。你的 AI 助手不光会写 bug，还会帮你开源商业机密。",
-      "commentary": "人类花二十年学\"不要把密钥提交到 Git\"，AI 花两秒钟学会了\"把整个财务部截图上传\"。所谓的\"生产力工具\"，本质上是把人类的低级错误自动化、规模化——恭喜，你的泄露速度也提升了 10 倍。",
-      "url": "https://thehackernews.com/2026/09/ai-coding-agents-exposed-13000-internal.html"
-    },
-    {
-      "title": "Cisco SD-WAN Manager 零日认证绕过正被在野利用",
-      "source": "HackerNews / 安全新闻",
-      "summary": "Cisco 发布紧急公告，确认 CVE-2026-76504 正被攻击者积极利用。该漏洞允许远程未认证攻击者绕过 SD-WAN Manager 的认证机制，而这是企业管理整个 SD-WAN 网络的中枢。CVSS 评分虽未列出，但\"零日 + 在野利用 + 网络管理中枢\"这三个关键词凑在一起，已经够让运维团队今晚加班了。",
-      "commentary": "企业花大价钱上 SD-WAN 追求\"智能组网\"，结果攻击者用一个未认证请求就能拿到管理面板的钥匙。所谓\"软件定义一切\"，包括软件定义你的灾难恢复时间表。",
-      "url": "https://thehackernews.com/2026/09/cisco-warns-of-attackers-exploiting.html"
+      "quote": "\"Spectre 教会我们一个道理：在计算机世界里，'修好了'和'真的修好了'之间，隔着一整个 CPU 微架构的深渊——跟人生一样，表面补丁永远治不了底层 bug。\""
     }
   ],
   "candidates": [
     {
-      "id": "hn:49901736",
-      "title": "Livenerf: Has Opus 5.5 been nerfed yet?",
-      "summary": "",
-      "url": "https://github.com/ninjahawk/livenerf",
+      "id": "hn:49911995",
+      "title": "Launch HN: Magnitude (YC S25) – Self-optimizing inference engine for agents",
+      "summary": "Hey HN, Anders and Tom here. We&#x27;re building Magnitude, an inference engine for agents that optimizes itself to run as fast as possible on your hardware. It works on Mac, Linux, and Windows on any hardware and is up to 2x faster than llama.cpp.<p>We&#x27;re both software engineers and previously",
+      "url": "https://github.com/magnitudedev/magnitude",
       "source": "Hacker News",
-      "score": 826,
-      "comments": 342
+      "score": 141,
+      "comments": 64
     },
     {
-      "id": "hn:49906637",
-      "title": "You Said No MCP",
-      "summary": "",
-      "url": "https://earendil.com/posts/you-said-no-mcp/",
+      "id": "hn:49913192",
+      "title": "EDG C++ front-end goes public",
+      "summary": "<a href=\"https:&#x2F;&#x2F;github.com&#x2F;edgcpp&#x2F;compiler\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;edgcpp&#x2F;compiler</a>",
+      "url": "https://edgcpp.org/#transition",
       "source": "Hacker News",
-      "score": 467,
-      "comments": 273
+      "score": 183,
+      "comments": 82
     },
     {
-      "id": "lob:dayzwt",
-      "title": "Pining for Arc Downcasting in Rust",
+      "id": "hn:49906432",
+      "title": "Singapore govt dating app uses Gale-Shapley stable marriage algorithm",
+      "summary": "Related: <a href=\"https:&#x2F;&#x2F;www.bbc.com&#x2F;news&#x2F;articles&#x2F;cqzjzr893yv4o\" rel=\"nofollow\">https:&#x2F;&#x2F;www.bbc.com&#x2F;news&#x2F;articles&#x2F;cqzjzr893yv4o</a>",
+      "url": "https://twitter.com/tuakdotsol/status/2105105417760391258",
+      "source": "Hacker News",
+      "score": 288,
+      "comments": 216
+    },
+    {
+      "id": "hn:49909583",
+      "title": "A brief history of the Bloomberg terminal",
       "summary": "",
-      "url": "https://wolfgirl.dev/blog/2026-09-29-pining-for-arc-downcasting-in-rust/",
-      "source": "Lobste.rs",
-      "score": 50,
-      "comments": 12,
-      "tags": [
-        "rust"
-      ]
+      "url": "https://spectrum.ieee.org/bloomberg-terminal",
+      "source": "Hacker News",
+      "score": 242,
+      "comments": 103
+    },
+    {
+      "id": "hn:49913571",
+      "title": "Gemini 4 Argon",
+      "summary": "See also: <i>Gemini 4 Argon (High): Intelligence, Performance and Price Analysis</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49914236\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49914236</a>",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "source": "Hacker News",
+      "score": 1153,
+      "comments": 763
     },
     {
       "id": "lob:odrfgk",
@@ -63,68 +81,31 @@
       "summary": "",
       "url": "https://nnethercote.github.io/2026/09/30/how-to-speed-up-the-rust-compiler-in-september-2026.html",
       "source": "Lobste.rs",
-      "score": 52,
+      "score": 71,
       "comments": 5,
       "tags": [
         "compilers",
-        "rust"
-      ]
-    },
-    {
-      "id": "hn:49883970",
-      "title": "I Could've Accessed 17T Microsoft Records",
-      "summary": "",
-      "url": "https://blog.faav.net/how-i-couldve-accessed-17-trillion-microsoft-records",
-      "source": "Hacker News",
-      "score": 122,
-      "comments": 56
-    },
-    {
-      "id": "lob:tyivfg",
-      "title": "CoW — a stacking window manager for Wayland",
-      "summary": "",
-      "url": "https://cow-wm.codeberg.page/cow/",
-      "source": "Lobste.rs",
-      "score": 132,
-      "comments": 17,
-      "tags": [
-        "freebsd",
-        "linux"
-      ]
-    },
-    {
-      "id": "lob:hxmtyv",
-      "title": "Deser: Rethinking Rust Serialization",
-      "summary": "",
-      "url": "https://lucumr.pocoo.org/2026/9/29/deser/",
-      "source": "Lobste.rs",
-      "score": 40,
-      "comments": 6,
-      "tags": [
         "rust",
         "vibecoding"
       ]
     },
     {
-      "id": "lob:zknqct",
-      "title": "Two Kinds of SQL Query Builders",
+      "id": "hn:49915082",
+      "title": "The top secret URSALA, RAQUEL, and FARRAH satellites (2025)",
       "summary": "",
-      "url": "https://mechanicalrabbit.github.io/FunSQL.jl/stable/two-kinds-of-sql-query-builders/#Two-Kinds-of-SQL-Query-Builders",
-      "source": "Lobste.rs",
-      "score": 29,
-      "comments": 16,
-      "tags": [
-        "databases"
-      ]
+      "url": "https://www.thespacereview.com/article/4951/1",
+      "source": "Hacker News",
+      "score": 171,
+      "comments": 76
     },
     {
-      "id": "hn:49911995",
-      "title": "Launch HN: Magnitude (YC S25) – Self-optimizing inference engine for agents",
-      "summary": "Hey HN, Anders and Tom here. We&#x27;re building Magnitude, an inference engine for agents that optimizes itself to run as fast as possible on your hardware. It works on Mac, Linux, and Windows on any hardware and is up to 2x faster than llama.cpp.<p>We&#x27;re both software engineers and previously",
-      "url": "https://github.com/magnitudedev/magnitude",
+      "id": "hn:49912955",
+      "title": "Surprisingly complex waves reveal the brain's inner workings",
+      "summary": "",
+      "url": "https://www.quantamagazine.org/surprisingly-complex-waves-reveal-the-brains-inner-workings-20260930/",
       "source": "Hacker News",
-      "score": 5,
-      "comments": 1
+      "score": 150,
+      "comments": 49
     },
     {
       "id": "lob:nicozi",
@@ -132,21 +113,115 @@
       "summary": "",
       "url": "https://en.wikipedia.org/wiki/The_Cuckoo%27s_Egg_(book)",
       "source": "Lobste.rs",
-      "score": 30,
-      "comments": 18,
+      "score": 52,
+      "comments": 23,
       "tags": [
         "book",
         "security"
       ]
     },
     {
-      "id": "hn:49890707",
-      "title": "Show HN: JBR-001 – An open-source 3D printable desktop robot",
-      "summary": "We built a desktop companion robot that is powered by Arduino UNO Q. Project is open source: source code, 3D printable files and assembly instructions are available at Arduino Project Hub.<p>Robot is equipped with camera, distance sensor, buzzer, moves head and arms with 3 servo motors and has an an",
-      "url": "https://projecthub.arduino.cc/syntheticaidata/jbr-001-a-desktop-companion-robot-powered-by-arduino-uno-q-b11c96",
+      "id": "hn:49912444",
+      "title": "5x faster Edge Functions: V8 isolates to Firecracker MicroVMs",
+      "summary": "",
+      "url": "https://www.netlify.com/blog/edge-functions-firecracker-microvms/",
       "source": "Hacker News",
-      "score": 103,
-      "comments": 23
+      "score": 139,
+      "comments": 53
+    },
+    {
+      "id": "hn:49915126",
+      "title": "56k.rip – the 1996 dial-up internet experience",
+      "summary": "",
+      "url": "https://56k.rip/",
+      "source": "Hacker News",
+      "score": 123,
+      "comments": 66
+    },
+    {
+      "id": "hn:49890732",
+      "title": "Why the Bronze Age Collapsed",
+      "summary": "",
+      "url": "https://www.worksinprogress.news/p/why-really-caused-the-bronze-age",
+      "source": "Hacker News",
+      "score": 141,
+      "comments": 76
+    },
+    {
+      "id": "arxiv:2609.40361v1",
+      "title": "Ranking-Aware Prompt Optimization for Multimodal Clinical Diagnosis",
+      "summary": "Multimodal large language models (MLLMs) are rapidly advancing clinical diagnosis, yet their adaptation pipelines remain anchored to accuracy-based objectives. Clinical data are heavily class-imbalanced: a constant-majority predictor can score above 90% accuracy while being clinically useless. We th",
+      "url": "https://arxiv.org/abs/2609.40361v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "arxiv_id": "2609.40361v1"
+    },
+    {
+      "id": "arxiv:2609.40316v1",
+      "title": "Scaling Laws for Looped Mixture of Experts",
+      "summary": "Looped transformers and Mixture-of-Experts (MoE) offer complementary routes to efficient scaling: recurrence increases computational depth at fixed parameters, while MoE sparsity expands total capacity at fixed active compute. Yet existing scaling laws model recurrence or sparsity in isolation. In t",
+      "url": "https://arxiv.org/abs/2609.40316v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_id": "2609.40316v1"
+    },
+    {
+      "id": "lob:irijoi",
+      "title": "Differences between `foldl` and `foldr`",
+      "summary": "",
+      "url": "https://blog.haskell.org/foldl-and-foldr/",
+      "source": "Lobste.rs",
+      "score": 42,
+      "comments": 6,
+      "tags": [
+        "haskell"
+      ]
+    },
+    {
+      "id": "arxiv:2609.40360v1",
+      "title": "Semifactual Credit-Augmented Policy Optimization",
+      "summary": "Reinforcement learning with verifiable rewards (RLVR) has improved the reasoning capabilities of large language models (LLMs), yet their predictions remain sensitive to task-irrelevant prompt features. We investigate this sensitivity through semifactual prompt interventions that preserve the underly",
+      "url": "https://arxiv.org/abs/2609.40360v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_id": "2609.40360v1"
+    },
+    {
+      "id": "arxiv:2609.40330v1",
+      "title": "Turbo Harness: Instance-Adaptive Harness Optimization",
+      "summary": "Automating the search for effective harnesses is an important step toward enabling agents to recursively self-improve. Existing harness optimizations typically produce a single global harness that is applied uniformly across task instances. However, a harness that works well on average may not be op",
+      "url": "https://arxiv.org/abs/2609.40330v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI"
+      ],
+      "arxiv_id": "2609.40330v1"
+    },
+    {
+      "id": "arxiv:2609.40322v1",
+      "title": "MatLoom: Layered Text-to-Material Generation in a Compact Program Space",
+      "summary": "Material generation should produce not only an appearance, but also the rules that construct it. We introduce MatLoom, a compact, layer-oriented language for text-to-material generation with pretrained language models. Each program composes alpha-masked layers whose shared spatial expressions define",
+      "url": "https://arxiv.org/abs/2609.40322v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL",
+        "cs.MM"
+      ],
+      "arxiv_id": "2609.40322v1"
     },
     {
       "id": "rss:fe2850382a",
@@ -161,69 +236,6 @@
       "title": "New Spectre-v2 BTR Attack Leaks Linux Memory Despite Existing Defenses",
       "summary": "A group of academics from VUSec and Scuola Superiore Sant'Anna have disclosed details of a new Spectre CPU vulnerability variant that affects Just-In-Time (JIT) engines present in web browsers, language runtimes, and the operating system kernel, across multiple CPU vendors.\n\nThe new Spectre v2 varia",
       "url": "https://thehackernews.com/2026/09/new-spectre-v2-btr-attack-leaks-linux.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "hn:49908394",
-      "title": "The last time my family was replaced by technology",
-      "summary": "",
-      "url": "https://manuel.darcemont.fr/posts/the-last-time-my-family-was-replaced-by-technology/",
-      "source": "Hacker News",
-      "score": 50,
-      "comments": 115
-    },
-    {
-      "id": "hn:49908962",
-      "title": "SDF vs. MSDF vs. Slug: GPU Text Rendering",
-      "summary": "",
-      "url": "https://alphapixeldev.com/sdf-vs-msdf-vs-slug-vs-rive-gpu-text-rendering/",
-      "source": "Hacker News",
-      "score": 75,
-      "comments": 35
-    },
-    {
-      "id": "hn:49909583",
-      "title": "A brief history of the Bloomberg terminal",
-      "summary": "",
-      "url": "https://spectrum.ieee.org/bloomberg-terminal",
-      "source": "Hacker News",
-      "score": 83,
-      "comments": 22
-    },
-    {
-      "id": "rss:64ee4bb03c",
-      "title": "Cisco Warns of Attackers Exploiting Critical Authentication Bypass in SD-WAN Manager",
-      "summary": "Attackers are exploiting a new critical zero-day flaw in Cisco Catalyst SD-WAN Manager, the system companies use to manage their Cisco SD-WAN networks, Cisco said in an&nbsp;advisory&nbsp;on September 30.\n\nThe flaw, CVE-2026-76504, could allow a remote attacker with no login access to use the Manage",
-      "url": "https://thehackernews.com/2026/09/cisco-warns-of-attackers-exploiting.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:7d52d419c0",
-      "title": "I built a QEMU sandbox to test if a 4B model (Gemma) can act as an autonomous Linux sysadmin — here are the results (2/3 pass rate)",
-      "summary": "What happens when you give an open-weights 4B parameter language model root access to a broken Linux server and tell it to fix the problem?\n\nI built local-agent-sandbox, a lightweight evaluation harness running on pure QEMU and llama.cpp. Here is how the experiment was structured, how the sandboxing",
-      "url": "https://dev.to/chetan_moorthy_b4c5f017cd/i-built-a-qemu-sandbox-to-test-if-a-4b-model-gemma-can-act-as-an-autonomous-linux-sysadmin-here-2fdd",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "lob:irijoi",
-      "title": "Differences between `foldl` and `foldr`",
-      "summary": "",
-      "url": "https://blog.haskell.org/foldl-and-foldr/",
-      "source": "Lobste.rs",
-      "score": 18,
-      "comments": 3,
-      "tags": [
-        "haskell"
-      ]
-    },
-    {
-      "id": "rss:47e2c34004",
-      "title": "AI Coding Agents Exposed 13,000 Internal Images, Including Billing Records, on GitHub",
-      "summary": "AI coding agents asked to share screenshots of code changes for review have put internal company images in public GitHub repositories, security company Glow said.\n\nIts researchers found more than 13,000 internal images from developers at over 300 organizations, including customer billing records and",
-      "url": "https://thehackernews.com/2026/09/ai-coding-agents-exposed-13000-internal.html",
       "source": "Tech RSS",
       "score": 0
     }
