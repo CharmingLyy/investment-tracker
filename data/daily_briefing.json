@@ -1,70 +1,61 @@
 {
-  "date": "2026-10-01",
-  "update_time": "2026-10-01 05:03:45",
+  "date": "2026-10-02",
+  "update_time": "2026-10-01 18:11:02",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-01\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Gemini 4 Argon 发布 (来源: HackerNews)\n- **核心干货**：Google 正式推出 Gemini 4 Argon，HN 热度直接飙到 1153 分、763 条评论——这个讨论量本身就说明问题了。同步放出的还有一份\"智能/性能/价格\"三维分析，摆明了要在性价比上跟对手正面刚。具体跑分和定价策略值得逐条细看，评论区大概率已经吵翻了。\n- **毒舌/硬核点评**：Google 现在发模型的频率比某些人换手机壳还勤，问题是每次都说\"最强\"，然后三个月后自己打自己脸。不过这次 HN 的讨论热度确实不像水军刷的——建议亲自跑个 benchmark，别信 PPT。\n- **🔗 传送门**：[点击直达原链接](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/)\n\n---\n\n### 2. 📌 EDG C++ 前端编译器开源 (来源: HackerNews)\n- **核心干货**：EDG 的 C++ 前端正式公开。玩过嵌入式、编译器工具链或者静态分析的人都知道，EDG 的 C++ 前端在业界是\"隐形冠军\"级别的存在——大量商业编译器（包括某些 GPU 厂商的工具链）底层用的就是它。这次开源意味着做语言工具、IDE 语义分析、代码静态检查的团队终于不用再从零啃 Clang 那坨庞然大物了。\n- **毒舌/硬核点评**：C++ 编译器前端这块地，Clang 一家独大太久了，EDG 出来开源算是给生态注入了一针清醒剂。不过别高兴太早——\"goes public\"和\"permissive license\"之间还隔着一条法务部的大河，先看清楚 License 再激动。\n- **🔗 传送门**：[点击直达原链接](https://edgcpp.org/#transition)\n\n---\n\n### 3. 📌 新 Spectre-v2 BTR 攻击绕过现有防御泄露 Linux 内存 (来源: Tech RSS)\n- **核心干货**：VUSec 和 Sant'Anna 高等研究院联合披露了 Spectre-v2 的新变种 \"BTR\" 攻击，影响浏览器 JIT 引擎、语言运行时和操作系统内核，跨多个 CPU 厂商。最要命的是——它能在现有防御措施下依然泄露 Linux 内存。这意味着你以为打了补丁就安全了？抱歉，CPU 微架构层面的锅，软件补丁只能缝缝补补。\n- **毒舌/硬核点评**：Spectre 就像科技圈的蟑螂——你以为喷了药就没了，结果它换个姿势又从地板缝里爬出来。2018 年到现在快九年了，硬件层面的根本性修复依然遥遥无期。搞安全的兄弟们，这活儿是铁饭碗，永远不愁没饭吃。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/09/new-spectre-v2-btr-attack-leaks-linux.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"Spectre 教会我们一个道理：在计算机世界里，'修好了'和'真的修好了'之间，隔着一整个 CPU 微架构的深渊——跟人生一样，表面补丁永远治不了底层 bug。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-02\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Gemini 4 Argon 发布 (来源: HackerNews)\n- **核心干货**：Google 正式发布 Gemini 4 Argon，HN 热度飙到 1601 分、评论区炸出 1065 条讨论，堪称年度最热 AI 发布帖。配套还有一份\"智能/性能/价格\"三维分析，显然 Google 这次是有备而来，要在推理能力和性价比上同时对友商施压。\n- **毒舌/硬核点评**：1601 分说明什么？说明全世界的程序员都在摸鱼刷 HN 而不是写代码。至于模型本身——Google 发布会的 PPT 能力一向是 SOTA，希望这次推理能力别又\"跑分猛如虎，实测原地杵\"。\n- **🔗 传送门**：[点击直达原链接](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/)\n\n---\n\n### 2. 📌 RIP, Vector Database (来源: HackerNews)\n- **核心干货**：turbopuffer 发文宣告\"向量数据库已死\"，核心论点是：随着原生支持向量检索的通用数据库（Postgres 等）和对象存储方案成熟，独立向量数据库的护城河正在被填平。对于 2023 年那波拿着向量数据库概念融资的创业者来说，这是一篇不折不扣的讣告。\n- **毒舌/硬核点评**：当年每个 VC 都要求 pitch deck 里写\"AI-native vector database\"，现在同一批人开始写\"AI-native agent memory\"。赛道换壳的速度比模型迭代还快，唯一不变的是韭菜的记忆只有 7 秒。\n- **🔗 传送门**：[点击直达原链接](https://turbopuffer.com/blog/rip-vector-database)\n\n---\n\n### 3. 📌 rsync 因 33 个 CVE 在 Debian 迎来大版本升级 (来源: Lobste.rs)\n- **核心干货**：Debian 将 rsync 从 3.4.1 直接跳到 3.5.0，原因是一次性修复了 33 个 CVE 漏洞。rsync 作为存在了几十年的基础设施工具，这种规模的集中爆雷极其罕见，意味着大量生产环境可能长期暴露在已知漏洞下而无人察觉。\n- **毒舌/硬核点评**：33 个 CVE 一次性打包修复——这不叫安全更新，这叫技术债的年终清算。所有还在跑老版本 rsync 的运维同学，今天不是\"建议升级\"，是\"必须升级\"，否则你的服务器可能比你家门锁还容易开。\n- **🔗 传送门**：[点击直达原链接](https://lobste.rs/s/sqyhgt/major_rsync_upgrade_debian_because_33)\n\n---\n\n### 🗣️ 今日顶男金句\n> **\"向量数据库的墓志铭上写着：'我曾是风口，后来成了基础设施。'——所有技术的终局都是被吞噬，区别只在于你是被 Postgres 吞，还是被时代吞。\"**",
   "briefing_items": [
     {
       "title": "Gemini 4 Argon 发布",
       "source": "HackerNews",
-      "summary": "Google 正式推出 Gemini 4 Argon，HN 热度直接飙到 1153 分、763 条评论——这个讨论量本身就说明问题了。同步放出的还有一份\"智能/性能/价格\"三维分析，摆明了要在性价比上跟对手正面刚。具体跑分和定价策略值得逐条细看，评论区大概率已经吵翻了。",
-      "commentary": "Google 现在发模型的频率比某些人换手机壳还勤，问题是每次都说\"最强\"，然后三个月后自己打自己脸。不过这次 HN 的讨论热度确实不像水军刷的——建议亲自跑个 benchmark，别信 PPT。",
+      "summary": "Google 正式发布 Gemini 4 Argon，HN 热度飙到 1601 分、评论区炸出 1065 条讨论，堪称年度最热 AI 发布帖。配套还有一份\"智能/性能/价格\"三维分析，显然 Google 这次是有备而来，要在推理能力和性价比上同时对友商施压。",
+      "commentary": "1601 分说明什么？说明全世界的程序员都在摸鱼刷 HN 而不是写代码。至于模型本身——Google 发布会的 PPT 能力一向是 SOTA，希望这次推理能力别又\"跑分猛如虎，实测原地杵\"。",
       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
     },
     {
-      "title": "EDG C++ 前端编译器开源",
+      "title": "RIP, Vector Database",
       "source": "HackerNews",
-      "summary": "EDG 的 C++ 前端正式公开。玩过嵌入式、编译器工具链或者静态分析的人都知道，EDG 的 C++ 前端在业界是\"隐形冠军\"级别的存在——大量商业编译器（包括某些 GPU 厂商的工具链）底层用的就是它。这次开源意味着做语言工具、IDE 语义分析、代码静态检查的团队终于不用再从零啃 Clang 那坨庞然大物了。",
-      "commentary": "C++ 编译器前端这块地，Clang 一家独大太久了，EDG 出来开源算是给生态注入了一针清醒剂。不过别高兴太早——\"goes public\"和\"permissive license\"之间还隔着一条法务部的大河，先看清楚 License 再激动。",
-      "url": "https://edgcpp.org/#transition"
+      "summary": "turbopuffer 发文宣告\"向量数据库已死\"，核心论点是：随着原生支持向量检索的通用数据库（Postgres 等）和对象存储方案成熟，独立向量数据库的护城河正在被填平。对于 2023 年那波拿着向量数据库概念融资的创业者来说，这是一篇不折不扣的讣告。",
+      "commentary": "当年每个 VC 都要求 pitch deck 里写\"AI-native vector database\"，现在同一批人开始写\"AI-native agent memory\"。赛道换壳的速度比模型迭代还快，唯一不变的是韭菜的记忆只有 7 秒。",
+      "url": "https://turbopuffer.com/blog/rip-vector-database"
     },
     {
-      "title": "新 Spectre-v2 BTR 攻击绕过现有防御泄露 Linux 内存",
-      "source": "Tech RSS",
-      "summary": "VUSec 和 Sant'Anna 高等研究院联合披露了 Spectre-v2 的新变种 \"BTR\" 攻击，影响浏览器 JIT 引擎、语言运行时和操作系统内核，跨多个 CPU 厂商。最要命的是——它能在现有防御措施下依然泄露 Linux 内存。这意味着你以为打了补丁就安全了？抱歉，CPU 微架构层面的锅，软件补丁只能缝缝补补。",
-      "commentary": "Spectre 就像科技圈的蟑螂——你以为喷了药就没了，结果它换个姿势又从地板缝里爬出来。2018 年到现在快九年了，硬件层面的根本性修复依然遥遥无期。搞安全的兄弟们，这活儿是铁饭碗，永远不愁没饭吃。",
-      "url": "https://thehackernews.com/2026/09/new-spectre-v2-btr-attack-leaks-linux.html"
+      "title": "rsync 因 33 个 CVE 在 Debian 迎来大版本升级",
+      "source": "Lobste.rs",
+      "summary": "Debian 将 rsync 从 3.4.1 直接跳到 3.5.0，原因是一次性修复了 33 个 CVE 漏洞。rsync 作为存在了几十年的基础设施工具，这种规模的集中爆雷极其罕见，意味着大量生产环境可能长期暴露在已知漏洞下而无人察觉。",
+      "commentary": "33 个 CVE 一次性打包修复——这不叫安全更新，这叫技术债的年终清算。所有还在跑老版本 rsync 的运维同学，今天不是\"建议升级\"，是\"必须升级\"，否则你的服务器可能比你家门锁还容易开。",
+      "url": "https://lobste.rs/s/sqyhgt/major_rsync_upgrade_debian_because_33"
     },
     {
-      "quote": "\"Spectre 教会我们一个道理：在计算机世界里，'修好了'和'真的修好了'之间，隔着一整个 CPU 微架构的深渊——跟人生一样，表面补丁永远治不了底层 bug。\""
+      "quote": "**\"向量数据库的墓志铭上写着：'我曾是风口，后来成了基础设施。'——所有技术的终局都是被吞噬，区别只在于你是被 Postgres 吞，还是被时代吞。\"**"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49911995",
-      "title": "Launch HN: Magnitude (YC S25) – Self-optimizing inference engine for agents",
-      "summary": "Hey HN, Anders and Tom here. We&#x27;re building Magnitude, an inference engine for agents that optimizes itself to run as fast as possible on your hardware. It works on Mac, Linux, and Windows on any hardware and is up to 2x faster than llama.cpp.<p>We&#x27;re both software engineers and previously",
-      "url": "https://github.com/magnitudedev/magnitude",
-      "source": "Hacker News",
-      "score": 141,
-      "comments": 64
-    },
-    {
-      "id": "hn:49913192",
-      "title": "EDG C++ front-end goes public",
-      "summary": "<a href=\"https:&#x2F;&#x2F;github.com&#x2F;edgcpp&#x2F;compiler\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;edgcpp&#x2F;compiler</a>",
-      "url": "https://edgcpp.org/#transition",
-      "source": "Hacker News",
-      "score": 183,
-      "comments": 82
-    },
-    {
-      "id": "hn:49906432",
-      "title": "Singapore govt dating app uses Gale-Shapley stable marriage algorithm",
-      "summary": "Related: <a href=\"https:&#x2F;&#x2F;www.bbc.com&#x2F;news&#x2F;articles&#x2F;cqzjzr893yv4o\" rel=\"nofollow\">https:&#x2F;&#x2F;www.bbc.com&#x2F;news&#x2F;articles&#x2F;cqzjzr893yv4o</a>",
-      "url": "https://twitter.com/tuakdotsol/status/2105105417760391258",
-      "source": "Hacker News",
-      "score": 288,
-      "comments": 216
-    },
-    {
-      "id": "hn:49909583",
-      "title": "A brief history of the Bloomberg terminal",
+      "id": "hn:49920896",
+      "title": "How to speed up the Rust compiler in September 2026",
       "summary": "",
-      "url": "https://spectrum.ieee.org/bloomberg-terminal",
+      "url": "https://nnethercote.github.io/2026/09/30/how-to-speed-up-the-rust-compiler-in-september-2026.html",
       "source": "Hacker News",
-      "score": 242,
-      "comments": 103
+      "score": 179,
+      "comments": 87
+    },
+    {
+      "id": "hn:49920160",
+      "title": "StreetComplete on iOS is now in public beta",
+      "summary": "",
+      "url": "https://github.com/streetcomplete/StreetComplete/issues/5421",
+      "source": "Hacker News",
+      "score": 411,
+      "comments": 96
+    },
+    {
+      "id": "hn:49923692",
+      "title": "Clef: Open-source decision models, and new RL fine-tuning platform",
+      "summary": "",
+      "url": "https://blog.cloudflare.com/clef-decision-models/",
+      "source": "Hacker News",
+      "score": 185,
+      "comments": 63
     },
     {
       "id": "hn:49913571",
@@ -72,80 +63,54 @@
       "summary": "See also: <i>Gemini 4 Argon (High): Intelligence, Performance and Price Analysis</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49914236\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49914236</a>",
       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
       "source": "Hacker News",
-      "score": 1153,
-      "comments": 763
+      "score": 1601,
+      "comments": 1065
     },
     {
-      "id": "lob:odrfgk",
-      "title": "How to speed up the Rust compiler in September 2026",
+      "id": "lob:qgd17n",
+      "title": "IANA's email about why example.com changed",
       "summary": "",
-      "url": "https://nnethercote.github.io/2026/09/30/how-to-speed-up-the-rust-compiler-in-september-2026.html",
+      "url": "https://www.oliverdunk.com/2026/09/30/iana-reply",
       "source": "Lobste.rs",
-      "score": 71,
+      "score": 86,
+      "comments": 30,
+      "tags": [
+        "networking",
+        "web"
+      ]
+    },
+    {
+      "id": "hn:49923466",
+      "title": "RIP, vector database",
+      "summary": "",
+      "url": "https://turbopuffer.com/blog/rip-vector-database",
+      "source": "Hacker News",
+      "score": 116,
+      "comments": 27
+    },
+    {
+      "id": "lob:bmcnwp",
+      "title": "Who's hiring? Q4 2026",
+      "summary": "<p>There was interest in expanding the scope of \"Who's hiring\" posts to non-software engineering positions <a href=\"https://lobste.rs/s/0zha79/who_s_hiring_support_edition_q3_2026\" rel=\"ugc\">[link1]</a> <a href=\"https://lobste.rs/s/cnoaqr/who_s_hiring_not_coder_edition_aug_2026\" rel=\"ugc\">[link2]</a",
+      "url": "https://lobste.rs/s/bmcnwp/who_s_hiring_q4_2026",
+      "source": "Lobste.rs",
+      "score": 38,
+      "comments": 6,
+      "tags": [
+        "job"
+      ]
+    },
+    {
+      "id": "lob:sqyhgt",
+      "title": "Major rsync upgrade in Debian because of 33 CVEs",
+      "summary": "<strong>apt-listchanges --which=both -f text --since=3.4.1+ds1-5+deb13u4 <br>\n/var/cache/apt/archives/rsync_3.5.0+ds1-0+deb13u1_amd64.deb\napt-listchanges: Reading changelogs...\napt-listchanges: News</strong>\n<p>rsync (3.5.0+ds1-0+deb13u1) trixie-security; urgency=medium</p>\n<p>In order to fix 33 CVE",
+      "url": "https://lobste.rs/s/sqyhgt/major_rsync_upgrade_debian_because_33",
+      "source": "Lobste.rs",
+      "score": 22,
       "comments": 5,
       "tags": [
-        "compilers",
-        "rust",
-        "vibecoding"
-      ]
-    },
-    {
-      "id": "hn:49915082",
-      "title": "The top secret URSALA, RAQUEL, and FARRAH satellites (2025)",
-      "summary": "",
-      "url": "https://www.thespacereview.com/article/4951/1",
-      "source": "Hacker News",
-      "score": 171,
-      "comments": 76
-    },
-    {
-      "id": "hn:49912955",
-      "title": "Surprisingly complex waves reveal the brain's inner workings",
-      "summary": "",
-      "url": "https://www.quantamagazine.org/surprisingly-complex-waves-reveal-the-brains-inner-workings-20260930/",
-      "source": "Hacker News",
-      "score": 150,
-      "comments": 49
-    },
-    {
-      "id": "lob:nicozi",
-      "title": "The Cuckoo's Egg",
-      "summary": "",
-      "url": "https://en.wikipedia.org/wiki/The_Cuckoo%27s_Egg_(book)",
-      "source": "Lobste.rs",
-      "score": 52,
-      "comments": 23,
-      "tags": [
-        "book",
         "security"
       ]
-    },
-    {
-      "id": "hn:49912444",
-      "title": "5x faster Edge Functions: V8 isolates to Firecracker MicroVMs",
-      "summary": "",
-      "url": "https://www.netlify.com/blog/edge-functions-firecracker-microvms/",
-      "source": "Hacker News",
-      "score": 139,
-      "comments": 53
-    },
-    {
-      "id": "hn:49915126",
-      "title": "56k.rip – the 1996 dial-up internet experience",
-      "summary": "",
-      "url": "https://56k.rip/",
-      "source": "Hacker News",
-      "score": 123,
-      "comments": 66
-    },
-    {
-      "id": "hn:49890732",
-      "title": "Why the Bronze Age Collapsed",
-      "summary": "",
-      "url": "https://www.worksinprogress.news/p/why-really-caused-the-bronze-age",
-      "source": "Hacker News",
-      "score": 141,
-      "comments": 76
     },
     {
       "id": "arxiv:2609.40361v1",
@@ -174,15 +139,47 @@
       "arxiv_id": "2609.40316v1"
     },
     {
-      "id": "lob:irijoi",
-      "title": "Differences between `foldl` and `foldr`",
-      "summary": "",
-      "url": "https://blog.haskell.org/foldl-and-foldr/",
+      "id": "lob:nwdxko",
+      "title": "EDG C/C++ Compiler Project",
+      "summary": "<p>During the 2025 November C++ ISO meeting Edison Design Group <a href=\"https://herbsutter.com/2025/11/10/trip-report-november-2025-iso-c-standards-meeting-kona-usa/\" rel=\"ugc\">announced that they would be winding down and that they will open-source their front end</a>. This is the repo containing ",
+      "url": "https://github.com/edgcpp/compiler",
       "source": "Lobste.rs",
-      "score": 42,
-      "comments": 6,
+      "score": 28,
+      "comments": 10,
       "tags": [
-        "haskell"
+        "c",
+        "c++",
+        "compilers"
+      ]
+    },
+    {
+      "id": "hn:49922569",
+      "title": "Ask HN: Who is hiring? (October 2026)",
+      "summary": "Please state the location and include REMOTE for remote work, REMOTE (US)\nor similar if the country is restricted, and ONSITE when remote work is <i>not</i> an option.<p>Please only post if you personally are part of the hiring company—no\nrecruiting firms or job boards. One post per company. If it i",
+      "url": "https://news.ycombinator.com/item?id=49922569",
+      "source": "Hacker News",
+      "score": 50,
+      "comments": 52
+    },
+    {
+      "id": "hn:49922568",
+      "title": "Ask HN: Who wants to be hired? (October 2026)",
+      "summary": "Share your information if you are looking for work. Please use this format:<p><pre><code>  Location:\n  Remote:\n  Willing to relocate:\n  Technologies:\n  Résumé&#x2F;CV:\n  Email:\n</code></pre>\nPlease only post if you are personally looking for work. Agencies, recruiters, job boards,\nand so on, are off",
+      "url": "https://news.ycombinator.com/item?id=49922568",
+      "source": "Hacker News",
+      "score": 35,
+      "comments": 137
+    },
+    {
+      "id": "lob:hbjy0b",
+      "title": "The AI Pascal’s Wager",
+      "summary": "",
+      "url": "https://ploum.net/2026-10-01-pascal_wager.html",
+      "source": "Lobste.rs",
+      "score": 23,
+      "comments": 36,
+      "tags": [
+        "vibecoding"
       ]
     },
     {
@@ -224,20 +221,39 @@
       "arxiv_id": "2609.40322v1"
     },
     {
-      "id": "rss:fe2850382a",
-      "title": "Citrix NetScaler CVE-2026-88772 Exploit Details Show Pre-Auth Path to Shellcode Execution",
-      "summary": "Cybersecurity researchers have disclosed technical details of a recently patched critical security flaw in Citrix NetScaler ADC and Gateway that has come under active exploitation in the wild.\n\nThe vulnerability, tracked as CVE-2026-88772 (CVSS score: 9.5), has been described as a memory overflow bu",
-      "url": "https://thehackernews.com/2026/09/citrix-netscaler-cve-2026-88772-exploit.html",
-      "source": "Tech RSS",
-      "score": 0
+      "id": "lob:bag41j",
+      "title": "Hanami, Why?: Introductions",
+      "summary": "",
+      "url": "https://aaronmallen.me/writing/hanami-why-introductions",
+      "source": "Lobste.rs",
+      "score": 48,
+      "comments": 2,
+      "tags": [
+        "ruby"
+      ]
     },
     {
-      "id": "rss:a4f467f89d",
-      "title": "New Spectre-v2 BTR Attack Leaks Linux Memory Despite Existing Defenses",
-      "summary": "A group of academics from VUSec and Scuola Superiore Sant'Anna have disclosed details of a new Spectre CPU vulnerability variant that affects Just-In-Time (JIT) engines present in web browsers, language runtimes, and the operating system kernel, across multiple CPU vendors.\n\nThe new Spectre v2 varia",
-      "url": "https://thehackernews.com/2026/09/new-spectre-v2-btr-attack-leaks-linux.html",
-      "source": "Tech RSS",
-      "score": 0
+      "id": "hn:49921923",
+      "title": "Cloudflare K2: serverless event streams",
+      "summary": "",
+      "url": "https://blog.cloudflare.com/cloudflare-k2-streams/",
+      "source": "Hacker News",
+      "score": 95,
+      "comments": 28
+    },
+    {
+      "id": "lob:lzlkbr",
+      "title": "Reviving Valve's 15-year-old e-book",
+      "summary": "",
+      "url": "https://nikolan.net/posts/portal2/",
+      "source": "Lobste.rs",
+      "score": 33,
+      "comments": 1,
+      "tags": [
+        "games",
+        "reversing",
+        "vibecoding"
+      ]
     }
   ],
   "ai_curated": true
