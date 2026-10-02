@@ -1,32 +1,32 @@
 {
-  "date": "2026-10-02",
-  "update_time": "2026-10-02 04:53:40",
+  "date": "2026-10-03",
+  "update_time": "2026-10-02 17:36:34",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-02\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Cloudflare 开源决策模型 Clef，还把 RL 微调平台一起端上桌 (来源: HackerNews)\n- **核心干货**：Cloudflare 发布了开放权重的\"决策模型\" Clef，以及配套的强化学习微调平台。简单说，就是让企业能拿开放权重模型去训练专做\"判断/决策\"的 AI，而不是再堆一个通用聊天玩具。RL 微调平台的存在意味着它不是发个模型跑路，而是把\"改造成你自己的决策引擎\"这条路也铺好了。\n- **毒舌/硬核点评**：Cloudflare 这步棋很鸡贼——CDN 生意增长见顶，转身来抢 AI 基础设施的饭碗。开放权重 + 微调平台，本质是把\"模型\"当引流品，真正收钱的是那套训练管线。通用大模型卷不动了，垂直决策模型才是下一个绞肉机。\n- **🔗 传送门**：[点击直达原链接](https://blog.cloudflare.com/clef-decision-models/)\n\n---\n\n### 2. 📌 向量数据库，安息吧 (来源: HackerNews)\n- **核心干货**：turbopuffer 这篇博客直接给\"向量数据库\"这个品类判了死刑。核心论点：随着底层存储和检索能力的进化，独立向量数据库正在被通用数据库和对象存储吞掉，专门为向量优化的独立系统越来越像上个时代的产物。HN 上 297 分、评论区吵成一片，说明戳到了不少人的饭碗。\n- **毒舌/硬核点评**：过去三年靠\"向量\"两个字融资的创业公司，现在大概在连夜改 PPT 讲\"AI 原生数据平台\"。技术品类的生死从来不看你多专一，只看通用方案哪天顺手把你做了。这是基础设施的宿命，不是悲剧，是规律。\n- **🔗 传送门**：[点击直达原链接](https://turbopuffer.com/blog/rip-vector-database)\n\n---\n\n### 3. 📌 Git 3.0 默认切 SHA-256，被批是\"代价高昂的错误\" (来源: HackerNews)\n- **核心干货**：GitButler 发文炮轰 Git 3.0 计划默认迁移到 SHA-256 哈希。核心担忧：迁移成本、生态兼容性、以及\"我们真的需要为理论上的哈希碰撞风险付这么大代价吗\"。HN 上 277 分、275 条评论，吵得比技术本身热闹——这说明它触及的是整个开发者生态的迁移神经。\n- **毒舌/硬核点评**：SHA-1 碰撞是学术演示级别的威胁，SHA-256 迁移是全体开发者买单级别的工程。安全圈永远在算\"理论风险\"，工程圈永远在扛\"实际成本\"，两边都对，两边都不肯让。Git 这块老骨头，动一下全身疼。\n- **🔗 传送门**：[点击直达原链接](https://blog.gitbutler.com/git-3-sha-256)\n\n---\n\n### 🗣️ 今日顶男金句\n> 技术的护城河从来不是\"我做得更专\"，而是\"通用方案顺手把我做了之前，我已经变成了那个通用方案\"。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-03\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Supabase 收购 Turso (来源: HackerNews)\n- **核心干货**：开源 BaaS 巨头 Supabase 宣布收购 Turso——那个把 SQLite 玩成分布式边缘数据库的团队。这意味着 Supabase 的 Postgres 帝国可能要向下兼容 SQLite 生态，边缘计算 + 本地优先（Local-first）的数据库叙事正在被资本正式收编。\n- **毒舌/硬核点评**：SQLite 是\"永远不会死\"的数据库，Turso 是\"试图让它学会分身术\"的创业公司，而 Supabase 是那个说\"你们俩都别折腾了，归我管\"的房东。开源商业化的尽头，果然还是并购。\n- **🔗 传送门**：[点击直达原链接](https://supabase.com/blog/supabase-is-acquiring-turso)\n\n---\n\n### 2. 📌 Linux 内核爆出多个漏洞 (来源: HackerNews | 503 分 / 364 评论)\n- **核心干货**：LWN 披露 Linux 内核存在多个安全漏洞，HN 上半天冲上 500+ 分、360+ 条评论，说明这次不是\"又一个 CVE\"级别的小打小闹。内核作为一切基础设施的地基，任何漏洞都可能是供应链级别的连锁反应。\n- **毒舌/硬核点评**：每次内核爆洞，运维群里就开始表演\"我用的发行版已经修了\"和\"我还在 4.x 苟着\"的经典对喷。真相是——你以为你在跑服务器，其实是服务器在跑你。\n- **🔗 传送门**：[点击直达原链接](https://lwn.net/Articles/1097401/)\n\n---\n\n### 3. 📌 Hierarchical Continuous Diffusion Language Models (来源: ArXiv)\n- **核心干货**：离散扩散语言模型一直有个结构性瓶颈——并行解码时每个 token 从边缘分布独立采样，导致全局一致性崩坏。这篇论文提出层级化连续扩散框架，试图在保持双向推理优势的同时修复这个\"各扫门前雪\"的采样缺陷。如果成立，扩散语言模型对自回归的挑战将从\"理论可行\"迈向\"工程可用\"。\n- **毒舌/硬核点评**：自回归模型像话痨，一个字一个字往外蹦；扩散模型像灵感爆发，一次性糊一整段——但经常糊出一堆语法正确的废话。这篇论文想给\"糊\"这件事加上结构，值得盯。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2610.02207v1)\n\n---\n\n### 🗣️ 今日顶男金句\n> **\"技术债和感情债的唯一区别是：技术债你还得起，但你永远不想还。\"**",
   "briefing_items": [
     {
-      "title": "Cloudflare 开源决策模型 Clef，还把 RL 微调平台一起端上桌",
+      "title": "Supabase 收购 Turso",
       "source": "HackerNews",
-      "summary": "Cloudflare 发布了开放权重的\"决策模型\" Clef，以及配套的强化学习微调平台。简单说，就是让企业能拿开放权重模型去训练专做\"判断/决策\"的 AI，而不是再堆一个通用聊天玩具。RL 微调平台的存在意味着它不是发个模型跑路，而是把\"改造成你自己的决策引擎\"这条路也铺好了。",
-      "commentary": "Cloudflare 这步棋很鸡贼——CDN 生意增长见顶，转身来抢 AI 基础设施的饭碗。开放权重 + 微调平台，本质是把\"模型\"当引流品，真正收钱的是那套训练管线。通用大模型卷不动了，垂直决策模型才是下一个绞肉机。",
-      "url": "https://blog.cloudflare.com/clef-decision-models/"
+      "summary": "开源 BaaS 巨头 Supabase 宣布收购 Turso——那个把 SQLite 玩成分布式边缘数据库的团队。这意味着 Supabase 的 Postgres 帝国可能要向下兼容 SQLite 生态，边缘计算 + 本地优先（Local-first）的数据库叙事正在被资本正式收编。",
+      "commentary": "SQLite 是\"永远不会死\"的数据库，Turso 是\"试图让它学会分身术\"的创业公司，而 Supabase 是那个说\"你们俩都别折腾了，归我管\"的房东。开源商业化的尽头，果然还是并购。",
+      "url": "https://supabase.com/blog/supabase-is-acquiring-turso"
     },
     {
-      "title": "向量数据库，安息吧",
-      "source": "HackerNews",
-      "summary": "turbopuffer 这篇博客直接给\"向量数据库\"这个品类判了死刑。核心论点：随着底层存储和检索能力的进化，独立向量数据库正在被通用数据库和对象存储吞掉，专门为向量优化的独立系统越来越像上个时代的产物。HN 上 297 分、评论区吵成一片，说明戳到了不少人的饭碗。",
-      "commentary": "过去三年靠\"向量\"两个字融资的创业公司，现在大概在连夜改 PPT 讲\"AI 原生数据平台\"。技术品类的生死从来不看你多专一，只看通用方案哪天顺手把你做了。这是基础设施的宿命，不是悲剧，是规律。",
-      "url": "https://turbopuffer.com/blog/rip-vector-database"
+      "title": "Linux 内核爆出多个漏洞",
+      "source": "HackerNews | 503 分 / 364 评论",
+      "summary": "LWN 披露 Linux 内核存在多个安全漏洞，HN 上半天冲上 500+ 分、360+ 条评论，说明这次不是\"又一个 CVE\"级别的小打小闹。内核作为一切基础设施的地基，任何漏洞都可能是供应链级别的连锁反应。",
+      "commentary": "每次内核爆洞，运维群里就开始表演\"我用的发行版已经修了\"和\"我还在 4.x 苟着\"的经典对喷。真相是——你以为你在跑服务器，其实是服务器在跑你。",
+      "url": "https://lwn.net/Articles/1097401/"
     },
     {
-      "title": "Git 3.0 默认切 SHA-256，被批是\"代价高昂的错误\"",
-      "source": "HackerNews",
-      "summary": "GitButler 发文炮轰 Git 3.0 计划默认迁移到 SHA-256 哈希。核心担忧：迁移成本、生态兼容性、以及\"我们真的需要为理论上的哈希碰撞风险付这么大代价吗\"。HN 上 277 分、275 条评论，吵得比技术本身热闹——这说明它触及的是整个开发者生态的迁移神经。",
-      "commentary": "SHA-1 碰撞是学术演示级别的威胁，SHA-256 迁移是全体开发者买单级别的工程。安全圈永远在算\"理论风险\"，工程圈永远在扛\"实际成本\"，两边都对，两边都不肯让。Git 这块老骨头，动一下全身疼。",
-      "url": "https://blog.gitbutler.com/git-3-sha-256"
+      "title": "Hierarchical Continuous Diffusion Language Models",
+      "source": "ArXiv",
+      "summary": "离散扩散语言模型一直有个结构性瓶颈——并行解码时每个 token 从边缘分布独立采样，导致全局一致性崩坏。这篇论文提出层级化连续扩散框架，试图在保持双向推理优势的同时修复这个\"各扫门前雪\"的采样缺陷。如果成立，扩散语言模型对自回归的挑战将从\"理论可行\"迈向\"工程可用\"。",
+      "commentary": "自回归模型像话痨，一个字一个字往外蹦；扩散模型像灵感爆发，一次性糊一整段——但经常糊出一堆语法正确的废话。这篇论文想给\"糊\"这件事加上结构，值得盯。",
+      "url": "https://arxiv.org/abs/2610.02207v1"
     },
     {
-      "quote": "技术的护城河从来不是\"我做得更专\"，而是\"通用方案顺手把我做了之前，我已经变成了那个通用方案\"。"
+      "quote": "**\"技术债和感情债的唯一区别是：技术债你还得起，但你永远不想还。\"**"
     }
   ],
   "candidates": [
@@ -36,130 +36,29 @@
       "summary": "",
       "url": "https://lwn.net/Articles/1097401/",
       "source": "Hacker News",
-      "score": 194,
-      "comments": 122
+      "score": 503,
+      "comments": 364
     },
     {
-      "id": "hn:49923466",
-      "title": "RIP, vector database",
-      "summary": "",
-      "url": "https://turbopuffer.com/blog/rip-vector-database",
-      "source": "Hacker News",
-      "score": 297,
-      "comments": 79
-    },
-    {
-      "id": "hn:49923692",
-      "title": "Clef: Open-weight decision models, and new RL fine-tuning platform",
-      "summary": "",
-      "url": "https://blog.cloudflare.com/clef-decision-models/",
-      "source": "Hacker News",
-      "score": 464,
-      "comments": 170
-    },
-    {
-      "id": "hn:49920160",
-      "title": "StreetComplete on iOS is now in public beta",
-      "summary": "",
-      "url": "https://github.com/streetcomplete/StreetComplete/issues/5421",
-      "source": "Hacker News",
-      "score": 539,
-      "comments": 141
-    },
-    {
-      "id": "hn:49924179",
+      "id": "lob:bytzgl",
       "title": "Git 3.0's upcoming SHA-256 default will be a costly mistake",
       "summary": "",
       "url": "https://blog.gitbutler.com/git-3-sha-256",
-      "source": "Hacker News",
-      "score": 277,
-      "comments": 275
-    },
-    {
-      "id": "hn:49922569",
-      "title": "Ask HN: Who is hiring? (October 2026)",
-      "summary": "Please state the location and include REMOTE for remote work, REMOTE (US)\nor similar if the country is restricted, and ONSITE when remote work is <i>not</i> an option.<p>Please only post if you personally are part of the hiring company—no\nrecruiting firms or job boards. One post per company. If it i",
-      "url": "https://news.ycombinator.com/item?id=49922569",
-      "source": "Hacker News",
-      "score": 169,
-      "comments": 175
-    },
-    {
-      "id": "hn:49925969",
-      "title": "Pi Durable",
-      "summary": "Related: <i>Pi 1.0</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49926069\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49926069</a> - Oct 2026 (184 comments)",
-      "url": "https://earendil.com/posts/pi-durable/",
-      "source": "Hacker News",
-      "score": 287,
-      "comments": 35
-    },
-    {
-      "id": "lob:qgd17n",
-      "title": "IANA's email about why example.com changed",
-      "summary": "",
-      "url": "https://www.oliverdunk.com/2026/09/30/iana-reply",
       "source": "Lobste.rs",
-      "score": 114,
-      "comments": 40,
+      "score": 72,
+      "comments": 65,
       "tags": [
-        "networking",
-        "web"
+        "vcs"
       ]
     },
     {
-      "id": "hn:49926628",
-      "title": "Automatic Transmission – a data-privacy study of connected vehicles",
+      "id": "hn:49930047",
+      "title": "Shimano Bicycle Museum Review",
       "summary": "",
-      "url": "https://automatictransmission.khoury.northeastern.edu/index.html",
+      "url": "https://inrng.com/2026/10/shimano-bicycle-museum/",
       "source": "Hacker News",
-      "score": 158,
-      "comments": 151
-    },
-    {
-      "id": "hn:49926536",
-      "title": "SvelteKit 3",
-      "summary": "",
-      "url": "https://svelte.dev/blog/sveltekit-3-is-here",
-      "source": "Hacker News",
-      "score": 174,
+      "score": 262,
       "comments": 62
-    },
-    {
-      "id": "lob:bmcnwp",
-      "title": "Who's hiring? Q4 2026",
-      "summary": "<p>There was interest in expanding the scope of \"Who's hiring\" posts to non-software engineering positions <a href=\"https://lobste.rs/s/0zha79/who_s_hiring_support_edition_q3_2026\" rel=\"ugc\">[link1]</a> <a href=\"https://lobste.rs/s/cnoaqr/who_s_hiring_not_coder_edition_aug_2026\" rel=\"ugc\">[link2]</a",
-      "url": "https://lobste.rs/s/bmcnwp/who_s_hiring_q4_2026",
-      "source": "Lobste.rs",
-      "score": 50,
-      "comments": 8,
-      "tags": [
-        "job"
-      ]
-    },
-    {
-      "id": "lob:hbjy0b",
-      "title": "The AI Pascal’s Wager",
-      "summary": "",
-      "url": "https://ploum.net/2026-10-01-pascal_wager.html",
-      "source": "Lobste.rs",
-      "score": 33,
-      "comments": 57,
-      "tags": [
-        "vibecoding"
-      ]
-    },
-    {
-      "id": "lob:zcr7in",
-      "title": "Is sandboxing sufficient to contain rogue agents?",
-      "summary": "",
-      "url": "https://blog.cryptographyengineering.com/2026/09/30/is-sandboxing-sufficient-to-contain-rogue-agents/",
-      "source": "Lobste.rs",
-      "score": 21,
-      "comments": 12,
-      "tags": [
-        "security",
-        "vibecoding"
-      ]
     },
     {
       "id": "lob:dfvxvs",
@@ -167,11 +66,33 @@
       "summary": "",
       "url": "https://blog.rust-lang.org/2026/10/01/Rust-1.99.0/",
       "source": "Lobste.rs",
-      "score": 53,
-      "comments": 3,
+      "score": 71,
+      "comments": 15,
       "tags": [
         "release",
         "rust"
+      ]
+    },
+    {
+      "id": "hn:49933235",
+      "title": "The Legend of von Neumann (1973) [pdf]",
+      "summary": "",
+      "url": "https://gwern.net/doc/math/1973-halmos.pdf",
+      "source": "Hacker News",
+      "score": 163,
+      "comments": 91
+    },
+    {
+      "id": "lob:qgd17n",
+      "title": "IANA's email about why example.com changed",
+      "summary": "",
+      "url": "https://www.oliverdunk.com/2026/09/30/iana-reply",
+      "source": "Lobste.rs",
+      "score": 130,
+      "comments": 51,
+      "tags": [
+        "networking",
+        "web"
       ]
     },
     {
@@ -180,39 +101,99 @@
       "summary": "",
       "url": "https://amoffat.github.io/blog/cognitive-load.html",
       "source": "Lobste.rs",
-      "score": 33,
-      "comments": 8,
+      "score": 43,
+      "comments": 18,
       "tags": [
         "vibecoding"
       ]
     },
     {
-      "id": "lob:crlwst",
-      "title": "Typeclasses vs Modules",
+      "id": "lob:gmjegm",
+      "title": "Waterfox 6.7.5 Adds a Built-in Feed Reader",
       "summary": "",
-      "url": "https://sm2n.ca/articles/typeclasses-vs-modules/",
+      "url": "https://www.waterfox.com/releases/6.7.5/",
       "source": "Lobste.rs",
-      "score": 35,
-      "comments": 8,
+      "score": 48,
+      "comments": 12,
       "tags": [
-        "haskell",
-        "ml",
-        "plt"
+        "browsers",
+        "release"
       ]
     },
     {
-      "id": "lob:lzlkbr",
-      "title": "Reviving Valve's 15-year-old e-book",
+      "id": "hn:49931031",
+      "title": "Show HN: Audionaut – an open-source cross-platform multitrack audio editor",
       "summary": "",
-      "url": "https://nikolan.net/posts/portal2/",
+      "url": "https://github.com/kvoltmer/Audionaut",
+      "source": "Hacker News",
+      "score": 112,
+      "comments": 38
+    },
+    {
+      "id": "lob:td9dxd",
+      "title": "The death of web development education",
+      "summary": "",
+      "url": "https://molily.de/web-dev-education/",
       "source": "Lobste.rs",
       "score": 43,
-      "comments": 1,
+      "comments": 7,
       "tags": [
-        "games",
-        "reversing",
-        "vibecoding"
+        "education",
+        "vibecoding",
+        "web"
       ]
+    },
+    {
+      "id": "lob:ccxvh6",
+      "title": "Pidgin 3.0 Alpha 3 2.97.0 has been released",
+      "summary": "",
+      "url": "https://discourse.imfreedom.org/t/pidgin-3-0-alpha-3-2-97-0-has-been-released/436",
+      "source": "Lobste.rs",
+      "score": 23,
+      "comments": 11,
+      "tags": [
+        "release"
+      ]
+    },
+    {
+      "id": "hn:49934784",
+      "title": "Supabase is acquiring Turso",
+      "summary": "",
+      "url": "https://supabase.com/blog/supabase-is-acquiring-turso",
+      "source": "Hacker News",
+      "score": 119,
+      "comments": 61
+    },
+    {
+      "id": "hn:49919676",
+      "title": "To grieve, or not to grieve?",
+      "summary": "",
+      "url": "https://xenaproject.wordpress.com/2026/10/01/to-grieve-or-not-to-grieve/",
+      "source": "Hacker News",
+      "score": 98,
+      "comments": 84
+    },
+    {
+      "id": "lob:hfmcxi",
+      "title": "What are you doing this weekend?",
+      "summary": "<p>Feel free to tell what you plan on doing this weekend and even ask for help or feedback.</p>\n<p>Please keep in mind it’s more than OK to do nothing at all too!</p>\n",
+      "url": "https://lobste.rs/s/hfmcxi/what_are_you_doing_this_weekend",
+      "source": "Lobste.rs",
+      "score": 18,
+      "comments": 39,
+      "tags": [
+        "ask",
+        "programming"
+      ]
+    },
+    {
+      "id": "hn:49927754",
+      "title": "Court agrees with EFF: Utah's VPN law demands a technical impossibility",
+      "summary": "",
+      "url": "https://www.eff.org/deeplinks/2026/10/court-agrees-eff-utahs-vpn-law-demands-technical-impossibility",
+      "source": "Hacker News",
+      "score": 85,
+      "comments": 19
     },
     {
       "id": "arxiv:2610.02207v1",
@@ -253,6 +234,31 @@
         "cs.LG"
       ],
       "arxiv_id": "2610.02201v1"
+    },
+    {
+      "id": "arxiv:2610.02193v1",
+      "title": "Hierarchical Continuous Diffusion Language Models",
+      "summary": "Discrete diffusion language models offer a compelling alternative to autoregressive generation for tasks demanding bidirectional reasoning and global constraint satisfaction. Yet they share a structural bottleneck: when decoding in parallel, each token is sampled independently from its marginal, sev",
+      "url": "https://arxiv.org/abs/2610.02193v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_id": "2610.02193v1"
+    },
+    {
+      "id": "arxiv:2610.02190v1",
+      "title": "Trust the Direction, Search the Step: Zero-and-First-Order Methods for LLM Fine-Tuning",
+      "summary": "Step-size selection remains a central challenge in large-scale neural network optimization; conservative steps slow convergence, while aggressive steps can destabilize it. We combine \\textbf{Z}ero-and-\\textbf{F}irst-\\textbf{O}rder optimization~(ZFO) and propose a lightweight framework that decouples",
+      "url": "https://arxiv.org/abs/2610.02190v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "math.OC"
+      ],
+      "arxiv_id": "2610.02190v1"
     }
   ],
   "ai_curated": true
