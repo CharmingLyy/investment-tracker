@@ -1,83 +1,43 @@
 {
   "date": "2026-10-02",
-  "update_time": "2026-10-01 18:11:02",
+  "update_time": "2026-10-02 04:53:40",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-02\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Gemini 4 Argon 发布 (来源: HackerNews)\n- **核心干货**：Google 正式发布 Gemini 4 Argon，HN 热度飙到 1601 分、评论区炸出 1065 条讨论，堪称年度最热 AI 发布帖。配套还有一份\"智能/性能/价格\"三维分析，显然 Google 这次是有备而来，要在推理能力和性价比上同时对友商施压。\n- **毒舌/硬核点评**：1601 分说明什么？说明全世界的程序员都在摸鱼刷 HN 而不是写代码。至于模型本身——Google 发布会的 PPT 能力一向是 SOTA，希望这次推理能力别又\"跑分猛如虎，实测原地杵\"。\n- **🔗 传送门**：[点击直达原链接](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/)\n\n---\n\n### 2. 📌 RIP, Vector Database (来源: HackerNews)\n- **核心干货**：turbopuffer 发文宣告\"向量数据库已死\"，核心论点是：随着原生支持向量检索的通用数据库（Postgres 等）和对象存储方案成熟，独立向量数据库的护城河正在被填平。对于 2023 年那波拿着向量数据库概念融资的创业者来说，这是一篇不折不扣的讣告。\n- **毒舌/硬核点评**：当年每个 VC 都要求 pitch deck 里写\"AI-native vector database\"，现在同一批人开始写\"AI-native agent memory\"。赛道换壳的速度比模型迭代还快，唯一不变的是韭菜的记忆只有 7 秒。\n- **🔗 传送门**：[点击直达原链接](https://turbopuffer.com/blog/rip-vector-database)\n\n---\n\n### 3. 📌 rsync 因 33 个 CVE 在 Debian 迎来大版本升级 (来源: Lobste.rs)\n- **核心干货**：Debian 将 rsync 从 3.4.1 直接跳到 3.5.0，原因是一次性修复了 33 个 CVE 漏洞。rsync 作为存在了几十年的基础设施工具，这种规模的集中爆雷极其罕见，意味着大量生产环境可能长期暴露在已知漏洞下而无人察觉。\n- **毒舌/硬核点评**：33 个 CVE 一次性打包修复——这不叫安全更新，这叫技术债的年终清算。所有还在跑老版本 rsync 的运维同学，今天不是\"建议升级\"，是\"必须升级\"，否则你的服务器可能比你家门锁还容易开。\n- **🔗 传送门**：[点击直达原链接](https://lobste.rs/s/sqyhgt/major_rsync_upgrade_debian_because_33)\n\n---\n\n### 🗣️ 今日顶男金句\n> **\"向量数据库的墓志铭上写着：'我曾是风口，后来成了基础设施。'——所有技术的终局都是被吞噬，区别只在于你是被 Postgres 吞，还是被时代吞。\"**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-02\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Cloudflare 开源决策模型 Clef，还把 RL 微调平台一起端上桌 (来源: HackerNews)\n- **核心干货**：Cloudflare 发布了开放权重的\"决策模型\" Clef，以及配套的强化学习微调平台。简单说，就是让企业能拿开放权重模型去训练专做\"判断/决策\"的 AI，而不是再堆一个通用聊天玩具。RL 微调平台的存在意味着它不是发个模型跑路，而是把\"改造成你自己的决策引擎\"这条路也铺好了。\n- **毒舌/硬核点评**：Cloudflare 这步棋很鸡贼——CDN 生意增长见顶，转身来抢 AI 基础设施的饭碗。开放权重 + 微调平台，本质是把\"模型\"当引流品，真正收钱的是那套训练管线。通用大模型卷不动了，垂直决策模型才是下一个绞肉机。\n- **🔗 传送门**：[点击直达原链接](https://blog.cloudflare.com/clef-decision-models/)\n\n---\n\n### 2. 📌 向量数据库，安息吧 (来源: HackerNews)\n- **核心干货**：turbopuffer 这篇博客直接给\"向量数据库\"这个品类判了死刑。核心论点：随着底层存储和检索能力的进化，独立向量数据库正在被通用数据库和对象存储吞掉，专门为向量优化的独立系统越来越像上个时代的产物。HN 上 297 分、评论区吵成一片，说明戳到了不少人的饭碗。\n- **毒舌/硬核点评**：过去三年靠\"向量\"两个字融资的创业公司，现在大概在连夜改 PPT 讲\"AI 原生数据平台\"。技术品类的生死从来不看你多专一，只看通用方案哪天顺手把你做了。这是基础设施的宿命，不是悲剧，是规律。\n- **🔗 传送门**：[点击直达原链接](https://turbopuffer.com/blog/rip-vector-database)\n\n---\n\n### 3. 📌 Git 3.0 默认切 SHA-256，被批是\"代价高昂的错误\" (来源: HackerNews)\n- **核心干货**：GitButler 发文炮轰 Git 3.0 计划默认迁移到 SHA-256 哈希。核心担忧：迁移成本、生态兼容性、以及\"我们真的需要为理论上的哈希碰撞风险付这么大代价吗\"。HN 上 277 分、275 条评论，吵得比技术本身热闹——这说明它触及的是整个开发者生态的迁移神经。\n- **毒舌/硬核点评**：SHA-1 碰撞是学术演示级别的威胁，SHA-256 迁移是全体开发者买单级别的工程。安全圈永远在算\"理论风险\"，工程圈永远在扛\"实际成本\"，两边都对，两边都不肯让。Git 这块老骨头，动一下全身疼。\n- **🔗 传送门**：[点击直达原链接](https://blog.gitbutler.com/git-3-sha-256)\n\n---\n\n### 🗣️ 今日顶男金句\n> 技术的护城河从来不是\"我做得更专\"，而是\"通用方案顺手把我做了之前，我已经变成了那个通用方案\"。",
   "briefing_items": [
     {
-      "title": "Gemini 4 Argon 发布",
+      "title": "Cloudflare 开源决策模型 Clef，还把 RL 微调平台一起端上桌",
       "source": "HackerNews",
-      "summary": "Google 正式发布 Gemini 4 Argon，HN 热度飙到 1601 分、评论区炸出 1065 条讨论，堪称年度最热 AI 发布帖。配套还有一份\"智能/性能/价格\"三维分析，显然 Google 这次是有备而来，要在推理能力和性价比上同时对友商施压。",
-      "commentary": "1601 分说明什么？说明全世界的程序员都在摸鱼刷 HN 而不是写代码。至于模型本身——Google 发布会的 PPT 能力一向是 SOTA，希望这次推理能力别又\"跑分猛如虎，实测原地杵\"。",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+      "summary": "Cloudflare 发布了开放权重的\"决策模型\" Clef，以及配套的强化学习微调平台。简单说，就是让企业能拿开放权重模型去训练专做\"判断/决策\"的 AI，而不是再堆一个通用聊天玩具。RL 微调平台的存在意味着它不是发个模型跑路，而是把\"改造成你自己的决策引擎\"这条路也铺好了。",
+      "commentary": "Cloudflare 这步棋很鸡贼——CDN 生意增长见顶，转身来抢 AI 基础设施的饭碗。开放权重 + 微调平台，本质是把\"模型\"当引流品，真正收钱的是那套训练管线。通用大模型卷不动了，垂直决策模型才是下一个绞肉机。",
+      "url": "https://blog.cloudflare.com/clef-decision-models/"
     },
     {
-      "title": "RIP, Vector Database",
+      "title": "向量数据库，安息吧",
       "source": "HackerNews",
-      "summary": "turbopuffer 发文宣告\"向量数据库已死\"，核心论点是：随着原生支持向量检索的通用数据库（Postgres 等）和对象存储方案成熟，独立向量数据库的护城河正在被填平。对于 2023 年那波拿着向量数据库概念融资的创业者来说，这是一篇不折不扣的讣告。",
-      "commentary": "当年每个 VC 都要求 pitch deck 里写\"AI-native vector database\"，现在同一批人开始写\"AI-native agent memory\"。赛道换壳的速度比模型迭代还快，唯一不变的是韭菜的记忆只有 7 秒。",
+      "summary": "turbopuffer 这篇博客直接给\"向量数据库\"这个品类判了死刑。核心论点：随着底层存储和检索能力的进化，独立向量数据库正在被通用数据库和对象存储吞掉，专门为向量优化的独立系统越来越像上个时代的产物。HN 上 297 分、评论区吵成一片，说明戳到了不少人的饭碗。",
+      "commentary": "过去三年靠\"向量\"两个字融资的创业公司，现在大概在连夜改 PPT 讲\"AI 原生数据平台\"。技术品类的生死从来不看你多专一，只看通用方案哪天顺手把你做了。这是基础设施的宿命，不是悲剧，是规律。",
       "url": "https://turbopuffer.com/blog/rip-vector-database"
     },
     {
-      "title": "rsync 因 33 个 CVE 在 Debian 迎来大版本升级",
-      "source": "Lobste.rs",
-      "summary": "Debian 将 rsync 从 3.4.1 直接跳到 3.5.0，原因是一次性修复了 33 个 CVE 漏洞。rsync 作为存在了几十年的基础设施工具，这种规模的集中爆雷极其罕见，意味着大量生产环境可能长期暴露在已知漏洞下而无人察觉。",
-      "commentary": "33 个 CVE 一次性打包修复——这不叫安全更新，这叫技术债的年终清算。所有还在跑老版本 rsync 的运维同学，今天不是\"建议升级\"，是\"必须升级\"，否则你的服务器可能比你家门锁还容易开。",
-      "url": "https://lobste.rs/s/sqyhgt/major_rsync_upgrade_debian_because_33"
+      "title": "Git 3.0 默认切 SHA-256，被批是\"代价高昂的错误\"",
+      "source": "HackerNews",
+      "summary": "GitButler 发文炮轰 Git 3.0 计划默认迁移到 SHA-256 哈希。核心担忧：迁移成本、生态兼容性、以及\"我们真的需要为理论上的哈希碰撞风险付这么大代价吗\"。HN 上 277 分、275 条评论，吵得比技术本身热闹——这说明它触及的是整个开发者生态的迁移神经。",
+      "commentary": "SHA-1 碰撞是学术演示级别的威胁，SHA-256 迁移是全体开发者买单级别的工程。安全圈永远在算\"理论风险\"，工程圈永远在扛\"实际成本\"，两边都对，两边都不肯让。Git 这块老骨头，动一下全身疼。",
+      "url": "https://blog.gitbutler.com/git-3-sha-256"
     },
     {
-      "quote": "**\"向量数据库的墓志铭上写着：'我曾是风口，后来成了基础设施。'——所有技术的终局都是被吞噬，区别只在于你是被 Postgres 吞，还是被时代吞。\"**"
+      "quote": "技术的护城河从来不是\"我做得更专\"，而是\"通用方案顺手把我做了之前，我已经变成了那个通用方案\"。"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49920896",
-      "title": "How to speed up the Rust compiler in September 2026",
+      "id": "hn:49928121",
+      "title": "Several vulnerabilities have been discovered in the Linux kernel",
       "summary": "",
-      "url": "https://nnethercote.github.io/2026/09/30/how-to-speed-up-the-rust-compiler-in-september-2026.html",
+      "url": "https://lwn.net/Articles/1097401/",
       "source": "Hacker News",
-      "score": 179,
-      "comments": 87
-    },
-    {
-      "id": "hn:49920160",
-      "title": "StreetComplete on iOS is now in public beta",
-      "summary": "",
-      "url": "https://github.com/streetcomplete/StreetComplete/issues/5421",
-      "source": "Hacker News",
-      "score": 411,
-      "comments": 96
-    },
-    {
-      "id": "hn:49923692",
-      "title": "Clef: Open-source decision models, and new RL fine-tuning platform",
-      "summary": "",
-      "url": "https://blog.cloudflare.com/clef-decision-models/",
-      "source": "Hacker News",
-      "score": 185,
-      "comments": 63
-    },
-    {
-      "id": "hn:49913571",
-      "title": "Gemini 4 Argon",
-      "summary": "See also: <i>Gemini 4 Argon (High): Intelligence, Performance and Price Analysis</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49914236\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49914236</a>",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
-      "source": "Hacker News",
-      "score": 1601,
-      "comments": 1065
-    },
-    {
-      "id": "lob:qgd17n",
-      "title": "IANA's email about why example.com changed",
-      "summary": "",
-      "url": "https://www.oliverdunk.com/2026/09/30/iana-reply",
-      "source": "Lobste.rs",
-      "score": 86,
-      "comments": 30,
-      "tags": [
-        "networking",
-        "web"
-      ]
+      "score": 194,
+      "comments": 122
     },
     {
       "id": "hn:49923466",
@@ -85,72 +45,35 @@
       "summary": "",
       "url": "https://turbopuffer.com/blog/rip-vector-database",
       "source": "Hacker News",
-      "score": 116,
-      "comments": 27
+      "score": 297,
+      "comments": 79
     },
     {
-      "id": "lob:bmcnwp",
-      "title": "Who's hiring? Q4 2026",
-      "summary": "<p>There was interest in expanding the scope of \"Who's hiring\" posts to non-software engineering positions <a href=\"https://lobste.rs/s/0zha79/who_s_hiring_support_edition_q3_2026\" rel=\"ugc\">[link1]</a> <a href=\"https://lobste.rs/s/cnoaqr/who_s_hiring_not_coder_edition_aug_2026\" rel=\"ugc\">[link2]</a",
-      "url": "https://lobste.rs/s/bmcnwp/who_s_hiring_q4_2026",
-      "source": "Lobste.rs",
-      "score": 38,
-      "comments": 6,
-      "tags": [
-        "job"
-      ]
+      "id": "hn:49923692",
+      "title": "Clef: Open-weight decision models, and new RL fine-tuning platform",
+      "summary": "",
+      "url": "https://blog.cloudflare.com/clef-decision-models/",
+      "source": "Hacker News",
+      "score": 464,
+      "comments": 170
     },
     {
-      "id": "lob:sqyhgt",
-      "title": "Major rsync upgrade in Debian because of 33 CVEs",
-      "summary": "<strong>apt-listchanges --which=both -f text --since=3.4.1+ds1-5+deb13u4 <br>\n/var/cache/apt/archives/rsync_3.5.0+ds1-0+deb13u1_amd64.deb\napt-listchanges: Reading changelogs...\napt-listchanges: News</strong>\n<p>rsync (3.5.0+ds1-0+deb13u1) trixie-security; urgency=medium</p>\n<p>In order to fix 33 CVE",
-      "url": "https://lobste.rs/s/sqyhgt/major_rsync_upgrade_debian_because_33",
-      "source": "Lobste.rs",
-      "score": 22,
-      "comments": 5,
-      "tags": [
-        "security"
-      ]
+      "id": "hn:49920160",
+      "title": "StreetComplete on iOS is now in public beta",
+      "summary": "",
+      "url": "https://github.com/streetcomplete/StreetComplete/issues/5421",
+      "source": "Hacker News",
+      "score": 539,
+      "comments": 141
     },
     {
-      "id": "arxiv:2609.40361v1",
-      "title": "Ranking-Aware Prompt Optimization for Multimodal Clinical Diagnosis",
-      "summary": "Multimodal large language models (MLLMs) are rapidly advancing clinical diagnosis, yet their adaptation pipelines remain anchored to accuracy-based objectives. Clinical data are heavily class-imbalanced: a constant-majority predictor can score above 90% accuracy while being clinically useless. We th",
-      "url": "https://arxiv.org/abs/2609.40361v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.CL",
-        "cs.CV"
-      ],
-      "arxiv_id": "2609.40361v1"
-    },
-    {
-      "id": "arxiv:2609.40316v1",
-      "title": "Scaling Laws for Looped Mixture of Experts",
-      "summary": "Looped transformers and Mixture-of-Experts (MoE) offer complementary routes to efficient scaling: recurrence increases computational depth at fixed parameters, while MoE sparsity expands total capacity at fixed active compute. Yet existing scaling laws model recurrence or sparsity in isolation. In t",
-      "url": "https://arxiv.org/abs/2609.40316v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_id": "2609.40316v1"
-    },
-    {
-      "id": "lob:nwdxko",
-      "title": "EDG C/C++ Compiler Project",
-      "summary": "<p>During the 2025 November C++ ISO meeting Edison Design Group <a href=\"https://herbsutter.com/2025/11/10/trip-report-november-2025-iso-c-standards-meeting-kona-usa/\" rel=\"ugc\">announced that they would be winding down and that they will open-source their front end</a>. This is the repo containing ",
-      "url": "https://github.com/edgcpp/compiler",
-      "source": "Lobste.rs",
-      "score": 28,
-      "comments": 10,
-      "tags": [
-        "c",
-        "c++",
-        "compilers"
-      ]
+      "id": "hn:49924179",
+      "title": "Git 3.0's upcoming SHA-256 default will be a costly mistake",
+      "summary": "",
+      "url": "https://blog.gitbutler.com/git-3-sha-256",
+      "source": "Hacker News",
+      "score": 277,
+      "comments": 275
     },
     {
       "id": "hn:49922569",
@@ -158,17 +81,60 @@
       "summary": "Please state the location and include REMOTE for remote work, REMOTE (US)\nor similar if the country is restricted, and ONSITE when remote work is <i>not</i> an option.<p>Please only post if you personally are part of the hiring company—no\nrecruiting firms or job boards. One post per company. If it i",
       "url": "https://news.ycombinator.com/item?id=49922569",
       "source": "Hacker News",
-      "score": 50,
-      "comments": 52
+      "score": 169,
+      "comments": 175
     },
     {
-      "id": "hn:49922568",
-      "title": "Ask HN: Who wants to be hired? (October 2026)",
-      "summary": "Share your information if you are looking for work. Please use this format:<p><pre><code>  Location:\n  Remote:\n  Willing to relocate:\n  Technologies:\n  Résumé&#x2F;CV:\n  Email:\n</code></pre>\nPlease only post if you are personally looking for work. Agencies, recruiters, job boards,\nand so on, are off",
-      "url": "https://news.ycombinator.com/item?id=49922568",
+      "id": "hn:49925969",
+      "title": "Pi Durable",
+      "summary": "Related: <i>Pi 1.0</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49926069\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49926069</a> - Oct 2026 (184 comments)",
+      "url": "https://earendil.com/posts/pi-durable/",
       "source": "Hacker News",
-      "score": 35,
-      "comments": 137
+      "score": 287,
+      "comments": 35
+    },
+    {
+      "id": "lob:qgd17n",
+      "title": "IANA's email about why example.com changed",
+      "summary": "",
+      "url": "https://www.oliverdunk.com/2026/09/30/iana-reply",
+      "source": "Lobste.rs",
+      "score": 114,
+      "comments": 40,
+      "tags": [
+        "networking",
+        "web"
+      ]
+    },
+    {
+      "id": "hn:49926628",
+      "title": "Automatic Transmission – a data-privacy study of connected vehicles",
+      "summary": "",
+      "url": "https://automatictransmission.khoury.northeastern.edu/index.html",
+      "source": "Hacker News",
+      "score": 158,
+      "comments": 151
+    },
+    {
+      "id": "hn:49926536",
+      "title": "SvelteKit 3",
+      "summary": "",
+      "url": "https://svelte.dev/blog/sveltekit-3-is-here",
+      "source": "Hacker News",
+      "score": 174,
+      "comments": 62
+    },
+    {
+      "id": "lob:bmcnwp",
+      "title": "Who's hiring? Q4 2026",
+      "summary": "<p>There was interest in expanding the scope of \"Who's hiring\" posts to non-software engineering positions <a href=\"https://lobste.rs/s/0zha79/who_s_hiring_support_edition_q3_2026\" rel=\"ugc\">[link1]</a> <a href=\"https://lobste.rs/s/cnoaqr/who_s_hiring_not_coder_edition_aug_2026\" rel=\"ugc\">[link2]</a",
+      "url": "https://lobste.rs/s/bmcnwp/who_s_hiring_q4_2026",
+      "source": "Lobste.rs",
+      "score": 50,
+      "comments": 8,
+      "tags": [
+        "job"
+      ]
     },
     {
       "id": "lob:hbjy0b",
@@ -176,70 +142,63 @@
       "summary": "",
       "url": "https://ploum.net/2026-10-01-pascal_wager.html",
       "source": "Lobste.rs",
-      "score": 23,
-      "comments": 36,
+      "score": 33,
+      "comments": 57,
       "tags": [
         "vibecoding"
       ]
     },
     {
-      "id": "arxiv:2609.40360v1",
-      "title": "Semifactual Credit-Augmented Policy Optimization",
-      "summary": "Reinforcement learning with verifiable rewards (RLVR) has improved the reasoning capabilities of large language models (LLMs), yet their predictions remain sensitive to task-irrelevant prompt features. We investigate this sensitivity through semifactual prompt interventions that preserve the underly",
-      "url": "https://arxiv.org/abs/2609.40360v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_id": "2609.40360v1"
-    },
-    {
-      "id": "arxiv:2609.40330v1",
-      "title": "Turbo Harness: Instance-Adaptive Harness Optimization",
-      "summary": "Automating the search for effective harnesses is an important step toward enabling agents to recursively self-improve. Existing harness optimizations typically produce a single global harness that is applied uniformly across task instances. However, a harness that works well on average may not be op",
-      "url": "https://arxiv.org/abs/2609.40330v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI"
-      ],
-      "arxiv_id": "2609.40330v1"
-    },
-    {
-      "id": "arxiv:2609.40322v1",
-      "title": "MatLoom: Layered Text-to-Material Generation in a Compact Program Space",
-      "summary": "Material generation should produce not only an appearance, but also the rules that construct it. We introduce MatLoom, a compact, layer-oriented language for text-to-material generation with pretrained language models. Each program composes alpha-masked layers whose shared spatial expressions define",
-      "url": "https://arxiv.org/abs/2609.40322v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.CL",
-        "cs.MM"
-      ],
-      "arxiv_id": "2609.40322v1"
-    },
-    {
-      "id": "lob:bag41j",
-      "title": "Hanami, Why?: Introductions",
+      "id": "lob:zcr7in",
+      "title": "Is sandboxing sufficient to contain rogue agents?",
       "summary": "",
-      "url": "https://aaronmallen.me/writing/hanami-why-introductions",
+      "url": "https://blog.cryptographyengineering.com/2026/09/30/is-sandboxing-sufficient-to-contain-rogue-agents/",
       "source": "Lobste.rs",
-      "score": 48,
-      "comments": 2,
+      "score": 21,
+      "comments": 12,
       "tags": [
-        "ruby"
+        "security",
+        "vibecoding"
       ]
     },
     {
-      "id": "hn:49921923",
-      "title": "Cloudflare K2: serverless event streams",
+      "id": "lob:dfvxvs",
+      "title": "Announcing Rust 1.99.0",
       "summary": "",
-      "url": "https://blog.cloudflare.com/cloudflare-k2-streams/",
-      "source": "Hacker News",
-      "score": 95,
-      "comments": 28
+      "url": "https://blog.rust-lang.org/2026/10/01/Rust-1.99.0/",
+      "source": "Lobste.rs",
+      "score": 53,
+      "comments": 3,
+      "tags": [
+        "release",
+        "rust"
+      ]
+    },
+    {
+      "id": "lob:iwvjr0",
+      "title": "Reducing the cognitive load of AI changes",
+      "summary": "",
+      "url": "https://amoffat.github.io/blog/cognitive-load.html",
+      "source": "Lobste.rs",
+      "score": 33,
+      "comments": 8,
+      "tags": [
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "lob:crlwst",
+      "title": "Typeclasses vs Modules",
+      "summary": "",
+      "url": "https://sm2n.ca/articles/typeclasses-vs-modules/",
+      "source": "Lobste.rs",
+      "score": 35,
+      "comments": 8,
+      "tags": [
+        "haskell",
+        "ml",
+        "plt"
+      ]
     },
     {
       "id": "lob:lzlkbr",
@@ -247,13 +206,53 @@
       "summary": "",
       "url": "https://nikolan.net/posts/portal2/",
       "source": "Lobste.rs",
-      "score": 33,
+      "score": 43,
       "comments": 1,
       "tags": [
         "games",
         "reversing",
         "vibecoding"
       ]
+    },
+    {
+      "id": "arxiv:2610.02207v1",
+      "title": "One Basis to Animate Them All: Gaussian Blendshape Distillation for Real-Time Avatars",
+      "summary": "3D Gaussian avatars support fast rendering, however, their real-time animation is often challenged by the costly neural inference. We address this bottleneck and show that the animation of pretrained avatar models can be closely approximated by a linear combination of identity-independent blendshape",
+      "url": "https://arxiv.org/abs/2610.02207v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.HC",
+        "cs.LG"
+      ],
+      "arxiv_id": "2610.02207v1"
+    },
+    {
+      "id": "arxiv:2610.02206v1",
+      "title": "KaliBench: A Fine-Grained Benchmark for Cybersecurity Tool Use on Kali Linux with Runtime-Free Verifiable Rewards",
+      "summary": "LLMs are increasingly applied to cybersecurity workflows, where they are expected to translate analysts' intent into tool invocations. However, existing evaluations focus on knowledge-based assessments or end-to-end agentic tasks, and do not directly measure LLMs' ability to generate executable comm",
+      "url": "https://arxiv.org/abs/2610.02206v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CR"
+      ],
+      "arxiv_id": "2610.02206v1"
+    },
+    {
+      "id": "arxiv:2610.02201v1",
+      "title": "SILSA: Sliding-Window Slice Latents for Topology-Preserving High-Resolution 3D Generation",
+      "summary": "High-resolution 3D generation increasingly relies on voxel latents and multi-stage pipelines that first predict active structure and then synthesize local geometry. While effective, this design fragments continuous surfaces into many local tokens, inflates generation cost, and often weakens topologi",
+      "url": "https://arxiv.org/abs/2610.02201v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_id": "2610.02201v1"
     }
   ],
   "ai_curated": true
