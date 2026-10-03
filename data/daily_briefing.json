@@ -1,70 +1,58 @@
 {
   "date": "2026-10-03",
-  "update_time": "2026-10-03 04:36:31",
+  "update_time": "2026-10-03 15:53:58",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-03\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 [AI 终于攻破《战略棋》(Stratego)：在不完全信息博弈中击败人类史上最强选手] (来源: HackerNews / Ars Technica)\n- **核心干货**：DeepMind 系的这套系统在《战略棋》这种\"信息大部分隐藏\"的博弈中，首次正面击败了人类历史最强玩家。关键在于它没有靠堆算力蛮干——论文里核心是高效的信念状态建模与搜索剪枝，用\"预算级\"算力就完成了这件事。这意味着 AI 在战争、谈判、扑克这类\"你看不见对手底牌\"的真实场景里的推理能力，又上了一个台阶。\n- **毒舌/硬核点评**：围棋、国际象棋早就被 AI 按在地上摩擦了，现在连\"藏牌\"的游戏也不放过。人类最后的堡垒大概只剩\"开会时假装在听\"和\"猜对象为什么生气\"了——而这俩 AI 估计也快学会了。\n- **🔗 传送门**：[点击直达原链接](https://arstechnica.com/science/2026/10/ai-finally-beat-the-best-stratego-player-in-history-and-did-it-on-a-budget/)\n\n---\n\n### 2. 📌 [法院站队 EFF：犹他州 VPN 法案要求的是\"技术上的不可能\"] (来源: HackerNews / EFF)\n- **核心干货**：犹他州搞了个法案，要求 VPN 服务商\"验证用户年龄并屏蔽未成年人\"——EFF 直接起诉，法院现在认同了：这玩意儿在技术上根本无法实现，VPN 的设计本质就是加密隧道，服务商根本看不到隧道里跑的是谁、多大年纪。这不只是一次法律胜利，更是给全美其他想照抄这套\"网络实名+年龄墙\"的州一记响亮的耳光。\n- **毒舌/硬核点评**：立法者再次用实际行动证明：不懂技术不可怕，可怕的是不懂还非要立法。想让 VPN 看穿加密流量，不如直接要求雨伞厂统计下雨时有多少人没淋湿——物理定律和密码学都不吃你这套。\n- **🔗 传送门**：[点击直达原链接](https://www.eff.org/deeplinks/2026/10/court-agrees-eff-utahs-vpn-law-demands-technical-impossibility)\n\n---\n\n### 3. 📌 [Redis 之父又出手：ds4 让你在本地跑 LLM] (来源: HackerNews)\n- **核心干货**：Redis 缔造者 antirez（Salvatore Sanfilippo）发布新项目 ds4，主打\"本地跑大模型\"。以他的尿性，这东西大概率是极致精简、性能导向、拒绝臃肿——直接冲着\"我不想把数据交给云端 API、也不想被 token 账单割韭菜\"的开发者痛点来的。本地推理赛道又添一员猛将。\n- **毒舌/硬核点评**：antirez 这人就是技术圈的\"不将就\"代言人——写完 Redis 嫌社区太吵退出，现在又回来教你们怎么不花冤枉钱跑模型。云厂商的 API 账单看了怕是要连夜改价目表。记住：真正的极客，宁可让显卡冒烟，也不让钱包流血。\n- **🔗 传送门**：[点击直达原链接](https://dwarfstar.sh/)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"别人卷模型的参数量，你该卷的是自己大脑的'有效参数'——毕竟前者烧的是电，后者烧的是你的人生。今天，把算力花在能复利的地方。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-03\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 法院裁定犹他州 VPN 法案\"技术上不可能实现\" (来源: HackerNews / EFF)\n- **核心干货**：犹他州此前通过一项法律，要求 VPN 服务商在用户接入前验证其年龄并默认开启内容过滤。EFF 提起诉讼后，法院认定该法案要求 VPN 供应商对加密隧道内的流量进行内容审查和年龄验证，在现有密码学架构下根本无法执行，等于强迫企业\"用一把没有钥匙的锁锁住一个不存在的门\"。法院判决支持 EFF 立场，该法案实质被宣告不可执行。\n- **毒舌/硬核点评**：立法者连 VPN 是干什么的都搞不清楚就敢立法，这波属于是\"用菜刀修核反应堆\"——勇气可嘉，物理不允许。更讽刺的是，真正想绕过限制的青少年连搜索引擎都不用，直接问 AI 就行了，请问阁下如何应对？\n- **🔗 传送门**：[点击直达原链接](https://www.eff.org/deeplinks/2026/10/court-agrees-eff-utahs-vpn-law-demands-technical-impossibility)\n\n---\n\n### 2. 📌 Aleph Alpha 发布主权开源模型 Kolibri (来源: HackerNews / Aleph Alpha)\n- **核心干货**：德国 AI 公司 Aleph Alpha 发布了名为 Kolibri 的开源权重 LLM，主打德语和英语双语能力，定位\"主权 AI\"——即数据不出境、模型可控、不依赖美国大厂 API。在欧盟 AI 主权焦虑日益加剧的背景下，这是欧洲本土力量对 OpenAI/Google 垄断地位的一次正式回应。模型权重开放，企业可私有化部署。\n- **毒舌/硬核点评**：欧洲终于想明白了——与其天天在布鲁塞尔写 AI 监管法案，不如自己训一个模型出来。开源权重这招很聪明，等于把\"主权\"两个字从政治口号变成了可下载的 .safetensors 文件。不过话说回来，Kolibri 在德语上的表现如果还打不过 GPT-4o，那\"主权\"就只剩下\"主权\"了。\n- **🔗 传送门**：[点击直达原链接](https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/)\n\n---\n\n### 3. 📌 高斯 Blendshape 蒸馏：让 3D 数字人实时动画不再卡成 PPT (来源: ArXiv cs.CV)\n- **核心干货**：3D 高斯泼溅（Gaussian Splatting）头像虽然渲染快，但实时动画一直被昂贵的神经推理拖后腿。这篇论文提出用\"身份无关的 blendshape 线性组合\"来近似预训练头像模型的动画输出，通过蒸馏方式把神经网络的推理成本砍掉，实现实时驱动。简单说：以前驱动一个高斯数字人需要跑一个大模型，现在只需要做几次矩阵乘法。\n- **毒舌/硬核点评**：元宇宙坟头草都三米高了，但数字人技术倒是在踏踏实实进步。这篇论文的价值在于把\"实时\"两个字从营销话术变成了工程现实——毕竟没有哪个用户愿意对着一个每帧延迟 200ms 的虚拟主播喊\"你好卡\"。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2610.02207v1)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> **\"立法者不懂技术就立法，就像程序员不懂业务就写需求——最后都是用户买单，区别是前者你还能起诉。\"**",
   "briefing_items": [
     {
-      "title": "[AI 终于攻破《战略棋》(Stratego)：在不完全信息博弈中击败人类史上最强选手]",
-      "source": "HackerNews / Ars Technica",
-      "summary": "DeepMind 系的这套系统在《战略棋》这种\"信息大部分隐藏\"的博弈中，首次正面击败了人类历史最强玩家。关键在于它没有靠堆算力蛮干——论文里核心是高效的信念状态建模与搜索剪枝，用\"预算级\"算力就完成了这件事。这意味着 AI 在战争、谈判、扑克这类\"你看不见对手底牌\"的真实场景里的推理能力，又上了一个台阶。",
-      "commentary": "围棋、国际象棋早就被 AI 按在地上摩擦了，现在连\"藏牌\"的游戏也不放过。人类最后的堡垒大概只剩\"开会时假装在听\"和\"猜对象为什么生气\"了——而这俩 AI 估计也快学会了。",
-      "url": "https://arstechnica.com/science/2026/10/ai-finally-beat-the-best-stratego-player-in-history-and-did-it-on-a-budget/"
-    },
-    {
-      "title": "[法院站队 EFF：犹他州 VPN 法案要求的是\"技术上的不可能\"]",
+      "title": "法院裁定犹他州 VPN 法案\"技术上不可能实现\"",
       "source": "HackerNews / EFF",
-      "summary": "犹他州搞了个法案，要求 VPN 服务商\"验证用户年龄并屏蔽未成年人\"——EFF 直接起诉，法院现在认同了：这玩意儿在技术上根本无法实现，VPN 的设计本质就是加密隧道，服务商根本看不到隧道里跑的是谁、多大年纪。这不只是一次法律胜利，更是给全美其他想照抄这套\"网络实名+年龄墙\"的州一记响亮的耳光。",
-      "commentary": "立法者再次用实际行动证明：不懂技术不可怕，可怕的是不懂还非要立法。想让 VPN 看穿加密流量，不如直接要求雨伞厂统计下雨时有多少人没淋湿——物理定律和密码学都不吃你这套。",
+      "summary": "犹他州此前通过一项法律，要求 VPN 服务商在用户接入前验证其年龄并默认开启内容过滤。EFF 提起诉讼后，法院认定该法案要求 VPN 供应商对加密隧道内的流量进行内容审查和年龄验证，在现有密码学架构下根本无法执行，等于强迫企业\"用一把没有钥匙的锁锁住一个不存在的门\"。法院判决支持 EFF 立场，该法案实质被宣告不可执行。",
+      "commentary": "立法者连 VPN 是干什么的都搞不清楚就敢立法，这波属于是\"用菜刀修核反应堆\"——勇气可嘉，物理不允许。更讽刺的是，真正想绕过限制的青少年连搜索引擎都不用，直接问 AI 就行了，请问阁下如何应对？",
       "url": "https://www.eff.org/deeplinks/2026/10/court-agrees-eff-utahs-vpn-law-demands-technical-impossibility"
     },
     {
-      "title": "[Redis 之父又出手：ds4 让你在本地跑 LLM]",
-      "source": "HackerNews",
-      "summary": "Redis 缔造者 antirez（Salvatore Sanfilippo）发布新项目 ds4，主打\"本地跑大模型\"。以他的尿性，这东西大概率是极致精简、性能导向、拒绝臃肿——直接冲着\"我不想把数据交给云端 API、也不想被 token 账单割韭菜\"的开发者痛点来的。本地推理赛道又添一员猛将。",
-      "commentary": "antirez 这人就是技术圈的\"不将就\"代言人——写完 Redis 嫌社区太吵退出，现在又回来教你们怎么不花冤枉钱跑模型。云厂商的 API 账单看了怕是要连夜改价目表。记住：真正的极客，宁可让显卡冒烟，也不让钱包流血。",
-      "url": "https://dwarfstar.sh/"
+      "title": "Aleph Alpha 发布主权开源模型 Kolibri",
+      "source": "HackerNews / Aleph Alpha",
+      "summary": "德国 AI 公司 Aleph Alpha 发布了名为 Kolibri 的开源权重 LLM，主打德语和英语双语能力，定位\"主权 AI\"——即数据不出境、模型可控、不依赖美国大厂 API。在欧盟 AI 主权焦虑日益加剧的背景下，这是欧洲本土力量对 OpenAI/Google 垄断地位的一次正式回应。模型权重开放，企业可私有化部署。",
+      "commentary": "欧洲终于想明白了——与其天天在布鲁塞尔写 AI 监管法案，不如自己训一个模型出来。开源权重这招很聪明，等于把\"主权\"两个字从政治口号变成了可下载的 .safetensors 文件。不过话说回来，Kolibri 在德语上的表现如果还打不过 GPT-4o，那\"主权\"就只剩下\"主权\"了。",
+      "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/"
     },
     {
-      "quote": "\"别人卷模型的参数量，你该卷的是自己大脑的'有效参数'——毕竟前者烧的是电，后者烧的是你的人生。今天，把算力花在能复利的地方。\""
+      "title": "高斯 Blendshape 蒸馏：让 3D 数字人实时动画不再卡成 PPT",
+      "source": "ArXiv cs.CV",
+      "summary": "3D 高斯泼溅（Gaussian Splatting）头像虽然渲染快，但实时动画一直被昂贵的神经推理拖后腿。这篇论文提出用\"身份无关的 blendshape 线性组合\"来近似预训练头像模型的动画输出，通过蒸馏方式把神经网络的推理成本砍掉，实现实时驱动。简单说：以前驱动一个高斯数字人需要跑一个大模型，现在只需要做几次矩阵乘法。",
+      "commentary": "元宇宙坟头草都三米高了，但数字人技术倒是在踏踏实实进步。这篇论文的价值在于把\"实时\"两个字从营销话术变成了工程现实——毕竟没有哪个用户愿意对着一个每帧延迟 200ms 的虚拟主播喊\"你好卡\"。",
+      "url": "https://arxiv.org/abs/2610.02207v1"
     }
   ],
   "candidates": [
-    {
-      "id": "hn:49933740",
-      "title": "With most information hidden, the game Stratego had stumped AI until now",
-      "summary": "<a href=\"https:&#x2F;&#x2F;www.nature.com&#x2F;articles&#x2F;s41586-026-11036-y\" rel=\"nofollow\">https:&#x2F;&#x2F;www.nature.com&#x2F;articles&#x2F;s41586-026-11036-y</a><p><a href=\"https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;2511.07312\" rel=\"nofollow\">https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;2511.07",
-      "url": "https://arstechnica.com/science/2026/10/ai-finally-beat-the-best-stratego-player-in-history-and-did-it-on-a-budget/",
-      "source": "Hacker News",
-      "score": 196,
-      "comments": 94
-    },
     {
       "id": "hn:49927754",
       "title": "Court agrees with EFF: Utah's VPN law demands a technical impossibility",
       "summary": "",
       "url": "https://www.eff.org/deeplinks/2026/10/court-agrees-eff-utahs-vpn-law-demands-technical-impossibility",
       "source": "Hacker News",
-      "score": 564,
-      "comments": 251
+      "score": 707,
+      "comments": 345
     },
     {
-      "id": "hn:49926411",
-      "title": "Loss of cell identity drives human aging: Two new papers",
+      "id": "hn:49943034",
+      "title": "Kolibri is an open-weight LLM from Aleph Alpha for German and English",
       "summary": "",
-      "url": "https://erictopol.substack.com/p/loss-of-cell-identity-drives-human",
+      "url": "https://tej.as/blog/aleph-alpha-kolibri",
       "source": "Hacker News",
-      "score": 201,
-      "comments": 51
+      "score": 242,
+      "comments": 110
     },
     {
-      "id": "hn:49936575",
-      "title": "From the creator of Redis; run LLM locally with ds4",
+      "id": "hn:49940394",
+      "title": "Newgrounds.com – A community of games, music, and art",
       "summary": "",
-      "url": "https://dwarfstar.sh/",
+      "url": "https://www.newgrounds.com/",
       "source": "Hacker News",
-      "score": 186,
-      "comments": 53
+      "score": 356,
+      "comments": 101
     },
     {
       "id": "hn:49925184",
@@ -72,8 +60,8 @@
       "summary": "<a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;Kv6yS\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;Kv6yS</a><p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=_h_pQ1-5iQg\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=_h_pQ1-5iQg</a><p><a href=\"https:&#x2F;&#x2F;www.theguardi",
       "url": "https://www.nytimes.com/athletic/7648198/2026/10/01/mike-tomlin-minecraft-nfl-coach/",
       "source": "Hacker News",
-      "score": 367,
-      "comments": 92
+      "score": 573,
+      "comments": 129
     },
     {
       "id": "hn:49932147",
@@ -81,38 +69,21 @@
       "summary": "",
       "url": "https://bsky.app/profile/theplanetaryguy.com/post/3mwucf5ert22f",
       "source": "Hacker News",
-      "score": 228,
-      "comments": 50
+      "score": 345,
+      "comments": 63
     },
     {
-      "id": "hn:49929391",
-      "title": "Greg Kroah-Hartman – Security in the LLM Age [video]",
+      "id": "lob:cd5gdk",
+      "title": "I got targeted: Trying to get your credentials via a git post-checkout hook",
       "summary": "",
-      "url": "https://www.youtube.com/watch?v=NnV_cWeoo5Q",
-      "source": "Hacker News",
-      "score": 200,
-      "comments": 53
-    },
-    {
-      "id": "lob:bytzgl",
-      "title": "Git 3.0's upcoming SHA-256 default will be a costly mistake",
-      "summary": "",
-      "url": "https://blog.gitbutler.com/git-3-sha-256",
+      "url": "https://frankwiles.com/posts/i-got-targeted/",
       "source": "Lobste.rs",
-      "score": 75,
-      "comments": 69,
+      "score": 80,
+      "comments": 25,
       "tags": [
+        "security",
         "vcs"
       ]
-    },
-    {
-      "id": "hn:49933869",
-      "title": "The Forgetful CPU (Linux on M4)",
-      "summary": "",
-      "url": "https://yuka.dev/blog-2026-10-02-linux-m4.html",
-      "source": "Hacker News",
-      "score": 156,
-      "comments": 66
     },
     {
       "id": "hn:49937276",
@@ -120,59 +91,20 @@
       "summary": "",
       "url": "https://developer.apple.com/pass-designer/",
       "source": "Hacker News",
-      "score": 364,
-      "comments": 226
+      "score": 497,
+      "comments": 300
     },
     {
-      "id": "hn:49925974",
-      "title": "FLUX 3 Image",
+      "id": "lob:wevegu",
+      "title": "The Four Horsemen of Agentic Coding",
       "summary": "",
-      "url": "https://bfl.ai/models/flux-3-image",
-      "source": "Hacker News",
-      "score": 296,
-      "comments": 62
-    },
-    {
-      "id": "lob:gmjegm",
-      "title": "Waterfox 6.7.5 Adds a Built-in Feed Reader",
-      "summary": "",
-      "url": "https://www.waterfox.com/releases/6.7.5/",
+      "url": "https://distantprovince.substack.com/p/the-four-horsemen-of-agentic-coding",
       "source": "Lobste.rs",
-      "score": 55,
-      "comments": 16,
+      "score": 53,
+      "comments": 11,
       "tags": [
-        "browsers",
-        "release"
-      ]
-    },
-    {
-      "id": "hn:49937504",
-      "title": "Muse Gadgets",
-      "summary": "",
-      "url": "https://gadgets.muse.ai",
-      "source": "Hacker News",
-      "score": 158,
-      "comments": 75
-    },
-    {
-      "id": "hn:49940219",
-      "title": "Things that apparently cause cancer",
-      "summary": "",
-      "url": "https://www.breakthroughjournal.org/p/things-that-apparently-cause-cancer",
-      "source": "Hacker News",
-      "score": 134,
-      "comments": 51
-    },
-    {
-      "id": "lob:wqqkws",
-      "title": "Actual RFC1149 packet being auctioned",
-      "summary": "",
-      "url": "https://onlineonly.christies.com/s/fine-printed-books-manuscripts-science/carrier-pigeon-internet-protocol-150/325216",
-      "source": "Lobste.rs",
-      "score": 66,
-      "comments": 10,
-      "tags": [
-        "networking"
+        "practices",
+        "vibecoding"
       ]
     },
     {
@@ -181,36 +113,76 @@
       "summary": "",
       "url": "https://ziglang.org/download/0.17.0/release-notes.html",
       "source": "Lobste.rs",
-      "score": 53,
-      "comments": 5,
+      "score": 102,
+      "comments": 8,
       "tags": [
         "zig"
       ]
     },
     {
-      "id": "lob:wevegu",
-      "title": "The Four Horsemen of Agentic Coding",
+      "id": "lob:wqqkws",
+      "title": "Actual RFC1149 packet being auctioned",
       "summary": "",
-      "url": "https://distantprovince.substack.com/p/the-four-horsemen-of-agentic-coding",
+      "url": "https://onlineonly.christies.com/s/fine-printed-books-manuscripts-science/carrier-pigeon-internet-protocol-150/325216",
       "source": "Lobste.rs",
-      "score": 30,
-      "comments": 3,
+      "score": 86,
+      "comments": 10,
       "tags": [
-        "practices",
-        "vibecoding"
+        "networking"
       ]
     },
     {
-      "id": "lob:hfmcxi",
-      "title": "What are you doing this weekend?",
-      "summary": "<p>Feel free to tell what you plan on doing this weekend and even ask for help or feedback.</p>\n<p>Please keep in mind it’s more than OK to do nothing at all too!</p>\n",
-      "url": "https://lobste.rs/s/hfmcxi/what_are_you_doing_this_weekend",
+      "id": "hn:49941091",
+      "title": "Cloudflare OHTTP gateway",
+      "summary": "",
+      "url": "https://blog.cloudflare.com/announcing-cloudflare-ohttp-gateway/",
+      "source": "Hacker News",
+      "score": 142,
+      "comments": 59
+    },
+    {
+      "id": "hn:49943451",
+      "title": "The Escalation of War in Ethiopia",
+      "summary": "",
+      "url": "https://www.africanistperspective.com/p/on-the-escalation-of-war-in-ethiopia",
+      "source": "Hacker News",
+      "score": 111,
+      "comments": 97
+    },
+    {
+      "id": "hn:49942706",
+      "title": "Kolibri Has Landed: A Sovereign Open-Weight Model",
+      "summary": "",
+      "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/",
+      "source": "Hacker News",
+      "score": 160,
+      "comments": 25
+    },
+    {
+      "id": "lob:s4wm69",
+      "title": "The forgetful CPU (Linux on M4)",
+      "summary": "",
+      "url": "https://yuka.dev/blog-2026-10-02-linux-m4.html",
       "source": "Lobste.rs",
-      "score": 20,
-      "comments": 59,
+      "score": 62,
+      "comments": 1,
       "tags": [
-        "ask",
-        "programming"
+        "hardware",
+        "linux",
+        "reversing"
+      ]
+    },
+    {
+      "id": "lob:0egeug",
+      "title": "Lobsters Interview with Sjamaan",
+      "summary": "<p>Our dear <a href=\"https://lobste.rs/~sjamaan\" rel=\"ugc\">@sjamaan</a> (<a href=\"https://www.more-magic.net\" rel=\"ugc\">website</a>) is a CHICKEN scheme maintainer and professional Clojure developer. We got to know each other on IRC over a few months and discussed:</p>\n<ul>\n<li>\n<a href=\"https://cal",
+      "url": "https://alexalejandre.com/interviews/peter-bex/",
+      "source": "Lobste.rs",
+      "score": 45,
+      "comments": 4,
+      "tags": [
+        "interview",
+        "lisp"
       ]
     },
     {
@@ -239,6 +211,44 @@
         "cs.CR"
       ],
       "arxiv_id": "2610.02206v1"
+    },
+    {
+      "id": "arxiv:2610.02201v1",
+      "title": "SILSA: Sliding-Window Slice Latents for Topology-Preserving High-Resolution 3D Generation",
+      "summary": "High-resolution 3D generation increasingly relies on voxel latents and multi-stage pipelines that first predict active structure and then synthesize local geometry. While effective, this design fragments continuous surfaces into many local tokens, inflates generation cost, and often weakens topologi",
+      "url": "https://arxiv.org/abs/2610.02201v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_id": "2610.02201v1"
+    },
+    {
+      "id": "arxiv:2610.02193v1",
+      "title": "Hierarchical Continuous Diffusion Language Models",
+      "summary": "Discrete diffusion language models offer a compelling alternative to autoregressive generation for tasks demanding bidirectional reasoning and global constraint satisfaction. Yet they share a structural bottleneck: when decoding in parallel, each token is sampled independently from its marginal, sev",
+      "url": "https://arxiv.org/abs/2610.02193v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_id": "2610.02193v1"
+    },
+    {
+      "id": "arxiv:2610.02190v1",
+      "title": "Trust the Direction, Search the Step: Zero-and-First-Order Methods for LLM Fine-Tuning",
+      "summary": "Step-size selection remains a central challenge in large-scale neural network optimization; conservative steps slow convergence, while aggressive steps can destabilize it. We combine \\textbf{Z}ero-and-\\textbf{F}irst-\\textbf{O}rder optimization~(ZFO) and propose a lightweight framework that decouples",
+      "url": "https://arxiv.org/abs/2610.02190v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "math.OC"
+      ],
+      "arxiv_id": "2610.02190v1"
     }
   ],
   "ai_curated": true
