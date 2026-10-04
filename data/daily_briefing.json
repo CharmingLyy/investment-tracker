@@ -1,80 +1,40 @@
 {
-  "date": "2026-10-04",
-  "update_time": "2026-10-04 05:06:47",
+  "date": "2026-10-05",
+  "update_time": "2026-10-04 16:36:45",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-04\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Kolibri：一个\"主权级\"开源权重模型 (来源: HackerNews)\n- **核心干货**：德国 Aleph Alpha 发布了 Kolibri，号称\"主权开源权重模型\"，主打可审计、可本地部署、不受外国 API 掐脖子。HN 548 分、310 条评论，说明欧洲人对\"AI 主权\"这事儿是真焦虑也是真上心。技术报告和第三方解读论文同时放出，诚意比某些只发个 HuggingFace 卡片的\"开源\"厂商高到不知哪里去了。\n- **毒舌/硬核点评**：开源权重年年有，但把\"主权\"两个字写进标题的，说明大家终于意识到——你调的不是 API，是别人的国运。\n- **🔗 传送门**：[点击直达原链接](https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/)\n\n---\n\n### 2. 📌 默认硬性预算上限：AI 时代的\"电闸\"该拉了 (来源: HackerNews)\n- **核心干货**：Simon Willison 撰文呼吁——从云服务到 AI Agent，一切消耗型资源都该默认设置\"硬预算上限\"，而不是事后账单惊魂。文章直指当前 SaaS/AI 产品的通病：默认无限额度、默认自动续费、默认把你的钱包当燃料。HN 309 分、158 条评论，显然戳中了无数被账单背刺过的灵魂。\n- **毒舌/硬核点评**：真正的 AI 安全对齐，不是让模型别骂人，而是让它别在凌晨三点偷偷花掉你一个月的工资。\n- **🔗 传送门**：[点击直达原链接](https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/)\n\n---\n\n### 3. 📌 gVisor 捐给 CNCF：容器沙箱的\"毕业典礼\" (来源: Lobste.rs)\n- **核心干货**：Google 的容器安全运行时 gVisor 正式捐赠给 CNCF，意味着这个为容器提供内核级隔离的沙箱项目从\"谷歌内部工具\"升级为\"云原生公共基础设施\"。对 Kubernetes 用户来说，这是安全隔离层从\"可选项\"变成\"标准件\"的信号。Google 又一次证明了：自己养不活的，就送出去让别人养。\n- **毒舌/硬核点评**：Google 的开源策略一贯是——先开源，再放养，最后捐赠。gVisor 活到被 CNCF 收养，已经算这家里命硬的孩子了。\n- **🔗 传送门**：[点击直达原链接](https://gvisor.dev/blog/2026/10/02/gvisor-cncf/)\n\n---\n\n### 🗣️ 今日顶男金句\n\"别问 AI 会不会取代你，先问问你有没有给自己设个硬预算上限——毕竟被取代是未来的事，被账单取代是今晚的事。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-05\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 在消费级 RTX 4090 上跑 125B 大模型，100 Tokens/秒 (来源: HackerNews)\n- **核心干货**：有人搞了个叫 Strata 的项目，让 Qwen 3.8 Flash Next（125B 参数）在单张 RTX 4090 上跑到 100T/s 的推理速度。核心思路大概率是极致量化 + 层间卸载 + 投机解码的组合拳，把\"消费级硬件跑千亿模型\"从标题党变成了可复现的工程实践。\n- **毒舌/硬核点评**：每年都有\"4090 跑千亿模型\"的项目上热搜，区别在于这次 HN 上没人骂\"fake\"。不过友情提醒：100T/s 是预填充还是解码？是 batch=1 还是 batch=64？别到时候跑起来发现是\"每秒 100 个 token，其中 99 个是 padding\"。\n- **🔗 传送门**：[点击直达原链接](https://github.com/Niko1221/Strata)\n\n---\n\n### 2. 📌 Valve 工程师让老旧 AMD GPU 在 Linux 上重获新生 (来源: HackerNews / Phoronix)\n- **核心干货**：Valve 的 Timur Kristóf 在 XDC 2026 上展示了针对老架构 AMD GPU（GCN 及更早）的 Linux 驱动优化工作。这不是小修小补——他实质性地改善了旧卡的 Vulkan 性能、修复了多年遗留的着色器编译器问题，让那些被 AMD 官方\"战略性放弃\"的显卡重新具备了可用的游戏和计算能力。\n- **毒舌/硬核点评**：AMD 官方驱动团队忙着追新卡，Valve 却像个执拗的二手车主，蹲在车库把一台 2013 年的老车调教到能跑拉力赛。Steam Deck 验证了\"软件能救硬件\"，Timur 这波操作是在验证\"软件能救别人的旧硬件\"——建议 AMD 给他发双倍工资，毕竟他在帮你维护几百万存量用户的忠诚度。\n- **🔗 传送门**：[点击直达原链接](https://www.phoronix.com/news/XDC-2026-Valve-Timur-AMDGPU)\n\n---\n\n### 3. 📌 Agent 不需要\"记忆\"，它需要的是\"文档\" (来源: HackerNews)\n- **核心干货**：一篇观点鲜明的技术博客，直指当前 AI Agent 架构的核心迷思：所有人都在给 Agent 加\"记忆模块\"（向量数据库、长期记忆、RAG 管线），但真正让 Agent 可靠工作的不是模糊的语义检索，而是结构化的、可审计的、版本化的文档体系。核心论点是：人类团队靠 Wiki 和 SOP 协作，Agent 也该如此——别把工程问题包装成认知科学问题。\n- **毒舌/硬核点评**：翻译一下就是——\"你给 Agent 塞了个向量数据库然后管它叫记忆，这就像把一箱碎纸片倒进办公室然后管它叫档案管理系统。\" 这篇文章会得罪不少做 Agent Memory 的创业公司，但 HN 上 163 条评论吵成一锅粥说明它戳到了真痛点。建议所有在 Agent 架构里堆\"memory layer\"的团队先读三遍再动手。\n- **🔗 传送门**：[点击直达原链接](https://liao.gg/blog/agents-dont-need-memory)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> **\"给 Agent 加记忆模块就像给金鱼买书架——看起来很努力，但方向全错了。真正稀缺的从来不是存储，而是结构。\"**",
   "briefing_items": [
     {
-      "title": "Kolibri：一个\"主权级\"开源权重模型",
+      "title": "在消费级 RTX 4090 上跑 125B 大模型，100 Tokens/秒",
       "source": "HackerNews",
-      "summary": "德国 Aleph Alpha 发布了 Kolibri，号称\"主权开源权重模型\"，主打可审计、可本地部署、不受外国 API 掐脖子。HN 548 分、310 条评论，说明欧洲人对\"AI 主权\"这事儿是真焦虑也是真上心。技术报告和第三方解读论文同时放出，诚意比某些只发个 HuggingFace 卡片的\"开源\"厂商高到不知哪里去了。",
-      "commentary": "开源权重年年有，但把\"主权\"两个字写进标题的，说明大家终于意识到——你调的不是 API，是别人的国运。",
-      "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/"
+      "summary": "有人搞了个叫 Strata 的项目，让 Qwen 3.8 Flash Next（125B 参数）在单张 RTX 4090 上跑到 100T/s 的推理速度。核心思路大概率是极致量化 + 层间卸载 + 投机解码的组合拳，把\"消费级硬件跑千亿模型\"从标题党变成了可复现的工程实践。",
+      "commentary": "每年都有\"4090 跑千亿模型\"的项目上热搜，区别在于这次 HN 上没人骂\"fake\"。不过友情提醒：100T/s 是预填充还是解码？是 batch=1 还是 batch=64？别到时候跑起来发现是\"每秒 100 个 token，其中 99 个是 padding\"。",
+      "url": "https://github.com/Niko1221/Strata"
     },
     {
-      "title": "默认硬性预算上限：AI 时代的\"电闸\"该拉了",
-      "source": "HackerNews",
-      "summary": "Simon Willison 撰文呼吁——从云服务到 AI Agent，一切消耗型资源都该默认设置\"硬预算上限\"，而不是事后账单惊魂。文章直指当前 SaaS/AI 产品的通病：默认无限额度、默认自动续费、默认把你的钱包当燃料。HN 309 分、158 条评论，显然戳中了无数被账单背刺过的灵魂。",
-      "commentary": "真正的 AI 安全对齐，不是让模型别骂人，而是让它别在凌晨三点偷偷花掉你一个月的工资。",
-      "url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/"
+      "title": "Valve 工程师让老旧 AMD GPU 在 Linux 上重获新生",
+      "source": "HackerNews / Phoronix",
+      "summary": "Valve 的 Timur Kristóf 在 XDC 2026 上展示了针对老架构 AMD GPU（GCN 及更早）的 Linux 驱动优化工作。这不是小修小补——他实质性地改善了旧卡的 Vulkan 性能、修复了多年遗留的着色器编译器问题，让那些被 AMD 官方\"战略性放弃\"的显卡重新具备了可用的游戏和计算能力。",
+      "commentary": "AMD 官方驱动团队忙着追新卡，Valve 却像个执拗的二手车主，蹲在车库把一台 2013 年的老车调教到能跑拉力赛。Steam Deck 验证了\"软件能救硬件\"，Timur 这波操作是在验证\"软件能救别人的旧硬件\"——建议 AMD 给他发双倍工资，毕竟他在帮你维护几百万存量用户的忠诚度。",
+      "url": "https://www.phoronix.com/news/XDC-2026-Valve-Timur-AMDGPU"
     },
     {
-      "title": "gVisor 捐给 CNCF：容器沙箱的\"毕业典礼\"",
-      "source": "Lobste.rs",
-      "summary": "Google 的容器安全运行时 gVisor 正式捐赠给 CNCF，意味着这个为容器提供内核级隔离的沙箱项目从\"谷歌内部工具\"升级为\"云原生公共基础设施\"。对 Kubernetes 用户来说，这是安全隔离层从\"可选项\"变成\"标准件\"的信号。Google 又一次证明了：自己养不活的，就送出去让别人养。",
-      "commentary": "Google 的开源策略一贯是——先开源，再放养，最后捐赠。gVisor 活到被 CNCF 收养，已经算这家里命硬的孩子了。",
-      "url": "https://gvisor.dev/blog/2026/10/02/gvisor-cncf/"
+      "title": "Agent 不需要\"记忆\"，它需要的是\"文档\"",
+      "source": "HackerNews",
+      "summary": "一篇观点鲜明的技术博客，直指当前 AI Agent 架构的核心迷思：所有人都在给 Agent 加\"记忆模块\"（向量数据库、长期记忆、RAG 管线），但真正让 Agent 可靠工作的不是模糊的语义检索，而是结构化的、可审计的、版本化的文档体系。核心论点是：人类团队靠 Wiki 和 SOP 协作，Agent 也该如此——别把工程问题包装成认知科学问题。",
+      "commentary": "翻译一下就是——\"你给 Agent 塞了个向量数据库然后管它叫记忆，这就像把一箱碎纸片倒进办公室然后管它叫档案管理系统。\" 这篇文章会得罪不少做 Agent Memory 的创业公司，但 HN 上 163 条评论吵成一锅粥说明它戳到了真痛点。建议所有在 Agent 架构里堆\"memory layer\"的团队先读三遍再动手。",
+      "url": "https://liao.gg/blog/agents-dont-need-memory"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49949438",
-      "title": "Tell HN: Bob Cringely has died",
-      "summary": "I heard from a friend of the family that Bob passed away in his sleep early Saturday. Very sad news. Bob, who&#x27;s real name was Mark Stevens, was an early employee of Apple and was best known for his PBS documentaries, especially &quot;Triumph of the Nerds&quot;. He will be missed.",
-      "url": "https://news.ycombinator.com/item?id=49949438",
-      "source": "Hacker News",
-      "score": 277,
-      "comments": 51
-    },
-    {
-      "id": "hn:49949235",
-      "title": "We're going to need default hard budget caps on pretty much everything",
+      "id": "hn:49953495",
+      "title": "Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s",
       "summary": "",
-      "url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/",
+      "url": "https://github.com/Niko1221/Strata",
       "source": "Hacker News",
-      "score": 309,
-      "comments": 158
-    },
-    {
-      "id": "hn:49946393",
-      "title": "Hole Punch: Sling your spaceship around gravitational fields",
-      "summary": "",
-      "url": "https://notoriousbfg.com/hole-punch/",
-      "source": "Hacker News",
-      "score": 258,
-      "comments": 62
-    },
-    {
-      "id": "hn:49942706",
-      "title": "Kolibri: A Sovereign Open-Weight Model",
-      "summary": "tech report: <a href=\"https:&#x2F;&#x2F;aleph-alpha.com&#x2F;downloads&#x2F;tech-report.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;aleph-alpha.com&#x2F;downloads&#x2F;tech-report.pdf</a><p>additional paper: <a href=\"https:&#x2F;&#x2F;tej.as&#x2F;blog&#x2F;aleph-alpha-kolibri\" rel=\"nofollow\">https:&#x2F;&",
-      "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/",
-      "source": "Hacker News",
-      "score": 548,
-      "comments": 310
-    },
-    {
-      "id": "lob:cd5gdk",
-      "title": "I got targeted: Trying to get your credentials via a git post-checkout hook",
-      "summary": "",
-      "url": "https://frankwiles.com/posts/i-got-targeted/",
-      "source": "Lobste.rs",
-      "score": 110,
-      "comments": 37,
-      "tags": [
-        "security",
-        "vcs"
-      ]
+      "score": 261,
+      "comments": 134
     },
     {
       "id": "hn:49946895",
@@ -82,51 +42,8 @@
       "summary": "",
       "url": "https://www.phoronix.com/news/XDC-2026-Valve-Timur-AMDGPU",
       "source": "Hacker News",
-      "score": 195,
-      "comments": 23
-    },
-    {
-      "id": "lob:wcmfft",
-      "title": "Zig 0.17.0 Release Notes",
-      "summary": "",
-      "url": "https://ziglang.org/download/0.17.0/release-notes.html",
-      "source": "Lobste.rs",
-      "score": 122,
-      "comments": 13,
-      "tags": [
-        "zig"
-      ]
-    },
-    {
-      "id": "hn:49944912",
-      "title": "FTL: A new operating system for clouds",
-      "summary": "<a href=\"https:&#x2F;&#x2F;github.com&#x2F;nuta&#x2F;ftl\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;nuta&#x2F;ftl</a>",
-      "url": "https://ftl-os.org/",
-      "source": "Hacker News",
-      "score": 160,
-      "comments": 63
-    },
-    {
-      "id": "hn:49923873",
-      "title": "Celebrating the 100th birthday of the kidney donated to him as a teenager",
-      "summary": "",
-      "url": "https://www.whec.com/top-news/webster-man-celebrating-the-100th-birthday-of-the-kidney-his-mom-donated-to-him-as-a-teenager/",
-      "source": "Hacker News",
-      "score": 170,
-      "comments": 42
-    },
-    {
-      "id": "lob:elziso",
-      "title": "The Era of Software Quality, or the Era of Ostriches?",
-      "summary": "",
-      "url": "https://blogs.gnome.org/mcatanzaro/2026/10/02/the-era-of-software-quality-or-the-era-of-ostriches/",
-      "source": "Lobste.rs",
-      "score": 27,
-      "comments": 41,
-      "tags": [
-        "practices",
-        "vibecoding"
-      ]
+      "score": 393,
+      "comments": 67
     },
     {
       "id": "hn:49945933",
@@ -134,20 +51,26 @@
       "summary": "",
       "url": "https://liao.gg/blog/agents-dont-need-memory",
       "source": "Hacker News",
-      "score": 103,
-      "comments": 62
+      "score": 285,
+      "comments": 163
     },
     {
-      "id": "lob:wqqkws",
-      "title": "Actual RFC1149 packet being auctioned",
+      "id": "hn:49949438",
+      "title": "Tell HN: Bob Cringely has died",
+      "summary": "I heard from a friend of the family that Bob passed away in his sleep early Saturday. Very sad news. Bob, who&#x27;s real name was Mark Stevens, was an early employee of Apple and was best known for his PBS documentaries, especially &quot;Triumph of the Nerds&quot;. He will be missed.",
+      "url": "https://news.ycombinator.com/item?id=49949438",
+      "source": "Hacker News",
+      "score": 681,
+      "comments": 140
+    },
+    {
+      "id": "hn:49950554",
+      "title": "Why don't more developers “use the platform”?",
       "summary": "",
-      "url": "https://onlineonly.christies.com/s/fine-printed-books-manuscripts-science/carrier-pigeon-internet-protocol-150/325216",
-      "source": "Lobste.rs",
-      "score": 93,
-      "comments": 10,
-      "tags": [
-        "networking"
-      ]
+      "url": "https://nolanlawson.com/2026/10/03/why-dont-more-developers-use-the-platform/",
+      "source": "Hacker News",
+      "score": 225,
+      "comments": 225
     },
     {
       "id": "hn:49946355",
@@ -155,51 +78,90 @@
       "summary": "",
       "url": "https://cosmowenman.substack.com/p/rodin-museum-3d-scan-verdict",
       "source": "Hacker News",
-      "score": 125,
-      "comments": 65
+      "score": 264,
+      "comments": 140
     },
     {
-      "id": "hn:49947631",
-      "title": "Reasons I didn't become an EMT, ranked",
-      "summary": "",
-      "url": "https://ben.stolovitz.com/posts/reasons-not-emt-ranked/",
+      "id": "hn:49946228",
+      "title": "LeCun has \"zero concerns\" about AI wiping out humanity, recent \"rogue\" incidents",
+      "summary": "<a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;TyDPf\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;TyDPf</a>",
+      "url": "https://fortune.com/2026/10/01/ai-godfather-yann-lecun-has-zero-concerns-about-human-extinction-says-anthropic-ceo-dario-amodei-is-deuded/",
       "source": "Hacker News",
-      "score": 125,
-      "comments": 61
+      "score": 275,
+      "comments": 442
     },
     {
-      "id": "lob:asoxjl",
-      "title": "gVisor is being donated to CNCF",
+      "id": "lob:cd5gdk",
+      "title": "I got targeted: Trying to get your credentials via a git post-checkout hook",
       "summary": "",
-      "url": "https://gvisor.dev/blog/2026/10/02/gvisor-cncf/",
+      "url": "https://frankwiles.com/posts/i-got-targeted/",
       "source": "Lobste.rs",
-      "score": 41,
-      "comments": 7,
+      "score": 122,
+      "comments": 37,
       "tags": [
-        "devops"
+        "security",
+        "vcs"
       ]
     },
     {
-      "id": "lob:0egeug",
-      "title": "Lobsters Interview with Sjamaan",
-      "summary": "<p>Our dear <a href=\"https://lobste.rs/~sjamaan\" rel=\"ugc\">@sjamaan</a> (<a href=\"https://www.more-magic.net\" rel=\"ugc\">website</a>) is a CHICKEN scheme maintainer and professional Clojure developer. We got to know each other on IRC over a few months and discussed:</p>\n<ul>\n<li>\n<a href=\"https://cal",
-      "url": "https://alexalejandre.com/interviews/peter-bex/",
+      "id": "lob:elziso",
+      "title": "The Era of Software Quality, or the Era of Ostriches?",
+      "summary": "",
+      "url": "https://blogs.gnome.org/mcatanzaro/2026/10/02/the-era-of-software-quality-or-the-era-of-ostriches/",
       "source": "Lobste.rs",
-      "score": 54,
-      "comments": 4,
+      "score": 37,
+      "comments": 55,
       "tags": [
-        "interview",
-        "lisp"
+        "practices",
+        "vibecoding"
       ]
     },
     {
-      "id": "hn:49910462",
-      "title": "So you think you could be an electrician?",
+      "id": "lob:dldhpw",
+      "title": "Rust's derive often implies inline",
       "summary": "",
-      "url": "https://asteriskmag.com/issues/15/so-you-think-you-could-be-an-electrician",
+      "url": "https://yossarian.net/til/post/rust-s-derive-often-implies-inline/",
+      "source": "Lobste.rs",
+      "score": 42,
+      "comments": 12,
+      "tags": [
+        "rust"
+      ]
+    },
+    {
+      "id": "hn:49952111",
+      "title": "Show HN: AI search for every photo and every frame of video on macOS",
+      "summary": "",
+      "url": "https://github.com/allenv0/SCM",
       "source": "Hacker News",
-      "score": 95,
-      "comments": 44
+      "score": 67,
+      "comments": 38
+    },
+    {
+      "id": "lob:xruas8",
+      "title": "An Update on Orion for Linux and Windows",
+      "summary": "",
+      "url": "https://blog.kagi.com/update-orion-linux-windows",
+      "source": "Lobste.rs",
+      "score": 22,
+      "comments": 6,
+      "tags": [
+        "browsers",
+        "linux",
+        "windows"
+      ]
+    },
+    {
+      "id": "lob:hk0ohb",
+      "title": "System-level ad-blocking in Android",
+      "summary": "",
+      "url": "https://kevinboone.me/adblock.html",
+      "source": "Lobste.rs",
+      "score": 21,
+      "comments": 12,
+      "tags": [
+        "android"
+      ]
     },
     {
       "id": "arxiv:2610.02207v1",
@@ -240,6 +202,47 @@
         "cs.LG"
       ],
       "arxiv_id": "2610.02201v1"
+    },
+    {
+      "id": "arxiv:2610.02193v1",
+      "title": "Hierarchical Continuous Diffusion Language Models",
+      "summary": "Discrete diffusion language models offer a compelling alternative to autoregressive generation for tasks demanding bidirectional reasoning and global constraint satisfaction. Yet they share a structural bottleneck: when decoding in parallel, each token is sampled independently from its marginal, sev",
+      "url": "https://arxiv.org/abs/2610.02193v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_id": "2610.02193v1"
+    },
+    {
+      "id": "arxiv:2610.02190v1",
+      "title": "Trust the Direction, Search the Step: Zero-and-First-Order Methods for LLM Fine-Tuning",
+      "summary": "Step-size selection remains a central challenge in large-scale neural network optimization; conservative steps slow convergence, while aggressive steps can destabilize it. We combine \\textbf{Z}ero-and-\\textbf{F}irst-\\textbf{O}rder optimization~(ZFO) and propose a lightweight framework that decouples",
+      "url": "https://arxiv.org/abs/2610.02190v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "math.OC"
+      ],
+      "arxiv_id": "2610.02190v1"
+    },
+    {
+      "id": "rss:4e4d79e994",
+      "title": "Dell CSM Flaws Enable Unauthenticated Admin Access and Root on Kubernetes Nodes",
+      "summary": "Dell has released security updates to address multiple critical security flaws in Dell Container Storage Modules (CSM) that could be exploited by bad actors to take over susceptible systems.\n\nThe vulnerabilities are listed below -\n\n\n  CVE-2026-63688 (CVSS score: 10.0) - A missing authentication for",
+      "url": "https://thehackernews.com/2026/10/dell-csm-flaws-enable-unauthenticated.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:b0174e146f",
+      "title": "Critical FortiMail Zero-Day Flaw Exploited in Attacks Allows Unauthenticated Arbitrary File Writes",
+      "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA), on Thursday, added a critical security flaw impacting Fortinet FortiMail to its Known Exploited Vulnerabilities (KEV) catalog, following reports of active exploitation.\n\nThe vulnerability, tracked as CVE-2026-104286 (CVSS score: 9.8),",
+      "url": "https://thehackernews.com/2026/10/critical-fortimail-zero-day-flaw.html",
+      "source": "Tech RSS",
+      "score": 0
     }
   ],
   "ai_curated": true
