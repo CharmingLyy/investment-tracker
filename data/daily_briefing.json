@@ -1,29 +1,29 @@
 {
   "date": "2026-10-05",
-  "update_time": "2026-10-04 16:36:45",
+  "update_time": "2026-10-05 04:52:51",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-05\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 在消费级 RTX 4090 上跑 125B 大模型，100 Tokens/秒 (来源: HackerNews)\n- **核心干货**：有人搞了个叫 Strata 的项目，让 Qwen 3.8 Flash Next（125B 参数）在单张 RTX 4090 上跑到 100T/s 的推理速度。核心思路大概率是极致量化 + 层间卸载 + 投机解码的组合拳，把\"消费级硬件跑千亿模型\"从标题党变成了可复现的工程实践。\n- **毒舌/硬核点评**：每年都有\"4090 跑千亿模型\"的项目上热搜，区别在于这次 HN 上没人骂\"fake\"。不过友情提醒：100T/s 是预填充还是解码？是 batch=1 还是 batch=64？别到时候跑起来发现是\"每秒 100 个 token，其中 99 个是 padding\"。\n- **🔗 传送门**：[点击直达原链接](https://github.com/Niko1221/Strata)\n\n---\n\n### 2. 📌 Valve 工程师让老旧 AMD GPU 在 Linux 上重获新生 (来源: HackerNews / Phoronix)\n- **核心干货**：Valve 的 Timur Kristóf 在 XDC 2026 上展示了针对老架构 AMD GPU（GCN 及更早）的 Linux 驱动优化工作。这不是小修小补——他实质性地改善了旧卡的 Vulkan 性能、修复了多年遗留的着色器编译器问题，让那些被 AMD 官方\"战略性放弃\"的显卡重新具备了可用的游戏和计算能力。\n- **毒舌/硬核点评**：AMD 官方驱动团队忙着追新卡，Valve 却像个执拗的二手车主，蹲在车库把一台 2013 年的老车调教到能跑拉力赛。Steam Deck 验证了\"软件能救硬件\"，Timur 这波操作是在验证\"软件能救别人的旧硬件\"——建议 AMD 给他发双倍工资，毕竟他在帮你维护几百万存量用户的忠诚度。\n- **🔗 传送门**：[点击直达原链接](https://www.phoronix.com/news/XDC-2026-Valve-Timur-AMDGPU)\n\n---\n\n### 3. 📌 Agent 不需要\"记忆\"，它需要的是\"文档\" (来源: HackerNews)\n- **核心干货**：一篇观点鲜明的技术博客，直指当前 AI Agent 架构的核心迷思：所有人都在给 Agent 加\"记忆模块\"（向量数据库、长期记忆、RAG 管线），但真正让 Agent 可靠工作的不是模糊的语义检索，而是结构化的、可审计的、版本化的文档体系。核心论点是：人类团队靠 Wiki 和 SOP 协作，Agent 也该如此——别把工程问题包装成认知科学问题。\n- **毒舌/硬核点评**：翻译一下就是——\"你给 Agent 塞了个向量数据库然后管它叫记忆，这就像把一箱碎纸片倒进办公室然后管它叫档案管理系统。\" 这篇文章会得罪不少做 Agent Memory 的创业公司，但 HN 上 163 条评论吵成一锅粥说明它戳到了真痛点。建议所有在 Agent 架构里堆\"memory layer\"的团队先读三遍再动手。\n- **🔗 传送门**：[点击直达原链接](https://liao.gg/blog/agents-dont-need-memory)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> **\"给 Agent 加记忆模块就像给金鱼买书架——看起来很努力，但方向全错了。真正稀缺的从来不是存储，而是结构。\"**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-05\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 消费级硬件跑 125B 大模型，100T/s 吞吐 (来源: HackerNews)\n- **核心干货**：Strata 项目让 Qwen 3.8 Flash Next（125B 参数）在单张 RTX 4090 上跑出 100 tokens/s 的推理速度。核心思路是通过极致的量化与显存调度策略，把原本需要多卡 A100 才能伺候的模型塞进消费级显卡，并且速度不拉胯。\n- **毒舌/硬核点评**：老黄看了想报警，H100 的销售话术又少了一条。不过别急着欢呼——先问问你的 4090 显存够不够，以及电费账单扛不扛得住。\n- **🔗 传送门**：[点击直达原链接](https://github.com/Niko1221/Strata)\n\n---\n\n### 2. 📌 苹果\"智能\"变\"智障\"：一键卸载 Apple Intelligence 并回收磁盘空间 (来源: HackerNews)\n- **核心干货**：一个开源工具让你在 macOS 27 上彻底关闭 Apple Intelligence，并回收其占用的磁盘空间。HN 上 458 分、284 条评论说明了一件事：用户对苹果强行塞进来的\"AI 功能\"积怨已久，尤其是那些占了几十个 GB 却几乎不用的模型文件。\n- **毒舌/硬核点评**：苹果花了几十亿美金做出来的 AI，最大的用户价值居然是\"如何把它删干净\"。这大概是库克时代最讽刺的产品闭环。\n- **🔗 传送门**：[点击直达原链接](https://github.com/omlahore/RemoveMacAI)\n\n---\n\n### 3. 📌 红act失误暴露 Google 数据中心真实水电消耗 (来源: HackerNews)\n- **核心干货**：一份本应被涂黑的公共记录因脱敏不当，意外泄露了 Google 在林肯市数据中心的真实用水和用电数据。结合近期 AI 算力军备竞赛的背景，这份数据大概率揭示了科技巨头对外公布的\"碳中和\"叙事与实际消耗之间的鸿沟。HN 上 421 条评论吵翻了天。\n- **毒舌/硬核点评**：AI 泡沫最诚实的地方在于——不管你嘴上怎么讲 ESG，电表和水表不会陪你演戏。建议 Google 下次买个好点的 PDF 编辑器。\n- **🔗 传送门**：[点击直达原链接](https://www.1011now.com/2026/09/30/more-questions-than-answers-about-lincolns-google-data-center-water-electricity-usage/)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> 大模型竞赛的终极悖论：所有人都在比谁的模型更大，但用户最想要的功能是\"怎么把它关掉\"。",
   "briefing_items": [
     {
-      "title": "在消费级 RTX 4090 上跑 125B 大模型，100 Tokens/秒",
+      "title": "消费级硬件跑 125B 大模型，100T/s 吞吐",
       "source": "HackerNews",
-      "summary": "有人搞了个叫 Strata 的项目，让 Qwen 3.8 Flash Next（125B 参数）在单张 RTX 4090 上跑到 100T/s 的推理速度。核心思路大概率是极致量化 + 层间卸载 + 投机解码的组合拳，把\"消费级硬件跑千亿模型\"从标题党变成了可复现的工程实践。",
-      "commentary": "每年都有\"4090 跑千亿模型\"的项目上热搜，区别在于这次 HN 上没人骂\"fake\"。不过友情提醒：100T/s 是预填充还是解码？是 batch=1 还是 batch=64？别到时候跑起来发现是\"每秒 100 个 token，其中 99 个是 padding\"。",
+      "summary": "Strata 项目让 Qwen 3.8 Flash Next（125B 参数）在单张 RTX 4090 上跑出 100 tokens/s 的推理速度。核心思路是通过极致的量化与显存调度策略，把原本需要多卡 A100 才能伺候的模型塞进消费级显卡，并且速度不拉胯。",
+      "commentary": "老黄看了想报警，H100 的销售话术又少了一条。不过别急着欢呼——先问问你的 4090 显存够不够，以及电费账单扛不扛得住。",
       "url": "https://github.com/Niko1221/Strata"
     },
     {
-      "title": "Valve 工程师让老旧 AMD GPU 在 Linux 上重获新生",
-      "source": "HackerNews / Phoronix",
-      "summary": "Valve 的 Timur Kristóf 在 XDC 2026 上展示了针对老架构 AMD GPU（GCN 及更早）的 Linux 驱动优化工作。这不是小修小补——他实质性地改善了旧卡的 Vulkan 性能、修复了多年遗留的着色器编译器问题，让那些被 AMD 官方\"战略性放弃\"的显卡重新具备了可用的游戏和计算能力。",
-      "commentary": "AMD 官方驱动团队忙着追新卡，Valve 却像个执拗的二手车主，蹲在车库把一台 2013 年的老车调教到能跑拉力赛。Steam Deck 验证了\"软件能救硬件\"，Timur 这波操作是在验证\"软件能救别人的旧硬件\"——建议 AMD 给他发双倍工资，毕竟他在帮你维护几百万存量用户的忠诚度。",
-      "url": "https://www.phoronix.com/news/XDC-2026-Valve-Timur-AMDGPU"
+      "title": "苹果\"智能\"变\"智障\"：一键卸载 Apple Intelligence 并回收磁盘空间",
+      "source": "HackerNews",
+      "summary": "一个开源工具让你在 macOS 27 上彻底关闭 Apple Intelligence，并回收其占用的磁盘空间。HN 上 458 分、284 条评论说明了一件事：用户对苹果强行塞进来的\"AI 功能\"积怨已久，尤其是那些占了几十个 GB 却几乎不用的模型文件。",
+      "commentary": "苹果花了几十亿美金做出来的 AI，最大的用户价值居然是\"如何把它删干净\"。这大概是库克时代最讽刺的产品闭环。",
+      "url": "https://github.com/omlahore/RemoveMacAI"
     },
     {
-      "title": "Agent 不需要\"记忆\"，它需要的是\"文档\"",
+      "title": "红act失误暴露 Google 数据中心真实水电消耗",
       "source": "HackerNews",
-      "summary": "一篇观点鲜明的技术博客，直指当前 AI Agent 架构的核心迷思：所有人都在给 Agent 加\"记忆模块\"（向量数据库、长期记忆、RAG 管线），但真正让 Agent 可靠工作的不是模糊的语义检索，而是结构化的、可审计的、版本化的文档体系。核心论点是：人类团队靠 Wiki 和 SOP 协作，Agent 也该如此——别把工程问题包装成认知科学问题。",
-      "commentary": "翻译一下就是——\"你给 Agent 塞了个向量数据库然后管它叫记忆，这就像把一箱碎纸片倒进办公室然后管它叫档案管理系统。\" 这篇文章会得罪不少做 Agent Memory 的创业公司，但 HN 上 163 条评论吵成一锅粥说明它戳到了真痛点。建议所有在 Agent 架构里堆\"memory layer\"的团队先读三遍再动手。",
-      "url": "https://liao.gg/blog/agents-dont-need-memory"
+      "summary": "一份本应被涂黑的公共记录因脱敏不当，意外泄露了 Google 在林肯市数据中心的真实用水和用电数据。结合近期 AI 算力军备竞赛的背景，这份数据大概率揭示了科技巨头对外公布的\"碳中和\"叙事与实际消耗之间的鸿沟。HN 上 421 条评论吵翻了天。",
+      "commentary": "AI 泡沫最诚实的地方在于——不管你嘴上怎么讲 ESG，电表和水表不会陪你演戏。建议 Google 下次买个好点的 PDF 编辑器。",
+      "url": "https://www.1011now.com/2026/09/30/more-questions-than-answers-about-lincolns-google-data-center-water-electricity-usage/"
     }
   ],
   "candidates": [
@@ -33,26 +33,26 @@
       "summary": "",
       "url": "https://github.com/Niko1221/Strata",
       "source": "Hacker News",
-      "score": 261,
-      "comments": 134
+      "score": 663,
+      "comments": 309
     },
     {
-      "id": "hn:49946895",
-      "title": "The work by Valve's Timur Kristóf on improving old AMD GPUs on Linux",
+      "id": "hn:49957116",
+      "title": "Turn off Apple Intelligence on macOS 27 and get its disk space back",
       "summary": "",
-      "url": "https://www.phoronix.com/news/XDC-2026-Valve-Timur-AMDGPU",
+      "url": "https://github.com/omlahore/RemoveMacAI",
       "source": "Hacker News",
-      "score": 393,
-      "comments": 67
+      "score": 458,
+      "comments": 284
     },
     {
-      "id": "hn:49945933",
-      "title": "Agents don't need memory, they need documentation",
+      "id": "hn:49957068",
+      "title": "Improper redaction reveals Google Data Center water and electricity usage",
       "summary": "",
-      "url": "https://liao.gg/blog/agents-dont-need-memory",
+      "url": "https://www.1011now.com/2026/09/30/more-questions-than-answers-about-lincolns-google-data-center-water-electricity-usage/",
       "source": "Hacker News",
-      "score": 285,
-      "comments": 163
+      "score": 309,
+      "comments": 421
     },
     {
       "id": "hn:49949438",
@@ -60,61 +60,8 @@
       "summary": "I heard from a friend of the family that Bob passed away in his sleep early Saturday. Very sad news. Bob, who&#x27;s real name was Mark Stevens, was an early employee of Apple and was best known for his PBS documentaries, especially &quot;Triumph of the Nerds&quot;. He will be missed.",
       "url": "https://news.ycombinator.com/item?id=49949438",
       "source": "Hacker News",
-      "score": 681,
-      "comments": 140
-    },
-    {
-      "id": "hn:49950554",
-      "title": "Why don't more developers “use the platform”?",
-      "summary": "",
-      "url": "https://nolanlawson.com/2026/10/03/why-dont-more-developers-use-the-platform/",
-      "source": "Hacker News",
-      "score": 225,
-      "comments": 225
-    },
-    {
-      "id": "hn:49946355",
-      "title": "Treachery in the Rodin Museum 3D scan verdict",
-      "summary": "",
-      "url": "https://cosmowenman.substack.com/p/rodin-museum-3d-scan-verdict",
-      "source": "Hacker News",
-      "score": 264,
-      "comments": 140
-    },
-    {
-      "id": "hn:49946228",
-      "title": "LeCun has \"zero concerns\" about AI wiping out humanity, recent \"rogue\" incidents",
-      "summary": "<a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;TyDPf\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;TyDPf</a>",
-      "url": "https://fortune.com/2026/10/01/ai-godfather-yann-lecun-has-zero-concerns-about-human-extinction-says-anthropic-ceo-dario-amodei-is-deuded/",
-      "source": "Hacker News",
-      "score": 275,
-      "comments": 442
-    },
-    {
-      "id": "lob:cd5gdk",
-      "title": "I got targeted: Trying to get your credentials via a git post-checkout hook",
-      "summary": "",
-      "url": "https://frankwiles.com/posts/i-got-targeted/",
-      "source": "Lobste.rs",
-      "score": 122,
-      "comments": 37,
-      "tags": [
-        "security",
-        "vcs"
-      ]
-    },
-    {
-      "id": "lob:elziso",
-      "title": "The Era of Software Quality, or the Era of Ostriches?",
-      "summary": "",
-      "url": "https://blogs.gnome.org/mcatanzaro/2026/10/02/the-era-of-software-quality-or-the-era-of-ostriches/",
-      "source": "Lobste.rs",
-      "score": 37,
-      "comments": 55,
-      "tags": [
-        "practices",
-        "vibecoding"
-      ]
+      "score": 839,
+      "comments": 181
     },
     {
       "id": "lob:dldhpw",
@@ -122,111 +69,97 @@
       "summary": "",
       "url": "https://yossarian.net/til/post/rust-s-derive-often-implies-inline/",
       "source": "Lobste.rs",
-      "score": 42,
-      "comments": 12,
+      "score": 64,
+      "comments": 14,
       "tags": [
         "rust"
       ]
     },
     {
-      "id": "hn:49952111",
-      "title": "Show HN: AI search for every photo and every frame of video on macOS",
+      "id": "hn:49959869",
+      "title": "Powerless F1 drivers frustrated by Bahrain F1 software glitch",
       "summary": "",
-      "url": "https://github.com/allenv0/SCM",
+      "url": "https://www.motorsport.com/f1/news/horrible-totally-unacceptable-powerless-f1-drivers-frustrated-by-bahrain-f1-software-glitch/10861968/",
       "source": "Hacker News",
-      "score": 67,
-      "comments": 38
+      "score": 136,
+      "comments": 68
     },
     {
-      "id": "lob:xruas8",
-      "title": "An Update on Orion for Linux and Windows",
+      "id": "lob:xkwswd",
+      "title": "We’re going to need default hard budget caps on pretty much everything",
       "summary": "",
-      "url": "https://blog.kagi.com/update-orion-linux-windows",
+      "url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/",
       "source": "Lobste.rs",
-      "score": 22,
-      "comments": 6,
+      "score": 38,
+      "comments": 18,
       "tags": [
-        "browsers",
-        "linux",
-        "windows"
+        "practices",
+        "vibecoding"
       ]
     },
     {
-      "id": "lob:hk0ohb",
-      "title": "System-level ad-blocking in Android",
+      "id": "hn:49956681",
+      "title": "A browser-native classic Visual Basic VB6 IDE",
       "summary": "",
-      "url": "https://kevinboone.me/adblock.html",
+      "url": "https://wieslawsoltes.github.io/VB6/",
+      "source": "Hacker News",
+      "score": 131,
+      "comments": 49
+    },
+    {
+      "id": "hn:49960084",
+      "title": "Nearly 200 People Under Observation After Irkutsk Lab Worker Dies from Plague",
+      "summary": "",
+      "url": "https://www.themoscowtimes.com/2026/10/02/nearly-200-people-under-observation-after-irkutsk-lab-worker-dies-from-plague-a93857",
+      "source": "Hacker News",
+      "score": 115,
+      "comments": 66
+    },
+    {
+      "id": "hn:49958569",
+      "title": "Self-hosted HTTP tunnels with SSH and Nginx",
+      "summary": "",
+      "url": "https://vincent.bernat.ch/en/blog/2026-http-over-ssh",
+      "source": "Hacker News",
+      "score": 97,
+      "comments": 29
+    },
+    {
+      "id": "lob:xpyahx",
+      "title": "grubby: static site generator for git repos written in Ruby",
+      "summary": "",
+      "url": "https://git.btxx.org/grubby",
       "source": "Lobste.rs",
-      "score": 21,
-      "comments": 12,
+      "score": 16,
+      "comments": 10,
       "tags": [
-        "android"
+        "ruby",
+        "vcs"
       ]
     },
     {
-      "id": "arxiv:2610.02207v1",
-      "title": "One Basis to Animate Them All: Gaussian Blendshape Distillation for Real-Time Avatars",
-      "summary": "3D Gaussian avatars support fast rendering, however, their real-time animation is often challenged by the costly neural inference. We address this bottleneck and show that the animation of pretrained avatar models can be closely approximated by a linear combination of identity-independent blendshape",
-      "url": "https://arxiv.org/abs/2610.02207v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.HC",
-        "cs.LG"
-      ],
-      "arxiv_id": "2610.02207v1"
+      "id": "lob:qcgjpu",
+      "title": "Kolibri: A Sovereign Open-Weight Model",
+      "summary": "",
+      "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/",
+      "source": "Lobste.rs",
+      "score": 34,
+      "comments": 5,
+      "tags": [
+        "vibecoding"
+      ]
     },
     {
-      "id": "arxiv:2610.02206v1",
-      "title": "KaliBench: A Fine-Grained Benchmark for Cybersecurity Tool Use on Kali Linux with Runtime-Free Verifiable Rewards",
-      "summary": "LLMs are increasingly applied to cybersecurity workflows, where they are expected to translate analysts' intent into tool invocations. However, existing evaluations focus on knowledge-based assessments or end-to-end agentic tasks, and do not directly measure LLMs' ability to generate executable comm",
-      "url": "https://arxiv.org/abs/2610.02206v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.CR"
-      ],
-      "arxiv_id": "2610.02206v1"
-    },
-    {
-      "id": "arxiv:2610.02201v1",
-      "title": "SILSA: Sliding-Window Slice Latents for Topology-Preserving High-Resolution 3D Generation",
-      "summary": "High-resolution 3D generation increasingly relies on voxel latents and multi-stage pipelines that first predict active structure and then synthesize local geometry. While effective, this design fragments continuous surfaces into many local tokens, inflates generation cost, and often weakens topologi",
-      "url": "https://arxiv.org/abs/2610.02201v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2610.02201v1"
-    },
-    {
-      "id": "arxiv:2610.02193v1",
-      "title": "Hierarchical Continuous Diffusion Language Models",
-      "summary": "Discrete diffusion language models offer a compelling alternative to autoregressive generation for tasks demanding bidirectional reasoning and global constraint satisfaction. Yet they share a structural bottleneck: when decoding in parallel, each token is sampled independently from its marginal, sev",
-      "url": "https://arxiv.org/abs/2610.02193v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2610.02193v1"
-    },
-    {
-      "id": "arxiv:2610.02190v1",
-      "title": "Trust the Direction, Search the Step: Zero-and-First-Order Methods for LLM Fine-Tuning",
-      "summary": "Step-size selection remains a central challenge in large-scale neural network optimization; conservative steps slow convergence, while aggressive steps can destabilize it. We combine \\textbf{Z}ero-and-\\textbf{F}irst-\\textbf{O}rder optimization~(ZFO) and propose a lightweight framework that decouples",
-      "url": "https://arxiv.org/abs/2610.02190v1",
+      "id": "arxiv:2610.03665v1",
+      "title": "Pivot-SD: Efficient Self-Distillation for Masked Diffusion Language Models",
+      "summary": "Masked diffusion language models (dLMs) offer a promising parallel alternative to autoregressive models for complex reasoning. However, they face a distinct credit-assignment challenge, since a few commitments during denoising sharply reduce the uncertainty over the remaining masked positions and sh",
+      "url": "https://arxiv.org/abs/2610.03665v1",
       "source": "ArXiv",
       "categories": [
         "cs.LG",
-        "math.OC"
+        "cs.CL"
       ],
-      "arxiv_id": "2610.02190v1"
+      "arxiv_id": "2610.03665v1"
     },
     {
       "id": "rss:4e4d79e994",
@@ -243,6 +176,67 @@
       "url": "https://thehackernews.com/2026/10/critical-fortimail-zero-day-flaw.html",
       "source": "Tech RSS",
       "score": 0
+    },
+    {
+      "id": "lob:dsoh2w",
+      "title": "ncdu: NCurses Disk Usage (an updated fork)",
+      "summary": "",
+      "url": "https://github.com/rcalixte/ncdu",
+      "source": "Lobste.rs",
+      "score": 23,
+      "comments": 9,
+      "tags": [
+        "release",
+        "zig"
+      ]
+    },
+    {
+      "id": "lob:4bzoft",
+      "title": "The complement of true is true, except when it's false",
+      "summary": "",
+      "url": "https://dryperspective.github.io/posts/complement-of-true/",
+      "source": "Lobste.rs",
+      "score": 33,
+      "comments": 3,
+      "tags": [
+        "c++"
+      ]
+    },
+    {
+      "id": "hn:49957812",
+      "title": "In the wake of closure, a digital archive of animated materials appears online",
+      "summary": "",
+      "url": "https://filmstories.co.uk/news/tippett-studios-in-the-wake-of-its-closure-a-digital-archive-of-animated-materials-appears-online/",
+      "source": "Hacker News",
+      "score": 72,
+      "comments": 7
+    },
+    {
+      "id": "arxiv:2610.03713v1",
+      "title": "What Should World Models Forget? Stratified Retention for Continual Adaptation",
+      "summary": "Continual learning treats degradation on previously seen data as evidence of failure, a convention inherited from settings with a stationary prediction target, where a correct label remains correct indefinitely. World models do not satisfy this condition. Their prediction target is the environment, ",
+      "url": "https://arxiv.org/abs/2610.03713v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV",
+        "eess.IV",
+        "eess.SP"
+      ],
+      "arxiv_id": "2610.03713v1"
+    },
+    {
+      "id": "arxiv:2610.03709v1",
+      "title": "From Mixing to Tearing: Graph Decomposition in Decentralized Optimization via Message Passing",
+      "summary": "We study the minimization of sums of smooth strongly convex functions over undirected graphs, with each function held by one agent and communication restricted to neighbors in the graph. Existing decentralized methods, whether based on gossip or on routing over spanning trees, typically use the netw",
+      "url": "https://arxiv.org/abs/2610.03709v1",
+      "source": "ArXiv",
+      "categories": [
+        "math.OC",
+        "cs.LG"
+      ],
+      "arxiv_id": "2610.03709v1"
     }
   ],
   "ai_curated": true
