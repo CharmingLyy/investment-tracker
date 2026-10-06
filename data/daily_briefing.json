@@ -1,181 +1,76 @@
 {
-  "date": "2026-10-05",
-  "update_time": "2026-10-05 04:52:51",
+  "date": "2026-10-06",
+  "update_time": "2026-10-06 05:40:21",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-05\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 消费级硬件跑 125B 大模型，100T/s 吞吐 (来源: HackerNews)\n- **核心干货**：Strata 项目让 Qwen 3.8 Flash Next（125B 参数）在单张 RTX 4090 上跑出 100 tokens/s 的推理速度。核心思路是通过极致的量化与显存调度策略，把原本需要多卡 A100 才能伺候的模型塞进消费级显卡，并且速度不拉胯。\n- **毒舌/硬核点评**：老黄看了想报警，H100 的销售话术又少了一条。不过别急着欢呼——先问问你的 4090 显存够不够，以及电费账单扛不扛得住。\n- **🔗 传送门**：[点击直达原链接](https://github.com/Niko1221/Strata)\n\n---\n\n### 2. 📌 苹果\"智能\"变\"智障\"：一键卸载 Apple Intelligence 并回收磁盘空间 (来源: HackerNews)\n- **核心干货**：一个开源工具让你在 macOS 27 上彻底关闭 Apple Intelligence，并回收其占用的磁盘空间。HN 上 458 分、284 条评论说明了一件事：用户对苹果强行塞进来的\"AI 功能\"积怨已久，尤其是那些占了几十个 GB 却几乎不用的模型文件。\n- **毒舌/硬核点评**：苹果花了几十亿美金做出来的 AI，最大的用户价值居然是\"如何把它删干净\"。这大概是库克时代最讽刺的产品闭环。\n- **🔗 传送门**：[点击直达原链接](https://github.com/omlahore/RemoveMacAI)\n\n---\n\n### 3. 📌 红act失误暴露 Google 数据中心真实水电消耗 (来源: HackerNews)\n- **核心干货**：一份本应被涂黑的公共记录因脱敏不当，意外泄露了 Google 在林肯市数据中心的真实用水和用电数据。结合近期 AI 算力军备竞赛的背景，这份数据大概率揭示了科技巨头对外公布的\"碳中和\"叙事与实际消耗之间的鸿沟。HN 上 421 条评论吵翻了天。\n- **毒舌/硬核点评**：AI 泡沫最诚实的地方在于——不管你嘴上怎么讲 ESG，电表和水表不会陪你演戏。建议 Google 下次买个好点的 PDF 编辑器。\n- **🔗 传送门**：[点击直达原链接](https://www.1011now.com/2026/09/30/more-questions-than-answers-about-lincolns-google-data-center-water-electricity-usage/)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> 大模型竞赛的终极悖论：所有人都在比谁的模型更大，但用户最想要的功能是\"怎么把它关掉\"。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-06\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Opus 5.5 智能体自主发现两种室温磁性半导体候选材料 (来源: HackerNews)\n- **核心干货**：AI 智能体（Opus 5.5）在材料科学领域实现自主科研突破，独立发现两种可在室温下工作的磁性半导体候选材料。这意味着 AI 不再只是\"辅助工具\"，而是开始直接产出人类实验室里烧钱烧时间才能拿到的硬科技成果——材料发现这个长期被\"试错法\"统治的领域，正在被算法暴力碾过。\n- **毒舌/硬核点评**：人类材料学家花二十年筛出来的候选清单，AI 一个下午跑完了。所以问题来了——当 AI 连\"发现新材料\"都能自己干，那些还在用 Excel 管实验数据的实验室，是不是该考虑转行了？\n- **🔗 传送门**：[点击直达原链接](https://www.vals.ai/blogs/room-temperature-magnetic-semiconductors)\n\n---\n\n### 2. 📌 Beam: Reflection 发布 501B 开源权重模型 (来源: HackerNews)\n- **核心干货**：Reflection 扔出一颗重磅炸弹——501B 参数的开源权重模型 Beam。在当前\"闭源巨头卷能力、开源社区卷尺寸\"的格局下，这个体量直接杀入第一梯队。关键不只是大，而是\"开源权重\"四个字：意味着中小团队和研究者终于有了一个能在本地/私有云部署的、接近前沿水平的基座模型。\n- **毒舌/硬核点评**：501B 开源，听起来很慷慨，但你先把 A100 集群的电费账单算一下。开源模型的门槛从来不是 License，是机房。不过话说回来，有总比没有强——至少这次不用看 API 涨价公告的脸色了。\n- **🔗 传送门**：[点击直达原链接](https://reflection.ai/blog/introducing-beam)\n\n---\n\n### 3. 📌 Cloudflare 推出 Web Search API (来源: HackerNews)\n- **核心干货**：Cloudflare 正式入局搜索 API 赛道，面向开发者提供 Web Search API。这不是又一个\"套壳 Google\"的玩意儿——Cloudflare 手握全球边缘网络和爬虫基础设施，意味着它有能力从索引层重建搜索能力。对开发者而言，多一个搜索 API 供应商，就少一分被单一平台卡脖子的风险；对 Google 而言，边缘网络上的搜索入口正在悄悄长出来。\n- **毒舌/硬核点评**：Cloudflare 的逻辑很清晰——你 Google 用搜索喂 AI，那我就把搜索本身变成基础设施卖给别人。当年 CDN 是怎么商品化的，搜索 API 就怎么再来一遍。Google 的核心护城河，正在被一寸一寸地\"边缘化\"。\n- **🔗 传送门**：[点击直达原链接](https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> **\"AI 不会取代你，但一个用 AI 把实验周期从三年压缩到三天的对手会。真正的护城河从来不是你知道什么，而是你多快能把'不知道'变成'已部署'。\"**",
   "briefing_items": [
     {
-      "title": "消费级硬件跑 125B 大模型，100T/s 吞吐",
+      "title": "Opus 5.5 智能体自主发现两种室温磁性半导体候选材料",
       "source": "HackerNews",
-      "summary": "Strata 项目让 Qwen 3.8 Flash Next（125B 参数）在单张 RTX 4090 上跑出 100 tokens/s 的推理速度。核心思路是通过极致的量化与显存调度策略，把原本需要多卡 A100 才能伺候的模型塞进消费级显卡，并且速度不拉胯。",
-      "commentary": "老黄看了想报警，H100 的销售话术又少了一条。不过别急着欢呼——先问问你的 4090 显存够不够，以及电费账单扛不扛得住。",
-      "url": "https://github.com/Niko1221/Strata"
+      "summary": "AI 智能体（Opus 5.5）在材料科学领域实现自主科研突破，独立发现两种可在室温下工作的磁性半导体候选材料。这意味着 AI 不再只是\"辅助工具\"，而是开始直接产出人类实验室里烧钱烧时间才能拿到的硬科技成果——材料发现这个长期被\"试错法\"统治的领域，正在被算法暴力碾过。",
+      "commentary": "人类材料学家花二十年筛出来的候选清单，AI 一个下午跑完了。所以问题来了——当 AI 连\"发现新材料\"都能自己干，那些还在用 Excel 管实验数据的实验室，是不是该考虑转行了？",
+      "url": "https://www.vals.ai/blogs/room-temperature-magnetic-semiconductors"
     },
     {
-      "title": "苹果\"智能\"变\"智障\"：一键卸载 Apple Intelligence 并回收磁盘空间",
+      "title": "Beam: Reflection 发布 501B 开源权重模型",
       "source": "HackerNews",
-      "summary": "一个开源工具让你在 macOS 27 上彻底关闭 Apple Intelligence，并回收其占用的磁盘空间。HN 上 458 分、284 条评论说明了一件事：用户对苹果强行塞进来的\"AI 功能\"积怨已久，尤其是那些占了几十个 GB 却几乎不用的模型文件。",
-      "commentary": "苹果花了几十亿美金做出来的 AI，最大的用户价值居然是\"如何把它删干净\"。这大概是库克时代最讽刺的产品闭环。",
-      "url": "https://github.com/omlahore/RemoveMacAI"
+      "summary": "Reflection 扔出一颗重磅炸弹——501B 参数的开源权重模型 Beam。在当前\"闭源巨头卷能力、开源社区卷尺寸\"的格局下，这个体量直接杀入第一梯队。关键不只是大，而是\"开源权重\"四个字：意味着中小团队和研究者终于有了一个能在本地/私有云部署的、接近前沿水平的基座模型。",
+      "commentary": "501B 开源，听起来很慷慨，但你先把 A100 集群的电费账单算一下。开源模型的门槛从来不是 License，是机房。不过话说回来，有总比没有强——至少这次不用看 API 涨价公告的脸色了。",
+      "url": "https://reflection.ai/blog/introducing-beam"
     },
     {
-      "title": "红act失误暴露 Google 数据中心真实水电消耗",
+      "title": "Cloudflare 推出 Web Search API",
       "source": "HackerNews",
-      "summary": "一份本应被涂黑的公共记录因脱敏不当，意外泄露了 Google 在林肯市数据中心的真实用水和用电数据。结合近期 AI 算力军备竞赛的背景，这份数据大概率揭示了科技巨头对外公布的\"碳中和\"叙事与实际消耗之间的鸿沟。HN 上 421 条评论吵翻了天。",
-      "commentary": "AI 泡沫最诚实的地方在于——不管你嘴上怎么讲 ESG，电表和水表不会陪你演戏。建议 Google 下次买个好点的 PDF 编辑器。",
-      "url": "https://www.1011now.com/2026/09/30/more-questions-than-answers-about-lincolns-google-data-center-water-electricity-usage/"
+      "summary": "Cloudflare 正式入局搜索 API 赛道，面向开发者提供 Web Search API。这不是又一个\"套壳 Google\"的玩意儿——Cloudflare 手握全球边缘网络和爬虫基础设施，意味着它有能力从索引层重建搜索能力。对开发者而言，多一个搜索 API 供应商，就少一分被单一平台卡脖子的风险；对 Google 而言，边缘网络上的搜索入口正在悄悄长出来。",
+      "commentary": "Cloudflare 的逻辑很清晰——你 Google 用搜索喂 AI，那我就把搜索本身变成基础设施卖给别人。当年 CDN 是怎么商品化的，搜索 API 就怎么再来一遍。Google 的核心护城河，正在被一寸一寸地\"边缘化\"。",
+      "url": "https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49953495",
-      "title": "Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s",
+      "id": "hn:49970667",
+      "title": "Opus 5.5 agents discover two room-temperature magnetic semiconductor candidates",
       "summary": "",
-      "url": "https://github.com/Niko1221/Strata",
+      "url": "https://www.vals.ai/blogs/room-temperature-magnetic-semiconductors",
       "source": "Hacker News",
-      "score": 663,
-      "comments": 309
+      "score": 276,
+      "comments": 187
     },
     {
-      "id": "hn:49957116",
-      "title": "Turn off Apple Intelligence on macOS 27 and get its disk space back",
+      "id": "hn:49971846",
+      "title": "ChatGPT is adding real cartoonists' signatures to fake New Yorker cartoons",
       "summary": "",
-      "url": "https://github.com/omlahore/RemoveMacAI",
+      "url": "https://www.niemanlab.org/2026/10/chatgpt-is-adding-real-cartoonists-signatures-to-fake-new-yorker-cartoons/",
       "source": "Hacker News",
-      "score": 458,
-      "comments": 284
+      "score": 362,
+      "comments": 265
     },
     {
-      "id": "hn:49957068",
-      "title": "Improper redaction reveals Google Data Center water and electricity usage",
+      "id": "hn:49969183",
+      "title": "Beam: Reflection's 501B open-weight model",
       "summary": "",
-      "url": "https://www.1011now.com/2026/09/30/more-questions-than-answers-about-lincolns-google-data-center-water-electricity-usage/",
+      "url": "https://reflection.ai/blog/introducing-beam",
       "source": "Hacker News",
-      "score": 309,
-      "comments": 421
+      "score": 384,
+      "comments": 118
     },
     {
-      "id": "hn:49949438",
-      "title": "Tell HN: Bob Cringely has died",
-      "summary": "I heard from a friend of the family that Bob passed away in his sleep early Saturday. Very sad news. Bob, who&#x27;s real name was Mark Stevens, was an early employee of Apple and was best known for his PBS documentaries, especially &quot;Triumph of the Nerds&quot;. He will be missed.",
-      "url": "https://news.ycombinator.com/item?id=49949438",
+      "id": "hn:49961057",
+      "title": "Anthropic reported diary entry to police, woman faces felony charge",
+      "summary": "",
+      "url": "https://www.techspot.com/news/114091-florida-woman-used-claude-diary-anthropic-reported-shoot.html",
       "source": "Hacker News",
-      "score": 839,
-      "comments": 181
+      "score": 645,
+      "comments": 510
     },
     {
-      "id": "lob:dldhpw",
-      "title": "Rust's derive often implies inline",
+      "id": "hn:49963171",
+      "title": "Web Search API",
       "summary": "",
-      "url": "https://yossarian.net/til/post/rust-s-derive-often-implies-inline/",
-      "source": "Lobste.rs",
-      "score": 64,
-      "comments": 14,
-      "tags": [
-        "rust"
-      ]
-    },
-    {
-      "id": "hn:49959869",
-      "title": "Powerless F1 drivers frustrated by Bahrain F1 software glitch",
-      "summary": "",
-      "url": "https://www.motorsport.com/f1/news/horrible-totally-unacceptable-powerless-f1-drivers-frustrated-by-bahrain-f1-software-glitch/10861968/",
+      "url": "https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/",
       "source": "Hacker News",
-      "score": 136,
-      "comments": 68
-    },
-    {
-      "id": "lob:xkwswd",
-      "title": "We’re going to need default hard budget caps on pretty much everything",
-      "summary": "",
-      "url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/",
-      "source": "Lobste.rs",
-      "score": 38,
-      "comments": 18,
-      "tags": [
-        "practices",
-        "vibecoding"
-      ]
-    },
-    {
-      "id": "hn:49956681",
-      "title": "A browser-native classic Visual Basic VB6 IDE",
-      "summary": "",
-      "url": "https://wieslawsoltes.github.io/VB6/",
-      "source": "Hacker News",
-      "score": 131,
-      "comments": 49
-    },
-    {
-      "id": "hn:49960084",
-      "title": "Nearly 200 People Under Observation After Irkutsk Lab Worker Dies from Plague",
-      "summary": "",
-      "url": "https://www.themoscowtimes.com/2026/10/02/nearly-200-people-under-observation-after-irkutsk-lab-worker-dies-from-plague-a93857",
-      "source": "Hacker News",
-      "score": 115,
-      "comments": 66
-    },
-    {
-      "id": "hn:49958569",
-      "title": "Self-hosted HTTP tunnels with SSH and Nginx",
-      "summary": "",
-      "url": "https://vincent.bernat.ch/en/blog/2026-http-over-ssh",
-      "source": "Hacker News",
-      "score": 97,
-      "comments": 29
-    },
-    {
-      "id": "lob:xpyahx",
-      "title": "grubby: static site generator for git repos written in Ruby",
-      "summary": "",
-      "url": "https://git.btxx.org/grubby",
-      "source": "Lobste.rs",
-      "score": 16,
-      "comments": 10,
-      "tags": [
-        "ruby",
-        "vcs"
-      ]
-    },
-    {
-      "id": "lob:qcgjpu",
-      "title": "Kolibri: A Sovereign Open-Weight Model",
-      "summary": "",
-      "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/",
-      "source": "Lobste.rs",
-      "score": 34,
-      "comments": 5,
-      "tags": [
-        "vibecoding"
-      ]
-    },
-    {
-      "id": "arxiv:2610.03665v1",
-      "title": "Pivot-SD: Efficient Self-Distillation for Masked Diffusion Language Models",
-      "summary": "Masked diffusion language models (dLMs) offer a promising parallel alternative to autoregressive models for complex reasoning. However, they face a distinct credit-assignment challenge, since a few commitments during denoising sharply reduce the uncertainty over the remaining masked positions and sh",
-      "url": "https://arxiv.org/abs/2610.03665v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.CL"
-      ],
-      "arxiv_id": "2610.03665v1"
-    },
-    {
-      "id": "rss:4e4d79e994",
-      "title": "Dell CSM Flaws Enable Unauthenticated Admin Access and Root on Kubernetes Nodes",
-      "summary": "Dell has released security updates to address multiple critical security flaws in Dell Container Storage Modules (CSM) that could be exploited by bad actors to take over susceptible systems.\n\nThe vulnerabilities are listed below -\n\n\n  CVE-2026-63688 (CVSS score: 10.0) - A missing authentication for",
-      "url": "https://thehackernews.com/2026/10/dell-csm-flaws-enable-unauthenticated.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:b0174e146f",
-      "title": "Critical FortiMail Zero-Day Flaw Exploited in Attacks Allows Unauthenticated Arbitrary File Writes",
-      "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA), on Thursday, added a critical security flaw impacting Fortinet FortiMail to its Known Exploited Vulnerabilities (KEV) catalog, following reports of active exploitation.\n\nThe vulnerability, tracked as CVE-2026-104286 (CVSS score: 9.8),",
-      "url": "https://thehackernews.com/2026/10/critical-fortimail-zero-day-flaw.html",
-      "source": "Tech RSS",
-      "score": 0
+      "score": 517,
+      "comments": 236
     },
     {
       "id": "lob:dsoh2w",
@@ -183,60 +78,166 @@
       "summary": "",
       "url": "https://github.com/rcalixte/ncdu",
       "source": "Lobste.rs",
-      "score": 23,
-      "comments": 9,
+      "score": 49,
+      "comments": 18,
       "tags": [
         "release",
         "zig"
       ]
     },
     {
-      "id": "lob:4bzoft",
-      "title": "The complement of true is true, except when it's false",
+      "id": "hn:49971230",
+      "title": "Find the flattest route between any two points in SF",
       "summary": "",
-      "url": "https://dryperspective.github.io/posts/complement-of-true/",
+      "url": "https://flattensf.com/",
+      "source": "Hacker News",
+      "score": 153,
+      "comments": 50
+    },
+    {
+      "id": "hn:49971921",
+      "title": "Example.com just launched the biggest redesign in decades",
+      "summary": "",
+      "url": "https://www.debugbear.com/blog/example-dot-com-redesign-history",
+      "source": "Hacker News",
+      "score": 149,
+      "comments": 88
+    },
+    {
+      "id": "hn:49970871",
+      "title": "Dust: Pretraining Transformers Without Backpropagation",
+      "summary": "",
+      "url": "https://qlabs.sh/research/dust",
+      "source": "Hacker News",
+      "score": 144,
+      "comments": 32
+    },
+    {
+      "id": "arxiv:2610.06844v1",
+      "title": "Learning to Read the Contextual Tokens in Diffusion Transformers",
+      "summary": "Multimodal Diffusion Transformers (MM-DiTs) jointly process visual and textual representations throughout generation. These models repeatedly update the text tokens through multimodal attention, forming dynamic contextual tokens whose function is not well understood. In this work, we introduce a fra",
+      "url": "https://arxiv.org/abs/2610.06844v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.GR",
+        "cs.LG"
+      ],
+      "arxiv_id": "2610.06844v1"
+    },
+    {
+      "id": "arxiv:2610.06830v1",
+      "title": "MemPilot: Orchestrating On-Demand Multimodal Memory Curation for LLM Agents",
+      "summary": "Memory has become integral to the LLM agent ecosystem, supporting information retention and reuse across interactions. However, most existing agent memory systems construct memory in a query-agnostic manner, which can incur unnecessary preprocessing cost and discard details that later prove essentia",
+      "url": "https://arxiv.org/abs/2610.06830v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_id": "2610.06830v1"
+    },
+    {
+      "id": "lob:9iztqv",
+      "title": "Flirt is now Open-Source",
+      "summary": "",
+      "url": "https://blog.buenzli.dev/flirt-is-open-source/",
       "source": "Lobste.rs",
-      "score": 33,
-      "comments": 3,
+      "score": 42,
+      "comments": 17,
       "tags": [
-        "c++"
+        "vcs"
       ]
     },
     {
-      "id": "hn:49957812",
-      "title": "In the wake of closure, a digital archive of animated materials appears online",
+      "id": "hn:49944049",
+      "title": "Competitive Programmer's Handbook (2018) [pdf]",
       "summary": "",
-      "url": "https://filmstories.co.uk/news/tippett-studios-in-the-wake-of-its-closure-a-digital-archive-of-animated-materials-appears-online/",
+      "url": "https://cses.fi/book/book.pdf",
       "source": "Hacker News",
-      "score": 72,
-      "comments": 7
+      "score": 162,
+      "comments": 36
     },
     {
-      "id": "arxiv:2610.03713v1",
-      "title": "What Should World Models Forget? Stratified Retention for Continual Adaptation",
-      "summary": "Continual learning treats degradation on previously seen data as evidence of failure, a convention inherited from settings with a stationary prediction target, where a correct label remains correct indefinitely. World models do not satisfy this condition. Their prediction target is the environment, ",
-      "url": "https://arxiv.org/abs/2610.03713v1",
+      "id": "lob:2svplr",
+      "title": "Gleam doesn't compile to Erlang source anymore",
+      "summary": "",
+      "url": "https://gleam.run/news/gleam-doesnt-compile-to-erlang-source-anymore/",
+      "source": "Lobste.rs",
+      "score": 88,
+      "comments": 9,
+      "tags": [
+        "compilers",
+        "erlang",
+        "gleam"
+      ]
+    },
+    {
+      "id": "hn:49971719",
+      "title": "Friendship ended with Deno, now Node is my best friend",
+      "summary": "",
+      "url": "https://dbushell.com/2026/10/03/deno-to-node/",
+      "source": "Hacker News",
+      "score": 114,
+      "comments": 50
+    },
+    {
+      "id": "lob:okk4bg",
+      "title": "Async Rust: Where does the scheduler live?",
+      "summary": "",
+      "url": "https://herecomesthemoon.net/2026/10/async-rust-where-does-the-scheduler-live/",
+      "source": "Lobste.rs",
+      "score": 27,
+      "comments": 8,
+      "tags": [
+        "rust"
+      ]
+    },
+    {
+      "id": "arxiv:2610.06829v1",
+      "title": "CLIFT: Conformal Self-Verification for Web Agent Training and Test-Time Scaling",
+      "summary": "Open-source web agents are now strong enough to execute realistic browser tasks, but training them with reinforcement learning still depends on weak supervision: binary task success is too sparse for credit assignment, while frontier-language-model judges are too expensive to call at every step and ",
+      "url": "https://arxiv.org/abs/2610.06829v1",
       "source": "ArXiv",
       "categories": [
-        "cs.LG",
+        "cs.CL",
         "cs.AI",
-        "cs.CV",
-        "eess.IV",
-        "eess.SP"
-      ],
-      "arxiv_id": "2610.03713v1"
-    },
-    {
-      "id": "arxiv:2610.03709v1",
-      "title": "From Mixing to Tearing: Graph Decomposition in Decentralized Optimization via Message Passing",
-      "summary": "We study the minimization of sums of smooth strongly convex functions over undirected graphs, with each function held by one agent and communication restricted to neighbors in the graph. Existing decentralized methods, whether based on gossip or on routing over spanning trees, typically use the netw",
-      "url": "https://arxiv.org/abs/2610.03709v1",
-      "source": "ArXiv",
-      "categories": [
-        "math.OC",
         "cs.LG"
       ],
-      "arxiv_id": "2610.03709v1"
+      "arxiv_id": "2610.06829v1"
+    },
+    {
+      "id": "rss:7a97126fa4",
+      "title": "New NetScaler Zero-Day Exploited in Targeted Attacks Can Knock SAML Deployments Offline",
+      "summary": "Citrix has released security updates for a high-severity security flaw in NetScaler ADC and NetScaler Gateway that has been exploited as part of targeted zero-day attacks.\n\nThe vulnerability, tracked as CVE-2026-88779, carries a CVSS score of 8.7 out of 10.0.\n\n\"CVE-2026-88779 is a memory overflow vu",
+      "url": "https://thehackernews.com/2026/10/new-netscaler-zero-day-exploited-in.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "hn:49973598",
+      "title": "Why Common Lisp is now the best programming language",
+      "summary": "",
+      "url": "https://www.vivienhenz.com/common-lisp",
+      "source": "Hacker News",
+      "score": 78,
+      "comments": 89
+    },
+    {
+      "id": "lob:9srb4r",
+      "title": "Mold 3.0.0 Released",
+      "summary": "",
+      "url": "https://github.com/rui314/mold/releases/tag/v3.0.0",
+      "source": "Lobste.rs",
+      "score": 28,
+      "comments": 5,
+      "tags": [
+        "release",
+        "rust",
+        "vibecoding"
+      ]
     }
   ],
   "ai_curated": true
