@@ -1,88 +1,67 @@
 {
   "date": "2026-10-07",
-  "update_time": "2026-10-06 18:03:51",
+  "update_time": "2026-10-07 05:10:51",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-07\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 JetBrains 有史以来首次净亏损 (来源: HackerNews)\n- **核心干货**：靠 IDE 收了几十年\"信仰税\"的 JetBrains，首次在可追踪历史上录得净亏损。HN 上 470 条评论直接炸锅，核心矛盾指向一个残酷现实：当 Cursor、Claude Code、Copilot 把\"写代码\"这件事从 IDE 里抽走，卖编辑器许可证的商业模式正在被釜底抽薪。连 Kotlin 和 IntelliJ 的护城河都挡不住 AI 原生开发工具的降维打击。\n- **毒舌/硬核点评**：卖铲子的公司发现矿工改用手钻了。JetBrains 的问题不是产品差，而是整个\"IDE 中心主义\"的世界观在崩塌——你优化的是打字体验，人家干掉的是打字本身。\n- **🔗 传送门**：[点击直达原链接](https://www.helgilibrary.com/companies/jetbrains)\n\n---\n\n### 2. 📌 Mistral Large 4 发布 (来源: HackerNews)\n- **核心干货**：HN 1030 分、679 条评论，Mistral 用 Large 4 再次证明欧洲 AI 旗舰还没躺平。在开源权重阵营里，Mistral 几乎是唯一能在推理质量上与闭源巨头掰手腕、同时保持\"可自部署\"这条底线的玩家。对于不想把数据喂给美国云厂商的欧洲企业和主权 AI 项目，这是刚需级别的更新。\n- **毒舌/硬核点评**：在 OpenAI 卷参数、Meta 卷开源、Anthropic 卷安全的三国杀里，Mistral 默默在卷\"我还能自己部署\"。这年头，能让你把模型搬进自己机房，本身就是一种奢侈。\n- **🔗 传送门**：[点击直达原链接](https://mistral.ai/news/mistral-large-4/)\n\n---\n\n### 3. 📌 openTPU：AI 开始设计自己的推理硬件 (来源: GitHub)\n- **核心干货**：一个开源项目正在尝试让 AI 参与设计专用推理芯片（TPU 类）。这不是\"用 AI 辅助 EDA\"的老故事，而是把硬件架构搜索直接交给模型——从算子映射到数据流调度，试图让推理硬件的设计周期从\"年\"压缩到\"周\"。如果跑通，意味着模型迭代速度和芯片迭代速度第一次开始同步。\n- **毒舌/硬核点评**：以前是\"软件定义硬件\"，现在是\"模型设计硬件\"。听着很科幻，但请记住：AI 设计的芯片最终还是要在台积电排队——物理世界的产能瓶颈，可不会因为你会写 transformer 就给你开后门。\n- **🔗 传送门**：[点击直达原链接](https://github.com/FeSens/openTPU)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"工具不会杀死工匠，但会重新定义谁是工匠。当 IDE 开始亏损、芯片开始自我设计，唯一安全的位置，是站在'定义问题'的那一端，而不是'熟练操作'的那一端。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-07\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Mistral Large 4 发布 (来源: HackerNews)\n- **核心干货**：Mistral 甩出 Large 4，HN 上 1655 分、989 条评论直接炸场——这是今年欧洲阵营对闭源巨头最硬的一次正面刚。结合同日 OpenAI 放出数学进展仓库和 Decisions API 公测，头部玩家在\"能力\"和\"基础设施\"两条线上同时开卷。\n- **毒舌/硬核点评**：开源阵营的尊严就靠 Mistral 一个人撑着了，法国人一边喝着咖啡一边把 GPT 的定价表又往下拽了一格。真正的赢家永远是那些按 token 付费的开发者。\n- **🔗 传送门**：[点击直达原链接](https://mistral.ai/news/mistral-large-4/)\n\n---\n\n### 2. 📌 AnyPS5：不靠模拟器把 PS5 二进制搬到 PC（已映射 87% 系统库）(来源: GitHub/HackerNews)\n- **核心干货**：不是模拟器，而是直接做二进制翻译 + 系统库映射，目前已覆盖 87% 的 PS5 系统库。这意味着\"主机独占\"这堵墙第一次被从工程层面而非法律层面凿开了一个洞。\n- **毒舌/硬核点评**：索尼的法务部现在应该比他们的第一方工作室还忙。技术上越优雅，律师函来得越快——这项目大概率活不过下个季度，但代码会永远留在互联网上。\n- **🔗 传送门**：[点击直达原链接](https://github.com/boykopovar/AnyPS5)\n\n---\n\n### 3. 📌 Utah 允许 AI 独立问诊并开药，无需人类监督 (来源: TechSpot)\n- **核心干货**：犹他州成为全美第一个允许 AI 在无人类医生监督下检查患者、开具处方的州。这不是\"辅助诊断\"，而是把处方权这种高法律责任的动作直接交给模型。\n- **毒舌/硬核点评**：一边是 LLM 连自己的幻觉都治不好，一边是立法者让它给人开药。建议配套立法：AI 误诊时，由投票通过这项法案的议员承担连带责任。\n- **🔗 传送门**：[点击直达原链接](https://www.techspot.com/news/114111-utah-become-first-state-ai-examine-patients-prescribe.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> **\"AI 不会取代你，但那个懂得给 AI 划定边界、并敢于为边界负责的人会。工具越强，判断力越贵。\"**",
   "briefing_items": [
-    {
-      "title": "JetBrains 有史以来首次净亏损",
-      "source": "HackerNews",
-      "summary": "靠 IDE 收了几十年\"信仰税\"的 JetBrains，首次在可追踪历史上录得净亏损。HN 上 470 条评论直接炸锅，核心矛盾指向一个残酷现实：当 Cursor、Claude Code、Copilot 把\"写代码\"这件事从 IDE 里抽走，卖编辑器许可证的商业模式正在被釜底抽薪。连 Kotlin 和 IntelliJ 的护城河都挡不住 AI 原生开发工具的降维打击。",
-      "commentary": "卖铲子的公司发现矿工改用手钻了。JetBrains 的问题不是产品差，而是整个\"IDE 中心主义\"的世界观在崩塌——你优化的是打字体验，人家干掉的是打字本身。",
-      "url": "https://www.helgilibrary.com/companies/jetbrains"
-    },
     {
       "title": "Mistral Large 4 发布",
       "source": "HackerNews",
-      "summary": "HN 1030 分、679 条评论，Mistral 用 Large 4 再次证明欧洲 AI 旗舰还没躺平。在开源权重阵营里，Mistral 几乎是唯一能在推理质量上与闭源巨头掰手腕、同时保持\"可自部署\"这条底线的玩家。对于不想把数据喂给美国云厂商的欧洲企业和主权 AI 项目，这是刚需级别的更新。",
-      "commentary": "在 OpenAI 卷参数、Meta 卷开源、Anthropic 卷安全的三国杀里，Mistral 默默在卷\"我还能自己部署\"。这年头，能让你把模型搬进自己机房，本身就是一种奢侈。",
+      "summary": "Mistral 甩出 Large 4，HN 上 1655 分、989 条评论直接炸场——这是今年欧洲阵营对闭源巨头最硬的一次正面刚。结合同日 OpenAI 放出数学进展仓库和 Decisions API 公测，头部玩家在\"能力\"和\"基础设施\"两条线上同时开卷。",
+      "commentary": "开源阵营的尊严就靠 Mistral 一个人撑着了，法国人一边喝着咖啡一边把 GPT 的定价表又往下拽了一格。真正的赢家永远是那些按 token 付费的开发者。",
       "url": "https://mistral.ai/news/mistral-large-4/"
     },
     {
-      "title": "openTPU：AI 开始设计自己的推理硬件",
-      "source": "GitHub",
-      "summary": "一个开源项目正在尝试让 AI 参与设计专用推理芯片（TPU 类）。这不是\"用 AI 辅助 EDA\"的老故事，而是把硬件架构搜索直接交给模型——从算子映射到数据流调度，试图让推理硬件的设计周期从\"年\"压缩到\"周\"。如果跑通，意味着模型迭代速度和芯片迭代速度第一次开始同步。",
-      "commentary": "以前是\"软件定义硬件\"，现在是\"模型设计硬件\"。听着很科幻，但请记住：AI 设计的芯片最终还是要在台积电排队——物理世界的产能瓶颈，可不会因为你会写 transformer 就给你开后门。",
-      "url": "https://github.com/FeSens/openTPU"
+      "title": "AnyPS5：不靠模拟器把 PS5 二进制搬到 PC（已映射 87% 系统库）",
+      "source": "GitHub/HackerNews",
+      "summary": "不是模拟器，而是直接做二进制翻译 + 系统库映射，目前已覆盖 87% 的 PS5 系统库。这意味着\"主机独占\"这堵墙第一次被从工程层面而非法律层面凿开了一个洞。",
+      "commentary": "索尼的法务部现在应该比他们的第一方工作室还忙。技术上越优雅，律师函来得越快——这项目大概率活不过下个季度，但代码会永远留在互联网上。",
+      "url": "https://github.com/boykopovar/AnyPS5"
     },
     {
-      "quote": "\"工具不会杀死工匠，但会重新定义谁是工匠。当 IDE 开始亏损、芯片开始自我设计，唯一安全的位置，是站在'定义问题'的那一端，而不是'熟练操作'的那一端。\""
+      "title": "Utah 允许 AI 独立问诊并开药，无需人类监督",
+      "source": "TechSpot",
+      "summary": "犹他州成为全美第一个允许 AI 在无人类医生监督下检查患者、开具处方的州。这不是\"辅助诊断\"，而是把处方权这种高法律责任的动作直接交给模型。",
+      "commentary": "一边是 LLM 连自己的幻觉都治不好，一边是立法者让它给人开药。建议配套立法：AI 误诊时，由投票通过这项法案的议员承担连带责任。",
+      "url": "https://www.techspot.com/news/114111-utah-become-first-state-ai-examine-patients-prescribe.html"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49977177",
-      "title": "Release of Polars 2.0",
+      "id": "hn:49984716",
+      "title": "Penguin Mail – open-source Rust email client for Linux with AI",
       "summary": "",
-      "url": "https://pola.rs/posts/release-polars-2/",
+      "url": "https://penguin-mail.com/",
       "source": "Hacker News",
-      "score": 296,
-      "comments": 55
+      "score": 123,
+      "comments": 53
     },
     {
-      "id": "hn:49977072",
-      "title": "JetBrains reported a net financial loss first time in its tracked history",
+      "id": "hn:49980487",
+      "title": "EmbeddingGemma 2: An open, lightweight multimodal embedding model",
       "summary": "",
-      "url": "https://www.helgilibrary.com/companies/jetbrains",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
       "source": "Hacker News",
-      "score": 505,
-      "comments": 470
+      "score": 271,
+      "comments": 31
     },
     {
-      "id": "hn:49976823",
-      "title": "Nature's capacity to 'bounce back' when species are lost is vastly overestimated",
-      "summary": "",
-      "url": "https://phys.org/news/2026-10-nature-capacity-species-lost-vastly.html",
+      "id": "hn:49984923",
+      "title": "Sharing AI progress in mathematics",
+      "summary": "<a href=\"https:&#x2F;&#x2F;github.com&#x2F;openai&#x2F;math\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;openai&#x2F;math</a><p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;openai&#x2F;math&#x2F;tree&#x2F;main&#x2F;preprints\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;openai&#x2F;math&#x2F;",
+      "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
       "source": "Hacker News",
-      "score": 221,
-      "comments": 104
+      "score": 646,
+      "comments": 583
     },
     {
-      "id": "hn:49976265",
-      "title": "Nobel Prize in Physics goes to Francis Halzen",
+      "id": "hn:49984025",
+      "title": "Decisions API is in public beta",
       "summary": "",
-      "url": "https://www.nobelprize.org/prizes/physics/2026/",
+      "url": "https://developers.openai.com/api/docs/guides/decisions",
       "source": "Hacker News",
-      "score": 378,
-      "comments": 119
-    },
-    {
-      "id": "hn:49977588",
-      "title": "Meta's Muse Is an Adorable Privacy and Security Dumpster Fire",
-      "summary": "",
-      "url": "https://www.techdirt.com/2026/10/06/metas-muse-is-an-adorable-privacy-and-security-dumpster-fire/",
-      "source": "Hacker News",
-      "score": 286,
-      "comments": 188
-    },
-    {
-      "id": "hn:49975619",
-      "title": "Gleam doesn't compile to Erlang source anymore",
-      "summary": "",
-      "url": "https://gleam.run/news/gleam-doesnt-compile-to-erlang-source-anymore/",
-      "source": "Hacker News",
-      "score": 216,
-      "comments": 94
+      "score": 200,
+      "comments": 93
     },
     {
       "id": "lob:rwloew",
@@ -90,8 +69,8 @@
       "summary": "<p>At the moment I self host using <a href=\"https://maddy.email\" rel=\"ugc\">maddy</a> for a bunch of domains that need a mailbox or catch all. There are some minor issues with it - some are me, some are who knows. The biggest bug bear is that the native email client on iOS takes an age to connect and",
       "url": "https://lobste.rs/s/rwloew/email_self_hosters_what_are_you_using",
       "source": "Lobste.rs",
-      "score": 55,
-      "comments": 55,
+      "score": 72,
+      "comments": 71,
       "tags": [
         "ask",
         "email"
@@ -103,8 +82,8 @@
       "summary": "",
       "url": "https://herecomesthemoon.net/2026/10/async-rust-where-does-the-scheduler-live/",
       "source": "Lobste.rs",
-      "score": 55,
-      "comments": 23,
+      "score": 60,
+      "comments": 36,
       "tags": [
         "rust"
       ]
@@ -115,136 +94,153 @@
       "summary": "<a href=\"https:&#x2F;&#x2F;docs.mistral.ai&#x2F;models&#x2F;mistral-large-4-0\" rel=\"nofollow\">https:&#x2F;&#x2F;docs.mistral.ai&#x2F;models&#x2F;mistral-large-4-0</a>",
       "url": "https://mistral.ai/news/mistral-large-4/\\",
       "source": "Hacker News",
-      "score": 1030,
-      "comments": 679
+      "score": 1655,
+      "comments": 989
     },
     {
-      "id": "lob:1hnx0k",
-      "title": "Open Source as We Know It Is Dead",
+      "id": "hn:49985664",
+      "title": "AnyPS5: Port PS5 binaries to PC without emulation (87% system libraries mapped)",
       "summary": "",
-      "url": "https://jross.me/open-source-as-we-know-it-is-dead/",
-      "source": "Lobste.rs",
-      "score": 33,
-      "comments": 48,
-      "tags": [
-        "vibecoding"
-      ]
-    },
-    {
-      "id": "lob:a9kwzv",
-      "title": "Friendship ended with Deno, now Node is my best friend",
-      "summary": "",
-      "url": "https://dbushell.com/2026/10/03/deno-to-node/",
-      "source": "Lobste.rs",
-      "score": 59,
-      "comments": 43,
-      "tags": [
-        "nodejs"
-      ]
-    },
-    {
-      "id": "hn:49980715",
-      "title": "AI is now capable of developing its own inference hardware",
-      "summary": "",
-      "url": "https://github.com/FeSens/openTPU",
+      "url": "https://github.com/boykopovar/AnyPS5",
       "source": "Hacker News",
-      "score": 109,
-      "comments": 77
+      "score": 169,
+      "comments": 125
     },
     {
-      "id": "arxiv:2610.06844v1",
-      "title": "Learning to Read the Contextual Tokens in Diffusion Transformers",
-      "summary": "Multimodal Diffusion Transformers (MM-DiTs) jointly process visual and textual representations throughout generation. These models repeatedly update the text tokens through multimodal attention, forming dynamic contextual tokens whose function is not well understood. In this work, we introduce a fra",
-      "url": "https://arxiv.org/abs/2610.06844v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.GR",
-        "cs.LG"
-      ],
-      "arxiv_id": "2610.06844v1"
-    },
-    {
-      "id": "arxiv:2610.06830v1",
-      "title": "MemPilot: Orchestrating On-Demand Multimodal Memory Curation for LLM Agents",
-      "summary": "Memory has become integral to the LLM agent ecosystem, supporting information retention and reuse across interactions. However, most existing agent memory systems construct memory in a query-agnostic manner, which can incur unnecessary preprocessing cost and discard details that later prove essentia",
-      "url": "https://arxiv.org/abs/2610.06830v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2610.06830v1"
-    },
-    {
-      "id": "lob:9iztqv",
-      "title": "Flirt is now Open-Source",
+      "id": "lob:2svplr",
+      "title": "Gleam doesn't compile to Erlang source anymore",
       "summary": "",
-      "url": "https://blog.buenzli.dev/flirt-is-open-source/",
+      "url": "https://gleam.run/news/gleam-doesnt-compile-to-erlang-source-anymore/",
       "source": "Lobste.rs",
-      "score": 45,
-      "comments": 22,
+      "score": 131,
+      "comments": 17,
       "tags": [
-        "vcs"
+        "compilers",
+        "erlang",
+        "gleam"
       ]
     },
     {
-      "id": "arxiv:2610.06829v1",
-      "title": "CLIFT: Conformal Self-Verification for Web Agent Training and Test-Time Scaling",
-      "summary": "Open-source web agents are now strong enough to execute realistic browser tasks, but training them with reinforcement learning still depends on weak supervision: binary task success is too sparse for credit assignment, while frontier-language-model judges are too expensive to call at every step and ",
-      "url": "https://arxiv.org/abs/2610.06829v1",
+      "id": "hn:49981905",
+      "title": "Claude Code’s suggested message feature: I think the real customer is the model",
+      "summary": "",
+      "url": "https://www.zohaib.cc/blog/smartest-claude-code-feature",
+      "source": "Hacker News",
+      "score": 149,
+      "comments": 78
+    },
+    {
+      "id": "lob:jxhi2i",
+      "title": "A sustainable web career, for when all this blows over",
+      "summary": "",
+      "url": "https://dbushell.com/2026/10/07/sustainable-web-career/",
+      "source": "Lobste.rs",
+      "score": 31,
+      "comments": 18,
+      "tags": [
+        "vibecoding",
+        "web"
+      ]
+    },
+    {
+      "id": "hn:49981197",
+      "title": "Utah to let AI examine patients and prescribe medication without human oversight",
+      "summary": "",
+      "url": "https://www.techspot.com/news/114111-utah-become-first-state-ai-examine-patients-prescribe.html",
+      "source": "Hacker News",
+      "score": 117,
+      "comments": 115
+    },
+    {
+      "id": "lob:0slgpl",
+      "title": "That Time I Worked With a Laptop Thief (2025)",
+      "summary": "",
+      "url": "https://blog.pipetogrep.org/2025/07/27/that-time-i-worked-with-a-laptop-thief/",
+      "source": "Lobste.rs",
+      "score": 42,
+      "comments": 8,
+      "tags": [
+        "security"
+      ]
+    },
+    {
+      "id": "lob:gveu0c",
+      "title": "Montray - a tray icon for systemd service health",
+      "summary": "",
+      "url": "https://github.com/dimonomid/montray/",
+      "source": "Lobste.rs",
+      "score": 32,
+      "comments": 5,
+      "tags": [
+        "linux",
+        "systemd"
+      ]
+    },
+    {
+      "id": "arxiv:2610.08773v1",
+      "title": "AdvSim2Real : Training Web Agents Against Adaptive Prompt Injection in a Web World Model",
+      "summary": "Web agents complete user requests by reading and acting on pages that third parties write, so an instruction planted on a page can redirect the agent away from the user's goal. The agent cannot simply ignore the page, because the page also holds the values and controls the task requires. Current def",
+      "url": "https://arxiv.org/abs/2610.08773v1",
       "source": "ArXiv",
       "categories": [
         "cs.CL",
         "cs.AI",
         "cs.LG"
       ],
-      "arxiv_id": "2610.06829v1"
+      "arxiv_id": "2610.08773v1"
     },
     {
-      "id": "rss:7a97126fa4",
-      "title": "New NetScaler Zero-Day Exploited in Targeted Attacks Can Knock SAML Deployments Offline",
-      "summary": "Citrix has released security updates for a high-severity security flaw in NetScaler ADC and NetScaler Gateway that has been exploited as part of targeted zero-day attacks.\n\nThe vulnerability, tracked as CVE-2026-88779, carries a CVSS score of 8.7 out of 10.0.\n\n\"CVE-2026-88779 is a memory overflow vu",
-      "url": "https://thehackernews.com/2026/10/new-netscaler-zero-day-exploited-in.html",
+      "id": "arxiv:2610.08743v1",
+      "title": "Reinforcement Learning with Conformal Action Sets: An Application to Sequential Recommendation",
+      "summary": "Sequential recommenders typically use a fixed slate size even though the number of useful alternatives changes within a session. We propose Reinforcement Learning with Calibrated Pruning (RLCP), which adapts the retained action set using critic scores and an online threshold. The threshold is update",
+      "url": "https://arxiv.org/abs/2610.08743v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "arxiv_id": "2610.08743v1"
+    },
+    {
+      "id": "rss:ef8c975732",
+      "title": "Microsoft Exchange Flaw Lets Authenticated Attackers Read Other Users' Mailboxes",
+      "summary": "Microsoft has released out-of-band security updates to address a high-severity flaw in Microsoft Exchange Server that could allow an attacker to escalate privileges under certain conditions.\n\nThe vulnerability, tracked as CVE-2026-96940, is rated 8.8 on the CVSS scoring system.\n\n\"Weak authorization",
+      "url": "https://thehackernews.com/2026/10/microsoft-exchange-flaw-lets.html",
       "source": "Tech RSS",
       "score": 0
     },
     {
-      "id": "hn:49978563",
-      "title": "Tapo (Rust/Python library) now speaks TP-Link's TPAP protocol",
-      "summary": "",
-      "url": "https://mihai.dinculescu.dev/posts/tapo-speaks-tpap/",
-      "source": "Hacker News",
-      "score": 89,
-      "comments": 31
+      "id": "rss:106bce5ca1",
+      "title": "NEXUS: Why the Next AI Architecture Won't Be Just One Thing",
+      "summary": "After watching enterprise AI deployments for a while, I've come to a conclusion that shapes everything I build: the systems that win in 2026–2030 won't be \"just RAG\" or \"just agents\" or \"just fine-tuned.\" They'll be unified systems that compose all of these under one orchestration layer — with self-",
+      "url": "https://dev.to/shivaysinghrajput/nexus-why-the-next-ai-architecture-wont-be-just-one-thing-16i",
+      "source": "Tech RSS",
+      "score": 0
     },
     {
-      "id": "lob:fks4pf",
-      "title": "Another step towards elm v1",
+      "id": "lob:dwbksa",
+      "title": "Brut, the Brutal Router for Unix Tools",
       "summary": "",
-      "url": "https://elm-lang.org/news/another-step-towards-elm-v1",
+      "url": "https://brut.sh",
       "source": "Lobste.rs",
-      "score": 81,
-      "comments": 7,
+      "score": 22,
+      "comments": 10,
       "tags": [
-        "elm"
+        "show",
+        "unix"
       ]
     },
     {
-      "id": "arxiv:2610.06843v1",
-      "title": "Recursive Video In-Context Learning for Agentic Robot",
-      "summary": "LLM agents that orchestrate frozen vision-language-action (VLA) policies improve across episodes through text memory, which records what the agent did but not how the task is done. A demonstration video shows it, but fits poorly into an agent's context. The full video slows every turn, fixed keyfram",
-      "url": "https://arxiv.org/abs/2610.06843v1",
+      "id": "arxiv:2610.08778v1",
+      "title": "Sherpa: Teaching LLMs to Teach Adaptively",
+      "summary": "Large language models (LLMs) have become increasingly capable problem solvers, but being able to solve a problem is not the same as being able to teach it. Existing approaches to training LLMs as teachers rely on demonstrations, preference data, or predefined pedagogical criteria that specify what g",
+      "url": "https://arxiv.org/abs/2610.08778v1",
       "source": "ArXiv",
       "categories": [
-        "cs.RO",
         "cs.AI",
-        "cs.CL",
-        "cs.MA"
+        "cs.CL"
       ],
-      "arxiv_id": "2610.06843v1"
+      "arxiv_id": "2610.08778v1"
     }
   ],
   "ai_curated": true
