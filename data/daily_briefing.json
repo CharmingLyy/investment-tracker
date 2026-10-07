@@ -1,155 +1,117 @@
 {
-  "date": "2026-10-07",
-  "update_time": "2026-10-07 05:10:51",
+  "date": "2026-10-08",
+  "update_time": "2026-10-07 18:36:26",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-07\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Mistral Large 4 发布 (来源: HackerNews)\n- **核心干货**：Mistral 甩出 Large 4，HN 上 1655 分、989 条评论直接炸场——这是今年欧洲阵营对闭源巨头最硬的一次正面刚。结合同日 OpenAI 放出数学进展仓库和 Decisions API 公测，头部玩家在\"能力\"和\"基础设施\"两条线上同时开卷。\n- **毒舌/硬核点评**：开源阵营的尊严就靠 Mistral 一个人撑着了，法国人一边喝着咖啡一边把 GPT 的定价表又往下拽了一格。真正的赢家永远是那些按 token 付费的开发者。\n- **🔗 传送门**：[点击直达原链接](https://mistral.ai/news/mistral-large-4/)\n\n---\n\n### 2. 📌 AnyPS5：不靠模拟器把 PS5 二进制搬到 PC（已映射 87% 系统库）(来源: GitHub/HackerNews)\n- **核心干货**：不是模拟器，而是直接做二进制翻译 + 系统库映射，目前已覆盖 87% 的 PS5 系统库。这意味着\"主机独占\"这堵墙第一次被从工程层面而非法律层面凿开了一个洞。\n- **毒舌/硬核点评**：索尼的法务部现在应该比他们的第一方工作室还忙。技术上越优雅，律师函来得越快——这项目大概率活不过下个季度，但代码会永远留在互联网上。\n- **🔗 传送门**：[点击直达原链接](https://github.com/boykopovar/AnyPS5)\n\n---\n\n### 3. 📌 Utah 允许 AI 独立问诊并开药，无需人类监督 (来源: TechSpot)\n- **核心干货**：犹他州成为全美第一个允许 AI 在无人类医生监督下检查患者、开具处方的州。这不是\"辅助诊断\"，而是把处方权这种高法律责任的动作直接交给模型。\n- **毒舌/硬核点评**：一边是 LLM 连自己的幻觉都治不好，一边是立法者让它给人开药。建议配套立法：AI 误诊时，由投票通过这项法案的议员承担连带责任。\n- **🔗 传送门**：[点击直达原链接](https://www.techspot.com/news/114111-utah-become-first-state-ai-examine-patients-prescribe.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> **\"AI 不会取代你，但那个懂得给 AI 划定边界、并敢于为边界负责的人会。工具越强，判断力越贵。\"**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-08\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 [Chrome 终于把 JPEG XL 给上了] (来源: HackerNews)\n- **核心干货**：Google 正式在 Chrome 中落地 JPEG XL 支持。这个格式能在同等画质下把图片体积压到 JPEG 的 60% 甚至更低，同时保留无损回退、HDR、广色域和渐进式解码。对全网的带宽账单和存储成本来说，这是一次迟到三年的\"技术扶贫\"。\n- **毒舌/硬核点评**：谷歌当年一刀砍掉 JXL 的时候，理由是\"没看到生态兴趣\"——现在又自己打脸捡起来，堪称科技圈最经典的\"我反对我自己\"。不过对开发者来说无所谓，反正你们终于不用再跪着求 WebP 了。\n- **🔗 传送门**：[点击直达原链接](https://developer.chrome.com/blog/jpeg-xl-in-chrome)\n\n---\n\n### 2. 📌 [Anthropic 甩出 Claude Haiku 5.5：小模型开始不讲武德] (来源: HackerNews)\n- **核心干货**：Anthropic 发布 Claude Haiku 5.5，主打极低延迟和成本，但在推理、工具调用和多语言任务上大幅逼近上一代 Sonnet。这意味着高并发、低成本的 Agent 流水线终于有了一个\"能打又不肉疼\"的底座模型。\n- **毒舌/硬核点评**：大模型厂商现在的内卷路线已经很清晰了——旗舰模型负责上发布会吹牛，小模型负责真正干活赚钱。Haiku 5.5 这种\"小钢炮\"，才是把 AI 从 demo 变成印钞机的关键零件。别盯着 GPT-6 的 PPT 流口水了，先看看谁的 API 账单更友好。\n- **🔗 传送门**：[点击直达原链接](https://www.anthropic.com/claude-haiku-5-5)\n\n---\n\n### 3. 📌 [用 Rust 从零重写 Photoshop？这位勇士是真不怕 Adobe 的律师函] (来源: Lobste.rs)\n- **核心干货**：一个名为 Photocraft 的开源项目，号称用纯 Rust 干净室（clean-room）重实现 Adobe Photoshop 的核心能力。干净室意味着不碰 Adobe 的源码和专利雷区，纯靠行为复刻。若真能跑通图层、蒙版、滤镜链路，这将是开源图像处理领域的一次核弹级事件。\n- **毒舌/硬核点评**：每年都有人号称要\"干掉 Photoshop\"，最后大多死在内存安全和滤镜性能上。但用 Rust 重写 + 干净室这套组合拳，至少姿态摆得很专业。建议作者先备好两样东西：性能基准测试，以及一位懂专利法的律师。\n- **🔗 传送门**：[点击直达原链接](https://github.com/storytold/photocraft)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"技术圈最贵的不是算力，是你以为'这个需求不重要'然后被竞争对手用一个小模型 + 一个新格式悄悄超车的那三个月。\"",
   "briefing_items": [
     {
-      "title": "Mistral Large 4 发布",
+      "title": "[Chrome 终于把 JPEG XL 给上了]",
       "source": "HackerNews",
-      "summary": "Mistral 甩出 Large 4，HN 上 1655 分、989 条评论直接炸场——这是今年欧洲阵营对闭源巨头最硬的一次正面刚。结合同日 OpenAI 放出数学进展仓库和 Decisions API 公测，头部玩家在\"能力\"和\"基础设施\"两条线上同时开卷。",
-      "commentary": "开源阵营的尊严就靠 Mistral 一个人撑着了，法国人一边喝着咖啡一边把 GPT 的定价表又往下拽了一格。真正的赢家永远是那些按 token 付费的开发者。",
-      "url": "https://mistral.ai/news/mistral-large-4/"
+      "summary": "Google 正式在 Chrome 中落地 JPEG XL 支持。这个格式能在同等画质下把图片体积压到 JPEG 的 60% 甚至更低，同时保留无损回退、HDR、广色域和渐进式解码。对全网的带宽账单和存储成本来说，这是一次迟到三年的\"技术扶贫\"。",
+      "commentary": "谷歌当年一刀砍掉 JXL 的时候，理由是\"没看到生态兴趣\"——现在又自己打脸捡起来，堪称科技圈最经典的\"我反对我自己\"。不过对开发者来说无所谓，反正你们终于不用再跪着求 WebP 了。",
+      "url": "https://developer.chrome.com/blog/jpeg-xl-in-chrome"
     },
     {
-      "title": "AnyPS5：不靠模拟器把 PS5 二进制搬到 PC（已映射 87% 系统库）",
-      "source": "GitHub/HackerNews",
-      "summary": "不是模拟器，而是直接做二进制翻译 + 系统库映射，目前已覆盖 87% 的 PS5 系统库。这意味着\"主机独占\"这堵墙第一次被从工程层面而非法律层面凿开了一个洞。",
-      "commentary": "索尼的法务部现在应该比他们的第一方工作室还忙。技术上越优雅，律师函来得越快——这项目大概率活不过下个季度，但代码会永远留在互联网上。",
-      "url": "https://github.com/boykopovar/AnyPS5"
+      "title": "[Anthropic 甩出 Claude Haiku 5.5：小模型开始不讲武德]",
+      "source": "HackerNews",
+      "summary": "Anthropic 发布 Claude Haiku 5.5，主打极低延迟和成本，但在推理、工具调用和多语言任务上大幅逼近上一代 Sonnet。这意味着高并发、低成本的 Agent 流水线终于有了一个\"能打又不肉疼\"的底座模型。",
+      "commentary": "大模型厂商现在的内卷路线已经很清晰了——旗舰模型负责上发布会吹牛，小模型负责真正干活赚钱。Haiku 5.5 这种\"小钢炮\"，才是把 AI 从 demo 变成印钞机的关键零件。别盯着 GPT-6 的 PPT 流口水了，先看看谁的 API 账单更友好。",
+      "url": "https://www.anthropic.com/claude-haiku-5-5"
     },
     {
-      "title": "Utah 允许 AI 独立问诊并开药，无需人类监督",
-      "source": "TechSpot",
-      "summary": "犹他州成为全美第一个允许 AI 在无人类医生监督下检查患者、开具处方的州。这不是\"辅助诊断\"，而是把处方权这种高法律责任的动作直接交给模型。",
-      "commentary": "一边是 LLM 连自己的幻觉都治不好，一边是立法者让它给人开药。建议配套立法：AI 误诊时，由投票通过这项法案的议员承担连带责任。",
-      "url": "https://www.techspot.com/news/114111-utah-become-first-state-ai-examine-patients-prescribe.html"
+      "title": "[用 Rust 从零重写 Photoshop？这位勇士是真不怕 Adobe 的律师函]",
+      "source": "Lobste.rs",
+      "summary": "一个名为 Photocraft 的开源项目，号称用纯 Rust 干净室（clean-room）重实现 Adobe Photoshop 的核心能力。干净室意味着不碰 Adobe 的源码和专利雷区，纯靠行为复刻。若真能跑通图层、蒙版、滤镜链路，这将是开源图像处理领域的一次核弹级事件。",
+      "commentary": "每年都有人号称要\"干掉 Photoshop\"，最后大多死在内存安全和滤镜性能上。但用 Rust 重写 + 干净室这套组合拳，至少姿态摆得很专业。建议作者先备好两样东西：性能基准测试，以及一位懂专利法的律师。",
+      "url": "https://github.com/storytold/photocraft"
+    },
+    {
+      "quote": "\"技术圈最贵的不是算力，是你以为'这个需求不重要'然后被竞争对手用一个小模型 + 一个新格式悄悄超车的那三个月。\""
     }
   ],
   "candidates": [
     {
-      "id": "hn:49984716",
-      "title": "Penguin Mail – open-source Rust email client for Linux with AI",
+      "id": "hn:49993914",
+      "title": "Visa, Mastercard, Major Banks Facing New Litigation over 'Anticompetitive' Fees",
       "summary": "",
-      "url": "https://penguin-mail.com/",
+      "url": "https://www.classaction.org/news/visa-mastercard-major-banks-facing-new-litigation-over-anticompetitive-merchant-credit-card-transaction-fees",
       "source": "Hacker News",
-      "score": 123,
-      "comments": 53
+      "score": 279,
+      "comments": 140
     },
     {
-      "id": "hn:49980487",
-      "title": "EmbeddingGemma 2: An open, lightweight multimodal embedding model",
+      "id": "hn:49994027",
+      "title": "GitHub Incident with Git Operations, Pull Requests and Actions",
       "summary": "",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
+      "url": "https://www.githubstatus.com/incidents/djlmxz2zd0j7",
       "source": "Hacker News",
-      "score": 271,
-      "comments": 31
+      "score": 218,
+      "comments": 170
     },
     {
-      "id": "hn:49984923",
-      "title": "Sharing AI progress in mathematics",
-      "summary": "<a href=\"https:&#x2F;&#x2F;github.com&#x2F;openai&#x2F;math\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;openai&#x2F;math</a><p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;openai&#x2F;math&#x2F;tree&#x2F;main&#x2F;preprints\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;openai&#x2F;math&#x2F;",
-      "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
-      "source": "Hacker News",
-      "score": 646,
-      "comments": 583
-    },
-    {
-      "id": "hn:49984025",
-      "title": "Decisions API is in public beta",
+      "id": "hn:49990224",
+      "title": "A font recreated from photographs of classic Commodore 64 keycaps",
       "summary": "",
-      "url": "https://developers.openai.com/api/docs/guides/decisions",
+      "url": "https://github.com/szabadkai/c64-keyboard-font/",
       "source": "Hacker News",
-      "score": 200,
-      "comments": 93
+      "score": 328,
+      "comments": 56
     },
     {
-      "id": "lob:rwloew",
-      "title": "Email Self Hosters - what are you using?",
-      "summary": "<p>At the moment I self host using <a href=\"https://maddy.email\" rel=\"ugc\">maddy</a> for a bunch of domains that need a mailbox or catch all. There are some minor issues with it - some are me, some are who knows. The biggest bug bear is that the native email client on iOS takes an age to connect and",
-      "url": "https://lobste.rs/s/rwloew/email_self_hosters_what_are_you_using",
+      "id": "hn:49990470",
+      "title": "Nobel Prize in Chemistry 2026 to Henri B. Kagan and Kenso Soai",
+      "summary": "",
+      "url": "https://www.nobelprize.org/prizes/chemistry/2026/press-release/",
+      "source": "Hacker News",
+      "score": 251,
+      "comments": 44
+    },
+    {
+      "id": "hn:49991227",
+      "title": "Shipping JPEG XL in Chrome",
+      "summary": "",
+      "url": "https://developer.chrome.com/blog/jpeg-xl-in-chrome",
+      "source": "Hacker News",
+      "score": 383,
+      "comments": 242
+    },
+    {
+      "id": "lob:7qjhic",
+      "title": "Is COSMIC DE mogging KDE Plasma?",
+      "summary": "",
+      "url": "https://thelibre.news/is-cosmic-de-mogging-kde-plasma/",
       "source": "Lobste.rs",
-      "score": 72,
-      "comments": 71,
+      "score": 41,
+      "comments": 10,
       "tags": [
-        "ask",
-        "email"
+        "design",
+        "linux"
       ]
     },
     {
-      "id": "lob:okk4bg",
-      "title": "Async Rust: Where does the scheduler live?",
+      "id": "lob:rwdufq",
+      "title": "Anti-Patterns in Software Blogging",
       "summary": "",
-      "url": "https://herecomesthemoon.net/2026/10/async-rust-where-does-the-scheduler-live/",
+      "url": "https://refactoringenglish.com/blog/anti-patterns-software-blogging/",
       "source": "Lobste.rs",
-      "score": 60,
-      "comments": 36,
+      "score": 46,
+      "comments": 22,
       "tags": [
-        "rust"
+        "programming"
       ]
     },
     {
-      "id": "hn:49977979",
-      "title": "Mistral Large 4",
-      "summary": "<a href=\"https:&#x2F;&#x2F;docs.mistral.ai&#x2F;models&#x2F;mistral-large-4-0\" rel=\"nofollow\">https:&#x2F;&#x2F;docs.mistral.ai&#x2F;models&#x2F;mistral-large-4-0</a>",
-      "url": "https://mistral.ai/news/mistral-large-4/\\",
-      "source": "Hacker News",
-      "score": 1655,
-      "comments": 989
-    },
-    {
-      "id": "hn:49985664",
-      "title": "AnyPS5: Port PS5 binaries to PC without emulation (87% system libraries mapped)",
+      "id": "lob:am1cuw",
+      "title": "Janet on x32: 32-bit Pointers, 64-bit Speed, 25% Less RAM",
       "summary": "",
-      "url": "https://github.com/boykopovar/AnyPS5",
-      "source": "Hacker News",
-      "score": 169,
-      "comments": 125
-    },
-    {
-      "id": "lob:2svplr",
-      "title": "Gleam doesn't compile to Erlang source anymore",
-      "summary": "",
-      "url": "https://gleam.run/news/gleam-doesnt-compile-to-erlang-source-anymore/",
+      "url": "https://alexalejandre.com/programming/lisp/janet-for-the-x32-abi/",
       "source": "Lobste.rs",
-      "score": 131,
-      "comments": 17,
+      "score": 62,
+      "comments": 19,
       "tags": [
-        "compilers",
-        "erlang",
-        "gleam"
+        "linux",
+        "performance"
       ]
-    },
-    {
-      "id": "hn:49981905",
-      "title": "Claude Code’s suggested message feature: I think the real customer is the model",
-      "summary": "",
-      "url": "https://www.zohaib.cc/blog/smartest-claude-code-feature",
-      "source": "Hacker News",
-      "score": 149,
-      "comments": 78
-    },
-    {
-      "id": "lob:jxhi2i",
-      "title": "A sustainable web career, for when all this blows over",
-      "summary": "",
-      "url": "https://dbushell.com/2026/10/07/sustainable-web-career/",
-      "source": "Lobste.rs",
-      "score": 31,
-      "comments": 18,
-      "tags": [
-        "vibecoding",
-        "web"
-      ]
-    },
-    {
-      "id": "hn:49981197",
-      "title": "Utah to let AI examine patients and prescribe medication without human oversight",
-      "summary": "",
-      "url": "https://www.techspot.com/news/114111-utah-become-first-state-ai-examine-patients-prescribe.html",
-      "source": "Hacker News",
-      "score": 117,
-      "comments": 115
     },
     {
       "id": "lob:0slgpl",
@@ -157,23 +119,123 @@
       "summary": "",
       "url": "https://blog.pipetogrep.org/2025/07/27/that-time-i-worked-with-a-laptop-thief/",
       "source": "Lobste.rs",
-      "score": 42,
-      "comments": 8,
+      "score": 82,
+      "comments": 19,
       "tags": [
         "security"
       ]
     },
     {
-      "id": "lob:gveu0c",
-      "title": "Montray - a tray icon for systemd service health",
+      "id": "lob:jxhi2i",
+      "title": "A sustainable web career, for when all this blows over",
       "summary": "",
-      "url": "https://github.com/dimonomid/montray/",
+      "url": "https://dbushell.com/2026/10/07/sustainable-web-career/",
       "source": "Lobste.rs",
-      "score": 32,
-      "comments": 5,
+      "score": 48,
+      "comments": 31,
       "tags": [
+        "vibecoding",
+        "web"
+      ]
+    },
+    {
+      "id": "hn:49996437",
+      "title": "Claude Haiku 5.5",
+      "summary": "",
+      "url": "https://www.anthropic.com/claude-haiku-5-5",
+      "source": "Hacker News",
+      "score": 176,
+      "comments": 69
+    },
+    {
+      "id": "lob:rmh4fg",
+      "title": "A Terminal Protocol for Program Status (OSC 7501)",
+      "summary": "",
+      "url": "https://mitchellh.com/writing/program-status-osc7501",
+      "source": "Lobste.rs",
+      "score": 26,
+      "comments": 21,
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "id": "hn:49993857",
+      "title": "Animated ASCII Art for Web Pages",
+      "summary": "",
+      "url": "https://ascii.rest/",
+      "source": "Hacker News",
+      "score": 157,
+      "comments": 38
+    },
+    {
+      "id": "lob:dwbksa",
+      "title": "Brut, the Brutal Router for Unix Tools",
+      "summary": "",
+      "url": "https://brut.sh",
+      "source": "Lobste.rs",
+      "score": 33,
+      "comments": 26,
+      "tags": [
+        "show",
+        "unix"
+      ]
+    },
+    {
+      "id": "lob:fpcicg",
+      "title": "Last rites for Gentoo's Chromium package",
+      "summary": "",
+      "url": "https://lwn.net/SubscriberLink/1097760/2be4d9e3eeb59039/",
+      "source": "Lobste.rs",
+      "score": 54,
+      "comments": 9,
+      "tags": [
+        "browsers",
         "linux",
-        "systemd"
+        "practices"
+      ]
+    },
+    {
+      "id": "lob:qn61ip",
+      "title": "An open-source, clean-room reimplementation of Adobe Photoshop in pure Rust",
+      "summary": "",
+      "url": "https://github.com/storytold/photocraft",
+      "source": "Lobste.rs",
+      "score": 14,
+      "comments": 12,
+      "tags": [
+        "rust",
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "hn:49994443",
+      "title": "Show HN: Bigwords.page – Turn any screen into a sign. The URL is the app",
+      "summary": "",
+      "url": "https://bigwords.page/",
+      "source": "Hacker News",
+      "score": 123,
+      "comments": 32
+    },
+    {
+      "id": "hn:49996425",
+      "title": "GPT‑6 and Intelligent UI for everyone",
+      "summary": "",
+      "url": "https://openai.com/index/gpt-6-for-everyone/",
+      "source": "Hacker News",
+      "score": 83,
+      "comments": 29
+    },
+    {
+      "id": "lob:9fjar3",
+      "title": "Reasons to dislike AI coding",
+      "summary": "",
+      "url": "https://www.sicpers.info/2026/10/reasons-to-dislike-ai-coding/",
+      "source": "Lobste.rs",
+      "score": 23,
+      "comments": 22,
+      "tags": [
+        "vibecoding"
       ]
     },
     {
@@ -188,59 +250,6 @@
         "cs.LG"
       ],
       "arxiv_id": "2610.08773v1"
-    },
-    {
-      "id": "arxiv:2610.08743v1",
-      "title": "Reinforcement Learning with Conformal Action Sets: An Application to Sequential Recommendation",
-      "summary": "Sequential recommenders typically use a fixed slate size even though the number of useful alternatives changes within a session. We propose Reinforcement Learning with Calibrated Pruning (RLCP), which adapts the retained action set using critic scores and an online threshold. The threshold is update",
-      "url": "https://arxiv.org/abs/2610.08743v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "arxiv_id": "2610.08743v1"
-    },
-    {
-      "id": "rss:ef8c975732",
-      "title": "Microsoft Exchange Flaw Lets Authenticated Attackers Read Other Users' Mailboxes",
-      "summary": "Microsoft has released out-of-band security updates to address a high-severity flaw in Microsoft Exchange Server that could allow an attacker to escalate privileges under certain conditions.\n\nThe vulnerability, tracked as CVE-2026-96940, is rated 8.8 on the CVSS scoring system.\n\n\"Weak authorization",
-      "url": "https://thehackernews.com/2026/10/microsoft-exchange-flaw-lets.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:106bce5ca1",
-      "title": "NEXUS: Why the Next AI Architecture Won't Be Just One Thing",
-      "summary": "After watching enterprise AI deployments for a while, I've come to a conclusion that shapes everything I build: the systems that win in 2026–2030 won't be \"just RAG\" or \"just agents\" or \"just fine-tuned.\" They'll be unified systems that compose all of these under one orchestration layer — with self-",
-      "url": "https://dev.to/shivaysinghrajput/nexus-why-the-next-ai-architecture-wont-be-just-one-thing-16i",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "lob:dwbksa",
-      "title": "Brut, the Brutal Router for Unix Tools",
-      "summary": "",
-      "url": "https://brut.sh",
-      "source": "Lobste.rs",
-      "score": 22,
-      "comments": 10,
-      "tags": [
-        "show",
-        "unix"
-      ]
-    },
-    {
-      "id": "arxiv:2610.08778v1",
-      "title": "Sherpa: Teaching LLMs to Teach Adaptively",
-      "summary": "Large language models (LLMs) have become increasingly capable problem solvers, but being able to solve a problem is not the same as being able to teach it. Existing approaches to training LLMs as teachers rely on demonstrations, preference data, or predefined pedagogical criteria that specify what g",
-      "url": "https://arxiv.org/abs/2610.08778v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_id": "2610.08778v1"
     }
   ],
   "ai_curated": true
