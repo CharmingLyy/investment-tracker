@@ -1,83 +1,88 @@
 {
-  "date": "2026-10-08",
-  "update_time": "2026-10-08 05:21:18",
+  "date": "2026-10-09",
+  "update_time": "2026-10-08 18:35:01",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-08\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 GPT‑6 正式发布，OpenAI 要把\"智能 UI\"塞进每个人的屏幕 (来源: HackerNews)\n- **核心干货**：OpenAI 放出 GPT-6，主打\"Intelligent UI for everyone\"——不再只是一个聊天框，而是让模型直接驱动界面交互。HN 564 分、292 条评论，热度仅次于踩雷贴。同期 OpenAI 还开源了数学预印本仓库（HN 1260 分，1428 条评论），明显在往\"AI 做真科研\"的方向铺路。\n- **毒舌/硬核点评**：每次 OpenAI 发版都号称\"for everyone\"，结果 everyone 的信用卡账单也跟着涨了。不过这次从\"聊天\"进化到\"接管 UI\"，是真正在动操作系统的奶酪——微软看了会沉默，苹果看了会流泪。\n- **🔗 传送门**：[点击直达原链接](https://openai.com/index/gpt-6-for-everyone/)\n\n---\n\n### 2. 📌 Claude Haiku 5.5 发布，小模型卷出新高度 (来源: HackerNews)\n- **核心干货**：Anthropic 更新 Haiku 系列到 5.5，776 分、387 条评论，讨论热度直逼 GPT-6。Haiku 一直主打\"低价高能\"，这次升级意味着廉价推理模型的能力天花板又被抬高了一档，Agent 和批处理场景的成本结构会被重新计算。\n- **毒舌/硬核点评**：Anthropic 一边在安全上念经，一边用 Haiku 疯狂抢占 OpenAI 的中低端市场——嘴上说着\"责任\"，手里全是\"生意\"。对开发者来说，这是好事：价格战打起来，钱包最舒服。\n- **🔗 传送门**：[点击直达原链接](https://www.anthropic.com/claude-haiku-5-5)\n\n---\n\n### 3. 📌 Rust 从零重写 Photoshop，纯 clean-room 开源实现 (来源: Lobste.rs)\n- **核心干货**：一个名为 photocraft 的项目，用纯 Rust 从零复刻 Photoshop，且是 clean-room 实现（不碰任何 Adobe 源码，规避法律风险）。图像编辑器是工程地狱级难度——色彩管理、图层合成、GPU 加速、撤销栈，每一项都是深坑。敢用 Rust 啃这块骨头，本身就是技术宣言。\n- **毒舌/硬核点评**：Adobe 看到这个项目的表情，大概和当年柯达看到数码相机差不多。当然，现在它离\"能干活\"还差 100 个 PR，但方向对了——图形软件的护城河，正在被 Rust 一点点挖穿。\n- **🔗 传送门**：[点击直达原链接](https://github.com/storytold/photocraft)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"模型越来越聪明，人却越来越不会用——所以真正的稀缺资源，从来不是算力，而是你那颗还愿意主动学习的脑子。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-09\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Claude Haiku 5.5 发布 (来源: HackerNews)\n- **核心干货**：Anthropic 推出 Claude Haiku 5.5，HN 热度直接飙到 1022 分、477 条评论。继 Opus 5.5 之后，Anthropic 把旗舰能力继续下沉到小模型产品线，主打低延迟、低成本场景，直接对标 GPT 系的 mini/nano 梯队。对于跑 Agent、批量推理、边缘部署的开发者来说，这意味着\"便宜又能打\"的选项又多了一个。\n- **毒舌/硬核点评**：模型迭代速度已经快过多数团队写 PRD 的速度了。你上次微调的模型还没上线，人家 5.5 都发两轮了——建议把\"追新模型\"正式列为一种职业运动。\n- **🔗 传送门**：[点击直达原链接](https://www.anthropic.com/claude-haiku-5-5)\n\n---\n\n### 2. 📌 4 小时电池储能全球范围内安装成本已低于燃气轮机 (来源: HackerNews)\n- **核心干货**：最新数据显示，全球范围内 4 小时电池储能的安装成本已全面低于燃气轮机。这不是实验室 PPT，是实打实的工程成本曲线交叉。意味着新建调峰电源时，电池不再只是\"环保选项\"，而是纯粹的\"财务最优解\"，电网级储能的商业逻辑彻底改写。\n- **毒舌/硬核点评**：燃气轮机的墓志铭可以提前刻了——\"死于一道再简单不过的算术题\"。能源转型喊了这么多年，最后干掉化石能源的不是口号，是资产负债表。\n- **🔗 传送门**：[点击直达原链接](https://www.solarpowerworldonline.com/2026/10/4-hour-battery-storage-is-cheaper-to-install-than-gas-turbines-all-across-globe/)\n\n---\n\n### 3. 📌 OpenAI 年化营收比此前释放信号低 200 亿美元 (来源: HackerNews / FT)\n- **核心干货**：FT 报道，OpenAI 实际年化营收比此前市场预期的信号低了约 200 亿美元。这个数字不是小数点问题，是估值叙事的地基问题。当\"增长故事\"和\"真实账本\"之间出现这种量级的偏差，整个 AI 资本泡沫的定价逻辑都得重新审视。\n- **毒舌/硬核点评**：200 亿美元的缺口，够买下好几个\"下一代 AGI\"的 PPT 了。市场终于开始问那个最朴素的问题——钱到底从哪来？答案显然不是\"改变世界\"。\n- **🔗 传送门**：[点击直达原链接](https://www.ft.com/content/b66a9858-f8fb-46cb-b506-44bfe26fca2a)\n\n---\n\n### 🗣️ 今日顶男金句\n> 技术圈最贵的不是算力，是清醒——别人在追风口，你在算成本结构，你就已经赢在下一个周期了。",
   "briefing_items": [
     {
-      "title": "GPT‑6 正式发布，OpenAI 要把\"智能 UI\"塞进每个人的屏幕",
+      "title": "Claude Haiku 5.5 发布",
       "source": "HackerNews",
-      "summary": "OpenAI 放出 GPT-6，主打\"Intelligent UI for everyone\"——不再只是一个聊天框，而是让模型直接驱动界面交互。HN 564 分、292 条评论，热度仅次于踩雷贴。同期 OpenAI 还开源了数学预印本仓库（HN 1260 分，1428 条评论），明显在往\"AI 做真科研\"的方向铺路。",
-      "commentary": "每次 OpenAI 发版都号称\"for everyone\"，结果 everyone 的信用卡账单也跟着涨了。不过这次从\"聊天\"进化到\"接管 UI\"，是真正在动操作系统的奶酪——微软看了会沉默，苹果看了会流泪。",
-      "url": "https://openai.com/index/gpt-6-for-everyone/"
-    },
-    {
-      "title": "Claude Haiku 5.5 发布，小模型卷出新高度",
-      "source": "HackerNews",
-      "summary": "Anthropic 更新 Haiku 系列到 5.5，776 分、387 条评论，讨论热度直逼 GPT-6。Haiku 一直主打\"低价高能\"，这次升级意味着廉价推理模型的能力天花板又被抬高了一档，Agent 和批处理场景的成本结构会被重新计算。",
-      "commentary": "Anthropic 一边在安全上念经，一边用 Haiku 疯狂抢占 OpenAI 的中低端市场——嘴上说着\"责任\"，手里全是\"生意\"。对开发者来说，这是好事：价格战打起来，钱包最舒服。",
+      "summary": "Anthropic 推出 Claude Haiku 5.5，HN 热度直接飙到 1022 分、477 条评论。继 Opus 5.5 之后，Anthropic 把旗舰能力继续下沉到小模型产品线，主打低延迟、低成本场景，直接对标 GPT 系的 mini/nano 梯队。对于跑 Agent、批量推理、边缘部署的开发者来说，这意味着\"便宜又能打\"的选项又多了一个。",
+      "commentary": "模型迭代速度已经快过多数团队写 PRD 的速度了。你上次微调的模型还没上线，人家 5.5 都发两轮了——建议把\"追新模型\"正式列为一种职业运动。",
       "url": "https://www.anthropic.com/claude-haiku-5-5"
     },
     {
-      "title": "Rust 从零重写 Photoshop，纯 clean-room 开源实现",
-      "source": "Lobste.rs",
-      "summary": "一个名为 photocraft 的项目，用纯 Rust 从零复刻 Photoshop，且是 clean-room 实现（不碰任何 Adobe 源码，规避法律风险）。图像编辑器是工程地狱级难度——色彩管理、图层合成、GPU 加速、撤销栈，每一项都是深坑。敢用 Rust 啃这块骨头，本身就是技术宣言。",
-      "commentary": "Adobe 看到这个项目的表情，大概和当年柯达看到数码相机差不多。当然，现在它离\"能干活\"还差 100 个 PR，但方向对了——图形软件的护城河，正在被 Rust 一点点挖穿。",
-      "url": "https://github.com/storytold/photocraft"
+      "title": "4 小时电池储能全球范围内安装成本已低于燃气轮机",
+      "source": "HackerNews",
+      "summary": "最新数据显示，全球范围内 4 小时电池储能的安装成本已全面低于燃气轮机。这不是实验室 PPT，是实打实的工程成本曲线交叉。意味着新建调峰电源时，电池不再只是\"环保选项\"，而是纯粹的\"财务最优解\"，电网级储能的商业逻辑彻底改写。",
+      "commentary": "燃气轮机的墓志铭可以提前刻了——\"死于一道再简单不过的算术题\"。能源转型喊了这么多年，最后干掉化石能源的不是口号，是资产负债表。",
+      "url": "https://www.solarpowerworldonline.com/2026/10/4-hour-battery-storage-is-cheaper-to-install-than-gas-turbines-all-across-globe/"
     },
     {
-      "quote": "\"模型越来越聪明，人却越来越不会用——所以真正的稀缺资源，从来不是算力，而是你那颗还愿意主动学习的脑子。\""
+      "title": "OpenAI 年化营收比此前释放信号低 200 亿美元",
+      "source": "HackerNews / FT",
+      "summary": "FT 报道，OpenAI 实际年化营收比此前市场预期的信号低了约 200 亿美元。这个数字不是小数点问题，是估值叙事的地基问题。当\"增长故事\"和\"真实账本\"之间出现这种量级的偏差，整个 AI 资本泡沫的定价逻辑都得重新审视。",
+      "commentary": "200 亿美元的缺口，够买下好几个\"下一代 AGI\"的 PPT 了。市场终于开始问那个最朴素的问题——钱到底从哪来？答案显然不是\"改变世界\"。",
+      "url": "https://www.ft.com/content/b66a9858-f8fb-46cb-b506-44bfe26fca2a"
+    },
+    {
+      "quote": "技术圈最贵的不是算力，是清醒——别人在追风口，你在算成本结构，你就已经赢在下一个周期了。"
     }
   ],
   "candidates": [
     {
-      "id": "hn:49996425",
-      "title": "GPT‑6 and Intelligent UI for everyone",
+      "id": "hn:50006832",
+      "title": "Trump administration is suspending Microsoft from a green card program",
       "summary": "",
-      "url": "https://openai.com/index/gpt-6-for-everyone/",
+      "url": "https://apnews.com/article/h1b-visa-program-vance-microsoft-e7b3a407f822702b269ee277d21343ea",
       "source": "Hacker News",
-      "score": 564,
-      "comments": 292
+      "score": 513,
+      "comments": 851
     },
     {
-      "id": "hn:49996259",
-      "title": "Docker Agent",
+      "id": "hn:50002008",
+      "title": "“Math 2.0” will need to value mathematical progress more holistically",
       "summary": "",
-      "url": "https://github.com/docker/docker-agent",
+      "url": "https://mathstodon.xyz/@tao/117395269325940185",
       "source": "Hacker News",
-      "score": 206,
-      "comments": 97
+      "score": 562,
+      "comments": 577
     },
     {
-      "id": "hn:49994443",
-      "title": "Show HN: Bigwords.page – Turn any screen into a sign. The URL is the app",
-      "summary": "",
-      "url": "https://bigwords.page/",
+      "id": "hn:50006366",
+      "title": "Tell HN: I've been paying for a rural Tanzanian's education for 10 years",
+      "summary": "Ten years ago I was 19 and traveling through East Africa, and I spent a summer in Ibumila, a village in the Njombe highlands of Tanzania. There&#x27;s no school in the village. The nearest one is a boarding school an hour away that costs a few hundred dollars a year, which is out of reach for most f",
+      "url": "https://news.ycombinator.com/item?id=50006366",
       "source": "Hacker News",
-      "score": 426,
-      "comments": 126
+      "score": 538,
+      "comments": 138
     },
     {
-      "id": "hn:49984923",
-      "title": "Sharing AI progress in mathematics",
-      "summary": "<a href=\"https:&#x2F;&#x2F;github.com&#x2F;openai&#x2F;math\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;openai&#x2F;math</a><p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;openai&#x2F;math&#x2F;tree&#x2F;main&#x2F;preprints\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;openai&#x2F;math&#x2F;",
-      "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
+      "id": "hn:50007519",
+      "title": "4-hour battery storage is cheaper to install than gas turbines all across globe",
+      "summary": "",
+      "url": "https://www.solarpowerworldonline.com/2026/10/4-hour-battery-storage-is-cheaper-to-install-than-gas-turbines-all-across-globe/",
       "source": "Hacker News",
-      "score": 1260,
-      "comments": 1428
+      "score": 146,
+      "comments": 63
     },
     {
-      "id": "lob:qn61ip",
-      "title": "An open-source, clean-room reimplementation of Adobe Photoshop in pure Rust",
+      "id": "hn:49980346",
+      "title": "The Slow Formation of Durable Software",
       "summary": "",
-      "url": "https://github.com/storytold/photocraft",
-      "source": "Lobste.rs",
-      "score": 30,
-      "comments": 14,
-      "tags": [
-        "rust",
-        "vibecoding"
-      ]
+      "url": "https://newsletter.dancohen.org/archive/the-slow-formation-of-durable-software/",
+      "source": "Hacker News",
+      "score": 207,
+      "comments": 69
+    },
+    {
+      "id": "hn:50004790",
+      "title": "I gave Opus 5.5 one prompt and six hours to visualize Invisible Cities",
+      "summary": "",
+      "url": "https://quesma.com/blog/invisible-cities-one-shot/",
+      "source": "Hacker News",
+      "score": 274,
+      "comments": 144
     },
     {
       "id": "hn:49996437",
@@ -85,52 +90,8 @@
       "summary": "",
       "url": "https://www.anthropic.com/claude-haiku-5-5",
       "source": "Hacker News",
-      "score": 776,
-      "comments": 387
-    },
-    {
-      "id": "hn:49998895",
-      "title": "Margaret Hamilton has died",
-      "summary": "",
-      "url": "https://news.mit.edu/2026/margaret-hamilton-computing-pioneer-dies-1007",
-      "source": "Hacker News",
-      "score": 1101,
-      "comments": 124
-    },
-    {
-      "id": "hn:49991227",
-      "title": "Shipping JPEG XL in Chrome",
-      "summary": "",
-      "url": "https://developer.chrome.com/blog/jpeg-xl-in-chrome",
-      "source": "Hacker News",
-      "score": 515,
-      "comments": 351
-    },
-    {
-      "id": "lob:0gvyif",
-      "title": "Software developers are not okay",
-      "summary": "",
-      "url": "https://www.baldurbjarnason.com/2026/05-software-developers-are-not-okay/",
-      "source": "Lobste.rs",
-      "score": 57,
-      "comments": 31,
-      "tags": [
-        "philosophy",
-        "vibecoding"
-      ]
-    },
-    {
-      "id": "lob:am1cuw",
-      "title": "Janet on x32: 32-bit Pointers, 64-bit Speed, 25% Less RAM",
-      "summary": "",
-      "url": "https://alexalejandre.com/programming/lisp/janet-for-the-x32-abi/",
-      "source": "Lobste.rs",
-      "score": 66,
-      "comments": 19,
-      "tags": [
-        "linux",
-        "performance"
-      ]
+      "score": 1022,
+      "comments": 477
     },
     {
       "id": "lob:lgdxtw",
@@ -138,7 +99,7 @@
       "summary": "",
       "url": "https://bd103.dev/blog/2026-10-07-c-for-rust-programmers/",
       "source": "Lobste.rs",
-      "score": 36,
+      "score": 48,
       "comments": 14,
       "tags": [
         "c",
@@ -146,31 +107,106 @@
       ]
     },
     {
-      "id": "hn:49969073",
-      "title": "How did Rosalind Franklin miss the helix in her iconic DNA image? She didn't",
-      "summary": "Paper: <a href=\"https:&#x2F;&#x2F;link.springer.com&#x2F;article&#x2F;10.1007&#x2F;s10739-026-09866-7\" rel=\"nofollow\">https:&#x2F;&#x2F;link.springer.com&#x2F;article&#x2F;10.1007&#x2F;s10739-026-09866-7</a>",
-      "url": "https://www.science.org/content/article/how-did-rosalind-franklin-miss-helix-her-iconic-dna-image-she-didn-t",
+      "id": "hn:50005527",
+      "title": "Beauty in DVD Menus",
+      "summary": "",
+      "url": "https://vale.rocks/posts/dvd-menus",
       "source": "Hacker News",
-      "score": 121,
-      "comments": 46
+      "score": 187,
+      "comments": 117
     },
     {
-      "id": "hn:49997073",
-      "title": "Push ifs up and fors down: The idiom, its algebra, and its limits",
+      "id": "lob:rwdufq",
+      "title": "Anti-Patterns in Software Blogging",
       "summary": "",
-      "url": "https://debasishg.github.io/blog/push-ifs-up-fors-down/",
-      "source": "Hacker News",
-      "score": 128,
-      "comments": 60
+      "url": "https://refactoringenglish.com/blog/anti-patterns-software-blogging/",
+      "source": "Lobste.rs",
+      "score": 114,
+      "comments": 49,
+      "tags": [
+        "programming"
+      ]
     },
     {
-      "id": "hn:49998066",
-      "title": "'Jonathan' is the oldest land animal on Earth",
+      "id": "lob:0gvyif",
+      "title": "Software developers are not okay",
       "summary": "",
-      "url": "https://www.404media.co/oldest-living-land-animal-jonathan-the-tortoise/",
+      "url": "https://www.baldurbjarnason.com/2026/05-software-developers-are-not-okay/",
+      "source": "Lobste.rs",
+      "score": 92,
+      "comments": 70,
+      "tags": [
+        "philosophy",
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "lob:ucwapn",
+      "title": "Calling a function in C without naming it",
+      "summary": "",
+      "url": "https://wiro.world/posts/calling-c-func-without-naming-it/",
+      "source": "Lobste.rs",
+      "score": 59,
+      "comments": 15,
+      "tags": [
+        "c",
+        "security"
+      ]
+    },
+    {
+      "id": "hn:50008427",
+      "title": "Whistle: Speech to Text in 16.9 MB",
+      "summary": "",
+      "url": "https://cactuscompute.com/blog/whistle",
       "source": "Hacker News",
-      "score": 104,
-      "comments": 40
+      "score": 139,
+      "comments": 36
+    },
+    {
+      "id": "hn:50008187",
+      "title": "OpenAI annualised revenues $20B less than previously signalled",
+      "summary": "",
+      "url": "https://www.ft.com/content/b66a9858-f8fb-46cb-b506-44bfe26fca2a",
+      "source": "Hacker News",
+      "score": 111,
+      "comments": 48
+    },
+    {
+      "id": "lob:en3vgh",
+      "title": "I've Been Deindexed by Google",
+      "summary": "",
+      "url": "https://kennyqin.com/deindexed-by-google/",
+      "source": "Lobste.rs",
+      "score": 37,
+      "comments": 11,
+      "tags": [
+        "practices"
+      ]
+    },
+    {
+      "id": "lob:9qtgrm",
+      "title": "Margaret Hamilton, computing pioneer who led software development for the Apollo program, dies at 90",
+      "summary": "",
+      "url": "https://news.mit.edu/2026/margaret-hamilton-computing-pioneer-dies-1007",
+      "source": "Lobste.rs",
+      "score": 228,
+      "comments": 6,
+      "tags": [
+        "person"
+      ]
+    },
+    {
+      "id": "lob:lhr4oy",
+      "title": "The people holding up the internet",
+      "summary": "",
+      "url": "https://sheets.works/data-viz/holding-up-the-internet",
+      "source": "Lobste.rs",
+      "score": 35,
+      "comments": 9,
+      "tags": [
+        "historical",
+        "web"
+      ]
     },
     {
       "id": "arxiv:2610.10536v1",
@@ -199,46 +235,16 @@
       "arxiv_id": "2610.10513v1"
     },
     {
-      "id": "hn:49970767",
-      "title": "Living off-grid: Hundred Rabbits",
+      "id": "lob:jiphkt",
+      "title": "A rant about APIs",
       "summary": "",
-      "url": "https://100r.ca/site/home.html",
-      "source": "Hacker News",
-      "score": 96,
-      "comments": 17
-    },
-    {
-      "id": "hn:49963568",
-      "title": "A new write and space optimized storage engine for MySQL is here",
-      "summary": "",
-      "url": "https://tidesdb.com/articles/tidesdb-now-available-for-mysql/",
-      "source": "Hacker News",
-      "score": 50,
-      "comments": 20
-    },
-    {
-      "id": "lob:y5tke0",
-      "title": "Creating distro build tooling for a small community",
-      "summary": "",
-      "url": "https://chimera-linux.org/news/2026/10/the-case-for-cbuild.html",
+      "url": "https://dev.clintonblackburn.com/2026/10/08/a-rant-about-apis.html",
       "source": "Lobste.rs",
-      "score": 27,
-      "comments": 2,
+      "score": 11,
+      "comments": 17,
       "tags": [
-        "linux"
-      ]
-    },
-    {
-      "id": "lob:4hxxad",
-      "title": "Zeroization, part 1: Wiping can make things worse",
-      "summary": "",
-      "url": "https://00f.net/2026/10/06/zeroization-1/",
-      "source": "Lobste.rs",
-      "score": 17,
-      "comments": 8,
-      "tags": [
-        "compilers",
-        "security"
+        "api",
+        "practices"
       ]
     }
   ],
