@@ -1,132 +1,155 @@
 {
-  "date": "2026-10-12",
-  "update_time": "2026-10-12 05:12:57",
+  "date": "2026-10-13",
+  "update_time": "2026-10-12 21:01:57",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-12\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 陶哲轩：Math 2.0 —— 当菲尔兹奖得主开始\"用AI搞数学\" (来源: HackerNews)\n- **核心干货**：陶哲轩在 Caltech 的演讲中正式提出\"Math 2.0\"概念——数学研究正从\"人脑苦思\"转向\"人机协作的大规模形式化验证与AI辅助猜想生成\"。这不是让AI替你证明定理，而是让AI帮你搜索反例、形式化证明、管理日益复杂的数学知识图谱，把数学家的角色从\"计算器\"升级为\"架构师\"。\n- **毒舌/硬核点评**：数学家花了两千年证明\"1+1=2\"，现在终于学会让机器帮忙搬砖了。但别高兴太早——AI能帮你验证证明，却没法帮你拿到终身教职。\n- **🔗 传送门**：[点击直达原链接](https://teorth.github.io/tao-web/slides/math-2-0-caltech-2026.pdf)\n\n---\n\n### 2. 📌 Karpathy 开炮：LLM 能力认知的\"理解鸿沟\"正在撕裂 (来源: HackerNews)\n- **核心干货**：Karpathy 指出一个危险信号——普通用户与专业人士对 LLM 实际能力的认知差距正在急剧扩大。一边是拿 LLM 当\"高级搜索引擎\"的大众，另一边是清楚知道模型边界、能精准驾驭它的工程师。这条推文 518 条评论吵翻天，本质是在问：当工具的能力远超使用者的理解力时，社会会发生什么？\n- **毒舌/硬核点评**：这就像给每个人发了法拉利钥匙，但驾校还没建好。最讽刺的是——觉得自己最懂AI的那批人，往往是最不懂的那批。\n- **🔗 传送门**：[点击直达原链接](https://twitter.com/karpathy/status/2109361546505966046)\n\n---\n\n### 3. 📌 Valen 语言：Rust 借用检查器的\"叛逆师弟\"来了 (来源: Lobste.rs)\n- **核心干货**：Verdagon 团队发布 Valen 语言的内存安全新范式——\"Group Borrowing\"。它不是 Rust 那套借用检查的改良版，而是从类型系统底层重新设计内存安全模型，试图解决 Rust 借用检查器\"学习曲线陡峭 + 复杂场景表达力不足\"的老大难问题。如果你觉得和 borrow checker 搏斗像在和前任吵架，这个项目值得盯。\n- **毒舌/硬核点评**：Rust 教会了一代人什么叫\"安全但痛苦\"，Valen 想做的是\"安全且不痛苦\"。能不能成另说，但至少有人在认真想这件事——而不是又写一个 JS 框架。\n- **🔗 传送门**：[点击直达原链接](https://verdagon.dev/blog/valen-group-borrowing)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> **\"AI 不会取代你，但一个用 AI 且愿意动脑的人会。最危险的不是工具太强，而是你用它的时候，脑子在待机。\"**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-13\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 [AI 编程代理：代码产量暴涨，软件质量原地踏步] (来源: Hacker News)\n- **核心干货**：Ars Technica 发文指出，AI 编程代理确实让代码产出量大幅提升，但并没有真正产出更多\"可用的软件\"。换句话说，代码行数上去了，能跑、能维护、能交付的产品却没同步增长。核心痛点在于：AI 擅长生成片段，却不擅长处理架构一致性、需求理解和长期维护。\n- **毒舌/硬核点评**：这就像给工地塞了一百个只会搬砖的机器人，结果楼没盖起来，砖堆得倒是挺壮观。代码不是资产，能跑的软件才是——别拿 commit 数量当 KPI 了，老板们。\n- **🔗 传送门**：[点击直达原链接](https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/)\n\n---\n\n### 2. 📌 [欧洲超市冰箱遭黑客\"远程除霜\"，供应链攻击玩出新花样] (来源: Hacker News / Reuters / AFP)\n- **核心干货**：法国 Intermarché 等超市连锁遭遇大规模网络攻击，黑客远程激活了冷藏柜的自动除霜功能，导致大量冷冻食品损坏、部分门店价格显示和配送系统也受到波及。这不是勒索软件，而是直接操控 IoT 物理设备搞破坏——供应链安全的攻击面已经从数据层延伸到了物理层。\n- **毒舌/硬核点评**：以前黑客偷数据，现在黑客让你家冰淇淋化成汤。IoT 设备的安全水平还停留在\"出厂密码 123456\"的年代，而它们已经掌管着全欧洲的冷链——这不叫攻击，这叫\"降维打击\"。\n- **🔗 传送门**：[点击直达原链接](https://www.tomshardware.com/tech-industry/cyber-security/unprecedented-cyberattack-cripples-supermarket-fridges-across-europe-as-hackers-activate-automatic-defrosting-delivery-and-store-prices-also-impacted-by-incident)\n\n---\n\n### 3. 📌 [Linus Torvalds 用 Claude Code 搞 Linux 内核优化] (来源: Lobste.rs / Phoronix)\n- **核心干货**：Phoronix 报道称，Linus Torvalds 正在借助 Claude Code 进行一项重量级的 Linux 内核改进工作。这意味着 AI 编程工具已经渗透到了最硬核的系统级开发场景，连内核维护者都开始用 AI 辅助写补丁了。\n- **毒舌/硬核点评**：当年 Linus 说\"Talk is cheap, show me the code\"，现在他自己开始让 AI 写 code 了。AI 编程工具的终极背书不是 YC 创业公司，而是那个骂人从不嘴软的男人亲自上手——这波广告，Anthropic 一分钱没花。\n- **🔗 传送门**：[点击直达原链接](https://www.phoronix.com/news/Linus-Torvalds-Claude-Code)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> **\"AI 能帮你写代码，但帮不了你想清楚要写什么。工具越强，思考越贵——别把脑子也外包了。\"**",
   "briefing_items": [
     {
-      "title": "陶哲轩：Math 2.0 —— 当菲尔兹奖得主开始\"用AI搞数学\"",
-      "source": "HackerNews",
-      "summary": "陶哲轩在 Caltech 的演讲中正式提出\"Math 2.0\"概念——数学研究正从\"人脑苦思\"转向\"人机协作的大规模形式化验证与AI辅助猜想生成\"。这不是让AI替你证明定理，而是让AI帮你搜索反例、形式化证明、管理日益复杂的数学知识图谱，把数学家的角色从\"计算器\"升级为\"架构师\"。",
-      "commentary": "数学家花了两千年证明\"1+1=2\"，现在终于学会让机器帮忙搬砖了。但别高兴太早——AI能帮你验证证明，却没法帮你拿到终身教职。",
-      "url": "https://teorth.github.io/tao-web/slides/math-2-0-caltech-2026.pdf"
+      "title": "[AI 编程代理：代码产量暴涨，软件质量原地踏步]",
+      "source": "Hacker News",
+      "summary": "Ars Technica 发文指出，AI 编程代理确实让代码产出量大幅提升，但并没有真正产出更多\"可用的软件\"。换句话说，代码行数上去了，能跑、能维护、能交付的产品却没同步增长。核心痛点在于：AI 擅长生成片段，却不擅长处理架构一致性、需求理解和长期维护。",
+      "commentary": "这就像给工地塞了一百个只会搬砖的机器人，结果楼没盖起来，砖堆得倒是挺壮观。代码不是资产，能跑的软件才是——别拿 commit 数量当 KPI 了，老板们。",
+      "url": "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/"
     },
     {
-      "title": "Karpathy 开炮：LLM 能力认知的\"理解鸿沟\"正在撕裂",
-      "source": "HackerNews",
-      "summary": "Karpathy 指出一个危险信号——普通用户与专业人士对 LLM 实际能力的认知差距正在急剧扩大。一边是拿 LLM 当\"高级搜索引擎\"的大众，另一边是清楚知道模型边界、能精准驾驭它的工程师。这条推文 518 条评论吵翻天，本质是在问：当工具的能力远超使用者的理解力时，社会会发生什么？",
-      "commentary": "这就像给每个人发了法拉利钥匙，但驾校还没建好。最讽刺的是——觉得自己最懂AI的那批人，往往是最不懂的那批。",
-      "url": "https://twitter.com/karpathy/status/2109361546505966046"
+      "title": "[欧洲超市冰箱遭黑客\"远程除霜\"，供应链攻击玩出新花样]",
+      "source": "Hacker News / Reuters / AFP",
+      "summary": "法国 Intermarché 等超市连锁遭遇大规模网络攻击，黑客远程激活了冷藏柜的自动除霜功能，导致大量冷冻食品损坏、部分门店价格显示和配送系统也受到波及。这不是勒索软件，而是直接操控 IoT 物理设备搞破坏——供应链安全的攻击面已经从数据层延伸到了物理层。",
+      "commentary": "以前黑客偷数据，现在黑客让你家冰淇淋化成汤。IoT 设备的安全水平还停留在\"出厂密码 123456\"的年代，而它们已经掌管着全欧洲的冷链——这不叫攻击，这叫\"降维打击\"。",
+      "url": "https://www.tomshardware.com/tech-industry/cyber-security/unprecedented-cyberattack-cripples-supermarket-fridges-across-europe-as-hackers-activate-automatic-defrosting-delivery-and-store-prices-also-impacted-by-incident"
     },
     {
-      "title": "Valen 语言：Rust 借用检查器的\"叛逆师弟\"来了",
-      "source": "Lobste.rs",
-      "summary": "Verdagon 团队发布 Valen 语言的内存安全新范式——\"Group Borrowing\"。它不是 Rust 那套借用检查的改良版，而是从类型系统底层重新设计内存安全模型，试图解决 Rust 借用检查器\"学习曲线陡峭 + 复杂场景表达力不足\"的老大难问题。如果你觉得和 borrow checker 搏斗像在和前任吵架，这个项目值得盯。",
-      "commentary": "Rust 教会了一代人什么叫\"安全但痛苦\"，Valen 想做的是\"安全且不痛苦\"。能不能成另说，但至少有人在认真想这件事——而不是又写一个 JS 框架。",
-      "url": "https://verdagon.dev/blog/valen-group-borrowing"
+      "title": "[Linus Torvalds 用 Claude Code 搞 Linux 内核优化]",
+      "source": "Lobste.rs / Phoronix",
+      "summary": "Phoronix 报道称，Linus Torvalds 正在借助 Claude Code 进行一项重量级的 Linux 内核改进工作。这意味着 AI 编程工具已经渗透到了最硬核的系统级开发场景，连内核维护者都开始用 AI 辅助写补丁了。",
+      "commentary": "当年 Linus 说\"Talk is cheap, show me the code\"，现在他自己开始让 AI 写 code 了。AI 编程工具的终极背书不是 YC 创业公司，而是那个骂人从不嘴软的男人亲自上手——这波广告，Anthropic 一分钱没花。",
+      "url": "https://www.phoronix.com/news/Linus-Torvalds-Claude-Code"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50043026",
-      "title": "Terence Tao: Math 2.0 [pdf]",
+      "id": "hn:50059523",
+      "title": "AI coding agents generate more code, but not more software",
       "summary": "",
-      "url": "https://teorth.github.io/tao-web/slides/math-2-0-caltech-2026.pdf",
+      "url": "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/",
       "source": "Hacker News",
-      "score": 357,
-      "comments": 401
+      "score": 215,
+      "comments": 184
     },
     {
-      "id": "hn:50048642",
-      "title": "Fingerprints are the new cookies",
-      "summary": "",
-      "url": "https://royfish.dev/fingerprints-are-the-new-cookies",
+      "id": "hn:50055304",
+      "title": "Hackers activate automatic defrosting in supermarket fridges across Europe",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.reuters.com&#x2F;business&#x2F;retail-consumer&#x2F;french-supermarket-chain-intermarche-hit-by-cyberattack-150-stories-targeted-2026-10-12&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.reuters.com&#x2F;business&#x2F;retail-consumer&#x2F;french-supe...</a>, <a href=\"http",
+      "url": "https://www.tomshardware.com/tech-industry/cyber-security/unprecedented-cyberattack-cripples-supermarket-fridges-across-europe-as-hackers-activate-automatic-defrosting-delivery-and-store-prices-also-impacted-by-incident",
       "source": "Hacker News",
-      "score": 206,
-      "comments": 93
+      "score": 266,
+      "comments": 503
     },
     {
-      "id": "hn:50045984",
-      "title": "Total Annihilation, rebuilt for modern computers",
+      "id": "lob:iq5xtw",
+      "title": "Linus Torvalds Working On A Hefty Linux Kernel Improvement With Claude Code",
       "summary": "",
-      "url": "https://nanolathe.gg",
-      "source": "Hacker News",
-      "score": 427,
-      "comments": 182
-    },
-    {
-      "id": "hn:50047422",
-      "title": "The gap in shared understanding of LLM capability is widening",
-      "summary": "",
-      "url": "https://twitter.com/karpathy/status/2109361546505966046",
-      "source": "Hacker News",
-      "score": 351,
-      "comments": 518
-    },
-    {
-      "id": "hn:50048638",
-      "title": "Google is illegaly cutting forest to build data centers",
-      "summary": "",
-      "url": "https://www.theguardian.com/technology/2026/oct/06/google-datacentres-finland-temporary-halt-environmental-impact-assessment",
-      "source": "Hacker News",
-      "score": 295,
-      "comments": 74
-    },
-    {
-      "id": "lob:ecxril",
-      "title": "LineageOS 24.0 released",
-      "summary": "",
-      "url": "https://lineageos.org/Changelog-32/",
+      "url": "https://www.phoronix.com/news/Linus-Torvalds-Claude-Code",
       "source": "Lobste.rs",
-      "score": 36,
-      "comments": 13,
+      "score": 40,
+      "comments": 48,
       "tags": [
-        "android",
-        "mobile",
-        "release"
+        "linux",
+        "vibecoding"
       ]
     },
     {
-      "id": "hn:50047091",
-      "title": "Cartographers of North Korea (2019)",
+      "id": "hn:50055593",
+      "title": "Turn a WiFi 7 Router into a 320Msps Software Defined Radio Receiver",
       "summary": "",
-      "url": "https://cartographers-nk.wonyoung.so/",
+      "url": "https://github.com/h0m3us3r/w1700k-sdr",
       "source": "Hacker News",
-      "score": 219,
-      "comments": 39
+      "score": 190,
+      "comments": 52
     },
     {
-      "id": "lob:4ehrkn",
-      "title": "I'm still around.. I'm just not writing here",
+      "id": "hn:50060694",
+      "title": "Codex CLI installs a persistent, self-updating background daemon by default",
       "summary": "",
-      "url": "https://rachelbythebay.com/w/2026/10/08/idle/",
-      "source": "Lobste.rs",
-      "score": 103,
-      "comments": 29,
-      "tags": [
-        "culture"
-      ]
-    },
-    {
-      "id": "lob:u9ue6c",
-      "title": "What's Wrong with GitHub",
-      "summary": "",
-      "url": "https://www.gnu.org/philosophy/whats-wrong-with-github.html",
-      "source": "Lobste.rs",
-      "score": 51,
-      "comments": 38,
-      "tags": [
-        "vcs"
-      ]
-    },
-    {
-      "id": "hn:50049411",
-      "title": "Whatever became of holography? (2011)",
-      "summary": "",
-      "url": "https://www.americanscientist.org/article/whatever-became-of-holography",
+      "url": "https://github.com/openai/codex/issues/48195",
       "source": "Hacker News",
-      "score": 100,
-      "comments": 47
+      "score": 317,
+      "comments": 188
+    },
+    {
+      "id": "hn:50055220",
+      "title": "Citroen revives the 2CV for an electric age",
+      "summary": "",
+      "url": "https://www.bbc.com/news/articles/c620r33plgppo",
+      "source": "Hacker News",
+      "score": 213,
+      "comments": 239
+    },
+    {
+      "id": "hn:50037711",
+      "title": "Secret of Orange Cats Revealed After 60-Year Search",
+      "summary": "",
+      "url": "https://www.sciencealert.com/secret-of-orange-cats-finally-revealed-after-60-year-search",
+      "source": "Hacker News",
+      "score": 198,
+      "comments": 163
+    },
+    {
+      "id": "hn:50036287",
+      "title": "The Making Of Super Mario 64 – full Giles Goddard interview (2001)",
+      "summary": "",
+      "url": "https://pixelatron.com/blog/the-making-of-super-mario-64-full-giles-goddard-interview-ngc/",
+      "source": "Hacker News",
+      "score": 194,
+      "comments": 75
+    },
+    {
+      "id": "hn:50058507",
+      "title": "GLM-Legal",
+      "summary": "",
+      "url": "https://z.ai/blog/glm-legal",
+      "source": "Hacker News",
+      "score": 325,
+      "comments": 179
+    },
+    {
+      "id": "hn:50058528",
+      "title": "A Modern Web App in C",
+      "summary": "",
+      "url": "https://prophitt.me/writing/a-modern-web-app-in-c",
+      "source": "Hacker News",
+      "score": 269,
+      "comments": 111
+    },
+    {
+      "id": "hn:50059115",
+      "title": "Muse Wonder",
+      "summary": "",
+      "url": "https://research.meta.ai/blog/muse-wonder",
+      "source": "Hacker News",
+      "score": 426,
+      "comments": 209
+    },
+    {
+      "id": "hn:50059096",
+      "title": "Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents",
+      "summary": "Hey HN, I’m Vishnu from Agent37 (<a href=\"https:&#x2F;&#x2F;agent37.com\">https:&#x2F;&#x2F;agent37.com</a>). We build sandboxes for running AI agents at under 10% of the cost of most sandbox providers. Our customers spend an average of $0.37&#x2F;month per sandbox.<p>You can view a video walkthrough",
+      "url": "https://news.ycombinator.com/item?id=50059096",
+      "source": "Hacker News",
+      "score": 64,
+      "comments": 46
+    },
+    {
+      "id": "lob:ikk8ie",
+      "title": "'AI' is Not a Tool",
+      "summary": "",
+      "url": "https://www.linkedin.com/pulse/ai-tool-rich-hickey-kjl8e",
+      "source": "Lobste.rs",
+      "score": 81,
+      "comments": 26,
+      "tags": [
+        "vibecoding"
+      ]
     },
     {
       "id": "lob:qgybwb",
@@ -134,8 +157,8 @@
       "summary": "",
       "url": "https://dbushell.com/2026/10/11/d-bus-hell/",
       "source": "Lobste.rs",
-      "score": 46,
-      "comments": 5,
+      "score": 107,
+      "comments": 22,
       "tags": [
         "person",
         "satire"
@@ -147,95 +170,66 @@
       "summary": "",
       "url": "https://itsallaboutthebit.com/i-am-sorry-but-you-still-have-to-think/",
       "source": "Lobste.rs",
-      "score": 37,
-      "comments": 3,
+      "score": 92,
+      "comments": 6,
       "tags": [
         "vibecoding"
       ]
     },
     {
-      "id": "rss:c8fe6f52b2",
-      "title": "Citrix Patches Critical NetScaler Flaw That Could Enable RCE in SAML Deployments",
-      "summary": "Citrix has released patches for yet another critical security flaw impacting NetScaler ADC and NetScaler Gateway that could result in remote code execution or denial-of-service (DoS) under certain conditions.\n\n\"CVE-2026-107406 is a memory overflow vulnerability that may lead to remote code execution",
-      "url": "https://thehackernews.com/2026/10/citrix-patches-critical-netscaler-flaw.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "lob:gmnqhj",
-      "title": "Valen's Memory Safety: A New Kind of Borrow Checking",
+      "id": "lob:ml9xrb",
+      "title": "Fingerprints are the new cookies",
       "summary": "",
-      "url": "https://verdagon.dev/blog/valen-group-borrowing",
+      "url": "https://royfish.dev/fingerprints-are-the-new-cookies",
       "source": "Lobste.rs",
-      "score": 25,
-      "comments": 5,
+      "score": 23,
+      "comments": 14,
       "tags": [
-        "compilers",
-        "plt"
+        "privacy"
       ]
     },
     {
-      "id": "arxiv:2610.13924v1",
-      "title": "KL Before and After Mixing: A Round-Complexity Separation in Parallel Sampling",
-      "summary": "A parallel sampler can choose at random which coordinates to generate together. For a target $p$ and the output law $q_U$ of a schedule $U$ drawn afresh for each output, we compare the schedule-averaged divergence $\\mathbb{E}_U D_{\\mathrm{KL}}(p\\|q_U)$ with the output-law divergence $D_{\\mathrm{KL}}",
-      "url": "https://arxiv.org/abs/2610.13924v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.IT"
-      ],
-      "arxiv_id": "2610.13924v1"
+      "id": "lob:lfen2h",
+      "title": "Living in the Weimar era of Ruby",
+      "summary": "",
+      "url": "https://blog.julik.nl/2026/10/the-weimar-of-ruby",
+      "source": "Lobste.rs",
+      "score": 36,
+      "comments": 5,
+      "tags": [
+        "ruby",
+        "vibecoding"
+      ]
     },
     {
-      "id": "arxiv:2610.13923v1",
-      "title": "Goal-Oriented Bundle Management and Flow Control for Deep-Space Communications via Reinforcement Learning",
-      "summary": "Deep-space communications operate under intermittent connectivity, long propagation delays, and relay storage constraints. In such networks, the Bundle Protocol enables store-carry-forward communication, requiring relay nodes to manage limited storage and scarce contact opportunities. Relay-side sch",
-      "url": "https://arxiv.org/abs/2610.13923v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.NI",
-        "cs.LG",
-        "eess.SY"
-      ],
-      "arxiv_id": "2610.13923v1"
+      "id": "lob:sozl9e",
+      "title": "(Post-Quantum) Cryptographic Right Answers",
+      "summary": "",
+      "url": "https://words.filippo.io/right-answers/",
+      "source": "Lobste.rs",
+      "score": 31,
+      "comments": 0,
+      "tags": [
+        "cryptography"
+      ]
     },
     {
-      "id": "arxiv:2610.13916v1",
-      "title": "Markov Chain Convergence in Kernel-Induced Geometry",
-      "summary": "We study the convergence of Markov chains in the geometry induced by Hilbertian embeddings associated with positive definite kernels, also called Maximum Mean Discrepancy (MMD). Under a contraction assumption in the kernel-induced geometry, and a standard spectral gap assumption, we establish non-as",
-      "url": "https://arxiv.org/abs/2610.13916v1",
-      "source": "ArXiv",
-      "categories": [
-        "math.PR",
-        "stat.ML"
-      ],
-      "arxiv_id": "2610.13916v1"
+      "id": "lob:u4vlin",
+      "title": "French supermarket chains say cyberattack forced refrigerator shutdown",
+      "summary": "<p>This popped up and reminded me strangely of a story post a month ago here:</p>\n<p><a href=\"https://lobste.rs/s/ygjo0g/i_think_military_commissary_freezers\" rel=\"ugc\">https://lobste.rs/s/ygjo0g/i_think_military_commissary_freezers</a></p>\n<p>And, lo and behold, the very same controller supplier is",
+      "url": "https://www.afp.com/en/french-supermarket-chains-say-cyberattack-forced-refrigerator-shutdown",
+      "source": "Lobste.rs",
+      "score": 14,
+      "comments": 10,
+      "tags": [
+        "security"
+      ]
     },
     {
-      "id": "arxiv:2610.13895v1",
-      "title": "Task Context Shapes Component Roles in Language Models",
-      "summary": "Large language models reuse the same attention heads across tasks, but identifying these shared heads does not explain what they do differently in each task. A natural source of inspiration is task-dependent interactions among shared brain regions, which motivate a network view of language-model com",
-      "url": "https://arxiv.org/abs/2610.13895v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "arxiv_id": "2610.13895v1"
-    },
-    {
-      "id": "rss:bd8afc1eeb",
-      "title": "Attackers Exploit AhsayCBS Flaws to Deploy XMRig Miners Disguised as Microsoft Edge",
-      "summary": "Threat actors have been observed exploiting two recently disclosed flaws in the AhsayCBS backup utility to seize control of affected devices and deploy web shells and XMRig cryptocurrency miners.\n\nDetails of the flaws are below -\n\n\n  CVE-2026-105133 (CVSS v4 score: 5.5) - An improper authentication",
-      "url": "https://thehackernews.com/2026/10/attackers-exploit-ahsaycbs-flaws-to.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:d7be9fcd97",
-      "title": "HPE's networking boss says AI will handle all trouble tickets without humans in two years",
-      "summary": "And you'll trust agents to do that for the same reason you no longer worry about automatic transmissions",
-      "url": "https://www.theregister.com/networks/2026/10/11/hpes-networking-boss-says-ai-will-handle-all-trouble-tickets-without-humans-in-two-years/5302179",
+      "id": "rss:8384d2f6d8",
+      "title": "Critical SonicWall SMA 1000 Flaw Targeted in 135 Exploitation Attempts After Patch",
+      "summary": "Threat actors have been observed exploiting a recently disclosed critical security flaw in SonicWall Secure Mobile Access (SMA) 1000 appliances within days of public disclosure.\n\nThe vulnerability, tracked as CVE-2026-102255 (CVSS score: 10.0), is a case of pre-authenticated server-side request forg",
+      "url": "https://thehackernews.com/2026/10/critical-sonicwall-sma-1000-flaw.html",
       "source": "Tech RSS",
       "score": 0
     }
