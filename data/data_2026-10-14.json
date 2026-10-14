@@ -1,0 +1,831 @@
+{
+  "update_time": "2026-10-14 13:12:58",
+  "stocks": {
+    "a_stocks": [
+      {
+        "market": "A股",
+        "code": "002050",
+        "name": "三花智控",
+        "symbol": "sz.002050",
+        "industry": null,
+        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
+        "price": 31.29,
+        "open": 32.4,
+        "high": 32.42,
+        "low": 31.25,
+        "change_pct": -3.52,
+        "volume": 30897873,
+        "turnover": 9.79,
+        "market_cap": null,
+        "pe": 32.94,
+        "cash_flow": 50.92,
+        "macd": -0.9925,
+        "macd_signal": -0.6869,
+        "macd_histogram": -0.611,
+        "rsi": 27.23,
+        "ma": {
+          "MA5": 32.81,
+          "MA10": 34.25,
+          "MA20": 34.62,
+          "MA60": 36.43
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
+        "price": 6.37,
+        "open": 6.44,
+        "high": 6.46,
+        "low": 6.36,
+        "change_pct": -1.39,
+        "volume": 33730214,
+        "turnover": 2.16,
+        "market_cap": null,
+        "pe": 73.03,
+        "cash_flow": 105.67,
+        "macd": -0.0572,
+        "macd_signal": -0.0533,
+        "macd_histogram": -0.0078,
+        "rsi": 39.43,
+        "ma": {
+          "MA5": 6.43,
+          "MA10": 6.47,
+          "MA20": 6.5,
+          "MA60": 6.62
+        },
+        "main_net_flow": null
+      }
+    ],
+    "hk_stocks": [
+      {
+        "market": "港股",
+        "code": "01810",
+        "name": "小米集团-W",
+        "symbol": "01810",
+        "industry": "Consumer Electronics",
+        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
+        "price": 26.38,
+        "open": 24.88,
+        "high": 26.84,
+        "low": 24.66,
+        "change_pct": 5.35,
+        "volume": 277524009,
+        "turnover": null,
+        "market_cap": 6791.5,
+        "pe": 19.4,
+        "cash_flow": 86.81,
+        "macd": -0.4681,
+        "macd_signal": -0.5899,
+        "macd_histogram": 0.2437,
+        "rsi": 53.6,
+        "ma": {
+          "MA5": 25.11,
+          "MA10": 24.71,
+          "MA20": 25.52,
+          "MA60": 26.86
+        },
+        "main_net_flow": null
+      }
+    ],
+    "us_stocks": [
+      {
+        "market": "美股",
+        "code": "NVDA",
+        "name": "NVIDIA",
+        "symbol": "NVDA",
+        "industry": "Semiconductors",
+        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
+        "price": 228.52,
+        "open": 224.34,
+        "high": 228.64,
+        "low": 223.06,
+        "change_pct": 0.97,
+        "volume": 83846800,
+        "turnover": null,
+        "market_cap": 55180.72,
+        "pe": 28.89,
+        "cash_flow": 418.1,
+        "macd": 2.9231,
+        "macd_signal": 3.5905,
+        "macd_histogram": -1.3349,
+        "rsi": 52.03,
+        "ma": {
+          "MA5": 230.41,
+          "MA10": 232.34,
+          "MA20": 228.32,
+          "MA60": 219.39
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "GOOG",
+        "name": "Alphabet (Google)",
+        "symbol": "GOOG",
+        "industry": "Internet Content & Information",
+        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
+        "price": 349.52,
+        "open": 352.42,
+        "high": 354.5,
+        "low": 347.57,
+        "change_pct": 0.16,
+        "volume": 14409500,
+        "turnover": null,
+        "market_cap": 42746.07,
+        "pe": 17.54,
+        "cash_flow": 226.65,
+        "macd": 1.8769,
+        "macd_signal": 0.7761,
+        "macd_histogram": 2.2016,
+        "rsi": 57.45,
+        "ma": {
+          "MA5": 347.72,
+          "MA10": 344.3,
+          "MA20": 343.01,
+          "MA60": 341.91
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "CRCL",
+        "name": "Circle",
+        "symbol": "CRCL",
+        "industry": "Capital Markets",
+        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
+        "price": 84.27,
+        "open": 82.02,
+        "high": 84.96,
+        "low": 81.64,
+        "change_pct": 0.48,
+        "volume": 5916500,
+        "turnover": null,
+        "market_cap": 213.94,
+        "pe": 57.72,
+        "cash_flow": 2.06,
+        "macd": -0.9932,
+        "macd_signal": -0.4861,
+        "macd_histogram": -1.0142,
+        "rsi": 48.58,
+        "ma": {
+          "MA5": 82.87,
+          "MA10": 82.81,
+          "MA20": 85.89,
+          "MA60": 80.86
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "MP",
+        "name": "MP Materials",
+        "symbol": "MP",
+        "industry": "Other Industrial Metals & Mining",
+        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
+        "price": 42.43,
+        "open": 42.77,
+        "high": 43.27,
+        "low": 41.94,
+        "change_pct": -2.14,
+        "volume": 5060700,
+        "turnover": null,
+        "market_cap": 75.57,
+        "pe": 52.61,
+        "cash_flow": 4.33,
+        "macd": -1.9834,
+        "macd_signal": -1.6744,
+        "macd_histogram": -0.6179,
+        "rsi": 32.93,
+        "ma": {
+          "MA5": 44.88,
+          "MA10": 46.01,
+          "MA20": 47.28,
+          "MA60": 50.12
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "PLTR",
+        "name": "Palantir",
+        "symbol": "PLTR",
+        "industry": "Software - Infrastructure",
+        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
+        "price": 208.67,
+        "open": 208.08,
+        "high": 210.88,
+        "low": 205.97,
+        "change_pct": -0.16,
+        "volume": 18486000,
+        "turnover": null,
+        "market_cap": 5014.46,
+        "pe": 179.89,
+        "cash_flow": 21.59,
+        "macd": 8.3882,
+        "macd_signal": 6.7496,
+        "macd_histogram": 3.2773,
+        "rsi": 75.62,
+        "ma": {
+          "MA5": 203.92,
+          "MA10": 196.69,
+          "MA20": 190.59,
+          "MA60": 171.17
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "NOW",
+        "name": "ServiceNow",
+        "symbol": "NOW",
+        "industry": "Software - Application",
+        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
+        "price": 138.61,
+        "open": 140.19,
+        "high": 145.17,
+        "low": 138.16,
+        "change_pct": -1.22,
+        "volume": 13191300,
+        "turnover": null,
+        "market_cap": 1433.04,
+        "pe": 86.63,
+        "cash_flow": 51.49,
+        "macd": 1.7506,
+        "macd_signal": 1.7353,
+        "macd_histogram": 0.0308,
+        "rsi": 53.98,
+        "ma": {
+          "MA5": 139.48,
+          "MA10": 137.76,
+          "MA20": 137.08,
+          "MA60": 128.67
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "DDOG",
+        "name": "Datadog",
+        "symbol": "DDOG",
+        "industry": "Software - Application",
+        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
+        "price": 283.34,
+        "open": 285.61,
+        "high": 293.0,
+        "low": 281.93,
+        "change_pct": -1.37,
+        "volume": 1907300,
+        "turnover": null,
+        "market_cap": 1017.4,
+        "pe": 566.68,
+        "cash_flow": 10.51,
+        "macd": 12.4447,
+        "macd_signal": 10.7723,
+        "macd_histogram": 3.3448,
+        "rsi": 64.46,
+        "ma": {
+          "MA5": 281.81,
+          "MA10": 279.12,
+          "MA20": 264.71,
+          "MA60": 249.03
+        },
+        "main_net_flow": null
+      }
+    ],
+    "crypto": [
+      {
+        "market": "加密货币",
+        "code": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "industry": "Smart Contract Platform",
+        "price": 82687,
+        "open": null,
+        "high": 84025,
+        "low": 82646,
+        "change_pct": -0.54,
+        "volume": 28389730820,
+        "turnover": null,
+        "market_cap": 16614.42,
+        "market_cap_rank": 1,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": 535.2192,
+        "macd_signal": 1030.1864,
+        "macd_histogram": -989.9344,
+        "rsi": 50.36,
+        "ma": {
+          "MA5": 82843.25,
+          "MA10": 83305.95,
+          "MA20": 83863.84,
+          "MA60": 79738.63
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 20098084.0,
+          "total_supply": 20098084.0,
+          "circ_ratio": 100.0,
+          "price_change_7d": -0.95934,
+          "price_change_30d": 6.4574,
+          "ath_pct": -34.42,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      },
+      {
+        "market": "加密货币",
+        "code": "ethereum",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "industry": "Smart Contract Platform",
+        "price": 2479.28,
+        "open": null,
+        "high": 2525.16,
+        "low": 2474.69,
+        "change_pct": -0.79,
+        "volume": 9655103325,
+        "turnover": null,
+        "market_cap": 3027.3,
+        "market_cap_rank": 2,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -22.6081,
+        "macd_signal": 7.0888,
+        "macd_histogram": -59.3937,
+        "rsi": 41.68,
+        "ma": {
+          "MA5": 2492.11,
+          "MA10": 2539.98,
+          "MA20": 2615.5,
+          "MA60": 2507.34
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 122133648.45963953,
+          "total_supply": 122133648.45963953,
+          "circ_ratio": 100.0,
+          "price_change_7d": -3.59763,
+          "price_change_30d": -0.98583,
+          "ath_pct": -49.87,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      }
+    ]
+  },
+  "news": [
+    {
+      "id": "35b871d31c",
+      "title": "[播客]独家实拍：我那永远跪着的母亲(11/07 22:10)",
+      "summary": "独家实拍：我那永远跪着的母亲",
+      "link": "http://go.rss.sina.com.cn/redirect.php?url=http://you.video.sina.com.cn/b/16972162-1239095354.html",
+      "source": "rss.sina.com.cn",
+      "published": ""
+    },
+    {
+      "id": "7b24dd20d0",
+      "title": "Charles Schwab and DoorDash ranked among bargain stocks that could lead the market higher",
+      "summary": "Third-quarter earnings growth is expected to be driven by energy and semiconductor companies, but what if the rest of the market shows up? HSBC envisages a stock market finally broadening out.",
+      "link": "https://www.marketwatch.com/story/from-charles-schwab-to-doordash-why-these-bargain-stocks-could-lead-the-market-higher-4d99fb97?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 14 Oct 2026 12:45:00 GMT"
+    },
+    {
+      "id": "a9d630d951",
+      "title": "Bank of America adds a profit miss to the misery of a $1.2 billion government fine",
+      "summary": "Bank of America’s stock falls as investor disappointment over the $1.2 billion government fine added to the bank’s downbeat earnings report.",
+      "link": "https://www.marketwatch.com/story/bank-of-america-adds-a-profit-miss-to-the-misery-of-a-1-2-billion-government-fine-d4420bfa?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 14 Oct 2026 12:45:00 GMT"
+    },
+    {
+      "id": "2e175a14dc",
+      "title": "My sister moved in with our mother, 78, and now says she deserves the $925,000 family home. Is she right?",
+      "summary": "“The house is worth $925,000 and mom owns it outright. She also has $480,000 in investments.”",
+      "link": "https://www.marketwatch.com/story/my-sister-moved-in-with-our-widowed-mother-78-and-says-she-deserves-the-family-home-is-she-right-7981835d?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 14 Oct 2026 12:15:00 GMT"
+    },
+    {
+      "id": "90a7c012db",
+      "title": "How to read your body’s warning signs years before you get sick",
+      "summary": "Most of us don’t just want to live longer lives. We want to live longer and healthier lives.",
+      "link": "https://www.marketwatch.com/story/how-to-read-your-bodys-warning-signs-years-before-you-get-sick-3fb8c82d?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 14 Oct 2026 12:00:00 GMT"
+    },
+    {
+      "id": "fb098e985e",
+      "title": "What analysts are watching with key semiconductor maker TSMC set to report results",
+      "summary": "Analysts at JPMorgan and Citigroup see further revenue growth for the semiconductor foundry, even after already posting a record-breaking figure for the third quarter.",
+      "link": "https://www.marketwatch.com/story/what-analysts-are-watching-with-key-semiconductor-maker-tsmc-set-to-report-results-c161e86b?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 14 Oct 2026 11:36:00 GMT"
+    },
+    {
+      "id": "773d060c80",
+      "title": "Here’s how much the AI boom is really contributing to inflation, according to Goldman Sachs calculations",
+      "summary": "Goldman believes the core inflation rate will revert toward the Fed’s 2% target in 2027.",
+      "link": "https://www.marketwatch.com/story/heres-how-much-the-ai-boom-is-contributing-to-inflation-according-to-goldman-sachs-calculations-5ec717ff?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 14 Oct 2026 11:18:00 GMT"
+    },
+    {
+      "id": "c8bed3a663",
+      "title": "‘I am a pretty cautious person’: My financial adviser wants me to invest $350,000 in a UAE data center. Is this risky?",
+      "summary": "“I like my life, but I also like the idea of a big return after years of putting money into my 401(k).”",
+      "link": "https://www.marketwatch.com/story/the-prospectus-looks-impressive-my-financial-adviser-wants-me-to-invest-350-000-in-a-uae-data-center-is-this-risky-d5d3747c?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 14 Oct 2026 11:16:00 GMT"
+    },
+    {
+      "id": "582acdf8bb",
+      "title": "BlackRock’s assets equal half the size of the U.S. economy after 15% growth",
+      "summary": "Fund-management giant BlackRock said Wednesday that assets under management are nearly $15.5 trillion after growth of 15%.",
+      "link": "https://www.marketwatch.com/story/blackrock-now-has-assets-equal-to-half-the-size-of-the-u-s-economy-after-15-growth-c382b289?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 14 Oct 2026 10:41:00 GMT"
+    },
+    {
+      "id": "90e1cab720",
+      "title": "My wife says we can’t afford to retire, so I vetoed her $8,000 trip to Italy. We have $4 million saved. Do I keep working?",
+      "summary": "“I worry about healthcare, long-term care, inflation, a long bear market and living to 95.”",
+      "link": "https://www.marketwatch.com/story/my-wife-says-we-cant-afford-to-retire-we-have-4-million-do-i-just-keep-working-f1b6b085?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 14 Oct 2026 10:16:00 GMT"
+    },
+    {
+      "id": "11cd232741",
+      "title": "The truth about being a landlord in retirement",
+      "summary": "Investing in rental property isn’t easy or ‘passive’",
+      "link": "https://www.marketwatch.com/story/the-truth-about-being-a-landlord-in-retirement-5d1daf4c?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 14 Oct 2026 10:00:00 GMT"
+    },
+    {
+      "id": "dd2c9e3de3",
+      "title": "U.S. consumer prices rise 3.7% year-on-year in September",
+      "summary": "",
+      "link": "https://www.investing.com/news/economic-indicators/us-consumer-prices-rise-by-37-yearonyear-in-september-4949221",
+      "source": "www.investing.com",
+      "published": "2026-10-14 13:08:59"
+    },
+    {
+      "id": "5933862137",
+      "title": "Dollar jumps, stocks and bonds dented by hot US inflation data",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/asia-shares-edge-up-as-chip-selloff-eases-us-cpi-awaited-4947869",
+      "source": "www.investing.com",
+      "published": "2026-10-14 13:07:24"
+    },
+    {
+      "id": "78341e36b0",
+      "title": "Keefe Bruyette cuts Wells Fargo stock price target on NIM concerns",
+      "summary": "",
+      "link": "https://www.investing.com/news/analyst-ratings/keefe-bruyette-cuts-wells-fargo-stock-price-target-on-nim-concerns-93CH-4949376",
+      "source": "www.investing.com",
+      "published": "2026-10-14 13:06:55"
+    },
+    {
+      "id": "cb8db96696",
+      "title": "Keefe Bruyette cuts Goldman Sachs stock price target on valuation",
+      "summary": "",
+      "link": "https://www.investing.com/news/analyst-ratings/keefe-bruyette-cuts-goldman-sachs-stock-price-target-on-valuation-93CH-4949375",
+      "source": "www.investing.com",
+      "published": "2026-10-14 13:06:53"
+    },
+    {
+      "id": "8e36dea957",
+      "title": "JPMorgan stock rating reaffirmed at Outperform by Keefe Bruyette",
+      "summary": "",
+      "link": "https://www.investing.com/news/analyst-ratings/jpmorgan-stock-rating-reaffirmed-at-outperform-by-keefe-bruyette-93CH-4949373",
+      "source": "www.investing.com",
+      "published": "2026-10-14 13:06:52"
+    },
+    {
+      "id": "88016ffbb2",
+      "title": "Airbus forecasts huge hiring gap as aviation services market expands",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/airbus-forecasts-huge-hiring-gap-as-aviation-services-market-expands-4949374",
+      "source": "www.investing.com",
+      "published": "2026-10-14 13:06:52"
+    },
+    {
+      "id": "5f6b402181",
+      "title": "Keefe Bruyette lowers FB Financial stock price target on NIM concerns",
+      "summary": "",
+      "link": "https://www.investing.com/news/analyst-ratings/keefe-bruyette-lowers-fb-financial-stock-price-target-on-nim-concerns-93CH-4949372",
+      "source": "www.investing.com",
+      "published": "2026-10-14 13:06:51"
+    },
+    {
+      "id": "17a48c72df",
+      "title": "Keefe Bruyette reiterates Citi stock rating on valuation appeal",
+      "summary": "",
+      "link": "https://www.investing.com/news/analyst-ratings/keefe-bruyette-reiterates-citi-stock-rating-on-valuation-appeal-93CH-4949371",
+      "source": "www.investing.com",
+      "published": "2026-10-14 13:06:47"
+    },
+    {
+      "id": "7088ed5237",
+      "title": "CBAK Energy reports $4.76M in sales to European RV customer",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/cbak-energy-reports-476m-in-sales-to-european-rv-customer-93CH-4949362",
+      "source": "www.investing.com",
+      "published": "2026-10-14 13:04:39"
+    },
+    {
+      "id": "491443a433",
+      "title": "T3 Defense unit ships rotators for Israeli C-UAV systems",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/t3-defense-unit-ships-rotators-for-israeli-cuav-systems-93CH-4949363",
+      "source": "www.investing.com",
+      "published": "2026-10-14 13:04:39"
+    }
+  ],
+  "briefing": {
+    "date": "2026-10-14",
+    "update_time": "2026-10-14 04:14:30",
+    "candidate_count": 20,
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-14\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Ledger 确认硬件钱包被植入间谍芯片，加密盗窃案实锤 (来源: HackerNews)\n- **核心干货**：攻击者通过供应链在 Ledger 硬件钱包中植入了一枚隐蔽的 eSIM 芯片，可远程窃取私钥。这不是什么\"钓鱼网站\"级别的低级套路，而是物理层面的供应链攻击——你以为买的是冷钱包，其实买的是别人的热钱包。\n- **毒舌/硬核点评**：硬件钱包的核心卖点是\"私钥永不触网\"，结果人家直接在 PCB 上给你焊了个后门。以后买 Ledger 建议先做 X 光透视，再上示波器——毕竟你的助记词可能比你先上了 5G 网络。\n- **🔗 传送门**：[点击直达原链接](https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/)\n\n---\n\n### 2. 📌 Google DeepMind 发布 Gemini 4 Argon，同步覆盖机器人方向 (来源: HackerNews)\n- **核心干货**：Gemini 4 Argon 正式亮相，HN 热度直接炸到 1117 分、808 条评论——这个讨论量在 HN 上属于\"核弹级\"。更关键的是同步放出了面向机器人方向的专用版本，说明 Google 在多模态 + 具身智能这条线上开始收网，不再只是聊天框里跟你贫嘴，而是要下场控制物理世界了。\n- **毒舌/硬核点评**：每次 Gemini 发新版本，OpenAI 的 PR 团队就得加一个通宵的班。但说真的，模型跑分已经卷成军备竞赛了，真正值得盯的是\"Argon for Robotics\"——当大模型开始指挥机械臂，程序员离被优化又近了一步，只不过这次优化你的是机器人。\n- **🔗 传送门**：[点击直达原链接](https://deepmind.google/models/gemini/)\n\n---\n\n### 3. 📌 Anthropic 重新设计源码控制系统，AI 公司开始造自己的轮子 (来源: HackerNews)\n- **核心干货**：Anthropic 发文详述其内部源码控制系统的重新设计，HN 611 分、588 条评论。核心信号是：当 AI 生成代码的吞吐量爆炸式增长时，Git 这套为人类手写代码设计的版本控制体系已经不够用了。Anthropic 在自建更适合 AI 协作范式的代码基础设施。\n- **毒舌/硬核点评**：Linus 当年用两周写出 Git，大概没想到二十年后 AI 公司嫌它\"不够 AI 原生\"。但仔细想想——当你的代码库每天被 AI 生成又回滚几百次，Git 的 diff 确实像用算盘算导弹弹道。问题是，Anthropic 造的这个新轮子，会不会也只是过渡方案？\n- **🔗 传送门**：[点击直达原链接](https://www.anthropic.com/engineering/redesigning-source-control)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> 硬件钱包告诉你\"Not your keys, not your coins\"；供应链攻击告诉你\"Not your PCB, not your keys\"。**信任这件事，从来都是分层级的——越底层，越致命。**",
+    "briefing_items": [
+      {
+        "title": "Ledger 确认硬件钱包被植入间谍芯片，加密盗窃案实锤",
+        "source": "HackerNews",
+        "summary": "攻击者通过供应链在 Ledger 硬件钱包中植入了一枚隐蔽的 eSIM 芯片，可远程窃取私钥。这不是什么\"钓鱼网站\"级别的低级套路，而是物理层面的供应链攻击——你以为买的是冷钱包，其实买的是别人的热钱包。",
+        "commentary": "硬件钱包的核心卖点是\"私钥永不触网\"，结果人家直接在 PCB 上给你焊了个后门。以后买 Ledger 建议先做 X 光透视，再上示波器——毕竟你的助记词可能比你先上了 5G 网络。",
+        "url": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/"
+      },
+      {
+        "title": "Google DeepMind 发布 Gemini 4 Argon，同步覆盖机器人方向",
+        "source": "HackerNews",
+        "summary": "Gemini 4 Argon 正式亮相，HN 热度直接炸到 1117 分、808 条评论——这个讨论量在 HN 上属于\"核弹级\"。更关键的是同步放出了面向机器人方向的专用版本，说明 Google 在多模态 + 具身智能这条线上开始收网，不再只是聊天框里跟你贫嘴，而是要下场控制物理世界了。",
+        "commentary": "每次 Gemini 发新版本，OpenAI 的 PR 团队就得加一个通宵的班。但说真的，模型跑分已经卷成军备竞赛了，真正值得盯的是\"Argon for Robotics\"——当大模型开始指挥机械臂，程序员离被优化又近了一步，只不过这次优化你的是机器人。",
+        "url": "https://deepmind.google/models/gemini/"
+      },
+      {
+        "title": "Anthropic 重新设计源码控制系统，AI 公司开始造自己的轮子",
+        "source": "HackerNews",
+        "summary": "Anthropic 发文详述其内部源码控制系统的重新设计，HN 611 分、588 条评论。核心信号是：当 AI 生成代码的吞吐量爆炸式增长时，Git 这套为人类手写代码设计的版本控制体系已经不够用了。Anthropic 在自建更适合 AI 协作范式的代码基础设施。",
+        "commentary": "Linus 当年用两周写出 Git，大概没想到二十年后 AI 公司嫌它\"不够 AI 原生\"。但仔细想想——当你的代码库每天被 AI 生成又回滚几百次，Git 的 diff 确实像用算盘算导弹弹道。问题是，Anthropic 造的这个新轮子，会不会也只是过渡方案？",
+        "url": "https://www.anthropic.com/engineering/redesigning-source-control"
+      }
+    ],
+    "candidates": [
+      {
+        "id": "hn:50077020",
+        "title": "Show HN: Guitoro, a virtual guitar you strum with your keyboard",
+        "summary": "Guitoro is a free browser guitar using recordings of real instruments. You can strum with your keyboard, mouse, or touchscreen, choose acoustic, classical, electric guitar or bass, and see chord fingering and each stroke. Song practice can be slowed to 20%, and there are free chord tools and tuners.",
+        "url": "https://guitoro.com/",
+        "source": "Hacker News",
+        "score": 339,
+        "comments": 96
+      },
+      {
+        "id": "hn:50073221",
+        "title": "I posted to HN, and then my website was flooded with AI bot traffic",
+        "summary": "",
+        "url": "https://www.sammystraus.com/#i-posted-to-hn-and-then-my-website-was-flooded-with-ai-bot-traffic",
+        "source": "Hacker News",
+        "score": 285,
+        "comments": 158
+      },
+      {
+        "id": "hn:50072913",
+        "title": "Thunderbird for iOS",
+        "summary": "",
+        "url": "https://blog.thunderbird.net/2026/10/thunderbird-for-ios-a-first-look-at-the-native-iphone-email-app-in-development/",
+        "source": "Hacker News",
+        "score": 375,
+        "comments": 162
+      },
+      {
+        "id": "hn:50054092",
+        "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
+        "summary": "<a href=\"https:&#x2F;&#x2F;www.heise.de&#x2F;en&#x2F;news&#x2F;Crypto-thieves-sell-hardware-wallets-with-secret-eSIM-11485188.html\" rel=\"nofollow\">https:&#x2F;&#x2F;www.heise.de&#x2F;en&#x2F;news&#x2F;Crypto-thieves-sell-hardware-wa...</a><p><a href=\"https:&#x2F;&#x2F;crypto.news&#x2F;ledger-confirm",
+        "url": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
+        "source": "Hacker News",
+        "score": 530,
+        "comments": 379
+      },
+      {
+        "id": "hn:50073633",
+        "title": "Redesigning source control at Anthropic",
+        "summary": "",
+        "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+        "source": "Hacker News",
+        "score": 611,
+        "comments": 588
+      },
+      {
+        "id": "hn:50072994",
+        "title": "The United Kingdom generates less electricity per person than in the 1970s",
+        "summary": "",
+        "url": "https://ourworldindata.org/data-insights/electricity-generation-per-person-in-the-united-kingdom-has-fallen-by-a-third-from-its-early-2000s-peak",
+        "source": "Hacker News",
+        "score": 236,
+        "comments": 328
+      },
+      {
+        "id": "hn:50073879",
+        "title": "Gemini 4 Argon",
+        "summary": "See also: <i>Gemini 4 Argon for Robotics</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50074869\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50074869</a>",
+        "url": "https://deepmind.google/models/gemini/",
+        "source": "Hacker News",
+        "score": 1117,
+        "comments": 808
+      },
+      {
+        "id": "hn:50071017",
+        "title": "Apple HomeView",
+        "summary": "",
+        "url": "https://www.apple.com/apple-homeview/",
+        "source": "Hacker News",
+        "score": 699,
+        "comments": 825
+      },
+      {
+        "id": "lob:hjhufj",
+        "title": "Where is all the new, good software?",
+        "summary": "",
+        "url": "https://www.natemeyvis.com/where-is-all-the-new-good-software/",
+        "source": "Lobste.rs",
+        "score": 38,
+        "comments": 57,
+        "tags": [
+          "practices",
+          "vibecoding"
+        ]
+      },
+      {
+        "id": "lob:73ssw1",
+        "title": "A plea not to use uv-build",
+        "summary": "",
+        "url": "https://blogs.gentoo.org/mgorny/2026/10/12/a-plea-not-to-use-uv-build/",
+        "source": "Lobste.rs",
+        "score": 72,
+        "comments": 28,
+        "tags": [
+          "devops",
+          "python"
+        ]
+      },
+      {
+        "id": "lob:2h9opx",
+        "title": "Who is vfmaddrnd231pd??",
+        "summary": "",
+        "url": "https://purplesyringa.moe/blog/who-is-vfmaddrnd231pd/",
+        "source": "Lobste.rs",
+        "score": 74,
+        "comments": 14,
+        "tags": [
+          "assembly"
+        ]
+      },
+      {
+        "id": "lob:j30pg4",
+        "title": "Vi Hart's Big Navier-Stokes Post",
+        "summary": "",
+        "url": "https://www.patreon.com/vihart/posts/vi-harts-big-171939430",
+        "source": "Lobste.rs",
+        "score": 95,
+        "comments": 3,
+        "tags": [
+          "math",
+          "vibecoding"
+        ]
+      },
+      {
+        "id": "lob:uiulqe",
+        "title": "Did Ente Locker copy my code without attribution?",
+        "summary": "",
+        "url": "https://fairscan.org/blog/did-ente-locker-copy-my-code-without-attribution/",
+        "source": "Lobste.rs",
+        "score": 69,
+        "comments": 7,
+        "tags": [
+          "law"
+        ]
+      },
+      {
+        "id": "lob:aasanp",
+        "title": "The reverts will continue until morale improves",
+        "summary": "",
+        "url": "http://peter.eisentraut.org/blog/2026/10/09/the-reverts-will-continue-until-morale-improves",
+        "source": "Lobste.rs",
+        "score": 44,
+        "comments": 7,
+        "tags": [
+          "databases"
+        ]
+      },
+      {
+        "id": "lob:6tbd2o",
+        "title": "Creusot 0.14.0 release - Contracts for Rust, formally proved",
+        "summary": "",
+        "url": "https://devlog.creusot.rs/v0-14-0/",
+        "source": "Lobste.rs",
+        "score": 16,
+        "comments": 6,
+        "tags": [
+          "formalmethods",
+          "release",
+          "rust"
+        ]
+      },
+      {
+        "id": "hn:50074909",
+        "title": "Show HN: How random are you?",
+        "summary": "",
+        "url": "https://lab.specr.net/rigged-draw/",
+        "source": "Hacker News",
+        "score": 96,
+        "comments": 58
+      },
+      {
+        "id": "arxiv:2610.18497v1",
+        "title": "Judges Follow the Reference: The Derivation Gap in Verifying Tool-Call Arguments",
+        "summary": "Tool-call judges evaluate argument values proposed by LLM agents. We find that they accept a correct value less often when their input holds no reference for it, that is, no text that says what the value should be. This happens when the value is a default value from the function schema that the user",
+        "url": "https://arxiv.org/abs/2610.18497v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.AI",
+          "cs.CL"
+        ],
+        "arxiv_id": "2610.18497v1"
+      },
+      {
+        "id": "lob:zmuawx",
+        "title": "Lotus Improv on the NeXT",
+        "summary": "",
+        "url": "https://stonetools.ghost.io/lotusimprov-next/",
+        "source": "Lobste.rs",
+        "score": 19,
+        "comments": 16,
+        "tags": [
+          "historical"
+        ]
+      },
+      {
+        "id": "lob:d9rpcl",
+        "title": "A slightly faster slimmer curl",
+        "summary": "",
+        "url": "https://daniel.haxx.se/blog/2026/10/13/a-slightly-faster-slimmer-curl/",
+        "source": "Lobste.rs",
+        "score": 34,
+        "comments": 1,
+        "tags": [
+          "performance"
+        ]
+      },
+      {
+        "id": "hn:50079865",
+        "title": "Recreational Programming",
+        "summary": "",
+        "url": "https://www.cphiri.dev/presentations/recreational-programming",
+        "source": "Hacker News",
+        "score": 97,
+        "comments": 32
+      }
+    ],
+    "ai_curated": true
+  },
+  "fear_greed": {
+    "value": 62,
+    "classification": "Greed",
+    "timestamp": "2026-10-14 00:00:00"
+  }
+}
