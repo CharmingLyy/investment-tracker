@@ -1,30 +1,29 @@
-# 🗞️ 每日硬核情报简报 | 2026-10-14
+# 🗞️ 每日硬核情报简报 | 2026-10-15
 
 > 💡 *"用最毒舌的视角，看最前沿的科技。"*
 
 ---
 
-### 1. 📌 Ledger 确认硬件钱包被植入间谍芯片，加密盗窃案实锤 (来源: HackerNews)
-- **核心干货**：攻击者通过供应链在 Ledger 硬件钱包中植入了一枚隐蔽的 eSIM 芯片，可远程窃取私钥。这不是什么"钓鱼网站"级别的低级套路，而是物理层面的供应链攻击——你以为买的是冷钱包，其实买的是别人的热钱包。
-- **毒舌/硬核点评**：硬件钱包的核心卖点是"私钥永不触网"，结果人家直接在 PCB 上给你焊了个后门。以后买 Ledger 建议先做 X 光透视，再上示波器——毕竟你的助记词可能比你先上了 5G 网络。
-- **🔗 传送门**：[点击直达原链接](https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/)
+### 1. 📌 AI 挖出 Linux 内核十年老洞：本地提权 + 虚拟机逃逸 (来源: Tech News)
+- **核心干货**：Linux 的 vhost 子系统被曝出一个存在近十年的严重漏洞——本地用户可任意读写内核内存直接拿到 root，更狠的是在虚拟化场景下，恶意虚拟机可以直接越狱写宿主机内存、劫持 VMM 进程。堪称"一洞双杀"。最讽刺的是，这个洞是 AI 工具扫出来的，不是人类安全研究员。
+- **毒舌/硬核点评**：人类审计了十年的代码，被 AI 一个午休时间翻了个底朝天。以后安全团队的 KPI 大概要改成"跑赢隔壁的 LLM"了。顺便，所有还在跑老内核的云厂商，今天建议别摸鱼了。
+- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/10/ai-found-linux-kernel-flaw-gives-local.html)
 
 ---
 
-### 2. 📌 Google DeepMind 发布 Gemini 4 Argon，同步覆盖机器人方向 (来源: HackerNews)
-- **核心干货**：Gemini 4 Argon 正式亮相，HN 热度直接炸到 1117 分、808 条评论——这个讨论量在 HN 上属于"核弹级"。更关键的是同步放出了面向机器人方向的专用版本，说明 Google 在多模态 + 具身智能这条线上开始收网，不再只是聊天框里跟你贫嘴，而是要下场控制物理世界了。
-- **毒舌/硬核点评**：每次 Gemini 发新版本，OpenAI 的 PR 团队就得加一个通宵的班。但说真的，模型跑分已经卷成军备竞赛了，真正值得盯的是"Argon for Robotics"——当大模型开始指挥机械臂，程序员离被优化又近了一步，只不过这次优化你的是机器人。
-- **🔗 传送门**：[点击直达原链接](https://deepmind.google/models/gemini/)
+### 2. 📌 Timescale 造了个比 pgvector 更快的向量索引 (来源: GitHub Trending)
+- **核心干货**：Timescale 发布 pg_vectorsearch，声称其索引性能直接碾压 pgvector 的 IVFFlat 和 HNSW。在向量数据库卷成红海的今天，这意味着你现有的 Postgres 实例可能不需要再外挂一套专用向量库了——少一个中间件，少一堆运维头发。
+- **毒舌/硬核点评**：pgvector 刚坐稳"最流行向量扩展"的位子，就被同门师弟掀桌子。开源圈的竞争就是这么朴实无华：你还在写 benchmark 报告，别人已经 merge 了。建议 pgvector 团队今晚加个班。
+- **🔗 传送门**：[点击直达原链接](https://github.com/timescale/pg_vectorsearch)
 
 ---
 
-### 3. 📌 Anthropic 重新设计源码控制系统，AI 公司开始造自己的轮子 (来源: HackerNews)
-- **核心干货**：Anthropic 发文详述其内部源码控制系统的重新设计，HN 611 分、588 条评论。核心信号是：当 AI 生成代码的吞吐量爆炸式增长时，Git 这套为人类手写代码设计的版本控制体系已经不够用了。Anthropic 在自建更适合 AI 协作范式的代码基础设施。
-- **毒舌/硬核点评**：Linus 当年用两周写出 Git，大概没想到二十年后 AI 公司嫌它"不够 AI 原生"。但仔细想想——当你的代码库每天被 AI 生成又回滚几百次，Git 的 diff 确实像用算盘算导弹弹道。问题是，Anthropic 造的这个新轮子，会不会也只是过渡方案？
+### 3. 📌 Anthropic 重新设计源代码管理 (来源: Lobste.rs)
+- **核心干货**：Anthropic 工程团队公开了他们如何从底层重新思考 source control——不是给 Git 套壳，而是针对 AI 协作场景重新设计版本控制的原语。当你的代码库一半提交来自 AI Agent 时，传统的 branch/merge/review 流程确实该重新想想了。
+- **毒舌/硬核点评**：Git 诞生于 Linux 内核邮件列表的骂战之中，二十年没大变过。现在 Anthropic 说"我们换个玩法"——不管成败，这至少比那些整天给 Git 加 GUI 的创业公司有诚意多了。不过话说回来，先让 AI 学会写 commit message 再说吧。
 - **🔗 传送门**：[点击直达原链接](https://www.anthropic.com/engineering/redesigning-source-control)
 
 ---
 
 ### 🗣️ 今日顶男金句
-
-> 硬件钱包告诉你"Not your keys, not your coins"；供应链攻击告诉你"Not your PCB, not your keys"。**信任这件事，从来都是分层级的——越底层，越致命。**
+> "AI 能帮你找到十年前的安全漏洞，但找不到你拖延了十年的 side project 里的 bug——因为那玩意儿根本还没写。"
