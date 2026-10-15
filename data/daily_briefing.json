@@ -1,43 +1,49 @@
 {
-  "date": "2026-10-15",
-  "update_time": "2026-10-15 04:12:04",
+  "date": "2026-10-16",
+  "update_time": "2026-10-15 16:31:01",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-15\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n> ⚠️ 本简报由启发式算法自动生成（未配置 LLM API Key）。\n> 设置 `DEEPSEEK_API_KEY` 或 `ANTHROPIC_API_KEY` 即可启用 AI 深度策展与毒舌点评。\n\n---\n\n### 1. 📌 OpenCode 2.0 (来源: Hacker News)\n- **核心干货**：详情请查看原链接\n- **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。\n- **🔗 传送门**：[点击直达原链接](https://anoma.ly/notes/opencode-2-0/)\n\n---\n\n### 2. 📌 Things to know when you get cancer (来源: Hacker News)\n- **核心干货**：详情请查看原链接\n- **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。\n- **🔗 传送门**：[点击直达原链接](https://jjmaxwell4.com/writing/things-to-know-when-you-get-cancer/)\n\n---\n\n### 3. 📌 We’re releasing Jev 1.14.0 along with experimental features for dreamers (来源: Hacker News)\n- **核心干货**：详情请查看原链接\n- **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。\n- **🔗 传送门**：[点击直达原链接](https://typesafe.ai/blog/jev-1-14)\n\n---\n\n### 🗣️ 今日顶男金句\n> 你的竞争对手在熬夜读论文，你在熬夜刷短视频。一年后，差距不用解释。\n",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-16\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 为了下载一个 ISO，他顺手写了个内核漏洞利用 (来源: Hacker News)\n- **核心干货**：作者原本只是想下个 ISO 镜像，结果一路顺藤摸瓜挖出了 Linux 内核驱动的漏洞，并写成了可用的 exploit。更狠的是，他发现同一类 bug 至少还潜伏在 13 个 in-tree 驱动里——这些驱动在 x86 上岁月静好，一到 ARM 等非一致性架构就悄悄污染数据，堪称\"架构歧视型后门\"。而他手上根本没有对应硬件来验证。\n- **毒舌/硬核点评**：这就是传说中的\"下个 ISO 顺便把内核掀了\"。内核维护者们看到这帖估计已经开始默默 grep 了——建议直接把这条 HN 帖子转成 CVE 编号发出去。至于那 13 个驱动，它们不是没 bug，只是还没在正确的 CPU 上翻车而已。\n- **🔗 传送门**：[点击直达原链接](https://blog.dfb.sh/blog/eap770-root-for-two-zeros/)\n\n---\n\n### 2. 📌 零点击间谍软件：定向广告成了投毒管道 (来源: Hacker News / Citizen Lab)\n- **核心干货**：Citizen Lab 披露了一个叫 AdFection 的攻击链——攻击者把间谍软件藏在定向广告投放里，用户啥都不用点（zero-click）就中招。广告联盟这套\"精准触达\"的基础设施，被原封不动改造成了精准投毒的传送带。广告技术栈的每一个中间商，都成了攻击面的一部分。\n- **毒舌/硬核点评**：广告行业花二十年建了一套\"比你自己更懂你\"的定向系统，结果第一个把它用到极致的不是电商，是间谍。所谓\"精准营销\"和\"精准投毒\"之间，只差一个威胁模型。建议所有吹捧 AdTech 的人先看完这篇再谈 ROI。\n- **🔗 传送门**：[点击直达原链接](https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/)\n\n---\n\n### 3. 📌 一个任务，多种界面：跨界面一致性训练让 LLM Agent 更抗造 (来源: ArXiv)\n- **核心干货**：论文指出一个扎心的现实——LLM Agent 的能力被\"焊死\"在了训练时用的那套界面上。把动作改个名字、换个符号表示，语义完全不变，Agent 立马变傻。作者提出一种简单的跨界面一致性训练方法，让模型学会\"任务本质\"而非\"界面皮肤\"，显著提升鲁棒性。\n- **毒舌/硬核点评**：这不就是 AI 版的\"换个壳就不认识了\"？人类实习生换个 UI 都能适应，你的 Agent 却因为按钮从 `submit` 改名成 `send` 就当场宕机。这篇论文的价值在于：它承认了当前 Agent 的\"智能\"有多少是真正理解、有多少只是对特定 token 序列的条件反射。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2610.20576v1)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> \"你以为你在调参，其实你在给特定硬件和特定界面写情书——换个对象，它就不认你了。真正的通用智能，是连分手都不用重训。\"",
   "briefing_items": [
     {
-      "title": "OpenCode 2.0",
+      "title": "为了下载一个 ISO，他顺手写了个内核漏洞利用",
       "source": "Hacker News",
-      "summary": "详情请查看原链接",
-      "commentary": "HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。",
-      "url": "https://anoma.ly/notes/opencode-2-0/"
+      "summary": "作者原本只是想下个 ISO 镜像，结果一路顺藤摸瓜挖出了 Linux 内核驱动的漏洞，并写成了可用的 exploit。更狠的是，他发现同一类 bug 至少还潜伏在 13 个 in-tree 驱动里——这些驱动在 x86 上岁月静好，一到 ARM 等非一致性架构就悄悄污染数据，堪称\"架构歧视型后门\"。而他手上根本没有对应硬件来验证。",
+      "commentary": "这就是传说中的\"下个 ISO 顺便把内核掀了\"。内核维护者们看到这帖估计已经开始默默 grep 了——建议直接把这条 HN 帖子转成 CVE 编号发出去。至于那 13 个驱动，它们不是没 bug，只是还没在正确的 CPU 上翻车而已。",
+      "url": "https://blog.dfb.sh/blog/eap770-root-for-two-zeros/"
     },
     {
-      "title": "Things to know when you get cancer",
-      "source": "Hacker News",
-      "summary": "详情请查看原链接",
-      "commentary": "HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。",
-      "url": "https://jjmaxwell4.com/writing/things-to-know-when-you-get-cancer/"
+      "title": "零点击间谍软件：定向广告成了投毒管道",
+      "source": "Hacker News / Citizen Lab",
+      "summary": "Citizen Lab 披露了一个叫 AdFection 的攻击链——攻击者把间谍软件藏在定向广告投放里，用户啥都不用点（zero-click）就中招。广告联盟这套\"精准触达\"的基础设施，被原封不动改造成了精准投毒的传送带。广告技术栈的每一个中间商，都成了攻击面的一部分。",
+      "commentary": "广告行业花二十年建了一套\"比你自己更懂你\"的定向系统，结果第一个把它用到极致的不是电商，是间谍。所谓\"精准营销\"和\"精准投毒\"之间，只差一个威胁模型。建议所有吹捧 AdTech 的人先看完这篇再谈 ROI。",
+      "url": "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/"
     },
     {
-      "title": "We’re releasing Jev 1.14.0 along with experimental features for dreamers",
-      "source": "Hacker News",
-      "summary": "详情请查看原链接",
-      "commentary": "HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。",
-      "url": "https://typesafe.ai/blog/jev-1-14"
-    },
-    {
-      "quote": "你的竞争对手在熬夜读论文，你在熬夜刷短视频。一年后，差距不用解释。"
+      "title": "一个任务，多种界面：跨界面一致性训练让 LLM Agent 更抗造",
+      "source": "ArXiv",
+      "summary": "论文指出一个扎心的现实——LLM Agent 的能力被\"焊死\"在了训练时用的那套界面上。把动作改个名字、换个符号表示，语义完全不变，Agent 立马变傻。作者提出一种简单的跨界面一致性训练方法，让模型学会\"任务本质\"而非\"界面皮肤\"，显著提升鲁棒性。",
+      "commentary": "这不就是 AI 版的\"换个壳就不认识了\"？人类实习生换个 UI 都能适应，你的 Agent 却因为按钮从 `submit` 改名成 `send` 就当场宕机。这篇论文的价值在于：它承认了当前 Agent 的\"智能\"有多少是真正理解、有多少只是对特定 token 序列的条件反射。",
+      "url": "https://arxiv.org/abs/2610.20576v1"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50094994",
-      "title": "OpenCode 2.0",
-      "summary": "",
-      "url": "https://anoma.ly/notes/opencode-2-0/",
+      "id": "hn:50070625",
+      "title": "Wanted to download an ISO, ended up writing a kernel exploit",
+      "summary": "Author here. Does anyone know what to do with the rest of the drivers? I found at least 13 in-tree drivers with the same bug class. The nasty part is they work fine on x86 and silently corrupt data on arm and other non-coherent archs, and I don&#x27;t have the hardware to test them.<p>I&#x27;d guess",
+      "url": "https://blog.dfb.sh/blog/eap770-root-for-two-zeros/",
       "source": "Hacker News",
-      "score": 387,
-      "comments": 164
+      "score": 262,
+      "comments": 136
+    },
+    {
+      "id": "hn:50103338",
+      "title": "Wayland desktop for Linux with skeuomorphic design",
+      "summary": "",
+      "url": "https://github.com/fyzugx/DEsk",
+      "source": "Hacker News",
+      "score": 199,
+      "comments": 79
     },
     {
       "id": "hn:50093568",
@@ -45,44 +51,17 @@
       "summary": "",
       "url": "https://jjmaxwell4.com/writing/things-to-know-when-you-get-cancer/",
       "source": "Hacker News",
-      "score": 949,
-      "comments": 231
+      "score": 1769,
+      "comments": 421
     },
     {
-      "id": "hn:50095353",
-      "title": "We’re releasing Jev 1.14.0 along with experimental features for dreamers",
+      "id": "hn:50102923",
+      "title": "Libreboot 26.10 \"Ominous Olive\" released with UEFI, Chromebook support",
       "summary": "",
-      "url": "https://typesafe.ai/blog/jev-1-14",
+      "url": "https://libreboot.org/news/libreboot2610.html",
       "source": "Hacker News",
-      "score": 222,
-      "comments": 76
-    },
-    {
-      "id": "hn:50050553",
-      "title": "Do dentists know what they're doing?",
-      "summary": "",
-      "url": "https://mapwriting.substack.com/p/dentists",
-      "source": "Hacker News",
-      "score": 497,
-      "comments": 366
-    },
-    {
-      "id": "hn:50089921",
-      "title": "Americans' social activity has steeply declined in the past 30 years",
-      "summary": "",
-      "url": "https://www.dataforprogress.org/blog/2026/9/29/americans-social-activity-has-steeply-declined-in-the-past-30-years",
-      "source": "Hacker News",
-      "score": 279,
-      "comments": 287
-    },
-    {
-      "id": "hn:50091788",
-      "title": "Containment and monitoring failures are to blame for AI hacking reports: experts",
-      "summary": "",
-      "url": "https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html",
-      "source": "Hacker News",
-      "score": 852,
-      "comments": 471
+      "score": 147,
+      "comments": 74
     },
     {
       "id": "lob:j4tlzg",
@@ -90,20 +69,24 @@
       "summary": "",
       "url": "https://viceconsole.fyi/blog/2026/10/10/what-i-self-host/",
       "source": "Lobste.rs",
-      "score": 39,
-      "comments": 32,
+      "score": 72,
+      "comments": 40,
       "tags": [
         "devops"
       ]
     },
     {
-      "id": "hn:50090369",
-      "title": "Better HTTP/1 connection reuse in Go 1.27",
+      "id": "lob:plcgps",
+      "title": "Anthropic's Scion is heavily inspired by Mononoke",
       "summary": "",
-      "url": "https://go.dev/blog/http-connection-reuse",
-      "source": "Hacker News",
-      "score": 217,
-      "comments": 31
+      "url": "https://sunshowers.io/posts/anthropic-mononoke/",
+      "source": "Lobste.rs",
+      "score": 118,
+      "comments": 39,
+      "tags": [
+        "vcs",
+        "vibecoding"
+      ]
     },
     {
       "id": "lob:7xg9rm",
@@ -111,13 +94,31 @@
       "summary": "",
       "url": "https://blog.mozilla.org/en/firefox/introducing-firefox-enterprise/",
       "source": "Lobste.rs",
-      "score": 107,
-      "comments": 31,
+      "score": 123,
+      "comments": 33,
       "tags": [
         "browsers",
         "release",
         "web"
       ]
+    },
+    {
+      "id": "hn:50103630",
+      "title": "I know why Mathematicians weep",
+      "summary": "",
+      "url": "https://www.derekthompson.org/p/i-know-why-the-mathematicians-weep",
+      "source": "Hacker News",
+      "score": 153,
+      "comments": 221
+    },
+    {
+      "id": "hn:50102247",
+      "title": "Show HN: Unfenced – Land for sale that borders public land",
+      "summary": "",
+      "url": "https://unfenced.land/",
+      "source": "Hacker News",
+      "score": 150,
+      "comments": 113
     },
     {
       "id": "arxiv:2610.20597v1",
@@ -132,47 +133,36 @@
       "arxiv_id": "2610.20597v1"
     },
     {
-      "id": "hn:50096142",
-      "title": "Tiny Little Office",
+      "id": "lob:bcaopz",
+      "title": "Haxy on Haxy",
       "summary": "",
-      "url": "https://tinylittleoffice.com/",
-      "source": "Hacker News",
-      "score": 221,
-      "comments": 27
-    },
-    {
-      "id": "lob:d1c8zn",
-      "title": "Plasma 6.8 released (KDE's 30th birthday)",
-      "summary": "",
-      "url": "https://kde.org/announcements/plasma/6/6.8.0/",
+      "url": "https://try.haxy.net/haxy:haxy",
       "source": "Lobste.rs",
-      "score": 64,
-      "comments": 4,
+      "score": 35,
+      "comments": 15,
       "tags": [
-        "linux",
-        "release"
+        "practices",
+        "vcs",
+        "zig"
       ]
     },
     {
-      "id": "lob:dyypvf",
-      "title": "Apple: Switch to Safari (from Chrome)",
+      "id": "hn:50103164",
+      "title": "C++26 Contracts: Introduction to Preconditions and Postconditions",
       "summary": "",
-      "url": "https://www.apple.com/safari/switch/",
-      "source": "Lobste.rs",
-      "score": 29,
-      "comments": 24,
-      "tags": [
-        "browsers"
-      ]
+      "url": "https://www.cppstories.com/2026/cpp26_contracts/",
+      "source": "Hacker News",
+      "score": 65,
+      "comments": 62
     },
     {
-      "id": "hn:50097369",
-      "title": "LFM2.5-24B-A2B: Built for fast on-device agents",
+      "id": "hn:50105344",
+      "title": "I designed a nose guard for my dog and gave it away. Now 500 dogs wear one",
       "summary": "",
-      "url": "https://www.liquid.ai/blog/lfm2-5-24b-a2b",
+      "url": "https://snoutcover.com/one-year",
       "source": "Hacker News",
-      "score": 107,
-      "comments": 30
+      "score": 80,
+      "comments": 40
     },
     {
       "id": "arxiv:2610.20587v1",
@@ -213,44 +203,43 @@
       "arxiv_id": "2610.20560v1"
     },
     {
-      "id": "lob:x9fqa4",
-      "title": "Awesome Gaming on Linux Without Cheating",
+      "id": "hn:50104654",
+      "title": "Simons Foundation Launches $15M Effort to Help Mathematicians Navigate AI Era",
       "summary": "",
-      "url": "https://onlineservices.epicgames.com/news/introducing-easy-anti-cheat-linux-v2",
+      "url": "https://www.simonsfoundation.org/news/simons-foundation-launches-15m-effort-to-help-mathematicians-navigate-ai-era/",
+      "source": "Hacker News",
+      "score": 97,
+      "comments": 61
+    },
+    {
+      "id": "lob:5j4bwx",
+      "title": "Fixing C Strings With String Views",
+      "summary": "",
+      "url": "https://eliasebner.com/blog/guides/fixing-strings-in-c/",
       "source": "Lobste.rs",
-      "score": 23,
-      "comments": 8,
+      "score": 17,
+      "comments": 17,
       "tags": [
-        "games",
-        "linux",
-        "security"
+        "c"
       ]
     },
     {
-      "id": "lob:cwota8",
-      "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
-      "summary": "<p>Video showing an implanted device: <a href=\"https://www.youtube.com/watch?v=Nf4FEFlgv3Q\" rel=\"ugc\">https://www.youtube.com/watch?v=Nf4FEFlgv3Q</a></p>\n",
-      "url": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
-      "source": "Lobste.rs",
-      "score": 30,
-      "comments": 8,
-      "tags": [
-        "cryptography",
-        "security"
-      ]
+      "id": "hn:50101813",
+      "title": "Zero-Click Spyware Delivered via Targeted Ads: AdFection",
+      "summary": "",
+      "url": "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
+      "source": "Hacker News",
+      "score": 135,
+      "comments": 16
     },
     {
-      "id": "lob:tsjuje",
-      "title": "yet another place where a linux man page is inaccurate",
+      "id": "hn:50105635",
+      "title": "Steam Client Is Now Faster Than Epic's New Vibe Coded Launcher",
       "summary": "",
-      "url": "https://sebsite.pw/w/20261014-initstate.html",
-      "source": "Lobste.rs",
-      "score": 30,
-      "comments": 2,
-      "tags": [
-        "c",
-        "linux"
-      ]
+      "url": "https://respawnfirst.com/steam-client-is-now-faster-than-epics-new-vibe-coded-launcher/",
+      "source": "Hacker News",
+      "score": 61,
+      "comments": 63
     }
   ],
   "ai_curated": true
