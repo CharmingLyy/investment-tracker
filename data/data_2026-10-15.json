@@ -1,0 +1,841 @@
+{
+  "update_time": "2026-10-15 12:58:42",
+  "stocks": {
+    "a_stocks": [
+      {
+        "market": "A股",
+        "code": "002050",
+        "name": "三花智控",
+        "symbol": "sz.002050",
+        "industry": null,
+        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
+        "price": 30.53,
+        "open": 30.38,
+        "high": 30.93,
+        "low": 30.12,
+        "change_pct": -2.43,
+        "volume": 39691732,
+        "turnover": 12.1,
+        "market_cap": null,
+        "pe": 32.14,
+        "cash_flow": 50.92,
+        "macd": -1.1848,
+        "macd_signal": -0.7865,
+        "macd_histogram": -0.7966,
+        "rsi": 24.86,
+        "ma": {
+          "MA5": 32.13,
+          "MA10": 33.71,
+          "MA20": 34.34,
+          "MA60": 36.25
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
+        "price": 6.2,
+        "open": 6.3,
+        "high": 6.32,
+        "low": 6.16,
+        "change_pct": -2.67,
+        "volume": 65514931,
+        "turnover": 4.07,
+        "market_cap": null,
+        "pe": 71.08,
+        "cash_flow": 105.67,
+        "macd": -0.0742,
+        "macd_signal": -0.0575,
+        "macd_histogram": -0.0333,
+        "rsi": 32.08,
+        "ma": {
+          "MA5": 6.39,
+          "MA10": 6.42,
+          "MA20": 6.48,
+          "MA60": 6.62
+        },
+        "main_net_flow": null
+      }
+    ],
+    "hk_stocks": [
+      {
+        "market": "港股",
+        "code": "01810",
+        "name": "小米集团-W",
+        "symbol": "01810",
+        "industry": "Consumer Electronics",
+        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
+        "price": 27.08,
+        "open": 26.0,
+        "high": 27.26,
+        "low": 25.98,
+        "change_pct": 2.65,
+        "volume": 266495588,
+        "turnover": null,
+        "market_cap": 6971.71,
+        "pe": 19.91,
+        "cash_flow": 86.81,
+        "macd": -0.2838,
+        "macd_signal": -0.5287,
+        "macd_histogram": 0.4898,
+        "rsi": 56.82,
+        "ma": {
+          "MA5": 25.8,
+          "MA10": 24.9,
+          "MA20": 25.56,
+          "MA60": 26.87
+        },
+        "main_net_flow": null
+      }
+    ],
+    "us_stocks": [
+      {
+        "market": "美股",
+        "code": "NVDA",
+        "name": "NVIDIA",
+        "symbol": "NVDA",
+        "industry": "Semiconductors",
+        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
+        "price": 221.3,
+        "open": 225.53,
+        "high": 226.0,
+        "low": 219.64,
+        "change_pct": -3.16,
+        "volume": 117249000,
+        "turnover": null,
+        "market_cap": 53437.31,
+        "pe": 28.89,
+        "cash_flow": 418.1,
+        "macd": 2.0078,
+        "macd_signal": 3.2738,
+        "macd_histogram": -2.532,
+        "rsi": 43.98,
+        "ma": {
+          "MA5": 227.18,
+          "MA10": 231.63,
+          "MA20": 228.69,
+          "MA60": 219.63
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "GOOG",
+        "name": "Alphabet (Google)",
+        "symbol": "GOOG",
+        "industry": "Internet Content & Information",
+        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
+        "price": 343.65,
+        "open": 351.43,
+        "high": 355.25,
+        "low": 342.4,
+        "change_pct": -1.68,
+        "volume": 20005000,
+        "turnover": null,
+        "market_cap": 42028.17,
+        "pe": 17.53,
+        "cash_flow": 226.65,
+        "macd": 1.6367,
+        "macd_signal": 0.9479,
+        "macd_histogram": 1.3776,
+        "rsi": 50.66,
+        "ma": {
+          "MA5": 346.97,
+          "MA10": 344.59,
+          "MA20": 343.23,
+          "MA60": 341.88
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "CRCL",
+        "name": "Circle",
+        "symbol": "CRCL",
+        "industry": "Capital Markets",
+        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
+        "price": 79.55,
+        "open": 82.51,
+        "high": 84.0,
+        "low": 78.28,
+        "change_pct": -5.6,
+        "volume": 11400200,
+        "turnover": null,
+        "market_cap": 201.96,
+        "pe": 57.64,
+        "cash_flow": 2.06,
+        "macd": -1.2943,
+        "macd_signal": -0.6478,
+        "macd_histogram": -1.2931,
+        "rsi": 42.61,
+        "ma": {
+          "MA5": 82.61,
+          "MA10": 82.55,
+          "MA20": 85.84,
+          "MA60": 81.0
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "MP",
+        "name": "MP Materials",
+        "symbol": "MP",
+        "industry": "Other Industrial Metals & Mining",
+        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
+        "price": 39.95,
+        "open": 41.4,
+        "high": 41.88,
+        "low": 39.05,
+        "change_pct": -5.84,
+        "volume": 10061800,
+        "turnover": null,
+        "market_cap": 71.15,
+        "pe": 49.53,
+        "cash_flow": 4.33,
+        "macd": -2.3214,
+        "macd_signal": -1.804,
+        "macd_histogram": -1.0349,
+        "rsi": 28.66,
+        "ma": {
+          "MA5": 43.6,
+          "MA10": 45.28,
+          "MA20": 46.83,
+          "MA60": 50.01
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "PLTR",
+        "name": "Palantir",
+        "symbol": "PLTR",
+        "industry": "Software - Infrastructure",
+        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
+        "price": 200.97,
+        "open": 207.02,
+        "high": 209.29,
+        "low": 199.74,
+        "change_pct": -3.69,
+        "volume": 24063200,
+        "turnover": null,
+        "market_cap": 4829.43,
+        "pe": 173.25,
+        "cash_flow": 21.59,
+        "macd": 8.0527,
+        "macd_signal": 7.0098,
+        "macd_histogram": 2.0859,
+        "rsi": 63.25,
+        "ma": {
+          "MA5": 205.29,
+          "MA10": 198.08,
+          "MA20": 191.92,
+          "MA60": 172.31
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "NOW",
+        "name": "ServiceNow",
+        "symbol": "NOW",
+        "industry": "Software - Application",
+        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
+        "price": 139.98,
+        "open": 139.49,
+        "high": 142.8,
+        "low": 138.39,
+        "change_pct": 0.99,
+        "volume": 13295500,
+        "turnover": null,
+        "market_cap": 1447.2,
+        "pe": 86.41,
+        "cash_flow": 51.49,
+        "macd": 1.7817,
+        "macd_signal": 1.7441,
+        "macd_histogram": 0.0752,
+        "rsi": 55.85,
+        "ma": {
+          "MA5": 139.9,
+          "MA10": 138.36,
+          "MA20": 137.09,
+          "MA60": 129.31
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "DDOG",
+        "name": "Datadog",
+        "symbol": "DDOG",
+        "industry": "Software - Application",
+        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
+        "price": 269.33,
+        "open": 281.11,
+        "high": 284.82,
+        "low": 268.37,
+        "change_pct": -4.94,
+        "volume": 2979200,
+        "turnover": null,
+        "market_cap": 967.1,
+        "pe": 561.1,
+        "cash_flow": 10.51,
+        "macd": 11.0414,
+        "macd_signal": 10.8254,
+        "macd_histogram": 0.432,
+        "rsi": 54.05,
+        "ma": {
+          "MA5": 281.4,
+          "MA10": 278.67,
+          "MA20": 266.64,
+          "MA60": 249.27
+        },
+        "main_net_flow": null
+      }
+    ],
+    "crypto": [
+      {
+        "market": "加密货币",
+        "code": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "industry": "Smart Contract Platform",
+        "price": 80627,
+        "open": null,
+        "high": 83005,
+        "low": 80444,
+        "change_pct": -2.62,
+        "volume": 39160994428,
+        "turnover": null,
+        "market_cap": 16207.2,
+        "market_cap_rank": 1,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": 220.4649,
+        "macd_signal": 854.2818,
+        "macd_histogram": -1267.6337,
+        "rsi": 43.56,
+        "ma": {
+          "MA5": 82164.26,
+          "MA10": 82681.15,
+          "MA20": 83636.2,
+          "MA60": 80016.62
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 20098593.0,
+          "total_supply": 20098593.0,
+          "circ_ratio": 100.0,
+          "price_change_7d": -2.19759,
+          "price_change_30d": 4.83551,
+          "ath_pct": -36.05,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      },
+      {
+        "market": "加密货币",
+        "code": "ethereum",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "industry": "Smart Contract Platform",
+        "price": 2350.83,
+        "open": null,
+        "high": 2483.98,
+        "low": 2332.43,
+        "change_pct": -5.22,
+        "volume": 18986575145,
+        "turnover": null,
+        "market_cap": 2871.32,
+        "market_cap_rank": 2,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -40.1775,
+        "macd_signal": -3.1233,
+        "macd_histogram": -74.1085,
+        "rsi": 33.51,
+        "ma": {
+          "MA5": 2449.08,
+          "MA10": 2497.85,
+          "MA20": 2595.41,
+          "MA60": 2514.25
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 122136580.3876922,
+          "total_supply": 122136580.3876922,
+          "circ_ratio": 100.0,
+          "price_change_7d": -7.29547,
+          "price_change_30d": -5.04576,
+          "ath_pct": -52.47,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      }
+    ]
+  },
+  "news": [
+    {
+      "id": "35b871d31c",
+      "title": "[播客]独家实拍：我那永远跪着的母亲(11/07 22:10)",
+      "summary": "独家实拍：我那永远跪着的母亲",
+      "link": "http://go.rss.sina.com.cn/redirect.php?url=http://you.video.sina.com.cn/b/16972162-1239095354.html",
+      "source": "rss.sina.com.cn",
+      "published": ""
+    },
+    {
+      "id": "b99416fa17",
+      "title": "Micron, Nvidia and other chip stocks face renewed pressure as AI fears swell",
+      "summary": "Reported details about Anthropic’s financial progress are adding to concerns about the health of the AI ecosystem.",
+      "link": "https://www.marketwatch.com/story/micron-nvidia-and-other-chip-stocks-face-renewed-pressure-as-ai-fears-swell-4e0dc989?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 15 Oct 2026 12:43:00 GMT"
+    },
+    {
+      "id": "f07de22b36",
+      "title": "This 30-year market veteran is alarmed by a record-chasing S&P 500. Here’s where he’s investing instead.",
+      "summary": "Steven Jon Kaplan sees a completely irrational stock market right now, and investors ignoring a perfectly safe way to play that.",
+      "link": "https://www.marketwatch.com/story/this-30-year-market-veteran-is-alarmed-by-a-near-record-s-p-500-heres-where-hes-investing-instead-c6611143?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 15 Oct 2026 12:40:00 GMT"
+    },
+    {
+      "id": "001eb6d682",
+      "title": "There’s a ‘monstrous bull market’ developing under the surface of the S&P 500. This hedge-fund manager tells you where it’s at.",
+      "summary": "The index may not move much because the stocks with the biggest weightings lag, but there’s a bull market starting to bubble elsewhere, says a hedge-fund manager.",
+      "link": "https://www.marketwatch.com/story/theres-a-monstrous-bull-market-developing-under-the-surface-of-the-s-p-500-this-hedge-fund-manager-tells-you-where-its-at-98450ef4?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 15 Oct 2026 12:08:00 GMT"
+    },
+    {
+      "id": "a42663e0dd",
+      "title": "CoreWeave’s AI bonds tumble, raising red flags for the wider market",
+      "summary": "CoreWeave’s bonds issued a few months ago fell to 81 cents on the dollar earlier Wednesday, yielding more than 15%.",
+      "link": "https://www.marketwatch.com/story/coreweave-sparks-worry-about-broader-credit-market-stress-as-its-bonds-tumble-887458e4?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 15 Oct 2026 11:17:00 GMT"
+    },
+    {
+      "id": "f3d2a7beee",
+      "title": "‘Some people did everything right’: I lost my home in the Great Recession. I rent in my 50s. Why is that judged as failure?",
+      "summary": "”I earn $110,000 a year.”",
+      "link": "https://www.marketwatch.com/story/i-earn-110-000-a-year-i-lost-my-home-in-the-great-recession-im-renting-in-my-50s-why-is-that-judged-as-failure-d1371d67?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 15 Oct 2026 10:15:00 GMT"
+    },
+    {
+      "id": "34613bd534",
+      "title": "I’m 64 years old, with two sons, but only one works in the family firm. Should I leave him 70% of the business?",
+      "summary": "“I have some reservations about the long-term stability of my younger son’s marriage.”",
+      "link": "https://www.marketwatch.com/story/im-64-years-old-with-two-sons-but-only-one-works-in-the-family-firm-should-i-leave-him-70-of-the-business-2fe6c382?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 15 Oct 2026 09:15:00 GMT"
+    },
+    {
+      "id": "7db71fdf78",
+      "title": "‘New Girl’ star Jake Johnson lists lush and private Pasadena estate for $3.3 million",
+      "summary": "Jake Johnson is looking to sell his four-bedroom, four-bathroom Southern California property, which offers approximately 3,153 square feet of living space.",
+      "link": "https://www.marketwatch.com/story/new-girl-star-jake-johnson-lists-lush-and-private-pasadena-estate-for-3-3-million-b6788838?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 15 Oct 2026 09:01:00 GMT"
+    },
+    {
+      "id": "46a86b1a57",
+      "title": "Why the AI trade is not set up for a rebound like July’s, according to JPMorgan",
+      "summary": "Fewer shorts, buybacks ending,  no inflows and too many longs imply no recovery is imminent, says a JPMorgan strategist.",
+      "link": "https://www.marketwatch.com/story/why-the-ai-trade-is-not-set-up-for-a-rebound-like-julys-according-to-jpmorgan-5ae511db?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 15 Oct 2026 08:53:00 GMT"
+    },
+    {
+      "id": "cf9909fcd4",
+      "title": "TSMC’s CEO sees no sign of a slowdown as chip foundry reports record profit",
+      "summary": "The semiconductor foundry announced third-quarter net profits of 763.34 Taiwanese new dollars, marking a record.",
+      "link": "https://www.marketwatch.com/story/tsmc-ceo-sees-no-sign-of-a-slowdown-as-chip-foundry-reports-record-profit-17a065d3?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 15 Oct 2026 08:42:00 GMT"
+    },
+    {
+      "id": "ae00262f34",
+      "title": "Anthropic’s slowing growth could be the AI trade’s latest red flag",
+      "summary": "Anthropic’s revenue growth appears to be cooling as the company prepares for its public debut, further stoking investors’ AI jitters",
+      "link": "https://www.marketwatch.com/story/anthropics-slowing-growth-could-be-the-ai-trades-latest-red-flag-292d0169?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 15 Oct 2026 01:07:00 GMT"
+    },
+    {
+      "id": "50fdd17dc4",
+      "title": "U.S. producer prices rise by 1.3% month-on-month in September",
+      "summary": "",
+      "link": "https://www.investing.com/news/economic-indicators/us-producer-prices-rise-by-13-monthonmonth-in-september-4951667",
+      "source": "www.investing.com",
+      "published": "2026-10-15 12:35:54"
+    },
+    {
+      "id": "ca8f7abc24",
+      "title": "Nasdaq 100 futures hold onto losses after hot U.S. producer inflation report",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/us-stock-futures-fall-as-hot-inflation-revives-fed-hike-concerns-4950317",
+      "source": "www.investing.com",
+      "published": "2026-10-15 12:35:39"
+    },
+    {
+      "id": "5858cdcaa8",
+      "title": "PPI surges as inflation concerns grow, exceeding forecasts",
+      "summary": "",
+      "link": "https://www.investing.com/news/economic-indicators/ppi-surges-as-inflation-concerns-grow-exceeding-forecasts-93CH-4951662",
+      "source": "www.investing.com",
+      "published": "2026-10-15 12:34:08"
+    },
+    {
+      "id": "e31fffdb6d",
+      "title": "U.S. yields near 3-week lows as AI equities rout drives flight to safe-haven",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/us-treasury-yields-slide-after-cpidriven-spike-4950530",
+      "source": "www.investing.com",
+      "published": "2026-10-15 12:33:33"
+    },
+    {
+      "id": "d992ba0a5e",
+      "title": "Retail sales rise more than expected, boosting economic outlook",
+      "summary": "",
+      "link": "https://www.investing.com/news/economic-indicators/retail-sales-rise-more-than-expected-boosting-economic-outlook-93CH-4951650",
+      "source": "www.investing.com",
+      "published": "2026-10-15 12:32:08"
+    },
+    {
+      "id": "daa5494f07",
+      "title": "Earnings call transcript: Flerie Q3 2026 NAV slips as biotech write-downs weigh",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-flerie-q3-2026-nav-slips-as-biotech-writedowns-weigh-93CH-4951639",
+      "source": "www.investing.com",
+      "published": "2026-10-15 12:30:39"
+    },
+    {
+      "id": "f7ee6f4443",
+      "title": "Empire State Manufacturing Index Surges, Surpassing Expectations",
+      "summary": "",
+      "link": "https://www.investing.com/news/economic-indicators/empire-state-manufacturing-index-surges-surpassing-expectations-93CH-4951636",
+      "source": "www.investing.com",
+      "published": "2026-10-15 12:30:08"
+    },
+    {
+      "id": "92d637834e",
+      "title": "Recursion raises $200M, reports trial data for two drug candidates",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/recursion-raises-200m-reports-trial-data-for-two-drug-candidates-93CH-4951629",
+      "source": "www.investing.com",
+      "published": "2026-10-15 12:28:43"
+    },
+    {
+      "id": "039a502051",
+      "title": "Alpha Modus to test AI platform at three grocery stores",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/alpha-modus-to-test-ai-platform-at-three-grocery-stores-93CH-4951628",
+      "source": "www.investing.com",
+      "published": "2026-10-15 12:28:36"
+    },
+    {
+      "id": "75c9e4c0da",
+      "title": "Oil prices slips as US weighs easing sanctions on ’shadow fleet’",
+      "summary": "",
+      "link": "https://www.investing.com/news/commodities-news/oil-prices-fall-as-investors-weigh-supply-outlook-middle-east-tensions-4950372",
+      "source": "www.investing.com",
+      "published": "2026-10-15 12:24:46"
+    }
+  ],
+  "briefing": {
+    "date": "2026-10-15",
+    "update_time": "2026-10-15 04:12:04",
+    "candidate_count": 20,
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-15\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n> ⚠️ 本简报由启发式算法自动生成（未配置 LLM API Key）。\n> 设置 `DEEPSEEK_API_KEY` 或 `ANTHROPIC_API_KEY` 即可启用 AI 深度策展与毒舌点评。\n\n---\n\n### 1. 📌 OpenCode 2.0 (来源: Hacker News)\n- **核心干货**：详情请查看原链接\n- **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。\n- **🔗 传送门**：[点击直达原链接](https://anoma.ly/notes/opencode-2-0/)\n\n---\n\n### 2. 📌 Things to know when you get cancer (来源: Hacker News)\n- **核心干货**：详情请查看原链接\n- **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。\n- **🔗 传送门**：[点击直达原链接](https://jjmaxwell4.com/writing/things-to-know-when-you-get-cancer/)\n\n---\n\n### 3. 📌 We’re releasing Jev 1.14.0 along with experimental features for dreamers (来源: Hacker News)\n- **核心干货**：详情请查看原链接\n- **毒舌/硬核点评**：HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。\n- **🔗 传送门**：[点击直达原链接](https://typesafe.ai/blog/jev-1-14)\n\n---\n\n### 🗣️ 今日顶男金句\n> 你的竞争对手在熬夜读论文，你在熬夜刷短视频。一年后，差距不用解释。\n",
+    "briefing_items": [
+      {
+        "title": "OpenCode 2.0",
+        "source": "Hacker News",
+        "summary": "详情请查看原链接",
+        "commentary": "HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。",
+        "url": "https://anoma.ly/notes/opencode-2-0/"
+      },
+      {
+        "title": "Things to know when you get cancer",
+        "source": "Hacker News",
+        "summary": "详情请查看原链接",
+        "commentary": "HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。",
+        "url": "https://jjmaxwell4.com/writing/things-to-know-when-you-get-cancer/"
+      },
+      {
+        "title": "We’re releasing Jev 1.14.0 along with experimental features for dreamers",
+        "source": "Hacker News",
+        "summary": "详情请查看原链接",
+        "commentary": "HN 老哥们吵得越凶，这个方向越值得关注。评论区永远比原文精彩。",
+        "url": "https://typesafe.ai/blog/jev-1-14"
+      },
+      {
+        "quote": "你的竞争对手在熬夜读论文，你在熬夜刷短视频。一年后，差距不用解释。"
+      }
+    ],
+    "candidates": [
+      {
+        "id": "hn:50094994",
+        "title": "OpenCode 2.0",
+        "summary": "",
+        "url": "https://anoma.ly/notes/opencode-2-0/",
+        "source": "Hacker News",
+        "score": 387,
+        "comments": 164
+      },
+      {
+        "id": "hn:50093568",
+        "title": "Things to know when you get cancer",
+        "summary": "",
+        "url": "https://jjmaxwell4.com/writing/things-to-know-when-you-get-cancer/",
+        "source": "Hacker News",
+        "score": 949,
+        "comments": 231
+      },
+      {
+        "id": "hn:50095353",
+        "title": "We’re releasing Jev 1.14.0 along with experimental features for dreamers",
+        "summary": "",
+        "url": "https://typesafe.ai/blog/jev-1-14",
+        "source": "Hacker News",
+        "score": 222,
+        "comments": 76
+      },
+      {
+        "id": "hn:50050553",
+        "title": "Do dentists know what they're doing?",
+        "summary": "",
+        "url": "https://mapwriting.substack.com/p/dentists",
+        "source": "Hacker News",
+        "score": 497,
+        "comments": 366
+      },
+      {
+        "id": "hn:50089921",
+        "title": "Americans' social activity has steeply declined in the past 30 years",
+        "summary": "",
+        "url": "https://www.dataforprogress.org/blog/2026/9/29/americans-social-activity-has-steeply-declined-in-the-past-30-years",
+        "source": "Hacker News",
+        "score": 279,
+        "comments": 287
+      },
+      {
+        "id": "hn:50091788",
+        "title": "Containment and monitoring failures are to blame for AI hacking reports: experts",
+        "summary": "",
+        "url": "https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html",
+        "source": "Hacker News",
+        "score": 852,
+        "comments": 471
+      },
+      {
+        "id": "lob:j4tlzg",
+        "title": "What I Self-Host",
+        "summary": "",
+        "url": "https://viceconsole.fyi/blog/2026/10/10/what-i-self-host/",
+        "source": "Lobste.rs",
+        "score": 39,
+        "comments": 32,
+        "tags": [
+          "devops"
+        ]
+      },
+      {
+        "id": "hn:50090369",
+        "title": "Better HTTP/1 connection reuse in Go 1.27",
+        "summary": "",
+        "url": "https://go.dev/blog/http-connection-reuse",
+        "source": "Hacker News",
+        "score": 217,
+        "comments": 31
+      },
+      {
+        "id": "lob:7xg9rm",
+        "title": "Introducing Firefox Enterprise",
+        "summary": "",
+        "url": "https://blog.mozilla.org/en/firefox/introducing-firefox-enterprise/",
+        "source": "Lobste.rs",
+        "score": 107,
+        "comments": 31,
+        "tags": [
+          "browsers",
+          "release",
+          "web"
+        ]
+      },
+      {
+        "id": "arxiv:2610.20597v1",
+        "title": "Co-Evolving Acting and Forecasting for Language Agents",
+        "summary": "Training language agents is bottlenecked by the high cost of long-horizon rollouts, yet standard agentic reinforcement learning (RL) learns only from a terminal scalar reward, leaving the supervision in intermediate steps largely unused. Prior work exploits this supervision through value targets tha",
+        "url": "https://arxiv.org/abs/2610.20597v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.AI",
+          "cs.LG"
+        ],
+        "arxiv_id": "2610.20597v1"
+      },
+      {
+        "id": "hn:50096142",
+        "title": "Tiny Little Office",
+        "summary": "",
+        "url": "https://tinylittleoffice.com/",
+        "source": "Hacker News",
+        "score": 221,
+        "comments": 27
+      },
+      {
+        "id": "lob:d1c8zn",
+        "title": "Plasma 6.8 released (KDE's 30th birthday)",
+        "summary": "",
+        "url": "https://kde.org/announcements/plasma/6/6.8.0/",
+        "source": "Lobste.rs",
+        "score": 64,
+        "comments": 4,
+        "tags": [
+          "linux",
+          "release"
+        ]
+      },
+      {
+        "id": "lob:dyypvf",
+        "title": "Apple: Switch to Safari (from Chrome)",
+        "summary": "",
+        "url": "https://www.apple.com/safari/switch/",
+        "source": "Lobste.rs",
+        "score": 29,
+        "comments": 24,
+        "tags": [
+          "browsers"
+        ]
+      },
+      {
+        "id": "hn:50097369",
+        "title": "LFM2.5-24B-A2B: Built for fast on-device agents",
+        "summary": "",
+        "url": "https://www.liquid.ai/blog/lfm2-5-24b-a2b",
+        "source": "Hacker News",
+        "score": 107,
+        "comments": 30
+      },
+      {
+        "id": "arxiv:2610.20587v1",
+        "title": "Price of Anarchy of First-Price Auctions in Agentic Markets",
+        "summary": "An agentic market is a decentralized serving-time market where AI agents bid to claim each user prompt. An agent's bid is based on its expected value for the prompt, which is the expectation of the reward for its response minus its inference costs. First-price auctions (FPAs), in which the highest b",
+        "url": "https://arxiv.org/abs/2610.20587v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.GT",
+          "cs.AI",
+          "cs.LG"
+        ],
+        "arxiv_id": "2610.20587v1"
+      },
+      {
+        "id": "arxiv:2610.20576v1",
+        "title": "One Task, Many Interfaces: Simple Cross-Interface Consistency Training Improves LLM Agent Robustness",
+        "summary": "Post-training binds the competence of an LLM agent to the interface it was trained on. Semantics-preserving perturbations of that interface, such as renaming an action or changing the notation, leave the underlying task unchanged yet make the agent worse at it. Scoring each sample independently mean",
+        "url": "https://arxiv.org/abs/2610.20576v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.LG",
+          "cs.AI",
+          "cs.CL"
+        ],
+        "arxiv_id": "2610.20576v1"
+      },
+      {
+        "id": "arxiv:2610.20560v1",
+        "title": "PhySGA: A Physics-Space Grounded Agentic Framework for Generalizable and Interactive 3D Composition",
+        "summary": "3D object composition is pivotal to digital content creation and robot simulation, while also serving as a critical testbed for physical intelligence in foundation models. Previous methods either leverage large language models to directly predict object coordinates, or utilize generative diffusion p",
+        "url": "https://arxiv.org/abs/2610.20560v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.AI",
+          "cs.CV"
+        ],
+        "arxiv_id": "2610.20560v1"
+      },
+      {
+        "id": "lob:x9fqa4",
+        "title": "Awesome Gaming on Linux Without Cheating",
+        "summary": "",
+        "url": "https://onlineservices.epicgames.com/news/introducing-easy-anti-cheat-linux-v2",
+        "source": "Lobste.rs",
+        "score": 23,
+        "comments": 8,
+        "tags": [
+          "games",
+          "linux",
+          "security"
+        ]
+      },
+      {
+        "id": "lob:cwota8",
+        "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
+        "summary": "<p>Video showing an implanted device: <a href=\"https://www.youtube.com/watch?v=Nf4FEFlgv3Q\" rel=\"ugc\">https://www.youtube.com/watch?v=Nf4FEFlgv3Q</a></p>\n",
+        "url": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
+        "source": "Lobste.rs",
+        "score": 30,
+        "comments": 8,
+        "tags": [
+          "cryptography",
+          "security"
+        ]
+      },
+      {
+        "id": "lob:tsjuje",
+        "title": "yet another place where a linux man page is inaccurate",
+        "summary": "",
+        "url": "https://sebsite.pw/w/20261014-initstate.html",
+        "source": "Lobste.rs",
+        "score": 30,
+        "comments": 2,
+        "tags": [
+          "c",
+          "linux"
+        ]
+      }
+    ],
+    "ai_curated": true
+  },
+  "fear_greed": {
+    "value": 53,
+    "classification": "Neutral",
+    "timestamp": "2026-10-15 00:00:00"
+  }
+}
