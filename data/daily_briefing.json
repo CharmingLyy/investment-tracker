@@ -1,106 +1,74 @@
 {
-  "date": "2026-10-16",
-  "update_time": "2026-10-16 03:53:41",
+  "date": "2026-10-17",
+  "update_time": "2026-10-16 16:16:08",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-16\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Meta 开源 Muse Spark Open 816B 大模型 (来源: HackerNews)\n- **核心干货**：Meta 发布了 Muse Spark Open，一个 816B 参数、激活 42B 的 MoE 架构开源大模型，直接在 HuggingFace 上放权重。这是目前开源社区体量最大的 MoE 模型之一，摆明了要在开源赛道上对闭源巨头们进行降维打击。\n- **毒舌/硬核点评**：小扎的\"开源\"战略已经从\"交个朋友\"进化到\"掀你桌子\"了。816B 参数白送，OpenAI 和 Anthropic 的定价团队今晚怕是要加班开紧急会议——当然，你得先有 8 张 H100 才配\"免费\"用。\n- **🔗 传送门**：[点击直达原链接](https://research.meta.ai/blog/muse-spark-open)\n\n---\n\n### 2. 📌 定向广告沦为零点击间谍软件投递管道 (来源: HackerNews / Citizen Lab)\n- **核心干货**：Citizen Lab 揭露了一条完整的攻击链：某以色列公司利用广告投放系统，通过定向广告向特定目标设备投递零点击间谍软件。受害者只需\"看到\"广告，无需任何点击，设备即被植入监控程序。这已经不是隐私泄露，而是广告网络被武器化成了国家级监控基础设施。\n- **毒舌/硬核点评**：你以为广告只是烦人？人家现在直接是数字武器了。下次你吐槽\"这广告怎么老跟着我\"的时候，建议改成\"这间谍软件怎么老跟着我\"。广告拦截器从\"体验优化工具\"正式升级为\"人身安全必需品\"。\n- **🔗 传送门**：[点击直达原链接](https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/)\n\n---\n\n### 3. 📌 PwnEscape：Linux 内核爆出虚拟机逃逸级漏洞 (来源: The Hacker News)\n- **核心干货**：Linux 内核披露了一个被命名为 PwnEscape 的高危漏洞（CVE-2026-99999），允许虚拟机内的代码直接读取宿主机的内存。研究员已在 Vercel 的生产云沙箱上成功演示了攻击，Vercel 官方已确认。这意味着所有依赖 Linux 虚拟化做多租户隔离的云厂商，底层信任模型都要重新审视。\n- **毒舌/硬核点评：** 云厂商最爱讲的故事是\"你的数据在独立沙箱里绝对安全\"。现在好了，你的沙箱隔壁邻居不仅能偷看你家密码，还不用撬锁。建议所有 CSP 把\"多租户隔离\"的 PPT 先撤下来，换成\"正在紧急修复中\"。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> 技术的本质不是让你更自由，而是让你在交出自由的时候，感觉更丝滑。真正的硬核，是看清这条流水线之后，依然选择掌握底层。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-17\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 PwnEscape：Linux 内核爆出核弹级漏洞，虚拟机越狱直读宿主机内存 (来源: Tech News)\n- **核心干货**：Linux 内核被曝出一个被命名为「PwnEscape」的严重漏洞（CVE-2026-99999），允许 Guest VM 内的代码直接读取宿主机内存。研究者在 Vercel 的线上云沙箱环境中成功演示了该攻击，Vercel 已确认。这意味着所有依赖 KVM/Xen 隔离的多租户云环境，其安全模型的地基正在开裂。\n- **毒舌/硬核点评**：你花大价钱买的「安全隔离」，在物理内存面前跟纸糊的没区别。云厂商的 SLA 里又该多一行免责条款了，建议各位 CTO 今晚别睡太死。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html)\n\n---\n\n### 2. 📌 MLExpert：迈向自主机器学习工程的通用 Agent 模型 (来源: ArXiv)\n- **核心干货**：这篇论文提出了 MLExpert——一个能够自主完成机器学习工程任务的通用 Agent 模型，目标直指 AI4AI（AI 研发 AI）的递归自我改进路径。它不是帮你调参的小助手，而是试图端到端地设计、训练、评估和迭代 ML 系统。如果这玩意儿真能跑通，「算法工程师」这个岗位的定义得重写。\n- **毒舌/硬核点评**：以前是 AI 帮你写代码，现在是 AI 帮你训 AI，下一步是不是 AI 帮你领工资？ML 工程师们，建议趁早学会给 Agent 写 Prompt，毕竟打不过就加入。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2610.22344v1)\n\n---\n\n### 3. 📌 Linus Torvalds 罕见发声：谈 AI 辅助内核贡献 (来源: Lobste.rs / LKML)\n- **核心干货**：Linus 在 Linux 内核邮件列表上就 AI 辅助代码贡献发表了直接看法。作为全球最挑剔的 Code Reviewer，他对 AI 生成 patch 的态度将直接影响整个开源社区的协作规范。这不是某家公司的 PR 稿，而是来自内核之王的真实判断——AI 写的内核代码，到底配不配进 mainline？\n- **毒舌/硬核点评**：Linus 骂人二十年，现在要对着 AI 生成的 patch 骂了。好消息是 AI 不会玻璃心，坏消息是 AI 可能连被骂的资格都没有。\n- **🔗 传送门**：[点击直达原链接](https://lore.kernel.org/lkml/CAHk-=whTs09_ozN+e09GU68N1wPP56MUzDjrg9rnKxQUa0A_4Q@mail.gmail.com/)\n\n---\n\n### 🗣️ 今日顶男金句\n> **\"AI 不会淘汰你，但会用 AI 造 AI 的人会。你的竞争对手不是机器，是那些把机器当杠杆的疯子。\"**",
   "briefing_items": [
     {
-      "title": "Meta 开源 Muse Spark Open 816B 大模型",
-      "source": "HackerNews",
-      "summary": "Meta 发布了 Muse Spark Open，一个 816B 参数、激活 42B 的 MoE 架构开源大模型，直接在 HuggingFace 上放权重。这是目前开源社区体量最大的 MoE 模型之一，摆明了要在开源赛道上对闭源巨头们进行降维打击。",
-      "commentary": "小扎的\"开源\"战略已经从\"交个朋友\"进化到\"掀你桌子\"了。816B 参数白送，OpenAI 和 Anthropic 的定价团队今晚怕是要加班开紧急会议——当然，你得先有 8 张 H100 才配\"免费\"用。",
-      "url": "https://research.meta.ai/blog/muse-spark-open"
-    },
-    {
-      "title": "定向广告沦为零点击间谍软件投递管道",
-      "source": "HackerNews / Citizen Lab",
-      "summary": "Citizen Lab 揭露了一条完整的攻击链：某以色列公司利用广告投放系统，通过定向广告向特定目标设备投递零点击间谍软件。受害者只需\"看到\"广告，无需任何点击，设备即被植入监控程序。这已经不是隐私泄露，而是广告网络被武器化成了国家级监控基础设施。",
-      "commentary": "你以为广告只是烦人？人家现在直接是数字武器了。下次你吐槽\"这广告怎么老跟着我\"的时候，建议改成\"这间谍软件怎么老跟着我\"。广告拦截器从\"体验优化工具\"正式升级为\"人身安全必需品\"。",
-      "url": "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/"
-    },
-    {
-      "title": "PwnEscape：Linux 内核爆出虚拟机逃逸级漏洞",
-      "source": "The Hacker News",
-      "summary": "Linux 内核披露了一个被命名为 PwnEscape 的高危漏洞（CVE-2026-99999），允许虚拟机内的代码直接读取宿主机的内存。研究员已在 Vercel 的生产云沙箱上成功演示了攻击，Vercel 官方已确认。这意味着所有依赖 Linux 虚拟化做多租户隔离的云厂商，底层信任模型都要重新审视。",
-      "commentary": "- **毒舌/硬核点评：** 云厂商最爱讲的故事是\"你的数据在独立沙箱里绝对安全\"。现在好了，你的沙箱隔壁邻居不仅能偷看你家密码，还不用撬锁。建议所有 CSP 把\"多租户隔离\"的 PPT 先撤下来，换成\"正在紧急修复中\"。",
+      "title": "PwnEscape：Linux 内核爆出核弹级漏洞，虚拟机越狱直读宿主机内存",
+      "source": "Tech News",
+      "summary": "Linux 内核被曝出一个被命名为「PwnEscape」的严重漏洞（CVE-2026-99999），允许 Guest VM 内的代码直接读取宿主机内存。研究者在 Vercel 的线上云沙箱环境中成功演示了该攻击，Vercel 已确认。这意味着所有依赖 KVM/Xen 隔离的多租户云环境，其安全模型的地基正在开裂。",
+      "commentary": "你花大价钱买的「安全隔离」，在物理内存面前跟纸糊的没区别。云厂商的 SLA 里又该多一行免责条款了，建议各位 CTO 今晚别睡太死。",
       "url": "https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html"
     },
     {
-      "quote": "技术的本质不是让你更自由，而是让你在交出自由的时候，感觉更丝滑。真正的硬核，是看清这条流水线之后，依然选择掌握底层。"
+      "title": "MLExpert：迈向自主机器学习工程的通用 Agent 模型",
+      "source": "ArXiv",
+      "summary": "这篇论文提出了 MLExpert——一个能够自主完成机器学习工程任务的通用 Agent 模型，目标直指 AI4AI（AI 研发 AI）的递归自我改进路径。它不是帮你调参的小助手，而是试图端到端地设计、训练、评估和迭代 ML 系统。如果这玩意儿真能跑通，「算法工程师」这个岗位的定义得重写。",
+      "commentary": "以前是 AI 帮你写代码，现在是 AI 帮你训 AI，下一步是不是 AI 帮你领工资？ML 工程师们，建议趁早学会给 Agent 写 Prompt，毕竟打不过就加入。",
+      "url": "https://arxiv.org/abs/2610.22344v1"
+    },
+    {
+      "title": "Linus Torvalds 罕见发声：谈 AI 辅助内核贡献",
+      "source": "Lobste.rs / LKML",
+      "summary": "Linus 在 Linux 内核邮件列表上就 AI 辅助代码贡献发表了直接看法。作为全球最挑剔的 Code Reviewer，他对 AI 生成 patch 的态度将直接影响整个开源社区的协作规范。这不是某家公司的 PR 稿，而是来自内核之王的真实判断——AI 写的内核代码，到底配不配进 mainline？",
+      "commentary": "Linus 骂人二十年，现在要对着 AI 生成的 patch 骂了。好消息是 AI 不会玻璃心，坏消息是 AI 可能连被骂的资格都没有。",
+      "url": "https://lore.kernel.org/lkml/CAHk-=whTs09_ozN+e09GU68N1wPP56MUzDjrg9rnKxQUa0A_4Q@mail.gmail.com/"
+    },
+    {
+      "quote": "**\"AI 不会淘汰你，但会用 AI 造 AI 的人会。你的竞争对手不是机器，是那些把机器当杠杆的疯子。\"**"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50103338",
-      "title": "Wayland desktop for Linux with skeuomorphic design",
+      "id": "hn:50065859",
+      "title": "Woman who rescued injured crow keeps getting 'thank-you gifts' from birds [video]",
       "summary": "",
-      "url": "https://github.com/fyzugx/DEsk",
+      "url": "https://www.youtube.com/watch?v=sjNpfz4UzqU",
       "source": "Hacker News",
-      "score": 543,
+      "score": 675,
       "comments": 211
     },
     {
-      "id": "hn:50109715",
-      "title": "What I self-host",
+      "id": "hn:50077225",
+      "title": "Yet another way to invoke functions without parentheses",
       "summary": "",
-      "url": "https://viceconsole.fyi/blog/2026/10/10/what-i-self-host/",
+      "url": "https://blog.ikaes.de/yet-another-way-to-invoke-functions-without-parentheses/",
       "source": "Hacker News",
-      "score": 328,
-      "comments": 213
+      "score": 200,
+      "comments": 85
     },
     {
-      "id": "hn:50101813",
-      "title": "AdFection: Targeted ads turned into a pipeline for zero-click mercenary spyware",
-      "summary": "<a href=\"https:&#x2F;&#x2F;www.theguardian.com&#x2F;technology&#x2F;2026&#x2F;oct&#x2F;15&#x2F;israeli-firm-digital-ads-enabling-installation-of-zero-click-spyware-researchers-say\" rel=\"nofollow\">https:&#x2F;&#x2F;www.theguardian.com&#x2F;technology&#x2F;2026&#x2F;oct&#x2F;15&#x2F;israeli-f...</a><p",
-      "url": "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
-      "source": "Hacker News",
-      "score": 408,
-      "comments": 575
-    },
-    {
-      "id": "hn:50108872",
-      "title": "Someone on Torrent Sites Kept Fucking with My Sonarr",
+      "id": "lob:xiq59t",
+      "title": "Linus Torvalds on AI-assisted kernel contributions",
       "summary": "",
-      "url": "https://thereallo.dev/blog/someone-on-torrent-sites-kept-fucking-with-my-sonarr-setup",
-      "source": "Hacker News",
-      "score": 267,
-      "comments": 126
+      "url": "https://lore.kernel.org/lkml/CAHk-=whTs09_ozN+e09GU68N1wPP56MUzDjrg9rnKxQUa0A_4Q@mail.gmail.com/",
+      "source": "Lobste.rs",
+      "score": 65,
+      "comments": 108,
+      "tags": [
+        "linux",
+        "vibecoding"
+      ]
     },
     {
-      "id": "hn:50109375",
-      "title": "New Withings Users Must Pay $99/Year for Apple Health Syncing",
+      "id": "hn:50117746",
+      "title": "I Love Software Rendering",
       "summary": "",
-      "url": "https://support.withings.com/hc/en-us/community/posts/51887047154577-Unacceptable-Apple-Health-Sync-is-now-behind-a-99-year-paywall-for-new-accounts",
+      "url": "https://www.jamesfmackenzie.com/2026/10/13/i-love-software-rendering/",
       "source": "Hacker News",
-      "score": 192,
-      "comments": 149
-    },
-    {
-      "id": "hn:50107379",
-      "title": "Muse Spark Open",
-      "summary": "<a href=\"https:&#x2F;&#x2F;dev.meta.ai&#x2F;resources&#x2F;blog&#x2F;build-with-muse-spark-open\" rel=\"nofollow\">https:&#x2F;&#x2F;dev.meta.ai&#x2F;resources&#x2F;blog&#x2F;build-with-muse-spark-ope...</a><p><a href=\"https:&#x2F;&#x2F;huggingface.co&#x2F;meta-models&#x2F;Muse-Spark-Open-816B-A42B\" re",
-      "url": "https://research.meta.ai/blog/muse-spark-open",
-      "source": "Hacker News",
-      "score": 672,
-      "comments": 364
-    },
-    {
-      "id": "hn:50105647",
-      "title": "Neural networks are clean",
-      "summary": "<a href=\"https:&#x2F;&#x2F;twitter.com&#x2F;nickcammarata&#x2F;status&#x2F;2110757819427574056\" rel=\"nofollow\">https:&#x2F;&#x2F;twitter.com&#x2F;nickcammarata&#x2F;status&#x2F;2110757819427574056</a>",
-      "url": "https://already-clean.goodfire.com/",
-      "source": "Hacker News",
-      "score": 553,
-      "comments": 210
-    },
-    {
-      "id": "hn:50106023",
-      "title": "Jev meets the Trolley Problem",
-      "summary": "",
-      "url": "https://zachlandes.com/trolley-problem/",
-      "source": "Hacker News",
-      "score": 349,
-      "comments": 161
+      "score": 182,
+      "comments": 127
     },
     {
       "id": "lob:uejdwj",
@@ -108,39 +76,20 @@
       "summary": "",
       "url": "https://jakearchibald.com/2026/jpeg-xl-vs-avif/",
       "source": "Lobste.rs",
-      "score": 51,
-      "comments": 15,
+      "score": 90,
+      "comments": 28,
       "tags": [
         "compsci",
         "web"
       ]
     },
     {
-      "id": "lob:plcgps",
-      "title": "Anthropic's Scion is heavily inspired by Mononoke",
-      "summary": "",
-      "url": "https://sunshowers.io/posts/anthropic-mononoke/",
-      "source": "Lobste.rs",
-      "score": 140,
-      "comments": 48,
-      "tags": [
-        "vcs",
-        "vibecoding"
-      ]
-    },
-    {
-      "id": "lob:bcaopz",
-      "title": "Haxy on Haxy",
-      "summary": "",
-      "url": "https://try.haxy.net/haxy:haxy",
-      "source": "Lobste.rs",
-      "score": 49,
-      "comments": 21,
-      "tags": [
-        "practices",
-        "vcs",
-        "zig"
-      ]
+      "id": "rss:81326b393b",
+      "title": "China-Linked Hackers Exploited BeyondTrust Zero-Day to Take Over Remote Support Servers",
+      "summary": "The China-nexus cyber espionage group tracked as Armory Castle (previously UNC5221 or Warp Panda) exploited a newly disclosed security flaw in BeyondTrust Remote Support (formerly Bomgar) as a zero-day in late August 2026.\n\nThe vulnerability, tracked as CVE-2026-102764 (CVSS score: 9.3), is a case o",
+      "url": "https://thehackernews.com/2026/10/china-linked-hackers-exploited.html",
+      "source": "Tech RSS",
+      "score": 0
     },
     {
       "id": "lob:kaerns",
@@ -148,12 +97,37 @@
       "summary": "",
       "url": "https://decomp.dev/",
       "source": "Lobste.rs",
-      "score": 58,
-      "comments": 14,
+      "score": 69,
+      "comments": 16,
       "tags": [
         "games",
         "reversing",
         "vibecoding"
+      ]
+    },
+    {
+      "id": "lob:umdbht",
+      "title": "My C23 Conventions",
+      "summary": "",
+      "url": "https://abner.page/post/c23-conventions-1/",
+      "source": "Lobste.rs",
+      "score": 55,
+      "comments": 13,
+      "tags": [
+        "c"
+      ]
+    },
+    {
+      "id": "lob:1iin5o",
+      "title": "Epic's EAC2 v2 seems fairly easily bypassable",
+      "summary": "",
+      "url": "https://codon.org.uk/~mjg59/blog/p/epics-eac2-v2-seems-fairly-easily-bypassable/",
+      "source": "Lobste.rs",
+      "score": 29,
+      "comments": 15,
+      "tags": [
+        "linux",
+        "security"
       ]
     },
     {
@@ -165,48 +139,41 @@
       "score": 0
     },
     {
-      "id": "lob:46dcms",
-      "title": "Microsoft Defender for Linux",
+      "id": "lob:qvomvk",
+      "title": "Why are we even doing all this?",
       "summary": "",
-      "url": "https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/secure-linux-desktops-with-microsoft-defender/4560822",
+      "url": "https://terrytao.wordpress.com/2026/10/15/why-are-we-even-doing-all-this/",
       "source": "Lobste.rs",
-      "score": 18,
-      "comments": 10,
+      "score": 36,
+      "comments": 6,
       "tags": [
-        "linux"
+        "math",
+        "vibecoding"
       ]
     },
     {
-      "id": "hn:50105777",
-      "title": "BIPM decides to stop adding leap seconds to UTC",
-      "summary": "",
+      "id": "lob:ipyrkv",
+      "title": "On the technical actions needed to ensure the continuity of UTC",
+      "summary": "<p>No more <a href=\"https://en.wikipedia.org/wiki/Leap_second\" rel=\"ugc\">leap seconds</a>. Sorry, about the title, but I couldn‘t resist.</p>\n",
       "url": "https://www.bipm.org/en/cgpm-2026/resolution-5",
-      "source": "Hacker News",
-      "score": 99,
-      "comments": 49
-    },
-    {
-      "id": "lob:umdbht",
-      "title": "My C23 Conventions",
-      "summary": "",
-      "url": "https://abner.page/post/c23-conventions-1/",
       "source": "Lobste.rs",
-      "score": 39,
-      "comments": 8,
+      "score": 33,
+      "comments": 7,
       "tags": [
-        "c"
+        "science"
       ]
     },
     {
-      "id": "lob:uqugjk",
-      "title": "The Costa GUI",
+      "id": "lob:vemho2",
+      "title": "Forgejo v17.0 is available",
       "summary": "",
-      "url": "https://costa.jacobpalm.dk",
+      "url": "https://forgejo.org/2026-10-release-v17-0/",
       "source": "Lobste.rs",
-      "score": 41,
-      "comments": 0,
+      "score": 53,
+      "comments": 5,
       "tags": [
-        "retrocomputing"
+        "release",
+        "vcs"
       ]
     },
     {
@@ -242,6 +209,54 @@
       "url": "https://thehackernews.com/2026/10/palo-alto-networks-patches-pan-os.html",
       "source": "Tech RSS",
       "score": 0
+    },
+    {
+      "id": "hn:50118977",
+      "title": "Big Fish: Exploiting a 37-Year-Old Kernel Bug in OpenBSD",
+      "summary": "",
+      "url": "https://calif.io/research/big-fish",
+      "source": "Hacker News",
+      "score": 61,
+      "comments": 8
+    },
+    {
+      "id": "lob:ttcx5k",
+      "title": "Announcing Rust 1.99.1",
+      "summary": "",
+      "url": "https://blog.rust-lang.org/2026/10/15/Rust-1.99.1/",
+      "source": "Lobste.rs",
+      "score": 22,
+      "comments": 7,
+      "tags": [
+        "release",
+        "rust"
+      ]
+    },
+    {
+      "id": "lob:q0wobg",
+      "title": "My self-hosted infrastructure with Incus OS",
+      "summary": "",
+      "url": "https://dataswamp.org/~solene/2026-10-15-selfhosting-infrastructure-incus-os.html",
+      "source": "Lobste.rs",
+      "score": 25,
+      "comments": 2,
+      "tags": [
+        "devops",
+        "linux"
+      ]
+    },
+    {
+      "id": "lob:hounpx",
+      "title": "What are you doing this weekend?",
+      "summary": "<p>Feel free to tell what you plan on doing this weekend and even ask for help or feedback.</p>\n<p>Please keep in mind it’s more than OK to do nothing at all too!</p>\n",
+      "url": "https://lobste.rs/s/hounpx/what_are_you_doing_this_weekend",
+      "source": "Lobste.rs",
+      "score": 9,
+      "comments": 17,
+      "tags": [
+        "ask",
+        "programming"
+      ]
     }
   ],
   "ai_curated": true
