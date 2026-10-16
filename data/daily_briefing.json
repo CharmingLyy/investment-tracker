@@ -1,78 +1,118 @@
 {
   "date": "2026-10-16",
-  "update_time": "2026-10-15 16:31:01",
+  "update_time": "2026-10-16 03:53:41",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-16\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 为了下载一个 ISO，他顺手写了个内核漏洞利用 (来源: Hacker News)\n- **核心干货**：作者原本只是想下个 ISO 镜像，结果一路顺藤摸瓜挖出了 Linux 内核驱动的漏洞，并写成了可用的 exploit。更狠的是，他发现同一类 bug 至少还潜伏在 13 个 in-tree 驱动里——这些驱动在 x86 上岁月静好，一到 ARM 等非一致性架构就悄悄污染数据，堪称\"架构歧视型后门\"。而他手上根本没有对应硬件来验证。\n- **毒舌/硬核点评**：这就是传说中的\"下个 ISO 顺便把内核掀了\"。内核维护者们看到这帖估计已经开始默默 grep 了——建议直接把这条 HN 帖子转成 CVE 编号发出去。至于那 13 个驱动，它们不是没 bug，只是还没在正确的 CPU 上翻车而已。\n- **🔗 传送门**：[点击直达原链接](https://blog.dfb.sh/blog/eap770-root-for-two-zeros/)\n\n---\n\n### 2. 📌 零点击间谍软件：定向广告成了投毒管道 (来源: Hacker News / Citizen Lab)\n- **核心干货**：Citizen Lab 披露了一个叫 AdFection 的攻击链——攻击者把间谍软件藏在定向广告投放里，用户啥都不用点（zero-click）就中招。广告联盟这套\"精准触达\"的基础设施，被原封不动改造成了精准投毒的传送带。广告技术栈的每一个中间商，都成了攻击面的一部分。\n- **毒舌/硬核点评**：广告行业花二十年建了一套\"比你自己更懂你\"的定向系统，结果第一个把它用到极致的不是电商，是间谍。所谓\"精准营销\"和\"精准投毒\"之间，只差一个威胁模型。建议所有吹捧 AdTech 的人先看完这篇再谈 ROI。\n- **🔗 传送门**：[点击直达原链接](https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/)\n\n---\n\n### 3. 📌 一个任务，多种界面：跨界面一致性训练让 LLM Agent 更抗造 (来源: ArXiv)\n- **核心干货**：论文指出一个扎心的现实——LLM Agent 的能力被\"焊死\"在了训练时用的那套界面上。把动作改个名字、换个符号表示，语义完全不变，Agent 立马变傻。作者提出一种简单的跨界面一致性训练方法，让模型学会\"任务本质\"而非\"界面皮肤\"，显著提升鲁棒性。\n- **毒舌/硬核点评**：这不就是 AI 版的\"换个壳就不认识了\"？人类实习生换个 UI 都能适应，你的 Agent 却因为按钮从 `submit` 改名成 `send` 就当场宕机。这篇论文的价值在于：它承认了当前 Agent 的\"智能\"有多少是真正理解、有多少只是对特定 token 序列的条件反射。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2610.20576v1)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> \"你以为你在调参，其实你在给特定硬件和特定界面写情书——换个对象，它就不认你了。真正的通用智能，是连分手都不用重训。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-16\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Meta 开源 Muse Spark Open 816B 大模型 (来源: HackerNews)\n- **核心干货**：Meta 发布了 Muse Spark Open，一个 816B 参数、激活 42B 的 MoE 架构开源大模型，直接在 HuggingFace 上放权重。这是目前开源社区体量最大的 MoE 模型之一，摆明了要在开源赛道上对闭源巨头们进行降维打击。\n- **毒舌/硬核点评**：小扎的\"开源\"战略已经从\"交个朋友\"进化到\"掀你桌子\"了。816B 参数白送，OpenAI 和 Anthropic 的定价团队今晚怕是要加班开紧急会议——当然，你得先有 8 张 H100 才配\"免费\"用。\n- **🔗 传送门**：[点击直达原链接](https://research.meta.ai/blog/muse-spark-open)\n\n---\n\n### 2. 📌 定向广告沦为零点击间谍软件投递管道 (来源: HackerNews / Citizen Lab)\n- **核心干货**：Citizen Lab 揭露了一条完整的攻击链：某以色列公司利用广告投放系统，通过定向广告向特定目标设备投递零点击间谍软件。受害者只需\"看到\"广告，无需任何点击，设备即被植入监控程序。这已经不是隐私泄露，而是广告网络被武器化成了国家级监控基础设施。\n- **毒舌/硬核点评**：你以为广告只是烦人？人家现在直接是数字武器了。下次你吐槽\"这广告怎么老跟着我\"的时候，建议改成\"这间谍软件怎么老跟着我\"。广告拦截器从\"体验优化工具\"正式升级为\"人身安全必需品\"。\n- **🔗 传送门**：[点击直达原链接](https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/)\n\n---\n\n### 3. 📌 PwnEscape：Linux 内核爆出虚拟机逃逸级漏洞 (来源: The Hacker News)\n- **核心干货**：Linux 内核披露了一个被命名为 PwnEscape 的高危漏洞（CVE-2026-99999），允许虚拟机内的代码直接读取宿主机的内存。研究员已在 Vercel 的生产云沙箱上成功演示了攻击，Vercel 官方已确认。这意味着所有依赖 Linux 虚拟化做多租户隔离的云厂商，底层信任模型都要重新审视。\n- **毒舌/硬核点评：** 云厂商最爱讲的故事是\"你的数据在独立沙箱里绝对安全\"。现在好了，你的沙箱隔壁邻居不仅能偷看你家密码，还不用撬锁。建议所有 CSP 把\"多租户隔离\"的 PPT 先撤下来，换成\"正在紧急修复中\"。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> 技术的本质不是让你更自由，而是让你在交出自由的时候，感觉更丝滑。真正的硬核，是看清这条流水线之后，依然选择掌握底层。",
   "briefing_items": [
     {
-      "title": "为了下载一个 ISO，他顺手写了个内核漏洞利用",
-      "source": "Hacker News",
-      "summary": "作者原本只是想下个 ISO 镜像，结果一路顺藤摸瓜挖出了 Linux 内核驱动的漏洞，并写成了可用的 exploit。更狠的是，他发现同一类 bug 至少还潜伏在 13 个 in-tree 驱动里——这些驱动在 x86 上岁月静好，一到 ARM 等非一致性架构就悄悄污染数据，堪称\"架构歧视型后门\"。而他手上根本没有对应硬件来验证。",
-      "commentary": "这就是传说中的\"下个 ISO 顺便把内核掀了\"。内核维护者们看到这帖估计已经开始默默 grep 了——建议直接把这条 HN 帖子转成 CVE 编号发出去。至于那 13 个驱动，它们不是没 bug，只是还没在正确的 CPU 上翻车而已。",
-      "url": "https://blog.dfb.sh/blog/eap770-root-for-two-zeros/"
+      "title": "Meta 开源 Muse Spark Open 816B 大模型",
+      "source": "HackerNews",
+      "summary": "Meta 发布了 Muse Spark Open，一个 816B 参数、激活 42B 的 MoE 架构开源大模型，直接在 HuggingFace 上放权重。这是目前开源社区体量最大的 MoE 模型之一，摆明了要在开源赛道上对闭源巨头们进行降维打击。",
+      "commentary": "小扎的\"开源\"战略已经从\"交个朋友\"进化到\"掀你桌子\"了。816B 参数白送，OpenAI 和 Anthropic 的定价团队今晚怕是要加班开紧急会议——当然，你得先有 8 张 H100 才配\"免费\"用。",
+      "url": "https://research.meta.ai/blog/muse-spark-open"
     },
     {
-      "title": "零点击间谍软件：定向广告成了投毒管道",
-      "source": "Hacker News / Citizen Lab",
-      "summary": "Citizen Lab 披露了一个叫 AdFection 的攻击链——攻击者把间谍软件藏在定向广告投放里，用户啥都不用点（zero-click）就中招。广告联盟这套\"精准触达\"的基础设施，被原封不动改造成了精准投毒的传送带。广告技术栈的每一个中间商，都成了攻击面的一部分。",
-      "commentary": "广告行业花二十年建了一套\"比你自己更懂你\"的定向系统，结果第一个把它用到极致的不是电商，是间谍。所谓\"精准营销\"和\"精准投毒\"之间，只差一个威胁模型。建议所有吹捧 AdTech 的人先看完这篇再谈 ROI。",
+      "title": "定向广告沦为零点击间谍软件投递管道",
+      "source": "HackerNews / Citizen Lab",
+      "summary": "Citizen Lab 揭露了一条完整的攻击链：某以色列公司利用广告投放系统，通过定向广告向特定目标设备投递零点击间谍软件。受害者只需\"看到\"广告，无需任何点击，设备即被植入监控程序。这已经不是隐私泄露，而是广告网络被武器化成了国家级监控基础设施。",
+      "commentary": "你以为广告只是烦人？人家现在直接是数字武器了。下次你吐槽\"这广告怎么老跟着我\"的时候，建议改成\"这间谍软件怎么老跟着我\"。广告拦截器从\"体验优化工具\"正式升级为\"人身安全必需品\"。",
       "url": "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/"
     },
     {
-      "title": "一个任务，多种界面：跨界面一致性训练让 LLM Agent 更抗造",
-      "source": "ArXiv",
-      "summary": "论文指出一个扎心的现实——LLM Agent 的能力被\"焊死\"在了训练时用的那套界面上。把动作改个名字、换个符号表示，语义完全不变，Agent 立马变傻。作者提出一种简单的跨界面一致性训练方法，让模型学会\"任务本质\"而非\"界面皮肤\"，显著提升鲁棒性。",
-      "commentary": "这不就是 AI 版的\"换个壳就不认识了\"？人类实习生换个 UI 都能适应，你的 Agent 却因为按钮从 `submit` 改名成 `send` 就当场宕机。这篇论文的价值在于：它承认了当前 Agent 的\"智能\"有多少是真正理解、有多少只是对特定 token 序列的条件反射。",
-      "url": "https://arxiv.org/abs/2610.20576v1"
+      "title": "PwnEscape：Linux 内核爆出虚拟机逃逸级漏洞",
+      "source": "The Hacker News",
+      "summary": "Linux 内核披露了一个被命名为 PwnEscape 的高危漏洞（CVE-2026-99999），允许虚拟机内的代码直接读取宿主机的内存。研究员已在 Vercel 的生产云沙箱上成功演示了攻击，Vercel 官方已确认。这意味着所有依赖 Linux 虚拟化做多租户隔离的云厂商，底层信任模型都要重新审视。",
+      "commentary": "- **毒舌/硬核点评：** 云厂商最爱讲的故事是\"你的数据在独立沙箱里绝对安全\"。现在好了，你的沙箱隔壁邻居不仅能偷看你家密码，还不用撬锁。建议所有 CSP 把\"多租户隔离\"的 PPT 先撤下来，换成\"正在紧急修复中\"。",
+      "url": "https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html"
+    },
+    {
+      "quote": "技术的本质不是让你更自由，而是让你在交出自由的时候，感觉更丝滑。真正的硬核，是看清这条流水线之后，依然选择掌握底层。"
     }
   ],
   "candidates": [
-    {
-      "id": "hn:50070625",
-      "title": "Wanted to download an ISO, ended up writing a kernel exploit",
-      "summary": "Author here. Does anyone know what to do with the rest of the drivers? I found at least 13 in-tree drivers with the same bug class. The nasty part is they work fine on x86 and silently corrupt data on arm and other non-coherent archs, and I don&#x27;t have the hardware to test them.<p>I&#x27;d guess",
-      "url": "https://blog.dfb.sh/blog/eap770-root-for-two-zeros/",
-      "source": "Hacker News",
-      "score": 262,
-      "comments": 136
-    },
     {
       "id": "hn:50103338",
       "title": "Wayland desktop for Linux with skeuomorphic design",
       "summary": "",
       "url": "https://github.com/fyzugx/DEsk",
       "source": "Hacker News",
-      "score": 199,
-      "comments": 79
+      "score": 543,
+      "comments": 211
     },
     {
-      "id": "hn:50093568",
-      "title": "Things to know when you get cancer",
-      "summary": "",
-      "url": "https://jjmaxwell4.com/writing/things-to-know-when-you-get-cancer/",
-      "source": "Hacker News",
-      "score": 1769,
-      "comments": 421
-    },
-    {
-      "id": "hn:50102923",
-      "title": "Libreboot 26.10 \"Ominous Olive\" released with UEFI, Chromebook support",
-      "summary": "",
-      "url": "https://libreboot.org/news/libreboot2610.html",
-      "source": "Hacker News",
-      "score": 147,
-      "comments": 74
-    },
-    {
-      "id": "lob:j4tlzg",
-      "title": "What I Self-Host",
+      "id": "hn:50109715",
+      "title": "What I self-host",
       "summary": "",
       "url": "https://viceconsole.fyi/blog/2026/10/10/what-i-self-host/",
+      "source": "Hacker News",
+      "score": 328,
+      "comments": 213
+    },
+    {
+      "id": "hn:50101813",
+      "title": "AdFection: Targeted ads turned into a pipeline for zero-click mercenary spyware",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.theguardian.com&#x2F;technology&#x2F;2026&#x2F;oct&#x2F;15&#x2F;israeli-firm-digital-ads-enabling-installation-of-zero-click-spyware-researchers-say\" rel=\"nofollow\">https:&#x2F;&#x2F;www.theguardian.com&#x2F;technology&#x2F;2026&#x2F;oct&#x2F;15&#x2F;israeli-f...</a><p",
+      "url": "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
+      "source": "Hacker News",
+      "score": 408,
+      "comments": 575
+    },
+    {
+      "id": "hn:50108872",
+      "title": "Someone on Torrent Sites Kept Fucking with My Sonarr",
+      "summary": "",
+      "url": "https://thereallo.dev/blog/someone-on-torrent-sites-kept-fucking-with-my-sonarr-setup",
+      "source": "Hacker News",
+      "score": 267,
+      "comments": 126
+    },
+    {
+      "id": "hn:50109375",
+      "title": "New Withings Users Must Pay $99/Year for Apple Health Syncing",
+      "summary": "",
+      "url": "https://support.withings.com/hc/en-us/community/posts/51887047154577-Unacceptable-Apple-Health-Sync-is-now-behind-a-99-year-paywall-for-new-accounts",
+      "source": "Hacker News",
+      "score": 192,
+      "comments": 149
+    },
+    {
+      "id": "hn:50107379",
+      "title": "Muse Spark Open",
+      "summary": "<a href=\"https:&#x2F;&#x2F;dev.meta.ai&#x2F;resources&#x2F;blog&#x2F;build-with-muse-spark-open\" rel=\"nofollow\">https:&#x2F;&#x2F;dev.meta.ai&#x2F;resources&#x2F;blog&#x2F;build-with-muse-spark-ope...</a><p><a href=\"https:&#x2F;&#x2F;huggingface.co&#x2F;meta-models&#x2F;Muse-Spark-Open-816B-A42B\" re",
+      "url": "https://research.meta.ai/blog/muse-spark-open",
+      "source": "Hacker News",
+      "score": 672,
+      "comments": 364
+    },
+    {
+      "id": "hn:50105647",
+      "title": "Neural networks are clean",
+      "summary": "<a href=\"https:&#x2F;&#x2F;twitter.com&#x2F;nickcammarata&#x2F;status&#x2F;2110757819427574056\" rel=\"nofollow\">https:&#x2F;&#x2F;twitter.com&#x2F;nickcammarata&#x2F;status&#x2F;2110757819427574056</a>",
+      "url": "https://already-clean.goodfire.com/",
+      "source": "Hacker News",
+      "score": 553,
+      "comments": 210
+    },
+    {
+      "id": "hn:50106023",
+      "title": "Jev meets the Trolley Problem",
+      "summary": "",
+      "url": "https://zachlandes.com/trolley-problem/",
+      "source": "Hacker News",
+      "score": 349,
+      "comments": 161
+    },
+    {
+      "id": "lob:uejdwj",
+      "title": "JPEG XL vs AVIF for web use-cases",
+      "summary": "",
+      "url": "https://jakearchibald.com/2026/jpeg-xl-vs-avif/",
       "source": "Lobste.rs",
-      "score": 72,
-      "comments": 40,
+      "score": 51,
+      "comments": 15,
       "tags": [
-        "devops"
+        "compsci",
+        "web"
       ]
     },
     {
@@ -81,56 +121,12 @@
       "summary": "",
       "url": "https://sunshowers.io/posts/anthropic-mononoke/",
       "source": "Lobste.rs",
-      "score": 118,
-      "comments": 39,
+      "score": 140,
+      "comments": 48,
       "tags": [
         "vcs",
         "vibecoding"
       ]
-    },
-    {
-      "id": "lob:7xg9rm",
-      "title": "Introducing Firefox Enterprise",
-      "summary": "",
-      "url": "https://blog.mozilla.org/en/firefox/introducing-firefox-enterprise/",
-      "source": "Lobste.rs",
-      "score": 123,
-      "comments": 33,
-      "tags": [
-        "browsers",
-        "release",
-        "web"
-      ]
-    },
-    {
-      "id": "hn:50103630",
-      "title": "I know why Mathematicians weep",
-      "summary": "",
-      "url": "https://www.derekthompson.org/p/i-know-why-the-mathematicians-weep",
-      "source": "Hacker News",
-      "score": 153,
-      "comments": 221
-    },
-    {
-      "id": "hn:50102247",
-      "title": "Show HN: Unfenced – Land for sale that borders public land",
-      "summary": "",
-      "url": "https://unfenced.land/",
-      "source": "Hacker News",
-      "score": 150,
-      "comments": 113
-    },
-    {
-      "id": "arxiv:2610.20597v1",
-      "title": "Co-Evolving Acting and Forecasting for Language Agents",
-      "summary": "Training language agents is bottlenecked by the high cost of long-horizon rollouts, yet standard agentic reinforcement learning (RL) learns only from a terminal scalar reward, leaving the supervision in intermediate steps largely unused. Prior work exploits this supervision through value targets tha",
-      "url": "https://arxiv.org/abs/2610.20597v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2610.20597v1"
     },
     {
       "id": "lob:bcaopz",
@@ -138,8 +134,8 @@
       "summary": "",
       "url": "https://try.haxy.net/haxy:haxy",
       "source": "Lobste.rs",
-      "score": 35,
-      "comments": 15,
+      "score": 49,
+      "comments": 21,
       "tags": [
         "practices",
         "vcs",
@@ -147,99 +143,105 @@
       ]
     },
     {
-      "id": "hn:50103164",
-      "title": "C++26 Contracts: Introduction to Preconditions and Postconditions",
+      "id": "lob:kaerns",
+      "title": "Sunsetting decomp.dev",
       "summary": "",
-      "url": "https://www.cppstories.com/2026/cpp26_contracts/",
-      "source": "Hacker News",
-      "score": 65,
-      "comments": 62
-    },
-    {
-      "id": "hn:50105344",
-      "title": "I designed a nose guard for my dog and gave it away. Now 500 dogs wear one",
-      "summary": "",
-      "url": "https://snoutcover.com/one-year",
-      "source": "Hacker News",
-      "score": 80,
-      "comments": 40
-    },
-    {
-      "id": "arxiv:2610.20587v1",
-      "title": "Price of Anarchy of First-Price Auctions in Agentic Markets",
-      "summary": "An agentic market is a decentralized serving-time market where AI agents bid to claim each user prompt. An agent's bid is based on its expected value for the prompt, which is the expectation of the reward for its response minus its inference costs. First-price auctions (FPAs), in which the highest b",
-      "url": "https://arxiv.org/abs/2610.20587v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.GT",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2610.20587v1"
-    },
-    {
-      "id": "arxiv:2610.20576v1",
-      "title": "One Task, Many Interfaces: Simple Cross-Interface Consistency Training Improves LLM Agent Robustness",
-      "summary": "Post-training binds the competence of an LLM agent to the interface it was trained on. Semantics-preserving perturbations of that interface, such as renaming an action or changing the notation, leave the underlying task unchanged yet make the agent worse at it. Scoring each sample independently mean",
-      "url": "https://arxiv.org/abs/2610.20576v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_id": "2610.20576v1"
-    },
-    {
-      "id": "arxiv:2610.20560v1",
-      "title": "PhySGA: A Physics-Space Grounded Agentic Framework for Generalizable and Interactive 3D Composition",
-      "summary": "3D object composition is pivotal to digital content creation and robot simulation, while also serving as a critical testbed for physical intelligence in foundation models. Previous methods either leverage large language models to directly predict object coordinates, or utilize generative diffusion p",
-      "url": "https://arxiv.org/abs/2610.20560v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.CV"
-      ],
-      "arxiv_id": "2610.20560v1"
-    },
-    {
-      "id": "hn:50104654",
-      "title": "Simons Foundation Launches $15M Effort to Help Mathematicians Navigate AI Era",
-      "summary": "",
-      "url": "https://www.simonsfoundation.org/news/simons-foundation-launches-15m-effort-to-help-mathematicians-navigate-ai-era/",
-      "source": "Hacker News",
-      "score": 97,
-      "comments": 61
-    },
-    {
-      "id": "lob:5j4bwx",
-      "title": "Fixing C Strings With String Views",
-      "summary": "",
-      "url": "https://eliasebner.com/blog/guides/fixing-strings-in-c/",
+      "url": "https://decomp.dev/",
       "source": "Lobste.rs",
-      "score": 17,
-      "comments": 17,
+      "score": 58,
+      "comments": 14,
+      "tags": [
+        "games",
+        "reversing",
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "rss:953d01711c",
+      "title": "Critical PwnEscape Linux Kernel Vulnerability Lets Guest VMs Read Host Memory",
+      "summary": "A newly disclosed critical flaw in the Linux kernel allows code inside a virtual machine to read memory on the host computer it runs on. A researcher demonstrated the leak against Vercel's live cloud sandboxes, and Vercel confirmed it.\n\nThe flaw, now tracked as CVE-2026-99999 and nicknamed PwnEscape",
+      "url": "https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "lob:46dcms",
+      "title": "Microsoft Defender for Linux",
+      "summary": "",
+      "url": "https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/secure-linux-desktops-with-microsoft-defender/4560822",
+      "source": "Lobste.rs",
+      "score": 18,
+      "comments": 10,
+      "tags": [
+        "linux"
+      ]
+    },
+    {
+      "id": "hn:50105777",
+      "title": "BIPM decides to stop adding leap seconds to UTC",
+      "summary": "",
+      "url": "https://www.bipm.org/en/cgpm-2026/resolution-5",
+      "source": "Hacker News",
+      "score": 99,
+      "comments": 49
+    },
+    {
+      "id": "lob:umdbht",
+      "title": "My C23 Conventions",
+      "summary": "",
+      "url": "https://abner.page/post/c23-conventions-1/",
+      "source": "Lobste.rs",
+      "score": 39,
+      "comments": 8,
       "tags": [
         "c"
       ]
     },
     {
-      "id": "hn:50101813",
-      "title": "Zero-Click Spyware Delivered via Targeted Ads: AdFection",
+      "id": "lob:uqugjk",
+      "title": "The Costa GUI",
       "summary": "",
-      "url": "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
-      "source": "Hacker News",
-      "score": 135,
-      "comments": 16
+      "url": "https://costa.jacobpalm.dk",
+      "source": "Lobste.rs",
+      "score": 41,
+      "comments": 0,
+      "tags": [
+        "retrocomputing"
+      ]
     },
     {
-      "id": "hn:50105635",
-      "title": "Steam Client Is Now Faster Than Epic's New Vibe Coded Launcher",
-      "summary": "",
-      "url": "https://respawnfirst.com/steam-client-is-now-faster-than-epics-new-vibe-coded-launcher/",
-      "source": "Hacker News",
-      "score": 61,
-      "comments": 63
+      "id": "arxiv:2610.22350v1",
+      "title": "FDE-Gym: The Last Mile of AI Delivery",
+      "summary": "Existing agent benchmarks typically evaluate agents on well-specified tasks defined by issue reports, specifications, or task tickets. Real-world customer delivery is different: forward-deployed engineers (FDEs) must clarify ambiguous requirements, work in live systems, and uncover unstated constrai",
+      "url": "https://arxiv.org/abs/2610.22350v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.SE"
+      ],
+      "arxiv_id": "2610.22350v1"
+    },
+    {
+      "id": "arxiv:2610.22344v1",
+      "title": "MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering",
+      "summary": "Large language models (LLMs) are expanding from assisting scientific research and engineering to autonomously developing and improving AI systems, advancing AI for AI (AI4AI) as a pathway toward recursive self-improvement (RSI). Workflow-driven machine learning engineering (MLE) systems provide a pr",
+      "url": "https://arxiv.org/abs/2610.22344v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_id": "2610.22344v1"
+    },
+    {
+      "id": "rss:d6e8bf80af",
+      "title": "Palo Alto Networks Patches PAN-OS Authenticated RCE Flaw Amid Active Exploitation",
+      "summary": "Palo Alto Networks on Wednesday issued security updates for a high-severity flaw in PAN-OS software that has come under active exploitation.\n\nThe vulnerability, tracked as CVE-2026-0322 (CVSS score: 8.6), is a case of remote code execution in the management interface.\n\n\"A remote code execution (RCE)",
+      "url": "https://thehackernews.com/2026/10/palo-alto-networks-patches-pan-os.html",
+      "source": "Tech RSS",
+      "score": 0
     }
   ],
   "ai_curated": true
