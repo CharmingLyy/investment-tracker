@@ -1,0 +1,832 @@
+{
+  "update_time": "2026-10-16 12:51:12",
+  "stocks": {
+    "a_stocks": [
+      {
+        "market": "A股",
+        "code": "002050",
+        "name": "三花智控",
+        "symbol": "sz.002050",
+        "industry": null,
+        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
+        "price": 31.42,
+        "open": 30.98,
+        "high": 32.05,
+        "low": 30.74,
+        "change_pct": 2.92,
+        "volume": 43710203,
+        "turnover": 13.71,
+        "market_cap": null,
+        "pe": 33.08,
+        "cash_flow": 50.92,
+        "macd": -1.251,
+        "macd_signal": -0.8794,
+        "macd_histogram": -0.7432,
+        "rsi": 32.3,
+        "ma": {
+          "MA5": 31.7,
+          "MA10": 33.26,
+          "MA20": 34.14,
+          "MA60": 36.08
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
+        "price": 6.24,
+        "open": 6.22,
+        "high": 6.3,
+        "low": 6.18,
+        "change_pct": 0.65,
+        "volume": 42901880,
+        "turnover": 2.68,
+        "market_cap": null,
+        "pe": 71.54,
+        "cash_flow": 105.67,
+        "macd": -0.0834,
+        "macd_signal": -0.0627,
+        "macd_histogram": -0.0415,
+        "rsi": 35.14,
+        "ma": {
+          "MA5": 6.35,
+          "MA10": 6.39,
+          "MA20": 6.45,
+          "MA60": 6.61
+        },
+        "main_net_flow": null
+      }
+    ],
+    "hk_stocks": [
+      {
+        "market": "港股",
+        "code": "01810",
+        "name": "小米集团-W",
+        "symbol": "01810",
+        "industry": "Consumer Electronics",
+        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
+        "price": 26.66,
+        "open": 27.02,
+        "high": 27.62,
+        "low": 26.56,
+        "change_pct": -1.55,
+        "volume": 154063468,
+        "turnover": null,
+        "market_cap": 6863.58,
+        "pe": 19.6,
+        "cash_flow": 86.81,
+        "macd": -0.1698,
+        "macd_signal": -0.457,
+        "macd_histogram": 0.5744,
+        "rsi": 54.38,
+        "ma": {
+          "MA5": 25.94,
+          "MA10": 25.14,
+          "MA20": 25.59,
+          "MA60": 26.86
+        },
+        "main_net_flow": null
+      }
+    ],
+    "us_stocks": [
+      {
+        "market": "美股",
+        "code": "NVDA",
+        "name": "NVIDIA",
+        "symbol": "NVDA",
+        "industry": "Semiconductors",
+        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
+        "price": 217.23,
+        "open": 215.3,
+        "high": 218.47,
+        "low": 212.85,
+        "change_pct": -1.84,
+        "volume": 126789100,
+        "turnover": null,
+        "market_cap": 52454.53,
+        "pe": 27.46,
+        "cash_flow": 418.1,
+        "macd": 0.9434,
+        "macd_signal": 2.8078,
+        "macd_histogram": -3.7288,
+        "rsi": 40.2,
+        "ma": {
+          "MA5": 224.53,
+          "MA10": 230.27,
+          "MA20": 228.58,
+          "MA60": 219.72
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "GOOG",
+        "name": "Alphabet (Google)",
+        "symbol": "GOOG",
+        "industry": "Internet Content & Information",
+        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
+        "price": 344.91,
+        "open": 340.53,
+        "high": 348.4,
+        "low": 336.82,
+        "change_pct": 0.37,
+        "volume": 16392600,
+        "turnover": null,
+        "market_cap": 42182.27,
+        "pe": 17.31,
+        "cash_flow": 226.65,
+        "macd": 1.5307,
+        "macd_signal": 1.0646,
+        "macd_histogram": 0.9322,
+        "rsi": 51.97,
+        "ma": {
+          "MA5": 346.98,
+          "MA10": 345.59,
+          "MA20": 343.29,
+          "MA60": 341.93
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "CRCL",
+        "name": "Circle",
+        "symbol": "CRCL",
+        "industry": "Capital Markets",
+        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
+        "price": 86.97,
+        "open": 75.27,
+        "high": 87.76,
+        "low": 75.27,
+        "change_pct": 9.33,
+        "volume": 16037700,
+        "turnover": null,
+        "market_cap": 220.8,
+        "pe": 59.57,
+        "cash_flow": 2.06,
+        "macd": -0.9236,
+        "macd_signal": -0.7031,
+        "macd_histogram": -0.4411,
+        "rsi": 52.5,
+        "ma": {
+          "MA5": 83.83,
+          "MA10": 82.95,
+          "MA20": 85.93,
+          "MA60": 81.34
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "MP",
+        "name": "MP Materials",
+        "symbol": "MP",
+        "industry": "Other Industrial Metals & Mining",
+        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
+        "price": 41.61,
+        "open": 38.8,
+        "high": 41.71,
+        "low": 38.6,
+        "change_pct": 4.16,
+        "volume": 6584800,
+        "turnover": null,
+        "market_cap": 74.11,
+        "pe": 51.59,
+        "cash_flow": 4.33,
+        "macd": -2.4274,
+        "macd_signal": -1.9289,
+        "macd_histogram": -0.9971,
+        "rsi": 34.76,
+        "ma": {
+          "MA5": 42.7,
+          "MA10": 44.83,
+          "MA20": 46.44,
+          "MA60": 49.95
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "PLTR",
+        "name": "Palantir",
+        "symbol": "PLTR",
+        "industry": "Software - Infrastructure",
+        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
+        "price": 200.5,
+        "open": 196.85,
+        "high": 200.91,
+        "low": 192.6,
+        "change_pct": -0.23,
+        "volume": 24745000,
+        "turnover": null,
+        "market_cap": 4818.13,
+        "pe": 172.84,
+        "cash_flow": 21.59,
+        "macd": 7.6609,
+        "macd_signal": 7.1399,
+        "macd_histogram": 1.0419,
+        "rsi": 62.58,
+        "ma": {
+          "MA5": 205.64,
+          "MA10": 199.13,
+          "MA20": 193.13,
+          "MA60": 173.58
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "NOW",
+        "name": "ServiceNow",
+        "symbol": "NOW",
+        "industry": "Software - Application",
+        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
+        "price": 148.57,
+        "open": 139.65,
+        "high": 149.34,
+        "low": 139.58,
+        "change_pct": 6.14,
+        "volume": 17607900,
+        "turnover": null,
+        "market_cap": 1536.01,
+        "pe": 92.86,
+        "cash_flow": 51.49,
+        "macd": 2.4711,
+        "macd_signal": 1.8893,
+        "macd_histogram": 1.1636,
+        "rsi": 65.37,
+        "ma": {
+          "MA5": 141.67,
+          "MA10": 139.44,
+          "MA20": 137.59,
+          "MA60": 130.19
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "DDOG",
+        "name": "Datadog",
+        "symbol": "DDOG",
+        "industry": "Software - Application",
+        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
+        "price": 266.25,
+        "open": 260.72,
+        "high": 266.91,
+        "low": 256.22,
+        "change_pct": -1.14,
+        "volume": 2823800,
+        "turnover": null,
+        "market_cap": 956.04,
+        "pe": 532.5,
+        "cash_flow": 10.51,
+        "macd": 9.5707,
+        "macd_signal": 10.5743,
+        "macd_histogram": -2.0071,
+        "rsi": 52.06,
+        "ma": {
+          "MA5": 279.89,
+          "MA10": 277.65,
+          "MA20": 268.15,
+          "MA60": 249.61
+        },
+        "main_net_flow": null
+      }
+    ],
+    "crypto": [
+      {
+        "market": "加密货币",
+        "code": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "industry": "Smart Contract Platform",
+        "price": 82044,
+        "open": null,
+        "high": 82816,
+        "low": 79806,
+        "change_pct": 1.65,
+        "volume": 31626579635,
+        "turnover": null,
+        "market_cap": 16490.61,
+        "market_cap_rank": 1,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": 248.1612,
+        "macd_signal": 752.699,
+        "macd_histogram": -1009.0757,
+        "rsi": 48.3,
+        "ma": {
+          "MA5": 82142.19,
+          "MA10": 82485.2,
+          "MA20": 83594.39,
+          "MA60": 80334.77
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 20098843.0,
+          "total_supply": 20098843.0,
+          "circ_ratio": 100.0,
+          "price_change_7d": -1.32388,
+          "price_change_30d": 7.67891,
+          "ath_pct": -34.93,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      },
+      {
+        "market": "加密货币",
+        "code": "ethereum",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "industry": "Smart Contract Platform",
+        "price": 2466.21,
+        "open": null,
+        "high": 2488.84,
+        "low": 2324.97,
+        "change_pct": 4.9,
+        "volume": 14344825588,
+        "turnover": null,
+        "market_cap": 3012.15,
+        "market_cap_rank": 2,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -34.7219,
+        "macd_signal": -8.2766,
+        "macd_histogram": -52.8906,
+        "rsi": 42.58,
+        "ma": {
+          "MA5": 2453.76,
+          "MA10": 2483.94,
+          "MA20": 2588.53,
+          "MA60": 2525.02
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 122139509.34816553,
+          "total_supply": 122139509.34816553,
+          "circ_ratio": 100.0,
+          "price_change_7d": -1.4748,
+          "price_change_30d": 1.88153,
+          "ath_pct": -50.14,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      }
+    ]
+  },
+  "news": [
+    {
+      "id": "35b871d31c",
+      "title": "[播客]独家实拍：我那永远跪着的母亲(11/07 22:10)",
+      "summary": "独家实拍：我那永远跪着的母亲",
+      "link": "http://go.rss.sina.com.cn/redirect.php?url=http://you.video.sina.com.cn/b/16972162-1239095354.html",
+      "source": "rss.sina.com.cn",
+      "published": ""
+    },
+    {
+      "id": "547b98a048",
+      "title": "Is Apple’s foldable iPhone Duo worth $2,000? See how it stacks up against other foldable phones.",
+      "summary": "Preorders for the iPhone Duo began Friday, marking Apple’s debut in a foldable phone market largely dominated by Samsung and Google.",
+      "link": "https://www.marketwatch.com/story/is-apples-foldable-iphone-duo-worth-2-000-see-how-it-stacks-up-against-other-foldable-phones-c9066b13?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 16 Oct 2026 12:00:00 GMT"
+    },
+    {
+      "id": "bd843604c2",
+      "title": "‘It’s a wait-and-see situation’: I’m 63 and diagnosed with lymphoma. Should I take my Social Security next year?",
+      "summary": "“My plan is to continue working as long as I’m able to do so and invest my Social Security benefits while I’m still earning a paycheck.”",
+      "link": "https://www.marketwatch.com/story/its-a-wait-and-see-situation-im-63-and-diagnosed-with-lymphoma-should-i-take-my-social-security-next-year-ea88b419?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 16 Oct 2026 11:30:00 GMT"
+    },
+    {
+      "id": "098f8ed787",
+      "title": "My wife says we can’t afford to retire. I vetoed her $8,000 trip to Italy. We’re in our 60s and have $4 million. Do I keep working?",
+      "summary": "“I worry about healthcare, long-term care, inflation, a long bear market and living to 95.”",
+      "link": "https://www.marketwatch.com/story/my-wife-says-we-cant-afford-to-retire-we-have-4-million-do-i-just-keep-working-f1b6b085?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 16 Oct 2026 11:15:00 GMT"
+    },
+    {
+      "id": "09d024db56",
+      "title": "Can a $55,000-plus robot load the dishwasher? Inside my afternoon with two humanoid housekeepers.",
+      "summary": "Tau Robotics’ humanoids vacuumed my floors and wiped my counters — with some help from humans behind the scenes",
+      "link": "https://www.marketwatch.com/story/can-a-55-000-plus-robot-load-the-dishwasher-inside-my-afternoon-with-two-humanoid-housekeepers-0a9569ab?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 16 Oct 2026 11:00:00 GMT"
+    },
+    {
+      "id": "6c1dbd4aa8",
+      "title": "Nearly 40% of the S&P 500 is in a bear market. Here are 10 of those stocks that analysts say can gain up to 81%.",
+      "summary": "The S&amp;P 500’s strong overall performance reflects its heavy weighting at the top. Under the surface, nearly 40% of the index’s stocks are down at least 20% from their 52-week highs.",
+      "link": "https://www.marketwatch.com/story/nearly-40-of-the-s-p-500-is-in-a-bear-market-here-are-10-of-those-stocks-that-analysts-say-can-gain-up-to-81-93a51af6?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 16 Oct 2026 10:56:00 GMT"
+    },
+    {
+      "id": "49065a3b2c",
+      "title": "How a midterm sweep by Democrats could turn this tech selloff into a tech crash",
+      "summary": "Popular AI names are under pressure again this week — but the pain could worsen after the Nov. 3 election.",
+      "link": "https://www.marketwatch.com/story/how-a-midterm-sweep-by-democrats-could-turn-this-tech-selloff-into-a-tech-crash-a1d1a82f?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 16 Oct 2026 10:49:00 GMT"
+    },
+    {
+      "id": "7b81871101",
+      "title": "Jefferies technical analyst finds an encouraging development in Thursday rebound, setting stage for rally into year-end",
+      "summary": "Lower rates are starting to generate a bid for the rest of the market, underneath the top handful of tech stocks.",
+      "link": "https://www.marketwatch.com/story/jefferies-technical-analyst-finds-an-encouraging-development-in-thursday-rebound-setting-stage-for-rally-into-year-end-34ad6e31?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 16 Oct 2026 10:38:00 GMT"
+    },
+    {
+      "id": "d3aaee4f37",
+      "title": "The best of the AI trade could be behind us. Here’s how to prepare, according to Barclays.",
+      "summary": "The London-based bank recommends holding on to Big Tech stocks ahead of their earnings, but has a preference for companies with strong business models.",
+      "link": "https://www.marketwatch.com/story/the-best-of-the-ai-trade-could-be-behind-us-heres-how-to-prepare-according-to-barclays-725ab4dd?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 16 Oct 2026 10:21:00 GMT"
+    },
+    {
+      "id": "d28f4c14c2",
+      "title": "I’m 64 with two sons, but only one works in the family firm. Should I leave him 70% of the business?",
+      "summary": "“I have some reservations about the long-term stability of my younger son’s marriage.”",
+      "link": "https://www.marketwatch.com/story/im-64-years-old-with-two-sons-but-only-one-works-in-the-family-firm-should-i-leave-him-70-of-the-business-2fe6c382?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 16 Oct 2026 10:16:00 GMT"
+    },
+    {
+      "id": "371cc9f85a",
+      "title": "Here are the key things Fed Chairman Kevin Warsh said — and didn’t say — while Americans were sleeping Thursday night",
+      "summary": "Federal Reserve Chairman Kevin Warsh had the opportunity Thursday night to shape expectations before the central bank’s interest-rate-setting meeting in two weeks — and in keeping with his practice of",
+      "link": "https://www.marketwatch.com/story/here-are-the-key-things-fed-chairman-kevin-warsh-said-and-didnt-say-while-americans-were-sleeping-thursday-night-b82238a1?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 16 Oct 2026 09:16:00 GMT"
+    },
+    {
+      "id": "520e324399",
+      "title": "Why is Varonis Systems stock rallying today?",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-varonis-systems-stock-rallying-today-93CH-4954058",
+      "source": "www.investing.com",
+      "published": "2026-10-16 12:37:05"
+    },
+    {
+      "id": "7cc1bac3e5",
+      "title": "EMA panel backs Ascendis’ achondroplasia drug TransCon CNP",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/ema-panel-backs-ascendis-achondroplasia-drug-transcon-cnp-93CH-4954057",
+      "source": "www.investing.com",
+      "published": "2026-10-16 12:36:41"
+    },
+    {
+      "id": "efcf07dd93",
+      "title": "Neurocrine presents data on congenital adrenal hyperplasia impacts",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/neurocrine-presents-data-on-congenital-adrenal-hyperplasia-impacts-93CH-4954056",
+      "source": "www.investing.com",
+      "published": "2026-10-16 12:36:40"
+    },
+    {
+      "id": "4907d09d70",
+      "title": "Corporación América Airports reports 3.4% rise in September traffic",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/corporacion-america-airports-reports-34-rise-in-september-traffic-93CH-4954055",
+      "source": "www.investing.com",
+      "published": "2026-10-16 12:36:33"
+    },
+    {
+      "id": "a77d22707c",
+      "title": "Actinium to present preclinical data on ATNM-400 at EANM congress",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/actinium-to-present-preclinical-data-on-atnm400-at-eanm-congress-93CH-4954054",
+      "source": "www.investing.com",
+      "published": "2026-10-16 12:36:32"
+    },
+    {
+      "id": "a4c3daf05e",
+      "title": "AutoNation appoints Goodyear CEO to board of directors",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/autonation-appoints-goodyear-ceo-to-board-of-directors-93CH-4954053",
+      "source": "www.investing.com",
+      "published": "2026-10-16 12:36:29"
+    },
+    {
+      "id": "798161d098",
+      "title": "CSW Industrials declares $0.30 quarterly dividend",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/csw-industrials-declares-030-quarterly-dividend-93CH-4954052",
+      "source": "www.investing.com",
+      "published": "2026-10-16 12:36:26"
+    },
+    {
+      "id": "a32e1b4a2d",
+      "title": "Earnings call transcript: Vertu Motors lifts H1 2026 profit outlook again",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-vertu-motors-lifts-h1-2026-profit-outlook-again-93CH-4954051",
+      "source": "www.investing.com",
+      "published": "2026-10-16 12:35:37"
+    },
+    {
+      "id": "dee3b48f6b",
+      "title": "European stocks on course for best week since Aug on easing yields",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/european-stocks-on-course-for-best-week-since-aug-on-easing-yields-4953245",
+      "source": "www.investing.com",
+      "published": "2026-10-16 12:34:50"
+    },
+    {
+      "id": "fc275d4fc9",
+      "title": "Johnson Matthey rises as Citi renews coverage on earnings growth outlook",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/johnson-matthey-rises-as-citi-renews-coverage-on-earnings-growth-outlook-4954049",
+      "source": "www.investing.com",
+      "published": "2026-10-16 12:32:28"
+    }
+  ],
+  "briefing": {
+    "date": "2026-10-16",
+    "update_time": "2026-10-16 03:53:41",
+    "candidate_count": 20,
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-16\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Meta 开源 Muse Spark Open 816B 大模型 (来源: HackerNews)\n- **核心干货**：Meta 发布了 Muse Spark Open，一个 816B 参数、激活 42B 的 MoE 架构开源大模型，直接在 HuggingFace 上放权重。这是目前开源社区体量最大的 MoE 模型之一，摆明了要在开源赛道上对闭源巨头们进行降维打击。\n- **毒舌/硬核点评**：小扎的\"开源\"战略已经从\"交个朋友\"进化到\"掀你桌子\"了。816B 参数白送，OpenAI 和 Anthropic 的定价团队今晚怕是要加班开紧急会议——当然，你得先有 8 张 H100 才配\"免费\"用。\n- **🔗 传送门**：[点击直达原链接](https://research.meta.ai/blog/muse-spark-open)\n\n---\n\n### 2. 📌 定向广告沦为零点击间谍软件投递管道 (来源: HackerNews / Citizen Lab)\n- **核心干货**：Citizen Lab 揭露了一条完整的攻击链：某以色列公司利用广告投放系统，通过定向广告向特定目标设备投递零点击间谍软件。受害者只需\"看到\"广告，无需任何点击，设备即被植入监控程序。这已经不是隐私泄露，而是广告网络被武器化成了国家级监控基础设施。\n- **毒舌/硬核点评**：你以为广告只是烦人？人家现在直接是数字武器了。下次你吐槽\"这广告怎么老跟着我\"的时候，建议改成\"这间谍软件怎么老跟着我\"。广告拦截器从\"体验优化工具\"正式升级为\"人身安全必需品\"。\n- **🔗 传送门**：[点击直达原链接](https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/)\n\n---\n\n### 3. 📌 PwnEscape：Linux 内核爆出虚拟机逃逸级漏洞 (来源: The Hacker News)\n- **核心干货**：Linux 内核披露了一个被命名为 PwnEscape 的高危漏洞（CVE-2026-99999），允许虚拟机内的代码直接读取宿主机的内存。研究员已在 Vercel 的生产云沙箱上成功演示了攻击，Vercel 官方已确认。这意味着所有依赖 Linux 虚拟化做多租户隔离的云厂商，底层信任模型都要重新审视。\n- **毒舌/硬核点评：** 云厂商最爱讲的故事是\"你的数据在独立沙箱里绝对安全\"。现在好了，你的沙箱隔壁邻居不仅能偷看你家密码，还不用撬锁。建议所有 CSP 把\"多租户隔离\"的 PPT 先撤下来，换成\"正在紧急修复中\"。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> 技术的本质不是让你更自由，而是让你在交出自由的时候，感觉更丝滑。真正的硬核，是看清这条流水线之后，依然选择掌握底层。",
+    "briefing_items": [
+      {
+        "title": "Meta 开源 Muse Spark Open 816B 大模型",
+        "source": "HackerNews",
+        "summary": "Meta 发布了 Muse Spark Open，一个 816B 参数、激活 42B 的 MoE 架构开源大模型，直接在 HuggingFace 上放权重。这是目前开源社区体量最大的 MoE 模型之一，摆明了要在开源赛道上对闭源巨头们进行降维打击。",
+        "commentary": "小扎的\"开源\"战略已经从\"交个朋友\"进化到\"掀你桌子\"了。816B 参数白送，OpenAI 和 Anthropic 的定价团队今晚怕是要加班开紧急会议——当然，你得先有 8 张 H100 才配\"免费\"用。",
+        "url": "https://research.meta.ai/blog/muse-spark-open"
+      },
+      {
+        "title": "定向广告沦为零点击间谍软件投递管道",
+        "source": "HackerNews / Citizen Lab",
+        "summary": "Citizen Lab 揭露了一条完整的攻击链：某以色列公司利用广告投放系统，通过定向广告向特定目标设备投递零点击间谍软件。受害者只需\"看到\"广告，无需任何点击，设备即被植入监控程序。这已经不是隐私泄露，而是广告网络被武器化成了国家级监控基础设施。",
+        "commentary": "你以为广告只是烦人？人家现在直接是数字武器了。下次你吐槽\"这广告怎么老跟着我\"的时候，建议改成\"这间谍软件怎么老跟着我\"。广告拦截器从\"体验优化工具\"正式升级为\"人身安全必需品\"。",
+        "url": "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/"
+      },
+      {
+        "title": "PwnEscape：Linux 内核爆出虚拟机逃逸级漏洞",
+        "source": "The Hacker News",
+        "summary": "Linux 内核披露了一个被命名为 PwnEscape 的高危漏洞（CVE-2026-99999），允许虚拟机内的代码直接读取宿主机的内存。研究员已在 Vercel 的生产云沙箱上成功演示了攻击，Vercel 官方已确认。这意味着所有依赖 Linux 虚拟化做多租户隔离的云厂商，底层信任模型都要重新审视。",
+        "commentary": "- **毒舌/硬核点评：** 云厂商最爱讲的故事是\"你的数据在独立沙箱里绝对安全\"。现在好了，你的沙箱隔壁邻居不仅能偷看你家密码，还不用撬锁。建议所有 CSP 把\"多租户隔离\"的 PPT 先撤下来，换成\"正在紧急修复中\"。",
+        "url": "https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html"
+      },
+      {
+        "quote": "技术的本质不是让你更自由，而是让你在交出自由的时候，感觉更丝滑。真正的硬核，是看清这条流水线之后，依然选择掌握底层。"
+      }
+    ],
+    "candidates": [
+      {
+        "id": "hn:50103338",
+        "title": "Wayland desktop for Linux with skeuomorphic design",
+        "summary": "",
+        "url": "https://github.com/fyzugx/DEsk",
+        "source": "Hacker News",
+        "score": 543,
+        "comments": 211
+      },
+      {
+        "id": "hn:50109715",
+        "title": "What I self-host",
+        "summary": "",
+        "url": "https://viceconsole.fyi/blog/2026/10/10/what-i-self-host/",
+        "source": "Hacker News",
+        "score": 328,
+        "comments": 213
+      },
+      {
+        "id": "hn:50101813",
+        "title": "AdFection: Targeted ads turned into a pipeline for zero-click mercenary spyware",
+        "summary": "<a href=\"https:&#x2F;&#x2F;www.theguardian.com&#x2F;technology&#x2F;2026&#x2F;oct&#x2F;15&#x2F;israeli-firm-digital-ads-enabling-installation-of-zero-click-spyware-researchers-say\" rel=\"nofollow\">https:&#x2F;&#x2F;www.theguardian.com&#x2F;technology&#x2F;2026&#x2F;oct&#x2F;15&#x2F;israeli-f...</a><p",
+        "url": "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
+        "source": "Hacker News",
+        "score": 408,
+        "comments": 575
+      },
+      {
+        "id": "hn:50108872",
+        "title": "Someone on Torrent Sites Kept Fucking with My Sonarr",
+        "summary": "",
+        "url": "https://thereallo.dev/blog/someone-on-torrent-sites-kept-fucking-with-my-sonarr-setup",
+        "source": "Hacker News",
+        "score": 267,
+        "comments": 126
+      },
+      {
+        "id": "hn:50109375",
+        "title": "New Withings Users Must Pay $99/Year for Apple Health Syncing",
+        "summary": "",
+        "url": "https://support.withings.com/hc/en-us/community/posts/51887047154577-Unacceptable-Apple-Health-Sync-is-now-behind-a-99-year-paywall-for-new-accounts",
+        "source": "Hacker News",
+        "score": 192,
+        "comments": 149
+      },
+      {
+        "id": "hn:50107379",
+        "title": "Muse Spark Open",
+        "summary": "<a href=\"https:&#x2F;&#x2F;dev.meta.ai&#x2F;resources&#x2F;blog&#x2F;build-with-muse-spark-open\" rel=\"nofollow\">https:&#x2F;&#x2F;dev.meta.ai&#x2F;resources&#x2F;blog&#x2F;build-with-muse-spark-ope...</a><p><a href=\"https:&#x2F;&#x2F;huggingface.co&#x2F;meta-models&#x2F;Muse-Spark-Open-816B-A42B\" re",
+        "url": "https://research.meta.ai/blog/muse-spark-open",
+        "source": "Hacker News",
+        "score": 672,
+        "comments": 364
+      },
+      {
+        "id": "hn:50105647",
+        "title": "Neural networks are clean",
+        "summary": "<a href=\"https:&#x2F;&#x2F;twitter.com&#x2F;nickcammarata&#x2F;status&#x2F;2110757819427574056\" rel=\"nofollow\">https:&#x2F;&#x2F;twitter.com&#x2F;nickcammarata&#x2F;status&#x2F;2110757819427574056</a>",
+        "url": "https://already-clean.goodfire.com/",
+        "source": "Hacker News",
+        "score": 553,
+        "comments": 210
+      },
+      {
+        "id": "hn:50106023",
+        "title": "Jev meets the Trolley Problem",
+        "summary": "",
+        "url": "https://zachlandes.com/trolley-problem/",
+        "source": "Hacker News",
+        "score": 349,
+        "comments": 161
+      },
+      {
+        "id": "lob:uejdwj",
+        "title": "JPEG XL vs AVIF for web use-cases",
+        "summary": "",
+        "url": "https://jakearchibald.com/2026/jpeg-xl-vs-avif/",
+        "source": "Lobste.rs",
+        "score": 51,
+        "comments": 15,
+        "tags": [
+          "compsci",
+          "web"
+        ]
+      },
+      {
+        "id": "lob:plcgps",
+        "title": "Anthropic's Scion is heavily inspired by Mononoke",
+        "summary": "",
+        "url": "https://sunshowers.io/posts/anthropic-mononoke/",
+        "source": "Lobste.rs",
+        "score": 140,
+        "comments": 48,
+        "tags": [
+          "vcs",
+          "vibecoding"
+        ]
+      },
+      {
+        "id": "lob:bcaopz",
+        "title": "Haxy on Haxy",
+        "summary": "",
+        "url": "https://try.haxy.net/haxy:haxy",
+        "source": "Lobste.rs",
+        "score": 49,
+        "comments": 21,
+        "tags": [
+          "practices",
+          "vcs",
+          "zig"
+        ]
+      },
+      {
+        "id": "lob:kaerns",
+        "title": "Sunsetting decomp.dev",
+        "summary": "",
+        "url": "https://decomp.dev/",
+        "source": "Lobste.rs",
+        "score": 58,
+        "comments": 14,
+        "tags": [
+          "games",
+          "reversing",
+          "vibecoding"
+        ]
+      },
+      {
+        "id": "rss:953d01711c",
+        "title": "Critical PwnEscape Linux Kernel Vulnerability Lets Guest VMs Read Host Memory",
+        "summary": "A newly disclosed critical flaw in the Linux kernel allows code inside a virtual machine to read memory on the host computer it runs on. A researcher demonstrated the leak against Vercel's live cloud sandboxes, and Vercel confirmed it.\n\nThe flaw, now tracked as CVE-2026-99999 and nicknamed PwnEscape",
+        "url": "https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html",
+        "source": "Tech RSS",
+        "score": 0
+      },
+      {
+        "id": "lob:46dcms",
+        "title": "Microsoft Defender for Linux",
+        "summary": "",
+        "url": "https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/secure-linux-desktops-with-microsoft-defender/4560822",
+        "source": "Lobste.rs",
+        "score": 18,
+        "comments": 10,
+        "tags": [
+          "linux"
+        ]
+      },
+      {
+        "id": "hn:50105777",
+        "title": "BIPM decides to stop adding leap seconds to UTC",
+        "summary": "",
+        "url": "https://www.bipm.org/en/cgpm-2026/resolution-5",
+        "source": "Hacker News",
+        "score": 99,
+        "comments": 49
+      },
+      {
+        "id": "lob:umdbht",
+        "title": "My C23 Conventions",
+        "summary": "",
+        "url": "https://abner.page/post/c23-conventions-1/",
+        "source": "Lobste.rs",
+        "score": 39,
+        "comments": 8,
+        "tags": [
+          "c"
+        ]
+      },
+      {
+        "id": "lob:uqugjk",
+        "title": "The Costa GUI",
+        "summary": "",
+        "url": "https://costa.jacobpalm.dk",
+        "source": "Lobste.rs",
+        "score": 41,
+        "comments": 0,
+        "tags": [
+          "retrocomputing"
+        ]
+      },
+      {
+        "id": "arxiv:2610.22350v1",
+        "title": "FDE-Gym: The Last Mile of AI Delivery",
+        "summary": "Existing agent benchmarks typically evaluate agents on well-specified tasks defined by issue reports, specifications, or task tickets. Real-world customer delivery is different: forward-deployed engineers (FDEs) must clarify ambiguous requirements, work in live systems, and uncover unstated constrai",
+        "url": "https://arxiv.org/abs/2610.22350v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.AI",
+          "cs.CL",
+          "cs.SE"
+        ],
+        "arxiv_id": "2610.22350v1"
+      },
+      {
+        "id": "arxiv:2610.22344v1",
+        "title": "MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering",
+        "summary": "Large language models (LLMs) are expanding from assisting scientific research and engineering to autonomously developing and improving AI systems, advancing AI for AI (AI4AI) as a pathway toward recursive self-improvement (RSI). Workflow-driven machine learning engineering (MLE) systems provide a pr",
+        "url": "https://arxiv.org/abs/2610.22344v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.AI",
+          "cs.CL",
+          "cs.LG"
+        ],
+        "arxiv_id": "2610.22344v1"
+      },
+      {
+        "id": "rss:d6e8bf80af",
+        "title": "Palo Alto Networks Patches PAN-OS Authenticated RCE Flaw Amid Active Exploitation",
+        "summary": "Palo Alto Networks on Wednesday issued security updates for a high-severity flaw in PAN-OS software that has come under active exploitation.\n\nThe vulnerability, tracked as CVE-2026-0322 (CVSS score: 8.6), is a case of remote code execution in the management interface.\n\n\"A remote code execution (RCE)",
+        "url": "https://thehackernews.com/2026/10/palo-alto-networks-patches-pan-os.html",
+        "source": "Tech RSS",
+        "score": 0
+      }
+    ],
+    "ai_curated": true
+  },
+  "fear_greed": {
+    "value": 63,
+    "classification": "Greed",
+    "timestamp": "2026-10-16 00:00:00"
+  }
+}
