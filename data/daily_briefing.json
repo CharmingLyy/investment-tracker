@@ -1,52 +1,70 @@
 {
   "date": "2026-10-17",
-  "update_time": "2026-10-16 16:16:08",
+  "update_time": "2026-10-17 03:43:43",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-17\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 PwnEscape：Linux 内核爆出核弹级漏洞，虚拟机越狱直读宿主机内存 (来源: Tech News)\n- **核心干货**：Linux 内核被曝出一个被命名为「PwnEscape」的严重漏洞（CVE-2026-99999），允许 Guest VM 内的代码直接读取宿主机内存。研究者在 Vercel 的线上云沙箱环境中成功演示了该攻击，Vercel 已确认。这意味着所有依赖 KVM/Xen 隔离的多租户云环境，其安全模型的地基正在开裂。\n- **毒舌/硬核点评**：你花大价钱买的「安全隔离」，在物理内存面前跟纸糊的没区别。云厂商的 SLA 里又该多一行免责条款了，建议各位 CTO 今晚别睡太死。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html)\n\n---\n\n### 2. 📌 MLExpert：迈向自主机器学习工程的通用 Agent 模型 (来源: ArXiv)\n- **核心干货**：这篇论文提出了 MLExpert——一个能够自主完成机器学习工程任务的通用 Agent 模型，目标直指 AI4AI（AI 研发 AI）的递归自我改进路径。它不是帮你调参的小助手，而是试图端到端地设计、训练、评估和迭代 ML 系统。如果这玩意儿真能跑通，「算法工程师」这个岗位的定义得重写。\n- **毒舌/硬核点评**：以前是 AI 帮你写代码，现在是 AI 帮你训 AI，下一步是不是 AI 帮你领工资？ML 工程师们，建议趁早学会给 Agent 写 Prompt，毕竟打不过就加入。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2610.22344v1)\n\n---\n\n### 3. 📌 Linus Torvalds 罕见发声：谈 AI 辅助内核贡献 (来源: Lobste.rs / LKML)\n- **核心干货**：Linus 在 Linux 内核邮件列表上就 AI 辅助代码贡献发表了直接看法。作为全球最挑剔的 Code Reviewer，他对 AI 生成 patch 的态度将直接影响整个开源社区的协作规范。这不是某家公司的 PR 稿，而是来自内核之王的真实判断——AI 写的内核代码，到底配不配进 mainline？\n- **毒舌/硬核点评**：Linus 骂人二十年，现在要对着 AI 生成的 patch 骂了。好消息是 AI 不会玻璃心，坏消息是 AI 可能连被骂的资格都没有。\n- **🔗 传送门**：[点击直达原链接](https://lore.kernel.org/lkml/CAHk-=whTs09_ozN+e09GU68N1wPP56MUzDjrg9rnKxQUa0A_4Q@mail.gmail.com/)\n\n---\n\n### 🗣️ 今日顶男金句\n> **\"AI 不会淘汰你，但会用 AI 造 AI 的人会。你的竞争对手不是机器，是那些把机器当杠杆的疯子。\"**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-17\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Claude 破译 ECDSA 曲线种子之谜 (来源: HackerNews / Anthropic Research)\n- **核心干货**：NIST 椭圆曲线（P-256 等）的随机种子参数悬赏多年无人认领——没人知道这些数字是\"真随机\"还是 NSA 埋了后门。Anthropic 的 Claude 通过逆向分析伪随机数生成器的历史实现，成功还原了种子来源，为这批密码学基础设施补上了\"可验证性\"这一关键拼图。密码学界吵了二十年的阴谋论，被一个模型用量化推理给捋直了。\n- **毒舌/硬核点评**：NSA 当年说\"种子是随手挑的\"，现在 AI 告诉你\"随手\"的算法长什么样——这不叫洗白，这叫把底裤颜色都验出来了。以后选曲线记得先问一句：这玩意儿是 Claude 审过的吗？\n- **🔗 传送门**：[点击直达原链接](https://www.anthropic.com/research/ecdsa-curve-origins)\n\n---\n\n### 2. 📌 Llama.cpp 跑进越狱 PS5：家用主机秒变本地推理机 (来源: GitHub / HackerNews)\n- **核心干货**：开发者 cobanov 在越狱的 PlayStation 5 上原生跑起了 llama.cpp，直接加载任意 GGUF 模型。PS5 的定制 APU（Zen 2 + RDNA 2）本是被索尼锁死的游戏专用硬件，如今被撬开当推理节点用——八核 CPU 加共享显存，跑 7B 级别模型完全够用。这是\"消费级硬件压榨\"的又一个里程碑：你抽屉里那台吃灰主机，可能比你的云账单更能打。\n- **毒舌/硬核点评**：索尼卖你一台 499 美元的游戏机，黑客帮你解锁成一台 499 美元的 AI 推理服务器。黄仁勋看了想涨价，索尼看了想封号——而玩家只想问：能不能顺便挖个矿把电费赚回来？\n- **🔗 传送门**：[点击直达原链接](https://github.com/cobanov/PS5LM)\n\n---\n\n### 3. 📌 PwnEscape：Linux 内核 VM 逃逸漏洞，云沙箱集体裸奔 (来源: Tech RSS / The Hacker News)\n- **核心干货**：CVE-2026-99999（CVSS 未定但致命），Linux 内核新漏洞允许虚拟机内的代码直接读取宿主机内存——研究者已在 Vercel 生产环境的云沙箱上实测成功，Vercel 官方确认。这意味着所有靠 VM 隔离做多租户安全的云平台，隔离墙一夜之间变成纱窗。KVM、Firecracker 这类\"安全边界\"叙事，得重新做安全审计了。\n- **毒舌/硬核点评**：云厂商卖了十年\"硬件级隔离、租户绝对安全\"，结果一个内核 bug 就让隔壁租户能偷看你的内存。所谓\"零信任\"，先信任一下自己的 hypervisor 补丁节奏吧——顺便，Vercel 这波公关，怕是又要连夜发 status page 了。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"硬件厂商卖你的是围墙，黑客卖你的是梯子。真正的算力自由，从来不在 EULA 的条款里，而在你敢不敢按下那个越狱键。\"",
   "briefing_items": [
     {
-      "title": "PwnEscape：Linux 内核爆出核弹级漏洞，虚拟机越狱直读宿主机内存",
-      "source": "Tech News",
-      "summary": "Linux 内核被曝出一个被命名为「PwnEscape」的严重漏洞（CVE-2026-99999），允许 Guest VM 内的代码直接读取宿主机内存。研究者在 Vercel 的线上云沙箱环境中成功演示了该攻击，Vercel 已确认。这意味着所有依赖 KVM/Xen 隔离的多租户云环境，其安全模型的地基正在开裂。",
-      "commentary": "你花大价钱买的「安全隔离」，在物理内存面前跟纸糊的没区别。云厂商的 SLA 里又该多一行免责条款了，建议各位 CTO 今晚别睡太死。",
+      "title": "Claude 破译 ECDSA 曲线种子之谜",
+      "source": "HackerNews / Anthropic Research",
+      "summary": "NIST 椭圆曲线（P-256 等）的随机种子参数悬赏多年无人认领——没人知道这些数字是\"真随机\"还是 NSA 埋了后门。Anthropic 的 Claude 通过逆向分析伪随机数生成器的历史实现，成功还原了种子来源，为这批密码学基础设施补上了\"可验证性\"这一关键拼图。密码学界吵了二十年的阴谋论，被一个模型用量化推理给捋直了。",
+      "commentary": "NSA 当年说\"种子是随手挑的\"，现在 AI 告诉你\"随手\"的算法长什么样——这不叫洗白，这叫把底裤颜色都验出来了。以后选曲线记得先问一句：这玩意儿是 Claude 审过的吗？",
+      "url": "https://www.anthropic.com/research/ecdsa-curve-origins"
+    },
+    {
+      "title": "Llama.cpp 跑进越狱 PS5：家用主机秒变本地推理机",
+      "source": "GitHub / HackerNews",
+      "summary": "开发者 cobanov 在越狱的 PlayStation 5 上原生跑起了 llama.cpp，直接加载任意 GGUF 模型。PS5 的定制 APU（Zen 2 + RDNA 2）本是被索尼锁死的游戏专用硬件，如今被撬开当推理节点用——八核 CPU 加共享显存，跑 7B 级别模型完全够用。这是\"消费级硬件压榨\"的又一个里程碑：你抽屉里那台吃灰主机，可能比你的云账单更能打。",
+      "commentary": "索尼卖你一台 499 美元的游戏机，黑客帮你解锁成一台 499 美元的 AI 推理服务器。黄仁勋看了想涨价，索尼看了想封号——而玩家只想问：能不能顺便挖个矿把电费赚回来？",
+      "url": "https://github.com/cobanov/PS5LM"
+    },
+    {
+      "title": "PwnEscape：Linux 内核 VM 逃逸漏洞，云沙箱集体裸奔",
+      "source": "Tech RSS / The Hacker News",
+      "summary": "CVE-2026-99999（CVSS 未定但致命），Linux 内核新漏洞允许虚拟机内的代码直接读取宿主机内存——研究者已在 Vercel 生产环境的云沙箱上实测成功，Vercel 官方确认。这意味着所有靠 VM 隔离做多租户安全的云平台，隔离墙一夜之间变成纱窗。KVM、Firecracker 这类\"安全边界\"叙事，得重新做安全审计了。",
+      "commentary": "云厂商卖了十年\"硬件级隔离、租户绝对安全\"，结果一个内核 bug 就让隔壁租户能偷看你的内存。所谓\"零信任\"，先信任一下自己的 hypervisor 补丁节奏吧——顺便，Vercel 这波公关，怕是又要连夜发 status page 了。",
       "url": "https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html"
     },
     {
-      "title": "MLExpert：迈向自主机器学习工程的通用 Agent 模型",
-      "source": "ArXiv",
-      "summary": "这篇论文提出了 MLExpert——一个能够自主完成机器学习工程任务的通用 Agent 模型，目标直指 AI4AI（AI 研发 AI）的递归自我改进路径。它不是帮你调参的小助手，而是试图端到端地设计、训练、评估和迭代 ML 系统。如果这玩意儿真能跑通，「算法工程师」这个岗位的定义得重写。",
-      "commentary": "以前是 AI 帮你写代码，现在是 AI 帮你训 AI，下一步是不是 AI 帮你领工资？ML 工程师们，建议趁早学会给 Agent 写 Prompt，毕竟打不过就加入。",
-      "url": "https://arxiv.org/abs/2610.22344v1"
-    },
-    {
-      "title": "Linus Torvalds 罕见发声：谈 AI 辅助内核贡献",
-      "source": "Lobste.rs / LKML",
-      "summary": "Linus 在 Linux 内核邮件列表上就 AI 辅助代码贡献发表了直接看法。作为全球最挑剔的 Code Reviewer，他对 AI 生成 patch 的态度将直接影响整个开源社区的协作规范。这不是某家公司的 PR 稿，而是来自内核之王的真实判断——AI 写的内核代码，到底配不配进 mainline？",
-      "commentary": "Linus 骂人二十年，现在要对着 AI 生成的 patch 骂了。好消息是 AI 不会玻璃心，坏消息是 AI 可能连被骂的资格都没有。",
-      "url": "https://lore.kernel.org/lkml/CAHk-=whTs09_ozN+e09GU68N1wPP56MUzDjrg9rnKxQUa0A_4Q@mail.gmail.com/"
-    },
-    {
-      "quote": "**\"AI 不会淘汰你，但会用 AI 造 AI 的人会。你的竞争对手不是机器，是那些把机器当杠杆的疯子。\"**"
+      "quote": "\"硬件厂商卖你的是围墙，黑客卖你的是梯子。真正的算力自由，从来不在 EULA 的条款里，而在你敢不敢按下那个越狱键。\""
     }
   ],
   "candidates": [
     {
-      "id": "hn:50065859",
-      "title": "Woman who rescued injured crow keeps getting 'thank-you gifts' from birds [video]",
+      "id": "hn:50122431",
+      "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
       "summary": "",
-      "url": "https://www.youtube.com/watch?v=sjNpfz4UzqU",
+      "url": "https://github.com/cobanov/PS5LM",
       "source": "Hacker News",
-      "score": 675,
-      "comments": 211
+      "score": 224,
+      "comments": 61
     },
     {
-      "id": "hn:50077225",
-      "title": "Yet another way to invoke functions without parentheses",
+      "id": "hn:50122878",
+      "title": "You could have invented transformers from memory",
       "summary": "",
-      "url": "https://blog.ikaes.de/yet-another-way-to-invoke-functions-without-parentheses/",
+      "url": "https://alexwang.ai/posts/associative-memory/",
       "source": "Hacker News",
-      "score": 200,
-      "comments": 85
+      "score": 176,
+      "comments": 49
+    },
+    {
+      "id": "hn:50122800",
+      "title": "Claude reveals ECDSA curve origins",
+      "summary": "<a href=\"https:&#x2F;&#x2F;words.filippo.io&#x2F;seeds-solved&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;words.filippo.io&#x2F;seeds-solved&#x2F;</a>",
+      "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
+      "source": "Hacker News",
+      "score": 737,
+      "comments": 282
+    },
+    {
+      "id": "hn:50118320",
+      "title": "Apple ML Research: Muse Spark Open with MLX on Mac Studio",
+      "summary": "",
+      "url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+      "source": "Hacker News",
+      "score": 280,
+      "comments": 128
     },
     {
       "id": "lob:xiq59t",
@@ -54,33 +72,63 @@
       "summary": "",
       "url": "https://lore.kernel.org/lkml/CAHk-=whTs09_ozN+e09GU68N1wPP56MUzDjrg9rnKxQUa0A_4Q@mail.gmail.com/",
       "source": "Lobste.rs",
-      "score": 65,
-      "comments": 108,
+      "score": 85,
+      "comments": 149,
       "tags": [
         "linux",
         "vibecoding"
       ]
     },
     {
-      "id": "hn:50117746",
-      "title": "I Love Software Rendering",
+      "id": "hn:50122034",
+      "title": "eBay Restricts Listings of Radio Equipment, but Exempts Ham-Band-Only Gear",
       "summary": "",
-      "url": "https://www.jamesfmackenzie.com/2026/10/13/i-love-software-rendering/",
+      "url": "https://www.arrl.org/arrlletterissue?issue=2026-10-15#eBay-Restricts-Listings-of-Radio-Equipment_-But-Exempts-Ham-Band-Only-Gear",
       "source": "Hacker News",
-      "score": 182,
-      "comments": 127
+      "score": 186,
+      "comments": 150
     },
     {
-      "id": "lob:uejdwj",
-      "title": "JPEG XL vs AVIF for web use-cases",
+      "id": "hn:50112657",
+      "title": "Tesla Roadster",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=7p5LxFdc-Qg\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=7p5LxFdc-Qg</a><p><a href=\"https:&#x2F;&#x2F;twitter.com&#x2F;Tesla&#x2F;status&#x2F;2110788059008819215\" rel=\"nofollow\">https:&#x2F;&#x2F;twitter.com&#x2F;Tesla&#x2F;st",
+      "url": "https://www.tesla.com/roadster",
+      "source": "Hacker News",
+      "score": 1265,
+      "comments": 2262
+    },
+    {
+      "id": "hn:50118981",
+      "title": "Waymo in Toronto",
       "summary": "",
-      "url": "https://jakearchibald.com/2026/jpeg-xl-vs-avif/",
+      "url": "https://waymo.com/blog/2026/10/waymo-in-toronto/",
+      "source": "Hacker News",
+      "score": 293,
+      "comments": 396
+    },
+    {
+      "id": "lob:6laoto",
+      "title": "The road to iroh 1.0",
+      "summary": "",
+      "url": "https://www.iroh.computer/blog/the-road-to-iroh-1-0",
       "source": "Lobste.rs",
-      "score": 90,
-      "comments": 28,
+      "score": 49,
+      "comments": 11,
       "tags": [
-        "compsci",
-        "web"
+        "networking"
+      ]
+    },
+    {
+      "id": "lob:qvomvk",
+      "title": "Why are we even doing all this?",
+      "summary": "",
+      "url": "https://terrytao.wordpress.com/2026/10/15/why-are-we-even-doing-all-this/",
+      "source": "Lobste.rs",
+      "score": 91,
+      "comments": 13,
+      "tags": [
+        "math",
+        "vibecoding"
       ]
     },
     {
@@ -92,42 +140,39 @@
       "score": 0
     },
     {
-      "id": "lob:kaerns",
-      "title": "Sunsetting decomp.dev",
-      "summary": "",
-      "url": "https://decomp.dev/",
-      "source": "Lobste.rs",
-      "score": 69,
-      "comments": 16,
-      "tags": [
-        "games",
-        "reversing",
-        "vibecoding"
-      ]
-    },
-    {
       "id": "lob:umdbht",
       "title": "My C23 Conventions",
       "summary": "",
       "url": "https://abner.page/post/c23-conventions-1/",
       "source": "Lobste.rs",
-      "score": 55,
-      "comments": 13,
+      "score": 62,
+      "comments": 14,
       "tags": [
         "c"
       ]
     },
     {
-      "id": "lob:1iin5o",
-      "title": "Epic's EAC2 v2 seems fairly easily bypassable",
+      "id": "lob:ddtqtn",
+      "title": "The NIST Elliptic Curves Seeds Bounty Has Been Claimed",
       "summary": "",
-      "url": "https://codon.org.uk/~mjg59/blog/p/epics-eac2-v2-seems-fairly-easily-bypassable/",
+      "url": "https://words.filippo.io/seeds-solved/",
       "source": "Lobste.rs",
-      "score": 29,
-      "comments": 15,
+      "score": 57,
+      "comments": 10,
       "tags": [
-        "linux",
-        "security"
+        "cryptography"
+      ]
+    },
+    {
+      "id": "lob:v6hhdr",
+      "title": "Making a 88x31 button book using ImageMagick",
+      "summary": "",
+      "url": "https://k.sosnierz.me/08-11-24/",
+      "source": "Lobste.rs",
+      "score": 38,
+      "comments": 9,
+      "tags": [
+        "art"
       ]
     },
     {
@@ -139,123 +184,55 @@
       "score": 0
     },
     {
-      "id": "lob:qvomvk",
-      "title": "Why are we even doing all this?",
-      "summary": "",
-      "url": "https://terrytao.wordpress.com/2026/10/15/why-are-we-even-doing-all-this/",
-      "source": "Lobste.rs",
-      "score": 36,
-      "comments": 6,
-      "tags": [
-        "math",
-        "vibecoding"
-      ]
-    },
-    {
-      "id": "lob:ipyrkv",
-      "title": "On the technical actions needed to ensure the continuity of UTC",
-      "summary": "<p>No more <a href=\"https://en.wikipedia.org/wiki/Leap_second\" rel=\"ugc\">leap seconds</a>. Sorry, about the title, but I couldn‘t resist.</p>\n",
-      "url": "https://www.bipm.org/en/cgpm-2026/resolution-5",
-      "source": "Lobste.rs",
-      "score": 33,
-      "comments": 7,
-      "tags": [
-        "science"
-      ]
-    },
-    {
-      "id": "lob:vemho2",
-      "title": "Forgejo v17.0 is available",
-      "summary": "",
-      "url": "https://forgejo.org/2026-10-release-v17-0/",
-      "source": "Lobste.rs",
-      "score": 53,
-      "comments": 5,
-      "tags": [
-        "release",
-        "vcs"
-      ]
-    },
-    {
-      "id": "arxiv:2610.22350v1",
-      "title": "FDE-Gym: The Last Mile of AI Delivery",
-      "summary": "Existing agent benchmarks typically evaluate agents on well-specified tasks defined by issue reports, specifications, or task tickets. Real-world customer delivery is different: forward-deployed engineers (FDEs) must clarify ambiguous requirements, work in live systems, and uncover unstated constrai",
-      "url": "https://arxiv.org/abs/2610.22350v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.SE"
-      ],
-      "arxiv_id": "2610.22350v1"
-    },
-    {
-      "id": "arxiv:2610.22344v1",
-      "title": "MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering",
-      "summary": "Large language models (LLMs) are expanding from assisting scientific research and engineering to autonomously developing and improving AI systems, advancing AI for AI (AI4AI) as a pathway toward recursive self-improvement (RSI). Workflow-driven machine learning engineering (MLE) systems provide a pr",
-      "url": "https://arxiv.org/abs/2610.22344v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "arxiv_id": "2610.22344v1"
-    },
-    {
-      "id": "rss:d6e8bf80af",
-      "title": "Palo Alto Networks Patches PAN-OS Authenticated RCE Flaw Amid Active Exploitation",
-      "summary": "Palo Alto Networks on Wednesday issued security updates for a high-severity flaw in PAN-OS software that has come under active exploitation.\n\nThe vulnerability, tracked as CVE-2026-0322 (CVSS score: 8.6), is a case of remote code execution in the management interface.\n\n\"A remote code execution (RCE)",
-      "url": "https://thehackernews.com/2026/10/palo-alto-networks-patches-pan-os.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "hn:50118977",
+      "id": "lob:cxlrc5",
       "title": "Big Fish: Exploiting a 37-Year-Old Kernel Bug in OpenBSD",
       "summary": "",
       "url": "https://calif.io/research/big-fish",
+      "source": "Lobste.rs",
+      "score": 28,
+      "comments": 0,
+      "tags": [
+        "openbsd",
+        "security"
+      ]
+    },
+    {
+      "id": "hn:50123580",
+      "title": "FLUX 3 Image Klein",
+      "summary": "",
+      "url": "https://bfl.ai/blog/flux-3-image-klein",
       "source": "Hacker News",
-      "score": 61,
-      "comments": 8
+      "score": 126,
+      "comments": 37
     },
     {
-      "id": "lob:ttcx5k",
-      "title": "Announcing Rust 1.99.1",
+      "id": "hn:50127274",
+      "title": "Butlerian Jihad",
       "summary": "",
-      "url": "https://blog.rust-lang.org/2026/10/15/Rust-1.99.1/",
-      "source": "Lobste.rs",
-      "score": 22,
-      "comments": 7,
-      "tags": [
-        "release",
-        "rust"
-      ]
+      "url": "https://dune.fandom.com/wiki/Butlerian_Jihad",
+      "source": "Hacker News",
+      "score": 91,
+      "comments": 44
     },
     {
-      "id": "lob:q0wobg",
-      "title": "My self-hosted infrastructure with Incus OS",
+      "id": "hn:50121939",
+      "title": "Designing more efficient quantum circuits with Claude",
       "summary": "",
-      "url": "https://dataswamp.org/~solene/2026-10-15-selfhosting-infrastructure-incus-os.html",
-      "source": "Lobste.rs",
-      "score": 25,
-      "comments": 2,
-      "tags": [
-        "devops",
-        "linux"
-      ]
+      "url": "https://www.anthropic.com/research/designing-efficient-quantum-circuits",
+      "source": "Hacker News",
+      "score": 110,
+      "comments": 21
     },
     {
-      "id": "lob:hounpx",
-      "title": "What are you doing this weekend?",
-      "summary": "<p>Feel free to tell what you plan on doing this weekend and even ask for help or feedback.</p>\n<p>Please keep in mind it’s more than OK to do nothing at all too!</p>\n",
-      "url": "https://lobste.rs/s/hounpx/what_are_you_doing_this_weekend",
+      "id": "lob:xcacrh",
+      "title": "Mull: note-taking with a language server / vscode extension",
+      "summary": "<p>I've been writing notes as plain text files since forever, and it occurred to me that note-taking could benefit from the typical features that a language server provides: clickable links, autocomplete, hover previews, formatting, diagnostics, refactoring, etc. So I built a little language server ",
+      "url": "https://github.com/stepchowfun/mull",
       "source": "Lobste.rs",
-      "score": 9,
-      "comments": 17,
+      "score": 12,
+      "comments": 8,
       "tags": [
-        "ask",
-        "programming"
+        "editors"
       ]
     }
   ],
