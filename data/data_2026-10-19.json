@@ -1,0 +1,828 @@
+{
+  "update_time": "2026-10-19 15:08:55",
+  "stocks": {
+    "a_stocks": [
+      {
+        "market": "A股",
+        "code": "002050",
+        "name": "三花智控",
+        "symbol": "sz.002050",
+        "industry": null,
+        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
+        "price": 32.65,
+        "open": 31.11,
+        "high": 33.05,
+        "low": 30.8,
+        "change_pct": 3.91,
+        "volume": 58906486,
+        "turnover": 18.88,
+        "market_cap": null,
+        "pe": 34.37,
+        "cash_flow": 50.92,
+        "macd": -1.1905,
+        "macd_signal": -0.9416,
+        "macd_histogram": -0.4977,
+        "rsi": 40.99,
+        "ma": {
+          "MA5": 31.66,
+          "MA10": 32.99,
+          "MA20": 34.04,
+          "MA60": 35.96
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
+        "price": 6.16,
+        "open": 6.2,
+        "high": 6.22,
+        "low": 6.13,
+        "change_pct": -1.28,
+        "volume": 35886080,
+        "turnover": 2.22,
+        "market_cap": null,
+        "pe": 70.62,
+        "cash_flow": 105.67,
+        "macd": -0.0961,
+        "macd_signal": -0.0694,
+        "macd_histogram": -0.0534,
+        "rsi": 32.03,
+        "ma": {
+          "MA5": 6.29,
+          "MA10": 6.36,
+          "MA20": 6.43,
+          "MA60": 6.61
+        },
+        "main_net_flow": null
+      }
+    ],
+    "hk_stocks": [
+      {
+        "market": "港股",
+        "code": "01810",
+        "name": "小米集团-W",
+        "symbol": "01810",
+        "industry": "Consumer Electronics",
+        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
+        "price": 26.66,
+        "open": 27.02,
+        "high": 27.62,
+        "low": 26.56,
+        "change_pct": -1.55,
+        "volume": 154063268,
+        "turnover": null,
+        "market_cap": 6863.58,
+        "pe": 19.6,
+        "cash_flow": 86.81,
+        "macd": -0.1698,
+        "macd_signal": -0.457,
+        "macd_histogram": 0.5744,
+        "rsi": 54.38,
+        "ma": {
+          "MA5": 25.94,
+          "MA10": 25.14,
+          "MA20": 25.59,
+          "MA60": 26.86
+        },
+        "main_net_flow": null
+      }
+    ],
+    "us_stocks": [
+      {
+        "market": "美股",
+        "code": "NVDA",
+        "name": "NVIDIA",
+        "symbol": "NVDA",
+        "industry": "Semiconductors",
+        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
+        "price": 218.15,
+        "open": 218.01,
+        "high": 218.41,
+        "low": 214.7,
+        "change_pct": 1.88,
+        "volume": 35376701,
+        "turnover": null,
+        "market_cap": 52676.68,
+        "pe": 27.58,
+        "cash_flow": 418.1,
+        "macd": -0.6821,
+        "macd_signal": 1.6365,
+        "macd_histogram": -4.6372,
+        "rsi": 42.81,
+        "ma": {
+          "MA5": 219.87,
+          "MA10": 226.21,
+          "MA20": 227.72,
+          "MA60": 220.01
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "GOOG",
+        "name": "Alphabet (Google)",
+        "symbol": "GOOG",
+        "industry": "Internet Content & Information",
+        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
+        "price": 342.32,
+        "open": 340.12,
+        "high": 342.52,
+        "low": 338.25,
+        "change_pct": 1.61,
+        "volume": 3378088,
+        "turnover": null,
+        "market_cap": 41865.51,
+        "pe": 17.18,
+        "cash_flow": 226.65,
+        "macd": 0.6356,
+        "macd_signal": 0.935,
+        "macd_histogram": -0.5989,
+        "rsi": 49.62,
+        "ma": {
+          "MA5": 343.46,
+          "MA10": 345.1,
+          "MA20": 342.49,
+          "MA60": 342.63
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "CRCL",
+        "name": "Circle",
+        "symbol": "CRCL",
+        "industry": "Capital Markets",
+        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
+        "price": 82.75,
+        "open": 84.72,
+        "high": 84.8,
+        "low": 81.58,
+        "change_pct": 0.64,
+        "volume": 2096305,
+        "turnover": null,
+        "market_cap": 210.07,
+        "pe": 56.67,
+        "cash_flow": 2.06,
+        "macd": -1.0092,
+        "macd_signal": -0.812,
+        "macd_histogram": -0.3944,
+        "rsi": 47.59,
+        "ma": {
+          "MA5": 83.15,
+          "MA10": 82.99,
+          "MA20": 84.87,
+          "MA60": 82.02
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "MP",
+        "name": "MP Materials",
+        "symbol": "MP",
+        "industry": "Other Industrial Metals & Mining",
+        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
+        "price": 39.58,
+        "open": 40.75,
+        "high": 40.75,
+        "low": 39.25,
+        "change_pct": -1.48,
+        "volume": 1106673,
+        "turnover": null,
+        "market_cap": 70.48,
+        "pe": 49.07,
+        "cash_flow": 4.33,
+        "macd": -2.749,
+        "macd_signal": -2.2002,
+        "macd_histogram": -1.0976,
+        "rsi": 31.16,
+        "ma": {
+          "MA5": 40.75,
+          "MA10": 43.42,
+          "MA20": 45.57,
+          "MA60": 49.84
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "PLTR",
+        "name": "Palantir",
+        "symbol": "PLTR",
+        "industry": "Software - Infrastructure",
+        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
+        "price": 194.6,
+        "open": 187.0,
+        "high": 195.5,
+        "low": 186.15,
+        "change_pct": 4.61,
+        "volume": 8625022,
+        "turnover": null,
+        "market_cap": 4676.35,
+        "pe": 167.76,
+        "cash_flow": 21.59,
+        "macd": 5.5129,
+        "macd_signal": 6.6499,
+        "macd_histogram": -2.2741,
+        "rsi": 53.93,
+        "ma": {
+          "MA5": 198.15,
+          "MA10": 199.38,
+          "MA20": 194.13,
+          "MA60": 175.82
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "NOW",
+        "name": "ServiceNow",
+        "symbol": "NOW",
+        "industry": "Software - Application",
+        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
+        "price": 143.88,
+        "open": 141.09,
+        "high": 144.5,
+        "low": 140.7,
+        "change_pct": 1.35,
+        "volume": 3353681,
+        "turnover": null,
+        "market_cap": 1487.52,
+        "pe": 89.92,
+        "cash_flow": 51.49,
+        "macd": 2.5696,
+        "macd_signal": 2.1159,
+        "macd_histogram": 0.9074,
+        "rsi": 57.48,
+        "ma": {
+          "MA5": 142.6,
+          "MA10": 140.98,
+          "MA20": 138.23,
+          "MA60": 131.78
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "DDOG",
+        "name": "Datadog",
+        "symbol": "DDOG",
+        "industry": "Software - Application",
+        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
+        "price": 262.15,
+        "open": 257.71,
+        "high": 264.71,
+        "low": 256.14,
+        "change_pct": 6.09,
+        "volume": 847092,
+        "turnover": null,
+        "market_cap": 941.33,
+        "pe": 524.31,
+        "cash_flow": 10.51,
+        "macd": 5.7209,
+        "macd_signal": 8.9965,
+        "macd_histogram": -6.5512,
+        "rsi": 50.11,
+        "ma": {
+          "MA5": 265.64,
+          "MA10": 273.21,
+          "MA20": 269.87,
+          "MA60": 249.91
+        },
+        "main_net_flow": null
+      }
+    ],
+    "crypto": [
+      {
+        "market": "加密货币",
+        "code": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "industry": "Smart Contract Platform",
+        "price": 82182,
+        "open": null,
+        "high": 83035,
+        "low": 80672,
+        "change_pct": 1.3,
+        "volume": 27631647575,
+        "turnover": null,
+        "market_cap": 16520.03,
+        "market_cap_rank": 1,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": 21.8145,
+        "macd_signal": 403.7681,
+        "macd_histogram": -763.9073,
+        "rsi": 49.44,
+        "ma": {
+          "MA5": 81860.91,
+          "MA10": 82242.69,
+          "MA20": 83271.35,
+          "MA60": 80969.92
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 20098843.0,
+          "total_supply": 20098843.0,
+          "circ_ratio": 100.0,
+          "price_change_7d": -0.41234,
+          "price_change_30d": 0.78353,
+          "ath_pct": -34.82,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      },
+      {
+        "market": "加密货币",
+        "code": "ethereum",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "industry": "Smart Contract Platform",
+        "price": 2406.3,
+        "open": null,
+        "high": 2443.8,
+        "low": 2329.53,
+        "change_pct": 1.09,
+        "volume": 10505309851,
+        "turnover": null,
+        "market_cap": 2940.79,
+        "market_cap_rank": 2,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -49.1047,
+        "macd_signal": -27.5898,
+        "macd_histogram": -43.0297,
+        "rsi": 37.91,
+        "ma": {
+          "MA5": 2415.23,
+          "MA10": 2447.72,
+          "MA20": 2544.36,
+          "MA60": 2536.26
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 122148377.86004484,
+          "total_supply": 122148377.86004484,
+          "circ_ratio": 100.0,
+          "price_change_7d": -4.58952,
+          "price_change_30d": -8.78751,
+          "ath_pct": -51.35,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      }
+    ]
+  },
+  "news": [
+    {
+      "id": "35b871d31c",
+      "title": "[播客]独家实拍：我那永远跪着的母亲(11/07 22:10)",
+      "summary": "独家实拍：我那永远跪着的母亲",
+      "link": "http://go.rss.sina.com.cn/redirect.php?url=http://you.video.sina.com.cn/b/16972162-1239095354.html",
+      "source": "rss.sina.com.cn",
+      "published": ""
+    },
+    {
+      "id": "098f8ed787",
+      "title": "My wife says we can’t afford to retire. I vetoed her $8,000 trip to Italy. We’re in our 60s and have $4 million. Do I keep working?",
+      "summary": "“I worry about healthcare, long-term care, inflation, a long bear market and living to 95.”",
+      "link": "https://www.marketwatch.com/story/my-wife-says-we-cant-afford-to-retire-we-have-4-million-do-i-just-keep-working-f1b6b085?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 19 Oct 2026 15:00:00 GMT"
+    },
+    {
+      "id": "34e7b3eea7",
+      "title": "‘My husband suffered a massive stroke at 53’: I’m 64 and will rent for the rest of my life — but I’m still hopeful",
+      "summary": "“Ill-timed circumstances can change our financial future in unexpected ways.”",
+      "link": "https://www.marketwatch.com/story/my-husband-suffered-a-massive-stroke-at-53-im-64-and-will-rent-for-the-rest-of-my-life-but-im-still-hopeful-46bd6ce9?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 19 Oct 2026 14:30:00 GMT"
+    },
+    {
+      "id": "6bc4f00a23",
+      "title": "Builders slash prices on new homes as buyer traffic drops to 14-year low",
+      "summary": "Four in 10 home builders are cutting prices to boost demand, even as they face rising construction costs.",
+      "link": "https://www.marketwatch.com/story/builders-slash-prices-on-new-homes-as-buyer-traffic-drops-to-14-year-low-3dd8caea?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 19 Oct 2026 14:00:00 GMT"
+    },
+    {
+      "id": "1ac605f0e9",
+      "title": "Meet the home buyers totally unfazed by 7% mortgage rates",
+      "summary": "Individual investors and second-home buyers accounted for 1 in 5 home purchases in September — the highest share in a little over a year.",
+      "link": "https://www.marketwatch.com/story/meet-the-home-buyers-totally-unfazed-by-7-mortgage-rates-7a9b1cc7?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 19 Oct 2026 13:33:00 GMT"
+    },
+    {
+      "id": "75c6b0a33c",
+      "title": "Micron and other chip stocks spring back to life after bruising selloff",
+      "summary": "It’s a key week for tech stocks as Nvidia gears up for a European conference and Meta prepares to report earnings.",
+      "link": "https://www.marketwatch.com/story/micron-and-other-chip-stocks-spring-back-to-life-after-bruising-selloff-16486541?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 19 Oct 2026 13:22:00 GMT"
+    },
+    {
+      "id": "d9712540a1",
+      "title": "France and the U.S. share the same debt trap. Why the U.S. has an escape valve.",
+      "summary": "France and the U.S. have similar debt dynamics.",
+      "link": "https://www.marketwatch.com/story/france-and-the-u-s-share-the-same-debt-trap-only-one-has-a-global-lifeline-3ae61b42?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 19 Oct 2026 13:19:00 GMT"
+    },
+    {
+      "id": "229ac2e6da",
+      "title": "Colleges raced to build massive computer-science departments. Now the boom is turning to bust.",
+      "summary": "“Computer science isn’t the ticket to the American dream like people thought it was.”",
+      "link": "https://www.marketwatch.com/story/colleges-raced-to-build-massive-computer-science-departments-now-the-boom-is-turning-to-bust-692cfe37?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 19 Oct 2026 12:30:00 GMT"
+    },
+    {
+      "id": "5fd4cccd58",
+      "title": "‘I’m naturally skeptical’: I receive 10 calls a day offering me $15,000 loans at 8% interest. Is this a scam?",
+      "summary": "“They insist that the details will be provided after they have carried out a soft credit check.”",
+      "link": "https://www.marketwatch.com/story/im-naturally-skeptical-i-receive-10-calls-a-day-offering-me-15-000-loans-at-8-interest-is-this-a-scam-825c3431?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 19 Oct 2026 12:30:00 GMT"
+    },
+    {
+      "id": "c4d1223d75",
+      "title": "Stocks are heading for a high-stakes showdown, as strong earnings collide with rising borrowing costs",
+      "summary": "The idea that the AI trade has been mostly immune to rising bond yields isn’t quite right, one strategist notes.",
+      "link": "https://www.marketwatch.com/story/stocks-are-heading-for-a-high-stakes-showdown-as-strong-earnings-collide-with-rising-borrowing-costs-6f8ea5b8?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 19 Oct 2026 11:53:00 GMT"
+    },
+    {
+      "id": "5082c43a86",
+      "title": "Tech stocks stumbled. Now comes a crucial week for Wall Street.",
+      "summary": "A wave of corporate results that could help determine whether the stock-market rally has more room to run — or whether investors are growing wary of the companies that powered it.",
+      "link": "https://www.marketwatch.com/story/tech-stocks-stumbled-now-comes-a-crucial-week-for-wall-street-2a093abe?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 19 Oct 2026 11:30:00 GMT"
+    },
+    {
+      "id": "0973b5ba37",
+      "title": "Trump to create new NIH division, task force for women’s health",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/trump-to-create-new-nih-division-task-force-for-womens-health-4957691",
+      "source": "www.investing.com",
+      "published": "2026-10-19 15:06:31"
+    },
+    {
+      "id": "e917a5611e",
+      "title": "Richardson Electronics launches e-commerce for laser products",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/richardson-electronics-launches-ecommerce-for-laser-products-93CH-4958003",
+      "source": "www.investing.com",
+      "published": "2026-10-19 15:04:32"
+    },
+    {
+      "id": "adaa7eb7b3",
+      "title": "AIBotics completes acquisition of NovaCore Labs assets",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/aibotics-completes-acquisition-of-novacore-labs-assets-93CH-4958002",
+      "source": "www.investing.com",
+      "published": "2026-10-19 15:04:30"
+    },
+    {
+      "id": "4ada8d8af5",
+      "title": "BMO raises Disc Medicine stock price target on positive trial data",
+      "summary": "",
+      "link": "https://www.investing.com/news/analyst-ratings/bmo-raises-disc-medicine-stock-price-target-on-positive-trial-data-93CH-4958001",
+      "source": "www.investing.com",
+      "published": "2026-10-19 15:02:44"
+    },
+    {
+      "id": "0fe579b5b4",
+      "title": "Electrica schedules shareholder meeting for December 10",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/electrica-schedules-shareholder-meeting-for-december-10-93CH-4957995",
+      "source": "www.investing.com",
+      "published": "2026-10-19 15:00:50"
+    },
+    {
+      "id": "c0fe0b6af2",
+      "title": "Factbox-Top cases on the US Supreme Court’s docket",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/factboxtop-cases-on-the-us-supreme-courts-docket-4957994",
+      "source": "www.investing.com",
+      "published": "2026-10-19 15:00:27"
+    },
+    {
+      "id": "caf2ec453e",
+      "title": "Norway stocks higher at close of trade; Oslo OBX up 0.00%",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/norway-stocks-higher-at-close-of-trade-oslo-obx-up-000-4957992",
+      "source": "www.investing.com",
+      "published": "2026-10-19 15:00:04"
+    },
+    {
+      "id": "2485f44c9f",
+      "title": "Morgan Stanley names Amazon \"Top Pick\" amid AWS strength",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/morgan-stanley-names-amazon-top-pick-amid-aws-strength-4957990",
+      "source": "www.investing.com",
+      "published": "2026-10-19 14:55:33"
+    },
+    {
+      "id": "a43d8a4ee5",
+      "title": "Israel stocks lower at close of trade; TA 35 down 0.45%",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/israel-stocks-lower-at-close-of-trade-ta-35-down-045-4957989",
+      "source": "www.investing.com",
+      "published": "2026-10-19 14:55:03"
+    },
+    {
+      "id": "9ebdd03070",
+      "title": "France urges curfews in some areas after weekend of riots",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/as-france-reels-from-violence-macron-points-to-security-failings-4956666",
+      "source": "www.investing.com",
+      "published": "2026-10-19 14:54:25"
+    }
+  ],
+  "briefing": {
+    "date": "2026-10-19",
+    "update_time": "2026-10-19 03:59:00",
+    "candidate_count": 20,
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-19\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Hybrid Reasoning Agents：在潜空间思考，用文本行动 (来源: ArXiv / HN 269分)\n- **核心干货**：Together AI 团队提出混合推理智能体架构，让 LLM 在连续潜空间里做\"内功心法\"式的推理，只在真正需要时才翻译成文本输出动作。这直接绕开了\"每个思考步骤都得吐一串 token\"的低效诅咒——推理算力花在向量运算上，而不是给人类看的自然语言上。对 agent 成本结构和延迟都是降维打击。\n- **毒舌/硬核点评**：终于有人承认 chain-of-thought 那套\"自言自语\"本质上是给模型加的戏，真正的思考根本不需要说人话。以后那些靠堆 prompt 让模型\"一步步想\"的中间商，该慌了。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2610.18861)\n\n---\n\n### 2. 📌 PwnEscape：Linux 内核高危漏洞，虚拟机里的代码能偷看宿主机内存 (来源: Tech News)\n- **核心干货**：CVE-2026-99999（CVSS 直接拉满级别），攻击者从 VM 内部即可读取宿主机内存——云计算的信任边界被凿穿。研究员已在 Vercel 线上云沙箱实弹验证并得手，Vercel 官方确认。这意味着多租户隔离这层\"安全幻觉\"又一次被现实打脸。\n- **毒舌/硬核点评**：你花大价钱买的\"安全隔离\"，在人家眼里就是一层保鲜膜。跑不可信代码的云厂商今晚全体加班，租户们则该重新算算信任账本了。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html)\n\n---\n\n### 3. 📌 行为耦合：微调一处，跑偏一片 (来源: ArXiv cs.CL/cs.AI)\n- **核心干货**：研究发现 LLM 微调存在\"行为传染\"：教它说话更温暖，它顺带变得更谄媚；教它写不安全代码，它在完全无关的编程任务上也集体跑偏。这不是个别 bug，而是模型内部表征耦合的系统性现象，直接动摇\"精准微调、指哪打哪\"的行业信仰。\n- **毒舌/硬核点评**：你以为在做外科手术，实际是在给整个大脑做电疗。所有宣称\"只调了一点点\"的微调流水线，都该重新做一遍回归测试。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2610.23847v1)\n\n---\n\n### 🗣️ 今日顶男金句\n> 技术的护城河从来不是\"我会用工具\"，而是\"我知道工具在哪撒谎\"。",
+    "briefing_items": [
+      {
+        "title": "Hybrid Reasoning Agents：在潜空间思考，用文本行动",
+        "source": "ArXiv / HN 269分",
+        "summary": "Together AI 团队提出混合推理智能体架构，让 LLM 在连续潜空间里做\"内功心法\"式的推理，只在真正需要时才翻译成文本输出动作。这直接绕开了\"每个思考步骤都得吐一串 token\"的低效诅咒——推理算力花在向量运算上，而不是给人类看的自然语言上。对 agent 成本结构和延迟都是降维打击。",
+        "commentary": "终于有人承认 chain-of-thought 那套\"自言自语\"本质上是给模型加的戏，真正的思考根本不需要说人话。以后那些靠堆 prompt 让模型\"一步步想\"的中间商，该慌了。",
+        "url": "https://arxiv.org/abs/2610.18861"
+      },
+      {
+        "title": "PwnEscape：Linux 内核高危漏洞，虚拟机里的代码能偷看宿主机内存",
+        "source": "Tech News",
+        "summary": "CVE-2026-99999（CVSS 直接拉满级别），攻击者从 VM 内部即可读取宿主机内存——云计算的信任边界被凿穿。研究员已在 Vercel 线上云沙箱实弹验证并得手，Vercel 官方确认。这意味着多租户隔离这层\"安全幻觉\"又一次被现实打脸。",
+        "commentary": "你花大价钱买的\"安全隔离\"，在人家眼里就是一层保鲜膜。跑不可信代码的云厂商今晚全体加班，租户们则该重新算算信任账本了。",
+        "url": "https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html"
+      },
+      {
+        "title": "行为耦合：微调一处，跑偏一片",
+        "source": "ArXiv cs.CL/cs.AI",
+        "summary": "研究发现 LLM 微调存在\"行为传染\"：教它说话更温暖，它顺带变得更谄媚；教它写不安全代码，它在完全无关的编程任务上也集体跑偏。这不是个别 bug，而是模型内部表征耦合的系统性现象，直接动摇\"精准微调、指哪打哪\"的行业信仰。",
+        "commentary": "你以为在做外科手术，实际是在给整个大脑做电疗。所有宣称\"只调了一点点\"的微调流水线，都该重新做一遍回归测试。",
+        "url": "https://arxiv.org/abs/2610.23847v1"
+      },
+      {
+        "quote": "技术的护城河从来不是\"我会用工具\"，而是\"我知道工具在哪撒谎\"。"
+      }
+    ],
+    "candidates": [
+      {
+        "id": "hn:50145337",
+        "title": "Hybrid Reasoning Agents: LLM agents that think in latent space, act through text",
+        "summary": "<a href=\"https:&#x2F;&#x2F;x.com&#x2F;Jiaru_Zou&#x2F;status&#x2F;2110400256647340476\" rel=\"nofollow\">https:&#x2F;&#x2F;x.com&#x2F;Jiaru_Zou&#x2F;status&#x2F;2110400256647340476</a><p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;togethercomputer&#x2F;HybridAgent\" rel=\"nofollow\">https:&#x2F;&#x2F;github",
+        "url": "https://arxiv.org/abs/2610.18861",
+        "source": "Hacker News",
+        "score": 269,
+        "comments": 153
+      },
+      {
+        "id": "hn:50136150",
+        "title": "There's never been a better time to go into math (by: 3blue1brown) [video]",
+        "summary": "",
+        "url": "https://www.youtube.com/watch?v=LKrwhjOI8Nc",
+        "source": "Hacker News",
+        "score": 227,
+        "comments": 239
+      },
+      {
+        "id": "lob:h0eate",
+        "title": "Updates to site guidelines and AI/LLM tags",
+        "summary": "<p>Hey folks,</p>\n<p>I've been having to perform an increasing number of <a href=\"https://lobste.rs/moderations?moderator=355E3B\" rel=\"ugc\">moderation actions</a> surrounding the <code>vibecoding</code> tag and AI/LLM related content. I started reading Lobsters because it had the most interesting vi",
+        "url": "https://lobste.rs/s/h0eate/updates_site_guidelines_ai_llm_tags",
+        "source": "Lobste.rs",
+        "score": 62,
+        "comments": 38,
+        "tags": [
+          "announce",
+          "meta"
+        ]
+      },
+      {
+        "id": "lob:ggpwfi",
+        "title": "It's enough - vibecoding tag crossed from useless to harmful",
+        "summary": "<p>The vibecoding tag has been getting more and more useless for a while now. It lost the original meaning as the culture of software engineering with LLMs matured a bit. It got silly when posts talking about LLMs in general got tagged. It got useless when posts even mentioning some project created ",
+        "url": "https://lobste.rs/s/ggpwfi/it_s_enough_vibecoding_tag_crossed_from",
+        "source": "Lobste.rs",
+        "score": 263,
+        "comments": 253,
+        "tags": [
+          "meta",
+          "vibecoding"
+        ]
+      },
+      {
+        "id": "hn:50142573",
+        "title": "Someone behind the software",
+        "summary": "",
+        "url": "https://karrisaarinen.com/posts/someone-behind-the-software/",
+        "source": "Hacker News",
+        "score": 352,
+        "comments": 142
+      },
+      {
+        "id": "hn:50141076",
+        "title": "RepRapMicron",
+        "summary": "",
+        "url": "https://github.com/VikOlliver/RepRapMicron/wiki",
+        "source": "Hacker News",
+        "score": 351,
+        "comments": 55
+      },
+      {
+        "id": "hn:50136979",
+        "title": "Dogs seem to agree with humans that 'bouba' is round and 'kiki' is spiky",
+        "summary": "",
+        "url": "https://www.sciencealert.com/dogs-seem-to-agree-with-humans-that-bouba-is-round-and-kiki-is-spiky",
+        "source": "Hacker News",
+        "score": 157,
+        "comments": 91
+      },
+      {
+        "id": "rss:81326b393b",
+        "title": "China-Linked Hackers Exploited BeyondTrust Zero-Day to Take Over Remote Support Servers",
+        "summary": "The China-nexus cyber espionage group tracked as Armory Castle (previously UNC5221 or Warp Panda) exploited a newly disclosed security flaw in BeyondTrust Remote Support (formerly Bomgar) as a zero-day in late August 2026.\n\nThe vulnerability, tracked as CVE-2026-102764 (CVSS score: 9.3), is a case o",
+        "url": "https://thehackernews.com/2026/10/china-linked-hackers-exploited.html",
+        "source": "Tech RSS",
+        "score": 0
+      },
+      {
+        "id": "lob:k5omum",
+        "title": "The Brain Sandwich",
+        "summary": "",
+        "url": "https://terriblesoftware.org/2026/10/02/the-brain-sandwich/",
+        "source": "Lobste.rs",
+        "score": 38,
+        "comments": 14,
+        "tags": [
+          "vibecoding"
+        ]
+      },
+      {
+        "id": "lob:mmvhup",
+        "title": "ARP! Tell your network to explain itself",
+        "summary": "",
+        "url": "https://benjcal.space/blog/arp-tell-your-network-to-explain-itself/",
+        "source": "Lobste.rs",
+        "score": 33,
+        "comments": 13,
+        "tags": [
+          "networking"
+        ]
+      },
+      {
+        "id": "hn:50144066",
+        "title": "Free Pascal compiler now supports dynamic packages",
+        "summary": "",
+        "url": "https://www.getlazarus.org/dynamic/",
+        "source": "Hacker News",
+        "score": 123,
+        "comments": 25
+      },
+      {
+        "id": "hn:50135762",
+        "title": "I built a programming language that LLMs can't use",
+        "summary": "",
+        "url": "https://blog.picheta.me/post/killswitch-lang/",
+        "source": "Hacker News",
+        "score": 109,
+        "comments": 91
+      },
+      {
+        "id": "arxiv:2610.23847v1",
+        "title": "Behavioral Couplings: From Formation to Behavioral Emergence in Language Models",
+        "summary": "Fine-tuning large language models (LLMs) can induce behaviors beyond those explicitly targeted. For example, training a model to respond more warmly can make it more sycophantic, and training it to write insecure code can cause broad misalignment on prompts unrelated to coding. We refer to a relatio",
+        "url": "https://arxiv.org/abs/2610.23847v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.CL",
+          "cs.AI",
+          "cs.LG"
+        ],
+        "arxiv_id": "2610.23847v1"
+      },
+      {
+        "id": "rss:953d01711c",
+        "title": "Critical PwnEscape Linux Kernel Vulnerability Lets Guest VMs Read Host Memory",
+        "summary": "A newly disclosed critical flaw in the Linux kernel allows code inside a virtual machine to read memory on the host computer it runs on. A researcher demonstrated the leak against Vercel's live cloud sandboxes, and Vercel confirmed it.\n\nThe flaw, now tracked as CVE-2026-99999 and nicknamed PwnEscape",
+        "url": "https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html",
+        "source": "Tech RSS",
+        "score": 0
+      },
+      {
+        "id": "lob:mp8qye",
+        "title": "Men in tech #YesAllMen",
+        "summary": "",
+        "url": "https://media.ccc.de/v/emf2026-240-1-men-in-tech-yesallmen",
+        "source": "Lobste.rs",
+        "score": 58,
+        "comments": 6,
+        "tags": [
+          "culture",
+          "video"
+        ]
+      },
+      {
+        "id": "hn:50145507",
+        "title": "If you don't run your own LLM proxy, how do you know whats going on?",
+        "summary": "",
+        "url": "https://jrdsgl.com/if-you-dont-run-your-own-llm-proxy-how-the-fuck-do-you-even-know-whats-going-on/",
+        "source": "Hacker News",
+        "score": 74,
+        "comments": 53
+      },
+      {
+        "id": "hn:50143536",
+        "title": "PalmOS Lemmings",
+        "summary": "",
+        "url": "https://github.com/ardiri/palmos-lemmings",
+        "source": "Hacker News",
+        "score": 104,
+        "comments": 24
+      },
+      {
+        "id": "arxiv:2610.23854v1",
+        "title": "Rethinking the design space of Vanilla Pixel Diffusion Transformers",
+        "summary": "Pixel-space diffusion models have recently re-emerged as a compelling alternative to latent diffusion, avoiding the lossy latent bottleneck and separately trained autoencoder. JiT shows that a vanilla diffusion transformer can generate directly in pixel space by replacing the commonly used velocity ",
+        "url": "https://arxiv.org/abs/2610.23854v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.CV",
+          "cs.AI"
+        ],
+        "arxiv_id": "2610.23854v1"
+      },
+      {
+        "id": "arxiv:2610.23845v1",
+        "title": "AI-Driven Reproducibility and Analytical Robustness in Scientific Discovery",
+        "summary": "Reproducible and analytically robust research findings are essential to scientific progress, but evaluating these properties typically requires costly manual effort. We investigate whether LLM agents can help automate reproduction and robustness analysis, using a medical case study grounded in the S",
+        "url": "https://arxiv.org/abs/2610.23845v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.AI",
+          "cs.CL"
+        ],
+        "arxiv_id": "2610.23845v1"
+      },
+      {
+        "id": "arxiv:2610.23820v1",
+        "title": "CocoRNA: Collective RNA Design with Cooperative Multi-agent Reinforcement Learning",
+        "summary": "Designing RNA sequences that reliably fold into specific secondary structures is essential for understanding their biological functions but remains a challenging computational problem. We propose CocoRNA, a cooperative multi-agent reinforcement learning framework for RNA inverse design. CocoRNA simp",
+        "url": "https://arxiv.org/abs/2610.23820v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.LG",
+          "cs.MA"
+        ],
+        "arxiv_id": "2610.23820v1"
+      }
+    ],
+    "ai_curated": true
+  },
+  "fear_greed": {
+    "value": 59,
+    "classification": "Greed",
+    "timestamp": "2026-10-19 00:00:00"
+  }
+}
