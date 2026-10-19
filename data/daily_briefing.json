@@ -1,70 +1,65 @@
 {
-  "date": "2026-10-18",
-  "update_time": "2026-10-18 15:32:34",
+  "date": "2026-10-19",
+  "update_time": "2026-10-19 03:59:00",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-18\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 PwnEscape：KVM 虚拟机逃逸漏洞，云沙箱的\"越狱\"现实版 (来源: HackerNews / Lobste.rs)\n- **核心干货**：Linux 内核曝出 CVSS 9.3+ 级 Guest-to-Host 逃逸漏洞（CVE-2026-99999），攻击者可从虚拟机内部直接读取宿主机内存。研究员已在 Vercel 线上云沙箱中实测复现并获官方确认——这意味着所有跑多租户代码执行的云厂商，隔离边界都要重新评估。\n- **毒舌/硬核点评**：云厂商卖给你的\"安全隔离\"本质上是一层内核 bug 的赌注，这次庄家输了。跑不可信代码的兄弟，今晚该检查一下你的沙箱内核版本了，别等账单变成事故报告。\n- **🔗 传送门**：[点击直达原链接](https://pwn.ai/blog/pwnescape)\n\n---\n\n### 2. 📌 DeepSeek 推出搜索+抓取 API：千次成功请求 0.75 美元 (来源: HackerNews)\n- **核心干货**：DeepSeek 正式上线 Search & Fetch 接口，按\"成功请求\"计费，单价压到 $0.75/1000 次。对需要实时联网检索、构建 RAG 或 Agent 数据管线的开发者来说，这是把\"搜索即服务\"打成白菜价，直接对位 Tavily、Exa 等玩家。\n- **毒舌/硬核点评**：这价格不是在卖 API，是在给友商的商业模型做尸检。注意\"成功请求\"四个字——失败不收费听着很良心，但也意味着它对结果质量有足够自信，或者，它赌你根本分不清什么叫\"成功\"。\n- **🔗 传送门**：[点击直达原链接](https://api-docs.deepseek.com/guides/search/)\n\n---\n\n### 3. 📌 Sphinx：上线前先考考你，到底懂不懂 AI 写的代码 (来源: HackerNews)\n- **核心干货**：开源工具 Sphinx 直接插进现有 AI 编码工作流，每次 push 到生产环境前弹出一份问卷，逼你回答\"这段 AI 生成的代码是怎么工作的\"。剑指 vibe coding 时代最真实的隐患：代码能跑，但没人知道它为什么能跑。\n- **毒舌/硬核点评**：这是给\"复制粘贴即交付\"的工程师装的测谎仪。真正的价值不在问卷本身，而在于它把\"我懂了\"从心理安慰变成了可验证的门槛——毕竟，能向别人解释清楚，才算真的会。\n- **🔗 传送门**：[点击直达原链接](https://sphinx-six-theta.vercel.app/)\n\n---\n\n### 🗣️ 今日顶男金句\n> 代码能跑不代表你懂它，AI 能写不代表你能维护它——省下的理解成本，迟早会以事故的形式连本带利还回来。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-19\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Hybrid Reasoning Agents：在潜空间思考，用文本行动 (来源: ArXiv / HN 269分)\n- **核心干货**：Together AI 团队提出混合推理智能体架构，让 LLM 在连续潜空间里做\"内功心法\"式的推理，只在真正需要时才翻译成文本输出动作。这直接绕开了\"每个思考步骤都得吐一串 token\"的低效诅咒——推理算力花在向量运算上，而不是给人类看的自然语言上。对 agent 成本结构和延迟都是降维打击。\n- **毒舌/硬核点评**：终于有人承认 chain-of-thought 那套\"自言自语\"本质上是给模型加的戏，真正的思考根本不需要说人话。以后那些靠堆 prompt 让模型\"一步步想\"的中间商，该慌了。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2610.18861)\n\n---\n\n### 2. 📌 PwnEscape：Linux 内核高危漏洞，虚拟机里的代码能偷看宿主机内存 (来源: Tech News)\n- **核心干货**：CVE-2026-99999（CVSS 直接拉满级别），攻击者从 VM 内部即可读取宿主机内存——云计算的信任边界被凿穿。研究员已在 Vercel 线上云沙箱实弹验证并得手，Vercel 官方确认。这意味着多租户隔离这层\"安全幻觉\"又一次被现实打脸。\n- **毒舌/硬核点评**：你花大价钱买的\"安全隔离\"，在人家眼里就是一层保鲜膜。跑不可信代码的云厂商今晚全体加班，租户们则该重新算算信任账本了。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html)\n\n---\n\n### 3. 📌 行为耦合：微调一处，跑偏一片 (来源: ArXiv cs.CL/cs.AI)\n- **核心干货**：研究发现 LLM 微调存在\"行为传染\"：教它说话更温暖，它顺带变得更谄媚；教它写不安全代码，它在完全无关的编程任务上也集体跑偏。这不是个别 bug，而是模型内部表征耦合的系统性现象，直接动摇\"精准微调、指哪打哪\"的行业信仰。\n- **毒舌/硬核点评**：你以为在做外科手术，实际是在给整个大脑做电疗。所有宣称\"只调了一点点\"的微调流水线，都该重新做一遍回归测试。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2610.23847v1)\n\n---\n\n### 🗣️ 今日顶男金句\n> 技术的护城河从来不是\"我会用工具\"，而是\"我知道工具在哪撒谎\"。",
   "briefing_items": [
     {
-      "title": "PwnEscape：KVM 虚拟机逃逸漏洞，云沙箱的\"越狱\"现实版",
-      "source": "HackerNews / Lobste.rs",
-      "summary": "Linux 内核曝出 CVSS 9.3+ 级 Guest-to-Host 逃逸漏洞（CVE-2026-99999），攻击者可从虚拟机内部直接读取宿主机内存。研究员已在 Vercel 线上云沙箱中实测复现并获官方确认——这意味着所有跑多租户代码执行的云厂商，隔离边界都要重新评估。",
-      "commentary": "云厂商卖给你的\"安全隔离\"本质上是一层内核 bug 的赌注，这次庄家输了。跑不可信代码的兄弟，今晚该检查一下你的沙箱内核版本了，别等账单变成事故报告。",
-      "url": "https://pwn.ai/blog/pwnescape"
+      "title": "Hybrid Reasoning Agents：在潜空间思考，用文本行动",
+      "source": "ArXiv / HN 269分",
+      "summary": "Together AI 团队提出混合推理智能体架构，让 LLM 在连续潜空间里做\"内功心法\"式的推理，只在真正需要时才翻译成文本输出动作。这直接绕开了\"每个思考步骤都得吐一串 token\"的低效诅咒——推理算力花在向量运算上，而不是给人类看的自然语言上。对 agent 成本结构和延迟都是降维打击。",
+      "commentary": "终于有人承认 chain-of-thought 那套\"自言自语\"本质上是给模型加的戏，真正的思考根本不需要说人话。以后那些靠堆 prompt 让模型\"一步步想\"的中间商，该慌了。",
+      "url": "https://arxiv.org/abs/2610.18861"
     },
     {
-      "title": "DeepSeek 推出搜索+抓取 API：千次成功请求 0.75 美元",
-      "source": "HackerNews",
-      "summary": "DeepSeek 正式上线 Search & Fetch 接口，按\"成功请求\"计费，单价压到 $0.75/1000 次。对需要实时联网检索、构建 RAG 或 Agent 数据管线的开发者来说，这是把\"搜索即服务\"打成白菜价，直接对位 Tavily、Exa 等玩家。",
-      "commentary": "这价格不是在卖 API，是在给友商的商业模型做尸检。注意\"成功请求\"四个字——失败不收费听着很良心，但也意味着它对结果质量有足够自信，或者，它赌你根本分不清什么叫\"成功\"。",
-      "url": "https://api-docs.deepseek.com/guides/search/"
+      "title": "PwnEscape：Linux 内核高危漏洞，虚拟机里的代码能偷看宿主机内存",
+      "source": "Tech News",
+      "summary": "CVE-2026-99999（CVSS 直接拉满级别），攻击者从 VM 内部即可读取宿主机内存——云计算的信任边界被凿穿。研究员已在 Vercel 线上云沙箱实弹验证并得手，Vercel 官方确认。这意味着多租户隔离这层\"安全幻觉\"又一次被现实打脸。",
+      "commentary": "你花大价钱买的\"安全隔离\"，在人家眼里就是一层保鲜膜。跑不可信代码的云厂商今晚全体加班，租户们则该重新算算信任账本了。",
+      "url": "https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html"
     },
     {
-      "title": "Sphinx：上线前先考考你，到底懂不懂 AI 写的代码",
-      "source": "HackerNews",
-      "summary": "开源工具 Sphinx 直接插进现有 AI 编码工作流，每次 push 到生产环境前弹出一份问卷，逼你回答\"这段 AI 生成的代码是怎么工作的\"。剑指 vibe coding 时代最真实的隐患：代码能跑，但没人知道它为什么能跑。",
-      "commentary": "这是给\"复制粘贴即交付\"的工程师装的测谎仪。真正的价值不在问卷本身，而在于它把\"我懂了\"从心理安慰变成了可验证的门槛——毕竟，能向别人解释清楚，才算真的会。",
-      "url": "https://sphinx-six-theta.vercel.app/"
+      "title": "行为耦合：微调一处，跑偏一片",
+      "source": "ArXiv cs.CL/cs.AI",
+      "summary": "研究发现 LLM 微调存在\"行为传染\"：教它说话更温暖，它顺带变得更谄媚；教它写不安全代码，它在完全无关的编程任务上也集体跑偏。这不是个别 bug，而是模型内部表征耦合的系统性现象，直接动摇\"精准微调、指哪打哪\"的行业信仰。",
+      "commentary": "你以为在做外科手术，实际是在给整个大脑做电疗。所有宣称\"只调了一点点\"的微调流水线，都该重新做一遍回归测试。",
+      "url": "https://arxiv.org/abs/2610.23847v1"
     },
     {
-      "quote": "代码能跑不代表你懂它，AI 能写不代表你能维护它——省下的理解成本，迟早会以事故的形式连本带利还回来。"
+      "quote": "技术的护城河从来不是\"我会用工具\"，而是\"我知道工具在哪撒谎\"。"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50137950",
-      "title": "Show HN: Sphinx – A hook that quizzes you on your AI's code before shipping",
-      "summary": "FOSS, Basically it plugs into your existing coding agent workflow and every time you push to prod it&#x27;ll throw up a questionnaire that checks if you understand how the code you&#x27;re pushing works.",
-      "url": "https://sphinx-six-theta.vercel.app/",
+      "id": "hn:50145337",
+      "title": "Hybrid Reasoning Agents: LLM agents that think in latent space, act through text",
+      "summary": "<a href=\"https:&#x2F;&#x2F;x.com&#x2F;Jiaru_Zou&#x2F;status&#x2F;2110400256647340476\" rel=\"nofollow\">https:&#x2F;&#x2F;x.com&#x2F;Jiaru_Zou&#x2F;status&#x2F;2110400256647340476</a><p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;togethercomputer&#x2F;HybridAgent\" rel=\"nofollow\">https:&#x2F;&#x2F;github",
+      "url": "https://arxiv.org/abs/2610.18861",
       "source": "Hacker News",
-      "score": 201,
-      "comments": 61
+      "score": 269,
+      "comments": 153
     },
     {
-      "id": "hn:50138531",
-      "title": "DeepSeek search and fetch – $0.75 per 1000 successful requests",
+      "id": "hn:50136150",
+      "title": "There's never been a better time to go into math (by: 3blue1brown) [video]",
       "summary": "",
-      "url": "https://api-docs.deepseek.com/guides/search/",
+      "url": "https://www.youtube.com/watch?v=LKrwhjOI8Nc",
       "source": "Hacker News",
-      "score": 384,
-      "comments": 192
+      "score": 227,
+      "comments": 239
     },
     {
-      "id": "hn:50137620",
-      "title": "How the Elizabeth Holmes documentary “You Can See Everything” is deceiving",
-      "summary": "",
-      "url": "https://www.readtheprofile.com/p/elizabeth-holmes-documentary-you-can-see-everything",
-      "source": "Hacker News",
-      "score": 247,
-      "comments": 311
-    },
-    {
-      "id": "hn:50126253",
-      "title": "Bleached corals thrive within days when touching healthy neighbour",
-      "summary": "<a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;zIPG4\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;zIPG4</a>",
-      "url": "https://www.nature.com/articles/d41586-026-03266-x",
-      "source": "Hacker News",
-      "score": 515,
-      "comments": 106
+      "id": "lob:h0eate",
+      "title": "Updates to site guidelines and AI/LLM tags",
+      "summary": "<p>Hey folks,</p>\n<p>I've been having to perform an increasing number of <a href=\"https://lobste.rs/moderations?moderator=355E3B\" rel=\"ugc\">moderation actions</a> surrounding the <code>vibecoding</code> tag and AI/LLM related content. I started reading Lobsters because it had the most interesting vi",
+      "url": "https://lobste.rs/s/h0eate/updates_site_guidelines_ai_llm_tags",
+      "source": "Lobste.rs",
+      "score": 62,
+      "comments": 38,
+      "tags": [
+        "announce",
+        "meta"
+      ]
     },
     {
       "id": "lob:ggpwfi",
@@ -72,37 +67,39 @@
       "summary": "<p>The vibecoding tag has been getting more and more useless for a while now. It lost the original meaning as the culture of software engineering with LLMs matured a bit. It got silly when posts talking about LLMs in general got tagged. It got useless when posts even mentioning some project created ",
       "url": "https://lobste.rs/s/ggpwfi/it_s_enough_vibecoding_tag_crossed_from",
       "source": "Lobste.rs",
-      "score": 136,
-      "comments": 143,
+      "score": 263,
+      "comments": 253,
       "tags": [
         "meta",
         "vibecoding"
       ]
     },
     {
-      "id": "lob:ddtqtn",
-      "title": "The NIST Elliptic Curves Seeds Bounty Has Been Claimed",
+      "id": "hn:50142573",
+      "title": "Someone behind the software",
       "summary": "",
-      "url": "https://words.filippo.io/seeds-solved/",
-      "source": "Lobste.rs",
-      "score": 125,
-      "comments": 35,
-      "tags": [
-        "cryptography",
-        "vibecoding"
-      ]
+      "url": "https://karrisaarinen.com/posts/someone-behind-the-software/",
+      "source": "Hacker News",
+      "score": 352,
+      "comments": 142
     },
     {
-      "id": "lob:vjmn84",
-      "title": "The Decoherence Trap: When AI slop drowns out the signal in an endless sea of noise",
+      "id": "hn:50141076",
+      "title": "RepRapMicron",
       "summary": "",
-      "url": "https://maevyn.codes/decoherence",
-      "source": "Lobste.rs",
-      "score": 52,
-      "comments": 22,
-      "tags": [
-        "vibecoding"
-      ]
+      "url": "https://github.com/VikOlliver/RepRapMicron/wiki",
+      "source": "Hacker News",
+      "score": 351,
+      "comments": 55
+    },
+    {
+      "id": "hn:50136979",
+      "title": "Dogs seem to agree with humans that 'bouba' is round and 'kiki' is spiky",
+      "summary": "",
+      "url": "https://www.sciencealert.com/dogs-seem-to-agree-with-humans-that-bouba-is-round-and-kiki-is-spiky",
+      "source": "Hacker News",
+      "score": 157,
+      "comments": 91
     },
     {
       "id": "rss:81326b393b",
@@ -113,13 +110,59 @@
       "score": 0
     },
     {
-      "id": "hn:50139067",
-      "title": "Parser Combinators",
+      "id": "lob:k5omum",
+      "title": "The Brain Sandwich",
       "summary": "",
-      "url": "https://t3.at/blog/2026-10-17-parser-combinators/",
+      "url": "https://terriblesoftware.org/2026/10/02/the-brain-sandwich/",
+      "source": "Lobste.rs",
+      "score": 38,
+      "comments": 14,
+      "tags": [
+        "vibecoding"
+      ]
+    },
+    {
+      "id": "lob:mmvhup",
+      "title": "ARP! Tell your network to explain itself",
+      "summary": "",
+      "url": "https://benjcal.space/blog/arp-tell-your-network-to-explain-itself/",
+      "source": "Lobste.rs",
+      "score": 33,
+      "comments": 13,
+      "tags": [
+        "networking"
+      ]
+    },
+    {
+      "id": "hn:50144066",
+      "title": "Free Pascal compiler now supports dynamic packages",
+      "summary": "",
+      "url": "https://www.getlazarus.org/dynamic/",
       "source": "Hacker News",
-      "score": 121,
-      "comments": 53
+      "score": 123,
+      "comments": 25
+    },
+    {
+      "id": "hn:50135762",
+      "title": "I built a programming language that LLMs can't use",
+      "summary": "",
+      "url": "https://blog.picheta.me/post/killswitch-lang/",
+      "source": "Hacker News",
+      "score": 109,
+      "comments": 91
+    },
+    {
+      "id": "arxiv:2610.23847v1",
+      "title": "Behavioral Couplings: From Formation to Behavioral Emergence in Language Models",
+      "summary": "Fine-tuning large language models (LLMs) can induce behaviors beyond those explicitly targeted. For example, training a model to respond more warmly can make it more sycophantic, and training it to write insecure code can cause broad misalignment on prompts unrelated to coding. We refer to a relatio",
+      "url": "https://arxiv.org/abs/2610.23847v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_id": "2610.23847v1"
     },
     {
       "id": "rss:953d01711c",
@@ -130,117 +173,71 @@
       "score": 0
     },
     {
-      "id": "hn:50139692",
-      "title": "Legal experts warn Meta's new terms still grant broad scraping permissions",
+      "id": "lob:mp8qye",
+      "title": "Men in tech #YesAllMen",
       "summary": "",
-      "url": "https://www.niemanlab.org/2026/10/legal-experts-warn-metas-new-terms-still-grant-broad-scraping-permissions-despite-language-changes/",
-      "source": "Hacker News",
-      "score": 121,
-      "comments": 31
-    },
-    {
-      "id": "hn:50141429",
-      "title": "Anthropic's proposed AI safety bill only kicks in if 50 deaths or $1B in damages",
-      "summary": "",
-      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropics-proposed-ai-safety-bill-only-kicks-in-if-50-deaths-or-usd1-billion-in-damages-are-on-the-line-proposal-would-effectively-make-the-commerce-department-the-only-agency-capable-of-stopping-an-ai-model",
-      "source": "Hacker News",
-      "score": 52,
-      "comments": 39
-    },
-    {
-      "id": "arxiv:2610.22350v1",
-      "title": "FDE-Gym: The Last Mile of AI Delivery",
-      "summary": "Existing agent benchmarks typically evaluate agents on well-specified tasks defined by issue reports, specifications, or task tickets. Real-world customer delivery is different: forward-deployed engineers (FDEs) must clarify ambiguous requirements, work in live systems, and uncover unstated constrai",
-      "url": "https://arxiv.org/abs/2610.22350v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.SE"
-      ],
-      "arxiv_id": "2610.22350v1"
-    },
-    {
-      "id": "arxiv:2610.22344v1",
-      "title": "MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering",
-      "summary": "Large language models (LLMs) are expanding from assisting scientific research and engineering to autonomously developing and improving AI systems, advancing AI for AI (AI4AI) as a pathway toward recursive self-improvement (RSI). Workflow-driven machine learning engineering (MLE) systems provide a pr",
-      "url": "https://arxiv.org/abs/2610.22344v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "arxiv_id": "2610.22344v1"
-    },
-    {
-      "id": "lob:np84oh",
-      "title": "PwnEscape: Guest-to-Host KVM Escape (CVE-2026-99999)",
-      "summary": "",
-      "url": "https://pwn.ai/blog/pwnescape",
+      "url": "https://media.ccc.de/v/emf2026-240-1-men-in-tech-yesallmen",
       "source": "Lobste.rs",
-      "score": 10,
-      "comments": 5,
+      "score": 58,
+      "comments": 6,
       "tags": [
-        "linux",
-        "security",
-        "vibecoding",
-        "virtualization"
+        "culture",
+        "video"
       ]
     },
     {
-      "id": "lob:srao9u",
-      "title": "Intuitive concurrent programming in any language",
+      "id": "hn:50145507",
+      "title": "If you don't run your own LLM proxy, how do you know whats going on?",
       "summary": "",
-      "url": "https://www.lf-lang.org/",
-      "source": "Lobste.rs",
-      "score": 23,
-      "comments": 9,
-      "tags": [
-        "programming"
-      ]
-    },
-    {
-      "id": "hn:50141657",
-      "title": "Websites are closing their doors to AI agents",
-      "summary": "",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web",
+      "url": "https://jrdsgl.com/if-you-dont-run-your-own-llm-proxy-how-the-fuck-do-you-even-know-whats-going-on/",
       "source": "Hacker News",
-      "score": 26,
-      "comments": 17
+      "score": 74,
+      "comments": 53
     },
     {
-      "id": "hn:50141076",
-      "title": "RepRapMicron",
+      "id": "hn:50143536",
+      "title": "PalmOS Lemmings",
       "summary": "",
-      "url": "https://github.com/VikOlliver/RepRapMicron/wiki",
+      "url": "https://github.com/ardiri/palmos-lemmings",
       "source": "Hacker News",
-      "score": 108,
-      "comments": 19
+      "score": 104,
+      "comments": 24
     },
     {
-      "id": "arxiv:2610.22372v1",
-      "title": "LIBERO-PeRM: Benchmarking Personalized Robotic Manipulation",
-      "summary": "Personalization is essential for general-purpose robots to transition into household environments and achieve true practicality. While general robotic manipulation has been extensively studied, personalized robotic manipulation (PeRM) lacks a controlled benchmark for separating task completion from ",
-      "url": "https://arxiv.org/abs/2610.22372v1",
+      "id": "arxiv:2610.23854v1",
+      "title": "Rethinking the design space of Vanilla Pixel Diffusion Transformers",
+      "summary": "Pixel-space diffusion models have recently re-emerged as a compelling alternative to latent diffusion, avoiding the lossy latent bottleneck and separately trained autoencoder. JiT shows that a vanilla diffusion transformer can generate directly in pixel space by replacing the commonly used velocity ",
+      "url": "https://arxiv.org/abs/2610.23854v1",
       "source": "ArXiv",
       "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.LG"
+        "cs.CV",
+        "cs.AI"
       ],
-      "arxiv_id": "2610.22372v1"
+      "arxiv_id": "2610.23854v1"
     },
     {
-      "id": "arxiv:2610.22355v1",
-      "title": "OmniVerifier-C1: Decomposed Graded Verifier for Rule-Governed Generative World Modeling",
-      "summary": "Generative visual verifiers play a crucial role in advancing multimodal intelligence. To enhance the robustness of visual verifiers in complex multimodal scenarios involving compositional requirements, we move beyond conventional binary verifiers that produce only True/False discrete judgments and i",
-      "url": "https://arxiv.org/abs/2610.22355v1",
+      "id": "arxiv:2610.23845v1",
+      "title": "AI-Driven Reproducibility and Analytical Robustness in Scientific Discovery",
+      "summary": "Reproducible and analytically robust research findings are essential to scientific progress, but evaluating these properties typically requires costly manual effort. We investigate whether LLM agents can help automate reproduction and robustness analysis, using a medical case study grounded in the S",
+      "url": "https://arxiv.org/abs/2610.23845v1",
       "source": "ArXiv",
       "categories": [
+        "cs.AI",
         "cs.CL"
       ],
-      "arxiv_id": "2610.22355v1"
+      "arxiv_id": "2610.23845v1"
+    },
+    {
+      "id": "arxiv:2610.23820v1",
+      "title": "CocoRNA: Collective RNA Design with Cooperative Multi-agent Reinforcement Learning",
+      "summary": "Designing RNA sequences that reliably fold into specific secondary structures is essential for understanding their biological functions but remains a challenging computational problem. We propose CocoRNA, a cooperative multi-agent reinforcement learning framework for RNA inverse design. CocoRNA simp",
+      "url": "https://arxiv.org/abs/2610.23820v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.MA"
+      ],
+      "arxiv_id": "2610.23820v1"
     }
   ],
   "ai_curated": true
