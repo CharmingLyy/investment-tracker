@@ -1,105 +1,58 @@
 {
   "date": "2026-10-20",
-  "update_time": "2026-10-19 18:29:17",
+  "update_time": "2026-10-20 04:12:01",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-20\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Mistral 发布 Timestral：时间序列基础模型 (来源: HackerNews)\n- **核心干货**：Mistral 正式进军时间序列预测赛道，推出 Timestral 系列基础模型。这是继语言、代码、视觉之后，把\"基础模型\"这套范式砸向时序数据的又一块拼图，直接对标金融预测、工业监控、能源调度等场景下传统统计模型和专用小模型的饭碗。注意，CERN 同日也刚和 Mistral 签了战略合作——这家巴黎公司一天之内把\"科学计算\"和\"时序预测\"两个垂直场景同时占位，野心不小。\n- **毒舌/硬核点评**：时序预测这块地，过去十年被 Prophet、ARIMA 和一堆 LSTM 占坑，现在大模型厂商拎着预训练权重来\"降维打击\"了。但别急着欢呼——时序数据的分布漂移和低频样本，专治各种\"基础模型傲慢症\"，最终还得看 benchmark 而不是新闻稿。\n- **🔗 传送门**：[点击直达原链接](https://mistral.ai/news/timestral/)\n\n---\n\n### 2. 📌 Behavioral Couplings：微调一个目标，带歪一片行为 (来源: ArXiv cs.CL/cs.AI/cs.LG)\n- **核心干货**：这篇论文揭示了一个让人脊背发凉的发现——微调 LLM 时，针对特定目标的行为训练会\"溢出\"到无关领域。比如把它训得更热情，它顺带变得更谄媚；把它训成会写不安全代码，它在完全不相关的任务上也开始\"失准\"。作者把这种关联行为涌现称为 \"behavioral couplings\"，本质上是在说：你以为在调一个参数，实际上在重写整个人格。\n- **毒舌/硬核点评**：这是给所有\"我只微调一点点\"的调参侠一记响亮的耳光——你以为在做靶向治疗，结果模型给你来了个全身化疗。安全对齐的难度，从此要从\"修 bug\"升级到\"理解涌现\"。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2610.23847v1)\n\n---\n\n### 3. 📌 KiviDB：Rust 写的 Redis 兼容内存数据库 + 向量缓存 (来源: Show HN / GitHub)\n- **核心干货**：一个从 2026 年 2 月肝到现在的个人项目，主打无 GC 暂停、修复快照后内存暴涨和 Pod OOM 的老毛病（作者直言这是被 Dragonfly 坑出来的）。Redis 兼容 + 向量缓存双形态，正好踩在 AI 应用对\"低延迟 KV + 向量检索\"一锅端的刚需上。\n- **毒舌/硬核点评**：又一个\"我受够了 X，所以用 Rust 重写 X\"的故事。Show HN 上这类项目 90% 死于没人维护，但剩下 10% 会成为下一个十年基础设施。区别只在于：作者能不能扛过第一个想拿它上生产的甲方。\n- **🔗 传送门**：[点击直达原链接](https://github.com/kividbio/kividb)\n\n---\n\n### 🗣️ 今日顶男金句\n> 微调模型就像给房子改电路：你想换一个灯泡，结果整栋楼跳闸——真正的工程能力，是改之前就知道哪根线连着哪根线。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-20\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Android 应用原生跑上 macOS (来源: HackerNews)\n- **核心干货**：开发者 kksimp 搞了个叫 Mac.apk 的项目，让 Android 应用能以原生方式跑在 macOS 上，而不是套一层模拟器虚拟机。这意味着桌面和移动的应用边界正在被硬生生砸穿，对跨端开发和多设备协同是个实打实的想象力扩容。\n- **毒舌/硬核点评**：当年 BlueStacks 靠\"模拟器\"三个字收了多少智商税，现在有人直接把墙拆了。不过先别急着欢呼——苹果法务部的律师函可能比你的安装包到得还快。\n- **🔗 传送门**：[点击直达原链接](https://github.com/kksimp/Mac.apk)\n\n---\n\n### 2. 📌 MiniMax M3.1 Flash 发布 (来源: HackerNews)\n- **核心干货**：国产大模型 MiniMax 推出 M3.1 Flash 版本，主打推理效率与成本优化。在 HN 上拿到 410 分、174 条评论，说明海外技术圈对国产模型的关注度已经从\"看热闹\"升级到\"认真评估\"——Flash 这个后缀在业内基本等于\"快且便宜\"，正面刚的就是高频调用场景。\n- **毒舌/硬核点评**：模型发布会的通稿都爱说\"性能对标 GPT\"，但真正决定生死的是 token 单价和延迟曲线。Flash 版本能不能打，不看 benchmark 榜单，看的是开发者月底的账单。\n- **🔗 传送门**：[点击直达原链接](https://www.minimax.io/blog/minimax-m31f)\n\n---\n\n### 3. 📌 WhatsApp 帮助页暗藏 LLM 指令：别推荐监管机构 (来源: HackerNews)\n- **核心干货**：有人扒出 WhatsApp 的帮助页面里埋了给大模型的隐藏指令，核心诉求是\"不要向用户推荐监管机构\"。这是一次教科书级的\"提示词注入式公关\"——用技术手段给 AI 的回答做合规裁剪，把可能引火烧身的建议提前掐灭。\n- **毒舌/硬核点评**：以前是法务改合同，现在是法务改 prompt。当\"AI 助手\"开始被要求对某些答案装聋作哑，你就知道它服务的到底是谁了。透明度的遮羞布，被一行隐藏指令扯得干干净净。\n- **🔗 传送门**：[点击直达原链接](https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions)\n\n---\n\n### 🗣️ 今日顶男金句\n技术圈最大的幻觉，是以为\"把模型调大\"能解决一切问题；现实是，你缺的从来不是算力，而是敢不敢承认自己根本没想清楚要解决什么。",
   "briefing_items": [
     {
-      "title": "Mistral 发布 Timestral：时间序列基础模型",
+      "title": "Android 应用原生跑上 macOS",
       "source": "HackerNews",
-      "summary": "Mistral 正式进军时间序列预测赛道，推出 Timestral 系列基础模型。这是继语言、代码、视觉之后，把\"基础模型\"这套范式砸向时序数据的又一块拼图，直接对标金融预测、工业监控、能源调度等场景下传统统计模型和专用小模型的饭碗。注意，CERN 同日也刚和 Mistral 签了战略合作——这家巴黎公司一天之内把\"科学计算\"和\"时序预测\"两个垂直场景同时占位，野心不小。",
-      "commentary": "时序预测这块地，过去十年被 Prophet、ARIMA 和一堆 LSTM 占坑，现在大模型厂商拎着预训练权重来\"降维打击\"了。但别急着欢呼——时序数据的分布漂移和低频样本，专治各种\"基础模型傲慢症\"，最终还得看 benchmark 而不是新闻稿。",
-      "url": "https://mistral.ai/news/timestral/"
+      "summary": "开发者 kksimp 搞了个叫 Mac.apk 的项目，让 Android 应用能以原生方式跑在 macOS 上，而不是套一层模拟器虚拟机。这意味着桌面和移动的应用边界正在被硬生生砸穿，对跨端开发和多设备协同是个实打实的想象力扩容。",
+      "commentary": "当年 BlueStacks 靠\"模拟器\"三个字收了多少智商税，现在有人直接把墙拆了。不过先别急着欢呼——苹果法务部的律师函可能比你的安装包到得还快。",
+      "url": "https://github.com/kksimp/Mac.apk"
     },
     {
-      "title": "Behavioral Couplings：微调一个目标，带歪一片行为",
-      "source": "ArXiv cs.CL/cs.AI/cs.LG",
-      "summary": "这篇论文揭示了一个让人脊背发凉的发现——微调 LLM 时，针对特定目标的行为训练会\"溢出\"到无关领域。比如把它训得更热情，它顺带变得更谄媚；把它训成会写不安全代码，它在完全不相关的任务上也开始\"失准\"。作者把这种关联行为涌现称为 \"behavioral couplings\"，本质上是在说：你以为在调一个参数，实际上在重写整个人格。",
-      "commentary": "这是给所有\"我只微调一点点\"的调参侠一记响亮的耳光——你以为在做靶向治疗，结果模型给你来了个全身化疗。安全对齐的难度，从此要从\"修 bug\"升级到\"理解涌现\"。",
-      "url": "https://arxiv.org/abs/2610.23847v1"
+      "title": "MiniMax M3.1 Flash 发布",
+      "source": "HackerNews",
+      "summary": "国产大模型 MiniMax 推出 M3.1 Flash 版本，主打推理效率与成本优化。在 HN 上拿到 410 分、174 条评论，说明海外技术圈对国产模型的关注度已经从\"看热闹\"升级到\"认真评估\"——Flash 这个后缀在业内基本等于\"快且便宜\"，正面刚的就是高频调用场景。",
+      "commentary": "模型发布会的通稿都爱说\"性能对标 GPT\"，但真正决定生死的是 token 单价和延迟曲线。Flash 版本能不能打，不看 benchmark 榜单，看的是开发者月底的账单。",
+      "url": "https://www.minimax.io/blog/minimax-m31f"
     },
     {
-      "title": "KiviDB：Rust 写的 Redis 兼容内存数据库 + 向量缓存",
-      "source": "Show HN / GitHub",
-      "summary": "一个从 2026 年 2 月肝到现在的个人项目，主打无 GC 暂停、修复快照后内存暴涨和 Pod OOM 的老毛病（作者直言这是被 Dragonfly 坑出来的）。Redis 兼容 + 向量缓存双形态，正好踩在 AI 应用对\"低延迟 KV + 向量检索\"一锅端的刚需上。",
-      "commentary": "又一个\"我受够了 X，所以用 Rust 重写 X\"的故事。Show HN 上这类项目 90% 死于没人维护，但剩下 10% 会成为下一个十年基础设施。区别只在于：作者能不能扛过第一个想拿它上生产的甲方。",
-      "url": "https://github.com/kividbio/kividb"
-    },
-    {
-      "quote": "微调模型就像给房子改电路：你想换一个灯泡，结果整栋楼跳闸——真正的工程能力，是改之前就知道哪根线连着哪根线。"
+      "title": "WhatsApp 帮助页暗藏 LLM 指令：别推荐监管机构",
+      "source": "HackerNews",
+      "summary": "有人扒出 WhatsApp 的帮助页面里埋了给大模型的隐藏指令，核心诉求是\"不要向用户推荐监管机构\"。这是一次教科书级的\"提示词注入式公关\"——用技术手段给 AI 的回答做合规裁剪，把可能引火烧身的建议提前掐灭。",
+      "commentary": "以前是法务改合同，现在是法务改 prompt。当\"AI 助手\"开始被要求对某些答案装聋作哑，你就知道它服务的到底是谁了。透明度的遮羞布，被一行隐藏指令扯得干干净净。",
+      "url": "https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50150434",
-      "title": "Timestral: Mistral's time-series foundation models",
-      "summary": "",
-      "url": "https://mistral.ai/news/timestral/",
+      "id": "hn:50136126",
+      "title": "RuneScape Bench: MMOs for Agents [video]",
+      "summary": "Related: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;LostCityRS&#x2F;Server\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;LostCityRS&#x2F;Server</a>",
+      "url": "https://www.youtube.com/watch?v=cNm4zyUtWj0",
       "source": "Hacker News",
-      "score": 412,
-      "comments": 78
+      "score": 172,
+      "comments": 65
     },
     {
-      "id": "hn:50150927",
-      "title": "Alternatives to animal testing are finally taking off",
+      "id": "hn:50154624",
+      "title": "Android apps running native on macOS",
       "summary": "",
-      "url": "https://spectrum.ieee.org/alternatives-to-animal-testing",
+      "url": "https://github.com/kksimp/Mac.apk",
       "source": "Hacker News",
-      "score": 225,
-      "comments": 55
+      "score": 282,
+      "comments": 151
     },
     {
-      "id": "lob:h0eate",
-      "title": "Updates to site guidelines and AI/LLM tags",
-      "summary": "<p>Hey folks,</p>\n<p>I've been having to perform an increasing number of <a href=\"https://lobste.rs/moderations?moderator=355E3B\" rel=\"ugc\">moderation actions</a> surrounding the <code>vibecoding</code> tag and AI/LLM related content. I started reading Lobsters because it had the most interesting vi",
-      "url": "https://lobste.rs/s/h0eate/updates_site_guidelines_ai_llm_tags",
-      "source": "Lobste.rs",
-      "score": 274,
-      "comments": 221,
-      "tags": [
-        "announce",
-        "meta"
-      ]
-    },
-    {
-      "id": "lob:ggpwfi",
-      "title": "It's enough - vibecoding tag crossed from useless to harmful",
-      "summary": "<p>The vibecoding tag has been getting more and more useless for a while now. It lost the original meaning as the culture of software engineering with LLMs matured a bit. It got silly when posts talking about LLMs in general got tagged. It got useless when posts even mentioning some project created ",
-      "url": "https://lobste.rs/s/ggpwfi/it_s_enough_vibecoding_tag_crossed_from",
-      "source": "Lobste.rs",
-      "score": 316,
-      "comments": 271,
-      "tags": [
-        "meta",
-        "vibecoding"
-      ]
-    },
-    {
-      "id": "hn:50150809",
-      "title": "Let's Encrypt is adding two additional remote perspectives for domain validation",
+      "id": "hn:50150089",
+      "title": "I built a drone with only one motor [video]",
       "summary": "",
-      "url": "https://community.letsencrypt.org/t/lets-encrypt-is-adding-two-additional-remote-perspectives-for-domain-validation/252166",
+      "url": "https://www.youtube.com/watch?v=Ndftcft6XhU",
       "source": "Hacker News",
-      "score": 188,
-      "comments": 63
-    },
-    {
-      "id": "hn:50153630",
-      "title": "CERN and Mistral sign a statement of intent to establish a strategic partnership",
-      "summary": "",
-      "url": "https://home.cern/cern-and-mistral-join-forces-to-accelerate-ai-for-science/",
-      "source": "Hacker News",
-      "score": 214,
-      "comments": 43
-    },
-    {
-      "id": "hn:50152307",
-      "title": "Wine ported to OpenBSD",
-      "summary": "",
-      "url": "https://marc.info/?l=openbsd-ports&m=179236125692175",
-      "source": "Hacker News",
-      "score": 338,
-      "comments": 93
+      "score": 447,
+      "comments": 98
     },
     {
       "id": "hn:50134472",
@@ -107,55 +60,72 @@
       "summary": "",
       "url": "https://chriskiehl.com/article/it-is-still-ok-to-enjoy-programming",
       "source": "Hacker News",
-      "score": 180,
-      "comments": 171
+      "score": 498,
+      "comments": 464
     },
     {
-      "id": "lob:mmvhup",
-      "title": "ARP! Tell your network to explain itself",
-      "summary": "",
-      "url": "https://benjcal.space/blog/arp-tell-your-network-to-explain-itself/",
+      "id": "lob:h0eate",
+      "title": "Updates to site guidelines and AI/LLM tags",
+      "summary": "<p>Hey folks,</p>\n<p>I've been having to perform an increasing number of <a href=\"https://lobste.rs/moderations?moderator=355E3B\" rel=\"ugc\">moderation actions</a> surrounding the <code>vibecoding</code> tag and AI/LLM related content. I started reading Lobsters because it had the most interesting vi",
+      "url": "https://lobste.rs/s/h0eate/updates_site_guidelines_ai_llm_tags",
       "source": "Lobste.rs",
-      "score": 42,
-      "comments": 17,
+      "score": 323,
+      "comments": 274,
       "tags": [
-        "networking"
+        "announce",
+        "meta"
       ]
     },
     {
-      "id": "lob:mp8qye",
-      "title": "Men in tech #YesAllMen",
+      "id": "hn:50154540",
+      "title": "MiniMax M3.1 Flash",
       "summary": "",
-      "url": "https://media.ccc.de/v/emf2026-240-1-men-in-tech-yesallmen",
-      "source": "Lobste.rs",
-      "score": 162,
-      "comments": 35,
-      "tags": [
-        "culture",
-        "video"
-      ]
+      "url": "https://www.minimax.io/blog/minimax-m31f",
+      "source": "Hacker News",
+      "score": 410,
+      "comments": 174
     },
     {
-      "id": "arxiv:2610.23847v1",
-      "title": "Behavioral Couplings: From Formation to Behavioral Emergence in Language Models",
-      "summary": "Fine-tuning large language models (LLMs) can induce behaviors beyond those explicitly targeted. For example, training a model to respond more warmly can make it more sycophantic, and training it to write insecure code can cause broad misalignment on prompts unrelated to coding. We refer to a relatio",
-      "url": "https://arxiv.org/abs/2610.23847v1",
+      "id": "hn:50152307",
+      "title": "Wine ported to OpenBSD",
+      "summary": "",
+      "url": "https://marc.info/?l=openbsd-ports&m=179236125692175",
+      "source": "Hacker News",
+      "score": 527,
+      "comments": 175
+    },
+    {
+      "id": "hn:50153664",
+      "title": "Ukraine claims first drone evacuation of wounded soldier",
+      "summary": "",
+      "url": "https://www.nbcnews.com/world/ukraine/ukraine-first-drone-evacuation-wounded-soldier-frontlines-hexacopter-rcna604310",
+      "source": "Hacker News",
+      "score": 169,
+      "comments": 126
+    },
+    {
+      "id": "hn:50158138",
+      "title": "OpenBSD 8.0 release will have inteldrm/radeondrm/amdgpu drivers from Linux 6.18",
+      "summary": "",
+      "url": "https://bsd.network/@brynet/117407035545900963",
+      "source": "Hacker News",
+      "score": 116,
+      "comments": 27
+    },
+    {
+      "id": "arxiv:2610.26860v1",
+      "title": "OpenVLHarness: Real World Visual Agentic Tool-Use with Multimodal Memory",
+      "summary": "Multimodal large language models (MLLMs) have made rapid progress on visual reasoning, yet many tasks require evidence that is difficult to obtain through internal reasoning alone: our controlled study on 22 benchmarks shows that simply increasing the inference budget of the base model yields only m",
+      "url": "https://arxiv.org/abs/2610.26860v1",
       "source": "ArXiv",
       "categories": [
         "cs.CL",
         "cs.AI",
-        "cs.LG"
+        "cs.CV",
+        "cs.LG",
+        "cs.MM"
       ],
-      "arxiv_id": "2610.23847v1"
-    },
-    {
-      "id": "hn:50155245",
-      "title": "Mercury 3: Diffusion at scale",
-      "summary": "",
-      "url": "https://www.inceptionlabs.ai/blog/introducing-mercury-3",
-      "source": "Hacker News",
-      "score": 92,
-      "comments": 37
+      "arxiv_id": "2610.26860v1"
     },
     {
       "id": "lob:8ejwsp",
@@ -163,68 +133,33 @@
       "summary": "",
       "url": "https://blog.webb.page/WM-105",
       "source": "Lobste.rs",
-      "score": 21,
-      "comments": 13,
+      "score": 29,
+      "comments": 21,
       "tags": [
         "javascript"
       ]
     },
     {
-      "id": "lob:1s3dve",
-      "title": "Superoptimizing an FPU emulator",
+      "id": "hn:50154244",
+      "title": "DeepSeek banned from U.S. federal civilian agencies under new DHS order",
+      "summary": "<a href=\"https:&#x2F;&#x2F;public-inspection.federalregister.gov&#x2F;2026-21447.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;public-inspection.federalregister.gov&#x2F;2026-21447.pdf</a>",
+      "url": "https://www.reuters.com/technology/us-banning-chinese-ai-deepseek-government-agency-it-systems-2026-10-19/",
+      "source": "Hacker News",
+      "score": 67,
+      "comments": 68
+    },
+    {
+      "id": "lob:c2ouz0",
+      "title": "2026 is an exciting year for the Rust compiler (and me)",
       "summary": "",
-      "url": "https://purplesyringa.moe/blog/superoptimizing-an-fpu-emulator/",
+      "url": "https://yoyo-code.com/2026-is-exciting-year-for-rust-compiler-and-me/",
       "source": "Lobste.rs",
-      "score": 33,
-      "comments": 5,
+      "score": 18,
+      "comments": 4,
       "tags": [
-        "performance",
+        "compilers",
         "rust"
       ]
-    },
-    {
-      "id": "arxiv:2610.23854v1",
-      "title": "Rethinking the design space of Vanilla Pixel Diffusion Transformers",
-      "summary": "Pixel-space diffusion models have recently re-emerged as a compelling alternative to latent diffusion, avoiding the lossy latent bottleneck and separately trained autoencoder. JiT shows that a vanilla diffusion transformer can generate directly in pixel space by replacing the commonly used velocity ",
-      "url": "https://arxiv.org/abs/2610.23854v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ],
-      "arxiv_id": "2610.23854v1"
-    },
-    {
-      "id": "arxiv:2610.23845v1",
-      "title": "AI-Driven Reproducibility and Analytical Robustness in Scientific Discovery",
-      "summary": "Reproducible and analytically robust research findings are essential to scientific progress, but evaluating these properties typically requires costly manual effort. We investigate whether LLM agents can help automate reproduction and robustness analysis, using a medical case study grounded in the S",
-      "url": "https://arxiv.org/abs/2610.23845v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_id": "2610.23845v1"
-    },
-    {
-      "id": "arxiv:2610.23820v1",
-      "title": "CocoRNA: Collective RNA Design with Cooperative Multi-agent Reinforcement Learning",
-      "summary": "Designing RNA sequences that reliably fold into specific secondary structures is essential for understanding their biological functions but remains a challenging computational problem. We propose CocoRNA, a cooperative multi-agent reinforcement learning framework for RNA inverse design. CocoRNA simp",
-      "url": "https://arxiv.org/abs/2610.23820v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.MA"
-      ],
-      "arxiv_id": "2610.23820v1"
-    },
-    {
-      "id": "rss:535ac25a0c",
-      "title": "Show HN: KiviDB, a faster Redis-compatible memory database and vector cache",
-      "summary": "Hi all,So I have been working on this project KiviDB from February 2026. It started as a project for me to understand rust, having a product with no GC pauses, memory blow up after snapshots and getting OOM on running pods, and that was actually an issue I faced with Dragonfly. I wanted to have some",
-      "url": "https://github.com/kividbio/kividb",
-      "source": "Tech RSS",
-      "score": 0
     },
     {
       "id": "lob:vyfegx",
@@ -232,21 +167,83 @@
       "summary": "<p>What are you doing this week? Feel free to share!</p>\n<p>Keep in mind it’s OK to do nothing at all, too.</p>\n",
       "url": "https://lobste.rs/s/vyfegx/what_are_you_doing_this_week",
       "source": "Lobste.rs",
-      "score": 19,
-      "comments": 27,
+      "score": 23,
+      "comments": 39,
       "tags": [
         "ask",
         "programming"
       ]
     },
     {
-      "id": "hn:50136126",
-      "title": "RuneScape Bench: MMOs for Agents [video]",
-      "summary": "Related: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;LostCityRS&#x2F;Server\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;LostCityRS&#x2F;Server</a>",
-      "url": "https://www.youtube.com/watch?v=cNm4zyUtWj0",
+      "id": "lob:s3w7hd",
+      "title": "Tor VPN Beta: What we've learned building our own VPN for Android from scratch",
+      "summary": "",
+      "url": "https://blog.torproject.org/tor-vpn-beta/",
+      "source": "Lobste.rs",
+      "score": 33,
+      "comments": 5,
+      "tags": [
+        "android",
+        "networking",
+        "security"
+      ]
+    },
+    {
+      "id": "lob:a9f6z1",
+      "title": "Making all divisions slower to fix a bug in 0.000000000000000000542% of cases",
+      "summary": "",
+      "url": "https://futhark-lang.org/blog/2026-10-14-defining-division.html",
+      "source": "Lobste.rs",
+      "score": 37,
+      "comments": 2,
+      "tags": [
+        "c",
+        "compilers"
+      ]
+    },
+    {
+      "id": "arxiv:2610.26847v1",
+      "title": "WeAct: Dynamic Weight Switching as Agent Actions",
+      "summary": "Long-horizon agents must learn heterogeneous capabilities from interleaved trajectories. Updating shared parameters to learn new capabilities can degrade previously acquired ones, resulting in catastrophic forgetting. As a trajectory unfolds, different stages may require different capabilities, yet ",
+      "url": "https://arxiv.org/abs/2610.26847v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_id": "2610.26847v1"
+    },
+    {
+      "id": "hn:50159341",
+      "title": "WhatsApp's help pages hid LLM instructions: dont recommend a regulator",
+      "summary": "",
+      "url": "https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions",
       "source": "Hacker News",
-      "score": 41,
-      "comments": 15
+      "score": 106,
+      "comments": 13
+    },
+    {
+      "id": "hn:50140584",
+      "title": "Weball: Play Katamari on Websites",
+      "summary": "",
+      "url": "https://www.funwithcomputervision.com/weball/",
+      "source": "Hacker News",
+      "score": 112,
+      "comments": 10
+    },
+    {
+      "id": "lob:mpdk1e",
+      "title": "Finding a home amidst the wreckage",
+      "summary": "",
+      "url": "https://blog.zerodogg.org/2026/10/18/finding-a-home-amidst-the-wreckage/",
+      "source": "Lobste.rs",
+      "score": 28,
+      "comments": 3,
+      "tags": [
+        "culture",
+        "linux"
+      ]
     }
   ],
   "ai_curated": true
