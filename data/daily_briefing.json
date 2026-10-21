@@ -1,52 +1,52 @@
 {
   "date": "2026-10-21",
-  "update_time": "2026-10-20 16:30:57",
+  "update_time": "2026-10-21 03:59:34",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-21\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 DeepSeek 开源自家推理引擎 DeepInfer (来源: GitHub/HackerNews)\n- **核心干货**：DeepSeek 把压箱底的推理引擎直接开源了。这意味着别人卖 API 靠模型能力赚钱，它反手把\"怎么把模型跑得又快又便宜\"这套工程护城河免费送人——推理侧的成本优化、批处理调度、显存管理这些真正烧钱的地方，全给你摊在阳光下。1668 分、610 条评论的 HN 热度说明一切。\n- **毒舌/硬核点评**：开源模型参数是\"交个朋友\"，开源推理引擎是\"拆自家地基\"。这波操作直接让一堆靠\"推理优化\"讲故事的创业公司连夜改 BP——护城河变护城河遗址了。\n- **🔗 传送门**：[点击直达原链接](https://github.com/deepseek-ai/DeepInfer)\n\n---\n\n### 2. 📌 假数据洗白术：编造统计数字，就能被大模型疯狂引用 (来源: HackerNews)\n- **核心干货**：一篇实测博文揭露了 LLM 时代最脏的 SEO——只要你精心编造一份看起来像模像样的\"统计数据\"并铺到网上，大模型在回答时就会一本正经地把它当权威引用。作者亲自操作，让自己的假数据\"遍布全网\"。这本质上暴露了 RAG 与训练语料对\"来源权威性\"毫无免疫力的致命缺陷。\n- **毒舌/硬核点评**：以前是\"谎言重复一千遍成真理\"，现在是\"假数据发布一次就被 AI 复读一万遍\"。给 AI 喂数据前不查来源，等于给谣言配了个 24 小时不休息的扩音器。\n- **🔗 传送门**：[点击直达原链接](https://peec.ai/blog/publish-stats-get-cited-the-tactic-that-put-my-data-all-over-the-web)\n\n---\n\n### 3. 📌 WeAct：把\"动态切换权重\"当成 Agent 的动作来学 (来源: ArXiv)\n- **核心干货**：长程 Agent 的老大难是灾难性遗忘——学新技能就把旧技能搞崩。这篇论文换了个思路：不硬改共享参数，而是让 Agent 在轨迹的不同阶段\"动态切换权重模块\"，把\"换脑子\"本身当成一个可学习的动作。这为多能力 Agent 提供了一条规避遗忘的工程化路径，比单纯堆参数优雅得多。\n- **毒舌/硬核点评**：别的 Agent 是\"一个脑子硬扛所有活\"，这个是\"干到哪步换哪个脑\"。听着像精神分裂，实则是模块化 MoE 思路在 Agent 上的正经落地——终于有人不靠加大模型而是靠调度聪明来解决问题了。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2610.26847v1)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"护城河不是你会什么，而是别人学不会什么——一旦你把它开源，剩下的就只有跑得比别人快这一条路了。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-21\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 DeepInfer：DeepSeek 官方下场做推理框架 (来源: GitHub / HN 2174 分)\n- **核心干货**：DeepSeek 亲自开源高性能推理框架，专为自家模型深度定制。意思很明确——别再拿 vLLM 那套通用轮子硬套我的模型了，我自己上手榨干每一滴算力。这意味着推理吞吐、延迟和显存占用都有望迎来实质性优化，部署成本直接打下来。\n- **毒舌/硬核点评**：模型厂商卷完参数开始卷\"交付链路\"，这才是正经事。毕竟再强的模型，跑起来像拖拉机也没人买单——自己造的发动机，才配得上自己造的车。\n- **🔗 传送门**：[点击直达原链接](https://github.com/deepseek-ai/DeepInfer)\n\n---\n\n### 2. 📌 Google 开源 TorchTPU：PyTorch 原生打通 TPU (来源: HackerNews 288 分)\n- **核心干货**：Google 把 PyTorch 到 TPU 的原生后端开源了，开发者不用再被 JAX 绑架、也不必为了跑 TPU 重写训练代码。对苦 TPU 生态割裂久矣的团队是实打实的利好，等于给 PyTorch 生态插上了 Google 自研芯片的翅膀。\n- **毒舌/硬核点评**：Google 终于想通了——与其逼全世界学 JAX，不如把 PyTorch 用户直接\"招安\"进 TPU 阵营。芯片战争打到最后，拼的不是峰值算力，是谁的生态让人懒得搬家。\n- **🔗 传送门**：[点击直达原链接](https://github.com/google-pytorch/torch_tpu)\n\n---\n\n### 3. 📌 eMudhra 中间 CA 被攻陷，Mozilla 紧急护驾 Firefox (来源: HackerNews 727 分 / Mozilla 安全博客)\n- **核心干货**：又一家证书颁发机构的中间证书遭攻陷，攻击者可借此伪造任意网站的\"合法\"证书、实施中间人劫持。Mozilla 已迅速在 Firefox 中吊销相关证书链止损。这事的分量在于——HTTPS 那把小锁的信任根基，又被人凿了一道缝。\n- **毒舌/硬核点评**：我们天天加密传输数据，却把\"信任\"外包给了几十家随时可能翻车的 CA。密码学再硬，也架不住发证的人自己漏了底——互联网的信任模型，本质是个大型\"我信你但你别坑我\"的击鼓传花。\n- **🔗 传送门**：[点击直达原链接](https://blog.mozilla.org/security/2026/10/20/protecting-firefox-users-following-the-compromise-of-emudhra-intermediate-certificates/)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"别迷信什么'护城河'——模型会被追平，框架会被替换，唯一带不走的是你持续踩坑后长在脑子里的判断力。技术迭代比你换手机还快，投资自己永远不会贬值。\"",
   "briefing_items": [
     {
-      "title": "DeepSeek 开源自家推理引擎 DeepInfer",
-      "source": "GitHub/HackerNews",
-      "summary": "DeepSeek 把压箱底的推理引擎直接开源了。这意味着别人卖 API 靠模型能力赚钱，它反手把\"怎么把模型跑得又快又便宜\"这套工程护城河免费送人——推理侧的成本优化、批处理调度、显存管理这些真正烧钱的地方，全给你摊在阳光下。1668 分、610 条评论的 HN 热度说明一切。",
-      "commentary": "开源模型参数是\"交个朋友\"，开源推理引擎是\"拆自家地基\"。这波操作直接让一堆靠\"推理优化\"讲故事的创业公司连夜改 BP——护城河变护城河遗址了。",
+      "title": "DeepInfer：DeepSeek 官方下场做推理框架",
+      "source": "GitHub / HN 2174 分",
+      "summary": "DeepSeek 亲自开源高性能推理框架，专为自家模型深度定制。意思很明确——别再拿 vLLM 那套通用轮子硬套我的模型了，我自己上手榨干每一滴算力。这意味着推理吞吐、延迟和显存占用都有望迎来实质性优化，部署成本直接打下来。",
+      "commentary": "模型厂商卷完参数开始卷\"交付链路\"，这才是正经事。毕竟再强的模型，跑起来像拖拉机也没人买单——自己造的发动机，才配得上自己造的车。",
       "url": "https://github.com/deepseek-ai/DeepInfer"
     },
     {
-      "title": "假数据洗白术：编造统计数字，就能被大模型疯狂引用",
-      "source": "HackerNews",
-      "summary": "一篇实测博文揭露了 LLM 时代最脏的 SEO——只要你精心编造一份看起来像模像样的\"统计数据\"并铺到网上，大模型在回答时就会一本正经地把它当权威引用。作者亲自操作，让自己的假数据\"遍布全网\"。这本质上暴露了 RAG 与训练语料对\"来源权威性\"毫无免疫力的致命缺陷。",
-      "commentary": "以前是\"谎言重复一千遍成真理\"，现在是\"假数据发布一次就被 AI 复读一万遍\"。给 AI 喂数据前不查来源，等于给谣言配了个 24 小时不休息的扩音器。",
-      "url": "https://peec.ai/blog/publish-stats-get-cited-the-tactic-that-put-my-data-all-over-the-web"
+      "title": "Google 开源 TorchTPU：PyTorch 原生打通 TPU",
+      "source": "HackerNews 288 分",
+      "summary": "Google 把 PyTorch 到 TPU 的原生后端开源了，开发者不用再被 JAX 绑架、也不必为了跑 TPU 重写训练代码。对苦 TPU 生态割裂久矣的团队是实打实的利好，等于给 PyTorch 生态插上了 Google 自研芯片的翅膀。",
+      "commentary": "Google 终于想通了——与其逼全世界学 JAX，不如把 PyTorch 用户直接\"招安\"进 TPU 阵营。芯片战争打到最后，拼的不是峰值算力，是谁的生态让人懒得搬家。",
+      "url": "https://github.com/google-pytorch/torch_tpu"
     },
     {
-      "title": "WeAct：把\"动态切换权重\"当成 Agent 的动作来学",
-      "source": "ArXiv",
-      "summary": "长程 Agent 的老大难是灾难性遗忘——学新技能就把旧技能搞崩。这篇论文换了个思路：不硬改共享参数，而是让 Agent 在轨迹的不同阶段\"动态切换权重模块\"，把\"换脑子\"本身当成一个可学习的动作。这为多能力 Agent 提供了一条规避遗忘的工程化路径，比单纯堆参数优雅得多。",
-      "commentary": "别的 Agent 是\"一个脑子硬扛所有活\"，这个是\"干到哪步换哪个脑\"。听着像精神分裂，实则是模块化 MoE 思路在 Agent 上的正经落地——终于有人不靠加大模型而是靠调度聪明来解决问题了。",
-      "url": "https://arxiv.org/abs/2610.26847v1"
+      "title": "eMudhra 中间 CA 被攻陷，Mozilla 紧急护驾 Firefox",
+      "source": "HackerNews 727 分 / Mozilla 安全博客",
+      "summary": "又一家证书颁发机构的中间证书遭攻陷，攻击者可借此伪造任意网站的\"合法\"证书、实施中间人劫持。Mozilla 已迅速在 Firefox 中吊销相关证书链止损。这事的分量在于——HTTPS 那把小锁的信任根基，又被人凿了一道缝。",
+      "commentary": "我们天天加密传输数据，却把\"信任\"外包给了几十家随时可能翻车的 CA。密码学再硬，也架不住发证的人自己漏了底——互联网的信任模型，本质是个大型\"我信你但你别坑我\"的击鼓传花。",
+      "url": "https://blog.mozilla.org/security/2026/10/20/protecting-firefox-users-following-the-compromise-of-emudhra-intermediate-certificates/"
     },
     {
-      "quote": "\"护城河不是你会什么，而是别人学不会什么——一旦你把它开源，剩下的就只有跑得比别人快这一条路了。\""
+      "quote": "\"别迷信什么'护城河'——模型会被追平，框架会被替换，唯一带不走的是你持续踩坑后长在脑子里的判断力。技术迭代比你换手机还快，投资自己永远不会贬值。\""
     }
   ],
   "candidates": [
     {
       "id": "hn:50163277",
-      "title": "DeepSeek just open-sourced its inference engine",
+      "title": "DeepInfer: High-performance inference framework for DeepSeek models",
       "summary": "",
       "url": "https://github.com/deepseek-ai/DeepInfer",
       "source": "Hacker News",
-      "score": 1668,
-      "comments": 610
+      "score": 2174,
+      "comments": 844
     },
     {
-      "id": "hn:50167536",
-      "title": "Facebook now charging to post more than 2 links a month",
-      "summary": "",
-      "url": "https://mastodon.gamedev.place/@AshleyGullen/117473851565913919",
+      "id": "hn:50108717",
+      "title": "SlopCodeBench 10/2026 – Opus 5.5, Astra wins overall, xhigh considered harmful",
+      "summary": "Quick update here since a lot of folks asked about what slopcodebench is &#x2F; where it fits in<p>Slop code bench is unique among benchmarks in that it makes a model work against a progressively disclosed list of features (checkpoints) that it doesn’t know it advance, inheriting the same codebase t",
+      "url": "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-new-models-on-slop-code-bench.md",
       "source": "Hacker News",
-      "score": 220,
-      "comments": 136
+      "score": 200,
+      "comments": 86
     },
     {
       "id": "lob:nne5uh",
@@ -54,12 +54,49 @@
       "summary": "",
       "url": "https://www.techspot.com/news/114018-netherlands-building-own-linux-os-break-free-microsoft.html",
       "source": "Lobste.rs",
-      "score": 56,
-      "comments": 12,
+      "score": 68,
+      "comments": 20,
       "tags": [
         "linux",
+        "nix",
         "windows"
       ]
+    },
+    {
+      "id": "hn:50172041",
+      "title": "Upcoming critical PHP security release",
+      "summary": "",
+      "url": "https://news-web.php.net/php.announce/509",
+      "source": "Hacker News",
+      "score": 191,
+      "comments": 59
+    },
+    {
+      "id": "hn:50170593",
+      "title": "Show HN: SimCity, but with Permits",
+      "summary": "",
+      "url": "https://permit.petercai.com/",
+      "source": "Hacker News",
+      "score": 637,
+      "comments": 326
+    },
+    {
+      "id": "hn:50166579",
+      "title": "eMudhra intermediate CA compromise",
+      "summary": "<a href=\"https:&#x2F;&#x2F;blog.mozilla.org&#x2F;security&#x2F;2026&#x2F;10&#x2F;20&#x2F;protecting-firefox-users-following-the-compromise-of-emudhra-intermediate-certificates&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;blog.mozilla.org&#x2F;security&#x2F;2026&#x2F;10&#x2F;20&#x2F;protecting-fire...</a>",
+      "url": "https://emudhra.we-have-a-problem.com/",
+      "source": "Hacker News",
+      "score": 727,
+      "comments": 349
+    },
+    {
+      "id": "hn:50169053",
+      "title": "Google open-sources TorchTPU, a native PyTorch back end for TPUs",
+      "summary": "",
+      "url": "https://github.com/google-pytorch/torch_tpu",
+      "source": "Hacker News",
+      "score": 288,
+      "comments": 65
     },
     {
       "id": "hn:50165208",
@@ -67,21 +104,8 @@
       "summary": "",
       "url": "https://teddysvoronos.com/2026-10-19-apple-broke-an-essential-presentation-feature-of-ipads/",
       "source": "Hacker News",
-      "score": 258,
-      "comments": 139
-    },
-    {
-      "id": "lob:h0eate",
-      "title": "Updates to site guidelines and AI/LLM tags",
-      "summary": "<p>Hey folks,</p>\n<p>I've been having to perform an increasing number of <a href=\"https://lobste.rs/moderations?moderator=355E3B\" rel=\"ugc\">moderation actions</a> surrounding the <code>vibecoding</code> tag and AI/LLM related content. I started reading Lobsters because it had the most interesting vi",
-      "url": "https://lobste.rs/s/h0eate/updates_site_guidelines_ai_llm_tags",
-      "source": "Lobste.rs",
-      "score": 341,
-      "comments": 336,
-      "tags": [
-        "announce",
-        "meta"
-      ]
+      "score": 513,
+      "comments": 265
     },
     {
       "id": "lob:d7m5j1",
@@ -89,8 +113,8 @@
       "summary": "",
       "url": "https://nmattia.com/posts/2026-10-19-setting-up-ssh-keys-touch-id/",
       "source": "Lobste.rs",
-      "score": 34,
-      "comments": 15,
+      "score": 53,
+      "comments": 22,
       "tags": [
         "cryptography",
         "mac",
@@ -98,13 +122,47 @@
       ]
     },
     {
-      "id": "hn:50165801",
-      "title": "Publish fake stats, get cited in LLMs",
+      "id": "lob:h0eate",
+      "title": "Updates to site guidelines and AI/LLM tags",
+      "summary": "<p>Hey folks,</p>\n<p>I've been having to perform an increasing number of <a href=\"https://lobste.rs/moderations?moderator=355E3B\" rel=\"ugc\">moderation actions</a> surrounding the <code>vibecoding</code> tag and AI/LLM related content. I started reading Lobsters because it had the most interesting vi",
+      "url": "https://lobste.rs/s/h0eate/updates_site_guidelines_ai_llm_tags",
+      "source": "Lobste.rs",
+      "score": 362,
+      "comments": 390,
+      "tags": [
+        "announce",
+        "meta"
+      ]
+    },
+    {
+      "id": "lob:7d1swo",
+      "title": "NixOS is making me less afraid",
       "summary": "",
-      "url": "https://peec.ai/blog/publish-stats-get-cited-the-tactic-that-put-my-data-all-over-the-web",
+      "url": "https://entropicthoughts.com/nixos-is-making-me-less-afraid",
+      "source": "Lobste.rs",
+      "score": 40,
+      "comments": 25,
+      "tags": [
+        "nix"
+      ]
+    },
+    {
+      "id": "hn:50168396",
+      "title": "Voxtral 3",
+      "summary": "",
+      "url": "https://mistral.ai/news/voxtral-3/",
       "source": "Hacker News",
-      "score": 160,
-      "comments": 90
+      "score": 559,
+      "comments": 146
+    },
+    {
+      "id": "hn:50169707",
+      "title": "What shall I teach my son?",
+      "summary": "",
+      "url": "https://stevekrouse.com/ends",
+      "source": "Hacker News",
+      "score": 309,
+      "comments": 376
     },
     {
       "id": "lob:gqyvn5",
@@ -112,59 +170,32 @@
       "summary": "",
       "url": "https://blog.mozilla.org/security/2026/10/20/protecting-firefox-users-following-the-compromise-of-emudhra-intermediate-certificates/",
       "source": "Lobste.rs",
-      "score": 43,
-      "comments": 20,
+      "score": 128,
+      "comments": 46,
       "tags": [
         "security"
       ]
     },
     {
-      "id": "hn:50166579",
-      "title": "EMudhra Intermediate CA Compromise",
+      "id": "hn:50173487",
+      "title": "Feds suspect ransom negotiator ran ShinyHunters extortion site",
       "summary": "",
-      "url": "https://emudhra.we-have-a-problem.com/",
+      "url": "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/",
       "source": "Hacker News",
-      "score": 157,
-      "comments": 61
+      "score": 131,
+      "comments": 50
     },
     {
-      "id": "arxiv:2610.26860v1",
-      "title": "OpenVLHarness: Real World Visual Agentic Tool-Use with Multimodal Memory",
-      "summary": "Multimodal large language models (MLLMs) have made rapid progress on visual reasoning, yet many tasks require evidence that is difficult to obtain through internal reasoning alone: our controlled study on 22 benchmarks shows that simply increasing the inference budget of the base model yields only m",
-      "url": "https://arxiv.org/abs/2610.26860v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.CV",
-        "cs.LG",
-        "cs.MM"
-      ],
-      "arxiv_id": "2610.26860v1"
-    },
-    {
-      "id": "lob:gqepzd",
-      "title": "Wine ported to OpenBSD",
+      "id": "lob:ekxoyt",
+      "title": "Upcoming Critical PHP Security Release",
       "summary": "",
-      "url": "https://marc.info/?l=openbsd-ports&m=179236125692175",
+      "url": "https://www.php.net/archive/2026.php#2026-10-20-1",
       "source": "Lobste.rs",
-      "score": 110,
-      "comments": 21,
+      "score": 34,
+      "comments": 6,
       "tags": [
-        "openbsd"
-      ]
-    },
-    {
-      "id": "lob:a9f6z1",
-      "title": "Making all divisions slower to fix a bug in 0.000000000000000000542% of cases",
-      "summary": "",
-      "url": "https://futhark-lang.org/blog/2026-10-14-defining-division.html",
-      "source": "Lobste.rs",
-      "score": 71,
-      "comments": 12,
-      "tags": [
-        "c",
-        "compilers"
+        "php",
+        "security"
       ]
     },
     {
@@ -173,81 +204,21 @@
       "summary": "",
       "url": "https://www.openbsd.org/80.html",
       "source": "Lobste.rs",
-      "score": 84,
-      "comments": 10,
+      "score": 96,
+      "comments": 11,
       "tags": [
         "openbsd",
         "release"
       ]
     },
     {
-      "id": "hn:50167028",
-      "title": "Ofcom Concedes Defeat in the 4chan Case",
-      "summary": "",
-      "url": "https://prestonbyrne.com/2026/10/20/ofcom-concedes-defeat/",
+      "id": "hn:50173891",
+      "title": "The Other Epidemic: Trying to get off benzodiazepines",
+      "summary": "<a href=\"https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20261020230542&#x2F;https:&#x2F;&#x2F;www.thebeliever.net&#x2F;the-other-epidemic&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20261020230542&#x2F;https:&#x2F;&#x2F;www.thebe...</a><p><a href=\"https:&#x2F;&#x2F;archive",
+      "url": "https://www.thebeliever.net/the-other-epidemic/",
       "source": "Hacker News",
-      "score": 97,
-      "comments": 53
-    },
-    {
-      "id": "lob:mpytbn",
-      "title": "One Hash Bloom Filters",
-      "summary": "",
-      "url": "https://www.calabro.io/ohbf",
-      "source": "Lobste.rs",
-      "score": 57,
-      "comments": 8,
-      "tags": [
-        "compsci",
-        "databases"
-      ]
-    },
-    {
-      "id": "hn:50166257",
-      "title": "How I got over 300 Tor exit nodes removed",
-      "summary": "",
-      "url": "https://kaba.cx/posts/20261020_Tor/",
-      "source": "Hacker News",
-      "score": 113,
-      "comments": 31
-    },
-    {
-      "id": "lob:7d1swo",
-      "title": "NixOS is making me less afraid",
-      "summary": "",
-      "url": "https://entropicthoughts.com/nixos-is-making-me-less-afraid",
-      "source": "Lobste.rs",
-      "score": 16,
-      "comments": 10,
-      "tags": [
-        "nix"
-      ]
-    },
-    {
-      "id": "lob:b36ixw",
-      "title": "In Context",
-      "summary": "",
-      "url": "https://www.youtube.com/watch?v=P5eO7BNyJao",
-      "source": "Lobste.rs",
-      "score": 31,
-      "comments": 10,
-      "tags": [
-        "programming",
-        "video"
-      ]
-    },
-    {
-      "id": "arxiv:2610.26847v1",
-      "title": "WeAct: Dynamic Weight Switching as Agent Actions",
-      "summary": "Long-horizon agents must learn heterogeneous capabilities from interleaved trajectories. Updating shared parameters to learn new capabilities can degrade previously acquired ones, resulting in catastrophic forgetting. As a trajectory unfolds, different stages may require different capabilities, yet ",
-      "url": "https://arxiv.org/abs/2610.26847v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_id": "2610.26847v1"
+      "score": 100,
+      "comments": 67
     },
     {
       "id": "rss:dde34d2718",
@@ -256,6 +227,19 @@
       "url": "https://thehackernews.com/2026/10/critical-fortisiem-flaw-gets-public.html",
       "source": "Tech RSS",
       "score": 0
+    },
+    {
+      "id": "lob:dlbufy",
+      "title": "Mastodon 5.0: A closer look",
+      "summary": "",
+      "url": "https://blog.joinmastodon.org/2026/10/5.0-a-closer-look/",
+      "source": "Lobste.rs",
+      "score": 20,
+      "comments": 8,
+      "tags": [
+        "design",
+        "release"
+      ]
     }
   ],
   "ai_curated": true
