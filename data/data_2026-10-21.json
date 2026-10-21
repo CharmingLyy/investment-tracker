@@ -1,0 +1,830 @@
+{
+  "update_time": "2026-10-21 13:21:26",
+  "stocks": {
+    "a_stocks": [
+      {
+        "market": "A股",
+        "code": "002050",
+        "name": "三花智控",
+        "symbol": "sz.002050",
+        "industry": null,
+        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
+        "price": 32.93,
+        "open": 33.03,
+        "high": 33.33,
+        "low": 32.66,
+        "change_pct": -0.3,
+        "volume": 39883699,
+        "turnover": 13.17,
+        "market_cap": null,
+        "pe": 34.67,
+        "cash_flow": 50.92,
+        "macd": -1.0231,
+        "macd_signal": -0.9831,
+        "macd_histogram": -0.0799,
+        "rsi": 42.91,
+        "ma": {
+          "MA5": 32.11,
+          "MA10": 32.46,
+          "MA20": 33.92,
+          "MA60": 35.83
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
+        "price": 6.12,
+        "open": 6.16,
+        "high": 6.2,
+        "low": 6.12,
+        "change_pct": -0.49,
+        "volume": 28092414,
+        "turnover": 1.73,
+        "market_cap": null,
+        "pe": 70.16,
+        "cash_flow": 105.67,
+        "macd": -0.1144,
+        "macd_signal": -0.0842,
+        "macd_histogram": -0.0605,
+        "rsi": 30.49,
+        "ma": {
+          "MA5": 6.17,
+          "MA10": 6.3,
+          "MA20": 6.4,
+          "MA60": 6.6
+        },
+        "main_net_flow": null
+      }
+    ],
+    "hk_stocks": [
+      {
+        "market": "港股",
+        "code": "01810",
+        "name": "小米集团-W",
+        "symbol": "01810",
+        "industry": "Consumer Electronics",
+        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
+        "price": 26.8,
+        "open": 27.28,
+        "high": 27.76,
+        "low": 26.54,
+        "change_pct": -0.96,
+        "volume": 144467851,
+        "turnover": null,
+        "market_cap": 6899.62,
+        "pe": 19.71,
+        "cash_flow": 86.81,
+        "macd": 0.0298,
+        "macd_signal": -0.294,
+        "macd_histogram": 0.6476,
+        "rsi": 54.69,
+        "ma": {
+          "MA5": 26.8,
+          "MA10": 25.71,
+          "MA20": 25.58,
+          "MA60": 26.83
+        },
+        "main_net_flow": null
+      }
+    ],
+    "us_stocks": [
+      {
+        "market": "美股",
+        "code": "NVDA",
+        "name": "NVIDIA",
+        "symbol": "NVDA",
+        "industry": "Semiconductors",
+        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
+        "price": 216.47,
+        "open": 215.98,
+        "high": 218.46,
+        "low": 212.77,
+        "change_pct": -0.29,
+        "volume": 78967900,
+        "turnover": null,
+        "market_cap": 52271.01,
+        "pe": 27.37,
+        "cash_flow": 418.1,
+        "macd": -1.2913,
+        "macd_signal": 1.0376,
+        "macd_histogram": -4.6577,
+        "rsi": 40.93,
+        "ma": {
+          "MA5": 217.24,
+          "MA10": 223.83,
+          "MA20": 227.04,
+          "MA60": 220.32
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "GOOG",
+        "name": "Alphabet (Google)",
+        "symbol": "GOOG",
+        "industry": "Internet Content & Information",
+        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
+        "price": 336.4,
+        "open": 339.71,
+        "high": 341.0,
+        "low": 334.6,
+        "change_pct": -1.11,
+        "volume": 14715900,
+        "turnover": null,
+        "market_cap": 41141.5,
+        "pe": 16.88,
+        "cash_flow": 226.65,
+        "macd": -0.0991,
+        "macd_signal": 0.701,
+        "macd_histogram": -1.6002,
+        "rsi": 44.04,
+        "ma": {
+          "MA5": 340.41,
+          "MA10": 344.06,
+          "MA20": 341.83,
+          "MA60": 342.76
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "CRCL",
+        "name": "Circle",
+        "symbol": "CRCL",
+        "industry": "Capital Markets",
+        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
+        "price": 85.87,
+        "open": 80.4,
+        "high": 86.66,
+        "low": 79.98,
+        "change_pct": 5.53,
+        "volume": 8381200,
+        "turnover": null,
+        "market_cap": 218.0,
+        "pe": 58.82,
+        "cash_flow": 2.06,
+        "macd": -0.8385,
+        "macd_signal": -0.8341,
+        "macd_histogram": -0.0089,
+        "rsi": 51.53,
+        "ma": {
+          "MA5": 83.2,
+          "MA10": 83.03,
+          "MA20": 84.36,
+          "MA60": 82.33
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "MP",
+        "name": "MP Materials",
+        "symbol": "MP",
+        "industry": "Other Industrial Metals & Mining",
+        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
+        "price": 39.05,
+        "open": 38.31,
+        "high": 40.16,
+        "low": 37.94,
+        "change_pct": 0.26,
+        "volume": 3728300,
+        "turnover": null,
+        "market_cap": 69.55,
+        "pe": 48.41,
+        "cash_flow": 4.33,
+        "macd": -2.9164,
+        "macd_signal": -2.3514,
+        "macd_histogram": -1.1301,
+        "rsi": 30.54,
+        "ma": {
+          "MA5": 39.95,
+          "MA10": 42.41,
+          "MA20": 44.94,
+          "MA60": 49.76
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "PLTR",
+        "name": "Palantir",
+        "symbol": "PLTR",
+        "industry": "Software - Infrastructure",
+        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
+        "price": 192.6,
+        "open": 192.44,
+        "high": 196.11,
+        "low": 189.42,
+        "change_pct": -0.8,
+        "volume": 15031300,
+        "turnover": null,
+        "market_cap": 4628.29,
+        "pe": 166.03,
+        "cash_flow": 21.59,
+        "macd": 4.7933,
+        "macd_signal": 6.2728,
+        "macd_histogram": -2.9591,
+        "rsi": 52.12,
+        "ma": {
+          "MA5": 194.85,
+          "MA10": 199.39,
+          "MA20": 194.48,
+          "MA60": 176.83
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "NOW",
+        "name": "ServiceNow",
+        "symbol": "NOW",
+        "industry": "Software - Application",
+        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
+        "price": 149.54,
+        "open": 148.08,
+        "high": 150.04,
+        "low": 146.31,
+        "change_pct": 2.88,
+        "volume": 10774800,
+        "turnover": null,
+        "market_cap": 1546.04,
+        "pe": 93.46,
+        "cash_flow": 51.49,
+        "macd": 3.1716,
+        "macd_signal": 2.3459,
+        "macd_histogram": 1.6514,
+        "rsi": 62.74,
+        "ma": {
+          "MA5": 145.08,
+          "MA10": 142.28,
+          "MA20": 138.93,
+          "MA60": 132.53
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "DDOG",
+        "name": "Datadog",
+        "symbol": "DDOG",
+        "industry": "Software - Application",
+        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
+        "price": 256.43,
+        "open": 257.12,
+        "high": 259.07,
+        "low": 252.62,
+        "change_pct": -1.51,
+        "volume": 2185800,
+        "turnover": null,
+        "market_cap": 920.78,
+        "pe": 512.86,
+        "cash_flow": 10.51,
+        "macd": 4.2569,
+        "macd_signal": 8.0257,
+        "macd_histogram": -7.5377,
+        "rsi": 47.3,
+        "ma": {
+          "MA5": 259.9,
+          "MA10": 270.85,
+          "MA20": 270.22,
+          "MA60": 249.96
+        },
+        "main_net_flow": null
+      }
+    ],
+    "crypto": [
+      {
+        "market": "加密货币",
+        "code": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "industry": "Smart Contract Platform",
+        "price": 83671,
+        "open": null,
+        "high": 83568,
+        "low": 82028,
+        "change_pct": 2.76,
+        "volume": 28488823645,
+        "turnover": null,
+        "market_cap": 16818.06,
+        "market_cap_rank": 1,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": 142.2395,
+        "macd_signal": 290.668,
+        "macd_histogram": -296.8569,
+        "rsi": 55.6,
+        "ma": {
+          "MA5": 82390.07,
+          "MA10": 82214.32,
+          "MA20": 83166.71,
+          "MA60": 81152.02
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 20098843.0,
+          "total_supply": 20099025.0,
+          "circ_ratio": 100.0,
+          "price_change_7d": 1.17981,
+          "price_change_30d": -1.8963,
+          "ath_pct": -33.64,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      },
+      {
+        "market": "加密货币",
+        "code": "ethereum",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "industry": "Smart Contract Platform",
+        "price": 2479.95,
+        "open": null,
+        "high": 2471.63,
+        "low": 2407.25,
+        "change_pct": 3.61,
+        "volume": 13617908297,
+        "turnover": null,
+        "market_cap": 3029.43,
+        "market_cap_rank": 2,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -42.1361,
+        "macd_signal": -33.6359,
+        "macd_histogram": -17.0005,
+        "rsi": 46.98,
+        "ma": {
+          "MA5": 2428.32,
+          "MA10": 2436.43,
+          "MA20": 2521.16,
+          "MA60": 2536.06
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 122149509.8558182,
+          "total_supply": 122149509.8558182,
+          "circ_ratio": 100.0,
+          "price_change_7d": 0.18151,
+          "price_change_30d": -9.28525,
+          "ath_pct": -49.86,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      }
+    ]
+  },
+  "news": [
+    {
+      "id": "35b871d31c",
+      "title": "[播客]独家实拍：我那永远跪着的母亲(11/07 22:10)",
+      "summary": "独家实拍：我那永远跪着的母亲",
+      "link": "http://go.rss.sina.com.cn/redirect.php?url=http://you.video.sina.com.cn/b/16972162-1239095354.html",
+      "source": "rss.sina.com.cn",
+      "published": ""
+    },
+    {
+      "id": "a56aca1b65",
+      "title": "Heckler disrupts Nvidia CEO Huang’s speech at Berlin conference",
+      "summary": "The person shouted something that could not be heard on the company’s livestream about 20 minutes into the address, before being removed from the auditorium.",
+      "link": "https://www.marketwatch.com/story/heckler-disrupts-nvidia-ceo-huangs-speech-at-berlin-conference-fc461a82?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 21 Oct 2026 12:32:00 GMT"
+    },
+    {
+      "id": "30ea7cac42",
+      "title": "Why SpaceX’s stock is surging — and lifting the broader AI universe along with it",
+      "summary": "SpaceX just gave Wall Street a big reason to believe in the artificial-intelligence boom as demand for its computing power is off the charts.",
+      "link": "https://www.marketwatch.com/story/why-spacexs-stock-is-surging-and-lifting-the-broader-ai-universe-along-with-it-0cd62f39?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 21 Oct 2026 12:06:00 GMT"
+    },
+    {
+      "id": "eb55a764d5",
+      "title": "Musk says he’s exploring a SpaceX-Tesla megamerger. What would a combined company be worth?",
+      "summary": "SpaceX and Super Micro Computer help revive Wall Street’s flagging enthusiasm, with more key earnings on tap.",
+      "link": "https://www.marketwatch.com/story/musk-says-hes-exploring-a-spacex-tesla-megamerger-what-would-a-combined-company-be-worth-f35566aa?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 21 Oct 2026 11:39:00 GMT"
+    },
+    {
+      "id": "0cce12f8fd",
+      "title": "‘I don’t feel sorry for myself’: I’m 64 and will be renting for the rest of my life. Is that so bad?",
+      "summary": "“I married a wonderful man with a good income. He left his job due to health issues and suffered a massive stroke at 53.”",
+      "link": "https://www.marketwatch.com/story/my-husband-suffered-a-massive-stroke-at-53-im-64-and-will-rent-for-the-rest-of-my-life-but-im-still-hopeful-46bd6ce9?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 21 Oct 2026 11:15:00 GMT"
+    },
+    {
+      "id": "af7aefed9f",
+      "title": "I receive 10 calls a day promising me $15,000 loans at 8% interest. Are these legitimate offers?",
+      "summary": "“They insist that the details will be provided after they have carried out a soft credit check.”",
+      "link": "https://www.marketwatch.com/story/im-naturally-skeptical-i-receive-10-calls-a-day-offering-me-15-000-loans-at-8-interest-is-this-a-scam-825c3431?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 21 Oct 2026 11:00:00 GMT"
+    },
+    {
+      "id": "79a49a3554",
+      "title": "Opposition to data centers will drive up inflation, says BlackRock’s Larry Fink",
+      "summary": "Fight the data centers at your economic peril, says BlackRock CEO Larry Fink.",
+      "link": "https://www.marketwatch.com/story/opposition-to-data-centers-will-drive-up-inflation-says-blackrocks-larry-fink-831c25b9?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 21 Oct 2026 10:59:00 GMT"
+    },
+    {
+      "id": "622eac1c88",
+      "title": "AT&T shrugs off SpaceX fears with its own large haul of new internet subscribers",
+      "summary": "AT&amp;T’s fiber business was the star of the show in Wednesday’s third-quarter earnings report.",
+      "link": "https://www.marketwatch.com/story/at-t-shrugs-off-spacex-fears-with-its-own-large-haul-of-new-internet-subscribers-644f66a8?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 21 Oct 2026 10:58:00 GMT"
+    },
+    {
+      "id": "6bb3940405",
+      "title": "My partner of 17 years left me his $1 million home. His children say I influenced him to do so. Should I share my inheritance?",
+      "summary": "“I never paid rent, although I put about $45,000 toward a new kitchen and a roof.”",
+      "link": "https://www.marketwatch.com/story/my-unmarried-partner-of-17-years-left-me-his-1-1-million-home-his-three-children-are-livid-should-i-share-my-inheritance-a11d593d?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 21 Oct 2026 10:15:00 GMT"
+    },
+    {
+      "id": "bd17f28ad2",
+      "title": "In the battle for AI supremacy, China is only six months behind the U.S — but that means it’s winning, says former Google CEO",
+      "summary": "AI is not a bubble, says Google’s former CEO. It’s real growth, real money, real customers paying for something useful.",
+      "link": "https://www.marketwatch.com/story/in-the-battle-for-ai-supremacy-china-is-only-six-months-behind-the-u-s-but-that-means-theyre-winning-says-former-google-ceo-82d71e7a?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 21 Oct 2026 10:12:00 GMT"
+    },
+    {
+      "id": "9c0fea5b08",
+      "title": "We have a $300,000 mortgage with a 2.75% interest rate. I want to pay it off. My husband says I’m crazy. Who’s right?",
+      "summary": "“I don’t want to enter retirement owing six figures when we have the cash to clear it.”",
+      "link": "https://www.marketwatch.com/story/we-have-a-300-000-mortgage-with-a-2-75-interest-rate-i-want-to-pay-it-off-my-husband-says-im-crazy-whos-right-4ed15226?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 21 Oct 2026 09:15:00 GMT"
+    },
+    {
+      "id": "9333ca55d1",
+      "title": "M&FI director exercises options for 100,000 shares at 13.5p",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/mfi-director-exercises-options-for-100000-shares-at-135p-93CH-4963208",
+      "source": "www.investing.com",
+      "published": "2026-10-21 13:14:35"
+    },
+    {
+      "id": "0ebd5f4258",
+      "title": "Earnings call transcript: Danaher tops Q3 2026 estimates but shares fall premarket",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-danaher-tops-q3-2026-estimates-but-shares-fall-premarket-93CH-4963206",
+      "source": "www.investing.com",
+      "published": "2026-10-21 13:12:56"
+    },
+    {
+      "id": "718159a844",
+      "title": "Basic-Fit Q3 2026 slides: 32% membership surge, €10M cost savings",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/basicfit-q3-2026-slides-32-membership-surge-10m-cost-savings-93CH-4963205",
+      "source": "www.investing.com",
+      "published": "2026-10-21 13:12:50"
+    },
+    {
+      "id": "ca71afc19d",
+      "title": "Kearny Financial stockholders elect directors and approve auditor at annual meeting",
+      "summary": "",
+      "link": "https://www.investing.com/news/sec-filings/kearny-financial-stockholders-elect-directors-and-approve-auditor-at-annual-meeting-93CH-4963201",
+      "source": "www.investing.com",
+      "published": "2026-10-21 13:12:39"
+    },
+    {
+      "id": "0b4bb6b271",
+      "title": "PG&E values San Francisco grid takeover at $22.5 billion",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/pge-values-san-francisco-grid-takeover-at-225-billion-93CH-4963202",
+      "source": "www.investing.com",
+      "published": "2026-10-21 13:12:39"
+    },
+    {
+      "id": "662fcf0938",
+      "title": "Lion Copper extends debenture maturity, engages research firm",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/lion-copper-extends-debenture-maturity-engages-research-firm-93CH-4963203",
+      "source": "www.investing.com",
+      "published": "2026-10-21 13:12:39"
+    },
+    {
+      "id": "0bd0002067",
+      "title": "First Community reports Q3 earnings rise, 99th dividend",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/first-community-reports-q3-earnings-rise-99th-dividend-93CH-4963204",
+      "source": "www.investing.com",
+      "published": "2026-10-21 13:12:39"
+    },
+    {
+      "id": "2a3e6f559d",
+      "title": "Civil Air Patrol orders 21 Cessna aircraft from Textron Aviation",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/civil-air-patrol-orders-21-cessna-aircraft-from-textron-aviation-93CH-4963200",
+      "source": "www.investing.com",
+      "published": "2026-10-21 13:12:38"
+    },
+    {
+      "id": "790fb061bf",
+      "title": "Broadcom launches fraud defense feature for card transactions",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/broadcom-launches-fraud-defense-feature-for-card-transactions-93CH-4963199",
+      "source": "www.investing.com",
+      "published": "2026-10-21 13:12:36"
+    },
+    {
+      "id": "1c8bb00635",
+      "title": "Onterris receives defense approval for PFAS treatment technology",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/onterris-receives-defense-approval-for-pfas-treatment-technology-93CH-4963198",
+      "source": "www.investing.com",
+      "published": "2026-10-21 13:12:35"
+    }
+  ],
+  "briefing": {
+    "date": "2026-10-21",
+    "update_time": "2026-10-21 03:59:34",
+    "candidate_count": 20,
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-21\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 DeepInfer：DeepSeek 官方下场做推理框架 (来源: GitHub / HN 2174 分)\n- **核心干货**：DeepSeek 亲自开源高性能推理框架，专为自家模型深度定制。意思很明确——别再拿 vLLM 那套通用轮子硬套我的模型了，我自己上手榨干每一滴算力。这意味着推理吞吐、延迟和显存占用都有望迎来实质性优化，部署成本直接打下来。\n- **毒舌/硬核点评**：模型厂商卷完参数开始卷\"交付链路\"，这才是正经事。毕竟再强的模型，跑起来像拖拉机也没人买单——自己造的发动机，才配得上自己造的车。\n- **🔗 传送门**：[点击直达原链接](https://github.com/deepseek-ai/DeepInfer)\n\n---\n\n### 2. 📌 Google 开源 TorchTPU：PyTorch 原生打通 TPU (来源: HackerNews 288 分)\n- **核心干货**：Google 把 PyTorch 到 TPU 的原生后端开源了，开发者不用再被 JAX 绑架、也不必为了跑 TPU 重写训练代码。对苦 TPU 生态割裂久矣的团队是实打实的利好，等于给 PyTorch 生态插上了 Google 自研芯片的翅膀。\n- **毒舌/硬核点评**：Google 终于想通了——与其逼全世界学 JAX，不如把 PyTorch 用户直接\"招安\"进 TPU 阵营。芯片战争打到最后，拼的不是峰值算力，是谁的生态让人懒得搬家。\n- **🔗 传送门**：[点击直达原链接](https://github.com/google-pytorch/torch_tpu)\n\n---\n\n### 3. 📌 eMudhra 中间 CA 被攻陷，Mozilla 紧急护驾 Firefox (来源: HackerNews 727 分 / Mozilla 安全博客)\n- **核心干货**：又一家证书颁发机构的中间证书遭攻陷，攻击者可借此伪造任意网站的\"合法\"证书、实施中间人劫持。Mozilla 已迅速在 Firefox 中吊销相关证书链止损。这事的分量在于——HTTPS 那把小锁的信任根基，又被人凿了一道缝。\n- **毒舌/硬核点评**：我们天天加密传输数据，却把\"信任\"外包给了几十家随时可能翻车的 CA。密码学再硬，也架不住发证的人自己漏了底——互联网的信任模型，本质是个大型\"我信你但你别坑我\"的击鼓传花。\n- **🔗 传送门**：[点击直达原链接](https://blog.mozilla.org/security/2026/10/20/protecting-firefox-users-following-the-compromise-of-emudhra-intermediate-certificates/)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"别迷信什么'护城河'——模型会被追平，框架会被替换，唯一带不走的是你持续踩坑后长在脑子里的判断力。技术迭代比你换手机还快，投资自己永远不会贬值。\"",
+    "briefing_items": [
+      {
+        "title": "DeepInfer：DeepSeek 官方下场做推理框架",
+        "source": "GitHub / HN 2174 分",
+        "summary": "DeepSeek 亲自开源高性能推理框架，专为自家模型深度定制。意思很明确——别再拿 vLLM 那套通用轮子硬套我的模型了，我自己上手榨干每一滴算力。这意味着推理吞吐、延迟和显存占用都有望迎来实质性优化，部署成本直接打下来。",
+        "commentary": "模型厂商卷完参数开始卷\"交付链路\"，这才是正经事。毕竟再强的模型，跑起来像拖拉机也没人买单——自己造的发动机，才配得上自己造的车。",
+        "url": "https://github.com/deepseek-ai/DeepInfer"
+      },
+      {
+        "title": "Google 开源 TorchTPU：PyTorch 原生打通 TPU",
+        "source": "HackerNews 288 分",
+        "summary": "Google 把 PyTorch 到 TPU 的原生后端开源了，开发者不用再被 JAX 绑架、也不必为了跑 TPU 重写训练代码。对苦 TPU 生态割裂久矣的团队是实打实的利好，等于给 PyTorch 生态插上了 Google 自研芯片的翅膀。",
+        "commentary": "Google 终于想通了——与其逼全世界学 JAX，不如把 PyTorch 用户直接\"招安\"进 TPU 阵营。芯片战争打到最后，拼的不是峰值算力，是谁的生态让人懒得搬家。",
+        "url": "https://github.com/google-pytorch/torch_tpu"
+      },
+      {
+        "title": "eMudhra 中间 CA 被攻陷，Mozilla 紧急护驾 Firefox",
+        "source": "HackerNews 727 分 / Mozilla 安全博客",
+        "summary": "又一家证书颁发机构的中间证书遭攻陷，攻击者可借此伪造任意网站的\"合法\"证书、实施中间人劫持。Mozilla 已迅速在 Firefox 中吊销相关证书链止损。这事的分量在于——HTTPS 那把小锁的信任根基，又被人凿了一道缝。",
+        "commentary": "我们天天加密传输数据，却把\"信任\"外包给了几十家随时可能翻车的 CA。密码学再硬，也架不住发证的人自己漏了底——互联网的信任模型，本质是个大型\"我信你但你别坑我\"的击鼓传花。",
+        "url": "https://blog.mozilla.org/security/2026/10/20/protecting-firefox-users-following-the-compromise-of-emudhra-intermediate-certificates/"
+      },
+      {
+        "quote": "\"别迷信什么'护城河'——模型会被追平，框架会被替换，唯一带不走的是你持续踩坑后长在脑子里的判断力。技术迭代比你换手机还快，投资自己永远不会贬值。\""
+      }
+    ],
+    "candidates": [
+      {
+        "id": "hn:50163277",
+        "title": "DeepInfer: High-performance inference framework for DeepSeek models",
+        "summary": "",
+        "url": "https://github.com/deepseek-ai/DeepInfer",
+        "source": "Hacker News",
+        "score": 2174,
+        "comments": 844
+      },
+      {
+        "id": "hn:50108717",
+        "title": "SlopCodeBench 10/2026 – Opus 5.5, Astra wins overall, xhigh considered harmful",
+        "summary": "Quick update here since a lot of folks asked about what slopcodebench is &#x2F; where it fits in<p>Slop code bench is unique among benchmarks in that it makes a model work against a progressively disclosed list of features (checkpoints) that it doesn’t know it advance, inheriting the same codebase t",
+        "url": "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-new-models-on-slop-code-bench.md",
+        "source": "Hacker News",
+        "score": 200,
+        "comments": 86
+      },
+      {
+        "id": "lob:nne5uh",
+        "title": "The Netherlands is building its own Linux OS to break free from Microsoft",
+        "summary": "",
+        "url": "https://www.techspot.com/news/114018-netherlands-building-own-linux-os-break-free-microsoft.html",
+        "source": "Lobste.rs",
+        "score": 68,
+        "comments": 20,
+        "tags": [
+          "linux",
+          "nix",
+          "windows"
+        ]
+      },
+      {
+        "id": "hn:50172041",
+        "title": "Upcoming critical PHP security release",
+        "summary": "",
+        "url": "https://news-web.php.net/php.announce/509",
+        "source": "Hacker News",
+        "score": 191,
+        "comments": 59
+      },
+      {
+        "id": "hn:50170593",
+        "title": "Show HN: SimCity, but with Permits",
+        "summary": "",
+        "url": "https://permit.petercai.com/",
+        "source": "Hacker News",
+        "score": 637,
+        "comments": 326
+      },
+      {
+        "id": "hn:50166579",
+        "title": "eMudhra intermediate CA compromise",
+        "summary": "<a href=\"https:&#x2F;&#x2F;blog.mozilla.org&#x2F;security&#x2F;2026&#x2F;10&#x2F;20&#x2F;protecting-firefox-users-following-the-compromise-of-emudhra-intermediate-certificates&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;blog.mozilla.org&#x2F;security&#x2F;2026&#x2F;10&#x2F;20&#x2F;protecting-fire...</a>",
+        "url": "https://emudhra.we-have-a-problem.com/",
+        "source": "Hacker News",
+        "score": 727,
+        "comments": 349
+      },
+      {
+        "id": "hn:50169053",
+        "title": "Google open-sources TorchTPU, a native PyTorch back end for TPUs",
+        "summary": "",
+        "url": "https://github.com/google-pytorch/torch_tpu",
+        "source": "Hacker News",
+        "score": 288,
+        "comments": 65
+      },
+      {
+        "id": "hn:50165208",
+        "title": "Apple broke an essential presentation feature of iPads",
+        "summary": "",
+        "url": "https://teddysvoronos.com/2026-10-19-apple-broke-an-essential-presentation-feature-of-ipads/",
+        "source": "Hacker News",
+        "score": 513,
+        "comments": 265
+      },
+      {
+        "id": "lob:d7m5j1",
+        "title": "Setting up SSH keys on macOS with Touch ID",
+        "summary": "",
+        "url": "https://nmattia.com/posts/2026-10-19-setting-up-ssh-keys-touch-id/",
+        "source": "Lobste.rs",
+        "score": 53,
+        "comments": 22,
+        "tags": [
+          "cryptography",
+          "mac",
+          "security"
+        ]
+      },
+      {
+        "id": "lob:h0eate",
+        "title": "Updates to site guidelines and AI/LLM tags",
+        "summary": "<p>Hey folks,</p>\n<p>I've been having to perform an increasing number of <a href=\"https://lobste.rs/moderations?moderator=355E3B\" rel=\"ugc\">moderation actions</a> surrounding the <code>vibecoding</code> tag and AI/LLM related content. I started reading Lobsters because it had the most interesting vi",
+        "url": "https://lobste.rs/s/h0eate/updates_site_guidelines_ai_llm_tags",
+        "source": "Lobste.rs",
+        "score": 362,
+        "comments": 390,
+        "tags": [
+          "announce",
+          "meta"
+        ]
+      },
+      {
+        "id": "lob:7d1swo",
+        "title": "NixOS is making me less afraid",
+        "summary": "",
+        "url": "https://entropicthoughts.com/nixos-is-making-me-less-afraid",
+        "source": "Lobste.rs",
+        "score": 40,
+        "comments": 25,
+        "tags": [
+          "nix"
+        ]
+      },
+      {
+        "id": "hn:50168396",
+        "title": "Voxtral 3",
+        "summary": "",
+        "url": "https://mistral.ai/news/voxtral-3/",
+        "source": "Hacker News",
+        "score": 559,
+        "comments": 146
+      },
+      {
+        "id": "hn:50169707",
+        "title": "What shall I teach my son?",
+        "summary": "",
+        "url": "https://stevekrouse.com/ends",
+        "source": "Hacker News",
+        "score": 309,
+        "comments": 376
+      },
+      {
+        "id": "lob:gqyvn5",
+        "title": "Protecting Firefox users following the compromise of eMudhra intermediate certificates",
+        "summary": "",
+        "url": "https://blog.mozilla.org/security/2026/10/20/protecting-firefox-users-following-the-compromise-of-emudhra-intermediate-certificates/",
+        "source": "Lobste.rs",
+        "score": 128,
+        "comments": 46,
+        "tags": [
+          "security"
+        ]
+      },
+      {
+        "id": "hn:50173487",
+        "title": "Feds suspect ransom negotiator ran ShinyHunters extortion site",
+        "summary": "",
+        "url": "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/",
+        "source": "Hacker News",
+        "score": 131,
+        "comments": 50
+      },
+      {
+        "id": "lob:ekxoyt",
+        "title": "Upcoming Critical PHP Security Release",
+        "summary": "",
+        "url": "https://www.php.net/archive/2026.php#2026-10-20-1",
+        "source": "Lobste.rs",
+        "score": 34,
+        "comments": 6,
+        "tags": [
+          "php",
+          "security"
+        ]
+      },
+      {
+        "id": "lob:sqdhu7",
+        "title": "OpenBSD 8.0",
+        "summary": "",
+        "url": "https://www.openbsd.org/80.html",
+        "source": "Lobste.rs",
+        "score": 96,
+        "comments": 11,
+        "tags": [
+          "openbsd",
+          "release"
+        ]
+      },
+      {
+        "id": "hn:50173891",
+        "title": "The Other Epidemic: Trying to get off benzodiazepines",
+        "summary": "<a href=\"https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20261020230542&#x2F;https:&#x2F;&#x2F;www.thebeliever.net&#x2F;the-other-epidemic&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20261020230542&#x2F;https:&#x2F;&#x2F;www.thebe...</a><p><a href=\"https:&#x2F;&#x2F;archive",
+        "url": "https://www.thebeliever.net/the-other-epidemic/",
+        "source": "Hacker News",
+        "score": 100,
+        "comments": 67
+      },
+      {
+        "id": "rss:dde34d2718",
+        "title": "Critical FortiSIEM Flaw Gets Public Exploit PoC for Unauthenticated Remote Code Execution",
+        "summary": "Cybersecurity researchers have released a proof-of-concept (PoC) exploit for a recently patched critical security flaw impacting Fortinet FortiSIEM that could result in arbitrary code execution.\n\nThe vulnerability, tracked as CVE-2026-106173 (CVSS score: 9.4), is a critical path traversal flaw that",
+        "url": "https://thehackernews.com/2026/10/critical-fortisiem-flaw-gets-public.html",
+        "source": "Tech RSS",
+        "score": 0
+      },
+      {
+        "id": "lob:dlbufy",
+        "title": "Mastodon 5.0: A closer look",
+        "summary": "",
+        "url": "https://blog.joinmastodon.org/2026/10/5.0-a-closer-look/",
+        "source": "Lobste.rs",
+        "score": 20,
+        "comments": 8,
+        "tags": [
+          "design",
+          "release"
+        ]
+      }
+    ],
+    "ai_curated": true
+  },
+  "fear_greed": {
+    "value": 63,
+    "classification": "Greed",
+    "timestamp": "2026-10-21 00:00:00"
+  }
+}
