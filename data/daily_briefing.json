@@ -1,110 +1,61 @@
 {
-  "date": "2026-10-22",
-  "update_time": "2026-10-22 04:00:35",
+  "date": "2026-10-23",
+  "update_time": "2026-10-22 16:48:42",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-22\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 LiteLLM 遭供应链投毒：PyPI 上的\"特洛伊木马\" (来源: HackerNews)\n- **核心干货**：PyPI 上的 LiteLLM 1.107.0 版本被植入凭据窃取器与后门，安装即中招。LiteLLM 是当下 LLM 应用层最流行的统一 API 网关之一，大量开发者在生产环境中直接依赖它——这意味着这次投毒的影响面不是\"某个玩具项目\"，而是整条 AI 应用供应链。\n- **毒舌/硬核点评**：你花三个月调 prompt、优化 RAG 流程，结果敌人从 `pip install` 那一行代码就摸进了你的服务器。AI 圈天天聊\"对齐\"，先对齐一下你的依赖锁文件吧。\n- **🔗 传送门**：[点击直达原链接](https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/)\n\n---\n\n### 2. 📌 eMudhra CA 密钥被毫秒级爆破，Mozilla 紧急护驾 Firefox (来源: Lobste.rs / 新闻)\n- **核心干货**：印度 CA 机构 eMudhra 的中间证书密钥因熵值低到离谱（\"8 bits of trust\"），被安全研究者以毫秒级速度破解。Mozilla 已紧急发布 Firefox 防护措施，mitmproxy 甚至专门加了 `--emudhra` 选项来应对。一个本该是信任根基的证书颁发机构，密钥强度约等于一个 8 位密码——这已经不是安全漏洞，是行为艺术。\n- **毒舌/硬核点评**：整个互联网 PKI 体系的信任链，这次被一个 CA 用 256 分之一的运气给撕开了。证书信任模型的设计者们，晚上睡得着吗？\n- **🔗 传送门**：[点击直达原链接](https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/)\n\n---\n\n### 3. 📌 新墨西哥州判 Meta 赔 250 亿美元，剑桥分析案余震 (来源: HackerNews)\n- **核心干货**：新墨西哥州司法部在剑桥分析相关案件中拿下对 Facebook（Meta）的 250 亿美元历史性罚单。这不是普通隐私罚款，而是州级司法对\"数据滥用+算法操控\"商业模式的一次正面清算，量级足以重塑整个科技巨头的合规成本模型。\n- **毒舌/硬核点评**：250 亿美元，够买多少个\"元宇宙\"部门？扎克伯格大概终于明白：用户数据不是免费油田，是带利息的高利贷。\n- **🔗 传送门**：[点击直达原链接](https://www.cnbc.com/2026/10/21/meta-new-mexico-cambridge-analytica-penalty.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> 供应链安全就像内裤——你没法向别人证明你穿了，但一旦没穿，所有人都会在关键时刻知道。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-23\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 eMudhra 跑路：全球 SSL/TLS 证书业务说停就停，CA 私钥被毫秒级爆破 (来源: HackerNews / Lobste.rs)\n- **核心干货**：印度 CA 机构 eMudhra 宣布退出全球 SSL/TLS 证书市场，而安全研究者 Scott Helme 同日爆料其 CA 密钥强度形同虚设——\"8 比特的信任\"，毫秒级即可破解。这不是商业撤退，这是连夜收拾行李跑路。整个 Web PKI 信任链的根基，被一家 CA 的偷工减料撕开了一道口子。\n- **毒舌/硬核点评**：把 CA 私钥做成 8 比特强度，相当于给银行金库装了个纸糊的门，然后还对外宣称\"我们很安全\"。现在门被踹开了，人跑了，留下一句\"Au revoir\"。这就是把信任外包给最低价投标者的下场。\n- **🔗 传送门**：[点击直达原链接](https://emudhra.com/en/press-release/emudhra-to-exit-global-ssl-tls-certificate-business)\n\n---\n\n### 2. 📌 Quad9 被迫退出法国：DNS 加密解析在\"浪漫之都\"成了违法生意 (来源: HackerNews)\n- **核心干货**：知名公共 DNS 解析器 Quad9 宣布撤出法国市场。背景是法国监管机构要求 DNS 解析商对域名进行封锁过滤，而 Quad9 坚持\"我不当审查员\"的立场，最终选择退出而非妥协。这标志着欧盟内部对加密 DNS 和网络中立性的监管压力正在实质性收紧。\n- **毒舌/硬核点评**：法国一边高喊\"数字主权\"，一边把不配合审查的 DNS 服务商赶出门——主权是有了，互联网的开放性没了。下一个被\"请走\"的会是谁？Cloudflare 已经在门口排队了吧。\n- **🔗 传送门**：[点击直达原链接](https://quad9.net/news/blog/au-revoir-france/)\n\n---\n\n### 3. 📌 360M 小模型伪装成终端：WorldTUI 用\"世界模型\"思路做 TUI 模拟器 (来源: HackerNews)\n- **核心干货**：开发者训练了一个仅 360M 参数的小模型，专门用来\"扮演\"一个终端界面——不是真的执行命令，而是用语言模型预测终端该输出什么。本质上是用世界模型（World Model）的思路做 TUI 仿真，探索\"小模型 + 特定领域\"能否在交互模拟场景中替代真实执行环境。对测试、教学、Agent 沙箱都有潜在价值。\n- **毒舌/硬核点评**：用 360M 参数去\"假装\"自己是终端，这大概是 AI 界最精致的角色扮演。不过话说回来，当模型连 `ls` 的输出都要靠猜的时候，你确定它不是在进行一场永无止境的\"幻觉终端\"表演？创意满分，实用性别急着鼓掌。\n- **🔗 传送门**：[点击直达原链接](https://simedw.com/2026/10/21/world-model-terminal/)\n\n---\n\n### 🗣️ 今日顶男金句\n> 信任这东西，在密码学里是比特，在商业里是契约，在人性里是幻觉——而大多数人只愿意为最后一项买单。",
   "briefing_items": [
     {
-      "title": "LiteLLM 遭供应链投毒：PyPI 上的\"特洛伊木马\"",
+      "title": "eMudhra 跑路：全球 SSL/TLS 证书业务说停就停，CA 私钥被毫秒级爆破",
+      "source": "HackerNews / Lobste.rs",
+      "summary": "印度 CA 机构 eMudhra 宣布退出全球 SSL/TLS 证书市场，而安全研究者 Scott Helme 同日爆料其 CA 密钥强度形同虚设——\"8 比特的信任\"，毫秒级即可破解。这不是商业撤退，这是连夜收拾行李跑路。整个 Web PKI 信任链的根基，被一家 CA 的偷工减料撕开了一道口子。",
+      "commentary": "把 CA 私钥做成 8 比特强度，相当于给银行金库装了个纸糊的门，然后还对外宣称\"我们很安全\"。现在门被踹开了，人跑了，留下一句\"Au revoir\"。这就是把信任外包给最低价投标者的下场。",
+      "url": "https://emudhra.com/en/press-release/emudhra-to-exit-global-ssl-tls-certificate-business"
+    },
+    {
+      "title": "Quad9 被迫退出法国：DNS 加密解析在\"浪漫之都\"成了违法生意",
       "source": "HackerNews",
-      "summary": "PyPI 上的 LiteLLM 1.107.0 版本被植入凭据窃取器与后门，安装即中招。LiteLLM 是当下 LLM 应用层最流行的统一 API 网关之一，大量开发者在生产环境中直接依赖它——这意味着这次投毒的影响面不是\"某个玩具项目\"，而是整条 AI 应用供应链。",
-      "commentary": "你花三个月调 prompt、优化 RAG 流程，结果敌人从 `pip install` 那一行代码就摸进了你的服务器。AI 圈天天聊\"对齐\"，先对齐一下你的依赖锁文件吧。",
-      "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/"
+      "summary": "知名公共 DNS 解析器 Quad9 宣布撤出法国市场。背景是法国监管机构要求 DNS 解析商对域名进行封锁过滤，而 Quad9 坚持\"我不当审查员\"的立场，最终选择退出而非妥协。这标志着欧盟内部对加密 DNS 和网络中立性的监管压力正在实质性收紧。",
+      "commentary": "法国一边高喊\"数字主权\"，一边把不配合审查的 DNS 服务商赶出门——主权是有了，互联网的开放性没了。下一个被\"请走\"的会是谁？Cloudflare 已经在门口排队了吧。",
+      "url": "https://quad9.net/news/blog/au-revoir-france/"
     },
     {
-      "title": "eMudhra CA 密钥被毫秒级爆破，Mozilla 紧急护驾 Firefox",
-      "source": "Lobste.rs / 新闻",
-      "summary": "印度 CA 机构 eMudhra 的中间证书密钥因熵值低到离谱（\"8 bits of trust\"），被安全研究者以毫秒级速度破解。Mozilla 已紧急发布 Firefox 防护措施，mitmproxy 甚至专门加了 `--emudhra` 选项来应对。一个本该是信任根基的证书颁发机构，密钥强度约等于一个 8 位密码——这已经不是安全漏洞，是行为艺术。",
-      "commentary": "整个互联网 PKI 体系的信任链，这次被一个 CA 用 256 分之一的运气给撕开了。证书信任模型的设计者们，晚上睡得着吗？",
-      "url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/"
-    },
-    {
-      "title": "新墨西哥州判 Meta 赔 250 亿美元，剑桥分析案余震",
+      "title": "360M 小模型伪装成终端：WorldTUI 用\"世界模型\"思路做 TUI 模拟器",
       "source": "HackerNews",
-      "summary": "新墨西哥州司法部在剑桥分析相关案件中拿下对 Facebook（Meta）的 250 亿美元历史性罚单。这不是普通隐私罚款，而是州级司法对\"数据滥用+算法操控\"商业模式的一次正面清算，量级足以重塑整个科技巨头的合规成本模型。",
-      "commentary": "250 亿美元，够买多少个\"元宇宙\"部门？扎克伯格大概终于明白：用户数据不是免费油田，是带利息的高利贷。",
-      "url": "https://www.cnbc.com/2026/10/21/meta-new-mexico-cambridge-analytica-penalty.html"
+      "summary": "开发者训练了一个仅 360M 参数的小模型，专门用来\"扮演\"一个终端界面——不是真的执行命令，而是用语言模型预测终端该输出什么。本质上是用世界模型（World Model）的思路做 TUI 仿真，探索\"小模型 + 特定领域\"能否在交互模拟场景中替代真实执行环境。对测试、教学、Agent 沙箱都有潜在价值。",
+      "commentary": "用 360M 参数去\"假装\"自己是终端，这大概是 AI 界最精致的角色扮演。不过话说回来，当模型连 `ls` 的输出都要靠猜的时候，你确定它不是在进行一场永无止境的\"幻觉终端\"表演？创意满分，实用性别急着鼓掌。",
+      "url": "https://simedw.com/2026/10/21/world-model-terminal/"
     },
     {
-      "quote": "供应链安全就像内裤——你没法向别人证明你穿了，但一旦没穿，所有人都会在关键时刻知道。"
+      "quote": "信任这东西，在密码学里是比特，在商业里是契约，在人性里是幻觉——而大多数人只愿意为最后一项买单。"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50188948",
-      "title": "There isn't an easy exploit for this PHP vulnerability",
+      "id": "hn:50195959",
+      "title": "Quad9 (DNS Resolver) to Exit France",
       "summary": "",
-      "url": "https://eliastaylor.com/noexploit/",
+      "url": "https://quad9.net/news/blog/au-revoir-france/",
       "source": "Hacker News",
-      "score": 259,
-      "comments": 129
-    },
-    {
-      "id": "hn:50184820",
-      "title": "Meta ordered to pay $25B penalty in New Mexico Cambridge Analytica case",
-      "summary": "<a href=\"https:&#x2F;&#x2F;nmdoj.gov&#x2F;press-release&#x2F;the-new-mexico-department-of-justice-secures-another-landmark-victory-against-big-tech-with-historic-25-billion-penalty-against-facebook&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;nmdoj.gov&#x2F;press-release&#x2F;the-new-mexico-department-of",
-      "url": "https://www.cnbc.com/2026/10/21/meta-new-mexico-cambridge-analytica-penalty.html",
-      "source": "Hacker News",
-      "score": 428,
-      "comments": 276
-    },
-    {
-      "id": "hn:50188228",
-      "title": "Security Disclosure",
-      "summary": "",
-      "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
-      "source": "Hacker News",
-      "score": 361,
-      "comments": 208
-    },
-    {
-      "id": "hn:50186010",
-      "title": "Rust Style Guide",
-      "summary": "",
-      "url": "https://google.github.io/styleguide/rustguide.html",
-      "source": "Hacker News",
-      "score": 239,
-      "comments": 132
-    },
-    {
-      "id": "hn:50185869",
-      "title": "GitLab critical patch release",
-      "summary": "",
-      "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/",
-      "source": "Hacker News",
-      "score": 268,
-      "comments": 65
-    },
-    {
-      "id": "hn:50189232",
-      "title": "mitmproxy adds --emudhra option",
-      "summary": "",
-      "url": "https://github.com/mitmproxy/mitmproxy/commit/169234499088fc2c414644a67efaed3d64ae2e3b",
-      "source": "Hacker News",
-      "score": 316,
+      "score": 250,
       "comments": 83
     },
     {
-      "id": "hn:50181114",
-      "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
+      "id": "hn:50195110",
+      "title": "eMudhra to exit global SSL/TLS certificate business",
       "summary": "",
-      "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
+      "url": "https://emudhra.com/en/press-release/emudhra-to-exit-global-ssl-tls-certificate-business",
       "source": "Hacker News",
-      "score": 458,
-      "comments": 156
+      "score": 494,
+      "comments": 387
     },
     {
-      "id": "lob:ekxoyt",
-      "title": "Upcoming Critical PHP Security Release",
+      "id": "hn:50190363",
+      "title": "WorldTUI: I trained a 360M model to pretend to be a terminal",
       "summary": "",
-      "url": "https://www.php.net/archive/2026.php#2026-10-20-1",
-      "source": "Lobste.rs",
-      "score": 183,
-      "comments": 119,
-      "tags": [
-        "php",
-        "security"
-      ]
+      "url": "https://simedw.com/2026/10/21/world-model-terminal/",
+      "source": "Hacker News",
+      "score": 420,
+      "comments": 130
     },
     {
       "id": "lob:ebsqsp",
@@ -112,22 +63,66 @@
       "summary": "",
       "url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
       "source": "Lobste.rs",
-      "score": 44,
-      "comments": 10,
+      "score": 68,
+      "comments": 24,
       "tags": [
         "cryptography",
         "security"
       ]
     },
     {
-      "id": "lob:gqyvn5",
-      "title": "Protecting Firefox users following the compromise of eMudhra intermediate certificates",
+      "id": "hn:50150163",
+      "title": "What Is Gridifcation",
       "summary": "",
-      "url": "https://blog.mozilla.org/security/2026/10/20/protecting-firefox-users-following-the-compromise-of-emudhra-intermediate-certificates/",
+      "url": "https://musicalform.substack.com/p/what-is-gridifcation",
+      "source": "Hacker News",
+      "score": 234,
+      "comments": 107
+    },
+    {
+      "id": "hn:50192536",
+      "title": "Jailbreaking the Switch 2",
+      "summary": "",
+      "url": "https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/",
+      "source": "Hacker News",
+      "score": 479,
+      "comments": 174
+    },
+    {
+      "id": "lob:9jgl3x",
+      "title": "Google's Rust Style Guide",
+      "summary": "",
+      "url": "https://google.github.io/styleguide/rustguide.html",
       "source": "Lobste.rs",
-      "score": 168,
-      "comments": 69,
+      "score": 43,
+      "comments": 16,
       "tags": [
+        "rust"
+      ]
+    },
+    {
+      "id": "lob:hplfis",
+      "title": "examining the macOS gcc binary",
+      "summary": "",
+      "url": "https://zoey-on-github.github.io/blog/macgcc.html",
+      "source": "Lobste.rs",
+      "score": 45,
+      "comments": 10,
+      "tags": [
+        "mac",
+        "reversing"
+      ]
+    },
+    {
+      "id": "lob:dldfel",
+      "title": "CVE-2026-107891: musl libc: multiple integer overflow in regcomp, possibly leading to incorrect allocation sizes and out-of-bounds heap writes",
+      "summary": "",
+      "url": "https://www.openwall.com/lists/oss-security/2026/10/21/18",
+      "source": "Lobste.rs",
+      "score": 44,
+      "comments": 5,
+      "tags": [
+        "c",
         "security"
       ]
     },
@@ -137,79 +132,66 @@
       "summary": "",
       "url": "https://firefox-source-docs.mozilla.org/devtools-user/local_mode/index.html",
       "source": "Lobste.rs",
-      "score": 79,
-      "comments": 16,
+      "score": 131,
+      "comments": 22,
       "tags": [
         "browsers"
       ]
     },
     {
-      "id": "lob:mfserj",
-      "title": "Unikernels in OCaml",
+      "id": "hn:50195543",
+      "title": "What's Getting Pwned",
       "summary": "",
-      "url": "https://uniker.nl/",
-      "source": "Lobste.rs",
-      "score": 58,
-      "comments": 7,
-      "tags": [
-        "ml",
-        "osdev"
-      ]
-    },
-    {
-      "id": "lob:dldfel",
-      "title": "CVE-2026-107891: musl libc: multiple integer overflow in regcomp, possibly leading to incorrect allocation sizes and out-of-bounds heap writes",
-      "summary": "",
-      "url": "https://www.openwall.com/lists/oss-security/2026/10/21/18",
-      "source": "Lobste.rs",
-      "score": 27,
-      "comments": 5,
-      "tags": [
-        "c",
-        "security"
-      ]
-    },
-    {
-      "id": "lob:vidyh0",
-      "title": "The Future of CSS",
-      "summary": "",
-      "url": "https://www.joshwcomeau.com/css/interop-2027/",
-      "source": "Lobste.rs",
-      "score": 58,
-      "comments": 6,
-      "tags": [
-        "css"
-      ]
-    },
-    {
-      "id": "hn:50190168",
-      "title": "Epic vs. Apple AU:Court Orders Alt App Stores,Sideloading and 3rd Party Payments",
-      "summary": "",
-      "url": "https://www.judgments.fedcourt.gov.au/judgments/Judgments/fca/single/2026/2026fca1552",
+      "url": "https://pwn.watch/",
       "source": "Hacker News",
-      "score": 84,
-      "comments": 39
+      "score": 147,
+      "comments": 92
     },
     {
-      "id": "rss:a50711ca47",
-      "title": "PHP blames supply chain security biz Chainguard for putting huge chunks of the web at risk",
-      "summary": "'Coordinated vulnerability disclosure, unless there's evidence of active exploits in the wild,' Chainguard CEO tells The Reg",
-      "url": "https://www.theregister.com/security/2026/10/22/php-blames-supply-chain-security-biz-chainguard-for-putting-huge-chunks-of-the-web-at-risk/5304611",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "lob:hty1qk",
-      "title": "zls 0.17.0",
+      "id": "hn:50193170",
+      "title": "Faster than earcut: triangulating 3.7M map polygons in 489 ms",
       "summary": "",
-      "url": "https://zigtools.org/zls/releases/0.17.0/",
-      "source": "Lobste.rs",
-      "score": 56,
-      "comments": 2,
-      "tags": [
-        "release",
-        "zig"
-      ]
+      "url": "https://globus.software/blog/2026/10/16/cutting-map-polygons/",
+      "source": "Hacker News",
+      "score": 146,
+      "comments": 32
+    },
+    {
+      "id": "arxiv:2610.30113v1",
+      "title": "Quant-Arena: Benchmarking LLM Agents for Quantitative Trading Research",
+      "summary": "Quantitative research is an iterative loop: a researcher proposes a market hypothesis, implements it as an executable signal, tests it on historical data, and decides what to keep. Existing benchmarks score formulas, code, or individual trading decisions, leaving open whether large language models (",
+      "url": "https://arxiv.org/abs/2610.30113v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CE"
+      ],
+      "arxiv_id": "2610.30113v1"
+    },
+    {
+      "id": "arxiv:2610.30108v1",
+      "title": "Multimodal Embodied Agents: A Unified Capability-centric Perspective from Computer-Use to Robot-Use",
+      "summary": "Multimodal agents (MMAs) sustain interaction through reasoning, memory, tools, and feedback, most visibly as computer-use agents, while robotic systems (RSs) couple sensing and actuation under physical dynamics. We define multimodal embodied agents (MMEAs) as goal-directed systems that couple multim",
+      "url": "https://arxiv.org/abs/2610.30108v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV",
+        "cs.MA",
+        "cs.MM"
+      ],
+      "arxiv_id": "2610.30108v1"
+    },
+    {
+      "id": "hn:50196837",
+      "title": "Google cleared 300 hectares of Finnish forest",
+      "summary": "",
+      "url": "https://www.techspot.com/news/114100-google-cleared-300-hectares-finnish-forest-data-center.html",
+      "source": "Hacker News",
+      "score": 96,
+      "comments": 52
     },
     {
       "id": "lob:cdnepk",
@@ -217,34 +199,61 @@
       "summary": "",
       "url": "https://mjtsai.com/blog/2026/10/15/passkeys-attestation-trap/",
       "source": "Lobste.rs",
-      "score": 16,
-      "comments": 21,
+      "score": 25,
+      "comments": 64,
       "tags": [
         "security",
         "web"
       ]
     },
     {
-      "id": "lob:tsfina",
-      "title": "Vector Graphics in Lil",
+      "id": "lob:wi4nnl",
+      "title": "Railway Security Disclosure: Wednesday October 21st",
       "summary": "",
-      "url": "https://beyondloom.com/blog/vectorgraphics.html",
+      "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
       "source": "Lobste.rs",
-      "score": 36,
-      "comments": 2,
+      "score": 19,
+      "comments": 8,
       "tags": [
-        "apl",
-        "graphics"
+        "devops",
+        "security"
       ]
     },
     {
-      "id": "hn:50190455",
-      "title": "The recently proposed o(n log n) integer multiplication algorithm [pdf]",
+      "id": "arxiv:2610.30128v1",
+      "title": "Think Harder Where It Matters: Item-Level Adaptive Recursion for Sequential Recommendation",
+      "summary": "Existing sequential recommenders usually allocate a fixed computational budget to every item in a user's interaction history, regardless of the item's contribution to the final prediction. We challenge this de facto design with two diagnostic findings. (1) Non-uniform computational need: items withi",
+      "url": "https://arxiv.org/abs/2610.30128v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_id": "2610.30128v1"
+    },
+    {
+      "id": "arxiv:2610.30105v1",
+      "title": "Asymmetric On-Policy Distillation Learns In-Context Exploration",
+      "summary": "Sequential decision-making under partial observability is difficult because agents must explore to infer hidden, task-relevant information before acting effectively. Learning such information-gathering behaviors tabula rasa via online reinforcement learning is sample-inefficient, whereas offline imi",
+      "url": "https://arxiv.org/abs/2610.30105v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_id": "2610.30105v1"
+    },
+    {
+      "id": "hn:50194522",
+      "title": "The Last Museum: Semantic search across 5.8M artworks from major museums",
       "summary": "",
-      "url": "https://web.maths.unsw.edu.au/~davidharvey/research/subnlogn.pdf",
+      "url": "https://lastmuseum.com/",
       "source": "Hacker News",
-      "score": 42,
-      "comments": 23
+      "score": 49,
+      "comments": 15
     }
   ],
   "ai_curated": true
