@@ -1,174 +1,88 @@
 {
   "date": "2026-10-22",
-  "update_time": "2026-10-21 16:48:36",
+  "update_time": "2026-10-22 04:00:35",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-22\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 eMudhra CA 密钥被毫秒级爆破：8 位熵的\"纸糊信任链\" (来源: HackerNews)\n- **核心干货**：安全研究员 Scott Helme 披露，印度 CA 机构 eMudhra 的中间证书私钥熵值低到只有约 8 bit，被瞬间破解。这不是\"攻破\"，更像是\"捡到\"——Mozilla 已紧急拉黑相关中间证书保护 Firefox 用户。整个事件暴露的是 CA 体系审核环节的形同虚设：一个能签发全网信任证书的机构，私钥强度可能还不如你家的 WiFi 密码。\n- **毒舌/硬核点评**：HTTPS 挂锁图标背后，原来有人的私钥是\"12345678\"。整个 PKI 信任体系就像一栋豪宅，结果发现承重墙是泡沫板做的——下次看到绿色小锁，建议默念一句\"但愿吧\"。\n- **🔗 传送门**：[点击直达原链接](https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/)\n\n---\n\n### 2. 📌 PHP2Shell：AI 挖出 PHP 关键 RCE，PHP 官方紧急发版 (来源: HackerNews)\n- **核心干货**：Wiz 研究团队借助 AI 在 PHP 核心中挖出一个可远程代码执行的严重漏洞，官方随即发布 8.2.35 等紧急安全版本，基金会同步发文说明加固计划。真正值得警惕的不是漏洞本身，而是\"AI 找漏洞\"进入量产阶段——OpenAI 同期还推了 Patch the Planet 做全球协同披露。攻防两端的节奏，正在被 Agent 重新定义。\n- **毒舌/硬核点评**：过去是安全研究员熬夜秃头挖洞，现在是 AI 喝着电挖洞。好消息是漏洞修得更快，坏消息是——挖洞的 AI 和攻击你的 AI 是同一批模型，你只是在跟自己赛跑。\n- **🔗 传送门**：[点击直达原链接](https://www.wiz.io/blog/php2shell-php-rce)\n\n---\n\n### 3. 📌 DuckDB 2.0.0 LTS \"Cinnamon Teal\"：分析型数据库正式成年 (来源: HackerNews)\n- **核心干货**：DuckDB 发布首个 2.0 LTS 长期支持版本，代号\"Cinnamon Teal\"。这个从\"单机版分析神器\"一路杀出来的嵌入式 OLAP 引擎，终于给出企业级承诺：稳定 API、长期维护、可放心上生产。对数据工程师而言，\"用 DuckDB 做临时分析\"正在变成\"用 DuckDB 当正式基础设施\"。\n- **毒舌/硬核点评**：当 Spark 还在为集群调度烧钱时，DuckDB 用一台笔记本告诉你什么叫\"大力出奇迹的正确姿势\"。2.0 LTS 一出，那些动辄上云的数仓方案，是时候解释一下自己凭什么贵 100 倍了。\n- **🔗 传送门**：[点击直达原链接](https://duckdb.org/2026/10/21/announcing-duckdb-200)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"AI 不会取代你，但会用 AI 挖漏洞、写数据库、签证书的人会——而他们的证书私钥，可能只有 8 位熵。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-22\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 LiteLLM 遭供应链投毒：PyPI 上的\"特洛伊木马\" (来源: HackerNews)\n- **核心干货**：PyPI 上的 LiteLLM 1.107.0 版本被植入凭据窃取器与后门，安装即中招。LiteLLM 是当下 LLM 应用层最流行的统一 API 网关之一，大量开发者在生产环境中直接依赖它——这意味着这次投毒的影响面不是\"某个玩具项目\"，而是整条 AI 应用供应链。\n- **毒舌/硬核点评**：你花三个月调 prompt、优化 RAG 流程，结果敌人从 `pip install` 那一行代码就摸进了你的服务器。AI 圈天天聊\"对齐\"，先对齐一下你的依赖锁文件吧。\n- **🔗 传送门**：[点击直达原链接](https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/)\n\n---\n\n### 2. 📌 eMudhra CA 密钥被毫秒级爆破，Mozilla 紧急护驾 Firefox (来源: Lobste.rs / 新闻)\n- **核心干货**：印度 CA 机构 eMudhra 的中间证书密钥因熵值低到离谱（\"8 bits of trust\"），被安全研究者以毫秒级速度破解。Mozilla 已紧急发布 Firefox 防护措施，mitmproxy 甚至专门加了 `--emudhra` 选项来应对。一个本该是信任根基的证书颁发机构，密钥强度约等于一个 8 位密码——这已经不是安全漏洞，是行为艺术。\n- **毒舌/硬核点评**：整个互联网 PKI 体系的信任链，这次被一个 CA 用 256 分之一的运气给撕开了。证书信任模型的设计者们，晚上睡得着吗？\n- **🔗 传送门**：[点击直达原链接](https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/)\n\n---\n\n### 3. 📌 新墨西哥州判 Meta 赔 250 亿美元，剑桥分析案余震 (来源: HackerNews)\n- **核心干货**：新墨西哥州司法部在剑桥分析相关案件中拿下对 Facebook（Meta）的 250 亿美元历史性罚单。这不是普通隐私罚款，而是州级司法对\"数据滥用+算法操控\"商业模式的一次正面清算，量级足以重塑整个科技巨头的合规成本模型。\n- **毒舌/硬核点评**：250 亿美元，够买多少个\"元宇宙\"部门？扎克伯格大概终于明白：用户数据不是免费油田，是带利息的高利贷。\n- **🔗 传送门**：[点击直达原链接](https://www.cnbc.com/2026/10/21/meta-new-mexico-cambridge-analytica-penalty.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> 供应链安全就像内裤——你没法向别人证明你穿了，但一旦没穿，所有人都会在关键时刻知道。",
   "briefing_items": [
     {
-      "title": "eMudhra CA 密钥被毫秒级爆破：8 位熵的\"纸糊信任链\"",
+      "title": "LiteLLM 遭供应链投毒：PyPI 上的\"特洛伊木马\"",
       "source": "HackerNews",
-      "summary": "安全研究员 Scott Helme 披露，印度 CA 机构 eMudhra 的中间证书私钥熵值低到只有约 8 bit，被瞬间破解。这不是\"攻破\"，更像是\"捡到\"——Mozilla 已紧急拉黑相关中间证书保护 Firefox 用户。整个事件暴露的是 CA 体系审核环节的形同虚设：一个能签发全网信任证书的机构，私钥强度可能还不如你家的 WiFi 密码。",
-      "commentary": "HTTPS 挂锁图标背后，原来有人的私钥是\"12345678\"。整个 PKI 信任体系就像一栋豪宅，结果发现承重墙是泡沫板做的——下次看到绿色小锁，建议默念一句\"但愿吧\"。",
+      "summary": "PyPI 上的 LiteLLM 1.107.0 版本被植入凭据窃取器与后门，安装即中招。LiteLLM 是当下 LLM 应用层最流行的统一 API 网关之一，大量开发者在生产环境中直接依赖它——这意味着这次投毒的影响面不是\"某个玩具项目\"，而是整条 AI 应用供应链。",
+      "commentary": "你花三个月调 prompt、优化 RAG 流程，结果敌人从 `pip install` 那一行代码就摸进了你的服务器。AI 圈天天聊\"对齐\"，先对齐一下你的依赖锁文件吧。",
+      "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/"
+    },
+    {
+      "title": "eMudhra CA 密钥被毫秒级爆破，Mozilla 紧急护驾 Firefox",
+      "source": "Lobste.rs / 新闻",
+      "summary": "印度 CA 机构 eMudhra 的中间证书密钥因熵值低到离谱（\"8 bits of trust\"），被安全研究者以毫秒级速度破解。Mozilla 已紧急发布 Firefox 防护措施，mitmproxy 甚至专门加了 `--emudhra` 选项来应对。一个本该是信任根基的证书颁发机构，密钥强度约等于一个 8 位密码——这已经不是安全漏洞，是行为艺术。",
+      "commentary": "整个互联网 PKI 体系的信任链，这次被一个 CA 用 256 分之一的运气给撕开了。证书信任模型的设计者们，晚上睡得着吗？",
       "url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/"
     },
     {
-      "title": "PHP2Shell：AI 挖出 PHP 关键 RCE，PHP 官方紧急发版",
+      "title": "新墨西哥州判 Meta 赔 250 亿美元，剑桥分析案余震",
       "source": "HackerNews",
-      "summary": "Wiz 研究团队借助 AI 在 PHP 核心中挖出一个可远程代码执行的严重漏洞，官方随即发布 8.2.35 等紧急安全版本，基金会同步发文说明加固计划。真正值得警惕的不是漏洞本身，而是\"AI 找漏洞\"进入量产阶段——OpenAI 同期还推了 Patch the Planet 做全球协同披露。攻防两端的节奏，正在被 Agent 重新定义。",
-      "commentary": "过去是安全研究员熬夜秃头挖洞，现在是 AI 喝着电挖洞。好消息是漏洞修得更快，坏消息是——挖洞的 AI 和攻击你的 AI 是同一批模型，你只是在跟自己赛跑。",
-      "url": "https://www.wiz.io/blog/php2shell-php-rce"
+      "summary": "新墨西哥州司法部在剑桥分析相关案件中拿下对 Facebook（Meta）的 250 亿美元历史性罚单。这不是普通隐私罚款，而是州级司法对\"数据滥用+算法操控\"商业模式的一次正面清算，量级足以重塑整个科技巨头的合规成本模型。",
+      "commentary": "250 亿美元，够买多少个\"元宇宙\"部门？扎克伯格大概终于明白：用户数据不是免费油田，是带利息的高利贷。",
+      "url": "https://www.cnbc.com/2026/10/21/meta-new-mexico-cambridge-analytica-penalty.html"
     },
     {
-      "title": "DuckDB 2.0.0 LTS \"Cinnamon Teal\"：分析型数据库正式成年",
-      "source": "HackerNews",
-      "summary": "DuckDB 发布首个 2.0 LTS 长期支持版本，代号\"Cinnamon Teal\"。这个从\"单机版分析神器\"一路杀出来的嵌入式 OLAP 引擎，终于给出企业级承诺：稳定 API、长期维护、可放心上生产。对数据工程师而言，\"用 DuckDB 做临时分析\"正在变成\"用 DuckDB 当正式基础设施\"。",
-      "commentary": "当 Spark 还在为集群调度烧钱时，DuckDB 用一台笔记本告诉你什么叫\"大力出奇迹的正确姿势\"。2.0 LTS 一出，那些动辄上云的数仓方案，是时候解释一下自己凭什么贵 100 倍了。",
-      "url": "https://duckdb.org/2026/10/21/announcing-duckdb-200"
-    },
-    {
-      "quote": "\"AI 不会取代你，但会用 AI 挖漏洞、写数据库、签证书的人会——而他们的证书私钥，可能只有 8 位熵。\""
+      "quote": "供应链安全就像内裤——你没法向别人证明你穿了，但一旦没穿，所有人都会在关键时刻知道。"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50177916",
-      "title": "Eight Bits of Trust; eMudhra's CA keys cracked in milliseconds",
+      "id": "hn:50188948",
+      "title": "There isn't an easy exploit for this PHP vulnerability",
       "summary": "",
-      "url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
+      "url": "https://eliastaylor.com/noexploit/",
       "source": "Hacker News",
-      "score": 607,
-      "comments": 265
+      "score": 259,
+      "comments": 129
     },
     {
-      "id": "hn:50180836",
-      "title": "PHP2Shell: AI uncovers critical RCE in PHP",
-      "summary": "<a href=\"https:&#x2F;&#x2F;www.php2shell.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.php2shell.com&#x2F;</a>",
-      "url": "https://www.wiz.io/blog/php2shell-php-rce",
+      "id": "hn:50184820",
+      "title": "Meta ordered to pay $25B penalty in New Mexico Cambridge Analytica case",
+      "summary": "<a href=\"https:&#x2F;&#x2F;nmdoj.gov&#x2F;press-release&#x2F;the-new-mexico-department-of-justice-secures-another-landmark-victory-against-big-tech-with-historic-25-billion-penalty-against-facebook&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;nmdoj.gov&#x2F;press-release&#x2F;the-new-mexico-department-of",
+      "url": "https://www.cnbc.com/2026/10/21/meta-new-mexico-cambridge-analytica-penalty.html",
       "source": "Hacker News",
-      "score": 360,
-      "comments": 118
+      "score": 428,
+      "comments": 276
     },
     {
-      "id": "hn:50181137",
-      "title": "The No Kings Takedown Is Why You Shouldn't Rent Your Megaphone from Zuck",
+      "id": "hn:50188228",
+      "title": "Security Disclosure",
       "summary": "",
-      "url": "https://www.techdirt.com/2026/10/20/accident-or-not-the-no-kings-takedown-is-why-you-shouldnt-rent-your-megaphone-from-zuck/",
+      "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
       "source": "Hacker News",
-      "score": 364,
-      "comments": 270
+      "score": 361,
+      "comments": 208
     },
     {
-      "id": "lob:ekxoyt",
-      "title": "Upcoming Critical PHP Security Release",
+      "id": "hn:50186010",
+      "title": "Rust Style Guide",
       "summary": "",
-      "url": "https://www.php.net/archive/2026.php#2026-10-20-1",
-      "source": "Lobste.rs",
-      "score": 143,
-      "comments": 91,
-      "tags": [
-        "php",
-        "security"
-      ]
-    },
-    {
-      "id": "lob:d7m5j1",
-      "title": "Setting up SSH keys on macOS with Touch ID",
-      "summary": "",
-      "url": "https://nmattia.com/posts/2026-10-19-setting-up-ssh-keys-touch-id/",
-      "source": "Lobste.rs",
-      "score": 65,
-      "comments": 26,
-      "tags": [
-        "cryptography",
-        "mac",
-        "security"
-      ]
-    },
-    {
-      "id": "lob:7d1swo",
-      "title": "NixOS is making me less afraid",
-      "summary": "",
-      "url": "https://entropicthoughts.com/nixos-is-making-me-less-afraid",
-      "source": "Lobste.rs",
-      "score": 60,
-      "comments": 39,
-      "tags": [
-        "nix"
-      ]
-    },
-    {
-      "id": "lob:h0eate",
-      "title": "Updates to site guidelines and AI/LLM tags",
-      "summary": "<p>Hey folks,</p>\n<p>I've been having to perform an increasing number of <a href=\"https://lobste.rs/moderations?moderator=355E3B\" rel=\"ugc\">moderation actions</a> surrounding the <code>vibecoding</code> tag and AI/LLM related content. I started reading Lobsters because it had the most interesting vi",
-      "url": "https://lobste.rs/s/h0eate/updates_site_guidelines_ai_llm_tags",
-      "source": "Lobste.rs",
-      "score": 368,
-      "comments": 405,
-      "tags": [
-        "announce",
-        "meta"
-      ]
-    },
-    {
-      "id": "hn:50181136",
-      "title": "DuckDB 2.0.0 LTS “Cinnamon Teal”",
-      "summary": "",
-      "url": "https://duckdb.org/2026/10/21/announcing-duckdb-200",
+      "url": "https://google.github.io/styleguide/rustguide.html",
       "source": "Hacker News",
-      "score": 200,
-      "comments": 23
+      "score": 239,
+      "comments": 132
     },
     {
-      "id": "hn:50180873",
-      "title": "PHP 8.2.35",
+      "id": "hn:50185869",
+      "title": "GitLab critical patch release",
       "summary": "",
-      "url": "https://github.com/php/php-src/releases/tag/php-8.2.35",
+      "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/",
       "source": "Hacker News",
-      "score": 658,
-      "comments": 260
+      "score": 268,
+      "comments": 65
     },
     {
-      "id": "lob:dlbufy",
-      "title": "Mastodon 5.0: A closer look",
+      "id": "hn:50189232",
+      "title": "mitmproxy adds --emudhra option",
       "summary": "",
-      "url": "https://blog.joinmastodon.org/2026/10/5.0-a-closer-look/",
-      "source": "Lobste.rs",
-      "score": 40,
-      "comments": 14,
-      "tags": [
-        "design",
-        "release"
-      ]
-    },
-    {
-      "id": "hn:50181175",
-      "title": "Patch the Planet: global response coordination as agents uncover vulnerabilities",
-      "summary": "<a href=\"https:&#x2F;&#x2F;patchtheplanet.org&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;patchtheplanet.org&#x2F;</a>",
-      "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/",
+      "url": "https://github.com/mitmproxy/mitmproxy/commit/169234499088fc2c414644a67efaed3d64ae2e3b",
       "source": "Hacker News",
-      "score": 127,
-      "comments": 67
-    },
-    {
-      "id": "lob:gqyvn5",
-      "title": "Protecting Firefox users following the compromise of eMudhra intermediate certificates",
-      "summary": "",
-      "url": "https://blog.mozilla.org/security/2026/10/20/protecting-firefox-users-following-the-compromise-of-emudhra-intermediate-certificates/",
-      "source": "Lobste.rs",
-      "score": 158,
-      "comments": 64,
-      "tags": [
-        "security"
-      ]
-    },
-    {
-      "id": "hn:50182987",
-      "title": "Today's PHP Security Release, and How We're Strengthening PHP Security",
-      "summary": "",
-      "url": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/",
-      "source": "Hacker News",
-      "score": 117,
-      "comments": 50
+      "score": 316,
+      "comments": 83
     },
     {
       "id": "hn:50181114",
@@ -176,31 +90,57 @@
       "summary": "",
       "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
       "source": "Hacker News",
-      "score": 122,
-      "comments": 53
+      "score": 458,
+      "comments": 156
     },
     {
-      "id": "lob:73ozwc",
-      "title": "Lobsters NYC Meetup on the 28th of October",
-      "summary": "<p>I previously arranged (by PMing everyone who mentioned it) a 5 Lobster meetup in Mexico. I'll be in NYC next week and think this could be nice. There will be cross contamination from Array Language people.</p>\n<p>We can target e.g. 5:30PM until ???, perhaps by Bryant Park or Borough Hall. (I don'",
-      "url": "https://lobste.rs/s/73ozwc/lobsters_nyc_meetup_on_28th_october",
+      "id": "lob:ekxoyt",
+      "title": "Upcoming Critical PHP Security Release",
+      "summary": "",
+      "url": "https://www.php.net/archive/2026.php#2026-10-20-1",
       "source": "Lobste.rs",
-      "score": 29,
-      "comments": 4,
+      "score": 183,
+      "comments": 119,
       "tags": [
-        "event"
+        "php",
+        "security"
       ]
     },
     {
-      "id": "lob:vidyh0",
-      "title": "The Future of CSS",
+      "id": "lob:ebsqsp",
+      "title": "Eight Bits of Trust; eMudhra's CA keys cracked in milliseconds",
       "summary": "",
-      "url": "https://www.joshwcomeau.com/css/interop-2027/",
+      "url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
       "source": "Lobste.rs",
-      "score": 41,
-      "comments": 6,
+      "score": 44,
+      "comments": 10,
       "tags": [
-        "css"
+        "cryptography",
+        "security"
+      ]
+    },
+    {
+      "id": "lob:gqyvn5",
+      "title": "Protecting Firefox users following the compromise of eMudhra intermediate certificates",
+      "summary": "",
+      "url": "https://blog.mozilla.org/security/2026/10/20/protecting-firefox-users-following-the-compromise-of-emudhra-intermediate-certificates/",
+      "source": "Lobste.rs",
+      "score": 168,
+      "comments": 69,
+      "tags": [
+        "security"
+      ]
+    },
+    {
+      "id": "lob:w9sxxq",
+      "title": "Firefox Local Mode",
+      "summary": "",
+      "url": "https://firefox-source-docs.mozilla.org/devtools-user/local_mode/index.html",
+      "source": "Lobste.rs",
+      "score": 79,
+      "comments": 16,
+      "tags": [
+        "browsers"
       ]
     },
     {
@@ -209,41 +149,102 @@
       "summary": "",
       "url": "https://uniker.nl/",
       "source": "Lobste.rs",
-      "score": 45,
-      "comments": 0,
+      "score": 58,
+      "comments": 7,
       "tags": [
         "ml",
         "osdev"
       ]
     },
     {
-      "id": "lob:9h14un",
-      "title": "How I got over 300 Tor exit nodes removed",
+      "id": "lob:dldfel",
+      "title": "CVE-2026-107891: musl libc: multiple integer overflow in regcomp, possibly leading to incorrect allocation sizes and out-of-bounds heap writes",
       "summary": "",
-      "url": "https://kaba.cx/posts/20261020_Tor/",
+      "url": "https://www.openwall.com/lists/oss-security/2026/10/21/18",
       "source": "Lobste.rs",
-      "score": 54,
-      "comments": 3,
+      "score": 27,
+      "comments": 5,
       "tags": [
-        "privacy",
+        "c",
         "security"
       ]
     },
     {
-      "id": "rss:dde34d2718",
-      "title": "Critical FortiSIEM Flaw Gets Public Exploit PoC for Unauthenticated Remote Code Execution",
-      "summary": "Cybersecurity researchers have released a proof-of-concept (PoC) exploit for a recently patched critical security flaw impacting Fortinet FortiSIEM that could result in arbitrary code execution.\n\nThe vulnerability, tracked as CVE-2026-106173 (CVSS score: 9.4), is a critical path traversal flaw that",
-      "url": "https://thehackernews.com/2026/10/critical-fortisiem-flaw-gets-public.html",
+      "id": "lob:vidyh0",
+      "title": "The Future of CSS",
+      "summary": "",
+      "url": "https://www.joshwcomeau.com/css/interop-2027/",
+      "source": "Lobste.rs",
+      "score": 58,
+      "comments": 6,
+      "tags": [
+        "css"
+      ]
+    },
+    {
+      "id": "hn:50190168",
+      "title": "Epic vs. Apple AU:Court Orders Alt App Stores,Sideloading and 3rd Party Payments",
+      "summary": "",
+      "url": "https://www.judgments.fedcourt.gov.au/judgments/Judgments/fca/single/2026/2026fca1552",
+      "source": "Hacker News",
+      "score": 84,
+      "comments": 39
+    },
+    {
+      "id": "rss:a50711ca47",
+      "title": "PHP blames supply chain security biz Chainguard for putting huge chunks of the web at risk",
+      "summary": "'Coordinated vulnerability disclosure, unless there's evidence of active exploits in the wild,' Chainguard CEO tells The Reg",
+      "url": "https://www.theregister.com/security/2026/10/22/php-blames-supply-chain-security-biz-chainguard-for-putting-huge-chunks-of-the-web-at-risk/5304611",
       "source": "Tech RSS",
       "score": 0
     },
     {
-      "id": "rss:4ea29b70b2",
-      "title": "NVIDIA Flare Architecture: Local LLM Inference for Blackwell and DGX Spark",
-      "summary": "On October 20, 2026, NVIDIA quietly published a new open-source repository under the Apache 2.0 license: flare-local-inference. With no press release and initial single-digit GitHub stars, the project caught the attention of local AI researchers and systems engineers tracking Blackwell workstation d",
-      "url": "https://dev.to/veduis/nvidia-flare-architecture-local-llm-inference-for-blackwell-and-dgx-spark-2lfl",
-      "source": "Tech RSS",
-      "score": 0
+      "id": "lob:hty1qk",
+      "title": "zls 0.17.0",
+      "summary": "",
+      "url": "https://zigtools.org/zls/releases/0.17.0/",
+      "source": "Lobste.rs",
+      "score": 56,
+      "comments": 2,
+      "tags": [
+        "release",
+        "zig"
+      ]
+    },
+    {
+      "id": "lob:cdnepk",
+      "title": "Passkeys Attestation Trap",
+      "summary": "",
+      "url": "https://mjtsai.com/blog/2026/10/15/passkeys-attestation-trap/",
+      "source": "Lobste.rs",
+      "score": 16,
+      "comments": 21,
+      "tags": [
+        "security",
+        "web"
+      ]
+    },
+    {
+      "id": "lob:tsfina",
+      "title": "Vector Graphics in Lil",
+      "summary": "",
+      "url": "https://beyondloom.com/blog/vectorgraphics.html",
+      "source": "Lobste.rs",
+      "score": 36,
+      "comments": 2,
+      "tags": [
+        "apl",
+        "graphics"
+      ]
+    },
+    {
+      "id": "hn:50190455",
+      "title": "The recently proposed o(n log n) integer multiplication algorithm [pdf]",
+      "summary": "",
+      "url": "https://web.maths.unsw.edu.au/~davidharvey/research/subnlogn.pdf",
+      "source": "Hacker News",
+      "score": 42,
+      "comments": 23
     }
   ],
   "ai_curated": true
