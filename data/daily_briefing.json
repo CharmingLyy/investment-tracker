@@ -1,104 +1,94 @@
 {
   "date": "2026-10-23",
-  "update_time": "2026-10-22 16:48:42",
+  "update_time": "2026-10-23 04:04:05",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-23\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 eMudhra 跑路：全球 SSL/TLS 证书业务说停就停，CA 私钥被毫秒级爆破 (来源: HackerNews / Lobste.rs)\n- **核心干货**：印度 CA 机构 eMudhra 宣布退出全球 SSL/TLS 证书市场，而安全研究者 Scott Helme 同日爆料其 CA 密钥强度形同虚设——\"8 比特的信任\"，毫秒级即可破解。这不是商业撤退，这是连夜收拾行李跑路。整个 Web PKI 信任链的根基，被一家 CA 的偷工减料撕开了一道口子。\n- **毒舌/硬核点评**：把 CA 私钥做成 8 比特强度，相当于给银行金库装了个纸糊的门，然后还对外宣称\"我们很安全\"。现在门被踹开了，人跑了，留下一句\"Au revoir\"。这就是把信任外包给最低价投标者的下场。\n- **🔗 传送门**：[点击直达原链接](https://emudhra.com/en/press-release/emudhra-to-exit-global-ssl-tls-certificate-business)\n\n---\n\n### 2. 📌 Quad9 被迫退出法国：DNS 加密解析在\"浪漫之都\"成了违法生意 (来源: HackerNews)\n- **核心干货**：知名公共 DNS 解析器 Quad9 宣布撤出法国市场。背景是法国监管机构要求 DNS 解析商对域名进行封锁过滤，而 Quad9 坚持\"我不当审查员\"的立场，最终选择退出而非妥协。这标志着欧盟内部对加密 DNS 和网络中立性的监管压力正在实质性收紧。\n- **毒舌/硬核点评**：法国一边高喊\"数字主权\"，一边把不配合审查的 DNS 服务商赶出门——主权是有了，互联网的开放性没了。下一个被\"请走\"的会是谁？Cloudflare 已经在门口排队了吧。\n- **🔗 传送门**：[点击直达原链接](https://quad9.net/news/blog/au-revoir-france/)\n\n---\n\n### 3. 📌 360M 小模型伪装成终端：WorldTUI 用\"世界模型\"思路做 TUI 模拟器 (来源: HackerNews)\n- **核心干货**：开发者训练了一个仅 360M 参数的小模型，专门用来\"扮演\"一个终端界面——不是真的执行命令，而是用语言模型预测终端该输出什么。本质上是用世界模型（World Model）的思路做 TUI 仿真，探索\"小模型 + 特定领域\"能否在交互模拟场景中替代真实执行环境。对测试、教学、Agent 沙箱都有潜在价值。\n- **毒舌/硬核点评**：用 360M 参数去\"假装\"自己是终端，这大概是 AI 界最精致的角色扮演。不过话说回来，当模型连 `ls` 的输出都要靠猜的时候，你确定它不是在进行一场永无止境的\"幻觉终端\"表演？创意满分，实用性别急着鼓掌。\n- **🔗 传送门**：[点击直达原链接](https://simedw.com/2026/10/21/world-model-terminal/)\n\n---\n\n### 🗣️ 今日顶男金句\n> 信任这东西，在密码学里是比特，在商业里是契约，在人性里是幻觉——而大多数人只愿意为最后一项买单。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-23\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Quad9 退出法国：DNS 解析器的\"主权\"撤退 (来源: HackerNews)\n- **核心干货**：免费公共 DNS 解析器 Quad9 宣布撤出法国市场。作为全球最主流的隐私向 DNS 服务之一，这次撤退意味着法国用户将失去一个不记录查询日志、自带恶意域名拦截的公共解析入口，背后是当地监管与 DNS 拦截义务之间的长期拉扯。\n- **毒舌/硬核点评**：DNS 是互联网的\"电话簿\"，法国这波操作相当于要求电话局把每个来电都登记备案——用户的选择只剩下\"要么被看，要么自己搭\"。\n- **🔗 传送门**：[点击直达原链接](https://quad9.net/news/blog/au-revoir-france/)\n\n---\n\n### 2. 📌 Anthropic：LLM 让形式化软件验证真正\"上量\" (来源: HackerNews / Anthropic Research)\n- **核心干货**：Anthropic 放出研究，论证 LLM 能把形式化验证从\"学术象牙塔里的手工活\"推进到工业级规模。核心思路是让模型承担编写证明、拆解不变式、补全验证脚本这类高人力成本环节，把过去只有安全关键领域才玩得起的形式化方法，拉低到普通工程团队可用的门槛。\n- **毒舌/硬核点评**：过去写形式化证明的门槛是\"会 Coq 的博士 + 三个月\"，现在变成\"会写 prompt 的工程师 + 一个下午\"。当然，模型写出来的证明对不对，还得靠验证器这个\"终极裁判\"说了算——这大概是 AI 最不会翻车的一种用法。\n- **🔗 传送门**：[点击直达原链接](https://www.anthropic.com/research/formal-verification)\n\n---\n\n### 3. 📌 NVIDIA OpenShell：给 AI 智能体舰队造一个\"安全沙箱\" (来源: GitHub)\n- **核心干货**：NVIDIA 开源 OpenShell，定位是为大规模自主 AI 智能体集群提供安全、私有的运行时环境。它要解决的是智能体\"能动手\"之后的最大隐患——任意执行代码、访问文件、发起网络请求时的隔离与权限边界，让\"一群 AI 替你干活\"不至于变成\"一群 AI 替你删库\"。\n- **毒舌/硬核点评**：智能体越能干，越需要一个笼子。NVIDIA 这波是把\"给 AI 发工牌的同时配好门禁\"，毕竟让一群自主程序共享你的 shell 权限，跟在工地上把挖掘机钥匙发给实习生是一个道理。\n- **🔗 传送门**：[点击直达原链接](https://github.com/NVIDIA/OpenShell)\n\n---\n\n### 🗣️ 今日顶男金句\n\"技术演进从来不是直线，而是一群人一边喊着'这次不一样'，一边把上一个时代的坑原样重挖一遍——区别只在于，这次铲子是 AI 递的。\"",
   "briefing_items": [
     {
-      "title": "eMudhra 跑路：全球 SSL/TLS 证书业务说停就停，CA 私钥被毫秒级爆破",
-      "source": "HackerNews / Lobste.rs",
-      "summary": "印度 CA 机构 eMudhra 宣布退出全球 SSL/TLS 证书市场，而安全研究者 Scott Helme 同日爆料其 CA 密钥强度形同虚设——\"8 比特的信任\"，毫秒级即可破解。这不是商业撤退，这是连夜收拾行李跑路。整个 Web PKI 信任链的根基，被一家 CA 的偷工减料撕开了一道口子。",
-      "commentary": "把 CA 私钥做成 8 比特强度，相当于给银行金库装了个纸糊的门，然后还对外宣称\"我们很安全\"。现在门被踹开了，人跑了，留下一句\"Au revoir\"。这就是把信任外包给最低价投标者的下场。",
-      "url": "https://emudhra.com/en/press-release/emudhra-to-exit-global-ssl-tls-certificate-business"
-    },
-    {
-      "title": "Quad9 被迫退出法国：DNS 加密解析在\"浪漫之都\"成了违法生意",
+      "title": "Quad9 退出法国：DNS 解析器的\"主权\"撤退",
       "source": "HackerNews",
-      "summary": "知名公共 DNS 解析器 Quad9 宣布撤出法国市场。背景是法国监管机构要求 DNS 解析商对域名进行封锁过滤，而 Quad9 坚持\"我不当审查员\"的立场，最终选择退出而非妥协。这标志着欧盟内部对加密 DNS 和网络中立性的监管压力正在实质性收紧。",
-      "commentary": "法国一边高喊\"数字主权\"，一边把不配合审查的 DNS 服务商赶出门——主权是有了，互联网的开放性没了。下一个被\"请走\"的会是谁？Cloudflare 已经在门口排队了吧。",
+      "summary": "免费公共 DNS 解析器 Quad9 宣布撤出法国市场。作为全球最主流的隐私向 DNS 服务之一，这次撤退意味着法国用户将失去一个不记录查询日志、自带恶意域名拦截的公共解析入口，背后是当地监管与 DNS 拦截义务之间的长期拉扯。",
+      "commentary": "DNS 是互联网的\"电话簿\"，法国这波操作相当于要求电话局把每个来电都登记备案——用户的选择只剩下\"要么被看，要么自己搭\"。",
       "url": "https://quad9.net/news/blog/au-revoir-france/"
     },
     {
-      "title": "360M 小模型伪装成终端：WorldTUI 用\"世界模型\"思路做 TUI 模拟器",
-      "source": "HackerNews",
-      "summary": "开发者训练了一个仅 360M 参数的小模型，专门用来\"扮演\"一个终端界面——不是真的执行命令，而是用语言模型预测终端该输出什么。本质上是用世界模型（World Model）的思路做 TUI 仿真，探索\"小模型 + 特定领域\"能否在交互模拟场景中替代真实执行环境。对测试、教学、Agent 沙箱都有潜在价值。",
-      "commentary": "用 360M 参数去\"假装\"自己是终端，这大概是 AI 界最精致的角色扮演。不过话说回来，当模型连 `ls` 的输出都要靠猜的时候，你确定它不是在进行一场永无止境的\"幻觉终端\"表演？创意满分，实用性别急着鼓掌。",
-      "url": "https://simedw.com/2026/10/21/world-model-terminal/"
+      "title": "Anthropic：LLM 让形式化软件验证真正\"上量\"",
+      "source": "HackerNews / Anthropic Research",
+      "summary": "Anthropic 放出研究，论证 LLM 能把形式化验证从\"学术象牙塔里的手工活\"推进到工业级规模。核心思路是让模型承担编写证明、拆解不变式、补全验证脚本这类高人力成本环节，把过去只有安全关键领域才玩得起的形式化方法，拉低到普通工程团队可用的门槛。",
+      "commentary": "过去写形式化证明的门槛是\"会 Coq 的博士 + 三个月\"，现在变成\"会写 prompt 的工程师 + 一个下午\"。当然，模型写出来的证明对不对，还得靠验证器这个\"终极裁判\"说了算——这大概是 AI 最不会翻车的一种用法。",
+      "url": "https://www.anthropic.com/research/formal-verification"
     },
     {
-      "quote": "信任这东西，在密码学里是比特，在商业里是契约，在人性里是幻觉——而大多数人只愿意为最后一项买单。"
+      "title": "NVIDIA OpenShell：给 AI 智能体舰队造一个\"安全沙箱\"",
+      "source": "GitHub",
+      "summary": "NVIDIA 开源 OpenShell，定位是为大规模自主 AI 智能体集群提供安全、私有的运行时环境。它要解决的是智能体\"能动手\"之后的最大隐患——任意执行代码、访问文件、发起网络请求时的隔离与权限边界，让\"一群 AI 替你干活\"不至于变成\"一群 AI 替你删库\"。",
+      "commentary": "智能体越能干，越需要一个笼子。NVIDIA 这波是把\"给 AI 发工牌的同时配好门禁\"，毕竟让一群自主程序共享你的 shell 权限，跟在工地上把挖掘机钥匙发给实习生是一个道理。",
+      "url": "https://github.com/NVIDIA/OpenShell"
     }
   ],
   "candidates": [
+    {
+      "id": "hn:50193416",
+      "title": "Tell HN: I unknowingly broke the PHP RCE embargo. I am sorry.",
+      "summary": "I posted here about the then-upcoming PHP RCEs related to CVE-2026-109618 &amp; CVE-2026-109619. I appreciate this has had considerable knock-on effects with the schedule for co-ordinated disclosure, and created additional workload.<p>I am truly sorry. I take full responsibility for my actions.<p>It",
+      "url": "https://news.ycombinator.com/item?id=50193416",
+      "source": "Hacker News",
+      "score": 425,
+      "comments": 181
+    },
+    {
+      "id": "hn:50198675",
+      "title": "OpenShell – A safe, private runtime for fleets of autonomous AI agents",
+      "summary": "",
+      "url": "https://github.com/NVIDIA/OpenShell",
+      "source": "Hacker News",
+      "score": 328,
+      "comments": 169
+    },
+    {
+      "id": "hn:50196718",
+      "title": "Run full iOS 16.5 firmware on Android Devices",
+      "summary": "<a href=\"https:&#x2F;&#x2F;hackios-web.vercel.app&#x2F;en\" rel=\"nofollow\">https:&#x2F;&#x2F;hackios-web.vercel.app&#x2F;en</a>",
+      "url": "https://github.com/oosexgang/hackios-xnu-kernel",
+      "source": "Hacker News",
+      "score": 352,
+      "comments": 132
+    },
     {
       "id": "hn:50195959",
       "title": "Quad9 (DNS Resolver) to Exit France",
       "summary": "",
       "url": "https://quad9.net/news/blog/au-revoir-france/",
       "source": "Hacker News",
-      "score": 250,
-      "comments": 83
+      "score": 1049,
+      "comments": 376
     },
     {
-      "id": "hn:50195110",
-      "title": "eMudhra to exit global SSL/TLS certificate business",
+      "id": "hn:50194833",
+      "title": "Woman faces six years in prison over Cash App account she never opened",
       "summary": "",
-      "url": "https://emudhra.com/en/press-release/emudhra-to-exit-global-ssl-tls-certificate-business",
+      "url": "https://www.techspot.com/news/114296-woman-spends-three-nights-jail-faces-six-years.html",
       "source": "Hacker News",
-      "score": 494,
-      "comments": 387
+      "score": 566,
+      "comments": 582
     },
     {
-      "id": "hn:50190363",
-      "title": "WorldTUI: I trained a 360M model to pretend to be a terminal",
+      "id": "hn:50197313",
+      "title": "Every AI model has the same \"controversial\" take on humans",
       "summary": "",
-      "url": "https://simedw.com/2026/10/21/world-model-terminal/",
+      "url": "https://www.modelcompare.ai/blog/ai-models-controversial-take-on-humans",
       "source": "Hacker News",
-      "score": 420,
-      "comments": 130
+      "score": 286,
+      "comments": 338
     },
     {
-      "id": "lob:ebsqsp",
-      "title": "Eight Bits of Trust; eMudhra's CA keys cracked in milliseconds",
+      "id": "hn:50197404",
+      "title": "Getting ready to operate GNU Taler in Germany",
       "summary": "",
-      "url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
-      "source": "Lobste.rs",
-      "score": 68,
-      "comments": 24,
-      "tags": [
-        "cryptography",
-        "security"
-      ]
-    },
-    {
-      "id": "hn:50150163",
-      "title": "What Is Gridifcation",
-      "summary": "",
-      "url": "https://musicalform.substack.com/p/what-is-gridifcation",
+      "url": "https://www.taler.net/en/news/2026-13.html",
       "source": "Hacker News",
-      "score": 234,
-      "comments": 107
-    },
-    {
-      "id": "hn:50192536",
-      "title": "Jailbreaking the Switch 2",
-      "summary": "",
-      "url": "https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/",
-      "source": "Hacker News",
-      "score": 479,
-      "comments": 174
-    },
-    {
-      "id": "lob:9jgl3x",
-      "title": "Google's Rust Style Guide",
-      "summary": "",
-      "url": "https://google.github.io/styleguide/rustguide.html",
-      "source": "Lobste.rs",
-      "score": 43,
-      "comments": 16,
-      "tags": [
-        "rust"
-      ]
+      "score": 240,
+      "comments": 95
     },
     {
       "id": "lob:hplfis",
@@ -106,25 +96,39 @@
       "summary": "",
       "url": "https://zoey-on-github.github.io/blog/macgcc.html",
       "source": "Lobste.rs",
-      "score": 45,
-      "comments": 10,
+      "score": 56,
+      "comments": 20,
       "tags": [
         "mac",
         "reversing"
       ]
     },
     {
-      "id": "lob:dldfel",
-      "title": "CVE-2026-107891: musl libc: multiple integer overflow in regcomp, possibly leading to incorrect allocation sizes and out-of-bounds heap writes",
+      "id": "hn:50202217",
+      "title": "LLMs are making formal software verification feasible at a much larger scale",
       "summary": "",
-      "url": "https://www.openwall.com/lists/oss-security/2026/10/21/18",
-      "source": "Lobste.rs",
-      "score": 44,
-      "comments": 5,
-      "tags": [
-        "c",
-        "security"
-      ]
+      "url": "https://www.anthropic.com/research/formal-verification",
+      "source": "Hacker News",
+      "score": 190,
+      "comments": 104
+    },
+    {
+      "id": "hn:50202681",
+      "title": "Docker is weird",
+      "summary": "",
+      "url": "https://codeandcake.dev/posts/2026-10-22-docker-is-weird",
+      "source": "Hacker News",
+      "score": 213,
+      "comments": 114
+    },
+    {
+      "id": "hn:50150163",
+      "title": "What Is Gridifcation",
+      "summary": "",
+      "url": "https://musicalform.substack.com/p/what-is-gridifcation",
+      "source": "Hacker News",
+      "score": 424,
+      "comments": 206
     },
     {
       "id": "lob:w9sxxq",
@@ -132,128 +136,109 @@
       "summary": "",
       "url": "https://firefox-source-docs.mozilla.org/devtools-user/local_mode/index.html",
       "source": "Lobste.rs",
-      "score": 131,
-      "comments": 22,
+      "score": 141,
+      "comments": 24,
       "tags": [
         "browsers"
       ]
     },
     {
-      "id": "hn:50195543",
-      "title": "What's Getting Pwned",
+      "id": "hn:50199389",
+      "title": "Hedra is a 3D open world game I wrote from scratch while in highschool",
       "summary": "",
-      "url": "https://pwn.watch/",
+      "url": "https://github.com/maxilevi/project-hedra/tree/pre-ai",
       "source": "Hacker News",
-      "score": 147,
-      "comments": 92
+      "score": 157,
+      "comments": 31
     },
     {
-      "id": "hn:50193170",
-      "title": "Faster than earcut: triangulating 3.7M map polygons in 489 ms",
-      "summary": "",
-      "url": "https://globus.software/blog/2026/10/16/cutting-map-polygons/",
-      "source": "Hacker News",
-      "score": 146,
-      "comments": 32
-    },
-    {
-      "id": "arxiv:2610.30113v1",
-      "title": "Quant-Arena: Benchmarking LLM Agents for Quantitative Trading Research",
-      "summary": "Quantitative research is an iterative loop: a researcher proposes a market hypothesis, implements it as an executable signal, tests it on historical data, and decides what to keep. Existing benchmarks score formulas, code, or individual trading decisions, leaving open whether large language models (",
-      "url": "https://arxiv.org/abs/2610.30113v1",
+      "id": "arxiv:2610.31656v1",
+      "title": "METTA: Memory-Enhanced Test-Time Adaptation for Meta-Reinforcement Learning",
+      "summary": "Meta-reinforcement learning aims to train agents that adapt quickly to unseen tasks from limited interaction, but this requires representing task evidence over long interaction histories. Classical recurrent agents compress experience into hidden states, while transformer-based agents retrieve from ",
+      "url": "https://arxiv.org/abs/2610.31656v1",
       "source": "ArXiv",
       "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.CE"
+        "cs.LG",
+        "cs.AI"
       ],
-      "arxiv_id": "2610.30113v1"
+      "arxiv_id": "2610.31656v1"
     },
     {
-      "id": "arxiv:2610.30108v1",
-      "title": "Multimodal Embodied Agents: A Unified Capability-centric Perspective from Computer-Use to Robot-Use",
-      "summary": "Multimodal agents (MMAs) sustain interaction through reasoning, memory, tools, and feedback, most visibly as computer-use agents, while robotic systems (RSs) couple sensing and actuation under physical dynamics. We define multimodal embodied agents (MMEAs) as goal-directed systems that couple multim",
-      "url": "https://arxiv.org/abs/2610.30108v1",
+      "id": "arxiv:2610.31624v1",
+      "title": "Questioning Instrumental Convergence in RLVR: Checkpoint Evidence from OLMo-3",
+      "summary": "Instrumental convergence is often invoked as a general reason to expect capable agents to acquire or express power-seeking subgoals: self-preservation, resource acquisition, deception, or resistance to oversight which poses an important threat to the society. For LLMs, reinforcement learning is the ",
+      "url": "https://arxiv.org/abs/2610.31624v1",
       "source": "ArXiv",
       "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CV",
-        "cs.MA",
-        "cs.MM"
+        "cs.LG",
+        "cs.AI"
       ],
-      "arxiv_id": "2610.30108v1"
+      "arxiv_id": "2610.31624v1"
     },
     {
-      "id": "hn:50196837",
-      "title": "Google cleared 300 hectares of Finnish forest",
+      "id": "lob:me75ey",
+      "title": "jailbreaking the switch 2",
       "summary": "",
-      "url": "https://www.techspot.com/news/114100-google-cleared-300-hectares-finnish-forest-data-center.html",
-      "source": "Hacker News",
-      "score": 96,
-      "comments": 52
-    },
-    {
-      "id": "lob:cdnepk",
-      "title": "Passkeys Attestation Trap",
-      "summary": "",
-      "url": "https://mjtsai.com/blog/2026/10/15/passkeys-attestation-trap/",
+      "url": "https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/",
       "source": "Lobste.rs",
-      "score": 25,
-      "comments": 64,
+      "score": 36,
+      "comments": 6,
       "tags": [
-        "security",
-        "web"
-      ]
-    },
-    {
-      "id": "lob:wi4nnl",
-      "title": "Railway Security Disclosure: Wednesday October 21st",
-      "summary": "",
-      "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
-      "source": "Lobste.rs",
-      "score": 19,
-      "comments": 8,
-      "tags": [
-        "devops",
+        "ai-tooling",
+        "hardware",
+        "reversing",
         "security"
       ]
     },
     {
-      "id": "arxiv:2610.30128v1",
-      "title": "Think Harder Where It Matters: Item-Level Adaptive Recursion for Sequential Recommendation",
-      "summary": "Existing sequential recommenders usually allocate a fixed computational budget to every item in a user's interaction history, regardless of the item's contribution to the final prediction. We challenge this de facto design with two diagnostic findings. (1) Non-uniform computational need: items withi",
-      "url": "https://arxiv.org/abs/2610.30128v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.IR",
-        "cs.AI",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "arxiv_id": "2610.30128v1"
-    },
-    {
-      "id": "arxiv:2610.30105v1",
-      "title": "Asymmetric On-Policy Distillation Learns In-Context Exploration",
-      "summary": "Sequential decision-making under partial observability is difficult because agents must explore to infer hidden, task-relevant information before acting effectively. Learning such information-gathering behaviors tabula rasa via online reinforcement learning is sample-inefficient, whereas offline imi",
-      "url": "https://arxiv.org/abs/2610.30105v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2610.30105v1"
-    },
-    {
-      "id": "hn:50194522",
-      "title": "The Last Museum: Semantic search across 5.8M artworks from major museums",
+      "id": "lob:os7brs",
+      "title": "Using a lookup-table to correct an approximation",
       "summary": "",
-      "url": "https://lastmuseum.com/",
-      "source": "Hacker News",
-      "score": 49,
-      "comments": 15
+      "url": "https://www.corsix.org/content/using-a-lookup-table-to-correct-an-approximation",
+      "source": "Lobste.rs",
+      "score": 32,
+      "comments": 5,
+      "tags": [
+        "performance"
+      ]
+    },
+    {
+      "id": "arxiv:2610.31657v1",
+      "title": "Cost-Aware Abstention for LLM-Based IT Ticket Classification",
+      "summary": "Wrong automatic routing of an IT support ticket can cost more than human triage. We evaluate cost-aware abstention as an offline, cost-conditional readiness assessment: select a routing policy on calibration data under explicit costs, then evaluate that frozen policy once on held-out test data. On a",
+      "url": "https://arxiv.org/abs/2610.31657v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_id": "2610.31657v1"
+    },
+    {
+      "id": "lob:ju4q1u",
+      "title": "I built a garbage collector for Rust (2023)",
+      "summary": "",
+      "url": "https://claytonwramsey.com/blog/dumpster/",
+      "source": "Lobste.rs",
+      "score": 15,
+      "comments": 7,
+      "tags": [
+        "rust"
+      ]
+    },
+    {
+      "id": "lob:tu5ynp",
+      "title": "Expose only share links of a private service with caddy",
+      "summary": "",
+      "url": "https://dataswamp.org/~solene/2026-10-21-caddy-forward-auth-public-share-links.html",
+      "source": "Lobste.rs",
+      "score": 19,
+      "comments": 3,
+      "tags": [
+        "devops",
+        "security"
+      ]
     }
   ],
   "ai_curated": true
