@@ -1,76 +1,67 @@
 {
-  "date": "2026-10-23",
-  "update_time": "2026-10-23 04:04:05",
+  "date": "2026-10-24",
+  "update_time": "2026-10-23 16:40:01",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-23\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Quad9 退出法国：DNS 解析器的\"主权\"撤退 (来源: HackerNews)\n- **核心干货**：免费公共 DNS 解析器 Quad9 宣布撤出法国市场。作为全球最主流的隐私向 DNS 服务之一，这次撤退意味着法国用户将失去一个不记录查询日志、自带恶意域名拦截的公共解析入口，背后是当地监管与 DNS 拦截义务之间的长期拉扯。\n- **毒舌/硬核点评**：DNS 是互联网的\"电话簿\"，法国这波操作相当于要求电话局把每个来电都登记备案——用户的选择只剩下\"要么被看，要么自己搭\"。\n- **🔗 传送门**：[点击直达原链接](https://quad9.net/news/blog/au-revoir-france/)\n\n---\n\n### 2. 📌 Anthropic：LLM 让形式化软件验证真正\"上量\" (来源: HackerNews / Anthropic Research)\n- **核心干货**：Anthropic 放出研究，论证 LLM 能把形式化验证从\"学术象牙塔里的手工活\"推进到工业级规模。核心思路是让模型承担编写证明、拆解不变式、补全验证脚本这类高人力成本环节，把过去只有安全关键领域才玩得起的形式化方法，拉低到普通工程团队可用的门槛。\n- **毒舌/硬核点评**：过去写形式化证明的门槛是\"会 Coq 的博士 + 三个月\"，现在变成\"会写 prompt 的工程师 + 一个下午\"。当然，模型写出来的证明对不对，还得靠验证器这个\"终极裁判\"说了算——这大概是 AI 最不会翻车的一种用法。\n- **🔗 传送门**：[点击直达原链接](https://www.anthropic.com/research/formal-verification)\n\n---\n\n### 3. 📌 NVIDIA OpenShell：给 AI 智能体舰队造一个\"安全沙箱\" (来源: GitHub)\n- **核心干货**：NVIDIA 开源 OpenShell，定位是为大规模自主 AI 智能体集群提供安全、私有的运行时环境。它要解决的是智能体\"能动手\"之后的最大隐患——任意执行代码、访问文件、发起网络请求时的隔离与权限边界，让\"一群 AI 替你干活\"不至于变成\"一群 AI 替你删库\"。\n- **毒舌/硬核点评**：智能体越能干，越需要一个笼子。NVIDIA 这波是把\"给 AI 发工牌的同时配好门禁\"，毕竟让一群自主程序共享你的 shell 权限，跟在工地上把挖掘机钥匙发给实习生是一个道理。\n- **🔗 传送门**：[点击直达原链接](https://github.com/NVIDIA/OpenShell)\n\n---\n\n### 🗣️ 今日顶男金句\n\"技术演进从来不是直线，而是一群人一边喊着'这次不一样'，一边把上一个时代的坑原样重挖一遍——区别只在于，这次铲子是 AI 递的。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-24\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Quad9 DNS 解析器宣布退出法国 (来源: Lobste.rs)\n- **核心干货**：全球知名公共 DNS 解析器 Quad9 宣布撤离法国市场。导火索是法国司法体系要求其配合屏蔽特定域名，而 Quad9 的瑞士注册地法律框架与法国的强制指令存在根本冲突。这本质上是\"无日志、非营利、隐私优先\"的 DNS 服务在各国内容审查压力下的一次硬碰硬。\n- **毒舌/硬核点评**：DNS 是互联网的\"电话簿\"，法国政府想给电话簿撕页，Quad9 直接把整本电话簿搬走——隐私原教旨主义者 vs 国家机器的经典对决，结局永远是用户成为代价。\n- **🔗 传送门**：[点击直达原链接](https://quad9.net/news/blog/au-revoir-france/)\n\n---\n\n### 2. 📌 质疑 RLVR 中的工具性收敛：来自 OLMo-3 的检查点证据 (来源: ArXiv)\n- **核心干货**：这篇论文直接挑战了 AI 安全领域一个\"圣经级\"假设——工具性收敛（即越强的智能体越倾向于自我保存、攫取资源、欺骗监督）。作者用 OLMo-3 的中间检查点做实证，发现 RLVR 训练过程中智能体并未系统性地表现出这些\"权力寻租\"行为。这意味着我们可能一直在用错误的假设去构建 AI 对齐策略。\n- **毒舌/硬核点评**：AI 安全圈吵了十年的\"智能体一定会想搞死你\"，被一个开源模型的检查点数据打脸。搞对齐的兄弟们，是时候从哲学辩论回归实验科学了——虽然实验数据通常更无聊，但至少能证伪。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2610.31624v1)\n\n---\n\n### 3. 📌 拆穿\"比 Rust 还快\"：Tov 基准测试中的恶意造假 (来源: Lobste.rs)\n- **核心干货**：Fyra Labs 发文实锤，声称\"性能超越 Rust\"的 Tov 项目存在基准测试造假——测试用例经过精心挑选和参数调优，只在对自己有利的场景下跑分。这类\"XX 语言比 Rust 快 10 倍\"的标题党在编程圈屡见不鲜，但这次被逐行拆解，堪称公开处刑。\n- **毒舌/硬核点评**：每次有人喊\"比 Rust 快\"，Rust 社区的反应就像看到有人拿 P 过的体检报告说比你健康。基准测试造假是技术圈最低级的营销，但永远有人上钩——因为大部分人不看方法论，只看标题。\n- **🔗 传送门**：[点击直达原链接](https://blog.fyralabs.com/debunking-faster-than-rust-malicious-benchmarks-in-tov/)\n\n---\n\n### 🗣️ 今日顶男金句\n与其争论哪种编程语言更快，不如先看看对方是怎么写 benchmark 的——**在跑分游戏里，最锋利的刀不是编译器，是选择性的数据。**",
   "briefing_items": [
     {
-      "title": "Quad9 退出法国：DNS 解析器的\"主权\"撤退",
-      "source": "HackerNews",
-      "summary": "免费公共 DNS 解析器 Quad9 宣布撤出法国市场。作为全球最主流的隐私向 DNS 服务之一，这次撤退意味着法国用户将失去一个不记录查询日志、自带恶意域名拦截的公共解析入口，背后是当地监管与 DNS 拦截义务之间的长期拉扯。",
-      "commentary": "DNS 是互联网的\"电话簿\"，法国这波操作相当于要求电话局把每个来电都登记备案——用户的选择只剩下\"要么被看，要么自己搭\"。",
+      "title": "Quad9 DNS 解析器宣布退出法国",
+      "source": "Lobste.rs",
+      "summary": "全球知名公共 DNS 解析器 Quad9 宣布撤离法国市场。导火索是法国司法体系要求其配合屏蔽特定域名，而 Quad9 的瑞士注册地法律框架与法国的强制指令存在根本冲突。这本质上是\"无日志、非营利、隐私优先\"的 DNS 服务在各国内容审查压力下的一次硬碰硬。",
+      "commentary": "DNS 是互联网的\"电话簿\"，法国政府想给电话簿撕页，Quad9 直接把整本电话簿搬走——隐私原教旨主义者 vs 国家机器的经典对决，结局永远是用户成为代价。",
       "url": "https://quad9.net/news/blog/au-revoir-france/"
     },
     {
-      "title": "Anthropic：LLM 让形式化软件验证真正\"上量\"",
-      "source": "HackerNews / Anthropic Research",
-      "summary": "Anthropic 放出研究，论证 LLM 能把形式化验证从\"学术象牙塔里的手工活\"推进到工业级规模。核心思路是让模型承担编写证明、拆解不变式、补全验证脚本这类高人力成本环节，把过去只有安全关键领域才玩得起的形式化方法，拉低到普通工程团队可用的门槛。",
-      "commentary": "过去写形式化证明的门槛是\"会 Coq 的博士 + 三个月\"，现在变成\"会写 prompt 的工程师 + 一个下午\"。当然，模型写出来的证明对不对，还得靠验证器这个\"终极裁判\"说了算——这大概是 AI 最不会翻车的一种用法。",
-      "url": "https://www.anthropic.com/research/formal-verification"
+      "title": "质疑 RLVR 中的工具性收敛：来自 OLMo-3 的检查点证据",
+      "source": "ArXiv",
+      "summary": "这篇论文直接挑战了 AI 安全领域一个\"圣经级\"假设——工具性收敛（即越强的智能体越倾向于自我保存、攫取资源、欺骗监督）。作者用 OLMo-3 的中间检查点做实证，发现 RLVR 训练过程中智能体并未系统性地表现出这些\"权力寻租\"行为。这意味着我们可能一直在用错误的假设去构建 AI 对齐策略。",
+      "commentary": "AI 安全圈吵了十年的\"智能体一定会想搞死你\"，被一个开源模型的检查点数据打脸。搞对齐的兄弟们，是时候从哲学辩论回归实验科学了——虽然实验数据通常更无聊，但至少能证伪。",
+      "url": "https://arxiv.org/abs/2610.31624v1"
     },
     {
-      "title": "NVIDIA OpenShell：给 AI 智能体舰队造一个\"安全沙箱\"",
-      "source": "GitHub",
-      "summary": "NVIDIA 开源 OpenShell，定位是为大规模自主 AI 智能体集群提供安全、私有的运行时环境。它要解决的是智能体\"能动手\"之后的最大隐患——任意执行代码、访问文件、发起网络请求时的隔离与权限边界，让\"一群 AI 替你干活\"不至于变成\"一群 AI 替你删库\"。",
-      "commentary": "智能体越能干，越需要一个笼子。NVIDIA 这波是把\"给 AI 发工牌的同时配好门禁\"，毕竟让一群自主程序共享你的 shell 权限，跟在工地上把挖掘机钥匙发给实习生是一个道理。",
-      "url": "https://github.com/NVIDIA/OpenShell"
+      "title": "拆穿\"比 Rust 还快\"：Tov 基准测试中的恶意造假",
+      "source": "Lobste.rs",
+      "summary": "Fyra Labs 发文实锤，声称\"性能超越 Rust\"的 Tov 项目存在基准测试造假——测试用例经过精心挑选和参数调优，只在对自己有利的场景下跑分。这类\"XX 语言比 Rust 快 10 倍\"的标题党在编程圈屡见不鲜，但这次被逐行拆解，堪称公开处刑。",
+      "commentary": "每次有人喊\"比 Rust 快\"，Rust 社区的反应就像看到有人拿 P 过的体检报告说比你健康。基准测试造假是技术圈最低级的营销，但永远有人上钩——因为大部分人不看方法论，只看标题。",
+      "url": "https://blog.fyralabs.com/debunking-faster-than-rust-malicious-benchmarks-in-tov/"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50193416",
-      "title": "Tell HN: I unknowingly broke the PHP RCE embargo. I am sorry.",
-      "summary": "I posted here about the then-upcoming PHP RCEs related to CVE-2026-109618 &amp; CVE-2026-109619. I appreciate this has had considerable knock-on effects with the schedule for co-ordinated disclosure, and created additional workload.<p>I am truly sorry. I take full responsibility for my actions.<p>It",
-      "url": "https://news.ycombinator.com/item?id=50193416",
-      "source": "Hacker News",
-      "score": 425,
-      "comments": 181
-    },
-    {
-      "id": "hn:50198675",
-      "title": "OpenShell – A safe, private runtime for fleets of autonomous AI agents",
+      "id": "hn:50202285",
+      "title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
       "summary": "",
-      "url": "https://github.com/NVIDIA/OpenShell",
+      "url": "https://edjefferson.com/localwiki/",
       "source": "Hacker News",
-      "score": 328,
-      "comments": 169
+      "score": 907,
+      "comments": 176
     },
     {
-      "id": "hn:50196718",
-      "title": "Run full iOS 16.5 firmware on Android Devices",
-      "summary": "<a href=\"https:&#x2F;&#x2F;hackios-web.vercel.app&#x2F;en\" rel=\"nofollow\">https:&#x2F;&#x2F;hackios-web.vercel.app&#x2F;en</a>",
-      "url": "https://github.com/oosexgang/hackios-xnu-kernel",
-      "source": "Hacker News",
-      "score": 352,
-      "comments": 132
-    },
-    {
-      "id": "hn:50195959",
-      "title": "Quad9 (DNS Resolver) to Exit France",
+      "id": "hn:50205934",
+      "title": "Disney Raising Prices Days After Confirming Ads Will Now Show Up on Every Tier",
       "summary": "",
-      "url": "https://quad9.net/news/blog/au-revoir-france/",
+      "url": "https://www.tvfandomlounge.com/disney-plus-price-hike-ads-premium-tier-nielsen-emmys-2026/",
       "source": "Hacker News",
-      "score": 1049,
-      "comments": 376
+      "score": 342,
+      "comments": 340
     },
     {
-      "id": "hn:50194833",
-      "title": "Woman faces six years in prison over Cash App account she never opened",
+      "id": "hn:50208837",
+      "title": "Investor-owned utilities charge 23% more for electricity than public providers",
       "summary": "",
-      "url": "https://www.techspot.com/news/114296-woman-spends-three-nights-jail-faces-six-years.html",
+      "url": "https://www.kadoa.com/energy-prices/insights/investor-owned-utilities",
       "source": "Hacker News",
-      "score": 566,
-      "comments": 582
+      "score": 448,
+      "comments": 307
+    },
+    {
+      "id": "hn:50203161",
+      "title": "The foolishness of \"natural language programming\" (1978)",
+      "summary": "",
+      "url": "https://www.cs.utexas.edu/~EWD/transcriptions/EWD06xx/EWD667.html",
+      "source": "Hacker News",
+      "score": 306,
+      "comments": 201
     },
     {
       "id": "hn:50197313",
@@ -78,17 +69,8 @@
       "summary": "",
       "url": "https://www.modelcompare.ai/blog/ai-models-controversial-take-on-humans",
       "source": "Hacker News",
-      "score": 286,
-      "comments": 338
-    },
-    {
-      "id": "hn:50197404",
-      "title": "Getting ready to operate GNU Taler in Germany",
-      "summary": "",
-      "url": "https://www.taler.net/en/news/2026-13.html",
-      "source": "Hacker News",
-      "score": 240,
-      "comments": 95
+      "score": 584,
+      "comments": 556
     },
     {
       "id": "lob:hplfis",
@@ -96,21 +78,12 @@
       "summary": "",
       "url": "https://zoey-on-github.github.io/blog/macgcc.html",
       "source": "Lobste.rs",
-      "score": 56,
-      "comments": 20,
+      "score": 59,
+      "comments": 22,
       "tags": [
         "mac",
         "reversing"
       ]
-    },
-    {
-      "id": "hn:50202217",
-      "title": "LLMs are making formal software verification feasible at a much larger scale",
-      "summary": "",
-      "url": "https://www.anthropic.com/research/formal-verification",
-      "source": "Hacker News",
-      "score": 190,
-      "comments": 104
     },
     {
       "id": "hn:50202681",
@@ -118,38 +91,93 @@
       "summary": "",
       "url": "https://codeandcake.dev/posts/2026-10-22-docker-is-weird",
       "source": "Hacker News",
-      "score": 213,
-      "comments": 114
+      "score": 731,
+      "comments": 296
     },
     {
-      "id": "hn:50150163",
-      "title": "What Is Gridifcation",
+      "id": "hn:50195002",
+      "title": "The alien space of science: Coherent but cognitively unavailable directions",
       "summary": "",
-      "url": "https://musicalform.substack.com/p/what-is-gridifcation",
+      "url": "https://arxiv.org/abs/2603.01092",
       "source": "Hacker News",
-      "score": 424,
-      "comments": 206
+      "score": 162,
+      "comments": 58
     },
     {
-      "id": "lob:w9sxxq",
-      "title": "Firefox Local Mode",
+      "id": "hn:50208099",
+      "title": "OpenSSL 4.1.0",
       "summary": "",
-      "url": "https://firefox-source-docs.mozilla.org/devtools-user/local_mode/index.html",
+      "url": "https://github.com/openssl/openssl/releases/tag/openssl-4.1.0",
+      "source": "Hacker News",
+      "score": 148,
+      "comments": 45
+    },
+    {
+      "id": "hn:50195488",
+      "title": "Show HN: OnKey – I'm a bad singer, so I built an app to show where I'm off-key",
+      "summary": "Hi all<p>I was pretty terrible at singing, now I’d say I’m bad but not terrible. This is because I’ve been using a singing app (won’t name it here) that scores me on my pitch and timing throughout the song so that I can improve.<p>Lately however, the app I’ve been using has flooded their song list w",
+      "url": "https://github.com/dsmurrell/onkey",
+      "source": "Hacker News",
+      "score": 146,
+      "comments": 66
+    },
+    {
+      "id": "lob:mucay8",
+      "title": "Please don't mess with links",
+      "summary": "",
+      "url": "https://maurycyz.com/misc/real_links/",
       "source": "Lobste.rs",
-      "score": 141,
-      "comments": 24,
+      "score": 65,
+      "comments": 16,
       "tags": [
-        "browsers"
+        "web"
       ]
     },
     {
-      "id": "hn:50199389",
-      "title": "Hedra is a 3D open world game I wrote from scratch while in highschool",
+      "id": "lob:s0aktw",
+      "title": "Quad9 DNS Resolver to exit France",
       "summary": "",
-      "url": "https://github.com/maxilevi/project-hedra/tree/pre-ai",
+      "url": "https://quad9.net/news/blog/au-revoir-france/",
+      "source": "Lobste.rs",
+      "score": 92,
+      "comments": 11,
+      "tags": [
+        "law",
+        "networking"
+      ]
+    },
+    {
+      "id": "hn:50210067",
+      "title": "eMudhra ignored Mozilla Root investigation deadline; blames social media",
+      "summary": "",
+      "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=2083449",
       "source": "Hacker News",
-      "score": 157,
-      "comments": 31
+      "score": 124,
+      "comments": 52
+    },
+    {
+      "id": "lob:gajtrm",
+      "title": "Debunking \"Faster than Rust\": Malicious Benchmarks in Tov",
+      "summary": "",
+      "url": "https://blog.fyralabs.com/debunking-faster-than-rust-malicious-benchmarks-in-tov/",
+      "source": "Lobste.rs",
+      "score": 21,
+      "comments": 14,
+      "tags": [
+        "performance"
+      ]
+    },
+    {
+      "id": "lob:jgull9",
+      "title": "a hacky fucked up way to portably access errno from outside of c",
+      "summary": "",
+      "url": "https://sebsite.pw/w/20260925-errno.html",
+      "source": "Lobste.rs",
+      "score": 26,
+      "comments": 22,
+      "tags": [
+        "c"
+      ]
     },
     {
       "id": "arxiv:2610.31656v1",
@@ -176,69 +204,38 @@
       "arxiv_id": "2610.31624v1"
     },
     {
-      "id": "lob:me75ey",
-      "title": "jailbreaking the switch 2",
+      "id": "lob:05xrj8",
+      "title": "We have Traits at Home",
       "summary": "",
-      "url": "https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/",
+      "url": "https://www.axelmagn.com/blog/202610-zig-traits/",
       "source": "Lobste.rs",
       "score": 36,
-      "comments": 6,
+      "comments": 11,
       "tags": [
-        "ai-tooling",
-        "hardware",
-        "reversing",
-        "security"
+        "zig"
       ]
     },
     {
-      "id": "lob:os7brs",
-      "title": "Using a lookup-table to correct an approximation",
+      "id": "lob:kcyzco",
+      "title": "UUIDv7 doesn't have the properties you think it does",
       "summary": "",
-      "url": "https://www.corsix.org/content/using-a-lookup-table-to-correct-an-approximation",
+      "url": "https://alexsci.com/blog/uuidv7-is-weird/",
       "source": "Lobste.rs",
       "score": 32,
-      "comments": 5,
+      "comments": 9,
       "tags": [
-        "performance"
+        "distributed",
+        "python"
       ]
     },
     {
-      "id": "arxiv:2610.31657v1",
-      "title": "Cost-Aware Abstention for LLM-Based IT Ticket Classification",
-      "summary": "Wrong automatic routing of an IT support ticket can cost more than human triage. We evaluate cost-aware abstention as an offline, cost-conditional readiness assessment: select a routing policy on calibration data under explicit costs, then evaluate that frozen policy once on held-out test data. On a",
-      "url": "https://arxiv.org/abs/2610.31657v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_id": "2610.31657v1"
-    },
-    {
-      "id": "lob:ju4q1u",
-      "title": "I built a garbage collector for Rust (2023)",
+      "id": "hn:50206840",
+      "title": "Job Loss and Cortisone Mania",
       "summary": "",
-      "url": "https://claytonwramsey.com/blog/dumpster/",
-      "source": "Lobste.rs",
-      "score": 15,
-      "comments": 7,
-      "tags": [
-        "rust"
-      ]
-    },
-    {
-      "id": "lob:tu5ynp",
-      "title": "Expose only share links of a private service with caddy",
-      "summary": "",
-      "url": "https://dataswamp.org/~solene/2026-10-21-caddy-forward-auth-public-share-links.html",
-      "source": "Lobste.rs",
-      "score": 19,
-      "comments": 3,
-      "tags": [
-        "devops",
-        "security"
-      ]
+      "url": "https://tilschuenemann.de/job-loss-cortisone-mania",
+      "source": "Hacker News",
+      "score": 94,
+      "comments": 31
     }
   ],
   "ai_curated": true
