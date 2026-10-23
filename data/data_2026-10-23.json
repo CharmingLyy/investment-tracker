@@ -1,0 +1,829 @@
+{
+  "update_time": "2026-10-23 12:58:54",
+  "stocks": {
+    "a_stocks": [
+      {
+        "market": "A股",
+        "code": "002050",
+        "name": "三花智控",
+        "symbol": "sz.002050",
+        "industry": null,
+        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
+        "price": 35.08,
+        "open": 32.3,
+        "high": 35.37,
+        "low": 32.21,
+        "change_pct": 6.66,
+        "volume": 92623405,
+        "turnover": 31.27,
+        "market_cap": null,
+        "pe": 36.93,
+        "cash_flow": 50.92,
+        "macd": -0.7161,
+        "macd_signal": -0.9252,
+        "macd_histogram": 0.4182,
+        "rsi": 55.59,
+        "ma": {
+          "MA5": 33.32,
+          "MA10": 32.51,
+          "MA20": 33.92,
+          "MA60": 35.71
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
+        "price": 6.17,
+        "open": 6.04,
+        "high": 6.18,
+        "low": 5.93,
+        "change_pct": 1.31,
+        "volume": 67919818,
+        "turnover": 4.12,
+        "market_cap": null,
+        "pe": 70.74,
+        "cash_flow": 105.67,
+        "macd": -0.1208,
+        "macd_signal": -0.0976,
+        "macd_histogram": -0.0464,
+        "rsi": 36.28,
+        "ma": {
+          "MA5": 6.14,
+          "MA10": 6.24,
+          "MA20": 6.37,
+          "MA60": 6.58
+        },
+        "main_net_flow": null
+      }
+    ],
+    "hk_stocks": [
+      {
+        "market": "港股",
+        "code": "01810",
+        "name": "小米集团-W",
+        "symbol": "01810",
+        "industry": "Consumer Electronics",
+        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
+        "price": 26.8,
+        "open": 26.0,
+        "high": 27.4,
+        "low": 25.88,
+        "change_pct": 3.88,
+        "volume": 216291102,
+        "turnover": null,
+        "market_cap": 6897.72,
+        "pe": 19.71,
+        "cash_flow": 86.81,
+        "macd": 0.0733,
+        "macd_signal": -0.1719,
+        "macd_histogram": 0.4904,
+        "rsi": 54.13,
+        "ma": {
+          "MA5": 26.62,
+          "MA10": 26.21,
+          "MA20": 25.54,
+          "MA60": 26.69
+        },
+        "main_net_flow": null
+      }
+    ],
+    "us_stocks": [
+      {
+        "market": "美股",
+        "code": "NVDA",
+        "name": "NVIDIA",
+        "symbol": "NVDA",
+        "industry": "Semiconductors",
+        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
+        "price": 212.21,
+        "open": 217.13,
+        "high": 218.88,
+        "low": 211.26,
+        "change_pct": -4.4,
+        "volume": 124816000,
+        "turnover": null,
+        "market_cap": 51242.35,
+        "pe": 26.83,
+        "cash_flow": 418.1,
+        "macd": -1.9801,
+        "macd_signal": 0.0682,
+        "macd_histogram": -4.0966,
+        "rsi": 39.08,
+        "ma": {
+          "MA5": 216.37,
+          "MA10": 220.45,
+          "MA20": 226.25,
+          "MA60": 221.12
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "GOOG",
+        "name": "Alphabet (Google)",
+        "symbol": "GOOG",
+        "industry": "Internet Content & Information",
+        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
+        "price": 320.76,
+        "open": 326.77,
+        "high": 327.7,
+        "low": 318.45,
+        "change_pct": -3.08,
+        "volume": 21044600,
+        "turnover": null,
+        "market_cap": 39228.74,
+        "pe": 16.09,
+        "cash_flow": 226.65,
+        "macd": -2.4608,
+        "macd_signal": -0.1998,
+        "macd_histogram": -4.5221,
+        "rsi": 32.8,
+        "ma": {
+          "MA5": 333.04,
+          "MA10": 340.01,
+          "MA20": 340.72,
+          "MA60": 342.49
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "CRCL",
+        "name": "Circle",
+        "symbol": "CRCL",
+        "industry": "Capital Markets",
+        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
+        "price": 86.62,
+        "open": 85.69,
+        "high": 87.97,
+        "low": 84.59,
+        "change_pct": -3.44,
+        "volume": 11891800,
+        "turnover": null,
+        "market_cap": 219.91,
+        "pe": 59.33,
+        "cash_flow": 2.06,
+        "macd": -0.1276,
+        "macd_signal": -0.6081,
+        "macd_histogram": 0.9611,
+        "rsi": 51.83,
+        "ma": {
+          "MA5": 85.16,
+          "MA10": 84.5,
+          "MA20": 83.95,
+          "MA60": 83.18
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "MP",
+        "name": "MP Materials",
+        "symbol": "MP",
+        "industry": "Other Industrial Metals & Mining",
+        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
+        "price": 38.56,
+        "open": 38.01,
+        "high": 38.96,
+        "low": 37.57,
+        "change_pct": -2.38,
+        "volume": 6011400,
+        "turnover": null,
+        "market_cap": 68.68,
+        "pe": 49.48,
+        "cash_flow": 4.33,
+        "macd": -2.9988,
+        "macd_signal": -2.5748,
+        "macd_histogram": -0.8481,
+        "rsi": 30.56,
+        "ma": {
+          "MA5": 39.25,
+          "MA10": 40.97,
+          "MA20": 43.93,
+          "MA60": 49.74
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "PLTR",
+        "name": "Palantir",
+        "symbol": "PLTR",
+        "industry": "Software - Infrastructure",
+        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
+        "price": 196.19,
+        "open": 200.76,
+        "high": 202.63,
+        "low": 194.54,
+        "change_pct": -2.74,
+        "volume": 22853700,
+        "turnover": null,
+        "market_cap": 4714.56,
+        "pe": 169.13,
+        "cash_flow": 21.59,
+        "macd": 4.541,
+        "macd_signal": 5.712,
+        "macd_histogram": -2.3421,
+        "rsi": 53.98,
+        "ma": {
+          "MA5": 194.14,
+          "MA10": 199.89,
+          "MA20": 195.16,
+          "MA60": 179.35
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "NOW",
+        "name": "ServiceNow",
+        "symbol": "NOW",
+        "industry": "Software - Application",
+        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
+        "price": 157.0,
+        "open": 154.25,
+        "high": 157.6,
+        "low": 153.57,
+        "change_pct": 2.53,
+        "volume": 17390000,
+        "turnover": null,
+        "market_cap": 1623.16,
+        "pe": 95.73,
+        "cash_flow": 51.49,
+        "macd": 4.5598,
+        "macd_signal": 3.0225,
+        "macd_histogram": 3.0745,
+        "rsi": 68.58,
+        "ma": {
+          "MA5": 149.4,
+          "MA10": 145.53,
+          "MA20": 140.51,
+          "MA60": 133.93
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "DDOG",
+        "name": "Datadog",
+        "symbol": "DDOG",
+        "industry": "Software - Application",
+        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
+        "price": 257.75,
+        "open": 271.49,
+        "high": 275.81,
+        "low": 256.41,
+        "change_pct": -5.62,
+        "volume": 3809400,
+        "turnover": null,
+        "market_cap": 925.52,
+        "pe": 515.5,
+        "cash_flow": 10.51,
+        "macd": 3.42,
+        "macd_signal": 6.541,
+        "macd_histogram": -6.2419,
+        "rsi": 48.07,
+        "ma": {
+          "MA5": 258.95,
+          "MA10": 269.42,
+          "MA20": 271.35,
+          "MA60": 250.22
+        },
+        "main_net_flow": null
+      }
+    ],
+    "crypto": [
+      {
+        "market": "加密货币",
+        "code": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "industry": "Smart Contract Platform",
+        "price": 81668,
+        "open": null,
+        "high": 81928,
+        "low": 80989,
+        "change_pct": 0.06,
+        "volume": 25565028420,
+        "turnover": null,
+        "market_cap": 16416.76,
+        "market_cap_rank": 1,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -17.2916,
+        "macd_signal": 194.6248,
+        "macd_histogram": -423.8327,
+        "rsi": 47.36,
+        "ma": {
+          "MA5": 82379.62,
+          "MA10": 82060.89,
+          "MA20": 82873.03,
+          "MA60": 81263.52
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 20102287.0,
+          "total_supply": 20102356.0,
+          "circ_ratio": 100.0,
+          "price_change_7d": -1.11377,
+          "price_change_30d": -4.68542,
+          "ath_pct": -35.23,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      },
+      {
+        "market": "加密货币",
+        "code": "ethereum",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "industry": "Smart Contract Platform",
+        "price": 2400.16,
+        "open": null,
+        "high": 2413.57,
+        "low": 2372.55,
+        "change_pct": 0.04,
+        "volume": 11621824392,
+        "turnover": null,
+        "market_cap": 2931.89,
+        "market_cap_rank": 2,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -46.5438,
+        "macd_signal": -38.253,
+        "macd_histogram": -16.5817,
+        "rsi": 40.31,
+        "ma": {
+          "MA5": 2422.44,
+          "MA10": 2420.05,
+          "MA20": 2492.36,
+          "MA60": 2533.3
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 122155364.9391704,
+          "total_supply": 122155364.9391704,
+          "circ_ratio": 100.0,
+          "price_change_7d": -3.03151,
+          "price_change_30d": -12.0332,
+          "ath_pct": -51.47,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      }
+    ]
+  },
+  "news": [
+    {
+      "id": "35b871d31c",
+      "title": "[播客]独家实拍：我那永远跪着的母亲(11/07 22:10)",
+      "summary": "独家实拍：我那永远跪着的母亲",
+      "link": "http://go.rss.sina.com.cn/redirect.php?url=http://you.video.sina.com.cn/b/16972162-1239095354.html",
+      "source": "rss.sina.com.cn",
+      "published": ""
+    },
+    {
+      "id": "dc9e6b03b7",
+      "title": "Smart financial advisers are dropping ROI, NAV and QCD for plain English when talking to clients",
+      "summary": "Not everyone is familiar with the ABCs of financial planning",
+      "link": "https://www.marketwatch.com/story/smart-financial-advisers-are-dropping-roi-nav-and-qcd-for-plain-english-when-talking-to-clients-2a16fc6f?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 23 Oct 2026 12:30:00 GMT"
+    },
+    {
+      "id": "fbef14d935",
+      "title": "It’s been a painful month for hedge funds. To turn it around, they are shorting U.S. stocks.",
+      "summary": "In response to losses on popular trades, hedge funds are now shorting U.S. stocks aggressively to try and win back some performance.",
+      "link": "https://www.marketwatch.com/story/its-been-a-painful-month-for-hedge-funds-to-turn-it-around-they-are-shorting-u-s-stocks-d36ee922?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 23 Oct 2026 12:23:00 GMT"
+    },
+    {
+      "id": "4590cc3912",
+      "title": "My spouse was awarded $90,000 from my 401(k) in our divorce. How is that fair?",
+      "summary": "“I retired in 2020 and subsequently went through a divorce a few years later.”",
+      "link": "https://www.marketwatch.com/story/my-spouse-was-awarded-90-000-from-my-401-k-in-our-divorce-how-is-that-fair-dc839aa3?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 23 Oct 2026 12:16:00 GMT"
+    },
+    {
+      "id": "e684a5bb9f",
+      "title": "The mobile ambitions of SpaceX are hitting telecom stocks again. Here’s what the latest developments mean.",
+      "summary": "Reports of Starlink’s discussions with cell-tower owners were noticed by shareholders of Verizon, AT&amp;T and T-Mobile.",
+      "link": "https://www.marketwatch.com/story/the-mobile-ambitions-of-spacex-see-telecom-stocks-get-hit-again-what-the-latest-developments-mean-9a4159b5?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 23 Oct 2026 11:32:00 GMT"
+    },
+    {
+      "id": "8ed2ba2504",
+      "title": "The stock market is splitting in two. Is that signaling trouble ahead, or just a new set of winners?",
+      "summary": "Tech stocks are slumping — even as more than 300 S&amp;P 500 constituents rose Thursday — and Treasurys are rallying. Here’s what may be changing.",
+      "link": "https://www.marketwatch.com/story/the-stock-market-is-splitting-in-two-is-that-signaling-trouble-ahead-or-just-a-new-set-of-winners-f51aaeab?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 23 Oct 2026 11:24:00 GMT"
+    },
+    {
+      "id": "f9f5fd11be",
+      "title": "Treasury yields log biggest drop since the 2023 banking crisis. Here’s what’s going on.",
+      "summary": "‘It’s a take-back trade,’ says PGIM’s Tipp. ‘Not an all-out fear of recession type of situation.’",
+      "link": "https://www.marketwatch.com/story/treasury-yields-see-extreme-plunge-why-investors-are-ducking-for-cover-60044c66?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 23 Oct 2026 11:01:00 GMT"
+    },
+    {
+      "id": "8255c04890",
+      "title": "France is getting its credit rating reviewed. The French debt turmoil has helped turn U.S. Treasury yields around. What comes next?",
+      "summary": "Moody’s is set to update its rating on France’s debt after U.S. markets close on Friday.",
+      "link": "https://www.marketwatch.com/story/france-is-getting-its-credit-rating-reviewed-by-moodys-what-to-expect-as-french-debt-turmoil-spills-overseas-e39de111?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 23 Oct 2026 10:45:00 GMT"
+    },
+    {
+      "id": "f32535f404",
+      "title": "The U.S. stock market is fracturing into two camps, and it’s leaving investors with a brutal case of whiplash",
+      "summary": "The artificial-intelligence trade is on the ropes. CNN’s “Fear & Greed” index is screaming fear, and the yield on the 10-year Treasury note just clinched its biggest daily drop since the collapse of S",
+      "link": "https://www.marketwatch.com/story/the-u-s-stock-market-is-fracturing-into-two-camps-and-its-leaving-investors-with-a-brutal-case-of-whiplash-e8580a99?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 23 Oct 2026 10:29:00 GMT"
+    },
+    {
+      "id": "f3aff83040",
+      "title": "‘She’s living the dream’: My stepmother said I can buy my childhood home for $850,000. Is she taking advantage of me?",
+      "summary": "“My late father bought our house for $250,000 in the 1990s.”",
+      "link": "https://www.marketwatch.com/story/shes-living-the-dream-my-stepmother-said-i-can-buy-my-childhood-home-for-850-000-is-she-taking-advantage-of-me-1fdda7b5?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 23 Oct 2026 10:15:00 GMT"
+    },
+    {
+      "id": "a7adcd71b4",
+      "title": "This market signal just occurred for only the second time since 1999. Here’s what happened and what it means.",
+      "summary": "An unusual occurrence with breadth and the stock market just occurred.",
+      "link": "https://www.marketwatch.com/story/this-market-signal-just-occurred-for-only-the-second-time-since-1999-heres-what-happened-and-what-it-means-a126cf31?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 23 Oct 2026 09:35:00 GMT"
+    },
+    {
+      "id": "bbbd3511e2",
+      "title": "Infosys ADR earnings matched, revenue topped estimates",
+      "summary": "",
+      "link": "https://www.investing.com/news/earnings/infosys-adr-earnings-matched-revenue-topped-estimates-4969390",
+      "source": "www.investing.com",
+      "published": "2026-10-23 12:45:24"
+    },
+    {
+      "id": "9c3be5457a",
+      "title": "Earnings call transcript: CSB Bank posts stronger Q2 2026 profit, shares edge up",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-csb-bank-posts-stronger-q2-2026-profit-shares-edge-up-93CH-4969385",
+      "source": "www.investing.com",
+      "published": "2026-10-23 12:44:39"
+    },
+    {
+      "id": "da794b92e2",
+      "title": "Lake Shore Bancorp declares $0.09 quarterly dividend",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/lake-shore-bancorp-declares-009-quarterly-dividend-93CH-4969384",
+      "source": "www.investing.com",
+      "published": "2026-10-23 12:44:34"
+    },
+    {
+      "id": "c178236c75",
+      "title": "U.S. stock futures slide amid AI-driven tech jitters, oil price spike",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/us-stock-futures-steady-after-nasdaq-posts-worst-day-since-june-4967865",
+      "source": "www.investing.com",
+      "published": "2026-10-23 12:43:26"
+    },
+    {
+      "id": "912dfb892b",
+      "title": "Apple fans, customers react as iPhone Duo hits stores",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/apple-fans-customers-react-as-iphone-duo-hits-stores-4969372",
+      "source": "www.investing.com",
+      "published": "2026-10-23 12:42:57"
+    },
+    {
+      "id": "e09e99ce1f",
+      "title": "AmEx lifts 2026 profit forecast as travel, entertainment spending drives growth",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/american-express-raises-2026-profit-forecast-as-affluent-customers-keep-spending-4968920",
+      "source": "www.investing.com",
+      "published": "2026-10-23 12:42:40"
+    },
+    {
+      "id": "f248f55a30",
+      "title": "Earnings call transcript: Shree Cement posts strong Q2 volume growth in FY27",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-shree-cement-posts-strong-q2-volume-growth-in-fy27-93CH-4969371",
+      "source": "www.investing.com",
+      "published": "2026-10-23 12:41:43"
+    },
+    {
+      "id": "a4a9412f47",
+      "title": "Yemen retracts statement on gatherings in Houthi-controlled areas - AP",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/yemen-retracts-statement-on-gatherings-in-houthicontrolled-areas--ap-4969370",
+      "source": "www.investing.com",
+      "published": "2026-10-23 12:41:16"
+    },
+    {
+      "id": "a9852a872e",
+      "title": "Needham cuts Deckers Outdoor stock price target on weak sales outlook",
+      "summary": "",
+      "link": "https://www.investing.com/news/analyst-ratings/needham-cuts-deckers-outdoor-stock-price-target-on-weak-sales-outlook-93CH-4969368",
+      "source": "www.investing.com",
+      "published": "2026-10-23 12:40:51"
+    },
+    {
+      "id": "5d3b760b84",
+      "title": "Stifel cuts Lindsay stock price target to $119 on subdued fundamentals",
+      "summary": "",
+      "link": "https://www.investing.com/news/analyst-ratings/stifel-cuts-lindsay-stock-price-target-to-119-on-subdued-fundamentals-93CH-4969367",
+      "source": "www.investing.com",
+      "published": "2026-10-23 12:40:48"
+    }
+  ],
+  "briefing": {
+    "date": "2026-10-23",
+    "update_time": "2026-10-23 04:04:05",
+    "candidate_count": 20,
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-23\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Quad9 退出法国：DNS 解析器的\"主权\"撤退 (来源: HackerNews)\n- **核心干货**：免费公共 DNS 解析器 Quad9 宣布撤出法国市场。作为全球最主流的隐私向 DNS 服务之一，这次撤退意味着法国用户将失去一个不记录查询日志、自带恶意域名拦截的公共解析入口，背后是当地监管与 DNS 拦截义务之间的长期拉扯。\n- **毒舌/硬核点评**：DNS 是互联网的\"电话簿\"，法国这波操作相当于要求电话局把每个来电都登记备案——用户的选择只剩下\"要么被看，要么自己搭\"。\n- **🔗 传送门**：[点击直达原链接](https://quad9.net/news/blog/au-revoir-france/)\n\n---\n\n### 2. 📌 Anthropic：LLM 让形式化软件验证真正\"上量\" (来源: HackerNews / Anthropic Research)\n- **核心干货**：Anthropic 放出研究，论证 LLM 能把形式化验证从\"学术象牙塔里的手工活\"推进到工业级规模。核心思路是让模型承担编写证明、拆解不变式、补全验证脚本这类高人力成本环节，把过去只有安全关键领域才玩得起的形式化方法，拉低到普通工程团队可用的门槛。\n- **毒舌/硬核点评**：过去写形式化证明的门槛是\"会 Coq 的博士 + 三个月\"，现在变成\"会写 prompt 的工程师 + 一个下午\"。当然，模型写出来的证明对不对，还得靠验证器这个\"终极裁判\"说了算——这大概是 AI 最不会翻车的一种用法。\n- **🔗 传送门**：[点击直达原链接](https://www.anthropic.com/research/formal-verification)\n\n---\n\n### 3. 📌 NVIDIA OpenShell：给 AI 智能体舰队造一个\"安全沙箱\" (来源: GitHub)\n- **核心干货**：NVIDIA 开源 OpenShell，定位是为大规模自主 AI 智能体集群提供安全、私有的运行时环境。它要解决的是智能体\"能动手\"之后的最大隐患——任意执行代码、访问文件、发起网络请求时的隔离与权限边界，让\"一群 AI 替你干活\"不至于变成\"一群 AI 替你删库\"。\n- **毒舌/硬核点评**：智能体越能干，越需要一个笼子。NVIDIA 这波是把\"给 AI 发工牌的同时配好门禁\"，毕竟让一群自主程序共享你的 shell 权限，跟在工地上把挖掘机钥匙发给实习生是一个道理。\n- **🔗 传送门**：[点击直达原链接](https://github.com/NVIDIA/OpenShell)\n\n---\n\n### 🗣️ 今日顶男金句\n\"技术演进从来不是直线，而是一群人一边喊着'这次不一样'，一边把上一个时代的坑原样重挖一遍——区别只在于，这次铲子是 AI 递的。\"",
+    "briefing_items": [
+      {
+        "title": "Quad9 退出法国：DNS 解析器的\"主权\"撤退",
+        "source": "HackerNews",
+        "summary": "免费公共 DNS 解析器 Quad9 宣布撤出法国市场。作为全球最主流的隐私向 DNS 服务之一，这次撤退意味着法国用户将失去一个不记录查询日志、自带恶意域名拦截的公共解析入口，背后是当地监管与 DNS 拦截义务之间的长期拉扯。",
+        "commentary": "DNS 是互联网的\"电话簿\"，法国这波操作相当于要求电话局把每个来电都登记备案——用户的选择只剩下\"要么被看，要么自己搭\"。",
+        "url": "https://quad9.net/news/blog/au-revoir-france/"
+      },
+      {
+        "title": "Anthropic：LLM 让形式化软件验证真正\"上量\"",
+        "source": "HackerNews / Anthropic Research",
+        "summary": "Anthropic 放出研究，论证 LLM 能把形式化验证从\"学术象牙塔里的手工活\"推进到工业级规模。核心思路是让模型承担编写证明、拆解不变式、补全验证脚本这类高人力成本环节，把过去只有安全关键领域才玩得起的形式化方法，拉低到普通工程团队可用的门槛。",
+        "commentary": "过去写形式化证明的门槛是\"会 Coq 的博士 + 三个月\"，现在变成\"会写 prompt 的工程师 + 一个下午\"。当然，模型写出来的证明对不对，还得靠验证器这个\"终极裁判\"说了算——这大概是 AI 最不会翻车的一种用法。",
+        "url": "https://www.anthropic.com/research/formal-verification"
+      },
+      {
+        "title": "NVIDIA OpenShell：给 AI 智能体舰队造一个\"安全沙箱\"",
+        "source": "GitHub",
+        "summary": "NVIDIA 开源 OpenShell，定位是为大规模自主 AI 智能体集群提供安全、私有的运行时环境。它要解决的是智能体\"能动手\"之后的最大隐患——任意执行代码、访问文件、发起网络请求时的隔离与权限边界，让\"一群 AI 替你干活\"不至于变成\"一群 AI 替你删库\"。",
+        "commentary": "智能体越能干，越需要一个笼子。NVIDIA 这波是把\"给 AI 发工牌的同时配好门禁\"，毕竟让一群自主程序共享你的 shell 权限，跟在工地上把挖掘机钥匙发给实习生是一个道理。",
+        "url": "https://github.com/NVIDIA/OpenShell"
+      }
+    ],
+    "candidates": [
+      {
+        "id": "hn:50193416",
+        "title": "Tell HN: I unknowingly broke the PHP RCE embargo. I am sorry.",
+        "summary": "I posted here about the then-upcoming PHP RCEs related to CVE-2026-109618 &amp; CVE-2026-109619. I appreciate this has had considerable knock-on effects with the schedule for co-ordinated disclosure, and created additional workload.<p>I am truly sorry. I take full responsibility for my actions.<p>It",
+        "url": "https://news.ycombinator.com/item?id=50193416",
+        "source": "Hacker News",
+        "score": 425,
+        "comments": 181
+      },
+      {
+        "id": "hn:50198675",
+        "title": "OpenShell – A safe, private runtime for fleets of autonomous AI agents",
+        "summary": "",
+        "url": "https://github.com/NVIDIA/OpenShell",
+        "source": "Hacker News",
+        "score": 328,
+        "comments": 169
+      },
+      {
+        "id": "hn:50196718",
+        "title": "Run full iOS 16.5 firmware on Android Devices",
+        "summary": "<a href=\"https:&#x2F;&#x2F;hackios-web.vercel.app&#x2F;en\" rel=\"nofollow\">https:&#x2F;&#x2F;hackios-web.vercel.app&#x2F;en</a>",
+        "url": "https://github.com/oosexgang/hackios-xnu-kernel",
+        "source": "Hacker News",
+        "score": 352,
+        "comments": 132
+      },
+      {
+        "id": "hn:50195959",
+        "title": "Quad9 (DNS Resolver) to Exit France",
+        "summary": "",
+        "url": "https://quad9.net/news/blog/au-revoir-france/",
+        "source": "Hacker News",
+        "score": 1049,
+        "comments": 376
+      },
+      {
+        "id": "hn:50194833",
+        "title": "Woman faces six years in prison over Cash App account she never opened",
+        "summary": "",
+        "url": "https://www.techspot.com/news/114296-woman-spends-three-nights-jail-faces-six-years.html",
+        "source": "Hacker News",
+        "score": 566,
+        "comments": 582
+      },
+      {
+        "id": "hn:50197313",
+        "title": "Every AI model has the same \"controversial\" take on humans",
+        "summary": "",
+        "url": "https://www.modelcompare.ai/blog/ai-models-controversial-take-on-humans",
+        "source": "Hacker News",
+        "score": 286,
+        "comments": 338
+      },
+      {
+        "id": "hn:50197404",
+        "title": "Getting ready to operate GNU Taler in Germany",
+        "summary": "",
+        "url": "https://www.taler.net/en/news/2026-13.html",
+        "source": "Hacker News",
+        "score": 240,
+        "comments": 95
+      },
+      {
+        "id": "lob:hplfis",
+        "title": "examining the macOS gcc binary",
+        "summary": "",
+        "url": "https://zoey-on-github.github.io/blog/macgcc.html",
+        "source": "Lobste.rs",
+        "score": 56,
+        "comments": 20,
+        "tags": [
+          "mac",
+          "reversing"
+        ]
+      },
+      {
+        "id": "hn:50202217",
+        "title": "LLMs are making formal software verification feasible at a much larger scale",
+        "summary": "",
+        "url": "https://www.anthropic.com/research/formal-verification",
+        "source": "Hacker News",
+        "score": 190,
+        "comments": 104
+      },
+      {
+        "id": "hn:50202681",
+        "title": "Docker is weird",
+        "summary": "",
+        "url": "https://codeandcake.dev/posts/2026-10-22-docker-is-weird",
+        "source": "Hacker News",
+        "score": 213,
+        "comments": 114
+      },
+      {
+        "id": "hn:50150163",
+        "title": "What Is Gridifcation",
+        "summary": "",
+        "url": "https://musicalform.substack.com/p/what-is-gridifcation",
+        "source": "Hacker News",
+        "score": 424,
+        "comments": 206
+      },
+      {
+        "id": "lob:w9sxxq",
+        "title": "Firefox Local Mode",
+        "summary": "",
+        "url": "https://firefox-source-docs.mozilla.org/devtools-user/local_mode/index.html",
+        "source": "Lobste.rs",
+        "score": 141,
+        "comments": 24,
+        "tags": [
+          "browsers"
+        ]
+      },
+      {
+        "id": "hn:50199389",
+        "title": "Hedra is a 3D open world game I wrote from scratch while in highschool",
+        "summary": "",
+        "url": "https://github.com/maxilevi/project-hedra/tree/pre-ai",
+        "source": "Hacker News",
+        "score": 157,
+        "comments": 31
+      },
+      {
+        "id": "arxiv:2610.31656v1",
+        "title": "METTA: Memory-Enhanced Test-Time Adaptation for Meta-Reinforcement Learning",
+        "summary": "Meta-reinforcement learning aims to train agents that adapt quickly to unseen tasks from limited interaction, but this requires representing task evidence over long interaction histories. Classical recurrent agents compress experience into hidden states, while transformer-based agents retrieve from ",
+        "url": "https://arxiv.org/abs/2610.31656v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.LG",
+          "cs.AI"
+        ],
+        "arxiv_id": "2610.31656v1"
+      },
+      {
+        "id": "arxiv:2610.31624v1",
+        "title": "Questioning Instrumental Convergence in RLVR: Checkpoint Evidence from OLMo-3",
+        "summary": "Instrumental convergence is often invoked as a general reason to expect capable agents to acquire or express power-seeking subgoals: self-preservation, resource acquisition, deception, or resistance to oversight which poses an important threat to the society. For LLMs, reinforcement learning is the ",
+        "url": "https://arxiv.org/abs/2610.31624v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.LG",
+          "cs.AI"
+        ],
+        "arxiv_id": "2610.31624v1"
+      },
+      {
+        "id": "lob:me75ey",
+        "title": "jailbreaking the switch 2",
+        "summary": "",
+        "url": "https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/",
+        "source": "Lobste.rs",
+        "score": 36,
+        "comments": 6,
+        "tags": [
+          "ai-tooling",
+          "hardware",
+          "reversing",
+          "security"
+        ]
+      },
+      {
+        "id": "lob:os7brs",
+        "title": "Using a lookup-table to correct an approximation",
+        "summary": "",
+        "url": "https://www.corsix.org/content/using-a-lookup-table-to-correct-an-approximation",
+        "source": "Lobste.rs",
+        "score": 32,
+        "comments": 5,
+        "tags": [
+          "performance"
+        ]
+      },
+      {
+        "id": "arxiv:2610.31657v1",
+        "title": "Cost-Aware Abstention for LLM-Based IT Ticket Classification",
+        "summary": "Wrong automatic routing of an IT support ticket can cost more than human triage. We evaluate cost-aware abstention as an offline, cost-conditional readiness assessment: select a routing policy on calibration data under explicit costs, then evaluate that frozen policy once on held-out test data. On a",
+        "url": "https://arxiv.org/abs/2610.31657v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.LG",
+          "cs.AI",
+          "cs.CL"
+        ],
+        "arxiv_id": "2610.31657v1"
+      },
+      {
+        "id": "lob:ju4q1u",
+        "title": "I built a garbage collector for Rust (2023)",
+        "summary": "",
+        "url": "https://claytonwramsey.com/blog/dumpster/",
+        "source": "Lobste.rs",
+        "score": 15,
+        "comments": 7,
+        "tags": [
+          "rust"
+        ]
+      },
+      {
+        "id": "lob:tu5ynp",
+        "title": "Expose only share links of a private service with caddy",
+        "summary": "",
+        "url": "https://dataswamp.org/~solene/2026-10-21-caddy-forward-auth-public-share-links.html",
+        "source": "Lobste.rs",
+        "score": 19,
+        "comments": 3,
+        "tags": [
+          "devops",
+          "security"
+        ]
+      }
+    ],
+    "ai_curated": true
+  },
+  "fear_greed": {
+    "value": 50,
+    "classification": "Neutral",
+    "timestamp": "2026-10-23 00:00:00"
+  }
+}
