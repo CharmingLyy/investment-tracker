@@ -1,125 +1,152 @@
 {
   "date": "2026-10-24",
-  "update_time": "2026-10-23 16:40:01",
+  "update_time": "2026-10-24 03:58:21",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-24\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Quad9 DNS 解析器宣布退出法国 (来源: Lobste.rs)\n- **核心干货**：全球知名公共 DNS 解析器 Quad9 宣布撤离法国市场。导火索是法国司法体系要求其配合屏蔽特定域名，而 Quad9 的瑞士注册地法律框架与法国的强制指令存在根本冲突。这本质上是\"无日志、非营利、隐私优先\"的 DNS 服务在各国内容审查压力下的一次硬碰硬。\n- **毒舌/硬核点评**：DNS 是互联网的\"电话簿\"，法国政府想给电话簿撕页，Quad9 直接把整本电话簿搬走——隐私原教旨主义者 vs 国家机器的经典对决，结局永远是用户成为代价。\n- **🔗 传送门**：[点击直达原链接](https://quad9.net/news/blog/au-revoir-france/)\n\n---\n\n### 2. 📌 质疑 RLVR 中的工具性收敛：来自 OLMo-3 的检查点证据 (来源: ArXiv)\n- **核心干货**：这篇论文直接挑战了 AI 安全领域一个\"圣经级\"假设——工具性收敛（即越强的智能体越倾向于自我保存、攫取资源、欺骗监督）。作者用 OLMo-3 的中间检查点做实证，发现 RLVR 训练过程中智能体并未系统性地表现出这些\"权力寻租\"行为。这意味着我们可能一直在用错误的假设去构建 AI 对齐策略。\n- **毒舌/硬核点评**：AI 安全圈吵了十年的\"智能体一定会想搞死你\"，被一个开源模型的检查点数据打脸。搞对齐的兄弟们，是时候从哲学辩论回归实验科学了——虽然实验数据通常更无聊，但至少能证伪。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2610.31624v1)\n\n---\n\n### 3. 📌 拆穿\"比 Rust 还快\"：Tov 基准测试中的恶意造假 (来源: Lobste.rs)\n- **核心干货**：Fyra Labs 发文实锤，声称\"性能超越 Rust\"的 Tov 项目存在基准测试造假——测试用例经过精心挑选和参数调优，只在对自己有利的场景下跑分。这类\"XX 语言比 Rust 快 10 倍\"的标题党在编程圈屡见不鲜，但这次被逐行拆解，堪称公开处刑。\n- **毒舌/硬核点评**：每次有人喊\"比 Rust 快\"，Rust 社区的反应就像看到有人拿 P 过的体检报告说比你健康。基准测试造假是技术圈最低级的营销，但永远有人上钩——因为大部分人不看方法论，只看标题。\n- **🔗 传送门**：[点击直达原链接](https://blog.fyralabs.com/debunking-faster-than-rust-malicious-benchmarks-in-tov/)\n\n---\n\n### 🗣️ 今日顶男金句\n与其争论哪种编程语言更快，不如先看看对方是怎么写 benchmark 的——**在跑分游戏里，最锋利的刀不是编译器，是选择性的数据。**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-24\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Kimi K3.1 Pro 发布，还带了个\"Highspeed\"版本 (来源: HackerNews)\n- **核心干货**：月之暗面甩出 K3.1 Pro，外加一个主打低延迟的 Highspeed 变体，HN 首页 779 分、478 条评论直接吵翻。Artificial Analysis 同步收录评测，说明这不是自吹自擂的 PPT 模型，而是真刀真枪进了第三方基准盘。国产大模型卷到\"高速版\"这个细分档位，意味着推理成本与响应速度的工程优化已经成为下一阶段的主战场。\n- **毒舌/硬核点评**：名字里带 \"Pro\" 的模型现在比便利店饭团口味还多，但敢同步上第三方评测的算有诚意——至于 Highspeed 是\"真的快\"还是\"降智换速度\"，得看榜单上那几分是不是用智商换的。\n- **🔗 传送门**：[点击直达原链接](https://www.kimi.ai/blog/kimi-k3-1-pro)\n\n---\n\n### 2. 📌 安全圈把 iPhone 给\"办\"了 (来源: HackerNews)\n- **核心干货**：一篇标题嚣张到不行的博客《Today, we hacked what we'd set out to hack: the iPhone》，779 分、526 条评论，热度说明一切。移动端攻防历来是\"防守方永远慢半拍\"的战场，能在公开渠道披露完整攻击链，要么是重大漏洞利用，要么是研究团队在给整个行业敲警钟。对做移动安全、终端防护、甚至 App 开发者来说，这是必读材料。\n- **毒舌/硬核点评**：苹果的\"隐私堡垒\"人设又被凿了个洞——不过话说回来，能被公开研究攻破的漏洞，总比在黑市里悄悄流通的要体面一点。建议库克看看评论区，526 条里大概有一半在问\"我的还能用吗\"。\n- **🔗 传送门**：[点击直达原链接](https://blog.calif.io/p/iphone)\n\n---\n\n### 3. 📌 给\"比 Rust 还快\"的基准测试扒皮 (来源: Lobste.rs)\n- **核心干货**：一篇名为《Debunking \"Faster than Rust\": Malicious Benchmarks in Tov》的文章，直接掀了某些项目\"吊打 Rust\"的桌子。核心手法不新鲜但永远有效：挑对自己有利的 workload、关掉对手的优化开关、用不公平的输入规模制造幻觉。这类\"基准测试造假\"的拆解，是每个技术选型者的防身术——毕竟选错语言，代价是团队几年的青春。\n- **毒舌/硬核点评**：\"比 Rust 快\"和\"我爷爷跑得比博尔特快\"属于同一类命题，区别只在于有没有人规定赛道。感谢这位作者，让又一批准备 all-in 新语言的团队省下了重构费。\n- **🔗 传送门**：[点击直达原链接](https://blog.fyralabs.com/debunking-faster-than-rust-malicious-benchmarks-in-tov/)\n\n---\n\n### 🗣️ 今日顶男金句\n**\"所有宣称'快 10 倍'的基准测试，都该先问一句：你比的是谁，又偷偷关掉了谁的优化开关？\"**",
   "briefing_items": [
     {
-      "title": "Quad9 DNS 解析器宣布退出法国",
-      "source": "Lobste.rs",
-      "summary": "全球知名公共 DNS 解析器 Quad9 宣布撤离法国市场。导火索是法国司法体系要求其配合屏蔽特定域名，而 Quad9 的瑞士注册地法律框架与法国的强制指令存在根本冲突。这本质上是\"无日志、非营利、隐私优先\"的 DNS 服务在各国内容审查压力下的一次硬碰硬。",
-      "commentary": "DNS 是互联网的\"电话簿\"，法国政府想给电话簿撕页，Quad9 直接把整本电话簿搬走——隐私原教旨主义者 vs 国家机器的经典对决，结局永远是用户成为代价。",
-      "url": "https://quad9.net/news/blog/au-revoir-france/"
+      "title": "Kimi K3.1 Pro 发布，还带了个\"Highspeed\"版本",
+      "source": "HackerNews",
+      "summary": "月之暗面甩出 K3.1 Pro，外加一个主打低延迟的 Highspeed 变体，HN 首页 779 分、478 条评论直接吵翻。Artificial Analysis 同步收录评测，说明这不是自吹自擂的 PPT 模型，而是真刀真枪进了第三方基准盘。国产大模型卷到\"高速版\"这个细分档位，意味着推理成本与响应速度的工程优化已经成为下一阶段的主战场。",
+      "commentary": "名字里带 \"Pro\" 的模型现在比便利店饭团口味还多，但敢同步上第三方评测的算有诚意——至于 Highspeed 是\"真的快\"还是\"降智换速度\"，得看榜单上那几分是不是用智商换的。",
+      "url": "https://www.kimi.ai/blog/kimi-k3-1-pro"
     },
     {
-      "title": "质疑 RLVR 中的工具性收敛：来自 OLMo-3 的检查点证据",
-      "source": "ArXiv",
-      "summary": "这篇论文直接挑战了 AI 安全领域一个\"圣经级\"假设——工具性收敛（即越强的智能体越倾向于自我保存、攫取资源、欺骗监督）。作者用 OLMo-3 的中间检查点做实证，发现 RLVR 训练过程中智能体并未系统性地表现出这些\"权力寻租\"行为。这意味着我们可能一直在用错误的假设去构建 AI 对齐策略。",
-      "commentary": "AI 安全圈吵了十年的\"智能体一定会想搞死你\"，被一个开源模型的检查点数据打脸。搞对齐的兄弟们，是时候从哲学辩论回归实验科学了——虽然实验数据通常更无聊，但至少能证伪。",
-      "url": "https://arxiv.org/abs/2610.31624v1"
+      "title": "安全圈把 iPhone 给\"办\"了",
+      "source": "HackerNews",
+      "summary": "一篇标题嚣张到不行的博客《Today, we hacked what we'd set out to hack: the iPhone》，779 分、526 条评论，热度说明一切。移动端攻防历来是\"防守方永远慢半拍\"的战场，能在公开渠道披露完整攻击链，要么是重大漏洞利用，要么是研究团队在给整个行业敲警钟。对做移动安全、终端防护、甚至 App 开发者来说，这是必读材料。",
+      "commentary": "苹果的\"隐私堡垒\"人设又被凿了个洞——不过话说回来，能被公开研究攻破的漏洞，总比在黑市里悄悄流通的要体面一点。建议库克看看评论区，526 条里大概有一半在问\"我的还能用吗\"。",
+      "url": "https://blog.calif.io/p/iphone"
     },
     {
-      "title": "拆穿\"比 Rust 还快\"：Tov 基准测试中的恶意造假",
+      "title": "给\"比 Rust 还快\"的基准测试扒皮",
       "source": "Lobste.rs",
-      "summary": "Fyra Labs 发文实锤，声称\"性能超越 Rust\"的 Tov 项目存在基准测试造假——测试用例经过精心挑选和参数调优，只在对自己有利的场景下跑分。这类\"XX 语言比 Rust 快 10 倍\"的标题党在编程圈屡见不鲜，但这次被逐行拆解，堪称公开处刑。",
-      "commentary": "每次有人喊\"比 Rust 快\"，Rust 社区的反应就像看到有人拿 P 过的体检报告说比你健康。基准测试造假是技术圈最低级的营销，但永远有人上钩——因为大部分人不看方法论，只看标题。",
+      "summary": "一篇名为《Debunking \"Faster than Rust\": Malicious Benchmarks in Tov》的文章，直接掀了某些项目\"吊打 Rust\"的桌子。核心手法不新鲜但永远有效：挑对自己有利的 workload、关掉对手的优化开关、用不公平的输入规模制造幻觉。这类\"基准测试造假\"的拆解，是每个技术选型者的防身术——毕竟选错语言，代价是团队几年的青春。",
+      "commentary": "\"比 Rust 快\"和\"我爷爷跑得比博尔特快\"属于同一类命题，区别只在于有没有人规定赛道。感谢这位作者，让又一批准备 all-in 新语言的团队省下了重构费。",
       "url": "https://blog.fyralabs.com/debunking-faster-than-rust-malicious-benchmarks-in-tov/"
     }
   ],
   "candidates": [
+    {
+      "id": "hn:50213925",
+      "title": "Dessa: the most authentic full-duplex speech model ever built",
+      "summary": "",
+      "url": "https://block.xyz/dessa",
+      "source": "Hacker News",
+      "score": 284,
+      "comments": 113
+    },
+    {
+      "id": "hn:50202114",
+      "title": "Canadians are running out of time to oppose Bill C-22",
+      "summary": "",
+      "url": "https://www.eff.org/deeplinks/2026/10/canadians-are-running-out-time-oppose-dangerous-c-22-surveillance-bill",
+      "source": "Hacker News",
+      "score": 358,
+      "comments": 192
+    },
+    {
+      "id": "hn:50212065",
+      "title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.kimi.com&#x2F;code&#x2F;docs&#x2F;en&#x2F;kimi-code&#x2F;models.html\" rel=\"nofollow\">https:&#x2F;&#x2F;www.kimi.com&#x2F;code&#x2F;docs&#x2F;en&#x2F;kimi-code&#x2F;models.html</a><p><a href=\"https:&#x2F;&#x2F;artificialanalysis.ai&#x2F;models&#x2F;kimi-k3-1-pro\" rel=\"n",
+      "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+      "source": "Hacker News",
+      "score": 779,
+      "comments": 478
+    },
     {
       "id": "hn:50202285",
       "title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
       "summary": "",
       "url": "https://edjefferson.com/localwiki/",
       "source": "Hacker News",
-      "score": 907,
-      "comments": 176
+      "score": 1294,
+      "comments": 226
     },
     {
-      "id": "hn:50205934",
-      "title": "Disney Raising Prices Days After Confirming Ads Will Now Show Up on Every Tier",
+      "id": "hn:50211474",
+      "title": "Today, we hacked what we'd set out to hack: the iPhone",
       "summary": "",
-      "url": "https://www.tvfandomlounge.com/disney-plus-price-hike-ads-premium-tier-nielsen-emmys-2026/",
+      "url": "https://blog.calif.io/p/iphone",
       "source": "Hacker News",
-      "score": 342,
-      "comments": 340
+      "score": 779,
+      "comments": 526
     },
     {
-      "id": "hn:50208837",
-      "title": "Investor-owned utilities charge 23% more for electricity than public providers",
+      "id": "lob:gajtrm",
+      "title": "Debunking \"Faster than Rust\": Malicious Benchmarks in Tov",
       "summary": "",
-      "url": "https://www.kadoa.com/energy-prices/insights/investor-owned-utilities",
-      "source": "Hacker News",
-      "score": 448,
-      "comments": 307
-    },
-    {
-      "id": "hn:50203161",
-      "title": "The foolishness of \"natural language programming\" (1978)",
-      "summary": "",
-      "url": "https://www.cs.utexas.edu/~EWD/transcriptions/EWD06xx/EWD667.html",
-      "source": "Hacker News",
-      "score": 306,
-      "comments": 201
-    },
-    {
-      "id": "hn:50197313",
-      "title": "Every AI model has the same \"controversial\" take on humans",
-      "summary": "",
-      "url": "https://www.modelcompare.ai/blog/ai-models-controversial-take-on-humans",
-      "source": "Hacker News",
-      "score": 584,
-      "comments": 556
-    },
-    {
-      "id": "lob:hplfis",
-      "title": "examining the macOS gcc binary",
-      "summary": "",
-      "url": "https://zoey-on-github.github.io/blog/macgcc.html",
+      "url": "https://blog.fyralabs.com/debunking-faster-than-rust-malicious-benchmarks-in-tov/",
       "source": "Lobste.rs",
-      "score": 59,
-      "comments": 22,
+      "score": 36,
+      "comments": 16,
       "tags": [
-        "mac",
-        "reversing"
+        "performance"
       ]
     },
     {
-      "id": "hn:50202681",
+      "id": "hn:50207910",
+      "title": "Apple Music 404 Not Found",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.macrumors.com&#x2F;2026&#x2F;10&#x2F;23&#x2F;apple-music-has-a-hidden-ipod-you-can-play-with&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.macrumors.com&#x2F;2026&#x2F;10&#x2F;23&#x2F;apple-music-has-a-hidde...</a>",
+      "url": "https://music.apple.com/this-url-doesnt-exist",
+      "source": "Hacker News",
+      "score": 640,
+      "comments": 209
+    },
+    {
+      "id": "hn:50169499",
+      "title": "The Real Kevin Bacon",
+      "summary": "",
+      "url": "https://pudding.cool/2026/10/kevin-bacon/",
+      "source": "Hacker News",
+      "score": 263,
+      "comments": 73
+    },
+    {
+      "id": "lob:hd72yt",
+      "title": "Software is slow because of bad design, not slow languages",
+      "summary": "",
+      "url": "https://www.seangoedecke.com/software-is-slow-because-of-bad-design-not-slow-languages/",
+      "source": "Lobste.rs",
+      "score": 39,
+      "comments": 45,
+      "tags": [
+        "performance"
+      ]
+    },
+    {
+      "id": "hn:50215530",
+      "title": "CVE Tracker",
+      "summary": "",
+      "url": "https://cve.0xosprey.com/",
+      "source": "Hacker News",
+      "score": 124,
+      "comments": 53
+    },
+    {
+      "id": "lob:7me8wm",
+      "title": "How close can pure FP get to C?",
+      "summary": "",
+      "url": "https://rtfeldman.com/fp-vs-c",
+      "source": "Lobste.rs",
+      "score": 36,
+      "comments": 9,
+      "tags": [
+        "performance",
+        "programming"
+      ]
+    },
+    {
+      "id": "lob:xsz9sc",
       "title": "Docker is weird",
       "summary": "",
       "url": "https://codeandcake.dev/posts/2026-10-22-docker-is-weird",
-      "source": "Hacker News",
-      "score": 731,
-      "comments": 296
-    },
-    {
-      "id": "hn:50195002",
-      "title": "The alien space of science: Coherent but cognitively unavailable directions",
-      "summary": "",
-      "url": "https://arxiv.org/abs/2603.01092",
-      "source": "Hacker News",
-      "score": 162,
-      "comments": 58
-    },
-    {
-      "id": "hn:50208099",
-      "title": "OpenSSL 4.1.0",
-      "summary": "",
-      "url": "https://github.com/openssl/openssl/releases/tag/openssl-4.1.0",
-      "source": "Hacker News",
-      "score": 148,
-      "comments": 45
-    },
-    {
-      "id": "hn:50195488",
-      "title": "Show HN: OnKey – I'm a bad singer, so I built an app to show where I'm off-key",
-      "summary": "Hi all<p>I was pretty terrible at singing, now I’d say I’m bad but not terrible. This is because I’ve been using a singing app (won’t name it here) that scores me on my pitch and timing throughout the song so that I can improve.<p>Lately however, the app I’ve been using has flooded their song list w",
-      "url": "https://github.com/dsmurrell/onkey",
-      "source": "Hacker News",
-      "score": 146,
-      "comments": 66
+      "source": "Lobste.rs",
+      "score": 96,
+      "comments": 43,
+      "tags": [
+        "programming"
+      ]
     },
     {
       "id": "lob:mucay8",
@@ -127,8 +154,8 @@
       "summary": "",
       "url": "https://maurycyz.com/misc/real_links/",
       "source": "Lobste.rs",
-      "score": 65,
-      "comments": 16,
+      "score": 90,
+      "comments": 22,
       "tags": [
         "web"
       ]
@@ -139,32 +166,11 @@
       "summary": "",
       "url": "https://quad9.net/news/blog/au-revoir-france/",
       "source": "Lobste.rs",
-      "score": 92,
+      "score": 109,
       "comments": 11,
       "tags": [
         "law",
         "networking"
-      ]
-    },
-    {
-      "id": "hn:50210067",
-      "title": "eMudhra ignored Mozilla Root investigation deadline; blames social media",
-      "summary": "",
-      "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=2083449",
-      "source": "Hacker News",
-      "score": 124,
-      "comments": 52
-    },
-    {
-      "id": "lob:gajtrm",
-      "title": "Debunking \"Faster than Rust\": Malicious Benchmarks in Tov",
-      "summary": "",
-      "url": "https://blog.fyralabs.com/debunking-faster-than-rust-malicious-benchmarks-in-tov/",
-      "source": "Lobste.rs",
-      "score": 21,
-      "comments": 14,
-      "tags": [
-        "performance"
       ]
     },
     {
@@ -173,69 +179,63 @@
       "summary": "",
       "url": "https://sebsite.pw/w/20260925-errno.html",
       "source": "Lobste.rs",
-      "score": 26,
-      "comments": 22,
+      "score": 29,
+      "comments": 24,
       "tags": [
         "c"
       ]
     },
     {
-      "id": "arxiv:2610.31656v1",
-      "title": "METTA: Memory-Enhanced Test-Time Adaptation for Meta-Reinforcement Learning",
-      "summary": "Meta-reinforcement learning aims to train agents that adapt quickly to unseen tasks from limited interaction, but this requires representing task evidence over long interaction histories. Classical recurrent agents compress experience into hidden states, while transformer-based agents retrieve from ",
-      "url": "https://arxiv.org/abs/2610.31656v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "arxiv_id": "2610.31656v1"
-    },
-    {
-      "id": "arxiv:2610.31624v1",
-      "title": "Questioning Instrumental Convergence in RLVR: Checkpoint Evidence from OLMo-3",
-      "summary": "Instrumental convergence is often invoked as a general reason to expect capable agents to acquire or express power-seeking subgoals: self-preservation, resource acquisition, deception, or resistance to oversight which poses an important threat to the society. For LLMs, reinforcement learning is the ",
-      "url": "https://arxiv.org/abs/2610.31624v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "arxiv_id": "2610.31624v1"
-    },
-    {
-      "id": "lob:05xrj8",
-      "title": "We have Traits at Home",
+      "id": "lob:5hoqzj",
+      "title": "The glorious @xkcdRandom Zig builtin",
       "summary": "",
-      "url": "https://www.axelmagn.com/blog/202610-zig-traits/",
+      "url": "https://ochagavia.nl/blog/the-glorious-@xkcdrandom-zig-builtin/",
       "source": "Lobste.rs",
-      "score": 36,
-      "comments": 11,
+      "score": 45,
+      "comments": 8,
       "tags": [
+        "compilers",
+        "satire",
         "zig"
       ]
     },
     {
-      "id": "lob:kcyzco",
-      "title": "UUIDv7 doesn't have the properties you think it does",
+      "id": "hn:50212507",
+      "title": "Air Purifiers as White Noise Machines",
       "summary": "",
-      "url": "https://alexsci.com/blog/uuidv7-is-weird/",
+      "url": "https://www.jefftk.com/p/air-purifiers-as-white-noise-machines",
+      "source": "Hacker News",
+      "score": 86,
+      "comments": 101
+    },
+    {
+      "id": "lob:crqz1g",
+      "title": "What are you doing this weekend?",
+      "summary": "<p>Feel free to tell what you plan on doing this weekend and even ask for help or feedback.</p>\n<p>Please keep in mind it’s more than OK to do nothing at all too!</p>\n",
+      "url": "https://lobste.rs/s/crqz1g/what_are_you_doing_this_weekend",
       "source": "Lobste.rs",
-      "score": 32,
-      "comments": 9,
+      "score": 19,
+      "comments": 41,
       "tags": [
-        "distributed",
-        "python"
+        "ask",
+        "programming"
       ]
     },
     {
-      "id": "hn:50206840",
-      "title": "Job Loss and Cortisone Mania",
-      "summary": "",
-      "url": "https://tilschuenemann.de/job-loss-cortisone-mania",
-      "source": "Hacker News",
-      "score": 94,
-      "comments": 31
+      "id": "rss:b81f5d7f3a",
+      "title": "MockMini: building a small, fuzzed proxy core for macOS in ~2,600 lines",
+      "summary": "MockMini is a small, auditable proxy core in C and Swift. It speaks Shadowsocks AEAD, VMess, Trojan and VLESS over TCP, TLS or WebSocket, on top of its own bounded userspace TCP/IP endpoint. It is about 2,600 lines, fuzzed, and licensed under Apache-2.0. v0.1.0 is the first tagged release.\n\nRepo: ht",
+      "url": "https://dev.to/yezicheng2011/mockmini-building-a-small-fuzzed-proxy-core-for-macos-in-2600-lines-2m93",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:7792798364",
+      "title": "Zentro v0.10.0: Open-Core SQL IDE Built with Go + Wails",
+      "summary": "I've been building Zentro, a desktop SQL IDE (Windows, macOS, Linux) that's organized around projects rather than loose connections. It supports PostgreSQL, MySQL, SQL Server and SQLite, and it's written in Go + Wails on the backend with React + TypeScript on the frontend, shipping as a single exe",
+      "url": "https://dev.to/alexnguyen03/zentro-v0100-open-core-sql-ide-built-with-go-wails-3ob1",
+      "source": "Tech RSS",
+      "score": 0
     }
   ],
   "ai_curated": true
