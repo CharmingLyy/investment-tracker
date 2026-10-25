@@ -1,124 +1,70 @@
 {
-  "date": "2026-10-24",
-  "update_time": "2026-10-24 15:33:49",
+  "date": "2026-10-25",
+  "update_time": "2026-10-25 03:57:25",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-24\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Kimi K3.1 Pro 发布，HN 头条炸场 (来源: Hacker News)\n- **核心干货**：月之暗面发布 K3.1 Pro 及 Highspeed 版本，直接冲上 HN 榜首，1000+ 分、600+ 条评论，讨论热度远超同期所有项目。Highspeed 版本的命名暗示其在推理吞吐上做了针对性优化，摆明了要在 Agent 和代码场景抢开发者。\n- **毒舌/硬核点评**：国产大模型终于从\"跑分自嗨\"进化到\"发个版本就能让 HN 吵 600 楼\"的阶段了。不过评论区热度≠生产力，真正的考验是三个月后还有多少人在用——毕竟模型圈的忠诚度，比渣男的承诺还低。\n- **🔗 传送门**：[点击直达原链接](https://www.kimi.ai/blog/kimi-k3-1-pro)\n\n---\n\n### 2. 📌 十二年磨一剑：分布式 SQLite 的长期主义 (来源: Hacker News)\n- **核心干货**：作者复盘了用十二年时间把 SQLite 改造成分布式数据库的完整历程。核心价值不在\"又一个分布式数据库\"，而在于它证明了一件事：单机嵌入式数据库的简洁性，可以在不牺牲太多复杂度的前提下扩展到分布式场景，对中小团队来说这可能比上一套 CockroachDB 务实得多。\n- **毒舌/硬核点评**：十二年做一个项目，这毅力放在硅谷够融五轮资、换三个 CEO、再被收购两次了。在这个\"三个月不出 Demo 就焦虑\"的行业里，这种慢工出细活的存在本身就是一种行为艺术。\n- **🔗 传送门**：[点击直达原链接](https://philipotoole.com/twelve-years-of-distributed-sqlite/)\n\n---\n\n### 3. 📌 iPhone 被攻破：这次是真刀真枪的越狱级研究 (来源: Hacker News)\n- **核心干货**：安全团队公开了针对 iPhone 的完整攻击链研究，1000+ 分、600+ 评论说明社区对其技术含量高度认可。这类完整利用链的公开，通常意味着某个此前被默认为\"安全\"的攻击面被彻底撕开，对 iOS 安全模型和后续补丁策略都有直接影响。\n- **毒舌/硬核点评**：苹果每年花大价钱讲\"隐私是基本人权\"，结果总有人用一篇博客告诉你\"人权\"的锁芯是什么型号。安全研究的价值就在于此——它不制造漏洞，只负责让装睡的人睡不着。\n- **🔗 传送门**：[点击直达原链接](https://blog.calif.io/p/iphone)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"技术圈最大的幻觉，是以为换个更快的语言就能写出更快的软件——真相是烂设计配 C 语言，照样能卡成 PPT。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-25\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Node2Shell：Brotli 解压炸弹炸穿 Node.js 官方构建 (来源: HackerNews / The Hacker News)\n- **核心干货**：Imperva 研究员在官方 Node.js 24.22.0 Linux arm64 镜像上，仅靠一段精心构造的 Brotli 压缩数据就实现了 RCE，无需调试器、无需自编译。更糟的是，这个 CVE-2026-111497 不止 Node 中招，Python 及其他调用 Brotli 解压的库同样躺枪——一个底层压缩库的边界检查缺失，直接辐射整个生态。\n- **毒舌/硬核点评**：压缩算法本是省带宽的老实人，现在成了递刀子的内鬼。提醒各位：你依赖树上那个\"稳定十年没人动\"的 C 库，往往就是最安静的定时炸弹。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/10/researchers-demonstrate-node2shell-rce.html)\n\n---\n\n### 2. 📌 C++26 标准投票被否决，史上罕见 (来源: Lobste.rs / LinkedIn)\n- **核心干货**：C++26 的最终 ballot 投票未通过，被各国国家体（national bodies）驳回——据 Robert Seacord 的说法，这在 C++ 标准化历史上几乎前所未有。意味着这一版标准可能延期、返工，甚至部分特性被砍。对依赖新标准特性的编译器厂商和重度模板库作者来说，路线图要重画了。\n- **毒舌/硬核点评**：一个以\"委员会设计\"闻名的语言，终于被委员会自己绊倒了。C++ 的进化速度本来就像冰川，现在冰川还开了个倒车——Rust 团队今晚可以多加一个鸡腿。\n- **🔗 传送门**：[点击直达原链接](https://www.linkedin.com/posts/robertseacord_balloting-has-completed-for-c26-unfortunately-activity-7519795140887035918-5PWL)\n\n---\n\n### 3. 📌 Steal My Bitcoin：用真金白银悬赏 PHP RCE 利用 (来源: HackerNews / Show HN)\n- **核心干货**：作者搭了个站点，公开悬赏：谁能真正利用那个让全网 panic 了几天的 PHP RCE（PHP2Shell 系列），就能把站上的比特币拿走。这是把漏洞武器化难度做成公开竞技场——同时也侧面验证了安全圈的一个判断：披露的漏洞和\"能稳定利用的漏洞\"之间，隔着一条马里亚纳海沟。\n- **毒舌/硬核点评**：史上最有诚意的漏洞 PoC 征集——不写论文、不开 CVE 发布会，直接上 BTC 当奖金。比起满嘴\"critical severity\"的安全营销号，这种用钱包投票的方式硬核一万倍。\n- **🔗 传送门**：[点击直达原链接](https://stealmybitcoin.com/)\n\n---\n\n### 🗣️ 今日顶男金句\n> 漏洞披露时人人都是安全专家，真金白银悬赏时才知道谁在裸泳——技术的含金量，永远由能跑通的代码和敢押上的筹码来定价。",
   "briefing_items": [
     {
-      "title": "Kimi K3.1 Pro 发布，HN 头条炸场",
-      "source": "Hacker News",
-      "summary": "月之暗面发布 K3.1 Pro 及 Highspeed 版本，直接冲上 HN 榜首，1000+ 分、600+ 条评论，讨论热度远超同期所有项目。Highspeed 版本的命名暗示其在推理吞吐上做了针对性优化，摆明了要在 Agent 和代码场景抢开发者。",
-      "commentary": "国产大模型终于从\"跑分自嗨\"进化到\"发个版本就能让 HN 吵 600 楼\"的阶段了。不过评论区热度≠生产力，真正的考验是三个月后还有多少人在用——毕竟模型圈的忠诚度，比渣男的承诺还低。",
-      "url": "https://www.kimi.ai/blog/kimi-k3-1-pro"
+      "title": "Node2Shell：Brotli 解压炸弹炸穿 Node.js 官方构建",
+      "source": "HackerNews / The Hacker News",
+      "summary": "Imperva 研究员在官方 Node.js 24.22.0 Linux arm64 镜像上，仅靠一段精心构造的 Brotli 压缩数据就实现了 RCE，无需调试器、无需自编译。更糟的是，这个 CVE-2026-111497 不止 Node 中招，Python 及其他调用 Brotli 解压的库同样躺枪——一个底层压缩库的边界检查缺失，直接辐射整个生态。",
+      "commentary": "压缩算法本是省带宽的老实人，现在成了递刀子的内鬼。提醒各位：你依赖树上那个\"稳定十年没人动\"的 C 库，往往就是最安静的定时炸弹。",
+      "url": "https://thehackernews.com/2026/10/researchers-demonstrate-node2shell-rce.html"
     },
     {
-      "title": "十二年磨一剑：分布式 SQLite 的长期主义",
-      "source": "Hacker News",
-      "summary": "作者复盘了用十二年时间把 SQLite 改造成分布式数据库的完整历程。核心价值不在\"又一个分布式数据库\"，而在于它证明了一件事：单机嵌入式数据库的简洁性，可以在不牺牲太多复杂度的前提下扩展到分布式场景，对中小团队来说这可能比上一套 CockroachDB 务实得多。",
-      "commentary": "十二年做一个项目，这毅力放在硅谷够融五轮资、换三个 CEO、再被收购两次了。在这个\"三个月不出 Demo 就焦虑\"的行业里，这种慢工出细活的存在本身就是一种行为艺术。",
-      "url": "https://philipotoole.com/twelve-years-of-distributed-sqlite/"
+      "title": "C++26 标准投票被否决，史上罕见",
+      "source": "Lobste.rs / LinkedIn",
+      "summary": "C++26 的最终 ballot 投票未通过，被各国国家体（national bodies）驳回——据 Robert Seacord 的说法，这在 C++ 标准化历史上几乎前所未有。意味着这一版标准可能延期、返工，甚至部分特性被砍。对依赖新标准特性的编译器厂商和重度模板库作者来说，路线图要重画了。",
+      "commentary": "一个以\"委员会设计\"闻名的语言，终于被委员会自己绊倒了。C++ 的进化速度本来就像冰川，现在冰川还开了个倒车——Rust 团队今晚可以多加一个鸡腿。",
+      "url": "https://www.linkedin.com/posts/robertseacord_balloting-has-completed-for-c26-unfortunately-activity-7519795140887035918-5PWL"
     },
     {
-      "title": "iPhone 被攻破：这次是真刀真枪的越狱级研究",
-      "source": "Hacker News",
-      "summary": "安全团队公开了针对 iPhone 的完整攻击链研究，1000+ 分、600+ 评论说明社区对其技术含量高度认可。这类完整利用链的公开，通常意味着某个此前被默认为\"安全\"的攻击面被彻底撕开，对 iOS 安全模型和后续补丁策略都有直接影响。",
-      "commentary": "苹果每年花大价钱讲\"隐私是基本人权\"，结果总有人用一篇博客告诉你\"人权\"的锁芯是什么型号。安全研究的价值就在于此——它不制造漏洞，只负责让装睡的人睡不着。",
-      "url": "https://blog.calif.io/p/iphone"
+      "title": "Steal My Bitcoin：用真金白银悬赏 PHP RCE 利用",
+      "source": "HackerNews / Show HN",
+      "summary": "作者搭了个站点，公开悬赏：谁能真正利用那个让全网 panic 了几天的 PHP RCE（PHP2Shell 系列），就能把站上的比特币拿走。这是把漏洞武器化难度做成公开竞技场——同时也侧面验证了安全圈的一个判断：披露的漏洞和\"能稳定利用的漏洞\"之间，隔着一条马里亚纳海沟。",
+      "commentary": "史上最有诚意的漏洞 PoC 征集——不写论文、不开 CVE 发布会，直接上 BTC 当奖金。比起满嘴\"critical severity\"的安全营销号，这种用钱包投票的方式硬核一万倍。",
+      "url": "https://stealmybitcoin.com/"
     },
     {
-      "quote": "\"技术圈最大的幻觉，是以为换个更快的语言就能写出更快的软件——真相是烂设计配 C 语言，照样能卡成 PPT。\""
+      "quote": "漏洞披露时人人都是安全专家，真金白银悬赏时才知道谁在裸泳——技术的含金量，永远由能跑通的代码和敢押上的筹码来定价。"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50217500",
-      "title": "Twelve years of distributed SQLite",
+      "id": "hn:50224100",
+      "title": "The Goose Programming Language",
+      "summary": "<a href=\"https:&#x2F;&#x2F;twitter.com&#x2F;ID_AA_Carmack&#x2F;status&#x2F;2113704269274636568\" rel=\"nofollow\">https:&#x2F;&#x2F;twitter.com&#x2F;ID_AA_Carmack&#x2F;status&#x2F;2113704269274636568</a>",
+      "url": "https://aardappel.github.io/goose/",
+      "source": "Hacker News",
+      "score": 284,
+      "comments": 183
+    },
+    {
+      "id": "hn:50226419",
+      "title": "America has lost 200k of jobs in media, film and the arts. How much is AI?",
       "summary": "",
-      "url": "https://philipotoole.com/twelve-years-of-distributed-sqlite/",
+      "url": "https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class",
       "source": "Hacker News",
-      "score": 293,
-      "comments": 43
+      "score": 228,
+      "comments": 223
     },
     {
-      "id": "hn:50217495",
-      "title": "Around a dozen banking apps began specifically permitting GrapheneOS",
+      "id": "hn:50225695",
+      "title": "We should be more ambitious with the software we build",
       "summary": "",
-      "url": "https://grapheneos.social/@GrapheneOS/117492375462459244",
+      "url": "https://danluu.com/ambitious/",
       "source": "Hacker News",
-      "score": 397,
-      "comments": 127
+      "score": 254,
+      "comments": 224
     },
     {
-      "id": "hn:50218195",
-      "title": "How close can pure functional programming get to C?",
-      "summary": "",
-      "url": "https://rtfeldman.com/fp-vs-c",
+      "id": "hn:50224916",
+      "title": "Show HN: Steal My Bitcoin",
+      "summary": "Made this because I&#x27;m curious if anyone out there has figured out how to actually use this PHP RCE we spent the last few days panicking over. Have fun!",
+      "url": "https://stealmybitcoin.com/",
       "source": "Hacker News",
-      "score": 186,
-      "comments": 45
-    },
-    {
-      "id": "hn:50212065",
-      "title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
-      "summary": "<a href=\"https:&#x2F;&#x2F;www.kimi.com&#x2F;code&#x2F;docs&#x2F;en&#x2F;kimi-code&#x2F;models.html\" rel=\"nofollow\">https:&#x2F;&#x2F;www.kimi.com&#x2F;code&#x2F;docs&#x2F;en&#x2F;kimi-code&#x2F;models.html</a><p><a href=\"https:&#x2F;&#x2F;artificialanalysis.ai&#x2F;models&#x2F;kimi-k3-1-pro\" rel=\"n",
-      "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
-      "source": "Hacker News",
-      "score": 1005,
-      "comments": 603
-    },
-    {
-      "id": "hn:50211474",
-      "title": "Today, we hacked what we'd set out to hack: the iPhone",
-      "summary": "",
-      "url": "https://blog.calif.io/p/iphone",
-      "source": "Hacker News",
-      "score": 1002,
-      "comments": 627
-    },
-    {
-      "id": "hn:50202285",
-      "title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
-      "summary": "",
-      "url": "https://edjefferson.com/localwiki/",
-      "source": "Hacker News",
-      "score": 1463,
-      "comments": 238
-    },
-    {
-      "id": "hn:50219666",
-      "title": "I Don't Understand Quantum Physics (2018)",
-      "summary": "",
-      "url": "https://www.southampton.ac.uk/~doug/quantum_physics/index.html",
-      "source": "Hacker News",
-      "score": 184,
-      "comments": 128
-    },
-    {
-      "id": "hn:50218430",
-      "title": "OBS Studio 33",
-      "summary": "",
-      "url": "https://github.com/obsproject/obs-studio/releases/tag/33.0.0",
-      "source": "Hacker News",
-      "score": 326,
-      "comments": 102
-    },
-    {
-      "id": "hn:50207910",
-      "title": "Apple Music 404 Not Found",
-      "summary": "<a href=\"https:&#x2F;&#x2F;www.macrumors.com&#x2F;2026&#x2F;10&#x2F;23&#x2F;apple-music-has-a-hidden-ipod-you-can-play-with&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.macrumors.com&#x2F;2026&#x2F;10&#x2F;23&#x2F;apple-music-has-a-hidde...</a>",
-      "url": "https://music.apple.com/this-url-doesnt-exist",
-      "source": "Hacker News",
-      "score": 847,
-      "comments": 248
-    },
-    {
-      "id": "hn:50186450",
-      "title": "Physicists trap a single antimatter particle for a month",
-      "summary": "",
-      "url": "https://www.scientificamerican.com/article/physicists-trap-a-single-antimatter-particle-for-a-month/",
-      "source": "Hacker News",
-      "score": 166,
-      "comments": 56
+      "score": 433,
+      "comments": 261
     },
     {
       "id": "lob:5xzuff",
@@ -126,92 +72,11 @@
       "summary": "",
       "url": "https://blog.habets.se/2026/10/Attention-people-who-think-UB-is-fine.html",
       "source": "Lobste.rs",
-      "score": 53,
-      "comments": 48,
+      "score": 68,
+      "comments": 57,
       "tags": [
         "c",
         "c++"
-      ]
-    },
-    {
-      "id": "lob:hd72yt",
-      "title": "Software is slow because of bad design, not slow languages",
-      "summary": "",
-      "url": "https://www.seangoedecke.com/software-is-slow-because-of-bad-design-not-slow-languages/",
-      "source": "Lobste.rs",
-      "score": 49,
-      "comments": 59,
-      "tags": [
-        "performance"
-      ]
-    },
-    {
-      "id": "lob:xgih2x",
-      "title": "I want my Wednesday back",
-      "summary": "",
-      "url": "https://blog.luitjes.it/posts/i-want-my-wednesday-back/",
-      "source": "Lobste.rs",
-      "score": 60,
-      "comments": 20,
-      "tags": [
-        "php",
-        "security"
-      ]
-    },
-    {
-      "id": "lob:xsz9sc",
-      "title": "Docker is weird",
-      "summary": "",
-      "url": "https://codeandcake.dev/posts/2026-10-22-docker-is-weird",
-      "source": "Lobste.rs",
-      "score": 99,
-      "comments": 47,
-      "tags": [
-        "programming"
-      ]
-    },
-    {
-      "id": "lob:mucay8",
-      "title": "Please don't mess with links",
-      "summary": "",
-      "url": "https://maurycyz.com/misc/real_links/",
-      "source": "Lobste.rs",
-      "score": 103,
-      "comments": 23,
-      "tags": [
-        "web"
-      ]
-    },
-    {
-      "id": "hn:50221676",
-      "title": "Google illegally cut down 250K trees in Finland for data center",
-      "summary": "",
-      "url": "https://nypost.com/2026/10/24/business/google-illegally-tore-down-250k-trees-for-finland-data-center-infuriating-locals-report/",
-      "source": "Hacker News",
-      "score": 136,
-      "comments": 60
-    },
-    {
-      "id": "hn:50219177",
-      "title": "Node2Shell evolves to HTTP2Shell, blast radius affects many HTTP libs and apps",
-      "summary": "",
-      "url": "https://www.aikido.dev/blog/python-packages-vulnerable-node2shell-brotli-cve-2026-111497",
-      "source": "Hacker News",
-      "score": 127,
-      "comments": 65
-    },
-    {
-      "id": "lob:5hoqzj",
-      "title": "The glorious @xkcdRandom Zig builtin",
-      "summary": "",
-      "url": "https://ochagavia.nl/blog/the-glorious-@xkcdrandom-zig-builtin/",
-      "source": "Lobste.rs",
-      "score": 55,
-      "comments": 8,
-      "tags": [
-        "compilers",
-        "satire",
-        "zig"
       ]
     },
     {
@@ -220,23 +85,166 @@
       "summary": "",
       "url": "https://captnemo.in/blog/2026/10/23/emsign-revoked-gov-in/",
       "source": "Lobste.rs",
-      "score": 39,
-      "comments": 7,
+      "score": 59,
+      "comments": 13,
       "tags": [
         "security"
       ]
     },
     {
-      "id": "arxiv:2610.31656v1",
-      "title": "METTA: Memory-Enhanced Test-Time Adaptation for Meta-Reinforcement Learning",
-      "summary": "Meta-reinforcement learning aims to train agents that adapt quickly to unseen tasks from limited interaction, but this requires representing task evidence over long interaction histories. Classical recurrent agents compress experience into hidden states, while transformer-based agents retrieve from ",
-      "url": "https://arxiv.org/abs/2610.31656v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "arxiv_id": "2610.31656v1"
+      "id": "hn:50224422",
+      "title": "Listen and read USA nuclear forces Emergency Action Messages, heard on 11175 kHz",
+      "summary": "",
+      "url": "https://missileer.watch",
+      "source": "Hacker News",
+      "score": 141,
+      "comments": 92
+    },
+    {
+      "id": "rss:2d71462e13",
+      "title": "How to run local LLMs with Ollama and plug them into your coding agent",
+      "summary": "Ollama runs open models such as Gemma, Qwen, DeepSeek, Kimi and gpt-oss on your own machine, with a CLI, a local REST API and official Python and JavaScript libraries. The newest trick is the one most people miss: ollama launch wires a coding agent like Claude Code, Codex or OpenCode straight to Oll",
+      "url": "https://dev.to/dedupedai/how-to-run-local-llms-with-ollama-and-plug-them-into-your-coding-agent-4ce0",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "lob:xgih2x",
+      "title": "I want my Wednesday back",
+      "summary": "",
+      "url": "https://blog.luitjes.it/posts/i-want-my-wednesday-back/",
+      "source": "Lobste.rs",
+      "score": 97,
+      "comments": 30,
+      "tags": [
+        "php",
+        "security"
+      ]
+    },
+    {
+      "id": "lob:vulvk7",
+      "title": "Wild version 0.11.0 released",
+      "summary": "",
+      "url": "https://github.com/wild-linker/wild/releases/tag/0.11.0",
+      "source": "Lobste.rs",
+      "score": 31,
+      "comments": 7,
+      "tags": [
+        "mac",
+        "release",
+        "rust"
+      ]
+    },
+    {
+      "id": "lob:al3yyf",
+      "title": "This week's \"node2shell\" Brotli vulnerability (CVE-2026-111497) is exploitable in Python, other consumers of Brotli",
+      "summary": "",
+      "url": "https://www.aikido.dev/blog/python-packages-vulnerable-node2shell-brotli-cve-2026-111497",
+      "source": "Lobste.rs",
+      "score": 8,
+      "comments": 10,
+      "tags": [
+        "security",
+        "web"
+      ]
+    },
+    {
+      "id": "lob:5hoqzj",
+      "title": "The glorious @xkcdRandom Zig builtin",
+      "summary": "",
+      "url": "https://ochagavia.nl/blog/the-glorious-@xkcdrandom-zig-builtin/",
+      "source": "Lobste.rs",
+      "score": 61,
+      "comments": 8,
+      "tags": [
+        "compilers",
+        "satire",
+        "zig"
+      ]
+    },
+    {
+      "id": "lob:vh8l3t",
+      "title": "What's wrong with AI?",
+      "summary": "",
+      "url": "https://homepage.farm/ai.html",
+      "source": "Lobste.rs",
+      "score": 26,
+      "comments": 22,
+      "tags": [
+        "culture"
+      ]
+    },
+    {
+      "id": "lob:rlrfew",
+      "title": "Balloting has completed for C++26. Unfortunately it was Disapproved",
+      "summary": "<p>tl;dr: it looks like C++ 26 got turned down by the national bodies (afaik unprecedented)</p>\n",
+      "url": "https://www.linkedin.com/posts/robertseacord_balloting-has-completed-for-c26-unfortunately-activity-7519795140887035918-5PWL",
+      "source": "Lobste.rs",
+      "score": 27,
+      "comments": 11,
+      "tags": [
+        "c++"
+      ]
+    },
+    {
+      "id": "lob:rqefcw",
+      "title": "Twelve years of distributed SQLite",
+      "summary": "",
+      "url": "https://philipotoole.com/twelve-years-of-distributed-sqlite/",
+      "source": "Lobste.rs",
+      "score": 15,
+      "comments": 1,
+      "tags": [
+        "databases"
+      ]
+    },
+    {
+      "id": "lob:rl0dz5",
+      "title": "Be Aware of What's in Your Logs",
+      "summary": "",
+      "url": "https://fireborn.mataroa.blog/blog/be-aware-of-whats-in-your-logs/",
+      "source": "Lobste.rs",
+      "score": 30,
+      "comments": 1,
+      "tags": [
+        "debugging"
+      ]
+    },
+    {
+      "id": "lob:qzfohf",
+      "title": "How to run a city builder on 16 MHz",
+      "summary": "",
+      "url": "https://larstofus.com/2025/11/16/how-to-run-a-city-builder-on-12-5-mhz/",
+      "source": "Lobste.rs",
+      "score": 9,
+      "comments": 13,
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "id": "rss:df266c486d",
+      "title": "Leaked LiteLLM Master Key Let Attackers Steal GitHub Tokens and Hijack Release Pipeline",
+      "summary": "LiteLLM on Friday revealed that an Agent Platform master key accidentally published to a public GitHub repository in late May 2026 ultimately allowed the threat actor to push a malicious version of the popular Python package.\n\n\"On May 27, 2026, a configuration file was committed to the public LiteLL",
+      "url": "https://thehackernews.com/2026/10/leaked-litellm-master-key-let-attackers.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:93b8480642",
+      "title": "Researchers Demonstrate Node2Shell RCE Exploit on Node.js Build Using Crafted Brotli Data",
+      "summary": "Malicious Brotli data can make an application on an official build of Node.js run attacker-supplied code, security researchers at Imperva have&nbsp;demonstrated.\n\nTheir \"Node2Shell\" proof of concept ran code on the official Node.js 24.22.0 image for Linux arm64, with no debugger or custom build, by",
+      "url": "https://thehackernews.com/2026/10/researchers-demonstrate-node2shell-rce.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:b05dd9aeba",
+      "title": "PHP2Shell Exploit Attempts Hit Millions as Attackers Try to Deploy Mirai Malware",
+      "summary": "Threat actors have been observed unsuccessfully attempting to exploit the newly disclosed PHP2Shell vulnerabilities to rope infected systems into a Mirai botnet variant called Potassium, as it emerges that weaponizing the flaws may be harder than previously thought.\n\nThe attacks aim to exploit CVE-2",
+      "url": "https://thehackernews.com/2026/10/php2shell-exploit-attempts-hit-millions.html",
+      "source": "Tech RSS",
+      "score": 0
     }
   ],
   "ai_curated": true
