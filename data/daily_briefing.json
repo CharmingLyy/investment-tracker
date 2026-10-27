@@ -1,109 +1,85 @@
 {
-  "date": "2026-10-27",
-  "update_time": "2026-10-27 04:22:38",
+  "date": "2026-10-28",
+  "update_time": "2026-10-27 17:40:09",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-27\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 OpenAI 宣称证伪\"指数时间假设\"（ETH），连发三篇数学/CS/物理成果 (来源: HackerNews)\n- **核心干货**：OpenAI 在 GitHub 挂出预印本，声称推翻了计算复杂性理论的基石之一——指数时间假设（ETH）。简单说，如果 ETH 倒了，意味着我们对\"哪些问题本质上就是算不动\"的整套认知要被重写，P vs NP 周边的一堆推论都得重新审视。配套还发了数学和物理各一项成果，一副\"三线开花\"的架势。\n- **毒舌/硬核点评**：AI 公司发基础科学预印本，这操作本身就够赛博朋克了。但预印本不是通行证，等同行评审把刀架上去再说——毕竟\"推翻 ETH\"和\"我证明了黎曼猜想\"在标题党浓度上是同一个量级。\n- **🔗 传送门**：[点击直达原链接](https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf)\n\n---\n\n### 2. 📌 Cloudflare 披露 GLM-5.3 Workers AI 跨请求 KV 缓存泄漏（155 条响应受影响）(来源: HackerNews)\n- **核心干货**：Cloudflare 官方博客承认其 Workers AI 平台上 GLM-5.3 模型存在跨请求 KV 缓存暴露问题——不同用户的推理请求可能命中彼此的缓存，导致 155 条响应出现内容串台。这类漏洞在推理服务架构里是典型的\"性能优化的阴暗面\"：缓存复用省了算力，也把隔离边界给省没了。\n- **毒舌/硬核点评**：把用户 A 的上下文泄漏给用户 B，这不叫缓存命中，这叫\"赛博读心术\"。所有把 KV cache 当性能银弹的平台都该照照镜子——你省下的那点延迟，可能正在别人的 prompt 里裸奔。\n- **🔗 传送门**：[点击直达原链接](https://blog.cloudflare.com/kv-cache-exposure-remediation/)\n\n---\n\n### 3. 📌 Sebastian Raschka 发布\"从零构建推理模型\"视频课程 (来源: HackerNews)\n- **核心干货**：Raschka 出了一套从零手搓 reasoning model 的视频课，不讲玄学只讲实现——把 o1/R1 那套\"思维链 + RL 训练\"的机制拆开揉碎，让你自己搭一遍。对想真正理解推理模型内部构造、而不是只会调 API 的工程师来说，这是少见的系统性材料。\n- **毒舌/硬核点评**：市面上 99% 的\"AI 课程\"是 prompt 模板大礼包，Raschka 这个是让你亲手把模型揍一遍。学完你可能会发现，所谓\"推理涌现\"没那么神秘——神秘的是为什么那么多人宁愿付费学写提示词也不愿读论文。\n- **🔗 传送门**：[点击直达原链接](https://magazine.sebastianraschka.com/p/building-reasoning-models)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"性能优化和隔离边界是一对天生的冤家——你越想快，越容易把别人的数据也一起加速送到你面前。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-28\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Python 实验性 JIT 被移除 (来源: HackerNews)\n- **核心干货**：CPython 那个备受期待、烧了核心开发者好几年头发的实验性 JIT 编译器，正式宣告被移除。核心痛点在于：在保持 C 扩展兼容性和单线程性能的前提下，做 JIT 的投入产出比低到令人发指，维护成本却高耸入云。\n- **毒舌/硬核点评**：Python 的速度就像早高峰的地铁，你拼命挤（JIT），最后发现还不如多等两班车（用 Cython 或直接换 Rust）。承认吧，\"胶水语言\"的宿命就是当好胶水，别硬凹性能人设。\n- **🔗 传送门**：[点击直达原链接](https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/)\n\n---\n\n### 2. 📌 机器人 Agent 的\"预训练懂 What，仿真教 How\" (来源: ArXiv)\n- **核心干货**：ZAP 方案提出用\"预训练理解任务语义 + 仿真教动作\"的配方，让一个小型现成视觉语言模型通过简单的工具调用就能控制机器人。直击机器人泛化难题：预训练负责\"知道要干嘛\"，仿真负责\"学会怎么动\"，两者解耦。\n- **毒舌/硬核点评**：终于有人把\"理论指导实践\"翻译成了代码。不过名字叫 ZAP 也够大胆的——真机部署翻车时，希望别变成\"Zero-Accuracy Policy\"。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2610.35817v1)\n\n---\n\n### 3. 📌 Stalwart v1.0：号称地表最快邮件服务器 (来源: Lobste.rs)\n- **核心干货**：用 Rust 从头手搓的邮件服务器 Stalwart 发布 1.0 正式版，主打极致性能，原生支持 JMAP/IMAP/SMTP。核心价值在于给被 Postfix + Dovecot 老古董统治了几十年的邮件基础设施来了一记现代化的重拳。\n- **毒舌/硬核点评**：邮件协议是互联网最顽固的活化石，\"地表最快\"在邮件领域约等于\"跑得最快的乌龟\"——但至少这只乌龟是用 Rust 写的，内存安全，不会半夜被 C 语言的段错误叫醒。\n- **🔗 传送门**：[点击直达原链接](https://stalw.art/blog/stalwart-1-0/)\n\n---\n\n### 🗣️ 今日顶男金句\n> 性能优化最大的幻觉，是以为换个编译器就能拯救糟糕的架构；就像以为换个健身房的年卡，就能拯救你三天打鱼的身材。",
   "briefing_items": [
     {
-      "title": "OpenAI 宣称证伪\"指数时间假设\"（ETH），连发三篇数学/CS/物理成果",
+      "title": "Python 实验性 JIT 被移除",
       "source": "HackerNews",
-      "summary": "OpenAI 在 GitHub 挂出预印本，声称推翻了计算复杂性理论的基石之一——指数时间假设（ETH）。简单说，如果 ETH 倒了，意味着我们对\"哪些问题本质上就是算不动\"的整套认知要被重写，P vs NP 周边的一堆推论都得重新审视。配套还发了数学和物理各一项成果，一副\"三线开花\"的架势。",
-      "commentary": "AI 公司发基础科学预印本，这操作本身就够赛博朋克了。但预印本不是通行证，等同行评审把刀架上去再说——毕竟\"推翻 ETH\"和\"我证明了黎曼猜想\"在标题党浓度上是同一个量级。",
-      "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf"
+      "summary": "CPython 那个备受期待、烧了核心开发者好几年头发的实验性 JIT 编译器，正式宣告被移除。核心痛点在于：在保持 C 扩展兼容性和单线程性能的前提下，做 JIT 的投入产出比低到令人发指，维护成本却高耸入云。",
+      "commentary": "Python 的速度就像早高峰的地铁，你拼命挤（JIT），最后发现还不如多等两班车（用 Cython 或直接换 Rust）。承认吧，\"胶水语言\"的宿命就是当好胶水，别硬凹性能人设。",
+      "url": "https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/"
     },
     {
-      "title": "Cloudflare 披露 GLM-5.3 Workers AI 跨请求 KV 缓存泄漏（155 条响应受影响）",
-      "source": "HackerNews",
-      "summary": "Cloudflare 官方博客承认其 Workers AI 平台上 GLM-5.3 模型存在跨请求 KV 缓存暴露问题——不同用户的推理请求可能命中彼此的缓存，导致 155 条响应出现内容串台。这类漏洞在推理服务架构里是典型的\"性能优化的阴暗面\"：缓存复用省了算力，也把隔离边界给省没了。",
-      "commentary": "把用户 A 的上下文泄漏给用户 B，这不叫缓存命中，这叫\"赛博读心术\"。所有把 KV cache 当性能银弹的平台都该照照镜子——你省下的那点延迟，可能正在别人的 prompt 里裸奔。",
-      "url": "https://blog.cloudflare.com/kv-cache-exposure-remediation/"
+      "title": "机器人 Agent 的\"预训练懂 What，仿真教 How\"",
+      "source": "ArXiv",
+      "summary": "ZAP 方案提出用\"预训练理解任务语义 + 仿真教动作\"的配方，让一个小型现成视觉语言模型通过简单的工具调用就能控制机器人。直击机器人泛化难题：预训练负责\"知道要干嘛\"，仿真负责\"学会怎么动\"，两者解耦。",
+      "commentary": "终于有人把\"理论指导实践\"翻译成了代码。不过名字叫 ZAP 也够大胆的——真机部署翻车时，希望别变成\"Zero-Accuracy Policy\"。",
+      "url": "https://arxiv.org/abs/2610.35817v1"
     },
     {
-      "title": "Sebastian Raschka 发布\"从零构建推理模型\"视频课程",
-      "source": "HackerNews",
-      "summary": "Raschka 出了一套从零手搓 reasoning model 的视频课，不讲玄学只讲实现——把 o1/R1 那套\"思维链 + RL 训练\"的机制拆开揉碎，让你自己搭一遍。对想真正理解推理模型内部构造、而不是只会调 API 的工程师来说，这是少见的系统性材料。",
-      "commentary": "市面上 99% 的\"AI 课程\"是 prompt 模板大礼包，Raschka 这个是让你亲手把模型揍一遍。学完你可能会发现，所谓\"推理涌现\"没那么神秘——神秘的是为什么那么多人宁愿付费学写提示词也不愿读论文。",
-      "url": "https://magazine.sebastianraschka.com/p/building-reasoning-models"
+      "title": "Stalwart v1.0：号称地表最快邮件服务器",
+      "source": "Lobste.rs",
+      "summary": "用 Rust 从头手搓的邮件服务器 Stalwart 发布 1.0 正式版，主打极致性能，原生支持 JMAP/IMAP/SMTP。核心价值在于给被 Postfix + Dovecot 老古董统治了几十年的邮件基础设施来了一记现代化的重拳。",
+      "commentary": "邮件协议是互联网最顽固的活化石，\"地表最快\"在邮件领域约等于\"跑得最快的乌龟\"——但至少这只乌龟是用 Rust 写的，内存安全，不会半夜被 C 语言的段错误叫醒。",
+      "url": "https://stalw.art/blog/stalwart-1-0/"
     },
     {
-      "quote": "\"性能优化和隔离边界是一对天生的冤家——你越想快，越容易把别人的数据也一起加速送到你面前。\""
+      "quote": "性能优化最大的幻觉，是以为换个编译器就能拯救糟糕的架构；就像以为换个健身房的年卡，就能拯救你三天打鱼的身材。"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50251344",
-      "title": "Three new discoveries in mathematics, computer science, and physics",
-      "summary": "Related:<p><i>The Exponential Time Hypothesis Is False [pdf]</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50251661\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50251661</a>",
-      "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities/",
-      "source": "Hacker News",
-      "score": 627,
-      "comments": 269
-    },
-    {
-      "id": "hn:50251661",
-      "title": "The Exponential Time Hypothesis Is False [pdf]",
-      "summary": "See also: <i>Announcing three new discoveries in mathematics, computer science, and physics</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50251344\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50251344</a>",
-      "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
-      "source": "Hacker News",
-      "score": 423,
-      "comments": 160
-    },
-    {
-      "id": "hn:50245138",
-      "title": "Sebastian Raschka's from-scratch video course on building reasoning models",
+      "id": "hn:50257419",
+      "title": "Python's experimental JIT to be removed",
       "summary": "",
-      "url": "https://magazine.sebastianraschka.com/p/building-reasoning-models",
+      "url": "https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/",
       "source": "Hacker News",
-      "score": 611,
-      "comments": 86
+      "score": 310,
+      "comments": 159
     },
     {
-      "id": "hn:50248055",
-      "title": "Oldest GUI application that still runs on Windows 11",
+      "id": "hn:50257326",
+      "title": "Wikipedia's Cleanup of AI-Generated Content",
       "summary": "",
-      "url": "https://blog.enlyth.com/posts/oldest-windows-gui-app-win-11/",
+      "url": "https://spectrum.ieee.org/wikipedia-wikiproject-ai-writing-cleanup",
       "source": "Hacker News",
-      "score": 342,
-      "comments": 206
+      "score": 298,
+      "comments": 142
     },
     {
-      "id": "hn:50245385",
-      "title": "Solar power is becoming bigger than nuclear",
+      "id": "hn:50259604",
+      "title": "The US government is hiding secret court ruling about how it spies on Americans",
       "summary": "",
-      "url": "https://www.bbc.com/future/article/20261023-how-solar-became-bigger-than-nuclear",
+      "url": "https://www.wired.com/story/the-us-government-is-hiding-a-secret-court-ruling-about-how-it-spies-on-americans/",
       "source": "Hacker News",
-      "score": 188,
-      "comments": 307
+      "score": 396,
+      "comments": 127
     },
     {
-      "id": "hn:50248371",
-      "title": "Type Server Protocol",
+      "id": "lob:c0yniy",
+      "title": "Stalwart v1.0: The Fastest Mail Server on the Planet",
       "summary": "",
-      "url": "https://github.com/microsoft/pylance-release/blob/main/docs/tsp/type-server-protocol.md",
-      "source": "Hacker News",
-      "score": 210,
-      "comments": 145
-    },
-    {
-      "id": "hn:50245831",
-      "title": "CSS-Tricks has a new owner",
-      "summary": "",
-      "url": "https://css-tricks.com/css-tricks-has-a-new-owner/",
-      "source": "Hacker News",
-      "score": 406,
-      "comments": 93
-    },
-    {
-      "id": "lob:tbbiqb",
-      "title": "POSIX wordexp(3) is dangerous",
-      "summary": "",
-      "url": "https://yossarian.net/til/post/posix-wordexp-3-is-dangerous/",
+      "url": "https://stalw.art/blog/stalwart-1-0/",
       "source": "Lobste.rs",
-      "score": 84,
-      "comments": 20,
+      "score": 37,
+      "comments": 17,
       "tags": [
-        "c",
-        "security"
+        "email"
+      ]
+    },
+    {
+      "id": "lob:pq6ju6",
+      "title": "The Exponential Time Hypothesis Is False [pdf]",
+      "summary": "",
+      "url": "https://files.mathhelm.org/files/733/The-Exponential-Time-Hypothesis-is-False-October-25-2026.pdf",
+      "source": "Lobste.rs",
+      "score": 41,
+      "comments": 15,
+      "tags": [
+        "math",
+        "pdf"
       ]
     },
     {
@@ -112,8 +88,8 @@
       "summary": "",
       "url": "https://evancz.dev/why-is-it-so-expensive-to-send-an-email",
       "source": "Lobste.rs",
-      "score": 50,
-      "comments": 27,
+      "score": 61,
+      "comments": 43,
       "tags": [
         "email"
       ]
@@ -124,12 +100,21 @@
       "summary": "",
       "url": "https://support.apple.com/en-us/149555",
       "source": "Lobste.rs",
-      "score": 46,
-      "comments": 32,
+      "score": 56,
+      "comments": 34,
       "tags": [
         "mac",
         "security"
       ]
+    },
+    {
+      "id": "hn:50258538",
+      "title": "New iMac with M6",
+      "summary": "",
+      "url": "https://www.apple.com/imac/",
+      "source": "Hacker News",
+      "score": 176,
+      "comments": 207
     },
     {
       "id": "lob:p9obkt",
@@ -137,7 +122,7 @@
       "summary": "",
       "url": "https://gram-editor.com/posts/release-3.4.0/",
       "source": "Lobste.rs",
-      "score": 54,
+      "score": 68,
       "comments": 11,
       "tags": [
         "editors",
@@ -145,13 +130,17 @@
       ]
     },
     {
-      "id": "hn:50247928",
-      "title": "A Man from the Future: Why Johnny Can't Stop Abstracting",
+      "id": "lob:cxxcik",
+      "title": "Shitty Screenshare",
       "summary": "",
-      "url": "http://muratbuffalo.blogspot.com/2026/10/the-man-from-future-why-johnny-cant.html",
-      "source": "Hacker News",
-      "score": 140,
-      "comments": 67
+      "url": "http://shittyscreenshare.com",
+      "source": "Lobste.rs",
+      "score": 60,
+      "comments": 31,
+      "tags": [
+        "browsers",
+        "web"
+      ]
     },
     {
       "id": "lob:olnqh2",
@@ -159,54 +148,56 @@
       "summary": "",
       "url": "https://brennenputh.me/blog/printable-websites/",
       "source": "Lobste.rs",
-      "score": 66,
-      "comments": 17,
+      "score": 79,
+      "comments": 22,
       "tags": [
         "css",
         "web"
       ]
     },
     {
-      "id": "hn:50247493",
-      "title": "Nietzschian Debugger",
+      "id": "lob:rwubks",
+      "title": "Oldest GUI application that still runs on Windows 11",
       "summary": "",
-      "url": "https://github.com/DilawarShafiq/nietzschian-debugger",
-      "source": "Hacker News",
-      "score": 148,
-      "comments": 48
-    },
-    {
-      "id": "hn:50252159",
-      "title": "Cross-request KV cache exposure in the GLM-5.3 Workers AI model (155 responses)",
-      "summary": "",
-      "url": "https://blog.cloudflare.com/kv-cache-exposure-remediation/",
-      "source": "Hacker News",
-      "score": 97,
-      "comments": 30
-    },
-    {
-      "id": "lob:hzrmwz",
-      "title": "Simple NetBSD webserver",
-      "summary": "",
-      "url": "https://bsandro.tech/posts/simple-netbsd-webserver/",
+      "url": "https://blog.enlyth.com/posts/oldest-windows-gui-app-win-11/",
       "source": "Lobste.rs",
-      "score": 53,
-      "comments": 8,
+      "score": 59,
+      "comments": 10,
       "tags": [
-        "netbsd"
+        "historical",
+        "windows"
       ]
     },
     {
-      "id": "lob:c0yniy",
-      "title": "Stalwart v1.0: The Fastest Mail Server on the Planet",
+      "id": "lob:o5to4p",
+      "title": "A faster way to compute signed 64-bit floor division by constants",
       "summary": "",
-      "url": "https://stalw.art/blog/stalwart-1-0/",
+      "url": "https://www.benjoffe.com/fast-floordiv",
       "source": "Lobste.rs",
-      "score": 25,
-      "comments": 6,
+      "score": 39,
+      "comments": 5,
       "tags": [
-        "email"
+        "c++",
+        "performance"
       ]
+    },
+    {
+      "id": "hn:50258868",
+      "title": "Here be monsters: What do you still need to know when agents do the work?",
+      "summary": "",
+      "url": "https://blog.adrq.dev/here-be-monsters-what-do-you-still-need-to-know-when-agents-do-the-work",
+      "source": "Hacker News",
+      "score": 95,
+      "comments": 24
+    },
+    {
+      "id": "hn:50261352",
+      "title": "Apple introduces the new 14‑inch MacBook Pro with M6",
+      "summary": "",
+      "url": "https://www.apple.com/in/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/",
+      "source": "Hacker News",
+      "score": 69,
+      "comments": 61
     },
     {
       "id": "arxiv:2610.35832v1",
@@ -245,6 +236,27 @@
         "cs.LG"
       ],
       "arxiv_id": "2610.35817v1"
+    },
+    {
+      "id": "hn:50261784",
+      "title": "A 28-Year-Old DOGE Operative Gutted USAID. HR Had No Record of Him Working There",
+      "summary": "",
+      "url": "https://www.wired.com/story/a-28-year-old-doge-operative-gutted-usaid-hr-had-no-record-of-him-working-there/",
+      "source": "Hacker News",
+      "score": 102,
+      "comments": 26
+    },
+    {
+      "id": "lob:6ntoqr",
+      "title": "CSS-Tricks has a new owner",
+      "summary": "",
+      "url": "https://css-tricks.com/css-tricks-has-a-new-owner/",
+      "source": "Lobste.rs",
+      "score": 94,
+      "comments": 2,
+      "tags": [
+        "web"
+      ]
     }
   ],
   "ai_curated": true
