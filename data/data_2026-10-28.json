@@ -1,0 +1,830 @@
+{
+  "update_time": "2026-10-28 14:41:59",
+  "stocks": {
+    "a_stocks": [
+      {
+        "market": "A股",
+        "code": "002050",
+        "name": "三花智控",
+        "symbol": "sz.002050",
+        "industry": null,
+        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
+        "price": 35.64,
+        "open": 34.18,
+        "high": 36.3,
+        "low": 34.18,
+        "change_pct": 4.64,
+        "volume": 96946152,
+        "turnover": 34.42,
+        "market_cap": null,
+        "pe": 37.52,
+        "cash_flow": 50.92,
+        "macd": -0.2825,
+        "macd_signal": -0.6812,
+        "macd_histogram": 0.7974,
+        "rsi": 57.53,
+        "ma": {
+          "MA5": 34.42,
+          "MA10": 33.26,
+          "MA20": 33.75,
+          "MA60": 35.67
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
+        "price": 6.1,
+        "open": 6.14,
+        "high": 6.15,
+        "low": 6.1,
+        "change_pct": -0.16,
+        "volume": 28983457,
+        "turnover": 1.77,
+        "market_cap": null,
+        "pe": 69.94,
+        "cash_flow": 105.67,
+        "macd": -0.1188,
+        "macd_signal": -0.1074,
+        "macd_histogram": -0.0227,
+        "rsi": 34.02,
+        "ma": {
+          "MA5": 6.13,
+          "MA10": 6.15,
+          "MA20": 6.31,
+          "MA60": 6.56
+        },
+        "main_net_flow": null
+      }
+    ],
+    "hk_stocks": [
+      {
+        "market": "港股",
+        "code": "01810",
+        "name": "小米集团-W",
+        "symbol": "01810",
+        "industry": "Consumer Electronics",
+        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
+        "price": 25.62,
+        "open": 25.8,
+        "high": 25.98,
+        "low": 25.4,
+        "change_pct": -0.16,
+        "volume": 76920774,
+        "turnover": null,
+        "market_cap": 6593.53,
+        "pe": 18.84,
+        "cash_flow": 86.81,
+        "macd": 0.0272,
+        "macd_signal": -0.0538,
+        "macd_histogram": 0.162,
+        "rsi": 47.47,
+        "ma": {
+          "MA5": 26.16,
+          "MA10": 26.48,
+          "MA20": 25.53,
+          "MA60": 26.53
+        },
+        "main_net_flow": null
+      }
+    ],
+    "us_stocks": [
+      {
+        "market": "美股",
+        "code": "NVDA",
+        "name": "NVIDIA",
+        "symbol": "NVDA",
+        "industry": "Semiconductors",
+        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
+        "price": 217.84,
+        "open": 219.88,
+        "high": 219.99,
+        "low": 217.27,
+        "change_pct": -0.05,
+        "volume": 18666694,
+        "turnover": null,
+        "market_cap": 52601.82,
+        "pe": 27.54,
+        "cash_flow": 418.1,
+        "macd": -2.4634,
+        "macd_signal": -1.4945,
+        "macd_histogram": -1.9377,
+        "rsi": 46.2,
+        "ma": {
+          "MA5": 214.99,
+          "MA10": 216.18,
+          "MA20": 223.91,
+          "MA60": 221.94
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "GOOG",
+        "name": "Alphabet (Google)",
+        "symbol": "GOOG",
+        "industry": "Internet Content & Information",
+        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
+        "price": 320.27,
+        "open": 319.88,
+        "high": 322.6,
+        "low": 319.68,
+        "change_pct": 1.08,
+        "volume": 5233313,
+        "turnover": null,
+        "market_cap": 39168.2,
+        "pe": 16.07,
+        "cash_flow": 226.65,
+        "macd": -6.1948,
+        "macd_signal": -3.3329,
+        "macd_histogram": -5.7239,
+        "rsi": 36.69,
+        "ma": {
+          "MA5": 317.87,
+          "MA10": 327.87,
+          "MA20": 336.23,
+          "MA60": 339.68
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "CRCL",
+        "name": "Circle",
+        "symbol": "CRCL",
+        "industry": "Capital Markets",
+        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
+        "price": 80.15,
+        "open": 80.44,
+        "high": 82.04,
+        "low": 79.31,
+        "change_pct": -1.75,
+        "volume": 1777915,
+        "turnover": null,
+        "market_cap": 203.49,
+        "pe": 54.9,
+        "cash_flow": 2.06,
+        "macd": -0.8979,
+        "macd_signal": -0.5959,
+        "macd_histogram": -0.604,
+        "rsi": 44.75,
+        "ma": {
+          "MA5": 82.82,
+          "MA10": 84.02,
+          "MA20": 83.29,
+          "MA60": 84.46
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "MP",
+        "name": "MP Materials",
+        "symbol": "MP",
+        "industry": "Other Industrial Metals & Mining",
+        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
+        "price": 40.33,
+        "open": 40.92,
+        "high": 41.36,
+        "low": 39.69,
+        "change_pct": -1.32,
+        "volume": 1070774,
+        "turnover": null,
+        "market_cap": 71.83,
+        "pe": 51.76,
+        "cash_flow": 4.33,
+        "macd": -2.6345,
+        "macd_signal": -2.7399,
+        "macd_histogram": 0.2108,
+        "rsi": 40.71,
+        "ma": {
+          "MA5": 39.11,
+          "MA10": 39.48,
+          "MA20": 42.38,
+          "MA60": 49.45
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "PLTR",
+        "name": "Palantir",
+        "symbol": "PLTR",
+        "industry": "Software - Infrastructure",
+        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
+        "price": 195.95,
+        "open": 197.01,
+        "high": 198.72,
+        "low": 193.35,
+        "change_pct": -1.4,
+        "volume": 4958043,
+        "turnover": null,
+        "market_cap": 4708.79,
+        "pe": 168.92,
+        "cash_flow": 21.59,
+        "macd": 3.5599,
+        "macd_signal": 4.6414,
+        "macd_histogram": -2.1629,
+        "rsi": 52.98,
+        "ma": {
+          "MA5": 197.29,
+          "MA10": 196.15,
+          "MA20": 197.12,
+          "MA60": 183.63
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "NOW",
+        "name": "ServiceNow",
+        "symbol": "NOW",
+        "industry": "Software - Application",
+        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
+        "price": 153.01,
+        "open": 151.6,
+        "high": 155.15,
+        "low": 151.13,
+        "change_pct": -1.14,
+        "volume": 4971838,
+        "turnover": null,
+        "market_cap": 1581.91,
+        "pe": 95.63,
+        "cash_flow": 51.49,
+        "macd": 5.4727,
+        "macd_signal": 4.5072,
+        "macd_histogram": 1.931,
+        "rsi": 60.48,
+        "ma": {
+          "MA5": 156.39,
+          "MA10": 152.05,
+          "MA20": 145.2,
+          "MA60": 136.78
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "DDOG",
+        "name": "Datadog",
+        "symbol": "DDOG",
+        "industry": "Software - Application",
+        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
+        "price": 282.11,
+        "open": 279.84,
+        "high": 285.0,
+        "low": 278.8,
+        "change_pct": 0.46,
+        "volume": 317324,
+        "turnover": null,
+        "market_cap": 1012.97,
+        "pe": 564.21,
+        "cash_flow": 10.51,
+        "macd": 5.5687,
+        "macd_signal": 5.5046,
+        "macd_histogram": 0.1283,
+        "rsi": 57.98,
+        "ma": {
+          "MA5": 274.11,
+          "MA10": 267.38,
+          "MA20": 273.02,
+          "MA60": 250.46
+        },
+        "main_net_flow": null
+      }
+    ],
+    "crypto": [
+      {
+        "market": "加密货币",
+        "code": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "industry": "Smart Contract Platform",
+        "price": 80386,
+        "open": null,
+        "high": 81636,
+        "low": 80153,
+        "change_pct": 0.23,
+        "volume": 24105756029,
+        "turnover": null,
+        "market_cap": 16161.55,
+        "market_cap_rank": 1,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -497.0207,
+        "macd_signal": -213.7243,
+        "macd_histogram": -566.5927,
+        "rsi": 43.79,
+        "ma": {
+          "MA5": 80420.62,
+          "MA10": 81343.5,
+          "MA20": 81811.44,
+          "MA60": 81391.74
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 20104859.0,
+          "total_supply": 20104859.0,
+          "circ_ratio": 100.0,
+          "price_change_7d": -4.03742,
+          "price_change_30d": -3.83633,
+          "ath_pct": -36.24,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      },
+      {
+        "market": "加密货币",
+        "code": "ethereum",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "industry": "Smart Contract Platform",
+        "price": 2325.49,
+        "open": null,
+        "high": 2379.62,
+        "low": 2324.28,
+        "change_pct": -0.08,
+        "volume": 9414570103,
+        "turnover": null,
+        "market_cap": 2841.06,
+        "market_cap_rank": 2,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -59.2596,
+        "macd_signal": -51.1866,
+        "macd_histogram": -16.1461,
+        "rsi": 35.7,
+        "ma": {
+          "MA5": 2335.54,
+          "MA10": 2377.4,
+          "MA20": 2416.47,
+          "MA60": 2521.67
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 122170165.62061684,
+          "total_supply": 122170165.62061684,
+          "circ_ratio": 100.0,
+          "price_change_7d": -5.91973,
+          "price_change_30d": -13.53131,
+          "ath_pct": -52.98,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      }
+    ]
+  },
+  "news": [
+    {
+      "id": "35b871d31c",
+      "title": "[播客]独家实拍：我那永远跪着的母亲(11/07 22:10)",
+      "summary": "独家实拍：我那永远跪着的母亲",
+      "link": "http://go.rss.sina.com.cn/redirect.php?url=http://you.video.sina.com.cn/b/16972162-1239095354.html",
+      "source": "rss.sina.com.cn",
+      "published": ""
+    },
+    {
+      "id": "9f4f072d30",
+      "title": "‘Just watch Judge Judy’: I’m in my 70s. Why do people keep making the same avoidable financial mistakes?",
+      "summary": "“Consider some familiar examples of poor decisions: accumulating credit-card debt or failing to plan for retirement.”",
+      "link": "https://www.marketwatch.com/story/you-need-only-watch-episodes-of-judge-judy-im-in-my-70s-why-do-people-keep-making-the-same-avoidable-financial-mistakes-bbf60fe4?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 28 Oct 2026 14:16:00 GMT"
+    },
+    {
+      "id": "9d51128a8a",
+      "title": "We stopped helping our neighbors with free home repairs and our friendship cooled. Who’s to blame?",
+      "summary": "“Last summer, they complained about needing to replace their roof. A few months later, they bought a new SUV.”",
+      "link": "https://www.marketwatch.com/story/we-stopped-helping-our-neighbors-with-free-home-repairs-and-our-friendship-cooled-whos-to-blame-d20b0720?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 28 Oct 2026 14:15:00 GMT"
+    },
+    {
+      "id": "3c89a6ccf7",
+      "title": "‘When do I sell my stocks?’ Ignore the noise and focus on these things.",
+      "summary": "Before you sell, ask whether a rising or falling stock price actually represents a change in the company’s business prospects",
+      "link": "https://www.marketwatch.com/story/when-do-i-sell-my-stocks-ignore-the-noise-and-focus-on-these-things-5f4ca5aa?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 28 Oct 2026 14:10:00 GMT"
+    },
+    {
+      "id": "041cb023bb",
+      "title": "Is that used EV worth the price? This checklist could save you thousands of dollars.",
+      "summary": "Pain at the pump is pushing cost-conscious drivers away from traditional gas-powered cars toward electric vehicles.",
+      "link": "https://www.marketwatch.com/story/is-that-used-ev-worth-the-price-this-checklist-could-save-you-thousands-of-dollars-2e1ab876?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 28 Oct 2026 13:53:00 GMT"
+    },
+    {
+      "id": "94a0f90f7e",
+      "title": "Want guaranteed income in retirement without an annuity? Try laddering I bonds.",
+      "summary": "The new I-bond interest rate could be 5.5% or 5.4%, but that shouldn’t change your strategy.",
+      "link": "https://www.marketwatch.com/story/how-to-use-i-bonds-to-create-guaranteed-inflation-proof-income-in-retirement-50753fea?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 28 Oct 2026 13:27:00 GMT"
+    },
+    {
+      "id": "29b9bacbda",
+      "title": "11 bargain-priced stocks of companies that have huge growth potential over the next two years",
+      "summary": "These stocks trade at low price/earnings valuations, and the companies are projected to achieve very high revenue growth rates through 2028.",
+      "link": "https://www.marketwatch.com/story/11-bargain-priced-stocks-of-companies-that-have-huge-growth-potential-over-the-next-two-years-d62618e6?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 28 Oct 2026 12:54:00 GMT"
+    },
+    {
+      "id": "4a928613ce",
+      "title": "Vertiv earnings just sent an upbeat signal about AI ahead of Big Tech results",
+      "summary": "Vertiv’s big sales beat affirms that the AI buildout is accelerating.",
+      "link": "https://www.marketwatch.com/story/vertiv-earnings-just-sent-an-upbeat-signal-about-ai-ahead-of-big-tech-results-5714a105?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 28 Oct 2026 12:48:00 GMT"
+    },
+    {
+      "id": "f538cd5057",
+      "title": "We are in our 70s. Should we pay off our 2.5% mortgage early or build up our savings?",
+      "summary": "“Let’s say 10 years from now, when I’m 84, we need a substantial amount of cash.”",
+      "link": "https://www.marketwatch.com/story/we-are-in-our-70s-should-we-pay-off-our-2-5-mortgage-or-build-up-our-savings-5a35e9c1?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 28 Oct 2026 12:45:00 GMT"
+    },
+    {
+      "id": "00fda50dd8",
+      "title": "SK Hynix delivered on third-quarter results — but the outlook is what really mattered to Wall Street and the AI trade",
+      "summary": "South Korea memory-chip giant says supply constraints will last through 2030.",
+      "link": "https://www.marketwatch.com/story/sk-hynix-delivered-on-third-quarter-results-but-the-outlook-is-what-really-mattered-to-wall-street-and-the-ai-trade-2fde9a57?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 28 Oct 2026 12:34:00 GMT"
+    },
+    {
+      "id": "c463fc05bf",
+      "title": "My wife cried when I found out she had only $80,000 in her 401(k). I have $2.2 million. Am I wrong to be shocked?",
+      "summary": "“When I brought up retiring last spring, she said she was ready whenever I was, and I took that to mean we were in good shape.”",
+      "link": "https://www.marketwatch.com/story/my-wife-has-only-80-000-saved-for-retirement-i-have-2-2-million-am-i-wrong-to-be-shocked-3e27b490?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Wed, 28 Oct 2026 12:30:00 GMT"
+    },
+    {
+      "id": "e83a81ae8a",
+      "title": "Expand Energy Q3 2026 slides: integrated gas strategy drives resilience",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/expand-energy-q3-2026-slides-integrated-gas-strategy-drives-resilience-93CH-4979772",
+      "source": "www.investing.com",
+      "published": "2026-10-28 14:21:55"
+    },
+    {
+      "id": "70055f138d",
+      "title": "Earnings call transcript: Advantest lifts outlook in Q2 2026 on AI test demand",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-advantest-lifts-outlook-in-q2-2026-on-ai-test-demand-93CH-4979771",
+      "source": "www.investing.com",
+      "published": "2026-10-28 14:21:52"
+    },
+    {
+      "id": "4280a09668",
+      "title": "Enerpac Tool Group earnings ahead: Margin pressure in focus",
+      "summary": "",
+      "link": "https://www.investing.com/news/earnings/enerpac-tool-group-earnings-ahead-margin-pressure-in-focus-93CH-4979770",
+      "source": "www.investing.com",
+      "published": "2026-10-28 14:21:41"
+    },
+    {
+      "id": "f2f7594e59",
+      "title": "Circle Internet stock may move 9.4% on Nov. 4 earnings report",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/circle-internet-stock-may-move-94-on-nov-4-earnings-report-93CH-4979769",
+      "source": "www.investing.com",
+      "published": "2026-10-28 14:21:32"
+    },
+    {
+      "id": "2297b75142",
+      "title": "Structure Therapeutics stock hits 52-week low at $20.67",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/structure-therapeutics-stock-hits-52week-low-at-2067-93CH-4979768",
+      "source": "www.investing.com",
+      "published": "2026-10-28 14:21:27"
+    },
+    {
+      "id": "43e138e02e",
+      "title": "C.H. Robinson Q3 2026 slides: strong results, AI gains amid acquisition",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/ch-robinson-q3-2026-slides-strong-results-ai-gains-amid-acquisition-93CH-4979767",
+      "source": "www.investing.com",
+      "published": "2026-10-28 14:21:15"
+    },
+    {
+      "id": "4955eeaf2f",
+      "title": "Earnings call transcript: Americana Restaurants posts record Q3 2026 growth",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-americana-restaurants-posts-record-q3-2026-growth-93CH-4979766",
+      "source": "www.investing.com",
+      "published": "2026-10-28 14:21:09"
+    },
+    {
+      "id": "61799aa87a",
+      "title": "CSW Industrials earnings up next: Can growth momentum hold?",
+      "summary": "",
+      "link": "https://www.investing.com/news/earnings/csw-industrials-earnings-up-next-can-growth-momentum-hold-93CH-4979764",
+      "source": "www.investing.com",
+      "published": "2026-10-28 14:20:47"
+    },
+    {
+      "id": "17bea8fe31",
+      "title": "Cantor Fitzgerald reiterates SK Hynix stock rating on AI demand",
+      "summary": "",
+      "link": "https://www.investing.com/news/analyst-ratings/cantor-fitzgerald-reiterates-sk-hynix-stock-rating-on-ai-demand-93CH-4979765",
+      "source": "www.investing.com",
+      "published": "2026-10-28 14:20:47"
+    },
+    {
+      "id": "5741740355",
+      "title": "B.Riley lowers Fannie Mae stock price target to $4.50 on valuation",
+      "summary": "",
+      "link": "https://www.investing.com/news/analyst-ratings/briley-lowers-fannie-mae-stock-price-target-to-450-on-valuation-93CH-4979763",
+      "source": "www.investing.com",
+      "published": "2026-10-28 14:20:45"
+    }
+  ],
+  "briefing": {
+    "date": "2026-10-28",
+    "update_time": "2026-10-28 04:53:08",
+    "candidate_count": 20,
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-28\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Python 实验性 JIT 被判死刑 (来源: HackerNews)\n- **核心干货**：CPython 核心团队决定砍掉那个备受瞩目的实验性 JIT 编译器。简单说，就是官方折腾了好几年、想给 Python 提速的\"涡轮增压\"方案，最终因为收益撑不起复杂度、维护成本过高而被放弃。对广大 Python 开发者而言，意味着短期内还是得靠 C 扩展、Cython 或 PyPy 续命。\n- **毒舌/硬核点评**：Python 的\"快\"就像周一早上的咖啡——闻着香，喝下去还是困。JIT 这波操作堪称技术圈的\"减肥失败宣言\"：我们试过了，但管不住嘴，还是躺平吧。\n- **🔗 传送门**：[点击直达原链接](https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/)\n\n---\n\n### 2. 📌 M6 芯片 MacBook Pro 与 iMac 扎堆发布 (来源: HackerNews)\n- **核心干货**：苹果一次性端出 14 英寸 MacBook Pro 和新 iMac，全系换装 M6 芯片。每年例行\"挤牙膏\"升级，重点无非是能效比再提升、AI 本地推理算力加码。真正的看点是苹果如何用自研芯片继续把 x86 阵营按在地上摩擦。\n- **毒舌/硬核点评**：M6 的发布节奏比我的健身计划还规律——每年都来，每年都\"更强\"，但你手里的 M3 依然能再战三年。苹果最擅长的不是造芯片，是制造\"你不换就落伍\"的焦虑。\n- **🔗 传送门**：[MacBook Pro](https://www.apple.com/in/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/) ｜ [iMac](https://www.apple.com/imac/)\n\n---\n\n### 3. 📌 Heads of Security：用注意力门控防提示注入 (来源: ArXiv)\n- **核心干货**：这篇论文提出 HoS 防御机制，通过一组可学习的\"逐头注意力门控\"，强制模型在\"可信指令\"和\"不可信数据\"之间划清界限。直击当前 LLM Agent 最大的安全软肋——提示注入攻击，让模型即便读了恶意内容也不会乖乖听话执行。\n- **毒舌/硬核点评**：给大模型装\"安检门\"的思路很对，但攻防永远是猫鼠游戏。今天的门控防住了注入，明天的攻击者就研究怎么绕过门控——安全这行，从来没有一劳永逸，只有军备竞赛。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2610.37657v1)\n\n---\n\n### 🗣️ 今日顶男金句\n> **\"技术圈最大的幻觉，是以为'下一个版本'能解决'这一版'的懒惰。\"** 别等 JIT、别等 M6、别等新框架——你今天动手写的那行代码，才是唯一真实的性能提升。",
+    "briefing_items": [
+      {
+        "title": "Python 实验性 JIT 被判死刑",
+        "source": "HackerNews",
+        "summary": "CPython 核心团队决定砍掉那个备受瞩目的实验性 JIT 编译器。简单说，就是官方折腾了好几年、想给 Python 提速的\"涡轮增压\"方案，最终因为收益撑不起复杂度、维护成本过高而被放弃。对广大 Python 开发者而言，意味着短期内还是得靠 C 扩展、Cython 或 PyPy 续命。",
+        "commentary": "Python 的\"快\"就像周一早上的咖啡——闻着香，喝下去还是困。JIT 这波操作堪称技术圈的\"减肥失败宣言\"：我们试过了，但管不住嘴，还是躺平吧。",
+        "url": "https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/"
+      },
+      {
+        "title": "M6 芯片 MacBook Pro 与 iMac 扎堆发布",
+        "source": "HackerNews",
+        "summary": "苹果一次性端出 14 英寸 MacBook Pro 和新 iMac，全系换装 M6 芯片。每年例行\"挤牙膏\"升级，重点无非是能效比再提升、AI 本地推理算力加码。真正的看点是苹果如何用自研芯片继续把 x86 阵营按在地上摩擦。",
+        "commentary": "M6 的发布节奏比我的健身计划还规律——每年都来，每年都\"更强\"，但你手里的 M3 依然能再战三年。苹果最擅长的不是造芯片，是制造\"你不换就落伍\"的焦虑。",
+        "url": ""
+      },
+      {
+        "title": "Heads of Security：用注意力门控防提示注入",
+        "source": "ArXiv",
+        "summary": "这篇论文提出 HoS 防御机制，通过一组可学习的\"逐头注意力门控\"，强制模型在\"可信指令\"和\"不可信数据\"之间划清界限。直击当前 LLM Agent 最大的安全软肋——提示注入攻击，让模型即便读了恶意内容也不会乖乖听话执行。",
+        "commentary": "给大模型装\"安检门\"的思路很对，但攻防永远是猫鼠游戏。今天的门控防住了注入，明天的攻击者就研究怎么绕过门控——安全这行，从来没有一劳永逸，只有军备竞赛。",
+        "url": "https://arxiv.org/abs/2610.37657v1"
+      },
+      {
+        "quote": "**\"技术圈最大的幻觉，是以为'下一个版本'能解决'这一版'的懒惰。\"** 别等 JIT、别等 M6、别等新框架——你今天动手写的那行代码，才是唯一真实的性能提升。"
+      }
+    ],
+    "candidates": [
+      {
+        "id": "hn:50261998",
+        "title": "Ghostty 1.4",
+        "summary": "",
+        "url": "https://ghostty.org/docs/install/release-notes/1-4-0",
+        "source": "Hacker News",
+        "score": 864,
+        "comments": 271
+      },
+      {
+        "id": "lob:q7arzy",
+        "title": "A fast and secure tar parser for the Rust ecosystem",
+        "summary": "",
+        "url": "https://astral.sh/blog/tar-codec",
+        "source": "Lobste.rs",
+        "score": 49,
+        "comments": 10,
+        "tags": [
+          "python",
+          "rust"
+        ]
+      },
+      {
+        "id": "hn:50264857",
+        "title": "Tailscale SSH: Investigation and remediation update",
+        "summary": "",
+        "url": "https://tailscale.com/ssh-investigation-update",
+        "source": "Hacker News",
+        "score": 236,
+        "comments": 119
+      },
+      {
+        "id": "hn:50264853",
+        "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
+        "summary": "",
+        "url": "https://www.brangus.io/survival-llm",
+        "source": "Hacker News",
+        "score": 246,
+        "comments": 120
+      },
+      {
+        "id": "hn:50261352",
+        "title": "New 14‑inch MacBook Pro with M6",
+        "summary": "",
+        "url": "https://www.apple.com/in/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/",
+        "source": "Hacker News",
+        "score": 313,
+        "comments": 401
+      },
+      {
+        "id": "hn:50257419",
+        "title": "Python's experimental JIT to be removed",
+        "summary": "",
+        "url": "https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/",
+        "source": "Hacker News",
+        "score": 467,
+        "comments": 253
+      },
+      {
+        "id": "hn:50258538",
+        "title": "New iMac with M6",
+        "summary": "",
+        "url": "https://www.apple.com/imac/",
+        "source": "Hacker News",
+        "score": 319,
+        "comments": 396
+      },
+      {
+        "id": "hn:50265609",
+        "title": "Early progress on accelerating drug development with Claude",
+        "summary": "",
+        "url": "https://www.anthropic.com/research/early-progress-drug-development",
+        "source": "Hacker News",
+        "score": 178,
+        "comments": 159
+      },
+      {
+        "id": "lob:pq6ju6",
+        "title": "The Exponential Time Hypothesis Is False [pdf]",
+        "summary": "",
+        "url": "https://files.mathhelm.org/files/733/The-Exponential-Time-Hypothesis-is-False-October-25-2026.pdf",
+        "source": "Lobste.rs",
+        "score": 50,
+        "comments": 28,
+        "tags": [
+          "math",
+          "pdf"
+        ]
+      },
+      {
+        "id": "lob:cxxcik",
+        "title": "Shitty Screenshare",
+        "summary": "",
+        "url": "http://shittyscreenshare.com",
+        "source": "Lobste.rs",
+        "score": 75,
+        "comments": 32,
+        "tags": [
+          "browsers",
+          "web"
+        ]
+      },
+      {
+        "id": "hn:50265594",
+        "title": "Raspberry Pi Zero 3W and Pi 4 Model A spotted in device trees",
+        "summary": "",
+        "url": "https://bret.dk/raspberry-pi-zero-3-w-pi-4-model-a/",
+        "source": "Hacker News",
+        "score": 126,
+        "comments": 58
+      },
+      {
+        "id": "hn:50268380",
+        "title": "Git for US Legislation",
+        "summary": "",
+        "url": "https://lexifina.com/blog/git-for-the-us-code",
+        "source": "Hacker News",
+        "score": 125,
+        "comments": 51
+      },
+      {
+        "id": "arxiv:2610.37657v1",
+        "title": "Heads of Security: Learned Attention Gates Improve Prompt Injection Robustness",
+        "summary": "We introduce Heads of Security (HoS), a prompt injection defense that enforces instruction-data separation via a small set of learned per-head attention gates. HoS learns how each head should redistribute attention between trusted and untrusted tokens, enabling models to reason over untrusted conten",
+        "url": "https://arxiv.org/abs/2610.37657v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.LG",
+          "cs.CL",
+          "cs.CR"
+        ],
+        "arxiv_id": "2610.37657v1"
+      },
+      {
+        "id": "hn:50266780",
+        "title": "Reviewers rarely talk about reliability. Owners bring it up twice as often",
+        "summary": "",
+        "url": "https://www.bettascore.ai/research/reliability-reviewers-vs-owners",
+        "source": "Hacker News",
+        "score": 89,
+        "comments": 77
+      },
+      {
+        "id": "hn:50234796",
+        "title": "Ink droplets in motion snag top prize in Nikon Small World contest",
+        "summary": "",
+        "url": "https://arstechnica.com/science/2026/10/meet-the-2026-winner-of-nikons-small-world-photomicrography-contest/",
+        "source": "Hacker News",
+        "score": 130,
+        "comments": 23
+      },
+      {
+        "id": "arxiv:2610.37642v1",
+        "title": "Metacognitive Decoding: Efficient Inference for Diffusion Language Agents",
+        "summary": "Diffusion language models offer a promising path to efficient agents through parallel token generation. However, efficient interaction requires adapting both where computation is spent and how much text is generated. We introduce a metacognitive controller that guides diffusion generation according ",
+        "url": "https://arxiv.org/abs/2610.37642v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.CL"
+        ],
+        "arxiv_id": "2610.37642v1"
+      },
+      {
+        "id": "lob:6ntoqr",
+        "title": "CSS-Tricks has a new owner",
+        "summary": "",
+        "url": "https://css-tricks.com/css-tricks-has-a-new-owner/",
+        "source": "Lobste.rs",
+        "score": 111,
+        "comments": 2,
+        "tags": [
+          "web"
+        ]
+      },
+      {
+        "id": "lob:d09iy3",
+        "title": "Compile-Time Dependent Types",
+        "summary": "",
+        "url": "https://thenumb.at/Syl-Intro/",
+        "source": "Lobste.rs",
+        "score": 24,
+        "comments": 9,
+        "tags": [
+          "ml",
+          "plt"
+        ]
+      },
+      {
+        "id": "arxiv:2610.37666v1",
+        "title": "ThinkWorld: World Imagination Reinforces Chain-of-Dynamics Reasoning",
+        "summary": "Vision-Language-Action (VLA) models have made substantial progress in robotic manipulation, but their generalization remains constrained by the diversity and coverage of action-labeled robot demonstrations. Human videos provide much broader behavioral and environmental experience, while learning fro",
+        "url": "https://arxiv.org/abs/2610.37666v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.RO",
+          "cs.AI",
+          "cs.CV"
+        ],
+        "arxiv_id": "2610.37666v1"
+      },
+      {
+        "id": "arxiv:2610.37658v1",
+        "title": "When Should We Intervene at Test Time?",
+        "summary": "Test-time adaptation helps a deployed model respond to changing inputs, but the same intervention can rescue one batch and damage the next. Updating normalization statistics, for example, can improve corrupted images yet fail when a batch contains mostly one class. Average accuracy hides these failu",
+        "url": "https://arxiv.org/abs/2610.37658v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.LG"
+        ],
+        "arxiv_id": "2610.37658v1"
+      }
+    ],
+    "ai_curated": true
+  },
+  "fear_greed": {
+    "value": 51,
+    "classification": "Neutral",
+    "timestamp": "2026-10-28 00:00:00"
+  }
+}
