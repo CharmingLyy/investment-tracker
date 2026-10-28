@@ -1,43 +1,43 @@
 {
-  "date": "2026-10-28",
-  "update_time": "2026-10-28 04:53:08",
+  "date": "2026-10-29",
+  "update_time": "2026-10-28 18:01:01",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-28\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Python 实验性 JIT 被判死刑 (来源: HackerNews)\n- **核心干货**：CPython 核心团队决定砍掉那个备受瞩目的实验性 JIT 编译器。简单说，就是官方折腾了好几年、想给 Python 提速的\"涡轮增压\"方案，最终因为收益撑不起复杂度、维护成本过高而被放弃。对广大 Python 开发者而言，意味着短期内还是得靠 C 扩展、Cython 或 PyPy 续命。\n- **毒舌/硬核点评**：Python 的\"快\"就像周一早上的咖啡——闻着香，喝下去还是困。JIT 这波操作堪称技术圈的\"减肥失败宣言\"：我们试过了，但管不住嘴，还是躺平吧。\n- **🔗 传送门**：[点击直达原链接](https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/)\n\n---\n\n### 2. 📌 M6 芯片 MacBook Pro 与 iMac 扎堆发布 (来源: HackerNews)\n- **核心干货**：苹果一次性端出 14 英寸 MacBook Pro 和新 iMac，全系换装 M6 芯片。每年例行\"挤牙膏\"升级，重点无非是能效比再提升、AI 本地推理算力加码。真正的看点是苹果如何用自研芯片继续把 x86 阵营按在地上摩擦。\n- **毒舌/硬核点评**：M6 的发布节奏比我的健身计划还规律——每年都来，每年都\"更强\"，但你手里的 M3 依然能再战三年。苹果最擅长的不是造芯片，是制造\"你不换就落伍\"的焦虑。\n- **🔗 传送门**：[MacBook Pro](https://www.apple.com/in/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/) ｜ [iMac](https://www.apple.com/imac/)\n\n---\n\n### 3. 📌 Heads of Security：用注意力门控防提示注入 (来源: ArXiv)\n- **核心干货**：这篇论文提出 HoS 防御机制，通过一组可学习的\"逐头注意力门控\"，强制模型在\"可信指令\"和\"不可信数据\"之间划清界限。直击当前 LLM Agent 最大的安全软肋——提示注入攻击，让模型即便读了恶意内容也不会乖乖听话执行。\n- **毒舌/硬核点评**：给大模型装\"安检门\"的思路很对，但攻防永远是猫鼠游戏。今天的门控防住了注入，明天的攻击者就研究怎么绕过门控——安全这行，从来没有一劳永逸，只有军备竞赛。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2610.37657v1)\n\n---\n\n### 🗣️ 今日顶男金句\n> **\"技术圈最大的幻觉，是以为'下一个版本'能解决'这一版'的懒惰。\"** 别等 JIT、别等 M6、别等新框架——你今天动手写的那行代码，才是唯一真实的性能提升。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-29\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Apple 的 git 至今仍信任已沦陷的 eMudhra 证书 (来源: HackerNews)\n- **核心干货**：印度 CA 机构 eMudhra 被曝出证书签发流程存在严重漏洞（可被滥发用于中间人攻击），但 Apple 的 git 基础设施至今仍将其列在信任链里，意味着通过 Apple 相关代码仓库拉取内容时，理论上存在被劫持的风险。这不是理论推演——HN 上 325 条评论说明开发者已经炸锅了。\n- **毒舌/硬核点评**：苹果一向以\"安全洁癖\"人设收割溢价，结果自家 git 的信任库比过期牛奶还馊。建议开发者先手动检查一遍 `trusted certs`，别让\"生态闭环\"变成\"攻击闭环\"。\n- **🔗 传送门**：[点击直达原链接](https://emudhra.we-have-a-problem.com/apple.html)\n\n---\n\n### 2. 📌 Astral 发布 Rust 生态的高速安全 tar 解析器 (来源: Lobste.rs)\n- **核心干货**：Astral（uv/ruff 背后的团队）又出刀了——这次是给 Rust 生态补上一个既快又安全的 tar 解析库。tar 是包管理、容器镜像、备份链路的底层基础设施，历史上一堆 CVE 都出在解压环节（路径穿越、符号链接逃逸）。这个库直接把这类攻击面按在类型系统里摩擦。\n- **毒舌/硬核点评**：别人做工具是\"能用就行\"，Astral 做工具是\"把隔壁 C 实现的棺材板钉死\"。当 uv 团队开始清理底层供应链的每一个脏角落，Python 生态的旧贵族们该睡不着了。\n- **🔗 传送门**：[点击直达原链接](https://astral.sh/blog/tar-codec)\n\n---\n\n### 3. 📌 Gemini 4 Carbon 发布 (来源: HackerNews)\n- **核心干货**：Google 推出 Gemini 4 Carbon，从命名看主打\"更低碳/更高效\"的推理路径，HN 265 分、206 条评论说明讨论热度不低。在算力军备竞赛撞上能源墙的当下，模型效率本身就是新的护城河——谁能用更少的电跑出更强的能力，谁就掌握定价权。\n- **毒舌/硬核点评**：AI 圈终于卷到\"省电\"这个赛道了，从\"参数越大越牛\"进化到\"每瓦特智能\"，算是行业从青春期走向成年。不过 Google 的发布会 PPT 一向比模型本身更节能——是骡子是马，等 benchmark 出来再说。\n- **🔗 传送门**：[点击直达原链接](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/)\n\n---\n\n### 🗣️ 今日顶男金句\n> 技术的护城河从来不是\"我做得出来\"，而是\"我做得出来还比你便宜一个数量级\"。省下来的每一瓦电，都是砸向对手的一记重拳。",
   "briefing_items": [
     {
-      "title": "Python 实验性 JIT 被判死刑",
+      "title": "Apple 的 git 至今仍信任已沦陷的 eMudhra 证书",
       "source": "HackerNews",
-      "summary": "CPython 核心团队决定砍掉那个备受瞩目的实验性 JIT 编译器。简单说，就是官方折腾了好几年、想给 Python 提速的\"涡轮增压\"方案，最终因为收益撑不起复杂度、维护成本过高而被放弃。对广大 Python 开发者而言，意味着短期内还是得靠 C 扩展、Cython 或 PyPy 续命。",
-      "commentary": "Python 的\"快\"就像周一早上的咖啡——闻着香，喝下去还是困。JIT 这波操作堪称技术圈的\"减肥失败宣言\"：我们试过了，但管不住嘴，还是躺平吧。",
-      "url": "https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/"
+      "summary": "印度 CA 机构 eMudhra 被曝出证书签发流程存在严重漏洞（可被滥发用于中间人攻击），但 Apple 的 git 基础设施至今仍将其列在信任链里，意味着通过 Apple 相关代码仓库拉取内容时，理论上存在被劫持的风险。这不是理论推演——HN 上 325 条评论说明开发者已经炸锅了。",
+      "commentary": "苹果一向以\"安全洁癖\"人设收割溢价，结果自家 git 的信任库比过期牛奶还馊。建议开发者先手动检查一遍 `trusted certs`，别让\"生态闭环\"变成\"攻击闭环\"。",
+      "url": "https://emudhra.we-have-a-problem.com/apple.html"
     },
     {
-      "title": "M6 芯片 MacBook Pro 与 iMac 扎堆发布",
+      "title": "Astral 发布 Rust 生态的高速安全 tar 解析器",
+      "source": "Lobste.rs",
+      "summary": "Astral（uv/ruff 背后的团队）又出刀了——这次是给 Rust 生态补上一个既快又安全的 tar 解析库。tar 是包管理、容器镜像、备份链路的底层基础设施，历史上一堆 CVE 都出在解压环节（路径穿越、符号链接逃逸）。这个库直接把这类攻击面按在类型系统里摩擦。",
+      "commentary": "别人做工具是\"能用就行\"，Astral 做工具是\"把隔壁 C 实现的棺材板钉死\"。当 uv 团队开始清理底层供应链的每一个脏角落，Python 生态的旧贵族们该睡不着了。",
+      "url": "https://astral.sh/blog/tar-codec"
+    },
+    {
+      "title": "Gemini 4 Carbon 发布",
       "source": "HackerNews",
-      "summary": "苹果一次性端出 14 英寸 MacBook Pro 和新 iMac，全系换装 M6 芯片。每年例行\"挤牙膏\"升级，重点无非是能效比再提升、AI 本地推理算力加码。真正的看点是苹果如何用自研芯片继续把 x86 阵营按在地上摩擦。",
-      "commentary": "M6 的发布节奏比我的健身计划还规律——每年都来，每年都\"更强\"，但你手里的 M3 依然能再战三年。苹果最擅长的不是造芯片，是制造\"你不换就落伍\"的焦虑。",
-      "url": ""
+      "summary": "Google 推出 Gemini 4 Carbon，从命名看主打\"更低碳/更高效\"的推理路径，HN 265 分、206 条评论说明讨论热度不低。在算力军备竞赛撞上能源墙的当下，模型效率本身就是新的护城河——谁能用更少的电跑出更强的能力，谁就掌握定价权。",
+      "commentary": "AI 圈终于卷到\"省电\"这个赛道了，从\"参数越大越牛\"进化到\"每瓦特智能\"，算是行业从青春期走向成年。不过 Google 的发布会 PPT 一向比模型本身更节能——是骡子是马，等 benchmark 出来再说。",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
     },
     {
-      "title": "Heads of Security：用注意力门控防提示注入",
-      "source": "ArXiv",
-      "summary": "这篇论文提出 HoS 防御机制，通过一组可学习的\"逐头注意力门控\"，强制模型在\"可信指令\"和\"不可信数据\"之间划清界限。直击当前 LLM Agent 最大的安全软肋——提示注入攻击，让模型即便读了恶意内容也不会乖乖听话执行。",
-      "commentary": "给大模型装\"安检门\"的思路很对，但攻防永远是猫鼠游戏。今天的门控防住了注入，明天的攻击者就研究怎么绕过门控——安全这行，从来没有一劳永逸，只有军备竞赛。",
-      "url": "https://arxiv.org/abs/2610.37657v1"
-    },
-    {
-      "quote": "**\"技术圈最大的幻觉，是以为'下一个版本'能解决'这一版'的懒惰。\"** 别等 JIT、别等 M6、别等新框架——你今天动手写的那行代码，才是唯一真实的性能提升。"
+      "quote": "技术的护城河从来不是\"我做得出来\"，而是\"我做得出来还比你便宜一个数量级\"。省下来的每一瓦电，都是砸向对手的一记重拳。"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50261998",
-      "title": "Ghostty 1.4",
+      "id": "hn:50271640",
+      "title": "Apple's git still trusts the compromised eMudhra certificates",
       "summary": "",
-      "url": "https://ghostty.org/docs/install/release-notes/1-4-0",
+      "url": "https://emudhra.we-have-a-problem.com/apple.html",
       "source": "Hacker News",
-      "score": 864,
-      "comments": 271
+      "score": 824,
+      "comments": 325
     },
     {
       "id": "lob:q7arzy",
@@ -45,110 +45,111 @@
       "summary": "",
       "url": "https://astral.sh/blog/tar-codec",
       "source": "Lobste.rs",
-      "score": 49,
-      "comments": 10,
+      "score": 78,
+      "comments": 14,
       "tags": [
         "python",
         "rust"
       ]
     },
     {
-      "id": "hn:50264857",
-      "title": "Tailscale SSH: Investigation and remediation update",
+      "id": "hn:50243060",
+      "title": "The Grid, a factory-scale robot in Massachusetts that builds PCBs on demand",
       "summary": "",
-      "url": "https://tailscale.com/ssh-investigation-update",
+      "url": "https://www.circuithub.com/post/unveiling-the-grid",
       "source": "Hacker News",
-      "score": 236,
-      "comments": 119
+      "score": 270,
+      "comments": 118
     },
     {
-      "id": "hn:50264853",
-      "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
+      "id": "hn:50276792",
+      "title": "Gemini 4 Carbon",
       "summary": "",
-      "url": "https://www.brangus.io/survival-llm",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
       "source": "Hacker News",
-      "score": 246,
-      "comments": 120
+      "score": 265,
+      "comments": 206
     },
     {
-      "id": "hn:50261352",
-      "title": "New 14‑inch MacBook Pro with M6",
+      "id": "hn:50274409",
+      "title": "CNC Stone Carving",
       "summary": "",
-      "url": "https://www.apple.com/in/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/",
+      "url": "https://carmelitegothic.com/cnc-stone-carving/",
       "source": "Hacker News",
-      "score": 313,
-      "comments": 401
+      "score": 225,
+      "comments": 76
     },
     {
-      "id": "hn:50257419",
-      "title": "Python's experimental JIT to be removed",
+      "id": "hn:50208960",
+      "title": "Start Doing Graph Theory",
       "summary": "",
-      "url": "https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/",
+      "url": "https://vertex.degree/",
       "source": "Hacker News",
-      "score": 467,
-      "comments": 253
+      "score": 408,
+      "comments": 94
     },
     {
-      "id": "hn:50258538",
-      "title": "New iMac with M6",
+      "id": "hn:50273171",
+      "title": "Emacs Turns 50",
       "summary": "",
-      "url": "https://www.apple.com/imac/",
+      "url": "https://www.technologyreview.com/2026/10/20/1145399/emacs-turns-50/",
       "source": "Hacker News",
-      "score": 319,
-      "comments": 396
+      "score": 250,
+      "comments": 102
     },
     {
-      "id": "hn:50265609",
-      "title": "Early progress on accelerating drug development with Claude",
-      "summary": "",
-      "url": "https://www.anthropic.com/research/early-progress-drug-development",
+      "id": "hn:50276940",
+      "title": "MacBook Pro with PROLED XDR Display and Touch",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.apple.com&#x2F;newsroom&#x2F;2026&#x2F;10&#x2F;apple-unveils-groundbreaking-macbook-pro-with-proled-xdr-display&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.apple.com&#x2F;newsroom&#x2F;2026&#x2F;10&#x2F;apple-unveils-groundb...</a>",
+      "url": "https://www.apple.com/macbook-pro/proled-xdr-display/",
       "source": "Hacker News",
-      "score": 178,
-      "comments": 159
+      "score": 159,
+      "comments": 240
     },
     {
-      "id": "lob:pq6ju6",
-      "title": "The Exponential Time Hypothesis Is False [pdf]",
+      "id": "lob:cpaibp",
+      "title": "This is not sustainable",
       "summary": "",
-      "url": "https://files.mathhelm.org/files/733/The-Exponential-Time-Hypothesis-is-False-October-25-2026.pdf",
+      "url": "https://www.netmeister.org/blog/defense-ddos.html",
       "source": "Lobste.rs",
-      "score": 50,
-      "comments": 28,
+      "score": 91,
+      "comments": 22,
       "tags": [
-        "math",
-        "pdf"
+        "security"
       ]
     },
     {
-      "id": "lob:cxxcik",
-      "title": "Shitty Screenshare",
+      "id": "lob:qr59sa",
+      "title": "Four Months of Zig",
       "summary": "",
-      "url": "http://shittyscreenshare.com",
+      "url": "https://gracefulliberty.com/articles/four-months-of-zig/",
+      "source": "Lobste.rs",
+      "score": 67,
+      "comments": 18,
+      "tags": [
+        "zig"
+      ]
+    },
+    {
+      "id": "lob:o6vpqb",
+      "title": "Ghostty 1.4.0",
+      "summary": "",
+      "url": "https://ghostty.org/docs/install/release-notes/1-4-0",
       "source": "Lobste.rs",
       "score": 75,
-      "comments": 32,
+      "comments": 8,
       "tags": [
-        "browsers",
-        "web"
+        "release"
       ]
     },
     {
-      "id": "hn:50265594",
-      "title": "Raspberry Pi Zero 3W and Pi 4 Model A spotted in device trees",
+      "id": "hn:50275626",
+      "title": "Dayjob: Tax – evaluating AI agents on 50 professional tax assignments",
       "summary": "",
-      "url": "https://bret.dk/raspberry-pi-zero-3-w-pi-4-model-a/",
+      "url": "https://surgehq.ai/blog/dayjob-tax",
       "source": "Hacker News",
-      "score": 126,
-      "comments": 58
-    },
-    {
-      "id": "hn:50268380",
-      "title": "Git for US Legislation",
-      "summary": "",
-      "url": "https://lexifina.com/blog/git-for-the-us-code",
-      "source": "Hacker News",
-      "score": 125,
-      "comments": 51
+      "score": 75,
+      "comments": 47
     },
     {
       "id": "arxiv:2610.37657v1",
@@ -164,22 +165,13 @@
       "arxiv_id": "2610.37657v1"
     },
     {
-      "id": "hn:50266780",
-      "title": "Reviewers rarely talk about reliability. Owners bring it up twice as often",
+      "id": "hn:50273731",
+      "title": "The Agent SDK",
       "summary": "",
-      "url": "https://www.bettascore.ai/research/reliability-reviewers-vs-owners",
+      "url": "https://cursor.com/blog/agent-sdk",
       "source": "Hacker News",
-      "score": 89,
-      "comments": 77
-    },
-    {
-      "id": "hn:50234796",
-      "title": "Ink droplets in motion snag top prize in Nikon Small World contest",
-      "summary": "",
-      "url": "https://arstechnica.com/science/2026/10/meet-the-2026-winner-of-nikons-small-world-photomicrography-contest/",
-      "source": "Hacker News",
-      "score": 130,
-      "comments": 23
+      "score": 44,
+      "comments": 57
     },
     {
       "id": "arxiv:2610.37642v1",
@@ -193,29 +185,25 @@
       "arxiv_id": "2610.37642v1"
     },
     {
-      "id": "lob:6ntoqr",
-      "title": "CSS-Tricks has a new owner",
+      "id": "lob:qd0hc9",
+      "title": "1,447 emoji? We'll do it live",
       "summary": "",
-      "url": "https://css-tricks.com/css-tricks-has-a-new-owner/",
+      "url": "https://planetpeanut.studio/post/2026/10/27/pidgin-emoji-twitch",
       "source": "Lobste.rs",
-      "score": 111,
+      "score": 44,
       "comments": 2,
       "tags": [
-        "web"
+        "design"
       ]
     },
     {
-      "id": "lob:d09iy3",
-      "title": "Compile-Time Dependent Types",
+      "id": "hn:50274251",
+      "title": "AlpineBSD",
       "summary": "",
-      "url": "https://thenumb.at/Syl-Intro/",
-      "source": "Lobste.rs",
-      "score": 24,
-      "comments": 9,
-      "tags": [
-        "ml",
-        "plt"
-      ]
+      "url": "https://wiki.alpinebsd.org",
+      "source": "Hacker News",
+      "score": 65,
+      "comments": 60
     },
     {
       "id": "arxiv:2610.37666v1",
@@ -240,6 +228,19 @@
         "cs.LG"
       ],
       "arxiv_id": "2610.37658v1"
+    },
+    {
+      "id": "arxiv:2610.37656v1",
+      "title": "Attention as Lattice Gauge Theory: Relations Interact Only Through Wilson Loops",
+      "summary": "Relations compose through the entity they share - Alice is Bob's mother and Bob is Carol's father, so Alice is Carol's grandmother - and the order matters, since a father's mother is not a mother's father; verifying a composed relation means closing the loop. We show that if each entity's coordinate",
+      "url": "https://arxiv.org/abs/2610.37656v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "physics.comp-ph"
+      ],
+      "arxiv_id": "2610.37656v1"
     }
   ],
   "ai_curated": true
