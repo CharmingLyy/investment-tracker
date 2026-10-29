@@ -1,0 +1,829 @@
+{
+  "update_time": "2026-10-29 14:47:23",
+  "stocks": {
+    "a_stocks": [
+      {
+        "market": "A股",
+        "code": "002050",
+        "name": "三花智控",
+        "symbol": "sz.002050",
+        "industry": null,
+        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
+        "price": 34.5,
+        "open": 34.95,
+        "high": 35.66,
+        "low": 34.5,
+        "change_pct": -3.2,
+        "volume": 64687623,
+        "turnover": 22.63,
+        "market_cap": null,
+        "pe": 37.34,
+        "cash_flow": 50.92,
+        "macd": -0.212,
+        "macd_signal": -0.5874,
+        "macd_histogram": 0.7507,
+        "rsi": 51.39,
+        "ma": {
+          "MA5": 34.74,
+          "MA10": 33.66,
+          "MA20": 33.69,
+          "MA60": 35.65
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
+        "price": 6.04,
+        "open": 6.07,
+        "high": 6.09,
+        "low": 6.03,
+        "change_pct": -0.98,
+        "volume": 34560542,
+        "turnover": 2.09,
+        "market_cap": null,
+        "pe": 69.25,
+        "cash_flow": 105.67,
+        "macd": -0.123,
+        "macd_signal": -0.1105,
+        "macd_histogram": -0.0249,
+        "rsi": 31.39,
+        "ma": {
+          "MA5": 6.12,
+          "MA10": 6.14,
+          "MA20": 6.28,
+          "MA60": 6.54
+        },
+        "main_net_flow": null
+      }
+    ],
+    "hk_stocks": [
+      {
+        "market": "港股",
+        "code": "01810",
+        "name": "小米集团-W",
+        "symbol": "01810",
+        "industry": "Consumer Electronics",
+        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
+        "price": 25.68,
+        "open": 25.7,
+        "high": 26.08,
+        "low": 25.46,
+        "change_pct": 0.23,
+        "volume": 88046677,
+        "turnover": null,
+        "market_cap": 6608.48,
+        "pe": 18.88,
+        "cash_flow": 86.81,
+        "macd": -0.0057,
+        "macd_signal": -0.0442,
+        "macd_histogram": 0.077,
+        "rsi": 47.84,
+        "ma": {
+          "MA5": 26.13,
+          "MA10": 26.41,
+          "MA20": 25.56,
+          "MA60": 26.49
+        },
+        "main_net_flow": null
+      }
+    ],
+    "us_stocks": [
+      {
+        "market": "美股",
+        "code": "NVDA",
+        "name": "NVIDIA",
+        "symbol": "NVDA",
+        "industry": "Semiconductors",
+        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
+        "price": 213.76,
+        "open": 214.35,
+        "high": 215.32,
+        "low": 212.08,
+        "change_pct": -0.75,
+        "volume": 21889911,
+        "turnover": null,
+        "market_cap": 51616.63,
+        "pe": 27.02,
+        "cash_flow": 418.1,
+        "macd": -2.8184,
+        "macd_signal": -1.7904,
+        "macd_histogram": -2.056,
+        "rsi": 42.37,
+        "ma": {
+          "MA5": 214.81,
+          "MA10": 215.59,
+          "MA20": 222.93,
+          "MA60": 221.81
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "GOOG",
+        "name": "Alphabet (Google)",
+        "symbol": "GOOG",
+        "industry": "Internet Content & Information",
+        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
+        "price": 283.24,
+        "open": 283.8,
+        "high": 284.76,
+        "low": 278.3,
+        "change_pct": -12.01,
+        "volume": 37549111,
+        "turnover": null,
+        "market_cap": 34639.82,
+        "pe": 14.79,
+        "cash_flow": 226.65,
+        "macd": -9.1748,
+        "macd_signal": -4.4805,
+        "macd_histogram": -9.3886,
+        "rsi": 22.3,
+        "ma": {
+          "MA5": 310.69,
+          "MA10": 321.86,
+          "MA20": 333.73,
+          "MA60": 338.43
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "CRCL",
+        "name": "Circle",
+        "symbol": "CRCL",
+        "industry": "Capital Markets",
+        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
+        "price": 80.12,
+        "open": 79.74,
+        "high": 80.3,
+        "low": 78.58,
+        "change_pct": -1.95,
+        "volume": 1492718,
+        "turnover": null,
+        "market_cap": 203.41,
+        "pe": 54.88,
+        "cash_flow": 2.06,
+        "macd": -0.991,
+        "macd_signal": -0.6551,
+        "macd_histogram": -0.6717,
+        "rsi": 44.62,
+        "ma": {
+          "MA5": 81.83,
+          "MA10": 83.5,
+          "MA20": 83.22,
+          "MA60": 84.77
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "MP",
+        "name": "MP Materials",
+        "symbol": "MP",
+        "industry": "Other Industrial Metals & Mining",
+        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
+        "price": 41.95,
+        "open": 40.1,
+        "high": 42.09,
+        "low": 40.1,
+        "change_pct": 2.17,
+        "volume": 1189790,
+        "turnover": null,
+        "market_cap": 74.71,
+        "pe": 54.35,
+        "cash_flow": 4.33,
+        "macd": -2.2784,
+        "macd_signal": -2.6383,
+        "macd_histogram": 0.7197,
+        "rsi": 45.77,
+        "ma": {
+          "MA5": 39.93,
+          "MA10": 39.59,
+          "MA20": 42.21,
+          "MA60": 49.37
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "PLTR",
+        "name": "Palantir",
+        "symbol": "PLTR",
+        "industry": "Software - Infrastructure",
+        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
+        "price": 195.51,
+        "open": 198.37,
+        "high": 198.51,
+        "low": 190.37,
+        "change_pct": -0.66,
+        "volume": 6310835,
+        "turnover": null,
+        "market_cap": 4698.34,
+        "pe": 168.55,
+        "cash_flow": 21.59,
+        "macd": 3.234,
+        "macd_signal": 4.3711,
+        "macd_histogram": -2.2742,
+        "rsi": 52.44,
+        "ma": {
+          "MA5": 197.33,
+          "MA10": 195.73,
+          "MA20": 197.43,
+          "MA60": 184.26
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "NOW",
+        "name": "ServiceNow",
+        "symbol": "NOW",
+        "industry": "Software - Application",
+        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
+        "price": 113.45,
+        "open": 120.9,
+        "high": 121.5,
+        "low": 112.37,
+        "change_pct": -24.43,
+        "volume": 26645839,
+        "turnover": null,
+        "market_cap": 1172.92,
+        "pe": 81.62,
+        "cash_flow": 51.49,
+        "macd": 1.9142,
+        "macd_signal": 3.9519,
+        "macd_histogram": -4.0755,
+        "rsi": 29.86,
+        "ma": {
+          "MA5": 147.1,
+          "MA10": 148.25,
+          "MA20": 143.84,
+          "MA60": 136.67
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "DDOG",
+        "name": "Datadog",
+        "symbol": "DDOG",
+        "industry": "Software - Application",
+        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
+        "price": 266.49,
+        "open": 269.55,
+        "high": 274.66,
+        "low": 263.59,
+        "change_pct": -4.28,
+        "volume": 639778,
+        "turnover": null,
+        "market_cap": 956.9,
+        "pe": 532.98,
+        "cash_flow": 10.51,
+        "macd": 4.4762,
+        "macd_signal": 5.2516,
+        "macd_histogram": -1.5507,
+        "rsi": 50.25,
+        "ma": {
+          "MA5": 275.12,
+          "MA10": 267.03,
+          "MA20": 272.34,
+          "MA60": 250.12
+        },
+        "main_net_flow": null
+      }
+    ],
+    "crypto": [
+      {
+        "market": "加密货币",
+        "code": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "industry": "Smart Contract Platform",
+        "price": 81185,
+        "open": null,
+        "high": 81698,
+        "low": 79636,
+        "change_pct": 0.85,
+        "volume": 28338985813,
+        "turnover": null,
+        "market_cap": 16321.07,
+        "market_cap_rank": 1,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -411.4262,
+        "macd_signal": -242.2765,
+        "macd_histogram": -338.2994,
+        "rsi": 47.15,
+        "ma": {
+          "MA5": 80664.67,
+          "MA10": 81359.05,
+          "MA20": 81784.76,
+          "MA60": 81464.61
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 20105281.0,
+          "total_supply": 20105281.0,
+          "circ_ratio": 100.0,
+          "price_change_7d": -0.59831,
+          "price_change_30d": -3.5804,
+          "ath_pct": -35.61,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      },
+      {
+        "market": "加密货币",
+        "code": "ethereum",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "industry": "Smart Contract Platform",
+        "price": 2345.01,
+        "open": null,
+        "high": 2384.72,
+        "low": 2292.94,
+        "change_pct": 0.59,
+        "volume": 10887552683,
+        "turnover": null,
+        "market_cap": 2864.55,
+        "market_cap_rank": 2,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -55.9011,
+        "macd_signal": -51.7314,
+        "macd_histogram": -8.3393,
+        "rsi": 37.7,
+        "ma": {
+          "MA5": 2339.25,
+          "MA10": 2374.32,
+          "MA20": 2410.95,
+          "MA60": 2520.99
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 122173130.04742783,
+          "total_supply": 122173130.04742783,
+          "circ_ratio": 100.0,
+          "price_change_7d": -2.67676,
+          "price_change_30d": -14.00477,
+          "ath_pct": -52.59,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      }
+    ]
+  },
+  "news": [
+    {
+      "id": "35b871d31c",
+      "title": "[播客]独家实拍：我那永远跪着的母亲(11/07 22:10)",
+      "summary": "独家实拍：我那永远跪着的母亲",
+      "link": "http://go.rss.sina.com.cn/redirect.php?url=http://you.video.sina.com.cn/b/16972162-1239095354.html",
+      "source": "rss.sina.com.cn",
+      "published": ""
+    },
+    {
+      "id": "cee7866a89",
+      "title": "Inflation surges, PCE shows. Fed pause on rate hikes unlikely to last with prices still rising.",
+      "summary": "Even though the Federal Reserve temporarily put its inflation fight on hold this week, the cost of living rose sharply again last month in a sign the central bank’s work is far from done.",
+      "link": "https://www.marketwatch.com/story/inflation-surges-pce-shows-fed-pause-on-rate-hikes-unlikely-to-last-long-with-prices-still-rising-79128886?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 29 Oct 2026 14:38:00 GMT"
+    },
+    {
+      "id": "d5890c5479",
+      "title": "The midterms are crucial to the future of Social Security – no matter how old you are",
+      "summary": "The program is expected to run out of money in the next six years, which is the same amount of time as a senator’s term.",
+      "link": "https://www.marketwatch.com/story/the-midterms-are-crucial-to-the-future-of-social-security-no-matter-how-old-you-are-0f080a9c?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 29 Oct 2026 14:37:00 GMT"
+    },
+    {
+      "id": "a340b27e3a",
+      "title": "3 reasons home prices keep going up, even though fewer people are buying",
+      "summary": "Weaker demand typically drives prices down, but national readings of home prices indicate that they’re still growing. What explains the disconnect?",
+      "link": "https://www.marketwatch.com/story/3-reasons-why-home-prices-keep-going-up-even-though-fewer-people-are-buying-9afa6106?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 29 Oct 2026 14:36:00 GMT"
+    },
+    {
+      "id": "07444d5c92",
+      "title": "Gen Z midterm voters told us they’re focused on their financial future, as social causes take a back seat",
+      "summary": "MarketWatch talked to younger voters who said many life goals feel unattainable for their generation.",
+      "link": "https://www.marketwatch.com/story/gen-z-voters-told-us-the-midterms-will-boil-down-to-affording-life-not-social-issues-11bd1734?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 29 Oct 2026 14:29:00 GMT"
+    },
+    {
+      "id": "04da9784a9",
+      "title": "ServiceNow’s stock is on track for its worst day ever. Here’s what went wrong.",
+      "summary": "Shares in the software company were down 24% on Thursday morning as investors digested its third-quarter earnings.",
+      "link": "https://www.marketwatch.com/story/servicenow-stock-is-on-track-for-its-largest-drop-on-record-but-jpmorgan-sees-a-bright-spot-5e5b05c6?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 29 Oct 2026 14:01:00 GMT"
+    },
+    {
+      "id": "b5130e0e70",
+      "title": "As voters struggle with pricey car loans, mortgages and credit-card debt, the cost of money itself is on the ballot",
+      "summary": "Interest rates aren’t expected to decline anytime soon, as the Federal Reserve held rates steady on Wednesday",
+      "link": "https://www.marketwatch.com/story/the-cost-of-money-itself-is-on-the-ballot-as-voters-struggle-with-pricey-car-loans-mortgages-and-credit-card-debt-c2cd83a0?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 29 Oct 2026 13:57:00 GMT"
+    },
+    {
+      "id": "e9a2e80027",
+      "title": "Economy grows at fastest pace in a year, GDP shows — and shows little sign of slowing",
+      "summary": "The U.S. economy ripped off its fastest rate of growth in a year, amped up by the boom in artificial intelligence and strong spending by wealthier Americans.",
+      "link": "https://www.marketwatch.com/story/u-s-economy-grows-at-fastest-pace-in-almost-three-years-third-quarter-gdp-shows-0e15b810?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 29 Oct 2026 13:56:00 GMT"
+    },
+    {
+      "id": "d6fdc951ce",
+      "title": "Lilly raised sales guidance for third time this year as Zepbound sales soar. Its stock is rallying.",
+      "summary": "The drugmaker continues to dominate the market for prescription weight-loss drugs in the U.S.",
+      "link": "https://www.marketwatch.com/story/lilly-raises-outlook-for-third-time-this-year-as-zepbound-sales-soar-6d987407?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 29 Oct 2026 13:49:00 GMT"
+    },
+    {
+      "id": "9199efb142",
+      "title": "Why Alphabet’s stock could see its worst day ever after the latest results",
+      "summary": "A doubling of cloud revenue wasn’t enough to appease Wall Street as investors grew more concerned that AI is hurting the company’s ability to make money off search queries.",
+      "link": "https://www.marketwatch.com/story/why-alphabets-stock-could-see-its-worst-drop-in-years-after-the-latest-results-6b64cf98?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 29 Oct 2026 13:47:00 GMT"
+    },
+    {
+      "id": "989295758e",
+      "title": "Marvell is reportedly close to buying Lumentum. Analysts say they see logic in a potential deal.",
+      "summary": "Shares in Lumentum Holdings rose 5.5% in premarket trading as investors weighed a potential combination with Marvell Technology.",
+      "link": "https://www.marketwatch.com/story/marvell-is-reportedly-close-to-buying-lumentum-analysts-say-they-see-logic-in-a-potential-deal-d7539c59?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 29 Oct 2026 13:05:00 GMT"
+    },
+    {
+      "id": "b2bf8f04b4",
+      "title": "Earnings call transcript: EPR Properties beats Q3 2026 estimates, shares rise",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-epr-properties-beats-q3-2026-estimates-shares-rise-93CH-4984430",
+      "source": "www.investing.com",
+      "published": "2026-10-29 14:44:16"
+    },
+    {
+      "id": "61995ebc96",
+      "title": "Reddit earnings in focus as user growth concerns test ad momentum",
+      "summary": "",
+      "link": "https://www.investing.com/news/earnings/reddit-earnings-in-focus-as-user-growth-concerns-test-ad-momentum-93CH-4984429",
+      "source": "www.investing.com",
+      "published": "2026-10-29 14:44:12"
+    },
+    {
+      "id": "0245d3af5e",
+      "title": "Earnings call transcript: FTI Consulting tops Q3 2026 profit forecasts",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-fti-consulting-tops-q3-2026-profit-forecasts-93CH-4984427",
+      "source": "www.investing.com",
+      "published": "2026-10-29 14:43:23"
+    },
+    {
+      "id": "dfc879832a",
+      "title": "Earnings call transcript: Univest Financial misses Q3 2026 profit estimates",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-univest-financial-misses-q3-2026-profit-estimates-93CH-4984428",
+      "source": "www.investing.com",
+      "published": "2026-10-29 14:43:23"
+    },
+    {
+      "id": "687ec1ed61",
+      "title": "OneMain Holdings earnings on deck as profit margins face test",
+      "summary": "",
+      "link": "https://www.investing.com/news/earnings/onemain-holdings-earnings-on-deck-as-profit-margins-face-test-93CH-4984426",
+      "source": "www.investing.com",
+      "published": "2026-10-29 14:43:19"
+    },
+    {
+      "id": "56351ceed8",
+      "title": "Earnings call transcript: Tradeweb tops Q3 2026 estimates as growth stays strong",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-tradeweb-tops-q3-2026-estimates-as-growth-stays-strong-93CH-4984425",
+      "source": "www.investing.com",
+      "published": "2026-10-29 14:43:14"
+    },
+    {
+      "id": "b1af9e4a93",
+      "title": "BMO cuts GE Vernova stock price target on valuation to $1,200",
+      "summary": "",
+      "link": "https://www.investing.com/news/analyst-ratings/bmo-cuts-ge-vernova-stock-price-target-on-valuation-to-1200-93CH-4984424",
+      "source": "www.investing.com",
+      "published": "2026-10-29 14:43:02"
+    },
+    {
+      "id": "2b556bbade",
+      "title": "Bernstein raises PPG Industries stock price target on Mexico strength",
+      "summary": "",
+      "link": "https://www.investing.com/news/analyst-ratings/bernstein-raises-ppg-industries-stock-price-target-on-mexico-strength-93CH-4984423",
+      "source": "www.investing.com",
+      "published": "2026-10-29 14:42:57"
+    },
+    {
+      "id": "83c487a9a6",
+      "title": "Bernstein raises eBay stock price target on strong category growth",
+      "summary": "",
+      "link": "https://www.investing.com/news/analyst-ratings/bernstein-raises-ebay-stock-price-target-on-strong-category-growth-93CH-4984421",
+      "source": "www.investing.com",
+      "published": "2026-10-29 14:42:51"
+    },
+    {
+      "id": "dad22510a6",
+      "title": "BMO raises Icon shares price target to $235 on strong bookings",
+      "summary": "",
+      "link": "https://www.investing.com/news/analyst-ratings/bmo-raises-icon-shares-price-target-to-235-on-strong-bookings-93CH-4984422",
+      "source": "www.investing.com",
+      "published": "2026-10-29 14:42:51"
+    }
+  ],
+  "briefing": {
+    "date": "2026-10-29",
+    "update_time": "2026-10-29 05:03:31",
+    "candidate_count": 20,
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-29\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Qwenputer：在 Qwen3.5 里跑起一颗确定性 RISC-V CPU (来源: HackerNews)\n- **核心干货**：有人把一颗功能完整、行为确定性的 RISC-V CPU 直接\"养\"进了 Qwen3.5 的模型权重/推理过程里。这不是让 LLM 写 Verilog，而是把 CPU 的执行逻辑嵌入模型本身并保证确定性输出——等于让大模型拥有了一个可复现、可调试的\"硬件执行内核\"。一旦成立，模型内部模拟硬件、做确定性状态机推理的路线就通了。\n- **毒舌/硬核点评**：以前大家比谁的模型\"会写代码\"，现在开始比谁的模型\"本身就是台机器\"。LLM 卷到最后，卷成了一块会喘气的 FPGA——只是别忘了，确定性这东西在 Transformer 里可是稀罕物，真跑起来别是\"薛定谔的 CPU\"。\n- **🔗 传送门**：[点击直达原链接](https://divagr.com/blog/qwenputer)\n\n---\n\n### 2. 📌 Gemini 4 Carbon 发布 (来源: HackerNews)\n- **核心干货**：Google 端出 Gemini 4 \"Carbon\"，HN 一天冲到 854 分、708 条评论，热度说明这不是挤牙膏式小版本。从命名和发布节奏看，重点大概率压在推理效率与碳/能耗账本上——在算力成本与能耗成为大模型生死线的当下，谁先把\"每 token 的焦耳数\"打下来，谁就握住了下一轮定价权。\n- **毒舌/硬核点评**：模型代号都开始环保叙事了，\"Carbon\"听着像在给数据中心赎罪。但说真的，参数再涨、榜单再刷，最后拼的是电费和毛利率——这年头，AI 圈的终极 KPI 已经从 benchmark 变成了电表读数。\n- **🔗 传送门**：[点击直达原链接](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/)\n\n---\n\n### 3. 📌 UEFI 固件代码执行漏洞：地球上的服务器几乎全中招 (来源: Lobste.rs / Ars Technica)\n- **核心干货**：一个存在于 UEFI 固件层的代码执行漏洞，影响范围覆盖\"地球上绝大多数服务器\"。固件层意味着它在操作系统之下的信任根里，传统杀软、EDR 基本看不见够不着，一旦被利用就是彻底的底层沦陷，且补丁要跨厂商、跨主板型号铺开，周期以季度计。\n- **毒舌/硬核点评**：每次看到\"影响地球上大部分服务器\"这种标题，就知道又到了全体运维集体失眠的夜晚。云厂商今晚的加班费，大概比这条漏洞的赏金还高——固件安全这门课，行业欠了二十年，现在连本带利一起还。\n- **🔗 传送门**：[点击直达原链接](https://arstechnica.com/security/2026/10/code-execution-flaw-in-uefi-firmware-threatens-most-servers-on-planet-earth/)\n\n---\n\n### 🗣️ 今日顶男金句\n> 模型会过时，榜单会翻篇，唯有你亲手调通的那条链路和算清的那笔电费，才是真正长在身上的资产。",
+    "briefing_items": [
+      {
+        "title": "Qwenputer：在 Qwen3.5 里跑起一颗确定性 RISC-V CPU",
+        "source": "HackerNews",
+        "summary": "有人把一颗功能完整、行为确定性的 RISC-V CPU 直接\"养\"进了 Qwen3.5 的模型权重/推理过程里。这不是让 LLM 写 Verilog，而是把 CPU 的执行逻辑嵌入模型本身并保证确定性输出——等于让大模型拥有了一个可复现、可调试的\"硬件执行内核\"。一旦成立，模型内部模拟硬件、做确定性状态机推理的路线就通了。",
+        "commentary": "以前大家比谁的模型\"会写代码\"，现在开始比谁的模型\"本身就是台机器\"。LLM 卷到最后，卷成了一块会喘气的 FPGA——只是别忘了，确定性这东西在 Transformer 里可是稀罕物，真跑起来别是\"薛定谔的 CPU\"。",
+        "url": "https://divagr.com/blog/qwenputer"
+      },
+      {
+        "title": "Gemini 4 Carbon 发布",
+        "source": "HackerNews",
+        "summary": "Google 端出 Gemini 4 \"Carbon\"，HN 一天冲到 854 分、708 条评论，热度说明这不是挤牙膏式小版本。从命名和发布节奏看，重点大概率压在推理效率与碳/能耗账本上——在算力成本与能耗成为大模型生死线的当下，谁先把\"每 token 的焦耳数\"打下来，谁就握住了下一轮定价权。",
+        "commentary": "模型代号都开始环保叙事了，\"Carbon\"听着像在给数据中心赎罪。但说真的，参数再涨、榜单再刷，最后拼的是电费和毛利率——这年头，AI 圈的终极 KPI 已经从 benchmark 变成了电表读数。",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+      },
+      {
+        "title": "UEFI 固件代码执行漏洞：地球上的服务器几乎全中招",
+        "source": "Lobste.rs / Ars Technica",
+        "summary": "一个存在于 UEFI 固件层的代码执行漏洞，影响范围覆盖\"地球上绝大多数服务器\"。固件层意味着它在操作系统之下的信任根里，传统杀软、EDR 基本看不见够不着，一旦被利用就是彻底的底层沦陷，且补丁要跨厂商、跨主板型号铺开，周期以季度计。",
+        "commentary": "每次看到\"影响地球上大部分服务器\"这种标题，就知道又到了全体运维集体失眠的夜晚。云厂商今晚的加班费，大概比这条漏洞的赏金还高——固件安全这门课，行业欠了二十年，现在连本带利一起还。",
+        "url": "https://arstechnica.com/security/2026/10/code-execution-flaw-in-uefi-firmware-threatens-most-servers-on-planet-earth/"
+      },
+      {
+        "quote": "模型会过时，榜单会翻篇，唯有你亲手调通的那条链路和算清的那笔电费，才是真正长在身上的资产。"
+      }
+    ],
+    "candidates": [
+      {
+        "id": "hn:50282838",
+        "title": "Qwenputer: A functioning, deterministic RISC-V CPU inside Qwen3.5",
+        "summary": "",
+        "url": "https://divagr.com/blog/qwenputer",
+        "source": "Hacker News",
+        "score": 232,
+        "comments": 53
+      },
+      {
+        "id": "lob:q7arzy",
+        "title": "A fast and secure tar parser for the Rust ecosystem",
+        "summary": "",
+        "url": "https://astral.sh/blog/tar-codec",
+        "source": "Lobste.rs",
+        "score": 84,
+        "comments": 15,
+        "tags": [
+          "python",
+          "rust"
+        ]
+      },
+      {
+        "id": "hn:50282544",
+        "title": "GitLab Security Incident: Attempted Exploitation of CVE-2026-97229",
+        "summary": "",
+        "url": "https://alpinelinux.org/posts/GitLab-security-incident-CVE-2026-97229.html",
+        "source": "Hacker News",
+        "score": 123,
+        "comments": 49
+      },
+      {
+        "id": "hn:50276998",
+        "title": "Why is this fingerprinting script creating bioweapons?",
+        "summary": "",
+        "url": "https://nullpt.rs/fingerprinting-bioweapons",
+        "source": "Hacker News",
+        "score": 973,
+        "comments": 201
+      },
+      {
+        "id": "hn:50282454",
+        "title": "StackOverflow now gets fewer than 1000 questions a month",
+        "summary": "",
+        "url": "https://data.stackexchange.com/stackoverflow/query/1926661#graph?t=1",
+        "source": "Hacker News",
+        "score": 228,
+        "comments": 210
+      },
+      {
+        "id": "hn:50243060",
+        "title": "The Grid, a factory-scale robot in Massachusetts that builds PCBs on demand",
+        "summary": "",
+        "url": "https://www.circuithub.com/post/unveiling-the-grid",
+        "source": "Hacker News",
+        "score": 469,
+        "comments": 212
+      },
+      {
+        "id": "hn:50276940",
+        "title": "MacBook Pro with PROLED XDR Display and Touch",
+        "summary": "<a href=\"https:&#x2F;&#x2F;www.apple.com&#x2F;newsroom&#x2F;2026&#x2F;10&#x2F;apple-unveils-groundbreaking-macbook-pro-with-proled-xdr-display&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.apple.com&#x2F;newsroom&#x2F;2026&#x2F;10&#x2F;apple-unveils-groundb...</a>",
+        "url": "https://www.apple.com/macbook-pro/proled-xdr-display/",
+        "source": "Hacker News",
+        "score": 530,
+        "comments": 917
+      },
+      {
+        "id": "lob:xybmsj",
+        "title": "Apple's git still trusts the compromised eMudhra certificates",
+        "summary": "",
+        "url": "https://emudhra.we-have-a-problem.com/apple.html",
+        "source": "Lobste.rs",
+        "score": 95,
+        "comments": 19,
+        "tags": [
+          "cryptography",
+          "mac"
+        ]
+      },
+      {
+        "id": "hn:50274409",
+        "title": "CNC Stone Carving",
+        "summary": "",
+        "url": "https://carmelitegothic.com/cnc-stone-carving/",
+        "source": "Hacker News",
+        "score": 438,
+        "comments": 122
+      },
+      {
+        "id": "hn:50276792",
+        "title": "Gemini 4 Carbon",
+        "summary": "",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+        "source": "Hacker News",
+        "score": 854,
+        "comments": 708
+      },
+      {
+        "id": "hn:50281044",
+        "title": "Formlabs Studio 1 $699 Resin Printer",
+        "summary": "",
+        "url": "https://formlabs.com/products/form-studio-1-basic-founders-edition/",
+        "source": "Hacker News",
+        "score": 154,
+        "comments": 105
+      },
+      {
+        "id": "lob:yxuvie",
+        "title": "AlpineBSD",
+        "summary": "",
+        "url": "https://wiki.alpinebsd.org/",
+        "source": "Lobste.rs",
+        "score": 65,
+        "comments": 17,
+        "tags": [
+          "netbsd"
+        ]
+      },
+      {
+        "id": "lob:cpaibp",
+        "title": "This is not sustainable",
+        "summary": "",
+        "url": "https://www.netmeister.org/blog/defense-ddos.html",
+        "source": "Lobste.rs",
+        "score": 127,
+        "comments": 32,
+        "tags": [
+          "security"
+        ]
+      },
+      {
+        "id": "lob:0gomue",
+        "title": "Code-execution flaw in UEFI firmware affects most servers on planet Earth",
+        "summary": "",
+        "url": "https://arstechnica.com/security/2026/10/code-execution-flaw-in-uefi-firmware-threatens-most-servers-on-planet-earth/",
+        "source": "Lobste.rs",
+        "score": 28,
+        "comments": 13,
+        "tags": [
+          "security"
+        ]
+      },
+      {
+        "id": "arxiv:2610.37657v1",
+        "title": "Heads of Security: Learned Attention Gates Improve Prompt Injection Robustness",
+        "summary": "We introduce Heads of Security (HoS), a prompt injection defense that enforces instruction-data separation via a small set of learned per-head attention gates. HoS learns how each head should redistribute attention between trusted and untrusted tokens, enabling models to reason over untrusted conten",
+        "url": "https://arxiv.org/abs/2610.37657v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.LG",
+          "cs.CL",
+          "cs.CR"
+        ],
+        "arxiv_id": "2610.37657v1"
+      },
+      {
+        "id": "lob:exwlmn",
+        "title": "GOTO Considered Totally Sick (for error handling in C)",
+        "summary": "",
+        "url": "https://thestateofinahaze.net/blog/c-goto-considered-totally-sick/",
+        "source": "Lobste.rs",
+        "score": 31,
+        "comments": 11,
+        "tags": [
+          "c"
+        ]
+      },
+      {
+        "id": "hn:50280974",
+        "title": "A Health Update",
+        "summary": "",
+        "url": "https://furbo.org/2026/10/28/a-health-update/",
+        "source": "Hacker News",
+        "score": 161,
+        "comments": 25
+      },
+      {
+        "id": "hn:50284255",
+        "title": "Claude Code burns ~15–20% of your tokens on a 3-word status line",
+        "summary": "",
+        "url": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce",
+        "source": "Hacker News",
+        "score": 132,
+        "comments": 26
+      },
+      {
+        "id": "arxiv:2610.37642v1",
+        "title": "Metacognitive Decoding: Efficient Inference for Diffusion Language Agents",
+        "summary": "Diffusion language models offer a promising path to efficient agents through parallel token generation. However, efficient interaction requires adapting both where computation is spent and how much text is generated. We introduce a metacognitive controller that guides diffusion generation according ",
+        "url": "https://arxiv.org/abs/2610.37642v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.CL"
+        ],
+        "arxiv_id": "2610.37642v1"
+      },
+      {
+        "id": "lob:m3gsln",
+        "title": "Hoot 0.10.0 released",
+        "summary": "",
+        "url": "https://spritely.institute/news/hoot-0-10-0-released.html",
+        "source": "Lobste.rs",
+        "score": 31,
+        "comments": 2,
+        "tags": [
+          "lisp",
+          "release"
+        ]
+      }
+    ],
+    "ai_curated": true
+  },
+  "fear_greed": {
+    "value": 51,
+    "classification": "Neutral",
+    "timestamp": "2026-10-29 00:00:00"
+  }
+}
