@@ -1,43 +1,43 @@
 {
   "date": "2026-10-29",
-  "update_time": "2026-10-28 18:01:01",
+  "update_time": "2026-10-29 05:03:31",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-29\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Apple 的 git 至今仍信任已沦陷的 eMudhra 证书 (来源: HackerNews)\n- **核心干货**：印度 CA 机构 eMudhra 被曝出证书签发流程存在严重漏洞（可被滥发用于中间人攻击），但 Apple 的 git 基础设施至今仍将其列在信任链里，意味着通过 Apple 相关代码仓库拉取内容时，理论上存在被劫持的风险。这不是理论推演——HN 上 325 条评论说明开发者已经炸锅了。\n- **毒舌/硬核点评**：苹果一向以\"安全洁癖\"人设收割溢价，结果自家 git 的信任库比过期牛奶还馊。建议开发者先手动检查一遍 `trusted certs`，别让\"生态闭环\"变成\"攻击闭环\"。\n- **🔗 传送门**：[点击直达原链接](https://emudhra.we-have-a-problem.com/apple.html)\n\n---\n\n### 2. 📌 Astral 发布 Rust 生态的高速安全 tar 解析器 (来源: Lobste.rs)\n- **核心干货**：Astral（uv/ruff 背后的团队）又出刀了——这次是给 Rust 生态补上一个既快又安全的 tar 解析库。tar 是包管理、容器镜像、备份链路的底层基础设施，历史上一堆 CVE 都出在解压环节（路径穿越、符号链接逃逸）。这个库直接把这类攻击面按在类型系统里摩擦。\n- **毒舌/硬核点评**：别人做工具是\"能用就行\"，Astral 做工具是\"把隔壁 C 实现的棺材板钉死\"。当 uv 团队开始清理底层供应链的每一个脏角落，Python 生态的旧贵族们该睡不着了。\n- **🔗 传送门**：[点击直达原链接](https://astral.sh/blog/tar-codec)\n\n---\n\n### 3. 📌 Gemini 4 Carbon 发布 (来源: HackerNews)\n- **核心干货**：Google 推出 Gemini 4 Carbon，从命名看主打\"更低碳/更高效\"的推理路径，HN 265 分、206 条评论说明讨论热度不低。在算力军备竞赛撞上能源墙的当下，模型效率本身就是新的护城河——谁能用更少的电跑出更强的能力，谁就掌握定价权。\n- **毒舌/硬核点评**：AI 圈终于卷到\"省电\"这个赛道了，从\"参数越大越牛\"进化到\"每瓦特智能\"，算是行业从青春期走向成年。不过 Google 的发布会 PPT 一向比模型本身更节能——是骡子是马，等 benchmark 出来再说。\n- **🔗 传送门**：[点击直达原链接](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/)\n\n---\n\n### 🗣️ 今日顶男金句\n> 技术的护城河从来不是\"我做得出来\"，而是\"我做得出来还比你便宜一个数量级\"。省下来的每一瓦电，都是砸向对手的一记重拳。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-29\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Qwenputer：在 Qwen3.5 里跑起一颗确定性 RISC-V CPU (来源: HackerNews)\n- **核心干货**：有人把一颗功能完整、行为确定性的 RISC-V CPU 直接\"养\"进了 Qwen3.5 的模型权重/推理过程里。这不是让 LLM 写 Verilog，而是把 CPU 的执行逻辑嵌入模型本身并保证确定性输出——等于让大模型拥有了一个可复现、可调试的\"硬件执行内核\"。一旦成立，模型内部模拟硬件、做确定性状态机推理的路线就通了。\n- **毒舌/硬核点评**：以前大家比谁的模型\"会写代码\"，现在开始比谁的模型\"本身就是台机器\"。LLM 卷到最后，卷成了一块会喘气的 FPGA——只是别忘了，确定性这东西在 Transformer 里可是稀罕物，真跑起来别是\"薛定谔的 CPU\"。\n- **🔗 传送门**：[点击直达原链接](https://divagr.com/blog/qwenputer)\n\n---\n\n### 2. 📌 Gemini 4 Carbon 发布 (来源: HackerNews)\n- **核心干货**：Google 端出 Gemini 4 \"Carbon\"，HN 一天冲到 854 分、708 条评论，热度说明这不是挤牙膏式小版本。从命名和发布节奏看，重点大概率压在推理效率与碳/能耗账本上——在算力成本与能耗成为大模型生死线的当下，谁先把\"每 token 的焦耳数\"打下来，谁就握住了下一轮定价权。\n- **毒舌/硬核点评**：模型代号都开始环保叙事了，\"Carbon\"听着像在给数据中心赎罪。但说真的，参数再涨、榜单再刷，最后拼的是电费和毛利率——这年头，AI 圈的终极 KPI 已经从 benchmark 变成了电表读数。\n- **🔗 传送门**：[点击直达原链接](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/)\n\n---\n\n### 3. 📌 UEFI 固件代码执行漏洞：地球上的服务器几乎全中招 (来源: Lobste.rs / Ars Technica)\n- **核心干货**：一个存在于 UEFI 固件层的代码执行漏洞，影响范围覆盖\"地球上绝大多数服务器\"。固件层意味着它在操作系统之下的信任根里，传统杀软、EDR 基本看不见够不着，一旦被利用就是彻底的底层沦陷，且补丁要跨厂商、跨主板型号铺开，周期以季度计。\n- **毒舌/硬核点评**：每次看到\"影响地球上大部分服务器\"这种标题，就知道又到了全体运维集体失眠的夜晚。云厂商今晚的加班费，大概比这条漏洞的赏金还高——固件安全这门课，行业欠了二十年，现在连本带利一起还。\n- **🔗 传送门**：[点击直达原链接](https://arstechnica.com/security/2026/10/code-execution-flaw-in-uefi-firmware-threatens-most-servers-on-planet-earth/)\n\n---\n\n### 🗣️ 今日顶男金句\n> 模型会过时，榜单会翻篇，唯有你亲手调通的那条链路和算清的那笔电费，才是真正长在身上的资产。",
   "briefing_items": [
     {
-      "title": "Apple 的 git 至今仍信任已沦陷的 eMudhra 证书",
+      "title": "Qwenputer：在 Qwen3.5 里跑起一颗确定性 RISC-V CPU",
       "source": "HackerNews",
-      "summary": "印度 CA 机构 eMudhra 被曝出证书签发流程存在严重漏洞（可被滥发用于中间人攻击），但 Apple 的 git 基础设施至今仍将其列在信任链里，意味着通过 Apple 相关代码仓库拉取内容时，理论上存在被劫持的风险。这不是理论推演——HN 上 325 条评论说明开发者已经炸锅了。",
-      "commentary": "苹果一向以\"安全洁癖\"人设收割溢价，结果自家 git 的信任库比过期牛奶还馊。建议开发者先手动检查一遍 `trusted certs`，别让\"生态闭环\"变成\"攻击闭环\"。",
-      "url": "https://emudhra.we-have-a-problem.com/apple.html"
-    },
-    {
-      "title": "Astral 发布 Rust 生态的高速安全 tar 解析器",
-      "source": "Lobste.rs",
-      "summary": "Astral（uv/ruff 背后的团队）又出刀了——这次是给 Rust 生态补上一个既快又安全的 tar 解析库。tar 是包管理、容器镜像、备份链路的底层基础设施，历史上一堆 CVE 都出在解压环节（路径穿越、符号链接逃逸）。这个库直接把这类攻击面按在类型系统里摩擦。",
-      "commentary": "别人做工具是\"能用就行\"，Astral 做工具是\"把隔壁 C 实现的棺材板钉死\"。当 uv 团队开始清理底层供应链的每一个脏角落，Python 生态的旧贵族们该睡不着了。",
-      "url": "https://astral.sh/blog/tar-codec"
+      "summary": "有人把一颗功能完整、行为确定性的 RISC-V CPU 直接\"养\"进了 Qwen3.5 的模型权重/推理过程里。这不是让 LLM 写 Verilog，而是把 CPU 的执行逻辑嵌入模型本身并保证确定性输出——等于让大模型拥有了一个可复现、可调试的\"硬件执行内核\"。一旦成立，模型内部模拟硬件、做确定性状态机推理的路线就通了。",
+      "commentary": "以前大家比谁的模型\"会写代码\"，现在开始比谁的模型\"本身就是台机器\"。LLM 卷到最后，卷成了一块会喘气的 FPGA——只是别忘了，确定性这东西在 Transformer 里可是稀罕物，真跑起来别是\"薛定谔的 CPU\"。",
+      "url": "https://divagr.com/blog/qwenputer"
     },
     {
       "title": "Gemini 4 Carbon 发布",
       "source": "HackerNews",
-      "summary": "Google 推出 Gemini 4 Carbon，从命名看主打\"更低碳/更高效\"的推理路径，HN 265 分、206 条评论说明讨论热度不低。在算力军备竞赛撞上能源墙的当下，模型效率本身就是新的护城河——谁能用更少的电跑出更强的能力，谁就掌握定价权。",
-      "commentary": "AI 圈终于卷到\"省电\"这个赛道了，从\"参数越大越牛\"进化到\"每瓦特智能\"，算是行业从青春期走向成年。不过 Google 的发布会 PPT 一向比模型本身更节能——是骡子是马，等 benchmark 出来再说。",
+      "summary": "Google 端出 Gemini 4 \"Carbon\"，HN 一天冲到 854 分、708 条评论，热度说明这不是挤牙膏式小版本。从命名和发布节奏看，重点大概率压在推理效率与碳/能耗账本上——在算力成本与能耗成为大模型生死线的当下，谁先把\"每 token 的焦耳数\"打下来，谁就握住了下一轮定价权。",
+      "commentary": "模型代号都开始环保叙事了，\"Carbon\"听着像在给数据中心赎罪。但说真的，参数再涨、榜单再刷，最后拼的是电费和毛利率——这年头，AI 圈的终极 KPI 已经从 benchmark 变成了电表读数。",
       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
     },
     {
-      "quote": "技术的护城河从来不是\"我做得出来\"，而是\"我做得出来还比你便宜一个数量级\"。省下来的每一瓦电，都是砸向对手的一记重拳。"
+      "title": "UEFI 固件代码执行漏洞：地球上的服务器几乎全中招",
+      "source": "Lobste.rs / Ars Technica",
+      "summary": "一个存在于 UEFI 固件层的代码执行漏洞，影响范围覆盖\"地球上绝大多数服务器\"。固件层意味着它在操作系统之下的信任根里，传统杀软、EDR 基本看不见够不着，一旦被利用就是彻底的底层沦陷，且补丁要跨厂商、跨主板型号铺开，周期以季度计。",
+      "commentary": "每次看到\"影响地球上大部分服务器\"这种标题，就知道又到了全体运维集体失眠的夜晚。云厂商今晚的加班费，大概比这条漏洞的赏金还高——固件安全这门课，行业欠了二十年，现在连本带利一起还。",
+      "url": "https://arstechnica.com/security/2026/10/code-execution-flaw-in-uefi-firmware-threatens-most-servers-on-planet-earth/"
+    },
+    {
+      "quote": "模型会过时，榜单会翻篇，唯有你亲手调通的那条链路和算清的那笔电费，才是真正长在身上的资产。"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50271640",
-      "title": "Apple's git still trusts the compromised eMudhra certificates",
+      "id": "hn:50282838",
+      "title": "Qwenputer: A functioning, deterministic RISC-V CPU inside Qwen3.5",
       "summary": "",
-      "url": "https://emudhra.we-have-a-problem.com/apple.html",
+      "url": "https://divagr.com/blog/qwenputer",
       "source": "Hacker News",
-      "score": 824,
-      "comments": 325
+      "score": 232,
+      "comments": 53
     },
     {
       "id": "lob:q7arzy",
@@ -45,12 +45,39 @@
       "summary": "",
       "url": "https://astral.sh/blog/tar-codec",
       "source": "Lobste.rs",
-      "score": 78,
-      "comments": 14,
+      "score": 84,
+      "comments": 15,
       "tags": [
         "python",
         "rust"
       ]
+    },
+    {
+      "id": "hn:50282544",
+      "title": "GitLab Security Incident: Attempted Exploitation of CVE-2026-97229",
+      "summary": "",
+      "url": "https://alpinelinux.org/posts/GitLab-security-incident-CVE-2026-97229.html",
+      "source": "Hacker News",
+      "score": 123,
+      "comments": 49
+    },
+    {
+      "id": "hn:50276998",
+      "title": "Why is this fingerprinting script creating bioweapons?",
+      "summary": "",
+      "url": "https://nullpt.rs/fingerprinting-bioweapons",
+      "source": "Hacker News",
+      "score": 973,
+      "comments": 201
+    },
+    {
+      "id": "hn:50282454",
+      "title": "StackOverflow now gets fewer than 1000 questions a month",
+      "summary": "",
+      "url": "https://data.stackexchange.com/stackoverflow/query/1926661#graph?t=1",
+      "source": "Hacker News",
+      "score": 228,
+      "comments": 210
     },
     {
       "id": "hn:50243060",
@@ -58,44 +85,8 @@
       "summary": "",
       "url": "https://www.circuithub.com/post/unveiling-the-grid",
       "source": "Hacker News",
-      "score": 270,
-      "comments": 118
-    },
-    {
-      "id": "hn:50276792",
-      "title": "Gemini 4 Carbon",
-      "summary": "",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
-      "source": "Hacker News",
-      "score": 265,
-      "comments": 206
-    },
-    {
-      "id": "hn:50274409",
-      "title": "CNC Stone Carving",
-      "summary": "",
-      "url": "https://carmelitegothic.com/cnc-stone-carving/",
-      "source": "Hacker News",
-      "score": 225,
-      "comments": 76
-    },
-    {
-      "id": "hn:50208960",
-      "title": "Start Doing Graph Theory",
-      "summary": "",
-      "url": "https://vertex.degree/",
-      "source": "Hacker News",
-      "score": 408,
-      "comments": 94
-    },
-    {
-      "id": "hn:50273171",
-      "title": "Emacs Turns 50",
-      "summary": "",
-      "url": "https://www.technologyreview.com/2026/10/20/1145399/emacs-turns-50/",
-      "source": "Hacker News",
-      "score": 250,
-      "comments": 102
+      "score": 469,
+      "comments": 212
     },
     {
       "id": "hn:50276940",
@@ -103,8 +94,60 @@
       "summary": "<a href=\"https:&#x2F;&#x2F;www.apple.com&#x2F;newsroom&#x2F;2026&#x2F;10&#x2F;apple-unveils-groundbreaking-macbook-pro-with-proled-xdr-display&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.apple.com&#x2F;newsroom&#x2F;2026&#x2F;10&#x2F;apple-unveils-groundb...</a>",
       "url": "https://www.apple.com/macbook-pro/proled-xdr-display/",
       "source": "Hacker News",
-      "score": 159,
-      "comments": 240
+      "score": 530,
+      "comments": 917
+    },
+    {
+      "id": "lob:xybmsj",
+      "title": "Apple's git still trusts the compromised eMudhra certificates",
+      "summary": "",
+      "url": "https://emudhra.we-have-a-problem.com/apple.html",
+      "source": "Lobste.rs",
+      "score": 95,
+      "comments": 19,
+      "tags": [
+        "cryptography",
+        "mac"
+      ]
+    },
+    {
+      "id": "hn:50274409",
+      "title": "CNC Stone Carving",
+      "summary": "",
+      "url": "https://carmelitegothic.com/cnc-stone-carving/",
+      "source": "Hacker News",
+      "score": 438,
+      "comments": 122
+    },
+    {
+      "id": "hn:50276792",
+      "title": "Gemini 4 Carbon",
+      "summary": "",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+      "source": "Hacker News",
+      "score": 854,
+      "comments": 708
+    },
+    {
+      "id": "hn:50281044",
+      "title": "Formlabs Studio 1 $699 Resin Printer",
+      "summary": "",
+      "url": "https://formlabs.com/products/form-studio-1-basic-founders-edition/",
+      "source": "Hacker News",
+      "score": 154,
+      "comments": 105
+    },
+    {
+      "id": "lob:yxuvie",
+      "title": "AlpineBSD",
+      "summary": "",
+      "url": "https://wiki.alpinebsd.org/",
+      "source": "Lobste.rs",
+      "score": 65,
+      "comments": 17,
+      "tags": [
+        "netbsd"
+      ]
     },
     {
       "id": "lob:cpaibp",
@@ -112,44 +155,23 @@
       "summary": "",
       "url": "https://www.netmeister.org/blog/defense-ddos.html",
       "source": "Lobste.rs",
-      "score": 91,
-      "comments": 22,
+      "score": 127,
+      "comments": 32,
       "tags": [
         "security"
       ]
     },
     {
-      "id": "lob:qr59sa",
-      "title": "Four Months of Zig",
+      "id": "lob:0gomue",
+      "title": "Code-execution flaw in UEFI firmware affects most servers on planet Earth",
       "summary": "",
-      "url": "https://gracefulliberty.com/articles/four-months-of-zig/",
+      "url": "https://arstechnica.com/security/2026/10/code-execution-flaw-in-uefi-firmware-threatens-most-servers-on-planet-earth/",
       "source": "Lobste.rs",
-      "score": 67,
-      "comments": 18,
+      "score": 28,
+      "comments": 13,
       "tags": [
-        "zig"
+        "security"
       ]
-    },
-    {
-      "id": "lob:o6vpqb",
-      "title": "Ghostty 1.4.0",
-      "summary": "",
-      "url": "https://ghostty.org/docs/install/release-notes/1-4-0",
-      "source": "Lobste.rs",
-      "score": 75,
-      "comments": 8,
-      "tags": [
-        "release"
-      ]
-    },
-    {
-      "id": "hn:50275626",
-      "title": "Dayjob: Tax – evaluating AI agents on 50 professional tax assignments",
-      "summary": "",
-      "url": "https://surgehq.ai/blog/dayjob-tax",
-      "source": "Hacker News",
-      "score": 75,
-      "comments": 47
     },
     {
       "id": "arxiv:2610.37657v1",
@@ -165,13 +187,34 @@
       "arxiv_id": "2610.37657v1"
     },
     {
-      "id": "hn:50273731",
-      "title": "The Agent SDK",
+      "id": "lob:exwlmn",
+      "title": "GOTO Considered Totally Sick (for error handling in C)",
       "summary": "",
-      "url": "https://cursor.com/blog/agent-sdk",
+      "url": "https://thestateofinahaze.net/blog/c-goto-considered-totally-sick/",
+      "source": "Lobste.rs",
+      "score": 31,
+      "comments": 11,
+      "tags": [
+        "c"
+      ]
+    },
+    {
+      "id": "hn:50280974",
+      "title": "A Health Update",
+      "summary": "",
+      "url": "https://furbo.org/2026/10/28/a-health-update/",
       "source": "Hacker News",
-      "score": 44,
-      "comments": 57
+      "score": 161,
+      "comments": 25
+    },
+    {
+      "id": "hn:50284255",
+      "title": "Claude Code burns ~15–20% of your tokens on a 3-word status line",
+      "summary": "",
+      "url": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce",
+      "source": "Hacker News",
+      "score": 132,
+      "comments": 26
     },
     {
       "id": "arxiv:2610.37642v1",
@@ -185,62 +228,17 @@
       "arxiv_id": "2610.37642v1"
     },
     {
-      "id": "lob:qd0hc9",
-      "title": "1,447 emoji? We'll do it live",
+      "id": "lob:m3gsln",
+      "title": "Hoot 0.10.0 released",
       "summary": "",
-      "url": "https://planetpeanut.studio/post/2026/10/27/pidgin-emoji-twitch",
+      "url": "https://spritely.institute/news/hoot-0-10-0-released.html",
       "source": "Lobste.rs",
-      "score": 44,
+      "score": 31,
       "comments": 2,
       "tags": [
-        "design"
+        "lisp",
+        "release"
       ]
-    },
-    {
-      "id": "hn:50274251",
-      "title": "AlpineBSD",
-      "summary": "",
-      "url": "https://wiki.alpinebsd.org",
-      "source": "Hacker News",
-      "score": 65,
-      "comments": 60
-    },
-    {
-      "id": "arxiv:2610.37666v1",
-      "title": "ThinkWorld: World Imagination Reinforces Chain-of-Dynamics Reasoning",
-      "summary": "Vision-Language-Action (VLA) models have made substantial progress in robotic manipulation, but their generalization remains constrained by the diversity and coverage of action-labeled robot demonstrations. Human videos provide much broader behavioral and environmental experience, while learning fro",
-      "url": "https://arxiv.org/abs/2610.37666v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CV"
-      ],
-      "arxiv_id": "2610.37666v1"
-    },
-    {
-      "id": "arxiv:2610.37658v1",
-      "title": "When Should We Intervene at Test Time?",
-      "summary": "Test-time adaptation helps a deployed model respond to changing inputs, but the same intervention can rescue one batch and damage the next. Updating normalization statistics, for example, can improve corrupted images yet fail when a batch contains mostly one class. Average accuracy hides these failu",
-      "url": "https://arxiv.org/abs/2610.37658v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG"
-      ],
-      "arxiv_id": "2610.37658v1"
-    },
-    {
-      "id": "arxiv:2610.37656v1",
-      "title": "Attention as Lattice Gauge Theory: Relations Interact Only Through Wilson Loops",
-      "summary": "Relations compose through the entity they share - Alice is Bob's mother and Bob is Carol's father, so Alice is Carol's grandmother - and the order matters, since a father's mother is not a mother's father; verifying a composed relation means closing the loop. We show that if each entity's coordinate",
-      "url": "https://arxiv.org/abs/2610.37656v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "physics.comp-ph"
-      ],
-      "arxiv_id": "2610.37656v1"
     }
   ],
   "ai_curated": true
