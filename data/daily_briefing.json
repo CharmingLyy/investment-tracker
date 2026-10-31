@@ -1,100 +1,79 @@
 {
-  "date": "2026-10-31",
-  "update_time": "2026-10-31 04:50:15",
+  "date": "2026-11-01",
+  "update_time": "2026-10-31 16:58:11",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-31\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Claude Code VS Code 扩展被植入后门，Cursor 官方市场成投毒渠道 (来源: HackerNews)\n- **核心干货**：安全研究者发现 Cursor 插件市场中的 Claude Code 官方 VS Code 扩展遭供应链投毒，攻击者可在用户机器上执行任意代码。这不仅是单个插件的问题——它暴露了 AI 编程工具生态在插件审核上的系统性漏洞：你信任的\"官方扩展\"，可能只是别人上传的同名包。\n- **毒舌/硬核点评**：给 AI 写代码的工具自己先被写了后门，这剧本编剧都不敢这么写。各位把\"AI 帮我写代码\"挂嘴边的，先确认一下帮你写代码的那玩意儿本身干不干净。\n- **🔗 传送门**：[点击直达原链接](https://phorion.io/blog/offical-claude-code-vsx-compromise/)\n\n---\n\n### 2. 📌 63 亿美元 Binance 大劫案，全程只用了 20 分钟 (来源: HackerNews)\n- **核心干货**：Wired 复盘了史上最大规模交易所被盗案之一——攻击者在 20 分钟内完成从渗透到转移资产的完整链路，63 亿美元灰飞烟灭。核心看点不在金额，而在攻击链的工业化程度：前期社工与基础设施准备可能长达数月，真正的\"盗窃\"阶段被压缩到分钟级。\n- **毒舌/硬核点评**：20 分钟赚 63 亿美元，这效率吊打全世界所有创业公司。可惜商业模式违法，且退出机制是戴手铐——再牛的 ROI 也架不住流动性被冻结。\n- **🔗 传送门**：[点击直达原链接](https://www.wired.com/story/the-dollar63-billion-binance-hack-was-pulled-off-in-just-20-minutes/)\n\n---\n\n### 3. 📌 用约 1GB 的 Qwen 权重跑起一台\"会玩\"的任天堂 NES (来源: GitHub Trending / HackerNews)\n- **核心干货**：nesformer 项目把 NES 模拟器逻辑塞进约 1GB 的 Qwen 模型权重里，让 LLM 直接\"学会\"跑游戏，而不是调用传统模拟器代码。这不是套壳 Demo——它探索的是用权重替代确定性程序逻辑的极限，对\"模型即程序\"这条路线是一次有意思的压力测试。\n- **毒舌/硬核点评**：别人用 1GB 权重让模型背古诗，这哥们用它跑超级马里奥。虽然大概率帧率和手感感人，但至少证明了：当参数够多，连模拟器都能被\"背\"下来——只是这性价比，建议还是直接下个 FCEUX。\n- **🔗 传送门**：[点击直达原链接](https://github.com/dbreunig/nesformer)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"供应链安全的真相是：你信任的从来不是那个包，而是上传那个包的人昨天还没被收买。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-01\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 有人把 ChatGPT 账号\"接管\"了 (来源: HackerNews)\n- **核心干货**：安全团队 Parameter 在 OpenAI 产品里挖出一个账号接管缺口，能直接影响 ChatGPT 账号的控制权。这类漏洞的杀伤力不在技术复杂度，而在于 ChatGPT 账号如今绑着支付、对话历史和一堆第三方集成，一次接管等于把数字身份拱手送人。\n- **毒舌/硬核点评**：模型能力卷到天际，结果防线的破口还是\"账号\"这种老掉牙的东西——AI 时代的安全短板，往往不在智能，而在登录框。\n- **🔗 传送门**：[点击直达原链接](https://www.parameter.ai/labs/we-found-a-gap-at-openai)\n\n---\n\n### 2. 📌 恶意软件开始用 LLM 给受害者\"估值排序\" (来源: HackerNews / Talos)\n- **核心干货**：Talos 披露 Volta Infostealer 的新玩法：用大模型分析受害者的数据画像，按\"这个人值多少钱\"给受害者排优先级，把无差别撒网升级成精准狩猎。这是 LLM 被武器化的一个清晰拐点——攻击方第一次把模型用在\"目标筛选\"而非\"生成诱饵\"上。\n- **毒舌/硬核点评**：以前黑客靠经验挑肥羊，现在直接让模型算 ROI。搞安全的还在写规则引擎，对面已经在做客户分层运营了——攻防不对称，就是这么被拉开的。\n- **🔗 传送门**：[点击直达原链接](https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/)\n\n---\n\n### 3. 📌 curl 意外图灵完备了九个月 (来源: Lobste.rs)\n- **核心干货**：一篇硬核逆向复盘：curl 曾因某个特性组合，在长达九个月里意外具备图灵完备能力——也就是说，理论上能用 curl 命令写出一台计算机。这不是营销噱头，而是对\"工具边界\"的一次严肃证明：你以为的 HTTP 客户端，可能是个计算模型。\n- **毒舌/硬核点评**：每个足够复杂的工具最终都会长出图灵完备的歪枝，这不是 bug，是复杂系统的宿命。下次有人吹\"我的 DSL 很安全\"，把这篇甩他脸上。\n- **🔗 传送门**：[点击直达原链接](https://seriot.ch/computation/curl.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> 安全不是一道墙，而是一条永远在移动的战线——你停下来庆祝补丁的那天，就是对手开始估值你的那天。",
   "briefing_items": [
     {
-      "title": "Claude Code VS Code 扩展被植入后门，Cursor 官方市场成投毒渠道",
+      "title": "有人把 ChatGPT 账号\"接管\"了",
       "source": "HackerNews",
-      "summary": "安全研究者发现 Cursor 插件市场中的 Claude Code 官方 VS Code 扩展遭供应链投毒，攻击者可在用户机器上执行任意代码。这不仅是单个插件的问题——它暴露了 AI 编程工具生态在插件审核上的系统性漏洞：你信任的\"官方扩展\"，可能只是别人上传的同名包。",
-      "commentary": "给 AI 写代码的工具自己先被写了后门，这剧本编剧都不敢这么写。各位把\"AI 帮我写代码\"挂嘴边的，先确认一下帮你写代码的那玩意儿本身干不干净。",
-      "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/"
+      "summary": "安全团队 Parameter 在 OpenAI 产品里挖出一个账号接管缺口，能直接影响 ChatGPT 账号的控制权。这类漏洞的杀伤力不在技术复杂度，而在于 ChatGPT 账号如今绑着支付、对话历史和一堆第三方集成，一次接管等于把数字身份拱手送人。",
+      "commentary": "模型能力卷到天际，结果防线的破口还是\"账号\"这种老掉牙的东西——AI 时代的安全短板，往往不在智能，而在登录框。",
+      "url": "https://www.parameter.ai/labs/we-found-a-gap-at-openai"
     },
     {
-      "title": "63 亿美元 Binance 大劫案，全程只用了 20 分钟",
-      "source": "HackerNews",
-      "summary": "Wired 复盘了史上最大规模交易所被盗案之一——攻击者在 20 分钟内完成从渗透到转移资产的完整链路，63 亿美元灰飞烟灭。核心看点不在金额，而在攻击链的工业化程度：前期社工与基础设施准备可能长达数月，真正的\"盗窃\"阶段被压缩到分钟级。",
-      "commentary": "20 分钟赚 63 亿美元，这效率吊打全世界所有创业公司。可惜商业模式违法，且退出机制是戴手铐——再牛的 ROI 也架不住流动性被冻结。",
-      "url": "https://www.wired.com/story/the-dollar63-billion-binance-hack-was-pulled-off-in-just-20-minutes/"
+      "title": "恶意软件开始用 LLM 给受害者\"估值排序\"",
+      "source": "HackerNews / Talos",
+      "summary": "Talos 披露 Volta Infostealer 的新玩法：用大模型分析受害者的数据画像，按\"这个人值多少钱\"给受害者排优先级，把无差别撒网升级成精准狩猎。这是 LLM 被武器化的一个清晰拐点——攻击方第一次把模型用在\"目标筛选\"而非\"生成诱饵\"上。",
+      "commentary": "以前黑客靠经验挑肥羊，现在直接让模型算 ROI。搞安全的还在写规则引擎，对面已经在做客户分层运营了——攻防不对称，就是这么被拉开的。",
+      "url": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/"
     },
     {
-      "title": "用约 1GB 的 Qwen 权重跑起一台\"会玩\"的任天堂 NES",
-      "source": "GitHub Trending / HackerNews",
-      "summary": "nesformer 项目把 NES 模拟器逻辑塞进约 1GB 的 Qwen 模型权重里，让 LLM 直接\"学会\"跑游戏，而不是调用传统模拟器代码。这不是套壳 Demo——它探索的是用权重替代确定性程序逻辑的极限，对\"模型即程序\"这条路线是一次有意思的压力测试。",
-      "commentary": "别人用 1GB 权重让模型背古诗，这哥们用它跑超级马里奥。虽然大概率帧率和手感感人，但至少证明了：当参数够多，连模拟器都能被\"背\"下来——只是这性价比，建议还是直接下个 FCEUX。",
-      "url": "https://github.com/dbreunig/nesformer"
+      "title": "curl 意外图灵完备了九个月",
+      "source": "Lobste.rs",
+      "summary": "一篇硬核逆向复盘：curl 曾因某个特性组合，在长达九个月里意外具备图灵完备能力——也就是说，理论上能用 curl 命令写出一台计算机。这不是营销噱头，而是对\"工具边界\"的一次严肃证明：你以为的 HTTP 客户端，可能是个计算模型。",
+      "commentary": "每个足够复杂的工具最终都会长出图灵完备的歪枝，这不是 bug，是复杂系统的宿命。下次有人吹\"我的 DSL 很安全\"，把这篇甩他脸上。",
+      "url": "https://seriot.ch/computation/curl.html"
     },
     {
-      "quote": "\"供应链安全的真相是：你信任的从来不是那个包，而是上传那个包的人昨天还没被收买。\""
+      "quote": "安全不是一道墙，而是一条永远在移动的战线——你停下来庆祝补丁的那天，就是对手开始估值你的那天。"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50306442",
-      "title": "Show HN: A working Nintendo in ~1GB of Qwen weights",
+      "id": "hn:50314699",
+      "title": "We Took over ChatGPT Accounts",
       "summary": "",
-      "url": "https://github.com/dbreunig/nesformer",
+      "url": "https://www.parameter.ai/labs/we-found-a-gap-at-openai",
       "source": "Hacker News",
-      "score": 216,
-      "comments": 118
+      "score": 201,
+      "comments": 103
     },
     {
-      "id": "hn:50300683",
-      "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
-      "summary": "<a href=\"https:&#x2F;&#x2F;cursor.com&#x2F;blog&#x2F;claude-code-extension-security-notice\" rel=\"nofollow\">https:&#x2F;&#x2F;cursor.com&#x2F;blog&#x2F;claude-code-extension-security-notic...</a>",
-      "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
-      "source": "Hacker News",
-      "score": 843,
-      "comments": 506
-    },
-    {
-      "id": "hn:50307190",
-      "title": "My favourite PowerMac is a Nintendo Wii",
+      "id": "hn:50314654",
+      "title": "Serbia just elected the world's brainiest parliament",
       "summary": "",
-      "url": "https://virtuallyfun.com/2026/10/29/my-favourite-powermac-is-a-nintendo-wii/",
+      "url": "https://www.science.org/content/article/serbia-just-elected-world-s-brainiest-parliament",
       "source": "Hacker News",
-      "score": 268,
-      "comments": 77
+      "score": 622,
+      "comments": 362
     },
     {
-      "id": "hn:50303172",
-      "title": "The $6.3B Binance hack was pulled off in just 20 minutes",
+      "id": "hn:50314666",
+      "title": "Molly (Signal fork) has not been updated since 3 months and is vulnerable",
       "summary": "",
-      "url": "https://www.wired.com/story/the-dollar63-billion-binance-hack-was-pulled-off-in-just-20-minutes/",
+      "url": "https://piefed.world/post/1503394",
       "source": "Hacker News",
-      "score": 381,
-      "comments": 258
+      "score": 190,
+      "comments": 128
     },
     {
-      "id": "hn:50263837",
-      "title": "Breaking the open web won't stop the bad bots",
+      "id": "hn:50313661",
+      "title": "Digital minimalism",
       "summary": "",
-      "url": "https://www.techpolicy.press/breaking-the-open-web-wont-stop-the-bad-bots/",
+      "url": "https://vitalik.eth.limo/general/2026/10/31/digital_minimalism.html",
       "source": "Hacker News",
-      "score": 219,
-      "comments": 101
+      "score": 195,
+      "comments": 145
     },
     {
-      "id": "hn:50305025",
-      "title": "Northflank Breached",
+      "id": "hn:50315226",
+      "title": "Prospero: A new coding harness for a more civilized age",
       "summary": "",
-      "url": "https://status.northflank.com",
+      "url": "https://nullprogram.com/blog/2026/10/31/",
       "source": "Hacker News",
-      "score": 393,
-      "comments": 292
-    },
-    {
-      "id": "lob:dsrruj",
-      "title": "London meetup",
-      "summary": "<p>Hi everyone,</p>\n<p>I recently saw a post about an NYC lobsters meetup, and am wondering how many people here could make it to a London meetup.</p>\n<p>If more than a couple of people here are based in London and can make it, I'll organise one in central London.</p>\n<p>If you could also let me kno",
-      "url": "https://lobste.rs/s/dsrruj/london_meetup",
-      "source": "Lobste.rs",
-      "score": 61,
-      "comments": 46,
-      "tags": [
-        "event"
-      ]
+      "score": 125,
+      "comments": 78
     },
     {
       "id": "lob:ttp7aq",
@@ -102,7 +81,7 @@
       "summary": "",
       "url": "https://cyberplace.social/@GossiTheDog/117528831681803563",
       "source": "Lobste.rs",
-      "score": 148,
+      "score": 162,
       "comments": 38,
       "tags": [
         "security"
@@ -114,32 +93,11 @@
       "summary": "",
       "url": "https://melaniekat.com/blog/public-on-pds/",
       "source": "Lobste.rs",
-      "score": 81,
-      "comments": 25,
+      "score": 91,
+      "comments": 31,
       "tags": [
         "privacy"
       ]
-    },
-    {
-      "id": "lob:6ole9g",
-      "title": "If you love a website, back it up",
-      "summary": "",
-      "url": "http://blog.mistys-internet.website/post/2026/10/29/if-you-love-a-website-back-it-up/",
-      "source": "Lobste.rs",
-      "score": 76,
-      "comments": 21,
-      "tags": [
-        "web"
-      ]
-    },
-    {
-      "id": "hn:50309029",
-      "title": "Infinite Mac: BeOS",
-      "summary": "",
-      "url": "https://blog.persistent.info/2026/10/infinite-mac-beos.html",
-      "source": "Hacker News",
-      "score": 127,
-      "comments": 52
     },
     {
       "id": "lob:xudbqx",
@@ -147,29 +105,24 @@
       "summary": "",
       "url": "https://smoores.dev/post/no_npm_estee_is_not_a_typo/",
       "source": "Lobste.rs",
-      "score": 29,
+      "score": 36,
       "comments": 19,
       "tags": [
         "javascript"
       ]
     },
     {
-      "id": "hn:50311686",
-      "title": "Show HN: To Honor Sir Patrick Stewart, Enjoy the TNG Episode Guessing Game",
+      "id": "lob:ukj8mm",
+      "title": "The federated code forge",
       "summary": "",
-      "url": "https://tng.episodle.com/",
-      "source": "Hacker News",
-      "score": 130,
-      "comments": 41
-    },
-    {
-      "id": "hn:50309266",
-      "title": "The oldest ice disappears and the Stone Age emerges from it",
-      "summary": "",
-      "url": "https://www.sciencenorway.no/archaeology-climate-culture/the-oldest-ice-is-disappearing-the-stone-age-is-emerging-from-the-melting-ice/2713921",
-      "source": "Hacker News",
-      "score": 114,
-      "comments": 47
+      "url": "https://tangled.org/blog/forge/",
+      "source": "Lobste.rs",
+      "score": 40,
+      "comments": 24,
+      "tags": [
+        "distributed",
+        "vcs"
+      ]
     },
     {
       "id": "lob:f4aqog",
@@ -177,51 +130,80 @@
       "summary": "",
       "url": "https://seriot.ch/computation/curl.html",
       "source": "Lobste.rs",
-      "score": 70,
-      "comments": 7,
+      "score": 77,
+      "comments": 11,
       "tags": [
         "compsci"
       ]
     },
     {
-      "id": "hn:50277379",
-      "title": "Cloudflare Turnstile solver library (no headless browser required)",
+      "id": "lob:fskctn",
+      "title": "Infinite Mac: BeOS",
       "summary": "",
-      "url": "https://github.com/chris124567/cfsolve",
-      "source": "Hacker News",
-      "score": 132,
-      "comments": 36
-    },
-    {
-      "id": "lob:u7dsbx",
-      "title": "What are you doing this weekend?",
-      "summary": "<p>Feel free to tell what you plan on doing this weekend and even ask for help or feedback.</p>\n<p>Please keep in mind it’s more than OK to do nothing at all too!</p>\n",
-      "url": "https://lobste.rs/s/u7dsbx/what_are_you_doing_this_weekend",
+      "url": "https://blog.persistent.info/2026/10/infinite-mac-beos.html",
       "source": "Lobste.rs",
-      "score": 20,
-      "comments": 36,
+      "score": 39,
+      "comments": 6,
       "tags": [
-        "ask",
-        "programming"
+        "retrocomputing"
       ]
     },
     {
-      "id": "hn:50310398",
-      "title": "sanstun: A sans-IO, parallel-friendly WireGuard implementation in Rust",
+      "id": "lob:soosuu",
+      "title": "The support case of a customer who said that all they could see was a black screen",
       "summary": "",
-      "url": "https://www.firezone.dev/blog/introducing-sanstun",
-      "source": "Hacker News",
-      "score": 93,
-      "comments": 17
+      "url": "https://devblogs.microsoft.com/oldnewthing/20261029-00/?p=112808/",
+      "source": "Lobste.rs",
+      "score": 39,
+      "comments": 7,
+      "tags": [
+        "historical",
+        "windows"
+      ]
     },
     {
-      "id": "hn:50312756",
-      "title": "Tell HN: Scribd Breached",
-      "summary": "Not seeing anything posted about this anywhere, received on Monday, 26th of Oct 2026:<p>Subject: Notice of Security Incident<p>This notice is being sent on behalf of Scribd, Inc., the parent company of Scribd, Slideshare, Everand, and Fable, by Epiq, Scribd Inc.’s notification partner.<p>Hello,<p>We",
-      "url": "https://news.ycombinator.com/item?id=50312756",
+      "id": "hn:50290652",
+      "title": "AI, Lean, and the Future of Formal Verification, with Lean Creator Leo de Moura",
+      "summary": "",
+      "url": "https://thedataexchange.media/leo-de-moura-lean-aws/",
       "source": "Hacker News",
-      "score": 86,
+      "score": 131,
+      "comments": 32
+    },
+    {
+      "id": "lob:1pmuy7",
+      "title": "How hard is it to check for whitespace?",
+      "summary": "",
+      "url": "https://serce.me/posts/2026-10-30-how-hard-is-it-to-check-for-whitespace",
+      "source": "Lobste.rs",
+      "score": 36,
+      "comments": 6,
+      "tags": [
+        "java",
+        "performance"
+      ]
+    },
+    {
+      "id": "hn:50314085",
+      "title": "Switch Lowering in GCC",
+      "summary": "",
+      "url": "https://xoranth.net/gcc-switch/",
+      "source": "Hacker News",
+      "score": 145,
       "comments": 29
+    },
+    {
+      "id": "arxiv:2610.40616v1",
+      "title": "Difficulty Calibration Across Time for Membership Inference in Diffusion Models",
+      "summary": "Modern diffusion models are trained on massive datasets that often include copyrighted or private images. Membership inference attacks (MIAs) address this by testing whether a given image was in a model's training set. The standard approach scores an image by its reconstruction loss and flags low-lo",
+      "url": "https://arxiv.org/abs/2610.40616v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CV",
+        "cs.CR",
+        "cs.LG"
+      ],
+      "arxiv_id": "2610.40616v1"
     },
     {
       "id": "rss:fa2a13a304",
@@ -230,6 +212,35 @@
       "url": "https://thehackernews.com/2026/10/wordpress-rce-flaw-draws-nearly-63000.html",
       "source": "Tech RSS",
       "score": 0
+    },
+    {
+      "id": "hn:50316531",
+      "title": "Malware uses LLMs to rank victims by how much they're worth",
+      "summary": "",
+      "url": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/",
+      "source": "Hacker News",
+      "score": 88,
+      "comments": 30
+    },
+    {
+      "id": "hn:50261253",
+      "title": "Simple circuits can create complex behaviors",
+      "summary": "",
+      "url": "https://aatishb.com/myriad/lets-build-a-brain/",
+      "source": "Hacker News",
+      "score": 96,
+      "comments": 20
+    },
+    {
+      "id": "arxiv:2610.40654v1",
+      "title": "Propose-Filter-Release: Scaling Noise to Typical Sensitivity via Private Filtering",
+      "summary": "An estimator can be accurate and stable on typical data, yet sensitive to a few possible records. Differentially private mechanisms commonly scale their noise to the worst-case influence of a single record, which lets these records dictate the noise even when the remaining data would allow far less.",
+      "url": "https://arxiv.org/abs/2610.40654v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_id": "2610.40654v1"
     }
   ],
   "ai_curated": true
