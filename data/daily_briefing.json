@@ -1,43 +1,43 @@
 {
   "date": "2026-10-31",
-  "update_time": "2026-10-30 17:49:05",
+  "update_time": "2026-10-31 04:50:15",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-31\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Claude Code VS Code 扩展被植入后门（Cursor 市场版） (来源: HackerNews)\n- **核心干货**：Cursor 官方市场里的 Claude Code VS Code 扩展被发现带后门，官方已发安全公告。这意味着你敲下 `claude` 那一刻，可能不只是 AI 在帮你写代码，还有人在帮你\"写\"后门。供应链攻击已经从 npm 包升级到了 AI 编程工具本身——你信任的 AI 助手，恰恰成了最理想的投毒载体。\n- **毒舌/硬核点评**：AI 编程工具让你效率翻倍，攻击者让你数据归零。以后装扩展前先问一句：这玩意儿是来帮我写代码的，还是来帮我\"写遗书\"的？Cursor 官方市场都沦陷了，建议各位把\"信任但验证\"刻在 IDE 启动页上。\n- **🔗 传送门**：[点击直达原链接](https://phorion.io/blog/offical-claude-code-vsx-compromise/)\n\n---\n\n### 2. 📌 Linux 内核 TCP 漏洞 CVSS 9.8，Anthropic 自曝 AI 写出利用代码 (来源: Tech RSS)\n- **核心干货**：CVE-2026-98432，Linux 内核 TCP 协议栈的满分漏洞，Ubuntu、RHEL 全线中招。更炸裂的是，Anthropic 承认自家 AI 模型在 10 月 27 日写出了利用此漏洞的 exploit——AI 安全能力的天花板，同时也是攻击能力的地板。同一周内还有 WordPress RCE 24 小时被轰 63000 次，这周的运维兄弟们怕是要集体加鸡腿了。\n- **毒舌/硬核点评**：以前说\"AI 会写代码\"是生产力福音，现在发现它写 exploit 的手速比写业务逻辑还快。建议把 CVSS 9.8 的补丁优先级调到比老板的周报还高——毕竟老板最多骂你，这个漏洞能直接让你服务器裸奔。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/10/linux-kernel-tcp-flaw-with-98-cvss.html)\n\n---\n\n### 3. 📌 AI 没在替代 SRE，它在把 SRE 养成\"操作员\" (来源: HackerNews)\n- **核心干货**：Signoz 的深度文章指出一个被忽视的真相：AI 不是抢走 SRE 的饭碗，而是悄悄剥夺他们的核心能力——当告警自动修复、根因分析一键生成，SRE 从\"理解系统为什么坏\"退化成\"点确认按钮的人\"。技能退化比失业更隐蔽，也更致命：系统一旦遇到 AI 没见过的新故障，没人能真正读懂它。\n- **毒舌/硬核点评**：这就像自动驾驶让你忘了怎么开车——平时爽，关键时刻方向盘在谁手里？HN 上 185 条评论吵翻天，说明戳中了行业痛点。给所有 SRE 一句忠告：AI 可以帮你按按钮，但别让它替你长脑子。\n- **🔗 传送门**：[点击直达原链接](https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling)\n\n---\n\n### 🗣️ 今日顶男金句\n> **\"AI 能替你写代码、修告警、甚至写 exploit——但它替不了你理解系统为什么坏。工具越聪明，越要保住自己那颗会思考的脑袋。\"**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-10-31\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Claude Code VS Code 扩展被植入后门，Cursor 官方市场成投毒渠道 (来源: HackerNews)\n- **核心干货**：安全研究者发现 Cursor 插件市场中的 Claude Code 官方 VS Code 扩展遭供应链投毒，攻击者可在用户机器上执行任意代码。这不仅是单个插件的问题——它暴露了 AI 编程工具生态在插件审核上的系统性漏洞：你信任的\"官方扩展\"，可能只是别人上传的同名包。\n- **毒舌/硬核点评**：给 AI 写代码的工具自己先被写了后门，这剧本编剧都不敢这么写。各位把\"AI 帮我写代码\"挂嘴边的，先确认一下帮你写代码的那玩意儿本身干不干净。\n- **🔗 传送门**：[点击直达原链接](https://phorion.io/blog/offical-claude-code-vsx-compromise/)\n\n---\n\n### 2. 📌 63 亿美元 Binance 大劫案，全程只用了 20 分钟 (来源: HackerNews)\n- **核心干货**：Wired 复盘了史上最大规模交易所被盗案之一——攻击者在 20 分钟内完成从渗透到转移资产的完整链路，63 亿美元灰飞烟灭。核心看点不在金额，而在攻击链的工业化程度：前期社工与基础设施准备可能长达数月，真正的\"盗窃\"阶段被压缩到分钟级。\n- **毒舌/硬核点评**：20 分钟赚 63 亿美元，这效率吊打全世界所有创业公司。可惜商业模式违法，且退出机制是戴手铐——再牛的 ROI 也架不住流动性被冻结。\n- **🔗 传送门**：[点击直达原链接](https://www.wired.com/story/the-dollar63-billion-binance-hack-was-pulled-off-in-just-20-minutes/)\n\n---\n\n### 3. 📌 用约 1GB 的 Qwen 权重跑起一台\"会玩\"的任天堂 NES (来源: GitHub Trending / HackerNews)\n- **核心干货**：nesformer 项目把 NES 模拟器逻辑塞进约 1GB 的 Qwen 模型权重里，让 LLM 直接\"学会\"跑游戏，而不是调用传统模拟器代码。这不是套壳 Demo——它探索的是用权重替代确定性程序逻辑的极限，对\"模型即程序\"这条路线是一次有意思的压力测试。\n- **毒舌/硬核点评**：别人用 1GB 权重让模型背古诗，这哥们用它跑超级马里奥。虽然大概率帧率和手感感人，但至少证明了：当参数够多，连模拟器都能被\"背\"下来——只是这性价比，建议还是直接下个 FCEUX。\n- **🔗 传送门**：[点击直达原链接](https://github.com/dbreunig/nesformer)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"供应链安全的真相是：你信任的从来不是那个包，而是上传那个包的人昨天还没被收买。\"",
   "briefing_items": [
     {
-      "title": "Claude Code VS Code 扩展被植入后门（Cursor 市场版）",
+      "title": "Claude Code VS Code 扩展被植入后门，Cursor 官方市场成投毒渠道",
       "source": "HackerNews",
-      "summary": "Cursor 官方市场里的 Claude Code VS Code 扩展被发现带后门，官方已发安全公告。这意味着你敲下 `claude` 那一刻，可能不只是 AI 在帮你写代码，还有人在帮你\"写\"后门。供应链攻击已经从 npm 包升级到了 AI 编程工具本身——你信任的 AI 助手，恰恰成了最理想的投毒载体。",
-      "commentary": "AI 编程工具让你效率翻倍，攻击者让你数据归零。以后装扩展前先问一句：这玩意儿是来帮我写代码的，还是来帮我\"写遗书\"的？Cursor 官方市场都沦陷了，建议各位把\"信任但验证\"刻在 IDE 启动页上。",
+      "summary": "安全研究者发现 Cursor 插件市场中的 Claude Code 官方 VS Code 扩展遭供应链投毒，攻击者可在用户机器上执行任意代码。这不仅是单个插件的问题——它暴露了 AI 编程工具生态在插件审核上的系统性漏洞：你信任的\"官方扩展\"，可能只是别人上传的同名包。",
+      "commentary": "给 AI 写代码的工具自己先被写了后门，这剧本编剧都不敢这么写。各位把\"AI 帮我写代码\"挂嘴边的，先确认一下帮你写代码的那玩意儿本身干不干净。",
       "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/"
     },
     {
-      "title": "Linux 内核 TCP 漏洞 CVSS 9.8，Anthropic 自曝 AI 写出利用代码",
-      "source": "Tech RSS",
-      "summary": "CVE-2026-98432，Linux 内核 TCP 协议栈的满分漏洞，Ubuntu、RHEL 全线中招。更炸裂的是，Anthropic 承认自家 AI 模型在 10 月 27 日写出了利用此漏洞的 exploit——AI 安全能力的天花板，同时也是攻击能力的地板。同一周内还有 WordPress RCE 24 小时被轰 63000 次，这周的运维兄弟们怕是要集体加鸡腿了。",
-      "commentary": "以前说\"AI 会写代码\"是生产力福音，现在发现它写 exploit 的手速比写业务逻辑还快。建议把 CVSS 9.8 的补丁优先级调到比老板的周报还高——毕竟老板最多骂你，这个漏洞能直接让你服务器裸奔。",
-      "url": "https://thehackernews.com/2026/10/linux-kernel-tcp-flaw-with-98-cvss.html"
-    },
-    {
-      "title": "AI 没在替代 SRE，它在把 SRE 养成\"操作员\"",
+      "title": "63 亿美元 Binance 大劫案，全程只用了 20 分钟",
       "source": "HackerNews",
-      "summary": "Signoz 的深度文章指出一个被忽视的真相：AI 不是抢走 SRE 的饭碗，而是悄悄剥夺他们的核心能力——当告警自动修复、根因分析一键生成，SRE 从\"理解系统为什么坏\"退化成\"点确认按钮的人\"。技能退化比失业更隐蔽，也更致命：系统一旦遇到 AI 没见过的新故障，没人能真正读懂它。",
-      "commentary": "这就像自动驾驶让你忘了怎么开车——平时爽，关键时刻方向盘在谁手里？HN 上 185 条评论吵翻天，说明戳中了行业痛点。给所有 SRE 一句忠告：AI 可以帮你按按钮，但别让它替你长脑子。",
-      "url": "https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling"
+      "summary": "Wired 复盘了史上最大规模交易所被盗案之一——攻击者在 20 分钟内完成从渗透到转移资产的完整链路，63 亿美元灰飞烟灭。核心看点不在金额，而在攻击链的工业化程度：前期社工与基础设施准备可能长达数月，真正的\"盗窃\"阶段被压缩到分钟级。",
+      "commentary": "20 分钟赚 63 亿美元，这效率吊打全世界所有创业公司。可惜商业模式违法，且退出机制是戴手铐——再牛的 ROI 也架不住流动性被冻结。",
+      "url": "https://www.wired.com/story/the-dollar63-billion-binance-hack-was-pulled-off-in-just-20-minutes/"
     },
     {
-      "quote": "**\"AI 能替你写代码、修告警、甚至写 exploit——但它替不了你理解系统为什么坏。工具越聪明，越要保住自己那颗会思考的脑袋。\"**"
+      "title": "用约 1GB 的 Qwen 权重跑起一台\"会玩\"的任天堂 NES",
+      "source": "GitHub Trending / HackerNews",
+      "summary": "nesformer 项目把 NES 模拟器逻辑塞进约 1GB 的 Qwen 模型权重里，让 LLM 直接\"学会\"跑游戏，而不是调用传统模拟器代码。这不是套壳 Demo——它探索的是用权重替代确定性程序逻辑的极限，对\"模型即程序\"这条路线是一次有意思的压力测试。",
+      "commentary": "别人用 1GB 权重让模型背古诗，这哥们用它跑超级马里奥。虽然大概率帧率和手感感人，但至少证明了：当参数够多，连模拟器都能被\"背\"下来——只是这性价比，建议还是直接下个 FCEUX。",
+      "url": "https://github.com/dbreunig/nesformer"
+    },
+    {
+      "quote": "\"供应链安全的真相是：你信任的从来不是那个包，而是上传那个包的人昨天还没被收买。\""
     }
   ],
   "candidates": [
     {
-      "id": "hn:50301854",
-      "title": "Azure's Weakest Link – Five Full Cross-Tenant Compromises",
+      "id": "hn:50306442",
+      "title": "Show HN: A working Nintendo in ~1GB of Qwen weights",
       "summary": "",
-      "url": "https://www.binarysecurity.no/posts/2026/10/one-root-case",
+      "url": "https://github.com/dbreunig/nesformer",
       "source": "Hacker News",
-      "score": 196,
-      "comments": 33
+      "score": 216,
+      "comments": 118
     },
     {
       "id": "hn:50300683",
@@ -45,30 +45,44 @@
       "summary": "<a href=\"https:&#x2F;&#x2F;cursor.com&#x2F;blog&#x2F;claude-code-extension-security-notice\" rel=\"nofollow\">https:&#x2F;&#x2F;cursor.com&#x2F;blog&#x2F;claude-code-extension-security-notic...</a>",
       "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
       "source": "Hacker News",
-      "score": 438,
-      "comments": 369
+      "score": 843,
+      "comments": 506
     },
     {
-      "id": "hn:50305693",
-      "title": "AI isn't replacing SREs, it's deskilling them",
+      "id": "hn:50307190",
+      "title": "My favourite PowerMac is a Nintendo Wii",
       "summary": "",
-      "url": "https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling",
+      "url": "https://virtuallyfun.com/2026/10/29/my-favourite-powermac-is-a-nintendo-wii/",
       "source": "Hacker News",
-      "score": 236,
-      "comments": 185
+      "score": 268,
+      "comments": 77
     },
     {
-      "id": "lob:eccbci",
-      "title": "Shared password manager for families?",
-      "summary": "<p>Long story short, I need to have a bunch of shared accounts with family for finance and insurance and stuff, mostly for the sake of family members who are getting old and need help keeping things organized.  So the requirements are:</p>\n<ul>\n<li>Shared over long distances; just having each of us ",
-      "url": "https://lobste.rs/s/eccbci/shared_password_manager_for_families",
-      "source": "Lobste.rs",
-      "score": 47,
-      "comments": 53,
-      "tags": [
-        "ask",
-        "security"
-      ]
+      "id": "hn:50303172",
+      "title": "The $6.3B Binance hack was pulled off in just 20 minutes",
+      "summary": "",
+      "url": "https://www.wired.com/story/the-dollar63-billion-binance-hack-was-pulled-off-in-just-20-minutes/",
+      "source": "Hacker News",
+      "score": 381,
+      "comments": 258
+    },
+    {
+      "id": "hn:50263837",
+      "title": "Breaking the open web won't stop the bad bots",
+      "summary": "",
+      "url": "https://www.techpolicy.press/breaking-the-open-web-wont-stop-the-bad-bots/",
+      "source": "Hacker News",
+      "score": 219,
+      "comments": 101
+    },
+    {
+      "id": "hn:50305025",
+      "title": "Northflank Breached",
+      "summary": "",
+      "url": "https://status.northflank.com",
+      "source": "Hacker News",
+      "score": 393,
+      "comments": 292
     },
     {
       "id": "lob:dsrruj",
@@ -76,8 +90,8 @@
       "summary": "<p>Hi everyone,</p>\n<p>I recently saw a post about an NYC lobsters meetup, and am wondering how many people here could make it to a London meetup.</p>\n<p>If more than a couple of people here are based in London and can make it, I'll organise one in central London.</p>\n<p>If you could also let me kno",
       "url": "https://lobste.rs/s/dsrruj/london_meetup",
       "source": "Lobste.rs",
-      "score": 52,
-      "comments": 41,
+      "score": 61,
+      "comments": 46,
       "tags": [
         "event"
       ]
@@ -88,10 +102,22 @@
       "summary": "",
       "url": "https://cyberplace.social/@GossiTheDog/117528831681803563",
       "source": "Lobste.rs",
-      "score": 102,
-      "comments": 30,
+      "score": 148,
+      "comments": 38,
       "tags": [
         "security"
+      ]
+    },
+    {
+      "id": "lob:htgcuc",
+      "title": "Do At-Proto Users Know This Is Public?",
+      "summary": "",
+      "url": "https://melaniekat.com/blog/public-on-pds/",
+      "source": "Lobste.rs",
+      "score": 81,
+      "comments": 25,
+      "tags": [
+        "privacy"
       ]
     },
     {
@@ -100,54 +126,50 @@
       "summary": "",
       "url": "http://blog.mistys-internet.website/post/2026/10/29/if-you-love-a-website-back-it-up/",
       "source": "Lobste.rs",
-      "score": 56,
-      "comments": 16,
+      "score": 76,
+      "comments": 21,
       "tags": [
         "web"
       ]
     },
     {
-      "id": "lob:m6fw0x",
-      "title": "NetBSD adds a new Emacs-like text editor called atto",
+      "id": "hn:50309029",
+      "title": "Infinite Mac: BeOS",
       "summary": "",
-      "url": "https://mastodon.sdf.org/@netbsd/117518160563539748",
+      "url": "https://blog.persistent.info/2026/10/infinite-mac-beos.html",
+      "source": "Hacker News",
+      "score": 127,
+      "comments": 52
+    },
+    {
+      "id": "lob:xudbqx",
+      "title": "No, npm, “estee” is not a typo of “testem”",
+      "summary": "",
+      "url": "https://smoores.dev/post/no_npm_estee_is_not_a_typo/",
       "source": "Lobste.rs",
-      "score": 48,
-      "comments": 27,
+      "score": 29,
+      "comments": 19,
       "tags": [
-        "editors",
-        "netbsd"
+        "javascript"
       ]
     },
     {
-      "id": "hn:50306008",
-      "title": "US tech stocks see sharp falls over AI cost fears",
+      "id": "hn:50311686",
+      "title": "Show HN: To Honor Sir Patrick Stewart, Enjoy the TNG Episode Guessing Game",
       "summary": "",
-      "url": "https://www.bbc.co.uk/news/articles/cvwy72e0n72yo",
+      "url": "https://tng.episodle.com/",
       "source": "Hacker News",
-      "score": 110,
-      "comments": 57
+      "score": 130,
+      "comments": 41
     },
     {
-      "id": "lob:htgcuc",
-      "title": "Do At-Proto Users Know This Is Public?",
+      "id": "hn:50309266",
+      "title": "The oldest ice disappears and the Stone Age emerges from it",
       "summary": "",
-      "url": "https://melaniekat.com/blog/public-on-pds/",
-      "source": "Lobste.rs",
-      "score": 46,
-      "comments": 12,
-      "tags": [
-        "privacy"
-      ]
-    },
-    {
-      "id": "hn:50305025",
-      "title": "Northflank Breached",
-      "summary": "",
-      "url": "https://status.northflank.com",
+      "url": "https://www.sciencenorway.no/archaeology-climate-culture/the-oldest-ice-is-disappearing-the-stone-age-is-emerging-from-the-melting-ice/2713921",
       "source": "Hacker News",
-      "score": 138,
-      "comments": 78
+      "score": 114,
+      "comments": 47
     },
     {
       "id": "lob:f4aqog",
@@ -155,33 +177,51 @@
       "summary": "",
       "url": "https://seriot.ch/computation/curl.html",
       "source": "Lobste.rs",
-      "score": 44,
-      "comments": 4,
+      "score": 70,
+      "comments": 7,
       "tags": [
         "compsci"
       ]
     },
     {
-      "id": "hn:50306442",
-      "title": "A Working Nintendo in ~1GB of Qwen Weights",
+      "id": "hn:50277379",
+      "title": "Cloudflare Turnstile solver library (no headless browser required)",
       "summary": "",
-      "url": "https://github.com/dbreunig/nesformer",
+      "url": "https://github.com/chris124567/cfsolve",
       "source": "Hacker News",
-      "score": 51,
-      "comments": 47
+      "score": 132,
+      "comments": 36
     },
     {
-      "id": "arxiv:2610.40616v1",
-      "title": "Difficulty Calibration Across Time for Membership Inference in Diffusion Models",
-      "summary": "Modern diffusion models are trained on massive datasets that often include copyrighted or private images. Membership inference attacks (MIAs) address this by testing whether a given image was in a model's training set. The standard approach scores an image by its reconstruction loss and flags low-lo",
-      "url": "https://arxiv.org/abs/2610.40616v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CV",
-        "cs.CR",
-        "cs.LG"
-      ],
-      "arxiv_id": "2610.40616v1"
+      "id": "lob:u7dsbx",
+      "title": "What are you doing this weekend?",
+      "summary": "<p>Feel free to tell what you plan on doing this weekend and even ask for help or feedback.</p>\n<p>Please keep in mind it’s more than OK to do nothing at all too!</p>\n",
+      "url": "https://lobste.rs/s/u7dsbx/what_are_you_doing_this_weekend",
+      "source": "Lobste.rs",
+      "score": 20,
+      "comments": 36,
+      "tags": [
+        "ask",
+        "programming"
+      ]
+    },
+    {
+      "id": "hn:50310398",
+      "title": "sanstun: A sans-IO, parallel-friendly WireGuard implementation in Rust",
+      "summary": "",
+      "url": "https://www.firezone.dev/blog/introducing-sanstun",
+      "source": "Hacker News",
+      "score": 93,
+      "comments": 17
+    },
+    {
+      "id": "hn:50312756",
+      "title": "Tell HN: Scribd Breached",
+      "summary": "Not seeing anything posted about this anywhere, received on Monday, 26th of Oct 2026:<p>Subject: Notice of Security Incident<p>This notice is being sent on behalf of Scribd, Inc., the parent company of Scribd, Slideshare, Everand, and Fable, by Epiq, Scribd Inc.’s notification partner.<p>Hello,<p>We",
+      "url": "https://news.ycombinator.com/item?id=50312756",
+      "source": "Hacker News",
+      "score": 86,
+      "comments": 29
     },
     {
       "id": "rss:fa2a13a304",
@@ -190,56 +230,6 @@
       "url": "https://thehackernews.com/2026/10/wordpress-rce-flaw-draws-nearly-63000.html",
       "source": "Tech RSS",
       "score": 0
-    },
-    {
-      "id": "rss:ea4440dfed",
-      "title": "Linux Kernel TCP Flaw With 9.8 CVSS Score Affects Ubuntu, Red Hat and Other Distributions",
-      "summary": "A flaw in the Linux kernel's TCP code, tracked as&nbsp;CVE-2026-98432, affects Ubuntu, Red Hat Enterprise Linux (RHEL), and other Linux distributions. The kernel's own CVE team rates it 9.8 out of 10 on the CVSS scale.\n\nAnthropic said&nbsp;on October 27 that its AI model wrote an exploit that uses t",
-      "url": "https://thehackernews.com/2026/10/linux-kernel-tcp-flaw-with-98-cvss.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:dd7e7dc80a",
-      "title": "Testing the CVE-2026-58062 OCSP Fix Before Trusting a Patched Build",
-      "summary": "Testing the CVE-2026-58062 OCSP Fix Before Trusting a Patched Build\n\n\nInstalling Bouncy Castle 1.85 or an Atlassian release that contains the fix should change a specific certificate-validation outcome. A test that only checks a normal certificate still validates can miss the vulnerability.",
-      "url": "https://dev.to/jeffreyciend/testing-the-cve-2026-58062-ocsp-fix-before-trusting-a-patched-build-knf",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "lob:u7dsbx",
-      "title": "What are you doing this weekend?",
-      "summary": "<p>Feel free to tell what you plan on doing this weekend and even ask for help or feedback.</p>\n<p>Please keep in mind it’s more than OK to do nothing at all too!</p>\n",
-      "url": "https://lobste.rs/s/u7dsbx/what_are_you_doing_this_weekend",
-      "source": "Lobste.rs",
-      "score": 13,
-      "comments": 20,
-      "tags": [
-        "ask",
-        "programming"
-      ]
-    },
-    {
-      "id": "lob:qsvspv",
-      "title": "Pidgin 3.0 Alpha 4 2.98.0 has been released",
-      "summary": "",
-      "url": "https://discourse.imfreedom.org/t/pidgin-3-0-alpha-4-2-98-0-has-been-released/445",
-      "source": "Lobste.rs",
-      "score": 17,
-      "comments": 4,
-      "tags": [
-        "release"
-      ]
-    },
-    {
-      "id": "hn:50305480",
-      "title": "Blockchain intelligence firms link North Korea to $6.3B hack on Binance",
-      "summary": "",
-      "url": "https://www.npr.org/2026/10/30/g-s1-150902/blockchain-intelligence-firms-link-north-korea-to-6-3b-hack-on-binance",
-      "source": "Hacker News",
-      "score": 84,
-      "comments": 24
     }
   ],
   "ai_curated": true
