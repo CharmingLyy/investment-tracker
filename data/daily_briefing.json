@@ -1,97 +1,76 @@
 {
   "date": "2026-11-02",
-  "update_time": "2026-11-01 17:44:31",
+  "update_time": "2026-11-02 05:14:27",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-02\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 [Memdoor：五个\"廉价\"小模型组队干翻旗舰大模型] (来源: HackerNews)\n- **核心干货**：开发者用 5 个 Qwen3.8-27B 模型组成协作团队，在 LiveCodeBench Hard 上击败了 Fable 5。核心思路不是堆参数，而是通过多智能体工作流让中等模型分工、互检、投票，用\"人多力量大\"的方式逼近甚至超越单点巨兽。这对算力预算有限的团队是实打实的路线参考。\n- **毒舌/硬核点评**：MoE 靠专家稀疏，这哥们靠\"五个臭皮匠\"硬凑诸葛亮——但成绩单是真的，说明很多所谓\"旗舰能力\"其实是没被组织好的算力，不是不可逾越的天花板。\n- **🔗 传送门**：[点击直达原链接](https://github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve)\n\n---\n\n### 2. 📌 [巴西法院对\"提示词注入\"律师开出制裁：AI 时代的法庭新罪名] (来源: HackerNews)\n- **核心干货**：有律师在提交给法院的文书中植入 prompt injection，试图操纵对方或法院使用的 AI 系统，被巴西法院正式制裁。这是全球司法系统首次把\"提示词注入\"当作可追责行为处理的公开案例，意味着 AI 安全漏洞正在从技术问题变成法律责任问题。\n- **毒舌/硬核点评**：以前律师玩文字游戏，现在直接给对方的 AI 下咒。攻击面从\"人读的文书\"扩展成\"机器读的文书\"，法律和安全的边界正式错位——以后打官司可能得先做红队测试。\n- **🔗 传送门**：[点击直达原链接](https://jetstream.security/insights/brazilian-court-sanctions-prompt-injection-filing/)\n\n---\n\n### 3. 📌 [AlpineBSD：把\"无 AI\"当卖点的操作系统，居然真有人做] (来源: Tech RSS)\n- **核心干货**：NetBSD 内核 + Alpine Linux 用户态，组合成一个主打\"零 AI 组件\"的 FOSS 操作系统。这不是技术突破，而是一个信号：市场开始分化出对\"确定性、可审计、无黑箱\"系统的真实需求，尤其面向合规敏感场景和厌恶 AI 噪声的开发者。\n- **毒舌/硬核点评**：别人卷 AI 它卷\"反 AI\"，用 BSD 内核配 Alpine 用户态，技术上属于老瓶装新酒——但它赌对了一件事：当全世界都在往模型里塞参数时，\"我不用 AI\"本身就是一种稀缺功能。\n- **🔗 传送门**：[点击直达原链接](https://www.theregister.com/os-platforms/2026/10/30/alpinebsd-announced-an-ai-free-foss-os/5306589)\n\n---\n\n### 🗣️ 今日顶男金句\n> 模型的边界不在参数规模，而在你组织它的方式——算力是子弹，架构才是枪。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-02\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Postgres 19 延期，AI 背锅 (来源: HackerNews)\n- **核心干货**：PostgreSQL 核心开发者 Robert Haas 亲自撰文解释 PG 19 为何跳票——不是因为功能膨胀，而是 AI 辅助代码审查和测试工具上线后，暴露出的历史遗留 Bug 数量激增，修不完。翻译成人话：AI 没帮你写更多代码，倒是先把你家祖传屎山给刨出来了。\n- **毒舌/硬核点评**：AI 的第一个真实生产力场景终于浮出水面——不是替代程序员，而是当那个敢说\"皇上没穿衣服\"的小孩。数据库这种\"错一行丢一库\"的领域，晚发布三个月远比带病上线体面。真正该慌的是那些靠\"没人发现\"活着的项目。\n- **🔗 传送门**：[点击直达原链接](http://rhaas.blogspot.com/2026/10/postgres-19-is-late-and-its-ais-fault.html)\n\n---\n\n### 2. 📌 HackerBooks：把 HN 十六年的集体品味榨成一本书单 (来源: HackerNews)\n- **核心干货**：继 Karpathy 的 HackerTube 之后，有人用 Claude Opus 5.5 把 2007 年至今 HN 评论区里被至少两个不同用户提到的约 1.65 万本书全部结构化，每本书都能回溯到具体讨论串，数据可下载。这是对\"HN 评论区是互联网最高信噪比\"这一信仰的一次暴力验证。\n- **毒舌/硬核点评**：Karpathy 搭了骨架，这位老哥直接补上灵魂——注意，项目本身是 Claude 写的，人类只负责出点子。这大概是 2026 年最诚实的\"AI 应用\"示范：不吹 AGI，就让模型干脏活累活，人负责审美。书单能不能读完另说，收藏夹+1 的仪式感已经拉满。\n- **🔗 传送门**：[点击直达原链接](https://hackerbooks.org)\n\n---\n\n### 3. 📌 Nibnib：把\"解压快\"卷到极致的图像压缩 (来源: GitHub / HackerNews)\n- **核心干货**：Raph Levien（字体与渲染圈老炮）推出的图像压缩库，核心卖点不是压缩率，而是\"极端解压速度\"——面向的是游戏、UI、实时渲染这类每帧都要解一堆贴图的场景。在所有人卷压缩比的时候，他反手卷解压延迟，属于典型的\"逆向差异化\"。\n- **毒舌/硬核点评**：这年头压缩算法比共享单车还多，敢把 KPI 定在\"解压最快\"而不是\"体积最小\"的，要么是天才要么是疯子，Raph 大概率是前者。给做实时图形和嵌入式的人提个醒：这玩意儿可能比你的贴图管线还懂什么叫\"帧率就是命\"。\n- **🔗 传送门**：[点击直达原链接](https://github.com/raphlinus/nibnib)\n\n---\n\n### 🗣️ 今日顶男金句\n\n> \"AI 不会让你变强，它只会让你原本的混乱变得更快、更响、更难修——所以先收拾好你的屎山，再谈什么智能体。\"",
   "briefing_items": [
     {
-      "title": "[Memdoor：五个\"廉价\"小模型组队干翻旗舰大模型]",
+      "title": "Postgres 19 延期，AI 背锅",
       "source": "HackerNews",
-      "summary": "开发者用 5 个 Qwen3.8-27B 模型组成协作团队，在 LiveCodeBench Hard 上击败了 Fable 5。核心思路不是堆参数，而是通过多智能体工作流让中等模型分工、互检、投票，用\"人多力量大\"的方式逼近甚至超越单点巨兽。这对算力预算有限的团队是实打实的路线参考。",
-      "commentary": "MoE 靠专家稀疏，这哥们靠\"五个臭皮匠\"硬凑诸葛亮——但成绩单是真的，说明很多所谓\"旗舰能力\"其实是没被组织好的算力，不是不可逾越的天花板。",
-      "url": "https://github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve"
+      "summary": "PostgreSQL 核心开发者 Robert Haas 亲自撰文解释 PG 19 为何跳票——不是因为功能膨胀，而是 AI 辅助代码审查和测试工具上线后，暴露出的历史遗留 Bug 数量激增，修不完。翻译成人话：AI 没帮你写更多代码，倒是先把你家祖传屎山给刨出来了。",
+      "commentary": "AI 的第一个真实生产力场景终于浮出水面——不是替代程序员，而是当那个敢说\"皇上没穿衣服\"的小孩。数据库这种\"错一行丢一库\"的领域，晚发布三个月远比带病上线体面。真正该慌的是那些靠\"没人发现\"活着的项目。",
+      "url": "http://rhaas.blogspot.com/2026/10/postgres-19-is-late-and-its-ais-fault.html"
     },
     {
-      "title": "[巴西法院对\"提示词注入\"律师开出制裁：AI 时代的法庭新罪名]",
+      "title": "HackerBooks：把 HN 十六年的集体品味榨成一本书单",
       "source": "HackerNews",
-      "summary": "有律师在提交给法院的文书中植入 prompt injection，试图操纵对方或法院使用的 AI 系统，被巴西法院正式制裁。这是全球司法系统首次把\"提示词注入\"当作可追责行为处理的公开案例，意味着 AI 安全漏洞正在从技术问题变成法律责任问题。",
-      "commentary": "以前律师玩文字游戏，现在直接给对方的 AI 下咒。攻击面从\"人读的文书\"扩展成\"机器读的文书\"，法律和安全的边界正式错位——以后打官司可能得先做红队测试。",
-      "url": "https://jetstream.security/insights/brazilian-court-sanctions-prompt-injection-filing/"
+      "summary": "继 Karpathy 的 HackerTube 之后，有人用 Claude Opus 5.5 把 2007 年至今 HN 评论区里被至少两个不同用户提到的约 1.65 万本书全部结构化，每本书都能回溯到具体讨论串，数据可下载。这是对\"HN 评论区是互联网最高信噪比\"这一信仰的一次暴力验证。",
+      "commentary": "Karpathy 搭了骨架，这位老哥直接补上灵魂——注意，项目本身是 Claude 写的，人类只负责出点子。这大概是 2026 年最诚实的\"AI 应用\"示范：不吹 AGI，就让模型干脏活累活，人负责审美。书单能不能读完另说，收藏夹+1 的仪式感已经拉满。",
+      "url": "https://hackerbooks.org"
     },
     {
-      "title": "[AlpineBSD：把\"无 AI\"当卖点的操作系统，居然真有人做]",
-      "source": "Tech RSS",
-      "summary": "NetBSD 内核 + Alpine Linux 用户态，组合成一个主打\"零 AI 组件\"的 FOSS 操作系统。这不是技术突破，而是一个信号：市场开始分化出对\"确定性、可审计、无黑箱\"系统的真实需求，尤其面向合规敏感场景和厌恶 AI 噪声的开发者。",
-      "commentary": "别人卷 AI 它卷\"反 AI\"，用 BSD 内核配 Alpine 用户态，技术上属于老瓶装新酒——但它赌对了一件事：当全世界都在往模型里塞参数时，\"我不用 AI\"本身就是一种稀缺功能。",
-      "url": "https://www.theregister.com/os-platforms/2026/10/30/alpinebsd-announced-an-ai-free-foss-os/5306589"
-    },
-    {
-      "quote": "模型的边界不在参数规模，而在你组织它的方式——算力是子弹，架构才是枪。"
+      "title": "Nibnib：把\"解压快\"卷到极致的图像压缩",
+      "source": "GitHub / HackerNews",
+      "summary": "Raph Levien（字体与渲染圈老炮）推出的图像压缩库，核心卖点不是压缩率，而是\"极端解压速度\"——面向的是游戏、UI、实时渲染这类每帧都要解一堆贴图的场景。在所有人卷压缩比的时候，他反手卷解压延迟，属于典型的\"逆向差异化\"。",
+      "commentary": "这年头压缩算法比共享单车还多，敢把 KPI 定在\"解压最快\"而不是\"体积最小\"的，要么是天才要么是疯子，Raph 大概率是前者。给做实时图形和嵌入式的人提个醒：这玩意儿可能比你的贴图管线还懂什么叫\"帧率就是命\"。",
+      "url": "https://github.com/raphlinus/nibnib"
     }
   ],
   "candidates": [
+    {
+      "id": "hn:50325253",
+      "title": "Show HN: OmniDiff – Opensource, super fast, content aware Git difftool, in Rust",
+      "summary": "I have been researching what the ultimate diff tool would look like, based on actual diffs in open source repositories.<p>OmniDiff can diff: code (25 languages), config, images, PDFs, archives, cursors, fonts...<p>It&#x27;s fast. It can diff C++ files of tens of thousands of lines in under 100ms, on",
+      "url": "https://github.com/ivankovic/omnidiff",
+      "source": "Hacker News",
+      "score": 195,
+      "comments": 46
+    },
+    {
+      "id": "hn:50312408",
+      "title": "Postgres 19 is late because so many more bugs are being found now",
+      "summary": "",
+      "url": "http://rhaas.blogspot.com/2026/10/postgres-19-is-late-and-its-ais-fault.html",
+      "source": "Hacker News",
+      "score": 199,
+      "comments": 122
+    },
     {
       "id": "hn:50319510",
       "title": "HackerTube: YouTube built from videos recommended by HN",
       "summary": "YouTube-style UI over 6,454 videos sourced from 39,834 HN comments since 2007.<p><a href=\"https:&#x2F;&#x2F;hackertube.org&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;hackertube.org&#x2F;</a>",
       "url": "https://karpathy.bearblog.dev/hacker-tube/",
       "source": "Hacker News",
-      "score": 1823,
-      "comments": 474
-    },
-    {
-      "id": "hn:50320995",
-      "title": "Memdoor: A team of 5 Qwen3.8-27B models beats Fable 5 on LiveCodeBench Hard",
-      "summary": "",
-      "url": "https://github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve",
-      "source": "Hacker News",
-      "score": 375,
-      "comments": 184
+      "score": 2408,
+      "comments": 551
     },
     {
       "id": "hn:50326821",
-      "title": "Show HN: HackerBooks – HackerTube, but for books recommended on HN",
+      "title": "Show HN: HackerBooks – HackerTube, but for books mentioned on HN",
       "summary": "Saw Karpathy&#x27;s HackerTube and wanted the same thing for books. So I had Claude build one (Opus 5.5).<p>It&#x27;s ~16.5k books that at least two different HN commenters brought up, from 2007 till now. Each book links back to the comments that mentioned it. Data is downloadable from the about pag",
       "url": "https://hackerbooks.org",
       "source": "Hacker News",
-      "score": 212,
-      "comments": 65
+      "score": 1125,
+      "comments": 204
     },
     {
-      "id": "hn:50326118",
-      "title": "Police chief unplugs Flock cameras after company ignores contract cancellation",
-      "summary": "",
-      "url": "https://www.tomshardware.com/tech-industry/big-tech/police-chief-physically-unplugs-flock-cameras-after-the-company-ignores-contract-cancellation-city-takes-matters-into-its-own-hands-amid-privacy-controversies",
+      "id": "hn:50328896",
+      "title": "Ask HN: Which TV do you recommend for privacy?",
+      "summary": "I haven’t owned a TV in years and would like one that respects my privacy. Are there any TV’s which do this well? I am looking for something in the 60”to 80”range and would like a 4k display with at least 60hz display. I don’t mind paying a premium.<p>I have heard good things about Apple TV as a bet",
+      "url": "https://news.ycombinator.com/item?id=50328896",
       "source": "Hacker News",
-      "score": 212,
-      "comments": 54
-    },
-    {
-      "id": "hn:50320963",
-      "title": "An Italian farmer found some unknown seeds in his attic and planted them",
-      "summary": "",
-      "url": "https://www.smithsonianmag.com/science-nature/italian-farmer-found-unknown-seeds-attic-with-nothing-lose-planted-them-result-biblical-180989644/",
-      "source": "Hacker News",
-      "score": 643,
-      "comments": 179
-    },
-    {
-      "id": "hn:50322173",
-      "title": "Brazilian Court Sanctions Lawyers for Prompt Injection in Court Filing",
-      "summary": "",
-      "url": "https://jetstream.security/insights/brazilian-court-sanctions-prompt-injection-filing/",
-      "source": "Hacker News",
-      "score": 250,
-      "comments": 135
-    },
-    {
-      "id": "hn:50326099",
-      "title": "Lenovo's 'encrypted' fingerprint USB is just an unencrypted SD card in a case",
-      "summary": "",
-      "url": "https://www.reddit.com/r/technology/comments/1xl2pr3/lenovos_encrypted_fingerprint_usb_drive_is_just/",
-      "source": "Hacker News",
-      "score": 187,
-      "comments": 70
+      "score": 231,
+      "comments": 393
     },
     {
       "id": "lob:lt44rt",
@@ -99,22 +78,10 @@
       "summary": "",
       "url": "https://blogs.kde.org/2026/11/01/introducing-kwi/",
       "source": "Lobste.rs",
-      "score": 69,
-      "comments": 17,
+      "score": 106,
+      "comments": 31,
       "tags": [
         "linux"
-      ]
-    },
-    {
-      "id": "lob:qwou15",
-      "title": "Mystery of 60-Second Fluctuations in Power Grids Solved",
-      "summary": "",
-      "url": "https://www.fz-juelich.de/en/news/archive/press-release/2026/mystery-of-60-second-fluctuations-in-power-grids-solved",
-      "source": "Lobste.rs",
-      "score": 59,
-      "comments": 17,
-      "tags": [
-        "science"
       ]
     },
     {
@@ -123,12 +90,21 @@
       "summary": "",
       "url": "https://matklad.github.io/2026/10/29/pub-calls-pub.html",
       "source": "Lobste.rs",
-      "score": 77,
-      "comments": 19,
+      "score": 90,
+      "comments": 20,
       "tags": [
         "api",
         "programming"
       ]
+    },
+    {
+      "id": "hn:50308754",
+      "title": "Copper – A minimal low-level programming language with OOP and generics",
+      "summary": "",
+      "url": "https://tibleiz.net/copper/",
+      "source": "Hacker News",
+      "score": 150,
+      "comments": 81
     },
     {
       "id": "lob:drwd4j",
@@ -136,8 +112,8 @@
       "summary": "",
       "url": "https://jepsen.io/analyses/particledb-1.1.4",
       "source": "Lobste.rs",
-      "score": 131,
-      "comments": 24,
+      "score": 146,
+      "comments": 39,
       "tags": [
         "databases",
         "testing"
@@ -149,24 +125,45 @@
       "summary": "",
       "url": "https://jordi.inversethought.com/blog/the-kluever-maneuver/",
       "source": "Lobste.rs",
-      "score": 52,
-      "comments": 29,
+      "score": 54,
+      "comments": 34,
       "tags": [
         "testing"
       ]
     },
     {
-      "id": "arxiv:2610.40616v1",
-      "title": "Difficulty Calibration Across Time for Membership Inference in Diffusion Models",
-      "summary": "Modern diffusion models are trained on massive datasets that often include copyrighted or private images. Membership inference attacks (MIAs) address this by testing whether a given image was in a model's training set. The standard approach scores an image by its reconstruction loss and flags low-lo",
-      "url": "https://arxiv.org/abs/2610.40616v1",
+      "id": "hn:50325454",
+      "title": "Proving and improving the Platonic Representation Hypothesis with JEPAs",
+      "summary": "",
+      "url": "https://arxiv.org/abs/2610.39302",
+      "source": "Hacker News",
+      "score": 124,
+      "comments": 64
+    },
+    {
+      "id": "lob:s2qeww",
+      "title": "An outsider's perspective on Scion and Mononoke",
+      "summary": "",
+      "url": "https://typesanitizer.com/blog/scion.html",
+      "source": "Lobste.rs",
+      "score": 67,
+      "comments": 7,
+      "tags": [
+        "vcs"
+      ]
+    },
+    {
+      "id": "arxiv:2610.42149v1",
+      "title": "Latent Reasoning in Continuous Space for Unified Multimodal Models",
+      "summary": "Unified Multimodal Models (UMMs) achieve remarkable success on diverse multimodal understanding and generation tasks, yet they still struggle to effectively leverage language-based chain-of-thought reasoning for image generation. As a result, existing reasoning-augmented UMMs often fail to inherit t",
+      "url": "https://arxiv.org/abs/2610.42149v1",
       "source": "ArXiv",
       "categories": [
         "cs.CV",
-        "cs.CR",
+        "cs.CL",
         "cs.LG"
       ],
-      "arxiv_id": "2610.40616v1"
+      "arxiv_id": "2610.42149v1"
     },
     {
       "id": "rss:fa2a13a304",
@@ -177,69 +174,68 @@
       "score": 0
     },
     {
-      "id": "arxiv:2610.40654v1",
-      "title": "Propose-Filter-Release: Scaling Noise to Typical Sensitivity via Private Filtering",
-      "summary": "An estimator can be accurate and stable on typical data, yet sensitive to a few possible records. Differentially private mechanisms commonly scale their noise to the worst-case influence of a single record, which lets these records dictate the noise even when the remaining data would allow far less.",
-      "url": "https://arxiv.org/abs/2610.40654v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG"
-      ],
-      "arxiv_id": "2610.40654v1"
+      "id": "hn:50299811",
+      "title": "Nibnib: Image compression with extreme decompression speed",
+      "summary": "",
+      "url": "https://github.com/raphlinus/nibnib",
+      "source": "Hacker News",
+      "score": 121,
+      "comments": 19
     },
     {
-      "id": "arxiv:2610.40649v1",
-      "title": "Rethinking Neural Thickets Without Weight Perturbations",
-      "summary": "The Neural Thickets hypothesis posits that pretrained language models lie in dense neighborhoods of task-specific experts in weight space, which random Gaussian perturbations can uncover. We reproduce the reported gains, but show that they do not require this geometric explanation. Perturbing a sing",
-      "url": "https://arxiv.org/abs/2610.40649v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CV"
-      ],
-      "arxiv_id": "2610.40649v1"
+      "id": "lob:bzazar",
+      "title": "Pratt parsing is a black box",
+      "summary": "",
+      "url": "https://vinipsmaker.github.io/blog/article/pratt-parsing-is-a-black-box/",
+      "source": "Lobste.rs",
+      "score": 26,
+      "comments": 10,
+      "tags": [
+        "compilers",
+        "plt"
+      ]
     },
     {
-      "id": "arxiv:2610.40647v1",
-      "title": "Read, Allocate, Route: Role-Coupled Tokenization for Pixel-Space Generative Transformers",
-      "summary": "Pixel-space generative Transformers typically use one token per image patch, so capturing finer detail requires more tokens and makes global attention increasingly expensive. We observe that finer detail does not necessarily require more global communication: low-frequency structure benefits from gl",
-      "url": "https://arxiv.org/abs/2610.40647v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.LG",
-        "cs.NE"
-      ],
-      "arxiv_id": "2610.40647v1"
+      "id": "lob:cqzwwg",
+      "title": "London Meetup - Nov 2026",
+      "summary": "<p>Pub Address: The Fellow, 24 York Way, London, N1 9AA.</p>\n<p>Date: Sunday, 15/11/2026 1pm</p>\n<p>The idea is to just meet and have a chat really.</p>\n<p>I have submitted a request to book a table. Hopefully they approve but if not we can just find an un-booked table.</p>\n<p>I am posting the meetu",
+      "url": "https://lobste.rs/s/cqzwwg/london_meetup_nov_2026",
+      "source": "Lobste.rs",
+      "score": 22,
+      "comments": 4,
+      "tags": [
+        "event"
+      ]
     },
     {
-      "id": "arxiv:2610.40627v1",
-      "title": "ShallowDefend: Harnessing Shallow Safety Alignment for Multi-Turn Defender",
-      "summary": "Safety alignment has enabled large language models to reliably refuse harmful requests directly, yet the same request distributed across a multi-turn conversation still succeeds far too often. This brittleness has a mechanistic root: Alignment is shallow, with safety behavior concentrated in a model",
-      "url": "https://arxiv.org/abs/2610.40627v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL"
-      ],
-      "arxiv_id": "2610.40627v1"
+      "id": "lob:mni8ri",
+      "title": "XKCD and Fourier",
+      "summary": "",
+      "url": "https://leancrew.com/all-this/2026/10/xkcd-and-fourier/",
+      "source": "Lobste.rs",
+      "score": 34,
+      "comments": 2,
+      "tags": [
+        "math"
+      ]
     },
     {
-      "id": "rss:40b7431d9e",
-      "title": "Show HN: OmniDiff – Opensource, super fast, content aware Git difftool, in Rust",
-      "summary": "I have been researching what the ultimate diff tool would look like, based on actual diffs in open source repositories.OmniDiff can diff: code (25 languages), config, images, PDFs, archives, cursors, fonts...It's fast. It can diff C++ files of tens of thousands of lines in under 100ms, on a 2023 Thi",
-      "url": "https://github.com/ivankovic/omnidiff",
-      "source": "Tech RSS",
-      "score": 0
+      "id": "hn:50271106",
+      "title": "Tips for more effective fuzz testing with AFL++",
+      "summary": "",
+      "url": "https://nullprogram.com/blog/2025/02/05/",
+      "source": "Hacker News",
+      "score": 97,
+      "comments": 16
     },
     {
-      "id": "rss:6a267a766b",
-      "title": "AlpineBSD announced – an AI-free FOSS OS",
-      "summary": "Combining the NetBSD kernel with the Alpine Linux userland",
-      "url": "https://www.theregister.com/os-platforms/2026/10/30/alpinebsd-announced-an-ai-free-foss-os/5306589",
-      "source": "Tech RSS",
-      "score": 0
+      "id": "hn:50299427",
+      "title": "New 3D thermal invisibility cloak makes objects disappear from infrared cameras",
+      "summary": "",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261025073051.htm",
+      "source": "Hacker News",
+      "score": 60,
+      "comments": 31
     }
   ],
   "ai_curated": true
