@@ -1,235 +1,252 @@
 {
-  "date": "2026-11-03",
-  "update_time": "2026-11-03 05:57:25",
+  "date": "2026-11-04",
+  "update_time": "2026-11-03 19:13:55",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-03\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Astra：直接读写模型权重来\"改造\"Qwen (来源: HackerNews)\n- **核心干货**：有人搞出了一套\"权重空间编程\"的方法，不再靠微调或提示词，而是直接在 Qwen 的权重矩阵上做读写操作，像编辑内存一样编辑模型的行为。这意味着模型定制从\"喂数据训练\"降维成了\"改字节\"，成本和门槛被狠狠砍了一刀。\n- **毒舌/硬核点评**：以前调模型像送孩子上补习班，现在直接开颅改脑回路——疗效立竿见影，但医闹风险也请自行承担。HN 2299 分说明大家嘴上说怕，手已经在扒源码了。\n- **🔗 传送门**：[点击直达原链接](https://rikiyat.github.io/blog/weight-space-programming/)\n\n---\n\n### 2. 📌 Ubuntu 高危内核 0day RCE 补丁\"鸽\"了近三周 (来源: Tech RSS / HN)\n- **核心干货**：CVE-2026-98432，一个能远程拿下 LTS 内核的 0day，Ubuntu 拖了快三周还没发补丁。对于把 Ubuntu 当生产基座的团队来说，这已经不是什么\"计划内维护\"，而是实打实的敞门营业。\n- **毒舌/硬核点评**：Canonical 的\"长期支持\"大概是指——长期支持漏洞在线。LTS 三个字母，现在看起来像 \"Let Threats Stay\"。\n- **🔗 传送门**：[点击直达原链接](https://freenode.net/article/ubuntu-lts-kernels-still-unfixed-for-critical-cve-2026-98432)\n\n---\n\n### 3. 📌 Subvocal：不出声，用嘴型跟电脑对话 (来源: HackerNews / YC F26)\n- **核心干货**：YC 新项目 Subvocal 做智能眼镜，靠识别\"默读嘴型\"实现无噪音输入——你在咖啡馆嘴唇动两下，电脑就懂了，周围人只当你在自言自语。交互入口从键盘、触屏，正式卷向\"面部肌肉\"。\n- **毒舌/硬核点评**：终于给\"对着空气嘀咕\"的人一个正当技术理由了。唯一风险是：以后地铁上分不清谁在跟 AI 聊天，谁是真的需要帮助。\n- **🔗 传送门**：[点击直达原链接](https://news.ycombinator.com/item?id=50340088)\n\n---\n\n### 🗣️ 今日顶男金句\n> 技术不会淘汰人，只会淘汰\"以为学会了上一个版本就能退休\"的人。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-04\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 别被\"LLM 读写神经网络权重\"忽悠了 (来源: HackerNews)\n- **核心干货**：针对此前热传的\"Astra 能直接读写 Qwen 权重\"的说法，开发者撰文辟谣，指出所谓\"权重空间编程\"更多是评测话术与营销包装，模型并没有真正获得对权重张量的原生读写能力。这盆冷水浇得及时——它提醒我们，在 LLM 能力被无限夸大的当下，\"看起来能操作权重\"和\"真正理解权重\"之间隔着一条马里亚纳海沟。\n- **毒舌/硬核点评**：每次有\"AI 顿悟底层\"的标题出现，先默认它是 PR 稿，十次有九次不会错。真正做权重级操作的团队，忙着调 loss，没空发博客。\n- **🔗 传送门**：[点击直达原链接](https://honnibal.dev/blog/astra-read-write-misleading)\n\n---\n\n### 2. 📌 Postman 偷偷装 AI 插件、还试图上传你的全部 API 数据 (来源: HackerNews)\n- **核心干货**：社区爆料 Postman 在未明确告知的情况下自动安装 AI 相关插件，并存在将用户 API 数据向外分享的行为。对于把鉴权 token、内部接口、生产环境密钥都塞在 Postman 里的开发者来说，这基本等同于把公司钥匙串交给了第三方。这是一次教科书级的\"工具链信任危机\"。\n- **毒舌/硬核点评**：免费工具最贵的时刻，就是它开始\"为你好\"地自动更新。建议立刻检查设置——顺便把生产环境的 token 从那个收藏夹里挪出来，别等出事再哭。\n- **🔗 传送门**：[点击直达原链接](https://github.com/postmanlabs/postman-app-support/issues/14370)\n\n---\n\n### 3. 📌 富士胶片磁带产能暴涨 5 倍，AI 把冷存储逼成了硬通货 (来源: Ars Technica)\n- **核心干货**：AI 训练与推理产生海量冷数据，云厂商对低成本、高密度长期归档的需求激增，富士胶片宣布将磁带产能扩大 5 倍。在所有人大谈 HBM 和光模块的时候，最古老的存储介质反而成了 AI 基础设施的隐形赢家——每 TB 成本与能耗，磁带至今吊打一切闪存。\n- **毒舌/硬核点评**：AI 时代的最大讽刺：模型在云端\"思考\"，数据却老老实实躺在磁带上。搞钱的朋友，别只盯着 GPU，冷存储这条链才是被低估的现金流。\n- **🔗 传送门**：[点击直达原链接](https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/)\n\n---\n\n### 🗣️ 今日顶男金句\n真正的技术护城河，从来不是你会调哪个 API，而是别人抄走你的代码后，依然追不上你对成本、延迟和信任边界的那点偏执。",
   "briefing_items": [
     {
-      "title": "Astra：直接读写模型权重来\"改造\"Qwen",
+      "title": "别被\"LLM 读写神经网络权重\"忽悠了",
       "source": "HackerNews",
-      "summary": "有人搞出了一套\"权重空间编程\"的方法，不再靠微调或提示词，而是直接在 Qwen 的权重矩阵上做读写操作，像编辑内存一样编辑模型的行为。这意味着模型定制从\"喂数据训练\"降维成了\"改字节\"，成本和门槛被狠狠砍了一刀。",
-      "commentary": "以前调模型像送孩子上补习班，现在直接开颅改脑回路——疗效立竿见影，但医闹风险也请自行承担。HN 2299 分说明大家嘴上说怕，手已经在扒源码了。",
-      "url": "https://rikiyat.github.io/blog/weight-space-programming/"
+      "summary": "针对此前热传的\"Astra 能直接读写 Qwen 权重\"的说法，开发者撰文辟谣，指出所谓\"权重空间编程\"更多是评测话术与营销包装，模型并没有真正获得对权重张量的原生读写能力。这盆冷水浇得及时——它提醒我们，在 LLM 能力被无限夸大的当下，\"看起来能操作权重\"和\"真正理解权重\"之间隔着一条马里亚纳海沟。",
+      "commentary": "每次有\"AI 顿悟底层\"的标题出现，先默认它是 PR 稿，十次有九次不会错。真正做权重级操作的团队，忙着调 loss，没空发博客。",
+      "url": "https://honnibal.dev/blog/astra-read-write-misleading"
     },
     {
-      "title": "Ubuntu 高危内核 0day RCE 补丁\"鸽\"了近三周",
-      "source": "Tech RSS / HN",
-      "summary": "CVE-2026-98432，一个能远程拿下 LTS 内核的 0day，Ubuntu 拖了快三周还没发补丁。对于把 Ubuntu 当生产基座的团队来说，这已经不是什么\"计划内维护\"，而是实打实的敞门营业。",
-      "commentary": "Canonical 的\"长期支持\"大概是指——长期支持漏洞在线。LTS 三个字母，现在看起来像 \"Let Threats Stay\"。",
-      "url": "https://freenode.net/article/ubuntu-lts-kernels-still-unfixed-for-critical-cve-2026-98432"
+      "title": "Postman 偷偷装 AI 插件、还试图上传你的全部 API 数据",
+      "source": "HackerNews",
+      "summary": "社区爆料 Postman 在未明确告知的情况下自动安装 AI 相关插件，并存在将用户 API 数据向外分享的行为。对于把鉴权 token、内部接口、生产环境密钥都塞在 Postman 里的开发者来说，这基本等同于把公司钥匙串交给了第三方。这是一次教科书级的\"工具链信任危机\"。",
+      "commentary": "免费工具最贵的时刻，就是它开始\"为你好\"地自动更新。建议立刻检查设置——顺便把生产环境的 token 从那个收藏夹里挪出来，别等出事再哭。",
+      "url": "https://github.com/postmanlabs/postman-app-support/issues/14370"
     },
     {
-      "title": "Subvocal：不出声，用嘴型跟电脑对话",
-      "source": "HackerNews / YC F26",
-      "summary": "YC 新项目 Subvocal 做智能眼镜，靠识别\"默读嘴型\"实现无噪音输入——你在咖啡馆嘴唇动两下，电脑就懂了，周围人只当你在自言自语。交互入口从键盘、触屏，正式卷向\"面部肌肉\"。",
-      "commentary": "终于给\"对着空气嘀咕\"的人一个正当技术理由了。唯一风险是：以后地铁上分不清谁在跟 AI 聊天，谁是真的需要帮助。",
-      "url": "https://news.ycombinator.com/item?id=50340088"
-    },
-    {
-      "quote": "技术不会淘汰人，只会淘汰\"以为学会了上一个版本就能退休\"的人。"
+      "title": "富士胶片磁带产能暴涨 5 倍，AI 把冷存储逼成了硬通货",
+      "source": "Ars Technica",
+      "summary": "AI 训练与推理产生海量冷数据，云厂商对低成本、高密度长期归档的需求激增，富士胶片宣布将磁带产能扩大 5 倍。在所有人大谈 HBM 和光模块的时候，最古老的存储介质反而成了 AI 基础设施的隐形赢家——每 TB 成本与能耗，磁带至今吊打一切闪存。",
+      "commentary": "AI 时代的最大讽刺：模型在云端\"思考\"，数据却老老实实躺在磁带上。搞钱的朋友，别只盯着 GPU，冷存储这条链才是被低估的现金流。",
+      "url": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50341174",
-      "title": "Astra can read and write weights to improve Qwen",
+      "id": "hn:50351111",
+      "title": "The 'Astra can read and write weights to improve Qwen' post is misleading",
       "summary": "",
-      "url": "https://rikiyat.github.io/blog/weight-space-programming/",
+      "url": "https://honnibal.dev/blog/astra-read-write-misleading",
       "source": "Hacker News",
-      "score": 2299,
-      "comments": 728
+      "score": 755,
+      "comments": 173
     },
     {
-      "id": "lob:0yxkvs",
-      "title": "Postgres 19 is late, and it's AI's fault",
+      "id": "hn:50354960",
+      "title": "Postman silently auto-installs AI plugins and attempts to share all API data",
       "summary": "",
-      "url": "http://rhaas.blogspot.com/2026/10/postgres-19-is-late-and-its-ais-fault.html",
+      "url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
+      "source": "Hacker News",
+      "score": 468,
+      "comments": 149
+    },
+    {
+      "id": "hn:50336918",
+      "title": "Fujifilm to boost tape production 5x as AI fuels archiving demand",
+      "summary": "",
+      "url": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/",
+      "source": "Hacker News",
+      "score": 259,
+      "comments": 103
+    },
+    {
+      "id": "hn:50355251",
+      "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+      "summary": "",
+      "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+      "source": "Hacker News",
+      "score": 181,
+      "comments": 48
+    },
+    {
+      "id": "hn:50339288",
+      "title": "Jailbreaking my car's navigation system just so I can change the time",
+      "summary": "",
+      "url": "https://blog.nns.ee/2026/11/02/renault-hack/",
+      "source": "Hacker News",
+      "score": 340,
+      "comments": 119
+    },
+    {
+      "id": "hn:50352757",
+      "title": "OpenAI seems to be silently re-enabling model training on Codex chats",
+      "summary": "My company is pretty paranoid about leaking IP to the frontier labs through prompts, so we&#x27;ve all been diligent about disabling data sharing in Codex&#x2F;Claude Code&#x2F;etc. But yesterday my coworkers and I noticed that the setting had been silently reenabled in Codex. None of us knowingly o",
+      "url": "https://news.ycombinator.com/item?id=50352757",
+      "source": "Hacker News",
+      "score": 261,
+      "comments": 82
+    },
+    {
+      "id": "hn:50353229",
+      "title": "Kalshi and its co-founders face felony charges for violating Utah gambling laws",
+      "summary": "",
+      "url": "https://arstechnica.com/tech-policy/2026/10/trump-admin-sues-utah-to-save-kalshi-from-the-states-total-ban-on-gambling/",
+      "source": "Hacker News",
+      "score": 239,
+      "comments": 170
+    },
+    {
+      "id": "hn:50349276",
+      "title": "Could a modern chess engine on a Pentium have defeated Kasparov in 1996?",
+      "summary": "",
+      "url": "https://nicholas.carlini.com/writing/2026/algorithmic-improvements-chess.html",
+      "source": "Hacker News",
+      "score": 346,
+      "comments": 151
+    },
+    {
+      "id": "lob:7fcuxz",
+      "title": "Why did you choose the nix you nix?",
+      "summary": "<p>I don't which nix is good and at this point I'm afraid I need to ask.</p>\n<ul>\n<li>(Cpp)<a href=\"https://nixos.org/\" rel=\"ugc\">Nix</a>\n</li>\n<li><a href=\"https://determinate.systems/\" rel=\"ugc\">Determinate Nix</a></li>\n<li><a href=\"https://lix.systems/\" rel=\"ugc\">Lix</a></li>\n</ul>\n<p>Or, you kno",
+      "url": "https://lobste.rs/s/7fcuxz/why_did_you_choose_nix_you_nix",
       "source": "Lobste.rs",
-      "score": 47,
-      "comments": 19,
+      "score": 37,
+      "comments": 31,
       "tags": [
-        "databases",
+        "ask",
+        "nix"
+      ]
+    },
+    {
+      "id": "hn:50352758",
+      "title": "Mac at Any Scale",
+      "summary": "",
+      "url": "https://namespace.so/blog/mac-at-any-scale",
+      "source": "Hacker News",
+      "score": 191,
+      "comments": 96
+    },
+    {
+      "id": "lob:e201eb",
+      "title": "The Ubuntu 26.04 Rust sudo is not compatible with standard sudo",
+      "summary": "",
+      "url": "https://utcc.utoronto.ca/~cks/space/blog/linux/Ubuntu2604RustSudoNotCompatible",
+      "source": "Lobste.rs",
+      "score": 27,
+      "comments": 18,
+      "tags": [
+        "linux",
+        "rust"
+      ]
+    },
+    {
+      "id": "lob:qa0owz",
+      "title": "Stop Hardcoding Your Timeouts",
+      "summary": "",
+      "url": "https://alfy.blog/2026/04/23/stop-hardcoding-your-timeouts.html",
+      "source": "Lobste.rs",
+      "score": 59,
+      "comments": 21,
+      "tags": [
         "practices"
       ]
     },
     {
-      "id": "hn:50338728",
-      "title": "Ask HN: Who is hiring? (November 2026)",
-      "summary": "Please state the location and include REMOTE for remote work, REMOTE (US)\nor similar if the country is restricted, and ONSITE when remote work is <i>not</i> an option.<p>Please only post if you personally are part of the hiring company—no\nrecruiting firms or job boards. One post per company. If it i",
-      "url": "https://news.ycombinator.com/item?id=50338728",
-      "source": "Hacker News",
-      "score": 198,
-      "comments": 159
-    },
-    {
-      "id": "hn:50339913",
-      "title": "Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app",
-      "summary": "Hey HN, we’re Wei-Wei and Jeff. We’re building Momentic, QA agents that autonomously plan, explore, and bug-bash controls and user flows in your web, iOS, Android, and (soon) desktop apps to catch bugs.<p>Here’s a demo: <a href=\"https:&#x2F;&#x2F;youtu.be&#x2F;BFsM-Se1Fh8\" rel=\"nofollow\">https:&#x2F",
-      "url": "https://momentic.ai/",
-      "source": "Hacker News",
-      "score": 137,
-      "comments": 90
-    },
-    {
-      "id": "hn:50340088",
-      "title": "Show HN: Subvocal – Talk to your computer without making noise",
-      "summary": "Hi HN, we&#x27;re Aarush and Arnav from The Subvocal Company (YC F26) (<a href=\"https:&#x2F;&#x2F;subvocal.company&#x2F;\">https:&#x2F;&#x2F;subvocal.company&#x2F;</a>). We’re building smart glasses that let you talk to your computer without talking out loud. You can mouth words silently and discreet",
-      "url": "https://news.ycombinator.com/item?id=50340088",
-      "source": "Hacker News",
-      "score": 624,
-      "comments": 323
-    },
-    {
-      "id": "hn:50339397",
-      "title": "US boy names that became girl names and vice versa",
+      "id": "lob:ezg5mx",
+      "title": "My favourite laptop",
       "summary": "",
-      "url": "https://namedaisy.com/blog/boy-names-that-became-girl-names",
-      "source": "Hacker News",
-      "score": 338,
-      "comments": 340
-    },
-    {
-      "id": "hn:50336518",
-      "title": "If you love a website, back it up",
-      "summary": "",
-      "url": "https://blog.mistys-internet.website/post/2026/10/29/if-you-love-a-website-back-it-up/",
-      "source": "Hacker News",
-      "score": 464,
-      "comments": 101
-    },
-    {
-      "id": "hn:50339221",
-      "title": "Show HN: Warsaw in voxels – An interactive 3D map of the city centre",
-      "summary": "Explore central Warsaw in voxels - slightly inspired by Minecraft, and MagicaVoxel. \nYou can change the date, time of day and weather, explore the city, or click on a pedestrian to control them (here a bit of inspiration from Dungeon Keeper).<p>Works best on desktop, but I tried to make it usable on",
-      "url": "https://p.migdal.pl/warsaw-vibe-voxel/",
-      "source": "Hacker News",
-      "score": 236,
-      "comments": 38
-    },
-    {
-      "id": "hn:50340619",
-      "title": "Self-Employed? Solopreneur? NIST Has a Cybersecurity Guide Just for You",
-      "summary": "",
-      "url": "https://www.nist.gov/news-events/news/2026/11/self-employed-solopreneur-nist-has-cybersecurity-guide-just-you",
-      "source": "Hacker News",
-      "score": 167,
-      "comments": 47
-    },
-    {
-      "id": "lob:s2qeww",
-      "title": "An outsider's perspective on Scion and Mononoke",
-      "summary": "",
-      "url": "https://typesanitizer.com/blog/scion.html",
+      "url": "https://blog.jsbarretto.com/post/laptop",
       "source": "Lobste.rs",
-      "score": 142,
-      "comments": 20,
+      "score": 42,
+      "comments": 34,
       "tags": [
-        "vcs"
+        "hardware"
       ]
     },
     {
-      "id": "hn:50346981",
-      "title": "Show HN: Hacker Times, a New York Times-inspired version of Hacker News",
-      "summary": "I thought it would be fun to browse HN as if it were a newspaper. The site updates once an hour. Enjoy!",
-      "url": "https://hackertimes.ca/",
-      "source": "Hacker News",
-      "score": 143,
-      "comments": 49
-    },
-    {
-      "id": "lob:zjjvbo",
-      "title": "Work on GEFS (the Good Enough File System) for OpenBSD progresses",
+      "id": "lob:u7wdqj",
+      "title": "Sparks of Weight-Space Programming: LLMs can natively read & write neural network weights",
       "summary": "",
-      "url": "https://www.undeadly.org/cgi?action=article;sid=20261101115637",
+      "url": "https://rikiyat.github.io/blog/weight-space-programming/",
       "source": "Lobste.rs",
-      "score": 90,
-      "comments": 11,
+      "score": 43,
+      "comments": 12,
       "tags": [
-        "openbsd"
+        "ai"
       ]
     },
     {
-      "id": "hn:50345924",
-      "title": "Scaling Git at OpenAI",
+      "id": "lob:wgoato",
+      "title": "A Decade of Kill Bugs",
       "summary": "",
-      "url": "https://openai.com/index/scaling-git-at-openai/",
-      "source": "Hacker News",
-      "score": 141,
-      "comments": 62
-    },
-    {
-      "id": "rss:cec6d95b5f",
-      "title": "Ubuntu still has not released patch for Linux 0day RCE in almost 3 weeks",
-      "summary": "Article URL: https://freenode.net/article/ubuntu-lts-kernels-still-unfixed-for-critical-cve-2026-98432\nComments URL: https://news.ycombinator.com/item?id=50341462\nPoints: 409\n# Comments: 117",
-      "url": "https://freenode.net/article/ubuntu-lts-kernels-still-unfixed-for-critical-cve-2026-98432",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "lob:qvdatp",
-      "title": "Jailbreaking my car's navigation system just so I can change the time",
-      "summary": "",
-      "url": "https://blog.nns.ee/2026/11/02/renault-hack/",
+      "url": "https://alangrow.com/blog/a-decade-of-kill-bugs",
       "source": "Lobste.rs",
-      "score": 89,
-      "comments": 4,
+      "score": 93,
+      "comments": 14,
       "tags": [
-        "linux",
-        "reversing",
-        "security"
-      ]
-    },
-    {
-      "id": "lob:gu6yyl",
-      "title": "Polyend releases the Tracker firmware source code",
-      "summary": "",
-      "url": "https://backstage.polyend.com/t/tracker-the-biggest-update-yet/25120",
-      "source": "Lobste.rs",
-      "score": 25,
-      "comments": 6,
-      "tags": [
-        "art",
-        "release"
-      ]
-    },
-    {
-      "id": "lob:ihqhia",
-      "title": "the lost malloc()",
-      "summary": "",
-      "url": "https://napcakes.nekoweb.org/posts/malloc/",
-      "source": "Lobste.rs",
-      "score": 27,
-      "comments": 5,
-      "tags": [
-        "c",
         "historical",
+        "linux",
         "unix"
       ]
     },
     {
-      "id": "hn:50346849",
-      "title": "DiscImageStudio: burn visible artwork onto CDs, DVDs and Blu-ray discs",
+      "id": "lob:chypzr",
+      "title": "Death comes for XSLT",
       "summary": "",
-      "url": "https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio",
-      "source": "Hacker News",
-      "score": 108,
-      "comments": 26
+      "url": "https://dbushell.com/2026/11/03/xslt-rip/",
+      "source": "Lobste.rs",
+      "score": 35,
+      "comments": 30,
+      "tags": [
+        "browsers",
+        "web"
+      ]
     },
     {
-      "id": "rss:861fb13b7b",
-      "title": "Attackers Target Unpatched CryptoPayment Gateway Flaw That Can Expose Wallet Credentials",
-      "summary": "Threat actors are attempting to exploit an unpatched maximum-severity security vulnerability in the CryptoPayment Gateway WordPress plugin, according to findings from Defused Cyber.\n\nThe vulnerability in question is CVE-2026-81648, which carries a CVSS score of 10.0. Successful exploitation of the f",
-      "url": "https://thehackernews.com/2026/11/attackers-target-unpatched.html",
-      "source": "Tech RSS",
-      "score": 0
+      "id": "lob:s1btqo",
+      "title": "This background sound leaks your exact location",
+      "summary": "",
+      "url": "https://youtu.be/UytYrhYLOKI",
+      "source": "Lobste.rs",
+      "score": 76,
+      "comments": 7,
+      "tags": [
+        "math",
+        "security",
+        "video"
+      ]
     },
     {
-      "id": "rss:b79b0657ef",
-      "title": "⚡ Weekly Recap: Critical CVEs, Linux DDoS Botnet, Device-Code Phishing, Android Spyware and More",
-      "summary": "Some attacks this week didn't need much of a trick. A fake support call, a trusted extension, a shared link, or a device with no password. Small things that people barely think about. Yet each was enough to cause serious trouble.\n\nThen there were the bigger messes. Billions stolen, hidden networks o",
-      "url": "https://thehackernews.com/2026/11/weekly-recap-critical-cves-linux-ddos.html",
-      "source": "Tech RSS",
-      "score": 0
+      "id": "arxiv:2611.03634v1",
+      "title": "WebHarbor: Docking Real Websites for Evolving GUI Agent Environments",
+      "summary": "GUI web agents require realistic and interactive environments that remain stable during both evaluation and training. Live website evaluation suffers from changing content, access restrictions, and limited coverage of authenticated workflows, while existing synthetic environments for training often ",
+      "url": "https://arxiv.org/abs/2611.03634v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_id": "2611.03634v1"
+    },
+    {
+      "id": "arxiv:2611.03618v1",
+      "title": "Strategist: Evolving Reasoning with Agents",
+      "summary": "A model is only half of an AI agent system. The other half is the inference strategy: the reasoning procedure that turns model calls into a response. Today that second half is written by hand, and the experience of building one strategy never carries to the next. We introduce Strategist, a meta-agen",
+      "url": "https://arxiv.org/abs/2611.03618v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_id": "2611.03618v1"
+    },
+    {
+      "id": "arxiv:2611.03601v1",
+      "title": "DiabAgent: Toward Agentic Physiological Control",
+      "summary": "As pretraining scales, medical language models have advanced rapidly in clinical question answering. Their ability to achieve effective physiological control through sustained intervention still lacks systematic quantitative evaluation. Type 1 diabetes provides a concrete setting: impaired insulin s",
+      "url": "https://arxiv.org/abs/2611.03601v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_id": "2611.03601v1"
     }
   ],
   "ai_curated": true
