@@ -1,32 +1,32 @@
 {
   "date": "2026-11-03",
-  "update_time": "2026-11-02 21:30:41",
+  "update_time": "2026-11-03 05:57:25",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-03\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Astra：直接读写模型权重来\"改造\"Qwen (来源: Hacker News)\n- **核心干货**：Astra 提出了一种\"权重空间编程\"的思路——不走微调、不走提示词，而是直接读取并改写 Qwen 模型内部的权重参数，像打补丁一样对模型行为做定向修改。这等于把模型当成可编辑的源码仓库，而不是只能喂数据的黑箱，对轻量定制和可解释性研究都有实质意义。\n- **毒舌/硬核点评**：微调派和 Prompt 工程师吵了两年，结果有人直接掀桌子去改权重了——原来我们一直在给模型\"喂饭\"，人家直接动手术。前提是别把脑子改坏了。\n- **🔗 传送门**：[点击直达原链接](https://rikiyat.github.io/blog/weight-space-programming/)\n\n---\n\n### 2. 📌 Ubuntu 被公开处刑：Linux 0day RCE 补丁三周未发 (来源: Tech RSS / Hacker News)\n- **核心干货**：一个严重的 Linux 内核 0day 远程代码执行漏洞（CVE-2026-98432）曝光近三周，Canonical 仍未给 LTS 内核推送修复补丁。叠加 HN 上那篇 1100+ 分的《WTF Ubuntu？》，社区对 Ubuntu 在安全响应和产品决策上的不满已经集中爆发。跑 Ubuntu 服务器的，该盯紧这条。\n- **毒舌/硬核点评**：一边是 Snap 强推、遥测争议，一边是 0day 补丁难产——Ubuntu 现在最大的安全漏洞，可能是它自己的发布流程。\n- **🔗 传送门**：[点击直达原链接](https://freenode.net/article/ubuntu-lts-kernels-still-unfixed-for-critical-cve-2026-98432)\n\n---\n\n### 3. 📌 Oracle 发债发股 200 亿美元，为 AI 基建\"上杠杆\" (来源: 财经新闻 / Hacker News)\n- **核心干货**：Oracle 提交文件，计划发行 200 亿美元的新股与债券，专项用于 AI 数据中心与算力基建。这是传统企业软件巨头为抢 AI 云份额而进行的重资本押注，也侧面印证了当前 AI 算力军备竞赛的烧钱烈度——连老牌巨头都得靠融资续命扩张。\n- **毒舌/硬核点评**：AI 这轮行情里，最稳的生意不是卖模型，是卖铲子、卖电、卖债。Oracle 这波操作翻译成人话就是：算力很贵，但我不想掉队。\n- **🔗 传送门**：[点击直达原链接](https://www.cnbc.com/2026/11/02/oracle-files-to-sell-20-billion-in-new-stock-bonds-to-finance-ai-buildout.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"微调是在教模型做事，改权重是直接替它做决定——区别就像辅导作业和代写作业，后者更快，但你得对结果负全责。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-03\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Astra：直接读写模型权重来\"改造\"Qwen (来源: HackerNews)\n- **核心干货**：有人搞出了一套\"权重空间编程\"的方法，不再靠微调或提示词，而是直接在 Qwen 的权重矩阵上做读写操作，像编辑内存一样编辑模型的行为。这意味着模型定制从\"喂数据训练\"降维成了\"改字节\"，成本和门槛被狠狠砍了一刀。\n- **毒舌/硬核点评**：以前调模型像送孩子上补习班，现在直接开颅改脑回路——疗效立竿见影，但医闹风险也请自行承担。HN 2299 分说明大家嘴上说怕，手已经在扒源码了。\n- **🔗 传送门**：[点击直达原链接](https://rikiyat.github.io/blog/weight-space-programming/)\n\n---\n\n### 2. 📌 Ubuntu 高危内核 0day RCE 补丁\"鸽\"了近三周 (来源: Tech RSS / HN)\n- **核心干货**：CVE-2026-98432，一个能远程拿下 LTS 内核的 0day，Ubuntu 拖了快三周还没发补丁。对于把 Ubuntu 当生产基座的团队来说，这已经不是什么\"计划内维护\"，而是实打实的敞门营业。\n- **毒舌/硬核点评**：Canonical 的\"长期支持\"大概是指——长期支持漏洞在线。LTS 三个字母，现在看起来像 \"Let Threats Stay\"。\n- **🔗 传送门**：[点击直达原链接](https://freenode.net/article/ubuntu-lts-kernels-still-unfixed-for-critical-cve-2026-98432)\n\n---\n\n### 3. 📌 Subvocal：不出声，用嘴型跟电脑对话 (来源: HackerNews / YC F26)\n- **核心干货**：YC 新项目 Subvocal 做智能眼镜，靠识别\"默读嘴型\"实现无噪音输入——你在咖啡馆嘴唇动两下，电脑就懂了，周围人只当你在自言自语。交互入口从键盘、触屏，正式卷向\"面部肌肉\"。\n- **毒舌/硬核点评**：终于给\"对着空气嘀咕\"的人一个正当技术理由了。唯一风险是：以后地铁上分不清谁在跟 AI 聊天，谁是真的需要帮助。\n- **🔗 传送门**：[点击直达原链接](https://news.ycombinator.com/item?id=50340088)\n\n---\n\n### 🗣️ 今日顶男金句\n> 技术不会淘汰人，只会淘汰\"以为学会了上一个版本就能退休\"的人。",
   "briefing_items": [
     {
       "title": "Astra：直接读写模型权重来\"改造\"Qwen",
-      "source": "Hacker News",
-      "summary": "Astra 提出了一种\"权重空间编程\"的思路——不走微调、不走提示词，而是直接读取并改写 Qwen 模型内部的权重参数，像打补丁一样对模型行为做定向修改。这等于把模型当成可编辑的源码仓库，而不是只能喂数据的黑箱，对轻量定制和可解释性研究都有实质意义。",
-      "commentary": "微调派和 Prompt 工程师吵了两年，结果有人直接掀桌子去改权重了——原来我们一直在给模型\"喂饭\"，人家直接动手术。前提是别把脑子改坏了。",
+      "source": "HackerNews",
+      "summary": "有人搞出了一套\"权重空间编程\"的方法，不再靠微调或提示词，而是直接在 Qwen 的权重矩阵上做读写操作，像编辑内存一样编辑模型的行为。这意味着模型定制从\"喂数据训练\"降维成了\"改字节\"，成本和门槛被狠狠砍了一刀。",
+      "commentary": "以前调模型像送孩子上补习班，现在直接开颅改脑回路——疗效立竿见影，但医闹风险也请自行承担。HN 2299 分说明大家嘴上说怕，手已经在扒源码了。",
       "url": "https://rikiyat.github.io/blog/weight-space-programming/"
     },
     {
-      "title": "Ubuntu 被公开处刑：Linux 0day RCE 补丁三周未发",
-      "source": "Tech RSS / Hacker News",
-      "summary": "一个严重的 Linux 内核 0day 远程代码执行漏洞（CVE-2026-98432）曝光近三周，Canonical 仍未给 LTS 内核推送修复补丁。叠加 HN 上那篇 1100+ 分的《WTF Ubuntu？》，社区对 Ubuntu 在安全响应和产品决策上的不满已经集中爆发。跑 Ubuntu 服务器的，该盯紧这条。",
-      "commentary": "一边是 Snap 强推、遥测争议，一边是 0day 补丁难产——Ubuntu 现在最大的安全漏洞，可能是它自己的发布流程。",
+      "title": "Ubuntu 高危内核 0day RCE 补丁\"鸽\"了近三周",
+      "source": "Tech RSS / HN",
+      "summary": "CVE-2026-98432，一个能远程拿下 LTS 内核的 0day，Ubuntu 拖了快三周还没发补丁。对于把 Ubuntu 当生产基座的团队来说，这已经不是什么\"计划内维护\"，而是实打实的敞门营业。",
+      "commentary": "Canonical 的\"长期支持\"大概是指——长期支持漏洞在线。LTS 三个字母，现在看起来像 \"Let Threats Stay\"。",
       "url": "https://freenode.net/article/ubuntu-lts-kernels-still-unfixed-for-critical-cve-2026-98432"
     },
     {
-      "title": "Oracle 发债发股 200 亿美元，为 AI 基建\"上杠杆\"",
-      "source": "财经新闻 / Hacker News",
-      "summary": "Oracle 提交文件，计划发行 200 亿美元的新股与债券，专项用于 AI 数据中心与算力基建。这是传统企业软件巨头为抢 AI 云份额而进行的重资本押注，也侧面印证了当前 AI 算力军备竞赛的烧钱烈度——连老牌巨头都得靠融资续命扩张。",
-      "commentary": "AI 这轮行情里，最稳的生意不是卖模型，是卖铲子、卖电、卖债。Oracle 这波操作翻译成人话就是：算力很贵，但我不想掉队。",
-      "url": "https://www.cnbc.com/2026/11/02/oracle-files-to-sell-20-billion-in-new-stock-bonds-to-finance-ai-buildout.html"
+      "title": "Subvocal：不出声，用嘴型跟电脑对话",
+      "source": "HackerNews / YC F26",
+      "summary": "YC 新项目 Subvocal 做智能眼镜，靠识别\"默读嘴型\"实现无噪音输入——你在咖啡馆嘴唇动两下，电脑就懂了，周围人只当你在自言自语。交互入口从键盘、触屏，正式卷向\"面部肌肉\"。",
+      "commentary": "终于给\"对着空气嘀咕\"的人一个正当技术理由了。唯一风险是：以后地铁上分不清谁在跟 AI 聊天，谁是真的需要帮助。",
+      "url": "https://news.ycombinator.com/item?id=50340088"
     },
     {
-      "quote": "\"微调是在教模型做事，改权重是直接替它做决定——区别就像辅导作业和代写作业，后者更快，但你得对结果负全责。\""
+      "quote": "技术不会淘汰人，只会淘汰\"以为学会了上一个版本就能退休\"的人。"
     }
   ],
   "candidates": [
@@ -36,8 +36,8 @@
       "summary": "",
       "url": "https://rikiyat.github.io/blog/weight-space-programming/",
       "source": "Hacker News",
-      "score": 1140,
-      "comments": 355
+      "score": 2299,
+      "comments": 728
     },
     {
       "id": "lob:0yxkvs",
@@ -45,57 +45,12 @@
       "summary": "",
       "url": "http://rhaas.blogspot.com/2026/10/postgres-19-is-late-and-its-ais-fault.html",
       "source": "Lobste.rs",
-      "score": 43,
-      "comments": 16,
+      "score": 47,
+      "comments": 19,
       "tags": [
         "databases",
         "practices"
       ]
-    },
-    {
-      "id": "hn:50340088",
-      "title": "Show HN: Subvocal – Talk to your computer without making noise",
-      "summary": "Hi HN, we&#x27;re Aarush and Arnav from The Subvocal Company (YC F26) (<a href=\"https:&#x2F;&#x2F;subvocal.company&#x2F;\">https:&#x2F;&#x2F;subvocal.company&#x2F;</a>). We’re building smart glasses that let you talk to your computer without talking out loud. You can mouth words silently and discreet",
-      "url": "https://news.ycombinator.com/item?id=50340088",
-      "source": "Hacker News",
-      "score": 383,
-      "comments": 229
-    },
-    {
-      "id": "hn:50336518",
-      "title": "If you love a website, back it up",
-      "summary": "",
-      "url": "https://blog.mistys-internet.website/post/2026/10/29/if-you-love-a-website-back-it-up/",
-      "source": "Hacker News",
-      "score": 280,
-      "comments": 66
-    },
-    {
-      "id": "hn:50339397",
-      "title": "US boy names that became girl names and vice versa",
-      "summary": "",
-      "url": "https://namedaisy.com/blog/boy-names-that-became-girl-names",
-      "source": "Hacker News",
-      "score": 194,
-      "comments": 212
-    },
-    {
-      "id": "hn:50337608",
-      "title": "WTF Ubuntu?",
-      "summary": "",
-      "url": "https://chalmovsky.com/posts/wtf-ubuntu",
-      "source": "Hacker News",
-      "score": 1118,
-      "comments": 534
-    },
-    {
-      "id": "hn:50339913",
-      "title": "Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app",
-      "summary": "Hey HN, we’re Wei-Wei and Jeff. We’re building Momentic, QA agents that autonomously plan, explore, and bug-bash controls and user flows in your web, iOS, Android, and (soon) desktop apps to catch bugs.<p>Here’s a demo: <a href=\"https:&#x2F;&#x2F;youtu.be&#x2F;BFsM-Se1Fh8\" rel=\"nofollow\">https:&#x2F",
-      "url": "https://momentic.ai/",
-      "source": "Hacker News",
-      "score": 94,
-      "comments": 62
     },
     {
       "id": "hn:50338728",
@@ -103,41 +58,44 @@
       "summary": "Please state the location and include REMOTE for remote work, REMOTE (US)\nor similar if the country is restricted, and ONSITE when remote work is <i>not</i> an option.<p>Please only post if you personally are part of the hiring company—no\nrecruiting firms or job boards. One post per company. If it i",
       "url": "https://news.ycombinator.com/item?id=50338728",
       "source": "Hacker News",
-      "score": 131,
-      "comments": 112
+      "score": 198,
+      "comments": 159
     },
     {
-      "id": "lob:s2qeww",
-      "title": "An outsider's perspective on Scion and Mononoke",
-      "summary": "",
-      "url": "https://typesanitizer.com/blog/scion.html",
-      "source": "Lobste.rs",
-      "score": 131,
-      "comments": 20,
-      "tags": [
-        "vcs"
-      ]
-    },
-    {
-      "id": "hn:50340369",
-      "title": "Let Me Ch...",
-      "summary": "",
-      "url": "https://blog.alxgsv.com/let-me-check/",
+      "id": "hn:50339913",
+      "title": "Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app",
+      "summary": "Hey HN, we’re Wei-Wei and Jeff. We’re building Momentic, QA agents that autonomously plan, explore, and bug-bash controls and user flows in your web, iOS, Android, and (soon) desktop apps to catch bugs.<p>Here’s a demo: <a href=\"https:&#x2F;&#x2F;youtu.be&#x2F;BFsM-Se1Fh8\" rel=\"nofollow\">https:&#x2F",
+      "url": "https://momentic.ai/",
       "source": "Hacker News",
-      "score": 157,
-      "comments": 58
+      "score": 137,
+      "comments": 90
     },
     {
-      "id": "lob:zjjvbo",
-      "title": "Work on GEFS (the Good Enough File System) for OpenBSD progresses",
+      "id": "hn:50340088",
+      "title": "Show HN: Subvocal – Talk to your computer without making noise",
+      "summary": "Hi HN, we&#x27;re Aarush and Arnav from The Subvocal Company (YC F26) (<a href=\"https:&#x2F;&#x2F;subvocal.company&#x2F;\">https:&#x2F;&#x2F;subvocal.company&#x2F;</a>). We’re building smart glasses that let you talk to your computer without talking out loud. You can mouth words silently and discreet",
+      "url": "https://news.ycombinator.com/item?id=50340088",
+      "source": "Hacker News",
+      "score": 624,
+      "comments": 323
+    },
+    {
+      "id": "hn:50339397",
+      "title": "US boy names that became girl names and vice versa",
       "summary": "",
-      "url": "https://www.undeadly.org/cgi?action=article;sid=20261101115637",
-      "source": "Lobste.rs",
-      "score": 83,
-      "comments": 9,
-      "tags": [
-        "openbsd"
-      ]
+      "url": "https://namedaisy.com/blog/boy-names-that-became-girl-names",
+      "source": "Hacker News",
+      "score": 338,
+      "comments": 340
+    },
+    {
+      "id": "hn:50336518",
+      "title": "If you love a website, back it up",
+      "summary": "",
+      "url": "https://blog.mistys-internet.website/post/2026/10/29/if-you-love-a-website-back-it-up/",
+      "source": "Hacker News",
+      "score": 464,
+      "comments": 101
     },
     {
       "id": "hn:50339221",
@@ -145,26 +103,64 @@
       "summary": "Explore central Warsaw in voxels - slightly inspired by Minecraft, and MagicaVoxel. \nYou can change the date, time of day and weather, explore the city, or click on a pedestrian to control them (here a bit of inspiration from Dungeon Keeper).<p>Works best on desktop, but I tried to make it usable on",
       "url": "https://p.migdal.pl/warsaw-vibe-voxel/",
       "source": "Hacker News",
-      "score": 156,
-      "comments": 30
+      "score": 236,
+      "comments": 38
     },
     {
-      "id": "lob:bzazar",
-      "title": "Pratt parsing is a black box",
+      "id": "hn:50340619",
+      "title": "Self-Employed? Solopreneur? NIST Has a Cybersecurity Guide Just for You",
       "summary": "",
-      "url": "https://vinipsmaker.github.io/blog/article/pratt-parsing-is-a-black-box/",
+      "url": "https://www.nist.gov/news-events/news/2026/11/self-employed-solopreneur-nist-has-cybersecurity-guide-just-you",
+      "source": "Hacker News",
+      "score": 167,
+      "comments": 47
+    },
+    {
+      "id": "lob:s2qeww",
+      "title": "An outsider's perspective on Scion and Mononoke",
+      "summary": "",
+      "url": "https://typesanitizer.com/blog/scion.html",
       "source": "Lobste.rs",
-      "score": 40,
+      "score": 142,
+      "comments": 20,
+      "tags": [
+        "vcs"
+      ]
+    },
+    {
+      "id": "hn:50346981",
+      "title": "Show HN: Hacker Times, a New York Times-inspired version of Hacker News",
+      "summary": "I thought it would be fun to browse HN as if it were a newspaper. The site updates once an hour. Enjoy!",
+      "url": "https://hackertimes.ca/",
+      "source": "Hacker News",
+      "score": 143,
+      "comments": 49
+    },
+    {
+      "id": "lob:zjjvbo",
+      "title": "Work on GEFS (the Good Enough File System) for OpenBSD progresses",
+      "summary": "",
+      "url": "https://www.undeadly.org/cgi?action=article;sid=20261101115637",
+      "source": "Lobste.rs",
+      "score": 90,
       "comments": 11,
       "tags": [
-        "compilers",
-        "plt"
+        "openbsd"
       ]
+    },
+    {
+      "id": "hn:50345924",
+      "title": "Scaling Git at OpenAI",
+      "summary": "",
+      "url": "https://openai.com/index/scaling-git-at-openai/",
+      "source": "Hacker News",
+      "score": 141,
+      "comments": 62
     },
     {
       "id": "rss:cec6d95b5f",
       "title": "Ubuntu still has not released patch for Linux 0day RCE in almost 3 weeks",
-      "summary": "Article URL: https://freenode.net/article/ubuntu-lts-kernels-still-unfixed-for-critical-cve-2026-98432\nComments URL: https://news.ycombinator.com/item?id=50341462\nPoints: 125\n# Comments: 16",
+      "summary": "Article URL: https://freenode.net/article/ubuntu-lts-kernels-still-unfixed-for-critical-cve-2026-98432\nComments URL: https://news.ycombinator.com/item?id=50341462\nPoints: 409\n# Comments: 117",
       "url": "https://freenode.net/article/ubuntu-lts-kernels-still-unfixed-for-critical-cve-2026-98432",
       "source": "Tech RSS",
       "score": 0
@@ -175,8 +171,8 @@
       "summary": "",
       "url": "https://blog.nns.ee/2026/11/02/renault-hack/",
       "source": "Lobste.rs",
-      "score": 49,
-      "comments": 3,
+      "score": 89,
+      "comments": 4,
       "tags": [
         "linux",
         "reversing",
@@ -184,26 +180,48 @@
       ]
     },
     {
-      "id": "hn:50342284",
-      "title": "Oracle files to sell $20B in new stock, bonds to finance AI buildout",
+      "id": "lob:gu6yyl",
+      "title": "Polyend releases the Tracker firmware source code",
       "summary": "",
-      "url": "https://www.cnbc.com/2026/11/02/oracle-files-to-sell-20-billion-in-new-stock-bonds-to-finance-ai-buildout.html",
-      "source": "Hacker News",
-      "score": 83,
-      "comments": 43
+      "url": "https://backstage.polyend.com/t/tracker-the-biggest-update-yet/25120",
+      "source": "Lobste.rs",
+      "score": 25,
+      "comments": 6,
+      "tags": [
+        "art",
+        "release"
+      ]
     },
     {
-      "id": "arxiv:2610.42149v1",
-      "title": "Latent Reasoning in Continuous Space for Unified Multimodal Models",
-      "summary": "Unified Multimodal Models (UMMs) achieve remarkable success on diverse multimodal understanding and generation tasks, yet they still struggle to effectively leverage language-based chain-of-thought reasoning for image generation. As a result, existing reasoning-augmented UMMs often fail to inherit t",
-      "url": "https://arxiv.org/abs/2610.42149v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CV",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "arxiv_id": "2610.42149v1"
+      "id": "lob:ihqhia",
+      "title": "the lost malloc()",
+      "summary": "",
+      "url": "https://napcakes.nekoweb.org/posts/malloc/",
+      "source": "Lobste.rs",
+      "score": 27,
+      "comments": 5,
+      "tags": [
+        "c",
+        "historical",
+        "unix"
+      ]
+    },
+    {
+      "id": "hn:50346849",
+      "title": "DiscImageStudio: burn visible artwork onto CDs, DVDs and Blu-ray discs",
+      "summary": "",
+      "url": "https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio",
+      "source": "Hacker News",
+      "score": 108,
+      "comments": 26
+    },
+    {
+      "id": "rss:861fb13b7b",
+      "title": "Attackers Target Unpatched CryptoPayment Gateway Flaw That Can Expose Wallet Credentials",
+      "summary": "Threat actors are attempting to exploit an unpatched maximum-severity security vulnerability in the CryptoPayment Gateway WordPress plugin, according to findings from Defused Cyber.\n\nThe vulnerability in question is CVE-2026-81648, which carries a CVSS score of 10.0. Successful exploitation of the f",
+      "url": "https://thehackernews.com/2026/11/attackers-target-unpatched.html",
+      "source": "Tech RSS",
+      "score": 0
     },
     {
       "id": "rss:b79b0657ef",
@@ -212,23 +230,6 @@
       "url": "https://thehackernews.com/2026/11/weekly-recap-critical-cves-linux-ddos.html",
       "source": "Tech RSS",
       "score": 0
-    },
-    {
-      "id": "rss:b581ca59b9",
-      "title": "Critical Langflow Flaws Could Let Unauthenticated Attackers Run Code on Servers",
-      "summary": "Two critical flaws in Langflow could let a remote attacker with no account bypass authentication or run arbitrary code,&nbsp;IBM said last week.\n\nLangflow is an open-source tool for building AI agents and workflows, and&nbsp;its vulnerability reports go to IBM. Every release from 1.0.0 through 1.12.",
-      "url": "https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "hn:50341736",
-      "title": "Egoless Mathematics in the AI Era",
-      "summary": "",
-      "url": "https://terrytao.wordpress.com/2026/11/02/egoless-mathematics-in-the-ai-era/",
-      "source": "Hacker News",
-      "score": 56,
-      "comments": 46
     }
   ],
   "ai_curated": true
