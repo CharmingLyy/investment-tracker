@@ -1,29 +1,29 @@
-# 🗞️ 每日硬核情报简报 | 2026-11-04
+# 🗞️ 每日硬核情报简报 | 2026-11-05
 
 > 💡 *"用最毒舌的视角，看最前沿的科技。"*
 
 ---
 
-### 1. 📌 Qwen 3.8 27B 本地跑，还能"读懂"自己的权重 (来源: HackerNews)
-- **核心干货**：Simon Willison 实测发现，Qwen 3.8 27B 这级"笔记本能扛"的模型，居然具备了直接解读模型权重文件的能力——把二进制权重当输入，反推其结构乃至语义倾向。这意味着一部分可解释性工作可以下放到消费级硬件上跑，而不必依赖云端巨兽。
-- **毒舌/硬核点评**：模型开始"内省"自己的脑回路了，可解释性研究终于从实验室专供走向了"i7 + 32G 内存"的平权时代。当然，先别急着喊 AGI，它读懂的权重和它真正"理解"的东西，大概还隔着一个哲学博士的距离。
-- **🔗 传送门**：[点击直达原链接](https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/)
+### 1. 📌 Nvidia RTX Spark 固件加密，Linux 上推理速度被砍至 35% (来源: HackerNews)
+- **核心干货**：Nvidia 在新款 RTX Spark 笔记本上引入了加密固件，直接导致 Linux 下 AI 推理性能暴跌至原来的 35%。这不是驱动 bug，是设计层面的"锁"——厂商用加密把优化路径攥在自己手里，开源生态和本地部署用户被当成了二等公民。
+- **毒舌/硬核点评**：卖你算力，再卖你"解锁算力"的资格，这商业模式比显卡还赚钱。Linux 玩家花全款买了个阉割版，黄氏刀法已经精确到固件层了。
+- **🔗 传送门**：[点击直达原链接](https://www.mindstudio.ai/blog/linux-nvidia-rtx-spark-laptop)
 
 ---
 
-### 2. 📌 富士胶片磁带产能暴增 5 倍，AI 把冷存储盘活了 (来源: HackerNews)
-- **核心干货**：因为 AI 训练与归档需求爆炸，富士胶片宣布把磁带产能拉高 5 倍。在 SSD 和 HDD 卷到飞起的年代，LTO 磁带靠"每 TB 成本最低、离线物理隔离、寿命长"这三大老本行，成了 AI 时代的数据冷库。这不是复古，是算账算出来的理性回归。
-- **毒舌/硬核点评**：AI 一边在云端吟诗作画，一边把几十 PB 的脏数据塞进磁带仓库。科技圈最性感的叙事，最后要靠最不性感的介质兜底——热数据是面子，磁带是里子。
-- **🔗 传送门**：[点击直达原链接](https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/)
+### 2. 📌 AMD 预计 Q4 史上首次在销量上超越 Intel (来源: HackerNews)
+- **核心干货**：AMD 给出 170 亿美元季度指引，首次在营收预期上压过 Intel。四十年的 x86 霸权格局正在实质性翻转，背后是数据中心 EPYC 的持续蚕食和 Intel 代工战略的持续失血。
+- **毒舌/硬核点评**：Intel 花了四年讲"IDM 2.0 复兴故事"，AMD 用一张财报把它变成了"回忆录"。摩尔定律没死，死的是躺着收租的那位。
+- **🔗 传送门**：[点击直达原链接](https://www.tomshardware.com/pc-components/cpus/amd-expects-to-outsell-intel-in-q4-for-the-first-time-in-history-usd17b-guidance-would-exceed-intels-projections)
 
 ---
 
-### 3. 📌 Linux TCP 9.8 分 RCE 漏洞：Red Hat 已修，Ubuntu 还在"测试频道"排队 (来源: Tech News)
-- **核心干货**：Linux 内核 IPv4 TCP 代码里的 use-after-free 漏洞（CVSS 9.8）可被远程触发 RCE，Red Hat 已为 RHEL 8/9/10 放出修复内核；但 Ubuntu 三个最新 LTS 的补丁还锁在 opt-in 测试通道里，没有正式推送时间表。企业级发行版跑得比社区版还快，这波很反直觉。
-- **毒舌/硬核点评**：Red Hat 交卷了，Ubuntu 还在草稿纸上写"待定"。运维同学这个月别关机了——你服务器上那个"稍后更新"的弹窗，现在价值 9.8 分。
-- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html)
+### 3. 📌 Zig 重写 libc 反而让 SQLite 慢了 12000 倍：Shlemiel 画匠归来 (来源: Lobste.rs)
+- **核心干货**：Zig 团队重写 libc 时踩了个经典性能坑——某个字符串/内存操作的复杂度从 O(n) 退化成 O(n²) 级别，直接把 SQLite 拖慢上万倍。这是"重写底层轮子"的教科书级反面案例：功能对了，渐进复杂度崩了。
+- **毒舌/硬核点评**：重写 libc 的勇气值得敬佩，但 Shlemiel 画匠的故事告诉我们——不是所有轮子都该重造，尤其是你还没搞懂原轮子为什么那么圆的时候。性能测试不写，12000 倍教做人。
+- **🔗 传送门**：[点击直达原链接](https://dennisforbes.ca/blog/microblog/2026/10/the_accidental_12000x_sqlite_slowdown/)
 
 ---
 
 ### 🗣️ 今日顶男金句
-"真正的技术护城河，不是你能把模型跑多大，而是模型崩了、磁带满了、内核裸奔了，你还有没有 Plan B——搞钱和搞技术，拼的都是兜底能力。"
+"重写底层不是勇气，是负债——你欠下的每一行复杂度，性能测试都会连本带利地讨回来。"
