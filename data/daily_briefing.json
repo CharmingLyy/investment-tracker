@@ -1,49 +1,40 @@
 {
   "date": "2026-11-04",
-  "update_time": "2026-11-03 19:13:55",
+  "update_time": "2026-11-04 05:35:16",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-04\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 别被\"LLM 读写神经网络权重\"忽悠了 (来源: HackerNews)\n- **核心干货**：针对此前热传的\"Astra 能直接读写 Qwen 权重\"的说法，开发者撰文辟谣，指出所谓\"权重空间编程\"更多是评测话术与营销包装，模型并没有真正获得对权重张量的原生读写能力。这盆冷水浇得及时——它提醒我们，在 LLM 能力被无限夸大的当下，\"看起来能操作权重\"和\"真正理解权重\"之间隔着一条马里亚纳海沟。\n- **毒舌/硬核点评**：每次有\"AI 顿悟底层\"的标题出现，先默认它是 PR 稿，十次有九次不会错。真正做权重级操作的团队，忙着调 loss，没空发博客。\n- **🔗 传送门**：[点击直达原链接](https://honnibal.dev/blog/astra-read-write-misleading)\n\n---\n\n### 2. 📌 Postman 偷偷装 AI 插件、还试图上传你的全部 API 数据 (来源: HackerNews)\n- **核心干货**：社区爆料 Postman 在未明确告知的情况下自动安装 AI 相关插件，并存在将用户 API 数据向外分享的行为。对于把鉴权 token、内部接口、生产环境密钥都塞在 Postman 里的开发者来说，这基本等同于把公司钥匙串交给了第三方。这是一次教科书级的\"工具链信任危机\"。\n- **毒舌/硬核点评**：免费工具最贵的时刻，就是它开始\"为你好\"地自动更新。建议立刻检查设置——顺便把生产环境的 token 从那个收藏夹里挪出来，别等出事再哭。\n- **🔗 传送门**：[点击直达原链接](https://github.com/postmanlabs/postman-app-support/issues/14370)\n\n---\n\n### 3. 📌 富士胶片磁带产能暴涨 5 倍，AI 把冷存储逼成了硬通货 (来源: Ars Technica)\n- **核心干货**：AI 训练与推理产生海量冷数据，云厂商对低成本、高密度长期归档的需求激增，富士胶片宣布将磁带产能扩大 5 倍。在所有人大谈 HBM 和光模块的时候，最古老的存储介质反而成了 AI 基础设施的隐形赢家——每 TB 成本与能耗，磁带至今吊打一切闪存。\n- **毒舌/硬核点评**：AI 时代的最大讽刺：模型在云端\"思考\"，数据却老老实实躺在磁带上。搞钱的朋友，别只盯着 GPU，冷存储这条链才是被低估的现金流。\n- **🔗 传送门**：[点击直达原链接](https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/)\n\n---\n\n### 🗣️ 今日顶男金句\n真正的技术护城河，从来不是你会调哪个 API，而是别人抄走你的代码后，依然追不上你对成本、延迟和信任边界的那点偏执。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-04\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Qwen 3.8 27B 本地跑，还能\"读懂\"自己的权重 (来源: HackerNews)\n- **核心干货**：Simon Willison 实测发现，Qwen 3.8 27B 这级\"笔记本能扛\"的模型，居然具备了直接解读模型权重文件的能力——把二进制权重当输入，反推其结构乃至语义倾向。这意味着一部分可解释性工作可以下放到消费级硬件上跑，而不必依赖云端巨兽。\n- **毒舌/硬核点评**：模型开始\"内省\"自己的脑回路了，可解释性研究终于从实验室专供走向了\"i7 + 32G 内存\"的平权时代。当然，先别急着喊 AGI，它读懂的权重和它真正\"理解\"的东西，大概还隔着一个哲学博士的距离。\n- **🔗 传送门**：[点击直达原链接](https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/)\n\n---\n\n### 2. 📌 富士胶片磁带产能暴增 5 倍，AI 把冷存储盘活了 (来源: HackerNews)\n- **核心干货**：因为 AI 训练与归档需求爆炸，富士胶片宣布把磁带产能拉高 5 倍。在 SSD 和 HDD 卷到飞起的年代，LTO 磁带靠\"每 TB 成本最低、离线物理隔离、寿命长\"这三大老本行，成了 AI 时代的数据冷库。这不是复古，是算账算出来的理性回归。\n- **毒舌/硬核点评**：AI 一边在云端吟诗作画，一边把几十 PB 的脏数据塞进磁带仓库。科技圈最性感的叙事，最后要靠最不性感的介质兜底——热数据是面子，磁带是里子。\n- **🔗 传送门**：[点击直达原链接](https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/)\n\n---\n\n### 3. 📌 Linux TCP 9.8 分 RCE 漏洞：Red Hat 已修，Ubuntu 还在\"测试频道\"排队 (来源: Tech News)\n- **核心干货**：Linux 内核 IPv4 TCP 代码里的 use-after-free 漏洞（CVSS 9.8）可被远程触发 RCE，Red Hat 已为 RHEL 8/9/10 放出修复内核；但 Ubuntu 三个最新 LTS 的补丁还锁在 opt-in 测试通道里，没有正式推送时间表。企业级发行版跑得比社区版还快，这波很反直觉。\n- **毒舌/硬核点评**：Red Hat 交卷了，Ubuntu 还在草稿纸上写\"待定\"。运维同学这个月别关机了——你服务器上那个\"稍后更新\"的弹窗，现在价值 9.8 分。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html)\n\n---\n\n### 🗣️ 今日顶男金句\n\"真正的技术护城河，不是你能把模型跑多大，而是模型崩了、磁带满了、内核裸奔了，你还有没有 Plan B——搞钱和搞技术，拼的都是兜底能力。\"",
   "briefing_items": [
     {
-      "title": "别被\"LLM 读写神经网络权重\"忽悠了",
+      "title": "Qwen 3.8 27B 本地跑，还能\"读懂\"自己的权重",
       "source": "HackerNews",
-      "summary": "针对此前热传的\"Astra 能直接读写 Qwen 权重\"的说法，开发者撰文辟谣，指出所谓\"权重空间编程\"更多是评测话术与营销包装，模型并没有真正获得对权重张量的原生读写能力。这盆冷水浇得及时——它提醒我们，在 LLM 能力被无限夸大的当下，\"看起来能操作权重\"和\"真正理解权重\"之间隔着一条马里亚纳海沟。",
-      "commentary": "每次有\"AI 顿悟底层\"的标题出现，先默认它是 PR 稿，十次有九次不会错。真正做权重级操作的团队，忙着调 loss，没空发博客。",
-      "url": "https://honnibal.dev/blog/astra-read-write-misleading"
+      "summary": "Simon Willison 实测发现，Qwen 3.8 27B 这级\"笔记本能扛\"的模型，居然具备了直接解读模型权重文件的能力——把二进制权重当输入，反推其结构乃至语义倾向。这意味着一部分可解释性工作可以下放到消费级硬件上跑，而不必依赖云端巨兽。",
+      "commentary": "模型开始\"内省\"自己的脑回路了，可解释性研究终于从实验室专供走向了\"i7 + 32G 内存\"的平权时代。当然，先别急着喊 AGI，它读懂的权重和它真正\"理解\"的东西，大概还隔着一个哲学博士的距离。",
+      "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/"
     },
     {
-      "title": "Postman 偷偷装 AI 插件、还试图上传你的全部 API 数据",
+      "title": "富士胶片磁带产能暴增 5 倍，AI 把冷存储盘活了",
       "source": "HackerNews",
-      "summary": "社区爆料 Postman 在未明确告知的情况下自动安装 AI 相关插件，并存在将用户 API 数据向外分享的行为。对于把鉴权 token、内部接口、生产环境密钥都塞在 Postman 里的开发者来说，这基本等同于把公司钥匙串交给了第三方。这是一次教科书级的\"工具链信任危机\"。",
-      "commentary": "免费工具最贵的时刻，就是它开始\"为你好\"地自动更新。建议立刻检查设置——顺便把生产环境的 token 从那个收藏夹里挪出来，别等出事再哭。",
-      "url": "https://github.com/postmanlabs/postman-app-support/issues/14370"
-    },
-    {
-      "title": "富士胶片磁带产能暴涨 5 倍，AI 把冷存储逼成了硬通货",
-      "source": "Ars Technica",
-      "summary": "AI 训练与推理产生海量冷数据，云厂商对低成本、高密度长期归档的需求激增，富士胶片宣布将磁带产能扩大 5 倍。在所有人大谈 HBM 和光模块的时候，最古老的存储介质反而成了 AI 基础设施的隐形赢家——每 TB 成本与能耗，磁带至今吊打一切闪存。",
-      "commentary": "AI 时代的最大讽刺：模型在云端\"思考\"，数据却老老实实躺在磁带上。搞钱的朋友，别只盯着 GPU，冷存储这条链才是被低估的现金流。",
+      "summary": "因为 AI 训练与归档需求爆炸，富士胶片宣布把磁带产能拉高 5 倍。在 SSD 和 HDD 卷到飞起的年代，LTO 磁带靠\"每 TB 成本最低、离线物理隔离、寿命长\"这三大老本行，成了 AI 时代的数据冷库。这不是复古，是算账算出来的理性回归。",
+      "commentary": "AI 一边在云端吟诗作画，一边把几十 PB 的脏数据塞进磁带仓库。科技圈最性感的叙事，最后要靠最不性感的介质兜底——热数据是面子，磁带是里子。",
       "url": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/"
+    },
+    {
+      "title": "Linux TCP 9.8 分 RCE 漏洞：Red Hat 已修，Ubuntu 还在\"测试频道\"排队",
+      "source": "Tech News",
+      "summary": "Linux 内核 IPv4 TCP 代码里的 use-after-free 漏洞（CVSS 9.8）可被远程触发 RCE，Red Hat 已为 RHEL 8/9/10 放出修复内核；但 Ubuntu 三个最新 LTS 的补丁还锁在 opt-in 测试通道里，没有正式推送时间表。企业级发行版跑得比社区版还快，这波很反直觉。",
+      "commentary": "Red Hat 交卷了，Ubuntu 还在草稿纸上写\"待定\"。运维同学这个月别关机了——你服务器上那个\"稍后更新\"的弹窗，现在价值 9.8 分。",
+      "url": "https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50351111",
-      "title": "The 'Astra can read and write weights to improve Qwen' post is misleading",
-      "summary": "",
-      "url": "https://honnibal.dev/blog/astra-read-write-misleading",
+      "id": "hn:50346755",
+      "title": "Show HN: HackerTV – HN's most-recommended Youtube videos as 24/7 TV channels",
+      "summary": "I saw HackerTube (<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50319510\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50319510</a>) a few days ago, the YouTube videos HN keeps\nrecommending, pulled from 19 years of comments. It made me want to flip\nthrough them instead of picki",
+      "url": "https://hackertv.org",
       "source": "Hacker News",
-      "score": 755,
-      "comments": 173
-    },
-    {
-      "id": "hn:50354960",
-      "title": "Postman silently auto-installs AI plugins and attempts to share all API data",
-      "summary": "",
-      "url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
-      "source": "Hacker News",
-      "score": 468,
-      "comments": 149
+      "score": 255,
+      "comments": 52
     },
     {
       "id": "hn:50336918",
@@ -51,8 +42,8 @@
       "summary": "",
       "url": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/",
       "source": "Hacker News",
-      "score": 259,
-      "comments": 103
+      "score": 427,
+      "comments": 181
     },
     {
       "id": "hn:50355251",
@@ -60,8 +51,8 @@
       "summary": "",
       "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
       "source": "Hacker News",
-      "score": 181,
-      "comments": 48
+      "score": 542,
+      "comments": 171
     },
     {
       "id": "hn:50339288",
@@ -69,57 +60,26 @@
       "summary": "",
       "url": "https://blog.nns.ee/2026/11/02/renault-hack/",
       "source": "Hacker News",
-      "score": 340,
-      "comments": 119
+      "score": 694,
+      "comments": 289
     },
     {
-      "id": "hn:50352757",
-      "title": "OpenAI seems to be silently re-enabling model training on Codex chats",
-      "summary": "My company is pretty paranoid about leaking IP to the frontier labs through prompts, so we&#x27;ve all been diligent about disabling data sharing in Codex&#x2F;Claude Code&#x2F;etc. But yesterday my coworkers and I noticed that the setting had been silently reenabled in Codex. None of us knowingly o",
-      "url": "https://news.ycombinator.com/item?id=50352757",
-      "source": "Hacker News",
-      "score": 261,
-      "comments": 82
-    },
-    {
-      "id": "hn:50353229",
-      "title": "Kalshi and its co-founders face felony charges for violating Utah gambling laws",
+      "id": "hn:50354358",
+      "title": "Stringman, an $800 open-source room scale gripper robot",
       "summary": "",
-      "url": "https://arstechnica.com/tech-policy/2026/10/trump-admin-sues-utah-to-save-kalshi-from-the-states-total-ban-on-gambling/",
+      "url": "https://neufangled.com/",
       "source": "Hacker News",
-      "score": 239,
-      "comments": 170
+      "score": 479,
+      "comments": 167
     },
     {
-      "id": "hn:50349276",
-      "title": "Could a modern chess engine on a Pentium have defeated Kasparov in 1996?",
+      "id": "hn:50358562",
+      "title": "Safari introduces Adaptive Dark Mode in 27.3",
       "summary": "",
-      "url": "https://nicholas.carlini.com/writing/2026/algorithmic-improvements-chess.html",
+      "url": "https://webkit.org/blog/18541/introducing-adaptive-dark-mode/",
       "source": "Hacker News",
-      "score": 346,
-      "comments": 151
-    },
-    {
-      "id": "lob:7fcuxz",
-      "title": "Why did you choose the nix you nix?",
-      "summary": "<p>I don't which nix is good and at this point I'm afraid I need to ask.</p>\n<ul>\n<li>(Cpp)<a href=\"https://nixos.org/\" rel=\"ugc\">Nix</a>\n</li>\n<li><a href=\"https://determinate.systems/\" rel=\"ugc\">Determinate Nix</a></li>\n<li><a href=\"https://lix.systems/\" rel=\"ugc\">Lix</a></li>\n</ul>\n<p>Or, you kno",
-      "url": "https://lobste.rs/s/7fcuxz/why_did_you_choose_nix_you_nix",
-      "source": "Lobste.rs",
-      "score": 37,
-      "comments": 31,
-      "tags": [
-        "ask",
-        "nix"
-      ]
-    },
-    {
-      "id": "hn:50352758",
-      "title": "Mac at Any Scale",
-      "summary": "",
-      "url": "https://namespace.so/blog/mac-at-any-scale",
-      "source": "Hacker News",
-      "score": 191,
-      "comments": 96
+      "score": 365,
+      "comments": 206
     },
     {
       "id": "lob:e201eb",
@@ -127,47 +87,64 @@
       "summary": "",
       "url": "https://utcc.utoronto.ca/~cks/space/blog/linux/Ubuntu2604RustSudoNotCompatible",
       "source": "Lobste.rs",
-      "score": 27,
-      "comments": 18,
+      "score": 55,
+      "comments": 29,
       "tags": [
         "linux",
         "rust"
       ]
     },
     {
-      "id": "lob:qa0owz",
-      "title": "Stop Hardcoding Your Timeouts",
-      "summary": "",
-      "url": "https://alfy.blog/2026/04/23/stop-hardcoding-your-timeouts.html",
+      "id": "lob:7fcuxz",
+      "title": "Why did you choose the nix you nix?",
+      "summary": "<p>I don't which nix is good and at this point I'm afraid I need to ask.</p>\n<ul>\n<li>(Cpp)<a href=\"https://nixos.org/\" rel=\"ugc\">Nix</a>\n</li>\n<li><a href=\"https://determinate.systems/\" rel=\"ugc\">Determinate Nix</a></li>\n<li><a href=\"https://lix.systems/\" rel=\"ugc\">Lix</a></li>\n</ul>\n<p>Or, you kno",
+      "url": "https://lobste.rs/s/7fcuxz/why_did_you_choose_nix_you_nix",
       "source": "Lobste.rs",
-      "score": 59,
-      "comments": 21,
+      "score": 41,
+      "comments": 39,
       "tags": [
-        "practices"
+        "ask",
+        "nix"
       ]
     },
     {
-      "id": "lob:ezg5mx",
-      "title": "My favourite laptop",
+      "id": "hn:50358702",
+      "title": "The Internals of PostgreSQL",
       "summary": "",
-      "url": "https://blog.jsbarretto.com/post/laptop",
-      "source": "Lobste.rs",
-      "score": 42,
-      "comments": 34,
-      "tags": [
-        "hardware"
-      ]
+      "url": "https://www.interdb.jp/pg/index.html",
+      "source": "Hacker News",
+      "score": 198,
+      "comments": 13
     },
     {
-      "id": "lob:u7wdqj",
-      "title": "Sparks of Weight-Space Programming: LLMs can natively read & write neural network weights",
+      "id": "hn:50360164",
+      "title": "C++26 Disapproved",
       "summary": "",
-      "url": "https://rikiyat.github.io/blog/weight-space-programming/",
+      "url": "https://andreasfertig.com/blog/2026/11/cpp26-dis-failed-how-does-cpp-survive/",
+      "source": "Hacker News",
+      "score": 173,
+      "comments": 73
+    },
+    {
+      "id": "hn:50333131",
+      "title": "Japan's Jimi 'Mundane' Halloween Costumes of 2026",
+      "summary": "",
+      "url": "https://spoon-tamago.com/japan-jimi-mundane-halloween-costumes-2026/",
+      "source": "Hacker News",
+      "score": 154,
+      "comments": 25
+    },
+    {
+      "id": "lob:chypzr",
+      "title": "Death comes for XSLT",
+      "summary": "",
+      "url": "https://dbushell.com/2026/11/03/xslt-rip/",
       "source": "Lobste.rs",
-      "score": 43,
-      "comments": 12,
+      "score": 70,
+      "comments": 63,
       "tags": [
-        "ai"
+        "browsers",
+        "web"
       ]
     },
     {
@@ -176,8 +153,8 @@
       "summary": "",
       "url": "https://alangrow.com/blog/a-decade-of-kill-bugs",
       "source": "Lobste.rs",
-      "score": 93,
-      "comments": 14,
+      "score": 104,
+      "comments": 17,
       "tags": [
         "historical",
         "linux",
@@ -185,16 +162,15 @@
       ]
     },
     {
-      "id": "lob:chypzr",
-      "title": "Death comes for XSLT",
+      "id": "lob:qa0owz",
+      "title": "Stop Hardcoding Your Timeouts",
       "summary": "",
-      "url": "https://dbushell.com/2026/11/03/xslt-rip/",
+      "url": "https://alfy.blog/2026/04/23/stop-hardcoding-your-timeouts.html",
       "source": "Lobste.rs",
-      "score": 35,
-      "comments": 30,
+      "score": 64,
+      "comments": 25,
       "tags": [
-        "browsers",
-        "web"
+        "practices"
       ]
     },
     {
@@ -203,7 +179,7 @@
       "summary": "",
       "url": "https://youtu.be/UytYrhYLOKI",
       "source": "Lobste.rs",
-      "score": 76,
+      "score": 97,
       "comments": 7,
       "tags": [
         "math",
@@ -212,41 +188,55 @@
       ]
     },
     {
-      "id": "arxiv:2611.03634v1",
-      "title": "WebHarbor: Docking Real Websites for Evolving GUI Agent Environments",
-      "summary": "GUI web agents require realistic and interactive environments that remain stable during both evaluation and training. Live website evaluation suffers from changing content, access restrictions, and limited coverage of authenticated workflows, while existing synthetic environments for training often ",
-      "url": "https://arxiv.org/abs/2611.03634v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "arxiv_id": "2611.03634v1"
+      "id": "lob:1gndxr",
+      "title": "Could a modern chess engine on a Pentium have defeated Kasparov in 1996?",
+      "summary": "",
+      "url": "https://nicholas.carlini.com/writing/2026/algorithmic-improvements-chess.html",
+      "source": "Lobste.rs",
+      "score": 36,
+      "comments": 9,
+      "tags": [
+        "games",
+        "retrocomputing"
+      ]
     },
     {
-      "id": "arxiv:2611.03618v1",
-      "title": "Strategist: Evolving Reasoning with Agents",
-      "summary": "A model is only half of an AI agent system. The other half is the inference strategy: the reasoning procedure that turns model calls into a response. Today that second half is written by hand, and the experience of building one strategy never carries to the next. We introduce Strategist, a meta-agen",
-      "url": "https://arxiv.org/abs/2611.03618v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_id": "2611.03618v1"
+      "id": "rss:f0a5fa78d9",
+      "title": "Red Hat Patches 9.8-Rated Linux TCP RCE Flaw While Ubuntu Releases Fixes for Testing",
+      "summary": "Fixed kernels for a&nbsp;use-after-free vulnerability in the Linux kernel's IPv4 TCP code&nbsp;are now available for Red Hat Enterprise Linux 8, 9, and 10, while Ubuntu's fixes for its three newest long-term-support releases remain in its opt-in testing channel with no date for a regular update.\n\nTh",
+      "url": "https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html",
+      "source": "Tech RSS",
+      "score": 0
     },
     {
-      "id": "arxiv:2611.03601v1",
-      "title": "DiabAgent: Toward Agentic Physiological Control",
-      "summary": "As pretraining scales, medical language models have advanced rapidly in clinical question answering. Their ability to achieve effective physiological control through sustained intervention still lacks systematic quantitative evaluation. Type 1 diabetes provides a concrete setting: impaired insulin s",
-      "url": "https://arxiv.org/abs/2611.03601v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_id": "2611.03601v1"
+      "id": "rss:861fb13b7b",
+      "title": "Attackers Target Unpatched CryptoPayment Gateway Flaw That Can Expose Wallet Credentials",
+      "summary": "Threat actors are attempting to exploit an unpatched maximum-severity security vulnerability in the CryptoPayment Gateway WordPress plugin, according to findings from Defused Cyber.\n\nThe vulnerability in question is CVE-2026-81648, which carries a CVSS score of 10.0. Successful exploitation of the f",
+      "url": "https://thehackernews.com/2026/11/attackers-target-unpatched.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:b79b0657ef",
+      "title": "⚡ Weekly Recap: Critical CVEs, Linux DDoS Botnet, Device-Code Phishing, Android Spyware and More",
+      "summary": "Some attacks this week didn't need much of a trick. A fake support call, a trusted extension, a shared link, or a device with no password. Small things that people barely think about. Yet each was enough to cause serious trouble.\n\nThen there were the bigger messes. Billions stolen, hidden networks o",
+      "url": "https://thehackernews.com/2026/11/weekly-recap-critical-cves-linux-ddos.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "lob:r3gton",
+      "title": "Your terminal manipulation/navigation setups",
+      "summary": "<p>Dear Lobste.rs, over a year after <a href=\"https://lobste.rs/s/o0x7rb/your_mouse_free_setups\" rel=\"ugc\">my previous post on mouse free setups</a>, your advice was instrumental to building the tech stack I use today as a disabled person, composed of the Svalboard, Talon Voice, and a fair few exten",
+      "url": "https://lobste.rs/s/r3gton/your_terminal_manipulation_navigation",
+      "source": "Lobste.rs",
+      "score": 12,
+      "comments": 9,
+      "tags": [
+        "a11y",
+        "ask",
+        "editors"
+      ]
     }
   ],
   "ai_curated": true
