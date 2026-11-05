@@ -1,0 +1,829 @@
+{
+  "update_time": "2026-11-05 15:56:10",
+  "stocks": {
+    "a_stocks": [
+      {
+        "market": "A股",
+        "code": "002050",
+        "name": "三花智控",
+        "symbol": "sz.002050",
+        "industry": null,
+        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
+        "price": 34.88,
+        "open": 34.0,
+        "high": 35.3,
+        "low": 33.83,
+        "change_pct": 0.9,
+        "volume": 68676597,
+        "turnover": 23.86,
+        "market_cap": null,
+        "pe": 37.75,
+        "cash_flow": 50.92,
+        "macd": -0.1131,
+        "macd_signal": -0.3361,
+        "macd_histogram": 0.446,
+        "rsi": 53.78,
+        "ma": {
+          "MA5": 33.85,
+          "MA10": 34.29,
+          "MA20": 33.33,
+          "MA60": 35.32
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
+        "price": 6.19,
+        "open": 6.21,
+        "high": 6.26,
+        "low": 6.15,
+        "change_pct": -0.32,
+        "volume": 67211881,
+        "turnover": 4.17,
+        "market_cap": null,
+        "pe": 69.5,
+        "cash_flow": 105.67,
+        "macd": -0.0916,
+        "macd_signal": -0.1098,
+        "macd_histogram": 0.0364,
+        "rsi": 46.12,
+        "ma": {
+          "MA5": 6.11,
+          "MA10": 6.12,
+          "MA20": 6.2,
+          "MA60": 6.47
+        },
+        "main_net_flow": null
+      }
+    ],
+    "hk_stocks": [
+      {
+        "market": "港股",
+        "code": "01810",
+        "name": "小米集团-W",
+        "symbol": "01810",
+        "industry": "Consumer Electronics",
+        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
+        "price": 31.3,
+        "open": 30.0,
+        "high": 31.4,
+        "low": 29.62,
+        "change_pct": 8.83,
+        "volume": 490490111,
+        "turnover": null,
+        "market_cap": 8054.73,
+        "pe": 23.01,
+        "cash_flow": 86.81,
+        "macd": 0.7923,
+        "macd_signal": 0.2896,
+        "macd_histogram": 1.0054,
+        "rsi": 71.86,
+        "ma": {
+          "MA5": 28.65,
+          "MA10": 27.39,
+          "MA20": 26.64,
+          "MA60": 26.62
+        },
+        "main_net_flow": null
+      }
+    ],
+    "us_stocks": [
+      {
+        "market": "美股",
+        "code": "NVDA",
+        "name": "NVIDIA",
+        "symbol": "NVDA",
+        "industry": "Semiconductors",
+        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
+        "price": 183.25,
+        "open": 196.07,
+        "high": 196.25,
+        "low": 181.55,
+        "change_pct": -8.43,
+        "volume": 104407315,
+        "turnover": null,
+        "market_cap": 44250.58,
+        "pe": 23.17,
+        "cash_flow": 418.1,
+        "macd": -7.0798,
+        "macd_signal": -4.2007,
+        "macd_histogram": -5.7581,
+        "rsi": 26.01,
+        "ma": {
+          "MA5": 199.35,
+          "MA10": 207.07,
+          "MA20": 213.76,
+          "MA60": 220.07
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "GOOG",
+        "name": "Alphabet (Google)",
+        "symbol": "GOOG",
+        "industry": "Internet Content & Information",
+        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
+        "price": 278.21,
+        "open": 291.72,
+        "high": 293.64,
+        "low": 276.23,
+        "change_pct": -3.16,
+        "volume": 12806803,
+        "turnover": null,
+        "market_cap": 34215.43,
+        "pe": 14.53,
+        "cash_flow": 11.62,
+        "macd": -16.2619,
+        "macd_signal": -11.5935,
+        "macd_histogram": -9.3367,
+        "rsi": 26.76,
+        "ma": {
+          "MA5": 280.01,
+          "MA10": 295.26,
+          "MA20": 317.63,
+          "MA60": 332.58
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "CRCL",
+        "name": "Circle",
+        "symbol": "CRCL",
+        "industry": "Capital Markets",
+        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
+        "price": 65.72,
+        "open": 73.5,
+        "high": 74.4,
+        "low": 64.81,
+        "change_pct": -13.66,
+        "volume": 7001780,
+        "turnover": null,
+        "market_cap": 168.61,
+        "pe": 39.59,
+        "cash_flow": null,
+        "macd": -3.4808,
+        "macd_signal": -2.0519,
+        "macd_histogram": -2.8578,
+        "rsi": 33.25,
+        "ma": {
+          "MA5": 72.34,
+          "MA10": 77.07,
+          "MA20": 80.78,
+          "MA60": 85.13
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "MP",
+        "name": "MP Materials",
+        "symbol": "MP",
+        "industry": "Other Industrial Metals & Mining",
+        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
+        "price": 32.27,
+        "open": 36.15,
+        "high": 36.54,
+        "low": 31.9,
+        "change_pct": -10.14,
+        "volume": 4553701,
+        "turnover": null,
+        "market_cap": 57.47,
+        "pe": 43.49,
+        "cash_flow": 4.33,
+        "macd": -2.7942,
+        "macd_signal": -2.514,
+        "macd_histogram": -0.5604,
+        "rsi": 25.57,
+        "ma": {
+          "MA5": 36.79,
+          "MA10": 38.33,
+          "MA20": 39.65,
+          "MA60": 48.05
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "PLTR",
+        "name": "Palantir",
+        "symbol": "PLTR",
+        "industry": "Software - Infrastructure",
+        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
+        "price": 154.83,
+        "open": 166.72,
+        "high": 167.25,
+        "low": 152.6,
+        "change_pct": -9.83,
+        "volume": 18281838,
+        "turnover": null,
+        "market_cap": 3730.38,
+        "pe": 109.03,
+        "cash_flow": 26.52,
+        "macd": -4.6337,
+        "macd_signal": 0.2685,
+        "macd_histogram": -9.8045,
+        "rsi": 25.37,
+        "ma": {
+          "MA5": 172.88,
+          "MA10": 185.19,
+          "MA20": 192.54,
+          "MA60": 184.53
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "NOW",
+        "name": "ServiceNow",
+        "symbol": "NOW",
+        "industry": "Software - Application",
+        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
+        "price": 104.53,
+        "open": 108.36,
+        "high": 108.63,
+        "low": 103.92,
+        "change_pct": -3.93,
+        "volume": 7974310,
+        "turnover": null,
+        "market_cap": 1084.93,
+        "pe": 75.2,
+        "cash_flow": 57.54,
+        "macd": -8.1143,
+        "macd_signal": -2.7221,
+        "macd_histogram": -10.7844,
+        "rsi": 28.73,
+        "ma": {
+          "MA5": 106.73,
+          "MA10": 126.54,
+          "MA20": 136.03,
+          "MA60": 135.13
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "DDOG",
+        "name": "Datadog",
+        "symbol": "DDOG",
+        "industry": "Software - Application",
+        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
+        "price": 175.1,
+        "open": 182.3,
+        "high": 183.0,
+        "low": 170.5,
+        "change_pct": -7.22,
+        "volume": 3332697,
+        "turnover": null,
+        "market_cap": 628.74,
+        "pe": 243.19,
+        "cash_flow": 9.56,
+        "macd": -14.7503,
+        "macd_signal": -3.7386,
+        "macd_histogram": -22.0235,
+        "rsi": 26.26,
+        "ma": {
+          "MA5": 207.14,
+          "MA10": 241.07,
+          "MA20": 255.24,
+          "MA60": 247.18
+        },
+        "main_net_flow": null
+      }
+    ],
+    "crypto": [
+      {
+        "market": "加密货币",
+        "code": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "industry": "Smart Contract Platform",
+        "price": 75614,
+        "open": null,
+        "high": 80882,
+        "low": 77879,
+        "change_pct": -5.79,
+        "volume": 35631457898,
+        "turnover": null,
+        "market_cap": 15202.47,
+        "market_cap_rank": 1,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -1285.5336,
+        "macd_signal": -995.9685,
+        "macd_histogram": -579.1303,
+        "rsi": 37.74,
+        "ma": {
+          "MA5": 77685.08,
+          "MA10": 78313.54,
+          "MA20": 79939.2,
+          "MA60": 81223.56
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 20105365.0,
+          "total_supply": 20105365.0,
+          "circ_ratio": 100.0,
+          "price_change_7d": -6.71609,
+          "price_change_30d": -12.58452,
+          "ath_pct": -40.03,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      },
+      {
+        "market": "加密货币",
+        "code": "ethereum",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "industry": "Smart Contract Platform",
+        "price": 2242.02,
+        "open": null,
+        "high": 2442.86,
+        "low": 2329.44,
+        "change_pct": -7.42,
+        "volume": 14325646802,
+        "turnover": null,
+        "market_cap": 2739.57,
+        "market_cap_rank": 2,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -56.641,
+        "macd_signal": -61.1377,
+        "macd_histogram": 8.9935,
+        "rsi": 39.86,
+        "ma": {
+          "MA5": 2292.55,
+          "MA10": 2291.37,
+          "MA20": 2341.11,
+          "MA60": 2498.19
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 122192071.85523713,
+          "total_supply": 122192071.85523713,
+          "circ_ratio": 100.0,
+          "price_change_7d": -3.92669,
+          "price_change_30d": -17.29014,
+          "ath_pct": -54.67,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      }
+    ]
+  },
+  "news": [
+    {
+      "id": "35b871d31c",
+      "title": "[播客]独家实拍：我那永远跪着的母亲(11/07 22:10)",
+      "summary": "独家实拍：我那永远跪着的母亲",
+      "link": "http://go.rss.sina.com.cn/redirect.php?url=http://you.video.sina.com.cn/b/16972162-1239095354.html",
+      "source": "rss.sina.com.cn",
+      "published": ""
+    },
+    {
+      "id": "5a25de701b",
+      "title": "‘My life could be cut short’: I’m 55, married and have a brain tumor. Should I splash out on a $210,000 Porsche?",
+      "summary": "“I also want to preserve the opportunity to leave a meaningful legacy for my two sons.”",
+      "link": "https://www.marketwatch.com/story/my-life-could-be-cut-short-im-55-married-with-4-3-million-and-have-a-brain-tumor-should-i-buy-a-210-000-custom-porsche-ed825ada?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 05 Nov 2026 15:30:00 GMT"
+    },
+    {
+      "id": "1635a24ff8",
+      "title": "‘I have no financial safety net’: I’m 66, rely on Social Security and have just $500 in savings. What hope do I have?",
+      "summary": "“Sometimes I wonder whether wealthier Americans should trade places with people like me.”",
+      "link": "https://www.marketwatch.com/story/i-have-no-financial-safety-net-im-66-rely-on-social-security-and-have-500-in-savings-what-politician-speaks-for-me-be2126cb?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 05 Nov 2026 15:30:00 GMT"
+    },
+    {
+      "id": "dcd6d902df",
+      "title": "Learning from ‘Love Is Blind’ money drama",
+      "summary": "Hear me out: These reality-TV couples are having really important conversations about love and money heading into tonight’s finale.",
+      "link": "https://www.marketwatch.com/story/learning-from-love-is-blind-money-drama-810175f9?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 05 Nov 2026 15:16:00 GMT"
+    },
+    {
+      "id": "4c89f39676",
+      "title": "Billionaires aren’t off the hook for higher taxes, even if they did dodge California’s wealth tax",
+      "summary": "Silicon Valley spent big to kill California’s wealth tax — but incoming Democrats are eyeing a national fight.",
+      "link": "https://www.marketwatch.com/story/billionaires-arent-off-the-hook-for-higher-taxes-even-if-they-did-dodge-californias-wealth-tax-a73f9045?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 05 Nov 2026 15:01:00 GMT"
+    },
+    {
+      "id": "a58b11a350",
+      "title": "Two months after my father’s funeral, my stepmother asked me to repay his $40,000 wedding gift. Should I do what she says?",
+      "summary": "“About two months after his funeral, my stepmother called and said she wanted the money back.”",
+      "link": "https://www.marketwatch.com/story/shes-a-type-a-personality-my-stepmother-wants-me-to-repay-my-late-fathers-40-000-wedding-gift-should-i-oblige-51fc64f7?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 05 Nov 2026 15:00:00 GMT"
+    },
+    {
+      "id": "c6661f6979",
+      "title": "A record 10% of first-time home buyers now pay in cash. Here’s where they get the money.",
+      "summary": "All-cash buyers are becoming more common, despite a housing market that’s been struggling with affordability issues.",
+      "link": "https://www.marketwatch.com/story/a-record-10-of-first-time-home-buyers-now-pay-in-cash-heres-where-they-get-the-money-70f2e656?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 05 Nov 2026 15:00:00 GMT"
+    },
+    {
+      "id": "a318ec5aed",
+      "title": "The wealthiest 10% of Americans are pulling ahead of everyone else. This is what’s making them richer.",
+      "summary": "The wealthiest 10% have a median net worth that is $800,000 greater than it was three years ago.",
+      "link": "https://www.marketwatch.com/story/the-wealthiest-10-of-americans-are-pulling-ahead-of-everyone-else-this-is-whats-making-them-richer-bd83c2f6?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 05 Nov 2026 15:00:00 GMT"
+    },
+    {
+      "id": "cec5487103",
+      "title": "How do Americans feel about the midterm results? It depends on how much money they make.",
+      "summary": "Most Americans are “thrilled” or “happy” about the results of this year’s election. Some are especially so.",
+      "link": "https://www.marketwatch.com/story/how-do-americans-feel-about-the-midterm-results-it-depends-on-how-much-money-they-make-e2a43f08?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 05 Nov 2026 14:57:00 GMT"
+    },
+    {
+      "id": "32a64a1dda",
+      "title": "This is the secret sauce for the economy — and it’s showing up in faster U.S. growth",
+      "summary": "Americans are unhappy about the economy, they’re worried about artificial intelligence and they took their frustration out on Republicans in the U.S. midterm elections.",
+      "link": "https://www.marketwatch.com/story/this-is-the-secret-sauce-for-the-economy-and-its-showing-up-in-faster-u-s-growth-fb78ce21?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 05 Nov 2026 14:49:00 GMT"
+    },
+    {
+      "id": "fd9047e7a5",
+      "title": "Three things that explain what’s changing with Obamacare in 2027",
+      "summary": "Affordable Care Act premiums are increasing again, and these plans have new rules.",
+      "link": "https://www.marketwatch.com/story/three-things-that-explain-whats-changing-with-obamacare-in-2027-7c94585b?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 05 Nov 2026 14:04:00 GMT"
+    },
+    {
+      "id": "ff570c9816",
+      "title": "Why is Tesla stock sliding today?",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-tesla-stock-sliding-today-93CH-5005078",
+      "source": "www.investing.com",
+      "published": "2026-11-05 15:33:39"
+    },
+    {
+      "id": "9796c03cc9",
+      "title": "UBS lowers Adient stock price target on industry headwinds",
+      "summary": "",
+      "link": "https://www.investing.com/news/analyst-ratings/ubs-lowers-adient-stock-price-target-on-industry-headwinds-93CH-5005077",
+      "source": "www.investing.com",
+      "published": "2026-11-05 15:33:02"
+    },
+    {
+      "id": "c6e49a1483",
+      "title": "Stifel raises Chatham Lodging Trust price target on business travel strength",
+      "summary": "",
+      "link": "https://www.investing.com/news/analyst-ratings/stifel-raises-chatham-lodging-trust-price-target-on-business-travel-strength-93CH-5005076",
+      "source": "www.investing.com",
+      "published": "2026-11-05 15:32:54"
+    },
+    {
+      "id": "945982b4f8",
+      "title": "UBS cuts Flutter Entertainment stock price target on earnings outlook",
+      "summary": "",
+      "link": "https://www.investing.com/news/analyst-ratings/ubs-cuts-flutter-entertainment-stock-price-target-on-earnings-outlook-93CH-5005075",
+      "source": "www.investing.com",
+      "published": "2026-11-05 15:32:53"
+    },
+    {
+      "id": "1c8d959272",
+      "title": "Raymond James raises Edgewise Therapeutics price target on FDA feedback",
+      "summary": "",
+      "link": "https://www.investing.com/news/analyst-ratings/raymond-james-raises-edgewise-therapeutics-price-target-on-fda-feedback-93CH-5005074",
+      "source": "www.investing.com",
+      "published": "2026-11-05 15:32:49"
+    },
+    {
+      "id": "68a4b261b0",
+      "title": "Stifel reiterates Buy rating on Amylyx stock ahead of data",
+      "summary": "",
+      "link": "https://www.investing.com/news/analyst-ratings/stifel-reiterates-buy-rating-on-amylyx-stock-ahead-of-data-93CH-5005073",
+      "source": "www.investing.com",
+      "published": "2026-11-05 15:32:45"
+    },
+    {
+      "id": "2cf302d4b5",
+      "title": "Nasdaq extends opening slide to over 4% amid post-midterms rotation out of chips",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/us-stock-index-futures-steady-after-midterms-rally-5001919",
+      "source": "www.investing.com",
+      "published": "2026-11-05 15:32:42"
+    },
+    {
+      "id": "aea1a42a57",
+      "title": "Betski secures a $15 Million Investment Commitment from Nimbus Capital to Accelerate  its Global Growth",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/betski-secures-a-15-million-investment-commitment-from-nimbus-capital-to-accelerate--its-global-growth-5005072",
+      "source": "www.investing.com",
+      "published": "2026-11-05 15:32:26"
+    },
+    {
+      "id": "77edcbe0e8",
+      "title": "ConocoPhillips beats estimates on higher oil prices, raises dividend",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/conocophillips-beats-estimates-on-higher-oil-prices-raises-dividend-5003908",
+      "source": "www.investing.com",
+      "published": "2026-11-05 15:32:13"
+    },
+    {
+      "id": "120e70d460",
+      "title": "Natural gas storage levels decline, signaling rising demand",
+      "summary": "",
+      "link": "https://www.investing.com/news/economic-indicators/natural-gas-storage-levels-decline-signaling-rising-demand-93CH-5005071",
+      "source": "www.investing.com",
+      "published": "2026-11-05 15:32:07"
+    }
+  ],
+  "briefing": {
+    "date": "2026-11-05",
+    "update_time": "2026-11-05 05:53:56",
+    "candidate_count": 20,
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-05\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Ripple-65B Preview：美国开源权重在 Agentic Coding 上拿下 SOTA (来源: HackerNews)\n- **核心干货**：美国本土开源权重阵营终于端出一个能打的——Ripple-65B 预览版在智能体编程（Agentic Coding）基准上刷到 SOTA。这不是又一个套壳微调，而是把\"模型自己规划任务、调工具、写代码、自纠错\"这条链路做扎实了，直接对标 Kimi 和国内那批开源猛兽。\n- **毒舌/硬核点评**：美国开源圈憋了这么久，总算想起\"开源权重\"四个字怎么写。不过预览版嘛，先别急着开香槟——等权重真放出来、跑分被社区复现再说，别又是一出\"论文 SOTA、下载拉胯\"的老戏码。\n- **🔗 传送门**：[点击直达原链接](https://www.ricursive.com/ripple)\n\n---\n\n### 2. 📌 Anthropic 攻克 LLM 可证明推理（Provable Inference）(来源: HackerNews)\n- **核心干货**：Anthropic 发布在\"可证明推理\"上的进展——让模型的推理过程能被形式化验证，而不只是\"看起来逻辑通顺\"。这戳中了 LLM 落地高价值场景（金融、医疗、合规）最大的软肋：你敢不敢为它的输出签字。若能规模化，等于给黑箱装了个可审计的仪表盘。\n- **毒舌/硬核点评**：终于有人认真回答\"你怎么证明它没胡说\"这个灵魂拷问了。但\"可证明\"三个字成本极高，别最后变成只有 benchmark 上可证明、生产环境里全靠信仰。\n- **🔗 传送门**：[点击直达原链接](https://www.anthropic.com/research/provable-inference)\n\n---\n\n### 3. 📌 Zig 重写 libc 反把 SQLite 拖慢：一次 12000 倍的\"薛定谔性能事故\" (来源: Lobste.rs)\n- **核心干货**：Zig 团队重写 libc 本想\"更干净更快\"，结果下游 SQLite 性能直接雪崩，最夸张处慢了约 12000 倍——典型的 Shlemiel the Painter 问题：算法没变，底层字符串/内存操作的一点点退化在热点路径上被无限放大。这是给所有\"我要重写标准库\"的勇士们上的一堂血泪课。\n- **毒舌/硬核点评**：重写 libc 一时爽，SQLite 火葬场。性能优化最贵的从来不是写新代码，而是你以为自己变快了。建议把这篇博客打印出来贴在每个\"我们重写一下底层吧\"的会议室门口。\n- **🔗 传送门**：[点击直达原链接](https://dennisforbes.ca/blog/microblog/2026/10/the_accidental_12000x_sqlite_slowdown/)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"重写底层的人分两种：一种改变了世界，另一种改变了 benchmark 的横轴单位——从毫秒变成了秒。\"",
+    "briefing_items": [
+      {
+        "title": "Ripple-65B Preview：美国开源权重在 Agentic Coding 上拿下 SOTA",
+        "source": "HackerNews",
+        "summary": "美国本土开源权重阵营终于端出一个能打的——Ripple-65B 预览版在智能体编程（Agentic Coding）基准上刷到 SOTA。这不是又一个套壳微调，而是把\"模型自己规划任务、调工具、写代码、自纠错\"这条链路做扎实了，直接对标 Kimi 和国内那批开源猛兽。",
+        "commentary": "美国开源圈憋了这么久，总算想起\"开源权重\"四个字怎么写。不过预览版嘛，先别急着开香槟——等权重真放出来、跑分被社区复现再说，别又是一出\"论文 SOTA、下载拉胯\"的老戏码。",
+        "url": "https://www.ricursive.com/ripple"
+      },
+      {
+        "title": "Anthropic 攻克 LLM 可证明推理（Provable Inference）",
+        "source": "HackerNews",
+        "summary": "Anthropic 发布在\"可证明推理\"上的进展——让模型的推理过程能被形式化验证，而不只是\"看起来逻辑通顺\"。这戳中了 LLM 落地高价值场景（金融、医疗、合规）最大的软肋：你敢不敢为它的输出签字。若能规模化，等于给黑箱装了个可审计的仪表盘。",
+        "commentary": "终于有人认真回答\"你怎么证明它没胡说\"这个灵魂拷问了。但\"可证明\"三个字成本极高，别最后变成只有 benchmark 上可证明、生产环境里全靠信仰。",
+        "url": "https://www.anthropic.com/research/provable-inference"
+      },
+      {
+        "title": "Zig 重写 libc 反把 SQLite 拖慢：一次 12000 倍的\"薛定谔性能事故\"",
+        "source": "Lobste.rs",
+        "summary": "Zig 团队重写 libc 本想\"更干净更快\"，结果下游 SQLite 性能直接雪崩，最夸张处慢了约 12000 倍——典型的 Shlemiel the Painter 问题：算法没变，底层字符串/内存操作的一点点退化在热点路径上被无限放大。这是给所有\"我要重写标准库\"的勇士们上的一堂血泪课。",
+        "commentary": "重写 libc 一时爽，SQLite 火葬场。性能优化最贵的从来不是写新代码，而是你以为自己变快了。建议把这篇博客打印出来贴在每个\"我们重写一下底层吧\"的会议室门口。",
+        "url": "https://dennisforbes.ca/blog/microblog/2026/10/the_accidental_12000x_sqlite_slowdown/"
+      },
+      {
+        "quote": "\"重写底层的人分两种：一种改变了世界，另一种改变了 benchmark 的横轴单位——从毫秒变成了秒。\""
+      }
+    ],
+    "candidates": [
+      {
+        "id": "hn:50369925",
+        "title": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
+        "summary": "",
+        "url": "https://www.ricursive.com/ripple",
+        "source": "Hacker News",
+        "score": 267,
+        "comments": 96
+      },
+      {
+        "id": "hn:50368626",
+        "title": "Progress on provable inference for large language models",
+        "summary": "",
+        "url": "https://www.anthropic.com/research/provable-inference",
+        "source": "Hacker News",
+        "score": 200,
+        "comments": 88
+      },
+      {
+        "id": "hn:50371246",
+        "title": "Residential proxies detected on White House network",
+        "summary": "",
+        "url": "https://layer3intel.com/blog/residential-proxies-white-house-network",
+        "source": "Hacker News",
+        "score": 858,
+        "comments": 273
+      },
+      {
+        "id": "hn:50372929",
+        "title": "A thousand fewer paths to root",
+        "summary": "",
+        "url": "https://openai.com/index/a-thousand-fewer-paths-to-root/",
+        "source": "Hacker News",
+        "score": 244,
+        "comments": 138
+      },
+      {
+        "id": "hn:50366999",
+        "title": "Kimi K3.1 Pro model weights are out",
+        "summary": "",
+        "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+        "source": "Hacker News",
+        "score": 450,
+        "comments": 132
+      },
+      {
+        "id": "hn:50370610",
+        "title": "Insects don't swarm at LED lights",
+        "summary": "",
+        "url": "https://www.birdsoutsidemywindow.org/2026/11/03/insects-dont-swarm-at-led-lights/",
+        "source": "Hacker News",
+        "score": 215,
+        "comments": 115
+      },
+      {
+        "id": "lob:lh1j0e",
+        "title": "Shlemiel the Painter Is Back: How Zig’s libc Rewrite Made SQLite Slower",
+        "summary": "",
+        "url": "https://dennisforbes.ca/blog/microblog/2026/10/the_accidental_12000x_sqlite_slowdown/",
+        "source": "Lobste.rs",
+        "score": 71,
+        "comments": 8,
+        "tags": [
+          "performance",
+          "rust",
+          "zig"
+        ]
+      },
+      {
+        "id": "hn:50372945",
+        "title": "Images 2.6",
+        "summary": "",
+        "url": "https://openai.com/index/introducing-images-2-6/",
+        "source": "Hacker News",
+        "score": 208,
+        "comments": 136
+      },
+      {
+        "id": "hn:50369106",
+        "title": "A new Go API for JSON",
+        "summary": "",
+        "url": "https://go.dev/blog/jsonv2",
+        "source": "Hacker News",
+        "score": 266,
+        "comments": 123
+      },
+      {
+        "id": "hn:50373308",
+        "title": "Starfall – Affordable, routine access to microgravity",
+        "summary": "",
+        "url": "https://www.spacex.com/starfall",
+        "source": "Hacker News",
+        "score": 177,
+        "comments": 109
+      },
+      {
+        "id": "lob:chypzr",
+        "title": "Death comes for XSLT",
+        "summary": "",
+        "url": "https://dbushell.com/2026/11/03/xslt-rip/",
+        "source": "Lobste.rs",
+        "score": 106,
+        "comments": 92,
+        "tags": [
+          "browsers",
+          "web"
+        ]
+      },
+      {
+        "id": "hn:50369503",
+        "title": "Conductor is joining Meta",
+        "summary": "",
+        "url": "https://www.conductor.build/announcement",
+        "source": "Hacker News",
+        "score": 155,
+        "comments": 169
+      },
+      {
+        "id": "lob:cozhtg",
+        "title": "So my ISP was hijacking my DNS",
+        "summary": "",
+        "url": "https://karthihegde.dev/posts/dns_tampering",
+        "source": "Lobste.rs",
+        "score": 80,
+        "comments": 11,
+        "tags": [
+          "networking"
+        ]
+      },
+      {
+        "id": "lob:ecrqpy",
+        "title": "How to speed up the Rust compiler in November 2026",
+        "summary": "",
+        "url": "https://nnethercote.github.io/2026/11/04/how-to-speed-up-the-rust-compiler-in-november-2026.html",
+        "source": "Lobste.rs",
+        "score": 36,
+        "comments": 1,
+        "tags": [
+          "compilers",
+          "rust"
+        ]
+      },
+      {
+        "id": "hn:50370654",
+        "title": "Qualcomm Cloud AI 100 Ultra – 150W AI Accelerator Card with 128GB at 548GB/s",
+        "summary": "",
+        "url": "https://www.qualcomm.com/data-center/products/cloud-ai-100-ultra",
+        "source": "Hacker News",
+        "score": 129,
+        "comments": 53
+      },
+      {
+        "id": "hn:50369895",
+        "title": "Show HN: After a decade of reversing, I got co-op working in DOS Wing Commander",
+        "summary": "",
+        "url": "https://fireflyk64.github.io/wcmulti/",
+        "source": "Hacker News",
+        "score": 148,
+        "comments": 16
+      },
+      {
+        "id": "lob:bqllfe",
+        "title": "Your Cryptography Conspiracy Theory Is Wrong",
+        "summary": "",
+        "url": "https://soatok.blog/2026/10/29/your-cryptography-conspiracy-theory-is-wrong/",
+        "source": "Lobste.rs",
+        "score": 54,
+        "comments": 9,
+        "tags": [
+          "cryptography"
+        ]
+      },
+      {
+        "id": "lob:xvtufg",
+        "title": "C++26 Disapproved",
+        "summary": "",
+        "url": "https://andreasfertig.com/blog/2026/11/cpp26-dis-failed-how-does-cpp-survive/",
+        "source": "Lobste.rs",
+        "score": 34,
+        "comments": 29,
+        "tags": [
+          "c++"
+        ]
+      },
+      {
+        "id": "lob:yba0yg",
+        "title": "Introducing Adaptive Dark Mode",
+        "summary": "",
+        "url": "https://webkit.org/blog/18541/introducing-adaptive-dark-mode/",
+        "source": "Lobste.rs",
+        "score": 37,
+        "comments": 10,
+        "tags": [
+          "css",
+          "web"
+        ]
+      },
+      {
+        "id": "lob:pa1411",
+        "title": "Zig 0.17.1 Released",
+        "summary": "",
+        "url": "https://ziglang.org/news/0.17.1-released/",
+        "source": "Lobste.rs",
+        "score": 48,
+        "comments": 0,
+        "tags": [
+          "release",
+          "zig"
+        ]
+      }
+    ],
+    "ai_curated": true
+  },
+  "fear_greed": {
+    "value": 50,
+    "classification": "Neutral",
+    "timestamp": "2026-11-05 00:00:00"
+  }
+}
