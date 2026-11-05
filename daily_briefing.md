@@ -4,26 +4,26 @@
 
 ---
 
-### 1. 📌 Nvidia RTX Spark 固件加密，Linux 上推理速度被砍至 35% (来源: HackerNews)
-- **核心干货**：Nvidia 在新款 RTX Spark 笔记本上引入了加密固件，直接导致 Linux 下 AI 推理性能暴跌至原来的 35%。这不是驱动 bug，是设计层面的"锁"——厂商用加密把优化路径攥在自己手里，开源生态和本地部署用户被当成了二等公民。
-- **毒舌/硬核点评**：卖你算力，再卖你"解锁算力"的资格，这商业模式比显卡还赚钱。Linux 玩家花全款买了个阉割版，黄氏刀法已经精确到固件层了。
-- **🔗 传送门**：[点击直达原链接](https://www.mindstudio.ai/blog/linux-nvidia-rtx-spark-laptop)
+### 1. 📌 Ripple-65B Preview：美国开源权重在 Agentic Coding 上拿下 SOTA (来源: HackerNews)
+- **核心干货**：美国本土开源权重阵营终于端出一个能打的——Ripple-65B 预览版在智能体编程（Agentic Coding）基准上刷到 SOTA。这不是又一个套壳微调，而是把"模型自己规划任务、调工具、写代码、自纠错"这条链路做扎实了，直接对标 Kimi 和国内那批开源猛兽。
+- **毒舌/硬核点评**：美国开源圈憋了这么久，总算想起"开源权重"四个字怎么写。不过预览版嘛，先别急着开香槟——等权重真放出来、跑分被社区复现再说，别又是一出"论文 SOTA、下载拉胯"的老戏码。
+- **🔗 传送门**：[点击直达原链接](https://www.ricursive.com/ripple)
 
 ---
 
-### 2. 📌 AMD 预计 Q4 史上首次在销量上超越 Intel (来源: HackerNews)
-- **核心干货**：AMD 给出 170 亿美元季度指引，首次在营收预期上压过 Intel。四十年的 x86 霸权格局正在实质性翻转，背后是数据中心 EPYC 的持续蚕食和 Intel 代工战略的持续失血。
-- **毒舌/硬核点评**：Intel 花了四年讲"IDM 2.0 复兴故事"，AMD 用一张财报把它变成了"回忆录"。摩尔定律没死，死的是躺着收租的那位。
-- **🔗 传送门**：[点击直达原链接](https://www.tomshardware.com/pc-components/cpus/amd-expects-to-outsell-intel-in-q4-for-the-first-time-in-history-usd17b-guidance-would-exceed-intels-projections)
+### 2. 📌 Anthropic 攻克 LLM 可证明推理（Provable Inference）(来源: HackerNews)
+- **核心干货**：Anthropic 发布在"可证明推理"上的进展——让模型的推理过程能被形式化验证，而不只是"看起来逻辑通顺"。这戳中了 LLM 落地高价值场景（金融、医疗、合规）最大的软肋：你敢不敢为它的输出签字。若能规模化，等于给黑箱装了个可审计的仪表盘。
+- **毒舌/硬核点评**：终于有人认真回答"你怎么证明它没胡说"这个灵魂拷问了。但"可证明"三个字成本极高，别最后变成只有 benchmark 上可证明、生产环境里全靠信仰。
+- **🔗 传送门**：[点击直达原链接](https://www.anthropic.com/research/provable-inference)
 
 ---
 
-### 3. 📌 Zig 重写 libc 反而让 SQLite 慢了 12000 倍：Shlemiel 画匠归来 (来源: Lobste.rs)
-- **核心干货**：Zig 团队重写 libc 时踩了个经典性能坑——某个字符串/内存操作的复杂度从 O(n) 退化成 O(n²) 级别，直接把 SQLite 拖慢上万倍。这是"重写底层轮子"的教科书级反面案例：功能对了，渐进复杂度崩了。
-- **毒舌/硬核点评**：重写 libc 的勇气值得敬佩，但 Shlemiel 画匠的故事告诉我们——不是所有轮子都该重造，尤其是你还没搞懂原轮子为什么那么圆的时候。性能测试不写，12000 倍教做人。
+### 3. 📌 Zig 重写 libc 反把 SQLite 拖慢：一次 12000 倍的"薛定谔性能事故" (来源: Lobste.rs)
+- **核心干货**：Zig 团队重写 libc 本想"更干净更快"，结果下游 SQLite 性能直接雪崩，最夸张处慢了约 12000 倍——典型的 Shlemiel the Painter 问题：算法没变，底层字符串/内存操作的一点点退化在热点路径上被无限放大。这是给所有"我要重写标准库"的勇士们上的一堂血泪课。
+- **毒舌/硬核点评**：重写 libc 一时爽，SQLite 火葬场。性能优化最贵的从来不是写新代码，而是你以为自己变快了。建议把这篇博客打印出来贴在每个"我们重写一下底层吧"的会议室门口。
 - **🔗 传送门**：[点击直达原链接](https://dennisforbes.ca/blog/microblog/2026/10/the_accidental_12000x_sqlite_slowdown/)
 
 ---
 
 ### 🗣️ 今日顶男金句
-"重写底层不是勇气，是负债——你欠下的每一行复杂度，性能测试都会连本带利地讨回来。"
+> "重写底层的人分两种：一种改变了世界，另一种改变了 benchmark 的横轴单位——从毫秒变成了秒。"

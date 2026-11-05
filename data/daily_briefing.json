@@ -1,125 +1,43 @@
 {
   "date": "2026-11-05",
-  "update_time": "2026-11-04 19:29:24",
+  "update_time": "2026-11-05 05:53:56",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-05\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Nvidia RTX Spark 固件加密，Linux 上推理速度被砍至 35% (来源: HackerNews)\n- **核心干货**：Nvidia 在新款 RTX Spark 笔记本上引入了加密固件，直接导致 Linux 下 AI 推理性能暴跌至原来的 35%。这不是驱动 bug，是设计层面的\"锁\"——厂商用加密把优化路径攥在自己手里，开源生态和本地部署用户被当成了二等公民。\n- **毒舌/硬核点评**：卖你算力，再卖你\"解锁算力\"的资格，这商业模式比显卡还赚钱。Linux 玩家花全款买了个阉割版，黄氏刀法已经精确到固件层了。\n- **🔗 传送门**：[点击直达原链接](https://www.mindstudio.ai/blog/linux-nvidia-rtx-spark-laptop)\n\n---\n\n### 2. 📌 AMD 预计 Q4 史上首次在销量上超越 Intel (来源: HackerNews)\n- **核心干货**：AMD 给出 170 亿美元季度指引，首次在营收预期上压过 Intel。四十年的 x86 霸权格局正在实质性翻转，背后是数据中心 EPYC 的持续蚕食和 Intel 代工战略的持续失血。\n- **毒舌/硬核点评**：Intel 花了四年讲\"IDM 2.0 复兴故事\"，AMD 用一张财报把它变成了\"回忆录\"。摩尔定律没死，死的是躺着收租的那位。\n- **🔗 传送门**：[点击直达原链接](https://www.tomshardware.com/pc-components/cpus/amd-expects-to-outsell-intel-in-q4-for-the-first-time-in-history-usd17b-guidance-would-exceed-intels-projections)\n\n---\n\n### 3. 📌 Zig 重写 libc 反而让 SQLite 慢了 12000 倍：Shlemiel 画匠归来 (来源: Lobste.rs)\n- **核心干货**：Zig 团队重写 libc 时踩了个经典性能坑——某个字符串/内存操作的复杂度从 O(n) 退化成 O(n²) 级别，直接把 SQLite 拖慢上万倍。这是\"重写底层轮子\"的教科书级反面案例：功能对了，渐进复杂度崩了。\n- **毒舌/硬核点评**：重写 libc 的勇气值得敬佩，但 Shlemiel 画匠的故事告诉我们——不是所有轮子都该重造，尤其是你还没搞懂原轮子为什么那么圆的时候。性能测试不写，12000 倍教做人。\n- **🔗 传送门**：[点击直达原链接](https://dennisforbes.ca/blog/microblog/2026/10/the_accidental_12000x_sqlite_slowdown/)\n\n---\n\n### 🗣️ 今日顶男金句\n\"重写底层不是勇气，是负债——你欠下的每一行复杂度，性能测试都会连本带利地讨回来。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-05\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Ripple-65B Preview：美国开源权重在 Agentic Coding 上拿下 SOTA (来源: HackerNews)\n- **核心干货**：美国本土开源权重阵营终于端出一个能打的——Ripple-65B 预览版在智能体编程（Agentic Coding）基准上刷到 SOTA。这不是又一个套壳微调，而是把\"模型自己规划任务、调工具、写代码、自纠错\"这条链路做扎实了，直接对标 Kimi 和国内那批开源猛兽。\n- **毒舌/硬核点评**：美国开源圈憋了这么久，总算想起\"开源权重\"四个字怎么写。不过预览版嘛，先别急着开香槟——等权重真放出来、跑分被社区复现再说，别又是一出\"论文 SOTA、下载拉胯\"的老戏码。\n- **🔗 传送门**：[点击直达原链接](https://www.ricursive.com/ripple)\n\n---\n\n### 2. 📌 Anthropic 攻克 LLM 可证明推理（Provable Inference）(来源: HackerNews)\n- **核心干货**：Anthropic 发布在\"可证明推理\"上的进展——让模型的推理过程能被形式化验证，而不只是\"看起来逻辑通顺\"。这戳中了 LLM 落地高价值场景（金融、医疗、合规）最大的软肋：你敢不敢为它的输出签字。若能规模化，等于给黑箱装了个可审计的仪表盘。\n- **毒舌/硬核点评**：终于有人认真回答\"你怎么证明它没胡说\"这个灵魂拷问了。但\"可证明\"三个字成本极高，别最后变成只有 benchmark 上可证明、生产环境里全靠信仰。\n- **🔗 传送门**：[点击直达原链接](https://www.anthropic.com/research/provable-inference)\n\n---\n\n### 3. 📌 Zig 重写 libc 反把 SQLite 拖慢：一次 12000 倍的\"薛定谔性能事故\" (来源: Lobste.rs)\n- **核心干货**：Zig 团队重写 libc 本想\"更干净更快\"，结果下游 SQLite 性能直接雪崩，最夸张处慢了约 12000 倍——典型的 Shlemiel the Painter 问题：算法没变，底层字符串/内存操作的一点点退化在热点路径上被无限放大。这是给所有\"我要重写标准库\"的勇士们上的一堂血泪课。\n- **毒舌/硬核点评**：重写 libc 一时爽，SQLite 火葬场。性能优化最贵的从来不是写新代码，而是你以为自己变快了。建议把这篇博客打印出来贴在每个\"我们重写一下底层吧\"的会议室门口。\n- **🔗 传送门**：[点击直达原链接](https://dennisforbes.ca/blog/microblog/2026/10/the_accidental_12000x_sqlite_slowdown/)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"重写底层的人分两种：一种改变了世界，另一种改变了 benchmark 的横轴单位——从毫秒变成了秒。\"",
   "briefing_items": [
     {
-      "title": "Nvidia RTX Spark 固件加密，Linux 上推理速度被砍至 35%",
+      "title": "Ripple-65B Preview：美国开源权重在 Agentic Coding 上拿下 SOTA",
       "source": "HackerNews",
-      "summary": "Nvidia 在新款 RTX Spark 笔记本上引入了加密固件，直接导致 Linux 下 AI 推理性能暴跌至原来的 35%。这不是驱动 bug，是设计层面的\"锁\"——厂商用加密把优化路径攥在自己手里，开源生态和本地部署用户被当成了二等公民。",
-      "commentary": "卖你算力，再卖你\"解锁算力\"的资格，这商业模式比显卡还赚钱。Linux 玩家花全款买了个阉割版，黄氏刀法已经精确到固件层了。",
-      "url": "https://www.mindstudio.ai/blog/linux-nvidia-rtx-spark-laptop"
+      "summary": "美国本土开源权重阵营终于端出一个能打的——Ripple-65B 预览版在智能体编程（Agentic Coding）基准上刷到 SOTA。这不是又一个套壳微调，而是把\"模型自己规划任务、调工具、写代码、自纠错\"这条链路做扎实了，直接对标 Kimi 和国内那批开源猛兽。",
+      "commentary": "美国开源圈憋了这么久，总算想起\"开源权重\"四个字怎么写。不过预览版嘛，先别急着开香槟——等权重真放出来、跑分被社区复现再说，别又是一出\"论文 SOTA、下载拉胯\"的老戏码。",
+      "url": "https://www.ricursive.com/ripple"
     },
     {
-      "title": "AMD 预计 Q4 史上首次在销量上超越 Intel",
+      "title": "Anthropic 攻克 LLM 可证明推理（Provable Inference）",
       "source": "HackerNews",
-      "summary": "AMD 给出 170 亿美元季度指引，首次在营收预期上压过 Intel。四十年的 x86 霸权格局正在实质性翻转，背后是数据中心 EPYC 的持续蚕食和 Intel 代工战略的持续失血。",
-      "commentary": "Intel 花了四年讲\"IDM 2.0 复兴故事\"，AMD 用一张财报把它变成了\"回忆录\"。摩尔定律没死，死的是躺着收租的那位。",
-      "url": "https://www.tomshardware.com/pc-components/cpus/amd-expects-to-outsell-intel-in-q4-for-the-first-time-in-history-usd17b-guidance-would-exceed-intels-projections"
+      "summary": "Anthropic 发布在\"可证明推理\"上的进展——让模型的推理过程能被形式化验证，而不只是\"看起来逻辑通顺\"。这戳中了 LLM 落地高价值场景（金融、医疗、合规）最大的软肋：你敢不敢为它的输出签字。若能规模化，等于给黑箱装了个可审计的仪表盘。",
+      "commentary": "终于有人认真回答\"你怎么证明它没胡说\"这个灵魂拷问了。但\"可证明\"三个字成本极高，别最后变成只有 benchmark 上可证明、生产环境里全靠信仰。",
+      "url": "https://www.anthropic.com/research/provable-inference"
     },
     {
-      "title": "Zig 重写 libc 反而让 SQLite 慢了 12000 倍：Shlemiel 画匠归来",
+      "title": "Zig 重写 libc 反把 SQLite 拖慢：一次 12000 倍的\"薛定谔性能事故\"",
       "source": "Lobste.rs",
-      "summary": "Zig 团队重写 libc 时踩了个经典性能坑——某个字符串/内存操作的复杂度从 O(n) 退化成 O(n²) 级别，直接把 SQLite 拖慢上万倍。这是\"重写底层轮子\"的教科书级反面案例：功能对了，渐进复杂度崩了。",
-      "commentary": "重写 libc 的勇气值得敬佩，但 Shlemiel 画匠的故事告诉我们——不是所有轮子都该重造，尤其是你还没搞懂原轮子为什么那么圆的时候。性能测试不写，12000 倍教做人。",
+      "summary": "Zig 团队重写 libc 本想\"更干净更快\"，结果下游 SQLite 性能直接雪崩，最夸张处慢了约 12000 倍——典型的 Shlemiel the Painter 问题：算法没变，底层字符串/内存操作的一点点退化在热点路径上被无限放大。这是给所有\"我要重写标准库\"的勇士们上的一堂血泪课。",
+      "commentary": "重写 libc 一时爽，SQLite 火葬场。性能优化最贵的从来不是写新代码，而是你以为自己变快了。建议把这篇博客打印出来贴在每个\"我们重写一下底层吧\"的会议室门口。",
       "url": "https://dennisforbes.ca/blog/microblog/2026/10/the_accidental_12000x_sqlite_slowdown/"
+    },
+    {
+      "quote": "\"重写底层的人分两种：一种改变了世界，另一种改变了 benchmark 的横轴单位——从毫秒变成了秒。\""
     }
   ],
   "candidates": [
     {
-      "id": "hn:50362905",
-      "title": "Nvidia RTX Spark encrypted firmware slows inference speed to 35% on Linux",
+      "id": "hn:50369925",
+      "title": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
       "summary": "",
-      "url": "https://www.mindstudio.ai/blog/linux-nvidia-rtx-spark-laptop",
+      "url": "https://www.ricursive.com/ripple",
       "source": "Hacker News",
-      "score": 505,
-      "comments": 226
-    },
-    {
-      "id": "hn:50364336",
-      "title": "AI is forcing us to pay off 40 years of technical debt",
-      "summary": "",
-      "url": "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability",
-      "source": "Hacker News",
-      "score": 812,
-      "comments": 497
-    },
-    {
-      "id": "hn:50367125",
-      "title": "AMD expects to outsell Intel in Q4 for the first time in history",
-      "summary": "",
-      "url": "https://www.tomshardware.com/pc-components/cpus/amd-expects-to-outsell-intel-in-q4-for-the-first-time-in-history-usd17b-guidance-would-exceed-intels-projections",
-      "source": "Hacker News",
-      "score": 290,
-      "comments": 94
-    },
-    {
-      "id": "hn:50365755",
-      "title": "North Korean fake job interview led to $6.3B Binance heist",
-      "summary": "",
-      "url": "https://www.theregister.com/security/2026/11/03/north-korean-fake-job-interview-led-to-63b-binance-heist/5307398",
-      "source": "Hacker News",
-      "score": 430,
-      "comments": 255
-    },
-    {
-      "id": "lob:e201eb",
-      "title": "The Ubuntu 26.04 Rust sudo is not compatible with standard sudo",
-      "summary": "",
-      "url": "https://utcc.utoronto.ca/~cks/space/blog/linux/Ubuntu2604RustSudoNotCompatible",
-      "source": "Lobste.rs",
-      "score": 76,
-      "comments": 62,
-      "tags": [
-        "linux",
-        "rust"
-      ]
-    },
-    {
-      "id": "hn:50363019",
-      "title": "Verification Is Not Knowledge: Science needs more than answers",
-      "summary": "",
-      "url": "https://blog.cosmos-institute.org/p/verification-is-not-knowledge",
-      "source": "Hacker News",
-      "score": 194,
-      "comments": 109
-    },
-    {
-      "id": "hn:50366522",
-      "title": "Guerrilla bike lanes: San Francisco makes illicit infrastructure permanent (2016)",
-      "summary": "",
-      "url": "https://99percentinvisible.org/article/guerrilla-bike-lanes-san-francisco-makes-illicit-infrastructure-permanent/",
-      "source": "Hacker News",
-      "score": 181,
-      "comments": 114
-    },
-    {
-      "id": "lob:lh1j0e",
-      "title": "Shlemiel the Painter Is Back: How Zig’s libc Rewrite Made SQLite Slower",
-      "summary": "",
-      "url": "https://dennisforbes.ca/blog/microblog/2026/10/the_accidental_12000x_sqlite_slowdown/",
-      "source": "Lobste.rs",
-      "score": 33,
-      "comments": 5,
-      "tags": [
-        "performance",
-        "rust",
-        "zig"
-      ]
-    },
-    {
-      "id": "lob:chypzr",
-      "title": "Death comes for XSLT",
-      "summary": "",
-      "url": "https://dbushell.com/2026/11/03/xslt-rip/",
-      "source": "Lobste.rs",
-      "score": 99,
-      "comments": 89,
-      "tags": [
-        "browsers",
-        "web"
-      ]
+      "score": 267,
+      "comments": 96
     },
     {
       "id": "hn:50368626",
@@ -127,21 +45,107 @@
       "summary": "",
       "url": "https://www.anthropic.com/research/provable-inference",
       "source": "Hacker News",
-      "score": 101,
-      "comments": 44
+      "score": 200,
+      "comments": 88
     },
     {
-      "id": "lob:1gndxr",
-      "title": "Could a modern chess engine on a Pentium have defeated Kasparov in 1996?",
+      "id": "hn:50371246",
+      "title": "Residential proxies detected on White House network",
       "summary": "",
-      "url": "https://nicholas.carlini.com/writing/2026/algorithmic-improvements-chess.html",
+      "url": "https://layer3intel.com/blog/residential-proxies-white-house-network",
+      "source": "Hacker News",
+      "score": 858,
+      "comments": 273
+    },
+    {
+      "id": "hn:50372929",
+      "title": "A thousand fewer paths to root",
+      "summary": "",
+      "url": "https://openai.com/index/a-thousand-fewer-paths-to-root/",
+      "source": "Hacker News",
+      "score": 244,
+      "comments": 138
+    },
+    {
+      "id": "hn:50366999",
+      "title": "Kimi K3.1 Pro model weights are out",
+      "summary": "",
+      "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+      "source": "Hacker News",
+      "score": 450,
+      "comments": 132
+    },
+    {
+      "id": "hn:50370610",
+      "title": "Insects don't swarm at LED lights",
+      "summary": "",
+      "url": "https://www.birdsoutsidemywindow.org/2026/11/03/insects-dont-swarm-at-led-lights/",
+      "source": "Hacker News",
+      "score": 215,
+      "comments": 115
+    },
+    {
+      "id": "lob:lh1j0e",
+      "title": "Shlemiel the Painter Is Back: How Zig’s libc Rewrite Made SQLite Slower",
+      "summary": "",
+      "url": "https://dennisforbes.ca/blog/microblog/2026/10/the_accidental_12000x_sqlite_slowdown/",
       "source": "Lobste.rs",
-      "score": 55,
-      "comments": 7,
+      "score": 71,
+      "comments": 8,
       "tags": [
-        "games",
-        "retrocomputing"
+        "performance",
+        "rust",
+        "zig"
       ]
+    },
+    {
+      "id": "hn:50372945",
+      "title": "Images 2.6",
+      "summary": "",
+      "url": "https://openai.com/index/introducing-images-2-6/",
+      "source": "Hacker News",
+      "score": 208,
+      "comments": 136
+    },
+    {
+      "id": "hn:50369106",
+      "title": "A new Go API for JSON",
+      "summary": "",
+      "url": "https://go.dev/blog/jsonv2",
+      "source": "Hacker News",
+      "score": 266,
+      "comments": 123
+    },
+    {
+      "id": "hn:50373308",
+      "title": "Starfall – Affordable, routine access to microgravity",
+      "summary": "",
+      "url": "https://www.spacex.com/starfall",
+      "source": "Hacker News",
+      "score": 177,
+      "comments": 109
+    },
+    {
+      "id": "lob:chypzr",
+      "title": "Death comes for XSLT",
+      "summary": "",
+      "url": "https://dbushell.com/2026/11/03/xslt-rip/",
+      "source": "Lobste.rs",
+      "score": 106,
+      "comments": 92,
+      "tags": [
+        "browsers",
+        "web"
+      ]
+    },
+    {
+      "id": "hn:50369503",
+      "title": "Conductor is joining Meta",
+      "summary": "",
+      "url": "https://www.conductor.build/announcement",
+      "source": "Hacker News",
+      "score": 155,
+      "comments": 169
     },
     {
       "id": "lob:cozhtg",
@@ -149,41 +153,53 @@
       "summary": "",
       "url": "https://karthihegde.dev/posts/dns_tampering",
       "source": "Lobste.rs",
-      "score": 55,
-      "comments": 6,
+      "score": 80,
+      "comments": 11,
       "tags": [
         "networking"
       ]
     },
     {
-      "id": "hn:50369146",
-      "title": "BYD doubles its Brazil market share to 9.7% a year after opening its local plant",
+      "id": "lob:ecrqpy",
+      "title": "How to speed up the Rust compiler in November 2026",
       "summary": "",
-      "url": "https://www.bloomberg.com/news/articles/2026-11-03/china-s-byd-doubles-market-share-in-brazil-with-new-plant-eyed",
-      "source": "Hacker News",
-      "score": 94,
-      "comments": 68
-    },
-    {
-      "id": "hn:50368804",
-      "title": "Launch HN: Kino AI (YC S23) – AI media manager and video editor",
-      "summary": "Hi HN! I&#x27;m Luke from Kino (<a href=\"https:&#x2F;&#x2F;kino.ai\">https:&#x2F;&#x2F;kino.ai</a>). Kino lets you make great videos with your agents and your teammates. Storage of footage and assets, a rich video editor, and review links for teammates are all bundled into one. Your colleagues and Co",
-      "url": "https://news.ycombinator.com/item?id=50368804",
-      "source": "Hacker News",
-      "score": 26,
-      "comments": 19
-    },
-    {
-      "id": "lob:fgucra",
-      "title": "Observations from Running stealmybitcoin.com",
-      "summary": "",
-      "url": "https://pavursec.com/blog/stealmybitcoin/",
+      "url": "https://nnethercote.github.io/2026/11/04/how-to-speed-up-the-rust-compiler-in-november-2026.html",
       "source": "Lobste.rs",
-      "score": 99,
-      "comments": 2,
+      "score": 36,
+      "comments": 1,
       "tags": [
-        "php",
-        "security"
+        "compilers",
+        "rust"
+      ]
+    },
+    {
+      "id": "hn:50370654",
+      "title": "Qualcomm Cloud AI 100 Ultra – 150W AI Accelerator Card with 128GB at 548GB/s",
+      "summary": "",
+      "url": "https://www.qualcomm.com/data-center/products/cloud-ai-100-ultra",
+      "source": "Hacker News",
+      "score": 129,
+      "comments": 53
+    },
+    {
+      "id": "hn:50369895",
+      "title": "Show HN: After a decade of reversing, I got co-op working in DOS Wing Commander",
+      "summary": "",
+      "url": "https://fireflyk64.github.io/wcmulti/",
+      "source": "Hacker News",
+      "score": 148,
+      "comments": 16
+    },
+    {
+      "id": "lob:bqllfe",
+      "title": "Your Cryptography Conspiracy Theory Is Wrong",
+      "summary": "",
+      "url": "https://soatok.blog/2026/10/29/your-cryptography-conspiracy-theory-is-wrong/",
+      "source": "Lobste.rs",
+      "score": 54,
+      "comments": 9,
+      "tags": [
+        "cryptography"
       ]
     },
     {
@@ -192,60 +208,37 @@
       "summary": "",
       "url": "https://andreasfertig.com/blog/2026/11/cpp26-dis-failed-how-does-cpp-survive/",
       "source": "Lobste.rs",
-      "score": 23,
-      "comments": 19,
+      "score": 34,
+      "comments": 29,
       "tags": [
         "c++"
       ]
     },
     {
-      "id": "hn:50365780",
-      "title": "Tencent Hy4",
+      "id": "lob:yba0yg",
+      "title": "Introducing Adaptive Dark Mode",
       "summary": "",
-      "url": "https://hy.tencent.ai/research/hy4",
-      "source": "Hacker News",
-      "score": 84,
-      "comments": 29
+      "url": "https://webkit.org/blog/18541/introducing-adaptive-dark-mode/",
+      "source": "Lobste.rs",
+      "score": 37,
+      "comments": 10,
+      "tags": [
+        "css",
+        "web"
+      ]
     },
     {
-      "id": "lob:ecrqpy",
-      "title": "How to speed up the Rust compiler in November 2026",
+      "id": "lob:pa1411",
+      "title": "Zig 0.17.1 Released",
       "summary": "",
-      "url": "https://nnethercote.github.io/2026/11/04/how-to-speed-up-the-rust-compiler-in-november-2026.html",
+      "url": "https://ziglang.org/news/0.17.1-released/",
       "source": "Lobste.rs",
-      "score": 19,
+      "score": 48,
       "comments": 0,
       "tags": [
-        "compilers",
-        "rust"
+        "release",
+        "zig"
       ]
-    },
-    {
-      "id": "lob:siqsg7",
-      "title": "Announcing NetBSD 11.1",
-      "summary": "",
-      "url": "https://www.netbsd.org/releases/formal-11/NetBSD-11.1.html",
-      "source": "Lobste.rs",
-      "score": 43,
-      "comments": 2,
-      "tags": [
-        "netbsd",
-        "release"
-      ]
-    },
-    {
-      "id": "arxiv:2611.05334v1",
-      "title": "A simple adaptive accelerated optimistic dual averaging method for unconstrained convex optimization in $p$-norm geometry",
-      "summary": "Efficient preconditioning plays an important role in large-scale first-order optimization. In this paper, we propose an adaptive accelerated optimistic dual averaging ($\\text{A}^2$ODA) method for unconstrained convex optimization that adopts low-cost preconditioning based on $p$-norm geometry for $p",
-      "url": "https://arxiv.org/abs/2611.05334v1",
-      "source": "ArXiv",
-      "categories": [
-        "math.OC",
-        "cs.AI",
-        "cs.LG",
-        "stat.ML"
-      ],
-      "arxiv_id": "2611.05334v1"
     }
   ],
   "ai_curated": true
