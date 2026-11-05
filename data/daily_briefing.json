@@ -1,88 +1,52 @@
 {
-  "date": "2026-11-05",
-  "update_time": "2026-11-05 05:53:56",
+  "date": "2026-11-06",
+  "update_time": "2026-11-05 19:39:11",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-05\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Ripple-65B Preview：美国开源权重在 Agentic Coding 上拿下 SOTA (来源: HackerNews)\n- **核心干货**：美国本土开源权重阵营终于端出一个能打的——Ripple-65B 预览版在智能体编程（Agentic Coding）基准上刷到 SOTA。这不是又一个套壳微调，而是把\"模型自己规划任务、调工具、写代码、自纠错\"这条链路做扎实了，直接对标 Kimi 和国内那批开源猛兽。\n- **毒舌/硬核点评**：美国开源圈憋了这么久，总算想起\"开源权重\"四个字怎么写。不过预览版嘛，先别急着开香槟——等权重真放出来、跑分被社区复现再说，别又是一出\"论文 SOTA、下载拉胯\"的老戏码。\n- **🔗 传送门**：[点击直达原链接](https://www.ricursive.com/ripple)\n\n---\n\n### 2. 📌 Anthropic 攻克 LLM 可证明推理（Provable Inference）(来源: HackerNews)\n- **核心干货**：Anthropic 发布在\"可证明推理\"上的进展——让模型的推理过程能被形式化验证，而不只是\"看起来逻辑通顺\"。这戳中了 LLM 落地高价值场景（金融、医疗、合规）最大的软肋：你敢不敢为它的输出签字。若能规模化，等于给黑箱装了个可审计的仪表盘。\n- **毒舌/硬核点评**：终于有人认真回答\"你怎么证明它没胡说\"这个灵魂拷问了。但\"可证明\"三个字成本极高，别最后变成只有 benchmark 上可证明、生产环境里全靠信仰。\n- **🔗 传送门**：[点击直达原链接](https://www.anthropic.com/research/provable-inference)\n\n---\n\n### 3. 📌 Zig 重写 libc 反把 SQLite 拖慢：一次 12000 倍的\"薛定谔性能事故\" (来源: Lobste.rs)\n- **核心干货**：Zig 团队重写 libc 本想\"更干净更快\"，结果下游 SQLite 性能直接雪崩，最夸张处慢了约 12000 倍——典型的 Shlemiel the Painter 问题：算法没变，底层字符串/内存操作的一点点退化在热点路径上被无限放大。这是给所有\"我要重写标准库\"的勇士们上的一堂血泪课。\n- **毒舌/硬核点评**：重写 libc 一时爽，SQLite 火葬场。性能优化最贵的从来不是写新代码，而是你以为自己变快了。建议把这篇博客打印出来贴在每个\"我们重写一下底层吧\"的会议室门口。\n- **🔗 传送门**：[点击直达原链接](https://dennisforbes.ca/blog/microblog/2026/10/the_accidental_12000x_sqlite_slowdown/)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"重写底层的人分两种：一种改变了世界，另一种改变了 benchmark 的横轴单位——从毫秒变成了秒。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-06\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 OpenAI 用 AI 流水线 30 小时挖出 948 个 Linux 提权漏洞 (来源: The Hacker News)\n- **核心干货**：OpenAI 披露了一套专攻网络安全的 AI 流水线，在单次 30 小时运行中分析 2308 个候选内核缺陷，最终验证并生成了 948 个本地提权（LPE）漏洞的利用与补丁，API 成本约 120 万美元。这意味着\"漏洞挖掘\"正从人肉逆向工程变成可规模化、可计价的工业化生产。\n- **毒舌/硬核点评**：以前一个 CVE 够安全研究员吹半年，现在 AI 一顿饭的功夫批发一千个——防守方的补丁队列怕是要当场心梗。120 万美元买近千个洞，平均一个 1200 刀，这价格比请个实习生还便宜，难怪甲方爸爸们开始失眠了。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html)\n\n---\n\n### 2. 📌 Zig 重写 libc 把 SQLite 拖慢了 12000 倍：Shlemiel 画匠又回来了 (来源: Lobste.rs)\n- **核心干货**：一篇硬核性能复盘指出，Zig 自研 libc 的某些实现细节让 SQLite 在特定路径上性能暴跌约 12000 倍。核心教训是老掉牙却总有人踩的坑：底层字符串/内存操作的复杂度一旦从 O(1) 退化为 O(n)，上层数据库就会被\"温水煮青蛙\"式地拖死。\n- **毒舌/硬核点评**：\"重写标准库\"是每个语言社区最性感的自嗨项目，也是最容易把生态炸掉的地雷。性能优化界的经典剧本：先造一个更干净的抽象，再用一个 strlen 把整个数据库送走。给所有想\"从零造轮子\"的团队提个醒——基准测试不是装饰品。\n- **🔗 传送门**：[点击直达原链接](https://dennisforbes.ca/blog/microblog/2026/10/the_accidental_12000x_sqlite_slowdown/)\n\n---\n\n### 3. 📌 Debian apt 曝出中间人任意代码执行漏洞 (来源: Lobste.rs / Debian Security)\n- **核心干货**：Debian 安全公告披露 apt 包管理器存在可被中间人利用的任意代码执行缺陷。apt 是整个 Debian/Ubuntu 生态的信任根之一，一旦签名校验或传输环节被绕过，攻击者就能在千万台服务器上\"合法\"地投递恶意包——这是供应链攻击的教科书级入口。\n- **毒舌/硬核点评**：你天天 `apt upgrade` 以为自己很安全，结果包管理器自己先被人 MITM 了。供应链安全的残酷真相：信任链上任何一环打盹，整条链就是摆设。建议运维兄弟们今天先把 apt 补丁打上，再去群里转发\"零信任\"鸡汤。\n- **🔗 传送门**：[点击直达原链接](https://lists.debian.org/debian-security-announce/2026/msg00526.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> 别人用 AI 批发漏洞，你用 AI 批发周报——同样是 30 小时，差距不在模型，在你敢不敢把活儿交给机器然后去睡觉。",
   "briefing_items": [
     {
-      "title": "Ripple-65B Preview：美国开源权重在 Agentic Coding 上拿下 SOTA",
-      "source": "HackerNews",
-      "summary": "美国本土开源权重阵营终于端出一个能打的——Ripple-65B 预览版在智能体编程（Agentic Coding）基准上刷到 SOTA。这不是又一个套壳微调，而是把\"模型自己规划任务、调工具、写代码、自纠错\"这条链路做扎实了，直接对标 Kimi 和国内那批开源猛兽。",
-      "commentary": "美国开源圈憋了这么久，总算想起\"开源权重\"四个字怎么写。不过预览版嘛，先别急着开香槟——等权重真放出来、跑分被社区复现再说，别又是一出\"论文 SOTA、下载拉胯\"的老戏码。",
-      "url": "https://www.ricursive.com/ripple"
+      "title": "OpenAI 用 AI 流水线 30 小时挖出 948 个 Linux 提权漏洞",
+      "source": "The Hacker News",
+      "summary": "OpenAI 披露了一套专攻网络安全的 AI 流水线，在单次 30 小时运行中分析 2308 个候选内核缺陷，最终验证并生成了 948 个本地提权（LPE）漏洞的利用与补丁，API 成本约 120 万美元。这意味着\"漏洞挖掘\"正从人肉逆向工程变成可规模化、可计价的工业化生产。",
+      "commentary": "以前一个 CVE 够安全研究员吹半年，现在 AI 一顿饭的功夫批发一千个——防守方的补丁队列怕是要当场心梗。120 万美元买近千个洞，平均一个 1200 刀，这价格比请个实习生还便宜，难怪甲方爸爸们开始失眠了。",
+      "url": "https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html"
     },
     {
-      "title": "Anthropic 攻克 LLM 可证明推理（Provable Inference）",
-      "source": "HackerNews",
-      "summary": "Anthropic 发布在\"可证明推理\"上的进展——让模型的推理过程能被形式化验证，而不只是\"看起来逻辑通顺\"。这戳中了 LLM 落地高价值场景（金融、医疗、合规）最大的软肋：你敢不敢为它的输出签字。若能规模化，等于给黑箱装了个可审计的仪表盘。",
-      "commentary": "终于有人认真回答\"你怎么证明它没胡说\"这个灵魂拷问了。但\"可证明\"三个字成本极高，别最后变成只有 benchmark 上可证明、生产环境里全靠信仰。",
-      "url": "https://www.anthropic.com/research/provable-inference"
-    },
-    {
-      "title": "Zig 重写 libc 反把 SQLite 拖慢：一次 12000 倍的\"薛定谔性能事故\"",
+      "title": "Zig 重写 libc 把 SQLite 拖慢了 12000 倍：Shlemiel 画匠又回来了",
       "source": "Lobste.rs",
-      "summary": "Zig 团队重写 libc 本想\"更干净更快\"，结果下游 SQLite 性能直接雪崩，最夸张处慢了约 12000 倍——典型的 Shlemiel the Painter 问题：算法没变，底层字符串/内存操作的一点点退化在热点路径上被无限放大。这是给所有\"我要重写标准库\"的勇士们上的一堂血泪课。",
-      "commentary": "重写 libc 一时爽，SQLite 火葬场。性能优化最贵的从来不是写新代码，而是你以为自己变快了。建议把这篇博客打印出来贴在每个\"我们重写一下底层吧\"的会议室门口。",
+      "summary": "一篇硬核性能复盘指出，Zig 自研 libc 的某些实现细节让 SQLite 在特定路径上性能暴跌约 12000 倍。核心教训是老掉牙却总有人踩的坑：底层字符串/内存操作的复杂度一旦从 O(1) 退化为 O(n)，上层数据库就会被\"温水煮青蛙\"式地拖死。",
+      "commentary": "\"重写标准库\"是每个语言社区最性感的自嗨项目，也是最容易把生态炸掉的地雷。性能优化界的经典剧本：先造一个更干净的抽象，再用一个 strlen 把整个数据库送走。给所有想\"从零造轮子\"的团队提个醒——基准测试不是装饰品。",
       "url": "https://dennisforbes.ca/blog/microblog/2026/10/the_accidental_12000x_sqlite_slowdown/"
     },
     {
-      "quote": "\"重写底层的人分两种：一种改变了世界，另一种改变了 benchmark 的横轴单位——从毫秒变成了秒。\""
+      "title": "Debian apt 曝出中间人任意代码执行漏洞",
+      "source": "Lobste.rs / Debian Security",
+      "summary": "Debian 安全公告披露 apt 包管理器存在可被中间人利用的任意代码执行缺陷。apt 是整个 Debian/Ubuntu 生态的信任根之一，一旦签名校验或传输环节被绕过，攻击者就能在千万台服务器上\"合法\"地投递恶意包——这是供应链攻击的教科书级入口。",
+      "commentary": "你天天 `apt upgrade` 以为自己很安全，结果包管理器自己先被人 MITM 了。供应链安全的残酷真相：信任链上任何一环打盹，整条链就是摆设。建议运维兄弟们今天先把 apt 补丁打上，再去群里转发\"零信任\"鸡汤。",
+      "url": "https://lists.debian.org/debian-security-announce/2026/msg00526.html"
+    },
+    {
+      "quote": "别人用 AI 批发漏洞，你用 AI 批发周报——同样是 30 小时，差距不在模型，在你敢不敢把活儿交给机器然后去睡觉。"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50369925",
-      "title": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
+      "id": "hn:50379704",
+      "title": "Alpine Linux Security Advisory: OpenSSH-server password authentication bypass",
       "summary": "",
-      "url": "https://www.ricursive.com/ripple",
+      "url": "https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/",
       "source": "Hacker News",
-      "score": 267,
-      "comments": 96
+      "score": 403,
+      "comments": 66
     },
     {
-      "id": "hn:50368626",
-      "title": "Progress on provable inference for large language models",
+      "id": "hn:50380810",
+      "title": "Motorola Signature 27 with GrapheneOS support",
       "summary": "",
-      "url": "https://www.anthropic.com/research/provable-inference",
+      "url": "https://motorolanews.com/motorola-signature-27-2/",
       "source": "Hacker News",
-      "score": 200,
-      "comments": 88
-    },
-    {
-      "id": "hn:50371246",
-      "title": "Residential proxies detected on White House network",
-      "summary": "",
-      "url": "https://layer3intel.com/blog/residential-proxies-white-house-network",
-      "source": "Hacker News",
-      "score": 858,
-      "comments": 273
-    },
-    {
-      "id": "hn:50372929",
-      "title": "A thousand fewer paths to root",
-      "summary": "",
-      "url": "https://openai.com/index/a-thousand-fewer-paths-to-root/",
-      "source": "Hacker News",
-      "score": 244,
-      "comments": 138
-    },
-    {
-      "id": "hn:50366999",
-      "title": "Kimi K3.1 Pro model weights are out",
-      "summary": "",
-      "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
-      "source": "Hacker News",
-      "score": 450,
-      "comments": 132
-    },
-    {
-      "id": "hn:50370610",
-      "title": "Insects don't swarm at LED lights",
-      "summary": "",
-      "url": "https://www.birdsoutsidemywindow.org/2026/11/03/insects-dont-swarm-at-led-lights/",
-      "source": "Hacker News",
-      "score": 215,
-      "comments": 115
+      "score": 238,
+      "comments": 144
     },
     {
       "id": "lob:lh1j0e",
@@ -90,8 +54,8 @@
       "summary": "",
       "url": "https://dennisforbes.ca/blog/microblog/2026/10/the_accidental_12000x_sqlite_slowdown/",
       "source": "Lobste.rs",
-      "score": 71,
-      "comments": 8,
+      "score": 94,
+      "comments": 19,
       "tags": [
         "performance",
         "rust",
@@ -99,53 +63,31 @@
       ]
     },
     {
-      "id": "hn:50372945",
-      "title": "Images 2.6",
+      "id": "hn:50378571",
+      "title": "Download your favourite YouTube videos",
       "summary": "",
-      "url": "https://openai.com/index/introducing-images-2-6/",
+      "url": "https://criminallyvulgar.dev/you-should-absolutely-download-your-favourite-youtube-videos/",
       "source": "Hacker News",
-      "score": 208,
-      "comments": 136
+      "score": 189,
+      "comments": 83
     },
     {
-      "id": "hn:50369106",
-      "title": "A new Go API for JSON",
+      "id": "hn:50349667",
+      "title": "The Lisp curse, now coming to your ecosystem",
       "summary": "",
-      "url": "https://go.dev/blog/jsonv2",
+      "url": "https://javahippie.net/programming/llm/2026/03/05/the-lisp-curse-coming-to-your-ecosystem.html",
       "source": "Hacker News",
-      "score": 266,
-      "comments": 123
+      "score": 127,
+      "comments": 78
     },
     {
-      "id": "hn:50373308",
-      "title": "Starfall – Affordable, routine access to microgravity",
+      "id": "hn:50378942",
+      "title": "I wish tech companies knew more about me",
       "summary": "",
-      "url": "https://www.spacex.com/starfall",
+      "url": "https://rakhim.exotext.com/i-wish-tech-companies-knew-more-about-me",
       "source": "Hacker News",
-      "score": 177,
-      "comments": 109
-    },
-    {
-      "id": "lob:chypzr",
-      "title": "Death comes for XSLT",
-      "summary": "",
-      "url": "https://dbushell.com/2026/11/03/xslt-rip/",
-      "source": "Lobste.rs",
-      "score": 106,
-      "comments": 92,
-      "tags": [
-        "browsers",
-        "web"
-      ]
-    },
-    {
-      "id": "hn:50369503",
-      "title": "Conductor is joining Meta",
-      "summary": "",
-      "url": "https://www.conductor.build/announcement",
-      "source": "Hacker News",
-      "score": 155,
-      "comments": 169
+      "score": 162,
+      "comments": 149
     },
     {
       "id": "lob:cozhtg",
@@ -153,42 +95,11 @@
       "summary": "",
       "url": "https://karthihegde.dev/posts/dns_tampering",
       "source": "Lobste.rs",
-      "score": 80,
-      "comments": 11,
+      "score": 102,
+      "comments": 17,
       "tags": [
         "networking"
       ]
-    },
-    {
-      "id": "lob:ecrqpy",
-      "title": "How to speed up the Rust compiler in November 2026",
-      "summary": "",
-      "url": "https://nnethercote.github.io/2026/11/04/how-to-speed-up-the-rust-compiler-in-november-2026.html",
-      "source": "Lobste.rs",
-      "score": 36,
-      "comments": 1,
-      "tags": [
-        "compilers",
-        "rust"
-      ]
-    },
-    {
-      "id": "hn:50370654",
-      "title": "Qualcomm Cloud AI 100 Ultra – 150W AI Accelerator Card with 128GB at 548GB/s",
-      "summary": "",
-      "url": "https://www.qualcomm.com/data-center/products/cloud-ai-100-ultra",
-      "source": "Hacker News",
-      "score": 129,
-      "comments": 53
-    },
-    {
-      "id": "hn:50369895",
-      "title": "Show HN: After a decade of reversing, I got co-op working in DOS Wing Commander",
-      "summary": "",
-      "url": "https://fireflyk64.github.io/wcmulti/",
-      "source": "Hacker News",
-      "score": 148,
-      "comments": 16
     },
     {
       "id": "lob:bqllfe",
@@ -196,49 +107,142 @@
       "summary": "",
       "url": "https://soatok.blog/2026/10/29/your-cryptography-conspiracy-theory-is-wrong/",
       "source": "Lobste.rs",
-      "score": 54,
-      "comments": 9,
+      "score": 75,
+      "comments": 30,
       "tags": [
         "cryptography"
       ]
     },
     {
-      "id": "lob:xvtufg",
-      "title": "C++26 Disapproved",
+      "id": "hn:50377976",
+      "title": "OpenSSH 10.6p2 Critical workaround for alpine without PAM",
       "summary": "",
-      "url": "https://andreasfertig.com/blog/2026/11/cpp26-dis-failed-how-does-cpp-survive/",
+      "url": "https://www.openssh.org/releasenotes.html#10.6p2",
+      "source": "Hacker News",
+      "score": 199,
+      "comments": 10
+    },
+    {
+      "id": "lob:h7bvma",
+      "title": "Man-in-the-middle arbitrary code execution in Debian’s apt",
+      "summary": "",
+      "url": "https://lists.debian.org/debian-security-announce/2026/msg00526.html",
       "source": "Lobste.rs",
-      "score": 34,
-      "comments": 29,
+      "score": 47,
+      "comments": 7,
       "tags": [
-        "c++"
+        "linux",
+        "security"
       ]
     },
     {
-      "id": "lob:yba0yg",
-      "title": "Introducing Adaptive Dark Mode",
+      "id": "lob:jplxxr",
+      "title": "Declarative Dragging",
       "summary": "",
-      "url": "https://webkit.org/blog/18541/introducing-adaptive-dark-mode/",
+      "url": "https://declarative-dragging.github.io/",
+      "source": "Lobste.rs",
+      "score": 101,
+      "comments": 3,
+      "tags": [
+        "design",
+        "graphics",
+        "plt"
+      ]
+    },
+    {
+      "id": "hn:50379576",
+      "title": "September in Servo: <progress>, rounded rectangles, and more",
+      "summary": "",
+      "url": "https://servo.org/blog/2026/11/05/september-in-servo/",
+      "source": "Hacker News",
+      "score": 131,
+      "comments": 27
+    },
+    {
+      "id": "lob:gfm0xn",
+      "title": "A new Go API for JSON",
+      "summary": "",
+      "url": "https://go.dev/blog/jsonv2",
       "source": "Lobste.rs",
       "score": 37,
-      "comments": 10,
+      "comments": 5,
       "tags": [
-        "css",
+        "go"
+      ]
+    },
+    {
+      "id": "rss:3e7cc1cdcb",
+      "title": "OpenAI AI Pipeline Generates 948 Linux Root Escalation Exploits in 30-Hour Run",
+      "summary": "OpenAI on Wednesday detailed a pipeline that employed an upcoming cyber-focused artificial intelligence (AI) model to validate and patch 948 local privilege escalation vulnerabilities in Linux for $1.2 million in API costs.\n\n\"Our prototype identified and analyzed 2,308 candidate Linux kernel finding",
+      "url": "https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "hn:50381033",
+      "title": "My psychophysics as a bilateral cochlear implant user",
+      "summary": "",
+      "url": "https://claude.ai/artifact/L8qsMc3SorytGW3LA81nYf",
+      "source": "Hacker News",
+      "score": 105,
+      "comments": 25
+    },
+    {
+      "id": "lob:hrsyjf",
+      "title": "11 nanoseconds per word: Ridiculously Over-Optimizing Anagrams",
+      "summary": "",
+      "url": "https://wiredream.com/anagram-fun/",
+      "source": "Lobste.rs",
+      "score": 22,
+      "comments": 2,
+      "tags": [
+        "performance",
+        "rust"
+      ]
+    },
+    {
+      "id": "lob:y4poxs",
+      "title": "Why is there an Anubis gate in front of Search for logged-in users?",
+      "summary": "<p>When one goes to Search on lobste.rs there is an Anubis gate first. I understand why it is there for a public rate limiting case, but why is it there for logged-in users? This is an invite only site and if anyone would hammer the server too much they are logged in so they can already be rate limi",
+      "url": "https://lobste.rs/s/y4poxs/why_is_there_anubis_gate_front_search_for",
+      "source": "Lobste.rs",
+      "score": 22,
+      "comments": 7,
+      "tags": [
+        "meta",
         "web"
       ]
     },
     {
-      "id": "lob:pa1411",
-      "title": "Zig 0.17.1 Released",
+      "id": "hn:50381383",
+      "title": "Window Sweaters",
       "summary": "",
-      "url": "https://ziglang.org/news/0.17.1-released/",
-      "source": "Lobste.rs",
-      "score": 48,
-      "comments": 0,
-      "tags": [
-        "release",
-        "zig"
-      ]
+      "url": "https://github.com/saragordic/window-sweaters",
+      "source": "Hacker News",
+      "score": 87,
+      "comments": 32
+    },
+    {
+      "id": "hn:50368208",
+      "title": "Show HN: A decent text-to-image model trained for ~$20K (Apache 2.0 Weights)",
+      "summary": "My brother and I run a 2-person lab that trains our own generative video models from scratch. The ultimate goal is a set of creative tools that make it easier for anyone to make animation.<p>Video models today are too slow&#x2F;expensive and lack sufficient controls. Creativity is an iterative proce",
+      "url": "https://www.linum.ai/field-notes/pjit-21k",
+      "source": "Hacker News",
+      "score": 68,
+      "comments": 6
+    },
+    {
+      "id": "arxiv:2611.06914v1",
+      "title": "A Framework for Context Enrichment and Selective Robustness in LLM Social Agents",
+      "summary": "Researchers use large language models as agents in social simulations, where agents are prompted with observations and background information intended to shape their actions. Yet LLM agents have been shown to substantially change their behavior under meaning-preserving prompt variations, creating a ",
+      "url": "https://arxiv.org/abs/2611.06914v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.MA",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_id": "2611.06914v1"
     }
   ],
   "ai_curated": true
