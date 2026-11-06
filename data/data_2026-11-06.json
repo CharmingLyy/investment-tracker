@@ -1,0 +1,830 @@
+{
+  "update_time": "2026-11-06 15:30:49",
+  "stocks": {
+    "a_stocks": [
+      {
+        "market": "A股",
+        "code": "002050",
+        "name": "三花智控",
+        "symbol": "sz.002050",
+        "industry": null,
+        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
+        "price": 33.67,
+        "open": 33.4,
+        "high": 34.4,
+        "low": 33.4,
+        "change_pct": -3.47,
+        "volume": 44811763,
+        "turnover": 15.15,
+        "market_cap": null,
+        "pe": 36.44,
+        "cash_flow": 50.92,
+        "macd": -0.13,
+        "macd_signal": -0.2949,
+        "macd_histogram": 0.3298,
+        "rsi": 47.95,
+        "ma": {
+          "MA5": 33.93,
+          "MA10": 34.15,
+          "MA20": 33.33,
+          "MA60": 35.24
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
+        "price": 6.1,
+        "open": 6.08,
+        "high": 6.19,
+        "low": 6.05,
+        "change_pct": -1.45,
+        "volume": 47533999,
+        "turnover": 2.91,
+        "market_cap": null,
+        "pe": 68.49,
+        "cash_flow": 105.67,
+        "macd": -0.089,
+        "macd_signal": -0.1056,
+        "macd_histogram": 0.0333,
+        "rsi": 41.37,
+        "ma": {
+          "MA5": 6.14,
+          "MA10": 6.11,
+          "MA20": 6.18,
+          "MA60": 6.46
+        },
+        "main_net_flow": null
+      }
+    ],
+    "hk_stocks": [
+      {
+        "market": "港股",
+        "code": "01810",
+        "name": "小米集团-W",
+        "symbol": "01810",
+        "industry": "Consumer Electronics",
+        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
+        "price": 30.38,
+        "open": 31.0,
+        "high": 31.74,
+        "low": 30.22,
+        "change_pct": -2.94,
+        "volume": 303885071,
+        "turnover": null,
+        "market_cap": 7817.98,
+        "pe": 22.34,
+        "cash_flow": 86.81,
+        "macd": 0.9476,
+        "macd_signal": 0.4212,
+        "macd_histogram": 1.0528,
+        "rsi": 65.87,
+        "ma": {
+          "MA5": 29.43,
+          "MA10": 27.75,
+          "MA20": 26.98,
+          "MA60": 26.68
+        },
+        "main_net_flow": null
+      }
+    ],
+    "us_stocks": [
+      {
+        "market": "美股",
+        "code": "NVDA",
+        "name": "NVIDIA",
+        "symbol": "NVDA",
+        "industry": "Semiconductors",
+        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
+        "price": 189.51,
+        "open": 191.14,
+        "high": 194.9,
+        "low": 189.51,
+        "change_pct": 4.36,
+        "volume": 62427077,
+        "turnover": null,
+        "market_cap": 45763.4,
+        "pe": 23.96,
+        "cash_flow": 418.1,
+        "macd": -7.9997,
+        "macd_signal": -4.9823,
+        "macd_histogram": -6.0348,
+        "rsi": 33.49,
+        "ma": {
+          "MA5": 196.0,
+          "MA10": 204.76,
+          "MA20": 211.69,
+          "MA60": 219.46
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "GOOG",
+        "name": "Alphabet (Google)",
+        "symbol": "GOOG",
+        "industry": "Internet Content & Information",
+        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
+        "price": 285.86,
+        "open": 283.7,
+        "high": 289.22,
+        "low": 283.0,
+        "change_pct": 1.46,
+        "volume": 6062047,
+        "turnover": null,
+        "market_cap": 35143.62,
+        "pe": 14.93,
+        "cash_flow": 11.62,
+        "macd": -15.7995,
+        "macd_signal": -12.3904,
+        "macd_histogram": -6.8183,
+        "rsi": 31.64,
+        "ma": {
+          "MA5": 282.24,
+          "MA10": 292.47,
+          "MA20": 314.71,
+          "MA60": 331.68
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "CRCL",
+        "name": "Circle",
+        "symbol": "CRCL",
+        "industry": "Capital Markets",
+        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
+        "price": 66.43,
+        "open": 68.73,
+        "high": 69.43,
+        "low": 66.41,
+        "change_pct": -4.38,
+        "volume": 2531937,
+        "turnover": null,
+        "market_cap": 170.38,
+        "pe": 40.01,
+        "cash_flow": 2.49,
+        "macd": -3.815,
+        "macd_signal": -2.357,
+        "macd_histogram": -2.916,
+        "rsi": 33.58,
+        "ma": {
+          "MA5": 71.87,
+          "MA10": 75.5,
+          "MA20": 80.07,
+          "MA60": 85.05
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "MP",
+        "name": "MP Materials",
+        "symbol": "MP",
+        "industry": "Other Industrial Metals & Mining",
+        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
+        "price": 34.93,
+        "open": 34.93,
+        "high": 35.29,
+        "low": 33.82,
+        "change_pct": 3.53,
+        "volume": 2537326,
+        "turnover": null,
+        "market_cap": 62.21,
+        "pe": 47.07,
+        "cash_flow": 4.11,
+        "macd": -2.7565,
+        "macd_signal": -2.544,
+        "macd_histogram": -0.425,
+        "rsi": 32.43,
+        "ma": {
+          "MA5": 36.15,
+          "MA10": 38.14,
+          "MA20": 39.16,
+          "MA60": 47.73
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "PLTR",
+        "name": "Palantir",
+        "symbol": "PLTR",
+        "industry": "Software - Infrastructure",
+        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
+        "price": 160.23,
+        "open": 158.75,
+        "high": 163.97,
+        "low": 157.24,
+        "change_pct": 3.38,
+        "volume": 7512279,
+        "turnover": null,
+        "market_cap": 3860.69,
+        "pe": 112.84,
+        "cash_flow": 26.52,
+        "macd": -6.0237,
+        "macd_signal": -0.9877,
+        "macd_histogram": -10.0719,
+        "rsi": 31.02,
+        "ma": {
+          "MA5": 168.13,
+          "MA10": 181.56,
+          "MA20": 190.11,
+          "MA60": 184.22
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "NOW",
+        "name": "ServiceNow",
+        "symbol": "NOW",
+        "industry": "Software - Application",
+        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
+        "price": 101.1,
+        "open": 102.41,
+        "high": 102.64,
+        "low": 100.55,
+        "change_pct": -1.23,
+        "volume": 3704962,
+        "turnover": null,
+        "market_cap": 1049.33,
+        "pe": 72.73,
+        "cash_flow": 57.54,
+        "macd": -9.388,
+        "macd_signal": -4.0828,
+        "macd_histogram": -10.6104,
+        "rsi": 27.31,
+        "ma": {
+          "MA5": 105.49,
+          "MA10": 120.53,
+          "MA20": 133.94,
+          "MA60": 134.66
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "DDOG",
+        "name": "Datadog",
+        "symbol": "DDOG",
+        "industry": "Software - Application",
+        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
+        "price": 176.43,
+        "open": 180.12,
+        "high": 185.18,
+        "low": 175.73,
+        "change_pct": 1.05,
+        "volume": 1325036,
+        "turnover": null,
+        "market_cap": 636.99,
+        "pe": 245.04,
+        "cash_flow": 10.66,
+        "macd": -18.1144,
+        "macd_signal": -6.62,
+        "macd_histogram": -22.9888,
+        "rsi": 27.06,
+        "ma": {
+          "MA5": 195.27,
+          "MA10": 231.7,
+          "MA20": 249.38,
+          "MA60": 245.91
+        },
+        "main_net_flow": null
+      }
+    ],
+    "crypto": [
+      {
+        "market": "加密货币",
+        "code": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "industry": "Smart Contract Platform",
+        "price": 75570,
+        "open": null,
+        "high": 76892,
+        "low": 75230,
+        "change_pct": -1.11,
+        "volume": 41808572817,
+        "turnover": null,
+        "market_cap": 15193.72,
+        "market_cap_rank": 1,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -1405.6716,
+        "macd_signal": -1072.6692,
+        "macd_histogram": -666.0048,
+        "rsi": 37.62,
+        "ma": {
+          "MA5": 77221.93,
+          "MA10": 77831.26,
+          "MA20": 79667.69,
+          "MA60": 81171.64
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 20105365.0,
+          "total_supply": 20105731.0,
+          "circ_ratio": 100.0,
+          "price_change_7d": -2.09104,
+          "price_change_30d": -8.89874,
+          "ath_pct": -40.06,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      },
+      {
+        "market": "加密货币",
+        "code": "ethereum",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "industry": "Smart Contract Platform",
+        "price": 2219.95,
+        "open": null,
+        "high": 2281.41,
+        "low": 2208.54,
+        "change_pct": -2.44,
+        "volume": 15649859163,
+        "turnover": null,
+        "market_cap": 2712.67,
+        "market_cap_rank": 2,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -60.2053,
+        "macd_signal": -61.0296,
+        "macd_histogram": 1.6485,
+        "rsi": 38.49,
+        "ma": {
+          "MA5": 2280.29,
+          "MA10": 2277.9,
+          "MA20": 2331.73,
+          "MA60": 2493.58
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 122194930.21672837,
+          "total_supply": 122194930.21672837,
+          "circ_ratio": 100.0,
+          "price_change_7d": -0.68532,
+          "price_change_30d": -13.33404,
+          "ath_pct": -55.12,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      }
+    ]
+  },
+  "news": [
+    {
+      "id": "35b871d31c",
+      "title": "[播客]独家实拍：我那永远跪着的母亲(11/07 22:10)",
+      "summary": "独家实拍：我那永远跪着的母亲",
+      "link": "http://go.rss.sina.com.cn/redirect.php?url=http://you.video.sina.com.cn/b/16972162-1239095354.html",
+      "source": "rss.sina.com.cn",
+      "published": ""
+    },
+    {
+      "id": "1635a24ff8",
+      "title": "‘I have no financial safety net’: I’m 66, rely on Social Security and have just $500 in savings. What hope do I have?",
+      "summary": "“Sometimes I wonder whether wealthier Americans should trade places with people like me.”",
+      "link": "https://www.marketwatch.com/story/i-have-no-financial-safety-net-im-66-rely-on-social-security-and-have-500-in-savings-what-politician-speaks-for-me-be2126cb?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 06 Nov 2026 15:30:00 GMT"
+    },
+    {
+      "id": "fa19ea6a1a",
+      "title": "These three stars need to align before investors rush back into stocks, Bank of America strategist says",
+      "summary": "Despite the steep drop in equity markets this week, investors should wait for several developments in other asset markets before rushing back into stocks, Michael Hartnett said.",
+      "link": "https://www.marketwatch.com/story/these-three-stars-need-to-align-before-investors-rush-back-into-stocks-bank-of-america-strategist-says-52879caa?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 06 Nov 2026 15:27:00 GMT"
+    },
+    {
+      "id": "83f060d9f5",
+      "title": "Moderna raises its revenue outlook — but all eyes are on what happens next with its cancer vaccine",
+      "summary": "The company lifted its revenue outlook for the year, saying it expects revenue to grow as much as 25% in 2026.",
+      "link": "https://www.marketwatch.com/story/modernas-stock-jumps-after-biotech-raises-sales-outlook-65363127?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 06 Nov 2026 15:09:00 GMT"
+    },
+    {
+      "id": "e54f5ca7c3",
+      "title": "My 93-year-old father changed his will at the 11th hour, leaving my brother his entire $500,000 estate. Can I challenge it?",
+      "summary": "“My brother had no job and needed a place to live.”",
+      "link": "https://www.marketwatch.com/story/my-93-year-old-father-changed-his-will-at-the-11th-hour-leaving-my-brother-his-entire-500-000-estate-can-i-challenge-it-ecfc63d2?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 06 Nov 2026 15:00:00 GMT"
+    },
+    {
+      "id": "debf7ba58b",
+      "title": "Trump’s Iran war has changed the future of Social Security",
+      "summary": "It’s a mathematical certainty that the Iran war is going to have an enormous influence on the future of retirement in America.",
+      "link": "https://www.marketwatch.com/story/trumps-iran-war-has-changed-the-future-of-social-security-7a500f9f?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 06 Nov 2026 14:55:00 GMT"
+    },
+    {
+      "id": "880f2128a5",
+      "title": "The S&P 500 has become a big AI bet. Here are some simple alternatives.",
+      "summary": "The large-cap index is nowhere near as diversified as you think.",
+      "link": "https://www.marketwatch.com/story/the-s-p-500-has-become-a-big-ai-bet-here-are-some-simple-alternatives-3c7574a4?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 06 Nov 2026 14:51:00 GMT"
+    },
+    {
+      "id": "24d40b498f",
+      "title": "‘It feels like he’s quietly building a separate life’: My husband inherited $500,000, but he refuses to spend it on our home",
+      "summary": "“Our kitchen dates from 1999 and the oven only works if you hit the door a certain way.”",
+      "link": "https://www.marketwatch.com/story/it-feels-like-hes-quietly-building-a-separate-life-my-husband-inherited-500-000-but-he-refuses-to-spend-it-on-our-home-06535cff?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 06 Nov 2026 14:50:00 GMT"
+    },
+    {
+      "id": "3b865c0ce0",
+      "title": "How much in Roth conversions can you do in 2027 with the new tax brackets?",
+      "summary": "The math should actually start with “if” — not “how much.”",
+      "link": "https://www.marketwatch.com/story/how-much-roth-conversion-can-you-do-in-2027-with-the-new-tax-brackets-a2f940c8?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 06 Nov 2026 14:26:00 GMT"
+    },
+    {
+      "id": "78ce6273b9",
+      "title": "‘It seems bizarre’: We’re in our 80s with $950,000 in traditional IRAs. Why is our adviser pushing Roth conversions?",
+      "summary": "“Our basic living expenses are covered by $110,000 in annual pensions and Social Security.”",
+      "link": "https://www.marketwatch.com/story/it-seems-bizarre-were-in-our-80s-with-950-000-in-traditional-iras-why-is-our-adviser-pushing-us-to-do-roth-conversions-a665f990?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 06 Nov 2026 14:15:00 GMT"
+    },
+    {
+      "id": "d8cf294e58",
+      "title": "Why Democrats should use their new power to embrace Trump’s tariffs",
+      "summary": "Blaming tariffs on manufactured goods for the soaring price of gasoline is the wrong solution to the affordability crisis.",
+      "link": "https://www.marketwatch.com/story/why-democrats-should-use-their-new-power-to-embrace-trumps-tariffs-7c467541?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 06 Nov 2026 13:30:00 GMT"
+    },
+    {
+      "id": "4c91a72ea7",
+      "title": "Sweetgreen stock hits 52-week high at 11.95 USD",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/sweetgreen-stock-hits-52week-high-at-1195-usd-93CH-5008731",
+      "source": "www.investing.com",
+      "published": "2026-11-06 15:13:52"
+    },
+    {
+      "id": "9f8705fcb2",
+      "title": "Why is CoreWeave stock rallying today?",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-coreweave-stock-rallying-today-93CH-5008730",
+      "source": "www.investing.com",
+      "published": "2026-11-06 15:12:54"
+    },
+    {
+      "id": "c22ca252c3",
+      "title": "New York sues GM in case related to deceptive trade practices, court records show",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/new-york-sues-gm-in-case-related-to-deceptive-trade-practices-court-records-show-5008729",
+      "source": "www.investing.com",
+      "published": "2026-11-06 15:12:49"
+    },
+    {
+      "id": "d6b85b30a9",
+      "title": "Franklin DE earnings beat by $0.17, revenue topped estimates",
+      "summary": "",
+      "link": "https://www.investing.com/news/earnings/franklin-de-earnings-beat-by-017-revenue-topped-estimates-5008727",
+      "source": "www.investing.com",
+      "published": "2026-11-06 15:12:42"
+    },
+    {
+      "id": "f6cf297ab2",
+      "title": "Gogo Inc earnings missed by $0.10, revenue fell short of estimates",
+      "summary": "",
+      "link": "https://www.investing.com/news/earnings/gogo-inc-earnings-missed-by-010-revenue-fell-short-of-estimates-5008726",
+      "source": "www.investing.com",
+      "published": "2026-11-06 15:10:46"
+    },
+    {
+      "id": "10c0a97c82",
+      "title": "Optimum Communications earnings missed by $10.06, revenue topped estimates",
+      "summary": "",
+      "link": "https://www.investing.com/news/earnings/optimum-communications-earnings-missed-by-1006-revenue-topped-estimates-5008725",
+      "source": "www.investing.com",
+      "published": "2026-11-06 15:10:41"
+    },
+    {
+      "id": "1128b72da5",
+      "title": "Telephone&Data Systems earnings beat by $0.13, revenue fell short of estimates",
+      "summary": "",
+      "link": "https://www.investing.com/news/earnings/telephonedata-systems-earnings-beat-by-013-revenue-fell-short-of-estimates-5008724",
+      "source": "www.investing.com",
+      "published": "2026-11-06 15:10:40"
+    },
+    {
+      "id": "af0f97b8cd",
+      "title": "Aligos earnings beat by $0.10, revenue topped estimates",
+      "summary": "",
+      "link": "https://www.investing.com/news/earnings/aligos-earnings-beat-by-010-revenue-topped-estimates-5008723",
+      "source": "www.investing.com",
+      "published": "2026-11-06 15:10:35"
+    },
+    {
+      "id": "60a8670e03",
+      "title": "Why is KLA stock surging today?",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-kla-stock-surging-today-93CH-5008722",
+      "source": "www.investing.com",
+      "published": "2026-11-06 15:09:32"
+    },
+    {
+      "id": "4d900bc023",
+      "title": "Halozyme sees minimal impact from Medicare drug pricing rule",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/halozyme-sees-minimal-impact-from-medicare-drug-pricing-rule-93CH-5008720",
+      "source": "www.investing.com",
+      "published": "2026-11-06 15:08:37"
+    }
+  ],
+  "briefing": {
+    "date": "2026-11-06",
+    "update_time": "2026-11-06 05:50:59",
+    "candidate_count": 20,
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-06\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Claude Code 把你的邮箱地址当\"伴手礼\"送给网站 (来源: HackerNews)\n- **核心干货**：Anthropic 的 Claude Code 被曝在访问外部网站时会携带用户邮箱地址，等于给每个被访问站点发了一张实名名片。805 分、271 条评论的 HN 热度说明这不是小打小闹——在 AI Agent 开始满互联网跑腿的时代，隐私边界第一次被摆上台面当众拷问。\n- **毒舌/硬核点评**：教你写代码的助手，顺便教网站怎么给你发垃圾邮件。Anthropic 的隐私设计大概是让 Claude 学会了\"社交牛逼症\"——见谁都想自我介绍。\n- **🔗 传送门**：[点击直达原链接](https://github.com/anthropics/claude-code/issues/107757)\n\n---\n\n### 2. 📌 OpenAI 流水线 30 小时生成 948 个 Linux 提权漏洞利用 (来源: 新闻)\n- **核心干货**：OpenAI 用一个 cybersecurity 专用模型跑通\"发现→验证→修补\"全链路，30 小时处理 2308 个候选内核问题，最终产出 948 个本地提权漏洞的补丁，API 成本 120 万美元。这意味着漏洞挖掘从\"安全研究员的手艺活\"变成了\"按 token 计费的工业流水线\"。\n- **毒舌/硬核点评**：以前挖漏洞靠天赋和熬夜，现在靠信用卡额度。120 万美元买 948 个洞，平均一个 1265 刀——比雇个安全工程师便宜多了，只是这钱最后大概率还是从你的云账单里出。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html)\n\n---\n\n### 3. 📌 Zig 重写 libc，把 SQLite 拖慢了 12000 倍 (来源: Lobste.rs)\n- **核心干货**：一个堪称教科书级的性能事故复盘：Zig 团队重写 libc 实现后，某个 SQLite 场景的性能直接崩了 12000 倍。经典的\"Shlemiel the Painter\"算法问题重现江湖——不是代码错了，是复杂度选错了。这是所有\"重写底层标准库\"派都必须跪读的反面教材。\n- **毒舌/硬核点评**：优化优化的，优化到沟里去了。12000 倍不是性能回归，是性能穿越——直接回到 1990 年代。给所有想\"用现代语言重写一切\"的理想主义者：标准库不是你想重写就能重写的。\n- **🔗 传送门**：[点击直达原链接](https://dennisforbes.ca/blog/microblog/2026/10/the_accidental_12000x_sqlite_slowdown/)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"重写底层库的人只有两种结局：成为英雄，或者成为 12000 倍性能事故的博客主角。区别只在于你有没有先读那篇叫『复杂度分析』的论文。\"",
+    "briefing_items": [
+      {
+        "title": "Claude Code 把你的邮箱地址当\"伴手礼\"送给网站",
+        "source": "HackerNews",
+        "summary": "Anthropic 的 Claude Code 被曝在访问外部网站时会携带用户邮箱地址，等于给每个被访问站点发了一张实名名片。805 分、271 条评论的 HN 热度说明这不是小打小闹——在 AI Agent 开始满互联网跑腿的时代，隐私边界第一次被摆上台面当众拷问。",
+        "commentary": "教你写代码的助手，顺便教网站怎么给你发垃圾邮件。Anthropic 的隐私设计大概是让 Claude 学会了\"社交牛逼症\"——见谁都想自我介绍。",
+        "url": "https://github.com/anthropics/claude-code/issues/107757"
+      },
+      {
+        "title": "OpenAI 流水线 30 小时生成 948 个 Linux 提权漏洞利用",
+        "source": "新闻",
+        "summary": "OpenAI 用一个 cybersecurity 专用模型跑通\"发现→验证→修补\"全链路，30 小时处理 2308 个候选内核问题，最终产出 948 个本地提权漏洞的补丁，API 成本 120 万美元。这意味着漏洞挖掘从\"安全研究员的手艺活\"变成了\"按 token 计费的工业流水线\"。",
+        "commentary": "以前挖漏洞靠天赋和熬夜，现在靠信用卡额度。120 万美元买 948 个洞，平均一个 1265 刀——比雇个安全工程师便宜多了，只是这钱最后大概率还是从你的云账单里出。",
+        "url": "https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html"
+      },
+      {
+        "title": "Zig 重写 libc，把 SQLite 拖慢了 12000 倍",
+        "source": "Lobste.rs",
+        "summary": "一个堪称教科书级的性能事故复盘：Zig 团队重写 libc 实现后，某个 SQLite 场景的性能直接崩了 12000 倍。经典的\"Shlemiel the Painter\"算法问题重现江湖——不是代码错了，是复杂度选错了。这是所有\"重写底层标准库\"派都必须跪读的反面教材。",
+        "commentary": "优化优化的，优化到沟里去了。12000 倍不是性能回归，是性能穿越——直接回到 1990 年代。给所有想\"用现代语言重写一切\"的理想主义者：标准库不是你想重写就能重写的。",
+        "url": "https://dennisforbes.ca/blog/microblog/2026/10/the_accidental_12000x_sqlite_slowdown/"
+      },
+      {
+        "quote": "\"重写底层库的人只有两种结局：成为英雄，或者成为 12000 倍性能事故的博客主角。区别只在于你有没有先读那篇叫『复杂度分析』的论文。\""
+      }
+    ],
+    "candidates": [
+      {
+        "id": "hn:50384233",
+        "title": "MS Paint Remote Code Execution Vulnerability",
+        "summary": "",
+        "url": "https://www.cve.org/CVERecord?id=CVE-2026-83844",
+        "source": "Hacker News",
+        "score": 419,
+        "comments": 158
+      },
+      {
+        "id": "lob:lh1j0e",
+        "title": "Shlemiel the Painter Is Back: How Zig’s libc Rewrite Made SQLite Slower",
+        "summary": "",
+        "url": "https://dennisforbes.ca/blog/microblog/2026/10/the_accidental_12000x_sqlite_slowdown/",
+        "source": "Lobste.rs",
+        "score": 102,
+        "comments": 24,
+        "tags": [
+          "performance",
+          "rust",
+          "zig"
+        ]
+      },
+      {
+        "id": "hn:50383057",
+        "title": "The Hackintosh Reborn",
+        "summary": "",
+        "url": "https://www.naut.ca/blog/2026/11/05/the-hackintosh-reborn-with-ai/",
+        "source": "Hacker News",
+        "score": 263,
+        "comments": 130
+      },
+      {
+        "id": "hn:50385272",
+        "title": "Claude Code sends your email address to websites",
+        "summary": "",
+        "url": "https://github.com/anthropics/claude-code/issues/107757",
+        "source": "Hacker News",
+        "score": 805,
+        "comments": 271
+      },
+      {
+        "id": "hn:50385870",
+        "title": "Cuban: Facebook knowingly runs AI deepfake scam ads; docs say $16B fraud revenue",
+        "summary": "",
+        "url": "https://finance.yahoo.com/technology/ai/articles/mark-cuban-says-facebook-knowingly-213000020.html",
+        "source": "Hacker News",
+        "score": 219,
+        "comments": 103
+      },
+      {
+        "id": "hn:50381383",
+        "title": "Window Sweaters",
+        "summary": "",
+        "url": "https://github.com/saragordic/window-sweaters",
+        "source": "Hacker News",
+        "score": 284,
+        "comments": 92
+      },
+      {
+        "id": "hn:50368208",
+        "title": "Show HN: A decent text-to-image model trained for ~$20K (Apache 2.0 Weights)",
+        "summary": "My brother and I run a 2-person lab that trains our own generative video models from scratch. The ultimate goal is a set of creative tools that make it easier for anyone to make animation.<p>Video models today are too slow&#x2F;expensive and lack sufficient controls. Creativity is an iterative proce",
+        "url": "https://www.linum.ai/field-notes/pjit-21k",
+        "source": "Hacker News",
+        "score": 191,
+        "comments": 17
+      },
+      {
+        "id": "lob:cozhtg",
+        "title": "So my ISP was hijacking my DNS",
+        "summary": "",
+        "url": "https://karthihegde.dev/posts/dns_tampering",
+        "source": "Lobste.rs",
+        "score": 106,
+        "comments": 18,
+        "tags": [
+          "networking"
+        ]
+      },
+      {
+        "id": "lob:bqllfe",
+        "title": "Your Cryptography Conspiracy Theory Is Wrong",
+        "summary": "",
+        "url": "https://soatok.blog/2026/10/29/your-cryptography-conspiracy-theory-is-wrong/",
+        "source": "Lobste.rs",
+        "score": 79,
+        "comments": 36,
+        "tags": [
+          "cryptography"
+        ]
+      },
+      {
+        "id": "lob:u26wki",
+        "title": "September in Servo: progress, rounded rectangles, and more",
+        "summary": "",
+        "url": "https://servo.org/blog/2026/11/05/september-in-servo/",
+        "source": "Lobste.rs",
+        "score": 65,
+        "comments": 9,
+        "tags": [
+          "browsers",
+          "release"
+        ]
+      },
+      {
+        "id": "hn:50386338",
+        "title": "Inkling 2 Small",
+        "summary": "",
+        "url": "https://thinkingmachines.ai/news/inkling-2-small/",
+        "source": "Hacker News",
+        "score": 139,
+        "comments": 53
+      },
+      {
+        "id": "hn:50381687",
+        "title": "Launch HN: Rivet (YC W23) – Scale and Orchestrate Agents on S3",
+        "summary": "Hey HN, this is Nathan and Nicholas from Rivet (<a href=\"https:&#x2F;&#x2F;rivet.dev\">https:&#x2F;&#x2F;rivet.dev</a>) – a fast, high-density, and scalable orchestrator for agentic workloads using the actor model. Rather than running a heavyweight sandbox per agent, each agent gets a lightweight act",
+        "url": "https://github.com/rivet-dev/rivet",
+        "source": "Hacker News",
+        "score": 86,
+        "comments": 46
+      },
+      {
+        "id": "lob:jplxxr",
+        "title": "Declarative Dragging",
+        "summary": "",
+        "url": "https://declarative-dragging.github.io/",
+        "source": "Lobste.rs",
+        "score": 118,
+        "comments": 4,
+        "tags": [
+          "design",
+          "graphics",
+          "plt"
+        ]
+      },
+      {
+        "id": "arxiv:2611.08439v1",
+        "title": "Label-Wording Augmentation in a Typed-Decision Encoder: Gains on Unfamiliar Words, Not on Abbreviations or Codes",
+        "summary": "Typed-decision models score options that the caller supplies at request time, so their accuracy depends on label wording that the model's developer does not control. We compare two releases of a 307M-parameter multilingual cross-encoder, Ru-Jev, trained on thirteen Russian-language tasks; the later ",
+        "url": "https://arxiv.org/abs/2611.08439v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.CL",
+          "cs.AI",
+          "cs.LG"
+        ],
+        "arxiv_id": "2611.08439v1"
+      },
+      {
+        "id": "arxiv:2611.08438v1",
+        "title": "Understanding AI from the Inside: The State of Mechanistic Interpretability for AI Safety",
+        "summary": "Neural networks are likely to be among the most consequential artefacts in human history. As these systems become more capable and autonomous, their potential to cause societal harm also grows, making AI safety one of the defining challenges of our time. Yet we continue to build increasingly powerfu",
+        "url": "https://arxiv.org/abs/2611.08438v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.CL",
+          "cs.AI",
+          "cs.LG"
+        ],
+        "arxiv_id": "2611.08438v1"
+      },
+      {
+        "id": "hn:50378643",
+        "title": "Show HN: Firenook – Firebase emulators in Rust: 40× faster writes, 10× less RAM",
+        "summary": "Hi HN, we have been developing with Firebase for a long time, and the only way Firebase developers can build apps without directly costing them is using the official Firebase Emulator Suite.<p>However, the issue with this suite is, it&#x27;s dependent and running on Java with a old Console UI (not u",
+        "url": "https://firenook.dev/",
+        "source": "Hacker News",
+        "score": 81,
+        "comments": 14
+      },
+      {
+        "id": "lob:yoywed",
+        "title": "Software Line Specialist",
+        "summary": "",
+        "url": "https://lovro-bikic.github.io/software-line-specialist/",
+        "source": "Lobste.rs",
+        "score": 45,
+        "comments": 5,
+        "tags": [
+          "satire"
+        ]
+      },
+      {
+        "id": "arxiv:2611.08452v1",
+        "title": "ReproBridge: Building Reproducibility into ML Research Artifacts",
+        "summary": "Reproducing machine learning experiments requires reconstructing procedures from information scattered across papers, released code, and supporting artifacts. For coding agents, reproduction success can therefore depend on their ability to fill in missing details, rather than on the released artifac",
+        "url": "https://arxiv.org/abs/2611.08452v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.AI"
+        ],
+        "arxiv_id": "2611.08452v1"
+      },
+      {
+        "id": "rss:d17ad1d8c5",
+        "title": "Researchers Bypass ChatGPT Lockdown Mode to Exfiltrate Chats Without User Interaction",
+        "summary": "Cybersecurity researchers have disclosed details of a now-patched vulnerability that could be exploited to bypass Lockdown Mode protections in OpenAI ChatGPT.\n\nLockdown Mode was introduced by the artificial intelligence (AI) company in June 2026 as an optional setting to minimize data exfiltration r",
+        "url": "https://thehackernews.com/2026/11/researchers-bypass-chatgpt-lockdown.html",
+        "source": "Tech RSS",
+        "score": 0
+      },
+      {
+        "id": "rss:3e7cc1cdcb",
+        "title": "OpenAI AI Pipeline Generates 948 Linux Root Escalation Exploits in 30-Hour Run",
+        "summary": "OpenAI on Wednesday detailed a pipeline that employed an upcoming cyber-focused artificial intelligence (AI) model to validate and patch 948 local privilege escalation vulnerabilities in Linux for $1.2 million in API costs.\n\n\"Our prototype identified and analyzed 2,308 candidate Linux kernel finding",
+        "url": "https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html",
+        "source": "Tech RSS",
+        "score": 0
+      }
+    ],
+    "ai_curated": true
+  },
+  "fear_greed": {
+    "value": 28,
+    "classification": "Fear",
+    "timestamp": "2026-11-06 00:00:00"
+  }
+}
