@@ -1,126 +1,70 @@
 {
-  "date": "2026-11-06",
-  "update_time": "2026-11-06 05:50:59",
+  "date": "2026-11-07",
+  "update_time": "2026-11-06 19:01:48",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-06\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Claude Code 把你的邮箱地址当\"伴手礼\"送给网站 (来源: HackerNews)\n- **核心干货**：Anthropic 的 Claude Code 被曝在访问外部网站时会携带用户邮箱地址，等于给每个被访问站点发了一张实名名片。805 分、271 条评论的 HN 热度说明这不是小打小闹——在 AI Agent 开始满互联网跑腿的时代，隐私边界第一次被摆上台面当众拷问。\n- **毒舌/硬核点评**：教你写代码的助手，顺便教网站怎么给你发垃圾邮件。Anthropic 的隐私设计大概是让 Claude 学会了\"社交牛逼症\"——见谁都想自我介绍。\n- **🔗 传送门**：[点击直达原链接](https://github.com/anthropics/claude-code/issues/107757)\n\n---\n\n### 2. 📌 OpenAI 流水线 30 小时生成 948 个 Linux 提权漏洞利用 (来源: 新闻)\n- **核心干货**：OpenAI 用一个 cybersecurity 专用模型跑通\"发现→验证→修补\"全链路，30 小时处理 2308 个候选内核问题，最终产出 948 个本地提权漏洞的补丁，API 成本 120 万美元。这意味着漏洞挖掘从\"安全研究员的手艺活\"变成了\"按 token 计费的工业流水线\"。\n- **毒舌/硬核点评**：以前挖漏洞靠天赋和熬夜，现在靠信用卡额度。120 万美元买 948 个洞，平均一个 1265 刀——比雇个安全工程师便宜多了，只是这钱最后大概率还是从你的云账单里出。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html)\n\n---\n\n### 3. 📌 Zig 重写 libc，把 SQLite 拖慢了 12000 倍 (来源: Lobste.rs)\n- **核心干货**：一个堪称教科书级的性能事故复盘：Zig 团队重写 libc 实现后，某个 SQLite 场景的性能直接崩了 12000 倍。经典的\"Shlemiel the Painter\"算法问题重现江湖——不是代码错了，是复杂度选错了。这是所有\"重写底层标准库\"派都必须跪读的反面教材。\n- **毒舌/硬核点评**：优化优化的，优化到沟里去了。12000 倍不是性能回归，是性能穿越——直接回到 1990 年代。给所有想\"用现代语言重写一切\"的理想主义者：标准库不是你想重写就能重写的。\n- **🔗 传送门**：[点击直达原链接](https://dennisforbes.ca/blog/microblog/2026/10/the_accidental_12000x_sqlite_slowdown/)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"重写底层库的人只有两种结局：成为英雄，或者成为 12000 倍性能事故的博客主角。区别只在于你有没有先读那篇叫『复杂度分析』的论文。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-07\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 OpenAI 用 AI 流水线 30 小时挖出 948 个 Linux 提权漏洞 (来源: The Hacker News)\n- **核心干货**：OpenAI 披露了一套安全研究流水线，调用一个即将发布的\"网络安全特化\"模型，在 30 小时内分析了 2308 个 Linux 内核候选漏洞，最终确认并修补了 948 个本地提权漏洞，API 成本仅 120 万美元。同时发布的 GPT-6 Cyber 号称在漏洞发现与修复能力上实现代际跃升。这意味着\"AI 挖洞\"从论文 demo 正式跨入工业化量产阶段。\n- **毒舌/硬核点评**：120 万美元买 948 个 root 提权洞，平均一个漏洞 1265 刀——比一个中级安全工程师一周的工资还便宜。Red Team 们的饭碗不是被抢了，是被打包成了按 token 计费的 SKU。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html)\n\n---\n\n### 2. 📌 OpenSSH \"SSHole\" 漏洞披露数小时内即遭在野利用 (来源: The Hacker News)\n- **核心干货**：CVE-2026-123158（CVSS 8.1），代号 SSHole，影响 Linux 上无密码账户的 OpenSSH 登录逻辑，攻击者可借此直接拿到 root。蜜罐显示漏洞公开后仅数小时就有攻击者进场尝试利用。这再次验证了\"披露即武器化\"的现代漏洞节奏——补丁窗口期已经压缩到以小时计。\n- **毒舌/硬核点评**：漏洞代号起得这么\"坦诚\"，也算是安全圈少见的黑色幽默。真正值得吐槽的是：2026 年了，还有一堆生产环境跑着没打补丁的 sshd，运维的 Slack 提醒永远比攻击者的脚本慢半拍。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html)\n\n---\n\n### 3. 📌 Blender 的 UI 与运行时性能碾压 GPUI (来源: Hacker News, 580 分)\n- **核心干货**：一个对比项目实测显示，Blender 自研的 UI 框架与运行时在响应速度和渲染效率上显著优于 Zed 的 GPUI。这戳中了一个长期被忽视的事实：Blender 那套被吐槽\"丑但快\"的 immediate-mode UI 架构，在性能工程上其实是被严重低估的工业级范本。对正在选型 Rust/GPU 原生 UI 框架的团队来说，这是一份值得细读的基准数据。\n- **毒舌/硬核点评**：GPUI 是当下 Rust 桌面 UI 的当红炸子鸡，结果被一个 3D 建模软件按在地上摩擦。说明什么？说明\"新框架 + 新语言\"不等于\"更快\"，只等于\"更想发推特\"。Blender 用二十年证明了：丑 UI 只要够快，用户会自己说服自己。\n- **🔗 传送门**：[点击直达原链接](https://github.com/ppmpreetham/BUI)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"AI 挖漏洞按 token 计费，漏洞按个卖，只有你的补丁还按'下周一定'计费——这就是 2026 年的攻防经济学。\"",
   "briefing_items": [
     {
-      "title": "Claude Code 把你的邮箱地址当\"伴手礼\"送给网站",
-      "source": "HackerNews",
-      "summary": "Anthropic 的 Claude Code 被曝在访问外部网站时会携带用户邮箱地址，等于给每个被访问站点发了一张实名名片。805 分、271 条评论的 HN 热度说明这不是小打小闹——在 AI Agent 开始满互联网跑腿的时代，隐私边界第一次被摆上台面当众拷问。",
-      "commentary": "教你写代码的助手，顺便教网站怎么给你发垃圾邮件。Anthropic 的隐私设计大概是让 Claude 学会了\"社交牛逼症\"——见谁都想自我介绍。",
-      "url": "https://github.com/anthropics/claude-code/issues/107757"
-    },
-    {
-      "title": "OpenAI 流水线 30 小时生成 948 个 Linux 提权漏洞利用",
-      "source": "新闻",
-      "summary": "OpenAI 用一个 cybersecurity 专用模型跑通\"发现→验证→修补\"全链路，30 小时处理 2308 个候选内核问题，最终产出 948 个本地提权漏洞的补丁，API 成本 120 万美元。这意味着漏洞挖掘从\"安全研究员的手艺活\"变成了\"按 token 计费的工业流水线\"。",
-      "commentary": "以前挖漏洞靠天赋和熬夜，现在靠信用卡额度。120 万美元买 948 个洞，平均一个 1265 刀——比雇个安全工程师便宜多了，只是这钱最后大概率还是从你的云账单里出。",
+      "title": "OpenAI 用 AI 流水线 30 小时挖出 948 个 Linux 提权漏洞",
+      "source": "The Hacker News",
+      "summary": "OpenAI 披露了一套安全研究流水线，调用一个即将发布的\"网络安全特化\"模型，在 30 小时内分析了 2308 个 Linux 内核候选漏洞，最终确认并修补了 948 个本地提权漏洞，API 成本仅 120 万美元。同时发布的 GPT-6 Cyber 号称在漏洞发现与修复能力上实现代际跃升。这意味着\"AI 挖洞\"从论文 demo 正式跨入工业化量产阶段。",
+      "commentary": "120 万美元买 948 个 root 提权洞，平均一个漏洞 1265 刀——比一个中级安全工程师一周的工资还便宜。Red Team 们的饭碗不是被抢了，是被打包成了按 token 计费的 SKU。",
       "url": "https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html"
     },
     {
-      "title": "Zig 重写 libc，把 SQLite 拖慢了 12000 倍",
-      "source": "Lobste.rs",
-      "summary": "一个堪称教科书级的性能事故复盘：Zig 团队重写 libc 实现后，某个 SQLite 场景的性能直接崩了 12000 倍。经典的\"Shlemiel the Painter\"算法问题重现江湖——不是代码错了，是复杂度选错了。这是所有\"重写底层标准库\"派都必须跪读的反面教材。",
-      "commentary": "优化优化的，优化到沟里去了。12000 倍不是性能回归，是性能穿越——直接回到 1990 年代。给所有想\"用现代语言重写一切\"的理想主义者：标准库不是你想重写就能重写的。",
-      "url": "https://dennisforbes.ca/blog/microblog/2026/10/the_accidental_12000x_sqlite_slowdown/"
+      "title": "OpenSSH \"SSHole\" 漏洞披露数小时内即遭在野利用",
+      "source": "The Hacker News",
+      "summary": "CVE-2026-123158（CVSS 8.1），代号 SSHole，影响 Linux 上无密码账户的 OpenSSH 登录逻辑，攻击者可借此直接拿到 root。蜜罐显示漏洞公开后仅数小时就有攻击者进场尝试利用。这再次验证了\"披露即武器化\"的现代漏洞节奏——补丁窗口期已经压缩到以小时计。",
+      "commentary": "漏洞代号起得这么\"坦诚\"，也算是安全圈少见的黑色幽默。真正值得吐槽的是：2026 年了，还有一堆生产环境跑着没打补丁的 sshd，运维的 Slack 提醒永远比攻击者的脚本慢半拍。",
+      "url": "https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html"
     },
     {
-      "quote": "\"重写底层库的人只有两种结局：成为英雄，或者成为 12000 倍性能事故的博客主角。区别只在于你有没有先读那篇叫『复杂度分析』的论文。\""
+      "title": "Blender 的 UI 与运行时性能碾压 GPUI",
+      "source": "Hacker News, 580 分",
+      "summary": "一个对比项目实测显示，Blender 自研的 UI 框架与运行时在响应速度和渲染效率上显著优于 Zed 的 GPUI。这戳中了一个长期被忽视的事实：Blender 那套被吐槽\"丑但快\"的 immediate-mode UI 架构，在性能工程上其实是被严重低估的工业级范本。对正在选型 Rust/GPU 原生 UI 框架的团队来说，这是一份值得细读的基准数据。",
+      "commentary": "GPUI 是当下 Rust 桌面 UI 的当红炸子鸡，结果被一个 3D 建模软件按在地上摩擦。说明什么？说明\"新框架 + 新语言\"不等于\"更快\"，只等于\"更想发推特\"。Blender 用二十年证明了：丑 UI 只要够快，用户会自己说服自己。",
+      "url": "https://github.com/ppmpreetham/BUI"
+    },
+    {
+      "quote": "\"AI 挖漏洞按 token 计费，漏洞按个卖，只有你的补丁还按'下周一定'计费——这就是 2026 年的攻防经济学。\""
     }
   ],
   "candidates": [
     {
-      "id": "hn:50384233",
-      "title": "MS Paint Remote Code Execution Vulnerability",
+      "id": "hn:50391456",
+      "title": "Tesla to wind down Cybertruck production",
       "summary": "",
-      "url": "https://www.cve.org/CVERecord?id=CVE-2026-83844",
+      "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
       "source": "Hacker News",
-      "score": 419,
-      "comments": 158
+      "score": 467,
+      "comments": 1114
     },
     {
-      "id": "lob:lh1j0e",
-      "title": "Shlemiel the Painter Is Back: How Zig’s libc Rewrite Made SQLite Slower",
+      "id": "hn:50389333",
+      "title": "Blender's UI and Runtime: Much Faster Than GPUI",
       "summary": "",
-      "url": "https://dennisforbes.ca/blog/microblog/2026/10/the_accidental_12000x_sqlite_slowdown/",
-      "source": "Lobste.rs",
-      "score": 102,
-      "comments": 24,
-      "tags": [
-        "performance",
-        "rust",
-        "zig"
-      ]
-    },
-    {
-      "id": "hn:50383057",
-      "title": "The Hackintosh Reborn",
-      "summary": "",
-      "url": "https://www.naut.ca/blog/2026/11/05/the-hackintosh-reborn-with-ai/",
+      "url": "https://github.com/ppmpreetham/BUI",
       "source": "Hacker News",
-      "score": 263,
-      "comments": 130
+      "score": 580,
+      "comments": 236
     },
     {
-      "id": "hn:50385272",
-      "title": "Claude Code sends your email address to websites",
+      "id": "hn:50394569",
+      "title": "Rune: A native GPU-rendered Rust UI framework for macOS, Windows, Linux and web",
       "summary": "",
-      "url": "https://github.com/anthropics/claude-code/issues/107757",
+      "url": "https://github.com/anomalyco/rune",
       "source": "Hacker News",
-      "score": 805,
-      "comments": 271
+      "score": 75,
+      "comments": 46
     },
     {
-      "id": "hn:50385870",
-      "title": "Cuban: Facebook knowingly runs AI deepfake scam ads; docs say $16B fraud revenue",
+      "id": "hn:50392118",
+      "title": "Gemini Omni 1.2 Flash",
       "summary": "",
-      "url": "https://finance.yahoo.com/technology/ai/articles/mark-cuban-says-facebook-knowingly-213000020.html",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
       "source": "Hacker News",
-      "score": 219,
-      "comments": 103
-    },
-    {
-      "id": "hn:50381383",
-      "title": "Window Sweaters",
-      "summary": "",
-      "url": "https://github.com/saragordic/window-sweaters",
-      "source": "Hacker News",
-      "score": 284,
-      "comments": 92
-    },
-    {
-      "id": "hn:50368208",
-      "title": "Show HN: A decent text-to-image model trained for ~$20K (Apache 2.0 Weights)",
-      "summary": "My brother and I run a 2-person lab that trains our own generative video models from scratch. The ultimate goal is a set of creative tools that make it easier for anyone to make animation.<p>Video models today are too slow&#x2F;expensive and lack sufficient controls. Creativity is an iterative proce",
-      "url": "https://www.linum.ai/field-notes/pjit-21k",
-      "source": "Hacker News",
-      "score": 191,
-      "comments": 17
-    },
-    {
-      "id": "lob:cozhtg",
-      "title": "So my ISP was hijacking my DNS",
-      "summary": "",
-      "url": "https://karthihegde.dev/posts/dns_tampering",
-      "source": "Lobste.rs",
-      "score": 106,
-      "comments": 18,
-      "tags": [
-        "networking"
-      ]
-    },
-    {
-      "id": "lob:bqllfe",
-      "title": "Your Cryptography Conspiracy Theory Is Wrong",
-      "summary": "",
-      "url": "https://soatok.blog/2026/10/29/your-cryptography-conspiracy-theory-is-wrong/",
-      "source": "Lobste.rs",
-      "score": 79,
-      "comments": 36,
-      "tags": [
-        "cryptography"
-      ]
+      "score": 230,
+      "comments": 178
     },
     {
       "id": "lob:u26wki",
@@ -128,43 +72,32 @@
       "summary": "",
       "url": "https://servo.org/blog/2026/11/05/september-in-servo/",
       "source": "Lobste.rs",
-      "score": 65,
-      "comments": 9,
+      "score": 77,
+      "comments": 11,
       "tags": [
         "browsers",
         "release"
       ]
     },
     {
-      "id": "hn:50386338",
-      "title": "Inkling 2 Small",
+      "id": "hn:50388001",
+      "title": "US FAA says it will phase out floppy disks from air traffic control by 2028",
       "summary": "",
-      "url": "https://thinkingmachines.ai/news/inkling-2-small/",
+      "url": "https://www.reuters.com/world/us/us-faa-says-it-will-phase-out-floppy-disks-air-traffic-control-by-2028-2026-11-05/",
       "source": "Hacker News",
-      "score": 139,
-      "comments": 53
+      "score": 112,
+      "comments": 113
     },
     {
-      "id": "hn:50381687",
-      "title": "Launch HN: Rivet (YC W23) – Scale and Orchestrate Agents on S3",
-      "summary": "Hey HN, this is Nathan and Nicholas from Rivet (<a href=\"https:&#x2F;&#x2F;rivet.dev\">https:&#x2F;&#x2F;rivet.dev</a>) – a fast, high-density, and scalable orchestrator for agentic workloads using the actor model. Rather than running a heavyweight sandbox per agent, each agent gets a lightweight act",
-      "url": "https://github.com/rivet-dev/rivet",
-      "source": "Hacker News",
-      "score": 86,
-      "comments": 46
-    },
-    {
-      "id": "lob:jplxxr",
-      "title": "Declarative Dragging",
+      "id": "lob:x2hcss",
+      "title": "SourceHut disabled registration bypass | CVE-2026-121728",
       "summary": "",
-      "url": "https://declarative-dragging.github.io/",
+      "url": "https://blog.arusekk.pl/posts/srht-disabled-registration-bypass/",
       "source": "Lobste.rs",
-      "score": 118,
-      "comments": 4,
+      "score": 53,
+      "comments": 1,
       "tags": [
-        "design",
-        "graphics",
-        "plt"
+        "security"
       ]
     },
     {
@@ -194,13 +127,12 @@
       "arxiv_id": "2611.08438v1"
     },
     {
-      "id": "hn:50378643",
-      "title": "Show HN: Firenook – Firebase emulators in Rust: 40× faster writes, 10× less RAM",
-      "summary": "Hi HN, we have been developing with Firebase for a long time, and the only way Firebase developers can build apps without directly costing them is using the official Firebase Emulator Suite.<p>However, the issue with this suite is, it&#x27;s dependent and running on Java with a old Console UI (not u",
-      "url": "https://firenook.dev/",
-      "source": "Hacker News",
-      "score": 81,
-      "comments": 14
+      "id": "rss:6e7eccb6f9",
+      "title": "Hackers Target OpenSSH SSHole Flaw Within Hours of Disclosure, Gain Root on Honeypot",
+      "summary": "Threat actors are attempting to exploit a recently disclosed security flaw impacting OpenSSH that can enable sign-ins to accounts that have no password set, according to Previdian.\n\nThe vulnerability, tracked as CVE-2026-123158 (CVSS score: 8.1) and codenamed SSHole (or *sshole), impacts Linux syste",
+      "url": "https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html",
+      "source": "Tech RSS",
+      "score": 0
     },
     {
       "id": "lob:yoywed",
@@ -208,10 +140,49 @@
       "summary": "",
       "url": "https://lovro-bikic.github.io/software-line-specialist/",
       "source": "Lobste.rs",
-      "score": 45,
-      "comments": 5,
+      "score": 95,
+      "comments": 8,
       "tags": [
         "satire"
+      ]
+    },
+    {
+      "id": "lob:jmdchp",
+      "title": "What are you doing this weekend?",
+      "summary": "<p>Feel free to tell what you plan on doing this weekend and even ask for help or feedback.</p>\n<p>Please keep in mind it’s more than OK to do nothing at all too!</p>\n",
+      "url": "https://lobste.rs/s/jmdchp/what_are_you_doing_this_weekend",
+      "source": "Lobste.rs",
+      "score": 22,
+      "comments": 32,
+      "tags": [
+        "ask",
+        "programming"
+      ]
+    },
+    {
+      "id": "lob:hvxjbb",
+      "title": "Making musl and proprietary NVIDIA drivers work together",
+      "summary": "",
+      "url": "https://chimera-linux.org/news/2026/11/musl-nvidia.html",
+      "source": "Lobste.rs",
+      "score": 33,
+      "comments": 7,
+      "tags": [
+        "linux"
+      ]
+    },
+    {
+      "id": "lob:q0ld7f",
+      "title": "X-87 - DOS 256 bytes",
+      "summary": "",
+      "url": "https://www.onirom.fr/wiki/codegolf/x-87/",
+      "source": "Lobste.rs",
+      "score": 37,
+      "comments": 0,
+      "tags": [
+        "art",
+        "assembly",
+        "concatenative"
       ]
     },
     {
@@ -224,6 +195,22 @@
         "cs.AI"
       ],
       "arxiv_id": "2611.08452v1"
+    },
+    {
+      "id": "rss:c95ffafc38",
+      "title": "Show HN: AegisKernel – Zero-trust POSIX runtime for AI agents in <0.016ms",
+      "summary": "Article URL: https://adikshatriyag-crypto.github.io/aegis-kernel/\nComments URL: https://news.ycombinator.com/item?id=50394991\nPoints: 6\n# Comments: 0",
+      "url": "https://adikshatriyag-crypto.github.io/aegis-kernel/",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:b64e697845",
+      "title": "OpenAI Launches GPT-6 Cyber After AI Helps Find 81 Firefox Flaws, 948 Linux Exploits",
+      "summary": "OpenAI on Thursday unveiled GPT‑6 Cyber, which it described as a major step forward in security research that brings together stronger cybersecurity capabilities with a step-change improvement in model alignment.\n\nThe new model is \"more capable at finding and fixing vulnerabilities, and far more rel",
+      "url": "https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html",
+      "source": "Tech RSS",
+      "score": 0
     },
     {
       "id": "rss:d17ad1d8c5",
@@ -240,6 +227,19 @@
       "url": "https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html",
       "source": "Tech RSS",
       "score": 0
+    },
+    {
+      "id": "lob:vbx0g4",
+      "title": "A Look at Datastar",
+      "summary": "",
+      "url": "https://noteflakes.com/articles/2026-11-04-datastar",
+      "source": "Lobste.rs",
+      "score": 22,
+      "comments": 9,
+      "tags": [
+        "ruby",
+        "web"
+      ]
     }
   ],
   "ai_curated": true
