@@ -1,83 +1,70 @@
 {
   "date": "2026-11-07",
-  "update_time": "2026-11-06 19:01:48",
+  "update_time": "2026-11-07 05:21:33",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-07\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 OpenAI 用 AI 流水线 30 小时挖出 948 个 Linux 提权漏洞 (来源: The Hacker News)\n- **核心干货**：OpenAI 披露了一套安全研究流水线，调用一个即将发布的\"网络安全特化\"模型，在 30 小时内分析了 2308 个 Linux 内核候选漏洞，最终确认并修补了 948 个本地提权漏洞，API 成本仅 120 万美元。同时发布的 GPT-6 Cyber 号称在漏洞发现与修复能力上实现代际跃升。这意味着\"AI 挖洞\"从论文 demo 正式跨入工业化量产阶段。\n- **毒舌/硬核点评**：120 万美元买 948 个 root 提权洞，平均一个漏洞 1265 刀——比一个中级安全工程师一周的工资还便宜。Red Team 们的饭碗不是被抢了，是被打包成了按 token 计费的 SKU。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html)\n\n---\n\n### 2. 📌 OpenSSH \"SSHole\" 漏洞披露数小时内即遭在野利用 (来源: The Hacker News)\n- **核心干货**：CVE-2026-123158（CVSS 8.1），代号 SSHole，影响 Linux 上无密码账户的 OpenSSH 登录逻辑，攻击者可借此直接拿到 root。蜜罐显示漏洞公开后仅数小时就有攻击者进场尝试利用。这再次验证了\"披露即武器化\"的现代漏洞节奏——补丁窗口期已经压缩到以小时计。\n- **毒舌/硬核点评**：漏洞代号起得这么\"坦诚\"，也算是安全圈少见的黑色幽默。真正值得吐槽的是：2026 年了，还有一堆生产环境跑着没打补丁的 sshd，运维的 Slack 提醒永远比攻击者的脚本慢半拍。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html)\n\n---\n\n### 3. 📌 Blender 的 UI 与运行时性能碾压 GPUI (来源: Hacker News, 580 分)\n- **核心干货**：一个对比项目实测显示，Blender 自研的 UI 框架与运行时在响应速度和渲染效率上显著优于 Zed 的 GPUI。这戳中了一个长期被忽视的事实：Blender 那套被吐槽\"丑但快\"的 immediate-mode UI 架构，在性能工程上其实是被严重低估的工业级范本。对正在选型 Rust/GPU 原生 UI 框架的团队来说，这是一份值得细读的基准数据。\n- **毒舌/硬核点评**：GPUI 是当下 Rust 桌面 UI 的当红炸子鸡，结果被一个 3D 建模软件按在地上摩擦。说明什么？说明\"新框架 + 新语言\"不等于\"更快\"，只等于\"更想发推特\"。Blender 用二十年证明了：丑 UI 只要够快，用户会自己说服自己。\n- **🔗 传送门**：[点击直达原链接](https://github.com/ppmpreetham/BUI)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"AI 挖漏洞按 token 计费，漏洞按个卖，只有你的补丁还按'下周一定'计费——这就是 2026 年的攻防经济学。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-07\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 OpenAI 的\"AI 找漏洞流水线\"：30 小时挖出 948 个 Linux 提权漏洞 (来源: Tech RSS)\n- **核心干货**：OpenAI 放出一条全自动流水线，用一个尚未公开的网络安全专用模型，在 30 小时内分析 2308 个 Linux 内核候选问题，最终确认并修复了 948 个本地提权漏洞，API 成本仅 120 万美元。同期还发布了 GPT-6 Cyber，号称在找漏洞、修漏洞和安全对齐上都实现了跳变式提升。\n- **毒舌/硬核点评**：以前安全研究员熬夜挖洞，现在变成\"给模型充 120 万刀电费，然后它把 Linux 内核翻了个底朝天\"。所谓\"AI 加速 AI 研究\"不是隐喻，是字面意义的——安全行业那套按漏洞赏金的商业模型，可能要先给自己挖个坑。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html)\n\n---\n\n### 2. 📌 Tesla 正式砍掉 Cybertruck 产线 (来源: Hacker News)\n- **核心干货**：Tesla 宣布逐步关停 Cybertruck 生产，理由是销量长期不及预期、市场反馈冷淡。这台被马斯克吹成\"未来主义皮卡\"的车型，从发布会砸玻璃到量产爬坡，再到今天的停产，完整走完了一个\"营销驱动型产品\"的生命周期。\n- **毒舌/硬核点评**：一台车从\"改变皮卡行业\"到\"被皮卡行业改变\"，只用了几年。HN 上 1786 条评论吵得热火朝天，但真正的结论只有一句：不锈钢外壳救不了糟糕的产品定义，推特热度也换不来销量。\n- **🔗 传送门**：[点击直达原链接](https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817)\n\n---\n\n### 3. 📌 Libghostty 1.0 发布：终端模拟器里的\"性能偏执狂\"终于毕业 (来源: Hacker News)\n- **核心干货**：Mitchell Hashimoto（HashiCorp 创始人）主导的 Ghostty 终端项目，其核心库 libghostty 发布 1.0。它把终端模拟器拆成可复用的底层库，主打原生性能、跨平台一致性和 GPU 加速渲染，让其他项目不必从头造轮子就能获得一个高质量的终端内核。\n- **毒舌/硬核点评**：终端这个\"老古董\"领域居然还能卷出新高度——别人在做套壳，Mitch 在做引擎。1.0 意味着 API 稳定了，接下来就看谁先把它塞进自己的编辑器、IDE 或 AI 终端里。提醒一句：性能是卖点，但别指望它帮你把 `rm -rf` 打错的手速救回来。\n- **🔗 传送门**：[点击直达原链接](https://mitchellh.com/writing/libghostty-1-0)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"AI 不会取代你，但会用 AI 在 30 小时内挖出 948 个漏洞、再用 120 万美元账单把你按在地上摩擦的人，会取代你。\"\n",
   "briefing_items": [
     {
-      "title": "OpenAI 用 AI 流水线 30 小时挖出 948 个 Linux 提权漏洞",
-      "source": "The Hacker News",
-      "summary": "OpenAI 披露了一套安全研究流水线，调用一个即将发布的\"网络安全特化\"模型，在 30 小时内分析了 2308 个 Linux 内核候选漏洞，最终确认并修补了 948 个本地提权漏洞，API 成本仅 120 万美元。同时发布的 GPT-6 Cyber 号称在漏洞发现与修复能力上实现代际跃升。这意味着\"AI 挖洞\"从论文 demo 正式跨入工业化量产阶段。",
-      "commentary": "120 万美元买 948 个 root 提权洞，平均一个漏洞 1265 刀——比一个中级安全工程师一周的工资还便宜。Red Team 们的饭碗不是被抢了，是被打包成了按 token 计费的 SKU。",
+      "title": "OpenAI 的\"AI 找漏洞流水线\"：30 小时挖出 948 个 Linux 提权漏洞",
+      "source": "Tech RSS",
+      "summary": "OpenAI 放出一条全自动流水线，用一个尚未公开的网络安全专用模型，在 30 小时内分析 2308 个 Linux 内核候选问题，最终确认并修复了 948 个本地提权漏洞，API 成本仅 120 万美元。同期还发布了 GPT-6 Cyber，号称在找漏洞、修漏洞和安全对齐上都实现了跳变式提升。",
+      "commentary": "以前安全研究员熬夜挖洞，现在变成\"给模型充 120 万刀电费，然后它把 Linux 内核翻了个底朝天\"。所谓\"AI 加速 AI 研究\"不是隐喻，是字面意义的——安全行业那套按漏洞赏金的商业模型，可能要先给自己挖个坑。",
       "url": "https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html"
     },
     {
-      "title": "OpenSSH \"SSHole\" 漏洞披露数小时内即遭在野利用",
-      "source": "The Hacker News",
-      "summary": "CVE-2026-123158（CVSS 8.1），代号 SSHole，影响 Linux 上无密码账户的 OpenSSH 登录逻辑，攻击者可借此直接拿到 root。蜜罐显示漏洞公开后仅数小时就有攻击者进场尝试利用。这再次验证了\"披露即武器化\"的现代漏洞节奏——补丁窗口期已经压缩到以小时计。",
-      "commentary": "漏洞代号起得这么\"坦诚\"，也算是安全圈少见的黑色幽默。真正值得吐槽的是：2026 年了，还有一堆生产环境跑着没打补丁的 sshd，运维的 Slack 提醒永远比攻击者的脚本慢半拍。",
-      "url": "https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html"
+      "title": "Tesla 正式砍掉 Cybertruck 产线",
+      "source": "Hacker News",
+      "summary": "Tesla 宣布逐步关停 Cybertruck 生产，理由是销量长期不及预期、市场反馈冷淡。这台被马斯克吹成\"未来主义皮卡\"的车型，从发布会砸玻璃到量产爬坡，再到今天的停产，完整走完了一个\"营销驱动型产品\"的生命周期。",
+      "commentary": "一台车从\"改变皮卡行业\"到\"被皮卡行业改变\"，只用了几年。HN 上 1786 条评论吵得热火朝天，但真正的结论只有一句：不锈钢外壳救不了糟糕的产品定义，推特热度也换不来销量。",
+      "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817"
     },
     {
-      "title": "Blender 的 UI 与运行时性能碾压 GPUI",
-      "source": "Hacker News, 580 分",
-      "summary": "一个对比项目实测显示，Blender 自研的 UI 框架与运行时在响应速度和渲染效率上显著优于 Zed 的 GPUI。这戳中了一个长期被忽视的事实：Blender 那套被吐槽\"丑但快\"的 immediate-mode UI 架构，在性能工程上其实是被严重低估的工业级范本。对正在选型 Rust/GPU 原生 UI 框架的团队来说，这是一份值得细读的基准数据。",
-      "commentary": "GPUI 是当下 Rust 桌面 UI 的当红炸子鸡，结果被一个 3D 建模软件按在地上摩擦。说明什么？说明\"新框架 + 新语言\"不等于\"更快\"，只等于\"更想发推特\"。Blender 用二十年证明了：丑 UI 只要够快，用户会自己说服自己。",
-      "url": "https://github.com/ppmpreetham/BUI"
+      "title": "Libghostty 1.0 发布：终端模拟器里的\"性能偏执狂\"终于毕业",
+      "source": "Hacker News",
+      "summary": "Mitchell Hashimoto（HashiCorp 创始人）主导的 Ghostty 终端项目，其核心库 libghostty 发布 1.0。它把终端模拟器拆成可复用的底层库，主打原生性能、跨平台一致性和 GPU 加速渲染，让其他项目不必从头造轮子就能获得一个高质量的终端内核。",
+      "commentary": "终端这个\"老古董\"领域居然还能卷出新高度——别人在做套壳，Mitch 在做引擎。1.0 意味着 API 稳定了，接下来就看谁先把它塞进自己的编辑器、IDE 或 AI 终端里。提醒一句：性能是卖点，但别指望它帮你把 `rm -rf` 打错的手速救回来。",
+      "url": "https://mitchellh.com/writing/libghostty-1-0"
     },
     {
-      "quote": "\"AI 挖漏洞按 token 计费，漏洞按个卖，只有你的补丁还按'下周一定'计费——这就是 2026 年的攻防经济学。\""
+      "quote": "\"AI 不会取代你，但会用 AI 在 30 小时内挖出 948 个漏洞、再用 120 万美元账单把你按在地上摩擦的人，会取代你。\""
     }
   ],
   "candidates": [
+    {
+      "id": "hn:50399933",
+      "title": "Libghostty 1.0",
+      "summary": "",
+      "url": "https://mitchellh.com/writing/libghostty-1-0",
+      "source": "Hacker News",
+      "score": 412,
+      "comments": 68
+    },
+    {
+      "id": "hn:50397429",
+      "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
+      "summary": "",
+      "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
+      "source": "Hacker News",
+      "score": 405,
+      "comments": 90
+    },
     {
       "id": "hn:50391456",
       "title": "Tesla to wind down Cybertruck production",
       "summary": "",
       "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
       "source": "Hacker News",
-      "score": 467,
-      "comments": 1114
+      "score": 926,
+      "comments": 1786
     },
     {
-      "id": "hn:50389333",
-      "title": "Blender's UI and Runtime: Much Faster Than GPUI",
+      "id": "hn:50397219",
+      "title": "Firecracker VM Escape: PwnEscape Part 2",
       "summary": "",
-      "url": "https://github.com/ppmpreetham/BUI",
+      "url": "https://pwn.ai/blog/firecracker-escape",
       "source": "Hacker News",
-      "score": 580,
-      "comments": 236
-    },
-    {
-      "id": "hn:50394569",
-      "title": "Rune: A native GPU-rendered Rust UI framework for macOS, Windows, Linux and web",
-      "summary": "",
-      "url": "https://github.com/anomalyco/rune",
-      "source": "Hacker News",
-      "score": 75,
-      "comments": 46
-    },
-    {
-      "id": "hn:50392118",
-      "title": "Gemini Omni 1.2 Flash",
-      "summary": "",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
-      "source": "Hacker News",
-      "score": 230,
-      "comments": 178
-    },
-    {
-      "id": "lob:u26wki",
-      "title": "September in Servo: progress, rounded rectangles, and more",
-      "summary": "",
-      "url": "https://servo.org/blog/2026/11/05/september-in-servo/",
-      "source": "Lobste.rs",
-      "score": 77,
-      "comments": 11,
-      "tags": [
-        "browsers",
-        "release"
-      ]
+      "score": 203,
+      "comments": 98
     },
     {
       "id": "hn:50388001",
@@ -85,19 +72,28 @@
       "summary": "",
       "url": "https://www.reuters.com/world/us/us-faa-says-it-will-phase-out-floppy-disks-air-traffic-control-by-2028-2026-11-05/",
       "source": "Hacker News",
-      "score": 112,
-      "comments": 113
+      "score": 306,
+      "comments": 245
     },
     {
-      "id": "lob:x2hcss",
-      "title": "SourceHut disabled registration bypass | CVE-2026-121728",
+      "id": "hn:50397994",
+      "title": "AI is dramatically accelerating AI research",
       "summary": "",
-      "url": "https://blog.arusekk.pl/posts/srht-disabled-registration-bypass/",
+      "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
+      "source": "Hacker News",
+      "score": 248,
+      "comments": 196
+    },
+    {
+      "id": "lob:hvxjbb",
+      "title": "Making musl and proprietary NVIDIA drivers work together",
+      "summary": "",
+      "url": "https://chimera-linux.org/news/2026/11/musl-nvidia.html",
       "source": "Lobste.rs",
-      "score": 53,
-      "comments": 1,
+      "score": 52,
+      "comments": 9,
       "tags": [
-        "security"
+        "linux"
       ]
     },
     {
@@ -140,8 +136,8 @@
       "summary": "",
       "url": "https://lovro-bikic.github.io/software-line-specialist/",
       "source": "Lobste.rs",
-      "score": 95,
-      "comments": 8,
+      "score": 111,
+      "comments": 9,
       "tags": [
         "satire"
       ]
@@ -152,37 +148,33 @@
       "summary": "<p>Feel free to tell what you plan on doing this weekend and even ask for help or feedback.</p>\n<p>Please keep in mind it’s more than OK to do nothing at all too!</p>\n",
       "url": "https://lobste.rs/s/jmdchp/what_are_you_doing_this_weekend",
       "source": "Lobste.rs",
-      "score": 22,
-      "comments": 32,
+      "score": 24,
+      "comments": 43,
       "tags": [
         "ask",
         "programming"
       ]
     },
     {
-      "id": "lob:hvxjbb",
-      "title": "Making musl and proprietary NVIDIA drivers work together",
+      "id": "hn:50400597",
+      "title": "I Toured Unitree's Factory. I'm More Bullish on the West",
       "summary": "",
-      "url": "https://chimera-linux.org/news/2026/11/musl-nvidia.html",
-      "source": "Lobste.rs",
-      "score": 33,
-      "comments": 7,
-      "tags": [
-        "linux"
-      ]
+      "url": "https://josef.cn/blog/unitree",
+      "source": "Hacker News",
+      "score": 77,
+      "comments": 50
     },
     {
-      "id": "lob:q0ld7f",
-      "title": "X-87 - DOS 256 bytes",
+      "id": "lob:i96uyr",
+      "title": "The MustCreate Pattern for Go Tests",
       "summary": "",
-      "url": "https://www.onirom.fr/wiki/codegolf/x-87/",
+      "url": "https://mtlynch.io/notes/go-must-create-pattern/",
       "source": "Lobste.rs",
-      "score": 37,
-      "comments": 0,
+      "score": 17,
+      "comments": 22,
       "tags": [
-        "art",
-        "assembly",
-        "concatenative"
+        "go",
+        "testing"
       ]
     },
     {
@@ -195,14 +187,6 @@
         "cs.AI"
       ],
       "arxiv_id": "2611.08452v1"
-    },
-    {
-      "id": "rss:c95ffafc38",
-      "title": "Show HN: AegisKernel – Zero-trust POSIX runtime for AI agents in <0.016ms",
-      "summary": "Article URL: https://adikshatriyag-crypto.github.io/aegis-kernel/\nComments URL: https://news.ycombinator.com/item?id=50394991\nPoints: 6\n# Comments: 0",
-      "url": "https://adikshatriyag-crypto.github.io/aegis-kernel/",
-      "source": "Tech RSS",
-      "score": 0
     },
     {
       "id": "rss:b64e697845",
@@ -229,17 +213,25 @@
       "score": 0
     },
     {
-      "id": "lob:vbx0g4",
-      "title": "A Look at Datastar",
+      "id": "lob:dxno99",
+      "title": "Clojure Distilled",
       "summary": "",
-      "url": "https://noteflakes.com/articles/2026-11-04-datastar",
+      "url": "https://yogthos.net/ClojureDistilled.html",
       "source": "Lobste.rs",
-      "score": 22,
-      "comments": 9,
+      "score": 45,
+      "comments": 2,
       "tags": [
-        "ruby",
-        "web"
+        "lisp"
       ]
+    },
+    {
+      "id": "hn:50399991",
+      "title": "RealPage rent-pricing case wraps with nearly $360M to renters",
+      "summary": "",
+      "url": "https://www.multifamilydive.com/news/realpage-rent-pricing-case-360m-renters/873553/",
+      "source": "Hacker News",
+      "score": 74,
+      "comments": 30
     }
   ],
   "ai_curated": true
