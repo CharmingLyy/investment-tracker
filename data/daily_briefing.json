@@ -1,32 +1,32 @@
 {
-  "date": "2026-11-07",
-  "update_time": "2026-11-07 05:21:33",
+  "date": "2026-11-08",
+  "update_time": "2026-11-07 17:33:49",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-07\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 OpenAI 的\"AI 找漏洞流水线\"：30 小时挖出 948 个 Linux 提权漏洞 (来源: Tech RSS)\n- **核心干货**：OpenAI 放出一条全自动流水线，用一个尚未公开的网络安全专用模型，在 30 小时内分析 2308 个 Linux 内核候选问题，最终确认并修复了 948 个本地提权漏洞，API 成本仅 120 万美元。同期还发布了 GPT-6 Cyber，号称在找漏洞、修漏洞和安全对齐上都实现了跳变式提升。\n- **毒舌/硬核点评**：以前安全研究员熬夜挖洞，现在变成\"给模型充 120 万刀电费，然后它把 Linux 内核翻了个底朝天\"。所谓\"AI 加速 AI 研究\"不是隐喻，是字面意义的——安全行业那套按漏洞赏金的商业模型，可能要先给自己挖个坑。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html)\n\n---\n\n### 2. 📌 Tesla 正式砍掉 Cybertruck 产线 (来源: Hacker News)\n- **核心干货**：Tesla 宣布逐步关停 Cybertruck 生产，理由是销量长期不及预期、市场反馈冷淡。这台被马斯克吹成\"未来主义皮卡\"的车型，从发布会砸玻璃到量产爬坡，再到今天的停产，完整走完了一个\"营销驱动型产品\"的生命周期。\n- **毒舌/硬核点评**：一台车从\"改变皮卡行业\"到\"被皮卡行业改变\"，只用了几年。HN 上 1786 条评论吵得热火朝天，但真正的结论只有一句：不锈钢外壳救不了糟糕的产品定义，推特热度也换不来销量。\n- **🔗 传送门**：[点击直达原链接](https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817)\n\n---\n\n### 3. 📌 Libghostty 1.0 发布：终端模拟器里的\"性能偏执狂\"终于毕业 (来源: Hacker News)\n- **核心干货**：Mitchell Hashimoto（HashiCorp 创始人）主导的 Ghostty 终端项目，其核心库 libghostty 发布 1.0。它把终端模拟器拆成可复用的底层库，主打原生性能、跨平台一致性和 GPU 加速渲染，让其他项目不必从头造轮子就能获得一个高质量的终端内核。\n- **毒舌/硬核点评**：终端这个\"老古董\"领域居然还能卷出新高度——别人在做套壳，Mitch 在做引擎。1.0 意味着 API 稳定了，接下来就看谁先把它塞进自己的编辑器、IDE 或 AI 终端里。提醒一句：性能是卖点，但别指望它帮你把 `rm -rf` 打错的手速救回来。\n- **🔗 传送门**：[点击直达原链接](https://mitchellh.com/writing/libghostty-1-0)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"AI 不会取代你，但会用 AI 在 30 小时内挖出 948 个漏洞、再用 120 万美元账单把你按在地上摩擦的人，会取代你。\"\n",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-08\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 OpenAI GPT-6 Cyber：30 小时挖出 948 个 Linux 提权漏洞，还顺手修了 (来源: Tech RSS)\n- **核心干货**：OpenAI 发布安全专用模型 GPT-6 Cyber，配套流水线在 30 小时、120 万美元 API 成本的跑批中，分析了 2308 个 Linux 内核候选点，验证并修补了 948 个本地提权漏洞，另外还揪出 81 个 Firefox 缺陷。核心不是\"模型变强了\"，而是 AI 第一次把安全研究从\"人类专家逐个人工审计\"变成\"可规模化、可计价的工程流水线\"。\n- **毒舌/硬核点评**：120 万美元换 948 个 root 提权洞，折合每个洞约 1265 美元——比请个安全实习生便宜，还不用交社保。安全工程师们，你们的下一份工作可能是给 AI 的漏洞报告写\"驳回理由\"。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html)\n\n---\n\n### 2. 📌 SSHole 漏洞披露数小时内即遭野外利用，蜜罐直接被拿 root (来源: Tech RSS)\n- **核心干货**：OpenSSH 新披露漏洞 CVE-2026-123158（CVSS 8.1，代号 SSHole）允许登录无密码账户，Previdian 观测到攻击者在披露后数小时内就开始扫描利用，蜜罐系统被直接拿到 root 权限。这印证了当前攻防节奏的残酷现实：补丁窗口期已从\"天\"压缩到\"小时\"。\n- **毒舌/硬核点评**：漏洞代号叫 SSHole，命名的人要么是天才要么是故意的。但真正的黑色幽默是——你的运维团队还在开会讨论变更审批流程，攻击者的自动化脚本已经跑完三轮了。打补丁这件事，现在拼的不是技术，是反射弧。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html)\n\n---\n\n### 3. 📌 Libghostty 1.0 发布：Mitchell Hashimoto 的终端模拟器正式落地 (来源: Hacker News, 913 分)\n- **核心干货**：HashiCorp 创始人 Mitchell Hashimoto 的 Ghostty 终端项目核心库 libghostty 发布 1.0。这不是又一个\"套壳 iTerm\"的审美玩具，而是把高性能、原生平台 GUI、GPU 加速终端能力沉淀为可复用库——意味着第三方应用可以直接嵌入一个正经的终端内核，而不用自己从零造 VT 解析器和渲染管线。\n- **毒舌/硬核点评**：终端模拟器这个赛道卷了四十年，大部分人做的是\"给 1978 年的 VT100 换个圆角图标\"。Mitchell 干的是把终端从应用降维成基础设施库——这才是\"我不用 Ghostty，但我的软件里全是 Ghostty\"的高级玩法。\n- **🔗 传送门**：[点击直达原链接](https://mitchellh.com/writing/libghostty-1-0)\n\n---\n\n### 🗣️ 今日顶男金句\n> 安全漏洞的披露窗口已经从\"天\"缩到\"小时\"，而你的技术债还在按\"季度\"排队——AI 不会淘汰程序员，但会淘汰那些把\"下个 sprint 再修\"当信仰的人。",
   "briefing_items": [
     {
-      "title": "OpenAI 的\"AI 找漏洞流水线\"：30 小时挖出 948 个 Linux 提权漏洞",
+      "title": "OpenAI GPT-6 Cyber：30 小时挖出 948 个 Linux 提权漏洞，还顺手修了",
       "source": "Tech RSS",
-      "summary": "OpenAI 放出一条全自动流水线，用一个尚未公开的网络安全专用模型，在 30 小时内分析 2308 个 Linux 内核候选问题，最终确认并修复了 948 个本地提权漏洞，API 成本仅 120 万美元。同期还发布了 GPT-6 Cyber，号称在找漏洞、修漏洞和安全对齐上都实现了跳变式提升。",
-      "commentary": "以前安全研究员熬夜挖洞，现在变成\"给模型充 120 万刀电费，然后它把 Linux 内核翻了个底朝天\"。所谓\"AI 加速 AI 研究\"不是隐喻，是字面意义的——安全行业那套按漏洞赏金的商业模型，可能要先给自己挖个坑。",
+      "summary": "OpenAI 发布安全专用模型 GPT-6 Cyber，配套流水线在 30 小时、120 万美元 API 成本的跑批中，分析了 2308 个 Linux 内核候选点，验证并修补了 948 个本地提权漏洞，另外还揪出 81 个 Firefox 缺陷。核心不是\"模型变强了\"，而是 AI 第一次把安全研究从\"人类专家逐个人工审计\"变成\"可规模化、可计价的工程流水线\"。",
+      "commentary": "120 万美元换 948 个 root 提权洞，折合每个洞约 1265 美元——比请个安全实习生便宜，还不用交社保。安全工程师们，你们的下一份工作可能是给 AI 的漏洞报告写\"驳回理由\"。",
       "url": "https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html"
     },
     {
-      "title": "Tesla 正式砍掉 Cybertruck 产线",
-      "source": "Hacker News",
-      "summary": "Tesla 宣布逐步关停 Cybertruck 生产，理由是销量长期不及预期、市场反馈冷淡。这台被马斯克吹成\"未来主义皮卡\"的车型，从发布会砸玻璃到量产爬坡，再到今天的停产，完整走完了一个\"营销驱动型产品\"的生命周期。",
-      "commentary": "一台车从\"改变皮卡行业\"到\"被皮卡行业改变\"，只用了几年。HN 上 1786 条评论吵得热火朝天，但真正的结论只有一句：不锈钢外壳救不了糟糕的产品定义，推特热度也换不来销量。",
-      "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817"
+      "title": "SSHole 漏洞披露数小时内即遭野外利用，蜜罐直接被拿 root",
+      "source": "Tech RSS",
+      "summary": "OpenSSH 新披露漏洞 CVE-2026-123158（CVSS 8.1，代号 SSHole）允许登录无密码账户，Previdian 观测到攻击者在披露后数小时内就开始扫描利用，蜜罐系统被直接拿到 root 权限。这印证了当前攻防节奏的残酷现实：补丁窗口期已从\"天\"压缩到\"小时\"。",
+      "commentary": "漏洞代号叫 SSHole，命名的人要么是天才要么是故意的。但真正的黑色幽默是——你的运维团队还在开会讨论变更审批流程，攻击者的自动化脚本已经跑完三轮了。打补丁这件事，现在拼的不是技术，是反射弧。",
+      "url": "https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html"
     },
     {
-      "title": "Libghostty 1.0 发布：终端模拟器里的\"性能偏执狂\"终于毕业",
-      "source": "Hacker News",
-      "summary": "Mitchell Hashimoto（HashiCorp 创始人）主导的 Ghostty 终端项目，其核心库 libghostty 发布 1.0。它把终端模拟器拆成可复用的底层库，主打原生性能、跨平台一致性和 GPU 加速渲染，让其他项目不必从头造轮子就能获得一个高质量的终端内核。",
-      "commentary": "终端这个\"老古董\"领域居然还能卷出新高度——别人在做套壳，Mitch 在做引擎。1.0 意味着 API 稳定了，接下来就看谁先把它塞进自己的编辑器、IDE 或 AI 终端里。提醒一句：性能是卖点，但别指望它帮你把 `rm -rf` 打错的手速救回来。",
+      "title": "Libghostty 1.0 发布：Mitchell Hashimoto 的终端模拟器正式落地",
+      "source": "Hacker News, 913 分",
+      "summary": "HashiCorp 创始人 Mitchell Hashimoto 的 Ghostty 终端项目核心库 libghostty 发布 1.0。这不是又一个\"套壳 iTerm\"的审美玩具，而是把高性能、原生平台 GUI、GPU 加速终端能力沉淀为可复用库——意味着第三方应用可以直接嵌入一个正经的终端内核，而不用自己从零造 VT 解析器和渲染管线。",
+      "commentary": "终端模拟器这个赛道卷了四十年，大部分人做的是\"给 1978 年的 VT100 换个圆角图标\"。Mitchell 干的是把终端从应用降维成基础设施库——这才是\"我不用 Ghostty，但我的软件里全是 Ghostty\"的高级玩法。",
       "url": "https://mitchellh.com/writing/libghostty-1-0"
     },
     {
-      "quote": "\"AI 不会取代你，但会用 AI 在 30 小时内挖出 948 个漏洞、再用 120 万美元账单把你按在地上摩擦的人，会取代你。\""
+      "quote": "安全漏洞的披露窗口已经从\"天\"缩到\"小时\"，而你的技术债还在按\"季度\"排队——AI 不会淘汰程序员，但会淘汰那些把\"下个 sprint 再修\"当信仰的人。"
     }
   ],
   "candidates": [
@@ -36,8 +36,8 @@
       "summary": "",
       "url": "https://mitchellh.com/writing/libghostty-1-0",
       "source": "Hacker News",
-      "score": 412,
-      "comments": 68
+      "score": 913,
+      "comments": 149
     },
     {
       "id": "hn:50397429",
@@ -45,8 +45,26 @@
       "summary": "",
       "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
       "source": "Hacker News",
-      "score": 405,
-      "comments": 90
+      "score": 546,
+      "comments": 136
+    },
+    {
+      "id": "hn:50403052",
+      "title": "Need for Speed Underground 2 online in the browser",
+      "summary": "",
+      "url": "https://nfsu2.xyz/",
+      "source": "Hacker News",
+      "score": 503,
+      "comments": 158
+    },
+    {
+      "id": "hn:50403097",
+      "title": "Every Mac comes with an (undocumented) family member classifier",
+      "summary": "",
+      "url": "https://8rank.ai/game/apple-intelligence-personal-knowledge-graph",
+      "source": "Hacker News",
+      "score": 413,
+      "comments": 238
     },
     {
       "id": "hn:50391456",
@@ -54,35 +72,39 @@
       "summary": "",
       "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
       "source": "Hacker News",
-      "score": 926,
-      "comments": 1786
+      "score": 1112,
+      "comments": 1982
     },
     {
-      "id": "hn:50397219",
-      "title": "Firecracker VM Escape: PwnEscape Part 2",
+      "id": "hn:50403066",
+      "title": "Running a law firm on Free software",
       "summary": "",
-      "url": "https://pwn.ai/blog/firecracker-escape",
+      "url": "https://decoded.legal/blog/2026/11/running-a-law-firm-on-free-software-2026-edition/",
       "source": "Hacker News",
-      "score": 203,
-      "comments": 98
+      "score": 136,
+      "comments": 66
     },
     {
-      "id": "hn:50388001",
-      "title": "US FAA says it will phase out floppy disks from air traffic control by 2028",
-      "summary": "",
-      "url": "https://www.reuters.com/world/us/us-faa-says-it-will-phase-out-floppy-disks-air-traffic-control-by-2028-2026-11-05/",
-      "source": "Hacker News",
-      "score": 306,
-      "comments": 245
+      "id": "lob:ipplhe",
+      "title": "How are you dealing with all the negative side effects of AI on the web?",
+      "summary": "<p>It seems to me that the AI hype killed the web for good, but not for the reasons we immediately associate with it.</p>\n<p>Search engines now rank links full of slop at the top, which ironically make LLM summaries acceptable, not because they are better than what we had before (they are not), but ",
+      "url": "https://lobste.rs/s/ipplhe/how_are_you_dealing_with_all_negative_side",
+      "source": "Lobste.rs",
+      "score": 33,
+      "comments": 40,
+      "tags": [
+        "ask",
+        "web"
+      ]
     },
     {
-      "id": "hn:50397994",
-      "title": "AI is dramatically accelerating AI research",
+      "id": "hn:50404599",
+      "title": "The $8 Linux Computer (2022)",
       "summary": "",
-      "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
+      "url": "http://thelittleengineerthatcould.blogspot.com/2022/12/the-8-linux-computer.html",
       "source": "Hacker News",
-      "score": 248,
-      "comments": 196
+      "score": 108,
+      "comments": 48
     },
     {
       "id": "lob:hvxjbb",
@@ -90,7 +112,7 @@
       "summary": "",
       "url": "https://chimera-linux.org/news/2026/11/musl-nvidia.html",
       "source": "Lobste.rs",
-      "score": 52,
+      "score": 59,
       "comments": 9,
       "tags": [
         "linux"
@@ -131,38 +153,29 @@
       "score": 0
     },
     {
-      "id": "lob:yoywed",
-      "title": "Software Line Specialist",
+      "id": "lob:y3hvme",
+      "title": "Inside GitHub's new Git storage architecture",
       "summary": "",
-      "url": "https://lovro-bikic.github.io/software-line-specialist/",
+      "url": "https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/",
       "source": "Lobste.rs",
-      "score": 111,
-      "comments": 9,
+      "score": 25,
+      "comments": 7,
       "tags": [
-        "satire"
+        "distributed",
+        "vcs"
       ]
     },
     {
-      "id": "lob:jmdchp",
-      "title": "What are you doing this weekend?",
-      "summary": "<p>Feel free to tell what you plan on doing this weekend and even ask for help or feedback.</p>\n<p>Please keep in mind it’s more than OK to do nothing at all too!</p>\n",
-      "url": "https://lobste.rs/s/jmdchp/what_are_you_doing_this_weekend",
-      "source": "Lobste.rs",
-      "score": 24,
-      "comments": 43,
-      "tags": [
-        "ask",
-        "programming"
-      ]
-    },
-    {
-      "id": "hn:50400597",
-      "title": "I Toured Unitree's Factory. I'm More Bullish on the West",
+      "id": "lob:osqswf",
+      "title": "The Port That Does Not Exist",
       "summary": "",
-      "url": "https://josef.cn/blog/unitree",
-      "source": "Hacker News",
-      "score": 77,
-      "comments": 50
+      "url": "https://acid.vegas/blog/the-port-that-does-not-exist/",
+      "source": "Lobste.rs",
+      "score": 51,
+      "comments": 6,
+      "tags": [
+        "networking"
+      ]
     },
     {
       "id": "lob:i96uyr",
@@ -170,11 +183,24 @@
       "summary": "",
       "url": "https://mtlynch.io/notes/go-must-create-pattern/",
       "source": "Lobste.rs",
-      "score": 17,
-      "comments": 22,
+      "score": 20,
+      "comments": 23,
       "tags": [
         "go",
         "testing"
+      ]
+    },
+    {
+      "id": "lob:4qiair",
+      "title": "Progress Report: Linux 7.3 - Asahi Linux",
+      "summary": "",
+      "url": "https://asahilinux.org/2026/11/progress-report-7-3/",
+      "source": "Lobste.rs",
+      "score": 28,
+      "comments": 3,
+      "tags": [
+        "linux",
+        "mac"
       ]
     },
     {
@@ -211,27 +237,6 @@
       "url": "https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html",
       "source": "Tech RSS",
       "score": 0
-    },
-    {
-      "id": "lob:dxno99",
-      "title": "Clojure Distilled",
-      "summary": "",
-      "url": "https://yogthos.net/ClojureDistilled.html",
-      "source": "Lobste.rs",
-      "score": 45,
-      "comments": 2,
-      "tags": [
-        "lisp"
-      ]
-    },
-    {
-      "id": "hn:50399991",
-      "title": "RealPage rent-pricing case wraps with nearly $360M to renters",
-      "summary": "",
-      "url": "https://www.multifamilydive.com/news/realpage-rent-pricing-case-360m-renters/873553/",
-      "source": "Hacker News",
-      "score": 74,
-      "comments": 30
     }
   ],
   "ai_curated": true
