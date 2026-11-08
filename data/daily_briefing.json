@@ -1,52 +1,52 @@
 {
-  "date": "2026-11-08",
-  "update_time": "2026-11-08 05:19:14",
+  "date": "2026-11-09",
+  "update_time": "2026-11-08 17:44:41",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-08\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Claude Code 的\"别再问了\"按钮，把密码问进了 1122 个公开仓库 (来源: HackerNews)\n- **核心干货**：安全公司 Apiiro 扒出，Claude Code 那个方便到让人上瘾的\"Don't Ask Again\"权限豁免选项，直接导致开发者的密码、API Key、令牌散落在 GitHub 上 1122 个公开文件里。本质是\"人机信任\"的经典翻车：AI 代理替你做决定，你替它背泄露的锅。\n- **毒舌/硬核点评**：人类为了少点一次鼠标，能把生产环境密钥裸奔到公网上——这波不是 AI 背叛你，是你自己把保险柜钥匙焊在了门把手上。建议改名叫\"Don't Ask Again, Just Leak\"。\n- **🔗 传送门**：[点击直达原链接](https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again)\n\n---\n\n### 2. 📌 每台 Mac 都自带一个\"隐藏版家庭成员分类器\" (来源: HackerNews)\n- **核心干货**：有人逆向发现 Apple Intelligence 在本地悄悄构建了一张\"个人知识图谱\"，能默默给照片、通讯录里的人做家庭关系分类——全程未文档化、未告知。这是端侧 AI 隐私叙事的一次现实打脸：算力本地化 ≠ 行为透明化。\n- **毒舌/硬核点评**：苹果嘴上喊着\"隐私是基本人权\"，后台却在给你家亲戚排家谱。你花钱买的是一台 Mac，附赠的是一位不请自来的族谱编纂员。\n- **🔗 传送门**：[点击直达原链接](https://8rank.ai/game/apple-intelligence-personal-knowledge-graph)\n\n---\n\n### 3. 📌 OpenSSH \"SSHole\" 漏洞披露数小时内即遭在野利用，蜜罐直接被拿 root (来源: Tech RSS)\n- **核心干货**：CVE-2026-123158（CVSS 8.1），代号 SSHole，允许攻击者登录未设密码的账户。披露后几小时内攻击者就开始扫全网，Previdian 的蜜罐当场被夺 root。这个漏洞的严重性在于：它打的是\"没设密码的账户\"这种看似无害、实则遍布运维盲区的配置。\n- **毒舌/硬核点评**：从披露到被利用只花了几小时，而某些团队打补丁的流程还卡在\"下周例会讨论\"。攻击者用的是脚本，你用的是会议纪要——这场军备竞赛的胜负，从流程那一刻就注定了。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"AI 帮你省下的每一次点击，最后都会以另一种方式，让你在安全审计报告里多点几次'确认'。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-09\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Llama-modchip：64GB 内存跑 284B 参数 DeepSeek，不碰 GPU (来源: HackerNews)\n- **核心干货**：有人把 284B 参数的 DeepSeek 模型塞进了 64GB 普通内存里跑，全程不用 GPU。核心思路是通过权重分层调度与量化策略，把\"显存不够\"这个借口彻底焊死。这意味着大模型的硬件门槛可能被重新定义——消费级设备跑旗舰级模型不再是 PPT 概念。\n- **毒舌/硬核点评**：英伟达看到这条估计要连夜开董事会。当 64GB 内存能跑 284B 模型时，\"买卡\"这件事从刚需变成了信仰充值。\n- **🔗 传送门**：[点击直达原链接](https://github.com/synchopate/llama-modchip)\n\n---\n\n### 2. 📌 Claude Code 的\"别再问了\"把密码送上 GitHub 公网，1,122 个文件躺枪 (来源: HackerNews)\n- **核心干货**：Claude Code 的 \"Don't Ask Again\" 权限选项被曝会在 1,122 个公开 GitHub 文件里明文泄露密码和密钥。这不是 AI 写错代码，是 AI Agent 的权限设计直接把安全底线给\"别问了\"。当开发效率工具开始替你决定\"不用确认\"，它也在替你决定\"不用保密\"。\n- **毒舌/硬核点评**：AI 助手帮你省下的每一次点击确认，都可能在 GitHub 上变成一次公开处刑。便利和安全之间的那行\"你确定吗？\"，删掉它就是删掉你的密钥。\n- **🔗 传送门**：[点击直达原链接](https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again)\n\n---\n\n### 3. 📌 OpenAI 的 AI 流水线 30 小时挖出 948 个 Linux 提权漏洞，API 账单 120 万美元 (来源: Tech RSS / HackerNews)\n- **核心干货**：OpenAI 用一套 AI 流水线在 30 小时内分析了 2,308 个候选点，最终验证并修复了 948 个 Linux 本地提权漏洞，API 成本 120 万美元。同期 GPT-6 Cyber 发布，号称还帮 Firefox 揪出 81 个缺陷。这不是\"AI 辅助安全\"，这是安全研究员这个工种的定价被重新锚定了。\n- **毒舌/硬核点评**：30 小时 948 个洞，人类安全团队看完沉默，开会研究\"996 还有没有意义\"。120 万美元的 API 账单贵吗？比起一个 0day 在黑市的标价，这简直是批发价。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> 工具替你省下的确认框，终会以另一种方式让你确认代价——安全、效率、成本，从来没有免费的那一个。",
   "briefing_items": [
     {
-      "title": "Claude Code 的\"别再问了\"按钮，把密码问进了 1122 个公开仓库",
+      "title": "Llama-modchip：64GB 内存跑 284B 参数 DeepSeek，不碰 GPU",
       "source": "HackerNews",
-      "summary": "安全公司 Apiiro 扒出，Claude Code 那个方便到让人上瘾的\"Don't Ask Again\"权限豁免选项，直接导致开发者的密码、API Key、令牌散落在 GitHub 上 1122 个公开文件里。本质是\"人机信任\"的经典翻车：AI 代理替你做决定，你替它背泄露的锅。",
-      "commentary": "人类为了少点一次鼠标，能把生产环境密钥裸奔到公网上——这波不是 AI 背叛你，是你自己把保险柜钥匙焊在了门把手上。建议改名叫\"Don't Ask Again, Just Leak\"。",
+      "summary": "有人把 284B 参数的 DeepSeek 模型塞进了 64GB 普通内存里跑，全程不用 GPU。核心思路是通过权重分层调度与量化策略，把\"显存不够\"这个借口彻底焊死。这意味着大模型的硬件门槛可能被重新定义——消费级设备跑旗舰级模型不再是 PPT 概念。",
+      "commentary": "英伟达看到这条估计要连夜开董事会。当 64GB 内存能跑 284B 模型时，\"买卡\"这件事从刚需变成了信仰充值。",
+      "url": "https://github.com/synchopate/llama-modchip"
+    },
+    {
+      "title": "Claude Code 的\"别再问了\"把密码送上 GitHub 公网，1,122 个文件躺枪",
+      "source": "HackerNews",
+      "summary": "Claude Code 的 \"Don't Ask Again\" 权限选项被曝会在 1,122 个公开 GitHub 文件里明文泄露密码和密钥。这不是 AI 写错代码，是 AI Agent 的权限设计直接把安全底线给\"别问了\"。当开发效率工具开始替你决定\"不用确认\"，它也在替你决定\"不用保密\"。",
+      "commentary": "AI 助手帮你省下的每一次点击确认，都可能在 GitHub 上变成一次公开处刑。便利和安全之间的那行\"你确定吗？\"，删掉它就是删掉你的密钥。",
       "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again"
     },
     {
-      "title": "每台 Mac 都自带一个\"隐藏版家庭成员分类器\"",
-      "source": "HackerNews",
-      "summary": "有人逆向发现 Apple Intelligence 在本地悄悄构建了一张\"个人知识图谱\"，能默默给照片、通讯录里的人做家庭关系分类——全程未文档化、未告知。这是端侧 AI 隐私叙事的一次现实打脸：算力本地化 ≠ 行为透明化。",
-      "commentary": "苹果嘴上喊着\"隐私是基本人权\"，后台却在给你家亲戚排家谱。你花钱买的是一台 Mac，附赠的是一位不请自来的族谱编纂员。",
-      "url": "https://8rank.ai/game/apple-intelligence-personal-knowledge-graph"
+      "title": "OpenAI 的 AI 流水线 30 小时挖出 948 个 Linux 提权漏洞，API 账单 120 万美元",
+      "source": "Tech RSS / HackerNews",
+      "summary": "OpenAI 用一套 AI 流水线在 30 小时内分析了 2,308 个候选点，最终验证并修复了 948 个 Linux 本地提权漏洞，API 成本 120 万美元。同期 GPT-6 Cyber 发布，号称还帮 Firefox 揪出 81 个缺陷。这不是\"AI 辅助安全\"，这是安全研究员这个工种的定价被重新锚定了。",
+      "commentary": "30 小时 948 个洞，人类安全团队看完沉默，开会研究\"996 还有没有意义\"。120 万美元的 API 账单贵吗？比起一个 0day 在黑市的标价，这简直是批发价。",
+      "url": "https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html"
     },
     {
-      "title": "OpenSSH \"SSHole\" 漏洞披露数小时内即遭在野利用，蜜罐直接被拿 root",
-      "source": "Tech RSS",
-      "summary": "CVE-2026-123158（CVSS 8.1），代号 SSHole，允许攻击者登录未设密码的账户。披露后几小时内攻击者就开始扫全网，Previdian 的蜜罐当场被夺 root。这个漏洞的严重性在于：它打的是\"没设密码的账户\"这种看似无害、实则遍布运维盲区的配置。",
-      "commentary": "从披露到被利用只花了几小时，而某些团队打补丁的流程还卡在\"下周例会讨论\"。攻击者用的是脚本，你用的是会议纪要——这场军备竞赛的胜负，从流程那一刻就注定了。",
-      "url": "https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html"
-    },
-    {
-      "quote": "\"AI 帮你省下的每一次点击，最后都会以另一种方式，让你在安全审计报告里多点几次'确认'。\""
+      "quote": "工具替你省下的确认框，终会以另一种方式让你确认代价——安全、效率、成本，从来没有免费的那一个。"
     }
   ],
   "candidates": [
+    {
+      "id": "hn:50411961",
+      "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
+      "summary": "",
+      "url": "https://github.com/synchopate/llama-modchip",
+      "source": "Hacker News",
+      "score": 204,
+      "comments": 62
+    },
     {
       "id": "hn:50407882",
       "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
       "summary": "",
       "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
       "source": "Hacker News",
-      "score": 276,
-      "comments": 184
-    },
-    {
-      "id": "hn:50406292",
-      "title": "Show HN: Coldframe, a honeypot that poses as a supermarket fridge controller",
-      "summary": "I built Coldframe, a honeypot that pretends to be a supermarket refrigeration controller. Inspired by the events on industrial fridge installations in the past weeks, I wanted to see what people would try against a convincing fake.<p>To learn more about this I built a honeypot that resembled perfect",
-      "url": "https://github.com/hedgerow-dev/coldframe",
-      "source": "Hacker News",
-      "score": 208,
-      "comments": 44
+      "score": 506,
+      "comments": 368
     },
     {
       "id": "hn:50406670",
@@ -54,58 +54,44 @@
       "summary": "",
       "url": "https://blog.bosscher.ch/posts/openstick/",
       "source": "Hacker News",
-      "score": 458,
-      "comments": 96
+      "score": 702,
+      "comments": 126
     },
     {
-      "id": "hn:50403052",
-      "title": "Need for Speed Underground 2 online in the browser",
+      "id": "hn:50410107",
+      "title": "Goodbye Claude, hello Pi",
       "summary": "",
-      "url": "https://nfsu2.xyz/",
+      "url": "https://caleb.software/posts/claude-to-pi.html",
       "source": "Hacker News",
-      "score": 876,
-      "comments": 239
+      "score": 564,
+      "comments": 352
     },
     {
-      "id": "hn:50406222",
-      "title": "MaxxBench – \"Nice DeepSWE score. But is it true?\"",
+      "id": "hn:50412318",
+      "title": "Person of Interest",
       "summary": "",
-      "url": "https://maxxbench.unlap.ai/research/why-maxxbench/",
+      "url": "https://krthr.co/person-of-interest/",
       "source": "Hacker News",
-      "score": 246,
-      "comments": 70
+      "score": 240,
+      "comments": 157
     },
     {
-      "id": "hn:50403097",
-      "title": "Every Mac comes with an (undocumented) family member classifier",
+      "id": "hn:50411467",
+      "title": "Agent memory needs its OpenTelemetry moment",
       "summary": "",
-      "url": "https://8rank.ai/game/apple-intelligence-personal-knowledge-graph",
+      "url": "https://www.lorekit.io/blog/open-agent-memory-format",
       "source": "Hacker News",
-      "score": 658,
-      "comments": 368
+      "score": 127,
+      "comments": 91
     },
     {
-      "id": "hn:50403507",
-      "title": "Every Windows 11 app should kill Electron, and Discord just showed why",
+      "id": "hn:50366902",
+      "title": "Clj.rs – a Clojure dialect implemented in Rust",
       "summary": "",
-      "url": "https://www.windowslatest.com/2026/11/06/every-windows-11-app-should-kill-electron-and-discord-just-showed-why-no-starting-screen-and-70-less-ram-even-with-two-accounts-signed-in/",
+      "url": "https://clj.rs/",
       "source": "Hacker News",
-      "score": 265,
-      "comments": 239
-    },
-    {
-      "id": "lob:0ouxwf",
-      "title": "Libghostty 1.0",
-      "summary": "",
-      "url": "https://mitchellh.com/writing/libghostty-1-0",
-      "source": "Lobste.rs",
-      "score": 158,
-      "comments": 7,
-      "tags": [
-        "c",
-        "release",
-        "zig"
-      ]
+      "score": 125,
+      "comments": 48
     },
     {
       "id": "lob:ipplhe",
@@ -113,24 +99,11 @@
       "summary": "<p>It seems to me that the AI hype killed the web for good, but not for the reasons we immediately associate with it.</p>\n<p>Search engines now rank links full of slop at the top, which ironically make LLM summaries acceptable, not because they are better than what we had before (they are not), but ",
       "url": "https://lobste.rs/s/ipplhe/how_are_you_dealing_with_all_negative_side",
       "source": "Lobste.rs",
-      "score": 61,
-      "comments": 58,
+      "score": 85,
+      "comments": 74,
       "tags": [
         "ask",
         "web"
-      ]
-    },
-    {
-      "id": "lob:4qiair",
-      "title": "Progress Report: Linux 7.3 - Asahi Linux",
-      "summary": "",
-      "url": "https://asahilinux.org/2026/11/progress-report-7-3/",
-      "source": "Lobste.rs",
-      "score": 49,
-      "comments": 6,
-      "tags": [
-        "linux",
-        "mac"
       ]
     },
     {
@@ -139,11 +112,20 @@
       "summary": "",
       "url": "https://sunshowers.io/posts/sshole/",
       "source": "Lobste.rs",
-      "score": 28,
-      "comments": 39,
+      "score": 47,
+      "comments": 73,
       "tags": [
-        "security"
+        "rant"
       ]
+    },
+    {
+      "id": "hn:50413822",
+      "title": "OpenAI raises $11B at a $1.25T valuation",
+      "summary": "",
+      "url": "https://247wallst.com/investing/2026/11/07/openai-just-raised-11-billion-at-a-1-25-trillion-valuation-below-the-1-4-trillion-it-first-sought/",
+      "source": "Hacker News",
+      "score": 136,
+      "comments": 132
     },
     {
       "id": "lob:j63dme",
@@ -151,21 +133,12 @@
       "summary": "",
       "url": "https://op.tngl.io/meridian/",
       "source": "Lobste.rs",
-      "score": 48,
-      "comments": 7,
+      "score": 57,
+      "comments": 11,
       "tags": [
         "browsers",
         "rust"
       ]
-    },
-    {
-      "id": "hn:50408931",
-      "title": "GitHub New pull request overview page in public preview",
-      "summary": "",
-      "url": "https://github.blog/changelog/2026-11-05-new-pull-request-overview-page-in-public-preview/",
-      "source": "Hacker News",
-      "score": 103,
-      "comments": 71
     },
     {
       "id": "arxiv:2611.08439v1",
@@ -202,37 +175,15 @@
       "score": 0
     },
     {
-      "id": "hn:50377661",
-      "title": "Uranium cubes reveal why the German nuclear project failed",
+      "id": "lob:lhovnm",
+      "title": "Dear Open Source Developers: It's OK not to embargo",
       "summary": "",
-      "url": "https://arstechnica.com/science/2026/11/uranium-cubes-reveal-why-the-german-nuclear-project-failed/",
-      "source": "Hacker News",
-      "score": 98,
-      "comments": 60
-    },
-    {
-      "id": "lob:osqswf",
-      "title": "The Port That Does Not Exist",
-      "summary": "",
-      "url": "https://acid.vegas/blog/the-port-that-does-not-exist/",
+      "url": "https://opensourcesecurity.io/2026/10-embargo/",
       "source": "Lobste.rs",
-      "score": 57,
-      "comments": 6,
+      "score": 28,
+      "comments": 2,
       "tags": [
-        "networking"
-      ]
-    },
-    {
-      "id": "lob:jsvlfm",
-      "title": "Scriptable GeoDNS: leaving AWS for Bunny",
-      "summary": "",
-      "url": "https://vincent.bernat.ch/en/blog/2026-bunny-geodns",
-      "source": "Lobste.rs",
-      "score": 24,
-      "comments": 11,
-      "tags": [
-        "performance",
-        "web"
+        "security"
       ]
     },
     {
@@ -245,6 +196,39 @@
         "cs.AI"
       ],
       "arxiv_id": "2611.08452v1"
+    },
+    {
+      "id": "rss:b64e697845",
+      "title": "OpenAI Launches GPT-6 Cyber After AI Helps Find 81 Firefox Flaws, 948 Linux Exploits",
+      "summary": "OpenAI on Thursday unveiled GPT‑6 Cyber, which it described as a major step forward in security research that brings together stronger cybersecurity capabilities with a step-change improvement in model alignment.\n\nThe new model is \"more capable at finding and fixing vulnerabilities, and far more rel",
+      "url": "https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:d17ad1d8c5",
+      "title": "Researchers Bypass ChatGPT Lockdown Mode to Exfiltrate Chats Without User Interaction",
+      "summary": "Cybersecurity researchers have disclosed details of a now-patched vulnerability that could be exploited to bypass Lockdown Mode protections in OpenAI ChatGPT.\n\nLockdown Mode was introduced by the artificial intelligence (AI) company in June 2026 as an optional setting to minimize data exfiltration r",
+      "url": "https://thehackernews.com/2026/11/researchers-bypass-chatgpt-lockdown.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:3e7cc1cdcb",
+      "title": "OpenAI AI Pipeline Generates 948 Linux Root Escalation Exploits in 30-Hour Run",
+      "summary": "OpenAI on Wednesday detailed a pipeline that employed an upcoming cyber-focused artificial intelligence (AI) model to validate and patch 948 local privilege escalation vulnerabilities in Linux for $1.2 million in API costs.\n\n\"Our prototype identified and analyzed 2,308 candidate Linux kernel finding",
+      "url": "https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "hn:50412067",
+      "title": "Writing as a thinking tool",
+      "summary": "",
+      "url": "http://muratbuffalo.blogspot.com/2026/11/writing-as-thinking-tool.html",
+      "source": "Hacker News",
+      "score": 115,
+      "comments": 32
     }
   ],
   "ai_curated": true
