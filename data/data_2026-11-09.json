@@ -1,0 +1,818 @@
+{
+  "update_time": "2026-11-09 17:58:57",
+  "stocks": {
+    "a_stocks": [
+      {
+        "market": "A股",
+        "code": "002050",
+        "name": "三花智控",
+        "symbol": "sz.002050",
+        "industry": null,
+        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
+        "price": 34.24,
+        "open": 34.2,
+        "high": 35.55,
+        "low": 34.1,
+        "change_pct": 1.69,
+        "volume": 61783823,
+        "turnover": 21.46,
+        "market_cap": null,
+        "pe": 37.06,
+        "cash_flow": 50.92,
+        "macd": -0.0963,
+        "macd_signal": -0.2552,
+        "macd_histogram": 0.3178,
+        "rsi": 50.66,
+        "ma": {
+          "MA5": 34.08,
+          "MA10": 34.14,
+          "MA20": 33.4,
+          "MA60": 35.16
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
+        "price": 6.1,
+        "open": 6.16,
+        "high": 6.2,
+        "low": 6.09,
+        "change_pct": 0.0,
+        "volume": 35979857,
+        "turnover": 2.21,
+        "market_cap": null,
+        "pe": 68.49,
+        "cash_flow": 105.67,
+        "macd": -0.0859,
+        "macd_signal": -0.1017,
+        "macd_histogram": 0.0315,
+        "rsi": 41.37,
+        "ma": {
+          "MA5": 6.15,
+          "MA10": 6.1,
+          "MA20": 6.16,
+          "MA60": 6.45
+        },
+        "main_net_flow": null
+      }
+    ],
+    "hk_stocks": [
+      {
+        "market": "港股",
+        "code": "01810",
+        "name": "小米集团-W",
+        "symbol": "01810",
+        "industry": "Consumer Electronics",
+        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
+        "price": NaN,
+        "open": null,
+        "high": null,
+        "low": null,
+        "change_pct": NaN,
+        "volume": 129742379,
+        "turnover": null,
+        "market_cap": 7745.93,
+        "pe": 22.13,
+        "cash_flow": 86.81,
+        "macd": 0.9475,
+        "macd_signal": 0.5264,
+        "macd_histogram": 0.8422,
+        "rsi": 65.87,
+        "ma": {
+          "MA5": null,
+          "MA10": null,
+          "MA20": null,
+          "MA60": null
+        },
+        "main_net_flow": null
+      }
+    ],
+    "us_stocks": [
+      {
+        "market": "美股",
+        "code": "NVDA",
+        "name": "NVIDIA",
+        "symbol": "NVDA",
+        "industry": "Semiconductors",
+        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
+        "price": 177.37,
+        "open": 173.04,
+        "high": 179.92,
+        "low": 170.24,
+        "change_pct": -4.97,
+        "volume": 305499998,
+        "turnover": null,
+        "market_cap": 42829.53,
+        "pe": 22.42,
+        "cash_flow": 418.1,
+        "macd": -9.6714,
+        "macd_signal": -5.9575,
+        "macd_histogram": -7.4278,
+        "rsi": 26.92,
+        "ma": {
+          "MA5": 190.49,
+          "MA10": 200.61,
+          "MA20": 209.1,
+          "MA60": 218.61
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "GOOG",
+        "name": "Alphabet (Google)",
+        "symbol": "GOOG",
+        "industry": "Internet Content & Information",
+        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
+        "price": 288.68,
+        "open": 290.96,
+        "high": 294.69,
+        "low": 288.52,
+        "change_pct": 1.67,
+        "volume": 11796091,
+        "turnover": null,
+        "market_cap": 35490.32,
+        "pe": 15.07,
+        "cash_flow": 11.62,
+        "macd": -15.3705,
+        "macd_signal": -13.0104,
+        "macd_histogram": -4.7202,
+        "rsi": 34.27,
+        "ma": {
+          "MA5": 283.98,
+          "MA10": 289.72,
+          "MA20": 311.6,
+          "MA60": 330.73
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "CRCL",
+        "name": "Circle",
+        "symbol": "CRCL",
+        "industry": "Capital Markets",
+        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
+        "price": 67.43,
+        "open": 65.98,
+        "high": 69.82,
+        "low": 65.41,
+        "change_pct": -0.66,
+        "volume": 4521471,
+        "turnover": null,
+        "market_cap": 172.99,
+        "pe": 40.62,
+        "cash_flow": 2.49,
+        "macd": -4.1001,
+        "macd_signal": -2.688,
+        "macd_histogram": -2.8241,
+        "rsi": 34.34,
+        "ma": {
+          "MA5": 71.23,
+          "MA10": 74.4,
+          "MA20": 79.32,
+          "MA60": 85.0
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "MP",
+        "name": "MP Materials",
+        "symbol": "MP",
+        "industry": "Other Industrial Metals & Mining",
+        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
+        "price": 37.14,
+        "open": 36.13,
+        "high": 37.69,
+        "low": 35.1,
+        "change_pct": 4.89,
+        "volume": 3220751,
+        "turnover": null,
+        "market_cap": 66.21,
+        "pe": 59.62,
+        "cash_flow": 4.1,
+        "macd": -2.5811,
+        "macd_signal": -2.545,
+        "macd_histogram": -0.0723,
+        "rsi": 40.21,
+        "ma": {
+          "MA5": 36.01,
+          "MA10": 38.15,
+          "MA20": 38.88,
+          "MA60": 47.38
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "PLTR",
+        "name": "Palantir",
+        "symbol": "PLTR",
+        "industry": "Software - Infrastructure",
+        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
+        "price": 169.27,
+        "open": 161.27,
+        "high": 170.5,
+        "low": 161.05,
+        "change_pct": 5.54,
+        "volume": 11372208,
+        "turnover": null,
+        "market_cap": 4078.53,
+        "pe": 119.2,
+        "cash_flow": 26.52,
+        "macd": -6.3236,
+        "macd_signal": -2.0532,
+        "macd_histogram": -8.541,
+        "rsi": 39.45,
+        "ma": {
+          "MA5": 166.35,
+          "MA10": 178.61,
+          "MA20": 188.13,
+          "MA60": 184.14
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "NOW",
+        "name": "ServiceNow",
+        "symbol": "NOW",
+        "industry": "Software - Application",
+        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
+        "price": 103.83,
+        "open": 101.63,
+        "high": 104.52,
+        "low": 101.5,
+        "change_pct": 1.82,
+        "volume": 6035431,
+        "turnover": null,
+        "market_cap": 1077.67,
+        "pe": 74.7,
+        "cash_flow": 57.54,
+        "macd": -9.8721,
+        "macd_signal": -5.2297,
+        "macd_histogram": -9.2849,
+        "rsi": 29.83,
+        "ma": {
+          "MA5": 105.23,
+          "MA10": 115.18,
+          "MA20": 132.16,
+          "MA60": 134.34
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "DDOG",
+        "name": "Datadog",
+        "symbol": "DDOG",
+        "industry": "Software - Application",
+        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
+        "price": 179.4,
+        "open": 178.43,
+        "high": 181.9,
+        "low": 176.51,
+        "change_pct": 0.2,
+        "volume": 1568118,
+        "turnover": null,
+        "market_cap": 647.73,
+        "pe": 249.17,
+        "cash_flow": 10.66,
+        "macd": -20.1173,
+        "macd_signal": -9.2898,
+        "macd_histogram": -21.6549,
+        "rsi": 28.46,
+        "ma": {
+          "MA5": 188.46,
+          "MA10": 221.87,
+          "MA20": 244.11,
+          "MA60": 244.68
+        },
+        "main_net_flow": null
+      }
+    ],
+    "crypto": [
+      {
+        "market": "加密货币",
+        "code": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "industry": "Smart Contract Platform",
+        "price": 74750,
+        "open": null,
+        "high": 75881,
+        "low": 73709,
+        "change_pct": -1.26,
+        "volume": 34384968741,
+        "turnover": null,
+        "market_cap": 15033.08,
+        "market_cap_rank": 1,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -1704.9106,
+        "macd_signal": -1336.6381,
+        "macd_histogram": -736.5448,
+        "rsi": 35.67,
+        "ma": {
+          "MA5": 75409.95,
+          "MA10": 76740.12,
+          "MA20": 78599.59,
+          "MA60": 81041.44
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 20109909.0,
+          "total_supply": 20109962.0,
+          "circ_ratio": 100.0,
+          "price_change_7d": -3.46333,
+          "price_change_30d": -9.87546,
+          "ath_pct": -40.71,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      },
+      {
+        "market": "加密货币",
+        "code": "ethereum",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "industry": "Smart Contract Platform",
+        "price": 2125.07,
+        "open": null,
+        "high": 2234.57,
+        "low": 2084.89,
+        "change_pct": -4.64,
+        "volume": 17069399190,
+        "turnover": null,
+        "market_cap": 2597.19,
+        "market_cap_rank": 2,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -74.1934,
+        "macd_signal": -64.4493,
+        "macd_histogram": -19.4881,
+        "rsi": 33.03,
+        "ma": {
+          "MA5": 2191.71,
+          "MA10": 2243.35,
+          "MA20": 2293.91,
+          "MA60": 2478.81
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 122203846.69715354,
+          "total_supply": 122203846.69715354,
+          "circ_ratio": 100.0,
+          "price_change_7d": -6.28391,
+          "price_change_30d": -15.10408,
+          "ath_pct": -57.04,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      }
+    ]
+  },
+  "news": [
+    {
+      "id": "35b871d31c",
+      "title": "[播客]独家实拍：我那永远跪着的母亲(11/07 22:10)",
+      "summary": "独家实拍：我那永远跪着的母亲",
+      "link": "http://go.rss.sina.com.cn/redirect.php?url=http://you.video.sina.com.cn/b/16972162-1239095354.html",
+      "source": "rss.sina.com.cn",
+      "published": ""
+    },
+    {
+      "id": "295863715f",
+      "title": "Ozempic, Zepbound and other GLP-1 drugs have a possible risk of vision loss",
+      "summary": "Several medical studies have found that people taking GLP-1 medications have an elevated risk for nonarteritic anterior ischemic optic neuropathy, or NAION.",
+      "link": "https://www.marketwatch.com/story/ozempic-zepbound-and-other-glp-1-drugs-have-a-possible-risk-of-vision-loss-b3738f36?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 09 Nov 2026 17:52:00 GMT"
+    },
+    {
+      "id": "34122fca2a",
+      "title": "Should a widow leave her late partner’s home to her stepkids — or cut off contact with them?",
+      "summary": "“It would be a less drastic step than selling the home now and splitting the proceeds.”",
+      "link": "https://www.marketwatch.com/story/she-can-always-change-her-mind-should-a-widow-leave-the-family-home-to-her-stepchildren-649b06af?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 09 Nov 2026 17:30:00 GMT"
+    },
+    {
+      "id": "0c914264ae",
+      "title": "There is no one at Nvidia who would be ready to replace Jensen Huang",
+      "summary": "Nvidia’s CEO has an “outsize role and unclear succession.”",
+      "link": "https://www.marketwatch.com/story/there-is-no-one-at-nvidia-who-would-be-ready-to-replace-jensen-huang-816cc405?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 09 Nov 2026 17:21:00 GMT"
+    },
+    {
+      "id": "c7f7885b93",
+      "title": "Why renters are obsessed with these $300 ‘boneless couches’",
+      "summary": "Black Friday could be the perfect time to buy one.",
+      "link": "https://www.marketwatch.com/story/why-renters-are-obsessed-with-these-300-boneless-couches-65a2e4fe?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 09 Nov 2026 16:26:00 GMT"
+    },
+    {
+      "id": "78ce6273b9",
+      "title": "‘It seems bizarre’: We’re in our 80s with $950,000 in traditional IRAs. Why is our adviser pushing Roth conversions?",
+      "summary": "“Our basic living expenses are covered by $110,000 in annual pensions and Social Security.”",
+      "link": "https://www.marketwatch.com/story/it-seems-bizarre-were-in-our-80s-with-950-000-in-traditional-iras-why-is-our-adviser-pushing-us-to-do-roth-conversions-a665f990?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 09 Nov 2026 16:00:00 GMT"
+    },
+    {
+      "id": "2db9fb1673",
+      "title": "How SpaceX was able to avert one of the market’s biggest fears about its stock",
+      "summary": "Some investors worried that SpaceX’s volatile stock would have an extreme impact on indexes, but the company’s staggered lockup schedule has mitigated this issue.",
+      "link": "https://www.marketwatch.com/story/how-spacex-was-able-to-avert-one-of-the-markets-biggest-fears-about-its-stock-93870736?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 09 Nov 2026 15:35:00 GMT"
+    },
+    {
+      "id": "95baca5d6d",
+      "title": "A failed trial for a heart drug casts shadow over rivals developing similar therapies",
+      "summary": "The full data from the closely watched clinical trial showed that the drug had no cardiovascular benefit even though it reduced Lp(a) levels.",
+      "link": "https://www.marketwatch.com/story/a-failed-trial-for-a-heart-drug-casts-shadow-over-rivals-developing-similar-therapies-2d9bd79f?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 09 Nov 2026 15:16:00 GMT"
+    },
+    {
+      "id": "5a25de701b",
+      "title": "‘My life could be cut short’: I’m 55, married and have a brain tumor. Should I splash out on a $210,000 Porsche?",
+      "summary": "“I also want to preserve the opportunity to leave a meaningful legacy for my two sons.”",
+      "link": "https://www.marketwatch.com/story/my-life-could-be-cut-short-im-55-married-with-4-3-million-and-have-a-brain-tumor-should-i-buy-a-210-000-custom-porsche-ed825ada?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 09 Nov 2026 15:00:00 GMT"
+    },
+    {
+      "id": "c274567d62",
+      "title": "As Nvidia’s stock falls, here’s what Wall Street has to say about the Jensen Huang scandal",
+      "summary": "The fallout from the board’s new investigation could become “a longer-lasting problem for the company,” analysts say",
+      "link": "https://www.marketwatch.com/story/how-wall-street-is-reacting-to-the-news-of-nvidias-jensen-huang-investigation-into-spy-claims-d8c839ab?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 09 Nov 2026 14:45:00 GMT"
+    },
+    {
+      "id": "23401c97c1",
+      "title": "As AI trade falters, Goldman Sachs says this lagging region is now positioned to outperform",
+      "summary": "Precisely because it has long been hamstrung by rigid labor markets and overregulation, European stocks may paradoxically be bigger beneficiaries of the AI revolution in terms of enhanced productivity",
+      "link": "https://www.marketwatch.com/story/as-ai-trade-falters-goldman-sachs-says-this-lagging-region-is-now-positioned-to-outperform-589805c6?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 09 Nov 2026 14:16:00 GMT"
+    },
+    {
+      "id": "2adf649268",
+      "title": "Canadian 10-yr bond yield dips as global debt markets navigate shifting sentiment",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/canadian-10yr-bond-yield-dips-as-global-debt-markets-navigate-shifting-sentiment-5012952",
+      "source": "www.investing.com",
+      "published": "2026-11-09 17:52:11"
+    },
+    {
+      "id": "9669b1ae12",
+      "title": "This Canadian energy stock trades at a steep discount to peers, Scotiabank says",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/this-canadian-energy-stock-trades-at-a-steep-discount-to-peers-scotiabank-says-5012954",
+      "source": "www.investing.com",
+      "published": "2026-11-09 17:52:10"
+    },
+    {
+      "id": "bb95927cdd",
+      "title": "RBC names this Canadian retirement home operator among the best-positioned stocks",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/rbc-names-this-canadian-retirement-home-operator-among-the-bestpositioned-stocks-5012953",
+      "source": "www.investing.com",
+      "published": "2026-11-09 17:52:09"
+    },
+    {
+      "id": "98af6bd4d3",
+      "title": "Canada’s inflation warning may be overblown",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/canadas-inflation-warning-may-be-overblown-5012951",
+      "source": "www.investing.com",
+      "published": "2026-11-09 17:52:08"
+    },
+    {
+      "id": "481cf56378",
+      "title": "Companies risk fines of 6% global turnover for unfair digital trade practices, EU draft law shows",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/companies-risk-fines-of-6-global-turnover-for-unfair-digital-trade-practices-eu-draft-law-shows-5012950",
+      "source": "www.investing.com",
+      "published": "2026-11-09 17:48:44"
+    },
+    {
+      "id": "c835bb7896",
+      "title": "Paraguay Congress confirms Schreiner as new central bank head",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/paraguay-congress-confirms-schreiner-as-new-central-bank-head-5012949",
+      "source": "www.investing.com",
+      "published": "2026-11-09 17:48:14"
+    },
+    {
+      "id": "d0582219da",
+      "title": "Sagimet Biosciences at guggenheim healthcare conference: acne pivot gains traction",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/sagimet-biosciences-at-guggenheim-healthcare-conference-acne-pivot-gains-traction-93CH-5012944",
+      "source": "www.investing.com",
+      "published": "2026-11-09 17:45:21"
+    },
+    {
+      "id": "85e41105dd",
+      "title": "Oil falls almost 5% as Trump signals restraint on Iran",
+      "summary": "",
+      "link": "https://www.investing.com/news/commodities-news/oil-falls-on-open-as-trump-says-fresh-iran-attacks-unlikely-5010359",
+      "source": "www.investing.com",
+      "published": "2026-11-09 17:43:32"
+    },
+    {
+      "id": "ffc5f82ad2",
+      "title": "Why is Veradermics stock climbing today?",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-veradermics-stock-climbing-today-93CH-5012943",
+      "source": "www.investing.com",
+      "published": "2026-11-09 17:43:24"
+    },
+    {
+      "id": "b5ccfa97c5",
+      "title": "Why is Mineralys Therapeutics stock climbing today?",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-mineralys-therapeutics-stock-climbing-today-93CH-5012942",
+      "source": "www.investing.com",
+      "published": "2026-11-09 17:43:20"
+    }
+  ],
+  "briefing": {
+    "date": "2026-11-09",
+    "update_time": "2026-11-09 05:30:24",
+    "candidate_count": 20,
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-09\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Rust + WebGPU 硬刚 SketchUp：KetchUp 开源了 (来源: Hacker News)\n- **核心干货**：一个用 Rust 和 WebGPU 从零重写的 SketchUp 开源替代品，直接在浏览器里跑 3D 建模。老牌 CAD 软件靠授权费吃了几十年，Web 端原生 GPU 加速这条路终于有人认真走通了——不用装客户端、不用买 license，打开网页就能拉模型。\n- **毒舌/硬核点评**：SketchUp 母公司 Trimble 看到这个 HN 338 分的项目，估计一边喝咖啡一边默默给法务部发消息。开源社区的逻辑永远是：你收费，我就重写一个；你重写不动，说明你该被重写了。\n- **🔗 传送门**：[点击直达原链接](https://ketchup3d.github.io/app/)\n\n---\n\n### 2. 📌 OpenAI 推出 GPT-6 Cyber：AI 挖出 81 个 Firefox 漏洞、948 个 Linux 提权链 (来源: Tech News)\n- **核心干货**：OpenAI 发布专攻安全研究的 GPT-6 Cyber，官方称其在漏洞发现与修复上实现\"阶跃式\"提升——辅助挖出 81 个 Firefox 缺陷、948 条 Linux 提权路径。这把\"AI 安全研究员\"从概念验证推到了量产阶段，红队/蓝队的成本结构要被重算。\n- **毒舌/硬核点评**：一边是 AI 几小时扫出近千个提权链，一边是厂商补丁排期排到明年——攻防速度差正在被 AI 拉到荒谬的程度。以后的安全工程师不是写 exploit 的人，而是给 AI 的 exploit 写 PR 的人。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html)\n\n---\n\n### 3. 📌 OpenSSH \"SSHole\" 漏洞披露数小时内即遭在野利用，蜜罐被拿 root (来源: Tech News)\n- **核心干货**：CVE-2026-123158（CVSS 8.1），代号 SSHole，影响无密码账户的 OpenSSH 登录逻辑，攻击者可借此直接登入并拿到 root。披露后数小时内就有攻击者拿蜜罐开刀——从 PoC 到武器化的窗口已经压缩到\"小时级\"。\n- **毒舌/硬核点评**：漏洞代号起得像个段子，利用速度可一点不好笑。还在用\"下周再打补丁\"节奏运维的朋友，这次蜜罐里被 root 的说不定就是你。CVSS 8.1 配小时级在野利用，这组合比任何安全周报标题都刺激。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> 漏洞不会等你排期，AI 也不会等你学会用 AI——唯一稳赚不赔的复利，是把\"下周再说\"改成\"现在就跑\"。",
+    "briefing_items": [
+      {
+        "title": "Rust + WebGPU 硬刚 SketchUp：KetchUp 开源了",
+        "source": "Hacker News",
+        "summary": "一个用 Rust 和 WebGPU 从零重写的 SketchUp 开源替代品，直接在浏览器里跑 3D 建模。老牌 CAD 软件靠授权费吃了几十年，Web 端原生 GPU 加速这条路终于有人认真走通了——不用装客户端、不用买 license，打开网页就能拉模型。",
+        "commentary": "SketchUp 母公司 Trimble 看到这个 HN 338 分的项目，估计一边喝咖啡一边默默给法务部发消息。开源社区的逻辑永远是：你收费，我就重写一个；你重写不动，说明你该被重写了。",
+        "url": "https://ketchup3d.github.io/app/"
+      },
+      {
+        "title": "OpenAI 推出 GPT-6 Cyber：AI 挖出 81 个 Firefox 漏洞、948 个 Linux 提权链",
+        "source": "Tech News",
+        "summary": "OpenAI 发布专攻安全研究的 GPT-6 Cyber，官方称其在漏洞发现与修复上实现\"阶跃式\"提升——辅助挖出 81 个 Firefox 缺陷、948 条 Linux 提权路径。这把\"AI 安全研究员\"从概念验证推到了量产阶段，红队/蓝队的成本结构要被重算。",
+        "commentary": "一边是 AI 几小时扫出近千个提权链，一边是厂商补丁排期排到明年——攻防速度差正在被 AI 拉到荒谬的程度。以后的安全工程师不是写 exploit 的人，而是给 AI 的 exploit 写 PR 的人。",
+        "url": "https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html"
+      },
+      {
+        "title": "OpenSSH \"SSHole\" 漏洞披露数小时内即遭在野利用，蜜罐被拿 root",
+        "source": "Tech News",
+        "summary": "CVE-2026-123158（CVSS 8.1），代号 SSHole，影响无密码账户的 OpenSSH 登录逻辑，攻击者可借此直接登入并拿到 root。披露后数小时内就有攻击者拿蜜罐开刀——从 PoC 到武器化的窗口已经压缩到\"小时级\"。",
+        "commentary": "漏洞代号起得像个段子，利用速度可一点不好笑。还在用\"下周再打补丁\"节奏运维的朋友，这次蜜罐里被 root 的说不定就是你。CVSS 8.1 配小时级在野利用，这组合比任何安全周报标题都刺激。",
+        "url": "https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html"
+      },
+      {
+        "quote": "漏洞不会等你排期，AI 也不会等你学会用 AI——唯一稳赚不赔的复利，是把\"下周再说\"改成\"现在就跑\"。"
+      }
+    ],
+    "candidates": [
+      {
+        "id": "hn:50418176",
+        "title": "KetchUp – Open-source SketchUp alternative built with Rust and WebGPU",
+        "summary": "",
+        "url": "https://ketchup3d.github.io/app/",
+        "source": "Hacker News",
+        "score": 338,
+        "comments": 92
+      },
+      {
+        "id": "hn:50418016",
+        "title": "Nvidia CEO Jensen Huang's letter to staff about affair",
+        "summary": "<a href=\"https:&#x2F;&#x2F;www.axios.com&#x2F;2026&#x2F;11&#x2F;08&#x2F;nvidia-ceo-jensen-huang-affair-email-to-company\" rel=\"nofollow\">https:&#x2F;&#x2F;www.axios.com&#x2F;2026&#x2F;11&#x2F;08&#x2F;nvidia-ceo-jensen-huang-aff...</a>, <a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;Hxn5h\" rel=\"nofollow\">",
+        "url": "https://nvidianews.nvidia.com/news/a-message-to-our-company",
+        "source": "Hacker News",
+        "score": 463,
+        "comments": 499
+      },
+      {
+        "id": "hn:50368481",
+        "title": "Declarative Dragging",
+        "summary": "",
+        "url": "https://declarative-dragging.github.io/",
+        "source": "Hacker News",
+        "score": 442,
+        "comments": 56
+      },
+      {
+        "id": "hn:50419215",
+        "title": "Unlocking any car from X brand in most of the world",
+        "summary": "",
+        "url": "https://shubs.io/unlocking-any-car-from-x-brand-in-most-of-the-world/",
+        "source": "Hacker News",
+        "score": 178,
+        "comments": 64
+      },
+      {
+        "id": "hn:50416158",
+        "title": "Outlook.com is rejecting email from domains without DMARC",
+        "summary": "",
+        "url": "https://mailroute.net/blog/outlook-rejecting-email-without-dmarc",
+        "source": "Hacker News",
+        "score": 325,
+        "comments": 233
+      },
+      {
+        "id": "hn:50416053",
+        "title": "Dux: Free, open-source Wayland desktop shell with file manager and theming",
+        "summary": "",
+        "url": "https://duxlabs.dev/",
+        "source": "Hacker News",
+        "score": 233,
+        "comments": 73
+      },
+      {
+        "id": "hn:50417407",
+        "title": "Ask HN: What are you working on? (November 2026)",
+        "summary": "What are you working on? What have you been curious about lately?",
+        "url": "https://news.ycombinator.com/item?id=50417407",
+        "source": "Hacker News",
+        "score": 176,
+        "comments": 587
+      },
+      {
+        "id": "hn:50420035",
+        "title": "RIP, Harvest",
+        "summary": "",
+        "url": "https://aphyr.com/posts/427-rip-harvest",
+        "source": "Hacker News",
+        "score": 194,
+        "comments": 60
+      },
+      {
+        "id": "lob:62loik",
+        "title": "systemd loves Rust",
+        "summary": "",
+        "url": "https://amutable.com/blog/systemd-loves-rust",
+        "source": "Lobste.rs",
+        "score": 37,
+        "comments": 18,
+        "tags": [
+          "rust",
+          "systemd"
+        ]
+      },
+      {
+        "id": "lob:sh62d1",
+        "title": "I’m not a fan of Deno’s security model (2024)",
+        "summary": "",
+        "url": "https://goldstein.lol/posts/deno-security/",
+        "source": "Lobste.rs",
+        "score": 40,
+        "comments": 15,
+        "tags": [
+          "security"
+        ]
+      },
+      {
+        "id": "lob:jbdtim",
+        "title": "Who wants to crowdsource LLM scans of articles submitted to Lobste.rs?",
+        "summary": "<p>Like many of us who value the human side of the web, I am looking for ways to keep slop at bay. It seems like LLM detection technology works reasonably well nowadays, with Pangram as the main provider. It is expensive, though!</p>\n<p>Assuming pangram scans are trustworthy, and it seems they are, ",
+        "url": "https://lobste.rs/s/jbdtim/who_wants_crowdsource_llm_scans_articles",
+        "source": "Lobste.rs",
+        "score": 22,
+        "comments": 30,
+        "tags": [
+          "meta"
+        ]
+      },
+      {
+        "id": "hn:50418975",
+        "title": "I'm not convinced the AI bubble exists",
+        "summary": "",
+        "url": "https://matteoraso.github.io/im-not-convinced-the-ai-bubble-exists.html#im-not-convinced-the-ai-bubble-exists",
+        "source": "Hacker News",
+        "score": 120,
+        "comments": 155
+      },
+      {
+        "id": "rss:6e7eccb6f9",
+        "title": "Hackers Target OpenSSH SSHole Flaw Within Hours of Disclosure, Gain Root on Honeypot",
+        "summary": "Threat actors are attempting to exploit a recently disclosed security flaw impacting OpenSSH that can enable sign-ins to accounts that have no password set, according to Previdian.\n\nThe vulnerability, tracked as CVE-2026-123158 (CVSS score: 8.1) and codenamed SSHole (or *sshole), impacts Linux syste",
+        "url": "https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html",
+        "source": "Tech RSS",
+        "score": 0
+      },
+      {
+        "id": "hn:50418818",
+        "title": "When a language's creator and its owners strongly disagree [pdf]",
+        "summary": "",
+        "url": "https://isocpp.org/files/papers/P4454R0.pdf",
+        "source": "Hacker News",
+        "score": 99,
+        "comments": 88
+      },
+      {
+        "id": "hn:50418182",
+        "title": "Chimera Vocal Synth",
+        "summary": "",
+        "url": "https://chimera-vocal-synth.vercel.app/",
+        "source": "Hacker News",
+        "score": 151,
+        "comments": 22
+      },
+      {
+        "id": "arxiv:2611.09872v1",
+        "title": "On the Reliability of Majority-Vote Pseudo-Labels in Test-Time Reinforcement Learning",
+        "summary": "Test-time reinforcement learning (TTRL) adapts pretrained language models to unlabeled target-domain data using self-generated pseudo-labels, whose reliability remains poorly understood. We analyze majority-vote supervision for TTRL with online Direct Preference Optimization (DPO) and decompose its ",
+        "url": "https://arxiv.org/abs/2611.09872v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.AI"
+        ],
+        "arxiv_id": "2611.09872v1"
+      },
+      {
+        "id": "arxiv:2611.09868v1",
+        "title": "CodeQuant2: Enhanced Outlier Mitigation and Adaptive Clustering for Low-Precision LRMs",
+        "summary": "Large reasoning models (LRMs) improve task performance by generating longer intermediate reasoning traces, but this substantially increases inference costs and makes low-precision quantization increasingly important. However, aggressively quantized models often perform poorly on reasoning tasks. We ",
+        "url": "https://arxiv.org/abs/2611.09868v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.CL"
+        ],
+        "arxiv_id": "2611.09868v1"
+      },
+      {
+        "id": "arxiv:2611.09863v1",
+        "title": "Flow-Guided Target-Space Alignment via Path Consistency",
+        "summary": "Many multimodal alignment problems require mapping a source modality into a fixed space defined by a target modality, where the target space is not merely an intermediate embedding but is used directly for downstream analysis. In this setting, successful alignment should preserve both the global str",
+        "url": "https://arxiv.org/abs/2611.09863v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.AI",
+          "cs.CV",
+          "cs.LG"
+        ],
+        "arxiv_id": "2611.09863v1"
+      },
+      {
+        "id": "arxiv:2611.09836v1",
+        "title": "Can Agentic Systems Close the Gap in Radiology with Production AI Tools?",
+        "summary": "Radiology AI has developed along two paths: specialized models that perform well on narrow tasks but cover few clinical findings, and generalist models that address a broader range of tasks but remain prone to hallucination and inaccurate measurements. Combining the two through agentic systems offer",
+        "url": "https://arxiv.org/abs/2611.09836v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.AI",
+          "cs.LG"
+        ],
+        "arxiv_id": "2611.09836v1"
+      },
+      {
+        "id": "rss:b64e697845",
+        "title": "OpenAI Launches GPT-6 Cyber After AI Helps Find 81 Firefox Flaws, 948 Linux Exploits",
+        "summary": "OpenAI on Thursday unveiled GPT‑6 Cyber, which it described as a major step forward in security research that brings together stronger cybersecurity capabilities with a step-change improvement in model alignment.\n\nThe new model is \"more capable at finding and fixing vulnerabilities, and far more rel",
+        "url": "https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html",
+        "source": "Tech RSS",
+        "score": 0
+      }
+    ],
+    "ai_curated": true
+  },
+  "fear_greed": {
+    "value": 29,
+    "classification": "Fear",
+    "timestamp": "2026-11-09 00:00:00"
+  }
+}
