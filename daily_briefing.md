@@ -4,26 +4,26 @@
 
 ---
 
-### 1. 📌 Llama-modchip：64GB 内存跑 284B 参数 DeepSeek，不碰 GPU (来源: HackerNews)
-- **核心干货**：有人把 284B 参数的 DeepSeek 模型塞进了 64GB 普通内存里跑，全程不用 GPU。核心思路是通过权重分层调度与量化策略，把"显存不够"这个借口彻底焊死。这意味着大模型的硬件门槛可能被重新定义——消费级设备跑旗舰级模型不再是 PPT 概念。
-- **毒舌/硬核点评**：英伟达看到这条估计要连夜开董事会。当 64GB 内存能跑 284B 模型时，"买卡"这件事从刚需变成了信仰充值。
-- **🔗 传送门**：[点击直达原链接](https://github.com/synchopate/llama-modchip)
+### 1. 📌 Rust + WebGPU 硬刚 SketchUp：KetchUp 开源了 (来源: Hacker News)
+- **核心干货**：一个用 Rust 和 WebGPU 从零重写的 SketchUp 开源替代品，直接在浏览器里跑 3D 建模。老牌 CAD 软件靠授权费吃了几十年，Web 端原生 GPU 加速这条路终于有人认真走通了——不用装客户端、不用买 license，打开网页就能拉模型。
+- **毒舌/硬核点评**：SketchUp 母公司 Trimble 看到这个 HN 338 分的项目，估计一边喝咖啡一边默默给法务部发消息。开源社区的逻辑永远是：你收费，我就重写一个；你重写不动，说明你该被重写了。
+- **🔗 传送门**：[点击直达原链接](https://ketchup3d.github.io/app/)
 
 ---
 
-### 2. 📌 Claude Code 的"别再问了"把密码送上 GitHub 公网，1,122 个文件躺枪 (来源: HackerNews)
-- **核心干货**：Claude Code 的 "Don't Ask Again" 权限选项被曝会在 1,122 个公开 GitHub 文件里明文泄露密码和密钥。这不是 AI 写错代码，是 AI Agent 的权限设计直接把安全底线给"别问了"。当开发效率工具开始替你决定"不用确认"，它也在替你决定"不用保密"。
-- **毒舌/硬核点评**：AI 助手帮你省下的每一次点击确认，都可能在 GitHub 上变成一次公开处刑。便利和安全之间的那行"你确定吗？"，删掉它就是删掉你的密钥。
-- **🔗 传送门**：[点击直达原链接](https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again)
+### 2. 📌 OpenAI 推出 GPT-6 Cyber：AI 挖出 81 个 Firefox 漏洞、948 个 Linux 提权链 (来源: Tech News)
+- **核心干货**：OpenAI 发布专攻安全研究的 GPT-6 Cyber，官方称其在漏洞发现与修复上实现"阶跃式"提升——辅助挖出 81 个 Firefox 缺陷、948 条 Linux 提权路径。这把"AI 安全研究员"从概念验证推到了量产阶段，红队/蓝队的成本结构要被重算。
+- **毒舌/硬核点评**：一边是 AI 几小时扫出近千个提权链，一边是厂商补丁排期排到明年——攻防速度差正在被 AI 拉到荒谬的程度。以后的安全工程师不是写 exploit 的人，而是给 AI 的 exploit 写 PR 的人。
+- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html)
 
 ---
 
-### 3. 📌 OpenAI 的 AI 流水线 30 小时挖出 948 个 Linux 提权漏洞，API 账单 120 万美元 (来源: Tech RSS / HackerNews)
-- **核心干货**：OpenAI 用一套 AI 流水线在 30 小时内分析了 2,308 个候选点，最终验证并修复了 948 个 Linux 本地提权漏洞，API 成本 120 万美元。同期 GPT-6 Cyber 发布，号称还帮 Firefox 揪出 81 个缺陷。这不是"AI 辅助安全"，这是安全研究员这个工种的定价被重新锚定了。
-- **毒舌/硬核点评**：30 小时 948 个洞，人类安全团队看完沉默，开会研究"996 还有没有意义"。120 万美元的 API 账单贵吗？比起一个 0day 在黑市的标价，这简直是批发价。
-- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html)
+### 3. 📌 OpenSSH "SSHole" 漏洞披露数小时内即遭在野利用，蜜罐被拿 root (来源: Tech News)
+- **核心干货**：CVE-2026-123158（CVSS 8.1），代号 SSHole，影响无密码账户的 OpenSSH 登录逻辑，攻击者可借此直接登入并拿到 root。披露后数小时内就有攻击者拿蜜罐开刀——从 PoC 到武器化的窗口已经压缩到"小时级"。
+- **毒舌/硬核点评**：漏洞代号起得像个段子，利用速度可一点不好笑。还在用"下周再打补丁"节奏运维的朋友，这次蜜罐里被 root 的说不定就是你。CVSS 8.1 配小时级在野利用，这组合比任何安全周报标题都刺激。
+- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html)
 
 ---
 
 ### 🗣️ 今日顶男金句
-> 工具替你省下的确认框，终会以另一种方式让你确认代价——安全、效率、成本，从来没有免费的那一个。
+> 漏洞不会等你排期，AI 也不会等你学会用 AI——唯一稳赚不赔的复利，是把"下周再说"改成"现在就跑"。

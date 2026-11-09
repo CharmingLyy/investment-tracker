@@ -1,170 +1,152 @@
 {
   "date": "2026-11-09",
-  "update_time": "2026-11-08 17:44:41",
+  "update_time": "2026-11-09 05:30:24",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-09\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Llama-modchip：64GB 内存跑 284B 参数 DeepSeek，不碰 GPU (来源: HackerNews)\n- **核心干货**：有人把 284B 参数的 DeepSeek 模型塞进了 64GB 普通内存里跑，全程不用 GPU。核心思路是通过权重分层调度与量化策略，把\"显存不够\"这个借口彻底焊死。这意味着大模型的硬件门槛可能被重新定义——消费级设备跑旗舰级模型不再是 PPT 概念。\n- **毒舌/硬核点评**：英伟达看到这条估计要连夜开董事会。当 64GB 内存能跑 284B 模型时，\"买卡\"这件事从刚需变成了信仰充值。\n- **🔗 传送门**：[点击直达原链接](https://github.com/synchopate/llama-modchip)\n\n---\n\n### 2. 📌 Claude Code 的\"别再问了\"把密码送上 GitHub 公网，1,122 个文件躺枪 (来源: HackerNews)\n- **核心干货**：Claude Code 的 \"Don't Ask Again\" 权限选项被曝会在 1,122 个公开 GitHub 文件里明文泄露密码和密钥。这不是 AI 写错代码，是 AI Agent 的权限设计直接把安全底线给\"别问了\"。当开发效率工具开始替你决定\"不用确认\"，它也在替你决定\"不用保密\"。\n- **毒舌/硬核点评**：AI 助手帮你省下的每一次点击确认，都可能在 GitHub 上变成一次公开处刑。便利和安全之间的那行\"你确定吗？\"，删掉它就是删掉你的密钥。\n- **🔗 传送门**：[点击直达原链接](https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again)\n\n---\n\n### 3. 📌 OpenAI 的 AI 流水线 30 小时挖出 948 个 Linux 提权漏洞，API 账单 120 万美元 (来源: Tech RSS / HackerNews)\n- **核心干货**：OpenAI 用一套 AI 流水线在 30 小时内分析了 2,308 个候选点，最终验证并修复了 948 个 Linux 本地提权漏洞，API 成本 120 万美元。同期 GPT-6 Cyber 发布，号称还帮 Firefox 揪出 81 个缺陷。这不是\"AI 辅助安全\"，这是安全研究员这个工种的定价被重新锚定了。\n- **毒舌/硬核点评**：30 小时 948 个洞，人类安全团队看完沉默，开会研究\"996 还有没有意义\"。120 万美元的 API 账单贵吗？比起一个 0day 在黑市的标价，这简直是批发价。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> 工具替你省下的确认框，终会以另一种方式让你确认代价——安全、效率、成本，从来没有免费的那一个。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-09\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Rust + WebGPU 硬刚 SketchUp：KetchUp 开源了 (来源: Hacker News)\n- **核心干货**：一个用 Rust 和 WebGPU 从零重写的 SketchUp 开源替代品，直接在浏览器里跑 3D 建模。老牌 CAD 软件靠授权费吃了几十年，Web 端原生 GPU 加速这条路终于有人认真走通了——不用装客户端、不用买 license，打开网页就能拉模型。\n- **毒舌/硬核点评**：SketchUp 母公司 Trimble 看到这个 HN 338 分的项目，估计一边喝咖啡一边默默给法务部发消息。开源社区的逻辑永远是：你收费，我就重写一个；你重写不动，说明你该被重写了。\n- **🔗 传送门**：[点击直达原链接](https://ketchup3d.github.io/app/)\n\n---\n\n### 2. 📌 OpenAI 推出 GPT-6 Cyber：AI 挖出 81 个 Firefox 漏洞、948 个 Linux 提权链 (来源: Tech News)\n- **核心干货**：OpenAI 发布专攻安全研究的 GPT-6 Cyber，官方称其在漏洞发现与修复上实现\"阶跃式\"提升——辅助挖出 81 个 Firefox 缺陷、948 条 Linux 提权路径。这把\"AI 安全研究员\"从概念验证推到了量产阶段，红队/蓝队的成本结构要被重算。\n- **毒舌/硬核点评**：一边是 AI 几小时扫出近千个提权链，一边是厂商补丁排期排到明年——攻防速度差正在被 AI 拉到荒谬的程度。以后的安全工程师不是写 exploit 的人，而是给 AI 的 exploit 写 PR 的人。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html)\n\n---\n\n### 3. 📌 OpenSSH \"SSHole\" 漏洞披露数小时内即遭在野利用，蜜罐被拿 root (来源: Tech News)\n- **核心干货**：CVE-2026-123158（CVSS 8.1），代号 SSHole，影响无密码账户的 OpenSSH 登录逻辑，攻击者可借此直接登入并拿到 root。披露后数小时内就有攻击者拿蜜罐开刀——从 PoC 到武器化的窗口已经压缩到\"小时级\"。\n- **毒舌/硬核点评**：漏洞代号起得像个段子，利用速度可一点不好笑。还在用\"下周再打补丁\"节奏运维的朋友，这次蜜罐里被 root 的说不定就是你。CVSS 8.1 配小时级在野利用，这组合比任何安全周报标题都刺激。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> 漏洞不会等你排期，AI 也不会等你学会用 AI——唯一稳赚不赔的复利，是把\"下周再说\"改成\"现在就跑\"。",
   "briefing_items": [
     {
-      "title": "Llama-modchip：64GB 内存跑 284B 参数 DeepSeek，不碰 GPU",
-      "source": "HackerNews",
-      "summary": "有人把 284B 参数的 DeepSeek 模型塞进了 64GB 普通内存里跑，全程不用 GPU。核心思路是通过权重分层调度与量化策略，把\"显存不够\"这个借口彻底焊死。这意味着大模型的硬件门槛可能被重新定义——消费级设备跑旗舰级模型不再是 PPT 概念。",
-      "commentary": "英伟达看到这条估计要连夜开董事会。当 64GB 内存能跑 284B 模型时，\"买卡\"这件事从刚需变成了信仰充值。",
-      "url": "https://github.com/synchopate/llama-modchip"
+      "title": "Rust + WebGPU 硬刚 SketchUp：KetchUp 开源了",
+      "source": "Hacker News",
+      "summary": "一个用 Rust 和 WebGPU 从零重写的 SketchUp 开源替代品，直接在浏览器里跑 3D 建模。老牌 CAD 软件靠授权费吃了几十年，Web 端原生 GPU 加速这条路终于有人认真走通了——不用装客户端、不用买 license，打开网页就能拉模型。",
+      "commentary": "SketchUp 母公司 Trimble 看到这个 HN 338 分的项目，估计一边喝咖啡一边默默给法务部发消息。开源社区的逻辑永远是：你收费，我就重写一个；你重写不动，说明你该被重写了。",
+      "url": "https://ketchup3d.github.io/app/"
     },
     {
-      "title": "Claude Code 的\"别再问了\"把密码送上 GitHub 公网，1,122 个文件躺枪",
-      "source": "HackerNews",
-      "summary": "Claude Code 的 \"Don't Ask Again\" 权限选项被曝会在 1,122 个公开 GitHub 文件里明文泄露密码和密钥。这不是 AI 写错代码，是 AI Agent 的权限设计直接把安全底线给\"别问了\"。当开发效率工具开始替你决定\"不用确认\"，它也在替你决定\"不用保密\"。",
-      "commentary": "AI 助手帮你省下的每一次点击确认，都可能在 GitHub 上变成一次公开处刑。便利和安全之间的那行\"你确定吗？\"，删掉它就是删掉你的密钥。",
-      "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again"
+      "title": "OpenAI 推出 GPT-6 Cyber：AI 挖出 81 个 Firefox 漏洞、948 个 Linux 提权链",
+      "source": "Tech News",
+      "summary": "OpenAI 发布专攻安全研究的 GPT-6 Cyber，官方称其在漏洞发现与修复上实现\"阶跃式\"提升——辅助挖出 81 个 Firefox 缺陷、948 条 Linux 提权路径。这把\"AI 安全研究员\"从概念验证推到了量产阶段，红队/蓝队的成本结构要被重算。",
+      "commentary": "一边是 AI 几小时扫出近千个提权链，一边是厂商补丁排期排到明年——攻防速度差正在被 AI 拉到荒谬的程度。以后的安全工程师不是写 exploit 的人，而是给 AI 的 exploit 写 PR 的人。",
+      "url": "https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html"
     },
     {
-      "title": "OpenAI 的 AI 流水线 30 小时挖出 948 个 Linux 提权漏洞，API 账单 120 万美元",
-      "source": "Tech RSS / HackerNews",
-      "summary": "OpenAI 用一套 AI 流水线在 30 小时内分析了 2,308 个候选点，最终验证并修复了 948 个 Linux 本地提权漏洞，API 成本 120 万美元。同期 GPT-6 Cyber 发布，号称还帮 Firefox 揪出 81 个缺陷。这不是\"AI 辅助安全\"，这是安全研究员这个工种的定价被重新锚定了。",
-      "commentary": "30 小时 948 个洞，人类安全团队看完沉默，开会研究\"996 还有没有意义\"。120 万美元的 API 账单贵吗？比起一个 0day 在黑市的标价，这简直是批发价。",
-      "url": "https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html"
+      "title": "OpenSSH \"SSHole\" 漏洞披露数小时内即遭在野利用，蜜罐被拿 root",
+      "source": "Tech News",
+      "summary": "CVE-2026-123158（CVSS 8.1），代号 SSHole，影响无密码账户的 OpenSSH 登录逻辑，攻击者可借此直接登入并拿到 root。披露后数小时内就有攻击者拿蜜罐开刀——从 PoC 到武器化的窗口已经压缩到\"小时级\"。",
+      "commentary": "漏洞代号起得像个段子，利用速度可一点不好笑。还在用\"下周再打补丁\"节奏运维的朋友，这次蜜罐里被 root 的说不定就是你。CVSS 8.1 配小时级在野利用，这组合比任何安全周报标题都刺激。",
+      "url": "https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html"
     },
     {
-      "quote": "工具替你省下的确认框，终会以另一种方式让你确认代价——安全、效率、成本，从来没有免费的那一个。"
+      "quote": "漏洞不会等你排期，AI 也不会等你学会用 AI——唯一稳赚不赔的复利，是把\"下周再说\"改成\"现在就跑\"。"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50411961",
-      "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
+      "id": "hn:50418176",
+      "title": "KetchUp – Open-source SketchUp alternative built with Rust and WebGPU",
       "summary": "",
-      "url": "https://github.com/synchopate/llama-modchip",
+      "url": "https://ketchup3d.github.io/app/",
       "source": "Hacker News",
-      "score": 204,
-      "comments": 62
+      "score": 338,
+      "comments": 92
     },
     {
-      "id": "hn:50407882",
-      "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
-      "summary": "",
-      "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+      "id": "hn:50418016",
+      "title": "Nvidia CEO Jensen Huang's letter to staff about affair",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.axios.com&#x2F;2026&#x2F;11&#x2F;08&#x2F;nvidia-ceo-jensen-huang-affair-email-to-company\" rel=\"nofollow\">https:&#x2F;&#x2F;www.axios.com&#x2F;2026&#x2F;11&#x2F;08&#x2F;nvidia-ceo-jensen-huang-aff...</a>, <a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;Hxn5h\" rel=\"nofollow\">",
+      "url": "https://nvidianews.nvidia.com/news/a-message-to-our-company",
       "source": "Hacker News",
-      "score": 506,
-      "comments": 368
+      "score": 463,
+      "comments": 499
     },
     {
-      "id": "hn:50406670",
-      "title": "What I run on my $10 USD OpenStick homelab",
+      "id": "hn:50368481",
+      "title": "Declarative Dragging",
       "summary": "",
-      "url": "https://blog.bosscher.ch/posts/openstick/",
+      "url": "https://declarative-dragging.github.io/",
       "source": "Hacker News",
-      "score": 702,
-      "comments": 126
+      "score": 442,
+      "comments": 56
     },
     {
-      "id": "hn:50410107",
-      "title": "Goodbye Claude, hello Pi",
+      "id": "hn:50419215",
+      "title": "Unlocking any car from X brand in most of the world",
       "summary": "",
-      "url": "https://caleb.software/posts/claude-to-pi.html",
+      "url": "https://shubs.io/unlocking-any-car-from-x-brand-in-most-of-the-world/",
       "source": "Hacker News",
-      "score": 564,
-      "comments": 352
+      "score": 178,
+      "comments": 64
     },
     {
-      "id": "hn:50412318",
-      "title": "Person of Interest",
+      "id": "hn:50416158",
+      "title": "Outlook.com is rejecting email from domains without DMARC",
       "summary": "",
-      "url": "https://krthr.co/person-of-interest/",
+      "url": "https://mailroute.net/blog/outlook-rejecting-email-without-dmarc",
       "source": "Hacker News",
-      "score": 240,
-      "comments": 157
+      "score": 325,
+      "comments": 233
     },
     {
-      "id": "hn:50411467",
-      "title": "Agent memory needs its OpenTelemetry moment",
+      "id": "hn:50416053",
+      "title": "Dux: Free, open-source Wayland desktop shell with file manager and theming",
       "summary": "",
-      "url": "https://www.lorekit.io/blog/open-agent-memory-format",
+      "url": "https://duxlabs.dev/",
       "source": "Hacker News",
-      "score": 127,
-      "comments": 91
+      "score": 233,
+      "comments": 73
     },
     {
-      "id": "hn:50366902",
-      "title": "Clj.rs – a Clojure dialect implemented in Rust",
-      "summary": "",
-      "url": "https://clj.rs/",
+      "id": "hn:50417407",
+      "title": "Ask HN: What are you working on? (November 2026)",
+      "summary": "What are you working on? What have you been curious about lately?",
+      "url": "https://news.ycombinator.com/item?id=50417407",
       "source": "Hacker News",
-      "score": 125,
-      "comments": 48
+      "score": 176,
+      "comments": 587
     },
     {
-      "id": "lob:ipplhe",
-      "title": "How are you dealing with all the negative side effects of AI on the web?",
-      "summary": "<p>It seems to me that the AI hype killed the web for good, but not for the reasons we immediately associate with it.</p>\n<p>Search engines now rank links full of slop at the top, which ironically make LLM summaries acceptable, not because they are better than what we had before (they are not), but ",
-      "url": "https://lobste.rs/s/ipplhe/how_are_you_dealing_with_all_negative_side",
+      "id": "hn:50420035",
+      "title": "RIP, Harvest",
+      "summary": "",
+      "url": "https://aphyr.com/posts/427-rip-harvest",
+      "source": "Hacker News",
+      "score": 194,
+      "comments": 60
+    },
+    {
+      "id": "lob:62loik",
+      "title": "systemd loves Rust",
+      "summary": "",
+      "url": "https://amutable.com/blog/systemd-loves-rust",
       "source": "Lobste.rs",
-      "score": 85,
-      "comments": 74,
+      "score": 37,
+      "comments": 18,
       "tags": [
-        "ask",
-        "web"
+        "rust",
+        "systemd"
       ]
     },
     {
-      "id": "lob:owsnms",
-      "title": "*sshole, or when are we finally going to get rid of C?",
+      "id": "lob:sh62d1",
+      "title": "I’m not a fan of Deno’s security model (2024)",
       "summary": "",
-      "url": "https://sunshowers.io/posts/sshole/",
+      "url": "https://goldstein.lol/posts/deno-security/",
       "source": "Lobste.rs",
-      "score": 47,
-      "comments": 73,
+      "score": 40,
+      "comments": 15,
       "tags": [
-        "rant"
+        "security"
       ]
     },
     {
-      "id": "hn:50413822",
-      "title": "OpenAI raises $11B at a $1.25T valuation",
+      "id": "lob:jbdtim",
+      "title": "Who wants to crowdsource LLM scans of articles submitted to Lobste.rs?",
+      "summary": "<p>Like many of us who value the human side of the web, I am looking for ways to keep slop at bay. It seems like LLM detection technology works reasonably well nowadays, with Pangram as the main provider. It is expensive, though!</p>\n<p>Assuming pangram scans are trustworthy, and it seems they are, ",
+      "url": "https://lobste.rs/s/jbdtim/who_wants_crowdsource_llm_scans_articles",
+      "source": "Lobste.rs",
+      "score": 22,
+      "comments": 30,
+      "tags": [
+        "meta"
+      ]
+    },
+    {
+      "id": "hn:50418975",
+      "title": "I'm not convinced the AI bubble exists",
       "summary": "",
-      "url": "https://247wallst.com/investing/2026/11/07/openai-just-raised-11-billion-at-a-1-25-trillion-valuation-below-the-1-4-trillion-it-first-sought/",
+      "url": "https://matteoraso.github.io/im-not-convinced-the-ai-bubble-exists.html#im-not-convinced-the-ai-bubble-exists",
       "source": "Hacker News",
-      "score": 136,
-      "comments": 132
-    },
-    {
-      "id": "lob:j63dme",
-      "title": "Meridian — an experimental web browser built on Servo and GPUI",
-      "summary": "",
-      "url": "https://op.tngl.io/meridian/",
-      "source": "Lobste.rs",
-      "score": 57,
-      "comments": 11,
-      "tags": [
-        "browsers",
-        "rust"
-      ]
-    },
-    {
-      "id": "arxiv:2611.08439v1",
-      "title": "Label-Wording Augmentation in a Typed-Decision Encoder: Gains on Unfamiliar Words, Not on Abbreviations or Codes",
-      "summary": "Typed-decision models score options that the caller supplies at request time, so their accuracy depends on label wording that the model's developer does not control. We compare two releases of a 307M-parameter multilingual cross-encoder, Ru-Jev, trained on thirteen Russian-language tasks; the later ",
-      "url": "https://arxiv.org/abs/2611.08439v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2611.08439v1"
-    },
-    {
-      "id": "arxiv:2611.08438v1",
-      "title": "Understanding AI from the Inside: The State of Mechanistic Interpretability for AI Safety",
-      "summary": "Neural networks are likely to be among the most consequential artefacts in human history. As these systems become more capable and autonomous, their potential to cause societal harm also grows, making AI safety one of the defining challenges of our time. Yet we continue to build increasingly powerfu",
-      "url": "https://arxiv.org/abs/2611.08438v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2611.08438v1"
+      "score": 120,
+      "comments": 155
     },
     {
       "id": "rss:6e7eccb6f9",
@@ -175,27 +157,69 @@
       "score": 0
     },
     {
-      "id": "lob:lhovnm",
-      "title": "Dear Open Source Developers: It's OK not to embargo",
+      "id": "hn:50418818",
+      "title": "When a language's creator and its owners strongly disagree [pdf]",
       "summary": "",
-      "url": "https://opensourcesecurity.io/2026/10-embargo/",
-      "source": "Lobste.rs",
-      "score": 28,
-      "comments": 2,
-      "tags": [
-        "security"
-      ]
+      "url": "https://isocpp.org/files/papers/P4454R0.pdf",
+      "source": "Hacker News",
+      "score": 99,
+      "comments": 88
     },
     {
-      "id": "arxiv:2611.08452v1",
-      "title": "ReproBridge: Building Reproducibility into ML Research Artifacts",
-      "summary": "Reproducing machine learning experiments requires reconstructing procedures from information scattered across papers, released code, and supporting artifacts. For coding agents, reproduction success can therefore depend on their ability to fill in missing details, rather than on the released artifac",
-      "url": "https://arxiv.org/abs/2611.08452v1",
+      "id": "hn:50418182",
+      "title": "Chimera Vocal Synth",
+      "summary": "",
+      "url": "https://chimera-vocal-synth.vercel.app/",
+      "source": "Hacker News",
+      "score": 151,
+      "comments": 22
+    },
+    {
+      "id": "arxiv:2611.09872v1",
+      "title": "On the Reliability of Majority-Vote Pseudo-Labels in Test-Time Reinforcement Learning",
+      "summary": "Test-time reinforcement learning (TTRL) adapts pretrained language models to unlabeled target-domain data using self-generated pseudo-labels, whose reliability remains poorly understood. We analyze majority-vote supervision for TTRL with online Direct Preference Optimization (DPO) and decompose its ",
+      "url": "https://arxiv.org/abs/2611.09872v1",
       "source": "ArXiv",
       "categories": [
         "cs.AI"
       ],
-      "arxiv_id": "2611.08452v1"
+      "arxiv_id": "2611.09872v1"
+    },
+    {
+      "id": "arxiv:2611.09868v1",
+      "title": "CodeQuant2: Enhanced Outlier Mitigation and Adaptive Clustering for Low-Precision LRMs",
+      "summary": "Large reasoning models (LRMs) improve task performance by generating longer intermediate reasoning traces, but this substantially increases inference costs and makes low-precision quantization increasingly important. However, aggressively quantized models often perform poorly on reasoning tasks. We ",
+      "url": "https://arxiv.org/abs/2611.09868v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_id": "2611.09868v1"
+    },
+    {
+      "id": "arxiv:2611.09863v1",
+      "title": "Flow-Guided Target-Space Alignment via Path Consistency",
+      "summary": "Many multimodal alignment problems require mapping a source modality into a fixed space defined by a target modality, where the target space is not merely an intermediate embedding but is used directly for downstream analysis. In this setting, successful alignment should preserve both the global str",
+      "url": "https://arxiv.org/abs/2611.09863v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "arxiv_id": "2611.09863v1"
+    },
+    {
+      "id": "arxiv:2611.09836v1",
+      "title": "Can Agentic Systems Close the Gap in Radiology with Production AI Tools?",
+      "summary": "Radiology AI has developed along two paths: specialized models that perform well on narrow tasks but cover few clinical findings, and generalist models that address a broader range of tasks but remain prone to hallucination and inaccurate measurements. Combining the two through agentic systems offer",
+      "url": "https://arxiv.org/abs/2611.09836v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_id": "2611.09836v1"
     },
     {
       "id": "rss:b64e697845",
@@ -204,31 +228,6 @@
       "url": "https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html",
       "source": "Tech RSS",
       "score": 0
-    },
-    {
-      "id": "rss:d17ad1d8c5",
-      "title": "Researchers Bypass ChatGPT Lockdown Mode to Exfiltrate Chats Without User Interaction",
-      "summary": "Cybersecurity researchers have disclosed details of a now-patched vulnerability that could be exploited to bypass Lockdown Mode protections in OpenAI ChatGPT.\n\nLockdown Mode was introduced by the artificial intelligence (AI) company in June 2026 as an optional setting to minimize data exfiltration r",
-      "url": "https://thehackernews.com/2026/11/researchers-bypass-chatgpt-lockdown.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:3e7cc1cdcb",
-      "title": "OpenAI AI Pipeline Generates 948 Linux Root Escalation Exploits in 30-Hour Run",
-      "summary": "OpenAI on Wednesday detailed a pipeline that employed an upcoming cyber-focused artificial intelligence (AI) model to validate and patch 948 local privilege escalation vulnerabilities in Linux for $1.2 million in API costs.\n\n\"Our prototype identified and analyzed 2,308 candidate Linux kernel finding",
-      "url": "https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "hn:50412067",
-      "title": "Writing as a thinking tool",
-      "summary": "",
-      "url": "http://muratbuffalo.blogspot.com/2026/11/writing-as-thinking-tool.html",
-      "source": "Hacker News",
-      "score": 115,
-      "comments": 32
     }
   ],
   "ai_curated": true
