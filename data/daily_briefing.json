@@ -1,52 +1,43 @@
 {
   "date": "2026-11-10",
-  "update_time": "2026-11-09 22:02:01",
+  "update_time": "2026-11-10 06:41:45",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-10\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"\n\n---\n\n### 1. 📌 Claude Fable 5.2 发布，Artificial Analysis 评分 65 创历史新高 (来源: HackerNews)\n- **核心干货**：Anthropic 一口气端出 Fable 5.2 和 Mythos 5.2 两个模型，其中 Fable 5.2 在 Artificial Analysis 榜单上拿到 65 分，刷出该榜单迄今最高纪录。HN 上 751 分、422 条评论的真金白银热度，说明这不只是版本号 +0.2 的凑数更新，而是实打实的推理能力跃迁。\n- **毒舌/硬核点评**：版本号只涨 0.2，榜单分数却敢直接掀桌——Anthropic 现在连\"挤牙膏\"都懒得演了。只是提醒各位：跑分是跑分，等你把它塞进生产环境、发现账单也跟着\"创历史新高\"时，别哭。\n- **🔗 传送门**：[点击直达原链接](https://www.anthropic.com/claude-fable-and-mythos-5-2)\n\n---\n\n### 2. 📌 Terminal2Shell：全平台通杀，瞬间拿到 root shell (来源: Lobste.rs)\n- **核心干货**：一个号称影响\"每一个主流操作系统\"的严重漏洞，攻击者无需复杂利用链即可直接拿到 shell 权限。同一天 OpenSSH 的 SSHole（CVE-2026-123158，CVSS 8.1）已被发现在披露数小时内就遭蜜罐实打实地打穿、拿下 root——今天堪称运维人的\"黑色星期一\"。\n- **毒舌/硬核点评**：上午打补丁，下午就被打穿，这节奏比你家 CI 流水线还快。所有还在用\"密码为空\"当默认配置的服务器，恭喜你们成功把 root 权限做成了公共福利。\n- **🔗 传送门**：[点击直达原链接](https://terminal2shell.com/)\n\n---\n\n### 3. 📌 Google Gemini 把个人 Drive 文件和邮件送进人工标注流水线 (来源: HackerNews)\n- **核心干货**：有开发者拿出证据指控 Gemini 会将用户的个人云盘文件与邮件内容路由给人工标注员处理。相比模型跑分，这才是真正戳中每个人隐私神经的事——你以为的\"私有云\"，可能只是别人的训练语料中转站。\n- **毒舌/硬核点评**：免费 AI 的商业模式终于写清楚了：你出数据，它出模型，标注员出眼睛。下次再点\"同意条款\"前，建议先默念三遍——我不是用户，我是原材料。\n- **🔗 传送门**：[点击直达原链接](https://github.com/thisisme6598/gemini_files/)\n\n---\n\n### 🗣️ 今日顶男金句\n> 跑分可以刷，账单不会骗人；漏洞可以补，习惯补不了。真正的高手，永远在别人晒榜单时先看日志、先改默认密码。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-10\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Terminal2Shell：全平台瞬间提权的\"通用后门\" (来源: Lobste.rs)\n- **核心干货**：一个影响所有主流操作系统的严重漏洞被公开——攻击者可通过终端接口直接获取 root/shell 权限，无需任何用户交互。这不是某个框架的 bug，而是横跨 Windows / macOS / Linux 的架构级设计缺陷，意味着你机器上那块\"安全的终端\"本质上是一扇没上锁的后门。\n- **毒舌/硬核点评**：安全圈又到了年度 KPI 冲刺时刻——各大厂商的\"零信任\"营销 PPT 还没焐热，现实就告诉你：终端才是最大的信任危机。建议各位先去检查下自己的提权日志，别等新闻变成事故通报。\n- **🔗 传送门**：[点击直达原链接](https://terminal2shell.com/)\n\n---\n\n### 2. 📌 CoreWeave 债券收益率破 16%：AI 泡沫的第一声裂响 (来源: HackerNews / CNBC)\n- **核心干货**：AI 算力租赁巨头 CoreWeave 的债券收益率飙升至 16% 以上，市场对其信用风险的定价已接近\"垃圾债\"水平。这背后是 AI 基础设施巨额资本开支与现金流回报之间的巨大缺口——当算力军备竞赛的账单开始到期，高杠杆玩家首当其冲。\n- **毒舌/硬核点评**：16% 的收益率不是\"投资机会\"，是市场用脚投票写下的\"我不信你还得起\"。AI 叙事再性感，也架不住利息按季度结账。各位看客记好：泡沫破裂从来不是\"砰\"的一声，而是债市里一声不吭的收益率曲线。\n- **🔗 传送门**：[点击直达原链接](https://www.cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html)\n\n---\n\n### 3. 📌 E-means：用十分之一 epoch 打赢 k-means 的新聚类算法 (来源: HackerNews / GitHub Pages)\n- **核心干货**：研究者提出 E-means 聚类算法，声称在收敛速度上大幅超越统治了半个多世纪的 k-means——仅需约 1/10 的迭代轮次即可达到同等或更优效果。对于每天要跑海量向量聚类的推荐、检索、RAG 系统而言，这是实打实的算力成本削减。\n- **毒舌/硬核点评**：k-means 自 1957 年出道以来一直是\"够用就行\"的代名词，如今终于有人来踢馆了。不过先别急着换生产环境——论文里的\"outperforming\"和工程上的\"稳定可复现\"之间，通常隔着一整个季度的事故复盘。\n- **🔗 传送门**：[点击直达原链接](https://e-means.github.io/)\n\n---\n\n### 🗣️ 今日顶男金句\n> **\"技术债和房贷最大的区别是：房贷你还完就自由了，技术债你还完会发现地基是别人的。\"**",
   "briefing_items": [
     {
-      "title": "Claude Fable 5.2 发布，Artificial Analysis 评分 65 创历史新高",
-      "source": "HackerNews",
-      "summary": "Anthropic 一口气端出 Fable 5.2 和 Mythos 5.2 两个模型，其中 Fable 5.2 在 Artificial Analysis 榜单上拿到 65 分，刷出该榜单迄今最高纪录。HN 上 751 分、422 条评论的真金白银热度，说明这不只是版本号 +0.2 的凑数更新，而是实打实的推理能力跃迁。",
-      "commentary": "版本号只涨 0.2，榜单分数却敢直接掀桌——Anthropic 现在连\"挤牙膏\"都懒得演了。只是提醒各位：跑分是跑分，等你把它塞进生产环境、发现账单也跟着\"创历史新高\"时，别哭。",
-      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
-    },
-    {
-      "title": "Terminal2Shell：全平台通杀，瞬间拿到 root shell",
+      "title": "Terminal2Shell：全平台瞬间提权的\"通用后门\"",
       "source": "Lobste.rs",
-      "summary": "一个号称影响\"每一个主流操作系统\"的严重漏洞，攻击者无需复杂利用链即可直接拿到 shell 权限。同一天 OpenSSH 的 SSHole（CVE-2026-123158，CVSS 8.1）已被发现在披露数小时内就遭蜜罐实打实地打穿、拿下 root——今天堪称运维人的\"黑色星期一\"。",
-      "commentary": "上午打补丁，下午就被打穿，这节奏比你家 CI 流水线还快。所有还在用\"密码为空\"当默认配置的服务器，恭喜你们成功把 root 权限做成了公共福利。",
+      "summary": "一个影响所有主流操作系统的严重漏洞被公开——攻击者可通过终端接口直接获取 root/shell 权限，无需任何用户交互。这不是某个框架的 bug，而是横跨 Windows / macOS / Linux 的架构级设计缺陷，意味着你机器上那块\"安全的终端\"本质上是一扇没上锁的后门。",
+      "commentary": "安全圈又到了年度 KPI 冲刺时刻——各大厂商的\"零信任\"营销 PPT 还没焐热，现实就告诉你：终端才是最大的信任危机。建议各位先去检查下自己的提权日志，别等新闻变成事故通报。",
       "url": "https://terminal2shell.com/"
     },
     {
-      "title": "Google Gemini 把个人 Drive 文件和邮件送进人工标注流水线",
-      "source": "HackerNews",
-      "summary": "有开发者拿出证据指控 Gemini 会将用户的个人云盘文件与邮件内容路由给人工标注员处理。相比模型跑分，这才是真正戳中每个人隐私神经的事——你以为的\"私有云\"，可能只是别人的训练语料中转站。",
-      "commentary": "免费 AI 的商业模式终于写清楚了：你出数据，它出模型，标注员出眼睛。下次再点\"同意条款\"前，建议先默念三遍——我不是用户，我是原材料。",
-      "url": "https://github.com/thisisme6598/gemini_files/"
+      "title": "CoreWeave 债券收益率破 16%：AI 泡沫的第一声裂响",
+      "source": "HackerNews / CNBC",
+      "summary": "AI 算力租赁巨头 CoreWeave 的债券收益率飙升至 16% 以上，市场对其信用风险的定价已接近\"垃圾债\"水平。这背后是 AI 基础设施巨额资本开支与现金流回报之间的巨大缺口——当算力军备竞赛的账单开始到期，高杠杆玩家首当其冲。",
+      "commentary": "16% 的收益率不是\"投资机会\"，是市场用脚投票写下的\"我不信你还得起\"。AI 叙事再性感，也架不住利息按季度结账。各位看客记好：泡沫破裂从来不是\"砰\"的一声，而是债市里一声不吭的收益率曲线。",
+      "url": "https://www.cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html"
     },
     {
-      "quote": "跑分可以刷，账单不会骗人；漏洞可以补，习惯补不了。真正的高手，永远在别人晒榜单时先看日志、先改默认密码。"
+      "title": "E-means：用十分之一 epoch 打赢 k-means 的新聚类算法",
+      "source": "HackerNews / GitHub Pages",
+      "summary": "研究者提出 E-means 聚类算法，声称在收敛速度上大幅超越统治了半个多世纪的 k-means——仅需约 1/10 的迭代轮次即可达到同等或更优效果。对于每天要跑海量向量聚类的推荐、检索、RAG 系统而言，这是实打实的算力成本削减。",
+      "commentary": "k-means 自 1957 年出道以来一直是\"够用就行\"的代名词，如今终于有人来踢馆了。不过先别急着换生产环境——论文里的\"outperforming\"和工程上的\"稳定可复现\"之间，通常隔着一整个季度的事故复盘。",
+      "url": "https://e-means.github.io/"
+    },
+    {
+      "quote": "**\"技术债和房贷最大的区别是：房贷你还完就自由了，技术债你还完会发现地基是别人的。\"**"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50429906",
+      "id": "hn:50429068",
       "title": "Claude Fable 5.2 and Mythos 5.2",
       "summary": "",
       "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
       "source": "Hacker News",
-      "score": 751,
-      "comments": 422
-    },
-    {
-      "id": "hn:50426175",
-      "title": "Magenta solar panels may be agrivoltaics' cleverest trick yet",
-      "summary": "",
-      "url": "https://www.anthropocenemagazine.org/2026/10/magenta-solar-panels-may-be-agrivoltaics-cleverest-trick-yet/",
-      "source": "Hacker News",
-      "score": 223,
-      "comments": 128
+      "score": 442,
+      "comments": 733
     },
     {
       "id": "lob:vghqe8",
@@ -54,21 +45,12 @@
       "summary": "",
       "url": "https://terminal2shell.com/",
       "source": "Lobste.rs",
-      "score": 53,
-      "comments": 15,
+      "score": 92,
+      "comments": 26,
       "tags": [
         "satire",
         "security"
       ]
-    },
-    {
-      "id": "hn:50429024",
-      "title": "Our Smallest, Most Efficient Model: Muse Ember",
-      "summary": "",
-      "url": "https://research.meta.ai/blog/muse-ember",
-      "source": "Hacker News",
-      "score": 186,
-      "comments": 76
     },
     {
       "id": "hn:50431058",
@@ -76,8 +58,8 @@
       "summary": "",
       "url": "https://postalpro.usps.com/zcb",
       "source": "Hacker News",
-      "score": 237,
-      "comments": 116
+      "score": 581,
+      "comments": 291
     },
     {
       "id": "hn:50427362",
@@ -85,8 +67,26 @@
       "summary": "",
       "url": "https://www.payments.ca/canada-launches-real-time-rail-bringing-247-payment-infrastructure-national-economy",
       "source": "Hacker News",
-      "score": 417,
-      "comments": 227
+      "score": 511,
+      "comments": 279
+    },
+    {
+      "id": "hn:50424581",
+      "title": "Foldable Flight: The Best Paper Airplanes",
+      "summary": "",
+      "url": "https://www.foldableflight.com",
+      "source": "Hacker News",
+      "score": 940,
+      "comments": 145
+    },
+    {
+      "id": "hn:50426175",
+      "title": "Semi-transparent, colored cadmium telluride photovoltaic panels in agrivoltaics",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.cell.com&#x2F;cell-reports-physical-science&#x2F;fulltext&#x2F;S2666-3864(26)00461-3\" rel=\"nofollow\">https:&#x2F;&#x2F;www.cell.com&#x2F;cell-reports-physical-science&#x2F;fulltext&#x2F;...</a>",
+      "url": "https://www.anthropocenemagazine.org/2026/10/magenta-solar-panels-may-be-agrivoltaics-cleverest-trick-yet/",
+      "source": "Hacker News",
+      "score": 298,
+      "comments": 196
     },
     {
       "id": "lob:kbrpx3",
@@ -94,21 +94,12 @@
       "summary": "",
       "url": "https://shubs.io/unlocking-any-car-from-x-brand-in-most-of-the-world/",
       "source": "Lobste.rs",
-      "score": 74,
-      "comments": 25,
+      "score": 81,
+      "comments": 27,
       "tags": [
         "reversing",
         "security"
       ]
-    },
-    {
-      "id": "hn:50424581",
-      "title": "Fold Epic Paper Airplanes",
-      "summary": "",
-      "url": "https://www.foldableflight.com",
-      "source": "Hacker News",
-      "score": 743,
-      "comments": 128
     },
     {
       "id": "lob:vlagyq",
@@ -116,12 +107,21 @@
       "summary": "",
       "url": "https://isocpp.org/files/papers/P4454R0.pdf",
       "source": "Lobste.rs",
-      "score": 52,
-      "comments": 16,
+      "score": 59,
+      "comments": 20,
       "tags": [
         "c++",
         "pdf"
       ]
+    },
+    {
+      "id": "hn:50429734",
+      "title": "E-means: Outperforming k-means in one-tenth the epochs",
+      "summary": "",
+      "url": "https://e-means.github.io/",
+      "source": "Hacker News",
+      "score": 355,
+      "comments": 31
     },
     {
       "id": "lob:ezjewj",
@@ -129,51 +129,62 @@
       "summary": "",
       "url": "https://www.wezm.net/v2/posts/2026/distro-energy-use/",
       "source": "Lobste.rs",
-      "score": 82,
-      "comments": 13,
+      "score": 90,
+      "comments": 16,
       "tags": [
         "linux"
       ]
     },
     {
-      "id": "hn:50428907",
-      "title": "Show HN: Every satellite that passed over any place this week, and its photos",
-      "summary": "hey HN, i built this because i wanted to know what had actually photographed my street.<p>type in any place and it finds every satellite that passed over it in the last 7 days (SGP4 on the CelesTrak catalog, runs in your browser in about half a second), then pulls the real Sentinel-2 &#x2F; Landsat ",
-      "url": "https://www.watched.earth",
-      "source": "Hacker News",
-      "score": 142,
-      "comments": 30
-    },
-    {
-      "id": "hn:50429734",
-      "title": "E-means: 10x faster k-means at equal loss",
+      "id": "lob:jxigk6",
+      "title": "Let’s Talk About Why all This OT Stuff is Connected",
       "summary": "",
-      "url": "https://e-means.github.io/",
-      "source": "Hacker News",
-      "score": 165,
-      "comments": 11
-    },
-    {
-      "id": "lob:urg4yu",
-      "title": "Unattended reboots with encrypted disks",
-      "summary": "",
-      "url": "https://jmmv.dev/2026/11/zkeys-intro.html",
+      "url": "https://tisiphone.net/2026/11/08/lets-talk-about-why-all-this-ot-stuff-is-connected/",
       "source": "Lobste.rs",
-      "score": 30,
-      "comments": 24,
+      "score": 42,
+      "comments": 22,
       "tags": [
-        "freebsd",
         "security"
       ]
     },
     {
-      "id": "hn:50431144",
-      "title": "Claude Fable 5.2 Scores 65 on Artificial Analysis, Highest So Far",
+      "id": "lob:ynik5s",
+      "title": "Microsoft are rejecting your mail",
       "summary": "",
-      "url": "https://artificialanalysis.ai/models/claude-fable-5-2",
+      "url": "https://www.mythic-beasts.com/blog/2026/11/09/microsoft-are-rejecting-your-mail/",
+      "source": "Lobste.rs",
+      "score": 47,
+      "comments": 7,
+      "tags": [
+        "email"
+      ]
+    },
+    {
+      "id": "hn:50433541",
+      "title": "Exact – a new cross platform UI framework",
+      "summary": "",
+      "url": "https://github.com/expo/exact",
       "source": "Hacker News",
-      "score": 116,
-      "comments": 64
+      "score": 103,
+      "comments": 58
+    },
+    {
+      "id": "hn:50429430",
+      "title": "The first 300-millimeter power silicon carbide (SiC) wafer",
+      "summary": "",
+      "url": "https://www.infineon.com/press-release/2026/infpr202611-028",
+      "source": "Hacker News",
+      "score": 125,
+      "comments": 66
+    },
+    {
+      "id": "hn:50434310",
+      "title": "Locating the source of a mysterious beep",
+      "summary": "",
+      "url": "https://simonwillison.net/2026/Nov/9/mysterious-beeps/",
+      "source": "Hacker News",
+      "score": 104,
+      "comments": 54
     },
     {
       "id": "rss:6e7eccb6f9",
@@ -184,56 +195,42 @@
       "score": 0
     },
     {
-      "id": "lob:txkq8s",
-      "title": "Horrible public key tricks",
+      "id": "lob:eeclwg",
+      "title": "Sure mate, buy me a bloody coffee",
       "summary": "",
-      "url": "https://maurycyz.com/projects/badcert/",
+      "url": "https://peateasea.de/sure-mate-buy-me-a-bloody-coffee/",
       "source": "Lobste.rs",
-      "score": 63,
-      "comments": 8,
+      "score": 42,
+      "comments": 4,
       "tags": [
-        "cryptography"
+        "culture"
       ]
     },
     {
-      "id": "hn:50429426",
-      "title": "Google Gemini routes personal Drive files and emails to human annotators",
+      "id": "hn:50435660",
+      "title": "CoreWeave bond yield tops 16% as AI credit stress rises",
       "summary": "",
-      "url": "https://github.com/thisisme6598/gemini_files/",
+      "url": "https://www.cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html",
       "source": "Hacker News",
-      "score": 141,
-      "comments": 24
+      "score": 98,
+      "comments": 42
     },
     {
-      "id": "hn:50430621",
-      "title": "CUI – Native UI components for C",
+      "id": "hn:50434264",
+      "title": "Horible public key tricks",
       "summary": "",
-      "url": "https://yappologistic.github.io/CUI/",
+      "url": "https://maurycyz.com/projects/badcert/",
       "source": "Hacker News",
-      "score": 85,
-      "comments": 52
+      "score": 112,
+      "comments": 38
     },
     {
-      "id": "arxiv:2611.09872v1",
-      "title": "On the Reliability of Majority-Vote Pseudo-Labels in Test-Time Reinforcement Learning",
-      "summary": "Test-time reinforcement learning (TTRL) adapts pretrained language models to unlabeled target-domain data using self-generated pseudo-labels, whose reliability remains poorly understood. We analyze majority-vote supervision for TTRL with online Direct Preference Optimization (DPO) and decompose its ",
-      "url": "https://arxiv.org/abs/2611.09872v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI"
-      ],
-      "arxiv_id": "2611.09872v1"
-    },
-    {
-      "id": "arxiv:2611.09868v1",
-      "title": "CodeQuant2: Enhanced Outlier Mitigation and Adaptive Clustering for Low-Precision LRMs",
-      "summary": "Large reasoning models (LRMs) improve task performance by generating longer intermediate reasoning traces, but this substantially increases inference costs and makes low-precision quantization increasingly important. However, aggressively quantized models often perform poorly on reasoning tasks. We ",
-      "url": "https://arxiv.org/abs/2611.09868v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL"
-      ],
-      "arxiv_id": "2611.09868v1"
+      "id": "rss:352177198c",
+      "title": "CISA Flags SonicWall SonicOS MFA Bypass Flaw Amid Reports of Possible Exploitation",
+      "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has added a high-severity vulnerability impacting SonicWall SonicOS to its Known Exploited Vulnerabilities (KEV) catalog, following reports that it said may have been exploited in real-world attacks.\n\nThe vulnerability, tracked as CVE-",
+      "url": "https://thehackernews.com/2026/11/cisa-flags-sonicwall-sonicos-mfa-bypass.html",
+      "source": "Tech RSS",
+      "score": 0
     }
   ],
   "ai_curated": true
