@@ -1,151 +1,61 @@
 {
-  "date": "2026-11-10",
-  "update_time": "2026-11-10 06:41:45",
+  "date": "2026-11-11",
+  "update_time": "2026-11-10 19:26:31",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-10\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Terminal2Shell：全平台瞬间提权的\"通用后门\" (来源: Lobste.rs)\n- **核心干货**：一个影响所有主流操作系统的严重漏洞被公开——攻击者可通过终端接口直接获取 root/shell 权限，无需任何用户交互。这不是某个框架的 bug，而是横跨 Windows / macOS / Linux 的架构级设计缺陷，意味着你机器上那块\"安全的终端\"本质上是一扇没上锁的后门。\n- **毒舌/硬核点评**：安全圈又到了年度 KPI 冲刺时刻——各大厂商的\"零信任\"营销 PPT 还没焐热，现实就告诉你：终端才是最大的信任危机。建议各位先去检查下自己的提权日志，别等新闻变成事故通报。\n- **🔗 传送门**：[点击直达原链接](https://terminal2shell.com/)\n\n---\n\n### 2. 📌 CoreWeave 债券收益率破 16%：AI 泡沫的第一声裂响 (来源: HackerNews / CNBC)\n- **核心干货**：AI 算力租赁巨头 CoreWeave 的债券收益率飙升至 16% 以上，市场对其信用风险的定价已接近\"垃圾债\"水平。这背后是 AI 基础设施巨额资本开支与现金流回报之间的巨大缺口——当算力军备竞赛的账单开始到期，高杠杆玩家首当其冲。\n- **毒舌/硬核点评**：16% 的收益率不是\"投资机会\"，是市场用脚投票写下的\"我不信你还得起\"。AI 叙事再性感，也架不住利息按季度结账。各位看客记好：泡沫破裂从来不是\"砰\"的一声，而是债市里一声不吭的收益率曲线。\n- **🔗 传送门**：[点击直达原链接](https://www.cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html)\n\n---\n\n### 3. 📌 E-means：用十分之一 epoch 打赢 k-means 的新聚类算法 (来源: HackerNews / GitHub Pages)\n- **核心干货**：研究者提出 E-means 聚类算法，声称在收敛速度上大幅超越统治了半个多世纪的 k-means——仅需约 1/10 的迭代轮次即可达到同等或更优效果。对于每天要跑海量向量聚类的推荐、检索、RAG 系统而言，这是实打实的算力成本削减。\n- **毒舌/硬核点评**：k-means 自 1957 年出道以来一直是\"够用就行\"的代名词，如今终于有人来踢馆了。不过先别急着换生产环境——论文里的\"outperforming\"和工程上的\"稳定可复现\"之间，通常隔着一整个季度的事故复盘。\n- **🔗 传送门**：[点击直达原链接](https://e-means.github.io/)\n\n---\n\n### 🗣️ 今日顶男金句\n> **\"技术债和房贷最大的区别是：房贷你还完就自由了，技术债你还完会发现地基是别人的。\"**",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-11\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 AlphaProof Code (来源: HackerNews / DeepMind)\n- **核心干货**：DeepMind 把当年在 IMO 上拿银牌的 AlphaProof 从\"数学证明器\"改装成了\"代码生成器\"。核心是把形式化推理的严谨性嫁接到代码合成上，试图解决大模型写代码\"看着对、跑起来崩\"的老毛病——用可验证的证明链条替代概率式瞎猜。\n- **毒舌/硬核点评**：终于有人意识到，让 LLM 写代码不该是\"抽卡求好运\"，而是\"推导求必然\"。不过先别急着欢呼，等它能把屎山遗留代码重构对了再吹。\n- **🔗 传送门**：[点击直达原链接](https://deepmind.google/blog/introducing-alphaproof-code/)\n\n---\n\n### 2. 📌 Amazon 用 Strands Decider 替换 Sonnet 4.6，省下数百万美元 (来源: HackerNews)\n- **核心干货**：亚马逊把内部大量调用 Claude Sonnet 4.6 的活儿，换成了自家 Strands 框架里的 Decider 模块做路由/决策，据称省了数百万美元。本质是\"不是所有任务都配得上顶级大模型\"——用小模型+智能调度分层处理，把贵的算力花在刀刃上。\n- **毒舌/硬核点评**：这才是企业级 AI 的正确打开方式：别拿法拉利送外卖。省钱的真谛从来不是买更便宜的模型，而是搞清楚哪些活儿根本不需要模型。\n- **🔗 传送门**：[点击直达原链接](https://strandsagents.com/blog/amazon-saves-millions-replacing-sonnet-with-strands-decider/)\n\n---\n\n### 3. 📌 Blender 5.3 发布，原生支持 Gaussian Splatting (来源: HackerNews)\n- **核心干货**：开源 3D 神器 Blender 5.3 正式原生集成 Gaussian Splatting（高斯泼溅）。这意味着从照片/视频重建的高保真 3D 场景，终于能直接进主流 3D 工作流里编辑渲染，而不是困在独立查看器里当花瓶。对数字孪生、影视预演、游戏资产管线是实打实的生产力升级。\n- **毒舌/硬核点评**：NeRF 派还没吵完，Gaussian Splat 已经把\"照片变 3D\"卷成了白菜价，现在 Blender 直接把它焊进主流程。那些还在卖天价 3D 扫描服务的公司，该清一清库存了。\n- **🔗 传送门**：[点击直达原链接](https://www.blender.org/download/releases/5-3/)\n\n---\n\n### 🗣️ 今日顶男金句\n> *\"把顶级大模型当万能锤子的人，最后都在为每一颗钉子付溢价；真正的工程师，是先分清哪些是钉子、哪些是螺丝、哪些根本不用敲。\"*",
   "briefing_items": [
     {
-      "title": "Terminal2Shell：全平台瞬间提权的\"通用后门\"",
-      "source": "Lobste.rs",
-      "summary": "一个影响所有主流操作系统的严重漏洞被公开——攻击者可通过终端接口直接获取 root/shell 权限，无需任何用户交互。这不是某个框架的 bug，而是横跨 Windows / macOS / Linux 的架构级设计缺陷，意味着你机器上那块\"安全的终端\"本质上是一扇没上锁的后门。",
-      "commentary": "安全圈又到了年度 KPI 冲刺时刻——各大厂商的\"零信任\"营销 PPT 还没焐热，现实就告诉你：终端才是最大的信任危机。建议各位先去检查下自己的提权日志，别等新闻变成事故通报。",
-      "url": "https://terminal2shell.com/"
+      "title": "AlphaProof Code",
+      "source": "HackerNews / DeepMind",
+      "summary": "DeepMind 把当年在 IMO 上拿银牌的 AlphaProof 从\"数学证明器\"改装成了\"代码生成器\"。核心是把形式化推理的严谨性嫁接到代码合成上，试图解决大模型写代码\"看着对、跑起来崩\"的老毛病——用可验证的证明链条替代概率式瞎猜。",
+      "commentary": "终于有人意识到，让 LLM 写代码不该是\"抽卡求好运\"，而是\"推导求必然\"。不过先别急着欢呼，等它能把屎山遗留代码重构对了再吹。",
+      "url": "https://deepmind.google/blog/introducing-alphaproof-code/"
     },
     {
-      "title": "CoreWeave 债券收益率破 16%：AI 泡沫的第一声裂响",
-      "source": "HackerNews / CNBC",
-      "summary": "AI 算力租赁巨头 CoreWeave 的债券收益率飙升至 16% 以上，市场对其信用风险的定价已接近\"垃圾债\"水平。这背后是 AI 基础设施巨额资本开支与现金流回报之间的巨大缺口——当算力军备竞赛的账单开始到期，高杠杆玩家首当其冲。",
-      "commentary": "16% 的收益率不是\"投资机会\"，是市场用脚投票写下的\"我不信你还得起\"。AI 叙事再性感，也架不住利息按季度结账。各位看客记好：泡沫破裂从来不是\"砰\"的一声，而是债市里一声不吭的收益率曲线。",
-      "url": "https://www.cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html"
+      "title": "Amazon 用 Strands Decider 替换 Sonnet 4.6，省下数百万美元",
+      "source": "HackerNews",
+      "summary": "亚马逊把内部大量调用 Claude Sonnet 4.6 的活儿，换成了自家 Strands 框架里的 Decider 模块做路由/决策，据称省了数百万美元。本质是\"不是所有任务都配得上顶级大模型\"——用小模型+智能调度分层处理，把贵的算力花在刀刃上。",
+      "commentary": "这才是企业级 AI 的正确打开方式：别拿法拉利送外卖。省钱的真谛从来不是买更便宜的模型，而是搞清楚哪些活儿根本不需要模型。",
+      "url": "https://strandsagents.com/blog/amazon-saves-millions-replacing-sonnet-with-strands-decider/"
     },
     {
-      "title": "E-means：用十分之一 epoch 打赢 k-means 的新聚类算法",
-      "source": "HackerNews / GitHub Pages",
-      "summary": "研究者提出 E-means 聚类算法，声称在收敛速度上大幅超越统治了半个多世纪的 k-means——仅需约 1/10 的迭代轮次即可达到同等或更优效果。对于每天要跑海量向量聚类的推荐、检索、RAG 系统而言，这是实打实的算力成本削减。",
-      "commentary": "k-means 自 1957 年出道以来一直是\"够用就行\"的代名词，如今终于有人来踢馆了。不过先别急着换生产环境——论文里的\"outperforming\"和工程上的\"稳定可复现\"之间，通常隔着一整个季度的事故复盘。",
-      "url": "https://e-means.github.io/"
+      "title": "Blender 5.3 发布，原生支持 Gaussian Splatting",
+      "source": "HackerNews",
+      "summary": "开源 3D 神器 Blender 5.3 正式原生集成 Gaussian Splatting（高斯泼溅）。这意味着从照片/视频重建的高保真 3D 场景，终于能直接进主流 3D 工作流里编辑渲染，而不是困在独立查看器里当花瓶。对数字孪生、影视预演、游戏资产管线是实打实的生产力升级。",
+      "commentary": "NeRF 派还没吵完，Gaussian Splat 已经把\"照片变 3D\"卷成了白菜价，现在 Blender 直接把它焊进主流程。那些还在卖天价 3D 扫描服务的公司，该清一清库存了。",
+      "url": "https://www.blender.org/download/releases/5-3/"
     },
     {
-      "quote": "**\"技术债和房贷最大的区别是：房贷你还完就自由了，技术债你还完会发现地基是别人的。\"**"
+      "quote": "*\"把顶级大模型当万能锤子的人，最后都在为每一颗钉子付溢价；真正的工程师，是先分清哪些是钉子、哪些是螺丝、哪些根本不用敲。\"*"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50429068",
-      "title": "Claude Fable 5.2 and Mythos 5.2",
+      "id": "hn:50442426",
+      "title": "Blender 5.3 released with Gaussian Splat support",
       "summary": "",
-      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "url": "https://www.blender.org/download/releases/5-3/",
       "source": "Hacker News",
-      "score": 442,
-      "comments": 733
+      "score": 290,
+      "comments": 39
     },
     {
-      "id": "lob:vghqe8",
-      "title": "Terminal2Shell: Critical flaw grants instant shell access on every major OS",
+      "id": "hn:50441707",
+      "title": "Smart home devices should work without the internet",
       "summary": "",
-      "url": "https://terminal2shell.com/",
-      "source": "Lobste.rs",
-      "score": 92,
-      "comments": 26,
-      "tags": [
-        "satire",
-        "security"
-      ]
-    },
-    {
-      "id": "hn:50431058",
-      "title": "USPS now offers official ZIP Code boundary polygons",
-      "summary": "",
-      "url": "https://postalpro.usps.com/zcb",
+      "url": "https://docodethatmatters.com/home-automation-overnight-success/",
       "source": "Hacker News",
-      "score": 581,
-      "comments": 291
+      "score": 287,
+      "comments": 125
     },
     {
-      "id": "hn:50427362",
-      "title": "Payments Canada announces launch of Canada's Real-Time Rail (RTR) payment system",
+      "id": "hn:50436640",
+      "title": "Amazon saves millions by replacing Sonnet 4.6 with Strands Decider",
       "summary": "",
-      "url": "https://www.payments.ca/canada-launches-real-time-rail-bringing-247-payment-infrastructure-national-economy",
+      "url": "https://strandsagents.com/blog/amazon-saves-millions-replacing-sonnet-with-strands-decider/",
       "source": "Hacker News",
-      "score": 511,
-      "comments": 279
-    },
-    {
-      "id": "hn:50424581",
-      "title": "Foldable Flight: The Best Paper Airplanes",
-      "summary": "",
-      "url": "https://www.foldableflight.com",
-      "source": "Hacker News",
-      "score": 940,
-      "comments": 145
-    },
-    {
-      "id": "hn:50426175",
-      "title": "Semi-transparent, colored cadmium telluride photovoltaic panels in agrivoltaics",
-      "summary": "<a href=\"https:&#x2F;&#x2F;www.cell.com&#x2F;cell-reports-physical-science&#x2F;fulltext&#x2F;S2666-3864(26)00461-3\" rel=\"nofollow\">https:&#x2F;&#x2F;www.cell.com&#x2F;cell-reports-physical-science&#x2F;fulltext&#x2F;...</a>",
-      "url": "https://www.anthropocenemagazine.org/2026/10/magenta-solar-panels-may-be-agrivoltaics-cleverest-trick-yet/",
-      "source": "Hacker News",
-      "score": 298,
-      "comments": 196
-    },
-    {
-      "id": "lob:kbrpx3",
-      "title": "unlocking any car from X brand in most of the world",
-      "summary": "",
-      "url": "https://shubs.io/unlocking-any-car-from-x-brand-in-most-of-the-world/",
-      "source": "Lobste.rs",
-      "score": 81,
-      "comments": 27,
-      "tags": [
-        "reversing",
-        "security"
-      ]
-    },
-    {
-      "id": "lob:vlagyq",
-      "title": "Herb Sutter: When a language’s creator and its owners strongly disagree: C++26 post-DIS, historical experience, and paths forward",
-      "summary": "",
-      "url": "https://isocpp.org/files/papers/P4454R0.pdf",
-      "source": "Lobste.rs",
-      "score": 59,
-      "comments": 20,
-      "tags": [
-        "c++",
-        "pdf"
-      ]
-    },
-    {
-      "id": "hn:50429734",
-      "title": "E-means: Outperforming k-means in one-tenth the epochs",
-      "summary": "",
-      "url": "https://e-means.github.io/",
-      "source": "Hacker News",
-      "score": 355,
-      "comments": 31
-    },
-    {
-      "id": "lob:ezjewj",
-      "title": "How Much Energy Does Building Distro Packages Use",
-      "summary": "",
-      "url": "https://www.wezm.net/v2/posts/2026/distro-energy-use/",
-      "source": "Lobste.rs",
-      "score": 90,
-      "comments": 16,
-      "tags": [
-        "linux"
-      ]
-    },
-    {
-      "id": "lob:jxigk6",
-      "title": "Let’s Talk About Why all This OT Stuff is Connected",
-      "summary": "",
-      "url": "https://tisiphone.net/2026/11/08/lets-talk-about-why-all-this-ot-stuff-is-connected/",
-      "source": "Lobste.rs",
-      "score": 42,
-      "comments": 22,
-      "tags": [
-        "security"
-      ]
+      "score": 642,
+      "comments": 223
     },
     {
       "id": "lob:ynik5s",
@@ -153,84 +63,174 @@
       "summary": "",
       "url": "https://www.mythic-beasts.com/blog/2026/11/09/microsoft-are-rejecting-your-mail/",
       "source": "Lobste.rs",
-      "score": 47,
-      "comments": 7,
+      "score": 72,
+      "comments": 21,
       "tags": [
         "email"
       ]
     },
     {
-      "id": "hn:50433541",
-      "title": "Exact – a new cross platform UI framework",
+      "id": "hn:50442736",
+      "title": ".name Grandfathered",
       "summary": "",
-      "url": "https://github.com/expo/exact",
+      "url": "https://neil.fraser.name/news/2026/11/10/",
       "source": "Hacker News",
-      "score": 103,
-      "comments": 58
+      "score": 365,
+      "comments": 63
     },
     {
-      "id": "hn:50429430",
-      "title": "The first 300-millimeter power silicon carbide (SiC) wafer",
+      "id": "hn:50439193",
+      "title": "AlphaProof Code",
       "summary": "",
-      "url": "https://www.infineon.com/press-release/2026/infpr202611-028",
+      "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
       "source": "Hacker News",
-      "score": 125,
-      "comments": 66
+      "score": 489,
+      "comments": 159
     },
     {
-      "id": "hn:50434310",
-      "title": "Locating the source of a mysterious beep",
+      "id": "arxiv:2611.12872v1",
+      "title": "HiVe-Mem: Interleaving Horizontal Memory Expansion and Vertical Evidence Composition for Multimodal Agents",
+      "summary": "As multimodal agents accumulate increasingly long interaction histories, effectively retrieving and utilizing past information becomes critical for long-term interaction. Existing memory systems typically rely on semantic retrieval over compressed memories and expose predefined representations, whic",
+      "url": "https://arxiv.org/abs/2611.12872v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_id": "2611.12872v1"
+    },
+    {
+      "id": "hn:50439695",
+      "title": "Ableton Live 13",
       "summary": "",
-      "url": "https://simonwillison.net/2026/Nov/9/mysterious-beeps/",
+      "url": "https://www.ableton.com/en/live/",
       "source": "Hacker News",
-      "score": 104,
-      "comments": 54
+      "score": 193,
+      "comments": 231
     },
     {
-      "id": "rss:6e7eccb6f9",
-      "title": "Hackers Target OpenSSH SSHole Flaw Within Hours of Disclosure, Gain Root on Honeypot",
-      "summary": "Threat actors are attempting to exploit a recently disclosed security flaw impacting OpenSSH that can enable sign-ins to accounts that have no password set, according to Previdian.\n\nThe vulnerability, tracked as CVE-2026-123158 (CVSS score: 8.1) and codenamed SSHole (or *sshole), impacts Linux syste",
-      "url": "https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "lob:eeclwg",
-      "title": "Sure mate, buy me a bloody coffee",
+      "id": "lob:ezjewj",
+      "title": "How Much Energy Does Building Distro Packages Use",
       "summary": "",
-      "url": "https://peateasea.de/sure-mate-buy-me-a-bloody-coffee/",
+      "url": "https://www.wezm.net/v2/posts/2026/distro-energy-use/",
       "source": "Lobste.rs",
-      "score": 42,
-      "comments": 4,
+      "score": 97,
+      "comments": 17,
       "tags": [
-        "culture"
+        "linux"
       ]
     },
     {
-      "id": "hn:50435660",
-      "title": "CoreWeave bond yield tops 16% as AI credit stress rises",
-      "summary": "",
-      "url": "https://www.cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html",
-      "source": "Hacker News",
-      "score": 98,
-      "comments": 42
-    },
-    {
-      "id": "hn:50434264",
-      "title": "Horible public key tricks",
+      "id": "lob:txkq8s",
+      "title": "Horrible public key tricks",
       "summary": "",
       "url": "https://maurycyz.com/projects/badcert/",
-      "source": "Hacker News",
-      "score": 112,
-      "comments": 38
+      "source": "Lobste.rs",
+      "score": 111,
+      "comments": 12,
+      "tags": [
+        "cryptography"
+      ]
     },
     {
-      "id": "rss:352177198c",
-      "title": "CISA Flags SonicWall SonicOS MFA Bypass Flaw Amid Reports of Possible Exploitation",
-      "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has added a high-severity vulnerability impacting SonicWall SonicOS to its Known Exploited Vulnerabilities (KEV) catalog, following reports that it said may have been exploited in real-world attacks.\n\nThe vulnerability, tracked as CVE-",
-      "url": "https://thehackernews.com/2026/11/cisa-flags-sonicwall-sonicos-mfa-bypass.html",
+      "id": "hn:50382401",
+      "title": "I deleted all my SSH keys",
+      "summary": "<a href=\"https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20261110172054&#x2F;https:&#x2F;&#x2F;blog.infected.systems&#x2F;posts&#x2F;2026-11-03-i-deleted-all-my-ssh-keys&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20261110172054&#x2F;https:&#x2F;&#x2F;blog.infe...</a>",
+      "url": "https://blog.infected.systems/posts/2026-11-03-i-deleted-all-my-ssh-keys/",
+      "source": "Hacker News",
+      "score": 106,
+      "comments": 37
+    },
+    {
+      "id": "rss:0b578e761c",
+      "title": "Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026",
+      "summary": "Google on Monday released updates to patch nine security vulnerabilities, including one that has come under active exploitation in the wild.\n\nThe high-severity vulnerability, assigned the CVE identifier CVE-2026-125350 (CVSS score: N/A), has been described as a use-after-free bug in the XML componen",
+      "url": "https://thehackernews.com/2026/11/google-issues-chrome-security-update.html",
       "source": "Tech RSS",
       "score": 0
+    },
+    {
+      "id": "lob:4yqgpu",
+      "title": "You should try Gleam",
+      "summary": "",
+      "url": "https://nchagnet.eu/blog/you-should-try-gleam",
+      "source": "Lobste.rs",
+      "score": 39,
+      "comments": 7,
+      "tags": [
+        "gleam"
+      ]
+    },
+    {
+      "id": "arxiv:2611.12878v1",
+      "title": "Adaptive Quantization Preserves Fast Rates for TD Learning over Rate-Limited Channels",
+      "summary": "Motivated by reinforcement learning subject to communication constraints, we study a policy evaluation problem with linear function approximation over a rate-limited channel. In our setup, an agent interacting with an unknown environment (modeled as a Markov Decision Process) transmits quantized est",
+      "url": "https://arxiv.org/abs/2611.12878v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_id": "2611.12878v1"
+    },
+    {
+      "id": "rss:a1ad84f79e",
+      "title": "Vulnerability that lets hackers SSH into Linux devices is under active exploitation",
+      "summary": "\"*sshole\" poses a serious threat to Internet security.",
+      "url": "https://arstechnica.com/security/2026/11/vulnerability-that-lets-hackers-ssh-into-linux-devices-is-under-active-exploitation/",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "lob:gj5obq",
+      "title": "Open Graph images with Astro and Typst",
+      "summary": "",
+      "url": "https://eaj.no/posts/open-graph-images-with-typst/",
+      "source": "Lobste.rs",
+      "score": 28,
+      "comments": 7,
+      "tags": [
+        "web"
+      ]
+    },
+    {
+      "id": "hn:50443427",
+      "title": "Val Town is winding down",
+      "summary": "",
+      "url": "https://blog.val.town/winding-down",
+      "source": "Hacker News",
+      "score": 115,
+      "comments": 30
+    },
+    {
+      "id": "lob:bubqox",
+      "title": "Blunt Banhammer Blocks Basic Bots Ballistically",
+      "summary": "",
+      "url": "https://shkspr.mobi/blog/2026/11/blunt-banhammer-blocks-basic-bots-ballistically/",
+      "source": "Lobste.rs",
+      "score": 22,
+      "comments": 10,
+      "tags": [
+        "web"
+      ]
+    },
+    {
+      "id": "hn:50443824",
+      "title": "Synaptics patent claims stop work on DisplayLink drivers",
+      "summary": "",
+      "url": "https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/",
+      "source": "Hacker News",
+      "score": 80,
+      "comments": 36
+    },
+    {
+      "id": "hn:50441518",
+      "title": "Show HN: Valencia, Spain in Sim City/Isometric View",
+      "summary": "",
+      "url": "https://tinyvalencia.com/",
+      "source": "Hacker News",
+      "score": 93,
+      "comments": 28
     }
   ],
   "ai_curated": true
