@@ -1,0 +1,821 @@
+{
+  "update_time": "2026-11-10 15:58:11",
+  "stocks": {
+    "a_stocks": [
+      {
+        "market": "A股",
+        "code": "002050",
+        "name": "三花智控",
+        "symbol": "sz.002050",
+        "industry": null,
+        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
+        "price": 35.35,
+        "open": 34.66,
+        "high": 36.47,
+        "low": 34.61,
+        "change_pct": 3.24,
+        "volume": 94724166,
+        "turnover": 33.77,
+        "market_cap": null,
+        "pe": 38.26,
+        "cash_flow": 50.92,
+        "macd": 0.0198,
+        "macd_signal": -0.2002,
+        "macd_histogram": 0.4399,
+        "rsi": 55.52,
+        "ma": {
+          "MA5": 34.54,
+          "MA10": 34.26,
+          "MA20": 33.55,
+          "MA60": 35.11
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
+        "price": 6.1,
+        "open": 6.13,
+        "high": 6.15,
+        "low": 6.09,
+        "change_pct": 0.0,
+        "volume": 28068337,
+        "turnover": 1.72,
+        "market_cap": null,
+        "pe": 68.49,
+        "cash_flow": 105.67,
+        "macd": -0.0825,
+        "macd_signal": -0.0978,
+        "macd_histogram": 0.0306,
+        "rsi": 41.37,
+        "ma": {
+          "MA5": 6.14,
+          "MA10": 6.1,
+          "MA20": 6.14,
+          "MA60": 6.43
+        },
+        "main_net_flow": null
+      }
+    ],
+    "hk_stocks": [
+      {
+        "market": "港股",
+        "code": "01810",
+        "name": "小米集团-W",
+        "symbol": "01810",
+        "industry": "Consumer Electronics",
+        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
+        "price": 30.6,
+        "open": 29.96,
+        "high": 31.04,
+        "low": 29.68,
+        "change_pct": 1.66,
+        "volume": 103337889,
+        "turnover": null,
+        "market_cap": 7874.59,
+        "pe": 22.5,
+        "cash_flow": 86.81,
+        "macd": 1.1335,
+        "macd_signal": 0.662,
+        "macd_histogram": 0.943,
+        "rsi": 65.86,
+        "ma": {
+          "MA5": 30.23,
+          "MA10": 28.56,
+          "MA20": 27.49,
+          "MA60": 26.84
+        },
+        "main_net_flow": null
+      }
+    ],
+    "us_stocks": [
+      {
+        "market": "美股",
+        "code": "NVDA",
+        "name": "NVIDIA",
+        "symbol": "NVDA",
+        "industry": "Semiconductors",
+        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
+        "price": 168.6,
+        "open": 173.98,
+        "high": 174.65,
+        "low": 167.69,
+        "change_pct": -5.64,
+        "volume": 163144611,
+        "turnover": null,
+        "market_cap": 40707.01,
+        "pe": 21.31,
+        "cash_flow": 418.1,
+        "macd": -11.3107,
+        "macd_signal": -7.0116,
+        "macd_histogram": -8.5982,
+        "rsi": 23.86,
+        "ma": {
+          "MA5": 183.13,
+          "MA10": 195.81,
+          "MA20": 206.17,
+          "MA60": 217.7
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "GOOG",
+        "name": "Alphabet (Google)",
+        "symbol": "GOOG",
+        "industry": "Internet Content & Information",
+        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
+        "price": 285.68,
+        "open": 287.27,
+        "high": 289.5,
+        "low": 285.28,
+        "change_pct": -0.12,
+        "volume": 5125298,
+        "turnover": null,
+        "market_cap": 35121.5,
+        "pe": 14.92,
+        "cash_flow": 11.62,
+        "macd": -15.1428,
+        "macd_signal": -13.471,
+        "macd_histogram": -3.3437,
+        "rsi": 31.76,
+        "ma": {
+          "MA5": 284.93,
+          "MA10": 286.34,
+          "MA20": 308.27,
+          "MA60": 329.76
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "CRCL",
+        "name": "Circle",
+        "symbol": "CRCL",
+        "industry": "Capital Markets",
+        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
+        "price": 64.78,
+        "open": 65.31,
+        "high": 67.57,
+        "low": 64.21,
+        "change_pct": -4.12,
+        "volume": 3202400,
+        "turnover": null,
+        "market_cap": 166.18,
+        "pe": 39.02,
+        "cash_flow": 2.62,
+        "macd": -4.5702,
+        "macd_signal": -3.0628,
+        "macd_histogram": -3.0149,
+        "rsi": 32.01,
+        "ma": {
+          "MA5": 69.16,
+          "MA10": 72.74,
+          "MA20": 78.35,
+          "MA60": 84.84
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "MP",
+        "name": "MP Materials",
+        "symbol": "MP",
+        "industry": "Other Industrial Metals & Mining",
+        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
+        "price": 35.81,
+        "open": 36.36,
+        "high": 37.27,
+        "low": 35.6,
+        "change_pct": -5.15,
+        "volume": 1377254,
+        "turnover": null,
+        "market_cap": 63.89,
+        "pe": 65.16,
+        "cash_flow": 4.1,
+        "macd": -2.5134,
+        "macd_signal": -2.5309,
+        "macd_histogram": 0.0349,
+        "rsi": 38.0,
+        "ma": {
+          "MA5": 35.72,
+          "MA10": 37.71,
+          "MA20": 38.57,
+          "MA60": 47.01
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "PLTR",
+        "name": "Palantir",
+        "symbol": "PLTR",
+        "industry": "Software - Infrastructure",
+        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
+        "price": 167.3,
+        "open": 168.2,
+        "high": 169.34,
+        "low": 165.6,
+        "change_pct": -1.12,
+        "volume": 5895454,
+        "turnover": null,
+        "market_cap": 4031.09,
+        "pe": 117.82,
+        "cash_flow": 26.52,
+        "macd": -6.6573,
+        "macd_signal": -2.9749,
+        "macd_histogram": -7.3649,
+        "rsi": 38.33,
+        "ma": {
+          "MA5": 164.71,
+          "MA10": 175.46,
+          "MA20": 186.06,
+          "MA60": 184.05
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "NOW",
+        "name": "ServiceNow",
+        "symbol": "NOW",
+        "industry": "Software - Application",
+        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
+        "price": 100.97,
+        "open": 100.55,
+        "high": 102.21,
+        "low": 99.14,
+        "change_pct": -1.74,
+        "volume": 5122066,
+        "turnover": null,
+        "market_cap": 1047.98,
+        "pe": 72.64,
+        "cash_flow": 57.54,
+        "macd": -10.4873,
+        "macd_signal": -6.2949,
+        "macd_histogram": -8.3848,
+        "rsi": 27.73,
+        "ma": {
+          "MA5": 103.37,
+          "MA10": 109.7,
+          "MA20": 130.22,
+          "MA60": 134.04
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "DDOG",
+        "name": "Datadog",
+        "symbol": "DDOG",
+        "industry": "Software - Application",
+        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
+        "price": 180.68,
+        "open": 177.83,
+        "high": 182.88,
+        "low": 173.18,
+        "change_pct": 0.59,
+        "volume": 949455,
+        "turnover": null,
+        "market_cap": 652.33,
+        "pe": 250.94,
+        "cash_flow": 10.66,
+        "macd": -21.5029,
+        "macd_signal": -11.7297,
+        "macd_histogram": -19.5464,
+        "rsi": 29.12,
+        "ma": {
+          "MA5": 180.53,
+          "MA10": 211.88,
+          "MA20": 238.99,
+          "MA60": 243.58
+        },
+        "main_net_flow": null
+      }
+    ],
+    "crypto": [
+      {
+        "market": "加密货币",
+        "code": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "industry": "Smart Contract Platform",
+        "price": 73123,
+        "open": null,
+        "high": 75465,
+        "low": 73587,
+        "change_pct": -3.07,
+        "volume": 27215001048,
+        "turnover": null,
+        "market_cap": 14705.13,
+        "market_cap_rank": 1,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -1853.7211,
+        "macd_signal": -1433.4886,
+        "macd_histogram": -840.4651,
+        "rsi": 32.88,
+        "ma": {
+          "MA5": 74933.71,
+          "MA10": 76350.46,
+          "MA20": 78076.7,
+          "MA60": 80981.79
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 20110225.0,
+          "total_supply": 20110315.0,
+          "circ_ratio": 100.0,
+          "price_change_7d": -5.36863,
+          "price_change_30d": -11.95845,
+          "ath_pct": -42.0,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      },
+      {
+        "market": "加密货币",
+        "code": "ethereum",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "industry": "Smart Contract Platform",
+        "price": 2019.69,
+        "open": null,
+        "high": 2145.87,
+        "low": 2054.41,
+        "change_pct": -5.85,
+        "volume": 12209641841,
+        "turnover": null,
+        "market_cap": 2468.2,
+        "market_cap_rank": 2,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -86.0135,
+        "macd_signal": -68.672,
+        "macd_histogram": -34.6829,
+        "rsi": 28.35,
+        "ma": {
+          "MA5": 2150.0,
+          "MA10": 2220.66,
+          "MA20": 2271.64,
+          "MA60": 2470.68
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 122206811.20718135,
+          "total_supply": 122206811.20718135,
+          "circ_ratio": 100.0,
+          "price_change_7d": -11.55621,
+          "price_change_30d": -19.38636,
+          "ath_pct": -59.17,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      }
+    ]
+  },
+  "news": [
+    {
+      "id": "35b871d31c",
+      "title": "[播客]独家实拍：我那永远跪着的母亲(11/07 22:10)",
+      "summary": "独家实拍：我那永远跪着的母亲",
+      "link": "http://go.rss.sina.com.cn/redirect.php?url=http://you.video.sina.com.cn/b/16972162-1239095354.html",
+      "source": "rss.sina.com.cn",
+      "published": ""
+    },
+    {
+      "id": "f5b3ba5c9f",
+      "title": "Why stocks are falling and 10-year yields are climbing back near 5% after Tuesday’s inflation report",
+      "summary": "‘I don’t think they should be raising another 25 basis points,’ one portfolio manager said about the Federal Reserve’s benchmark interest rate.",
+      "link": "https://www.marketwatch.com/story/why-stocks-are-falling-and-10-year-yields-are-climbing-back-near-5-after-tuesdays-inflation-report-389b8392?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 10 Nov 2026 15:47:00 GMT"
+    },
+    {
+      "id": "d8b803083e",
+      "title": "‘I’m sick of flying’: I paid for priority boarding, but the overhead bins were full. Was I duped?",
+      "summary": "“Maybe next time I’ll try the other approach: I’ll board whenever I feel like it and drop my suitcase in the first open slot I see.”",
+      "link": "https://www.marketwatch.com/story/im-sick-of-flying-i-paid-for-priority-boarding-but-the-overhead-bins-were-full-was-i-duped-0badcc80?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 10 Nov 2026 15:45:00 GMT"
+    },
+    {
+      "id": "0ab981f0a1",
+      "title": "‘The thought of living to 100 terrifies me’: Is Social Security a giant Ponzi scheme?",
+      "summary": "There’s already a demographic ‘run’ on Social Security.",
+      "link": "https://www.marketwatch.com/story/the-thought-of-living-to-100-terrifies-me-is-social-security-a-giant-ponzi-scheme-84a64e7e?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 10 Nov 2026 15:30:00 GMT"
+    },
+    {
+      "id": "f383cbd7c4",
+      "title": "Elon Musk was half right in his comment last week about SoftBank backpedaling on a gas-turbine order",
+      "summary": "Elon Musk in a social-media post last week said that SoftBank “defaulted” on a gas-turbine order. The truth, revealed Tuesday in the Japanese’s investment company’s second-quarter earnings, wasn’t far",
+      "link": "https://www.marketwatch.com/story/elon-musk-was-half-right-in-his-comment-last-week-about-softbank-back-pedaling-on-a-gas-turbine-order-c293d335?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 10 Nov 2026 15:30:00 GMT"
+    },
+    {
+      "id": "e615ac1d7b",
+      "title": "Forget happy hour. ‘Money parties’ are having a moment.",
+      "summary": "There’s evidence showing that talking about finances with your friends can help you save money.",
+      "link": "https://www.marketwatch.com/story/forget-happy-hour-money-parties-are-having-a-moment-6bc6f02a?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 10 Nov 2026 14:58:00 GMT"
+    },
+    {
+      "id": "c21b65d153",
+      "title": "Here’s how Bernie Sanders wants to keep Social Security solvent ‘for generations’",
+      "summary": "The Vermont senator aims to eliminate the taxable maximum, making the wealthy pay more in taxes",
+      "link": "https://www.marketwatch.com/story/heres-how-bernie-sanders-wants-to-keep-social-security-solvent-for-generations-f5666a38?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 10 Nov 2026 14:10:00 GMT"
+    },
+    {
+      "id": "7c3cf9a679",
+      "title": "Fed’s Waller puts half-point rate hike into the mix for December",
+      "summary": "U.S. central bank official had put a half-point discussion into the mix ahead of Labor Department data, which came in as hot as he feared.",
+      "link": "https://www.marketwatch.com/story/feds-waller-puts-half-point-rate-hike-into-the-mix-for-december-1bebdffc?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 10 Nov 2026 13:41:00 GMT"
+    },
+    {
+      "id": "1b567ea39a",
+      "title": "Here’s what Nvidia investors should be focusing on now. Hint: It’s not Jensen Huang’s affair.",
+      "summary": "Nvidia’s stock still seems like a good bet — if the AI trade holds up. And that’s a big ‘if.’",
+      "link": "https://www.marketwatch.com/story/heres-what-nvidia-investors-should-be-focusing-on-now-hint-its-not-jensen-huangs-affair-f443b822?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 10 Nov 2026 13:30:00 GMT"
+    },
+    {
+      "id": "c574959473",
+      "title": "Nvidia couldn’t derail the stock market’s rally. Hot inflation might.",
+      "summary": "A Fed official raises the prospect of a half-a-percentage-point rate hike. Plus, fresh valuation focus on Anthropic’s blockbuster IPO.",
+      "link": "https://www.marketwatch.com/story/nvidia-couldnt-derail-the-stock-markets-rally-hot-inflation-might-8a572024?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 10 Nov 2026 12:33:00 GMT"
+    },
+    {
+      "id": "246ea8eeeb",
+      "title": "Anthropic officially sets the stage for an IPO valuing the company north of $1 trillion",
+      "summary": "Anthropic could raise up to $63 billion in an IPO expected to take place next week.",
+      "link": "https://www.marketwatch.com/story/anthropic-reportedly-retracts-ipo-terms-sent-to-banks-by-mistake-exposing-jitters-over-ai-investments-6116578d?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 10 Nov 2026 12:32:00 GMT"
+    },
+    {
+      "id": "a822960cb1",
+      "title": "Earnings call transcript: Infinity Natural Resources misses Q3 2026 EPS forecast",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-infinity-natural-resources-misses-q3-2026-eps-forecast-93CH-5016192",
+      "source": "www.investing.com",
+      "published": "2026-11-10 15:46:34"
+    },
+    {
+      "id": "7e68a1719a",
+      "title": "Earnings call transcript: Nordhealth Q3 2026 profit turns positive as growth accelerates",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-nordhealth-q3-2026-profit-turns-positive-as-growth-accelerates-93CH-5016191",
+      "source": "www.investing.com",
+      "published": "2026-11-10 15:46:29"
+    },
+    {
+      "id": "442238308a",
+      "title": "Earnings call transcript: Sabaf posts steady Q3 2026 growth as margins improve",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-sabaf-posts-steady-q3-2026-growth-as-margins-improve-93CH-5016190",
+      "source": "www.investing.com",
+      "published": "2026-11-10 15:46:05"
+    },
+    {
+      "id": "b2a8770f47",
+      "title": "Herc Holdings at Baird 2026 Global Industrial Conference: scale gains",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/herc-holdings-at-baird-2026-global-industrial-conference-scale-gains-93CH-5016189",
+      "source": "www.investing.com",
+      "published": "2026-11-10 15:46:03"
+    },
+    {
+      "id": "73da15e677",
+      "title": "Hycroft Mining SVP & general counsel sells $206,125 in stock",
+      "summary": "",
+      "link": "https://www.investing.com/news/insider-trading-news/hycroft-mining-svp--general-counsel-sells-206125-in-stock-93CH-5016188",
+      "source": "www.investing.com",
+      "published": "2026-11-10 15:46:02"
+    },
+    {
+      "id": "cb2163f7fe",
+      "title": "Odds rise Jensen Huang could be forced out after being honeypotted by alleged spy",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/odds-rise-jensen-huang-could-be-forced-out-after-being-honeypotted-by-alleged-spy-5016187",
+      "source": "www.investing.com",
+      "published": "2026-11-10 15:45:26"
+    },
+    {
+      "id": "88c72a0fc4",
+      "title": "Why is IREN stock sliding today?",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-iren-stock-sliding-today-93CH-5016186",
+      "source": "www.investing.com",
+      "published": "2026-11-10 15:45:11"
+    },
+    {
+      "id": "46453de3ce",
+      "title": "Brava Q3 2026 slides: record margins overshadowed by earnings miss",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/brava-q3-2026-slides-record-margins-overshadowed-by-earnings-miss-93CH-5016183",
+      "source": "www.investing.com",
+      "published": "2026-11-10 15:43:04"
+    },
+    {
+      "id": "ded9b77711",
+      "title": "Earnings call transcript: Ranger Energy Services misses Q3 2026 estimates",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-ranger-energy-services-misses-q3-2026-estimates-93CH-5016182",
+      "source": "www.investing.com",
+      "published": "2026-11-10 15:42:56"
+    },
+    {
+      "id": "1b508b92c3",
+      "title": "Incyte at Wolfe research healthcare conference: growth plan takes shape",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/incyte-at-wolfe-research-healthcare-conference-growth-plan-takes-shape-93CH-5016181",
+      "source": "www.investing.com",
+      "published": "2026-11-10 15:42:51"
+    }
+  ],
+  "briefing": {
+    "date": "2026-11-10",
+    "update_time": "2026-11-10 06:41:45",
+    "candidate_count": 20,
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-10\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Terminal2Shell：全平台瞬间提权的\"通用后门\" (来源: Lobste.rs)\n- **核心干货**：一个影响所有主流操作系统的严重漏洞被公开——攻击者可通过终端接口直接获取 root/shell 权限，无需任何用户交互。这不是某个框架的 bug，而是横跨 Windows / macOS / Linux 的架构级设计缺陷，意味着你机器上那块\"安全的终端\"本质上是一扇没上锁的后门。\n- **毒舌/硬核点评**：安全圈又到了年度 KPI 冲刺时刻——各大厂商的\"零信任\"营销 PPT 还没焐热，现实就告诉你：终端才是最大的信任危机。建议各位先去检查下自己的提权日志，别等新闻变成事故通报。\n- **🔗 传送门**：[点击直达原链接](https://terminal2shell.com/)\n\n---\n\n### 2. 📌 CoreWeave 债券收益率破 16%：AI 泡沫的第一声裂响 (来源: HackerNews / CNBC)\n- **核心干货**：AI 算力租赁巨头 CoreWeave 的债券收益率飙升至 16% 以上，市场对其信用风险的定价已接近\"垃圾债\"水平。这背后是 AI 基础设施巨额资本开支与现金流回报之间的巨大缺口——当算力军备竞赛的账单开始到期，高杠杆玩家首当其冲。\n- **毒舌/硬核点评**：16% 的收益率不是\"投资机会\"，是市场用脚投票写下的\"我不信你还得起\"。AI 叙事再性感，也架不住利息按季度结账。各位看客记好：泡沫破裂从来不是\"砰\"的一声，而是债市里一声不吭的收益率曲线。\n- **🔗 传送门**：[点击直达原链接](https://www.cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html)\n\n---\n\n### 3. 📌 E-means：用十分之一 epoch 打赢 k-means 的新聚类算法 (来源: HackerNews / GitHub Pages)\n- **核心干货**：研究者提出 E-means 聚类算法，声称在收敛速度上大幅超越统治了半个多世纪的 k-means——仅需约 1/10 的迭代轮次即可达到同等或更优效果。对于每天要跑海量向量聚类的推荐、检索、RAG 系统而言，这是实打实的算力成本削减。\n- **毒舌/硬核点评**：k-means 自 1957 年出道以来一直是\"够用就行\"的代名词，如今终于有人来踢馆了。不过先别急着换生产环境——论文里的\"outperforming\"和工程上的\"稳定可复现\"之间，通常隔着一整个季度的事故复盘。\n- **🔗 传送门**：[点击直达原链接](https://e-means.github.io/)\n\n---\n\n### 🗣️ 今日顶男金句\n> **\"技术债和房贷最大的区别是：房贷你还完就自由了，技术债你还完会发现地基是别人的。\"**",
+    "briefing_items": [
+      {
+        "title": "Terminal2Shell：全平台瞬间提权的\"通用后门\"",
+        "source": "Lobste.rs",
+        "summary": "一个影响所有主流操作系统的严重漏洞被公开——攻击者可通过终端接口直接获取 root/shell 权限，无需任何用户交互。这不是某个框架的 bug，而是横跨 Windows / macOS / Linux 的架构级设计缺陷，意味着你机器上那块\"安全的终端\"本质上是一扇没上锁的后门。",
+        "commentary": "安全圈又到了年度 KPI 冲刺时刻——各大厂商的\"零信任\"营销 PPT 还没焐热，现实就告诉你：终端才是最大的信任危机。建议各位先去检查下自己的提权日志，别等新闻变成事故通报。",
+        "url": "https://terminal2shell.com/"
+      },
+      {
+        "title": "CoreWeave 债券收益率破 16%：AI 泡沫的第一声裂响",
+        "source": "HackerNews / CNBC",
+        "summary": "AI 算力租赁巨头 CoreWeave 的债券收益率飙升至 16% 以上，市场对其信用风险的定价已接近\"垃圾债\"水平。这背后是 AI 基础设施巨额资本开支与现金流回报之间的巨大缺口——当算力军备竞赛的账单开始到期，高杠杆玩家首当其冲。",
+        "commentary": "16% 的收益率不是\"投资机会\"，是市场用脚投票写下的\"我不信你还得起\"。AI 叙事再性感，也架不住利息按季度结账。各位看客记好：泡沫破裂从来不是\"砰\"的一声，而是债市里一声不吭的收益率曲线。",
+        "url": "https://www.cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html"
+      },
+      {
+        "title": "E-means：用十分之一 epoch 打赢 k-means 的新聚类算法",
+        "source": "HackerNews / GitHub Pages",
+        "summary": "研究者提出 E-means 聚类算法，声称在收敛速度上大幅超越统治了半个多世纪的 k-means——仅需约 1/10 的迭代轮次即可达到同等或更优效果。对于每天要跑海量向量聚类的推荐、检索、RAG 系统而言，这是实打实的算力成本削减。",
+        "commentary": "k-means 自 1957 年出道以来一直是\"够用就行\"的代名词，如今终于有人来踢馆了。不过先别急着换生产环境——论文里的\"outperforming\"和工程上的\"稳定可复现\"之间，通常隔着一整个季度的事故复盘。",
+        "url": "https://e-means.github.io/"
+      },
+      {
+        "quote": "**\"技术债和房贷最大的区别是：房贷你还完就自由了，技术债你还完会发现地基是别人的。\"**"
+      }
+    ],
+    "candidates": [
+      {
+        "id": "hn:50429068",
+        "title": "Claude Fable 5.2 and Mythos 5.2",
+        "summary": "",
+        "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+        "source": "Hacker News",
+        "score": 442,
+        "comments": 733
+      },
+      {
+        "id": "lob:vghqe8",
+        "title": "Terminal2Shell: Critical flaw grants instant shell access on every major OS",
+        "summary": "",
+        "url": "https://terminal2shell.com/",
+        "source": "Lobste.rs",
+        "score": 92,
+        "comments": 26,
+        "tags": [
+          "satire",
+          "security"
+        ]
+      },
+      {
+        "id": "hn:50431058",
+        "title": "USPS now offers official ZIP Code boundary polygons",
+        "summary": "",
+        "url": "https://postalpro.usps.com/zcb",
+        "source": "Hacker News",
+        "score": 581,
+        "comments": 291
+      },
+      {
+        "id": "hn:50427362",
+        "title": "Payments Canada announces launch of Canada's Real-Time Rail (RTR) payment system",
+        "summary": "",
+        "url": "https://www.payments.ca/canada-launches-real-time-rail-bringing-247-payment-infrastructure-national-economy",
+        "source": "Hacker News",
+        "score": 511,
+        "comments": 279
+      },
+      {
+        "id": "hn:50424581",
+        "title": "Foldable Flight: The Best Paper Airplanes",
+        "summary": "",
+        "url": "https://www.foldableflight.com",
+        "source": "Hacker News",
+        "score": 940,
+        "comments": 145
+      },
+      {
+        "id": "hn:50426175",
+        "title": "Semi-transparent, colored cadmium telluride photovoltaic panels in agrivoltaics",
+        "summary": "<a href=\"https:&#x2F;&#x2F;www.cell.com&#x2F;cell-reports-physical-science&#x2F;fulltext&#x2F;S2666-3864(26)00461-3\" rel=\"nofollow\">https:&#x2F;&#x2F;www.cell.com&#x2F;cell-reports-physical-science&#x2F;fulltext&#x2F;...</a>",
+        "url": "https://www.anthropocenemagazine.org/2026/10/magenta-solar-panels-may-be-agrivoltaics-cleverest-trick-yet/",
+        "source": "Hacker News",
+        "score": 298,
+        "comments": 196
+      },
+      {
+        "id": "lob:kbrpx3",
+        "title": "unlocking any car from X brand in most of the world",
+        "summary": "",
+        "url": "https://shubs.io/unlocking-any-car-from-x-brand-in-most-of-the-world/",
+        "source": "Lobste.rs",
+        "score": 81,
+        "comments": 27,
+        "tags": [
+          "reversing",
+          "security"
+        ]
+      },
+      {
+        "id": "lob:vlagyq",
+        "title": "Herb Sutter: When a language’s creator and its owners strongly disagree: C++26 post-DIS, historical experience, and paths forward",
+        "summary": "",
+        "url": "https://isocpp.org/files/papers/P4454R0.pdf",
+        "source": "Lobste.rs",
+        "score": 59,
+        "comments": 20,
+        "tags": [
+          "c++",
+          "pdf"
+        ]
+      },
+      {
+        "id": "hn:50429734",
+        "title": "E-means: Outperforming k-means in one-tenth the epochs",
+        "summary": "",
+        "url": "https://e-means.github.io/",
+        "source": "Hacker News",
+        "score": 355,
+        "comments": 31
+      },
+      {
+        "id": "lob:ezjewj",
+        "title": "How Much Energy Does Building Distro Packages Use",
+        "summary": "",
+        "url": "https://www.wezm.net/v2/posts/2026/distro-energy-use/",
+        "source": "Lobste.rs",
+        "score": 90,
+        "comments": 16,
+        "tags": [
+          "linux"
+        ]
+      },
+      {
+        "id": "lob:jxigk6",
+        "title": "Let’s Talk About Why all This OT Stuff is Connected",
+        "summary": "",
+        "url": "https://tisiphone.net/2026/11/08/lets-talk-about-why-all-this-ot-stuff-is-connected/",
+        "source": "Lobste.rs",
+        "score": 42,
+        "comments": 22,
+        "tags": [
+          "security"
+        ]
+      },
+      {
+        "id": "lob:ynik5s",
+        "title": "Microsoft are rejecting your mail",
+        "summary": "",
+        "url": "https://www.mythic-beasts.com/blog/2026/11/09/microsoft-are-rejecting-your-mail/",
+        "source": "Lobste.rs",
+        "score": 47,
+        "comments": 7,
+        "tags": [
+          "email"
+        ]
+      },
+      {
+        "id": "hn:50433541",
+        "title": "Exact – a new cross platform UI framework",
+        "summary": "",
+        "url": "https://github.com/expo/exact",
+        "source": "Hacker News",
+        "score": 103,
+        "comments": 58
+      },
+      {
+        "id": "hn:50429430",
+        "title": "The first 300-millimeter power silicon carbide (SiC) wafer",
+        "summary": "",
+        "url": "https://www.infineon.com/press-release/2026/infpr202611-028",
+        "source": "Hacker News",
+        "score": 125,
+        "comments": 66
+      },
+      {
+        "id": "hn:50434310",
+        "title": "Locating the source of a mysterious beep",
+        "summary": "",
+        "url": "https://simonwillison.net/2026/Nov/9/mysterious-beeps/",
+        "source": "Hacker News",
+        "score": 104,
+        "comments": 54
+      },
+      {
+        "id": "rss:6e7eccb6f9",
+        "title": "Hackers Target OpenSSH SSHole Flaw Within Hours of Disclosure, Gain Root on Honeypot",
+        "summary": "Threat actors are attempting to exploit a recently disclosed security flaw impacting OpenSSH that can enable sign-ins to accounts that have no password set, according to Previdian.\n\nThe vulnerability, tracked as CVE-2026-123158 (CVSS score: 8.1) and codenamed SSHole (or *sshole), impacts Linux syste",
+        "url": "https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html",
+        "source": "Tech RSS",
+        "score": 0
+      },
+      {
+        "id": "lob:eeclwg",
+        "title": "Sure mate, buy me a bloody coffee",
+        "summary": "",
+        "url": "https://peateasea.de/sure-mate-buy-me-a-bloody-coffee/",
+        "source": "Lobste.rs",
+        "score": 42,
+        "comments": 4,
+        "tags": [
+          "culture"
+        ]
+      },
+      {
+        "id": "hn:50435660",
+        "title": "CoreWeave bond yield tops 16% as AI credit stress rises",
+        "summary": "",
+        "url": "https://www.cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html",
+        "source": "Hacker News",
+        "score": 98,
+        "comments": 42
+      },
+      {
+        "id": "hn:50434264",
+        "title": "Horible public key tricks",
+        "summary": "",
+        "url": "https://maurycyz.com/projects/badcert/",
+        "source": "Hacker News",
+        "score": 112,
+        "comments": 38
+      },
+      {
+        "id": "rss:352177198c",
+        "title": "CISA Flags SonicWall SonicOS MFA Bypass Flaw Amid Reports of Possible Exploitation",
+        "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has added a high-severity vulnerability impacting SonicWall SonicOS to its Known Exploited Vulnerabilities (KEV) catalog, following reports that it said may have been exploited in real-world attacks.\n\nThe vulnerability, tracked as CVE-",
+        "url": "https://thehackernews.com/2026/11/cisa-flags-sonicwall-sonicos-mfa-bypass.html",
+        "source": "Tech RSS",
+        "score": 0
+      }
+    ],
+    "ai_curated": true
+  },
+  "fear_greed": {
+    "value": 32,
+    "classification": "Fear",
+    "timestamp": "2026-11-10 00:00:00"
+  }
+}
