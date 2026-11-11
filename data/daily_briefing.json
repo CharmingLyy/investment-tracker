@@ -1,156 +1,167 @@
 {
-  "date": "2026-11-11",
-  "update_time": "2026-11-11 05:28:24",
+  "date": "2026-11-12",
+  "update_time": "2026-11-11 19:21:18",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-11\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 AlphaProof Code：DeepMind 把数学证明机器开进了代码世界 (来源: HackerNews)\n- **核心干货**：DeepMind 推出 AlphaProof Code，把当年在 IMO 数学题上大杀四方的形式化证明能力，迁移到了代码验证与程序合成领域。本质上是用\"可验证的推理\"替代\"概率性瞎猜\"，让 AI 生成的代码能附带数学级别的正确性背书——这对金融、航天、编译器这类\"错一行就爆炸\"的场景是刚需。\n- **毒舌/硬核点评**：别的模型还在用\"我觉得这段代码应该没问题\"糊弄甲方，DeepMind 直接掏出了一张数学试卷让代码现场答辩。以后 AI 写代码的终极形态不是\"能跑就行\"，而是\"先证明它能跑，再让它跑\"。\n- **🔗 传送门**：[点击直达原链接](https://deepmind.google/blog/introducing-alphaproof-code/)\n\n---\n\n### 2. 📌 智能家居设备就该断网也能用 (来源: HackerNews | 798 分)\n- **核心干货**：一篇高赞长文炮轰当下智能家居的云依赖病：你家灯泡要亮，得先跨半个地球问一遍厂商服务器。作者主张本地优先架构——设备在局域网内自洽运行，云只做锦上添花。这不只是体验问题，更是\"厂商倒闭你就变智障家居\"的资产安全命题。\n- **毒舌/硬核点评**：花大价钱买的\"智能\"家居，本质是租来的遥控器——房东（云厂商）一跑路，你家秒变毛坯房。真正的智能，是断网时还能开关灯，而不是对着路由器磕头。\n- **🔗 传送门**：[点击直达原链接](https://docodethatmatters.com/home-automation-overnight-success/)\n\n---\n\n### 3. 📌 ReTrace：把爱烧钱的工具调用 Agent 蒸馏成\"无脑\"固定流水线 (来源: ArXiv)\n- **核心干货**：企业里大量 SOP 流程其实每次都一样，但 LLM Agent 每次执行都要重新\"思考\"每一步该调哪个工具，延迟和成本双双起飞。ReTrace 的思路很务实：先把 Agent 跑出来的成功轨迹蒸馏成无需 Planner 的固定工作流，后续同类任务直接照抄最优路径。这是把 Agent 从\"每次都请个博士来决策\"降级为\"训练有素的流水线工人\"。\n- **毒舌/硬核点评**：Agent 圈最大的泡沫就是\"每一步都要大模型深思熟虑\"。现实是，90% 的业务流程根本不配拥有自由意志——让模型学会\"背答案\"，比让它\"临场发挥\"值钱得多。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2611.14492v1)\n\n---\n\n### 🗣️ 今日顶男金句\n*\"真正的技术护城河，不是你调用了多大的模型，而是你把多少'需要思考'的事，变成了'不需要思考'的确定性。\"*",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-12\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Google SWE 智能体 72 小时在 NASA 激光雷达数据里挖出未记录的玛雅金字塔 (来源: HackerNews)\n- **核心干货**：Google 的软件工程智能体（SWE agents）被指向 NASA 的 LiDAR 地形数据，72 小时内自主识别出一座此前未被测绘的玛雅金字塔遗址。这不是\"AI 画图\"，而是智能体在真实科研数据上完成了一次考古级别的发现闭环，意味着 Agent 从\"写代码的实习生\"正式跨入\"能干活的科研协作者\"。\n- **毒舌/硬核点评**：考古学家几十年没找到的东西，AI 三天就给你扒出来了。下次谁再说 Agent 只会写 CRUD，请把这座金字塔拍他脸上——不过话说回来，模型训练数据里要是混进了考古报告，这\"发现\"的含金量还得再验一验。\n- **🔗 传送门**：[点击直达原链接](https://pietromiotti.com/latest/maya-site/?maya)\n\n---\n\n### 2. 📌 Tim Peters 逝世：Python 之禅的作者，走了 (来源: HackerNews)\n- **核心干货**：Tim Peters（1952–2026），Python 社区传奇、《Python 之禅》（PEP 20）作者、Timsort 算法发明者，与世长辞。他留下的不只是 `import this` 那几句箴言，还有支撑 CPython 排序性能二十余年的 Timsort——一个至今仍在每个 Python 进程里默默跑着的算法。\n- **毒舌/硬核点评**：\"Simple is better than complex\" 这句话教育了整整一代程序员，而他自己写出的 Timsort 却是复杂度拉满的工程杰作——嘴上讲简洁，手上干硬活，这才是真大佬。R.I.P.，愿天堂没有 GIL。\n- **🔗 传送门**：[点击直达原链接](https://discuss.python.org/t/in-memoriam-tim-peters-1952-2026/110028)\n\n---\n\n### 3. 📌 ReTrace：把\"每次都问 LLM\"的工具智能体，蒸馏成免规划器的固定工作流 (来源: ArXiv cs.AI)\n- **核心干货**：企业 SOP 自动化场景里，LLM 智能体每跑一步都要调一次模型选下一步，规模化后延迟和成本双双爆炸。ReTrace 的思路是把工具使用型智能体的决策轨迹蒸馏成\"免规划器\"的静态工作流——同样的 SOP，跑起来不再逐步请示大模型，直接省掉大部分推理开销。\n- **毒舌/硬核点评**：翻译成人话就是——别让 AI 每走一步都开个会。固定流程就该用固定流程跑，把大模型当万能胶水糊一切，最后账单会用红字教你做人。这论文的价值不在多聪明，而在终于有人肯承认：有些活儿，压根不需要智能体。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2611.14492v1)\n\n---\n\n### 🗣️ 今日顶男金句\n> 智能体再能挖金字塔，也挖不出你的年终奖——工具决定上限，认知决定你配不配拿到那个上限。",
   "briefing_items": [
     {
-      "title": "AlphaProof Code：DeepMind 把数学证明机器开进了代码世界",
+      "title": "Google SWE 智能体 72 小时在 NASA 激光雷达数据里挖出未记录的玛雅金字塔",
       "source": "HackerNews",
-      "summary": "DeepMind 推出 AlphaProof Code，把当年在 IMO 数学题上大杀四方的形式化证明能力，迁移到了代码验证与程序合成领域。本质上是用\"可验证的推理\"替代\"概率性瞎猜\"，让 AI 生成的代码能附带数学级别的正确性背书——这对金融、航天、编译器这类\"错一行就爆炸\"的场景是刚需。",
-      "commentary": "别的模型还在用\"我觉得这段代码应该没问题\"糊弄甲方，DeepMind 直接掏出了一张数学试卷让代码现场答辩。以后 AI 写代码的终极形态不是\"能跑就行\"，而是\"先证明它能跑，再让它跑\"。",
-      "url": "https://deepmind.google/blog/introducing-alphaproof-code/"
+      "summary": "Google 的软件工程智能体（SWE agents）被指向 NASA 的 LiDAR 地形数据，72 小时内自主识别出一座此前未被测绘的玛雅金字塔遗址。这不是\"AI 画图\"，而是智能体在真实科研数据上完成了一次考古级别的发现闭环，意味着 Agent 从\"写代码的实习生\"正式跨入\"能干活的科研协作者\"。",
+      "commentary": "考古学家几十年没找到的东西，AI 三天就给你扒出来了。下次谁再说 Agent 只会写 CRUD，请把这座金字塔拍他脸上——不过话说回来，模型训练数据里要是混进了考古报告，这\"发现\"的含金量还得再验一验。",
+      "url": "https://pietromiotti.com/latest/maya-site/?maya"
     },
     {
-      "title": "智能家居设备就该断网也能用",
-      "source": "HackerNews | 798 分",
-      "summary": "一篇高赞长文炮轰当下智能家居的云依赖病：你家灯泡要亮，得先跨半个地球问一遍厂商服务器。作者主张本地优先架构——设备在局域网内自洽运行，云只做锦上添花。这不只是体验问题，更是\"厂商倒闭你就变智障家居\"的资产安全命题。",
-      "commentary": "花大价钱买的\"智能\"家居，本质是租来的遥控器——房东（云厂商）一跑路，你家秒变毛坯房。真正的智能，是断网时还能开关灯，而不是对着路由器磕头。",
-      "url": "https://docodethatmatters.com/home-automation-overnight-success/"
+      "title": "Tim Peters 逝世：Python 之禅的作者，走了",
+      "source": "HackerNews",
+      "summary": "Tim Peters（1952–2026），Python 社区传奇、《Python 之禅》（PEP 20）作者、Timsort 算法发明者，与世长辞。他留下的不只是 `import this` 那几句箴言，还有支撑 CPython 排序性能二十余年的 Timsort——一个至今仍在每个 Python 进程里默默跑着的算法。",
+      "commentary": "\"Simple is better than complex\" 这句话教育了整整一代程序员，而他自己写出的 Timsort 却是复杂度拉满的工程杰作——嘴上讲简洁，手上干硬活，这才是真大佬。R.I.P.，愿天堂没有 GIL。",
+      "url": "https://discuss.python.org/t/in-memoriam-tim-peters-1952-2026/110028"
     },
     {
-      "title": "ReTrace：把爱烧钱的工具调用 Agent 蒸馏成\"无脑\"固定流水线",
-      "source": "ArXiv",
-      "summary": "企业里大量 SOP 流程其实每次都一样，但 LLM Agent 每次执行都要重新\"思考\"每一步该调哪个工具，延迟和成本双双起飞。ReTrace 的思路很务实：先把 Agent 跑出来的成功轨迹蒸馏成无需 Planner 的固定工作流，后续同类任务直接照抄最优路径。这是把 Agent 从\"每次都请个博士来决策\"降级为\"训练有素的流水线工人\"。",
-      "commentary": "Agent 圈最大的泡沫就是\"每一步都要大模型深思熟虑\"。现实是，90% 的业务流程根本不配拥有自由意志——让模型学会\"背答案\"，比让它\"临场发挥\"值钱得多。",
+      "title": "ReTrace：把\"每次都问 LLM\"的工具智能体，蒸馏成免规划器的固定工作流",
+      "source": "ArXiv cs.AI",
+      "summary": "企业 SOP 自动化场景里，LLM 智能体每跑一步都要调一次模型选下一步，规模化后延迟和成本双双爆炸。ReTrace 的思路是把工具使用型智能体的决策轨迹蒸馏成\"免规划器\"的静态工作流——同样的 SOP，跑起来不再逐步请示大模型，直接省掉大部分推理开销。",
+      "commentary": "翻译成人话就是——别让 AI 每走一步都开个会。固定流程就该用固定流程跑，把大模型当万能胶水糊一切，最后账单会用红字教你做人。这论文的价值不在多聪明，而在终于有人肯承认：有些活儿，压根不需要智能体。",
       "url": "https://arxiv.org/abs/2611.14492v1"
+    },
+    {
+      "quote": "智能体再能挖金字塔，也挖不出你的年终奖——工具决定上限，认知决定你配不配拿到那个上限。"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50445401",
-      "title": "Scion is back and is going to sell a kei truck in America",
+      "id": "hn:50455394",
+      "title": "A false smoke alarm almost drowned Jane Street's only NYC datacenter",
       "summary": "",
-      "url": "https://www.theautopian.com/scion-is-back-and-its-going-to-sell-a-freaking-kei-truck-in-america/",
+      "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/",
       "source": "Hacker News",
-      "score": 405,
-      "comments": 285
+      "score": 244,
+      "comments": 126
     },
     {
-      "id": "hn:50441707",
-      "title": "Smart home devices should work without the internet",
+      "id": "hn:50452455",
+      "title": "Google SWE points 48 AI agents at NASA Lidar, finds unmapped Maya pyramid in 72h",
       "summary": "",
-      "url": "https://docodethatmatters.com/home-automation-overnight-success/",
+      "url": "https://pietromiotti.com/latest/maya-site/?maya",
       "source": "Hacker News",
-      "score": 798,
-      "comments": 285
+      "score": 824,
+      "comments": 303
     },
     {
-      "id": "hn:50447074",
-      "title": "Tracking Anthropic-discovered vulnerabilities",
+      "id": "hn:50451903",
+      "title": "Using voltage glitching to unleash the A100 in my mining card",
       "summary": "",
-      "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
+      "url": "https://blog.kate.land/posts/using-voltage-glitching-to-unlock-the-a100/",
       "source": "Hacker News",
-      "score": 361,
-      "comments": 165
+      "score": 208,
+      "comments": 77
     },
     {
-      "id": "hn:50443824",
+      "id": "lob:m43bas",
+      "title": "How do you actually self-host securely?",
+      "summary": "<p>I recognize that the title is rather vague, but I'm completely green when it comes to self-hosting, so I figured here would be a good place to ask for some pointers given the discussions I sometimes see happening in the comments. I tried researching first through DDG and Google, but (and I recogn",
+      "url": "https://lobste.rs/s/m43bas/how_do_you_actually_self_host_securely",
+      "source": "Lobste.rs",
+      "score": 75,
+      "comments": 46,
+      "tags": [
+        "ask",
+        "devops"
+      ]
+    },
+    {
+      "id": "hn:50453288",
+      "title": "Hyper-Realistic Sand with WebGL2",
+      "summary": "",
+      "url": "https://av.github.io/safe-sand/",
+      "source": "Hacker News",
+      "score": 204,
+      "comments": 48
+    },
+    {
+      "id": "hn:50456631",
+      "title": "AWS Finally Built Its Own AWS Emulator",
+      "summary": "",
+      "url": "https://github.com/aws/aws-emulator",
+      "source": "Hacker News",
+      "score": 184,
+      "comments": 52
+    },
+    {
+      "id": "hn:50453637",
+      "title": "Atuin Threads: All your agent sessions on every machine",
+      "summary": "",
+      "url": "https://blog.atuin.sh/threads-agent-sessions/",
+      "source": "Hacker News",
+      "score": 133,
+      "comments": 55
+    },
+    {
+      "id": "lob:nld6x3",
+      "title": "What are some \"No AI\" apps/companies/resources you know of?",
+      "summary": "<p>Hey everyone I'm wondering if there's any useful/helpful list of apps, companies, or resources in general that avoid AI (they don't have to be vocally or openly \"anti\", but at least explicitly avoid it) that you know of?</p>\n<p>I'm not looking to start a discussion on what's good/bad or (un)worth",
+      "url": "https://lobste.rs/s/nld6x3/what_are_some_no_ai_apps_companies",
+      "source": "Lobste.rs",
+      "score": 42,
+      "comments": 20,
+      "tags": [
+        "ask"
+      ]
+    },
+    {
+      "id": "lob:fdnic2",
       "title": "Synaptics patent claims stop work on DisplayLink drivers",
       "summary": "",
       "url": "https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/",
-      "source": "Hacker News",
-      "score": 337,
-      "comments": 202
-    },
-    {
-      "id": "hn:50442736",
-      "title": ".name Grandfathered",
-      "summary": "Previously: <i>.name Termination</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49550772\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49550772</a> - Sept 2026 (547 comments)",
-      "url": "https://neil.fraser.name/news/2026/11/10/",
-      "source": "Hacker News",
-      "score": 744,
-      "comments": 168
-    },
-    {
-      "id": "hn:50444129",
-      "title": "Starlink Mini 2",
-      "summary": "",
-      "url": "https://starlink.com/mini-2",
-      "source": "Hacker News",
-      "score": 341,
-      "comments": 345
-    },
-    {
-      "id": "hn:50443427",
-      "title": "Val Town is winding down",
-      "summary": "",
-      "url": "https://blog.val.town/winding-down",
-      "source": "Hacker News",
-      "score": 343,
-      "comments": 89
-    },
-    {
-      "id": "hn:50439193",
-      "title": "AlphaProof Code",
-      "summary": "",
-      "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
-      "source": "Hacker News",
-      "score": 600,
-      "comments": 179
-    },
-    {
-      "id": "hn:50446246",
-      "title": "Six Math Essentials",
-      "summary": "",
-      "url": "https://teorth.github.io/tao-web/six-math-essentials.html",
-      "source": "Hacker News",
-      "score": 188,
-      "comments": 32
-    },
-    {
-      "id": "hn:50442225",
-      "title": "Announcing .NET 11",
-      "summary": "<a href=\"https:&#x2F;&#x2F;learn.microsoft.com&#x2F;en-us&#x2F;dotnet&#x2F;core&#x2F;whats-new&#x2F;dotnet-11&#x2F;runtime\" rel=\"nofollow\">https:&#x2F;&#x2F;learn.microsoft.com&#x2F;en-us&#x2F;dotnet&#x2F;core&#x2F;whats-new&#x2F;dotn...</a>",
-      "url": "https://devblogs.microsoft.com/dotnet/announcing-dotnet-11/",
-      "source": "Hacker News",
-      "score": 111,
-      "comments": 193
-    },
-    {
-      "id": "lob:kqjcnb",
-      "title": "Weird licenses and the new open source",
-      "summary": "",
-      "url": "https://dustri.org/b/weird-licenses-and-the-new-open-source.html",
       "source": "Lobste.rs",
-      "score": 17,
-      "comments": 23,
+      "score": 55,
+      "comments": 17,
       "tags": [
         "law"
       ]
     },
     {
-      "id": "lob:4yqgpu",
-      "title": "You should try Gleam",
+      "id": "hn:50450488",
+      "title": "Tim Peters has died",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;Python&#x2F;s&#x2F;2Cm5dBcvQw\" rel=\"nofollow\">https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;Python&#x2F;s&#x2F;2Cm5dBcvQw</a>",
+      "url": "https://discuss.python.org/t/in-memoriam-tim-peters-1952-2026/110028",
+      "source": "Hacker News",
+      "score": 349,
+      "comments": 39
+    },
+    {
+      "id": "hn:50452655",
+      "title": "Can a Linear Program Do Weight-Space Programming?",
       "summary": "",
-      "url": "https://nchagnet.eu/blog/you-should-try-gleam",
+      "url": "https://nathan.rs/posts/weight-space-lp/",
+      "source": "Hacker News",
+      "score": 189,
+      "comments": 29
+    },
+    {
+      "id": "lob:vkkbwo",
+      "title": ".name grandfathered",
+      "summary": "",
+      "url": "https://neil.fraser.name/news/2026/11/10/",
       "source": "Lobste.rs",
-      "score": 52,
-      "comments": 10,
+      "score": 179,
+      "comments": 27,
       "tags": [
-        "gleam"
+        "networking"
       ]
     },
     {
-      "id": "lob:gj5obq",
-      "title": "Open Graph images with Astro and Typst",
+      "id": "lob:sdtcvv",
+      "title": "I deleted all my SSH keys",
       "summary": "",
-      "url": "https://eaj.no/posts/open-graph-images-with-typst/",
+      "url": "https://blog.infected.systems/posts/2026-11-03-i-deleted-all-my-ssh-keys/",
       "source": "Lobste.rs",
-      "score": 38,
-      "comments": 8,
+      "score": 55,
+      "comments": 19,
       "tags": [
-        "web"
+        "hardware",
+        "security"
       ]
     },
     {
@@ -181,12 +192,25 @@
       "arxiv_id": "2611.14493v1"
     },
     {
-      "id": "rss:0b578e761c",
-      "title": "Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026",
-      "summary": "Google on Monday released updates to patch nine security vulnerabilities, including one that has come under active exploitation in the wild.\n\nThe high-severity vulnerability, assigned the CVE identifier CVE-2026-125350 (CVSS score: 8.8), has&nbsp;been described as a use-after-free bug in the XML com",
-      "url": "https://thehackernews.com/2026/11/google-issues-chrome-security-update.html",
-      "source": "Tech RSS",
-      "score": 0
+      "id": "lob:idktfu",
+      "title": "Go Turns 17",
+      "summary": "",
+      "url": "https://go.dev/blog/17years",
+      "source": "Lobste.rs",
+      "score": 38,
+      "comments": 7,
+      "tags": [
+        "go"
+      ]
+    },
+    {
+      "id": "hn:50454625",
+      "title": "Show HN: Yogurt – Free, private, open-source alternative to Granola",
+      "summary": "Hey HN, I’m Eric and I want to share an OSS project that I’ve been building in my free time. Yogurt is a free, MIT licensed desktop app that uses on-device AI models to transcribe, summarize, and chat with your meetings.<p>Here&#x27;s a quick demo video: <a href=\"https:&#x2F;&#x2F;www.youtube.com&#x",
+      "url": "https://github.com/FrigadeHQ/yogurt",
+      "source": "Hacker News",
+      "score": 69,
+      "comments": 34
     },
     {
       "id": "lob:t7qkjb",
@@ -194,8 +218,8 @@
       "summary": "",
       "url": "https://stoppels.ch/2026/11/07/the-hardest-tarball.html",
       "source": "Lobste.rs",
-      "score": 57,
-      "comments": 4,
+      "score": 78,
+      "comments": 5,
       "tags": [
         "unix"
       ]
@@ -224,17 +248,6 @@
         "cs.MA"
       ],
       "arxiv_id": "2611.14492v1"
-    },
-    {
-      "id": "arxiv:2611.14491v1",
-      "title": "TimeSeek: Multi-Task and Multi-Domain Pretraining for Generalized Time Series Analytics",
-      "summary": "Time series analytics has been widely applied across various domains. While existing time series foundation models (TSFMs) have demonstrated promising results, they still face two major challenges: 1) Most TSFMs mainly rely on stacking Transformer layers to increase parameter size, lacking the abili",
-      "url": "https://arxiv.org/abs/2611.14491v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG"
-      ],
-      "arxiv_id": "2611.14491v1"
     }
   ],
   "ai_curated": true
