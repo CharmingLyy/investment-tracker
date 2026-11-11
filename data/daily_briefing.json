@@ -1,43 +1,40 @@
 {
   "date": "2026-11-11",
-  "update_time": "2026-11-10 19:26:31",
+  "update_time": "2026-11-11 05:28:24",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-11\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 AlphaProof Code (来源: HackerNews / DeepMind)\n- **核心干货**：DeepMind 把当年在 IMO 上拿银牌的 AlphaProof 从\"数学证明器\"改装成了\"代码生成器\"。核心是把形式化推理的严谨性嫁接到代码合成上，试图解决大模型写代码\"看着对、跑起来崩\"的老毛病——用可验证的证明链条替代概率式瞎猜。\n- **毒舌/硬核点评**：终于有人意识到，让 LLM 写代码不该是\"抽卡求好运\"，而是\"推导求必然\"。不过先别急着欢呼，等它能把屎山遗留代码重构对了再吹。\n- **🔗 传送门**：[点击直达原链接](https://deepmind.google/blog/introducing-alphaproof-code/)\n\n---\n\n### 2. 📌 Amazon 用 Strands Decider 替换 Sonnet 4.6，省下数百万美元 (来源: HackerNews)\n- **核心干货**：亚马逊把内部大量调用 Claude Sonnet 4.6 的活儿，换成了自家 Strands 框架里的 Decider 模块做路由/决策，据称省了数百万美元。本质是\"不是所有任务都配得上顶级大模型\"——用小模型+智能调度分层处理，把贵的算力花在刀刃上。\n- **毒舌/硬核点评**：这才是企业级 AI 的正确打开方式：别拿法拉利送外卖。省钱的真谛从来不是买更便宜的模型，而是搞清楚哪些活儿根本不需要模型。\n- **🔗 传送门**：[点击直达原链接](https://strandsagents.com/blog/amazon-saves-millions-replacing-sonnet-with-strands-decider/)\n\n---\n\n### 3. 📌 Blender 5.3 发布，原生支持 Gaussian Splatting (来源: HackerNews)\n- **核心干货**：开源 3D 神器 Blender 5.3 正式原生集成 Gaussian Splatting（高斯泼溅）。这意味着从照片/视频重建的高保真 3D 场景，终于能直接进主流 3D 工作流里编辑渲染，而不是困在独立查看器里当花瓶。对数字孪生、影视预演、游戏资产管线是实打实的生产力升级。\n- **毒舌/硬核点评**：NeRF 派还没吵完，Gaussian Splat 已经把\"照片变 3D\"卷成了白菜价，现在 Blender 直接把它焊进主流程。那些还在卖天价 3D 扫描服务的公司，该清一清库存了。\n- **🔗 传送门**：[点击直达原链接](https://www.blender.org/download/releases/5-3/)\n\n---\n\n### 🗣️ 今日顶男金句\n> *\"把顶级大模型当万能锤子的人，最后都在为每一颗钉子付溢价；真正的工程师，是先分清哪些是钉子、哪些是螺丝、哪些根本不用敲。\"*",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-11\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 AlphaProof Code：DeepMind 把数学证明机器开进了代码世界 (来源: HackerNews)\n- **核心干货**：DeepMind 推出 AlphaProof Code，把当年在 IMO 数学题上大杀四方的形式化证明能力，迁移到了代码验证与程序合成领域。本质上是用\"可验证的推理\"替代\"概率性瞎猜\"，让 AI 生成的代码能附带数学级别的正确性背书——这对金融、航天、编译器这类\"错一行就爆炸\"的场景是刚需。\n- **毒舌/硬核点评**：别的模型还在用\"我觉得这段代码应该没问题\"糊弄甲方，DeepMind 直接掏出了一张数学试卷让代码现场答辩。以后 AI 写代码的终极形态不是\"能跑就行\"，而是\"先证明它能跑，再让它跑\"。\n- **🔗 传送门**：[点击直达原链接](https://deepmind.google/blog/introducing-alphaproof-code/)\n\n---\n\n### 2. 📌 智能家居设备就该断网也能用 (来源: HackerNews | 798 分)\n- **核心干货**：一篇高赞长文炮轰当下智能家居的云依赖病：你家灯泡要亮，得先跨半个地球问一遍厂商服务器。作者主张本地优先架构——设备在局域网内自洽运行，云只做锦上添花。这不只是体验问题，更是\"厂商倒闭你就变智障家居\"的资产安全命题。\n- **毒舌/硬核点评**：花大价钱买的\"智能\"家居，本质是租来的遥控器——房东（云厂商）一跑路，你家秒变毛坯房。真正的智能，是断网时还能开关灯，而不是对着路由器磕头。\n- **🔗 传送门**：[点击直达原链接](https://docodethatmatters.com/home-automation-overnight-success/)\n\n---\n\n### 3. 📌 ReTrace：把爱烧钱的工具调用 Agent 蒸馏成\"无脑\"固定流水线 (来源: ArXiv)\n- **核心干货**：企业里大量 SOP 流程其实每次都一样，但 LLM Agent 每次执行都要重新\"思考\"每一步该调哪个工具，延迟和成本双双起飞。ReTrace 的思路很务实：先把 Agent 跑出来的成功轨迹蒸馏成无需 Planner 的固定工作流，后续同类任务直接照抄最优路径。这是把 Agent 从\"每次都请个博士来决策\"降级为\"训练有素的流水线工人\"。\n- **毒舌/硬核点评**：Agent 圈最大的泡沫就是\"每一步都要大模型深思熟虑\"。现实是，90% 的业务流程根本不配拥有自由意志——让模型学会\"背答案\"，比让它\"临场发挥\"值钱得多。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2611.14492v1)\n\n---\n\n### 🗣️ 今日顶男金句\n*\"真正的技术护城河，不是你调用了多大的模型，而是你把多少'需要思考'的事，变成了'不需要思考'的确定性。\"*",
   "briefing_items": [
     {
-      "title": "AlphaProof Code",
-      "source": "HackerNews / DeepMind",
-      "summary": "DeepMind 把当年在 IMO 上拿银牌的 AlphaProof 从\"数学证明器\"改装成了\"代码生成器\"。核心是把形式化推理的严谨性嫁接到代码合成上，试图解决大模型写代码\"看着对、跑起来崩\"的老毛病——用可验证的证明链条替代概率式瞎猜。",
-      "commentary": "终于有人意识到，让 LLM 写代码不该是\"抽卡求好运\"，而是\"推导求必然\"。不过先别急着欢呼，等它能把屎山遗留代码重构对了再吹。",
+      "title": "AlphaProof Code：DeepMind 把数学证明机器开进了代码世界",
+      "source": "HackerNews",
+      "summary": "DeepMind 推出 AlphaProof Code，把当年在 IMO 数学题上大杀四方的形式化证明能力，迁移到了代码验证与程序合成领域。本质上是用\"可验证的推理\"替代\"概率性瞎猜\"，让 AI 生成的代码能附带数学级别的正确性背书——这对金融、航天、编译器这类\"错一行就爆炸\"的场景是刚需。",
+      "commentary": "别的模型还在用\"我觉得这段代码应该没问题\"糊弄甲方，DeepMind 直接掏出了一张数学试卷让代码现场答辩。以后 AI 写代码的终极形态不是\"能跑就行\"，而是\"先证明它能跑，再让它跑\"。",
       "url": "https://deepmind.google/blog/introducing-alphaproof-code/"
     },
     {
-      "title": "Amazon 用 Strands Decider 替换 Sonnet 4.6，省下数百万美元",
-      "source": "HackerNews",
-      "summary": "亚马逊把内部大量调用 Claude Sonnet 4.6 的活儿，换成了自家 Strands 框架里的 Decider 模块做路由/决策，据称省了数百万美元。本质是\"不是所有任务都配得上顶级大模型\"——用小模型+智能调度分层处理，把贵的算力花在刀刃上。",
-      "commentary": "这才是企业级 AI 的正确打开方式：别拿法拉利送外卖。省钱的真谛从来不是买更便宜的模型，而是搞清楚哪些活儿根本不需要模型。",
-      "url": "https://strandsagents.com/blog/amazon-saves-millions-replacing-sonnet-with-strands-decider/"
+      "title": "智能家居设备就该断网也能用",
+      "source": "HackerNews | 798 分",
+      "summary": "一篇高赞长文炮轰当下智能家居的云依赖病：你家灯泡要亮，得先跨半个地球问一遍厂商服务器。作者主张本地优先架构——设备在局域网内自洽运行，云只做锦上添花。这不只是体验问题，更是\"厂商倒闭你就变智障家居\"的资产安全命题。",
+      "commentary": "花大价钱买的\"智能\"家居，本质是租来的遥控器——房东（云厂商）一跑路，你家秒变毛坯房。真正的智能，是断网时还能开关灯，而不是对着路由器磕头。",
+      "url": "https://docodethatmatters.com/home-automation-overnight-success/"
     },
     {
-      "title": "Blender 5.3 发布，原生支持 Gaussian Splatting",
-      "source": "HackerNews",
-      "summary": "开源 3D 神器 Blender 5.3 正式原生集成 Gaussian Splatting（高斯泼溅）。这意味着从照片/视频重建的高保真 3D 场景，终于能直接进主流 3D 工作流里编辑渲染，而不是困在独立查看器里当花瓶。对数字孪生、影视预演、游戏资产管线是实打实的生产力升级。",
-      "commentary": "NeRF 派还没吵完，Gaussian Splat 已经把\"照片变 3D\"卷成了白菜价，现在 Blender 直接把它焊进主流程。那些还在卖天价 3D 扫描服务的公司，该清一清库存了。",
-      "url": "https://www.blender.org/download/releases/5-3/"
-    },
-    {
-      "quote": "*\"把顶级大模型当万能锤子的人，最后都在为每一颗钉子付溢价；真正的工程师，是先分清哪些是钉子、哪些是螺丝、哪些根本不用敲。\"*"
+      "title": "ReTrace：把爱烧钱的工具调用 Agent 蒸馏成\"无脑\"固定流水线",
+      "source": "ArXiv",
+      "summary": "企业里大量 SOP 流程其实每次都一样，但 LLM Agent 每次执行都要重新\"思考\"每一步该调哪个工具，延迟和成本双双起飞。ReTrace 的思路很务实：先把 Agent 跑出来的成功轨迹蒸馏成无需 Planner 的固定工作流，后续同类任务直接照抄最优路径。这是把 Agent 从\"每次都请个博士来决策\"降级为\"训练有素的流水线工人\"。",
+      "commentary": "Agent 圈最大的泡沫就是\"每一步都要大模型深思熟虑\"。现实是，90% 的业务流程根本不配拥有自由意志——让模型学会\"背答案\"，比让它\"临场发挥\"值钱得多。",
+      "url": "https://arxiv.org/abs/2611.14492v1"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50442426",
-      "title": "Blender 5.3 released with Gaussian Splat support",
+      "id": "hn:50445401",
+      "title": "Scion is back and is going to sell a kei truck in America",
       "summary": "",
-      "url": "https://www.blender.org/download/releases/5-3/",
+      "url": "https://www.theautopian.com/scion-is-back-and-its-going-to-sell-a-freaking-kei-truck-in-america/",
       "source": "Hacker News",
-      "score": 290,
-      "comments": 39
+      "score": 405,
+      "comments": 285
     },
     {
       "id": "hn:50441707",
@@ -45,174 +42,17 @@
       "summary": "",
       "url": "https://docodethatmatters.com/home-automation-overnight-success/",
       "source": "Hacker News",
-      "score": 287,
-      "comments": 125
+      "score": 798,
+      "comments": 285
     },
     {
-      "id": "hn:50436640",
-      "title": "Amazon saves millions by replacing Sonnet 4.6 with Strands Decider",
+      "id": "hn:50447074",
+      "title": "Tracking Anthropic-discovered vulnerabilities",
       "summary": "",
-      "url": "https://strandsagents.com/blog/amazon-saves-millions-replacing-sonnet-with-strands-decider/",
+      "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
       "source": "Hacker News",
-      "score": 642,
-      "comments": 223
-    },
-    {
-      "id": "lob:ynik5s",
-      "title": "Microsoft are rejecting your mail",
-      "summary": "",
-      "url": "https://www.mythic-beasts.com/blog/2026/11/09/microsoft-are-rejecting-your-mail/",
-      "source": "Lobste.rs",
-      "score": 72,
-      "comments": 21,
-      "tags": [
-        "email"
-      ]
-    },
-    {
-      "id": "hn:50442736",
-      "title": ".name Grandfathered",
-      "summary": "",
-      "url": "https://neil.fraser.name/news/2026/11/10/",
-      "source": "Hacker News",
-      "score": 365,
-      "comments": 63
-    },
-    {
-      "id": "hn:50439193",
-      "title": "AlphaProof Code",
-      "summary": "",
-      "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
-      "source": "Hacker News",
-      "score": 489,
-      "comments": 159
-    },
-    {
-      "id": "arxiv:2611.12872v1",
-      "title": "HiVe-Mem: Interleaving Horizontal Memory Expansion and Vertical Evidence Composition for Multimodal Agents",
-      "summary": "As multimodal agents accumulate increasingly long interaction histories, effectively retrieving and utilizing past information becomes critical for long-term interaction. Existing memory systems typically rely on semantic retrieval over compressed memories and expose predefined representations, whic",
-      "url": "https://arxiv.org/abs/2611.12872v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2611.12872v1"
-    },
-    {
-      "id": "hn:50439695",
-      "title": "Ableton Live 13",
-      "summary": "",
-      "url": "https://www.ableton.com/en/live/",
-      "source": "Hacker News",
-      "score": 193,
-      "comments": 231
-    },
-    {
-      "id": "lob:ezjewj",
-      "title": "How Much Energy Does Building Distro Packages Use",
-      "summary": "",
-      "url": "https://www.wezm.net/v2/posts/2026/distro-energy-use/",
-      "source": "Lobste.rs",
-      "score": 97,
-      "comments": 17,
-      "tags": [
-        "linux"
-      ]
-    },
-    {
-      "id": "lob:txkq8s",
-      "title": "Horrible public key tricks",
-      "summary": "",
-      "url": "https://maurycyz.com/projects/badcert/",
-      "source": "Lobste.rs",
-      "score": 111,
-      "comments": 12,
-      "tags": [
-        "cryptography"
-      ]
-    },
-    {
-      "id": "hn:50382401",
-      "title": "I deleted all my SSH keys",
-      "summary": "<a href=\"https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20261110172054&#x2F;https:&#x2F;&#x2F;blog.infected.systems&#x2F;posts&#x2F;2026-11-03-i-deleted-all-my-ssh-keys&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20261110172054&#x2F;https:&#x2F;&#x2F;blog.infe...</a>",
-      "url": "https://blog.infected.systems/posts/2026-11-03-i-deleted-all-my-ssh-keys/",
-      "source": "Hacker News",
-      "score": 106,
-      "comments": 37
-    },
-    {
-      "id": "rss:0b578e761c",
-      "title": "Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026",
-      "summary": "Google on Monday released updates to patch nine security vulnerabilities, including one that has come under active exploitation in the wild.\n\nThe high-severity vulnerability, assigned the CVE identifier CVE-2026-125350 (CVSS score: N/A), has been described as a use-after-free bug in the XML componen",
-      "url": "https://thehackernews.com/2026/11/google-issues-chrome-security-update.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "lob:4yqgpu",
-      "title": "You should try Gleam",
-      "summary": "",
-      "url": "https://nchagnet.eu/blog/you-should-try-gleam",
-      "source": "Lobste.rs",
-      "score": 39,
-      "comments": 7,
-      "tags": [
-        "gleam"
-      ]
-    },
-    {
-      "id": "arxiv:2611.12878v1",
-      "title": "Adaptive Quantization Preserves Fast Rates for TD Learning over Rate-Limited Channels",
-      "summary": "Motivated by reinforcement learning subject to communication constraints, we study a policy evaluation problem with linear function approximation over a rate-limited channel. In our setup, an agent interacting with an unknown environment (modeled as a Markov Decision Process) transmits quantized est",
-      "url": "https://arxiv.org/abs/2611.12878v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG"
-      ],
-      "arxiv_id": "2611.12878v1"
-    },
-    {
-      "id": "rss:a1ad84f79e",
-      "title": "Vulnerability that lets hackers SSH into Linux devices is under active exploitation",
-      "summary": "\"*sshole\" poses a serious threat to Internet security.",
-      "url": "https://arstechnica.com/security/2026/11/vulnerability-that-lets-hackers-ssh-into-linux-devices-is-under-active-exploitation/",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "lob:gj5obq",
-      "title": "Open Graph images with Astro and Typst",
-      "summary": "",
-      "url": "https://eaj.no/posts/open-graph-images-with-typst/",
-      "source": "Lobste.rs",
-      "score": 28,
-      "comments": 7,
-      "tags": [
-        "web"
-      ]
-    },
-    {
-      "id": "hn:50443427",
-      "title": "Val Town is winding down",
-      "summary": "",
-      "url": "https://blog.val.town/winding-down",
-      "source": "Hacker News",
-      "score": 115,
-      "comments": 30
-    },
-    {
-      "id": "lob:bubqox",
-      "title": "Blunt Banhammer Blocks Basic Bots Ballistically",
-      "summary": "",
-      "url": "https://shkspr.mobi/blog/2026/11/blunt-banhammer-blocks-basic-bots-ballistically/",
-      "source": "Lobste.rs",
-      "score": 22,
-      "comments": 10,
-      "tags": [
-        "web"
-      ]
+      "score": 361,
+      "comments": 165
     },
     {
       "id": "hn:50443824",
@@ -220,17 +60,181 @@
       "summary": "",
       "url": "https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/",
       "source": "Hacker News",
-      "score": 80,
-      "comments": 36
+      "score": 337,
+      "comments": 202
     },
     {
-      "id": "hn:50441518",
-      "title": "Show HN: Valencia, Spain in Sim City/Isometric View",
-      "summary": "",
-      "url": "https://tinyvalencia.com/",
+      "id": "hn:50442736",
+      "title": ".name Grandfathered",
+      "summary": "Previously: <i>.name Termination</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49550772\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49550772</a> - Sept 2026 (547 comments)",
+      "url": "https://neil.fraser.name/news/2026/11/10/",
       "source": "Hacker News",
-      "score": 93,
-      "comments": 28
+      "score": 744,
+      "comments": 168
+    },
+    {
+      "id": "hn:50444129",
+      "title": "Starlink Mini 2",
+      "summary": "",
+      "url": "https://starlink.com/mini-2",
+      "source": "Hacker News",
+      "score": 341,
+      "comments": 345
+    },
+    {
+      "id": "hn:50443427",
+      "title": "Val Town is winding down",
+      "summary": "",
+      "url": "https://blog.val.town/winding-down",
+      "source": "Hacker News",
+      "score": 343,
+      "comments": 89
+    },
+    {
+      "id": "hn:50439193",
+      "title": "AlphaProof Code",
+      "summary": "",
+      "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+      "source": "Hacker News",
+      "score": 600,
+      "comments": 179
+    },
+    {
+      "id": "hn:50446246",
+      "title": "Six Math Essentials",
+      "summary": "",
+      "url": "https://teorth.github.io/tao-web/six-math-essentials.html",
+      "source": "Hacker News",
+      "score": 188,
+      "comments": 32
+    },
+    {
+      "id": "hn:50442225",
+      "title": "Announcing .NET 11",
+      "summary": "<a href=\"https:&#x2F;&#x2F;learn.microsoft.com&#x2F;en-us&#x2F;dotnet&#x2F;core&#x2F;whats-new&#x2F;dotnet-11&#x2F;runtime\" rel=\"nofollow\">https:&#x2F;&#x2F;learn.microsoft.com&#x2F;en-us&#x2F;dotnet&#x2F;core&#x2F;whats-new&#x2F;dotn...</a>",
+      "url": "https://devblogs.microsoft.com/dotnet/announcing-dotnet-11/",
+      "source": "Hacker News",
+      "score": 111,
+      "comments": 193
+    },
+    {
+      "id": "lob:kqjcnb",
+      "title": "Weird licenses and the new open source",
+      "summary": "",
+      "url": "https://dustri.org/b/weird-licenses-and-the-new-open-source.html",
+      "source": "Lobste.rs",
+      "score": 17,
+      "comments": 23,
+      "tags": [
+        "law"
+      ]
+    },
+    {
+      "id": "lob:4yqgpu",
+      "title": "You should try Gleam",
+      "summary": "",
+      "url": "https://nchagnet.eu/blog/you-should-try-gleam",
+      "source": "Lobste.rs",
+      "score": 52,
+      "comments": 10,
+      "tags": [
+        "gleam"
+      ]
+    },
+    {
+      "id": "lob:gj5obq",
+      "title": "Open Graph images with Astro and Typst",
+      "summary": "",
+      "url": "https://eaj.no/posts/open-graph-images-with-typst/",
+      "source": "Lobste.rs",
+      "score": 38,
+      "comments": 8,
+      "tags": [
+        "web"
+      ]
+    },
+    {
+      "id": "arxiv:2611.14514v1",
+      "title": "Contrastive Discovery: Open-Ended Scientific Discovery over Competing Explanations",
+      "summary": "LLM agents are increasingly used for open-ended, data-driven scientific discovery, yet most of them evaluate hypotheses pointwise, testing an empirical claim $h$ only against its complement $\\neg h$. When evidence rejects $h$, the agent learns that one explanation is unlikely but not which alternati",
+      "url": "https://arxiv.org/abs/2611.14514v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_id": "2611.14514v1"
+    },
+    {
+      "id": "arxiv:2611.14493v1",
+      "title": "Comparative Analysis of Agent Evaluation Frameworks: Stability, Detection, and Discovery in Enterprise Analytics Agents",
+      "summary": "Deploying LLM-based analytics agents in enterprise settings requires evaluation frameworks that can reliably detect failures across complex, multi-tool workflows. We present a three-phase comparative study of three evaluation frameworks, each representing a distinct evaluation paradigm (trace-based ",
+      "url": "https://arxiv.org/abs/2611.14493v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "cs.SE"
+      ],
+      "arxiv_id": "2611.14493v1"
+    },
+    {
+      "id": "rss:0b578e761c",
+      "title": "Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026",
+      "summary": "Google on Monday released updates to patch nine security vulnerabilities, including one that has come under active exploitation in the wild.\n\nThe high-severity vulnerability, assigned the CVE identifier CVE-2026-125350 (CVSS score: 8.8), has&nbsp;been described as a use-after-free bug in the XML com",
+      "url": "https://thehackernews.com/2026/11/google-issues-chrome-security-update.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "lob:t7qkjb",
+      "title": "The hardest tarball",
+      "summary": "",
+      "url": "https://stoppels.ch/2026/11/07/the-hardest-tarball.html",
+      "source": "Lobste.rs",
+      "score": 57,
+      "comments": 4,
+      "tags": [
+        "unix"
+      ]
+    },
+    {
+      "id": "arxiv:2611.14515v1",
+      "title": "AutoScaffold: AI-Guided Scaffolding for Reinforcement Learning of Language Models",
+      "summary": "Reinforcement learning with verifiable rewards (RLVR) produces rich training experience, yet outcome rewards reduce each attempt to a single number and leave most of this information unused. Training-time scaffolds, such as strategies or hints added to the prompt during training, offer a natural way",
+      "url": "https://arxiv.org/abs/2611.14515v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "arxiv_id": "2611.14515v1"
+    },
+    {
+      "id": "arxiv:2611.14492v1",
+      "title": "ReTrace: Distilling Tool-Using Agents into Planner-Free Workflows",
+      "summary": "Business process automation runs the same Standard Operating Procedure (SOP) again and again on new inputs. Large Language Model (LLM) agents can follow an SOP written in natural language, but they call an LLM to choose every step of every run, which adds latency and cost at scale. We present ReTrac",
+      "url": "https://arxiv.org/abs/2611.14492v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "cs.MA"
+      ],
+      "arxiv_id": "2611.14492v1"
+    },
+    {
+      "id": "arxiv:2611.14491v1",
+      "title": "TimeSeek: Multi-Task and Multi-Domain Pretraining for Generalized Time Series Analytics",
+      "summary": "Time series analytics has been widely applied across various domains. While existing time series foundation models (TSFMs) have demonstrated promising results, they still face two major challenges: 1) Most TSFMs mainly rely on stacking Transformer layers to increase parameter size, lacking the abili",
+      "url": "https://arxiv.org/abs/2611.14491v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_id": "2611.14491v1"
     }
   ],
   "ai_curated": true
