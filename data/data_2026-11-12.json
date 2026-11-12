@@ -1,0 +1,835 @@
+{
+  "update_time": "2026-11-12 16:28:37",
+  "stocks": {
+    "a_stocks": [
+      {
+        "market": "A股",
+        "code": "002050",
+        "name": "三花智控",
+        "symbol": "sz.002050",
+        "industry": null,
+        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
+        "price": 34.61,
+        "open": 36.25,
+        "high": 36.27,
+        "low": 34.44,
+        "change_pct": -4.79,
+        "volume": 91107601,
+        "turnover": 32.21,
+        "market_cap": null,
+        "pe": 37.46,
+        "cash_flow": 50.92,
+        "macd": 0.1828,
+        "macd_signal": -0.0611,
+        "macd_histogram": 0.4879,
+        "rsi": 51.06,
+        "ma": {
+          "MA5": 34.84,
+          "MA10": 34.35,
+          "MA20": 34.0,
+          "MA60": 34.98
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
+        "price": 6.0,
+        "open": 6.05,
+        "high": 6.07,
+        "low": 5.99,
+        "change_pct": -0.99,
+        "volume": 40999900,
+        "turnover": 2.47,
+        "market_cap": null,
+        "pe": 67.37,
+        "cash_flow": 105.67,
+        "macd": -0.0857,
+        "macd_signal": -0.0929,
+        "macd_histogram": 0.0144,
+        "rsi": 35.98,
+        "ma": {
+          "MA5": 6.07,
+          "MA10": 6.09,
+          "MA20": 6.12,
+          "MA60": 6.41
+        },
+        "main_net_flow": null
+      }
+    ],
+    "hk_stocks": [
+      {
+        "market": "港股",
+        "code": "01810",
+        "name": "小米集团-W",
+        "symbol": "01810",
+        "industry": "Consumer Electronics",
+        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
+        "price": NaN,
+        "open": null,
+        "high": null,
+        "low": null,
+        "change_pct": NaN,
+        "volume": 109529909,
+        "turnover": null,
+        "market_cap": 7715.04,
+        "pe": 22.04,
+        "cash_flow": 86.81,
+        "macd": 1.157,
+        "macd_signal": 0.8402,
+        "macd_histogram": 0.6336,
+        "rsi": 62.58,
+        "ma": {
+          "MA5": null,
+          "MA10": null,
+          "MA20": null,
+          "MA60": null
+        },
+        "main_net_flow": null
+      }
+    ],
+    "us_stocks": [
+      {
+        "market": "美股",
+        "code": "NVDA",
+        "name": "NVIDIA",
+        "symbol": "NVDA",
+        "industry": "Semiconductors",
+        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
+        "price": 165.06,
+        "open": 150.99,
+        "high": 167.14,
+        "low": 148.8,
+        "change_pct": -4.99,
+        "volume": 479083318,
+        "turnover": null,
+        "market_cap": 39866.7,
+        "pe": 20.87,
+        "cash_flow": 418.1,
+        "macd": -13.3264,
+        "macd_signal": -9.089,
+        "macd_histogram": -8.4747,
+        "rsi": 25.62,
+        "ma": {
+          "MA5": 174.6,
+          "MA10": 186.81,
+          "MA20": 201.2,
+          "MA60": 216.07
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "GOOG",
+        "name": "Alphabet (Google)",
+        "symbol": "GOOG",
+        "industry": "Internet Content & Information",
+        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
+        "price": 295.48,
+        "open": 290.69,
+        "high": 296.99,
+        "low": 290.47,
+        "change_pct": 1.67,
+        "volume": 8553608,
+        "turnover": null,
+        "market_cap": 36326.31,
+        "pe": 15.43,
+        "cash_flow": 11.62,
+        "macd": -13.0012,
+        "macd_signal": -13.5136,
+        "macd_histogram": 1.0247,
+        "rsi": 41.27,
+        "ma": {
+          "MA5": 288.19,
+          "MA10": 284.45,
+          "MA20": 303.11,
+          "MA60": 328.14
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "CRCL",
+        "name": "Circle",
+        "symbol": "CRCL",
+        "industry": "Capital Markets",
+        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
+        "price": 65.32,
+        "open": 63.3,
+        "high": 65.87,
+        "low": 62.77,
+        "change_pct": -2.69,
+        "volume": 3518031,
+        "turnover": null,
+        "market_cap": 167.57,
+        "pe": 39.35,
+        "cash_flow": 2.62,
+        "macd": -4.8955,
+        "macd_signal": -3.6879,
+        "macd_histogram": -2.4153,
+        "rsi": 34.23,
+        "ma": {
+          "MA5": 66.57,
+          "MA10": 69.83,
+          "MA20": 76.66,
+          "MA60": 84.55
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "MP",
+        "name": "MP Materials",
+        "symbol": "MP",
+        "industry": "Other Industrial Metals & Mining",
+        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
+        "price": 38.46,
+        "open": 37.81,
+        "high": 38.63,
+        "low": 35.93,
+        "change_pct": 4.71,
+        "volume": 3931932,
+        "turnover": null,
+        "market_cap": 68.56,
+        "pe": 82.44,
+        "cash_flow": 4.1,
+        "macd": -2.1083,
+        "macd_signal": -2.4115,
+        "macd_histogram": 0.6066,
+        "rsi": 45.71,
+        "ma": {
+          "MA5": 36.96,
+          "MA10": 37.02,
+          "MA20": 38.29,
+          "MA60": 46.38
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "PLTR",
+        "name": "Palantir",
+        "symbol": "PLTR",
+        "industry": "Software - Infrastructure",
+        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
+        "price": 171.88,
+        "open": 169.94,
+        "high": 172.68,
+        "low": 168.25,
+        "change_pct": -0.3,
+        "volume": 5093338,
+        "turnover": null,
+        "market_cap": 4141.93,
+        "pe": 121.06,
+        "cash_flow": 26.52,
+        "macd": -6.1522,
+        "macd_signal": -4.1329,
+        "macd_histogram": -4.0387,
+        "rsi": 42.05,
+        "ma": {
+          "MA5": 168.54,
+          "MA10": 170.72,
+          "MA20": 183.27,
+          "MA60": 184.04
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "NOW",
+        "name": "ServiceNow",
+        "symbol": "NOW",
+        "industry": "Software - Application",
+        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
+        "price": 101.56,
+        "open": 101.42,
+        "high": 102.5,
+        "low": 99.63,
+        "change_pct": -1.17,
+        "volume": 3255421,
+        "turnover": null,
+        "market_cap": 1054.11,
+        "pe": 73.06,
+        "cash_flow": 57.54,
+        "macd": -10.7975,
+        "macd_signal": -7.9177,
+        "macd_histogram": -5.7595,
+        "rsi": 30.33,
+        "ma": {
+          "MA5": 101.73,
+          "MA10": 104.01,
+          "MA20": 125.94,
+          "MA60": 133.32
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "DDOG",
+        "name": "Datadog",
+        "symbol": "DDOG",
+        "industry": "Software - Application",
+        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
+        "price": 182.24,
+        "open": 178.7,
+        "high": 183.5,
+        "low": 176.42,
+        "change_pct": -1.16,
+        "volume": 1004669,
+        "turnover": null,
+        "market_cap": 657.96,
+        "pe": 253.11,
+        "cash_flow": 10.66,
+        "macd": -22.5252,
+        "macd_signal": -15.5875,
+        "macd_histogram": -13.8753,
+        "rsi": 31.0,
+        "ma": {
+          "MA5": 180.74,
+          "MA10": 193.89,
+          "MA20": 230.43,
+          "MA60": 241.66
+        },
+        "main_net_flow": null
+      }
+    ],
+    "crypto": [
+      {
+        "market": "加密货币",
+        "code": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "industry": "Smart Contract Platform",
+        "price": 71765,
+        "open": null,
+        "high": 74695,
+        "low": 71238,
+        "change_pct": -3.35,
+        "volume": 29051648611,
+        "turnover": null,
+        "market_cap": 14428.84,
+        "market_cap_rank": 1,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -2083.5987,
+        "macd_signal": -1627.8595,
+        "macd_histogram": -911.4784,
+        "rsi": 30.45,
+        "ma": {
+          "MA5": 73895.19,
+          "MA10": 75486.04,
+          "MA20": 77273.12,
+          "MA60": 80853.09
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 20111109.0,
+          "total_supply": 20111109.0,
+          "circ_ratio": 100.0,
+          "price_change_7d": -5.44816,
+          "price_change_30d": -13.83997,
+          "ath_pct": -43.08,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      },
+      {
+        "market": "加密货币",
+        "code": "ethereum",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "industry": "Smart Contract Platform",
+        "price": 2012.26,
+        "open": null,
+        "high": 2097.43,
+        "low": 1983.64,
+        "change_pct": -3.17,
+        "volume": 10720220124,
+        "turnover": null,
+        "market_cap": 2458.87,
+        "market_cap_rank": 2,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -97.4679,
+        "macd_signal": -77.5456,
+        "macd_histogram": -39.8446,
+        "rsi": 28.15,
+        "ma": {
+          "MA5": 2075.08,
+          "MA10": 2178.12,
+          "MA20": 2238.02,
+          "MA60": 2455.63
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 122212724.4774798,
+          "total_supply": 122212724.4774798,
+          "circ_ratio": 100.0,
+          "price_change_7d": -10.58294,
+          "price_change_30d": -19.95451,
+          "ath_pct": -59.32,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      }
+    ]
+  },
+  "news": [
+    {
+      "id": "35b871d31c",
+      "title": "[播客]独家实拍：我那永远跪着的母亲(11/07 22:10)",
+      "summary": "独家实拍：我那永远跪着的母亲",
+      "link": "http://go.rss.sina.com.cn/redirect.php?url=http://you.video.sina.com.cn/b/16972162-1239095354.html",
+      "source": "rss.sina.com.cn",
+      "published": ""
+    },
+    {
+      "id": "d8b803083e",
+      "title": "‘I’m sick of flying’: I paid for priority boarding, but the overhead bins were full. Was I duped?",
+      "summary": "“Maybe next time I’ll try the other approach: I’ll board whenever I feel like it and drop my suitcase in the first open slot I see.”",
+      "link": "https://www.marketwatch.com/story/im-sick-of-flying-i-paid-for-priority-boarding-but-the-overhead-bins-were-full-was-i-duped-0badcc80?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 12 Nov 2026 16:15:00 GMT"
+    },
+    {
+      "id": "10b7fd00ba",
+      "title": "Medicare at age 50? What ‘Medicare for more’ could mean for American workers.",
+      "summary": "It’s not “Medicare for All,” but a new bill would lower the Medicare age to 50, expanding coverage for 60 million adults",
+      "link": "https://www.marketwatch.com/story/its-not-medicare-for-all-but-medicare-for-more-what-this-could-mean-for-workers-over-50-4a5c51a3?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 12 Nov 2026 16:00:00 GMT"
+    },
+    {
+      "id": "7f1fdfd342",
+      "title": "Nvidia is spending more than ever on Washington lobbying. It may not stop Congress from limiting China chip sales now.",
+      "summary": "‘There’s no question that Congress is going to push for a complete ban on the sale of advanced semiconductors into China,’ says a former U.S. ambassador to Beijing",
+      "link": "https://www.marketwatch.com/story/nvidia-is-spending-more-than-ever-on-washington-lobbying-it-still-may-not-be-able-to-stop-congress-from-limiting-its-china-chip-sales-now-d4c34c66?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 12 Nov 2026 15:55:00 GMT"
+    },
+    {
+      "id": "0097433535",
+      "title": "Home sales plummet to lowest level since ‘Great Recession’ as prices hit all-time high",
+      "summary": "Home sales fell in October to a 16-year low as buyers bolted from the housing market in the face of 7% mortgage rates.",
+      "link": "https://www.marketwatch.com/story/home-sales-plummet-to-lowest-level-since-the-great-recession-as-buyers-flee-the-market-624e6270?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 12 Nov 2026 15:52:00 GMT"
+    },
+    {
+      "id": "5d0e7f5c22",
+      "title": "What really happens during Medicare counseling",
+      "summary": "Open enrollment can bring unexpected challenges for seniors.",
+      "link": "https://www.marketwatch.com/story/what-really-happens-during-medicare-counseling-6a4f618e?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 12 Nov 2026 15:40:00 GMT"
+    },
+    {
+      "id": "0ab981f0a1",
+      "title": "‘The thought of living to 100 terrifies me’: Is Social Security a giant Ponzi scheme?",
+      "summary": "There is already a demographic ‘run’ on Social Security.",
+      "link": "https://www.marketwatch.com/story/the-thought-of-living-to-100-terrifies-me-is-social-security-a-giant-ponzi-scheme-84a64e7e?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 12 Nov 2026 15:30:00 GMT"
+    },
+    {
+      "id": "25451828de",
+      "title": "‘He calls my plans a fantasy’: My husband says we can’t afford our $200,000-a-year dream retirement. I think he’s cheap.",
+      "summary": "“We have $2 million saved in our retirement accounts and a house worth $1.3 million.”",
+      "link": "https://www.marketwatch.com/story/he-calls-my-plans-a-fantasy-my-husband-says-we-cant-afford-our-200-000-a-year-dream-retirement-i-think-hes-cheap-45bc5b4e?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 12 Nov 2026 15:26:00 GMT"
+    },
+    {
+      "id": "52626a628f",
+      "title": "Here’s what Megaspeed, the company at the forefront of the Nvidia scandal, is now saying",
+      "summary": "The Singaporean company Megaspeed, which stands at the center of the scandal engulfing Nvidia, on Thursday issued its first public statement since the scandal erupted.",
+      "link": "https://www.marketwatch.com/story/heres-what-megaspeed-the-company-at-the-forefront-of-the-nvidia-scandal-is-now-saying-b73f8d0b?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 12 Nov 2026 15:23:00 GMT"
+    },
+    {
+      "id": "848fa89848",
+      "title": "These home buyers bought their first house with help from their employer. ‘Why not jump at the chance?’",
+      "summary": "The rise in home-buying help from employers “speaks volumes about how difficult buying a home has become, even for people with steady jobs.”",
+      "link": "https://www.marketwatch.com/story/need-money-for-a-down-payment-more-employers-are-offering-to-help-59c57da3?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 12 Nov 2026 15:13:00 GMT"
+    },
+    {
+      "id": "95378f1d8e",
+      "title": "Jensen Huang built Nvidia into a behemoth. His resignation puts the entire AI boom in jeopardy.",
+      "summary": "Huang fueled his company and the AI ecosystem with advanced chips and creative financing deals across the supply chain. What will happen now that’s he gone?",
+      "link": "https://www.marketwatch.com/story/jensen-huang-built-nvidia-into-a-behemoth-his-scandal-puts-the-entire-ai-boom-in-jeopardy-c374b079?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 12 Nov 2026 14:49:00 GMT"
+    },
+    {
+      "id": "2a1590f0a4",
+      "title": "Earnings call transcript: ENAV Q3 2026 profit jumps as stock rises 5%",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-enav-q3-2026-profit-jumps-as-stock-rises-5-93CH-5022678",
+      "source": "www.investing.com",
+      "published": "2026-11-12 16:15:33"
+    },
+    {
+      "id": "ac325ae8eb",
+      "title": "StoneX reiterates Humacyte stock rating on strong sales growth",
+      "summary": "",
+      "link": "https://www.investing.com/news/analyst-ratings/stonex-reiterates-humacyte-stock-rating-on-strong-sales-growth-93CH-5022675",
+      "source": "www.investing.com",
+      "published": "2026-11-12 16:14:55"
+    },
+    {
+      "id": "ff02046329",
+      "title": "Earnings call transcript: Aya Gold & Silver misses Q3 2026 estimates as stock slips",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-aya-gold--silver-misses-q3-2026-estimates-as-stock-slips-93CH-5022674",
+      "source": "www.investing.com",
+      "published": "2026-11-12 16:14:23"
+    },
+    {
+      "id": "d5ea8bed21",
+      "title": "Earnings call transcript: DO & CO posts record H1 2026/27 as margins expand",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-do--co-posts-record-h1-202627-as-margins-expand-93CH-5022672",
+      "source": "www.investing.com",
+      "published": "2026-11-12 16:13:59"
+    },
+    {
+      "id": "a9f4f195e1",
+      "title": "Central Puerto Q3 2026 slides: EBITDA surges 70% on fuel strategy",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/central-puerto-q3-2026-slides-ebitda-surges-70-on-fuel-strategy-93CH-5022671",
+      "source": "www.investing.com",
+      "published": "2026-11-12 16:13:35"
+    },
+    {
+      "id": "16ae84bebd",
+      "title": "Trump says US does not \"need\" Iran deal, directs Vance to focus on domestic corruption",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/trump-says-vance-should-focus-on-domestic-corruption-we-dont-need-a-deal-with-iran-5021925",
+      "source": "www.investing.com",
+      "published": "2026-11-12 16:12:58"
+    },
+    {
+      "id": "9bcd1a9f24",
+      "title": "Trump says ex Apple CEO Cook is ’a legend’, should replace Huang at Nvidia",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/trump-says-ex-apple-ceo-cook-should-replace-huang-at-nvidia-5022650",
+      "source": "www.investing.com",
+      "published": "2026-11-12 16:12:40"
+    },
+    {
+      "id": "20f7c13324",
+      "title": "Jacobs declares $0.36 quarterly dividend payable in December",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/jacobs-declares-036-quarterly-dividend-payable-in-december-93CH-5022668",
+      "source": "www.investing.com",
+      "published": "2026-11-12 16:12:37"
+    },
+    {
+      "id": "a16de2bdd0",
+      "title": "Nvidia CEO Jensen Huang resigns in big blow to AI boom",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/nvidia-ceo-jensen-huang-to-step-down-in-big-blow-to-ai-boom-5021980",
+      "source": "www.investing.com",
+      "published": "2026-11-12 16:12:25"
+    },
+    {
+      "id": "c9253cfcce",
+      "title": "Wolverine Q3 2026 slides: tariff refunds boost beat, guidance raised",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/wolverine-q3-2026-slides-tariff-refunds-boost-beat-guidance-raised-93CH-5022667",
+      "source": "www.investing.com",
+      "published": "2026-11-12 16:12:22"
+    }
+  ],
+  "briefing": {
+    "date": "2026-11-12",
+    "update_time": "2026-11-12 06:33:09",
+    "candidate_count": 20,
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-12\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 AWS 官方\"造了个假 AWS\"：自主 AI Agent 反向构建云仿真器 (来源: HackerNews / GitHub)\n- **核心干货**：AWS 官方发布开源项目 aws-emulator，由自主 AI Agent 驱动，把 AWS 的 API、服务行为、甚至计费逻辑在本地模拟出来。核心痛点是：开发者在本地/CI 环境调试云架构，再也不必为了一个 S3 桶或 Lambda 触发器真金白银地开账号烧钱，也不必担心测试 bug 误删生产资源。\n- **毒舌/硬核点评**：云厂商终于亲手给自己造了个\"平替\"，这波属于是房东把样板间免费开放给租客练手——但请记住，仿真器永远学不会真实账单的\"惊喜感\"，本地跑通不等于线上不炸。\n- **🔗 传送门**：[点击直达原链接](https://github.com/aws/aws-emulator)\n\n---\n\n### 2. 📌 美联航明令禁止 AI Agent 代客订票 (来源: HackerNews)\n- **核心干货**：United Airlines 正式封杀 AI Agent 代旅客预订机票，HN 上近 500 条评论吵翻。本质是\"自动化代理 vs 平台规则\"的正面碰撞：OTA 和航司的票价、退改、欺诈风控体系，本就是为人类行为设计的，机器代理一进场，退款套利、库存刷单、责任归属全部乱套。这是 AI Agent 商业化落地的第一个真实\"路障样本\"。\n- **毒舌/硬核点评**：Agent 能帮你比价、填表、抢票，却在\"这单算谁的\"面前被一句\"禁止\"打回原形。技术跑得比法律和商业规则快了半条街，结果就是——你的 AI 助理再聪明，也敌不过航司法务部的一页条款。\n- **🔗 传送门**：[点击直达原链接](https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/)\n\n---\n\n### 3. 📌 ReTrace：把\"会调工具的 Agent\"蒸馏成免规划器的固定工作流 (来源: ArXiv)\n- **核心干货**：企业里同一套 SOP 天天在新输入上重跑，LLM Agent 却每一步都要问一次大模型该干啥——延迟高、成本高、还不可复现。ReTrace 的做法是把工具调用型 Agent 的行为\"蒸馏\"成无需 planner 的确定性工作流，保留多工具编排能力，砍掉每步推理开销。对 RPA、财务/客服/工单自动化这类高频重复场景，是实打实的降本增效。\n- **毒舌/硬核点评**：这才是 Agent 落地的正确姿势——别让大模型在流水线上每拧一颗螺丝都要\"思考人生\"，学会一次、固化下来，剩下的交给确定性逻辑。天天喊 AutoGPT 的，该来看看什么叫工业化。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2611.14492v1)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"AI 能替你写代码、订机票、做决策，唯独替不了你承担后果——所以真正值钱的，从来不是会调工具的手，而是敢在出事后签字的那颗脑袋。\"",
+    "briefing_items": [
+      {
+        "title": "AWS 官方\"造了个假 AWS\"：自主 AI Agent 反向构建云仿真器",
+        "source": "HackerNews / GitHub",
+        "summary": "AWS 官方发布开源项目 aws-emulator，由自主 AI Agent 驱动，把 AWS 的 API、服务行为、甚至计费逻辑在本地模拟出来。核心痛点是：开发者在本地/CI 环境调试云架构，再也不必为了一个 S3 桶或 Lambda 触发器真金白银地开账号烧钱，也不必担心测试 bug 误删生产资源。",
+        "commentary": "云厂商终于亲手给自己造了个\"平替\"，这波属于是房东把样板间免费开放给租客练手——但请记住，仿真器永远学不会真实账单的\"惊喜感\"，本地跑通不等于线上不炸。",
+        "url": "https://github.com/aws/aws-emulator"
+      },
+      {
+        "title": "美联航明令禁止 AI Agent 代客订票",
+        "source": "HackerNews",
+        "summary": "United Airlines 正式封杀 AI Agent 代旅客预订机票，HN 上近 500 条评论吵翻。本质是\"自动化代理 vs 平台规则\"的正面碰撞：OTA 和航司的票价、退改、欺诈风控体系，本就是为人类行为设计的，机器代理一进场，退款套利、库存刷单、责任归属全部乱套。这是 AI Agent 商业化落地的第一个真实\"路障样本\"。",
+        "commentary": "Agent 能帮你比价、填表、抢票，却在\"这单算谁的\"面前被一句\"禁止\"打回原形。技术跑得比法律和商业规则快了半条街，结果就是——你的 AI 助理再聪明，也敌不过航司法务部的一页条款。",
+        "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/"
+      },
+      {
+        "title": "ReTrace：把\"会调工具的 Agent\"蒸馏成免规划器的固定工作流",
+        "source": "ArXiv",
+        "summary": "企业里同一套 SOP 天天在新输入上重跑，LLM Agent 却每一步都要问一次大模型该干啥——延迟高、成本高、还不可复现。ReTrace 的做法是把工具调用型 Agent 的行为\"蒸馏\"成无需 planner 的确定性工作流，保留多工具编排能力，砍掉每步推理开销。对 RPA、财务/客服/工单自动化这类高频重复场景，是实打实的降本增效。",
+        "commentary": "这才是 Agent 落地的正确姿势——别让大模型在流水线上每拧一颗螺丝都要\"思考人生\"，学会一次、固化下来，剩下的交给确定性逻辑。天天喊 AutoGPT 的，该来看看什么叫工业化。",
+        "url": "https://arxiv.org/abs/2611.14492v1"
+      },
+      {
+        "quote": "\"AI 能替你写代码、订机票、做决策，唯独替不了你承担后果——所以真正值钱的，从来不是会调工具的手，而是敢在出事后签字的那颗脑袋。\""
+      }
+    ],
+    "candidates": [
+      {
+        "id": "hn:50456631",
+        "title": "AWS emulator",
+        "summary": "<a href=\"https:&#x2F;&#x2F;www.aboutamazon.com&#x2F;news&#x2F;aws&#x2F;how-autonomous-ai-agents-built-aws-emulator\" rel=\"nofollow\">https:&#x2F;&#x2F;www.aboutamazon.com&#x2F;news&#x2F;aws&#x2F;how-autonomous-ai-agent...</a><p><a href=\"https:&#x2F;&#x2F;www.allthingsdistributed.com&#x2F;2026&#x2F;11&",
+        "url": "https://github.com/aws/aws-emulator",
+        "source": "Hacker News",
+        "score": 780,
+        "comments": 229
+      },
+      {
+        "id": "hn:50455394",
+        "title": "A false smoke alarm almost drowned Jane Street's only NYC datacenter",
+        "summary": "",
+        "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/",
+        "source": "Hacker News",
+        "score": 459,
+        "comments": 227
+      },
+      {
+        "id": "hn:50458900",
+        "title": "United Airlines bans AI agents from booking flights on behalf of travelers",
+        "summary": "",
+        "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
+        "source": "Hacker News",
+        "score": 505,
+        "comments": 489
+      },
+      {
+        "id": "hn:50459703",
+        "title": "Nvidia is preparing to oust Jensen Huang",
+        "summary": "",
+        "url": "https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad",
+        "source": "Hacker News",
+        "score": 833,
+        "comments": 1161
+      },
+      {
+        "id": "lob:m43bas",
+        "title": "How do you actually self-host securely?",
+        "summary": "<p>I recognize that the title is rather vague, but I'm completely green when it comes to self-hosting, so I figured here would be a good place to ask for some pointers given the discussions I sometimes see happening in the comments. I tried researching first through DDG and Google, but (and I recogn",
+        "url": "https://lobste.rs/s/m43bas/how_do_you_actually_self_host_securely",
+        "source": "Lobste.rs",
+        "score": 102,
+        "comments": 57,
+        "tags": [
+          "ask",
+          "devops"
+        ]
+      },
+      {
+        "id": "hn:50459745",
+        "title": "93% of paint splatters are valid Perl programs (2019)",
+        "summary": "",
+        "url": "https://www.mcmillen.dev/sigbovik/",
+        "source": "Hacker News",
+        "score": 339,
+        "comments": 46
+      },
+      {
+        "id": "hn:50450488",
+        "title": "Tim Peters has died",
+        "summary": "<a href=\"https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;Python&#x2F;s&#x2F;2Cm5dBcvQw\" rel=\"nofollow\">https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;Python&#x2F;s&#x2F;2Cm5dBcvQw</a>",
+        "url": "https://discuss.python.org/t/in-memoriam-tim-peters-1952-2026/110028",
+        "source": "Hacker News",
+        "score": 1062,
+        "comments": 116
+      },
+      {
+        "id": "hn:50456791",
+        "title": "Gemini Decisions API",
+        "summary": "",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+        "source": "Hacker News",
+        "score": 366,
+        "comments": 114
+      },
+      {
+        "id": "hn:50458208",
+        "title": "Emacs in the Age of Magic",
+        "summary": "",
+        "url": "https://commandlinesystems.com/magic.txt",
+        "source": "Hacker News",
+        "score": 192,
+        "comments": 73
+      },
+      {
+        "id": "lob:nld6x3",
+        "title": "What are some \"No AI\" apps/companies/resources you know of?",
+        "summary": "<p>Hey everyone I'm wondering if there's any useful/helpful list of apps, companies, or resources in general that avoid AI (they don't have to be vocally or openly \"anti\", but at least explicitly avoid it) that you know of?</p>\n<p>I'm not looking to start a discussion on what's good/bad or (un)worth",
+        "url": "https://lobste.rs/s/nld6x3/what_are_some_no_ai_apps_companies",
+        "source": "Lobste.rs",
+        "score": 74,
+        "comments": 29,
+        "tags": [
+          "ask"
+        ]
+      },
+      {
+        "id": "hn:50459485",
+        "title": "Lock Your GitHub Actions",
+        "summary": "",
+        "url": "https://hugovk.dev/blog/2026/lock-github-actions/",
+        "source": "Hacker News",
+        "score": 199,
+        "comments": 40
+      },
+      {
+        "id": "lob:vkkbwo",
+        "title": ".name grandfathered",
+        "summary": "",
+        "url": "https://neil.fraser.name/news/2026/11/10/",
+        "source": "Lobste.rs",
+        "score": 185,
+        "comments": 27,
+        "tags": [
+          "networking"
+        ]
+      },
+      {
+        "id": "lob:sdtcvv",
+        "title": "I deleted all my SSH keys",
+        "summary": "",
+        "url": "https://blog.infected.systems/posts/2026-11-03-i-deleted-all-my-ssh-keys/",
+        "source": "Lobste.rs",
+        "score": 61,
+        "comments": 20,
+        "tags": [
+          "hardware",
+          "security"
+        ]
+      },
+      {
+        "id": "hn:50462177",
+        "title": "Critical RCE Vulnerability in Apache HTTP Server",
+        "summary": "",
+        "url": "https://www.wiz.io/blog/cve-2026-119618-rce-apache-http-server-vulnerability",
+        "source": "Hacker News",
+        "score": 99,
+        "comments": 40
+      },
+      {
+        "id": "lob:zy4p7f",
+        "title": "Using voltage glitching to unleash the A100 in my mining card",
+        "summary": "",
+        "url": "https://blog.kate.land/posts/using-voltage-glitching-to-unlock-the-a100/",
+        "source": "Lobste.rs",
+        "score": 42,
+        "comments": 8,
+        "tags": [
+          "hardware"
+        ]
+      },
+      {
+        "id": "arxiv:2611.14514v1",
+        "title": "Contrastive Discovery: Open-Ended Scientific Discovery over Competing Explanations",
+        "summary": "LLM agents are increasingly used for open-ended, data-driven scientific discovery, yet most of them evaluate hypotheses pointwise, testing an empirical claim $h$ only against its complement $\\neg h$. When evidence rejects $h$, the agent learns that one explanation is unlikely but not which alternati",
+        "url": "https://arxiv.org/abs/2611.14514v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.AI",
+          "cs.CL",
+          "cs.LG"
+        ],
+        "arxiv_id": "2611.14514v1"
+      },
+      {
+        "id": "arxiv:2611.14493v1",
+        "title": "Comparative Analysis of Agent Evaluation Frameworks: Stability, Detection, and Discovery in Enterprise Analytics Agents",
+        "summary": "Deploying LLM-based analytics agents in enterprise settings requires evaluation frameworks that can reliably detect failures across complex, multi-tool workflows. We present a three-phase comparative study of three evaluation frameworks, each representing a distinct evaluation paradigm (trace-based ",
+        "url": "https://arxiv.org/abs/2611.14493v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.AI",
+          "cs.CL",
+          "cs.LG",
+          "cs.SE"
+        ],
+        "arxiv_id": "2611.14493v1"
+      },
+      {
+        "id": "lob:lnau2d",
+        "title": "How I accidentally became a millionaire",
+        "summary": "",
+        "url": "https://lyra.horse/blog/2026/11/disinformation-machine/",
+        "source": "Lobste.rs",
+        "score": 70,
+        "comments": 6,
+        "tags": [
+          "security"
+        ]
+      },
+      {
+        "id": "arxiv:2611.14515v1",
+        "title": "AutoScaffold: AI-Guided Scaffolding for Reinforcement Learning of Language Models",
+        "summary": "Reinforcement learning with verifiable rewards (RLVR) produces rich training experience, yet outcome rewards reduce each attempt to a single number and leave most of this information unused. Training-time scaffolds, such as strategies or hints added to the prompt during training, offer a natural way",
+        "url": "https://arxiv.org/abs/2611.14515v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.LG",
+          "cs.CL"
+        ],
+        "arxiv_id": "2611.14515v1"
+      },
+      {
+        "id": "arxiv:2611.14492v1",
+        "title": "ReTrace: Distilling Tool-Using Agents into Planner-Free Workflows",
+        "summary": "Business process automation runs the same Standard Operating Procedure (SOP) again and again on new inputs. Large Language Model (LLM) agents can follow an SOP written in natural language, but they call an LLM to choose every step of every run, which adds latency and cost at scale. We present ReTrac",
+        "url": "https://arxiv.org/abs/2611.14492v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.AI",
+          "cs.LG",
+          "cs.MA"
+        ],
+        "arxiv_id": "2611.14492v1"
+      }
+    ],
+    "ai_curated": true
+  },
+  "fear_greed": {
+    "value": 28,
+    "classification": "Fear",
+    "timestamp": "2026-11-12 00:00:00"
+  }
+}
