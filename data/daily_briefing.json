@@ -1,61 +1,70 @@
 {
   "date": "2026-11-12",
-  "update_time": "2026-11-11 19:21:18",
+  "update_time": "2026-11-12 06:33:09",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-12\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Google SWE 智能体 72 小时在 NASA 激光雷达数据里挖出未记录的玛雅金字塔 (来源: HackerNews)\n- **核心干货**：Google 的软件工程智能体（SWE agents）被指向 NASA 的 LiDAR 地形数据，72 小时内自主识别出一座此前未被测绘的玛雅金字塔遗址。这不是\"AI 画图\"，而是智能体在真实科研数据上完成了一次考古级别的发现闭环，意味着 Agent 从\"写代码的实习生\"正式跨入\"能干活的科研协作者\"。\n- **毒舌/硬核点评**：考古学家几十年没找到的东西，AI 三天就给你扒出来了。下次谁再说 Agent 只会写 CRUD，请把这座金字塔拍他脸上——不过话说回来，模型训练数据里要是混进了考古报告，这\"发现\"的含金量还得再验一验。\n- **🔗 传送门**：[点击直达原链接](https://pietromiotti.com/latest/maya-site/?maya)\n\n---\n\n### 2. 📌 Tim Peters 逝世：Python 之禅的作者，走了 (来源: HackerNews)\n- **核心干货**：Tim Peters（1952–2026），Python 社区传奇、《Python 之禅》（PEP 20）作者、Timsort 算法发明者，与世长辞。他留下的不只是 `import this` 那几句箴言，还有支撑 CPython 排序性能二十余年的 Timsort——一个至今仍在每个 Python 进程里默默跑着的算法。\n- **毒舌/硬核点评**：\"Simple is better than complex\" 这句话教育了整整一代程序员，而他自己写出的 Timsort 却是复杂度拉满的工程杰作——嘴上讲简洁，手上干硬活，这才是真大佬。R.I.P.，愿天堂没有 GIL。\n- **🔗 传送门**：[点击直达原链接](https://discuss.python.org/t/in-memoriam-tim-peters-1952-2026/110028)\n\n---\n\n### 3. 📌 ReTrace：把\"每次都问 LLM\"的工具智能体，蒸馏成免规划器的固定工作流 (来源: ArXiv cs.AI)\n- **核心干货**：企业 SOP 自动化场景里，LLM 智能体每跑一步都要调一次模型选下一步，规模化后延迟和成本双双爆炸。ReTrace 的思路是把工具使用型智能体的决策轨迹蒸馏成\"免规划器\"的静态工作流——同样的 SOP，跑起来不再逐步请示大模型，直接省掉大部分推理开销。\n- **毒舌/硬核点评**：翻译成人话就是——别让 AI 每走一步都开个会。固定流程就该用固定流程跑，把大模型当万能胶水糊一切，最后账单会用红字教你做人。这论文的价值不在多聪明，而在终于有人肯承认：有些活儿，压根不需要智能体。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2611.14492v1)\n\n---\n\n### 🗣️ 今日顶男金句\n> 智能体再能挖金字塔，也挖不出你的年终奖——工具决定上限，认知决定你配不配拿到那个上限。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-12\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 AWS 官方\"造了个假 AWS\"：自主 AI Agent 反向构建云仿真器 (来源: HackerNews / GitHub)\n- **核心干货**：AWS 官方发布开源项目 aws-emulator，由自主 AI Agent 驱动，把 AWS 的 API、服务行为、甚至计费逻辑在本地模拟出来。核心痛点是：开发者在本地/CI 环境调试云架构，再也不必为了一个 S3 桶或 Lambda 触发器真金白银地开账号烧钱，也不必担心测试 bug 误删生产资源。\n- **毒舌/硬核点评**：云厂商终于亲手给自己造了个\"平替\"，这波属于是房东把样板间免费开放给租客练手——但请记住，仿真器永远学不会真实账单的\"惊喜感\"，本地跑通不等于线上不炸。\n- **🔗 传送门**：[点击直达原链接](https://github.com/aws/aws-emulator)\n\n---\n\n### 2. 📌 美联航明令禁止 AI Agent 代客订票 (来源: HackerNews)\n- **核心干货**：United Airlines 正式封杀 AI Agent 代旅客预订机票，HN 上近 500 条评论吵翻。本质是\"自动化代理 vs 平台规则\"的正面碰撞：OTA 和航司的票价、退改、欺诈风控体系，本就是为人类行为设计的，机器代理一进场，退款套利、库存刷单、责任归属全部乱套。这是 AI Agent 商业化落地的第一个真实\"路障样本\"。\n- **毒舌/硬核点评**：Agent 能帮你比价、填表、抢票，却在\"这单算谁的\"面前被一句\"禁止\"打回原形。技术跑得比法律和商业规则快了半条街，结果就是——你的 AI 助理再聪明，也敌不过航司法务部的一页条款。\n- **🔗 传送门**：[点击直达原链接](https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/)\n\n---\n\n### 3. 📌 ReTrace：把\"会调工具的 Agent\"蒸馏成免规划器的固定工作流 (来源: ArXiv)\n- **核心干货**：企业里同一套 SOP 天天在新输入上重跑，LLM Agent 却每一步都要问一次大模型该干啥——延迟高、成本高、还不可复现。ReTrace 的做法是把工具调用型 Agent 的行为\"蒸馏\"成无需 planner 的确定性工作流，保留多工具编排能力，砍掉每步推理开销。对 RPA、财务/客服/工单自动化这类高频重复场景，是实打实的降本增效。\n- **毒舌/硬核点评**：这才是 Agent 落地的正确姿势——别让大模型在流水线上每拧一颗螺丝都要\"思考人生\"，学会一次、固化下来，剩下的交给确定性逻辑。天天喊 AutoGPT 的，该来看看什么叫工业化。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2611.14492v1)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"AI 能替你写代码、订机票、做决策，唯独替不了你承担后果——所以真正值钱的，从来不是会调工具的手，而是敢在出事后签字的那颗脑袋。\"",
   "briefing_items": [
     {
-      "title": "Google SWE 智能体 72 小时在 NASA 激光雷达数据里挖出未记录的玛雅金字塔",
-      "source": "HackerNews",
-      "summary": "Google 的软件工程智能体（SWE agents）被指向 NASA 的 LiDAR 地形数据，72 小时内自主识别出一座此前未被测绘的玛雅金字塔遗址。这不是\"AI 画图\"，而是智能体在真实科研数据上完成了一次考古级别的发现闭环，意味着 Agent 从\"写代码的实习生\"正式跨入\"能干活的科研协作者\"。",
-      "commentary": "考古学家几十年没找到的东西，AI 三天就给你扒出来了。下次谁再说 Agent 只会写 CRUD，请把这座金字塔拍他脸上——不过话说回来，模型训练数据里要是混进了考古报告，这\"发现\"的含金量还得再验一验。",
-      "url": "https://pietromiotti.com/latest/maya-site/?maya"
+      "title": "AWS 官方\"造了个假 AWS\"：自主 AI Agent 反向构建云仿真器",
+      "source": "HackerNews / GitHub",
+      "summary": "AWS 官方发布开源项目 aws-emulator，由自主 AI Agent 驱动，把 AWS 的 API、服务行为、甚至计费逻辑在本地模拟出来。核心痛点是：开发者在本地/CI 环境调试云架构，再也不必为了一个 S3 桶或 Lambda 触发器真金白银地开账号烧钱，也不必担心测试 bug 误删生产资源。",
+      "commentary": "云厂商终于亲手给自己造了个\"平替\"，这波属于是房东把样板间免费开放给租客练手——但请记住，仿真器永远学不会真实账单的\"惊喜感\"，本地跑通不等于线上不炸。",
+      "url": "https://github.com/aws/aws-emulator"
     },
     {
-      "title": "Tim Peters 逝世：Python 之禅的作者，走了",
+      "title": "美联航明令禁止 AI Agent 代客订票",
       "source": "HackerNews",
-      "summary": "Tim Peters（1952–2026），Python 社区传奇、《Python 之禅》（PEP 20）作者、Timsort 算法发明者，与世长辞。他留下的不只是 `import this` 那几句箴言，还有支撑 CPython 排序性能二十余年的 Timsort——一个至今仍在每个 Python 进程里默默跑着的算法。",
-      "commentary": "\"Simple is better than complex\" 这句话教育了整整一代程序员，而他自己写出的 Timsort 却是复杂度拉满的工程杰作——嘴上讲简洁，手上干硬活，这才是真大佬。R.I.P.，愿天堂没有 GIL。",
-      "url": "https://discuss.python.org/t/in-memoriam-tim-peters-1952-2026/110028"
+      "summary": "United Airlines 正式封杀 AI Agent 代旅客预订机票，HN 上近 500 条评论吵翻。本质是\"自动化代理 vs 平台规则\"的正面碰撞：OTA 和航司的票价、退改、欺诈风控体系，本就是为人类行为设计的，机器代理一进场，退款套利、库存刷单、责任归属全部乱套。这是 AI Agent 商业化落地的第一个真实\"路障样本\"。",
+      "commentary": "Agent 能帮你比价、填表、抢票，却在\"这单算谁的\"面前被一句\"禁止\"打回原形。技术跑得比法律和商业规则快了半条街，结果就是——你的 AI 助理再聪明，也敌不过航司法务部的一页条款。",
+      "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/"
     },
     {
-      "title": "ReTrace：把\"每次都问 LLM\"的工具智能体，蒸馏成免规划器的固定工作流",
-      "source": "ArXiv cs.AI",
-      "summary": "企业 SOP 自动化场景里，LLM 智能体每跑一步都要调一次模型选下一步，规模化后延迟和成本双双爆炸。ReTrace 的思路是把工具使用型智能体的决策轨迹蒸馏成\"免规划器\"的静态工作流——同样的 SOP，跑起来不再逐步请示大模型，直接省掉大部分推理开销。",
-      "commentary": "翻译成人话就是——别让 AI 每走一步都开个会。固定流程就该用固定流程跑，把大模型当万能胶水糊一切，最后账单会用红字教你做人。这论文的价值不在多聪明，而在终于有人肯承认：有些活儿，压根不需要智能体。",
+      "title": "ReTrace：把\"会调工具的 Agent\"蒸馏成免规划器的固定工作流",
+      "source": "ArXiv",
+      "summary": "企业里同一套 SOP 天天在新输入上重跑，LLM Agent 却每一步都要问一次大模型该干啥——延迟高、成本高、还不可复现。ReTrace 的做法是把工具调用型 Agent 的行为\"蒸馏\"成无需 planner 的确定性工作流，保留多工具编排能力，砍掉每步推理开销。对 RPA、财务/客服/工单自动化这类高频重复场景，是实打实的降本增效。",
+      "commentary": "这才是 Agent 落地的正确姿势——别让大模型在流水线上每拧一颗螺丝都要\"思考人生\"，学会一次、固化下来，剩下的交给确定性逻辑。天天喊 AutoGPT 的，该来看看什么叫工业化。",
       "url": "https://arxiv.org/abs/2611.14492v1"
     },
     {
-      "quote": "智能体再能挖金字塔，也挖不出你的年终奖——工具决定上限，认知决定你配不配拿到那个上限。"
+      "quote": "\"AI 能替你写代码、订机票、做决策，唯独替不了你承担后果——所以真正值钱的，从来不是会调工具的手，而是敢在出事后签字的那颗脑袋。\""
     }
   ],
   "candidates": [
+    {
+      "id": "hn:50456631",
+      "title": "AWS emulator",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.aboutamazon.com&#x2F;news&#x2F;aws&#x2F;how-autonomous-ai-agents-built-aws-emulator\" rel=\"nofollow\">https:&#x2F;&#x2F;www.aboutamazon.com&#x2F;news&#x2F;aws&#x2F;how-autonomous-ai-agent...</a><p><a href=\"https:&#x2F;&#x2F;www.allthingsdistributed.com&#x2F;2026&#x2F;11&",
+      "url": "https://github.com/aws/aws-emulator",
+      "source": "Hacker News",
+      "score": 780,
+      "comments": 229
+    },
     {
       "id": "hn:50455394",
       "title": "A false smoke alarm almost drowned Jane Street's only NYC datacenter",
       "summary": "",
       "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/",
       "source": "Hacker News",
-      "score": 244,
-      "comments": 126
+      "score": 459,
+      "comments": 227
     },
     {
-      "id": "hn:50452455",
-      "title": "Google SWE points 48 AI agents at NASA Lidar, finds unmapped Maya pyramid in 72h",
+      "id": "hn:50458900",
+      "title": "United Airlines bans AI agents from booking flights on behalf of travelers",
       "summary": "",
-      "url": "https://pietromiotti.com/latest/maya-site/?maya",
+      "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
       "source": "Hacker News",
-      "score": 824,
-      "comments": 303
+      "score": 505,
+      "comments": 489
     },
     {
-      "id": "hn:50451903",
-      "title": "Using voltage glitching to unleash the A100 in my mining card",
+      "id": "hn:50459703",
+      "title": "Nvidia is preparing to oust Jensen Huang",
       "summary": "",
-      "url": "https://blog.kate.land/posts/using-voltage-glitching-to-unlock-the-a100/",
+      "url": "https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad",
       "source": "Hacker News",
-      "score": 208,
-      "comments": 77
+      "score": 833,
+      "comments": 1161
     },
     {
       "id": "lob:m43bas",
@@ -63,63 +72,21 @@
       "summary": "<p>I recognize that the title is rather vague, but I'm completely green when it comes to self-hosting, so I figured here would be a good place to ask for some pointers given the discussions I sometimes see happening in the comments. I tried researching first through DDG and Google, but (and I recogn",
       "url": "https://lobste.rs/s/m43bas/how_do_you_actually_self_host_securely",
       "source": "Lobste.rs",
-      "score": 75,
-      "comments": 46,
+      "score": 102,
+      "comments": 57,
       "tags": [
         "ask",
         "devops"
       ]
     },
     {
-      "id": "hn:50453288",
-      "title": "Hyper-Realistic Sand with WebGL2",
+      "id": "hn:50459745",
+      "title": "93% of paint splatters are valid Perl programs (2019)",
       "summary": "",
-      "url": "https://av.github.io/safe-sand/",
+      "url": "https://www.mcmillen.dev/sigbovik/",
       "source": "Hacker News",
-      "score": 204,
-      "comments": 48
-    },
-    {
-      "id": "hn:50456631",
-      "title": "AWS Finally Built Its Own AWS Emulator",
-      "summary": "",
-      "url": "https://github.com/aws/aws-emulator",
-      "source": "Hacker News",
-      "score": 184,
-      "comments": 52
-    },
-    {
-      "id": "hn:50453637",
-      "title": "Atuin Threads: All your agent sessions on every machine",
-      "summary": "",
-      "url": "https://blog.atuin.sh/threads-agent-sessions/",
-      "source": "Hacker News",
-      "score": 133,
-      "comments": 55
-    },
-    {
-      "id": "lob:nld6x3",
-      "title": "What are some \"No AI\" apps/companies/resources you know of?",
-      "summary": "<p>Hey everyone I'm wondering if there's any useful/helpful list of apps, companies, or resources in general that avoid AI (they don't have to be vocally or openly \"anti\", but at least explicitly avoid it) that you know of?</p>\n<p>I'm not looking to start a discussion on what's good/bad or (un)worth",
-      "url": "https://lobste.rs/s/nld6x3/what_are_some_no_ai_apps_companies",
-      "source": "Lobste.rs",
-      "score": 42,
-      "comments": 20,
-      "tags": [
-        "ask"
-      ]
-    },
-    {
-      "id": "lob:fdnic2",
-      "title": "Synaptics patent claims stop work on DisplayLink drivers",
-      "summary": "",
-      "url": "https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/",
-      "source": "Lobste.rs",
-      "score": 55,
-      "comments": 17,
-      "tags": [
-        "law"
-      ]
+      "score": 339,
+      "comments": 46
     },
     {
       "id": "hn:50450488",
@@ -127,17 +94,47 @@
       "summary": "<a href=\"https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;Python&#x2F;s&#x2F;2Cm5dBcvQw\" rel=\"nofollow\">https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;Python&#x2F;s&#x2F;2Cm5dBcvQw</a>",
       "url": "https://discuss.python.org/t/in-memoriam-tim-peters-1952-2026/110028",
       "source": "Hacker News",
-      "score": 349,
-      "comments": 39
+      "score": 1062,
+      "comments": 116
     },
     {
-      "id": "hn:50452655",
-      "title": "Can a Linear Program Do Weight-Space Programming?",
+      "id": "hn:50456791",
+      "title": "Gemini Decisions API",
       "summary": "",
-      "url": "https://nathan.rs/posts/weight-space-lp/",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
       "source": "Hacker News",
-      "score": 189,
-      "comments": 29
+      "score": 366,
+      "comments": 114
+    },
+    {
+      "id": "hn:50458208",
+      "title": "Emacs in the Age of Magic",
+      "summary": "",
+      "url": "https://commandlinesystems.com/magic.txt",
+      "source": "Hacker News",
+      "score": 192,
+      "comments": 73
+    },
+    {
+      "id": "lob:nld6x3",
+      "title": "What are some \"No AI\" apps/companies/resources you know of?",
+      "summary": "<p>Hey everyone I'm wondering if there's any useful/helpful list of apps, companies, or resources in general that avoid AI (they don't have to be vocally or openly \"anti\", but at least explicitly avoid it) that you know of?</p>\n<p>I'm not looking to start a discussion on what's good/bad or (un)worth",
+      "url": "https://lobste.rs/s/nld6x3/what_are_some_no_ai_apps_companies",
+      "source": "Lobste.rs",
+      "score": 74,
+      "comments": 29,
+      "tags": [
+        "ask"
+      ]
+    },
+    {
+      "id": "hn:50459485",
+      "title": "Lock Your GitHub Actions",
+      "summary": "",
+      "url": "https://hugovk.dev/blog/2026/lock-github-actions/",
+      "source": "Hacker News",
+      "score": 199,
+      "comments": 40
     },
     {
       "id": "lob:vkkbwo",
@@ -145,7 +142,7 @@
       "summary": "",
       "url": "https://neil.fraser.name/news/2026/11/10/",
       "source": "Lobste.rs",
-      "score": 179,
+      "score": 185,
       "comments": 27,
       "tags": [
         "networking"
@@ -157,11 +154,32 @@
       "summary": "",
       "url": "https://blog.infected.systems/posts/2026-11-03-i-deleted-all-my-ssh-keys/",
       "source": "Lobste.rs",
-      "score": 55,
-      "comments": 19,
+      "score": 61,
+      "comments": 20,
       "tags": [
         "hardware",
         "security"
+      ]
+    },
+    {
+      "id": "hn:50462177",
+      "title": "Critical RCE Vulnerability in Apache HTTP Server",
+      "summary": "",
+      "url": "https://www.wiz.io/blog/cve-2026-119618-rce-apache-http-server-vulnerability",
+      "source": "Hacker News",
+      "score": 99,
+      "comments": 40
+    },
+    {
+      "id": "lob:zy4p7f",
+      "title": "Using voltage glitching to unleash the A100 in my mining card",
+      "summary": "",
+      "url": "https://blog.kate.land/posts/using-voltage-glitching-to-unlock-the-a100/",
+      "source": "Lobste.rs",
+      "score": 42,
+      "comments": 8,
+      "tags": [
+        "hardware"
       ]
     },
     {
@@ -192,36 +210,15 @@
       "arxiv_id": "2611.14493v1"
     },
     {
-      "id": "lob:idktfu",
-      "title": "Go Turns 17",
+      "id": "lob:lnau2d",
+      "title": "How I accidentally became a millionaire",
       "summary": "",
-      "url": "https://go.dev/blog/17years",
+      "url": "https://lyra.horse/blog/2026/11/disinformation-machine/",
       "source": "Lobste.rs",
-      "score": 38,
-      "comments": 7,
+      "score": 70,
+      "comments": 6,
       "tags": [
-        "go"
-      ]
-    },
-    {
-      "id": "hn:50454625",
-      "title": "Show HN: Yogurt – Free, private, open-source alternative to Granola",
-      "summary": "Hey HN, I’m Eric and I want to share an OSS project that I’ve been building in my free time. Yogurt is a free, MIT licensed desktop app that uses on-device AI models to transcribe, summarize, and chat with your meetings.<p>Here&#x27;s a quick demo video: <a href=\"https:&#x2F;&#x2F;www.youtube.com&#x",
-      "url": "https://github.com/FrigadeHQ/yogurt",
-      "source": "Hacker News",
-      "score": 69,
-      "comments": 34
-    },
-    {
-      "id": "lob:t7qkjb",
-      "title": "The hardest tarball",
-      "summary": "",
-      "url": "https://stoppels.ch/2026/11/07/the-hardest-tarball.html",
-      "source": "Lobste.rs",
-      "score": 78,
-      "comments": 5,
-      "tags": [
-        "unix"
+        "security"
       ]
     },
     {
