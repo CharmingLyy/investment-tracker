@@ -1,70 +1,65 @@
 {
-  "date": "2026-11-12",
-  "update_time": "2026-11-12 06:33:09",
+  "date": "2026-11-13",
+  "update_time": "2026-11-12 19:39:53",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-12\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 AWS 官方\"造了个假 AWS\"：自主 AI Agent 反向构建云仿真器 (来源: HackerNews / GitHub)\n- **核心干货**：AWS 官方发布开源项目 aws-emulator，由自主 AI Agent 驱动，把 AWS 的 API、服务行为、甚至计费逻辑在本地模拟出来。核心痛点是：开发者在本地/CI 环境调试云架构，再也不必为了一个 S3 桶或 Lambda 触发器真金白银地开账号烧钱，也不必担心测试 bug 误删生产资源。\n- **毒舌/硬核点评**：云厂商终于亲手给自己造了个\"平替\"，这波属于是房东把样板间免费开放给租客练手——但请记住，仿真器永远学不会真实账单的\"惊喜感\"，本地跑通不等于线上不炸。\n- **🔗 传送门**：[点击直达原链接](https://github.com/aws/aws-emulator)\n\n---\n\n### 2. 📌 美联航明令禁止 AI Agent 代客订票 (来源: HackerNews)\n- **核心干货**：United Airlines 正式封杀 AI Agent 代旅客预订机票，HN 上近 500 条评论吵翻。本质是\"自动化代理 vs 平台规则\"的正面碰撞：OTA 和航司的票价、退改、欺诈风控体系，本就是为人类行为设计的，机器代理一进场，退款套利、库存刷单、责任归属全部乱套。这是 AI Agent 商业化落地的第一个真实\"路障样本\"。\n- **毒舌/硬核点评**：Agent 能帮你比价、填表、抢票，却在\"这单算谁的\"面前被一句\"禁止\"打回原形。技术跑得比法律和商业规则快了半条街，结果就是——你的 AI 助理再聪明，也敌不过航司法务部的一页条款。\n- **🔗 传送门**：[点击直达原链接](https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/)\n\n---\n\n### 3. 📌 ReTrace：把\"会调工具的 Agent\"蒸馏成免规划器的固定工作流 (来源: ArXiv)\n- **核心干货**：企业里同一套 SOP 天天在新输入上重跑，LLM Agent 却每一步都要问一次大模型该干啥——延迟高、成本高、还不可复现。ReTrace 的做法是把工具调用型 Agent 的行为\"蒸馏\"成无需 planner 的确定性工作流，保留多工具编排能力，砍掉每步推理开销。对 RPA、财务/客服/工单自动化这类高频重复场景，是实打实的降本增效。\n- **毒舌/硬核点评**：这才是 Agent 落地的正确姿势——别让大模型在流水线上每拧一颗螺丝都要\"思考人生\"，学会一次、固化下来，剩下的交给确定性逻辑。天天喊 AutoGPT 的，该来看看什么叫工业化。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2611.14492v1)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"AI 能替你写代码、订机票、做决策，唯独替不了你承担后果——所以真正值钱的，从来不是会调工具的手，而是敢在出事后签字的那颗脑袋。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-13\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 黄仁勋卸任英伟达 CEO (来源: HackerNews / AP News)\n- **核心干货**：执掌英伟达三十余年的\"皮衣刀客\"Jensen Huang 正式宣布卸任 CEO，官方新闻稿已挂上 nvidianews，同时 Reuters 等媒体跟进报道。HN 上炸出 2000+ 评论、2000+ 分数，堪称年度最重量级人事地震。考虑到英伟达当前是全球 AI 算力供应链的绝对中枢，这次交棒直接牵动整个半导体与 AI 行业的资本叙事。\n- **毒舌/硬核点评**：卖铲子的人要换掌柜了，而全世界还在排队抢铲子。真正的悬念不是\"谁接班\"，而是新 CEO 会不会把 CUDA 生态继续当护城河，还是转头就去追下一波叙事——毕竟华尔街只认增长，不认情怀。\n- **🔗 传送门**：[点击直达原链接](https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f)\n\n---\n\n### 2. 📌 Rust 1.100.0 发布 (来源: GitHub Releases)\n- **核心干货**：Rust 语言正式迈入\"1.100\"这个里程碑版本号。对一个以\"稳定压倒一切\"为信条的 systems 语言来说，三位数版本号本身就是个象征——从 2015 年 1.0 到今天，它已经从 Mozilla 的实验项目长成操作系统、浏览器引擎、云基础设施的底层主力。这个版本值得关注的是长期积累的 API 稳定性与工具链成熟度，而非某个单一特性。\n- **毒舌/硬核点评**：别的语言在卷新语法新特性，Rust 在卷\"我们又一次没有破坏任何东西\"。在一个到处是 breaking change 的行业里，\"无聊的稳定\"反而是最稀缺的奢侈品——顺便，借用检查器依旧不会对你手下留情。\n- **🔗 传送门**：[点击直达原链接](https://github.com/rust-lang/rust/releases/tag/1.100.0)\n\n---\n\n### 3. 📌 Humble Bundle 用\"Vibe Coding\"把自家安全体系干碎了 (来源: Lobste.rs)\n- **核心干货**：Humble Bundle 被曝因大量依赖 AI 辅助的\"氛围编程\"（vibecoding）来改代码，导致大部分安全机制被实质性摧毁。这不是理论风险，而是\"把安全交给 AI 生成、没人真正 review\"的现实翻车案例，对当下所有\"AI 写代码、人闭眼合并\"的团队是一记响亮耳光。\n- **毒舌/硬核点评**：当\"让 AI 帮你写\"遇上\"没人看得懂也懒得看\"，结果就是安全团队集体失业、攻击者集体上岗。Vibe coding 的尽头不是生产力革命，是 CVE 流水线——代码可以 vibe，安全不能 vibe。\n- **🔗 传送门**：[点击直达原链接](https://forums.spacebattles.com/threads/humble-bundle-just-completely-killed-most-of-their-security-through-vibecoding.1346295/)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"让 AI 帮你写代码是效率，让 AI 帮你写安全是自杀——工具越聪明，越考验用它的人到底有没有脑子。\"",
   "briefing_items": [
     {
-      "title": "AWS 官方\"造了个假 AWS\"：自主 AI Agent 反向构建云仿真器",
-      "source": "HackerNews / GitHub",
-      "summary": "AWS 官方发布开源项目 aws-emulator，由自主 AI Agent 驱动，把 AWS 的 API、服务行为、甚至计费逻辑在本地模拟出来。核心痛点是：开发者在本地/CI 环境调试云架构，再也不必为了一个 S3 桶或 Lambda 触发器真金白银地开账号烧钱，也不必担心测试 bug 误删生产资源。",
-      "commentary": "云厂商终于亲手给自己造了个\"平替\"，这波属于是房东把样板间免费开放给租客练手——但请记住，仿真器永远学不会真实账单的\"惊喜感\"，本地跑通不等于线上不炸。",
-      "url": "https://github.com/aws/aws-emulator"
+      "title": "黄仁勋卸任英伟达 CEO",
+      "source": "HackerNews / AP News",
+      "summary": "执掌英伟达三十余年的\"皮衣刀客\"Jensen Huang 正式宣布卸任 CEO，官方新闻稿已挂上 nvidianews，同时 Reuters 等媒体跟进报道。HN 上炸出 2000+ 评论、2000+ 分数，堪称年度最重量级人事地震。考虑到英伟达当前是全球 AI 算力供应链的绝对中枢，这次交棒直接牵动整个半导体与 AI 行业的资本叙事。",
+      "commentary": "卖铲子的人要换掌柜了，而全世界还在排队抢铲子。真正的悬念不是\"谁接班\"，而是新 CEO 会不会把 CUDA 生态继续当护城河，还是转头就去追下一波叙事——毕竟华尔街只认增长，不认情怀。",
+      "url": "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f"
     },
     {
-      "title": "美联航明令禁止 AI Agent 代客订票",
-      "source": "HackerNews",
-      "summary": "United Airlines 正式封杀 AI Agent 代旅客预订机票，HN 上近 500 条评论吵翻。本质是\"自动化代理 vs 平台规则\"的正面碰撞：OTA 和航司的票价、退改、欺诈风控体系，本就是为人类行为设计的，机器代理一进场，退款套利、库存刷单、责任归属全部乱套。这是 AI Agent 商业化落地的第一个真实\"路障样本\"。",
-      "commentary": "Agent 能帮你比价、填表、抢票，却在\"这单算谁的\"面前被一句\"禁止\"打回原形。技术跑得比法律和商业规则快了半条街，结果就是——你的 AI 助理再聪明，也敌不过航司法务部的一页条款。",
-      "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/"
+      "title": "Rust 1.100.0 发布",
+      "source": "GitHub Releases",
+      "summary": "Rust 语言正式迈入\"1.100\"这个里程碑版本号。对一个以\"稳定压倒一切\"为信条的 systems 语言来说，三位数版本号本身就是个象征——从 2015 年 1.0 到今天，它已经从 Mozilla 的实验项目长成操作系统、浏览器引擎、云基础设施的底层主力。这个版本值得关注的是长期积累的 API 稳定性与工具链成熟度，而非某个单一特性。",
+      "commentary": "别的语言在卷新语法新特性，Rust 在卷\"我们又一次没有破坏任何东西\"。在一个到处是 breaking change 的行业里，\"无聊的稳定\"反而是最稀缺的奢侈品——顺便，借用检查器依旧不会对你手下留情。",
+      "url": "https://github.com/rust-lang/rust/releases/tag/1.100.0"
     },
     {
-      "title": "ReTrace：把\"会调工具的 Agent\"蒸馏成免规划器的固定工作流",
-      "source": "ArXiv",
-      "summary": "企业里同一套 SOP 天天在新输入上重跑，LLM Agent 却每一步都要问一次大模型该干啥——延迟高、成本高、还不可复现。ReTrace 的做法是把工具调用型 Agent 的行为\"蒸馏\"成无需 planner 的确定性工作流，保留多工具编排能力，砍掉每步推理开销。对 RPA、财务/客服/工单自动化这类高频重复场景，是实打实的降本增效。",
-      "commentary": "这才是 Agent 落地的正确姿势——别让大模型在流水线上每拧一颗螺丝都要\"思考人生\"，学会一次、固化下来，剩下的交给确定性逻辑。天天喊 AutoGPT 的，该来看看什么叫工业化。",
-      "url": "https://arxiv.org/abs/2611.14492v1"
+      "title": "Humble Bundle 用\"Vibe Coding\"把自家安全体系干碎了",
+      "source": "Lobste.rs",
+      "summary": "Humble Bundle 被曝因大量依赖 AI 辅助的\"氛围编程\"（vibecoding）来改代码，导致大部分安全机制被实质性摧毁。这不是理论风险，而是\"把安全交给 AI 生成、没人真正 review\"的现实翻车案例，对当下所有\"AI 写代码、人闭眼合并\"的团队是一记响亮耳光。",
+      "commentary": "当\"让 AI 帮你写\"遇上\"没人看得懂也懒得看\"，结果就是安全团队集体失业、攻击者集体上岗。Vibe coding 的尽头不是生产力革命，是 CVE 流水线——代码可以 vibe，安全不能 vibe。",
+      "url": "https://forums.spacebattles.com/threads/humble-bundle-just-completely-killed-most-of-their-security-through-vibecoding.1346295/"
     },
     {
-      "quote": "\"AI 能替你写代码、订机票、做决策，唯独替不了你承担后果——所以真正值钱的，从来不是会调工具的手，而是敢在出事后签字的那颗脑袋。\""
+      "quote": "\"让 AI 帮你写代码是效率，让 AI 帮你写安全是自杀——工具越聪明，越考验用它的人到底有没有脑子。\""
     }
   ],
   "candidates": [
     {
-      "id": "hn:50456631",
-      "title": "AWS emulator",
-      "summary": "<a href=\"https:&#x2F;&#x2F;www.aboutamazon.com&#x2F;news&#x2F;aws&#x2F;how-autonomous-ai-agents-built-aws-emulator\" rel=\"nofollow\">https:&#x2F;&#x2F;www.aboutamazon.com&#x2F;news&#x2F;aws&#x2F;how-autonomous-ai-agent...</a><p><a href=\"https:&#x2F;&#x2F;www.allthingsdistributed.com&#x2F;2026&#x2F;11&",
-      "url": "https://github.com/aws/aws-emulator",
+      "id": "hn:50471668",
+      "title": "Ask HN: Microsoft/Azure Outage?",
+      "summary": "For the past 5 minutes all of our Microsoft Cloud connections are down. Anyone else? The Status page won&#x27;t even load.",
+      "url": "https://news.ycombinator.com/item?id=50471668",
       "source": "Hacker News",
-      "score": 780,
-      "comments": 229
+      "score": 212,
+      "comments": 88
     },
     {
-      "id": "hn:50455394",
-      "title": "A false smoke alarm almost drowned Jane Street's only NYC datacenter",
+      "id": "hn:50471793",
+      "title": "Rust 1.100.0",
       "summary": "",
-      "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/",
+      "url": "https://github.com/rust-lang/rust/releases/tag/1.100.0",
       "source": "Hacker News",
-      "score": 459,
-      "comments": 227
+      "score": 216,
+      "comments": 44
     },
     {
-      "id": "hn:50458900",
-      "title": "United Airlines bans AI agents from booking flights on behalf of travelers",
+      "id": "lob:8kmjot",
+      "title": "Humble Bundle just completely killed most of their security through vibecoding",
       "summary": "",
-      "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
-      "source": "Hacker News",
-      "score": 505,
-      "comments": 489
-    },
-    {
-      "id": "hn:50459703",
-      "title": "Nvidia is preparing to oust Jensen Huang",
-      "summary": "",
-      "url": "https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad",
-      "source": "Hacker News",
-      "score": 833,
-      "comments": 1161
+      "url": "https://forums.spacebattles.com/threads/humble-bundle-just-completely-killed-most-of-their-security-through-vibecoding.1346295/",
+      "source": "Lobste.rs",
+      "score": 40,
+      "comments": 17,
+      "tags": [
+        "practices",
+        "security"
+      ]
     },
     {
       "id": "lob:m43bas",
@@ -72,48 +67,82 @@
       "summary": "<p>I recognize that the title is rather vague, but I'm completely green when it comes to self-hosting, so I figured here would be a good place to ask for some pointers given the discussions I sometimes see happening in the comments. I tried researching first through DDG and Google, but (and I recogn",
       "url": "https://lobste.rs/s/m43bas/how_do_you_actually_self_host_securely",
       "source": "Lobste.rs",
-      "score": 102,
-      "comments": 57,
+      "score": 117,
+      "comments": 71,
       "tags": [
         "ask",
         "devops"
       ]
     },
     {
-      "id": "hn:50459745",
-      "title": "93% of paint splatters are valid Perl programs (2019)",
+      "id": "hn:50467618",
+      "title": "Abandoned Quake 4 expansion finished by modders and now playable",
       "summary": "",
-      "url": "https://www.mcmillen.dev/sigbovik/",
+      "url": "https://www.moddb.com/mods/openq4/downloads/openq4-0141-windows-x64",
       "source": "Hacker News",
-      "score": 339,
-      "comments": 46
+      "score": 183,
+      "comments": 62
     },
     {
-      "id": "hn:50450488",
-      "title": "Tim Peters has died",
-      "summary": "<a href=\"https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;Python&#x2F;s&#x2F;2Cm5dBcvQw\" rel=\"nofollow\">https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;Python&#x2F;s&#x2F;2Cm5dBcvQw</a>",
-      "url": "https://discuss.python.org/t/in-memoriam-tim-peters-1952-2026/110028",
+      "id": "hn:50467087",
+      "title": "Jensen Huang resigns",
+      "summary": "<a href=\"https:&#x2F;&#x2F;nvidianews.nvidia.com&#x2F;news&#x2F;nvidia-announces-ceo-transition\" rel=\"nofollow\">https:&#x2F;&#x2F;nvidianews.nvidia.com&#x2F;news&#x2F;nvidia-announces-ceo-tran...</a><p><a href=\"https:&#x2F;&#x2F;www.reuters.com&#x2F;business&#x2F;retail-consumer&#x2F;nvidia-ceo-jens",
+      "url": "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f",
       "source": "Hacker News",
-      "score": 1062,
-      "comments": 116
+      "score": 2032,
+      "comments": 2076
     },
     {
-      "id": "hn:50456791",
-      "title": "Gemini Decisions API",
+      "id": "hn:50471431",
+      "title": "Gemini 4 Hydrogen",
       "summary": "",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
       "source": "Hacker News",
-      "score": 366,
-      "comments": 114
+      "score": 273,
+      "comments": 174
     },
     {
-      "id": "hn:50458208",
-      "title": "Emacs in the Age of Magic",
+      "id": "hn:50471731",
+      "title": "Outlook is down, and so is Microsoft's status page",
       "summary": "",
-      "url": "https://commandlinesystems.com/magic.txt",
+      "url": "https://gvwire.com/2026/11/12/microsoft-outlook-down-for-thousands-of-users-downdetector-shows/",
       "source": "Hacker News",
-      "score": 192,
-      "comments": 73
+      "score": 160,
+      "comments": 39
+    },
+    {
+      "id": "lob:ii1gzp",
+      "title": "How a false smoke alarm almost drowned Jane Street's only NYC datacenter",
+      "summary": "",
+      "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/",
+      "source": "Lobste.rs",
+      "score": 77,
+      "comments": 11,
+      "tags": [
+        "devops",
+        "ml"
+      ]
+    },
+    {
+      "id": "hn:50468888",
+      "title": "I'm making LLMs work on small and old devices",
+      "summary": "",
+      "url": "https://github.com/hyperionaidev/smolmaxxing/",
+      "source": "Hacker News",
+      "score": 162,
+      "comments": 62
+    },
+    {
+      "id": "lob:lnau2d",
+      "title": "How I accidentally became a millionaire",
+      "summary": "",
+      "url": "https://lyra.horse/blog/2026/11/disinformation-machine/",
+      "source": "Lobste.rs",
+      "score": 199,
+      "comments": 25,
+      "tags": [
+        "security"
+      ]
     },
     {
       "id": "lob:nld6x3",
@@ -121,65 +150,23 @@
       "summary": "<p>Hey everyone I'm wondering if there's any useful/helpful list of apps, companies, or resources in general that avoid AI (they don't have to be vocally or openly \"anti\", but at least explicitly avoid it) that you know of?</p>\n<p>I'm not looking to start a discussion on what's good/bad or (un)worth",
       "url": "https://lobste.rs/s/nld6x3/what_are_some_no_ai_apps_companies",
       "source": "Lobste.rs",
-      "score": 74,
-      "comments": 29,
+      "score": 92,
+      "comments": 45,
       "tags": [
         "ask"
       ]
     },
     {
-      "id": "hn:50459485",
-      "title": "Lock Your GitHub Actions",
+      "id": "lob:ooshl8",
+      "title": "The entirety of \"Let Over Lambda\" is now freely available online",
       "summary": "",
-      "url": "https://hugovk.dev/blog/2026/lock-github-actions/",
-      "source": "Hacker News",
-      "score": 199,
-      "comments": 40
-    },
-    {
-      "id": "lob:vkkbwo",
-      "title": ".name grandfathered",
-      "summary": "",
-      "url": "https://neil.fraser.name/news/2026/11/10/",
+      "url": "https://letoverlambda.com/",
       "source": "Lobste.rs",
-      "score": 185,
-      "comments": 27,
+      "score": 36,
+      "comments": 9,
       "tags": [
-        "networking"
-      ]
-    },
-    {
-      "id": "lob:sdtcvv",
-      "title": "I deleted all my SSH keys",
-      "summary": "",
-      "url": "https://blog.infected.systems/posts/2026-11-03-i-deleted-all-my-ssh-keys/",
-      "source": "Lobste.rs",
-      "score": 61,
-      "comments": 20,
-      "tags": [
-        "hardware",
-        "security"
-      ]
-    },
-    {
-      "id": "hn:50462177",
-      "title": "Critical RCE Vulnerability in Apache HTTP Server",
-      "summary": "",
-      "url": "https://www.wiz.io/blog/cve-2026-119618-rce-apache-http-server-vulnerability",
-      "source": "Hacker News",
-      "score": 99,
-      "comments": 40
-    },
-    {
-      "id": "lob:zy4p7f",
-      "title": "Using voltage glitching to unleash the A100 in my mining card",
-      "summary": "",
-      "url": "https://blog.kate.land/posts/using-voltage-glitching-to-unlock-the-a100/",
-      "source": "Lobste.rs",
-      "score": 42,
-      "comments": 8,
-      "tags": [
-        "hardware"
+        "book",
+        "lisp"
       ]
     },
     {
@@ -210,15 +197,15 @@
       "arxiv_id": "2611.14493v1"
     },
     {
-      "id": "lob:lnau2d",
-      "title": "How I accidentally became a millionaire",
+      "id": "lob:lrpb0m",
+      "title": "For the first time, a C++ standard failed to pass the national bodies",
       "summary": "",
-      "url": "https://lyra.horse/blog/2026/11/disinformation-machine/",
+      "url": "https://herecomesthemoon.net/2026/11/cpp26-failed-the-national-bodies/",
       "source": "Lobste.rs",
-      "score": 70,
-      "comments": 6,
+      "score": 35,
+      "comments": 9,
       "tags": [
-        "security"
+        "c++"
       ]
     },
     {
@@ -245,6 +232,25 @@
         "cs.MA"
       ],
       "arxiv_id": "2611.14492v1"
+    },
+    {
+      "id": "arxiv:2611.14491v1",
+      "title": "TimeSeek: Multi-Task and Multi-Domain Pretraining for Generalized Time Series Analytics",
+      "summary": "Time series analytics has been widely applied across various domains. While existing time series foundation models (TSFMs) have demonstrated promising results, they still face two major challenges: 1) Most TSFMs mainly rely on stacking Transformer layers to increase parameter size, lacking the abili",
+      "url": "https://arxiv.org/abs/2611.14491v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_id": "2611.14491v1"
+    },
+    {
+      "id": "rss:f05534491c",
+      "title": "PTC Patches Critical Windchill and FlexPLM Flaw That Could Enable Remote Code Execution",
+      "summary": "PTC has released patches for a new critical vulnerability impacting Windchill and FlexPLM software that, if successfully exploited, could result in remote code execution.\n\nThe security flaw, tracked as CVE-2026-126325, carries a CVSS v4 score of 9.2 out of a maximum of 10.0.\n\nIt has been described a",
+      "url": "https://thehackernews.com/2026/11/ptc-patches-critical-windchill-and.html",
+      "source": "Tech RSS",
+      "score": 0
     }
   ],
   "ai_curated": true
