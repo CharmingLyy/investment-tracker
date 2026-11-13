@@ -1,0 +1,806 @@
+{
+  "update_time": "2026-11-13 15:49:33",
+  "stocks": {
+    "a_stocks": [
+      {
+        "market": "A股",
+        "code": "002050",
+        "name": "三花智控",
+        "symbol": "sz.002050",
+        "industry": null,
+        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
+        "price": 34.87,
+        "open": 34.6,
+        "high": 35.85,
+        "low": 34.6,
+        "change_pct": 0.75,
+        "volume": 62138647,
+        "turnover": 21.84,
+        "market_cap": null,
+        "pe": 37.74,
+        "cash_flow": null,
+        "macd": 0.1957,
+        "macd_signal": -0.0097,
+        "macd_histogram": 0.4109,
+        "rsi": 52.14,
+        "ma": {
+          "MA5": 35.08,
+          "MA10": 34.51,
+          "MA20": 34.18,
+          "MA60": 34.92
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
+        "price": 5.95,
+        "open": 5.99,
+        "high": 6.05,
+        "low": 5.93,
+        "change_pct": -0.83,
+        "volume": 41574531,
+        "turnover": 2.48,
+        "market_cap": null,
+        "pe": 66.81,
+        "cash_flow": null,
+        "macd": -0.0915,
+        "macd_signal": -0.0926,
+        "macd_histogram": 0.0023,
+        "rsi": 33.56,
+        "ma": {
+          "MA5": 6.04,
+          "MA10": 6.09,
+          "MA20": 6.1,
+          "MA60": 6.39
+        },
+        "main_net_flow": null
+      }
+    ],
+    "hk_stocks": [
+      {
+        "market": "港股",
+        "code": "01810",
+        "name": "小米集团-W",
+        "symbol": "01810",
+        "industry": "Consumer Electronics",
+        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
+        "price": 28.86,
+        "open": 29.74,
+        "high": 29.8,
+        "low": 28.8,
+        "change_pct": -3.74,
+        "volume": 109047187,
+        "turnover": null,
+        "market_cap": 7426.24,
+        "pe": 21.22,
+        "cash_flow": 86.81,
+        "macd": 1.0468,
+        "macd_signal": 0.8808,
+        "macd_histogram": 0.332,
+        "rsi": 54.78,
+        "ma": {
+          "MA5": 29.93,
+          "MA10": 29.68,
+          "MA20": 28.01,
+          "MA60": 26.99
+        },
+        "main_net_flow": null
+      }
+    ],
+    "us_stocks": [
+      {
+        "market": "美股",
+        "code": "NVDA",
+        "name": "NVIDIA",
+        "symbol": "NVDA",
+        "industry": "Semiconductors",
+        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
+        "price": 160.04,
+        "open": 169.89,
+        "high": 170.0,
+        "low": 159.04,
+        "change_pct": -3.7,
+        "volume": 164575607,
+        "turnover": null,
+        "market_cap": 38646.57,
+        "pe": 20.23,
+        "cash_flow": 418.1,
+        "macd": -14.4502,
+        "macd_signal": -10.1471,
+        "macd_histogram": -8.6061,
+        "rsi": 23.98,
+        "ma": {
+          "MA5": 169.5,
+          "MA10": 182.46,
+          "MA20": 198.55,
+          "MA60": 215.15
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "GOOG",
+        "name": "Alphabet (Google)",
+        "symbol": "GOOG",
+        "industry": "Internet Content & Information",
+        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
+        "price": 291.37,
+        "open": 299.86,
+        "high": 301.62,
+        "low": 290.79,
+        "change_pct": -1.35,
+        "volume": 6154731,
+        "turnover": null,
+        "market_cap": 35835.78,
+        "pe": 15.22,
+        "cash_flow": 11.62,
+        "macd": -12.1904,
+        "macd_signal": -13.2515,
+        "macd_histogram": 2.1223,
+        "rsi": 38.8,
+        "ma": {
+          "MA5": 289.66,
+          "MA10": 285.76,
+          "MA20": 300.83,
+          "MA60": 327.36
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "CRCL",
+        "name": "Circle",
+        "symbol": "CRCL",
+        "industry": "Capital Markets",
+        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
+        "price": 61.8,
+        "open": 63.05,
+        "high": 63.83,
+        "low": 60.56,
+        "change_pct": -3.17,
+        "volume": 3506888,
+        "turnover": null,
+        "market_cap": 158.55,
+        "pe": 37.23,
+        "cash_flow": 2.62,
+        "macd": -5.3699,
+        "macd_signal": -4.0435,
+        "macd_histogram": -2.6526,
+        "rsi": 31.17,
+        "ma": {
+          "MA5": 65.06,
+          "MA10": 68.61,
+          "MA20": 75.56,
+          "MA60": 84.16
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "MP",
+        "name": "MP Materials",
+        "symbol": "MP",
+        "industry": "Other Industrial Metals & Mining",
+        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
+        "price": 38.64,
+        "open": 37.34,
+        "high": 39.75,
+        "low": 37.21,
+        "change_pct": 3.18,
+        "volume": 3175801,
+        "turnover": null,
+        "market_cap": 68.88,
+        "pe": 82.83,
+        "cash_flow": 4.1,
+        "macd": -1.9381,
+        "macd_signal": -2.3296,
+        "macd_histogram": 0.783,
+        "rsi": 46.49,
+        "ma": {
+          "MA5": 37.41,
+          "MA10": 36.83,
+          "MA20": 38.16,
+          "MA60": 46.09
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "PLTR",
+        "name": "Palantir",
+        "symbol": "PLTR",
+        "industry": "Software - Infrastructure",
+        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
+        "price": 167.72,
+        "open": 171.98,
+        "high": 172.28,
+        "low": 164.75,
+        "change_pct": -2.25,
+        "volume": 4637363,
+        "turnover": null,
+        "market_cap": 4041.21,
+        "pe": 118.11,
+        "cash_flow": 26.52,
+        "macd": -6.2866,
+        "macd_signal": -4.5671,
+        "macd_histogram": -3.439,
+        "rsi": 39.29,
+        "ma": {
+          "MA5": 169.94,
+          "MA10": 169.05,
+          "MA20": 182.34,
+          "MA60": 183.93
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "NOW",
+        "name": "ServiceNow",
+        "symbol": "NOW",
+        "industry": "Software - Application",
+        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
+        "price": 100.51,
+        "open": 102.2,
+        "high": 102.5,
+        "low": 99.92,
+        "change_pct": -0.15,
+        "volume": 2466494,
+        "turnover": null,
+        "market_cap": 1043.24,
+        "pe": 72.31,
+        "cash_flow": 57.54,
+        "macd": -10.8712,
+        "macd_signal": -8.5198,
+        "macd_histogram": -4.7028,
+        "rsi": 29.77,
+        "ma": {
+          "MA5": 101.26,
+          "MA10": 103.46,
+          "MA20": 123.82,
+          "MA60": 132.81
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "DDOG",
+        "name": "Datadog",
+        "symbol": "DDOG",
+        "industry": "Software - Application",
+        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
+        "price": 179.28,
+        "open": 188.24,
+        "high": 188.44,
+        "low": 178.16,
+        "change_pct": -2.81,
+        "volume": 747701,
+        "turnover": null,
+        "market_cap": 647.28,
+        "pe": 249.0,
+        "cash_flow": 10.66,
+        "macd": -22.6213,
+        "macd_signal": -16.9663,
+        "macd_histogram": -11.31,
+        "rsi": 30.21,
+        "ma": {
+          "MA5": 181.23,
+          "MA10": 188.51,
+          "MA20": 227.15,
+          "MA60": 240.81
+        },
+        "main_net_flow": null
+      }
+    ],
+    "crypto": [
+      {
+        "market": "加密货币",
+        "code": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "industry": "Smart Contract Platform",
+        "price": 68359,
+        "open": null,
+        "high": 72091,
+        "low": 67922,
+        "change_pct": -4.16,
+        "volume": 43617258443,
+        "turnover": null,
+        "market_cap": 13747.41,
+        "market_cap_rank": 1,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -2520.5532,
+        "macd_signal": -1811.5182,
+        "macd_histogram": -1418.07,
+        "rsi": 24.84,
+        "ma": {
+          "MA5": 72538.74,
+          "MA10": 74543.4,
+          "MA20": 76630.5,
+          "MA60": 80682.84
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 20111481.0,
+          "total_supply": 20111481.0,
+          "circ_ratio": 100.0,
+          "price_change_7d": -9.54753,
+          "price_change_30d": -16.63061,
+          "ath_pct": -45.78,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      },
+      {
+        "market": "加密货币",
+        "code": "ethereum",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "industry": null,
+        "price": 1922.81,
+        "open": null,
+        "high": 2023.42,
+        "low": 1905.0,
+        "change_pct": -3.81,
+        "volume": 14719140235,
+        "turnover": null,
+        "market_cap": 2350.03,
+        "market_cap_rank": 2,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": null,
+        "macd_signal": null,
+        "macd_histogram": null,
+        "rsi": null,
+        "ma": {},
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 122215668.80579185,
+          "total_supply": 122215668.80579185,
+          "circ_ratio": null,
+          "price_change_7d": null,
+          "price_change_30d": null,
+          "ath_pct": null,
+          "ath_date": null,
+          "categories": [],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      }
+    ]
+  },
+  "news": [
+    {
+      "id": "35b871d31c",
+      "title": "[播客]独家实拍：我那永远跪着的母亲(11/07 22:10)",
+      "summary": "独家实拍：我那永远跪着的母亲",
+      "link": "http://go.rss.sina.com.cn/redirect.php?url=http://you.video.sina.com.cn/b/16972162-1239095354.html",
+      "source": "rss.sina.com.cn",
+      "published": ""
+    },
+    {
+      "id": "bc1e79e3c8",
+      "title": "Microsoft Outlook outage stretches into a second day, causing widespread disruption",
+      "summary": "The outage could result in a $100 million to $400 million negative impact to Microsoft if the company offers credits and other compensation to customers, one analyst said.",
+      "link": "https://www.marketwatch.com/story/microsoft-stock-slumps-on-outage-that-includes-the-copilot-tool-it-has-been-heavily-promoting-4007dc4f?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 13 Nov 2026 15:44:00 GMT"
+    },
+    {
+      "id": "f0f1c705c2",
+      "title": "I’m 17 and will be a first-generation college student. Is law school worth being $200,000 in debt?",
+      "summary": "“I‘’m considering a pre-law track … I’m just a bit hesitant because of how expensive law school is.”",
+      "link": "https://www.marketwatch.com/story/im-17-and-will-be-a-first-generation-college-student-is-law-school-worth-being-200-000-in-debt-df9b23c3?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 13 Nov 2026 15:37:00 GMT"
+    },
+    {
+      "id": "8c37efb100",
+      "title": "‘He calls my plans a fantasy’: My husband says we can’t afford a $200,000-a-year retirement. Is he being cheap?",
+      "summary": "“We have $2 million saved in our retirement accounts and a house worth $1.3 million.”",
+      "link": "https://www.marketwatch.com/story/he-calls-my-plans-a-fantasy-my-husband-says-we-cant-afford-our-200-000-a-year-dream-retirement-i-think-hes-cheap-45bc5b4e?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 13 Nov 2026 15:30:00 GMT"
+    },
+    {
+      "id": "349dfa978a",
+      "title": "‘She has a history of financial mismanagement’: My brother cut our sister out of his will. I’ll get everything. Do I tell her?",
+      "summary": "“I’m torn between respecting my brother’s wishes and being fair to my sister.”",
+      "link": "https://www.marketwatch.com/story/she-has-a-history-of-financial-mismanagement-my-brother-cut-my-sister-out-of-his-will-im-getting-everything-do-i-tell-her-3e537851?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 13 Nov 2026 15:15:00 GMT"
+    },
+    {
+      "id": "40bc86f72f",
+      "title": "Am I overpaying for health insurance? How to answer the key question this open-enrollment season.",
+      "summary": "More people want to understand the fine print on plans this year, financial planners say.",
+      "link": "https://www.marketwatch.com/story/am-i-overpaying-for-health-insurance-how-to-answer-the-key-question-this-open-enrollment-season-2d00ed55?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 13 Nov 2026 15:11:00 GMT"
+    },
+    {
+      "id": "0097433535",
+      "title": "Home sales plummet to lowest level since ‘Great Recession’ as prices hit all-time high",
+      "summary": "Home sales fell in October to a 16-year low as buyers bolted from the housing market in the face of 7% mortgage rates.",
+      "link": "https://www.marketwatch.com/story/home-sales-plummet-to-lowest-level-since-the-great-recession-as-buyers-flee-the-market-624e6270?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 13 Nov 2026 15:08:00 GMT"
+    },
+    {
+      "id": "51c9fee7f3",
+      "title": "The 2027 401(k) limits are here. See how much more you can save next year.",
+      "summary": "Defined-contribution plans are getting a bump. IRA savers are not.",
+      "link": "https://www.marketwatch.com/story/the-2027-401-k-limits-are-here-see-how-much-more-you-can-save-next-year-d525768c?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 13 Nov 2026 15:03:00 GMT"
+    },
+    {
+      "id": "61aaeccc09",
+      "title": "Trump administration is hiring debt collectors to go after defaulted student-loan borrowers for first time in 6 years",
+      "summary": "The Treasury Department proposes to pay debt collectors much less than in the past to help borrowers get out of default.",
+      "link": "https://www.marketwatch.com/story/trump-administration-is-hiring-debt-collectors-for-first-time-in-6-years-to-go-after-defaulted-student-loan-borrowers-8bae13ad?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 13 Nov 2026 14:28:00 GMT"
+    },
+    {
+      "id": "33ba7d4d27",
+      "title": "Opening trading-card packs has become a $2 billion market",
+      "summary": "Pack-ripping apps are changing the way people buy and sell cards. But analysts say their “slot-like payoff” raises risks.",
+      "link": "https://www.marketwatch.com/story/opening-trading-card-packs-has-become-a-2-billion-market-new-apps-are-trying-to-cash-in-b7ba11f5?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 13 Nov 2026 14:16:00 GMT"
+    },
+    {
+      "id": "9126db9b74",
+      "title": "I’m 63 and spending $95,000 on a roof deck for my $500,000 home. Am I being extravagant?",
+      "summary": "“I have a net worth of $2.3 million and my only debt is a 15-year mortgage.”",
+      "link": "https://www.marketwatch.com/story/im-63-and-want-to-spend-95-000-on-a-roof-deck-for-my-500-000-home-is-that-a-good-investment-f1a59c27?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 13 Nov 2026 14:15:00 GMT"
+    },
+    {
+      "id": "3a6ad51537",
+      "title": "Bessent blames Commerce Dept over lack of export controls for Nvidia partner Megaspeed",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/bessent-says-treasury-favored-limits-on-megaspeed-5025721",
+      "source": "www.investing.com",
+      "published": "2026-11-13 15:30:24"
+    },
+    {
+      "id": "5e1a67fcb2",
+      "title": "Northland Power Nov 2026 slides: 4 for 4 delivery, 2030 targets on track",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/northland-power-nov-2026-slides-4-for-4-delivery-2030-targets-on-track-93CH-5026082",
+      "source": "www.investing.com",
+      "published": "2026-11-13 15:30:19"
+    },
+    {
+      "id": "1526705f62",
+      "title": "SKHY support and resistance levels to watch",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/skhy-support-and-resistance-levels-to-watch-93CH-5026078",
+      "source": "www.investing.com",
+      "published": "2026-11-13 15:29:55"
+    },
+    {
+      "id": "ca4cc0bd22",
+      "title": "IRB(Re) 3Q26 slides: tax reform drives loss, solvency hits 333%",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/irbre-3q26-slides-tax-reform-drives-loss-solvency-hits-333-93CH-5026077",
+      "source": "www.investing.com",
+      "published": "2026-11-13 15:29:17"
+    },
+    {
+      "id": "92da936ed1",
+      "title": "Earnings call transcript: Exchange Income tops EPS estimates in Q3 2026",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-exchange-income-tops-eps-estimates-in-q3-2026-93CH-5026076",
+      "source": "www.investing.com",
+      "published": "2026-11-13 15:29:03"
+    },
+    {
+      "id": "fa09cce2ce",
+      "title": "Earnings call transcript: Rede D’Or misses Q3 2026 estimates but stock rises",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-rede-dor-misses-q3-2026-estimates-but-stock-rises-93CH-5026075",
+      "source": "www.investing.com",
+      "published": "2026-11-13 15:28:49"
+    },
+    {
+      "id": "72e090b3a8",
+      "title": "Flowers Foods stock hits 52-week low at 5.39 USD",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/flowers-foods-stock-hits-52week-low-at-539-usd-93CH-5026074",
+      "source": "www.investing.com",
+      "published": "2026-11-13 15:28:18"
+    },
+    {
+      "id": "d3fffefb90",
+      "title": "Mach Natural Resources stock hits 52-week low at $8.93",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/mach-natural-resources-stock-hits-52week-low-at-893-93CH-5026073",
+      "source": "www.investing.com",
+      "published": "2026-11-13 15:28:16"
+    },
+    {
+      "id": "493adba037",
+      "title": "Why is Coherent stock tumbling today?",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-coherent-stock-tumbling-today-93CH-5026072",
+      "source": "www.investing.com",
+      "published": "2026-11-13 15:28:06"
+    },
+    {
+      "id": "89f2401884",
+      "title": "Amazon stands out as the best consumer stock pick",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/amazon-stands-out-as-the-best-consumer-stock-pick-93CH-5026071",
+      "source": "www.investing.com",
+      "published": "2026-11-13 15:28:05"
+    }
+  ],
+  "briefing": {
+    "date": "2026-11-13",
+    "update_time": "2026-11-13 05:52:22",
+    "candidate_count": 20,
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-13\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 黄仁勋辞职：一个时代的强制关机 (来源: HackerNews)\n- **核心干货**：NVIDIA 官方宣布 CEO 黄仁勋卸任，HN 热度直接炸到 3234 分、近 3000 条评论。结合同日爆出的\"与第二名员工存在关系\"的报道，以及员工请愿\"求回归\"的魔幻剧情，这不是正常交班，更像一场公关核爆后的被迫退场。对行业而言，真正的问题不是谁接任，而是这家靠 AI 算力吃到饱的公司，能否在创始人光环消散后维持叙事。\n- **毒舌/硬核点评**：皮衣可以传承，但\"AI 教父\"的人设没法 fork。NVIDIA 接下来要靠财报而不是 keynote 撑场子了。\n- **🔗 传送门**：[点击直达原链接](https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f)\n\n---\n\n### 2. 📌 Rust 1.100：版本号终于凑了个整数 (来源: HackerNews)\n- **核心干货**：Rust 发布 1.100 版本，554 分说明社区依然买账。数字好看只是彩蛋，重点是其编译器、工具链和生态在系统编程、嵌入式、WebAssembly 领域的持续加固。对正在评估\"要不要上 Rust\"的团队来说，这是一个心理门槛被跨过的节点——1.100 听起来就不像实验品了。\n- **毒舌/硬核点评**：别的语言版本号是里程碑，Rust 的版本号是给 CTO 看的心理安慰剂——\"你看，都三位数了，稳的。\"\n- **🔗 传送门**：[点击直达原链接](https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/)\n\n---\n\n### 3. 📌 Gemini 4 Hydrogen + Orchestrator：Google 把\"代理编排\"摆上桌 (来源: HackerNews)\n- **核心干货**：Google 在 Antigravity 平台推出 Gemini 4 Hydrogen 及 Orchestrator 编排层。核心信号不是又一个更强的模型，而是\"编排\"被提到产品级位置——多代理协作、任务分解、工具调用调度开始成为正式基础设施。这标志着大模型竞争从\"谁的分数高\"转向\"谁能把一堆代理管明白\"。\n- **毒舌/硬核点评**：模型越来越像发动机，真正赚钱的是变速箱和底盘。Google 终于想起来自己会造车了。\n- **🔗 传送门**：[点击直达原链接](https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/)\n\n---\n\n### 🗣️ 今日顶男金句\n\"技术圈最大的幻觉，是以为换个版本号、换个 CEO、换个模型名，问题就解决了——真正的护城河，永远在没有人愿意干的脏活里。\"",
+    "briefing_items": [
+      {
+        "title": "黄仁勋辞职：一个时代的强制关机",
+        "source": "HackerNews",
+        "summary": "NVIDIA 官方宣布 CEO 黄仁勋卸任，HN 热度直接炸到 3234 分、近 3000 条评论。结合同日爆出的\"与第二名员工存在关系\"的报道，以及员工请愿\"求回归\"的魔幻剧情，这不是正常交班，更像一场公关核爆后的被迫退场。对行业而言，真正的问题不是谁接任，而是这家靠 AI 算力吃到饱的公司，能否在创始人光环消散后维持叙事。",
+        "commentary": "皮衣可以传承，但\"AI 教父\"的人设没法 fork。NVIDIA 接下来要靠财报而不是 keynote 撑场子了。",
+        "url": "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f"
+      },
+      {
+        "title": "Rust 1.100：版本号终于凑了个整数",
+        "source": "HackerNews",
+        "summary": "Rust 发布 1.100 版本，554 分说明社区依然买账。数字好看只是彩蛋，重点是其编译器、工具链和生态在系统编程、嵌入式、WebAssembly 领域的持续加固。对正在评估\"要不要上 Rust\"的团队来说，这是一个心理门槛被跨过的节点——1.100 听起来就不像实验品了。",
+        "commentary": "别的语言版本号是里程碑，Rust 的版本号是给 CTO 看的心理安慰剂——\"你看，都三位数了，稳的。\"",
+        "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/"
+      },
+      {
+        "title": "Gemini 4 Hydrogen + Orchestrator：Google 把\"代理编排\"摆上桌",
+        "source": "HackerNews",
+        "summary": "Google 在 Antigravity 平台推出 Gemini 4 Hydrogen 及 Orchestrator 编排层。核心信号不是又一个更强的模型，而是\"编排\"被提到产品级位置——多代理协作、任务分解、工具调用调度开始成为正式基础设施。这标志着大模型竞争从\"谁的分数高\"转向\"谁能把一堆代理管明白\"。",
+        "commentary": "模型越来越像发动机，真正赚钱的是变速箱和底盘。Google 终于想起来自己会造车了。",
+        "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/"
+      }
+    ],
+    "candidates": [
+      {
+        "id": "hn:50471731",
+        "title": "Service degradation on Microsoft 365",
+        "summary": "<a href=\"https:&#x2F;&#x2F;www.abc.net.au&#x2F;news&#x2F;2026-11-13&#x2F;microsoft-outage-affects-users-worldwide&#x2F;107381050\" rel=\"nofollow\">https:&#x2F;&#x2F;www.abc.net.au&#x2F;news&#x2F;2026-11-13&#x2F;microsoft-outage-affe...</a><p><a href=\"https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;sysadm",
+        "url": "https://status.cloud.microsoft/",
+        "source": "Hacker News",
+        "score": 675,
+        "comments": 631
+      },
+      {
+        "id": "hn:50472038",
+        "title": "Rust 1.100",
+        "summary": "",
+        "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
+        "source": "Hacker News",
+        "score": 554,
+        "comments": 223
+      },
+      {
+        "id": "hn:50472260",
+        "title": "Gemini 4 Hydrogen and Orchestrator",
+        "summary": "",
+        "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
+        "source": "Hacker News",
+        "score": 364,
+        "comments": 100
+      },
+      {
+        "id": "hn:50470488",
+        "title": "Show HN: My $300 embroidery machine needed a subscription, so I built my own app",
+        "summary": "<a href=\"https:&#x2F;&#x2F;x.com&#x2F;simpsoka&#x2F;status&#x2F;2115254318161182876\" rel=\"nofollow\">https:&#x2F;&#x2F;x.com&#x2F;simpsoka&#x2F;status&#x2F;2115254318161182876</a>",
+        "url": "https://github.com/simpsoka/zigzag",
+        "source": "Hacker News",
+        "score": 429,
+        "comments": 166
+      },
+      {
+        "id": "hn:50472490",
+        "title": "Dwarf planet candidate appears which takes roughly 280 years to orbit our sun",
+        "summary": "",
+        "url": "https://www.smithsonianmag.com/smart-news/astronomers-found-a-mysterious-object-orbiting-far-beyond-pluto-it-could-be-a-new-dwarf-planet-hidden-in-our-solar-system-180989857/",
+        "source": "Hacker News",
+        "score": 249,
+        "comments": 110
+      },
+      {
+        "id": "hn:50477231",
+        "title": "Nvidia employees petition to bring back Jensen Huang",
+        "summary": "",
+        "url": "https://www.wired.com/story/nvidia-employees-petition-for-jensen-huangs-return/",
+        "source": "Hacker News",
+        "score": 314,
+        "comments": 245
+      },
+      {
+        "id": "hn:50468888",
+        "title": "I'm making LLMs work on small and old devices",
+        "summary": "",
+        "url": "https://github.com/hyperionaidev/smolmaxxing/",
+        "source": "Hacker News",
+        "score": 320,
+        "comments": 105
+      },
+      {
+        "id": "hn:50471761",
+        "title": "Turning a 22-year-old Postgres type-confusion primitive into RCE",
+        "summary": "",
+        "url": "https://mehmetince.net/part-3-6-how-i-ended-up-turning-a-22-year-old-postgresql-type-confusion-primitive-into-rce-cve-2026-6460/",
+        "source": "Hacker News",
+        "score": 162,
+        "comments": 29
+      },
+      {
+        "id": "lob:ii1gzp",
+        "title": "How a false smoke alarm almost drowned Jane Street's only NYC datacenter",
+        "summary": "",
+        "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/",
+        "source": "Lobste.rs",
+        "score": 84,
+        "comments": 17,
+        "tags": [
+          "devops",
+          "ml"
+        ]
+      },
+      {
+        "id": "hn:50473190",
+        "title": "Former Nvidia CEO Huang had a relationship with a second employee, sources say",
+        "summary": "<a href=\"https:&#x2F;&#x2F;www.forbes.com&#x2F;sites&#x2F;alisondurkee&#x2F;2026&#x2F;11&#x2F;12&#x2F;jensen-huang-had-a-third-affair-with-another-nvidia-employee-report-says&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.forbes.com&#x2F;sites&#x2F;alisondurkee&#x2F;2026&#x2F;11&#x2F;12&#x2F;jensen-...",
+        "url": "https://www.reuters.com/technology/former-nvidia-ceo-huang-had-relationship-with-second-employee-sources-say-2026-11-12/",
+        "source": "Hacker News",
+        "score": 188,
+        "comments": 220
+      },
+      {
+        "id": "hn:50467087",
+        "title": "Jensen Huang resigns",
+        "summary": "<a href=\"https:&#x2F;&#x2F;nvidianews.nvidia.com&#x2F;news&#x2F;nvidia-announces-ceo-transition\" rel=\"nofollow\">https:&#x2F;&#x2F;nvidianews.nvidia.com&#x2F;news&#x2F;nvidia-announces-ceo-tran...</a><p><a href=\"https:&#x2F;&#x2F;www.reuters.com&#x2F;business&#x2F;retail-consumer&#x2F;nvidia-ceo-jens",
+        "url": "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f",
+        "source": "Hacker News",
+        "score": 3234,
+        "comments": 2986
+      },
+      {
+        "id": "lob:ooshl8",
+        "title": "The entirety of \"Let Over Lambda\" is now freely available online",
+        "summary": "",
+        "url": "https://letoverlambda.com/",
+        "source": "Lobste.rs",
+        "score": 52,
+        "comments": 21,
+        "tags": [
+          "book",
+          "lisp"
+        ]
+      },
+      {
+        "id": "lob:lnau2d",
+        "title": "How I accidentally became a millionaire",
+        "summary": "",
+        "url": "https://lyra.horse/blog/2026/11/disinformation-machine/",
+        "source": "Lobste.rs",
+        "score": 236,
+        "comments": 28,
+        "tags": [
+          "security"
+        ]
+      },
+      {
+        "id": "hn:50475713",
+        "title": "Edge0-145B: Frontier AI Capabilities on Your Own Computer",
+        "summary": "",
+        "url": "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer",
+        "source": "Hacker News",
+        "score": 163,
+        "comments": 39
+      },
+      {
+        "id": "lob:pty8pn",
+        "title": "The anti-marketing aspect of the Gemini network",
+        "summary": "",
+        "url": "https://ploum.net/2026-11-12-anti-marketing-gemini.html",
+        "source": "Lobste.rs",
+        "score": 29,
+        "comments": 17,
+        "tags": [
+          "web"
+        ]
+      },
+      {
+        "id": "hn:50474361",
+        "title": "Foundation Models framework",
+        "summary": "",
+        "url": "https://developer.apple.com/foundation-models-framework/",
+        "source": "Hacker News",
+        "score": 174,
+        "comments": 25
+      },
+      {
+        "id": "lob:3gw2f4",
+        "title": "Hello Baochip",
+        "summary": "",
+        "url": "https://ratfactor.com/cards/hello-baochip",
+        "source": "Lobste.rs",
+        "score": 56,
+        "comments": 7,
+        "tags": [
+          "hardware"
+        ]
+      },
+      {
+        "id": "lob:2drgwh",
+        "title": "Hijacking Samsung TV Smart Hub Ads",
+        "summary": "",
+        "url": "https://dvratil.cz/2026/11/hijacking-samsung-tv-smart-hub-ads/",
+        "source": "Lobste.rs",
+        "score": 41,
+        "comments": 3,
+        "tags": [
+          "networking",
+          "reversing"
+        ]
+      },
+      {
+        "id": "rss:f05534491c",
+        "title": "PTC Patches Critical Windchill and FlexPLM Flaw That Could Enable Remote Code Execution",
+        "summary": "PTC has released patches for a new critical vulnerability impacting Windchill and FlexPLM software that, if successfully exploited, could result in remote code execution.\n\nThe security flaw, tracked as CVE-2026-126325, carries a CVSS v4 score of 9.2 out of a maximum of 10.0.\n\nIt has been described a",
+        "url": "https://thehackernews.com/2026/11/ptc-patches-critical-windchill-and.html",
+        "source": "Tech RSS",
+        "score": 0
+      },
+      {
+        "id": "rss:e9379276d3",
+        "title": "exploit a 22 years old PostgreSQL composite-type vulnerability",
+        "summary": "&#32; submitted by &#32;  /u/wtfse   [link] &#32; [comments]",
+        "url": "https://www.reddit.com/r/programming/comments/1xuk4d5/exploit_a_22_years_old_postgresql_compositetype/",
+        "source": "Tech RSS",
+        "score": 0
+      }
+    ],
+    "ai_curated": true
+  },
+  "fear_greed": {
+    "value": 20,
+    "classification": "Extreme Fear",
+    "timestamp": "2026-11-13 00:00:00"
+  }
+}
