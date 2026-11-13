@@ -1,134 +1,133 @@
 {
-  "date": "2026-11-13",
-  "update_time": "2026-11-13 05:52:22",
+  "date": "2026-11-14",
+  "update_time": "2026-11-13 19:20:58",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-13\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 黄仁勋辞职：一个时代的强制关机 (来源: HackerNews)\n- **核心干货**：NVIDIA 官方宣布 CEO 黄仁勋卸任，HN 热度直接炸到 3234 分、近 3000 条评论。结合同日爆出的\"与第二名员工存在关系\"的报道，以及员工请愿\"求回归\"的魔幻剧情，这不是正常交班，更像一场公关核爆后的被迫退场。对行业而言，真正的问题不是谁接任，而是这家靠 AI 算力吃到饱的公司，能否在创始人光环消散后维持叙事。\n- **毒舌/硬核点评**：皮衣可以传承，但\"AI 教父\"的人设没法 fork。NVIDIA 接下来要靠财报而不是 keynote 撑场子了。\n- **🔗 传送门**：[点击直达原链接](https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f)\n\n---\n\n### 2. 📌 Rust 1.100：版本号终于凑了个整数 (来源: HackerNews)\n- **核心干货**：Rust 发布 1.100 版本，554 分说明社区依然买账。数字好看只是彩蛋，重点是其编译器、工具链和生态在系统编程、嵌入式、WebAssembly 领域的持续加固。对正在评估\"要不要上 Rust\"的团队来说，这是一个心理门槛被跨过的节点——1.100 听起来就不像实验品了。\n- **毒舌/硬核点评**：别的语言版本号是里程碑，Rust 的版本号是给 CTO 看的心理安慰剂——\"你看，都三位数了，稳的。\"\n- **🔗 传送门**：[点击直达原链接](https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/)\n\n---\n\n### 3. 📌 Gemini 4 Hydrogen + Orchestrator：Google 把\"代理编排\"摆上桌 (来源: HackerNews)\n- **核心干货**：Google 在 Antigravity 平台推出 Gemini 4 Hydrogen 及 Orchestrator 编排层。核心信号不是又一个更强的模型，而是\"编排\"被提到产品级位置——多代理协作、任务分解、工具调用调度开始成为正式基础设施。这标志着大模型竞争从\"谁的分数高\"转向\"谁能把一堆代理管明白\"。\n- **毒舌/硬核点评**：模型越来越像发动机，真正赚钱的是变速箱和底盘。Google 终于想起来自己会造车了。\n- **🔗 传送门**：[点击直达原链接](https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/)\n\n---\n\n### 🗣️ 今日顶男金句\n\"技术圈最大的幻觉，是以为换个版本号、换个 CEO、换个模型名，问题就解决了——真正的护城河，永远在没有人愿意干的脏活里。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-14\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 PostgreSQL 补丁修复 52 个漏洞，含一枚潜伏 22 年的\"认证 RCE\"定时炸弹 (来源: Tech News / HackerNews)\n- **核心干货**：PostgreSQL 发布安全更新，一次性修复 52 个漏洞，其中最狠的是一个复合类型的类型混淆（type confusion）漏洞——只要数据库用户有建对象的权限，就能在服务器上执行任意代码。这玩意儿 2004 年就埋进去了，躺了 22 年才被挖出来。更坑的是，装了 C 语言扩展的实例光打补丁不够，还得重新编译扩展才算彻底止血。\n- **毒舌/硬核点评**：22 年的陈年漏洞，代码界的\"地窖老酒\"终于开坛了——只不过这酒有毒。给所有觉得\"老代码稳定就别动\"的团队一记当头棒喝：你没被黑，只是没人认真找而已。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html)\n\n---\n\n### 2. 📌 Metal Sandbox：给 Apple Silicon 上的 GPU 编码 Agent 套上\"隔离笼子\" (来源: ArXiv)\n- **核心干货**：针对苹果芯片本地跑 GPU 编码 Agent 的痛点，提出一套隔离执行与命令调度方案。核心是让 Agent 在生成 Metal kernel、跑开发命令、发模型请求之间安全切换，防止 AI 生成的代码把本地加速器搞崩或越权乱来。这是把\"Agent 写内核\"从玩具实验推向可用工程的关键一环。\n- **毒舌/硬核点评**：让 AI 直接在 Metal 上写 kernel，就像让实习生直接操作核反应堆——不是不行，但你得先装个安全壳。这活儿终于有人正经干了。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2611.17294v1)\n\n---\n\n### 3. 📌 AI 解锁哥德尔尘封笔记本，据说藏着数百条已证定理 (来源: HackerNews / The Guardian)\n- **核心干货**：AI 被用来破译/整理哥德尔手稿中被认为难以解读的笔记，据称其中包含数百条已证明的定理。哥德尔是谁？20 世纪最硬核的逻辑学家，不完备定理的缔造者。如果这批手稿真被 AI 系统性地\"读活\"了，对数学史和逻辑学都是地震级事件。\n- **毒舌/硬核点评**：AI 连哥德尔的草稿都能读，却读不懂你写的需求文档——技术栈没毛病，问题出在写文档的人。顺便提醒：先别急着欢呼，等数学家逐条验证完再开香槟，否则又是一波\"AIGC 考古学\"的泡沫。\n- **🔗 传送门**：[点击直达原链接](https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths)\n\n---\n\n### 🗣️ 今日顶男金句\n*\"22 年的漏洞在等你，AI 在替哥德尔翻笔记，而你还在纠结今天的日报格式——世界的参差，往往就差在有没有人愿意认真读一遍老代码。\"*",
   "briefing_items": [
     {
-      "title": "黄仁勋辞职：一个时代的强制关机",
-      "source": "HackerNews",
-      "summary": "NVIDIA 官方宣布 CEO 黄仁勋卸任，HN 热度直接炸到 3234 分、近 3000 条评论。结合同日爆出的\"与第二名员工存在关系\"的报道，以及员工请愿\"求回归\"的魔幻剧情，这不是正常交班，更像一场公关核爆后的被迫退场。对行业而言，真正的问题不是谁接任，而是这家靠 AI 算力吃到饱的公司，能否在创始人光环消散后维持叙事。",
-      "commentary": "皮衣可以传承，但\"AI 教父\"的人设没法 fork。NVIDIA 接下来要靠财报而不是 keynote 撑场子了。",
-      "url": "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f"
+      "title": "PostgreSQL 补丁修复 52 个漏洞，含一枚潜伏 22 年的\"认证 RCE\"定时炸弹",
+      "source": "Tech News / HackerNews",
+      "summary": "PostgreSQL 发布安全更新，一次性修复 52 个漏洞，其中最狠的是一个复合类型的类型混淆（type confusion）漏洞——只要数据库用户有建对象的权限，就能在服务器上执行任意代码。这玩意儿 2004 年就埋进去了，躺了 22 年才被挖出来。更坑的是，装了 C 语言扩展的实例光打补丁不够，还得重新编译扩展才算彻底止血。",
+      "commentary": "22 年的陈年漏洞，代码界的\"地窖老酒\"终于开坛了——只不过这酒有毒。给所有觉得\"老代码稳定就别动\"的团队一记当头棒喝：你没被黑，只是没人认真找而已。",
+      "url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html"
     },
     {
-      "title": "Rust 1.100：版本号终于凑了个整数",
-      "source": "HackerNews",
-      "summary": "Rust 发布 1.100 版本，554 分说明社区依然买账。数字好看只是彩蛋，重点是其编译器、工具链和生态在系统编程、嵌入式、WebAssembly 领域的持续加固。对正在评估\"要不要上 Rust\"的团队来说，这是一个心理门槛被跨过的节点——1.100 听起来就不像实验品了。",
-      "commentary": "别的语言版本号是里程碑，Rust 的版本号是给 CTO 看的心理安慰剂——\"你看，都三位数了，稳的。\"",
-      "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/"
+      "title": "Metal Sandbox：给 Apple Silicon 上的 GPU 编码 Agent 套上\"隔离笼子\"",
+      "source": "ArXiv",
+      "summary": "针对苹果芯片本地跑 GPU 编码 Agent 的痛点，提出一套隔离执行与命令调度方案。核心是让 Agent 在生成 Metal kernel、跑开发命令、发模型请求之间安全切换，防止 AI 生成的代码把本地加速器搞崩或越权乱来。这是把\"Agent 写内核\"从玩具实验推向可用工程的关键一环。",
+      "commentary": "让 AI 直接在 Metal 上写 kernel，就像让实习生直接操作核反应堆——不是不行，但你得先装个安全壳。这活儿终于有人正经干了。",
+      "url": "https://arxiv.org/abs/2611.17294v1"
     },
     {
-      "title": "Gemini 4 Hydrogen + Orchestrator：Google 把\"代理编排\"摆上桌",
-      "source": "HackerNews",
-      "summary": "Google 在 Antigravity 平台推出 Gemini 4 Hydrogen 及 Orchestrator 编排层。核心信号不是又一个更强的模型，而是\"编排\"被提到产品级位置——多代理协作、任务分解、工具调用调度开始成为正式基础设施。这标志着大模型竞争从\"谁的分数高\"转向\"谁能把一堆代理管明白\"。",
-      "commentary": "模型越来越像发动机，真正赚钱的是变速箱和底盘。Google 终于想起来自己会造车了。",
-      "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/"
+      "title": "AI 解锁哥德尔尘封笔记本，据说藏着数百条已证定理",
+      "source": "HackerNews / The Guardian",
+      "summary": "AI 被用来破译/整理哥德尔手稿中被认为难以解读的笔记，据称其中包含数百条已证明的定理。哥德尔是谁？20 世纪最硬核的逻辑学家，不完备定理的缔造者。如果这批手稿真被 AI 系统性地\"读活\"了，对数学史和逻辑学都是地震级事件。",
+      "commentary": "AI 连哥德尔的草稿都能读，却读不懂你写的需求文档——技术栈没毛病，问题出在写文档的人。顺便提醒：先别急着欢呼，等数学家逐条验证完再开香槟，否则又是一波\"AIGC 考古学\"的泡沫。",
+      "url": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50471731",
-      "title": "Service degradation on Microsoft 365",
-      "summary": "<a href=\"https:&#x2F;&#x2F;www.abc.net.au&#x2F;news&#x2F;2026-11-13&#x2F;microsoft-outage-affects-users-worldwide&#x2F;107381050\" rel=\"nofollow\">https:&#x2F;&#x2F;www.abc.net.au&#x2F;news&#x2F;2026-11-13&#x2F;microsoft-outage-affe...</a><p><a href=\"https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;sysadm",
-      "url": "https://status.cloud.microsoft/",
+      "id": "hn:50474959",
+      "title": "Reverse engineering my Coway air purifier to ditch the cloud",
+      "summary": "",
+      "url": "https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/",
       "source": "Hacker News",
-      "score": 675,
-      "comments": 631
+      "score": 543,
+      "comments": 152
     },
     {
-      "id": "hn:50472038",
-      "title": "Rust 1.100",
+      "id": "hn:50482379",
+      "title": "Doomsday: Friday, 13 November, A.D. 2026 (1960)",
+      "summary": "",
+      "url": "https://www.science.org/doi/10.1126/science.132.3436.1291",
+      "source": "Hacker News",
+      "score": 374,
+      "comments": 265
+    },
+    {
+      "id": "hn:50486482",
+      "title": "LibreOffice actually works 365 days a year",
+      "summary": "",
+      "url": "https://twitter.com/LibreOffice/status/2121205272479998268",
+      "source": "Hacker News",
+      "score": 511,
+      "comments": 183
+    },
+    {
+      "id": "arxiv:2611.17294v1",
+      "title": "Metal Sandbox: Isolated Execution and Command Scheduling for GPU Coding Agents on Apple Silicon",
+      "summary": "On-device inference requires kernels that make effective use of local accelerators. Efficient training and evaluation of models that generate Apple Metal kernels benefit from native macOS tools and concurrent agent sessions. These sessions alternate between model requests, development commands, and ",
+      "url": "https://arxiv.org/abs/2611.17294v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL",
+        "cs.DC"
+      ],
+      "arxiv_id": "2611.17294v1"
+    },
+    {
+      "id": "lob:81hnjw",
+      "title": "Announcing Rust 1.100.0",
       "summary": "",
       "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
-      "source": "Hacker News",
-      "score": 554,
-      "comments": 223
-    },
-    {
-      "id": "hn:50472260",
-      "title": "Gemini 4 Hydrogen and Orchestrator",
-      "summary": "",
-      "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
-      "source": "Hacker News",
-      "score": 364,
-      "comments": 100
-    },
-    {
-      "id": "hn:50470488",
-      "title": "Show HN: My $300 embroidery machine needed a subscription, so I built my own app",
-      "summary": "<a href=\"https:&#x2F;&#x2F;x.com&#x2F;simpsoka&#x2F;status&#x2F;2115254318161182876\" rel=\"nofollow\">https:&#x2F;&#x2F;x.com&#x2F;simpsoka&#x2F;status&#x2F;2115254318161182876</a>",
-      "url": "https://github.com/simpsoka/zigzag",
-      "source": "Hacker News",
-      "score": 429,
-      "comments": 166
-    },
-    {
-      "id": "hn:50472490",
-      "title": "Dwarf planet candidate appears which takes roughly 280 years to orbit our sun",
-      "summary": "",
-      "url": "https://www.smithsonianmag.com/smart-news/astronomers-found-a-mysterious-object-orbiting-far-beyond-pluto-it-could-be-a-new-dwarf-planet-hidden-in-our-solar-system-180989857/",
-      "source": "Hacker News",
-      "score": 249,
-      "comments": 110
-    },
-    {
-      "id": "hn:50477231",
-      "title": "Nvidia employees petition to bring back Jensen Huang",
-      "summary": "",
-      "url": "https://www.wired.com/story/nvidia-employees-petition-for-jensen-huangs-return/",
-      "source": "Hacker News",
-      "score": 314,
-      "comments": 245
-    },
-    {
-      "id": "hn:50468888",
-      "title": "I'm making LLMs work on small and old devices",
-      "summary": "",
-      "url": "https://github.com/hyperionaidev/smolmaxxing/",
-      "source": "Hacker News",
-      "score": 320,
-      "comments": 105
-    },
-    {
-      "id": "hn:50471761",
-      "title": "Turning a 22-year-old Postgres type-confusion primitive into RCE",
-      "summary": "",
-      "url": "https://mehmetince.net/part-3-6-how-i-ended-up-turning-a-22-year-old-postgresql-type-confusion-primitive-into-rce-cve-2026-6460/",
-      "source": "Hacker News",
-      "score": 162,
-      "comments": 29
-    },
-    {
-      "id": "lob:ii1gzp",
-      "title": "How a false smoke alarm almost drowned Jane Street's only NYC datacenter",
-      "summary": "",
-      "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/",
       "source": "Lobste.rs",
-      "score": 84,
-      "comments": 17,
+      "score": 143,
+      "comments": 13,
       "tags": [
-        "devops",
-        "ml"
+        "release",
+        "rust"
       ]
     },
     {
-      "id": "hn:50473190",
-      "title": "Former Nvidia CEO Huang had a relationship with a second employee, sources say",
-      "summary": "<a href=\"https:&#x2F;&#x2F;www.forbes.com&#x2F;sites&#x2F;alisondurkee&#x2F;2026&#x2F;11&#x2F;12&#x2F;jensen-huang-had-a-third-affair-with-another-nvidia-employee-report-says&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.forbes.com&#x2F;sites&#x2F;alisondurkee&#x2F;2026&#x2F;11&#x2F;12&#x2F;jensen-...",
-      "url": "https://www.reuters.com/technology/former-nvidia-ceo-huang-had-relationship-with-second-employee-sources-say-2026-11-12/",
+      "id": "hn:50484235",
+      "title": "A technical vision for the Haskell ecosystem",
+      "summary": "",
+      "url": "https://discourse.haskell.org/t/a-technical-vision-for-the-haskell-ecosystem/15078",
       "source": "Hacker News",
-      "score": 188,
-      "comments": 220
+      "score": 129,
+      "comments": 46
     },
     {
-      "id": "hn:50467087",
-      "title": "Jensen Huang resigns",
-      "summary": "<a href=\"https:&#x2F;&#x2F;nvidianews.nvidia.com&#x2F;news&#x2F;nvidia-announces-ceo-transition\" rel=\"nofollow\">https:&#x2F;&#x2F;nvidianews.nvidia.com&#x2F;news&#x2F;nvidia-announces-ceo-tran...</a><p><a href=\"https:&#x2F;&#x2F;www.reuters.com&#x2F;business&#x2F;retail-consumer&#x2F;nvidia-ceo-jens",
-      "url": "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f",
-      "source": "Hacker News",
-      "score": 3234,
-      "comments": 2986
+      "id": "lob:lh9pwf",
+      "title": "How Not to Build a Music Player",
+      "summary": "",
+      "url": "https://alichraghi.github.io/blog/how-not-to-build-a-music-player",
+      "source": "Lobste.rs",
+      "score": 63,
+      "comments": 18,
+      "tags": [
+        "person",
+        "zig"
+      ]
+    },
+    {
+      "id": "lob:akdy9z",
+      "title": "Terminal borders that don't cost a cell",
+      "summary": "",
+      "url": "https://www.joshka.net/cell-borders/",
+      "source": "Lobste.rs",
+      "score": 30,
+      "comments": 26,
+      "tags": [
+        "design",
+        "graphics",
+        "programming"
+      ]
+    },
+    {
+      "id": "lob:pty8pn",
+      "title": "The anti-marketing aspect of the Gemini network",
+      "summary": "",
+      "url": "https://ploum.net/2026-11-12-anti-marketing-gemini.html",
+      "source": "Lobste.rs",
+      "score": 47,
+      "comments": 29,
+      "tags": [
+        "web"
+      ]
     },
     {
       "id": "lob:ooshl8",
@@ -136,8 +135,8 @@
       "summary": "",
       "url": "https://letoverlambda.com/",
       "source": "Lobste.rs",
-      "score": 52,
-      "comments": 21,
+      "score": 67,
+      "comments": 23,
       "tags": [
         "book",
         "lisp"
@@ -149,80 +148,106 @@
       "summary": "",
       "url": "https://lyra.horse/blog/2026/11/disinformation-machine/",
       "source": "Lobste.rs",
-      "score": 236,
-      "comments": 28,
+      "score": 264,
+      "comments": 29,
       "tags": [
         "security"
       ]
     },
     {
-      "id": "hn:50475713",
-      "title": "Edge0-145B: Frontier AI Capabilities on Your Own Computer",
+      "id": "arxiv:2611.17332v1",
+      "title": "ArchSpace: Recording, Reviewing, and Referencing LLM Architecture Research",
+      "summary": "Model architecture shapes the scaling behavior, training efficiency, and inference cost of LLMs, making it a central focus of both industry and academia. In industry, teams such as those behind DeepSeek, Qwen, and Kimi routinely introduce architectural innovations, yet public reports rarely document",
+      "url": "https://arxiv.org/abs/2611.17332v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_id": "2611.17332v1"
+    },
+    {
+      "id": "hn:50486748",
+      "title": "AI unlocks Gödel's notebooks, said to contain hundreds of proved theorems",
       "summary": "",
-      "url": "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer",
+      "url": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
       "source": "Hacker News",
-      "score": 163,
-      "comments": 39
+      "score": 166,
+      "comments": 32
     },
     {
-      "id": "lob:pty8pn",
-      "title": "The anti-marketing aspect of the Gemini network",
+      "id": "lob:f6u0cg",
+      "title": "Contra \"Glue work considered harmful\"",
       "summary": "",
-      "url": "https://ploum.net/2026-11-12-anti-marketing-gemini.html",
+      "url": "https://sunshowers.io/posts/glue-work/",
       "source": "Lobste.rs",
-      "score": 29,
-      "comments": 17,
+      "score": 37,
+      "comments": 12,
       "tags": [
-        "web"
+        "practices"
       ]
     },
     {
-      "id": "hn:50474361",
-      "title": "Foundation Models framework",
+      "id": "arxiv:2611.17323v1",
+      "title": "AgentSSL: Can MLE Agents Leverage Unlabeled Data?",
+      "summary": "Applying machine learning systems to new domains introduces bottlenecks in both labeled data acquisition and manual pipeline engineering. While recent MLE agents show promise in automating pipeline design, they have been studied almost exclusively in fully supervised settings, leaving them untested ",
+      "url": "https://arxiv.org/abs/2611.17323v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_id": "2611.17323v1"
+    },
+    {
+      "id": "hn:50484007",
+      "title": "Lonewolf 0.3 – A standalone XMPP server written in Rust",
       "summary": "",
-      "url": "https://developer.apple.com/foundation-models-framework/",
+      "url": "https://github.com/lonewolf-im/lonewolf/releases/tag/v0.3.0",
       "source": "Hacker News",
-      "score": 174,
-      "comments": 25
+      "score": 98,
+      "comments": 22
     },
     {
-      "id": "lob:3gw2f4",
-      "title": "Hello Baochip",
+      "id": "lob:9oq6fr",
+      "title": "The need for at least a third option",
       "summary": "",
-      "url": "https://ratfactor.com/cards/hello-baochip",
+      "url": "https://blog.ovalerio.net/archives/3359",
       "source": "Lobste.rs",
-      "score": 56,
-      "comments": 7,
+      "score": 32,
+      "comments": 6,
       "tags": [
-        "hardware"
+        "android",
+        "ios",
+        "mobile"
       ]
     },
     {
-      "id": "lob:2drgwh",
-      "title": "Hijacking Samsung TV Smart Hub Ads",
-      "summary": "",
-      "url": "https://dvratil.cz/2026/11/hijacking-samsung-tv-smart-hub-ads/",
-      "source": "Lobste.rs",
-      "score": 41,
-      "comments": 3,
-      "tags": [
-        "networking",
-        "reversing"
-      ]
+      "id": "arxiv:2611.17316v1",
+      "title": "CoReMem: Cost-Internalizing Memory for Successive Coding Tasks with Prospective Valuation",
+      "summary": "Coding agents tackle successive tasks on an evolving repository, carrying forward edits and writing memory before the next task is known. Selecting memory for unknown next tasks requires balancing future usefulness against the costs of writing and reading it. The actor must also decide when acting o",
+      "url": "https://arxiv.org/abs/2611.17316v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.SE"
+      ],
+      "arxiv_id": "2611.17316v1"
     },
     {
-      "id": "rss:f05534491c",
-      "title": "PTC Patches Critical Windchill and FlexPLM Flaw That Could Enable Remote Code Execution",
-      "summary": "PTC has released patches for a new critical vulnerability impacting Windchill and FlexPLM software that, if successfully exploited, could result in remote code execution.\n\nThe security flaw, tracked as CVE-2026-126325, carries a CVSS v4 score of 9.2 out of a maximum of 10.0.\n\nIt has been described a",
-      "url": "https://thehackernews.com/2026/11/ptc-patches-critical-windchill-and.html",
+      "id": "rss:2b871475e5",
+      "title": "PostgreSQL Patches 52 Flaws, Including 22-Year-Old Bug Enabling Authenticated RCE",
+      "summary": "A type confusion flaw in PostgreSQL lets a database user who can create objects run code on the server. Updates released yesterday fix it, along with 51 other security flaws. Full protection from this flaw also requires rebuilding any C-language extensions installed on the server.\n\nThe flaw, tracked",
+      "url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html",
       "source": "Tech RSS",
       "score": 0
     },
     {
-      "id": "rss:e9379276d3",
+      "id": "rss:d6736e3c8a",
       "title": "exploit a 22 years old PostgreSQL composite-type vulnerability",
       "summary": "&#32; submitted by &#32;  /u/wtfse   [link] &#32; [comments]",
-      "url": "https://www.reddit.com/r/programming/comments/1xuk4d5/exploit_a_22_years_old_postgresql_compositetype/",
+      "url": "https://www.reddit.com/r/programming/comments/1xv1i5m/exploit_a_22_years_old_postgresql_compositetype/",
       "source": "Tech RSS",
       "score": 0
     }
