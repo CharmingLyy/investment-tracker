@@ -1,127 +1,85 @@
 {
   "date": "2026-11-13",
-  "update_time": "2026-11-12 19:39:53",
+  "update_time": "2026-11-13 05:52:22",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-13\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 黄仁勋卸任英伟达 CEO (来源: HackerNews / AP News)\n- **核心干货**：执掌英伟达三十余年的\"皮衣刀客\"Jensen Huang 正式宣布卸任 CEO，官方新闻稿已挂上 nvidianews，同时 Reuters 等媒体跟进报道。HN 上炸出 2000+ 评论、2000+ 分数，堪称年度最重量级人事地震。考虑到英伟达当前是全球 AI 算力供应链的绝对中枢，这次交棒直接牵动整个半导体与 AI 行业的资本叙事。\n- **毒舌/硬核点评**：卖铲子的人要换掌柜了，而全世界还在排队抢铲子。真正的悬念不是\"谁接班\"，而是新 CEO 会不会把 CUDA 生态继续当护城河，还是转头就去追下一波叙事——毕竟华尔街只认增长，不认情怀。\n- **🔗 传送门**：[点击直达原链接](https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f)\n\n---\n\n### 2. 📌 Rust 1.100.0 发布 (来源: GitHub Releases)\n- **核心干货**：Rust 语言正式迈入\"1.100\"这个里程碑版本号。对一个以\"稳定压倒一切\"为信条的 systems 语言来说，三位数版本号本身就是个象征——从 2015 年 1.0 到今天，它已经从 Mozilla 的实验项目长成操作系统、浏览器引擎、云基础设施的底层主力。这个版本值得关注的是长期积累的 API 稳定性与工具链成熟度，而非某个单一特性。\n- **毒舌/硬核点评**：别的语言在卷新语法新特性，Rust 在卷\"我们又一次没有破坏任何东西\"。在一个到处是 breaking change 的行业里，\"无聊的稳定\"反而是最稀缺的奢侈品——顺便，借用检查器依旧不会对你手下留情。\n- **🔗 传送门**：[点击直达原链接](https://github.com/rust-lang/rust/releases/tag/1.100.0)\n\n---\n\n### 3. 📌 Humble Bundle 用\"Vibe Coding\"把自家安全体系干碎了 (来源: Lobste.rs)\n- **核心干货**：Humble Bundle 被曝因大量依赖 AI 辅助的\"氛围编程\"（vibecoding）来改代码，导致大部分安全机制被实质性摧毁。这不是理论风险，而是\"把安全交给 AI 生成、没人真正 review\"的现实翻车案例，对当下所有\"AI 写代码、人闭眼合并\"的团队是一记响亮耳光。\n- **毒舌/硬核点评**：当\"让 AI 帮你写\"遇上\"没人看得懂也懒得看\"，结果就是安全团队集体失业、攻击者集体上岗。Vibe coding 的尽头不是生产力革命，是 CVE 流水线——代码可以 vibe，安全不能 vibe。\n- **🔗 传送门**：[点击直达原链接](https://forums.spacebattles.com/threads/humble-bundle-just-completely-killed-most-of-their-security-through-vibecoding.1346295/)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"让 AI 帮你写代码是效率，让 AI 帮你写安全是自杀——工具越聪明，越考验用它的人到底有没有脑子。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-13\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 黄仁勋辞职：一个时代的强制关机 (来源: HackerNews)\n- **核心干货**：NVIDIA 官方宣布 CEO 黄仁勋卸任，HN 热度直接炸到 3234 分、近 3000 条评论。结合同日爆出的\"与第二名员工存在关系\"的报道，以及员工请愿\"求回归\"的魔幻剧情，这不是正常交班，更像一场公关核爆后的被迫退场。对行业而言，真正的问题不是谁接任，而是这家靠 AI 算力吃到饱的公司，能否在创始人光环消散后维持叙事。\n- **毒舌/硬核点评**：皮衣可以传承，但\"AI 教父\"的人设没法 fork。NVIDIA 接下来要靠财报而不是 keynote 撑场子了。\n- **🔗 传送门**：[点击直达原链接](https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f)\n\n---\n\n### 2. 📌 Rust 1.100：版本号终于凑了个整数 (来源: HackerNews)\n- **核心干货**：Rust 发布 1.100 版本，554 分说明社区依然买账。数字好看只是彩蛋，重点是其编译器、工具链和生态在系统编程、嵌入式、WebAssembly 领域的持续加固。对正在评估\"要不要上 Rust\"的团队来说，这是一个心理门槛被跨过的节点——1.100 听起来就不像实验品了。\n- **毒舌/硬核点评**：别的语言版本号是里程碑，Rust 的版本号是给 CTO 看的心理安慰剂——\"你看，都三位数了，稳的。\"\n- **🔗 传送门**：[点击直达原链接](https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/)\n\n---\n\n### 3. 📌 Gemini 4 Hydrogen + Orchestrator：Google 把\"代理编排\"摆上桌 (来源: HackerNews)\n- **核心干货**：Google 在 Antigravity 平台推出 Gemini 4 Hydrogen 及 Orchestrator 编排层。核心信号不是又一个更强的模型，而是\"编排\"被提到产品级位置——多代理协作、任务分解、工具调用调度开始成为正式基础设施。这标志着大模型竞争从\"谁的分数高\"转向\"谁能把一堆代理管明白\"。\n- **毒舌/硬核点评**：模型越来越像发动机，真正赚钱的是变速箱和底盘。Google 终于想起来自己会造车了。\n- **🔗 传送门**：[点击直达原链接](https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/)\n\n---\n\n### 🗣️ 今日顶男金句\n\"技术圈最大的幻觉，是以为换个版本号、换个 CEO、换个模型名，问题就解决了——真正的护城河，永远在没有人愿意干的脏活里。\"",
   "briefing_items": [
     {
-      "title": "黄仁勋卸任英伟达 CEO",
-      "source": "HackerNews / AP News",
-      "summary": "执掌英伟达三十余年的\"皮衣刀客\"Jensen Huang 正式宣布卸任 CEO，官方新闻稿已挂上 nvidianews，同时 Reuters 等媒体跟进报道。HN 上炸出 2000+ 评论、2000+ 分数，堪称年度最重量级人事地震。考虑到英伟达当前是全球 AI 算力供应链的绝对中枢，这次交棒直接牵动整个半导体与 AI 行业的资本叙事。",
-      "commentary": "卖铲子的人要换掌柜了，而全世界还在排队抢铲子。真正的悬念不是\"谁接班\"，而是新 CEO 会不会把 CUDA 生态继续当护城河，还是转头就去追下一波叙事——毕竟华尔街只认增长，不认情怀。",
+      "title": "黄仁勋辞职：一个时代的强制关机",
+      "source": "HackerNews",
+      "summary": "NVIDIA 官方宣布 CEO 黄仁勋卸任，HN 热度直接炸到 3234 分、近 3000 条评论。结合同日爆出的\"与第二名员工存在关系\"的报道，以及员工请愿\"求回归\"的魔幻剧情，这不是正常交班，更像一场公关核爆后的被迫退场。对行业而言，真正的问题不是谁接任，而是这家靠 AI 算力吃到饱的公司，能否在创始人光环消散后维持叙事。",
+      "commentary": "皮衣可以传承，但\"AI 教父\"的人设没法 fork。NVIDIA 接下来要靠财报而不是 keynote 撑场子了。",
       "url": "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f"
     },
     {
-      "title": "Rust 1.100.0 发布",
-      "source": "GitHub Releases",
-      "summary": "Rust 语言正式迈入\"1.100\"这个里程碑版本号。对一个以\"稳定压倒一切\"为信条的 systems 语言来说，三位数版本号本身就是个象征——从 2015 年 1.0 到今天，它已经从 Mozilla 的实验项目长成操作系统、浏览器引擎、云基础设施的底层主力。这个版本值得关注的是长期积累的 API 稳定性与工具链成熟度，而非某个单一特性。",
-      "commentary": "别的语言在卷新语法新特性，Rust 在卷\"我们又一次没有破坏任何东西\"。在一个到处是 breaking change 的行业里，\"无聊的稳定\"反而是最稀缺的奢侈品——顺便，借用检查器依旧不会对你手下留情。",
-      "url": "https://github.com/rust-lang/rust/releases/tag/1.100.0"
+      "title": "Rust 1.100：版本号终于凑了个整数",
+      "source": "HackerNews",
+      "summary": "Rust 发布 1.100 版本，554 分说明社区依然买账。数字好看只是彩蛋，重点是其编译器、工具链和生态在系统编程、嵌入式、WebAssembly 领域的持续加固。对正在评估\"要不要上 Rust\"的团队来说，这是一个心理门槛被跨过的节点——1.100 听起来就不像实验品了。",
+      "commentary": "别的语言版本号是里程碑，Rust 的版本号是给 CTO 看的心理安慰剂——\"你看，都三位数了，稳的。\"",
+      "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/"
     },
     {
-      "title": "Humble Bundle 用\"Vibe Coding\"把自家安全体系干碎了",
-      "source": "Lobste.rs",
-      "summary": "Humble Bundle 被曝因大量依赖 AI 辅助的\"氛围编程\"（vibecoding）来改代码，导致大部分安全机制被实质性摧毁。这不是理论风险，而是\"把安全交给 AI 生成、没人真正 review\"的现实翻车案例，对当下所有\"AI 写代码、人闭眼合并\"的团队是一记响亮耳光。",
-      "commentary": "当\"让 AI 帮你写\"遇上\"没人看得懂也懒得看\"，结果就是安全团队集体失业、攻击者集体上岗。Vibe coding 的尽头不是生产力革命，是 CVE 流水线——代码可以 vibe，安全不能 vibe。",
-      "url": "https://forums.spacebattles.com/threads/humble-bundle-just-completely-killed-most-of-their-security-through-vibecoding.1346295/"
-    },
-    {
-      "quote": "\"让 AI 帮你写代码是效率，让 AI 帮你写安全是自杀——工具越聪明，越考验用它的人到底有没有脑子。\""
+      "title": "Gemini 4 Hydrogen + Orchestrator：Google 把\"代理编排\"摆上桌",
+      "source": "HackerNews",
+      "summary": "Google 在 Antigravity 平台推出 Gemini 4 Hydrogen 及 Orchestrator 编排层。核心信号不是又一个更强的模型，而是\"编排\"被提到产品级位置——多代理协作、任务分解、工具调用调度开始成为正式基础设施。这标志着大模型竞争从\"谁的分数高\"转向\"谁能把一堆代理管明白\"。",
+      "commentary": "模型越来越像发动机，真正赚钱的是变速箱和底盘。Google 终于想起来自己会造车了。",
+      "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50471668",
-      "title": "Ask HN: Microsoft/Azure Outage?",
-      "summary": "For the past 5 minutes all of our Microsoft Cloud connections are down. Anyone else? The Status page won&#x27;t even load.",
-      "url": "https://news.ycombinator.com/item?id=50471668",
-      "source": "Hacker News",
-      "score": 212,
-      "comments": 88
-    },
-    {
-      "id": "hn:50471793",
-      "title": "Rust 1.100.0",
-      "summary": "",
-      "url": "https://github.com/rust-lang/rust/releases/tag/1.100.0",
-      "source": "Hacker News",
-      "score": 216,
-      "comments": 44
-    },
-    {
-      "id": "lob:8kmjot",
-      "title": "Humble Bundle just completely killed most of their security through vibecoding",
-      "summary": "",
-      "url": "https://forums.spacebattles.com/threads/humble-bundle-just-completely-killed-most-of-their-security-through-vibecoding.1346295/",
-      "source": "Lobste.rs",
-      "score": 40,
-      "comments": 17,
-      "tags": [
-        "practices",
-        "security"
-      ]
-    },
-    {
-      "id": "lob:m43bas",
-      "title": "How do you actually self-host securely?",
-      "summary": "<p>I recognize that the title is rather vague, but I'm completely green when it comes to self-hosting, so I figured here would be a good place to ask for some pointers given the discussions I sometimes see happening in the comments. I tried researching first through DDG and Google, but (and I recogn",
-      "url": "https://lobste.rs/s/m43bas/how_do_you_actually_self_host_securely",
-      "source": "Lobste.rs",
-      "score": 117,
-      "comments": 71,
-      "tags": [
-        "ask",
-        "devops"
-      ]
-    },
-    {
-      "id": "hn:50467618",
-      "title": "Abandoned Quake 4 expansion finished by modders and now playable",
-      "summary": "",
-      "url": "https://www.moddb.com/mods/openq4/downloads/openq4-0141-windows-x64",
-      "source": "Hacker News",
-      "score": 183,
-      "comments": 62
-    },
-    {
-      "id": "hn:50467087",
-      "title": "Jensen Huang resigns",
-      "summary": "<a href=\"https:&#x2F;&#x2F;nvidianews.nvidia.com&#x2F;news&#x2F;nvidia-announces-ceo-transition\" rel=\"nofollow\">https:&#x2F;&#x2F;nvidianews.nvidia.com&#x2F;news&#x2F;nvidia-announces-ceo-tran...</a><p><a href=\"https:&#x2F;&#x2F;www.reuters.com&#x2F;business&#x2F;retail-consumer&#x2F;nvidia-ceo-jens",
-      "url": "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f",
-      "source": "Hacker News",
-      "score": 2032,
-      "comments": 2076
-    },
-    {
-      "id": "hn:50471431",
-      "title": "Gemini 4 Hydrogen",
-      "summary": "",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
-      "source": "Hacker News",
-      "score": 273,
-      "comments": 174
-    },
-    {
       "id": "hn:50471731",
-      "title": "Outlook is down, and so is Microsoft's status page",
-      "summary": "",
-      "url": "https://gvwire.com/2026/11/12/microsoft-outlook-down-for-thousands-of-users-downdetector-shows/",
+      "title": "Service degradation on Microsoft 365",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.abc.net.au&#x2F;news&#x2F;2026-11-13&#x2F;microsoft-outage-affects-users-worldwide&#x2F;107381050\" rel=\"nofollow\">https:&#x2F;&#x2F;www.abc.net.au&#x2F;news&#x2F;2026-11-13&#x2F;microsoft-outage-affe...</a><p><a href=\"https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;sysadm",
+      "url": "https://status.cloud.microsoft/",
       "source": "Hacker News",
-      "score": 160,
-      "comments": 39
+      "score": 675,
+      "comments": 631
     },
     {
-      "id": "lob:ii1gzp",
-      "title": "How a false smoke alarm almost drowned Jane Street's only NYC datacenter",
+      "id": "hn:50472038",
+      "title": "Rust 1.100",
       "summary": "",
-      "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/",
-      "source": "Lobste.rs",
-      "score": 77,
-      "comments": 11,
-      "tags": [
-        "devops",
-        "ml"
-      ]
+      "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
+      "source": "Hacker News",
+      "score": 554,
+      "comments": 223
+    },
+    {
+      "id": "hn:50472260",
+      "title": "Gemini 4 Hydrogen and Orchestrator",
+      "summary": "",
+      "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
+      "source": "Hacker News",
+      "score": 364,
+      "comments": 100
+    },
+    {
+      "id": "hn:50470488",
+      "title": "Show HN: My $300 embroidery machine needed a subscription, so I built my own app",
+      "summary": "<a href=\"https:&#x2F;&#x2F;x.com&#x2F;simpsoka&#x2F;status&#x2F;2115254318161182876\" rel=\"nofollow\">https:&#x2F;&#x2F;x.com&#x2F;simpsoka&#x2F;status&#x2F;2115254318161182876</a>",
+      "url": "https://github.com/simpsoka/zigzag",
+      "source": "Hacker News",
+      "score": 429,
+      "comments": 166
+    },
+    {
+      "id": "hn:50472490",
+      "title": "Dwarf planet candidate appears which takes roughly 280 years to orbit our sun",
+      "summary": "",
+      "url": "https://www.smithsonianmag.com/smart-news/astronomers-found-a-mysterious-object-orbiting-far-beyond-pluto-it-could-be-a-new-dwarf-planet-hidden-in-our-solar-system-180989857/",
+      "source": "Hacker News",
+      "score": 249,
+      "comments": 110
+    },
+    {
+      "id": "hn:50477231",
+      "title": "Nvidia employees petition to bring back Jensen Huang",
+      "summary": "",
+      "url": "https://www.wired.com/story/nvidia-employees-petition-for-jensen-huangs-return/",
+      "source": "Hacker News",
+      "score": 314,
+      "comments": 245
     },
     {
       "id": "hn:50468888",
@@ -129,32 +87,48 @@
       "summary": "",
       "url": "https://github.com/hyperionaidev/smolmaxxing/",
       "source": "Hacker News",
-      "score": 162,
-      "comments": 62
+      "score": 320,
+      "comments": 105
     },
     {
-      "id": "lob:lnau2d",
-      "title": "How I accidentally became a millionaire",
+      "id": "hn:50471761",
+      "title": "Turning a 22-year-old Postgres type-confusion primitive into RCE",
       "summary": "",
-      "url": "https://lyra.horse/blog/2026/11/disinformation-machine/",
+      "url": "https://mehmetince.net/part-3-6-how-i-ended-up-turning-a-22-year-old-postgresql-type-confusion-primitive-into-rce-cve-2026-6460/",
+      "source": "Hacker News",
+      "score": 162,
+      "comments": 29
+    },
+    {
+      "id": "lob:ii1gzp",
+      "title": "How a false smoke alarm almost drowned Jane Street's only NYC datacenter",
+      "summary": "",
+      "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/",
       "source": "Lobste.rs",
-      "score": 199,
-      "comments": 25,
+      "score": 84,
+      "comments": 17,
       "tags": [
-        "security"
+        "devops",
+        "ml"
       ]
     },
     {
-      "id": "lob:nld6x3",
-      "title": "What are some \"No AI\" apps/companies/resources you know of?",
-      "summary": "<p>Hey everyone I'm wondering if there's any useful/helpful list of apps, companies, or resources in general that avoid AI (they don't have to be vocally or openly \"anti\", but at least explicitly avoid it) that you know of?</p>\n<p>I'm not looking to start a discussion on what's good/bad or (un)worth",
-      "url": "https://lobste.rs/s/nld6x3/what_are_some_no_ai_apps_companies",
-      "source": "Lobste.rs",
-      "score": 92,
-      "comments": 45,
-      "tags": [
-        "ask"
-      ]
+      "id": "hn:50473190",
+      "title": "Former Nvidia CEO Huang had a relationship with a second employee, sources say",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.forbes.com&#x2F;sites&#x2F;alisondurkee&#x2F;2026&#x2F;11&#x2F;12&#x2F;jensen-huang-had-a-third-affair-with-another-nvidia-employee-report-says&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.forbes.com&#x2F;sites&#x2F;alisondurkee&#x2F;2026&#x2F;11&#x2F;12&#x2F;jensen-...",
+      "url": "https://www.reuters.com/technology/former-nvidia-ceo-huang-had-relationship-with-second-employee-sources-say-2026-11-12/",
+      "source": "Hacker News",
+      "score": 188,
+      "comments": 220
+    },
+    {
+      "id": "hn:50467087",
+      "title": "Jensen Huang resigns",
+      "summary": "<a href=\"https:&#x2F;&#x2F;nvidianews.nvidia.com&#x2F;news&#x2F;nvidia-announces-ceo-transition\" rel=\"nofollow\">https:&#x2F;&#x2F;nvidianews.nvidia.com&#x2F;news&#x2F;nvidia-announces-ceo-tran...</a><p><a href=\"https:&#x2F;&#x2F;www.reuters.com&#x2F;business&#x2F;retail-consumer&#x2F;nvidia-ceo-jens",
+      "url": "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f",
+      "source": "Hacker News",
+      "score": 3234,
+      "comments": 2986
     },
     {
       "id": "lob:ooshl8",
@@ -162,93 +136,93 @@
       "summary": "",
       "url": "https://letoverlambda.com/",
       "source": "Lobste.rs",
-      "score": 36,
-      "comments": 9,
+      "score": 52,
+      "comments": 21,
       "tags": [
         "book",
         "lisp"
       ]
     },
     {
-      "id": "arxiv:2611.14514v1",
-      "title": "Contrastive Discovery: Open-Ended Scientific Discovery over Competing Explanations",
-      "summary": "LLM agents are increasingly used for open-ended, data-driven scientific discovery, yet most of them evaluate hypotheses pointwise, testing an empirical claim $h$ only against its complement $\\neg h$. When evidence rejects $h$, the agent learns that one explanation is unlikely but not which alternati",
-      "url": "https://arxiv.org/abs/2611.14514v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "arxiv_id": "2611.14514v1"
-    },
-    {
-      "id": "arxiv:2611.14493v1",
-      "title": "Comparative Analysis of Agent Evaluation Frameworks: Stability, Detection, and Discovery in Enterprise Analytics Agents",
-      "summary": "Deploying LLM-based analytics agents in enterprise settings requires evaluation frameworks that can reliably detect failures across complex, multi-tool workflows. We present a three-phase comparative study of three evaluation frameworks, each representing a distinct evaluation paradigm (trace-based ",
-      "url": "https://arxiv.org/abs/2611.14493v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.LG",
-        "cs.SE"
-      ],
-      "arxiv_id": "2611.14493v1"
-    },
-    {
-      "id": "lob:lrpb0m",
-      "title": "For the first time, a C++ standard failed to pass the national bodies",
+      "id": "lob:lnau2d",
+      "title": "How I accidentally became a millionaire",
       "summary": "",
-      "url": "https://herecomesthemoon.net/2026/11/cpp26-failed-the-national-bodies/",
+      "url": "https://lyra.horse/blog/2026/11/disinformation-machine/",
       "source": "Lobste.rs",
-      "score": 35,
-      "comments": 9,
+      "score": 236,
+      "comments": 28,
       "tags": [
-        "c++"
+        "security"
       ]
     },
     {
-      "id": "arxiv:2611.14515v1",
-      "title": "AutoScaffold: AI-Guided Scaffolding for Reinforcement Learning of Language Models",
-      "summary": "Reinforcement learning with verifiable rewards (RLVR) produces rich training experience, yet outcome rewards reduce each attempt to a single number and leave most of this information unused. Training-time scaffolds, such as strategies or hints added to the prompt during training, offer a natural way",
-      "url": "https://arxiv.org/abs/2611.14515v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.CL"
-      ],
-      "arxiv_id": "2611.14515v1"
+      "id": "hn:50475713",
+      "title": "Edge0-145B: Frontier AI Capabilities on Your Own Computer",
+      "summary": "",
+      "url": "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer",
+      "source": "Hacker News",
+      "score": 163,
+      "comments": 39
     },
     {
-      "id": "arxiv:2611.14492v1",
-      "title": "ReTrace: Distilling Tool-Using Agents into Planner-Free Workflows",
-      "summary": "Business process automation runs the same Standard Operating Procedure (SOP) again and again on new inputs. Large Language Model (LLM) agents can follow an SOP written in natural language, but they call an LLM to choose every step of every run, which adds latency and cost at scale. We present ReTrac",
-      "url": "https://arxiv.org/abs/2611.14492v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.LG",
-        "cs.MA"
-      ],
-      "arxiv_id": "2611.14492v1"
+      "id": "lob:pty8pn",
+      "title": "The anti-marketing aspect of the Gemini network",
+      "summary": "",
+      "url": "https://ploum.net/2026-11-12-anti-marketing-gemini.html",
+      "source": "Lobste.rs",
+      "score": 29,
+      "comments": 17,
+      "tags": [
+        "web"
+      ]
     },
     {
-      "id": "arxiv:2611.14491v1",
-      "title": "TimeSeek: Multi-Task and Multi-Domain Pretraining for Generalized Time Series Analytics",
-      "summary": "Time series analytics has been widely applied across various domains. While existing time series foundation models (TSFMs) have demonstrated promising results, they still face two major challenges: 1) Most TSFMs mainly rely on stacking Transformer layers to increase parameter size, lacking the abili",
-      "url": "https://arxiv.org/abs/2611.14491v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG"
-      ],
-      "arxiv_id": "2611.14491v1"
+      "id": "hn:50474361",
+      "title": "Foundation Models framework",
+      "summary": "",
+      "url": "https://developer.apple.com/foundation-models-framework/",
+      "source": "Hacker News",
+      "score": 174,
+      "comments": 25
+    },
+    {
+      "id": "lob:3gw2f4",
+      "title": "Hello Baochip",
+      "summary": "",
+      "url": "https://ratfactor.com/cards/hello-baochip",
+      "source": "Lobste.rs",
+      "score": 56,
+      "comments": 7,
+      "tags": [
+        "hardware"
+      ]
+    },
+    {
+      "id": "lob:2drgwh",
+      "title": "Hijacking Samsung TV Smart Hub Ads",
+      "summary": "",
+      "url": "https://dvratil.cz/2026/11/hijacking-samsung-tv-smart-hub-ads/",
+      "source": "Lobste.rs",
+      "score": 41,
+      "comments": 3,
+      "tags": [
+        "networking",
+        "reversing"
+      ]
     },
     {
       "id": "rss:f05534491c",
       "title": "PTC Patches Critical Windchill and FlexPLM Flaw That Could Enable Remote Code Execution",
       "summary": "PTC has released patches for a new critical vulnerability impacting Windchill and FlexPLM software that, if successfully exploited, could result in remote code execution.\n\nThe security flaw, tracked as CVE-2026-126325, carries a CVSS v4 score of 9.2 out of a maximum of 10.0.\n\nIt has been described a",
       "url": "https://thehackernews.com/2026/11/ptc-patches-critical-windchill-and.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:e9379276d3",
+      "title": "exploit a 22 years old PostgreSQL composite-type vulnerability",
+      "summary": "&#32; submitted by &#32;  /u/wtfse   [link] &#32; [comments]",
+      "url": "https://www.reddit.com/r/programming/comments/1xuk4d5/exploit_a_22_years_old_postgresql_compositetype/",
       "source": "Tech RSS",
       "score": 0
     }
