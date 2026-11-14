@@ -1,58 +1,88 @@
 {
   "date": "2026-11-14",
-  "update_time": "2026-11-13 19:20:58",
+  "update_time": "2026-11-14 05:41:29",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-14\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 PostgreSQL 补丁修复 52 个漏洞，含一枚潜伏 22 年的\"认证 RCE\"定时炸弹 (来源: Tech News / HackerNews)\n- **核心干货**：PostgreSQL 发布安全更新，一次性修复 52 个漏洞，其中最狠的是一个复合类型的类型混淆（type confusion）漏洞——只要数据库用户有建对象的权限，就能在服务器上执行任意代码。这玩意儿 2004 年就埋进去了，躺了 22 年才被挖出来。更坑的是，装了 C 语言扩展的实例光打补丁不够，还得重新编译扩展才算彻底止血。\n- **毒舌/硬核点评**：22 年的陈年漏洞，代码界的\"地窖老酒\"终于开坛了——只不过这酒有毒。给所有觉得\"老代码稳定就别动\"的团队一记当头棒喝：你没被黑，只是没人认真找而已。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html)\n\n---\n\n### 2. 📌 Metal Sandbox：给 Apple Silicon 上的 GPU 编码 Agent 套上\"隔离笼子\" (来源: ArXiv)\n- **核心干货**：针对苹果芯片本地跑 GPU 编码 Agent 的痛点，提出一套隔离执行与命令调度方案。核心是让 Agent 在生成 Metal kernel、跑开发命令、发模型请求之间安全切换，防止 AI 生成的代码把本地加速器搞崩或越权乱来。这是把\"Agent 写内核\"从玩具实验推向可用工程的关键一环。\n- **毒舌/硬核点评**：让 AI 直接在 Metal 上写 kernel，就像让实习生直接操作核反应堆——不是不行，但你得先装个安全壳。这活儿终于有人正经干了。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2611.17294v1)\n\n---\n\n### 3. 📌 AI 解锁哥德尔尘封笔记本，据说藏着数百条已证定理 (来源: HackerNews / The Guardian)\n- **核心干货**：AI 被用来破译/整理哥德尔手稿中被认为难以解读的笔记，据称其中包含数百条已证明的定理。哥德尔是谁？20 世纪最硬核的逻辑学家，不完备定理的缔造者。如果这批手稿真被 AI 系统性地\"读活\"了，对数学史和逻辑学都是地震级事件。\n- **毒舌/硬核点评**：AI 连哥德尔的草稿都能读，却读不懂你写的需求文档——技术栈没毛病，问题出在写文档的人。顺便提醒：先别急着欢呼，等数学家逐条验证完再开香槟，否则又是一波\"AIGC 考古学\"的泡沫。\n- **🔗 传送门**：[点击直达原链接](https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths)\n\n---\n\n### 🗣️ 今日顶男金句\n*\"22 年的漏洞在等你，AI 在替哥德尔翻笔记，而你还在纠结今天的日报格式——世界的参差，往往就差在有没有人愿意认真读一遍老代码。\"*",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-14\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Nvidia 被指\"自导自演\"GPU 稀缺：一边卖铲子，一边给淘金者发贷款 (来源: HackerNews)\n- **核心干货**：有爆料称 Nvidia 通过投资 AI 初创公司，再引导这些公司回头购买自家 GPU，人为制造\"供不应求\"的假象来维持高价与市场热度。本质是给淘金者发贷款买自家铲子——账面营收漂亮，实际是左手倒右手的资本循环。更微妙的是，同期还有董事在\"黄仁勋丑闻\"曝光前套现近 10 亿美元（情报 [16]），两条线一叠加，味道就很冲了。\n- **毒舌/硬核点评**：这不叫卖芯片，这叫金融炼金术。当一家公司同时是供应商、投资人和市场需求的制造者时，\"需求旺盛\"这四个字就该打个问号。各位算力买家，你们买的到底是硅，还是击鼓传花的入场券？\n- **🔗 传送门**：[点击直达原链接](https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus)\n\n---\n\n### 2. 📌 Jonathan Blow 开炮：\"AI 都解决编程了，我的软件怎么还是老样子？\" (来源: HackerNews)\n- **核心干货**：知名独立开发者 Jonathan Blow 用一个朴素到扎心的问题，正面硬刚当前\"AI 取代程序员\"的叙事——如果 AI 真把编程问题解决了，为什么我们日常用的软件质量、体验、可靠性并没有出现肉眼可见的跃迁？这背后其实戳中一个真相：编程的瓶颈从来不是\"写代码\"这个动作，而是需求理解、系统设计与长期维护。代码写得再快，烂架构照样烂。\n- **毒舌/硬核点评**：AI 能把 CRUD 写到飞起，但没人能替你决定\"到底该不该做这个功能\"。工具越强，越暴露决策层的空虚。这句话该打印出来贴在每个\"All in AI\"的会议室墙上。\n- **🔗 传送门**：[点击直达原链接](https://www.youtube.com/watch?v=IRK8h67ol7Q)\n\n---\n\n### 3. 📌 Metal Sandbox：在 Apple Silicon 上给 GPU 编码 Agent 建\"隔离沙盒\" (来源: ArXiv)\n- **核心干货**：这篇论文针对一个被忽视的工程痛点——让 AI Agent 在本地 Mac 上自动生成、训练和测试 Metal GPU 内核时，如何做到隔离执行与命令调度。多个 Agent 会话会交替发起模型请求、执行开发命令、跑测试，若无沙盒隔离，一个失控的内核就能把整机干趴。该工作把\"端侧 AI 写 GPU 代码\"这件事从玩具级实验推向可工程化的方向，是本地推理工具链里实打实的一块拼图。\n- **毒舌/硬核点评**：大家都在卷模型参数，没人管 Agent 跑飞了会不会把你 MacBook 烧成暖手宝。这篇论文的价值就在于——它承认了 AI 会闯祸，并提前修好了笼子。这才是工程思维，不是 PPT 思维。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2611.17294v1)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"别人在追风口，你在修地基——风停的时候，只有地基还在。搞钱和搞技术都一样：快是表象，稳才是复利。\"",
   "briefing_items": [
     {
-      "title": "PostgreSQL 补丁修复 52 个漏洞，含一枚潜伏 22 年的\"认证 RCE\"定时炸弹",
-      "source": "Tech News / HackerNews",
-      "summary": "PostgreSQL 发布安全更新，一次性修复 52 个漏洞，其中最狠的是一个复合类型的类型混淆（type confusion）漏洞——只要数据库用户有建对象的权限，就能在服务器上执行任意代码。这玩意儿 2004 年就埋进去了，躺了 22 年才被挖出来。更坑的是，装了 C 语言扩展的实例光打补丁不够，还得重新编译扩展才算彻底止血。",
-      "commentary": "22 年的陈年漏洞，代码界的\"地窖老酒\"终于开坛了——只不过这酒有毒。给所有觉得\"老代码稳定就别动\"的团队一记当头棒喝：你没被黑，只是没人认真找而已。",
-      "url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html"
+      "title": "Nvidia 被指\"自导自演\"GPU 稀缺：一边卖铲子，一边给淘金者发贷款",
+      "source": "HackerNews",
+      "summary": "有爆料称 Nvidia 通过投资 AI 初创公司，再引导这些公司回头购买自家 GPU，人为制造\"供不应求\"的假象来维持高价与市场热度。本质是给淘金者发贷款买自家铲子——账面营收漂亮，实际是左手倒右手的资本循环。更微妙的是，同期还有董事在\"黄仁勋丑闻\"曝光前套现近 10 亿美元（情报 [16]），两条线一叠加，味道就很冲了。",
+      "commentary": "这不叫卖芯片，这叫金融炼金术。当一家公司同时是供应商、投资人和市场需求的制造者时，\"需求旺盛\"这四个字就该打个问号。各位算力买家，你们买的到底是硅，还是击鼓传花的入场券？",
+      "url": "https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus"
     },
     {
-      "title": "Metal Sandbox：给 Apple Silicon 上的 GPU 编码 Agent 套上\"隔离笼子\"",
+      "title": "Jonathan Blow 开炮：\"AI 都解决编程了，我的软件怎么还是老样子？\"",
+      "source": "HackerNews",
+      "summary": "知名独立开发者 Jonathan Blow 用一个朴素到扎心的问题，正面硬刚当前\"AI 取代程序员\"的叙事——如果 AI 真把编程问题解决了，为什么我们日常用的软件质量、体验、可靠性并没有出现肉眼可见的跃迁？这背后其实戳中一个真相：编程的瓶颈从来不是\"写代码\"这个动作，而是需求理解、系统设计与长期维护。代码写得再快，烂架构照样烂。",
+      "commentary": "AI 能把 CRUD 写到飞起，但没人能替你决定\"到底该不该做这个功能\"。工具越强，越暴露决策层的空虚。这句话该打印出来贴在每个\"All in AI\"的会议室墙上。",
+      "url": "https://www.youtube.com/watch?v=IRK8h67ol7Q"
+    },
+    {
+      "title": "Metal Sandbox：在 Apple Silicon 上给 GPU 编码 Agent 建\"隔离沙盒\"",
       "source": "ArXiv",
-      "summary": "针对苹果芯片本地跑 GPU 编码 Agent 的痛点，提出一套隔离执行与命令调度方案。核心是让 Agent 在生成 Metal kernel、跑开发命令、发模型请求之间安全切换，防止 AI 生成的代码把本地加速器搞崩或越权乱来。这是把\"Agent 写内核\"从玩具实验推向可用工程的关键一环。",
-      "commentary": "让 AI 直接在 Metal 上写 kernel，就像让实习生直接操作核反应堆——不是不行，但你得先装个安全壳。这活儿终于有人正经干了。",
+      "summary": "这篇论文针对一个被忽视的工程痛点——让 AI Agent 在本地 Mac 上自动生成、训练和测试 Metal GPU 内核时，如何做到隔离执行与命令调度。多个 Agent 会话会交替发起模型请求、执行开发命令、跑测试，若无沙盒隔离，一个失控的内核就能把整机干趴。该工作把\"端侧 AI 写 GPU 代码\"这件事从玩具级实验推向可工程化的方向，是本地推理工具链里实打实的一块拼图。",
+      "commentary": "大家都在卷模型参数，没人管 Agent 跑飞了会不会把你 MacBook 烧成暖手宝。这篇论文的价值就在于——它承认了 AI 会闯祸，并提前修好了笼子。这才是工程思维，不是 PPT 思维。",
       "url": "https://arxiv.org/abs/2611.17294v1"
     },
     {
-      "title": "AI 解锁哥德尔尘封笔记本，据说藏着数百条已证定理",
-      "source": "HackerNews / The Guardian",
-      "summary": "AI 被用来破译/整理哥德尔手稿中被认为难以解读的笔记，据称其中包含数百条已证明的定理。哥德尔是谁？20 世纪最硬核的逻辑学家，不完备定理的缔造者。如果这批手稿真被 AI 系统性地\"读活\"了，对数学史和逻辑学都是地震级事件。",
-      "commentary": "AI 连哥德尔的草稿都能读，却读不懂你写的需求文档——技术栈没毛病，问题出在写文档的人。顺便提醒：先别急着欢呼，等数学家逐条验证完再开香槟，否则又是一波\"AIGC 考古学\"的泡沫。",
-      "url": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths"
+      "quote": "\"别人在追风口，你在修地基——风停的时候，只有地基还在。搞钱和搞技术都一样：快是表象，稳才是复利。\""
     }
   ],
   "candidates": [
     {
-      "id": "hn:50474959",
-      "title": "Reverse engineering my Coway air purifier to ditch the cloud",
+      "id": "hn:50491423",
+      "title": "Terminal borders that don't cost a cell",
       "summary": "",
-      "url": "https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/",
+      "url": "https://www.joshka.net/cell-borders/",
       "source": "Hacker News",
-      "score": 543,
-      "comments": 152
+      "score": 166,
+      "comments": 79
     },
     {
-      "id": "hn:50482379",
-      "title": "Doomsday: Friday, 13 November, A.D. 2026 (1960)",
+      "id": "hn:50493251",
+      "title": "Nvidia Allegedly Engineered Scarcity by Funding AI Startups to Buy Its GPUs",
       "summary": "",
-      "url": "https://www.science.org/doi/10.1126/science.132.3436.1291",
+      "url": "https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus",
       "source": "Hacker News",
-      "score": 374,
-      "comments": 265
+      "score": 207,
+      "comments": 114
     },
     {
-      "id": "hn:50486482",
-      "title": "LibreOffice actually works 365 days a year",
-      "summary": "",
-      "url": "https://twitter.com/LibreOffice/status/2121205272479998268",
+      "id": "hn:50489641",
+      "title": "FAA issues national ground stop – lifted 4.5 hours later",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.fly.faa.gov&#x2F;adv&#x2F;adv_otherdis?adv_date=11132026&amp;advn=111\" rel=\"nofollow\">https:&#x2F;&#x2F;www.fly.faa.gov&#x2F;adv&#x2F;adv_otherdis?adv_date=11132026&amp;a...</a><p><a href=\"https:&#x2F;&#x2F;www.fly.faa.gov&#x2F;adv&#x2F;adv_otherdis?adv_date=11142026&a",
+      "url": "https://www.nbcnews.com/news/us-news/faa-orders-nationwide-ground-stop-departing-flights-reasons-safety-rcna609247",
       "source": "Hacker News",
-      "score": 511,
-      "comments": 183
+      "score": 1452,
+      "comments": 1122
+    },
+    {
+      "id": "hn:50490593",
+      "title": "Live airband on all frequencies from KORS. Victoria, CA also ground stopped",
+      "summary": "",
+      "url": "https://orcasairband.com/",
+      "source": "Hacker News",
+      "score": 242,
+      "comments": 55
+    },
+    {
+      "id": "hn:50484658",
+      "title": "Jonathan Blow – If AI solved coding, why is my software still the same? [video]",
+      "summary": "",
+      "url": "https://www.youtube.com/watch?v=IRK8h67ol7Q",
+      "source": "Hacker News",
+      "score": 196,
+      "comments": 189
+    },
+    {
+      "id": "hn:50488325",
+      "title": "FM-1 Workbench",
+      "summary": "",
+      "url": "https://open.m-vave.com/fm1-workbench",
+      "source": "Hacker News",
+      "score": 208,
+      "comments": 137
     },
     {
       "id": "arxiv:2611.17294v1",
@@ -69,12 +99,21 @@
       "arxiv_id": "2611.17294v1"
     },
     {
+      "id": "hn:50487185",
+      "title": "After 600 experiments, here's what I discovered about JEPA world models",
+      "summary": "",
+      "url": "https://haddyalchaer.com/jepa",
+      "source": "Hacker News",
+      "score": 237,
+      "comments": 37
+    },
+    {
       "id": "lob:81hnjw",
       "title": "Announcing Rust 1.100.0",
       "summary": "",
       "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
       "source": "Lobste.rs",
-      "score": 143,
+      "score": 150,
       "comments": 13,
       "tags": [
         "release",
@@ -82,76 +121,29 @@
       ]
     },
     {
-      "id": "hn:50484235",
-      "title": "A technical vision for the Haskell ecosystem",
+      "id": "lob:9oq6fr",
+      "title": "The need for at least a third option",
       "summary": "",
-      "url": "https://discourse.haskell.org/t/a-technical-vision-for-the-haskell-ecosystem/15078",
-      "source": "Hacker News",
-      "score": 129,
-      "comments": 46
-    },
-    {
-      "id": "lob:lh9pwf",
-      "title": "How Not to Build a Music Player",
-      "summary": "",
-      "url": "https://alichraghi.github.io/blog/how-not-to-build-a-music-player",
+      "url": "https://blog.ovalerio.net/archives/3359",
       "source": "Lobste.rs",
-      "score": 63,
-      "comments": 18,
+      "score": 55,
+      "comments": 16,
       "tags": [
-        "person",
-        "zig"
+        "android",
+        "ios",
+        "mobile"
       ]
     },
     {
-      "id": "lob:akdy9z",
-      "title": "Terminal borders that don't cost a cell",
+      "id": "lob:f6u0cg",
+      "title": "Contra \"Glue work considered harmful\"",
       "summary": "",
-      "url": "https://www.joshka.net/cell-borders/",
+      "url": "https://sunshowers.io/posts/glue-work/",
       "source": "Lobste.rs",
-      "score": 30,
-      "comments": 26,
+      "score": 48,
+      "comments": 16,
       "tags": [
-        "design",
-        "graphics",
-        "programming"
-      ]
-    },
-    {
-      "id": "lob:pty8pn",
-      "title": "The anti-marketing aspect of the Gemini network",
-      "summary": "",
-      "url": "https://ploum.net/2026-11-12-anti-marketing-gemini.html",
-      "source": "Lobste.rs",
-      "score": 47,
-      "comments": 29,
-      "tags": [
-        "web"
-      ]
-    },
-    {
-      "id": "lob:ooshl8",
-      "title": "The entirety of \"Let Over Lambda\" is now freely available online",
-      "summary": "",
-      "url": "https://letoverlambda.com/",
-      "source": "Lobste.rs",
-      "score": 67,
-      "comments": 23,
-      "tags": [
-        "book",
-        "lisp"
-      ]
-    },
-    {
-      "id": "lob:lnau2d",
-      "title": "How I accidentally became a millionaire",
-      "summary": "",
-      "url": "https://lyra.horse/blog/2026/11/disinformation-machine/",
-      "source": "Lobste.rs",
-      "score": 264,
-      "comments": 29,
-      "tags": [
-        "security"
+        "practices"
       ]
     },
     {
@@ -167,25 +159,13 @@
       "arxiv_id": "2611.17332v1"
     },
     {
-      "id": "hn:50486748",
-      "title": "AI unlocks Gödel's notebooks, said to contain hundreds of proved theorems",
+      "id": "hn:50488470",
+      "title": "Found: A protein that drives ageing without unleashing inflammation",
       "summary": "",
-      "url": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
+      "url": "https://www.nature.com/articles/d41586-026-03638-3",
       "source": "Hacker News",
-      "score": 166,
-      "comments": 32
-    },
-    {
-      "id": "lob:f6u0cg",
-      "title": "Contra \"Glue work considered harmful\"",
-      "summary": "",
-      "url": "https://sunshowers.io/posts/glue-work/",
-      "source": "Lobste.rs",
-      "score": 37,
-      "comments": 12,
-      "tags": [
-        "practices"
-      ]
+      "score": 164,
+      "comments": 24
     },
     {
       "id": "arxiv:2611.17323v1",
@@ -200,27 +180,52 @@
       "arxiv_id": "2611.17323v1"
     },
     {
-      "id": "hn:50484007",
-      "title": "Lonewolf 0.3 – A standalone XMPP server written in Rust",
+      "id": "lob:xca2qj",
+      "title": "Probabilistic data structures in Go",
       "summary": "",
-      "url": "https://github.com/lonewolf-im/lonewolf/releases/tag/v0.3.0",
-      "source": "Hacker News",
-      "score": 98,
-      "comments": 22
+      "url": "https://antonz.org/probabilistic-data-structures/",
+      "source": "Lobste.rs",
+      "score": 34,
+      "comments": 9,
+      "tags": [
+        "go"
+      ]
     },
     {
-      "id": "lob:9oq6fr",
-      "title": "The need for at least a third option",
+      "id": "hn:50492993",
+      "title": "Nvidia director sold nearly $1B in stock weeks before the Jensen Huang scandal",
       "summary": "",
-      "url": "https://blog.ovalerio.net/archives/3359",
-      "source": "Lobste.rs",
-      "score": 32,
-      "comments": 6,
-      "tags": [
-        "android",
-        "ios",
-        "mobile"
-      ]
+      "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-director-sold-nearly-1b-160000846.html",
+      "source": "Hacker News",
+      "score": 127,
+      "comments": 29
+    },
+    {
+      "id": "hn:50493062",
+      "title": "Ggml v1.0.0",
+      "summary": "",
+      "url": "https://github.com/ggml-org/ggml/releases/tag/v1.0.0",
+      "source": "Hacker News",
+      "score": 119,
+      "comments": 20
+    },
+    {
+      "id": "hn:50491830",
+      "title": "What Happened to 3Com?",
+      "summary": "",
+      "url": "https://dfarq.homeip.net/what-happened-to-3com/",
+      "source": "Hacker News",
+      "score": 99,
+      "comments": 56
+    },
+    {
+      "id": "hn:50491980",
+      "title": "Unsloth Qwen3.8-27B Quantizations – Dynamic v3.1 Update",
+      "summary": "",
+      "url": "https://unsloth.ai/docs/models/qwen3.8",
+      "source": "Hacker News",
+      "score": 67,
+      "comments": 10
     },
     {
       "id": "arxiv:2611.17316v1",
@@ -234,22 +239,6 @@
         "cs.SE"
       ],
       "arxiv_id": "2611.17316v1"
-    },
-    {
-      "id": "rss:2b871475e5",
-      "title": "PostgreSQL Patches 52 Flaws, Including 22-Year-Old Bug Enabling Authenticated RCE",
-      "summary": "A type confusion flaw in PostgreSQL lets a database user who can create objects run code on the server. Updates released yesterday fix it, along with 51 other security flaws. Full protection from this flaw also requires rebuilding any C-language extensions installed on the server.\n\nThe flaw, tracked",
-      "url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:d6736e3c8a",
-      "title": "exploit a 22 years old PostgreSQL composite-type vulnerability",
-      "summary": "&#32; submitted by &#32;  /u/wtfse   [link] &#32; [comments]",
-      "url": "https://www.reddit.com/r/programming/comments/1xv1i5m/exploit_a_22_years_old_postgresql_compositetype/",
-      "source": "Tech RSS",
-      "score": 0
     }
   ],
   "ai_curated": true
