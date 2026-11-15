@@ -1,43 +1,49 @@
 {
-  "date": "2026-11-15",
-  "update_time": "2026-11-15 05:40:33",
+  "date": "2026-11-16",
+  "update_time": "2026-11-15 18:36:50",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-15\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Lovable 应用泄露护照信息与 20 万+ 私密消息 (来源: HackerNews)\n- **核心干货**：主打\"氛围编程\"的 Lovable 生成的应用被曝存在严重安全缺陷，大量用户数据——包括护照扫描件和超过 20 万条私人消息——处于裸奔状态。这基本是给\"Vibe Coding 改变世界\"叙事泼了一盆冰水：AI 帮你快速生成 App，也顺便帮你快速生成数据泄露事故。\n- **毒舌/硬核点评**：让 AI 写代码很爽，直到它把你的护照连同聊天记录一起\"开源\"了。速度能生成产品，但生成不了安全意识——安全这活儿，AI 目前还只会说\"已为你生成优雅的解决方案\"。\n- **🔗 传送门**：[点击直达原链接](https://www.crissyfield.de/research/lovable-en/)\n\n---\n\n### 2. 📌 SpaceX 星舰 Flight 15 成功\"筷子夹火箭\"收官 (来源: HackerNews)\n- **核心干货**：SpaceX 在 Flight 15 中再次用发射塔机械臂成功捕获返回的超重型助推器，把\"用筷子夹火箭\"从科幻梗变成常规操作。可复用性再下一城，单次发射成本的天花板正被一点点焊死。\n- **毒舌/硬核点评**：当别家还在为\"火箭能不能回收\"写 PPT，SpaceX 已经把回收做成了流水线日常。所谓护城河，就是别人觉得疯狂、你却觉得无聊的东西。\n- **🔗 传送门**：[点击直达原链接](https://www.spacex.com/launches/starship-flight-15)\n\n---\n\n### 3. 📌 PostgreSQL 修复 52 个漏洞，含潜伏 22 年的 RCE 级老 Bug (来源: Tech RSS)\n- **核心干货**：PostgreSQL 一口气修补 52 个安全缺陷，其中最狠的是一个存在了 22 年的类型混淆漏洞——任何能创建对象的数据库用户都能借此在服务器上执行代码。更坑的是，完整修复还需要重新编译服务器上所有 C 语言扩展。\n- **毒舌/硬核点评**：一个 Bug 苟了 22 年，比你职业生涯还稳定。这也提醒所有\"我们数据库很稳\"的团队：稳，有时候只是没人发现而已。补丁打完记得重编扩展，不然等于没修。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> AI 能帮你把代码写得飞快，但只有你自己能决定——是先上线，还是先补上那个要命的鉴权。速度决定你能跑多快，安全决定你能跑多远。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-16\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 SpaceX 星舰第 15 飞：筷子夹火箭已成常规操作 (来源: HackerNews)\n- **核心干货**：星舰完成第 15 次试飞，Super Heavy 助推器再次被发射塔\"筷子\"机械臂精准捕获。到了这个阶段，回收已从\"奇迹\"退化为\"流程\"，真正的看点转向飞船本体的在轨能力验证与复用节奏。\n- **毒舌/硬核点评**：别人家火箭回收还上新闻头条，SpaceX 回收已经无聊到只剩 HN 网友数第几秒夹住。当颠覆变成日常，才是对同行最狠的羞辱——你们的\"首次\"是人家的\"例行公事\"。\n- **🔗 传送门**：[点击直达原链接](https://www.spacex.com/launches/starship-flight-15)\n\n---\n\n### 2. 📌 PostgreSQL 修补 52 个漏洞，含潜伏 22 年的认证 RCE 老雷 (来源: Tech RSS)\n- **核心干货**：一个类型混淆漏洞允许具备建对象权限的数据库用户直接在服务器上执行代码，且已潜伏 22 年；此次一并修复 52 个安全问题。要彻底免疫，还得重新编译服务器上所有 C 语言扩展——运维的周末又没了。\n- **毒舌/硬核点评**：22 年前的代码今天才被挖出来，说明\"祖传代码\"不只是技术债，还是定时炸弹。那些把 Postgres 当免维护基础设施的团队，该醒醒了——你信任的稳定，只是没人认真翻过底裤。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html)\n\n---\n\n### 3. 📌 DRAM 价格操纵案法院驳回撤诉，三巨头要上法庭了 (来源: HackerNews)\n- **核心干货**：法院拒绝驳回针对三星、SK 海力士、美光的 DRAM 价格操纵集体诉讼，案件进入实质审理。在 AI 算力疯狂吞噬内存产能的当下，这桩旧案被重新点燃，直接戳中\"内存为什么这么贵\"的行业神经。\n- **毒舌/硬核点评**：一边是 AI 把 HBM 抢到断货，一边是三巨头被指控联手抬价——内存涨价的锅，终于有人要背了。只是等判决下来，你买的那条 DDR5 大概已经够买半台整机。\n- **🔗 传送门**：[点击直达原链接](https://litnews.ai/articles/garciaguirre-samsung-sk-hynix-micron-dram-conspiracy-suit-survives-dismissal)\n\n---\n\n### 🗣️ 今日顶男金句\n\"技术的护城河从来不是你写了多少代码，而是别人复制你的成本有多高——所以要么快，要么深，要么别干。\"",
   "briefing_items": [
     {
-      "title": "Lovable 应用泄露护照信息与 20 万+ 私密消息",
+      "title": "SpaceX 星舰第 15 飞：筷子夹火箭已成常规操作",
       "source": "HackerNews",
-      "summary": "主打\"氛围编程\"的 Lovable 生成的应用被曝存在严重安全缺陷，大量用户数据——包括护照扫描件和超过 20 万条私人消息——处于裸奔状态。这基本是给\"Vibe Coding 改变世界\"叙事泼了一盆冰水：AI 帮你快速生成 App，也顺便帮你快速生成数据泄露事故。",
-      "commentary": "让 AI 写代码很爽，直到它把你的护照连同聊天记录一起\"开源\"了。速度能生成产品，但生成不了安全意识——安全这活儿，AI 目前还只会说\"已为你生成优雅的解决方案\"。",
-      "url": "https://www.crissyfield.de/research/lovable-en/"
-    },
-    {
-      "title": "SpaceX 星舰 Flight 15 成功\"筷子夹火箭\"收官",
-      "source": "HackerNews",
-      "summary": "SpaceX 在 Flight 15 中再次用发射塔机械臂成功捕获返回的超重型助推器，把\"用筷子夹火箭\"从科幻梗变成常规操作。可复用性再下一城，单次发射成本的天花板正被一点点焊死。",
-      "commentary": "当别家还在为\"火箭能不能回收\"写 PPT，SpaceX 已经把回收做成了流水线日常。所谓护城河，就是别人觉得疯狂、你却觉得无聊的东西。",
+      "summary": "星舰完成第 15 次试飞，Super Heavy 助推器再次被发射塔\"筷子\"机械臂精准捕获。到了这个阶段，回收已从\"奇迹\"退化为\"流程\"，真正的看点转向飞船本体的在轨能力验证与复用节奏。",
+      "commentary": "别人家火箭回收还上新闻头条，SpaceX 回收已经无聊到只剩 HN 网友数第几秒夹住。当颠覆变成日常，才是对同行最狠的羞辱——你们的\"首次\"是人家的\"例行公事\"。",
       "url": "https://www.spacex.com/launches/starship-flight-15"
     },
     {
-      "title": "PostgreSQL 修复 52 个漏洞，含潜伏 22 年的 RCE 级老 Bug",
+      "title": "PostgreSQL 修补 52 个漏洞，含潜伏 22 年的认证 RCE 老雷",
       "source": "Tech RSS",
-      "summary": "PostgreSQL 一口气修补 52 个安全缺陷，其中最狠的是一个存在了 22 年的类型混淆漏洞——任何能创建对象的数据库用户都能借此在服务器上执行代码。更坑的是，完整修复还需要重新编译服务器上所有 C 语言扩展。",
-      "commentary": "一个 Bug 苟了 22 年，比你职业生涯还稳定。这也提醒所有\"我们数据库很稳\"的团队：稳，有时候只是没人发现而已。补丁打完记得重编扩展，不然等于没修。",
+      "summary": "一个类型混淆漏洞允许具备建对象权限的数据库用户直接在服务器上执行代码，且已潜伏 22 年；此次一并修复 52 个安全问题。要彻底免疫，还得重新编译服务器上所有 C 语言扩展——运维的周末又没了。",
+      "commentary": "22 年前的代码今天才被挖出来，说明\"祖传代码\"不只是技术债，还是定时炸弹。那些把 Postgres 当免维护基础设施的团队，该醒醒了——你信任的稳定，只是没人认真翻过底裤。",
       "url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html"
     },
     {
-      "quote": "AI 能帮你把代码写得飞快，但只有你自己能决定——是先上线，还是先补上那个要命的鉴权。速度决定你能跑多快，安全决定你能跑多远。"
+      "title": "DRAM 价格操纵案法院驳回撤诉，三巨头要上法庭了",
+      "source": "HackerNews",
+      "summary": "法院拒绝驳回针对三星、SK 海力士、美光的 DRAM 价格操纵集体诉讼，案件进入实质审理。在 AI 算力疯狂吞噬内存产能的当下，这桩旧案被重新点燃，直接戳中\"内存为什么这么贵\"的行业神经。",
+      "commentary": "一边是 AI 把 HBM 抢到断货，一边是三巨头被指控联手抬价——内存涨价的锅，终于有人要背了。只是等判决下来，你买的那条 DDR5 大概已经够买半台整机。",
+      "url": "https://litnews.ai/articles/garciaguirre-samsung-sk-hynix-micron-dram-conspiracy-suit-survives-dismissal"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50499017",
-      "title": "Lovable apps expose passport details and more than 200K private messages",
+      "id": "hn:50507303",
+      "title": "All AI-generated code should be Open Source",
       "summary": "",
-      "url": "https://www.crissyfield.de/research/lovable-en/",
+      "url": "https://jakub.jankiewicz.org/blog/ai-code-open-source/",
       "source": "Hacker News",
-      "score": 734,
-      "comments": 295
+      "score": 640,
+      "comments": 347
+    },
+    {
+      "id": "hn:50506719",
+      "title": "The MacBook Pro's OLED PWM Problem: When a 'Better' Display Becomes Worse to Use",
+      "summary": "",
+      "url": "https://macanorak.com/the-macbook-pros-oled-pwm-problem-when-a-better-display-becomes-worse-to-use/",
+      "source": "Hacker News",
+      "score": 257,
+      "comments": 146
     },
     {
       "id": "hn:50500963",
@@ -45,58 +51,17 @@
       "summary": "<a href=\"https:&#x2F;&#x2F;x.com&#x2F;SpaceX&#x2F;status&#x2F;2121316300702056595\" rel=\"nofollow\">https:&#x2F;&#x2F;x.com&#x2F;SpaceX&#x2F;status&#x2F;2121316300702056595</a><p><a href=\"https:&#x2F;&#x2F;youtu.be&#x2F;jHlpfNSpBmw?t=3233\" rel=\"nofollow\">https:&#x2F;&#x2F;youtu.be&#x2F;jHlpfNSpBmw?t=3",
       "url": "https://www.spacex.com/launches/starship-flight-15",
       "source": "Hacker News",
-      "score": 965,
-      "comments": 656
+      "score": 1524,
+      "comments": 1060
     },
     {
-      "id": "hn:50499038",
-      "title": "A family tree of software job titles",
+      "id": "hn:50502988",
+      "title": "Court denies motion to dismiss DRAM price fixing case",
       "summary": "",
-      "url": "https://zwischenzugs.com/2026/11/03/a-family-tree-of-software-job-titles/",
+      "url": "https://litnews.ai/articles/garciaguirre-samsung-sk-hynix-micron-dram-conspiracy-suit-survives-dismissal",
       "source": "Hacker News",
-      "score": 259,
-      "comments": 128
-    },
-    {
-      "id": "hn:50501631",
-      "title": "Nvidia deliberately kept GPU prices high through circular financing deals",
-      "summary": "",
-      "url": "https://www.techspot.com/news/114558-nvidia-deliberately-kept-gpu-prices-high-through-circular.html",
-      "source": "Hacker News",
-      "score": 375,
-      "comments": 190
-    },
-    {
-      "id": "hn:50497892",
-      "title": "PyPI's redesigned project pages with clearer security signals are now live",
-      "summary": "",
-      "url": "https://blog.pypi.org/posts/2026-11-06-ui-updates-complete/",
-      "source": "Hacker News",
-      "score": 225,
-      "comments": 97
-    },
-    {
-      "id": "lob:akdy9z",
-      "title": "Terminal borders that don't cost a cell",
-      "summary": "",
-      "url": "https://www.joshka.net/cell-borders/",
-      "source": "Lobste.rs",
-      "score": 60,
-      "comments": 55,
-      "tags": [
-        "design",
-        "graphics",
-        "programming"
-      ]
-    },
-    {
-      "id": "hn:50496976",
-      "title": "KDE: The documentary [video]",
-      "summary": "",
-      "url": "https://tube.kockatoo.org/w/fFinNHfanLT7aBEb2B8y4c",
-      "source": "Hacker News",
-      "score": 423,
-      "comments": 91
+      "score": 410,
+      "comments": 189
     },
     {
       "id": "arxiv:2611.17294v1",
@@ -113,40 +78,27 @@
       "arxiv_id": "2611.17294v1"
     },
     {
+      "id": "hn:50505271",
+      "title": "Why did some Apollo missions carry a grenade launcher?",
+      "summary": "",
+      "url": "https://space.stackexchange.com/questions/37775",
+      "source": "Hacker News",
+      "score": 167,
+      "comments": 118
+    },
+    {
       "id": "lob:9oq6fr",
       "title": "The need for at least a third option",
       "summary": "",
       "url": "https://blog.ovalerio.net/archives/3359",
       "source": "Lobste.rs",
-      "score": 85,
-      "comments": 44,
+      "score": 89,
+      "comments": 49,
       "tags": [
         "android",
         "ios",
         "mobile"
       ]
-    },
-    {
-      "id": "lob:lh9pwf",
-      "title": "How Not to Build a Music Player",
-      "summary": "",
-      "url": "https://alichraghi.github.io/blog/how-not-to-build-a-music-player",
-      "source": "Lobste.rs",
-      "score": 113,
-      "comments": 25,
-      "tags": [
-        "person",
-        "zig"
-      ]
-    },
-    {
-      "id": "hn:50501594",
-      "title": "How did Woz write the Apple 1 BASIC before building the computer?",
-      "summary": "",
-      "url": "https://retrocomputing.stackexchange.com/questions/17957",
-      "source": "Hacker News",
-      "score": 158,
-      "comments": 64
     },
     {
       "id": "arxiv:2611.17332v1",
@@ -161,38 +113,35 @@
       "arxiv_id": "2611.17332v1"
     },
     {
-      "id": "lob:xca2qj",
-      "title": "Probabilistic data structures in Go",
-      "summary": "",
-      "url": "https://antonz.org/probabilistic-data-structures/",
-      "source": "Lobste.rs",
-      "score": 62,
-      "comments": 12,
-      "tags": [
-        "go"
-      ]
-    },
-    {
-      "id": "hn:50503255",
-      "title": "We're Asking an Appeals Court to Require a Warrant for ALPR Searches",
-      "summary": "",
-      "url": "https://www.eff.org/deeplinks/2026/11/were-asking-appeals-court-require-warrant-alpr-searches",
-      "source": "Hacker News",
-      "score": 150,
-      "comments": 30
-    },
-    {
       "id": "lob:fllb0m",
       "title": "Let Me Let You Own Your Data",
       "summary": "",
       "url": "https://www.willett.io/posts/data/",
       "source": "Lobste.rs",
-      "score": 31,
-      "comments": 19,
+      "score": 42,
+      "comments": 30,
       "tags": [
         "databases",
         "privacy"
       ]
+    },
+    {
+      "id": "hn:50463399",
+      "title": "Claude Code and Codex reverse engineered my 1994 Jeep's ECU over a $3 Arduino [video]",
+      "summary": "",
+      "url": "https://www.youtube.com/watch?v=WPj3aQ-xxpI",
+      "source": "Hacker News",
+      "score": 121,
+      "comments": 60
+    },
+    {
+      "id": "hn:50506894",
+      "title": "Things That Turbo Pascal Is Smaller Than (2011)",
+      "summary": "",
+      "url": "https://prog21.dadgum.com/116.html",
+      "source": "Hacker News",
+      "score": 120,
+      "comments": 52
     },
     {
       "id": "arxiv:2611.17323v1",
@@ -207,15 +156,26 @@
       "arxiv_id": "2611.17323v1"
     },
     {
-      "id": "lob:wqml56",
-      "title": "Someone's impersonating this blog",
+      "id": "hn:50506376",
+      "title": "Understanding Positional Embeddings in Modern LLMs",
       "summary": "",
-      "url": "https://mattbee.mataroa.blog/p/someones-impersonating-this-blog/",
+      "url": "https://magazine.sebastianraschka.com/p/understanding-positional-embeddings",
+      "source": "Hacker News",
+      "score": 136,
+      "comments": 3
+    },
+    {
+      "id": "lob:pgmw6b",
+      "title": "What happened to 3com?",
+      "summary": "",
+      "url": "https://dfarq.homeip.net/what-happened-to-3com/",
       "source": "Lobste.rs",
-      "score": 46,
-      "comments": 2,
+      "score": 38,
+      "comments": 7,
       "tags": [
-        "security"
+        "hardware",
+        "historical",
+        "retrocomputing"
       ]
     },
     {
@@ -240,12 +200,48 @@
       "score": 0
     },
     {
-      "id": "rss:3c940461e9",
-      "title": "Your agent's token bill is mostly the same prompt, sent again",
-      "summary": "Most of what you pay for when an agent works is the same text, sent again.\n\nEvery time an agent thinks, the whole prompt goes back to the model: its instructions, its tool definitions, the conversation so far. On a long task that repeated part is the majority of the bill. Providers know this and sel",
-      "url": "https://dev.to/roseparley/your-agents-token-bill-is-mostly-the-same-prompt-sent-again-3g3g",
-      "source": "Tech RSS",
-      "score": 0
+      "id": "hn:50507553",
+      "title": "Emacs Is My Browser",
+      "summary": "",
+      "url": "https://joshblais.com/blog/emacs-as-my-browser/",
+      "source": "Hacker News",
+      "score": 88,
+      "comments": 42
+    },
+    {
+      "id": "lob:vdxevp",
+      "title": "Memory management in 40 major C projects, a survey",
+      "summary": "",
+      "url": "https://theconsensus.dev/p/2026/11/08/c-memory-management-survey.html",
+      "source": "Lobste.rs",
+      "score": 26,
+      "comments": 1,
+      "tags": [
+        "c"
+      ]
+    },
+    {
+      "id": "lob:h8tghc",
+      "title": "cursor:pointer on buttons",
+      "summary": "",
+      "url": "https://blog.kizu.dev/cursors/",
+      "source": "Lobste.rs",
+      "score": 20,
+      "comments": 10,
+      "tags": [
+        "a11y",
+        "css",
+        "web"
+      ]
+    },
+    {
+      "id": "hn:50481321",
+      "title": "What thousands of conversations look like inside a language model",
+      "summary": "",
+      "url": "https://operator0x.com/field-notes/qwen-conversation-state-space/",
+      "source": "Hacker News",
+      "score": 75,
+      "comments": 24
     }
   ],
   "ai_curated": true
