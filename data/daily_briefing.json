@@ -1,70 +1,79 @@
 {
   "date": "2026-11-15",
-  "update_time": "2026-11-14 17:45:30",
+  "update_time": "2026-11-15 05:40:33",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-15\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 GGML v1.0.0 正式发布 (来源: HackerNews)\n- **核心干货**：那个让 llama.cpp 能在你奶奶家十年前的老笔记本上跑大模型的底层张量库，终于憋出了 1.0.0。这标志着 GGML 从\"Georgi 的个人玩具\"正式进化为有稳定 ABI 承诺的基础设施，边缘推理生态的地基算是浇死了。\n- **毒舌/硬核点评**：大厂在云端烧钱堆 H100 卷参数，极客在本地用 GGML 榨干最后一丝 CPU 算力——技术民主化从来不是请客吃饭，是把显卡税砍到零。\n- **🔗 传送门**：[点击直达原链接](https://github.com/ggml-org/ggml/releases/tag/v1.0.0)\n\n---\n\n### 2. 📌 意大利以数据访问问题对 Meta 开出 8.87 亿欧元罚单 (来源: HackerNews / Reuters)\n- **核心干货**：意大利监管机构认定 Meta 在 Android 端对用户数据的抓取与利用违反 GDPR，罚款金额直接创下欧洲对单一科技巨头的纪录之一。这不是孤立事件，而是欧盟\"数字主权\"叙事下对美系平台持续加压的最新一锤。\n- **毒舌/硬核点评**：Meta 的合规团队大概是全公司最忙的部门——罚款单比财报还准时，8.87 亿欧元够买多少个\"我们重视用户隐私\"的公关稿？\n- **🔗 传送门**：[点击直达原链接](https://www.reuters.com/world/italy-fines-meta-887-million-over-android-users-data-access-2026-11-14/)\n\n---\n\n### 3. 📌 ArchSpace：给 LLM 架构研究建一个\"可复现档案库\" (来源: ArXiv)\n- **核心干货**：DeepSeek、Qwen、Kimi 们天天在架构上搞微创新，但公开报告往往语焉不详、无法复现。ArchSpace 试图把架构设计、训练配置、评测结果结构化归档，让\"这个改动到底有没有用\"从玄学变成可查的工程事实。\n- **毒舌/硬核点评**：架构论文的水分，一半靠\"我们做了大量实验\"糊弄过去——ArchSpace 要是真能落地，审稿人第一个失业。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2611.17332v1)\n\n---\n\n### 🗣️ 今日顶男金句\n> 别迷信\"前沿\"，1.0.0 的稳定比 100.0 的 PPT 值钱——能跑在你机器上的，才是你的算力。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-15\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Lovable 应用泄露护照信息与 20 万+ 私密消息 (来源: HackerNews)\n- **核心干货**：主打\"氛围编程\"的 Lovable 生成的应用被曝存在严重安全缺陷，大量用户数据——包括护照扫描件和超过 20 万条私人消息——处于裸奔状态。这基本是给\"Vibe Coding 改变世界\"叙事泼了一盆冰水：AI 帮你快速生成 App，也顺便帮你快速生成数据泄露事故。\n- **毒舌/硬核点评**：让 AI 写代码很爽，直到它把你的护照连同聊天记录一起\"开源\"了。速度能生成产品，但生成不了安全意识——安全这活儿，AI 目前还只会说\"已为你生成优雅的解决方案\"。\n- **🔗 传送门**：[点击直达原链接](https://www.crissyfield.de/research/lovable-en/)\n\n---\n\n### 2. 📌 SpaceX 星舰 Flight 15 成功\"筷子夹火箭\"收官 (来源: HackerNews)\n- **核心干货**：SpaceX 在 Flight 15 中再次用发射塔机械臂成功捕获返回的超重型助推器，把\"用筷子夹火箭\"从科幻梗变成常规操作。可复用性再下一城，单次发射成本的天花板正被一点点焊死。\n- **毒舌/硬核点评**：当别家还在为\"火箭能不能回收\"写 PPT，SpaceX 已经把回收做成了流水线日常。所谓护城河，就是别人觉得疯狂、你却觉得无聊的东西。\n- **🔗 传送门**：[点击直达原链接](https://www.spacex.com/launches/starship-flight-15)\n\n---\n\n### 3. 📌 PostgreSQL 修复 52 个漏洞，含潜伏 22 年的 RCE 级老 Bug (来源: Tech RSS)\n- **核心干货**：PostgreSQL 一口气修补 52 个安全缺陷，其中最狠的是一个存在了 22 年的类型混淆漏洞——任何能创建对象的数据库用户都能借此在服务器上执行代码。更坑的是，完整修复还需要重新编译服务器上所有 C 语言扩展。\n- **毒舌/硬核点评**：一个 Bug 苟了 22 年，比你职业生涯还稳定。这也提醒所有\"我们数据库很稳\"的团队：稳，有时候只是没人发现而已。补丁打完记得重编扩展，不然等于没修。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> AI 能帮你把代码写得飞快，但只有你自己能决定——是先上线，还是先补上那个要命的鉴权。速度决定你能跑多快，安全决定你能跑多远。",
   "briefing_items": [
     {
-      "title": "GGML v1.0.0 正式发布",
+      "title": "Lovable 应用泄露护照信息与 20 万+ 私密消息",
       "source": "HackerNews",
-      "summary": "那个让 llama.cpp 能在你奶奶家十年前的老笔记本上跑大模型的底层张量库，终于憋出了 1.0.0。这标志着 GGML 从\"Georgi 的个人玩具\"正式进化为有稳定 ABI 承诺的基础设施，边缘推理生态的地基算是浇死了。",
-      "commentary": "大厂在云端烧钱堆 H100 卷参数，极客在本地用 GGML 榨干最后一丝 CPU 算力——技术民主化从来不是请客吃饭，是把显卡税砍到零。",
-      "url": "https://github.com/ggml-org/ggml/releases/tag/v1.0.0"
+      "summary": "主打\"氛围编程\"的 Lovable 生成的应用被曝存在严重安全缺陷，大量用户数据——包括护照扫描件和超过 20 万条私人消息——处于裸奔状态。这基本是给\"Vibe Coding 改变世界\"叙事泼了一盆冰水：AI 帮你快速生成 App，也顺便帮你快速生成数据泄露事故。",
+      "commentary": "让 AI 写代码很爽，直到它把你的护照连同聊天记录一起\"开源\"了。速度能生成产品，但生成不了安全意识——安全这活儿，AI 目前还只会说\"已为你生成优雅的解决方案\"。",
+      "url": "https://www.crissyfield.de/research/lovable-en/"
     },
     {
-      "title": "意大利以数据访问问题对 Meta 开出 8.87 亿欧元罚单",
-      "source": "HackerNews / Reuters",
-      "summary": "意大利监管机构认定 Meta 在 Android 端对用户数据的抓取与利用违反 GDPR，罚款金额直接创下欧洲对单一科技巨头的纪录之一。这不是孤立事件，而是欧盟\"数字主权\"叙事下对美系平台持续加压的最新一锤。",
-      "commentary": "Meta 的合规团队大概是全公司最忙的部门——罚款单比财报还准时，8.87 亿欧元够买多少个\"我们重视用户隐私\"的公关稿？",
-      "url": "https://www.reuters.com/world/italy-fines-meta-887-million-over-android-users-data-access-2026-11-14/"
+      "title": "SpaceX 星舰 Flight 15 成功\"筷子夹火箭\"收官",
+      "source": "HackerNews",
+      "summary": "SpaceX 在 Flight 15 中再次用发射塔机械臂成功捕获返回的超重型助推器，把\"用筷子夹火箭\"从科幻梗变成常规操作。可复用性再下一城，单次发射成本的天花板正被一点点焊死。",
+      "commentary": "当别家还在为\"火箭能不能回收\"写 PPT，SpaceX 已经把回收做成了流水线日常。所谓护城河，就是别人觉得疯狂、你却觉得无聊的东西。",
+      "url": "https://www.spacex.com/launches/starship-flight-15"
     },
     {
-      "title": "ArchSpace：给 LLM 架构研究建一个\"可复现档案库\"",
-      "source": "ArXiv",
-      "summary": "DeepSeek、Qwen、Kimi 们天天在架构上搞微创新，但公开报告往往语焉不详、无法复现。ArchSpace 试图把架构设计、训练配置、评测结果结构化归档，让\"这个改动到底有没有用\"从玄学变成可查的工程事实。",
-      "commentary": "架构论文的水分，一半靠\"我们做了大量实验\"糊弄过去——ArchSpace 要是真能落地，审稿人第一个失业。",
-      "url": "https://arxiv.org/abs/2611.17332v1"
+      "title": "PostgreSQL 修复 52 个漏洞，含潜伏 22 年的 RCE 级老 Bug",
+      "source": "Tech RSS",
+      "summary": "PostgreSQL 一口气修补 52 个安全缺陷，其中最狠的是一个存在了 22 年的类型混淆漏洞——任何能创建对象的数据库用户都能借此在服务器上执行代码。更坑的是，完整修复还需要重新编译服务器上所有 C 语言扩展。",
+      "commentary": "一个 Bug 苟了 22 年，比你职业生涯还稳定。这也提醒所有\"我们数据库很稳\"的团队：稳，有时候只是没人发现而已。补丁打完记得重编扩展，不然等于没修。",
+      "url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html"
     },
     {
-      "quote": "别迷信\"前沿\"，1.0.0 的稳定比 100.0 的 PPT 值钱——能跑在你机器上的，才是你的算力。"
+      "quote": "AI 能帮你把代码写得飞快，但只有你自己能决定——是先上线，还是先补上那个要命的鉴权。速度决定你能跑多快，安全决定你能跑多远。"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50493062",
-      "title": "Ggml v1.0.0",
+      "id": "hn:50499017",
+      "title": "Lovable apps expose passport details and more than 200K private messages",
       "summary": "",
-      "url": "https://github.com/ggml-org/ggml/releases/tag/v1.0.0",
+      "url": "https://www.crissyfield.de/research/lovable-en/",
       "source": "Hacker News",
-      "score": 377,
-      "comments": 63
+      "score": 734,
+      "comments": 295
     },
     {
-      "id": "hn:50440709",
-      "title": "Why get an expensive Pi when I have an old phone?",
-      "summary": "",
-      "url": "https://so.long.thanks.fish/why-pi-when-i-have-an-old-phone/",
+      "id": "hn:50500963",
+      "title": "SpaceX catches the Starship to end Flight 15",
+      "summary": "<a href=\"https:&#x2F;&#x2F;x.com&#x2F;SpaceX&#x2F;status&#x2F;2121316300702056595\" rel=\"nofollow\">https:&#x2F;&#x2F;x.com&#x2F;SpaceX&#x2F;status&#x2F;2121316300702056595</a><p><a href=\"https:&#x2F;&#x2F;youtu.be&#x2F;jHlpfNSpBmw?t=3233\" rel=\"nofollow\">https:&#x2F;&#x2F;youtu.be&#x2F;jHlpfNSpBmw?t=3",
+      "url": "https://www.spacex.com/launches/starship-flight-15",
       "source": "Hacker News",
-      "score": 371,
-      "comments": 227
+      "score": 965,
+      "comments": 656
     },
     {
-      "id": "hn:50496602",
-      "title": "Tech Companies Are Trying to Shift the Concept of Privacy (Again)",
+      "id": "hn:50499038",
+      "title": "A family tree of software job titles",
       "summary": "",
-      "url": "https://www.eff.org/deeplinks/2026/11/tech-companies-are-trying-shift-entire-concept-privacy-again",
+      "url": "https://zwischenzugs.com/2026/11/03/a-family-tree-of-software-job-titles/",
       "source": "Hacker News",
-      "score": 237,
-      "comments": 93
+      "score": 259,
+      "comments": 128
     },
     {
-      "id": "hn:50493904",
-      "title": "Monkey Island: all 13 versions side by side",
+      "id": "hn:50501631",
+      "title": "Nvidia deliberately kept GPU prices high through circular financing deals",
       "summary": "",
-      "url": "https://monkeyisland.pages.dev/",
+      "url": "https://www.techspot.com/news/114558-nvidia-deliberately-kept-gpu-prices-high-through-circular.html",
       "source": "Hacker News",
-      "score": 351,
-      "comments": 121
+      "score": 375,
+      "comments": 190
+    },
+    {
+      "id": "hn:50497892",
+      "title": "PyPI's redesigned project pages with clearer security signals are now live",
+      "summary": "",
+      "url": "https://blog.pypi.org/posts/2026-11-06-ui-updates-complete/",
+      "source": "Hacker News",
+      "score": 225,
+      "comments": 97
     },
     {
       "id": "lob:akdy9z",
@@ -72,13 +81,22 @@
       "summary": "",
       "url": "https://www.joshka.net/cell-borders/",
       "source": "Lobste.rs",
-      "score": 49,
-      "comments": 45,
+      "score": 60,
+      "comments": 55,
       "tags": [
         "design",
         "graphics",
         "programming"
       ]
+    },
+    {
+      "id": "hn:50496976",
+      "title": "KDE: The documentary [video]",
+      "summary": "",
+      "url": "https://tube.kockatoo.org/w/fFinNHfanLT7aBEb2B8y4c",
+      "source": "Hacker News",
+      "score": 423,
+      "comments": 91
     },
     {
       "id": "arxiv:2611.17294v1",
@@ -95,26 +113,13 @@
       "arxiv_id": "2611.17294v1"
     },
     {
-      "id": "lob:lh9pwf",
-      "title": "How Not to Build a Music Player",
-      "summary": "",
-      "url": "https://alichraghi.github.io/blog/how-not-to-build-a-music-player",
-      "source": "Lobste.rs",
-      "score": 103,
-      "comments": 25,
-      "tags": [
-        "person",
-        "zig"
-      ]
-    },
-    {
       "id": "lob:9oq6fr",
       "title": "The need for at least a third option",
       "summary": "",
       "url": "https://blog.ovalerio.net/archives/3359",
       "source": "Lobste.rs",
-      "score": 72,
-      "comments": 34,
+      "score": 85,
+      "comments": 44,
       "tags": [
         "android",
         "ios",
@@ -122,25 +127,26 @@
       ]
     },
     {
-      "id": "lob:f6u0cg",
-      "title": "Contra \"Glue work considered harmful\"",
+      "id": "lob:lh9pwf",
+      "title": "How Not to Build a Music Player",
       "summary": "",
-      "url": "https://sunshowers.io/posts/glue-work/",
+      "url": "https://alichraghi.github.io/blog/how-not-to-build-a-music-player",
       "source": "Lobste.rs",
-      "score": 51,
-      "comments": 19,
+      "score": 113,
+      "comments": 25,
       "tags": [
-        "practices"
+        "person",
+        "zig"
       ]
     },
     {
-      "id": "hn:50497009",
-      "title": "Italy fines Meta $887M over Android users' data access",
+      "id": "hn:50501594",
+      "title": "How did Woz write the Apple 1 BASIC before building the computer?",
       "summary": "",
-      "url": "https://www.reuters.com/world/italy-fines-meta-887-million-over-android-users-data-access-2026-11-14/",
+      "url": "https://retrocomputing.stackexchange.com/questions/17957",
       "source": "Hacker News",
-      "score": 146,
-      "comments": 71
+      "score": 158,
+      "comments": 64
     },
     {
       "id": "arxiv:2611.17332v1",
@@ -160,20 +166,33 @@
       "summary": "",
       "url": "https://antonz.org/probabilistic-data-structures/",
       "source": "Lobste.rs",
-      "score": 52,
-      "comments": 10,
+      "score": 62,
+      "comments": 12,
       "tags": [
         "go"
       ]
     },
     {
-      "id": "hn:50496976",
-      "title": "KDE: A documentary on free software [video]",
+      "id": "hn:50503255",
+      "title": "We're Asking an Appeals Court to Require a Warrant for ALPR Searches",
       "summary": "",
-      "url": "https://tube.kockatoo.org/w/fFinNHfanLT7aBEb2B8y4c",
+      "url": "https://www.eff.org/deeplinks/2026/11/were-asking-appeals-court-require-warrant-alpr-searches",
       "source": "Hacker News",
-      "score": 168,
-      "comments": 26
+      "score": 150,
+      "comments": 30
+    },
+    {
+      "id": "lob:fllb0m",
+      "title": "Let Me Let You Own Your Data",
+      "summary": "",
+      "url": "https://www.willett.io/posts/data/",
+      "source": "Lobste.rs",
+      "score": 31,
+      "comments": 19,
+      "tags": [
+        "databases",
+        "privacy"
+      ]
     },
     {
       "id": "arxiv:2611.17323v1",
@@ -188,62 +207,15 @@
       "arxiv_id": "2611.17323v1"
     },
     {
-      "id": "hn:50441444",
-      "title": "Generative AI uses more energy on non-English text",
-      "summary": "",
-      "url": "https://news.umich.edu/generative-ai-uses-more-energy-on-non-english-text/",
-      "source": "Hacker News",
-      "score": 95,
-      "comments": 64
-    },
-    {
-      "id": "lob:ezl1sa",
-      "title": "Running a law firm on Free software (2026 edition)",
-      "summary": "",
-      "url": "https://decoded.legal/blog/2026/11/running-a-law-firm-on-free-software-2026-edition/",
-      "source": "Lobste.rs",
-      "score": 45,
-      "comments": 3,
-      "tags": [
-        "practices"
-      ]
-    },
-    {
-      "id": "lob:mgiv0i",
-      "title": "ML Modules for Mere Mortals",
-      "summary": "",
-      "url": "https://thunderseethe.dev/posts/ml-modules-for-mere-mortals/intro/",
-      "source": "Lobste.rs",
-      "score": 31,
-      "comments": 10,
-      "tags": [
-        "ml",
-        "plt"
-      ]
-    },
-    {
       "id": "lob:wqml56",
       "title": "Someone's impersonating this blog",
       "summary": "",
       "url": "https://mattbee.mataroa.blog/p/someones-impersonating-this-blog/",
       "source": "Lobste.rs",
-      "score": 39,
+      "score": 46,
       "comments": 2,
       "tags": [
         "security"
-      ]
-    },
-    {
-      "id": "lob:kb3fs1",
-      "title": "Beating the frontier on NetHack",
-      "summary": "",
-      "url": "https://antithesis.com/blog/2026/nethack/",
-      "source": "Lobste.rs",
-      "score": 36,
-      "comments": 3,
-      "tags": [
-        "games",
-        "testing"
       ]
     },
     {
@@ -258,6 +230,22 @@
         "cs.SE"
       ],
       "arxiv_id": "2611.17316v1"
+    },
+    {
+      "id": "rss:2b871475e5",
+      "title": "PostgreSQL Patches 52 Flaws, Including 22-Year-Old Bug Enabling Authenticated RCE",
+      "summary": "A type confusion flaw in PostgreSQL lets a database user who can create objects run code on the server. Updates released yesterday fix it, along with 51 other security flaws. Full protection from this flaw also requires rebuilding any C-language extensions installed on the server.\n\nThe flaw, tracked",
+      "url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:3c940461e9",
+      "title": "Your agent's token bill is mostly the same prompt, sent again",
+      "summary": "Most of what you pay for when an agent works is the same text, sent again.\n\nEvery time an agent thinks, the whole prompt goes back to the model: its instructions, its tool definitions, the conversation so far. On a long task that repeated part is the majority of the bill. Providers know this and sel",
+      "url": "https://dev.to/roseparley/your-agents-token-bill-is-mostly-the-same-prompt-sent-again-3g3g",
+      "source": "Tech RSS",
+      "score": 0
     }
   ],
   "ai_curated": true
