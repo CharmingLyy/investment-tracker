@@ -1,0 +1,827 @@
+{
+  "update_time": "2026-11-16 17:40:19",
+  "stocks": {
+    "a_stocks": [
+      {
+        "market": "A股",
+        "code": "002050",
+        "name": "三花智控",
+        "symbol": "sz.002050",
+        "industry": null,
+        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
+        "price": 33.63,
+        "open": 34.69,
+        "high": 34.69,
+        "low": 33.21,
+        "change_pct": -3.56,
+        "volume": 52441741,
+        "turnover": 17.7,
+        "market_cap": null,
+        "pe": 36.4,
+        "cash_flow": null,
+        "macd": 0.1046,
+        "macd_signal": 0.0131,
+        "macd_histogram": 0.183,
+        "rsi": 46.83,
+        "ma": {
+          "MA5": 34.96,
+          "MA10": 34.52,
+          "MA20": 34.22,
+          "MA60": 34.85
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
+        "price": 5.88,
+        "open": 5.94,
+        "high": 5.94,
+        "low": 5.85,
+        "change_pct": -1.18,
+        "volume": 40947317,
+        "turnover": 2.41,
+        "market_cap": null,
+        "pe": 66.02,
+        "cash_flow": null,
+        "macd": -0.1006,
+        "macd_signal": -0.0942,
+        "macd_histogram": -0.0127,
+        "rsi": 30.47,
+        "ma": {
+          "MA5": 6.0,
+          "MA10": 6.07,
+          "MA20": 6.09,
+          "MA60": 6.38
+        },
+        "main_net_flow": null
+      }
+    ],
+    "hk_stocks": [
+      {
+        "market": "港股",
+        "code": "01810",
+        "name": "小米集团-W",
+        "symbol": "01810",
+        "industry": "Consumer Electronics",
+        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
+        "price": NaN,
+        "open": null,
+        "high": null,
+        "low": null,
+        "change_pct": NaN,
+        "volume": 93529433,
+        "turnover": null,
+        "market_cap": 7482.35,
+        "pe": 21.38,
+        "cash_flow": 86.81,
+        "macd": 1.0469,
+        "macd_signal": 0.9141,
+        "macd_histogram": 0.2656,
+        "rsi": 54.78,
+        "ma": {
+          "MA5": null,
+          "MA10": null,
+          "MA20": null,
+          "MA60": null
+        },
+        "main_net_flow": null
+      }
+    ],
+    "us_stocks": [
+      {
+        "market": "美股",
+        "code": "NVDA",
+        "name": "NVIDIA",
+        "symbol": "NVDA",
+        "industry": "Semiconductors",
+        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
+        "price": 156.57,
+        "open": 159.0,
+        "high": 163.0,
+        "low": 156.53,
+        "change_pct": -3.85,
+        "volume": 177316586,
+        "turnover": null,
+        "market_cap": 37809.37,
+        "pe": 19.8,
+        "cash_flow": 418.1,
+        "macd": -15.3397,
+        "macd_signal": -11.1495,
+        "macd_histogram": -8.3804,
+        "rsi": 22.84,
+        "ma": {
+          "MA5": 165.65,
+          "MA10": 178.2,
+          "MA20": 195.66,
+          "MA60": 214.23
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "GOOG",
+        "name": "Alphabet (Google)",
+        "symbol": "GOOG",
+        "industry": "Internet Content & Information",
+        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
+        "price": 283.79,
+        "open": 290.47,
+        "high": 290.75,
+        "low": 282.47,
+        "change_pct": -2.98,
+        "volume": 9015187,
+        "turnover": null,
+        "market_cap": 34889.26,
+        "pe": 14.82,
+        "cash_flow": 11.62,
+        "macd": -11.9408,
+        "macd_signal": -12.9743,
+        "macd_histogram": 2.067,
+        "rsi": 34.68,
+        "ma": {
+          "MA5": 289.44,
+          "MA10": 286.45,
+          "MA20": 298.07,
+          "MA60": 326.42
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "CRCL",
+        "name": "Circle",
+        "symbol": "CRCL",
+        "industry": "Capital Markets",
+        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
+        "price": 57.78,
+        "open": 57.67,
+        "high": 59.8,
+        "low": 57.31,
+        "change_pct": -7.11,
+        "volume": 5488186,
+        "turnover": null,
+        "market_cap": 148.22,
+        "pe": 34.8,
+        "cash_flow": 2.62,
+        "macd": -5.8824,
+        "macd_signal": -4.4052,
+        "macd_histogram": -2.9544,
+        "rsi": 27.96,
+        "ma": {
+          "MA5": 63.18,
+          "MA10": 67.22,
+          "MA20": 74.4,
+          "MA60": 83.66
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "MP",
+        "name": "MP Materials",
+        "symbol": "MP",
+        "industry": "Other Industrial Metals & Mining",
+        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
+        "price": 36.79,
+        "open": 37.5,
+        "high": 38.24,
+        "low": 36.52,
+        "change_pct": -5.08,
+        "volume": 2611305,
+        "turnover": null,
+        "market_cap": 65.58,
+        "pe": 82.74,
+        "cash_flow": 4.1,
+        "macd": -1.8595,
+        "macd_signal": -2.2336,
+        "macd_histogram": 0.7482,
+        "rsi": 41.85,
+        "ma": {
+          "MA5": 37.24,
+          "MA10": 36.68,
+          "MA20": 38.06,
+          "MA60": 45.71
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "PLTR",
+        "name": "Palantir",
+        "symbol": "PLTR",
+        "industry": "Software - Infrastructure",
+        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
+        "price": 162.51,
+        "open": 165.74,
+        "high": 166.09,
+        "low": 160.17,
+        "change_pct": -3.26,
+        "volume": 7154267,
+        "turnover": null,
+        "market_cap": 3915.67,
+        "pe": 114.44,
+        "cash_flow": 26.52,
+        "macd": -6.7009,
+        "macd_signal": -4.9907,
+        "macd_histogram": -3.4203,
+        "rsi": 36.06,
+        "ma": {
+          "MA5": 168.66,
+          "MA10": 167.5,
+          "MA20": 180.77,
+          "MA60": 183.64
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "NOW",
+        "name": "ServiceNow",
+        "symbol": "NOW",
+        "industry": "Software - Application",
+        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
+        "price": 101.16,
+        "open": 101.29,
+        "high": 101.94,
+        "low": 98.88,
+        "change_pct": -1.07,
+        "volume": 4013725,
+        "turnover": null,
+        "market_cap": 1049.96,
+        "pe": 72.78,
+        "cash_flow": 57.54,
+        "macd": -10.5911,
+        "macd_signal": -8.913,
+        "macd_histogram": -3.3562,
+        "rsi": 31.23,
+        "ma": {
+          "MA5": 101.29,
+          "MA10": 103.15,
+          "MA20": 121.7,
+          "MA60": 132.39
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "DDOG",
+        "name": "Datadog",
+        "symbol": "DDOG",
+        "industry": "Software - Application",
+        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
+        "price": 173.98,
+        "open": 182.41,
+        "high": 182.41,
+        "low": 173.72,
+        "change_pct": -5.53,
+        "volume": 1320739,
+        "turnover": null,
+        "market_cap": 628.14,
+        "pe": 241.64,
+        "cash_flow": 10.66,
+        "macd": -22.6997,
+        "macd_signal": -18.0509,
+        "macd_histogram": -9.2976,
+        "rsi": 28.75,
+        "ma": {
+          "MA5": 181.08,
+          "MA10": 184.79,
+          "MA20": 223.07,
+          "MA60": 239.86
+        },
+        "main_net_flow": null
+      }
+    ],
+    "crypto": [
+      {
+        "market": "加密货币",
+        "code": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "industry": "Smart Contract Platform",
+        "price": 64861,
+        "open": null,
+        "high": 65502,
+        "low": 63879,
+        "change_pct": 0.57,
+        "volume": 32414748265,
+        "turnover": null,
+        "market_cap": 13047.09,
+        "market_cap_rank": 1,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -3787.4556,
+        "macd_signal": -2650.171,
+        "macd_histogram": -2274.5693,
+        "rsi": 23.89,
+        "ma": {
+          "MA5": 66794.4,
+          "MA10": 70745.11,
+          "MA20": 74298.58,
+          "MA60": 80118.38
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 20112878.0,
+          "total_supply": 20112946.0,
+          "circ_ratio": 100.0,
+          "price_change_7d": -13.48973,
+          "price_change_30d": -20.05746,
+          "ath_pct": -48.56,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      },
+      {
+        "market": "加密货币",
+        "code": "ethereum",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "industry": "Smart Contract Platform",
+        "price": 1824.94,
+        "open": null,
+        "high": 1858.45,
+        "low": 1786.78,
+        "change_pct": 1.1,
+        "volume": 11762132456,
+        "turnover": null,
+        "market_cap": 2231.03,
+        "market_cap_rank": 2,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -144.955,
+        "macd_signal": -110.4722,
+        "macd_histogram": -68.9657,
+        "rsi": 25.89,
+        "ma": {
+          "MA5": 1875.51,
+          "MA10": 1997.68,
+          "MA20": 2138.67,
+          "MA60": 2415.46
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 122224475.73780824,
+          "total_supply": 122224475.73780824,
+          "circ_ratio": 100.0,
+          "price_change_7d": -14.33649,
+          "price_change_30d": -23.93931,
+          "ath_pct": -63.1,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      }
+    ]
+  },
+  "news": [
+    {
+      "id": "35b871d31c",
+      "title": "[播客]独家实拍：我那永远跪着的母亲(11/07 22:10)",
+      "summary": "独家实拍：我那永远跪着的母亲",
+      "link": "http://go.rss.sina.com.cn/redirect.php?url=http://you.video.sina.com.cn/b/16972162-1239095354.html",
+      "source": "rss.sina.com.cn",
+      "published": ""
+    },
+    {
+      "id": "8c37efb100",
+      "title": "‘He calls my plans a fantasy’: My husband says we can’t afford a $200,000-a-year retirement. Is he being cheap?",
+      "summary": "“We have $2 million saved in our retirement accounts and a house worth $1.3 million.”",
+      "link": "https://www.marketwatch.com/story/he-calls-my-plans-a-fantasy-my-husband-says-we-cant-afford-our-200-000-a-year-dream-retirement-i-think-hes-cheap-45bc5b4e?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 16 Nov 2026 17:00:00 GMT"
+    },
+    {
+      "id": "cfa780e006",
+      "title": "Nvidia is gearing up for one of Wall Street’s most anticipated earnings calls in years",
+      "summary": "Jensen Huang’s sudden departure has made Tuesday’s earnings call “the most important in the company’s history.”",
+      "link": "https://www.marketwatch.com/story/nvidia-is-gearing-up-for-one-of-wall-streets-most-anticipated-earnings-calls-in-years-91855b1e?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 16 Nov 2026 16:37:00 GMT"
+    },
+    {
+      "id": "9415e7707d",
+      "title": "I am turning 18 next month and want to start investing. What do I do first?",
+      "summary": "“I have not tried investing before.”",
+      "link": "https://www.marketwatch.com/story/i-am-turning-18-next-month-and-want-to-start-investing-what-do-i-do-first-75370ff3?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 16 Nov 2026 16:20:00 GMT"
+    },
+    {
+      "id": "96fd48d682",
+      "title": "SpaceX widens its lead in the space race, even as a tech selloff weighs on its stock",
+      "summary": "SpaceX had a mostly successful Starship launch, while an Amazon partner hit a setback.",
+      "link": "https://www.marketwatch.com/story/spacex-widens-its-lead-in-the-space-race-even-as-a-tech-selloff-weighs-on-its-stock-975f5c1f?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 16 Nov 2026 15:59:00 GMT"
+    },
+    {
+      "id": "4a3f2a316b",
+      "title": "These 13 S&P 500 stocks can rise up to 70% over the next year, according to analysts",
+      "summary": "Consensus earnings estimates have continued to increase, especially for semiconductor manufacturers whose share have declined significantly since the end of September, which underscores several calls",
+      "link": "https://www.marketwatch.com/story/these-13-s-p-500-stocks-can-rise-up-to-70-over-the-next-year-according-to-analysts-21119af9?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 16 Nov 2026 15:47:00 GMT"
+    },
+    {
+      "id": "07110b6189",
+      "title": "Nvidia’s stock extends declines following harsh words from the U.S. government",
+      "summary": "The Commerce Department announced a new rule aimed at restricting China’s remote access to advanced chips.",
+      "link": "https://www.marketwatch.com/story/nvidias-stock-extends-declines-following-harsh-words-from-the-u-s-government-d721188e?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 16 Nov 2026 15:22:00 GMT"
+    },
+    {
+      "id": "8a1de7eabe",
+      "title": "My husband is happily retired at 64 and thinks I should keep working. Is he being fair?",
+      "summary": "“I’m exhausted. My alarm goes off at 6 a.m., and I have a 50-minute commute.”",
+      "link": "https://www.marketwatch.com/story/my-husband-is-happily-retired-at-64-and-thinks-i-should-keep-working-is-he-being-fair-325c5f38?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 16 Nov 2026 15:15:00 GMT"
+    },
+    {
+      "id": "b60942d32d",
+      "title": "The FDA declined to approve one of biotech’s most closely watched cancer drugs",
+      "summary": "The regulator told Summit Therapeutics that the lung-cancer drug needs to prove it can help people live longer.",
+      "link": "https://www.marketwatch.com/story/the-fda-declined-to-approve-one-of-biotechs-most-closely-watched-cancer-drugs-d7c6a0a3?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 16 Nov 2026 15:06:00 GMT"
+    },
+    {
+      "id": "cbba4cd06b",
+      "title": "My older brother, who has no children, cut our only sister out of his will. I’ll get everything instead. Do I tell her?",
+      "summary": "“I’m torn between respecting my brother’s wishes and being fair to my sister.”",
+      "link": "https://www.marketwatch.com/story/she-has-a-history-of-financial-mismanagement-my-brother-cut-my-sister-out-of-his-will-im-getting-everything-do-i-tell-her-3e537851?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 16 Nov 2026 15:00:00 GMT"
+    },
+    {
+      "id": "f474b112e7",
+      "title": "Parents told us what it’s like to help their kids battle sports-gambling addiction: ‘There’s no handbook’",
+      "summary": "“We essentially married the most addictive device with the most addictive behavior, and we put them together.”",
+      "link": "https://www.marketwatch.com/story/parents-told-us-what-its-like-to-help-their-kids-battle-sports-gambling-addiction-theres-no-handbook-6e2d5bb2?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 16 Nov 2026 15:00:00 GMT"
+    },
+    {
+      "id": "f948bac89d",
+      "title": "BioAge Labs at UBS conference: pivots BGE-102 toward eye disease",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/bioage-labs-at-ubs-conference-pivots-bge102-toward-eye-disease-93CH-5030622",
+      "source": "www.investing.com",
+      "published": "2026-11-16 17:25:31"
+    },
+    {
+      "id": "1c7af4e74e",
+      "title": "First Tracks Biotherapeutics at Jefferies: celiac data lifts outlook",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/first-tracks-biotherapeutics-at-jefferies-celiac-data-lifts-outlook-93CH-5030621",
+      "source": "www.investing.com",
+      "published": "2026-11-16 17:24:52"
+    },
+    {
+      "id": "00ca0efaca",
+      "title": "Fed’s Barr warns on AI risks to financial system",
+      "summary": "",
+      "link": "https://www.investing.com/news/economic-indicators/feds-barr-warns-on-ai-risks-to-financial-system-5028804",
+      "source": "www.investing.com",
+      "published": "2026-11-16 17:24:28"
+    },
+    {
+      "id": "c4a2b4b064",
+      "title": "Prime Medicine at Jefferies: pushes gene-editing pipeline, funding options",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/prime-medicine-at-jefferies-pushes-geneediting-pipeline-funding-options-93CH-5030620",
+      "source": "www.investing.com",
+      "published": "2026-11-16 17:23:01"
+    },
+    {
+      "id": "51bb933f62",
+      "title": "European shares fall as Nvidia turmoil lingers and markets brace for AI mega-tests",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/european-shares-flat-as-nvidia-turmoil-lingers-and-markets-brace-for-ai-megatests-5028357",
+      "source": "www.investing.com",
+      "published": "2026-11-16 17:22:27"
+    },
+    {
+      "id": "888d331b9e",
+      "title": "Earnings call transcript: IBAT narrows q2 2027 loss as pilot plan advances",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-ibat-narrows-q2-2027-loss-as-pilot-plan-advances-93CH-5030619",
+      "source": "www.investing.com",
+      "published": "2026-11-16 17:21:30"
+    },
+    {
+      "id": "0eca84c78c",
+      "title": "Bank of Canada Governor Macklem to step down once term ends in 2027",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/bank-of-canada-governor-macklem-to-step-down-once-term-ends-in-2027-5030388",
+      "source": "www.investing.com",
+      "published": "2026-11-16 17:18:22"
+    },
+    {
+      "id": "96ce5c831a",
+      "title": "BC Partners Credit to acquire majority stake in CION Investment",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/bc-partners-credit-to-acquire-majority-stake-in-cion-investment-93CH-5030617",
+      "source": "www.investing.com",
+      "published": "2026-11-16 17:17:37"
+    },
+    {
+      "id": "07b84ea040",
+      "title": "Cogent Biosciences stock hits 52-week low at 27.73 USD",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/cogent-biosciences-stock-hits-52week-low-at-2773-usd-93CH-5030616",
+      "source": "www.investing.com",
+      "published": "2026-11-16 17:16:06"
+    },
+    {
+      "id": "dad88948cd",
+      "title": "Rapid Micro Biosystems earnings missed by $0.03, revenue fell short of estimates",
+      "summary": "",
+      "link": "https://www.investing.com/news/earnings/rapid-micro-biosystems-earnings-missed-by-003-revenue-fell-short-of-estimates-5030615",
+      "source": "www.investing.com",
+      "published": "2026-11-16 17:15:37"
+    }
+  ],
+  "briefing": {
+    "date": "2026-11-16",
+    "update_time": "2026-11-16 05:40:03",
+    "candidate_count": 20,
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-16\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Qwen4-Max 发布 (来源: HackerNews)\n- **核心干货**：阿里通义千问甩出 Qwen4-Max，直接对标顶级闭源模型的第一梯队。HN 上 278 分、93 条评论的热度说明这不是又一场\"跑分自嗨\"——开源阵营又多了一张能上牌桌的王牌，闭源厂商的定价权正在被一寸寸啃掉。\n- **毒舌/硬核点评**：每次发布都喊\"史上最强\"，但真正的问题是：你的 API 账单什么时候能便宜到让创业公司不再半夜偷偷算 token？模型越强，套壳公司的估值越虚。\n- **🔗 传送门**：[点击直达原链接](https://qwen.ai/blog?id=qwen4-max)\n\n---\n\n### 2. 📌 MacBook Pro 的 OLED PWM 问题：更好的屏幕，反而更难受 (来源: HackerNews)\n- **核心干货**：文章扒出 M 系列 MacBook Pro 用上 OLED 后引入的 PWM 调光问题——低亮度下频闪导致部分用户眼疲劳、头痛。447 分、255 条评论，说明这不是小众玄学，而是大量真实用户的生理反应。硬件参数的\"进步\"，可能正在牺牲一部分人的使用体验。\n- **毒舌/硬核点评**：厂商在发布会吹尼特和色域，却对频闪避而不谈。屏幕是给人看的，不是给评测仪器看的。参数表赢麻了，眼睛先投降了。\n- **🔗 传送门**：[点击直达原链接](https://macanorak.com/the-macbook-pros-oled-pwm-problem-when-a-better-display-becomes-worse-to-use/)\n\n---\n\n### 3. 📌 在仿真中训练推理模型，让机器人原生使用真实硬件 (来源: ArXiv)\n- **核心干货**：机器人操作智能体（RUA）此前只有 GPT-6 Astra、Claude Fable 5.2 这类前沿闭源模型能打，开源权重模型明显落后。这篇论文证明可以在仿真环境里训练推理模型，使其原生迁移到真实机器人上，缩小了开源与闭源在具身智能上的差距。这是把\"仿真到现实\"（Sim2Real）从口号变成可训练路径的关键一步。\n- **毒舌/硬核点评**：具身智能最大的谎言就是\"仿真里跑通了\"。这篇的价值在于：终于有人认真研究怎么让模型不把真实世界当成又一个仿真环境。开源模型追上来，最先慌的是那些卖机器人\"大脑\"授权费的。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2611.18562v1)\n\n---\n\n### 🗣️ 今日顶男金句\n> 参数是给发布会看的，体验是给用户受的——真正的技术进步，是让两者不再打架。",
+    "briefing_items": [
+      {
+        "title": "Qwen4-Max 发布",
+        "source": "HackerNews",
+        "summary": "阿里通义千问甩出 Qwen4-Max，直接对标顶级闭源模型的第一梯队。HN 上 278 分、93 条评论的热度说明这不是又一场\"跑分自嗨\"——开源阵营又多了一张能上牌桌的王牌，闭源厂商的定价权正在被一寸寸啃掉。",
+        "commentary": "每次发布都喊\"史上最强\"，但真正的问题是：你的 API 账单什么时候能便宜到让创业公司不再半夜偷偷算 token？模型越强，套壳公司的估值越虚。",
+        "url": "https://qwen.ai/blog?id=qwen4-max"
+      },
+      {
+        "title": "MacBook Pro 的 OLED PWM 问题：更好的屏幕，反而更难受",
+        "source": "HackerNews",
+        "summary": "文章扒出 M 系列 MacBook Pro 用上 OLED 后引入的 PWM 调光问题——低亮度下频闪导致部分用户眼疲劳、头痛。447 分、255 条评论，说明这不是小众玄学，而是大量真实用户的生理反应。硬件参数的\"进步\"，可能正在牺牲一部分人的使用体验。",
+        "commentary": "厂商在发布会吹尼特和色域，却对频闪避而不谈。屏幕是给人看的，不是给评测仪器看的。参数表赢麻了，眼睛先投降了。",
+        "url": "https://macanorak.com/the-macbook-pros-oled-pwm-problem-when-a-better-display-becomes-worse-to-use/"
+      },
+      {
+        "title": "在仿真中训练推理模型，让机器人原生使用真实硬件",
+        "source": "ArXiv",
+        "summary": "机器人操作智能体（RUA）此前只有 GPT-6 Astra、Claude Fable 5.2 这类前沿闭源模型能打，开源权重模型明显落后。这篇论文证明可以在仿真环境里训练推理模型，使其原生迁移到真实机器人上，缩小了开源与闭源在具身智能上的差距。这是把\"仿真到现实\"（Sim2Real）从口号变成可训练路径的关键一步。",
+        "commentary": "具身智能最大的谎言就是\"仿真里跑通了\"。这篇的价值在于：终于有人认真研究怎么让模型不把真实世界当成又一个仿真环境。开源模型追上来，最先慌的是那些卖机器人\"大脑\"授权费的。",
+        "url": "https://arxiv.org/abs/2611.18562v1"
+      },
+      {
+        "quote": "参数是给发布会看的，体验是给用户受的——真正的技术进步，是让两者不再打架。"
+      }
+    ],
+    "candidates": [
+      {
+        "id": "hn:50509837",
+        "title": "Protomaps: Self-hosting map tiles has gotten cheap and easy",
+        "summary": "",
+        "url": "https://bruceroettgers.eu/blog/protomaps/",
+        "source": "Hacker News",
+        "score": 247,
+        "comments": 51
+      },
+      {
+        "id": "hn:50513215",
+        "title": "Qwen4-Max",
+        "summary": "",
+        "url": "https://qwen.ai/blog?id=qwen4-max",
+        "source": "Hacker News",
+        "score": 278,
+        "comments": 93
+      },
+      {
+        "id": "hn:50513160",
+        "title": "Universal XSS in uBlock Origin from website-driven element picker",
+        "summary": "",
+        "url": "https://iter.ca/post/ubo-uxss/",
+        "source": "Hacker News",
+        "score": 206,
+        "comments": 51
+      },
+      {
+        "id": "hn:50511395",
+        "title": "Old Bitly links are being hijacked",
+        "summary": "",
+        "url": "https://ransomnews.com/burger-king-tweet-bitly-link-hijack-2026/",
+        "source": "Hacker News",
+        "score": 230,
+        "comments": 125
+      },
+      {
+        "id": "hn:50509308",
+        "title": "A short explainer on how El Niño works [video]",
+        "summary": "",
+        "url": "https://www.youtube.com/watch?v=7_JF3etiAv8",
+        "source": "Hacker News",
+        "score": 208,
+        "comments": 90
+      },
+      {
+        "id": "hn:50506719",
+        "title": "The MacBook Pro's OLED PWM problem",
+        "summary": "",
+        "url": "https://macanorak.com/the-macbook-pros-oled-pwm-problem-when-a-better-display-becomes-worse-to-use/",
+        "source": "Hacker News",
+        "score": 447,
+        "comments": 255
+      },
+      {
+        "id": "hn:50509023",
+        "title": "Crows make decisions faster than we can",
+        "summary": "",
+        "url": "https://www.nytimes.com/2026/11/15/science/birdbrain-crows-birds-research-decision.html",
+        "source": "Hacker News",
+        "score": 201,
+        "comments": 145
+      },
+      {
+        "id": "lob:ek4fkg",
+        "title": "All AI-generated code should be Open Source",
+        "summary": "",
+        "url": "https://jakub.jankiewicz.org/blog/ai-code-open-source/",
+        "source": "Lobste.rs",
+        "score": 46,
+        "comments": 14,
+        "tags": [
+          "programming"
+        ]
+      },
+      {
+        "id": "lob:vdxevp",
+        "title": "Memory management in 40 major C projects, a survey",
+        "summary": "",
+        "url": "https://theconsensus.dev/p/2026/11/08/c-memory-management-survey.html",
+        "source": "Lobste.rs",
+        "score": 48,
+        "comments": 12,
+        "tags": [
+          "c"
+        ]
+      },
+      {
+        "id": "hn:50509972",
+        "title": "Handwriting, as a Font",
+        "summary": "",
+        "url": "https://ductus.sorenblank.com",
+        "source": "Hacker News",
+        "score": 197,
+        "comments": 44
+      },
+      {
+        "id": "lob:dxxvek",
+        "title": "A datetime library for Rust",
+        "summary": "",
+        "url": "https://burntsushi.net/jiff/",
+        "source": "Lobste.rs",
+        "score": 46,
+        "comments": 11,
+        "tags": [
+          "rust"
+        ]
+      },
+      {
+        "id": "hn:50512235",
+        "title": "What's Next for Nvidia?",
+        "summary": "",
+        "url": "https://steveblank.com/2026/11/15/whats-next-for-nvidia/",
+        "source": "Hacker News",
+        "score": 161,
+        "comments": 210
+      },
+      {
+        "id": "arxiv:2611.18533v1",
+        "title": "ModHarness-RL: Recasting Harnesses as Learnable and Evolving Programs for Agentic RL",
+        "summary": "Agentic reinforcement learning (RL) increasingly relies on a harness, the scaffold around the model that decides what it sees of its own interaction and what guidance it receives. Most existing approaches train under a hand-written harness that stays fixed throughout. However, an effective harness d",
+        "url": "https://arxiv.org/abs/2611.18533v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.AI",
+          "cs.CL",
+          "cs.LG"
+        ],
+        "arxiv_id": "2611.18533v1"
+      },
+      {
+        "id": "lob:w9j7xs",
+        "title": "25 of my favourite modern NES games",
+        "summary": "",
+        "url": "https://jordi.inversethought.com/blog/25-of-my-favourite-modern-nes-games/",
+        "source": "Lobste.rs",
+        "score": 68,
+        "comments": 11,
+        "tags": [
+          "games",
+          "retrocomputing"
+        ]
+      },
+      {
+        "id": "lob:h8tghc",
+        "title": "cursor:pointer on buttons",
+        "summary": "",
+        "url": "https://blog.kizu.dev/cursors/",
+        "source": "Lobste.rs",
+        "score": 30,
+        "comments": 13,
+        "tags": [
+          "a11y",
+          "css",
+          "web"
+        ]
+      },
+      {
+        "id": "hn:50511806",
+        "title": "Preserving 30 years of Salon journalism",
+        "summary": "",
+        "url": "https://blog.archive.org/2026/11/12/preserving-30-years-of-salon-journalism/",
+        "source": "Hacker News",
+        "score": 118,
+        "comments": 34
+      },
+      {
+        "id": "hn:50512824",
+        "title": "Coles hit by a cybersecurity incident",
+        "summary": "",
+        "url": "https://www.colesgroup.com.au/updates/",
+        "source": "Hacker News",
+        "score": 82,
+        "comments": 59
+      },
+      {
+        "id": "hn:50512441",
+        "title": "Tor Project Issues Rapid-Response DoS-Defense Fix Amid Sustained DDoS Attack",
+        "summary": "",
+        "url": "https://forum.torproject.org/t/security-release-0-4-9-17/22454",
+        "source": "Hacker News",
+        "score": 92,
+        "comments": 24
+      },
+      {
+        "id": "arxiv:2611.18562v1",
+        "title": "Training Reasoning Models in Simulation to Natively Use Real Robots",
+        "summary": "Robot-use agents (RUAs) have emerged as a promising approach to general-purpose robot control. However, strong performance has so far been achieved only by frontier proprietary models such as GPT-6 Astra and Claude Fable 5.2, whereas open-weight models remain substantially less capable. We show that",
+        "url": "https://arxiv.org/abs/2611.18562v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.RO",
+          "cs.LG"
+        ],
+        "arxiv_id": "2611.18562v1"
+      },
+      {
+        "id": "arxiv:2611.18543v1",
+        "title": "Imitation Bootstrapped Multi-Agent Reinforcement Learning",
+        "summary": "Demonstrations are an effective way to accelerate single-agent reinforcement learning (RL), but extending this idea to multi-agent reinforcement learning (MARL) is non-trivial as it is difficult and often impossible for a single person to teleoperate multiple agents simultaneously. Round-Robin Behav",
+        "url": "https://arxiv.org/abs/2611.18543v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.AI",
+          "cs.MA"
+        ],
+        "arxiv_id": "2611.18543v1"
+      }
+    ],
+    "ai_curated": true
+  },
+  "fear_greed": {
+    "value": 10,
+    "classification": "Extreme Fear",
+    "timestamp": "2026-11-16 00:00:00"
+  }
+}
