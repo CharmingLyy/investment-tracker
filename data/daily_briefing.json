@@ -1,97 +1,70 @@
 {
-  "date": "2026-11-16",
-  "update_time": "2026-11-16 05:40:03",
+  "date": "2026-11-17",
+  "update_time": "2026-11-16 21:44:48",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-16\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Qwen4-Max 发布 (来源: HackerNews)\n- **核心干货**：阿里通义千问甩出 Qwen4-Max，直接对标顶级闭源模型的第一梯队。HN 上 278 分、93 条评论的热度说明这不是又一场\"跑分自嗨\"——开源阵营又多了一张能上牌桌的王牌，闭源厂商的定价权正在被一寸寸啃掉。\n- **毒舌/硬核点评**：每次发布都喊\"史上最强\"，但真正的问题是：你的 API 账单什么时候能便宜到让创业公司不再半夜偷偷算 token？模型越强，套壳公司的估值越虚。\n- **🔗 传送门**：[点击直达原链接](https://qwen.ai/blog?id=qwen4-max)\n\n---\n\n### 2. 📌 MacBook Pro 的 OLED PWM 问题：更好的屏幕，反而更难受 (来源: HackerNews)\n- **核心干货**：文章扒出 M 系列 MacBook Pro 用上 OLED 后引入的 PWM 调光问题——低亮度下频闪导致部分用户眼疲劳、头痛。447 分、255 条评论，说明这不是小众玄学，而是大量真实用户的生理反应。硬件参数的\"进步\"，可能正在牺牲一部分人的使用体验。\n- **毒舌/硬核点评**：厂商在发布会吹尼特和色域，却对频闪避而不谈。屏幕是给人看的，不是给评测仪器看的。参数表赢麻了，眼睛先投降了。\n- **🔗 传送门**：[点击直达原链接](https://macanorak.com/the-macbook-pros-oled-pwm-problem-when-a-better-display-becomes-worse-to-use/)\n\n---\n\n### 3. 📌 在仿真中训练推理模型，让机器人原生使用真实硬件 (来源: ArXiv)\n- **核心干货**：机器人操作智能体（RUA）此前只有 GPT-6 Astra、Claude Fable 5.2 这类前沿闭源模型能打，开源权重模型明显落后。这篇论文证明可以在仿真环境里训练推理模型，使其原生迁移到真实机器人上，缩小了开源与闭源在具身智能上的差距。这是把\"仿真到现实\"（Sim2Real）从口号变成可训练路径的关键一步。\n- **毒舌/硬核点评**：具身智能最大的谎言就是\"仿真里跑通了\"。这篇的价值在于：终于有人认真研究怎么让模型不把真实世界当成又一个仿真环境。开源模型追上来，最先慌的是那些卖机器人\"大脑\"授权费的。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2611.18562v1)\n\n---\n\n### 🗣️ 今日顶男金句\n> 参数是给发布会看的，体验是给用户受的——真正的技术进步，是让两者不再打架。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-17\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 PostgreSQL 修复 52 个漏洞，含潜伏 22 年的认证后 RCE (来源: Tech RSS / The Hacker News)\n- **核心干货**：PostgreSQL 一次性补了 52 个安全洞，其中最狠的是一处类型混淆漏洞——任何有建对象权限的数据库用户都能在服务器上执行代码，而这个 bug 已经在代码库里躺了 22 年。完整修复还得重编译服务器上所有 C 语言扩展，运维今晚别想睡了。\n- **毒舌/硬核点评**：22 年没人发现，说明这漏洞要么藏得极深，要么根本没人认真审过这段代码——安全圈天天喊\"左移\"，结果核心基础设施的祖传代码还是靠运气活着。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html)\n\n---\n\n### 2. 📌 Jiff 1.0：Rust 的\"终于有人认真做\"日期时间库 (来源: Hacker News / burntsushi.net)\n- **核心干货**：BurntSushi（ripgrep 作者）发布 Jiff 1.0，一个从零设计的 Rust 日期时间库。它直击时区处理、夏令时切换、单调时钟这些让无数程序员深夜骂娘的老大难问题，API 设计明确区分\"时间戳\"和\"民用时间\"。作者信誉本身就是质量背书。\n- **毒舌/硬核点评**：时间处理是编程界的\"送命题\"，chrono 用着用着就想砸键盘，Jiff 能不能终结这场噩梦另说，但至少 BurntSushi 出手，说明这问题终于被当回事了。\n- **🔗 传送门**：[点击直达原链接](https://burntsushi.net/jiff/)\n\n---\n\n### 3. 📌 Frame：31.5 寸彩色电子纸显示屏 (来源: Hacker News / TRMNL)\n- **核心干货**：TRMNL 推出 31.5 寸彩色电子纸显示器 Frame，把\"电子墨水\"从阅读器小屏拉到桌面级大屏。低功耗、无背光、断电保持画面，瞄准的是信息看板、数字艺术和\"反手机焦虑\"场景。彩色大尺寸电子纸的量产成本一直是行业门槛，这次算是迈了一步。\n- **毒舌/硬核点评**：终于有个屏幕能让你盯着看一整天还不伤眼——前提是你钱包够厚，而且能忍受刷新率慢到像在等 56K 拨号。\n- **🔗 传送门**：[点击直达原链接](https://trmnl.com/blog/introducing-frame)\n\n---\n\n### 🗣️ 今日顶男金句\n> 技术债和利息一样，拖得越久还得越狠——22 年前的漏洞今天来收账，连本带利。",
   "briefing_items": [
     {
-      "title": "Qwen4-Max 发布",
-      "source": "HackerNews",
-      "summary": "阿里通义千问甩出 Qwen4-Max，直接对标顶级闭源模型的第一梯队。HN 上 278 分、93 条评论的热度说明这不是又一场\"跑分自嗨\"——开源阵营又多了一张能上牌桌的王牌，闭源厂商的定价权正在被一寸寸啃掉。",
-      "commentary": "每次发布都喊\"史上最强\"，但真正的问题是：你的 API 账单什么时候能便宜到让创业公司不再半夜偷偷算 token？模型越强，套壳公司的估值越虚。",
-      "url": "https://qwen.ai/blog?id=qwen4-max"
+      "title": "PostgreSQL 修复 52 个漏洞，含潜伏 22 年的认证后 RCE",
+      "source": "Tech RSS / The Hacker News",
+      "summary": "PostgreSQL 一次性补了 52 个安全洞，其中最狠的是一处类型混淆漏洞——任何有建对象权限的数据库用户都能在服务器上执行代码，而这个 bug 已经在代码库里躺了 22 年。完整修复还得重编译服务器上所有 C 语言扩展，运维今晚别想睡了。",
+      "commentary": "22 年没人发现，说明这漏洞要么藏得极深，要么根本没人认真审过这段代码——安全圈天天喊\"左移\"，结果核心基础设施的祖传代码还是靠运气活着。",
+      "url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html"
     },
     {
-      "title": "MacBook Pro 的 OLED PWM 问题：更好的屏幕，反而更难受",
-      "source": "HackerNews",
-      "summary": "文章扒出 M 系列 MacBook Pro 用上 OLED 后引入的 PWM 调光问题——低亮度下频闪导致部分用户眼疲劳、头痛。447 分、255 条评论，说明这不是小众玄学，而是大量真实用户的生理反应。硬件参数的\"进步\"，可能正在牺牲一部分人的使用体验。",
-      "commentary": "厂商在发布会吹尼特和色域，却对频闪避而不谈。屏幕是给人看的，不是给评测仪器看的。参数表赢麻了，眼睛先投降了。",
-      "url": "https://macanorak.com/the-macbook-pros-oled-pwm-problem-when-a-better-display-becomes-worse-to-use/"
+      "title": "Jiff 1.0：Rust 的\"终于有人认真做\"日期时间库",
+      "source": "Hacker News / burntsushi.net",
+      "summary": "BurntSushi（ripgrep 作者）发布 Jiff 1.0，一个从零设计的 Rust 日期时间库。它直击时区处理、夏令时切换、单调时钟这些让无数程序员深夜骂娘的老大难问题，API 设计明确区分\"时间戳\"和\"民用时间\"。作者信誉本身就是质量背书。",
+      "commentary": "时间处理是编程界的\"送命题\"，chrono 用着用着就想砸键盘，Jiff 能不能终结这场噩梦另说，但至少 BurntSushi 出手，说明这问题终于被当回事了。",
+      "url": "https://burntsushi.net/jiff/"
     },
     {
-      "title": "在仿真中训练推理模型，让机器人原生使用真实硬件",
-      "source": "ArXiv",
-      "summary": "机器人操作智能体（RUA）此前只有 GPT-6 Astra、Claude Fable 5.2 这类前沿闭源模型能打，开源权重模型明显落后。这篇论文证明可以在仿真环境里训练推理模型，使其原生迁移到真实机器人上，缩小了开源与闭源在具身智能上的差距。这是把\"仿真到现实\"（Sim2Real）从口号变成可训练路径的关键一步。",
-      "commentary": "具身智能最大的谎言就是\"仿真里跑通了\"。这篇的价值在于：终于有人认真研究怎么让模型不把真实世界当成又一个仿真环境。开源模型追上来，最先慌的是那些卖机器人\"大脑\"授权费的。",
-      "url": "https://arxiv.org/abs/2611.18562v1"
+      "title": "Frame：31.5 寸彩色电子纸显示屏",
+      "source": "Hacker News / TRMNL",
+      "summary": "TRMNL 推出 31.5 寸彩色电子纸显示器 Frame，把\"电子墨水\"从阅读器小屏拉到桌面级大屏。低功耗、无背光、断电保持画面，瞄准的是信息看板、数字艺术和\"反手机焦虑\"场景。彩色大尺寸电子纸的量产成本一直是行业门槛，这次算是迈了一步。",
+      "commentary": "终于有个屏幕能让你盯着看一整天还不伤眼——前提是你钱包够厚，而且能忍受刷新率慢到像在等 56K 拨号。",
+      "url": "https://trmnl.com/blog/introducing-frame"
     },
     {
-      "quote": "参数是给发布会看的，体验是给用户受的——真正的技术进步，是让两者不再打架。"
+      "quote": "技术债和利息一样，拖得越久还得越狠——22 年前的漏洞今天来收账，连本带利。"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50509837",
-      "title": "Protomaps: Self-hosting map tiles has gotten cheap and easy",
+      "id": "hn:50519744",
+      "title": "Jiff 1.0: A datetime library for Rust",
       "summary": "",
-      "url": "https://bruceroettgers.eu/blog/protomaps/",
+      "url": "https://burntsushi.net/jiff/",
       "source": "Hacker News",
-      "score": 247,
-      "comments": 51
+      "score": 246,
+      "comments": 53
     },
     {
-      "id": "hn:50513215",
-      "title": "Qwen4-Max",
+      "id": "hn:50521045",
+      "title": "Outages reported at Bank of America, Chase, U.S. Bank, Wells Fargo and Zelle",
       "summary": "",
-      "url": "https://qwen.ai/blog?id=qwen4-max",
+      "url": "https://apnews.com/article/bank-outage-chase-wells-fargo-truist-50fee2693c22f597fa6ca51a97ef2cda",
       "source": "Hacker News",
-      "score": 278,
-      "comments": 93
+      "score": 557,
+      "comments": 425
     },
     {
-      "id": "hn:50513160",
-      "title": "Universal XSS in uBlock Origin from website-driven element picker",
+      "id": "hn:50519354",
+      "title": "Frame – 31.5\" color ePaper display",
       "summary": "",
-      "url": "https://iter.ca/post/ubo-uxss/",
+      "url": "https://trmnl.com/blog/introducing-frame",
       "source": "Hacker News",
-      "score": 206,
-      "comments": 51
+      "score": 213,
+      "comments": 134
     },
     {
-      "id": "hn:50511395",
-      "title": "Old Bitly links are being hijacked",
+      "id": "hn:50516473",
+      "title": "The Secret ThinkPad Powerbutton Code to Bring Dead Laptops Back to Life (2007)",
       "summary": "",
-      "url": "https://ransomnews.com/burger-king-tweet-bitly-link-hijack-2026/",
+      "url": "https://masnick.com/posts/the-secret-thinkpad-powerbutton-code-to-bring-dead-laptops-back-to-life/",
       "source": "Hacker News",
-      "score": 230,
-      "comments": 125
-    },
-    {
-      "id": "hn:50509308",
-      "title": "A short explainer on how El Niño works [video]",
-      "summary": "",
-      "url": "https://www.youtube.com/watch?v=7_JF3etiAv8",
-      "source": "Hacker News",
-      "score": 208,
-      "comments": 90
-    },
-    {
-      "id": "hn:50506719",
-      "title": "The MacBook Pro's OLED PWM problem",
-      "summary": "",
-      "url": "https://macanorak.com/the-macbook-pros-oled-pwm-problem-when-a-better-display-becomes-worse-to-use/",
-      "source": "Hacker News",
-      "score": 447,
-      "comments": 255
-    },
-    {
-      "id": "hn:50509023",
-      "title": "Crows make decisions faster than we can",
-      "summary": "",
-      "url": "https://www.nytimes.com/2026/11/15/science/birdbrain-crows-birds-research-decision.html",
-      "source": "Hacker News",
-      "score": 201,
-      "comments": 145
+      "score": 276,
+      "comments": 110
     },
     {
       "id": "lob:ek4fkg",
@@ -99,53 +72,33 @@
       "summary": "",
       "url": "https://jakub.jankiewicz.org/blog/ai-code-open-source/",
       "source": "Lobste.rs",
-      "score": 46,
-      "comments": 14,
+      "score": 73,
+      "comments": 27,
       "tags": [
         "programming"
       ]
     },
     {
-      "id": "lob:vdxevp",
-      "title": "Memory management in 40 major C projects, a survey",
+      "id": "hn:50520182",
+      "title": "Grazing sheep in fields with solar arrays",
       "summary": "",
-      "url": "https://theconsensus.dev/p/2026/11/08/c-memory-management-survey.html",
-      "source": "Lobste.rs",
-      "score": 48,
-      "comments": 12,
-      "tags": [
-        "c"
-      ]
-    },
-    {
-      "id": "hn:50509972",
-      "title": "Handwriting, as a Font",
-      "summary": "",
-      "url": "https://ductus.sorenblank.com",
+      "url": "https://news.cornell.edu/stories/2026/10/sheep-grazing-solar-fields-offers-farmers-economic-ecological-gains",
       "source": "Hacker News",
-      "score": 197,
-      "comments": 44
+      "score": 162,
+      "comments": 128
     },
     {
-      "id": "lob:dxxvek",
-      "title": "A datetime library for Rust",
+      "id": "lob:rhoopo",
+      "title": "Migrating from GitHub to Codeberg",
       "summary": "",
-      "url": "https://burntsushi.net/jiff/",
+      "url": "https://yorickpeterse.com/articles/migrating-from-github-to-codeberg/",
       "source": "Lobste.rs",
-      "score": 46,
-      "comments": 11,
+      "score": 61,
+      "comments": 16,
       "tags": [
-        "rust"
+        "programming",
+        "vcs"
       ]
-    },
-    {
-      "id": "hn:50512235",
-      "title": "What's Next for Nvidia?",
-      "summary": "",
-      "url": "https://steveblank.com/2026/11/15/whats-next-for-nvidia/",
-      "source": "Hacker News",
-      "score": 161,
-      "comments": 210
     },
     {
       "id": "arxiv:2611.18533v1",
@@ -161,58 +114,61 @@
       "arxiv_id": "2611.18533v1"
     },
     {
-      "id": "lob:w9j7xs",
-      "title": "25 of my favourite modern NES games",
+      "id": "lob:thiekk",
+      "title": "Paint in the memory of other programs",
       "summary": "",
-      "url": "https://jordi.inversethought.com/blog/25-of-my-favourite-modern-nes-games/",
+      "url": "https://citrons.xyz/journal/2026-04-13",
       "source": "Lobste.rs",
-      "score": 68,
-      "comments": 11,
+      "score": 62,
+      "comments": 6,
       "tags": [
-        "games",
-        "retrocomputing"
+        "programming",
+        "visualization"
       ]
     },
     {
-      "id": "lob:h8tghc",
-      "title": "cursor:pointer on buttons",
+      "id": "lob:dgvb5g",
+      "title": "What is w2rt6byl5nf1opmc-a[.]com?",
       "summary": "",
-      "url": "https://blog.kizu.dev/cursors/",
+      "url": "https://jack.cab/blog/siterate.html",
       "source": "Lobste.rs",
-      "score": 30,
-      "comments": 13,
+      "score": 38,
+      "comments": 7,
       "tags": [
-        "a11y",
-        "css",
         "web"
       ]
     },
     {
-      "id": "hn:50511806",
-      "title": "Preserving 30 years of Salon journalism",
+      "id": "hn:50520270",
+      "title": "Aristotle Expands into Rust",
       "summary": "",
-      "url": "https://blog.archive.org/2026/11/12/preserving-30-years-of-salon-journalism/",
+      "url": "https://www.harmonic.fun/news/aristotle-rust-verification/",
       "source": "Hacker News",
-      "score": 118,
-      "comments": 34
+      "score": 77,
+      "comments": 41
     },
     {
-      "id": "hn:50512824",
-      "title": "Coles hit by a cybersecurity incident",
+      "id": "lob:emdfap",
+      "title": "you won't win at copyright",
       "summary": "",
-      "url": "https://www.colesgroup.com.au/updates/",
-      "source": "Hacker News",
-      "score": 82,
-      "comments": 59
+      "url": "https://ingrids.space/posts/you-wont-win-at-copyright/",
+      "source": "Lobste.rs",
+      "score": 60,
+      "comments": 5,
+      "tags": [
+        "culture",
+        "law",
+        "philosophy"
+      ]
     },
     {
-      "id": "hn:50512441",
-      "title": "Tor Project Issues Rapid-Response DoS-Defense Fix Amid Sustained DDoS Attack",
+      "id": "hn:50520804",
+      "title": "OpenAI: Strengthening the fight against online child sexual abuse",
       "summary": "",
-      "url": "https://forum.torproject.org/t/security-release-0-4-9-17/22454",
+      "url": "https://openai.com/index/strengthening-online-child-safety/",
       "source": "Hacker News",
-      "score": 92,
-      "comments": 24
+      "score": 70,
+      "comments": 120
     },
     {
       "id": "arxiv:2611.18562v1",
@@ -237,6 +193,63 @@
         "cs.MA"
       ],
       "arxiv_id": "2611.18543v1"
+    },
+    {
+      "id": "rss:2b871475e5",
+      "title": "PostgreSQL Patches 52 Flaws, Including 22-Year-Old Bug Enabling Authenticated RCE",
+      "summary": "A type confusion flaw in PostgreSQL lets a database user who can create objects run code on the server. Updates released yesterday fix it, along with 51 other security flaws. Full protection from this flaw also requires rebuilding any C-language extensions installed on the server.\n\nThe flaw, tracked",
+      "url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "lob:isejqv",
+      "title": "What are you doing this week?",
+      "summary": "<p>What are you doing this week? Feel free to share!</p>\n<p>Keep in mind it’s OK to do nothing at all, too.</p>\n",
+      "url": "https://lobste.rs/s/isejqv/what_are_you_doing_this_week",
+      "source": "Lobste.rs",
+      "score": 13,
+      "comments": 16,
+      "tags": [
+        "ask",
+        "programming"
+      ]
+    },
+    {
+      "id": "hn:50443844",
+      "title": "Giant Roadside Attractions Face Mounting Costs and an Uncertain Future",
+      "summary": "",
+      "url": "https://www.nytimes.com/2026/11/08/world/canada/roadside-attractions-giant-dinosaur.html",
+      "source": "Hacker News",
+      "score": 27,
+      "comments": 28
+    },
+    {
+      "id": "lob:ydzo2o",
+      "title": "Announcing Hegel-clj",
+      "summary": "",
+      "url": "https://aphyr.com/posts/428-announcing-hegel-clj",
+      "source": "Lobste.rs",
+      "score": 34,
+      "comments": 1,
+      "tags": [
+        "clojure",
+        "release",
+        "testing"
+      ]
+    },
+    {
+      "id": "arxiv:2611.18531v1",
+      "title": "Alignment by Socialization: Learning Tradeoffs Under Selection",
+      "summary": "Artificial intelligence (AI) agents are expected to complete tasks while following rules of conduct, but these objectives can conflict. We study how evolutionary selection shapes an agent's choices between them, and whether experience can make those choices reflect human judgments and withstand subs",
+      "url": "https://arxiv.org/abs/2611.18531v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "q-bio.PE",
+        "q-fin.GN"
+      ],
+      "arxiv_id": "2611.18531v1"
     }
   ],
   "ai_curated": true
