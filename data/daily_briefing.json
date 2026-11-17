@@ -1,32 +1,29 @@
 {
   "date": "2026-11-17",
-  "update_time": "2026-11-16 21:44:48",
+  "update_time": "2026-11-17 07:16:49",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-17\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 PostgreSQL 修复 52 个漏洞，含潜伏 22 年的认证后 RCE (来源: Tech RSS / The Hacker News)\n- **核心干货**：PostgreSQL 一次性补了 52 个安全洞，其中最狠的是一处类型混淆漏洞——任何有建对象权限的数据库用户都能在服务器上执行代码，而这个 bug 已经在代码库里躺了 22 年。完整修复还得重编译服务器上所有 C 语言扩展，运维今晚别想睡了。\n- **毒舌/硬核点评**：22 年没人发现，说明这漏洞要么藏得极深，要么根本没人认真审过这段代码——安全圈天天喊\"左移\"，结果核心基础设施的祖传代码还是靠运气活着。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html)\n\n---\n\n### 2. 📌 Jiff 1.0：Rust 的\"终于有人认真做\"日期时间库 (来源: Hacker News / burntsushi.net)\n- **核心干货**：BurntSushi（ripgrep 作者）发布 Jiff 1.0，一个从零设计的 Rust 日期时间库。它直击时区处理、夏令时切换、单调时钟这些让无数程序员深夜骂娘的老大难问题，API 设计明确区分\"时间戳\"和\"民用时间\"。作者信誉本身就是质量背书。\n- **毒舌/硬核点评**：时间处理是编程界的\"送命题\"，chrono 用着用着就想砸键盘，Jiff 能不能终结这场噩梦另说，但至少 BurntSushi 出手，说明这问题终于被当回事了。\n- **🔗 传送门**：[点击直达原链接](https://burntsushi.net/jiff/)\n\n---\n\n### 3. 📌 Frame：31.5 寸彩色电子纸显示屏 (来源: Hacker News / TRMNL)\n- **核心干货**：TRMNL 推出 31.5 寸彩色电子纸显示器 Frame，把\"电子墨水\"从阅读器小屏拉到桌面级大屏。低功耗、无背光、断电保持画面，瞄准的是信息看板、数字艺术和\"反手机焦虑\"场景。彩色大尺寸电子纸的量产成本一直是行业门槛，这次算是迈了一步。\n- **毒舌/硬核点评**：终于有个屏幕能让你盯着看一整天还不伤眼——前提是你钱包够厚，而且能忍受刷新率慢到像在等 56K 拨号。\n- **🔗 传送门**：[点击直达原链接](https://trmnl.com/blog/introducing-frame)\n\n---\n\n### 🗣️ 今日顶男金句\n> 技术债和利息一样，拖得越久还得越狠——22 年前的漏洞今天来收账，连本带利。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-17\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 PostgreSQL 一口气补 52 个洞，其中一个是 22 年前的\"祖传 RCE\" (来源: Tech RSS / The Hacker News)\n- **核心干货**：PostgreSQL 发布安全更新修复 52 个漏洞，最扎眼的是一个潜伏 22 年的类型混淆（type confusion）缺陷——只要数据库用户有建对象权限，就能在服务器上执行任意代码。更麻烦的是，彻底修复还得把服务器上所有 C 语言扩展全部重编译一遍。其余 51 个漏洞也一并打包。\n- **毒舌/硬核点评**：22 年没人发现，说明这洞比很多读这篇简报的工程师的职业生涯都长。恭喜 PostgreSQL 用户，今天不是\"要不要升级\"的问题，是\"你那些年久失修的 C 扩展还编得动吗\"的问题。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html)\n\n---\n\n### 2. 📌 Windows 11 正在偷偷记录你用了哪些 AI 编程 Agent 和开发工具 (来源: Hacker News，495 分)\n- **核心干货**：有人扒出 Windows 11 的遥测机制会收集你机器上运行了哪些 coding agent 和开发者工具。这不是普通的崩溃日志，而是对你\"开发工作流\"的画像——你用 Copilot 还是 Cursor、跑什么本地模型，微软大概率比你老板还清楚。\n- **毒舌/硬核点评**：一边卖你 Copilot 订阅，一边统计你装了几个竞品，这波叫\"生态调研\"，翻译成人话就是\"竞品情报，谢谢你的遥测\"。开发机建议默认把遥测当敌情处理，别等哪天你的工具链成了别人的商业分析报表。\n- **🔗 传送门**：[点击直达原链接](https://xusheng.dev/posts/windows-coding-agent-telemetry/)\n\n---\n\n### 3. 📌 CMU 把计算机课程免费搬上 YouTube (来源: Hacker News，1247 分)\n- **核心干货**：卡内基梅隆大学把自家 CS 课程系统性放到 YouTube 免费公开，1247 分的热度说明这不是营销噱头而是真材实料。对自学者来说，相当于顶级 CS 学位的核心课程表被公开拆墙，成本从六位数学费降到 0。\n- **毒舌/硬核点评**：课程免费了，但没人替你写作业、debug 到凌晨三点。真正稀缺的从来不是 MIT/CMU 的讲义——那玩意儿网上早就有——而是能对着它啃完 15 周不跑路的那点自律。资源平权的尽头，是执行力平权。\n- **🔗 传送门**：[点击直达原链接](https://www.cs.cmu.edu/learn/)\n\n---\n\n### 🗣️ 今日顶男金句\n技术债和信用卡一样，刷卡的时候很爽，账单来的时候才发现利息是复利计算的——那个 22 年前的洞，就是最好的对账单。",
   "briefing_items": [
     {
-      "title": "PostgreSQL 修复 52 个漏洞，含潜伏 22 年的认证后 RCE",
+      "title": "PostgreSQL 一口气补 52 个洞，其中一个是 22 年前的\"祖传 RCE\"",
       "source": "Tech RSS / The Hacker News",
-      "summary": "PostgreSQL 一次性补了 52 个安全洞，其中最狠的是一处类型混淆漏洞——任何有建对象权限的数据库用户都能在服务器上执行代码，而这个 bug 已经在代码库里躺了 22 年。完整修复还得重编译服务器上所有 C 语言扩展，运维今晚别想睡了。",
-      "commentary": "22 年没人发现，说明这漏洞要么藏得极深，要么根本没人认真审过这段代码——安全圈天天喊\"左移\"，结果核心基础设施的祖传代码还是靠运气活着。",
+      "summary": "PostgreSQL 发布安全更新修复 52 个漏洞，最扎眼的是一个潜伏 22 年的类型混淆（type confusion）缺陷——只要数据库用户有建对象权限，就能在服务器上执行任意代码。更麻烦的是，彻底修复还得把服务器上所有 C 语言扩展全部重编译一遍。其余 51 个漏洞也一并打包。",
+      "commentary": "22 年没人发现，说明这洞比很多读这篇简报的工程师的职业生涯都长。恭喜 PostgreSQL 用户，今天不是\"要不要升级\"的问题，是\"你那些年久失修的 C 扩展还编得动吗\"的问题。",
       "url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html"
     },
     {
-      "title": "Jiff 1.0：Rust 的\"终于有人认真做\"日期时间库",
-      "source": "Hacker News / burntsushi.net",
-      "summary": "BurntSushi（ripgrep 作者）发布 Jiff 1.0，一个从零设计的 Rust 日期时间库。它直击时区处理、夏令时切换、单调时钟这些让无数程序员深夜骂娘的老大难问题，API 设计明确区分\"时间戳\"和\"民用时间\"。作者信誉本身就是质量背书。",
-      "commentary": "时间处理是编程界的\"送命题\"，chrono 用着用着就想砸键盘，Jiff 能不能终结这场噩梦另说，但至少 BurntSushi 出手，说明这问题终于被当回事了。",
-      "url": "https://burntsushi.net/jiff/"
+      "title": "Windows 11 正在偷偷记录你用了哪些 AI 编程 Agent 和开发工具",
+      "source": "Hacker News，495 分",
+      "summary": "有人扒出 Windows 11 的遥测机制会收集你机器上运行了哪些 coding agent 和开发者工具。这不是普通的崩溃日志，而是对你\"开发工作流\"的画像——你用 Copilot 还是 Cursor、跑什么本地模型，微软大概率比你老板还清楚。",
+      "commentary": "一边卖你 Copilot 订阅，一边统计你装了几个竞品，这波叫\"生态调研\"，翻译成人话就是\"竞品情报，谢谢你的遥测\"。开发机建议默认把遥测当敌情处理，别等哪天你的工具链成了别人的商业分析报表。",
+      "url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/"
     },
     {
-      "title": "Frame：31.5 寸彩色电子纸显示屏",
-      "source": "Hacker News / TRMNL",
-      "summary": "TRMNL 推出 31.5 寸彩色电子纸显示器 Frame，把\"电子墨水\"从阅读器小屏拉到桌面级大屏。低功耗、无背光、断电保持画面，瞄准的是信息看板、数字艺术和\"反手机焦虑\"场景。彩色大尺寸电子纸的量产成本一直是行业门槛，这次算是迈了一步。",
-      "commentary": "终于有个屏幕能让你盯着看一整天还不伤眼——前提是你钱包够厚，而且能忍受刷新率慢到像在等 56K 拨号。",
-      "url": "https://trmnl.com/blog/introducing-frame"
-    },
-    {
-      "quote": "技术债和利息一样，拖得越久还得越狠——22 年前的漏洞今天来收账，连本带利。"
+      "title": "CMU 把计算机课程免费搬上 YouTube",
+      "source": "Hacker News，1247 分",
+      "summary": "卡内基梅隆大学把自家 CS 课程系统性放到 YouTube 免费公开，1247 分的热度说明这不是营销噱头而是真材实料。对自学者来说，相当于顶级 CS 学位的核心课程表被公开拆墙，成本从六位数学费降到 0。",
+      "commentary": "课程免费了，但没人替你写作业、debug 到凌晨三点。真正稀缺的从来不是 MIT/CMU 的讲义——那玩意儿网上早就有——而是能对着它啃完 15 周不跑路的那点自律。资源平权的尽头，是执行力平权。",
+      "url": "https://www.cs.cmu.edu/learn/"
     }
   ],
   "candidates": [
@@ -36,17 +33,44 @@
       "summary": "",
       "url": "https://burntsushi.net/jiff/",
       "source": "Hacker News",
-      "score": 246,
-      "comments": 53
+      "score": 359,
+      "comments": 80
     },
     {
-      "id": "hn:50521045",
-      "title": "Outages reported at Bank of America, Chase, U.S. Bank, Wells Fargo and Zelle",
+      "id": "hn:50524736",
+      "title": "Windows 11 Is Collecting Data on Which Coding Agents and Developer Tools You Use",
       "summary": "",
-      "url": "https://apnews.com/article/bank-outage-chase-wells-fargo-truist-50fee2693c22f597fa6ca51a97ef2cda",
+      "url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/",
       "source": "Hacker News",
-      "score": 557,
-      "comments": 425
+      "score": 495,
+      "comments": 334
+    },
+    {
+      "id": "hn:50523601",
+      "title": "BugMeNot has closed",
+      "summary": "",
+      "url": "https://www.bugmenot.com/",
+      "source": "Hacker News",
+      "score": 473,
+      "comments": 218
+    },
+    {
+      "id": "hn:50522980",
+      "title": "Carnegie Mellon is putting computer science courses on YouTube for free",
+      "summary": "",
+      "url": "https://www.cs.cmu.edu/learn/",
+      "source": "Hacker News",
+      "score": 1247,
+      "comments": 178
+    },
+    {
+      "id": "hn:50524767",
+      "title": "Optimizely compromised, served malware on Zoom, GitLab",
+      "summary": "",
+      "url": "https://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely/",
+      "source": "Hacker News",
+      "score": 269,
+      "comments": 113
     },
     {
       "id": "hn:50519354",
@@ -54,38 +78,26 @@
       "summary": "",
       "url": "https://trmnl.com/blog/introducing-frame",
       "source": "Hacker News",
-      "score": 213,
-      "comments": 134
+      "score": 378,
+      "comments": 268
     },
     {
-      "id": "hn:50516473",
-      "title": "The Secret ThinkPad Powerbutton Code to Bring Dead Laptops Back to Life (2007)",
+      "id": "hn:50522643",
+      "title": "Chemistry is Actually Geometry",
       "summary": "",
-      "url": "https://masnick.com/posts/the-secret-thinkpad-powerbutton-code-to-bring-dead-laptops-back-to-life/",
+      "url": "https://chillphysicsenjoyer.substack.com/p/chemistry-is-actually-geometry",
       "source": "Hacker News",
-      "score": 276,
+      "score": 195,
+      "comments": 99
+    },
+    {
+      "id": "hn:50523459",
+      "title": "OpenCode Browse",
+      "summary": "",
+      "url": "https://opencode.ai/product/browse",
+      "source": "Hacker News",
+      "score": 214,
       "comments": 110
-    },
-    {
-      "id": "lob:ek4fkg",
-      "title": "All AI-generated code should be Open Source",
-      "summary": "",
-      "url": "https://jakub.jankiewicz.org/blog/ai-code-open-source/",
-      "source": "Lobste.rs",
-      "score": 73,
-      "comments": 27,
-      "tags": [
-        "programming"
-      ]
-    },
-    {
-      "id": "hn:50520182",
-      "title": "Grazing sheep in fields with solar arrays",
-      "summary": "",
-      "url": "https://news.cornell.edu/stories/2026/10/sheep-grazing-solar-fields-offers-farmers-economic-ecological-gains",
-      "source": "Hacker News",
-      "score": 162,
-      "comments": 128
     },
     {
       "id": "lob:rhoopo",
@@ -93,38 +105,21 @@
       "summary": "",
       "url": "https://yorickpeterse.com/articles/migrating-from-github-to-codeberg/",
       "source": "Lobste.rs",
-      "score": 61,
-      "comments": 16,
+      "score": 68,
+      "comments": 25,
       "tags": [
         "programming",
         "vcs"
       ]
     },
     {
-      "id": "arxiv:2611.18533v1",
-      "title": "ModHarness-RL: Recasting Harnesses as Learnable and Evolving Programs for Agentic RL",
-      "summary": "Agentic reinforcement learning (RL) increasingly relies on a harness, the scaffold around the model that decides what it sees of its own interaction and what guidance it receives. Most existing approaches train under a hand-written harness that stays fixed throughout. However, an effective harness d",
-      "url": "https://arxiv.org/abs/2611.18533v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "arxiv_id": "2611.18533v1"
-    },
-    {
-      "id": "lob:thiekk",
-      "title": "Paint in the memory of other programs",
+      "id": "hn:50526152",
+      "title": "Running coding agents without handing them my credentials",
       "summary": "",
-      "url": "https://citrons.xyz/journal/2026-04-13",
-      "source": "Lobste.rs",
-      "score": 62,
-      "comments": 6,
-      "tags": [
-        "programming",
-        "visualization"
-      ]
+      "url": "https://blog.antonio.cx/running-agents-with-lend",
+      "source": "Hacker News",
+      "score": 94,
+      "comments": 51
     },
     {
       "id": "lob:dgvb5g",
@@ -132,20 +127,20 @@
       "summary": "",
       "url": "https://jack.cab/blog/siterate.html",
       "source": "Lobste.rs",
-      "score": 38,
-      "comments": 7,
+      "score": 57,
+      "comments": 11,
       "tags": [
         "web"
       ]
     },
     {
-      "id": "hn:50520270",
-      "title": "Aristotle Expands into Rust",
+      "id": "hn:50523025",
+      "title": "Comcast's \"fiber-powered Wi-Fi\" is cable, AT&T says in false advertising case",
       "summary": "",
-      "url": "https://www.harmonic.fun/news/aristotle-rust-verification/",
+      "url": "https://arstechnica.com/tech-policy/2026/11/comcast-falsely-advertises-cable-internet-as-fiber-powered-att-lawsuit-says/",
       "source": "Hacker News",
-      "score": 77,
-      "comments": 41
+      "score": 118,
+      "comments": 106
     },
     {
       "id": "lob:emdfap",
@@ -153,8 +148,8 @@
       "summary": "",
       "url": "https://ingrids.space/posts/you-wont-win-at-copyright/",
       "source": "Lobste.rs",
-      "score": 60,
-      "comments": 5,
+      "score": 70,
+      "comments": 11,
       "tags": [
         "culture",
         "law",
@@ -162,37 +157,78 @@
       ]
     },
     {
-      "id": "hn:50520804",
-      "title": "OpenAI: Strengthening the fight against online child sexual abuse",
+      "id": "lob:thiekk",
+      "title": "Paint in the memory of other programs",
       "summary": "",
-      "url": "https://openai.com/index/strengthening-online-child-safety/",
+      "url": "https://citrons.xyz/journal/2026-04-13",
+      "source": "Lobste.rs",
+      "score": 71,
+      "comments": 6,
+      "tags": [
+        "programming",
+        "visualization"
+      ]
+    },
+    {
+      "id": "lob:s7mejx",
+      "title": "How Rust Changed Me As A Developer",
+      "summary": "",
+      "url": "https://blog.startifact.com/posts/how-rust-changed-me/",
+      "source": "Lobste.rs",
+      "score": 22,
+      "comments": 10,
+      "tags": [
+        "performance",
+        "rust"
+      ]
+    },
+    {
+      "id": "lob:urcrqe",
+      "title": "Janet Reno was talking about my friend Coolio (computer criminal)",
+      "summary": "",
+      "url": "https://michael.bacarella.com/2026/11/16/janet-reno-vs-my-friend-coolio/",
+      "source": "Lobste.rs",
+      "score": 28,
+      "comments": 11,
+      "tags": [
+        "culture",
+        "security"
+      ]
+    },
+    {
+      "id": "hn:50526560",
+      "title": "If an App Asks for Full Disk Access or System and App Protection Override",
+      "summary": "",
+      "url": "https://support.apple.com/en-us/149699",
       "source": "Hacker News",
-      "score": 70,
-      "comments": 120
+      "score": 85,
+      "comments": 50
     },
     {
-      "id": "arxiv:2611.18562v1",
-      "title": "Training Reasoning Models in Simulation to Natively Use Real Robots",
-      "summary": "Robot-use agents (RUAs) have emerged as a promising approach to general-purpose robot control. However, strong performance has so far been achieved only by frontier proprietary models such as GPT-6 Astra and Claude Fable 5.2, whereas open-weight models remain substantially less capable. We show that",
-      "url": "https://arxiv.org/abs/2611.18562v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.RO",
-        "cs.LG"
-      ],
-      "arxiv_id": "2611.18562v1"
+      "id": "lob:ki1l5r",
+      "title": "\"Proof of use\" as a requirement for open source contributions?",
+      "summary": "<p>As an open source maintainer, I get a lot of AI slop PRs. Some of these have genuine value. Most address edge cases that almost never occur in real life. It's not that they're not fixing real problems, it's that they're fixing problems that nobody is ever likely to encounter.</p>\n<p>I'm experimen",
+      "url": "https://lobste.rs/s/ki1l5r/proof_use_as_requirement_for_open_source",
+      "source": "Lobste.rs",
+      "score": 17,
+      "comments": 5,
+      "tags": [
+        "ai",
+        "ask",
+        "culture"
+      ]
     },
     {
-      "id": "arxiv:2611.18543v1",
-      "title": "Imitation Bootstrapped Multi-Agent Reinforcement Learning",
-      "summary": "Demonstrations are an effective way to accelerate single-agent reinforcement learning (RL), but extending this idea to multi-agent reinforcement learning (MARL) is non-trivial as it is difficult and often impossible for a single person to teleoperate multiple agents simultaneously. Round-Robin Behav",
-      "url": "https://arxiv.org/abs/2611.18543v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.MA"
-      ],
-      "arxiv_id": "2611.18543v1"
+      "id": "lob:iihw5u",
+      "title": "Squircles",
+      "summary": "",
+      "url": "https://linebender.org/wiki/curves/squircle/",
+      "source": "Lobste.rs",
+      "score": 44,
+      "comments": 5,
+      "tags": [
+        "graphics"
+      ]
     },
     {
       "id": "rss:2b871475e5",
@@ -201,55 +237,6 @@
       "url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html",
       "source": "Tech RSS",
       "score": 0
-    },
-    {
-      "id": "lob:isejqv",
-      "title": "What are you doing this week?",
-      "summary": "<p>What are you doing this week? Feel free to share!</p>\n<p>Keep in mind it’s OK to do nothing at all, too.</p>\n",
-      "url": "https://lobste.rs/s/isejqv/what_are_you_doing_this_week",
-      "source": "Lobste.rs",
-      "score": 13,
-      "comments": 16,
-      "tags": [
-        "ask",
-        "programming"
-      ]
-    },
-    {
-      "id": "hn:50443844",
-      "title": "Giant Roadside Attractions Face Mounting Costs and an Uncertain Future",
-      "summary": "",
-      "url": "https://www.nytimes.com/2026/11/08/world/canada/roadside-attractions-giant-dinosaur.html",
-      "source": "Hacker News",
-      "score": 27,
-      "comments": 28
-    },
-    {
-      "id": "lob:ydzo2o",
-      "title": "Announcing Hegel-clj",
-      "summary": "",
-      "url": "https://aphyr.com/posts/428-announcing-hegel-clj",
-      "source": "Lobste.rs",
-      "score": 34,
-      "comments": 1,
-      "tags": [
-        "clojure",
-        "release",
-        "testing"
-      ]
-    },
-    {
-      "id": "arxiv:2611.18531v1",
-      "title": "Alignment by Socialization: Learning Tradeoffs Under Selection",
-      "summary": "Artificial intelligence (AI) agents are expected to complete tasks while following rules of conduct, but these objectives can conflict. We study how evolutionary selection shapes an agent's choices between them, and whether experience can make those choices reflect human judgments and withstand subs",
-      "url": "https://arxiv.org/abs/2611.18531v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "q-bio.PE",
-        "q-fin.GN"
-      ],
-      "arxiv_id": "2611.18531v1"
     }
   ],
   "ai_curated": true
