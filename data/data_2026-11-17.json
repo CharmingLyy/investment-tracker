@@ -1,0 +1,827 @@
+{
+  "update_time": "2026-11-17 17:13:48",
+  "stocks": {
+    "a_stocks": [
+      {
+        "market": "A股",
+        "code": "002050",
+        "name": "三花智控",
+        "symbol": "sz.002050",
+        "industry": null,
+        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
+        "price": 32.88,
+        "open": 33.35,
+        "high": 34.07,
+        "low": 32.58,
+        "change_pct": -2.23,
+        "volume": 49019563,
+        "turnover": 16.29,
+        "market_cap": null,
+        "pe": 35.59,
+        "cash_flow": null,
+        "macd": -0.0278,
+        "macd_signal": 0.0049,
+        "macd_histogram": -0.0654,
+        "rsi": 43.91,
+        "ma": {
+          "MA5": 34.47,
+          "MA10": 34.51,
+          "MA20": 34.22,
+          "MA60": 34.75
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
+        "price": 5.83,
+        "open": 5.87,
+        "high": 5.88,
+        "low": 5.77,
+        "change_pct": -0.85,
+        "volume": 44002514,
+        "turnover": 2.56,
+        "market_cap": null,
+        "pe": 65.46,
+        "cash_flow": null,
+        "macd": -0.1105,
+        "macd_signal": -0.0975,
+        "macd_histogram": -0.0261,
+        "rsi": 28.45,
+        "ma": {
+          "MA5": 5.94,
+          "MA10": 6.04,
+          "MA20": 6.07,
+          "MA60": 6.36
+        },
+        "main_net_flow": null
+      }
+    ],
+    "hk_stocks": [
+      {
+        "market": "港股",
+        "code": "01810",
+        "name": "小米集团-W",
+        "symbol": "01810",
+        "industry": "Consumer Electronics",
+        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
+        "price": NaN,
+        "open": null,
+        "high": null,
+        "low": null,
+        "change_pct": NaN,
+        "volume": 166780713,
+        "turnover": null,
+        "market_cap": 7641.88,
+        "pe": 21.84,
+        "cash_flow": 86.81,
+        "macd": 0.9696,
+        "macd_signal": 0.9128,
+        "macd_histogram": 0.1135,
+        "rsi": 55.84,
+        "ma": {
+          "MA5": null,
+          "MA10": null,
+          "MA20": null,
+          "MA60": null
+        },
+        "main_net_flow": null
+      }
+    ],
+    "us_stocks": [
+      {
+        "market": "美股",
+        "code": "NVDA",
+        "name": "NVIDIA",
+        "symbol": "NVDA",
+        "industry": "Semiconductors",
+        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
+        "price": 154.07,
+        "open": 156.91,
+        "high": 157.46,
+        "low": 150.36,
+        "change_pct": -1.33,
+        "volume": 185650493,
+        "turnover": null,
+        "market_cap": 37203.28,
+        "pe": 19.48,
+        "cash_flow": 418.1,
+        "macd": -16.2642,
+        "macd_signal": -12.178,
+        "macd_histogram": -8.1725,
+        "rsi": 22.08,
+        "ma": {
+          "MA5": 162.6,
+          "MA10": 172.89,
+          "MA20": 192.52,
+          "MA60": 213.32
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "GOOG",
+        "name": "Alphabet (Google)",
+        "symbol": "GOOG",
+        "industry": "Internet Content & Information",
+        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
+        "price": 278.64,
+        "open": 280.78,
+        "high": 281.61,
+        "low": 276.05,
+        "change_pct": -0.93,
+        "volume": 6833489,
+        "turnover": null,
+        "market_cap": 34256.0,
+        "pe": 14.55,
+        "cash_flow": 11.62,
+        "macd": -12.2482,
+        "macd_signal": -12.8614,
+        "macd_histogram": 1.2264,
+        "rsi": 32.29,
+        "ma": {
+          "MA5": 287.68,
+          "MA10": 286.23,
+          "MA20": 295.05,
+          "MA60": 325.28
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "CRCL",
+        "name": "Circle",
+        "symbol": "CRCL",
+        "industry": "Capital Markets",
+        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
+        "price": 54.77,
+        "open": 57.28,
+        "high": 57.66,
+        "low": 53.31,
+        "change_pct": -5.0,
+        "volume": 5653090,
+        "turnover": null,
+        "market_cap": 140.51,
+        "pe": 32.99,
+        "cash_flow": 2.62,
+        "macd": -6.49,
+        "macd_signal": -4.8237,
+        "macd_histogram": -3.3325,
+        "rsi": 25.85,
+        "ma": {
+          "MA5": 61.11,
+          "MA10": 65.16,
+          "MA20": 72.84,
+          "MA60": 83.11
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "MP",
+        "name": "MP Materials",
+        "symbol": "MP",
+        "industry": "Other Industrial Metals & Mining",
+        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
+        "price": 35.52,
+        "open": 36.75,
+        "high": 37.09,
+        "low": 34.75,
+        "change_pct": -1.58,
+        "volume": 3367226,
+        "turnover": null,
+        "market_cap": 63.32,
+        "pe": 79.88,
+        "cash_flow": 4.1,
+        "macd": -1.929,
+        "macd_signal": -2.1816,
+        "macd_histogram": 0.5053,
+        "rsi": 39.07,
+        "ma": {
+          "MA5": 36.91,
+          "MA10": 36.38,
+          "MA20": 37.85,
+          "MA60": 45.33
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "PLTR",
+        "name": "Palantir",
+        "symbol": "PLTR",
+        "industry": "Software - Infrastructure",
+        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
+        "price": 155.41,
+        "open": 159.97,
+        "high": 162.59,
+        "low": 153.91,
+        "change_pct": -3.1,
+        "volume": 7988495,
+        "turnover": null,
+        "market_cap": 3744.72,
+        "pe": 109.45,
+        "cash_flow": 26.52,
+        "macd": -7.6624,
+        "macd_signal": -5.5521,
+        "macd_histogram": -4.2205,
+        "rsi": 32.26,
+        "ma": {
+          "MA5": 165.55,
+          "MA10": 165.29,
+          "MA20": 178.81,
+          "MA60": 183.27
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "NOW",
+        "name": "ServiceNow",
+        "symbol": "NOW",
+        "industry": "Software - Application",
+        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
+        "price": 92.51,
+        "open": 98.0,
+        "high": 98.93,
+        "low": 92.03,
+        "change_pct": -6.9,
+        "volume": 10640847,
+        "turnover": null,
+        "market_cap": 960.18,
+        "pe": 66.55,
+        "cash_flow": 57.54,
+        "macd": -11.1591,
+        "macd_signal": -9.3851,
+        "macd_histogram": -3.548,
+        "rsi": 26.51,
+        "ma": {
+          "MA5": 99.51,
+          "MA10": 101.31,
+          "MA20": 118.76,
+          "MA60": 131.77
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "DDOG",
+        "name": "Datadog",
+        "symbol": "DDOG",
+        "industry": "Software - Application",
+        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
+        "price": 163.18,
+        "open": 171.11,
+        "high": 173.5,
+        "low": 162.11,
+        "change_pct": -5.6,
+        "volume": 2528916,
+        "turnover": null,
+        "market_cap": 589.13,
+        "pe": 226.63,
+        "cash_flow": 10.66,
+        "macd": -23.7382,
+        "macd_signal": -19.2027,
+        "macd_histogram": -9.0711,
+        "rsi": 26.17,
+        "ma": {
+          "MA5": 177.81,
+          "MA10": 178.94,
+          "MA20": 218.36,
+          "MA60": 238.8
+        },
+        "main_net_flow": null
+      }
+    ],
+    "crypto": [
+      {
+        "market": "加密货币",
+        "code": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "industry": "Smart Contract Platform",
+        "price": 63858,
+        "open": null,
+        "high": 65455,
+        "low": 63361,
+        "change_pct": -1.44,
+        "volume": 34765708594,
+        "turnover": null,
+        "market_cap": 12847.7,
+        "market_cap_rank": 1,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -4043.3343,
+        "macd_signal": -2929.0578,
+        "macd_histogram": -2228.5531,
+        "rsi": 22.65,
+        "ma": {
+          "MA5": 65286.51,
+          "MA10": 69550.73,
+          "MA20": 73426.49,
+          "MA60": 79834.36
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 20113378.0,
+          "total_supply": 20113378.0,
+          "circ_ratio": 100.0,
+          "price_change_7d": -12.33144,
+          "price_change_30d": -21.16542,
+          "ath_pct": -49.35,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      },
+      {
+        "market": "加密货币",
+        "code": "ethereum",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "industry": "Smart Contract Platform",
+        "price": 1784.67,
+        "open": null,
+        "high": 1839.63,
+        "low": 1753.07,
+        "change_pct": -2.14,
+        "volume": 11342196047,
+        "turnover": null,
+        "market_cap": 2181.64,
+        "market_cap_rank": 2,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -151.9927,
+        "macd_signal": -118.8464,
+        "macd_histogram": -66.2927,
+        "rsi": 24.47,
+        "ma": {
+          "MA5": 1827.89,
+          "MA10": 1951.9,
+          "MA20": 2109.75,
+          "MA60": 2401.59
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 122227436.38164121,
+          "total_supply": 122227436.38164121,
+          "circ_ratio": 100.0,
+          "price_change_7d": -11.51094,
+          "price_change_30d": -24.51196,
+          "ath_pct": -63.92,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      }
+    ]
+  },
+  "news": [
+    {
+      "id": "35b871d31c",
+      "title": "[播客]独家实拍：我那永远跪着的母亲(11/07 22:10)",
+      "summary": "独家实拍：我那永远跪着的母亲",
+      "link": "http://go.rss.sina.com.cn/redirect.php?url=http://you.video.sina.com.cn/b/16972162-1239095354.html",
+      "source": "rss.sina.com.cn",
+      "published": ""
+    },
+    {
+      "id": "f474b112e7",
+      "title": "Parents told us what it’s like to help their kids battle sports-gambling addiction: ‘There’s no handbook’",
+      "summary": "“We essentially married the most addictive device with the most addictive behavior, and we put them together.”",
+      "link": "https://www.marketwatch.com/story/parents-told-us-what-its-like-to-help-their-kids-battle-sports-gambling-addiction-theres-no-handbook-6e2d5bb2?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 17 Nov 2026 17:07:00 GMT"
+    },
+    {
+      "id": "9b5c2892e6",
+      "title": "‘I felt so seen’: Why families across America are laughing — and crying — over SNL’s ‘Sister’ sketch",
+      "summary": "The late-night comedy sketch does the impossible by making female caregivers feel seen.",
+      "link": "https://www.marketwatch.com/story/so-sad-and-so-true-has-your-family-talked-about-snls-sister-sketch-yet-19bf9d67?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 17 Nov 2026 17:03:00 GMT"
+    },
+    {
+      "id": "ceb701bcc0",
+      "title": "If you own a Nasdaq-100 fund, you’ll own Anthropic shares after 15 trading days — whether you want to or not",
+      "summary": "Anthropic’s suppliers are buying $26 billion worth of stock at the IPO price because they want to. Some funds will be forced to buy, and at a potentially worse price.",
+      "link": "https://www.marketwatch.com/story/if-you-own-a-nasdaq-100-fund-youll-own-anthropic-shares-after-15-trading-days-whether-you-want-to-or-not-19b08485?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 17 Nov 2026 17:02:00 GMT"
+    },
+    {
+      "id": "c3c067a1e1",
+      "title": "Measles cases in the U.S. are at a 35-year high. Here’s the staggering cost of falling vaccination rates for Americans.",
+      "summary": "The U.S. officially lost its measles elimination status on Tuesday as it grapples with multiple outbreaks of the virus.",
+      "link": "https://www.marketwatch.com/story/measles-cases-in-the-u-s-are-at-a-35-year-high-heres-the-staggering-cost-of-falling-vaccination-rates-for-americans-e80a7ac6?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 17 Nov 2026 16:47:00 GMT"
+    },
+    {
+      "id": "8f3368c908",
+      "title": "Jensen Huang now wants to return as Nvidia’s CEO. This is why that could be difficult.",
+      "summary": "Corporate-governance experts point to issues that would make a triumphant return difficult.",
+      "link": "https://www.marketwatch.com/story/jensen-huangs-fans-want-him-back-as-nvidia-ceo-this-is-why-thats-unlikely-2be28ac2?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 17 Nov 2026 16:38:00 GMT"
+    },
+    {
+      "id": "e15d1e40c6",
+      "title": "Coherent and Lumentum stocks climb as potential U.S. import ban threatens Chinese rivals",
+      "summary": "The Trump administration is reportedly planning to move forward on banning imports of Chinese optical transceivers.",
+      "link": "https://www.marketwatch.com/story/coherent-and-lumentum-stocks-climb-as-potential-u-s-import-ban-threatens-chinese-rivals-e20dfb79?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 17 Nov 2026 15:39:00 GMT"
+    },
+    {
+      "id": "77448b95b8",
+      "title": "‘It is heartbreaking’: My brother took over our ailing mother’s life and finances. What can I do?",
+      "summary": "“It is devastating when the people you should be able to trust become the very people you have to protect yourself from.”",
+      "link": "https://www.marketwatch.com/story/it-is-heartbreaking-exhausting-and-downright-dirty-my-brother-took-over-our-ailing-mothers-life-and-finances-what-can-i-do-b4d48817?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 17 Nov 2026 15:30:00 GMT"
+    },
+    {
+      "id": "e7e103d1ce",
+      "title": "‘Nvidia’s turmoil has me spooked’: Should I sell my stocks and invest in real estate?",
+      "summary": "“Real estate here in Florida seems to be presenting some interesting opportunities.”",
+      "link": "https://www.marketwatch.com/story/nvidia-spooked-me-should-i-sell-my-stocks-or-ride-out-the-market-turmoil-560583c6?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 17 Nov 2026 15:15:00 GMT"
+    },
+    {
+      "id": "b6926eef20",
+      "title": "Anthropic wants everyday investors to be part of its IPO. Some are not buying it.",
+      "summary": "“It’s total hype and kind of inflated expectations.”",
+      "link": "https://www.marketwatch.com/story/anthropic-wants-everyday-investors-to-be-part-of-its-ipo-some-are-not-buying-it-43576d2d?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 17 Nov 2026 15:01:00 GMT"
+    },
+    {
+      "id": "d7622a717c",
+      "title": "Nearly half of home builders are cutting prices and offering lower mortgage rates as they struggle to find buyers",
+      "summary": "More builders are cutting prices in spite of rising construction costs that make it more expensive to build new homes.",
+      "link": "https://www.marketwatch.com/story/nearly-half-of-home-builders-are-cutting-prices-and-offering-lower-mortgage-rates-as-they-struggle-to-find-buyers-033351e1?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Tue, 17 Nov 2026 15:01:00 GMT"
+    },
+    {
+      "id": "b363d003c6",
+      "title": "Factbox-From Amazon to Google, the deep-pocketed investors in Anthropic",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/factboxfrom-amazon-to-google-the-deeppocketed-investors-in-anthropic-5033632",
+      "source": "www.investing.com",
+      "published": "2026-11-17 16:54:21"
+    },
+    {
+      "id": "568fb07248",
+      "title": "OCSL Q4 2026 slides: credit quality improves as earnings decline",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/ocsl-q4-2026-slides-credit-quality-improves-as-earnings-decline-93CH-5033631",
+      "source": "www.investing.com",
+      "published": "2026-11-17 16:53:11"
+    },
+    {
+      "id": "0965f19bb0",
+      "title": "Versigent at RBC Global Industrials Conference 2026: export growth offsets headwinds",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/versigent-at-rbc-global-industrials-conference-2026-export-growth-offsets-headwinds-93CH-5033629",
+      "source": "www.investing.com",
+      "published": "2026-11-17 16:51:41"
+    },
+    {
+      "id": "fffe6bfe5c",
+      "title": "Maravai LifeSciences at Jefferies conference: growth broadens beyond cleancap",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/maravai-lifesciences-at-jefferies-conference-growth-broadens-beyond-cleancap-93CH-5033628",
+      "source": "www.investing.com",
+      "published": "2026-11-17 16:51:27"
+    },
+    {
+      "id": "fba5f195c1",
+      "title": "COP31 AI pledge fails to lure US Big Tech",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/cop31-ai-pledge-fails-to-lure-us-big-tech-5033626",
+      "source": "www.investing.com",
+      "published": "2026-11-17 16:48:23"
+    },
+    {
+      "id": "f82cdba5c2",
+      "title": "Earnings call transcript: Palatin Technologies Q1 2026 misses as stock falls 14%",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-palatin-technologies-q1-2026-misses-as-stock-falls-14-93CH-5033625",
+      "source": "www.investing.com",
+      "published": "2026-11-17 16:48:21"
+    },
+    {
+      "id": "046d04f1e9",
+      "title": "J.B. Hunt at Stephens conference: margins, capacity and growth",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/jb-hunt-at-stephens-conference-margins-capacity-and-growth-93CH-5033623",
+      "source": "www.investing.com",
+      "published": "2026-11-17 16:48:01"
+    },
+    {
+      "id": "5977fd748c",
+      "title": "Boot Barn at Stephens conference: growth plan lifts margin outlook",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/boot-barn-at-stephens-conference-growth-plan-lifts-margin-outlook-93CH-5033622",
+      "source": "www.investing.com",
+      "published": "2026-11-17 16:47:09"
+    },
+    {
+      "id": "acd5ae4c3d",
+      "title": "Bill Holdings shares surge on reports of looming TPG take-private deal",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/bill-holdings-shares-surge-on-reports-of-looming-tpg-takeprivate-deal-5033616",
+      "source": "www.investing.com",
+      "published": "2026-11-17 16:46:40"
+    },
+    {
+      "id": "ec6e8b6aab",
+      "title": "Alkami at Stephens annual conference: growth plan leans on ai and banks",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/alkami-at-stephens-annual-conference-growth-plan-leans-on-ai-and-banks-93CH-5033617",
+      "source": "www.investing.com",
+      "published": "2026-11-17 16:44:29"
+    }
+  ],
+  "briefing": {
+    "date": "2026-11-17",
+    "update_time": "2026-11-17 07:16:49",
+    "candidate_count": 20,
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-17\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 PostgreSQL 一口气补 52 个洞，其中一个是 22 年前的\"祖传 RCE\" (来源: Tech RSS / The Hacker News)\n- **核心干货**：PostgreSQL 发布安全更新修复 52 个漏洞，最扎眼的是一个潜伏 22 年的类型混淆（type confusion）缺陷——只要数据库用户有建对象权限，就能在服务器上执行任意代码。更麻烦的是，彻底修复还得把服务器上所有 C 语言扩展全部重编译一遍。其余 51 个漏洞也一并打包。\n- **毒舌/硬核点评**：22 年没人发现，说明这洞比很多读这篇简报的工程师的职业生涯都长。恭喜 PostgreSQL 用户，今天不是\"要不要升级\"的问题，是\"你那些年久失修的 C 扩展还编得动吗\"的问题。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html)\n\n---\n\n### 2. 📌 Windows 11 正在偷偷记录你用了哪些 AI 编程 Agent 和开发工具 (来源: Hacker News，495 分)\n- **核心干货**：有人扒出 Windows 11 的遥测机制会收集你机器上运行了哪些 coding agent 和开发者工具。这不是普通的崩溃日志，而是对你\"开发工作流\"的画像——你用 Copilot 还是 Cursor、跑什么本地模型，微软大概率比你老板还清楚。\n- **毒舌/硬核点评**：一边卖你 Copilot 订阅，一边统计你装了几个竞品，这波叫\"生态调研\"，翻译成人话就是\"竞品情报，谢谢你的遥测\"。开发机建议默认把遥测当敌情处理，别等哪天你的工具链成了别人的商业分析报表。\n- **🔗 传送门**：[点击直达原链接](https://xusheng.dev/posts/windows-coding-agent-telemetry/)\n\n---\n\n### 3. 📌 CMU 把计算机课程免费搬上 YouTube (来源: Hacker News，1247 分)\n- **核心干货**：卡内基梅隆大学把自家 CS 课程系统性放到 YouTube 免费公开，1247 分的热度说明这不是营销噱头而是真材实料。对自学者来说，相当于顶级 CS 学位的核心课程表被公开拆墙，成本从六位数学费降到 0。\n- **毒舌/硬核点评**：课程免费了，但没人替你写作业、debug 到凌晨三点。真正稀缺的从来不是 MIT/CMU 的讲义——那玩意儿网上早就有——而是能对着它啃完 15 周不跑路的那点自律。资源平权的尽头，是执行力平权。\n- **🔗 传送门**：[点击直达原链接](https://www.cs.cmu.edu/learn/)\n\n---\n\n### 🗣️ 今日顶男金句\n技术债和信用卡一样，刷卡的时候很爽，账单来的时候才发现利息是复利计算的——那个 22 年前的洞，就是最好的对账单。",
+    "briefing_items": [
+      {
+        "title": "PostgreSQL 一口气补 52 个洞，其中一个是 22 年前的\"祖传 RCE\"",
+        "source": "Tech RSS / The Hacker News",
+        "summary": "PostgreSQL 发布安全更新修复 52 个漏洞，最扎眼的是一个潜伏 22 年的类型混淆（type confusion）缺陷——只要数据库用户有建对象权限，就能在服务器上执行任意代码。更麻烦的是，彻底修复还得把服务器上所有 C 语言扩展全部重编译一遍。其余 51 个漏洞也一并打包。",
+        "commentary": "22 年没人发现，说明这洞比很多读这篇简报的工程师的职业生涯都长。恭喜 PostgreSQL 用户，今天不是\"要不要升级\"的问题，是\"你那些年久失修的 C 扩展还编得动吗\"的问题。",
+        "url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html"
+      },
+      {
+        "title": "Windows 11 正在偷偷记录你用了哪些 AI 编程 Agent 和开发工具",
+        "source": "Hacker News，495 分",
+        "summary": "有人扒出 Windows 11 的遥测机制会收集你机器上运行了哪些 coding agent 和开发者工具。这不是普通的崩溃日志，而是对你\"开发工作流\"的画像——你用 Copilot 还是 Cursor、跑什么本地模型，微软大概率比你老板还清楚。",
+        "commentary": "一边卖你 Copilot 订阅，一边统计你装了几个竞品，这波叫\"生态调研\"，翻译成人话就是\"竞品情报，谢谢你的遥测\"。开发机建议默认把遥测当敌情处理，别等哪天你的工具链成了别人的商业分析报表。",
+        "url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/"
+      },
+      {
+        "title": "CMU 把计算机课程免费搬上 YouTube",
+        "source": "Hacker News，1247 分",
+        "summary": "卡内基梅隆大学把自家 CS 课程系统性放到 YouTube 免费公开，1247 分的热度说明这不是营销噱头而是真材实料。对自学者来说，相当于顶级 CS 学位的核心课程表被公开拆墙，成本从六位数学费降到 0。",
+        "commentary": "课程免费了，但没人替你写作业、debug 到凌晨三点。真正稀缺的从来不是 MIT/CMU 的讲义——那玩意儿网上早就有——而是能对着它啃完 15 周不跑路的那点自律。资源平权的尽头，是执行力平权。",
+        "url": "https://www.cs.cmu.edu/learn/"
+      }
+    ],
+    "candidates": [
+      {
+        "id": "hn:50519744",
+        "title": "Jiff 1.0: A datetime library for Rust",
+        "summary": "",
+        "url": "https://burntsushi.net/jiff/",
+        "source": "Hacker News",
+        "score": 359,
+        "comments": 80
+      },
+      {
+        "id": "hn:50524736",
+        "title": "Windows 11 Is Collecting Data on Which Coding Agents and Developer Tools You Use",
+        "summary": "",
+        "url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/",
+        "source": "Hacker News",
+        "score": 495,
+        "comments": 334
+      },
+      {
+        "id": "hn:50523601",
+        "title": "BugMeNot has closed",
+        "summary": "",
+        "url": "https://www.bugmenot.com/",
+        "source": "Hacker News",
+        "score": 473,
+        "comments": 218
+      },
+      {
+        "id": "hn:50522980",
+        "title": "Carnegie Mellon is putting computer science courses on YouTube for free",
+        "summary": "",
+        "url": "https://www.cs.cmu.edu/learn/",
+        "source": "Hacker News",
+        "score": 1247,
+        "comments": 178
+      },
+      {
+        "id": "hn:50524767",
+        "title": "Optimizely compromised, served malware on Zoom, GitLab",
+        "summary": "",
+        "url": "https://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely/",
+        "source": "Hacker News",
+        "score": 269,
+        "comments": 113
+      },
+      {
+        "id": "hn:50519354",
+        "title": "Frame – 31.5\" color ePaper display",
+        "summary": "",
+        "url": "https://trmnl.com/blog/introducing-frame",
+        "source": "Hacker News",
+        "score": 378,
+        "comments": 268
+      },
+      {
+        "id": "hn:50522643",
+        "title": "Chemistry is Actually Geometry",
+        "summary": "",
+        "url": "https://chillphysicsenjoyer.substack.com/p/chemistry-is-actually-geometry",
+        "source": "Hacker News",
+        "score": 195,
+        "comments": 99
+      },
+      {
+        "id": "hn:50523459",
+        "title": "OpenCode Browse",
+        "summary": "",
+        "url": "https://opencode.ai/product/browse",
+        "source": "Hacker News",
+        "score": 214,
+        "comments": 110
+      },
+      {
+        "id": "lob:rhoopo",
+        "title": "Migrating from GitHub to Codeberg",
+        "summary": "",
+        "url": "https://yorickpeterse.com/articles/migrating-from-github-to-codeberg/",
+        "source": "Lobste.rs",
+        "score": 68,
+        "comments": 25,
+        "tags": [
+          "programming",
+          "vcs"
+        ]
+      },
+      {
+        "id": "hn:50526152",
+        "title": "Running coding agents without handing them my credentials",
+        "summary": "",
+        "url": "https://blog.antonio.cx/running-agents-with-lend",
+        "source": "Hacker News",
+        "score": 94,
+        "comments": 51
+      },
+      {
+        "id": "lob:dgvb5g",
+        "title": "What is w2rt6byl5nf1opmc-a[.]com?",
+        "summary": "",
+        "url": "https://jack.cab/blog/siterate.html",
+        "source": "Lobste.rs",
+        "score": 57,
+        "comments": 11,
+        "tags": [
+          "web"
+        ]
+      },
+      {
+        "id": "hn:50523025",
+        "title": "Comcast's \"fiber-powered Wi-Fi\" is cable, AT&T says in false advertising case",
+        "summary": "",
+        "url": "https://arstechnica.com/tech-policy/2026/11/comcast-falsely-advertises-cable-internet-as-fiber-powered-att-lawsuit-says/",
+        "source": "Hacker News",
+        "score": 118,
+        "comments": 106
+      },
+      {
+        "id": "lob:emdfap",
+        "title": "you won't win at copyright",
+        "summary": "",
+        "url": "https://ingrids.space/posts/you-wont-win-at-copyright/",
+        "source": "Lobste.rs",
+        "score": 70,
+        "comments": 11,
+        "tags": [
+          "culture",
+          "law",
+          "philosophy"
+        ]
+      },
+      {
+        "id": "lob:thiekk",
+        "title": "Paint in the memory of other programs",
+        "summary": "",
+        "url": "https://citrons.xyz/journal/2026-04-13",
+        "source": "Lobste.rs",
+        "score": 71,
+        "comments": 6,
+        "tags": [
+          "programming",
+          "visualization"
+        ]
+      },
+      {
+        "id": "lob:s7mejx",
+        "title": "How Rust Changed Me As A Developer",
+        "summary": "",
+        "url": "https://blog.startifact.com/posts/how-rust-changed-me/",
+        "source": "Lobste.rs",
+        "score": 22,
+        "comments": 10,
+        "tags": [
+          "performance",
+          "rust"
+        ]
+      },
+      {
+        "id": "lob:urcrqe",
+        "title": "Janet Reno was talking about my friend Coolio (computer criminal)",
+        "summary": "",
+        "url": "https://michael.bacarella.com/2026/11/16/janet-reno-vs-my-friend-coolio/",
+        "source": "Lobste.rs",
+        "score": 28,
+        "comments": 11,
+        "tags": [
+          "culture",
+          "security"
+        ]
+      },
+      {
+        "id": "hn:50526560",
+        "title": "If an App Asks for Full Disk Access or System and App Protection Override",
+        "summary": "",
+        "url": "https://support.apple.com/en-us/149699",
+        "source": "Hacker News",
+        "score": 85,
+        "comments": 50
+      },
+      {
+        "id": "lob:ki1l5r",
+        "title": "\"Proof of use\" as a requirement for open source contributions?",
+        "summary": "<p>As an open source maintainer, I get a lot of AI slop PRs. Some of these have genuine value. Most address edge cases that almost never occur in real life. It's not that they're not fixing real problems, it's that they're fixing problems that nobody is ever likely to encounter.</p>\n<p>I'm experimen",
+        "url": "https://lobste.rs/s/ki1l5r/proof_use_as_requirement_for_open_source",
+        "source": "Lobste.rs",
+        "score": 17,
+        "comments": 5,
+        "tags": [
+          "ai",
+          "ask",
+          "culture"
+        ]
+      },
+      {
+        "id": "lob:iihw5u",
+        "title": "Squircles",
+        "summary": "",
+        "url": "https://linebender.org/wiki/curves/squircle/",
+        "source": "Lobste.rs",
+        "score": 44,
+        "comments": 5,
+        "tags": [
+          "graphics"
+        ]
+      },
+      {
+        "id": "rss:2b871475e5",
+        "title": "PostgreSQL Patches 52 Flaws, Including 22-Year-Old Bug Enabling Authenticated RCE",
+        "summary": "A type confusion flaw in PostgreSQL lets a database user who can create objects run code on the server. Updates released yesterday fix it, along with 51 other security flaws. Full protection from this flaw also requires rebuilding any C-language extensions installed on the server.\n\nThe flaw, tracked",
+        "url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html",
+        "source": "Tech RSS",
+        "score": 0
+      }
+    ],
+    "ai_curated": true
+  },
+  "fear_greed": {
+    "value": 12,
+    "classification": "Extreme Fear",
+    "timestamp": "2026-11-17 00:00:00"
+  }
+}
