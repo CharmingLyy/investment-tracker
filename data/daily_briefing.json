@@ -1,234 +1,58 @@
 {
   "date": "2026-11-18",
-  "update_time": "2026-11-17 20:35:15",
+  "update_time": "2026-11-18 06:41:49",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-18\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 GPT‑6.2 Astra 与 Sol 双模型发布 (来源: HackerNews)\n- **核心干货**：OpenAI 一次性甩出 Astra 和 Sol 两款模型，从命名看走的是\"重型推理 + 轻量快反\"的双轨策略。HN 730 分、448 条评论的炸场数据说明这不是例行小版本，而是又一次把竞品按在地上摩擦的节奏。\n- **毒舌/硬核点评**：版本号都快赶上 iOS 了，但真正的问题是——你分得清 6.1 和 6.2 在你工作流里到底差在哪吗？大多数人的用法还停留在\"帮我润色邮件\"。模型在飞，用户在地上爬。\n- **🔗 传送门**：[点击直达原链接](https://openai.com/index/introducing-gpt-6-2-astra-sol/)\n\n---\n\n### 2. 📌 curl 正式启动 Rust 重写 (来源: Lobste.rs)\n- **核心干货**：Daniel Stenberg 亲自下场，curl 这个承载了半个互联网流量的 C 语言老古董开始动真格往 Rust 迁移。这不是\"用 Rust 写个玩具替代品\"，而是要在真实生产代码里逐步替换内存安全雷区——缓冲区溢出、UAF 这些让运维半夜惊醒的老毛病有望根治。\n- **毒舌/硬核点评**：C 语言写 curl 写了二十多年没崩，靠的是 Stenberg 的铁血 code review 和一点运气。现在终于承认\"人肉内存管理\"不是长久之计了。Rust 教徒们可以开香槟，但别忘了——迁移期的双语言地狱才是真正的渡劫。\n- **🔗 传送门**：[点击直达原链接](https://daniel.haxx.se/blog/2026/11/17/actual-curl-rewrites-in-rust/)\n\n---\n\n### 3. 📌 Latent Lattice 语言模型：换条路堆算力 (来源: ArXiv)\n- **核心干货**：当所有人都在往\"更深、更循环、更多 latent 推理步\"上卷时，这篇论文反其道而行——不加深网络，而是增加模型同时维持的\"活跃计算状态数\"，用格点结构撑起并行计算容量。等于说别人在盖更高的楼，它在铺更宽的地基，试图用架构换效率而非无脑堆参数。\n- **毒舌/硬核点评**：在\"大力出奇迹\"的军备竞赛里，敢问\"是不是方向本身就错了\"的论文不多了。但 ArXiv 上每天都有\"颠覆性架构\"，能活到被复现的那 1% 才算数。先别急着改简历，等有人跑出 scaling law 再说。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2611.21608v1)\n\n---\n\n### 🗣️ 今日顶男金句\n技术债和房贷一个道理：你可以一直只还利息，但总有一天银行会来收房子——区别是，技术债的催收员叫\"线上事故\"，而且从不提前打电话。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-18\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Java4Shell：OpenJDK 处理 Base64 时的远程代码执行漏洞 (来源: HackerNews)\n- **核心干货**：OpenJDK 在处理 Base64 解码时被曝出可远程触发 RCE 的高危漏洞，配合 Oracle 同日紧急修补 11 个 Java SE 漏洞的动作来看，这次不是普通的\"例行补丁日\"，而是真出事了。凡是跑 JVM 的后端服务，今天都该把升级窗口提上日程。\n- **毒舌/硬核点评**：名字起得很有仪式感——\"Java4Shell\"，致敬 Log4Shell 的命名传统，仿佛在提醒全世界：企业级基础设施的老底子，永远是你最熟悉的陌生人。老 Java 不死，只是偶尔给你一记闷棍。\n- **🔗 传送门**：[点击直达原链接](https://calif.io/java4shell/)\n\n---\n\n### 2. 📌 GPT‑6.2 Astra 与 Sol 发布 (来源: HackerNews)\n- **核心干货**：OpenAI 推出 GPT‑6.2 的两个新版本 Astra 和 Sol，HN 分数破 1200、评论 750+，是本日毫无争议的话题中心。版本号从 6 跳到 6.2 还拆出双型号，说明模型迭代已进入\"命名越花、细分越狠\"的工业化阶段——能力升级之外，更多是在给不同场景做定向裁剪。\n- **毒舌/硬核点评**：评论区 754 条，一半在讨论跑分，一半在讨论\"这次又贵了多少\"。当模型发布变成季度财报的延伸，真正的问题不是它多聪明，而是你的账单还能撑几个版本。\n- **🔗 传送门**：[点击直达原链接](https://openai.com/index/introducing-gpt-6-2-astra-sol/)\n\n---\n\n### 3. 📌 微软 ONNX Runtime 从 GitHub 上\"消失\" (来源: HackerNews)\n- **核心干货**：微软的 ONNX Runtime 仓库在 GitHub 上不见踪影，作为跨框架推理引擎的行业基石之一，它的突然下线让大量依赖它的部署链路陷入不确定。无论是迁移、归档还是\"战略性调整\"，这一动作对推理生态的震动都不小。\n- **毒舌/硬核点评**：开源项目的最大风险，从来不是代码烂，而是金主爸爸哪天心情一变就把仓库收了。ONNX Runtime 这波\"人间蒸发\"，堪称给所有把命脉押在单一厂商开源项目上的团队上了一堂免费的风险教育课。\n- **🔗 传送门**：[点击直达原链接](https://github.com/microsoft/onnxruntime)\n\n---\n\n### 🗣️ 今日顶男金句\n技术选型的第一原则不是\"哪个最强\"，而是\"哪个跑路时你还能自己扛\"——把核心依赖交给别人的善意，是工程师最贵的浪漫。",
   "briefing_items": [
     {
-      "title": "GPT‑6.2 Astra 与 Sol 双模型发布",
+      "title": "Java4Shell：OpenJDK 处理 Base64 时的远程代码执行漏洞",
       "source": "HackerNews",
-      "summary": "OpenAI 一次性甩出 Astra 和 Sol 两款模型，从命名看走的是\"重型推理 + 轻量快反\"的双轨策略。HN 730 分、448 条评论的炸场数据说明这不是例行小版本，而是又一次把竞品按在地上摩擦的节奏。",
-      "commentary": "版本号都快赶上 iOS 了，但真正的问题是——你分得清 6.1 和 6.2 在你工作流里到底差在哪吗？大多数人的用法还停留在\"帮我润色邮件\"。模型在飞，用户在地上爬。",
+      "summary": "OpenJDK 在处理 Base64 解码时被曝出可远程触发 RCE 的高危漏洞，配合 Oracle 同日紧急修补 11 个 Java SE 漏洞的动作来看，这次不是普通的\"例行补丁日\"，而是真出事了。凡是跑 JVM 的后端服务，今天都该把升级窗口提上日程。",
+      "commentary": "名字起得很有仪式感——\"Java4Shell\"，致敬 Log4Shell 的命名传统，仿佛在提醒全世界：企业级基础设施的老底子，永远是你最熟悉的陌生人。老 Java 不死，只是偶尔给你一记闷棍。",
+      "url": "https://calif.io/java4shell/"
+    },
+    {
+      "title": "GPT‑6.2 Astra 与 Sol 发布",
+      "source": "HackerNews",
+      "summary": "OpenAI 推出 GPT‑6.2 的两个新版本 Astra 和 Sol，HN 分数破 1200、评论 750+，是本日毫无争议的话题中心。版本号从 6 跳到 6.2 还拆出双型号，说明模型迭代已进入\"命名越花、细分越狠\"的工业化阶段——能力升级之外，更多是在给不同场景做定向裁剪。",
+      "commentary": "评论区 754 条，一半在讨论跑分，一半在讨论\"这次又贵了多少\"。当模型发布变成季度财报的延伸，真正的问题不是它多聪明，而是你的账单还能撑几个版本。",
       "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/"
     },
     {
-      "title": "curl 正式启动 Rust 重写",
-      "source": "Lobste.rs",
-      "summary": "Daniel Stenberg 亲自下场，curl 这个承载了半个互联网流量的 C 语言老古董开始动真格往 Rust 迁移。这不是\"用 Rust 写个玩具替代品\"，而是要在真实生产代码里逐步替换内存安全雷区——缓冲区溢出、UAF 这些让运维半夜惊醒的老毛病有望根治。",
-      "commentary": "C 语言写 curl 写了二十多年没崩，靠的是 Stenberg 的铁血 code review 和一点运气。现在终于承认\"人肉内存管理\"不是长久之计了。Rust 教徒们可以开香槟，但别忘了——迁移期的双语言地狱才是真正的渡劫。",
-      "url": "https://daniel.haxx.se/blog/2026/11/17/actual-curl-rewrites-in-rust/"
-    },
-    {
-      "title": "Latent Lattice 语言模型：换条路堆算力",
-      "source": "ArXiv",
-      "summary": "当所有人都在往\"更深、更循环、更多 latent 推理步\"上卷时，这篇论文反其道而行——不加深网络，而是增加模型同时维持的\"活跃计算状态数\"，用格点结构撑起并行计算容量。等于说别人在盖更高的楼，它在铺更宽的地基，试图用架构换效率而非无脑堆参数。",
-      "commentary": "在\"大力出奇迹\"的军备竞赛里，敢问\"是不是方向本身就错了\"的论文不多了。但 ArXiv 上每天都有\"颠覆性架构\"，能活到被复现的那 1% 才算数。先别急着改简历，等有人跑出 scaling law 再说。",
-      "url": "https://arxiv.org/abs/2611.21608v1"
+      "title": "微软 ONNX Runtime 从 GitHub 上\"消失\"",
+      "source": "HackerNews",
+      "summary": "微软的 ONNX Runtime 仓库在 GitHub 上不见踪影，作为跨框架推理引擎的行业基石之一，它的突然下线让大量依赖它的部署链路陷入不确定。无论是迁移、归档还是\"战略性调整\"，这一动作对推理生态的震动都不小。",
+      "commentary": "开源项目的最大风险，从来不是代码烂，而是金主爸爸哪天心情一变就把仓库收了。ONNX Runtime 这波\"人间蒸发\"，堪称给所有把命脉押在单一厂商开源项目上的团队上了一堂免费的风险教育课。",
+      "url": "https://github.com/microsoft/onnxruntime"
     }
   ],
   "candidates": [
+    {
+      "id": "hn:50534631",
+      "title": "Nvidia stopped disclosing Singapore sales as revenues hit $104B",
+      "summary": "",
+      "url": "https://www.ft.com/content/dbde7a30-548c-4f9d-a4be-7898a0c24dcf",
+      "source": "Hacker News",
+      "score": 484,
+      "comments": 222
+    },
+    {
+      "id": "hn:50539610",
+      "title": "Microsoft's ONNX Runtime has disappeared from GitHub",
+      "summary": "",
+      "url": "https://github.com/microsoft/onnxruntime",
+      "source": "Hacker News",
+      "score": 249,
+      "comments": 59
+    },
     {
       "id": "hn:50535230",
       "title": "GPT‑6.2 Astra and Sol",
       "summary": "",
       "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
       "source": "Hacker News",
-      "score": 730,
-      "comments": 448
-    },
-    {
-      "id": "lob:1dj9w1",
-      "title": "Actual curl rewrites in rust",
-      "summary": "",
-      "url": "https://daniel.haxx.se/blog/2026/11/17/actual-curl-rewrites-in-rust/",
-      "source": "Lobste.rs",
-      "score": 63,
-      "comments": 36,
-      "tags": [
-        "rust"
-      ]
-    },
-    {
-      "id": "hn:50532191",
-      "title": "What is the best harness for each model?",
-      "summary": "",
-      "url": "https://runta.com/blog/introducing-frontierharness-eval-v1-1/",
-      "source": "Hacker News",
-      "score": 274,
-      "comments": 97
-    },
-    {
-      "id": "lob:s7mejx",
-      "title": "How Rust Changed Me As A Developer",
-      "summary": "",
-      "url": "https://blog.startifact.com/posts/how-rust-changed-me/",
-      "source": "Lobste.rs",
-      "score": 39,
-      "comments": 18,
-      "tags": [
-        "performance",
-        "rust"
-      ]
-    },
-    {
-      "id": "hn:50535238",
-      "title": "Apple Services Down",
-      "summary": "",
-      "url": "https://developer.apple.com/system-status/",
-      "source": "Hacker News",
-      "score": 435,
-      "comments": 242
-    },
-    {
-      "id": "lob:urcrqe",
-      "title": "Janet Reno was talking about my friend Coolio (computer criminal)",
-      "summary": "",
-      "url": "https://michael.bacarella.com/2026/11/16/janet-reno-vs-my-friend-coolio/",
-      "source": "Lobste.rs",
-      "score": 42,
-      "comments": 18,
-      "tags": [
-        "culture",
-        "security"
-      ]
-    },
-    {
-      "id": "lob:dgvb5g",
-      "title": "What is w2rt6byl5nf1opmc-a[.]com?",
-      "summary": "",
-      "url": "https://jack.cab/blog/siterate.html",
-      "source": "Lobste.rs",
-      "score": 71,
-      "comments": 13,
-      "tags": [
-        "web"
-      ]
-    },
-    {
-      "id": "hn:50535885",
-      "title": "MAI Code 2 and Code 2 Flash",
-      "summary": "",
-      "url": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/",
-      "source": "Hacker News",
-      "score": 148,
-      "comments": 71
-    },
-    {
-      "id": "lob:z4rhlt",
-      "title": "Redict is deprecated",
-      "summary": "",
-      "url": "https://redict.io/posts/2026-11-17-redict-deprecated/",
-      "source": "Lobste.rs",
-      "score": 63,
-      "comments": 9,
-      "tags": [
-        "databases"
-      ]
-    },
-    {
-      "id": "hn:50532385",
-      "title": "Show HN: Alloy CSS, dialogs, menus and tabs that work with JavaScript off",
-      "summary": "",
-      "url": "https://alloyhtml.com/example.html",
-      "source": "Hacker News",
-      "score": 145,
-      "comments": 23
-    },
-    {
-      "id": "lob:6t3oi4",
-      "title": "On Leaving Swift for Rust",
-      "summary": "",
-      "url": "https://www.prux.org/posts/goodbye-swift-hello-rust/",
-      "source": "Lobste.rs",
-      "score": 22,
-      "comments": 11,
-      "tags": [
-        "mobile",
-        "rust",
-        "swift"
-      ]
-    },
-    {
-      "id": "lob:sz6o8w",
-      "title": "Improving the Wii U's Wii Mode",
-      "summary": "",
-      "url": "https://garyodernichts.blogspot.com/2026/11/improving-wii-us-wii-mode.html",
-      "source": "Lobste.rs",
-      "score": 45,
-      "comments": 1,
-      "tags": [
-        "graphics",
-        "hardware",
-        "reversing"
-      ]
-    },
-    {
-      "id": "arxiv:2611.21608v1",
-      "title": "Latent Lattice Language Models",
-      "summary": "Language models typically increase per-token computation through deeper or looped layers and latent reasoning steps, while richer residual connections improve information flow across layers. We instead increase computational capacity: the number of active computational states a model maintains. We i",
-      "url": "https://arxiv.org/abs/2611.21608v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_id": "2611.21608v1"
-    },
-    {
-      "id": "arxiv:2611.21605v1",
-      "title": "ViRA: Toward Ultra-High-Resolution Visual Agents via Cross-Input Relative Policy Optimization",
-      "summary": "Visual agents answer questions about ultra-high-resolution photos by zooming into the relevant regions. However, existing agents often answer from common sense instead of reading the evidence. Reinforcement learning (RL) on the final answer cannot correct this, because a guess earns the same reward ",
-      "url": "https://arxiv.org/abs/2611.21605v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ],
-      "arxiv_id": "2611.21605v1"
-    },
-    {
-      "id": "arxiv:2611.21598v1",
-      "title": "Mitigating Catastrophic Forgetting with Physics-Indexed Specialist Memory: the Evolutionary Neuroplastic Agent",
-      "summary": "Continual reinforcement learning requires adaptation to changing conditions while preserving performance under previously encountered dynamics. It was investigated whether specialists generated by evolutionary search can provide a reusable memory when combined with environment detection and failure-",
-      "url": "https://arxiv.org/abs/2611.21598v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.NE"
-      ],
-      "arxiv_id": "2611.21598v1"
-    },
-    {
-      "id": "lob:kseyz1",
-      "title": "Github Redesign (2019)",
-      "summary": "<p>I suggest the conversation steer away from the controversial last point where he flattens the UI quite a bit to make it less \"dated\", as the rest was quite good up until that point, and that deserves being discussed.</p>\n",
-      "url": "https://tonsky.me/blog/github-redesign/",
-      "source": "Lobste.rs",
-      "score": 31,
-      "comments": 8,
-      "tags": [
-        "design"
-      ]
-    },
-    {
-      "id": "hn:50536387",
-      "title": "Solid 2.0",
-      "summary": "",
-      "url": "https://www.solidjs.com/blog/solid-2-0-the-long-hold/",
-      "source": "Hacker News",
-      "score": 83,
-      "comments": 21
-    },
-    {
-      "id": "hn:50535992",
-      "title": "Phrack 73 Released",
-      "summary": "",
-      "url": "https://phrack.org/issues/73/introduction_md",
-      "source": "Hacker News",
-      "score": 99,
-      "comments": 4
+      "score": 1203,
+      "comments": 754
     },
     {
       "id": "hn:50537156",
@@ -236,17 +60,176 @@
       "summary": "",
       "url": "https://github.com/jquery/jquery/releases/tag/4.1.0",
       "source": "Hacker News",
-      "score": 55,
-      "comments": 26
+      "score": 300,
+      "comments": 158
     },
     {
-      "id": "hn:50536468",
-      "title": "Launch HN: StarSling (YC P25) – Self-improving CI for agent-volume repos",
-      "summary": "We’re Yonas and Daniel and we’re building StarSling (<a href=\"https:&#x2F;&#x2F;starsling.dev\">https:&#x2F;&#x2F;starsling.dev</a>), fast GitHub Actions runners with AI agents that ship PRs to continuously improve your tests and workflows.<p>Every CI job gets its own ephemeral sandbox on the fastest",
-      "url": "https://starsling.dev",
+      "id": "lob:1dj9w1",
+      "title": "Actual curl rewrites in rust",
+      "summary": "",
+      "url": "https://daniel.haxx.se/blog/2026/11/17/actual-curl-rewrites-in-rust/",
+      "source": "Lobste.rs",
+      "score": 87,
+      "comments": 53,
+      "tags": [
+        "rust"
+      ]
+    },
+    {
+      "id": "hn:50538240",
+      "title": "Java4Shell: RCE in OpenJDK when processing Base64",
+      "summary": "",
+      "url": "https://calif.io/java4shell/",
       "source": "Hacker News",
-      "score": 24,
-      "comments": 10
+      "score": 759,
+      "comments": 201
+    },
+    {
+      "id": "hn:50540437",
+      "title": "ID.me terms required for IRS sign-in",
+      "summary": "",
+      "url": "https://consumerrights.wiki/w/ID.me_terms_required_for_IRS_sign-in",
+      "source": "Hacker News",
+      "score": 285,
+      "comments": 120
+    },
+    {
+      "id": "hn:50538994",
+      "title": "Quad9's withdrawal from France: A canary in the coal mine",
+      "summary": "",
+      "url": "https://blog.cloudflare.com/quad9-withdrawal-from-france/",
+      "source": "Hacker News",
+      "score": 452,
+      "comments": 142
+    },
+    {
+      "id": "hn:50540178",
+      "title": "Google's AI answers reducing search traffic by 40%",
+      "summary": "",
+      "url": "https://revscope.co/blog/search-seo-geo-2026/",
+      "source": "Hacker News",
+      "score": 280,
+      "comments": 210
+    },
+    {
+      "id": "hn:50532849",
+      "title": "Highly classified US national security communications network goes down",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.reuters.com&#x2F;technology&#x2F;highly-classified-us-national-security-communications-network-is-down-cnn-2026-11-17&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.reuters.com&#x2F;technology&#x2F;highly-classified-us-nati...</a>",
+      "url": "https://www.cnn.com/2026/11/17/politics/highly-classified-national-security-communications-network-goes-down",
+      "source": "Hacker News",
+      "score": 544,
+      "comments": 629
+    },
+    {
+      "id": "lob:s7mejx",
+      "title": "How Rust Changed Me As A Developer",
+      "summary": "",
+      "url": "https://blog.startifact.com/posts/how-rust-changed-me/",
+      "source": "Lobste.rs",
+      "score": 40,
+      "comments": 19,
+      "tags": [
+        "performance",
+        "rust"
+      ]
+    },
+    {
+      "id": "hn:50539747",
+      "title": "Archive Team is archiving the Apple Support Community (closes November 20, 2026)",
+      "summary": "",
+      "url": "https://wiki.archiveteam.org/index.php/Apple_Discussions",
+      "source": "Hacker News",
+      "score": 157,
+      "comments": 53
+    },
+    {
+      "id": "hn:50535885",
+      "title": "MAI Code 2 and Code 2 Flash",
+      "summary": "",
+      "url": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/",
+      "source": "Hacker News",
+      "score": 330,
+      "comments": 147
+    },
+    {
+      "id": "lob:kseyz1",
+      "title": "Github Redesign (2019)",
+      "summary": "<p>I suggest the conversation steer away from the controversial last point where he flattens the UI quite a bit to make it less \"dated\", as the rest was quite good up until that point, and that deserves being discussed.</p>\n",
+      "url": "https://tonsky.me/blog/github-redesign/",
+      "source": "Lobste.rs",
+      "score": 39,
+      "comments": 10,
+      "tags": [
+        "design"
+      ]
+    },
+    {
+      "id": "lob:z4rhlt",
+      "title": "Redict is deprecated",
+      "summary": "",
+      "url": "https://redict.io/posts/2026-11-17-redict-deprecated/",
+      "source": "Lobste.rs",
+      "score": 70,
+      "comments": 9,
+      "tags": [
+        "databases"
+      ]
+    },
+    {
+      "id": "hn:50542135",
+      "title": "Interviewed at a YC startup, found out they used my LinkedIn without permission",
+      "summary": "",
+      "url": "https://reddit.com/r/recruitinghell/comments/1xyr6ml/interviewed_at_a_yc_startup_spent_30_hours/",
+      "source": "Hacker News",
+      "score": 152,
+      "comments": 14
+    },
+    {
+      "id": "lob:yqmfzq",
+      "title": "Steve Jobs Core Animation demo from WWDC 2007",
+      "summary": "",
+      "url": "https://lucas.love/100/058",
+      "source": "Lobste.rs",
+      "score": 22,
+      "comments": 10,
+      "tags": [
+        "graphics",
+        "mac",
+        "video"
+      ]
+    },
+    {
+      "id": "lob:oj87qu",
+      "title": "How to Bypass Rust's Orphan Rule",
+      "summary": "",
+      "url": "https://edvong.com/bypass-orphan-rule/",
+      "source": "Lobste.rs",
+      "score": 17,
+      "comments": 7,
+      "tags": [
+        "rust"
+      ]
+    },
+    {
+      "id": "lob:xu4ajj",
+      "title": "Phrack 73",
+      "summary": "",
+      "url": "https://phrack.org/issues/73/introduction_md.html",
+      "source": "Lobste.rs",
+      "score": 43,
+      "comments": 2,
+      "tags": [
+        "release",
+        "security"
+      ]
+    },
+    {
+      "id": "rss:7e289d5590",
+      "title": "Oracle to Patch 11 Java Flaws Today as Critical OpenJDK RCE (CVE-2026-114938) Report Emerges",
+      "summary": "Oracle is preparing to release security patches for 11 vulnerabilities in Java SE on Tuesday, November 17, 2026, all of which may be exploited remotely without authentication, as separate reports warn of a potentially critical remote code execution (RCE) flaw affecting OpenJDK.\n\nThe 11 vulnerabiliti",
+      "url": "https://thehackernews.com/2026/11/oracle-to-patch-11-java-flaws-today-as.html",
+      "source": "Tech RSS",
+      "score": 0
     }
   ],
   "ai_curated": true
