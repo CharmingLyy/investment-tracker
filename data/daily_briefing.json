@@ -1,214 +1,242 @@
 {
-  "date": "2026-11-18",
-  "update_time": "2026-11-18 06:41:49",
+  "date": "2026-11-19",
+  "update_time": "2026-11-18 20:08:00",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-18\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Java4Shell：OpenJDK 处理 Base64 时的远程代码执行漏洞 (来源: HackerNews)\n- **核心干货**：OpenJDK 在处理 Base64 解码时被曝出可远程触发 RCE 的高危漏洞，配合 Oracle 同日紧急修补 11 个 Java SE 漏洞的动作来看，这次不是普通的\"例行补丁日\"，而是真出事了。凡是跑 JVM 的后端服务，今天都该把升级窗口提上日程。\n- **毒舌/硬核点评**：名字起得很有仪式感——\"Java4Shell\"，致敬 Log4Shell 的命名传统，仿佛在提醒全世界：企业级基础设施的老底子，永远是你最熟悉的陌生人。老 Java 不死，只是偶尔给你一记闷棍。\n- **🔗 传送门**：[点击直达原链接](https://calif.io/java4shell/)\n\n---\n\n### 2. 📌 GPT‑6.2 Astra 与 Sol 发布 (来源: HackerNews)\n- **核心干货**：OpenAI 推出 GPT‑6.2 的两个新版本 Astra 和 Sol，HN 分数破 1200、评论 750+，是本日毫无争议的话题中心。版本号从 6 跳到 6.2 还拆出双型号，说明模型迭代已进入\"命名越花、细分越狠\"的工业化阶段——能力升级之外，更多是在给不同场景做定向裁剪。\n- **毒舌/硬核点评**：评论区 754 条，一半在讨论跑分，一半在讨论\"这次又贵了多少\"。当模型发布变成季度财报的延伸，真正的问题不是它多聪明，而是你的账单还能撑几个版本。\n- **🔗 传送门**：[点击直达原链接](https://openai.com/index/introducing-gpt-6-2-astra-sol/)\n\n---\n\n### 3. 📌 微软 ONNX Runtime 从 GitHub 上\"消失\" (来源: HackerNews)\n- **核心干货**：微软的 ONNX Runtime 仓库在 GitHub 上不见踪影，作为跨框架推理引擎的行业基石之一，它的突然下线让大量依赖它的部署链路陷入不确定。无论是迁移、归档还是\"战略性调整\"，这一动作对推理生态的震动都不小。\n- **毒舌/硬核点评**：开源项目的最大风险，从来不是代码烂，而是金主爸爸哪天心情一变就把仓库收了。ONNX Runtime 这波\"人间蒸发\"，堪称给所有把命脉押在单一厂商开源项目上的团队上了一堂免费的风险教育课。\n- **🔗 传送门**：[点击直达原链接](https://github.com/microsoft/onnxruntime)\n\n---\n\n### 🗣️ 今日顶男金句\n技术选型的第一原则不是\"哪个最强\"，而是\"哪个跑路时你还能自己扛\"——把核心依赖交给别人的善意，是工程师最贵的浪漫。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-19\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Nginx HTTP/2 未授权远程代码执行 (来源: HackerNews)\n- **核心干货**：Wiz 团队披露了 Nginx 的 HTTP/2 模块中存在未授权 RCE 漏洞，攻击者无需任何凭据即可通过精心构造的 HTTP/2 帧序列触发内存破坏，进而拿下服务器权限。Nginx 作为全球占比最高的反向代理/Web 服务器，这意味着互联网上百万级入口同时暴露在枪口下。\n- **毒舌/硬核点评**：你精心堆叠的 WAF、零信任架构、SOC 告警大屏，在 Nginx 自己先\"叛变\"面前约等于行为艺术。补丁打快点，别等脚本小子上门才想起 `systemctl restart nginx` 治百病。\n- **🔗 传送门**：[点击直达原链接](https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities)\n\n---\n\n### 2. 📌 curl 正式启动 Rust 重写 (来源: Lobste.rs)\n- **核心干货**：curl 作者 Daniel Stenberg 宣布在真实代码层面推进 Rust 重写，而非此前社区猜测的\"试验性探索\"。作为互联网最核心的基础设施之一，curl 的 Rust 化意味着内存安全将正式进入\"被所有人依赖但没人愿意重写\"的底层软件层。\n- **毒舌/硬核点评**：C 语言写网络库就像用手术刀切菜——锋利、优雅，偶尔切到自己手指就送进 ICU。Rust 重写不是时髦，是终于有人愿意给这条跑了三十年的老水管换内衬了。\n- **🔗 传送门**：[点击直达原链接](https://daniel.haxx.se/blog/2026/11/17/actual-curl-rewrites-in-rust/)\n\n---\n\n### 3. 📌 微软 Ignite 2026 一口气甩出七款新模型 (来源: HackerNews)\n- **核心干货**：微软在 Ignite 大会上发布七款新模型，主打\"可扩展的性价比\"——不是刷榜，而是压推理成本。信号很明确：大模型竞争已从\"谁的参数多\"切换到\"谁让你用得起\"，企业级落地开始算真账了。\n- **毒舌/硬核点评**：模型发布会现在比手机发布会还勤，但终于有人开始聊\"每 token 多少钱\"而不是\"我的 benchmark 多漂亮\"。毕竟 CFO 不看排行榜，只看账单。\n- **🔗 传送门**：[点击直达原链接](https://microsoft.ai/news/microsoft-ignite-2026/)\n\n---\n\n### 🗣️ 今日顶男金句\n\"基础设施的 bug 从不挑时间爆发，它只挑你刚下班、没备份、且老板在群里 @ 你的那一刻。\"",
   "briefing_items": [
     {
-      "title": "Java4Shell：OpenJDK 处理 Base64 时的远程代码执行漏洞",
+      "title": "Nginx HTTP/2 未授权远程代码执行",
       "source": "HackerNews",
-      "summary": "OpenJDK 在处理 Base64 解码时被曝出可远程触发 RCE 的高危漏洞，配合 Oracle 同日紧急修补 11 个 Java SE 漏洞的动作来看，这次不是普通的\"例行补丁日\"，而是真出事了。凡是跑 JVM 的后端服务，今天都该把升级窗口提上日程。",
-      "commentary": "名字起得很有仪式感——\"Java4Shell\"，致敬 Log4Shell 的命名传统，仿佛在提醒全世界：企业级基础设施的老底子，永远是你最熟悉的陌生人。老 Java 不死，只是偶尔给你一记闷棍。",
-      "url": "https://calif.io/java4shell/"
+      "summary": "Wiz 团队披露了 Nginx 的 HTTP/2 模块中存在未授权 RCE 漏洞，攻击者无需任何凭据即可通过精心构造的 HTTP/2 帧序列触发内存破坏，进而拿下服务器权限。Nginx 作为全球占比最高的反向代理/Web 服务器，这意味着互联网上百万级入口同时暴露在枪口下。",
+      "commentary": "你精心堆叠的 WAF、零信任架构、SOC 告警大屏，在 Nginx 自己先\"叛变\"面前约等于行为艺术。补丁打快点，别等脚本小子上门才想起 `systemctl restart nginx` 治百病。",
+      "url": "https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities"
     },
     {
-      "title": "GPT‑6.2 Astra 与 Sol 发布",
-      "source": "HackerNews",
-      "summary": "OpenAI 推出 GPT‑6.2 的两个新版本 Astra 和 Sol，HN 分数破 1200、评论 750+，是本日毫无争议的话题中心。版本号从 6 跳到 6.2 还拆出双型号，说明模型迭代已进入\"命名越花、细分越狠\"的工业化阶段——能力升级之外，更多是在给不同场景做定向裁剪。",
-      "commentary": "评论区 754 条，一半在讨论跑分，一半在讨论\"这次又贵了多少\"。当模型发布变成季度财报的延伸，真正的问题不是它多聪明，而是你的账单还能撑几个版本。",
-      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/"
+      "title": "curl 正式启动 Rust 重写",
+      "source": "Lobste.rs",
+      "summary": "curl 作者 Daniel Stenberg 宣布在真实代码层面推进 Rust 重写，而非此前社区猜测的\"试验性探索\"。作为互联网最核心的基础设施之一，curl 的 Rust 化意味着内存安全将正式进入\"被所有人依赖但没人愿意重写\"的底层软件层。",
+      "commentary": "C 语言写网络库就像用手术刀切菜——锋利、优雅，偶尔切到自己手指就送进 ICU。Rust 重写不是时髦，是终于有人愿意给这条跑了三十年的老水管换内衬了。",
+      "url": "https://daniel.haxx.se/blog/2026/11/17/actual-curl-rewrites-in-rust/"
     },
     {
-      "title": "微软 ONNX Runtime 从 GitHub 上\"消失\"",
+      "title": "微软 Ignite 2026 一口气甩出七款新模型",
       "source": "HackerNews",
-      "summary": "微软的 ONNX Runtime 仓库在 GitHub 上不见踪影，作为跨框架推理引擎的行业基石之一，它的突然下线让大量依赖它的部署链路陷入不确定。无论是迁移、归档还是\"战略性调整\"，这一动作对推理生态的震动都不小。",
-      "commentary": "开源项目的最大风险，从来不是代码烂，而是金主爸爸哪天心情一变就把仓库收了。ONNX Runtime 这波\"人间蒸发\"，堪称给所有把命脉押在单一厂商开源项目上的团队上了一堂免费的风险教育课。",
-      "url": "https://github.com/microsoft/onnxruntime"
+      "summary": "微软在 Ignite 大会上发布七款新模型，主打\"可扩展的性价比\"——不是刷榜，而是压推理成本。信号很明确：大模型竞争已从\"谁的参数多\"切换到\"谁让你用得起\"，企业级落地开始算真账了。",
+      "commentary": "模型发布会现在比手机发布会还勤，但终于有人开始聊\"每 token 多少钱\"而不是\"我的 benchmark 多漂亮\"。毕竟 CFO 不看排行榜，只看账单。",
+      "url": "https://microsoft.ai/news/microsoft-ignite-2026/"
     }
   ],
   "candidates": [
-    {
-      "id": "hn:50534631",
-      "title": "Nvidia stopped disclosing Singapore sales as revenues hit $104B",
-      "summary": "",
-      "url": "https://www.ft.com/content/dbde7a30-548c-4f9d-a4be-7898a0c24dcf",
-      "source": "Hacker News",
-      "score": 484,
-      "comments": 222
-    },
-    {
-      "id": "hn:50539610",
-      "title": "Microsoft's ONNX Runtime has disappeared from GitHub",
-      "summary": "",
-      "url": "https://github.com/microsoft/onnxruntime",
-      "source": "Hacker News",
-      "score": 249,
-      "comments": 59
-    },
-    {
-      "id": "hn:50535230",
-      "title": "GPT‑6.2 Astra and Sol",
-      "summary": "",
-      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
-      "source": "Hacker News",
-      "score": 1203,
-      "comments": 754
-    },
-    {
-      "id": "hn:50537156",
-      "title": "jQuery 4.1.0",
-      "summary": "",
-      "url": "https://github.com/jquery/jquery/releases/tag/4.1.0",
-      "source": "Hacker News",
-      "score": 300,
-      "comments": 158
-    },
     {
       "id": "lob:1dj9w1",
       "title": "Actual curl rewrites in rust",
       "summary": "",
       "url": "https://daniel.haxx.se/blog/2026/11/17/actual-curl-rewrites-in-rust/",
       "source": "Lobste.rs",
-      "score": 87,
-      "comments": 53,
+      "score": 108,
+      "comments": 59,
       "tags": [
         "rust"
       ]
     },
     {
-      "id": "hn:50538240",
-      "title": "Java4Shell: RCE in OpenJDK when processing Base64",
+      "id": "hn:50547777",
+      "title": "AI agents ask better questions than KPMG accountants in audit trial",
       "summary": "",
-      "url": "https://calif.io/java4shell/",
+      "url": "https://europeanbusinessmagazine.com/ai-agents-better-questions-kpmg/",
       "source": "Hacker News",
-      "score": 759,
-      "comments": 201
+      "score": 162,
+      "comments": 85
     },
     {
-      "id": "hn:50540437",
-      "title": "ID.me terms required for IRS sign-in",
+      "id": "hn:50547374",
+      "title": "Unauthenticated remote code execution in Nginx",
       "summary": "",
-      "url": "https://consumerrights.wiki/w/ID.me_terms_required_for_IRS_sign-in",
+      "url": "https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities",
       "source": "Hacker News",
-      "score": 285,
-      "comments": 120
+      "score": 681,
+      "comments": 270
     },
     {
-      "id": "hn:50538994",
-      "title": "Quad9's withdrawal from France: A canary in the coal mine",
+      "id": "hn:50548021",
+      "title": "Seven new models at scalable price-performance",
       "summary": "",
-      "url": "https://blog.cloudflare.com/quad9-withdrawal-from-france/",
+      "url": "https://microsoft.ai/news/microsoft-ignite-2026/",
       "source": "Hacker News",
-      "score": 452,
-      "comments": 142
+      "score": 299,
+      "comments": 190
     },
     {
-      "id": "hn:50540178",
-      "title": "Google's AI answers reducing search traffic by 40%",
+      "id": "hn:50545958",
+      "title": "DNS resolvers are the wrong place to fight piracy",
       "summary": "",
-      "url": "https://revscope.co/blog/search-seo-geo-2026/",
+      "url": "https://techstackups.com/articles/quad9-leaves-france-dns-blocking/",
       "source": "Hacker News",
-      "score": 280,
-      "comments": 210
-    },
-    {
-      "id": "hn:50532849",
-      "title": "Highly classified US national security communications network goes down",
-      "summary": "<a href=\"https:&#x2F;&#x2F;www.reuters.com&#x2F;technology&#x2F;highly-classified-us-national-security-communications-network-is-down-cnn-2026-11-17&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.reuters.com&#x2F;technology&#x2F;highly-classified-us-nati...</a>",
-      "url": "https://www.cnn.com/2026/11/17/politics/highly-classified-national-security-communications-network-goes-down",
-      "source": "Hacker News",
-      "score": 544,
-      "comments": 629
-    },
-    {
-      "id": "lob:s7mejx",
-      "title": "How Rust Changed Me As A Developer",
-      "summary": "",
-      "url": "https://blog.startifact.com/posts/how-rust-changed-me/",
-      "source": "Lobste.rs",
-      "score": 40,
-      "comments": 19,
-      "tags": [
-        "performance",
-        "rust"
-      ]
-    },
-    {
-      "id": "hn:50539747",
-      "title": "Archive Team is archiving the Apple Support Community (closes November 20, 2026)",
-      "summary": "",
-      "url": "https://wiki.archiveteam.org/index.php/Apple_Discussions",
-      "source": "Hacker News",
-      "score": 157,
-      "comments": 53
-    },
-    {
-      "id": "hn:50535885",
-      "title": "MAI Code 2 and Code 2 Flash",
-      "summary": "",
-      "url": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/",
-      "source": "Hacker News",
-      "score": 330,
+      "score": 453,
       "comments": 147
     },
     {
-      "id": "lob:kseyz1",
-      "title": "Github Redesign (2019)",
-      "summary": "<p>I suggest the conversation steer away from the controversial last point where he flattens the UI quite a bit to make it less \"dated\", as the rest was quite good up until that point, and that deserves being discussed.</p>\n",
-      "url": "https://tonsky.me/blog/github-redesign/",
+      "id": "lob:spmgsd",
+      "title": "Codeberg's domain suddenly disappeared from their account, site is unreachable",
+      "summary": "<p><del>Note: codeberg's servers are up, it's just the domain that's gone. It works perfectly after adding the following line to <code>/etc/hosts</code>:</del></p>\n<pre><code>217.197.84.140 codeberg.org\n</code></pre>\n<p>Update: it's now up again, and the above workaround is not necessary.</p>\n",
+      "url": "https://social.anoxinon.de/@Codeberg/117636454915265360",
       "source": "Lobste.rs",
-      "score": 39,
-      "comments": 10,
+      "score": 158,
+      "comments": 47,
+      "tags": [
+        "vcs"
+      ]
+    },
+    {
+      "id": "hn:50546914",
+      "title": "'Human' Is Cambridge Dictionary's Word of the Year 2026",
+      "summary": "",
+      "url": "https://www.cam.ac.uk/news/cambridge-dictionary-reveals-word-of-the-year-2026",
+      "source": "Hacker News",
+      "score": 183,
+      "comments": 135
+    },
+    {
+      "id": "hn:50548004",
+      "title": "KVM: x86: Unconditionally reset MMU context when emulating INIT (CVE-2026-99312)",
+      "summary": "",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-99312",
+      "source": "Hacker News",
+      "score": 142,
+      "comments": 84
+    },
+    {
+      "id": "hn:50547620",
+      "title": "Inside Deutsche Bank",
+      "summary": "",
+      "url": "https://www.inside-db.com/",
+      "source": "Hacker News",
+      "score": 355,
+      "comments": 131
+    },
+    {
+      "id": "lob:g0bf9i",
+      "title": "Java4Shell: Write once, RCE everywhere",
+      "summary": "",
+      "url": "https://calif.io/java4shell/",
+      "source": "Lobste.rs",
+      "score": 52,
+      "comments": 27,
+      "tags": [
+        "java",
+        "security"
+      ]
+    },
+    {
+      "id": "arxiv:2611.23192v1",
+      "title": "WoRD: Diffusion-Based Posterior Inference for Online Goal Recognition",
+      "summary": "Goal recognition is the task of inferring an agent's intended goal from its observed behavior. Most existing work focuses on high-level symbolic recognition, abstracting away the continuous motion through which agents reach their goal. Methods that do reason over continuous trajectories rely on an e",
+      "url": "https://arxiv.org/abs/2611.23192v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "arxiv_id": "2611.23192v1"
+    },
+    {
+      "id": "lob:cwxmdw",
+      "title": "Windows 11 collects data on which coding agents and dev tools you use",
+      "summary": "",
+      "url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/",
+      "source": "Lobste.rs",
+      "score": 25,
+      "comments": 15,
+      "tags": [
+        "practices",
+        "privacy",
+        "security"
+      ]
+    },
+    {
+      "id": "arxiv:2611.23229v1",
+      "title": "Ambient LLMs: Data-Efficient Supervised Fine-tuning via Temperature Matching",
+      "summary": "Collecting large-scale, diverse, and high-quality post-training datasets for autoregressive language models is challenging. Consequently, Supervised Fine-Tuning (SFT) is typically applied to datasets significantly smaller than those used for pre-training, which leads to overfitting and the catastrop",
+      "url": "https://arxiv.org/abs/2611.23229v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_id": "2611.23229v1"
+    },
+    {
+      "id": "lob:wj2svg",
+      "title": "nginx2root",
+      "summary": "",
+      "url": "https://xint.io/blog/nginx2root-remote-code-execution",
+      "source": "Lobste.rs",
+      "score": 36,
+      "comments": 11,
+      "tags": [
+        "security"
+      ]
+    },
+    {
+      "id": "lob:de02yg",
+      "title": "Sarasa Gothic Mono",
+      "summary": "",
+      "url": "https://picaq.github.io/sarasa",
+      "source": "Lobste.rs",
+      "score": 26,
+      "comments": 23,
       "tags": [
         "design"
       ]
     },
     {
-      "id": "lob:z4rhlt",
-      "title": "Redict is deprecated",
+      "id": "hn:50550062",
+      "title": "Scottish HTTP Codes",
       "summary": "",
-      "url": "https://redict.io/posts/2026-11-17-redict-deprecated/",
-      "source": "Lobste.rs",
-      "score": 70,
-      "comments": 9,
-      "tags": [
-        "databases"
-      ]
-    },
-    {
-      "id": "hn:50542135",
-      "title": "Interviewed at a YC startup, found out they used my LinkedIn without permission",
-      "summary": "",
-      "url": "https://reddit.com/r/recruitinghell/comments/1xyr6ml/interviewed_at_a_yc_startup_spent_30_hours/",
+      "url": "https://underwood.network/http/scots.html",
       "source": "Hacker News",
-      "score": 152,
-      "comments": 14
+      "score": 138,
+      "comments": 24
     },
     {
-      "id": "lob:yqmfzq",
-      "title": "Steve Jobs Core Animation demo from WWDC 2007",
+      "id": "lob:dpvrbv",
+      "title": "Solid 2.0",
       "summary": "",
-      "url": "https://lucas.love/100/058",
+      "url": "https://www.solidjs.com/blog/solid-2-0-the-long-hold",
       "source": "Lobste.rs",
-      "score": 22,
-      "comments": 10,
+      "score": 16,
+      "comments": 12,
       "tags": [
-        "graphics",
-        "mac",
-        "video"
+        "javascript",
+        "web"
       ]
     },
     {
-      "id": "lob:oj87qu",
-      "title": "How to Bypass Rust's Orphan Rule",
-      "summary": "",
-      "url": "https://edvong.com/bypass-orphan-rule/",
-      "source": "Lobste.rs",
-      "score": 17,
-      "comments": 7,
-      "tags": [
-        "rust"
-      ]
+      "id": "arxiv:2611.23218v1",
+      "title": "What Does a Bias Head Measure? Non-Identifiability in Head-Level Bias Attribution",
+      "summary": "Methods that localise social bias in large language models to individual attention heads and remove it by ablation are validated by their effect on a fairness metric, never by evidence that the statistic selecting the heads measures bias. We audit this on Qwen-2.5-7B-Instruct and Llama-3.1-8B-Instru",
+      "url": "https://arxiv.org/abs/2611.23218v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_id": "2611.23218v1"
+    },
+    {
+      "id": "arxiv:2611.23211v1",
+      "title": "Multimodal Masked Diffusion Autoencoder for Modeling Impaired Driving",
+      "summary": "Human cognitive state (e.g., distraction, stress), gaze, and behavior interact with the driving environment in subtle ways that AI could use to assist drivers, but ground-truth labels for human cognitive state levels are costly to obtain at scale. We propose a multimodal masked-diffusion autoencoder",
+      "url": "https://arxiv.org/abs/2611.23211v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CV",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "arxiv_id": "2611.23211v1"
     },
     {
       "id": "lob:xu4ajj",
@@ -216,20 +244,12 @@
       "summary": "",
       "url": "https://phrack.org/issues/73/introduction_md.html",
       "source": "Lobste.rs",
-      "score": 43,
-      "comments": 2,
+      "score": 61,
+      "comments": 3,
       "tags": [
         "release",
         "security"
       ]
-    },
-    {
-      "id": "rss:7e289d5590",
-      "title": "Oracle to Patch 11 Java Flaws Today as Critical OpenJDK RCE (CVE-2026-114938) Report Emerges",
-      "summary": "Oracle is preparing to release security patches for 11 vulnerabilities in Java SE on Tuesday, November 17, 2026, all of which may be exploited remotely without authentication, as separate reports warn of a potentially critical remote code execution (RCE) flaw affecting OpenJDK.\n\nThe 11 vulnerabiliti",
-      "url": "https://thehackernews.com/2026/11/oracle-to-patch-11-java-flaws-today-as.html",
-      "source": "Tech RSS",
-      "score": 0
     }
   ],
   "ai_curated": true
