@@ -1,0 +1,830 @@
+{
+  "update_time": "2026-11-19 16:58:11",
+  "stocks": {
+    "a_stocks": [
+      {
+        "market": "A股",
+        "code": "002050",
+        "name": "三花智控",
+        "symbol": "sz.002050",
+        "industry": null,
+        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
+        "price": 32.54,
+        "open": 32.3,
+        "high": 33.34,
+        "low": 31.96,
+        "change_pct": 0.77,
+        "volume": 44714688,
+        "turnover": 14.6,
+        "market_cap": null,
+        "pe": 35.22,
+        "cash_flow": null,
+        "macd": -0.2741,
+        "macd_signal": -0.0802,
+        "macd_histogram": -0.3879,
+        "rsi": 43.01,
+        "ma": {
+          "MA5": 33.24,
+          "MA10": 34.04,
+          "MA20": 34.17,
+          "MA60": 34.56
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
+        "price": 5.89,
+        "open": 5.93,
+        "high": 5.93,
+        "low": 5.79,
+        "change_pct": 0.0,
+        "volume": 36863228,
+        "turnover": 2.15,
+        "market_cap": null,
+        "pe": 66.13,
+        "cash_flow": null,
+        "macd": -0.1124,
+        "macd_signal": -0.1028,
+        "macd_histogram": -0.0191,
+        "rsi": 34.09,
+        "ma": {
+          "MA5": 5.89,
+          "MA10": 5.98,
+          "MA20": 6.05,
+          "MA60": 6.34
+        },
+        "main_net_flow": null
+      }
+    ],
+    "hk_stocks": [
+      {
+        "market": "港股",
+        "code": "01810",
+        "name": "小米集团-W",
+        "symbol": "01810",
+        "industry": "Consumer Electronics",
+        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
+        "price": NaN,
+        "open": null,
+        "high": null,
+        "low": null,
+        "change_pct": NaN,
+        "volume": 134797260,
+        "turnover": null,
+        "market_cap": 7338.3,
+        "pe": 20.97,
+        "cash_flow": 86.81,
+        "macd": 0.916,
+        "macd_signal": 0.9112,
+        "macd_histogram": 0.0098,
+        "rsi": 58.5,
+        "ma": {
+          "MA5": null,
+          "MA10": null,
+          "MA20": null,
+          "MA60": null
+        },
+        "main_net_flow": null
+      }
+    ],
+    "us_stocks": [
+      {
+        "market": "美股",
+        "code": "NVDA",
+        "name": "NVIDIA",
+        "symbol": "NVDA",
+        "industry": "Semiconductors",
+        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
+        "price": 150.64,
+        "open": 152.92,
+        "high": 158.13,
+        "low": 150.39,
+        "change_pct": -0.21,
+        "volume": 139016084,
+        "turnover": null,
+        "market_cap": 36375.01,
+        "pe": 16.18,
+        "cash_flow": 992.41,
+        "macd": -17.3861,
+        "macd_signal": -13.967,
+        "macd_histogram": -6.8382,
+        "rsi": 21.0,
+        "ma": {
+          "MA5": 155.21,
+          "MA10": 165.02,
+          "MA20": 185.96,
+          "MA60": 211.33
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "GOOG",
+        "name": "Alphabet (Google)",
+        "symbol": "GOOG",
+        "industry": "Internet Content & Information",
+        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
+        "price": 282.07,
+        "open": 290.66,
+        "high": 292.21,
+        "low": 282.01,
+        "change_pct": 1.03,
+        "volume": 11907166,
+        "turnover": null,
+        "market_cap": 34677.68,
+        "pe": 14.73,
+        "cash_flow": 11.62,
+        "macd": -11.7477,
+        "macd_signal": -12.5446,
+        "macd_histogram": 1.5939,
+        "rsi": 36.24,
+        "ma": {
+          "MA5": 282.53,
+          "MA10": 285.35,
+          "MA20": 290.48,
+          "MA60": 323.25
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "CRCL",
+        "name": "Circle",
+        "symbol": "CRCL",
+        "industry": "Capital Markets",
+        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
+        "price": 53.59,
+        "open": 55.48,
+        "high": 56.68,
+        "low": 53.5,
+        "change_pct": 0.53,
+        "volume": 3940478,
+        "turnover": null,
+        "market_cap": 137.49,
+        "pe": 32.28,
+        "cash_flow": 2.62,
+        "macd": -7.3053,
+        "macd_signal": -5.6712,
+        "macd_histogram": -3.2682,
+        "rsi": 25.46,
+        "ma": {
+          "MA5": 56.28,
+          "MA10": 61.27,
+          "MA20": 69.36,
+          "MA60": 81.86
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "MP",
+        "name": "MP Materials",
+        "symbol": "MP",
+        "industry": "Other Industrial Metals & Mining",
+        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
+        "price": 36.71,
+        "open": 36.02,
+        "high": 37.61,
+        "low": 35.96,
+        "change_pct": 2.11,
+        "volume": 2401872,
+        "turnover": null,
+        "market_cap": 65.44,
+        "pe": 92.73,
+        "cash_flow": 4.1,
+        "macd": -1.7962,
+        "macd_signal": -2.0699,
+        "macd_histogram": 0.5474,
+        "rsi": 43.79,
+        "ma": {
+          "MA5": 36.47,
+          "MA10": 36.62,
+          "MA20": 37.55,
+          "MA60": 44.54
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "PLTR",
+        "name": "Palantir",
+        "symbol": "PLTR",
+        "industry": "Software - Infrastructure",
+        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
+        "price": 158.38,
+        "open": 160.94,
+        "high": 167.13,
+        "low": 158.05,
+        "change_pct": 1.09,
+        "volume": 9000904,
+        "turnover": null,
+        "market_cap": 3816.16,
+        "pe": 111.54,
+        "cash_flow": 26.52,
+        "macd": -8.1532,
+        "macd_signal": -6.4563,
+        "macd_histogram": -3.3937,
+        "rsi": 34.94,
+        "ma": {
+          "MA5": 160.0,
+          "MA10": 164.24,
+          "MA20": 174.72,
+          "MA60": 182.7
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "NOW",
+        "name": "ServiceNow",
+        "symbol": "NOW",
+        "industry": "Software - Application",
+        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
+        "price": 90.41,
+        "open": 91.0,
+        "high": 93.73,
+        "low": 90.22,
+        "change_pct": -0.2,
+        "volume": 7246157,
+        "turnover": null,
+        "market_cap": 938.38,
+        "pe": 65.04,
+        "cash_flow": 57.54,
+        "macd": -11.6644,
+        "macd_signal": -10.1743,
+        "macd_histogram": -2.9802,
+        "rsi": 25.47,
+        "ma": {
+          "MA5": 95.1,
+          "MA10": 98.33,
+          "MA20": 112.32,
+          "MA60": 130.57
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "DDOG",
+        "name": "Datadog",
+        "symbol": "DDOG",
+        "industry": "Software - Application",
+        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
+        "price": 172.93,
+        "open": 174.19,
+        "high": 182.39,
+        "low": 172.61,
+        "change_pct": 3.48,
+        "volume": 2114225,
+        "turnover": null,
+        "market_cap": 624.35,
+        "pe": 240.18,
+        "cash_flow": 10.66,
+        "macd": -23.1924,
+        "macd_signal": -20.712,
+        "macd_histogram": -4.9609,
+        "rsi": 31.75,
+        "ma": {
+          "MA5": 172.45,
+          "MA10": 176.81,
+          "MA20": 208.92,
+          "MA60": 236.99
+        },
+        "main_net_flow": null
+      }
+    ],
+    "crypto": [
+      {
+        "market": "加密货币",
+        "code": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "industry": "Smart Contract Platform",
+        "price": 62908,
+        "open": null,
+        "high": 64006,
+        "low": 62068,
+        "change_pct": 0.76,
+        "volume": 30205135017,
+        "turnover": null,
+        "market_cap": 12645.31,
+        "market_cap_rank": 1,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -4348.7107,
+        "macd_signal": -3405.8921,
+        "macd_histogram": -1885.6373,
+        "rsi": 21.57,
+        "ma": {
+          "MA5": 64187.11,
+          "MA10": 67243.71,
+          "MA20": 72017.64,
+          "MA60": 79243.22
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 20113584.0,
+          "total_supply": 20113903.0,
+          "circ_ratio": 100.0,
+          "price_change_7d": -12.16058,
+          "price_change_30d": -23.79094,
+          "ath_pct": -50.1,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      },
+      {
+        "market": "加密货币",
+        "code": "ethereum",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "industry": "Smart Contract Platform",
+        "price": 1772.81,
+        "open": null,
+        "high": 1813.98,
+        "low": 1746.35,
+        "change_pct": 1.87,
+        "volume": 9916188060,
+        "turnover": null,
+        "market_cap": 2165.3,
+        "market_cap_rank": 2,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -156.2474,
+        "macd_signal": -131.536,
+        "macd_histogram": -49.4226,
+        "rsi": 24.13,
+        "ma": {
+          "MA5": 1804.64,
+          "MA10": 1884.7,
+          "MA20": 2064.38,
+          "MA60": 2373.39
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 122233327.7069443,
+          "total_supply": 122233327.7069443,
+          "circ_ratio": 100.0,
+          "price_change_7d": -11.64831,
+          "price_change_30d": -27.31681,
+          "ath_pct": -64.16,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      }
+    ]
+  },
+  "news": [
+    {
+      "id": "35b871d31c",
+      "title": "[播客]独家实拍：我那永远跪着的母亲(11/07 22:10)",
+      "summary": "独家实拍：我那永远跪着的母亲",
+      "link": "http://go.rss.sina.com.cn/redirect.php?url=http://you.video.sina.com.cn/b/16972162-1239095354.html",
+      "source": "rss.sina.com.cn",
+      "published": ""
+    },
+    {
+      "id": "0d139454d2",
+      "title": "Anthropic is coming to your 401(k). Love it or hate it, AI is becoming a bigger part of your financial plan.",
+      "summary": "A number of public pension plans already have a stake in Anthropic.",
+      "link": "https://www.marketwatch.com/story/anthropic-is-coming-to-your-401-k-love-it-or-hate-it-ai-is-becoming-a-bigger-part-of-your-financial-plan-2e9ae533?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 19 Nov 2026 16:53:00 GMT"
+    },
+    {
+      "id": "57759cbba6",
+      "title": "Alibaba’s cloud business is thriving. But those profits are completely offset by losses from its AI labs.",
+      "summary": "The cloud-services business of Chinese internet giant Alibaba is thriving — but the losses from the artificial-intelligence labs business is completely offsetting it.",
+      "link": "https://www.marketwatch.com/story/alibabas-cloud-business-is-thriving-but-those-profits-are-completely-offset-by-losses-from-its-ai-labs-74bf4b3c?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 19 Nov 2026 16:52:00 GMT"
+    },
+    {
+      "id": "30aae81d26",
+      "title": "Anthropic’s IPO poses this big risk to an already shaky stock market",
+      "summary": "Investors are worried that a flood of equity issuance could overwhelm demand.",
+      "link": "https://www.marketwatch.com/story/anthropics-ipo-poses-this-big-risk-to-an-already-shaky-stock-market-83ce7794?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 19 Nov 2026 16:49:00 GMT"
+    },
+    {
+      "id": "49df56e729",
+      "title": "A CoreWeave co-founder just made an unconventional $30 million wager on its battered bonds",
+      "summary": "While executives typically buy shares to signal confidence, CoreWeave co-founder Brian Venturo is turning to the bond market to calm AI jitters.",
+      "link": "https://www.marketwatch.com/story/a-coreweave-co-founder-just-made-an-unconventional-30-million-wager-on-its-battered-bonds-5586b0e9?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 19 Nov 2026 16:27:00 GMT"
+    },
+    {
+      "id": "ae8ad0ebab",
+      "title": "Want to create more competition in grocery delivery? Let DoorDash and Instacart merge.",
+      "summary": "The combined company would be better able to challenge corporate juggernauts like Amazon, Walmart and Uber.",
+      "link": "https://www.marketwatch.com/story/want-to-create-more-competition-in-grocery-delivery-let-doordash-and-instacart-merge-10505ad0?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 19 Nov 2026 16:21:00 GMT"
+    },
+    {
+      "id": "edf425872f",
+      "title": "We’re in our 50s and terrified of a market crash. Should we put $400,000 of our $1 million retirement savings into an annuity?",
+      "summary": "“We have a house worth $450,000. Our combined annual income is $125,000.”",
+      "link": "https://www.marketwatch.com/story/were-in-our-50s-and-terrified-of-a-market-crash-should-we-put-400-000-of-our-1-million-retirement-savings-into-an-annuity-1943f240?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 19 Nov 2026 16:15:00 GMT"
+    },
+    {
+      "id": "66e86930ce",
+      "title": "‘Buyers are out for blood’: With home sales at a record low, buyers are calling the shots",
+      "summary": "The few buyers left in the market braving record-high home prices and 7% mortgage rates are starting to call the shots, real-estate agents say.",
+      "link": "https://www.marketwatch.com/story/buyers-are-out-for-blood-as-housing-market-finally-hits-rock-bottom-fa5093a6?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 19 Nov 2026 16:14:00 GMT"
+    },
+    {
+      "id": "e3005996ee",
+      "title": "Tech outages are rattling Americans so much that they’re stockpiling cash and supplies",
+      "summary": "A lack of clarity from world leaders is prompting some people to prepare for the worst.",
+      "link": "https://www.marketwatch.com/story/why-are-these-tech-outages-rattling-americans-so-much-that-theyre-stockpiling-cash-and-supplies-07516bdd?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 19 Nov 2026 15:57:00 GMT"
+    },
+    {
+      "id": "8ffb72e7e8",
+      "title": "Can Anthropic’s IPO do for the stock market what Nvidia’s earnings couldn’t?",
+      "summary": "Here’s the case for energy stocks in your 401(k) and why Target’s comeback runs through the shoe aisle. Plus, what “GTA VI” means for Take-Two investors.",
+      "link": "https://www.marketwatch.com/story/can-anthropics-ipo-do-for-the-stock-market-what-nvidias-earnings-couldnt-be67a434?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 19 Nov 2026 15:51:00 GMT"
+    },
+    {
+      "id": "450c75b1fc",
+      "title": "Trump says Americans should ‘relax’ as Washington scrambles to get to the bottom of outages",
+      "summary": "The Trump administration and Congress have been rushing to address the series of technology failures that have hit the U.S. over the past week, with Vice President J.D. Vance withdrawing from an event",
+      "link": "https://www.marketwatch.com/story/washington-is-scrambling-to-get-to-the-bottom-of-the-growing-number-of-tech-outages-across-america-66fbf299?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 19 Nov 2026 15:01:00 GMT"
+    },
+    {
+      "id": "719005afbc",
+      "title": "Anthropic opens 34% above IPO price, reaches $2 trillion valuation in Nasdaq debut",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/anthropic-opens-34-above-ipo-price-reaches-2-trillion-valuation-in-nasdaq-debut-5039595",
+      "source": "www.investing.com",
+      "published": "2026-11-19 16:53:51"
+    },
+    {
+      "id": "7af64862d5",
+      "title": "Bybit Joins Proof of Talk in Abu Dhabi 2026 as Title Partner and Official Exchange Partner",
+      "summary": "",
+      "link": "https://www.investing.com/news/cryptocurrency-news/bybit-joins-proof-of-talk-in-abu-dhabi-2026-as-title-partner-and-official-exchange-partner-5039600",
+      "source": "www.investing.com",
+      "published": "2026-11-19 16:53:46"
+    },
+    {
+      "id": "7341a23884",
+      "title": "SoFi Technologies stock hits 52-week low at $13.84",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/sofi-technologies-stock-hits-52week-low-at-1384-93CH-5039597",
+      "source": "www.investing.com",
+      "published": "2026-11-19 16:53:08"
+    },
+    {
+      "id": "19bebd9f57",
+      "title": "TD Cowen Top Pharma Pick for 2027",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/td-cowen-top-pharma-pick-for-2027-5039596",
+      "source": "www.investing.com",
+      "published": "2026-11-19 16:52:34"
+    },
+    {
+      "id": "ed4f8bfd43",
+      "title": "Stocks wobble with focus on Anthropic debut; oil prices rise",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/stocks-rise-after-anthropic-ipo-pricing-sets-stage-for-blockbuster-debut-5037540",
+      "source": "www.investing.com",
+      "published": "2026-11-19 16:49:12"
+    },
+    {
+      "id": "4ae68d4ff7",
+      "title": "Oil prices rise as tanker disruptions offset surplus supply outlook",
+      "summary": "",
+      "link": "https://www.investing.com/news/commodities-news/oil-prices-steady-as-supply-surplus-softens-sentiment-though-gulf-war-supports-5037604",
+      "source": "www.investing.com",
+      "published": "2026-11-19 16:48:24"
+    },
+    {
+      "id": "14f033453e",
+      "title": "Earnings call transcript: Copa Holdings beats Q3 2026 estimates as shares rise",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-copa-holdings-beats-q3-2026-estimates-as-shares-rise-93CH-5039593",
+      "source": "www.investing.com",
+      "published": "2026-11-19 16:46:07"
+    },
+    {
+      "id": "47292caf04",
+      "title": "Earnings call transcript: Clear Blue Technologies posts first positive EBITDA in years in Q3 2026",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-clear-blue-technologies-posts-first-positive-ebitda-in-years-in-q3-2026-93CH-5039592",
+      "source": "www.investing.com",
+      "published": "2026-11-19 16:45:47"
+    },
+    {
+      "id": "9abd55c3a6",
+      "title": "Moody’s upgrades Toyota outlook to positive, projects modest EBIT margin expansion",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/moodys-upgrades-toyota-outlook-to-positive-projects-modest-ebit-margin-expansion-5039589",
+      "source": "www.investing.com",
+      "published": "2026-11-19 16:43:21"
+    },
+    {
+      "id": "0f4ba81e9f",
+      "title": "Wall St wavers ahead of Anthropic market debut",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/nasdaq-futures-jump-as-anthropics-record-ipo-pricing-fuels-hopes-for-strong-debut-5038156",
+      "source": "www.investing.com",
+      "published": "2026-11-19 16:42:57"
+    }
+  ],
+  "briefing": {
+    "date": "2026-11-19",
+    "update_time": "2026-11-19 06:43:43",
+    "candidate_count": 20,
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-19\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Nginx HTTP/2 未授权远程代码执行（CVE-2026-123633 / CVE-2026-123007） (来源: HackerNews)\n- **核心干货**：Wiz 研究团队披露了 Nginx 的 HTTP/2 模块中存在未授权 RCE 漏洞，攻击者无需任何凭据即可直接打穿服务端。考虑到全球有数百万台服务器跑着 Nginx 反代，这基本等于把半个互联网的门锁给撬了——而且 HN 上 1277 分、553 条评论的炸裂讨论量说明，运维们今晚大概率要通宵打补丁了。\n- **毒舌/硬核点评**：Nginx 上一次这么出圈还是因为它的配置文件让人看不懂。这次倒好，连攻击者都不用看懂配置了，直接一行请求送你 root。\n- **🔗 传送门**：[点击直达原链接](https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities)\n\n---\n\n### 2. 📌 Gemini 4 Neon 正式发布 (来源: HackerNews)\n- **核心干货**：Google 端出了 Gemini 4 Neon，同时 DeepMind 的 Genie 4 也同步上线，一天之内两张王牌齐发。HN 上 690 分、584 条评论的激烈交锋说明社区对它的实际能力争论不休——但不管怎样，Google 这波是在用产品密度告诉所有人：模型军备竞赛没有中场休息。\n- **毒舌/硬核点评**：Google 发布模型的速度已经快过我更新手机系统了。唯一的问题是：发布会的 PPT 能力什么时候能和 API 的实际延迟对齐一下？\n- **🔗 传送门**：[点击直达原链接](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/)\n\n---\n\n### 3. 📌 Java4Shell：Write once, RCE everywhere (来源: Lobste.rs)\n- **核心干货**：一个针对 Java 生态的通用 RCE 利用链被公开，号称\"写一次，到处打穿\"。更有意思的是社区里出现了两篇立场完全相反的文章——一篇拿它当 Java 的罪证，另一篇反而论证它是\"使用 Java 的理由\"。这种正反互搏本身就是最好的信号：Java 的攻击面广到连黑粉和死忠都能拿同一件事各说各话。\n- **毒舌/硬核点评**：Java 的 \"Write Once, Run Anywhere\" 终于迎来了它的暗黑版本——\"Write Once, RCE Everywhere\"。二十年前的口号，今天被安全研究员玩成了地狱笑话。\n- **🔗 传送门**：[点击直达原链接](https://calif.io/java4shell/)\n\n---\n\n### 🗣️ 今日顶男金句\n\"补丁打得越快，越说明你平时欠的技术债越多——真正的安全感不是来自没有漏洞，而是来自你凌晨三点被告警叫醒时，还认得自己写的代码。\"",
+    "briefing_items": [
+      {
+        "title": "Nginx HTTP/2 未授权远程代码执行（CVE-2026-123633 / CVE-2026-123007）",
+        "source": "HackerNews",
+        "summary": "Wiz 研究团队披露了 Nginx 的 HTTP/2 模块中存在未授权 RCE 漏洞，攻击者无需任何凭据即可直接打穿服务端。考虑到全球有数百万台服务器跑着 Nginx 反代，这基本等于把半个互联网的门锁给撬了——而且 HN 上 1277 分、553 条评论的炸裂讨论量说明，运维们今晚大概率要通宵打补丁了。",
+        "commentary": "Nginx 上一次这么出圈还是因为它的配置文件让人看不懂。这次倒好，连攻击者都不用看懂配置了，直接一行请求送你 root。",
+        "url": "https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities"
+      },
+      {
+        "title": "Gemini 4 Neon 正式发布",
+        "source": "HackerNews",
+        "summary": "Google 端出了 Gemini 4 Neon，同时 DeepMind 的 Genie 4 也同步上线，一天之内两张王牌齐发。HN 上 690 分、584 条评论的激烈交锋说明社区对它的实际能力争论不休——但不管怎样，Google 这波是在用产品密度告诉所有人：模型军备竞赛没有中场休息。",
+        "commentary": "Google 发布模型的速度已经快过我更新手机系统了。唯一的问题是：发布会的 PPT 能力什么时候能和 API 的实际延迟对齐一下？",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+      },
+      {
+        "title": "Java4Shell：Write once, RCE everywhere",
+        "source": "Lobste.rs",
+        "summary": "一个针对 Java 生态的通用 RCE 利用链被公开，号称\"写一次，到处打穿\"。更有意思的是社区里出现了两篇立场完全相反的文章——一篇拿它当 Java 的罪证，另一篇反而论证它是\"使用 Java 的理由\"。这种正反互搏本身就是最好的信号：Java 的攻击面广到连黑粉和死忠都能拿同一件事各说各话。",
+        "commentary": "Java 的 \"Write Once, Run Anywhere\" 终于迎来了它的暗黑版本——\"Write Once, RCE Everywhere\"。二十年前的口号，今天被安全研究员玩成了地狱笑话。",
+        "url": "https://calif.io/java4shell/"
+      }
+    ],
+    "candidates": [
+      {
+        "id": "hn:50547374",
+        "title": "Unauthenticated remote code execution in Nginx",
+        "summary": "<a href=\"https:&#x2F;&#x2F;www.cve.org&#x2F;CVERecord?id=CVE-2026-123633\" rel=\"nofollow\">https:&#x2F;&#x2F;www.cve.org&#x2F;CVERecord?id=CVE-2026-123633</a><p><a href=\"https:&#x2F;&#x2F;www.cve.org&#x2F;CVERecord?id=CVE-2026-123007\" rel=\"nofollow\">https:&#x2F;&#x2F;www.cve.org&#x2F;CVERecord?id=CVE-",
+        "url": "https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities",
+        "source": "Hacker News",
+        "score": 1277,
+        "comments": 553
+      },
+      {
+        "id": "lob:1dj9w1",
+        "title": "Actual curl rewrites in rust",
+        "summary": "",
+        "url": "https://daniel.haxx.se/blog/2026/11/17/actual-curl-rewrites-in-rust/",
+        "source": "Lobste.rs",
+        "score": 114,
+        "comments": 61,
+        "tags": [
+          "rust"
+        ]
+      },
+      {
+        "id": "hn:50548021",
+        "title": "Seven new models at scalable price-performance",
+        "summary": "",
+        "url": "https://microsoft.ai/news/microsoft-ignite-2026/",
+        "source": "Hacker News",
+        "score": 508,
+        "comments": 336
+      },
+      {
+        "id": "hn:50551046",
+        "title": "DaisyRose-27B",
+        "summary": "",
+        "url": "https://www.radixark.com/blog/daisyrose-27b",
+        "source": "Hacker News",
+        "score": 180,
+        "comments": 57
+      },
+      {
+        "id": "hn:50546914",
+        "title": "The Cambridge Dictionary has named ‘human’ as the Word of the Year 2026",
+        "summary": "",
+        "url": "https://www.cam.ac.uk/news/cambridge-dictionary-reveals-word-of-the-year-2026",
+        "source": "Hacker News",
+        "score": 266,
+        "comments": 191
+      },
+      {
+        "id": "lob:spmgsd",
+        "title": "Codeberg's domain suddenly disappeared from their account, site is unreachable",
+        "summary": "<p><del>Note: codeberg's servers are up, it's just the domain that's gone. It works perfectly after adding the following line to <code>/etc/hosts</code>:</del></p>\n<pre><code>217.197.84.140 codeberg.org\n</code></pre>\n<p>Update: it's now up again, and the above workaround is not necessary.</p>\n",
+        "url": "https://social.anoxinon.de/@Codeberg/117636454915265360",
+        "source": "Lobste.rs",
+        "score": 193,
+        "comments": 64,
+        "tags": [
+          "vcs"
+        ]
+      },
+      {
+        "id": "lob:cwxmdw",
+        "title": "Windows 11 collects data on which coding agents and dev tools you use",
+        "summary": "",
+        "url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/",
+        "source": "Lobste.rs",
+        "score": 37,
+        "comments": 27,
+        "tags": [
+          "practices",
+          "privacy",
+          "security"
+        ]
+      },
+      {
+        "id": "hn:50554038",
+        "title": "Multiple vulnerabilities in Regexp and String case conversion",
+        "summary": "",
+        "url": "https://www.ruby-lang.org/en/news/2026/11/18/multiple-vulnerabilities-in-regexp-and-string/",
+        "source": "Hacker News",
+        "score": 187,
+        "comments": 60
+      },
+      {
+        "id": "hn:50552424",
+        "title": "Gemini 4 Neon",
+        "summary": "",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+        "source": "Hacker News",
+        "score": 690,
+        "comments": 584
+      },
+      {
+        "id": "hn:50547620",
+        "title": "Inside Deutsche Bank",
+        "summary": "",
+        "url": "https://www.inside-db.com/",
+        "source": "Hacker News",
+        "score": 636,
+        "comments": 203
+      },
+      {
+        "id": "hn:50550415",
+        "title": "Genie 4 is now available",
+        "summary": "",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/",
+        "source": "Hacker News",
+        "score": 231,
+        "comments": 156
+      },
+      {
+        "id": "lob:g0bf9i",
+        "title": "Java4Shell: Write once, RCE everywhere",
+        "summary": "",
+        "url": "https://calif.io/java4shell/",
+        "source": "Lobste.rs",
+        "score": 56,
+        "comments": 30,
+        "tags": [
+          "java",
+          "security"
+        ]
+      },
+      {
+        "id": "hn:50554935",
+        "title": "Unreal Tournament 2004 in the Browser",
+        "summary": "",
+        "url": "https://ut2004.dev/",
+        "source": "Hacker News",
+        "score": 127,
+        "comments": 53
+      },
+      {
+        "id": "lob:wj2svg",
+        "title": "nginx2root",
+        "summary": "",
+        "url": "https://xint.io/blog/nginx2root-remote-code-execution",
+        "source": "Lobste.rs",
+        "score": 70,
+        "comments": 13,
+        "tags": [
+          "security"
+        ]
+      },
+      {
+        "id": "hn:50553225",
+        "title": "LLM assisted reverse engineering",
+        "summary": "",
+        "url": "https://www.slowchronicle.com/posts/llm-assisted-reverse-engineering",
+        "source": "Hacker News",
+        "score": 150,
+        "comments": 38
+      },
+      {
+        "id": "hn:50525260",
+        "title": "Dumping an AES key from a MyQ garage opener to stop rebooting when offline",
+        "summary": "",
+        "url": "https://kusha.me/blog/stop_myq_homebridge_819lmb_rebooting/",
+        "source": "Hacker News",
+        "score": 99,
+        "comments": 34
+      },
+      {
+        "id": "lob:dpvrbv",
+        "title": "Solid 2.0",
+        "summary": "",
+        "url": "https://www.solidjs.com/blog/solid-2-0-the-long-hold",
+        "source": "Lobste.rs",
+        "score": 19,
+        "comments": 14,
+        "tags": [
+          "javascript",
+          "web"
+        ]
+      },
+      {
+        "id": "lob:a1uff5",
+        "title": "Java4Shell is a reason to use Java",
+        "summary": "",
+        "url": "https://mccue.dev/pages/11-18-26-java4shell",
+        "source": "Lobste.rs",
+        "score": 28,
+        "comments": 11,
+        "tags": [
+          "java",
+          "security"
+        ]
+      },
+      {
+        "id": "lob:zr0hkw",
+        "title": "Upcoming Critical PHP Security Release (18 Nov 2026)",
+        "summary": "",
+        "url": "https://www.php.net/index.php#2026-11-18-1",
+        "source": "Lobste.rs",
+        "score": 21,
+        "comments": 5,
+        "tags": [
+          "php",
+          "security"
+        ]
+      },
+      {
+        "id": "lob:eklpkn",
+        "title": "How I made a custom game engine for Satelital",
+        "summary": "",
+        "url": "https://spectralorbit.com/blog/satelital_game_engine",
+        "source": "Lobste.rs",
+        "score": 26,
+        "comments": 5,
+        "tags": [
+          "games",
+          "graphics"
+        ]
+      }
+    ],
+    "ai_curated": true
+  },
+  "fear_greed": {
+    "value": 10,
+    "classification": "Extreme Fear",
+    "timestamp": "2026-11-19 00:00:00"
+  }
+}
