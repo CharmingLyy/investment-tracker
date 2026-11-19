@@ -1,61 +1,52 @@
 {
   "date": "2026-11-19",
-  "update_time": "2026-11-18 20:08:00",
+  "update_time": "2026-11-19 06:43:43",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-19\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Nginx HTTP/2 未授权远程代码执行 (来源: HackerNews)\n- **核心干货**：Wiz 团队披露了 Nginx 的 HTTP/2 模块中存在未授权 RCE 漏洞，攻击者无需任何凭据即可通过精心构造的 HTTP/2 帧序列触发内存破坏，进而拿下服务器权限。Nginx 作为全球占比最高的反向代理/Web 服务器，这意味着互联网上百万级入口同时暴露在枪口下。\n- **毒舌/硬核点评**：你精心堆叠的 WAF、零信任架构、SOC 告警大屏，在 Nginx 自己先\"叛变\"面前约等于行为艺术。补丁打快点，别等脚本小子上门才想起 `systemctl restart nginx` 治百病。\n- **🔗 传送门**：[点击直达原链接](https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities)\n\n---\n\n### 2. 📌 curl 正式启动 Rust 重写 (来源: Lobste.rs)\n- **核心干货**：curl 作者 Daniel Stenberg 宣布在真实代码层面推进 Rust 重写，而非此前社区猜测的\"试验性探索\"。作为互联网最核心的基础设施之一，curl 的 Rust 化意味着内存安全将正式进入\"被所有人依赖但没人愿意重写\"的底层软件层。\n- **毒舌/硬核点评**：C 语言写网络库就像用手术刀切菜——锋利、优雅，偶尔切到自己手指就送进 ICU。Rust 重写不是时髦，是终于有人愿意给这条跑了三十年的老水管换内衬了。\n- **🔗 传送门**：[点击直达原链接](https://daniel.haxx.se/blog/2026/11/17/actual-curl-rewrites-in-rust/)\n\n---\n\n### 3. 📌 微软 Ignite 2026 一口气甩出七款新模型 (来源: HackerNews)\n- **核心干货**：微软在 Ignite 大会上发布七款新模型，主打\"可扩展的性价比\"——不是刷榜，而是压推理成本。信号很明确：大模型竞争已从\"谁的参数多\"切换到\"谁让你用得起\"，企业级落地开始算真账了。\n- **毒舌/硬核点评**：模型发布会现在比手机发布会还勤，但终于有人开始聊\"每 token 多少钱\"而不是\"我的 benchmark 多漂亮\"。毕竟 CFO 不看排行榜，只看账单。\n- **🔗 传送门**：[点击直达原链接](https://microsoft.ai/news/microsoft-ignite-2026/)\n\n---\n\n### 🗣️ 今日顶男金句\n\"基础设施的 bug 从不挑时间爆发，它只挑你刚下班、没备份、且老板在群里 @ 你的那一刻。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-19\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Nginx HTTP/2 未授权远程代码执行（CVE-2026-123633 / CVE-2026-123007） (来源: HackerNews)\n- **核心干货**：Wiz 研究团队披露了 Nginx 的 HTTP/2 模块中存在未授权 RCE 漏洞，攻击者无需任何凭据即可直接打穿服务端。考虑到全球有数百万台服务器跑着 Nginx 反代，这基本等于把半个互联网的门锁给撬了——而且 HN 上 1277 分、553 条评论的炸裂讨论量说明，运维们今晚大概率要通宵打补丁了。\n- **毒舌/硬核点评**：Nginx 上一次这么出圈还是因为它的配置文件让人看不懂。这次倒好，连攻击者都不用看懂配置了，直接一行请求送你 root。\n- **🔗 传送门**：[点击直达原链接](https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities)\n\n---\n\n### 2. 📌 Gemini 4 Neon 正式发布 (来源: HackerNews)\n- **核心干货**：Google 端出了 Gemini 4 Neon，同时 DeepMind 的 Genie 4 也同步上线，一天之内两张王牌齐发。HN 上 690 分、584 条评论的激烈交锋说明社区对它的实际能力争论不休——但不管怎样，Google 这波是在用产品密度告诉所有人：模型军备竞赛没有中场休息。\n- **毒舌/硬核点评**：Google 发布模型的速度已经快过我更新手机系统了。唯一的问题是：发布会的 PPT 能力什么时候能和 API 的实际延迟对齐一下？\n- **🔗 传送门**：[点击直达原链接](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/)\n\n---\n\n### 3. 📌 Java4Shell：Write once, RCE everywhere (来源: Lobste.rs)\n- **核心干货**：一个针对 Java 生态的通用 RCE 利用链被公开，号称\"写一次，到处打穿\"。更有意思的是社区里出现了两篇立场完全相反的文章——一篇拿它当 Java 的罪证，另一篇反而论证它是\"使用 Java 的理由\"。这种正反互搏本身就是最好的信号：Java 的攻击面广到连黑粉和死忠都能拿同一件事各说各话。\n- **毒舌/硬核点评**：Java 的 \"Write Once, Run Anywhere\" 终于迎来了它的暗黑版本——\"Write Once, RCE Everywhere\"。二十年前的口号，今天被安全研究员玩成了地狱笑话。\n- **🔗 传送门**：[点击直达原链接](https://calif.io/java4shell/)\n\n---\n\n### 🗣️ 今日顶男金句\n\"补丁打得越快，越说明你平时欠的技术债越多——真正的安全感不是来自没有漏洞，而是来自你凌晨三点被告警叫醒时，还认得自己写的代码。\"",
   "briefing_items": [
     {
-      "title": "Nginx HTTP/2 未授权远程代码执行",
+      "title": "Nginx HTTP/2 未授权远程代码执行（CVE-2026-123633 / CVE-2026-123007）",
       "source": "HackerNews",
-      "summary": "Wiz 团队披露了 Nginx 的 HTTP/2 模块中存在未授权 RCE 漏洞，攻击者无需任何凭据即可通过精心构造的 HTTP/2 帧序列触发内存破坏，进而拿下服务器权限。Nginx 作为全球占比最高的反向代理/Web 服务器，这意味着互联网上百万级入口同时暴露在枪口下。",
-      "commentary": "你精心堆叠的 WAF、零信任架构、SOC 告警大屏，在 Nginx 自己先\"叛变\"面前约等于行为艺术。补丁打快点，别等脚本小子上门才想起 `systemctl restart nginx` 治百病。",
+      "summary": "Wiz 研究团队披露了 Nginx 的 HTTP/2 模块中存在未授权 RCE 漏洞，攻击者无需任何凭据即可直接打穿服务端。考虑到全球有数百万台服务器跑着 Nginx 反代，这基本等于把半个互联网的门锁给撬了——而且 HN 上 1277 分、553 条评论的炸裂讨论量说明，运维们今晚大概率要通宵打补丁了。",
+      "commentary": "Nginx 上一次这么出圈还是因为它的配置文件让人看不懂。这次倒好，连攻击者都不用看懂配置了，直接一行请求送你 root。",
       "url": "https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities"
     },
     {
-      "title": "curl 正式启动 Rust 重写",
-      "source": "Lobste.rs",
-      "summary": "curl 作者 Daniel Stenberg 宣布在真实代码层面推进 Rust 重写，而非此前社区猜测的\"试验性探索\"。作为互联网最核心的基础设施之一，curl 的 Rust 化意味着内存安全将正式进入\"被所有人依赖但没人愿意重写\"的底层软件层。",
-      "commentary": "C 语言写网络库就像用手术刀切菜——锋利、优雅，偶尔切到自己手指就送进 ICU。Rust 重写不是时髦，是终于有人愿意给这条跑了三十年的老水管换内衬了。",
-      "url": "https://daniel.haxx.se/blog/2026/11/17/actual-curl-rewrites-in-rust/"
+      "title": "Gemini 4 Neon 正式发布",
+      "source": "HackerNews",
+      "summary": "Google 端出了 Gemini 4 Neon，同时 DeepMind 的 Genie 4 也同步上线，一天之内两张王牌齐发。HN 上 690 分、584 条评论的激烈交锋说明社区对它的实际能力争论不休——但不管怎样，Google 这波是在用产品密度告诉所有人：模型军备竞赛没有中场休息。",
+      "commentary": "Google 发布模型的速度已经快过我更新手机系统了。唯一的问题是：发布会的 PPT 能力什么时候能和 API 的实际延迟对齐一下？",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
     },
     {
-      "title": "微软 Ignite 2026 一口气甩出七款新模型",
-      "source": "HackerNews",
-      "summary": "微软在 Ignite 大会上发布七款新模型，主打\"可扩展的性价比\"——不是刷榜，而是压推理成本。信号很明确：大模型竞争已从\"谁的参数多\"切换到\"谁让你用得起\"，企业级落地开始算真账了。",
-      "commentary": "模型发布会现在比手机发布会还勤，但终于有人开始聊\"每 token 多少钱\"而不是\"我的 benchmark 多漂亮\"。毕竟 CFO 不看排行榜，只看账单。",
-      "url": "https://microsoft.ai/news/microsoft-ignite-2026/"
+      "title": "Java4Shell：Write once, RCE everywhere",
+      "source": "Lobste.rs",
+      "summary": "一个针对 Java 生态的通用 RCE 利用链被公开，号称\"写一次，到处打穿\"。更有意思的是社区里出现了两篇立场完全相反的文章——一篇拿它当 Java 的罪证，另一篇反而论证它是\"使用 Java 的理由\"。这种正反互搏本身就是最好的信号：Java 的攻击面广到连黑粉和死忠都能拿同一件事各说各话。",
+      "commentary": "Java 的 \"Write Once, Run Anywhere\" 终于迎来了它的暗黑版本——\"Write Once, RCE Everywhere\"。二十年前的口号，今天被安全研究员玩成了地狱笑话。",
+      "url": "https://calif.io/java4shell/"
     }
   ],
   "candidates": [
+    {
+      "id": "hn:50547374",
+      "title": "Unauthenticated remote code execution in Nginx",
+      "summary": "<a href=\"https:&#x2F;&#x2F;www.cve.org&#x2F;CVERecord?id=CVE-2026-123633\" rel=\"nofollow\">https:&#x2F;&#x2F;www.cve.org&#x2F;CVERecord?id=CVE-2026-123633</a><p><a href=\"https:&#x2F;&#x2F;www.cve.org&#x2F;CVERecord?id=CVE-2026-123007\" rel=\"nofollow\">https:&#x2F;&#x2F;www.cve.org&#x2F;CVERecord?id=CVE-",
+      "url": "https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities",
+      "source": "Hacker News",
+      "score": 1277,
+      "comments": 553
+    },
     {
       "id": "lob:1dj9w1",
       "title": "Actual curl rewrites in rust",
       "summary": "",
       "url": "https://daniel.haxx.se/blog/2026/11/17/actual-curl-rewrites-in-rust/",
       "source": "Lobste.rs",
-      "score": 108,
-      "comments": 59,
+      "score": 114,
+      "comments": 61,
       "tags": [
         "rust"
       ]
-    },
-    {
-      "id": "hn:50547777",
-      "title": "AI agents ask better questions than KPMG accountants in audit trial",
-      "summary": "",
-      "url": "https://europeanbusinessmagazine.com/ai-agents-better-questions-kpmg/",
-      "source": "Hacker News",
-      "score": 162,
-      "comments": 85
-    },
-    {
-      "id": "hn:50547374",
-      "title": "Unauthenticated remote code execution in Nginx",
-      "summary": "",
-      "url": "https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities",
-      "source": "Hacker News",
-      "score": 681,
-      "comments": 270
     },
     {
       "id": "hn:50548021",
@@ -63,17 +54,26 @@
       "summary": "",
       "url": "https://microsoft.ai/news/microsoft-ignite-2026/",
       "source": "Hacker News",
-      "score": 299,
-      "comments": 190
+      "score": 508,
+      "comments": 336
     },
     {
-      "id": "hn:50545958",
-      "title": "DNS resolvers are the wrong place to fight piracy",
+      "id": "hn:50551046",
+      "title": "DaisyRose-27B",
       "summary": "",
-      "url": "https://techstackups.com/articles/quad9-leaves-france-dns-blocking/",
+      "url": "https://www.radixark.com/blog/daisyrose-27b",
       "source": "Hacker News",
-      "score": 453,
-      "comments": 147
+      "score": 180,
+      "comments": 57
+    },
+    {
+      "id": "hn:50546914",
+      "title": "The Cambridge Dictionary has named ‘human’ as the Word of the Year 2026",
+      "summary": "",
+      "url": "https://www.cam.ac.uk/news/cambridge-dictionary-reveals-word-of-the-year-2026",
+      "source": "Hacker News",
+      "score": 266,
+      "comments": 191
     },
     {
       "id": "lob:spmgsd",
@@ -81,64 +81,11 @@
       "summary": "<p><del>Note: codeberg's servers are up, it's just the domain that's gone. It works perfectly after adding the following line to <code>/etc/hosts</code>:</del></p>\n<pre><code>217.197.84.140 codeberg.org\n</code></pre>\n<p>Update: it's now up again, and the above workaround is not necessary.</p>\n",
       "url": "https://social.anoxinon.de/@Codeberg/117636454915265360",
       "source": "Lobste.rs",
-      "score": 158,
-      "comments": 47,
+      "score": 193,
+      "comments": 64,
       "tags": [
         "vcs"
       ]
-    },
-    {
-      "id": "hn:50546914",
-      "title": "'Human' Is Cambridge Dictionary's Word of the Year 2026",
-      "summary": "",
-      "url": "https://www.cam.ac.uk/news/cambridge-dictionary-reveals-word-of-the-year-2026",
-      "source": "Hacker News",
-      "score": 183,
-      "comments": 135
-    },
-    {
-      "id": "hn:50548004",
-      "title": "KVM: x86: Unconditionally reset MMU context when emulating INIT (CVE-2026-99312)",
-      "summary": "",
-      "url": "https://www.cve.org/CVERecord?id=CVE-2026-99312",
-      "source": "Hacker News",
-      "score": 142,
-      "comments": 84
-    },
-    {
-      "id": "hn:50547620",
-      "title": "Inside Deutsche Bank",
-      "summary": "",
-      "url": "https://www.inside-db.com/",
-      "source": "Hacker News",
-      "score": 355,
-      "comments": 131
-    },
-    {
-      "id": "lob:g0bf9i",
-      "title": "Java4Shell: Write once, RCE everywhere",
-      "summary": "",
-      "url": "https://calif.io/java4shell/",
-      "source": "Lobste.rs",
-      "score": 52,
-      "comments": 27,
-      "tags": [
-        "java",
-        "security"
-      ]
-    },
-    {
-      "id": "arxiv:2611.23192v1",
-      "title": "WoRD: Diffusion-Based Posterior Inference for Online Goal Recognition",
-      "summary": "Goal recognition is the task of inferring an agent's intended goal from its observed behavior. Most existing work focuses on high-level symbolic recognition, abstracting away the continuous motion through which agents reach their goal. Methods that do reason over continuous trajectories rely on an e",
-      "url": "https://arxiv.org/abs/2611.23192v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI",
-        "cs.LG",
-        "cs.RO"
-      ],
-      "arxiv_id": "2611.23192v1"
     },
     {
       "id": "lob:cwxmdw",
@@ -146,8 +93,8 @@
       "summary": "",
       "url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/",
       "source": "Lobste.rs",
-      "score": 25,
-      "comments": 15,
+      "score": 37,
+      "comments": 27,
       "tags": [
         "practices",
         "privacy",
@@ -155,17 +102,62 @@
       ]
     },
     {
-      "id": "arxiv:2611.23229v1",
-      "title": "Ambient LLMs: Data-Efficient Supervised Fine-tuning via Temperature Matching",
-      "summary": "Collecting large-scale, diverse, and high-quality post-training datasets for autoregressive language models is challenging. Consequently, Supervised Fine-Tuning (SFT) is typically applied to datasets significantly smaller than those used for pre-training, which leads to overfitting and the catastrop",
-      "url": "https://arxiv.org/abs/2611.23229v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_id": "2611.23229v1"
+      "id": "hn:50554038",
+      "title": "Multiple vulnerabilities in Regexp and String case conversion",
+      "summary": "",
+      "url": "https://www.ruby-lang.org/en/news/2026/11/18/multiple-vulnerabilities-in-regexp-and-string/",
+      "source": "Hacker News",
+      "score": 187,
+      "comments": 60
+    },
+    {
+      "id": "hn:50552424",
+      "title": "Gemini 4 Neon",
+      "summary": "",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+      "source": "Hacker News",
+      "score": 690,
+      "comments": 584
+    },
+    {
+      "id": "hn:50547620",
+      "title": "Inside Deutsche Bank",
+      "summary": "",
+      "url": "https://www.inside-db.com/",
+      "source": "Hacker News",
+      "score": 636,
+      "comments": 203
+    },
+    {
+      "id": "hn:50550415",
+      "title": "Genie 4 is now available",
+      "summary": "",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/",
+      "source": "Hacker News",
+      "score": 231,
+      "comments": 156
+    },
+    {
+      "id": "lob:g0bf9i",
+      "title": "Java4Shell: Write once, RCE everywhere",
+      "summary": "",
+      "url": "https://calif.io/java4shell/",
+      "source": "Lobste.rs",
+      "score": 56,
+      "comments": 30,
+      "tags": [
+        "java",
+        "security"
+      ]
+    },
+    {
+      "id": "hn:50554935",
+      "title": "Unreal Tournament 2004 in the Browser",
+      "summary": "",
+      "url": "https://ut2004.dev/",
+      "source": "Hacker News",
+      "score": 127,
+      "comments": 53
     },
     {
       "id": "lob:wj2svg",
@@ -173,32 +165,29 @@
       "summary": "",
       "url": "https://xint.io/blog/nginx2root-remote-code-execution",
       "source": "Lobste.rs",
-      "score": 36,
-      "comments": 11,
+      "score": 70,
+      "comments": 13,
       "tags": [
         "security"
       ]
     },
     {
-      "id": "lob:de02yg",
-      "title": "Sarasa Gothic Mono",
+      "id": "hn:50553225",
+      "title": "LLM assisted reverse engineering",
       "summary": "",
-      "url": "https://picaq.github.io/sarasa",
-      "source": "Lobste.rs",
-      "score": 26,
-      "comments": 23,
-      "tags": [
-        "design"
-      ]
+      "url": "https://www.slowchronicle.com/posts/llm-assisted-reverse-engineering",
+      "source": "Hacker News",
+      "score": 150,
+      "comments": 38
     },
     {
-      "id": "hn:50550062",
-      "title": "Scottish HTTP Codes",
+      "id": "hn:50525260",
+      "title": "Dumping an AES key from a MyQ garage opener to stop rebooting when offline",
       "summary": "",
-      "url": "https://underwood.network/http/scots.html",
+      "url": "https://kusha.me/blog/stop_myq_homebridge_819lmb_rebooting/",
       "source": "Hacker News",
-      "score": 138,
-      "comments": 24
+      "score": 99,
+      "comments": 34
     },
     {
       "id": "lob:dpvrbv",
@@ -206,49 +195,50 @@
       "summary": "",
       "url": "https://www.solidjs.com/blog/solid-2-0-the-long-hold",
       "source": "Lobste.rs",
-      "score": 16,
-      "comments": 12,
+      "score": 19,
+      "comments": 14,
       "tags": [
         "javascript",
         "web"
       ]
     },
     {
-      "id": "arxiv:2611.23218v1",
-      "title": "What Does a Bias Head Measure? Non-Identifiability in Head-Level Bias Attribution",
-      "summary": "Methods that localise social bias in large language models to individual attention heads and remove it by ablation are validated by their effect on a fairness metric, never by evidence that the statistic selecting the heads measures bias. We audit this on Qwen-2.5-7B-Instruct and Llama-3.1-8B-Instru",
-      "url": "https://arxiv.org/abs/2611.23218v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.LG"
-      ],
-      "arxiv_id": "2611.23218v1"
-    },
-    {
-      "id": "arxiv:2611.23211v1",
-      "title": "Multimodal Masked Diffusion Autoencoder for Modeling Impaired Driving",
-      "summary": "Human cognitive state (e.g., distraction, stress), gaze, and behavior interact with the driving environment in subtle ways that AI could use to assist drivers, but ground-truth labels for human cognitive state levels are costly to obtain at scale. We propose a multimodal masked-diffusion autoencoder",
-      "url": "https://arxiv.org/abs/2611.23211v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CV",
-        "cs.LG",
-        "cs.RO"
-      ],
-      "arxiv_id": "2611.23211v1"
-    },
-    {
-      "id": "lob:xu4ajj",
-      "title": "Phrack 73",
+      "id": "lob:a1uff5",
+      "title": "Java4Shell is a reason to use Java",
       "summary": "",
-      "url": "https://phrack.org/issues/73/introduction_md.html",
+      "url": "https://mccue.dev/pages/11-18-26-java4shell",
       "source": "Lobste.rs",
-      "score": 61,
-      "comments": 3,
+      "score": 28,
+      "comments": 11,
       "tags": [
-        "release",
+        "java",
         "security"
+      ]
+    },
+    {
+      "id": "lob:zr0hkw",
+      "title": "Upcoming Critical PHP Security Release (18 Nov 2026)",
+      "summary": "",
+      "url": "https://www.php.net/index.php#2026-11-18-1",
+      "source": "Lobste.rs",
+      "score": 21,
+      "comments": 5,
+      "tags": [
+        "php",
+        "security"
+      ]
+    },
+    {
+      "id": "lob:eklpkn",
+      "title": "How I made a custom game engine for Satelital",
+      "summary": "",
+      "url": "https://spectralorbit.com/blog/satelital_game_engine",
+      "source": "Lobste.rs",
+      "score": 26,
+      "comments": 5,
+      "tags": [
+        "games",
+        "graphics"
       ]
     }
   ],
