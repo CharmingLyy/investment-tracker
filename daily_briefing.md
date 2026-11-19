@@ -1,29 +1,29 @@
-# 🗞️ 每日硬核情报简报 | 2026-11-19
+# 🗞️ 每日硬核情报简报 | 2026-11-20
 
 > 💡 *"用最毒舌的视角，看最前沿的科技。"*
 
 ---
 
-### 1. 📌 Nginx HTTP/2 未授权远程代码执行（CVE-2026-123633 / CVE-2026-123007） (来源: HackerNews)
-- **核心干货**：Wiz 研究团队披露了 Nginx 的 HTTP/2 模块中存在未授权 RCE 漏洞，攻击者无需任何凭据即可直接打穿服务端。考虑到全球有数百万台服务器跑着 Nginx 反代，这基本等于把半个互联网的门锁给撬了——而且 HN 上 1277 分、553 条评论的炸裂讨论量说明，运维们今晚大概率要通宵打补丁了。
-- **毒舌/硬核点评**：Nginx 上一次这么出圈还是因为它的配置文件让人看不懂。这次倒好，连攻击者都不用看懂配置了，直接一行请求送你 root。
-- **🔗 传送门**：[点击直达原链接](https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities)
+### 1. 📌 Anthropic 纳斯达克首日市值破 2 万亿美元 (来源: HackerNews / Reuters)
+- **核心干货**：Anthropic 完成史上最疯狂的 IPO 之一，上市首日市值直接冲到 2 万亿美元量级，成为对"AI 承诺与危险"双重叙事的一次华尔街压力测试。727 条评论的背后，是整个行业在争论：这到底是新时代的思科，还是又一个被叙事撑起来的泡沫顶。
+- **毒舌/硬核点评**：两万亿的估值，意味着 Claude 每写一行代码都得自带印钞机属性。提醒各位：当年思科在互联网泡沫顶峰也当过"最合理"的那个，然后花了二十年才爬回高点。
+- **🔗 传送门**：[点击直达原链接](https://www.reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19/)
 
 ---
 
-### 2. 📌 Gemini 4 Neon 正式发布 (来源: HackerNews)
-- **核心干货**：Google 端出了 Gemini 4 Neon，同时 DeepMind 的 Genie 4 也同步上线，一天之内两张王牌齐发。HN 上 690 分、584 条评论的激烈交锋说明社区对它的实际能力争论不休——但不管怎样，Google 这波是在用产品密度告诉所有人：模型军备竞赛没有中场休息。
-- **毒舌/硬核点评**：Google 发布模型的速度已经快过我更新手机系统了。唯一的问题是：发布会的 PPT 能力什么时候能和 API 的实际延迟对齐一下？
-- **🔗 传送门**：[点击直达原链接](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/)
+### 2. 📌 Claude 解出两个黑洞物理开放问题 (来源: HackerNews / Anthropic Research)
+- **核心干货**：Anthropic 官方发布研究，称 Claude 在黑洞物理领域解决了两个此前悬而未决的开放问题。这不是"AI 帮你搜论文"，而是模型直接参与了理论物理的推演与突破——如果结论站得住，这将是 LLM 从"编程助手"迈向"科研协作者"的分水岭事件。
+- **毒舌/硬核点评**：昨天还在帮你改 Python 缩进，今天直接在广义相对论里开新坑。物理学家们，建议现在就学会给模型写 prompt，而不是写 rebuttal。
+- **🔗 传送门**：[点击直达原链接](https://www.anthropic.com/research/claude-black-hole-physics)
 
 ---
 
-### 3. 📌 Java4Shell：Write once, RCE everywhere (来源: Lobste.rs)
-- **核心干货**：一个针对 Java 生态的通用 RCE 利用链被公开，号称"写一次，到处打穿"。更有意思的是社区里出现了两篇立场完全相反的文章——一篇拿它当 Java 的罪证，另一篇反而论证它是"使用 Java 的理由"。这种正反互搏本身就是最好的信号：Java 的攻击面广到连黑粉和死忠都能拿同一件事各说各话。
-- **毒舌/硬核点评**：Java 的 "Write Once, Run Anywhere" 终于迎来了它的暗黑版本——"Write Once, RCE Everywhere"。二十年前的口号，今天被安全研究员玩成了地狱笑话。
-- **🔗 传送门**：[点击直达原链接](https://calif.io/java4shell/)
+### 3. 📌 研究者演示 PostgreSQL / MySQL / Oracle 数据库 RCE (来源: Tech RSS / The Hacker News)
+- **核心干货**：一位研究者公开 PoC，证明低权限数据库账号——连一张应用表都读不了的那种——照样能通过普通 SQL 触达引擎代码里的内存破坏漏洞，最终在数据库服务器上执行任意代码。三大主流数据库全部中招，冲击面覆盖几乎所有后端架构。
+- **毒舌/硬核点评**：你的"最小权限原则"在内存破坏面前形同虚设——权限隔离做得再漂亮，也拦不住引擎自己把自己玩崩。这周赶紧盯补丁，别等 DBA 在凌晨三点给你打电话。
+- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/researcher-demonstrates-database-rce.html)
 
 ---
 
 ### 🗣️ 今日顶男金句
-"补丁打得越快，越说明你平时欠的技术债越多——真正的安全感不是来自没有漏洞，而是来自你凌晨三点被告警叫醒时，还认得自己写的代码。"
+> 泡沫破裂时最惨的，从来不是没上车的人，而是上错车还加了杠杆的人。技术看长线，仓位管短线。
