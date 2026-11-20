@@ -1,0 +1,841 @@
+{
+  "update_time": "2026-11-20 16:31:51",
+  "stocks": {
+    "a_stocks": [
+      {
+        "market": "A股",
+        "code": "002050",
+        "name": "三花智控",
+        "symbol": "sz.002050",
+        "industry": null,
+        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
+        "price": 31.4,
+        "open": 31.9,
+        "high": 32.45,
+        "low": 31.4,
+        "change_pct": -3.5,
+        "volume": 48440078,
+        "turnover": 15.39,
+        "market_cap": null,
+        "pe": 33.99,
+        "cash_flow": null,
+        "macd": -0.4371,
+        "macd_signal": -0.1516,
+        "macd_histogram": -0.5711,
+        "rsi": 38.76,
+        "ma": {
+          "MA5": 32.55,
+          "MA10": 33.82,
+          "MA20": 33.98,
+          "MA60": 34.48
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
+        "price": 5.87,
+        "open": 5.8,
+        "high": 5.87,
+        "low": 5.68,
+        "change_pct": -0.34,
+        "volume": 51877543,
+        "turnover": 2.98,
+        "market_cap": null,
+        "pe": 65.91,
+        "cash_flow": null,
+        "macd": -0.1128,
+        "macd_signal": -0.1048,
+        "macd_histogram": -0.0159,
+        "rsi": 33.08,
+        "ma": {
+          "MA5": 5.87,
+          "MA10": 5.96,
+          "MA20": 6.03,
+          "MA60": 6.33
+        },
+        "main_net_flow": null
+      }
+    ],
+    "hk_stocks": [
+      {
+        "market": "港股",
+        "code": "01810",
+        "name": "小米集团-W",
+        "symbol": "01810",
+        "industry": "Consumer Electronics",
+        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
+        "price": NaN,
+        "open": null,
+        "high": null,
+        "low": null,
+        "change_pct": NaN,
+        "volume": 157628408,
+        "turnover": null,
+        "market_cap": 7111.31,
+        "pe": 20.32,
+        "cash_flow": 86.81,
+        "macd": 0.7901,
+        "macd_signal": 0.8668,
+        "macd_histogram": -0.1534,
+        "rsi": 51.28,
+        "ma": {
+          "MA5": null,
+          "MA10": null,
+          "MA20": null,
+          "MA60": null
+        },
+        "main_net_flow": null
+      }
+    ],
+    "us_stocks": [
+      {
+        "market": "美股",
+        "code": "NVDA",
+        "name": "NVIDIA",
+        "symbol": "NVDA",
+        "industry": "Semiconductors",
+        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
+        "price": 136.52,
+        "open": 143.57,
+        "high": 143.73,
+        "low": 135.62,
+        "change_pct": -6.48,
+        "volume": 197655244,
+        "turnover": null,
+        "market_cap": 32960.65,
+        "pe": 14.66,
+        "cash_flow": 992.41,
+        "macd": -18.9518,
+        "macd_signal": -15.0236,
+        "macd_histogram": -7.8564,
+        "rsi": 17.21,
+        "ma": {
+          "MA5": 149.01,
+          "MA10": 159.54,
+          "MA20": 182.01,
+          "MA60": 209.73
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "GOOG",
+        "name": "Alphabet (Google)",
+        "symbol": "GOOG",
+        "industry": "Internet Content & Information",
+        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
+        "price": 274.28,
+        "open": 272.45,
+        "high": 280.52,
+        "low": 271.06,
+        "change_pct": 1.2,
+        "volume": 13007248,
+        "turnover": null,
+        "market_cap": 33715.06,
+        "pe": 14.32,
+        "cash_flow": 11.62,
+        "macd": -12.5534,
+        "macd_signal": -12.6874,
+        "macd_histogram": 0.268,
+        "rsi": 32.88,
+        "ma": {
+          "MA5": 276.67,
+          "MA10": 283.28,
+          "MA20": 287.78,
+          "MA60": 322.02
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "CRCL",
+        "name": "Circle",
+        "symbol": "CRCL",
+        "industry": "Capital Markets",
+        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
+        "price": 49.74,
+        "open": 51.38,
+        "high": 52.69,
+        "low": 49.16,
+        "change_pct": -4.12,
+        "volume": 5233203,
+        "turnover": null,
+        "market_cap": 127.61,
+        "pe": 29.96,
+        "cash_flow": 2.62,
+        "macd": -7.8664,
+        "macd_signal": -6.1321,
+        "macd_histogram": -3.4686,
+        "rsi": 22.5,
+        "ma": {
+          "MA5": 53.44,
+          "MA10": 59.29,
+          "MA20": 67.47,
+          "MA60": 81.09
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "MP",
+        "name": "MP Materials",
+        "symbol": "MP",
+        "industry": "Other Industrial Metals & Mining",
+        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
+        "price": 34.71,
+        "open": 35.94,
+        "high": 37.59,
+        "low": 34.66,
+        "change_pct": -5.32,
+        "volume": 3276579,
+        "turnover": null,
+        "market_cap": 61.88,
+        "pe": 87.67,
+        "cash_flow": 4.1,
+        "macd": -1.8384,
+        "macd_signal": -2.0244,
+        "macd_histogram": 0.3719,
+        "rsi": 39.1,
+        "ma": {
+          "MA5": 35.65,
+          "MA10": 36.54,
+          "MA20": 37.36,
+          "MA60": 44.13
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "PLTR",
+        "name": "Palantir",
+        "symbol": "PLTR",
+        "industry": "Software - Infrastructure",
+        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
+        "price": 146.0,
+        "open": 149.7,
+        "high": 152.51,
+        "low": 145.77,
+        "change_pct": -5.0,
+        "volume": 11381029,
+        "turnover": null,
+        "market_cap": 3518.71,
+        "pe": 102.84,
+        "cash_flow": 26.52,
+        "macd": -9.4377,
+        "macd_signal": -7.1127,
+        "macd_histogram": -4.6499,
+        "rsi": 27.44,
+        "ma": {
+          "MA5": 154.66,
+          "MA10": 162.33,
+          "MA20": 171.95,
+          "MA60": 181.96
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "NOW",
+        "name": "ServiceNow",
+        "symbol": "NOW",
+        "industry": "Software - Application",
+        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
+        "price": 91.06,
+        "open": 87.33,
+        "high": 93.15,
+        "low": 87.66,
+        "change_pct": 2.46,
+        "volume": 7288545,
+        "turnover": null,
+        "market_cap": 945.13,
+        "pe": 65.51,
+        "cash_flow": 57.54,
+        "macd": -11.7079,
+        "macd_signal": -10.5008,
+        "macd_histogram": -2.4143,
+        "rsi": 27.98,
+        "ma": {
+          "MA5": 92.56,
+          "MA10": 97.08,
+          "MA20": 108.85,
+          "MA60": 129.76
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "DDOG",
+        "name": "Datadog",
+        "symbol": "DDOG",
+        "industry": "Software - Application",
+        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
+        "price": 162.29,
+        "open": 165.0,
+        "high": 167.36,
+        "low": 160.84,
+        "change_pct": -2.51,
+        "volume": 1401281,
+        "turnover": null,
+        "market_cap": 585.94,
+        "pe": 225.4,
+        "cash_flow": 10.66,
+        "macd": -23.7193,
+        "macd_signal": -21.3958,
+        "macd_histogram": -4.647,
+        "rsi": 26.57,
+        "ma": {
+          "MA5": 166.78,
+          "MA10": 174.49,
+          "MA20": 203.22,
+          "MA60": 235.54
+        },
+        "main_net_flow": null
+      }
+    ],
+    "crypto": [
+      {
+        "market": "加密货币",
+        "code": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "industry": "Smart Contract Platform",
+        "price": 59159,
+        "open": null,
+        "high": 63282,
+        "low": 59241,
+        "change_pct": -6.12,
+        "volume": 45841643318,
+        "turnover": null,
+        "market_cap": 11900.54,
+        "market_cap_rank": 1,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -4774.2116,
+        "macd_signal": -3692.0894,
+        "macd_histogram": -2164.2444,
+        "rsi": 17.66,
+        "ma": {
+          "MA5": 62761.28,
+          "MA10": 65689.2,
+          "MA20": 71050.4,
+          "MA60": 78769.54
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 20114434.0,
+          "total_supply": 20114434.0,
+          "circ_ratio": 100.0,
+          "price_change_7d": -14.02671,
+          "price_change_30d": -29.97661,
+          "ath_pct": -53.08,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      },
+      {
+        "market": "加密货币",
+        "code": "ethereum",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "industry": "Smart Contract Platform",
+        "price": 1638.33,
+        "open": null,
+        "high": 1788.41,
+        "low": 1647.3,
+        "change_pct": -7.74,
+        "volume": 15521907845,
+        "turnover": null,
+        "market_cap": 2002.54,
+        "market_cap_rank": 2,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -167.7902,
+        "macd_signal": -138.9855,
+        "macd_histogram": -57.6095,
+        "rsi": 19.83,
+        "ma": {
+          "MA5": 1762.57,
+          "MA10": 1842.08,
+          "MA20": 2032.88,
+          "MA60": 2354.2
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 122236257.68111889,
+          "total_supply": 122236257.68111889,
+          "circ_ratio": 100.0,
+          "price_change_7d": -15.22748,
+          "price_change_30d": -34.73516,
+          "ath_pct": -66.88,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      }
+    ]
+  },
+  "news": [
+    {
+      "id": "35b871d31c",
+      "title": "[播客]独家实拍：我那永远跪着的母亲(11/07 22:10)",
+      "summary": "独家实拍：我那永远跪着的母亲",
+      "link": "http://go.rss.sina.com.cn/redirect.php?url=http://you.video.sina.com.cn/b/16972162-1239095354.html",
+      "source": "rss.sina.com.cn",
+      "published": ""
+    },
+    {
+      "id": "fc809b7c1c",
+      "title": "Nvidia’s stock heads for a stretch of weekly losses unseen since 2008",
+      "summary": "One fund manager says the continued uncertainty makes Nvidia “vulnerable” to more selling, even as the company has erased $811 billion in market value in the past seven days.",
+      "link": "https://www.marketwatch.com/story/nvidias-stock-heads-for-a-stretch-of-weekly-losses-unseen-since-2008-91aba9a6?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 20 Nov 2026 16:19:00 GMT"
+    },
+    {
+      "id": "ac848341af",
+      "title": "Investors fled to healthcare stocks for safety. Now insurance and hospital shares are plunging.",
+      "summary": "Shares of UnitedHealth, Humana and CVS Health declined this week in light of a new Medicare for All proposal",
+      "link": "https://www.marketwatch.com/story/investors-fled-to-healthcare-stocks-for-safety-now-insurance-and-hospital-shares-are-plunging-9cb6a96c?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 20 Nov 2026 15:53:00 GMT"
+    },
+    {
+      "id": "2a9f77691f",
+      "title": "Anthropic’s stock slides closer to IPO price and drags down the AI trade",
+      "summary": "Anthropic’s inability to hold its opening stock price has been seen as “bad for the rest of tech.”",
+      "link": "https://www.marketwatch.com/story/anthropics-stock-slides-closer-to-ipo-price-and-drags-down-the-ai-trade-cc43a0c4?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 20 Nov 2026 15:38:00 GMT"
+    },
+    {
+      "id": "b9810a9632",
+      "title": "This proposed Social Security fix could add trillions to the national debt",
+      "summary": "A Republican senator has a new proposal called the “Stop Scaring Seniors Act.”",
+      "link": "https://www.marketwatch.com/story/this-proposed-social-security-fix-could-add-trillions-to-the-national-debt-17197e91?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 20 Nov 2026 15:28:00 GMT"
+    },
+    {
+      "id": "40010375c0",
+      "title": "This closely watched investing guru just sold all of his stocks",
+      "summary": "Panmure Liberum strategist and widely-followed stock-market commentator Joachim Klement has effectively had his personal retirement portfolio 100% invested in stocks for many years.",
+      "link": "https://www.marketwatch.com/story/this-closely-watched-guru-just-sold-everything-474b4389?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 20 Nov 2026 15:23:00 GMT"
+    },
+    {
+      "id": "dff2c623cd",
+      "title": "Here’s what’s been proven to help GLP-1 users from losing too much muscle from the drug",
+      "summary": "People taking Zepbound who engage in consistent resistance training can still get stronger even if they lose some of their muscle, according to a new study.",
+      "link": "https://www.marketwatch.com/story/heres-whats-been-proven-to-help-glp-1-users-who-have-lost-muscle-from-the-drug-2c71cdbf?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 20 Nov 2026 15:04:00 GMT"
+    },
+    {
+      "id": "a3c9faca8a",
+      "title": "I’m terrified of a market crash. Should I put $400,000 of my $1 million retirement savings into an annuity?",
+      "summary": "“We have a house worth $450,000. Our combined annual income is $125,000.”",
+      "link": "https://www.marketwatch.com/story/were-in-our-50s-and-terrified-of-a-market-crash-should-we-put-400-000-of-our-1-million-retirement-savings-into-an-annuity-1943f240?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 20 Nov 2026 14:30:00 GMT"
+    },
+    {
+      "id": "9ed0b1f93c",
+      "title": "GameStop has transformed from a meme stock into a ‘real company,’ analysts say",
+      "summary": "Roaring Kitty’s return had minimal impact on GameStop’s stock, which has started to gain more sophisticated appeal for its “new and improved story.”",
+      "link": "https://www.marketwatch.com/story/gamestop-has-transformed-from-a-meme-stock-into-a-real-company-analysts-say-7ae5c7ed?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 20 Nov 2026 14:15:00 GMT"
+    },
+    {
+      "id": "10cce7f262",
+      "title": "These little-known investments could be among the best bargains in a crash",
+      "summary": "If this stock market turmoil turns into a full-blown crash, look for low-risk investment bargains among closed-end funds.",
+      "link": "https://www.marketwatch.com/story/these-little-known-investments-could-be-among-the-best-bargains-in-a-crash-78a379b4?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 20 Nov 2026 14:00:00 GMT"
+    },
+    {
+      "id": "272a03f377",
+      "title": "Is Social Security a Ponzi scheme? No. Don’t get carried away with 1930s-era prophecies of doom.",
+      "summary": "Wisconsin Republican Sen. Ron Johnson called Social Security a “scam” and urged lawmakers to shut it down.",
+      "link": "https://www.marketwatch.com/story/the-thought-of-living-to-100-terrifies-me-is-social-security-a-giant-ponzi-scheme-84a64e7e?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 20 Nov 2026 13:00:00 GMT"
+    },
+    {
+      "id": "d7e93f6a98",
+      "title": "Fti Consulting Inc stock hits 52-week high at 209.01 USD",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/fti-consulting-inc-stock-hits-52week-high-at-20901-usd-93CH-5042246",
+      "source": "www.investing.com",
+      "published": "2026-11-20 16:14:19"
+    },
+    {
+      "id": "f328fcdc6d",
+      "title": "Bally’s Intralot 9M26 slides: revenue surges but leverage climbs",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/ballys-intralot-9m26-slides-revenue-surges-but-leverage-climbs-93CH-5042244",
+      "source": "www.investing.com",
+      "published": "2026-11-20 16:12:18"
+    },
+    {
+      "id": "e78b3f203b",
+      "title": "Exclusive: Twenty One CEO on Bitcoin, acquisitions, and building value",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/exclusive-twenty-one-ceo-on-bitcoin-acquisitions-and-building-value-5042243",
+      "source": "www.investing.com",
+      "published": "2026-11-20 16:11:17"
+    },
+    {
+      "id": "432a589a49",
+      "title": "Nasdaq slides in choppy trading, briefly turns red for the year amid AI rout",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/wall-street-futures-fall-as-anthropic-debut-fails-to-revive-ai-trade-5040450",
+      "source": "www.investing.com",
+      "published": "2026-11-20 16:10:51"
+    },
+    {
+      "id": "d884266722",
+      "title": "Treasury yields fall as bond market tracks risk assets, not Fed rhetoric",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/treasury-yields-fall-as-bond-market-tracks-risk-assets-not-fed-rhetoric-93CH-5042241",
+      "source": "www.investing.com",
+      "published": "2026-11-20 16:10:02"
+    },
+    {
+      "id": "81d696ce38",
+      "title": "International Bancshares Corporation stock hits 52-week low at $64.20",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/international-bancshares-corporation-stock-hits-52week-low-at-6420-93CH-5042240",
+      "source": "www.investing.com",
+      "published": "2026-11-20 16:08:43"
+    },
+    {
+      "id": "c7462fc0fb",
+      "title": "ECB’s Nagel: Will likely need to act in December but price expectations remain anchored",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/ecbs-nagel-will-likely-need-to-act-in-december-but-price-expectations-remain-anchored-5042238",
+      "source": "www.investing.com",
+      "published": "2026-11-20 16:06:18"
+    },
+    {
+      "id": "bf1a322b1c",
+      "title": "Novanta Inc stock hits 52-week low at 47.83 USD",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/novanta-inc-stock-hits-52week-low-at-4783-usd-93CH-5042237",
+      "source": "www.investing.com",
+      "published": "2026-11-20 16:05:32"
+    },
+    {
+      "id": "de3ee8f89a",
+      "title": "Provident Financial Holdings shareholders elect directors and approve auditor at annual meeting",
+      "summary": "",
+      "link": "https://www.investing.com/news/sec-filings/provident-financial-holdings-shareholders-elect-directors-and-approve-auditor-at-annual-meeting-93CH-5042236",
+      "source": "www.investing.com",
+      "published": "2026-11-20 16:04:52"
+    },
+    {
+      "id": "65372ea8ae",
+      "title": "First Solar CEO testifies on US manufacturing strategy",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/first-solar-ceo-testifies-on-us-manufacturing-strategy-93CH-5042233",
+      "source": "www.investing.com",
+      "published": "2026-11-20 16:04:37"
+    }
+  ],
+  "briefing": {
+    "date": "2026-11-20",
+    "update_time": "2026-11-20 06:30:51",
+    "candidate_count": 20,
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-20\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Claude 拿下两个黑洞物理开放问题 (来源: HackerNews)\n- **核心干货**：Anthropic 放出的研究显示，Claude 独立解决了两道悬而未决的黑洞物理开放问题——不是\"辅助人类打草稿\"，而是给出了可验证的完整解。这意味着 LLM 首次在硬核理论物理领域拿出\"能进论文\"级别的产出，AI 从\"科研实习生\"升级为\"合作者\"。\n- **毒舌/硬核点评**：以后物理学博士答辩第一句话可能得改成\"首先感谢我的非人类一作\"。但别急着狂欢——能解数学题和能判断哪个问题值得解，中间隔着一整个诺奖的距离。\n- **🔗 传送门**：[点击直达原链接](https://www.anthropic.com/research/claude-black-hole-physics)\n\n---\n\n### 2. 📌 Anthropic 纳斯达克首秀，AI 泡沫压力测试开场 (来源: HackerNews)\n- **核心干货**：Reuters 报道 Anthropic 完成历史性 IPO 登陆纳斯达克，成为 AI 承诺与风险在华尔街面前的一次正面对撞。2048 条评论的 HN 讨论区已经吵成一锅粥——这不只是一家公司的估值问题，而是整个\"AI 烧钱换增长\"叙事的公开定价时刻。\n- **毒舌/硬核点评**：Claude 上午解黑洞，下午被华尔街解剖。技术圈看能力，资本圈看 ARR，两边对\"智能\"的定义大概差了三个数量级——但敲钟那一刻，所有人都假装自己懂。\n- **🔗 传送门**：[点击直达原链接](https://www.reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19/)\n\n---\n\n### 3. 📌 低权限数据库账号即可 RCE：PostgreSQL / MySQL / Oracle 全线中招 (来源: Tech RSS)\n- **核心干货**：一位研究者证明，连一张应用表都读不了的低权限数据库账号，照样能通过普通 SQL 触发引擎层内存破坏漏洞，在数据库服务器上执行任意代码。PostgreSQL、MySQL、Oracle 三大主流引擎全在射程内，且漏洞已公开 PoC。这是\"权限隔离\"信仰的一次塌方。\n- **毒舌/硬核点评**：DBA 们信奉多年的\"最小权限原则\"，被一个 SQL 语句当场证伪。建议今晚别只备份数据库——顺便把补丁也打上，毕竟\"只读账号\"现在读的是你的内存。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/researcher-demonstrates-database-rce.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> 模型能解黑洞，但解不了你的商业模式——所以真正稀缺的从来不是智能，是知道该把智能用在哪儿的那点判断力。",
+    "briefing_items": [
+      {
+        "title": "Claude 拿下两个黑洞物理开放问题",
+        "source": "HackerNews",
+        "summary": "Anthropic 放出的研究显示，Claude 独立解决了两道悬而未决的黑洞物理开放问题——不是\"辅助人类打草稿\"，而是给出了可验证的完整解。这意味着 LLM 首次在硬核理论物理领域拿出\"能进论文\"级别的产出，AI 从\"科研实习生\"升级为\"合作者\"。",
+        "commentary": "以后物理学博士答辩第一句话可能得改成\"首先感谢我的非人类一作\"。但别急着狂欢——能解数学题和能判断哪个问题值得解，中间隔着一整个诺奖的距离。",
+        "url": "https://www.anthropic.com/research/claude-black-hole-physics"
+      },
+      {
+        "title": "Anthropic 纳斯达克首秀，AI 泡沫压力测试开场",
+        "source": "HackerNews",
+        "summary": "Reuters 报道 Anthropic 完成历史性 IPO 登陆纳斯达克，成为 AI 承诺与风险在华尔街面前的一次正面对撞。2048 条评论的 HN 讨论区已经吵成一锅粥——这不只是一家公司的估值问题，而是整个\"AI 烧钱换增长\"叙事的公开定价时刻。",
+        "commentary": "Claude 上午解黑洞，下午被华尔街解剖。技术圈看能力，资本圈看 ARR，两边对\"智能\"的定义大概差了三个数量级——但敲钟那一刻，所有人都假装自己懂。",
+        "url": "https://www.reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19/"
+      },
+      {
+        "title": "低权限数据库账号即可 RCE：PostgreSQL / MySQL / Oracle 全线中招",
+        "source": "Tech RSS",
+        "summary": "一位研究者证明，连一张应用表都读不了的低权限数据库账号，照样能通过普通 SQL 触发引擎层内存破坏漏洞，在数据库服务器上执行任意代码。PostgreSQL、MySQL、Oracle 三大主流引擎全在射程内，且漏洞已公开 PoC。这是\"权限隔离\"信仰的一次塌方。",
+        "commentary": "DBA 们信奉多年的\"最小权限原则\"，被一个 SQL 语句当场证伪。建议今晚别只备份数据库——顺便把补丁也打上，毕竟\"只读账号\"现在读的是你的内存。",
+        "url": "https://thehackernews.com/2026/11/researcher-demonstrates-database-rce.html"
+      },
+      {
+        "quote": "模型能解黑洞，但解不了你的商业模式——所以真正稀缺的从来不是智能，是知道该把智能用在哪儿的那点判断力。"
+      }
+    ],
+    "candidates": [
+      {
+        "id": "hn:50528119",
+        "title": "How to CAD Almost Anything",
+        "summary": "",
+        "url": "https://ocw.mit.edu/courses/res-16-002-how-to-cad-almost-anything-january-iap-2024/",
+        "source": "Hacker News",
+        "score": 211,
+        "comments": 62
+      },
+      {
+        "id": "hn:50519231",
+        "title": "Garage Door Spam",
+        "summary": "",
+        "url": "https://blog.harrison.page/garage-door-spam/",
+        "source": "Hacker News",
+        "score": 820,
+        "comments": 344
+      },
+      {
+        "id": "hn:50563148",
+        "title": "Claude solves two open problems in the physics of black holes",
+        "summary": "",
+        "url": "https://www.anthropic.com/research/claude-black-hole-physics",
+        "source": "Hacker News",
+        "score": 456,
+        "comments": 218
+      },
+      {
+        "id": "hn:50564159",
+        "title": "The 98% Slot Machine: How Paid Advertising Became an Extraction Tax",
+        "summary": "",
+        "url": "https://globalcommercegraph.com/writing/the-ninety-eight-percent-slot-machine",
+        "source": "Hacker News",
+        "score": 249,
+        "comments": 138
+      },
+      {
+        "id": "lob:spmgsd",
+        "title": "Codeberg's domain suddenly disappeared from their account, site is unreachable",
+        "summary": "<p><del>Note: codeberg's servers are up, it's just the domain that's gone. It works perfectly after adding the following line to <code>/etc/hosts</code>:</del></p>\n<pre><code>217.197.84.140 codeberg.org\n</code></pre>\n<p>Update: it's now up again, and the above workaround is not necessary.</p>\n",
+        "url": "https://social.anoxinon.de/@Codeberg/117636454915265360",
+        "source": "Lobste.rs",
+        "score": 223,
+        "comments": 73,
+        "tags": [
+          "vcs"
+        ]
+      },
+      {
+        "id": "hn:50562754",
+        "title": "Anthropic’s Nasdaq debut",
+        "summary": "",
+        "url": "https://www.reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19/",
+        "source": "Hacker News",
+        "score": 1037,
+        "comments": 2048
+      },
+      {
+        "id": "lob:pqyuhk",
+        "title": "PostgreSQL 19 Released",
+        "summary": "",
+        "url": "https://www.postgresql.org/about/news/postgresql-19-released-3449/",
+        "source": "Lobste.rs",
+        "score": 64,
+        "comments": 3,
+        "tags": [
+          "databases",
+          "release"
+        ]
+      },
+      {
+        "id": "lob:rzuasm",
+        "title": "We Need Smart People Who Give a Shit",
+        "summary": "",
+        "url": "https://violetpixel.com/blog/2026-11-17-we-need-smart-people-who-give-a-shit/",
+        "source": "Lobste.rs",
+        "score": 149,
+        "comments": 55,
+        "tags": [
+          "culture"
+        ]
+      },
+      {
+        "id": "hn:50569226",
+        "title": "OpenSSL: Buffer overflow in EVP_EncodeBlock() (CVE-2026-121481, CVSS 9.8)",
+        "summary": "",
+        "url": "https://github.com/openssl/openssl/pull/33652",
+        "source": "Hacker News",
+        "score": 119,
+        "comments": 62
+      },
+      {
+        "id": "lob:bk5nfs",
+        "title": "Distributed, high-performance blob storage on SQLite",
+        "summary": "",
+        "url": "https://zerodha.tech/blog/high-performance-distributed-blob-storage/",
+        "source": "Lobste.rs",
+        "score": 27,
+        "comments": 3,
+        "tags": [
+          "distributed",
+          "rust"
+        ]
+      },
+      {
+        "id": "lob:qsrnot",
+        "title": "Design for Understandability",
+        "summary": "",
+        "url": "https://jschuster.org/blog/2026/11/19/design-for-understandability/",
+        "source": "Lobste.rs",
+        "score": 34,
+        "comments": 20,
+        "tags": [
+          "api",
+          "plt",
+          "practices",
+          "slides"
+        ]
+      },
+      {
+        "id": "hn:50562320",
+        "title": "Launch HN: Onlook (YC W25) – An open-source developer tool for designers",
+        "summary": "Hey HN, I&#x27;m Daniel, founder of Onlook (<a href=\"https:&#x2F;&#x2F;github.com&#x2F;onlook-dev&#x2F;onlook\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;onlook-dev&#x2F;onlook</a> and onlook.com).<p>Onlook is a desktop app that puts a canvas on top of your real codebase, letting you design di",
+        "url": "https://github.com/onlook-dev/onlook/",
+        "source": "Hacker News",
+        "score": 105,
+        "comments": 73
+      },
+      {
+        "id": "arxiv:2611.26627v1",
+        "title": "RL Post-Training in Diffusion Transformers Is Activation Steering",
+        "summary": "Reinforcement learning (RL) post-training substantially improves the visual quality, text rendering, and compositional accuracy of diffusion transformers. Because capabilities such as rendering requested text or composing multiple objects are inherently prompt-dependent, a natural hypothesis is that",
+        "url": "https://arxiv.org/abs/2611.26627v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.CV",
+          "cs.LG"
+        ],
+        "arxiv_id": "2611.26627v1"
+      },
+      {
+        "id": "arxiv:2611.26617v1",
+        "title": "One Prior, Two Dynamics: Repurposing Video Diffusion Transformers for Self-Supervised Latent Action Learning",
+        "summary": "Videos reveal how the world changes, but rarely the actions that cause those changes. Latent action learning recovers such supervision from visual transitions, yet often learns the underlying dynamics largely from scratch. We ask whether a pretrained video generator can instead provide the prior for",
+        "url": "https://arxiv.org/abs/2611.26617v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.CV",
+          "cs.AI",
+          "cs.LG",
+          "cs.RO"
+        ],
+        "arxiv_id": "2611.26617v1"
+      },
+      {
+        "id": "hn:50570479",
+        "title": "Google is pushing OEMs against GrapheneOS and bootloader unlocking",
+        "summary": "",
+        "url": "https://grapheneos.social/@GrapheneOS/117645038299496084",
+        "source": "Hacker News",
+        "score": 114,
+        "comments": 13
+      },
+      {
+        "id": "lob:uzn2t6",
+        "title": "Mutex poisoning is not for everyone",
+        "summary": "",
+        "url": "https://bertptrs.nl/2026/11/16/mutex-poisoning-is-not-for-everyone.html",
+        "source": "Lobste.rs",
+        "score": 30,
+        "comments": 8,
+        "tags": [
+          "rust"
+        ]
+      },
+      {
+        "id": "lob:elmy67",
+        "title": "15 million web servers on one VM - smoltcp, DPDK, AF_XDP",
+        "summary": "",
+        "url": "https://kapteko.com/15-million-webservers/",
+        "source": "Lobste.rs",
+        "score": 40,
+        "comments": 1,
+        "tags": [
+          "networking",
+          "rust"
+        ]
+      },
+      {
+        "id": "arxiv:2611.26613v1",
+        "title": "AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control",
+        "summary": "Frontier multimodal language agents such as GPT-6 Astra have demonstrated strong capabilities in controlling robots directly via low-level numerical actions without high-level primitives. However, existing benchmarks report only episode-level success rates, which show neither how these agents succee",
+        "url": "https://arxiv.org/abs/2611.26613v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.RO",
+          "cs.CL",
+          "cs.CV"
+        ],
+        "arxiv_id": "2611.26613v1"
+      },
+      {
+        "id": "arxiv:2611.26601v1",
+        "title": "SoK: Assessing the Evolution of LLM Capability in Software Vulnerability Research",
+        "summary": "LLM-based agents are becoming increasingly capable at discovering, validating and patching vulnerabilities in real software, and vendors and researchers report that this is already changing how vulnerabilities are found and fixed. These claims, however, are scattered across papers, vendor reports an",
+        "url": "https://arxiv.org/abs/2611.26601v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.CR",
+          "cs.AI",
+          "cs.SE"
+        ],
+        "arxiv_id": "2611.26601v1"
+      },
+      {
+        "id": "rss:08eb2a8108",
+        "title": "Researcher Demonstrates Database RCE Exploits Affecting PostgreSQL, MySQL and Oracle",
+        "summary": "Low-privilege database accounts that cannot read a single application table can still be used to run code on the database server itself, a researcher has shown, by reaching memory-corruption bugs in the engine code behind ordinary SQL.\n\nThe exploits, published yesterday, are the researcher's proofs",
+        "url": "https://thehackernews.com/2026/11/researcher-demonstrates-database-rce.html",
+        "source": "Tech RSS",
+        "score": 0
+      }
+    ],
+    "ai_curated": true
+  },
+  "fear_greed": {
+    "value": 12,
+    "classification": "Extreme Fear",
+    "timestamp": "2026-11-20 00:00:00"
+  }
+}
