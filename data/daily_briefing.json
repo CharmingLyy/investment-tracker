@@ -1,52 +1,52 @@
 {
   "date": "2026-11-20",
-  "update_time": "2026-11-19 20:07:56",
+  "update_time": "2026-11-20 06:30:51",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-20\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Anthropic 纳斯达克首日市值破 2 万亿美元 (来源: HackerNews / Reuters)\n- **核心干货**：Anthropic 完成史上最疯狂的 IPO 之一，上市首日市值直接冲到 2 万亿美元量级，成为对\"AI 承诺与危险\"双重叙事的一次华尔街压力测试。727 条评论的背后，是整个行业在争论：这到底是新时代的思科，还是又一个被叙事撑起来的泡沫顶。\n- **毒舌/硬核点评**：两万亿的估值，意味着 Claude 每写一行代码都得自带印钞机属性。提醒各位：当年思科在互联网泡沫顶峰也当过\"最合理\"的那个，然后花了二十年才爬回高点。\n- **🔗 传送门**：[点击直达原链接](https://www.reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19/)\n\n---\n\n### 2. 📌 Claude 解出两个黑洞物理开放问题 (来源: HackerNews / Anthropic Research)\n- **核心干货**：Anthropic 官方发布研究，称 Claude 在黑洞物理领域解决了两个此前悬而未决的开放问题。这不是\"AI 帮你搜论文\"，而是模型直接参与了理论物理的推演与突破——如果结论站得住，这将是 LLM 从\"编程助手\"迈向\"科研协作者\"的分水岭事件。\n- **毒舌/硬核点评**：昨天还在帮你改 Python 缩进，今天直接在广义相对论里开新坑。物理学家们，建议现在就学会给模型写 prompt，而不是写 rebuttal。\n- **🔗 传送门**：[点击直达原链接](https://www.anthropic.com/research/claude-black-hole-physics)\n\n---\n\n### 3. 📌 研究者演示 PostgreSQL / MySQL / Oracle 数据库 RCE (来源: Tech RSS / The Hacker News)\n- **核心干货**：一位研究者公开 PoC，证明低权限数据库账号——连一张应用表都读不了的那种——照样能通过普通 SQL 触达引擎代码里的内存破坏漏洞，最终在数据库服务器上执行任意代码。三大主流数据库全部中招，冲击面覆盖几乎所有后端架构。\n- **毒舌/硬核点评**：你的\"最小权限原则\"在内存破坏面前形同虚设——权限隔离做得再漂亮，也拦不住引擎自己把自己玩崩。这周赶紧盯补丁，别等 DBA 在凌晨三点给你打电话。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/researcher-demonstrates-database-rce.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> 泡沫破裂时最惨的，从来不是没上车的人，而是上错车还加了杠杆的人。技术看长线，仓位管短线。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-20\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Claude 拿下两个黑洞物理开放问题 (来源: HackerNews)\n- **核心干货**：Anthropic 放出的研究显示，Claude 独立解决了两道悬而未决的黑洞物理开放问题——不是\"辅助人类打草稿\"，而是给出了可验证的完整解。这意味着 LLM 首次在硬核理论物理领域拿出\"能进论文\"级别的产出，AI 从\"科研实习生\"升级为\"合作者\"。\n- **毒舌/硬核点评**：以后物理学博士答辩第一句话可能得改成\"首先感谢我的非人类一作\"。但别急着狂欢——能解数学题和能判断哪个问题值得解，中间隔着一整个诺奖的距离。\n- **🔗 传送门**：[点击直达原链接](https://www.anthropic.com/research/claude-black-hole-physics)\n\n---\n\n### 2. 📌 Anthropic 纳斯达克首秀，AI 泡沫压力测试开场 (来源: HackerNews)\n- **核心干货**：Reuters 报道 Anthropic 完成历史性 IPO 登陆纳斯达克，成为 AI 承诺与风险在华尔街面前的一次正面对撞。2048 条评论的 HN 讨论区已经吵成一锅粥——这不只是一家公司的估值问题，而是整个\"AI 烧钱换增长\"叙事的公开定价时刻。\n- **毒舌/硬核点评**：Claude 上午解黑洞，下午被华尔街解剖。技术圈看能力，资本圈看 ARR，两边对\"智能\"的定义大概差了三个数量级——但敲钟那一刻，所有人都假装自己懂。\n- **🔗 传送门**：[点击直达原链接](https://www.reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19/)\n\n---\n\n### 3. 📌 低权限数据库账号即可 RCE：PostgreSQL / MySQL / Oracle 全线中招 (来源: Tech RSS)\n- **核心干货**：一位研究者证明，连一张应用表都读不了的低权限数据库账号，照样能通过普通 SQL 触发引擎层内存破坏漏洞，在数据库服务器上执行任意代码。PostgreSQL、MySQL、Oracle 三大主流引擎全在射程内，且漏洞已公开 PoC。这是\"权限隔离\"信仰的一次塌方。\n- **毒舌/硬核点评**：DBA 们信奉多年的\"最小权限原则\"，被一个 SQL 语句当场证伪。建议今晚别只备份数据库——顺便把补丁也打上，毕竟\"只读账号\"现在读的是你的内存。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/researcher-demonstrates-database-rce.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> 模型能解黑洞，但解不了你的商业模式——所以真正稀缺的从来不是智能，是知道该把智能用在哪儿的那点判断力。",
   "briefing_items": [
     {
-      "title": "Anthropic 纳斯达克首日市值破 2 万亿美元",
-      "source": "HackerNews / Reuters",
-      "summary": "Anthropic 完成史上最疯狂的 IPO 之一，上市首日市值直接冲到 2 万亿美元量级，成为对\"AI 承诺与危险\"双重叙事的一次华尔街压力测试。727 条评论的背后，是整个行业在争论：这到底是新时代的思科，还是又一个被叙事撑起来的泡沫顶。",
-      "commentary": "两万亿的估值，意味着 Claude 每写一行代码都得自带印钞机属性。提醒各位：当年思科在互联网泡沫顶峰也当过\"最合理\"的那个，然后花了二十年才爬回高点。",
-      "url": "https://www.reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19/"
-    },
-    {
-      "title": "Claude 解出两个黑洞物理开放问题",
-      "source": "HackerNews / Anthropic Research",
-      "summary": "Anthropic 官方发布研究，称 Claude 在黑洞物理领域解决了两个此前悬而未决的开放问题。这不是\"AI 帮你搜论文\"，而是模型直接参与了理论物理的推演与突破——如果结论站得住，这将是 LLM 从\"编程助手\"迈向\"科研协作者\"的分水岭事件。",
-      "commentary": "昨天还在帮你改 Python 缩进，今天直接在广义相对论里开新坑。物理学家们，建议现在就学会给模型写 prompt，而不是写 rebuttal。",
+      "title": "Claude 拿下两个黑洞物理开放问题",
+      "source": "HackerNews",
+      "summary": "Anthropic 放出的研究显示，Claude 独立解决了两道悬而未决的黑洞物理开放问题——不是\"辅助人类打草稿\"，而是给出了可验证的完整解。这意味着 LLM 首次在硬核理论物理领域拿出\"能进论文\"级别的产出，AI 从\"科研实习生\"升级为\"合作者\"。",
+      "commentary": "以后物理学博士答辩第一句话可能得改成\"首先感谢我的非人类一作\"。但别急着狂欢——能解数学题和能判断哪个问题值得解，中间隔着一整个诺奖的距离。",
       "url": "https://www.anthropic.com/research/claude-black-hole-physics"
     },
     {
-      "title": "研究者演示 PostgreSQL / MySQL / Oracle 数据库 RCE",
-      "source": "Tech RSS / The Hacker News",
-      "summary": "一位研究者公开 PoC，证明低权限数据库账号——连一张应用表都读不了的那种——照样能通过普通 SQL 触达引擎代码里的内存破坏漏洞，最终在数据库服务器上执行任意代码。三大主流数据库全部中招，冲击面覆盖几乎所有后端架构。",
-      "commentary": "你的\"最小权限原则\"在内存破坏面前形同虚设——权限隔离做得再漂亮，也拦不住引擎自己把自己玩崩。这周赶紧盯补丁，别等 DBA 在凌晨三点给你打电话。",
+      "title": "Anthropic 纳斯达克首秀，AI 泡沫压力测试开场",
+      "source": "HackerNews",
+      "summary": "Reuters 报道 Anthropic 完成历史性 IPO 登陆纳斯达克，成为 AI 承诺与风险在华尔街面前的一次正面对撞。2048 条评论的 HN 讨论区已经吵成一锅粥——这不只是一家公司的估值问题，而是整个\"AI 烧钱换增长\"叙事的公开定价时刻。",
+      "commentary": "Claude 上午解黑洞，下午被华尔街解剖。技术圈看能力，资本圈看 ARR，两边对\"智能\"的定义大概差了三个数量级——但敲钟那一刻，所有人都假装自己懂。",
+      "url": "https://www.reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19/"
+    },
+    {
+      "title": "低权限数据库账号即可 RCE：PostgreSQL / MySQL / Oracle 全线中招",
+      "source": "Tech RSS",
+      "summary": "一位研究者证明，连一张应用表都读不了的低权限数据库账号，照样能通过普通 SQL 触发引擎层内存破坏漏洞，在数据库服务器上执行任意代码。PostgreSQL、MySQL、Oracle 三大主流引擎全在射程内，且漏洞已公开 PoC。这是\"权限隔离\"信仰的一次塌方。",
+      "commentary": "DBA 们信奉多年的\"最小权限原则\"，被一个 SQL 语句当场证伪。建议今晚别只备份数据库——顺便把补丁也打上，毕竟\"只读账号\"现在读的是你的内存。",
       "url": "https://thehackernews.com/2026/11/researcher-demonstrates-database-rce.html"
     },
     {
-      "quote": "泡沫破裂时最惨的，从来不是没上车的人，而是上错车还加了杠杆的人。技术看长线，仓位管短线。"
+      "quote": "模型能解黑洞，但解不了你的商业模式——所以真正稀缺的从来不是智能，是知道该把智能用在哪儿的那点判断力。"
     }
   ],
   "candidates": [
+    {
+      "id": "hn:50528119",
+      "title": "How to CAD Almost Anything",
+      "summary": "",
+      "url": "https://ocw.mit.edu/courses/res-16-002-how-to-cad-almost-anything-january-iap-2024/",
+      "source": "Hacker News",
+      "score": 211,
+      "comments": 62
+    },
     {
       "id": "hn:50519231",
       "title": "Garage Door Spam",
       "summary": "",
       "url": "https://blog.harrison.page/garage-door-spam/",
       "source": "Hacker News",
-      "score": 600,
-      "comments": 257
-    },
-    {
-      "id": "hn:50562754",
-      "title": "Anthropic hits $2T in Nasdaq debut",
-      "summary": "",
-      "url": "https://www.reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19/",
-      "source": "Hacker News",
-      "score": 470,
-      "comments": 727
+      "score": 820,
+      "comments": 344
     },
     {
       "id": "hn:50563148",
@@ -54,53 +54,17 @@
       "summary": "",
       "url": "https://www.anthropic.com/research/claude-black-hole-physics",
       "source": "Hacker News",
-      "score": 202,
-      "comments": 64
+      "score": 456,
+      "comments": 218
     },
     {
-      "id": "hn:50562113",
-      "title": "UK government forced to admit it issued Apple a secret encryption order",
+      "id": "hn:50564159",
+      "title": "The 98% Slot Machine: How Paid Advertising Became an Extraction Tax",
       "summary": "",
-      "url": "https://macanorak.com/uk-government-forced-to-admit-it-issued-apple-a-secret-encryption-order/",
+      "url": "https://globalcommercegraph.com/writing/the-ninety-eight-percent-slot-machine",
       "source": "Hacker News",
-      "score": 276,
-      "comments": 133
-    },
-    {
-      "id": "hn:50558906",
-      "title": "Someone reported java4shell bug in September 2026",
-      "summary": "",
-      "url": "https://github.com/openjdk/jdk/pull/32781",
-      "source": "Hacker News",
-      "score": 253,
-      "comments": 69
-    },
-    {
-      "id": "hn:50547048",
-      "title": "Nintendo takes Picofly firmware down from GitHub [video]",
-      "summary": "",
-      "url": "https://www.youtube.com/watch?v=-TLCGUpoD6c",
-      "source": "Hacker News",
-      "score": 212,
-      "comments": 76
-    },
-    {
-      "id": "hn:50558533",
-      "title": "How the European Commission rolled out Matrix to more than 40k staff",
-      "summary": "",
-      "url": "https://element.io/blog/how-the-european-commission-rolled-out-matrix-to-more-than-40-000-staff/",
-      "source": "Hacker News",
-      "score": 594,
-      "comments": 280
-    },
-    {
-      "id": "hn:50556287",
-      "title": "Ruby2ßhell: Pre-authentication RCE on stock Rails",
-      "summary": "",
-      "url": "https://verialabs.com/ruby2shell/",
-      "source": "Hacker News",
-      "score": 339,
-      "comments": 139
+      "score": 249,
+      "comments": 138
     },
     {
       "id": "lob:spmgsd",
@@ -108,88 +72,20 @@
       "summary": "<p><del>Note: codeberg's servers are up, it's just the domain that's gone. It works perfectly after adding the following line to <code>/etc/hosts</code>:</del></p>\n<pre><code>217.197.84.140 codeberg.org\n</code></pre>\n<p>Update: it's now up again, and the above workaround is not necessary.</p>\n",
       "url": "https://social.anoxinon.de/@Codeberg/117636454915265360",
       "source": "Lobste.rs",
-      "score": 216,
-      "comments": 69,
+      "score": 223,
+      "comments": 73,
       "tags": [
         "vcs"
       ]
     },
     {
-      "id": "hn:50561508",
-      "title": "Pete warden on local AI, open models, voice interfaces, the future of hardware",
+      "id": "hn:50562754",
+      "title": "Anthropic’s Nasdaq debut",
       "summary": "",
-      "url": "https://thedataexchange.media/pete-warden-moonshine/",
+      "url": "https://www.reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19/",
       "source": "Hacker News",
-      "score": 164,
-      "comments": 152
-    },
-    {
-      "id": "lob:rzuasm",
-      "title": "We Need Smart People Who Give a Shit",
-      "summary": "",
-      "url": "https://violetpixel.com/blog/2026-11-17-we-need-smart-people-who-give-a-shit/",
-      "source": "Lobste.rs",
-      "score": 86,
-      "comments": 42,
-      "tags": [
-        "culture"
-      ]
-    },
-    {
-      "id": "hn:50561515",
-      "title": "Show HN: Cornhole News – A Hacker News inspired site for news across the Midwest",
-      "summary": "",
-      "url": "https://cornholenews.news",
-      "source": "Hacker News",
-      "score": 117,
-      "comments": 59
-    },
-    {
-      "id": "lob:a1uff5",
-      "title": "Java4Shell is a reason to use Java",
-      "summary": "",
-      "url": "https://mccue.dev/pages/11-18-26-java4shell",
-      "source": "Lobste.rs",
-      "score": 39,
-      "comments": 15,
-      "tags": [
-        "java",
-        "security"
-      ]
-    },
-    {
-      "id": "lob:wj2svg",
-      "title": "nginx2root",
-      "summary": "",
-      "url": "https://xint.io/blog/nginx2root-remote-code-execution",
-      "source": "Lobste.rs",
-      "score": 82,
-      "comments": 16,
-      "tags": [
-        "security"
-      ]
-    },
-    {
-      "id": "hn:50559719",
-      "title": "Making 8-page foldable zines from a single A4 sheet in the browser",
-      "summary": "",
-      "url": "https://krthr.co/paper-folds-and-whats-new-in-fanzines-app/",
-      "source": "Hacker News",
-      "score": 159,
-      "comments": 40
-    },
-    {
-      "id": "lob:zr0hkw",
-      "title": "Upcoming Critical PHP Security Release (18 Nov 2026)",
-      "summary": "",
-      "url": "https://www.php.net/index.php#2026-11-18-1",
-      "source": "Lobste.rs",
-      "score": 30,
-      "comments": 11,
-      "tags": [
-        "php",
-        "security"
-      ]
+      "score": 1037,
+      "comments": 2048
     },
     {
       "id": "lob:pqyuhk",
@@ -197,11 +93,33 @@
       "summary": "",
       "url": "https://www.postgresql.org/about/news/postgresql-19-released-3449/",
       "source": "Lobste.rs",
-      "score": 26,
-      "comments": 1,
+      "score": 64,
+      "comments": 3,
       "tags": [
-        "databases"
+        "databases",
+        "release"
       ]
+    },
+    {
+      "id": "lob:rzuasm",
+      "title": "We Need Smart People Who Give a Shit",
+      "summary": "",
+      "url": "https://violetpixel.com/blog/2026-11-17-we-need-smart-people-who-give-a-shit/",
+      "source": "Lobste.rs",
+      "score": 149,
+      "comments": 55,
+      "tags": [
+        "culture"
+      ]
+    },
+    {
+      "id": "hn:50569226",
+      "title": "OpenSSL: Buffer overflow in EVP_EncodeBlock() (CVE-2026-121481, CVSS 9.8)",
+      "summary": "",
+      "url": "https://github.com/openssl/openssl/pull/33652",
+      "source": "Hacker News",
+      "score": 119,
+      "comments": 62
     },
     {
       "id": "lob:bk5nfs",
@@ -209,12 +127,122 @@
       "summary": "",
       "url": "https://zerodha.tech/blog/high-performance-distributed-blob-storage/",
       "source": "Lobste.rs",
-      "score": 20,
-      "comments": 1,
+      "score": 27,
+      "comments": 3,
       "tags": [
         "distributed",
         "rust"
       ]
+    },
+    {
+      "id": "lob:qsrnot",
+      "title": "Design for Understandability",
+      "summary": "",
+      "url": "https://jschuster.org/blog/2026/11/19/design-for-understandability/",
+      "source": "Lobste.rs",
+      "score": 34,
+      "comments": 20,
+      "tags": [
+        "api",
+        "plt",
+        "practices",
+        "slides"
+      ]
+    },
+    {
+      "id": "hn:50562320",
+      "title": "Launch HN: Onlook (YC W25) – An open-source developer tool for designers",
+      "summary": "Hey HN, I&#x27;m Daniel, founder of Onlook (<a href=\"https:&#x2F;&#x2F;github.com&#x2F;onlook-dev&#x2F;onlook\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;onlook-dev&#x2F;onlook</a> and onlook.com).<p>Onlook is a desktop app that puts a canvas on top of your real codebase, letting you design di",
+      "url": "https://github.com/onlook-dev/onlook/",
+      "source": "Hacker News",
+      "score": 105,
+      "comments": 73
+    },
+    {
+      "id": "arxiv:2611.26627v1",
+      "title": "RL Post-Training in Diffusion Transformers Is Activation Steering",
+      "summary": "Reinforcement learning (RL) post-training substantially improves the visual quality, text rendering, and compositional accuracy of diffusion transformers. Because capabilities such as rendering requested text or composing multiple objects are inherently prompt-dependent, a natural hypothesis is that",
+      "url": "https://arxiv.org/abs/2611.26627v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "arxiv_id": "2611.26627v1"
+    },
+    {
+      "id": "arxiv:2611.26617v1",
+      "title": "One Prior, Two Dynamics: Repurposing Video Diffusion Transformers for Self-Supervised Latent Action Learning",
+      "summary": "Videos reveal how the world changes, but rarely the actions that cause those changes. Latent action learning recovers such supervision from visual transitions, yet often learns the underlying dynamics largely from scratch. We ask whether a pretrained video generator can instead provide the prior for",
+      "url": "https://arxiv.org/abs/2611.26617v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "arxiv_id": "2611.26617v1"
+    },
+    {
+      "id": "hn:50570479",
+      "title": "Google is pushing OEMs against GrapheneOS and bootloader unlocking",
+      "summary": "",
+      "url": "https://grapheneos.social/@GrapheneOS/117645038299496084",
+      "source": "Hacker News",
+      "score": 114,
+      "comments": 13
+    },
+    {
+      "id": "lob:uzn2t6",
+      "title": "Mutex poisoning is not for everyone",
+      "summary": "",
+      "url": "https://bertptrs.nl/2026/11/16/mutex-poisoning-is-not-for-everyone.html",
+      "source": "Lobste.rs",
+      "score": 30,
+      "comments": 8,
+      "tags": [
+        "rust"
+      ]
+    },
+    {
+      "id": "lob:elmy67",
+      "title": "15 million web servers on one VM - smoltcp, DPDK, AF_XDP",
+      "summary": "",
+      "url": "https://kapteko.com/15-million-webservers/",
+      "source": "Lobste.rs",
+      "score": 40,
+      "comments": 1,
+      "tags": [
+        "networking",
+        "rust"
+      ]
+    },
+    {
+      "id": "arxiv:2611.26613v1",
+      "title": "AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control",
+      "summary": "Frontier multimodal language agents such as GPT-6 Astra have demonstrated strong capabilities in controlling robots directly via low-level numerical actions without high-level primitives. However, existing benchmarks report only episode-level success rates, which show neither how these agents succee",
+      "url": "https://arxiv.org/abs/2611.26613v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.RO",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "arxiv_id": "2611.26613v1"
+    },
+    {
+      "id": "arxiv:2611.26601v1",
+      "title": "SoK: Assessing the Evolution of LLM Capability in Software Vulnerability Research",
+      "summary": "LLM-based agents are becoming increasingly capable at discovering, validating and patching vulnerabilities in real software, and vendors and researchers report that this is already changing how vulnerabilities are found and fixed. These claims, however, are scattered across papers, vendor reports an",
+      "url": "https://arxiv.org/abs/2611.26601v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.SE"
+      ],
+      "arxiv_id": "2611.26601v1"
     },
     {
       "id": "rss:08eb2a8108",
@@ -223,15 +251,6 @@
       "url": "https://thehackernews.com/2026/11/researcher-demonstrates-database-rce.html",
       "source": "Tech RSS",
       "score": 0
-    },
-    {
-      "id": "hn:50563066",
-      "title": "Pancreatic cancer halted by virus injection in three patients",
-      "summary": "",
-      "url": "https://scienceinhand.com/pancreatic-cancer-halted-by-virus-injection-in-three-patients/",
-      "source": "Hacker News",
-      "score": 124,
-      "comments": 13
     }
   ],
   "ai_curated": true
