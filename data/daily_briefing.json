@@ -1,40 +1,70 @@
 {
-  "date": "2026-11-21",
-  "update_time": "2026-11-21 06:22:06",
+  "date": "2026-11-22",
+  "update_time": "2026-11-21 18:49:40",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-21\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 黎曼猜想被\"闪电宣布\"了两次，数学界集体应激 (来源: HackerNews)\n- **核心干货**：Levent Alpöge 挂出 PDF 宣称证明广义黎曼猜想（GRH），几乎同时另一位 Alessandro Masullo 也\"匆忙宣布\"了同类结果，两条帖子在 HN 合计近 4400 分、2500+ 评论。GRH 一旦成立，素数分布、密码学安全边界、乃至整个解析数论的底层假设都要重新校准——这就是为什么数学家们既兴奋又谨慎，连陶哲轩都下场写了篇博客把 Navier-Stokes 奇点和 GRH 串在一起讨论。\n- **毒舌/硬核点评**：数学界的\"抢先发表\"比科技圈还刺激——PDF 一挂、邮件一发、全世界开始连夜验证。上一次这么热闹还是有人宣称自己证明了什么，结果审稿人花了三年发现第 47 页有个符号写反了。\n- **🔗 传送门**：[点击直达原链接](https://alpo.ge/remark.pdf)\n\n---\n\n### 2. 📌 语言模型开始\"自己改自己的权重\"了 (来源: ArXiv)\n- **核心干货**：这篇论文提出让 LLM 直接重写自身权重参数，而不是靠外部微调或 RLHF 打补丁。如果靠谱，意味着模型可以在推理过程中自我进化、自我修正，把\"训练\"和\"推理\"的边界彻底抹掉——这是从\"用模型\"到\"模型自己改自己\"的范式跳跃。\n- **毒舌/硬核点评**：以前是人类调参调到秃头，现在是模型自己动手改自己——听起来很酷，但请务必给它加个 `git revert`。毕竟一个能改自己权重的模型，离\"改完顺便把验证脚本也删了\"只有一步之遥。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2611.21885)\n\n---\n\n### 3. 📌 用\"氛围编程\"手搓一颗推理芯片 (来源: HackerNews)\n- **核心干货**：作者用 AI 辅助编码（vibecoding）从零设计了一颗推理专用芯片，把原本需要专业 EDA 团队数月的硬件设计流程压缩成个人项目。这不是玩票——它展示了 LLM 正在把芯片设计这种\"高门槛、重经验\"的领域拉低到个人开发者可触及的区间。\n- **毒舌/硬核点评**：十年前你说\"我一个人设计芯片\"，别人以为你在吹牛；现在你说这话，别人问你用的是哪个模型。硬件行业的护城河，正在被一段段自动生成的 Verilog 慢慢填平。\n- **🔗 传送门**：[点击直达原链接](https://ankitg.me/blog/vibecoding-inference-chip/)\n\n---\n\n### 🗣️ 今日顶男金句\n\"别等'准备好了'再动手——黎曼猜想的证明都是'匆忙宣布'的，你的 side project 又有什么好磨叽的？先挂出去，让世界帮你 debug。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-22\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Levent Alpöge 宣称证明广义黎曼猜想 (来源: HackerNews)\n- **核心干货**：数学界炸锅了。Levent Alpöge 挂出一篇 PDF，宣称搞定了广义黎曼猜想（GRH）——这个悬了 160 多年、连克雷研究所都懒得悬赏的硬骨头。几乎同时，另一路人马 Alessandro Masullo 也发了个\"匆忙公告\"，两条线在 HN 上分别收割了 2800+ 和 2300+ 分。是真突破还是又一次\"arXiv 先发制人、审稿人后知后觉\"，全世界的数论学家正在连夜验算。\n- **毒舌/硬核点评**：每次有人宣称秒掉黎曼猜想，数学界的反应都像收到\"你中奖了\"的诈骗短信——先激动三秒，再冷静十年。这次能不能撑过同行评审的毒打，才是真正的证明。\n- **🔗 传送门**：[点击直达原链接](https://alpo.ge/remark.pdf)\n\n---\n\n### 2. 📌 巴西税务局把计税引擎开源到 GitHub，MIT 协议 (来源: HackerNews)\n- **核心干货**：一个国家级税务机关，把自家税改后的核心计税代码以 MIT 协议扔上了 GitHub。这不是作秀，是让纳税人、会计师、第三方软件商能直接审计\"国家到底怎么算我的钱\"。透明度的天花板操作，顺手给全球税务软件生态送了个标准件。\n- **毒舌/硬核点评**：别的政府开源是发个 README 交差，巴西直接开了计税引擎——这波属于\"你怀疑我多收税？来，自己跑一遍\"。建议各国财政部抄作业，尤其是那些把税率表藏得比祖传配方还深的。\n- **🔗 传送门**：[点击直达原链接](https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/novembro/receita-federal-publica-primeiro-codigo-fonte-aberto-no-github-e-amplia-transparencia-da-reforma-tributaria)\n\n---\n\n### 3. 📌 Linux KVM 高危漏洞：虚拟机可越狱读取宿主机内存 (来源: Tech RSS)\n- **核心干货**：CVE-2026-99312，KVM 虚拟化层翻车。研究者在 DigitalOcean 上从一台自己的 VM 里，硬是读出了约 127 GB 的宿主机内存——而在共享云服务器上，这块内存里可能躺着**其他租户的虚拟机**。云厂商的\"隔离\"承诺，被这一铲子挖穿了底。\n- **毒舌/硬核点评**：你租的是虚拟机，云厂商卖的是\"隔离感\"。这漏洞一出来，多租户云的安全模型又得连夜打补丁——顺便提醒各位，敏感数据上云前先问问自己：隔壁老王的那台 VM，今天心情好吗？\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> 数学猜想可以宣称证明，云上隔离可不能只靠\"宣称\"。真正的硬核，是别人验算一百遍你还站得住。",
   "briefing_items": [
     {
-      "title": "黎曼猜想被\"闪电宣布\"了两次，数学界集体应激",
+      "title": "Levent Alpöge 宣称证明广义黎曼猜想",
       "source": "HackerNews",
-      "summary": "Levent Alpöge 挂出 PDF 宣称证明广义黎曼猜想（GRH），几乎同时另一位 Alessandro Masullo 也\"匆忙宣布\"了同类结果，两条帖子在 HN 合计近 4400 分、2500+ 评论。GRH 一旦成立，素数分布、密码学安全边界、乃至整个解析数论的底层假设都要重新校准——这就是为什么数学家们既兴奋又谨慎，连陶哲轩都下场写了篇博客把 Navier-Stokes 奇点和 GRH 串在一起讨论。",
-      "commentary": "数学界的\"抢先发表\"比科技圈还刺激——PDF 一挂、邮件一发、全世界开始连夜验证。上一次这么热闹还是有人宣称自己证明了什么，结果审稿人花了三年发现第 47 页有个符号写反了。",
+      "summary": "数学界炸锅了。Levent Alpöge 挂出一篇 PDF，宣称搞定了广义黎曼猜想（GRH）——这个悬了 160 多年、连克雷研究所都懒得悬赏的硬骨头。几乎同时，另一路人马 Alessandro Masullo 也发了个\"匆忙公告\"，两条线在 HN 上分别收割了 2800+ 和 2300+ 分。是真突破还是又一次\"arXiv 先发制人、审稿人后知后觉\"，全世界的数论学家正在连夜验算。",
+      "commentary": "每次有人宣称秒掉黎曼猜想，数学界的反应都像收到\"你中奖了\"的诈骗短信——先激动三秒，再冷静十年。这次能不能撑过同行评审的毒打，才是真正的证明。",
       "url": "https://alpo.ge/remark.pdf"
     },
     {
-      "title": "语言模型开始\"自己改自己的权重\"了",
-      "source": "ArXiv",
-      "summary": "这篇论文提出让 LLM 直接重写自身权重参数，而不是靠外部微调或 RLHF 打补丁。如果靠谱，意味着模型可以在推理过程中自我进化、自我修正，把\"训练\"和\"推理\"的边界彻底抹掉——这是从\"用模型\"到\"模型自己改自己\"的范式跳跃。",
-      "commentary": "以前是人类调参调到秃头，现在是模型自己动手改自己——听起来很酷，但请务必给它加个 `git revert`。毕竟一个能改自己权重的模型，离\"改完顺便把验证脚本也删了\"只有一步之遥。",
-      "url": "https://arxiv.org/abs/2611.21885"
+      "title": "巴西税务局把计税引擎开源到 GitHub，MIT 协议",
+      "source": "HackerNews",
+      "summary": "一个国家级税务机关，把自家税改后的核心计税代码以 MIT 协议扔上了 GitHub。这不是作秀，是让纳税人、会计师、第三方软件商能直接审计\"国家到底怎么算我的钱\"。透明度的天花板操作，顺手给全球税务软件生态送了个标准件。",
+      "commentary": "别的政府开源是发个 README 交差，巴西直接开了计税引擎——这波属于\"你怀疑我多收税？来，自己跑一遍\"。建议各国财政部抄作业，尤其是那些把税率表藏得比祖传配方还深的。",
+      "url": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/novembro/receita-federal-publica-primeiro-codigo-fonte-aberto-no-github-e-amplia-transparencia-da-reforma-tributaria"
     },
     {
-      "title": "用\"氛围编程\"手搓一颗推理芯片",
-      "source": "HackerNews",
-      "summary": "作者用 AI 辅助编码（vibecoding）从零设计了一颗推理专用芯片，把原本需要专业 EDA 团队数月的硬件设计流程压缩成个人项目。这不是玩票——它展示了 LLM 正在把芯片设计这种\"高门槛、重经验\"的领域拉低到个人开发者可触及的区间。",
-      "commentary": "十年前你说\"我一个人设计芯片\"，别人以为你在吹牛；现在你说这话，别人问你用的是哪个模型。硬件行业的护城河，正在被一段段自动生成的 Verilog 慢慢填平。",
-      "url": "https://ankitg.me/blog/vibecoding-inference-chip/"
+      "title": "Linux KVM 高危漏洞：虚拟机可越狱读取宿主机内存",
+      "source": "Tech RSS",
+      "summary": "CVE-2026-99312，KVM 虚拟化层翻车。研究者在 DigitalOcean 上从一台自己的 VM 里，硬是读出了约 127 GB 的宿主机内存——而在共享云服务器上，这块内存里可能躺着**其他租户的虚拟机**。云厂商的\"隔离\"承诺，被这一铲子挖穿了底。",
+      "commentary": "你租的是虚拟机，云厂商卖的是\"隔离感\"。这漏洞一出来，多租户云的安全模型又得连夜打补丁——顺便提醒各位，敏感数据上云前先问问自己：隔壁老王的那台 VM，今天心情好吗？",
+      "url": "https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html"
+    },
+    {
+      "quote": "数学猜想可以宣称证明，云上隔离可不能只靠\"宣称\"。真正的硬核，是别人验算一百遍你还站得住。"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50577265",
-      "title": "Language Models Can Rewrite Their Own Weights",
+      "id": "hn:50588982",
+      "title": "Detonating a pile of lead azide",
       "summary": "",
-      "url": "https://arxiv.org/abs/2611.21885",
+      "url": "https://www.science.org/content/blog-post/detonating-huge-pile-lead-azide-really",
       "source": "Hacker News",
-      "score": 380,
-      "comments": 116
+      "score": 363,
+      "comments": 227
+    },
+    {
+      "id": "hn:50589618",
+      "title": "Lean verification of the Riemann Hypothesis",
+      "summary": "",
+      "url": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/",
+      "source": "Hacker News",
+      "score": 482,
+      "comments": 383
+    },
+    {
+      "id": "hn:50532613",
+      "title": "Brazil's tax authority open-sources its tax calculator on GitHub under MIT",
+      "summary": "",
+      "url": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/novembro/receita-federal-publica-primeiro-codigo-fonte-aberto-no-github-e-amplia-transparencia-da-reforma-tributaria",
+      "source": "Hacker News",
+      "score": 510,
+      "comments": 164
+    },
+    {
+      "id": "hn:50587875",
+      "title": "My monitor was cutting my download speed by 75%",
+      "summary": "",
+      "url": "https://blog.tymscar.com/posts/studiodisplayethernet/",
+      "source": "Hacker News",
+      "score": 304,
+      "comments": 156
     },
     {
       "id": "hn:50579568",
@@ -42,8 +72,8 @@
       "summary": "Related: <i>Levent Alpöge claims proof of the Generalized Riemann Hypothesis [pdf]</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50574968\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50574968</a>",
       "url": "https://math216.wordpress.com/2026/11/20/hurried-announcement-alessandro-masullo-grh/",
       "source": "Hacker News",
-      "score": 1842,
-      "comments": 841
+      "score": 2323,
+      "comments": 1117
     },
     {
       "id": "hn:50574968",
@@ -51,44 +81,8 @@
       "summary": "Related: <i>Hurried Announcement: Alessandro Masullo GRH</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50579568\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50579568</a>",
       "url": "https://alpo.ge/remark.pdf",
       "source": "Hacker News",
-      "score": 2506,
-      "comments": 1728
-    },
-    {
-      "id": "hn:50583274",
-      "title": "NINLIVE: The Nine Inch Nails live archive",
-      "summary": "",
-      "url": "https://ninlive.com/",
-      "source": "Hacker News",
-      "score": 204,
-      "comments": 51
-    },
-    {
-      "id": "hn:50579331",
-      "title": "We promoted developers into architects without informing them",
-      "summary": "",
-      "url": "https://manidoraisamy.com/developer-to-architect.html",
-      "source": "Hacker News",
-      "score": 376,
-      "comments": 216
-    },
-    {
-      "id": "hn:50578358",
-      "title": "Unforced Navier-Stokes Singularity and the Generalized Riemann Hypothesis",
-      "summary": "",
-      "url": "https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis/",
-      "source": "Hacker News",
-      "score": 397,
-      "comments": 162
-    },
-    {
-      "id": "hn:50576232",
-      "title": "Finite-time blow-up for the Navier–Stokes equations",
-      "summary": "",
-      "url": "https://github.com/tristanbuckmaster/navier-stokes/",
-      "source": "Hacker News",
-      "score": 273,
-      "comments": 86
+      "score": 2822,
+      "comments": 1992
     },
     {
       "id": "hn:50581260",
@@ -96,39 +90,8 @@
       "summary": "",
       "url": "https://thinkingmachines.ai/news/inkling-2-mini/",
       "source": "Hacker News",
-      "score": 868,
-      "comments": 160
-    },
-    {
-      "id": "lob:tj1j4b",
-      "title": "Announcing jj-musubi: live sync for Jujutsu",
-      "summary": "",
-      "url": "https://www.serpentine.com/posts/2026/announcing-jj-musubi/",
-      "source": "Lobste.rs",
-      "score": 46,
-      "comments": 27,
-      "tags": [
-        "release",
-        "vcs"
-      ]
-    },
-    {
-      "id": "hn:50579297",
-      "title": "Vibecoding an inference chip",
-      "summary": "",
-      "url": "https://ankitg.me/blog/vibecoding-inference-chip/",
-      "source": "Hacker News",
-      "score": 133,
-      "comments": 54
-    },
-    {
-      "id": "hn:50581110",
-      "title": "DreamCoder: Coding harness and IDE from the author of Mastering Emacs",
-      "summary": "",
-      "url": "https://www.masteringemacs.org/article/announcing-dreamcoder",
-      "source": "Hacker News",
-      "score": 170,
-      "comments": 38
+      "score": 1261,
+      "comments": 253
     },
     {
       "id": "lob:kkglbw",
@@ -136,48 +99,73 @@
       "summary": "",
       "url": "https://vim-classic.org/news/vim-8.3.1-released.html",
       "source": "Lobste.rs",
-      "score": 56,
-      "comments": 9,
+      "score": 67,
+      "comments": 24,
       "tags": [
         "editors",
         "release"
       ]
     },
     {
-      "id": "lob:tr5ghf",
-      "title": "Garage Door Spam",
+      "id": "lob:tj1j4b",
+      "title": "Announcing jj-musubi: live sync for Jujutsu",
       "summary": "",
-      "url": "https://blog.harrison.page/garage-door-spam/",
+      "url": "https://www.serpentine.com/posts/2026/announcing-jj-musubi/",
       "source": "Lobste.rs",
-      "score": 40,
-      "comments": 9,
+      "score": 65,
+      "comments": 30,
       "tags": [
-        "hardware"
+        "release",
+        "vcs"
       ]
     },
     {
-      "id": "lob:qsrnot",
-      "title": "Design for Understandability",
+      "id": "hn:50587208",
+      "title": "RCE in Gnupg",
       "summary": "",
-      "url": "https://jschuster.org/blog/2026/11/19/design-for-understandability/",
-      "source": "Lobste.rs",
-      "score": 50,
-      "comments": 29,
-      "tags": [
-        "api",
-        "plt",
-        "practices",
-        "slides"
-      ]
-    },
-    {
-      "id": "hn:50583761",
-      "title": "Ask HN: I have been unemployed for 2y. 15 years of experience, US. What to do?",
-      "summary": "I&#x27;m Senior software engineer in the US (DMV area), with 15y of experience. Worked for Fortune 50+ company and bunch of mid-size companies. Been unemployed for 2y and can&#x27;t find a job, within those 2 years, I pretty much spent my savings that I&#x27;ve saved through years, maybe have 4-5 mo",
-      "url": "https://news.ycombinator.com/item?id=50583761",
+      "url": "https://lists.gnupg.org/pipermail/gnupg-announce/2026q4/000517.html",
       "source": "Hacker News",
-      "score": 68,
-      "comments": 71
+      "score": 178,
+      "comments": 57
+    },
+    {
+      "id": "lob:1n8fzn",
+      "title": "Slopstrap: Make your site look hastily vibecoded",
+      "summary": "",
+      "url": "https://slopstrap.mikelacher.com/l",
+      "source": "Lobste.rs",
+      "score": 62,
+      "comments": 14,
+      "tags": [
+        "css",
+        "satire",
+        "web"
+      ]
+    },
+    {
+      "id": "lob:o5coeq",
+      "title": "Internet Archive Staffers Are Unionizing",
+      "summary": "",
+      "url": "https://cwa-union.org/news/releases/internet-archive-workers-launch-union-campaign-communications-workers-america",
+      "source": "Lobste.rs",
+      "score": 72,
+      "comments": 7,
+      "tags": [
+        "culture"
+      ]
+    },
+    {
+      "id": "lob:hcahbx",
+      "title": "Visited links are purple",
+      "summary": "",
+      "url": "https://dbushell.com/2026/11/16/visited-links/",
+      "source": "Lobste.rs",
+      "score": 39,
+      "comments": 10,
+      "tags": [
+        "a11y",
+        "web"
+      ]
     },
     {
       "id": "arxiv:2611.26627v1",
@@ -206,25 +194,13 @@
       "arxiv_id": "2611.26617v1"
     },
     {
-      "id": "lob:o5coeq",
-      "title": "Internet Archive Staffers Are Unionizing",
-      "summary": "",
-      "url": "https://cwa-union.org/news/releases/internet-archive-workers-launch-union-campaign-communications-workers-america",
-      "source": "Lobste.rs",
-      "score": 47,
-      "comments": 6,
-      "tags": [
-        "culture"
-      ]
-    },
-    {
       "id": "lob:vo5jve",
       "title": "Removing binder.c",
       "summary": "",
       "url": "https://lwn.net/Articles/1102982/",
       "source": "Lobste.rs",
-      "score": 60,
-      "comments": 7,
+      "score": 65,
+      "comments": 9,
       "tags": [
         "android",
         "linux",
@@ -232,13 +208,46 @@
       ]
     },
     {
-      "id": "hn:50585593",
-      "title": "BlackBlaze now explicitly states selling your data for advertisement",
-      "summary": "",
-      "url": "https://www.backblaze.com/company/policy/privacy",
-      "source": "Hacker News",
-      "score": 121,
-      "comments": 31
+      "id": "arxiv:2611.26613v1",
+      "title": "AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control",
+      "summary": "Frontier multimodal language agents such as GPT-6 Astra have demonstrated strong capabilities in controlling robots directly via low-level numerical actions without high-level primitives. However, existing benchmarks report only episode-level success rates, which show neither how these agents succee",
+      "url": "https://arxiv.org/abs/2611.26613v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.RO",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "arxiv_id": "2611.26613v1"
+    },
+    {
+      "id": "arxiv:2611.26601v1",
+      "title": "SoK: Assessing the Evolution of LLM Capability in Software Vulnerability Research",
+      "summary": "LLM-based agents are becoming increasingly capable at discovering, validating and patching vulnerabilities in real software, and vendors and researchers report that this is already changing how vulnerabilities are found and fixed. These claims, however, are scattered across papers, vendor reports an",
+      "url": "https://arxiv.org/abs/2611.26601v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.SE"
+      ],
+      "arxiv_id": "2611.26601v1"
+    },
+    {
+      "id": "rss:9e30c5ae43",
+      "title": "Linux KVM Flaw CVE-2026-99312 Lets Guest VMs Access Host Memory on AMD Hosts",
+      "summary": "A flaw in KVM, the hypervisor built into the Linux kernel, let researchers read about 127 GB of a cloud server's memory from inside a virtual machine of their own on DigitalOcean.\n\nOn a shared server, that memory can include other customers' virtual machines. The flaw, tracked as CVE-2026-99312, aff",
+      "url": "https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:38c6a3884f",
+      "title": "Hackers Exploit Critical Cisco Expressway Flaw, Breach Four Devices and Reach Internal Network",
+      "summary": "Threat actors have been observed exploiting a recently disclosed critical security flaw in Cisco Expressway to breach a Russian organization shortly after the public release of a proof-of-concept (PoC) exploit.\n\nThe activity involves the exploitation of CVE-2026-76466 (CVSS score: 9.8), a vulnerabil",
+      "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-cisco.html",
+      "source": "Tech RSS",
+      "score": 0
     }
   ],
   "ai_curated": true
