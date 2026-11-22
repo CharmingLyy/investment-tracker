@@ -1,43 +1,52 @@
 {
   "date": "2026-11-22",
-  "update_time": "2026-11-21 18:49:40",
+  "update_time": "2026-11-22 05:53:56",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-22\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Levent Alpöge 宣称证明广义黎曼猜想 (来源: HackerNews)\n- **核心干货**：数学界炸锅了。Levent Alpöge 挂出一篇 PDF，宣称搞定了广义黎曼猜想（GRH）——这个悬了 160 多年、连克雷研究所都懒得悬赏的硬骨头。几乎同时，另一路人马 Alessandro Masullo 也发了个\"匆忙公告\"，两条线在 HN 上分别收割了 2800+ 和 2300+ 分。是真突破还是又一次\"arXiv 先发制人、审稿人后知后觉\"，全世界的数论学家正在连夜验算。\n- **毒舌/硬核点评**：每次有人宣称秒掉黎曼猜想，数学界的反应都像收到\"你中奖了\"的诈骗短信——先激动三秒，再冷静十年。这次能不能撑过同行评审的毒打，才是真正的证明。\n- **🔗 传送门**：[点击直达原链接](https://alpo.ge/remark.pdf)\n\n---\n\n### 2. 📌 巴西税务局把计税引擎开源到 GitHub，MIT 协议 (来源: HackerNews)\n- **核心干货**：一个国家级税务机关，把自家税改后的核心计税代码以 MIT 协议扔上了 GitHub。这不是作秀，是让纳税人、会计师、第三方软件商能直接审计\"国家到底怎么算我的钱\"。透明度的天花板操作，顺手给全球税务软件生态送了个标准件。\n- **毒舌/硬核点评**：别的政府开源是发个 README 交差，巴西直接开了计税引擎——这波属于\"你怀疑我多收税？来，自己跑一遍\"。建议各国财政部抄作业，尤其是那些把税率表藏得比祖传配方还深的。\n- **🔗 传送门**：[点击直达原链接](https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/novembro/receita-federal-publica-primeiro-codigo-fonte-aberto-no-github-e-amplia-transparencia-da-reforma-tributaria)\n\n---\n\n### 3. 📌 Linux KVM 高危漏洞：虚拟机可越狱读取宿主机内存 (来源: Tech RSS)\n- **核心干货**：CVE-2026-99312，KVM 虚拟化层翻车。研究者在 DigitalOcean 上从一台自己的 VM 里，硬是读出了约 127 GB 的宿主机内存——而在共享云服务器上，这块内存里可能躺着**其他租户的虚拟机**。云厂商的\"隔离\"承诺，被这一铲子挖穿了底。\n- **毒舌/硬核点评**：你租的是虚拟机，云厂商卖的是\"隔离感\"。这漏洞一出来，多租户云的安全模型又得连夜打补丁——顺便提醒各位，敏感数据上云前先问问自己：隔壁老王的那台 VM，今天心情好吗？\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> 数学猜想可以宣称证明，云上隔离可不能只靠\"宣称\"。真正的硬核，是别人验算一百遍你还站得住。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-22\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Lean 形式化验证黎曼猜想 (来源: HackerNews / Lobste.rs)\n- **核心干货**：Lean 社区放出对黎曼猜想的机器验证尝试，同时 Levent Alpöge 也单独声称给出了证明。若成立，这是数学界百年悬案首次被交互式定理证明器\"代码化\"审视——价值不在于谁对谁错，而在于\"证明\"这件事本身正在被工程化。\n- **毒舌/硬核点评**：数学界终于开始用 CI/CD 管理猜想了。但请记住：HN 上 931 分和 792 条评论，99% 的人连黎曼猜想的陈述都写不对，却都在评论区当审稿人。\n- **🔗 传送门**：[点击直达原链接](https://leanprover-community.github.io/blog/posts/riemann-hypothesis/)\n\n---\n\n### 2. 📌 胰腺癌口服药 daraxonrasib 被称为\"数十年最大突破\" (来源: HackerNews)\n- **核心干货**：针对 KRAS 突变的口服靶向药在胰腺癌临床中交出里程碑数据。胰腺癌素有\"癌中之王\"之称，五年生存率长期个位数，一款能口服、能走通 KRAS 通路的药，商业与生命价值都拉满。\n- **毒舌/硬核点评**：这才是 834 分该有的含金量——不是又一个 LLM 套壳融资，而是真能让人多活几年的分子。提醒各位：AI 再卷，也别忘了医药才是硬科技里最硬的赛道。\n- **🔗 传送门**：[点击直达原链接](https://www.theguardian.com/society/2026/nov/20/pill-pancreatic-cancer-breakthrough-daraxonrasib)\n\n---\n\n### 3. 📌 RL 后训练在 Diffusion Transformer 里其实是在\"操控激活\" (来源: ArXiv cs.CV/cs.LG)\n- **核心干货**：论文揭示了一个反直觉结论——扩散 Transformer 的 RL 后训练之所以能提升画质、文字渲染和构图，本质不是\"学会了新能力\"，而是在做激活空间的方向引导（activation steering）。这等于把 RL 从黑盒魔法降维成可解释的向量操作，对后续可控生成和训练效率优化是实打实的杠杆。\n- **毒舌/硬核点评**：翻译成人话：你以为 RL 教会了模型画画，其实只是给它脑门上贴了张\"此处加粗\"的便利贴。学术界终于开始承认——很多\"能力涌现\"不过是没调好的旋钮。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2611.26627v1)\n\n---\n\n### 🗣️ 今日顶男金句\n> 真正的护城河从来不是模型参数，而是你敢不敢把\"证明\"、\"疗效\"和\"可解释性\"这三样最不性感的东西，做到别人抄不动。",
   "briefing_items": [
     {
-      "title": "Levent Alpöge 宣称证明广义黎曼猜想",
+      "title": "Lean 形式化验证黎曼猜想",
+      "source": "HackerNews / Lobste.rs",
+      "summary": "Lean 社区放出对黎曼猜想的机器验证尝试，同时 Levent Alpöge 也单独声称给出了证明。若成立，这是数学界百年悬案首次被交互式定理证明器\"代码化\"审视——价值不在于谁对谁错，而在于\"证明\"这件事本身正在被工程化。",
+      "commentary": "数学界终于开始用 CI/CD 管理猜想了。但请记住：HN 上 931 分和 792 条评论，99% 的人连黎曼猜想的陈述都写不对，却都在评论区当审稿人。",
+      "url": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/"
+    },
+    {
+      "title": "胰腺癌口服药 daraxonrasib 被称为\"数十年最大突破\"",
       "source": "HackerNews",
-      "summary": "数学界炸锅了。Levent Alpöge 挂出一篇 PDF，宣称搞定了广义黎曼猜想（GRH）——这个悬了 160 多年、连克雷研究所都懒得悬赏的硬骨头。几乎同时，另一路人马 Alessandro Masullo 也发了个\"匆忙公告\"，两条线在 HN 上分别收割了 2800+ 和 2300+ 分。是真突破还是又一次\"arXiv 先发制人、审稿人后知后觉\"，全世界的数论学家正在连夜验算。",
-      "commentary": "每次有人宣称秒掉黎曼猜想，数学界的反应都像收到\"你中奖了\"的诈骗短信——先激动三秒，再冷静十年。这次能不能撑过同行评审的毒打，才是真正的证明。",
-      "url": "https://alpo.ge/remark.pdf"
+      "summary": "针对 KRAS 突变的口服靶向药在胰腺癌临床中交出里程碑数据。胰腺癌素有\"癌中之王\"之称，五年生存率长期个位数，一款能口服、能走通 KRAS 通路的药，商业与生命价值都拉满。",
+      "commentary": "这才是 834 分该有的含金量——不是又一个 LLM 套壳融资，而是真能让人多活几年的分子。提醒各位：AI 再卷，也别忘了医药才是硬科技里最硬的赛道。",
+      "url": "https://www.theguardian.com/society/2026/nov/20/pill-pancreatic-cancer-breakthrough-daraxonrasib"
     },
     {
-      "title": "巴西税务局把计税引擎开源到 GitHub，MIT 协议",
-      "source": "HackerNews",
-      "summary": "一个国家级税务机关，把自家税改后的核心计税代码以 MIT 协议扔上了 GitHub。这不是作秀，是让纳税人、会计师、第三方软件商能直接审计\"国家到底怎么算我的钱\"。透明度的天花板操作，顺手给全球税务软件生态送了个标准件。",
-      "commentary": "别的政府开源是发个 README 交差，巴西直接开了计税引擎——这波属于\"你怀疑我多收税？来，自己跑一遍\"。建议各国财政部抄作业，尤其是那些把税率表藏得比祖传配方还深的。",
-      "url": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/novembro/receita-federal-publica-primeiro-codigo-fonte-aberto-no-github-e-amplia-transparencia-da-reforma-tributaria"
+      "title": "RL 后训练在 Diffusion Transformer 里其实是在\"操控激活\"",
+      "source": "ArXiv cs.CV/cs.LG",
+      "summary": "论文揭示了一个反直觉结论——扩散 Transformer 的 RL 后训练之所以能提升画质、文字渲染和构图，本质不是\"学会了新能力\"，而是在做激活空间的方向引导（activation steering）。这等于把 RL 从黑盒魔法降维成可解释的向量操作，对后续可控生成和训练效率优化是实打实的杠杆。",
+      "commentary": "翻译成人话：你以为 RL 教会了模型画画，其实只是给它脑门上贴了张\"此处加粗\"的便利贴。学术界终于开始承认——很多\"能力涌现\"不过是没调好的旋钮。",
+      "url": "https://arxiv.org/abs/2611.26627v1"
     },
     {
-      "title": "Linux KVM 高危漏洞：虚拟机可越狱读取宿主机内存",
-      "source": "Tech RSS",
-      "summary": "CVE-2026-99312，KVM 虚拟化层翻车。研究者在 DigitalOcean 上从一台自己的 VM 里，硬是读出了约 127 GB 的宿主机内存——而在共享云服务器上，这块内存里可能躺着**其他租户的虚拟机**。云厂商的\"隔离\"承诺，被这一铲子挖穿了底。",
-      "commentary": "你租的是虚拟机，云厂商卖的是\"隔离感\"。这漏洞一出来，多租户云的安全模型又得连夜打补丁——顺便提醒各位，敏感数据上云前先问问自己：隔壁老王的那台 VM，今天心情好吗？",
-      "url": "https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html"
-    },
-    {
-      "quote": "数学猜想可以宣称证明，云上隔离可不能只靠\"宣称\"。真正的硬核，是别人验算一百遍你还站得住。"
+      "quote": "真正的护城河从来不是模型参数，而是你敢不敢把\"证明\"、\"疗效\"和\"可解释性\"这三样最不性感的东西，做到别人抄不动。"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50588982",
-      "title": "Detonating a pile of lead azide",
+      "id": "hn:50596133",
+      "title": "Toyota, Nissan, and Honda to standardize parts to lower costs",
       "summary": "",
-      "url": "https://www.science.org/content/blog-post/detonating-huge-pile-lead-azide-really",
+      "url": "https://www.caranddriver.com/news/a74490092/toyota-nissan-honda-standardize-parts-lower-costs/",
       "source": "Hacker News",
-      "score": 363,
-      "comments": 227
+      "score": 165,
+      "comments": 83
+    },
+    {
+      "id": "hn:50582069",
+      "title": "Pill to treat pancreatic cancer hailed as 'biggest breakthrough in decades'",
+      "summary": "",
+      "url": "https://www.theguardian.com/society/2026/nov/20/pill-pancreatic-cancer-breakthrough-daraxonrasib",
+      "source": "Hacker News",
+      "score": 834,
+      "comments": 192
     },
     {
       "id": "hn:50589618",
@@ -45,17 +54,35 @@
       "summary": "",
       "url": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/",
       "source": "Hacker News",
-      "score": 482,
-      "comments": 383
+      "score": 931,
+      "comments": 792
     },
     {
-      "id": "hn:50532613",
-      "title": "Brazil's tax authority open-sources its tax calculator on GitHub under MIT",
+      "id": "hn:50591853",
+      "title": "Inkling-2-Mini in 5.4 GB Memory",
       "summary": "",
-      "url": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/novembro/receita-federal-publica-primeiro-codigo-fonte-aberto-no-github-e-amplia-transparencia-da-reforma-tributaria",
+      "url": "https://github.com/ShinMegamiBoson/lookatmyquant",
       "source": "Hacker News",
-      "score": 510,
-      "comments": 164
+      "score": 414,
+      "comments": 103
+    },
+    {
+      "id": "hn:50588982",
+      "title": "Detonating a pile of lead azide",
+      "summary": "",
+      "url": "https://www.science.org/content/blog-post/detonating-huge-pile-lead-azide-really",
+      "source": "Hacker News",
+      "score": 578,
+      "comments": 374
+    },
+    {
+      "id": "hn:50583028",
+      "title": "Getting the mind to steer the body to steer you",
+      "summary": "",
+      "url": "https://notnottalmud.substack.com/p/getting-the-mind-to-steer-the-body",
+      "source": "Hacker News",
+      "score": 217,
+      "comments": 69
     },
     {
       "id": "hn:50587875",
@@ -63,35 +90,8 @@
       "summary": "",
       "url": "https://blog.tymscar.com/posts/studiodisplayethernet/",
       "source": "Hacker News",
-      "score": 304,
-      "comments": 156
-    },
-    {
-      "id": "hn:50579568",
-      "title": "Hurried Announcement: Alessandro Masullo GRH",
-      "summary": "Related: <i>Levent Alpöge claims proof of the Generalized Riemann Hypothesis [pdf]</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50574968\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50574968</a>",
-      "url": "https://math216.wordpress.com/2026/11/20/hurried-announcement-alessandro-masullo-grh/",
-      "source": "Hacker News",
-      "score": 2323,
-      "comments": 1117
-    },
-    {
-      "id": "hn:50574968",
-      "title": "Levent Alpöge claims proof of the Generalized Riemann Hypothesis [pdf]",
-      "summary": "Related: <i>Hurried Announcement: Alessandro Masullo GRH</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50579568\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50579568</a>",
-      "url": "https://alpo.ge/remark.pdf",
-      "source": "Hacker News",
-      "score": 2822,
-      "comments": 1992
-    },
-    {
-      "id": "hn:50581260",
-      "title": "Inkling 2 Mini",
-      "summary": "",
-      "url": "https://thinkingmachines.ai/news/inkling-2-mini/",
-      "source": "Hacker News",
-      "score": 1261,
-      "comments": 253
+      "score": 541,
+      "comments": 261
     },
     {
       "id": "lob:kkglbw",
@@ -99,34 +99,25 @@
       "summary": "",
       "url": "https://vim-classic.org/news/vim-8.3.1-released.html",
       "source": "Lobste.rs",
-      "score": 67,
-      "comments": 24,
+      "score": 73,
+      "comments": 28,
       "tags": [
         "editors",
         "release"
       ]
     },
     {
-      "id": "lob:tj1j4b",
-      "title": "Announcing jj-musubi: live sync for Jujutsu",
+      "id": "lob:cmifpg",
+      "title": "Levent Alpöge Claims Proof of Riemann Hypothesis",
       "summary": "",
-      "url": "https://www.serpentine.com/posts/2026/announcing-jj-musubi/",
+      "url": "https://alpo.ge/remark.pdf",
       "source": "Lobste.rs",
-      "score": 65,
-      "comments": 30,
+      "score": 104,
+      "comments": 62,
       "tags": [
-        "release",
-        "vcs"
+        "math",
+        "pdf"
       ]
-    },
-    {
-      "id": "hn:50587208",
-      "title": "RCE in Gnupg",
-      "summary": "",
-      "url": "https://lists.gnupg.org/pipermail/gnupg-announce/2026q4/000517.html",
-      "source": "Hacker News",
-      "score": 178,
-      "comments": 57
     },
     {
       "id": "lob:1n8fzn",
@@ -134,7 +125,7 @@
       "summary": "",
       "url": "https://slopstrap.mikelacher.com/l",
       "source": "Lobste.rs",
-      "score": 62,
+      "score": 81,
       "comments": 14,
       "tags": [
         "css",
@@ -143,28 +134,54 @@
       ]
     },
     {
-      "id": "lob:o5coeq",
-      "title": "Internet Archive Staffers Are Unionizing",
+      "id": "lob:qxzs4y",
+      "title": "TODOs JJ Style",
       "summary": "",
-      "url": "https://cwa-union.org/news/releases/internet-archive-workers-launch-union-campaign-communications-workers-america",
+      "url": "https://bwc9876.dev/blog/jj_todo/",
       "source": "Lobste.rs",
-      "score": 72,
-      "comments": 7,
+      "score": 47,
+      "comments": 9,
       "tags": [
-        "culture"
+        "vcs"
       ]
     },
     {
-      "id": "lob:hcahbx",
-      "title": "Visited links are purple",
+      "id": "hn:50592097",
+      "title": "Upload2Shell (CVE-2026-125396)",
       "summary": "",
-      "url": "https://dbushell.com/2026/11/16/visited-links/",
+      "url": "https://pwn.ai/upload2shell",
+      "source": "Hacker News",
+      "score": 101,
+      "comments": 46
+    },
+    {
+      "id": "hn:50595168",
+      "title": "Leonida – PC Recompilation of the Xbox Version of GTA 6",
+      "summary": "",
+      "url": "https://github.com/ItsNotRexed/Leonida",
+      "source": "Hacker News",
+      "score": 105,
+      "comments": 69
+    },
+    {
+      "id": "hn:50594911",
+      "title": "Sandwich Simulator",
+      "summary": "",
+      "url": "https://stulle.app/",
+      "source": "Hacker News",
+      "score": 124,
+      "comments": 50
+    },
+    {
+      "id": "lob:fjueso",
+      "title": "C++26 is done (again)! — Trip report: November 2026 ISO C++ standards meeting (Búzios, Brazil)",
+      "summary": "",
+      "url": "https://herbsutter.com/2026/11/21/c26-is-done-again-trip-report-november-2026-iso-c-standards-meeting-buzios-brazil/",
       "source": "Lobste.rs",
-      "score": 39,
-      "comments": 10,
+      "score": 16,
+      "comments": 23,
       "tags": [
-        "a11y",
-        "web"
+        "c++"
       ]
     },
     {
@@ -194,18 +211,13 @@
       "arxiv_id": "2611.26617v1"
     },
     {
-      "id": "lob:vo5jve",
-      "title": "Removing binder.c",
+      "id": "hn:50595554",
+      "title": "Data Processing Incidents on Inference Providers",
       "summary": "",
-      "url": "https://lwn.net/Articles/1102982/",
-      "source": "Lobste.rs",
-      "score": 65,
-      "comments": 9,
-      "tags": [
-        "android",
-        "linux",
-        "rust"
-      ]
+      "url": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
+      "source": "Hacker News",
+      "score": 73,
+      "comments": 29
     },
     {
       "id": "arxiv:2611.26613v1",
@@ -232,22 +244,6 @@
         "cs.SE"
       ],
       "arxiv_id": "2611.26601v1"
-    },
-    {
-      "id": "rss:9e30c5ae43",
-      "title": "Linux KVM Flaw CVE-2026-99312 Lets Guest VMs Access Host Memory on AMD Hosts",
-      "summary": "A flaw in KVM, the hypervisor built into the Linux kernel, let researchers read about 127 GB of a cloud server's memory from inside a virtual machine of their own on DigitalOcean.\n\nOn a shared server, that memory can include other customers' virtual machines. The flaw, tracked as CVE-2026-99312, aff",
-      "url": "https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:38c6a3884f",
-      "title": "Hackers Exploit Critical Cisco Expressway Flaw, Breach Four Devices and Reach Internal Network",
-      "summary": "Threat actors have been observed exploiting a recently disclosed critical security flaw in Cisco Expressway to breach a Russian organization shortly after the public release of a proof-of-concept (PoC) exploit.\n\nThe activity involves the exploitation of CVE-2026-76466 (CVSS score: 9.8), a vulnerabil",
-      "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-cisco.html",
-      "source": "Tech RSS",
-      "score": 0
     }
   ],
   "ai_curated": true
