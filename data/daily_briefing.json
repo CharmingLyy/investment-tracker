@@ -1,32 +1,32 @@
 {
-  "date": "2026-11-22",
-  "update_time": "2026-11-22 05:53:56",
+  "date": "2026-11-23",
+  "update_time": "2026-11-22 19:11:17",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-22\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Lean 形式化验证黎曼猜想 (来源: HackerNews / Lobste.rs)\n- **核心干货**：Lean 社区放出对黎曼猜想的机器验证尝试，同时 Levent Alpöge 也单独声称给出了证明。若成立，这是数学界百年悬案首次被交互式定理证明器\"代码化\"审视——价值不在于谁对谁错，而在于\"证明\"这件事本身正在被工程化。\n- **毒舌/硬核点评**：数学界终于开始用 CI/CD 管理猜想了。但请记住：HN 上 931 分和 792 条评论，99% 的人连黎曼猜想的陈述都写不对，却都在评论区当审稿人。\n- **🔗 传送门**：[点击直达原链接](https://leanprover-community.github.io/blog/posts/riemann-hypothesis/)\n\n---\n\n### 2. 📌 胰腺癌口服药 daraxonrasib 被称为\"数十年最大突破\" (来源: HackerNews)\n- **核心干货**：针对 KRAS 突变的口服靶向药在胰腺癌临床中交出里程碑数据。胰腺癌素有\"癌中之王\"之称，五年生存率长期个位数，一款能口服、能走通 KRAS 通路的药，商业与生命价值都拉满。\n- **毒舌/硬核点评**：这才是 834 分该有的含金量——不是又一个 LLM 套壳融资，而是真能让人多活几年的分子。提醒各位：AI 再卷，也别忘了医药才是硬科技里最硬的赛道。\n- **🔗 传送门**：[点击直达原链接](https://www.theguardian.com/society/2026/nov/20/pill-pancreatic-cancer-breakthrough-daraxonrasib)\n\n---\n\n### 3. 📌 RL 后训练在 Diffusion Transformer 里其实是在\"操控激活\" (来源: ArXiv cs.CV/cs.LG)\n- **核心干货**：论文揭示了一个反直觉结论——扩散 Transformer 的 RL 后训练之所以能提升画质、文字渲染和构图，本质不是\"学会了新能力\"，而是在做激活空间的方向引导（activation steering）。这等于把 RL 从黑盒魔法降维成可解释的向量操作，对后续可控生成和训练效率优化是实打实的杠杆。\n- **毒舌/硬核点评**：翻译成人话：你以为 RL 教会了模型画画，其实只是给它脑门上贴了张\"此处加粗\"的便利贴。学术界终于开始承认——很多\"能力涌现\"不过是没调好的旋钮。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2611.26627v1)\n\n---\n\n### 🗣️ 今日顶男金句\n> 真正的护城河从来不是模型参数，而是你敢不敢把\"证明\"、\"疗效\"和\"可解释性\"这三样最不性感的东西，做到别人抄不动。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-23\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Lean 形式化验证黎曼猜想 (来源: Hacker News)\n- **核心干货**：数学界和 CS 界今天同时炸锅——有人用 Lean 证明助手对黎曼猜想发起了形式化验证工程。这不是\"证明了黎曼猜想\"（别激动，真证了全世界头条都得换），而是把该猜想的验证框架、相关引理和机器可检验的证明路径搬进了 Lean 生态。意义在于：数学证明的\"可执行性\"又往前拱了一大步，未来顶级数学成果可能先跑通编译器再上期刊。\n- **毒舌/硬核点评**：980 条评论里一半在问\"这是不是真证出来了\"，另一半在吵\"形式化算不算真数学\"。建议先读完再开香槟——Lean 能验证你的证明，但验证不了你的阅读理解。\n- **🔗 传送门**：[点击直达原链接](https://leanprover-community.github.io/blog/posts/riemann-hypothesis/)\n\n---\n\n### 2. 📌 胰腺癌口服药被称\"数十年来最大突破\" (来源: Hacker News / The Guardian)\n- **核心干货**：名为 daraxonrasib 的口服靶向药在胰腺癌治疗上取得里程碑式结果——胰腺癌向来是\"癌中之王\"，五年生存率惨不忍睹，且绝大多数疗法对它束手无策。一款能口服、且被业界用\"decades\"级措辞形容的突破，意味着 KRAS 相关靶点攻坚终于从实验室走到了病床边。这条的含金量不在代码，在命。\n- **毒舌/硬核点评**：今天所有 AI 融资新闻加起来，都不如这一颗药片值钱。技术圈天天吹\"改变世界\"，真正改变世界的往往是那些上不了 GitHub Trending 的东西。\n- **🔗 传送门**：[点击直达原链接](https://www.theguardian.com/society/2026/nov/20/pill-pancreatic-cancer-breakthrough-daraxonrasib)\n\n---\n\n### 3. 📌 把 Postgres 塞进单个二进制文件 (来源: Lobste.rs)\n- **核心干货**：作者硬生生把 PostgreSQL 打包成了一个可独立分发的单二进制，省去传统部署里那套依赖、初始化、配置的仪式感。对嵌入式场景、边缘计算、以及\"我就想快速起个库\"的开发者来说，这是把重型数据库的启动门槛砍到了 SQLite 级别。工程价值极高，属于那种不性感但天天用得上的硬活。\n- **毒舌/硬核点评**：Postgres 社区一向以\"稳重\"（读作：部署麻烦）著称，如今被人做成单文件——这既是对发行版打包文化的降维打击，也是给所有\"容器化万能论\"信徒的一记耳光：有时候一个静态二进制比一整套 K8s 编排更优雅。\n- **🔗 传送门**：[点击直达原链接](https://progrium.xyz/articles/2026/single-binary-postgres)\n\n---\n\n### 🗣️ 今日顶男金句\n> 别把\"我在学新技术\"当成努力，把\"我用新技术解决了一个真问题\"才算数——前者感动自己，后者才有人付钱。",
   "briefing_items": [
     {
       "title": "Lean 形式化验证黎曼猜想",
-      "source": "HackerNews / Lobste.rs",
-      "summary": "Lean 社区放出对黎曼猜想的机器验证尝试，同时 Levent Alpöge 也单独声称给出了证明。若成立，这是数学界百年悬案首次被交互式定理证明器\"代码化\"审视——价值不在于谁对谁错，而在于\"证明\"这件事本身正在被工程化。",
-      "commentary": "数学界终于开始用 CI/CD 管理猜想了。但请记住：HN 上 931 分和 792 条评论，99% 的人连黎曼猜想的陈述都写不对，却都在评论区当审稿人。",
+      "source": "Hacker News",
+      "summary": "数学界和 CS 界今天同时炸锅——有人用 Lean 证明助手对黎曼猜想发起了形式化验证工程。这不是\"证明了黎曼猜想\"（别激动，真证了全世界头条都得换），而是把该猜想的验证框架、相关引理和机器可检验的证明路径搬进了 Lean 生态。意义在于：数学证明的\"可执行性\"又往前拱了一大步，未来顶级数学成果可能先跑通编译器再上期刊。",
+      "commentary": "980 条评论里一半在问\"这是不是真证出来了\"，另一半在吵\"形式化算不算真数学\"。建议先读完再开香槟——Lean 能验证你的证明，但验证不了你的阅读理解。",
       "url": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/"
     },
     {
-      "title": "胰腺癌口服药 daraxonrasib 被称为\"数十年最大突破\"",
-      "source": "HackerNews",
-      "summary": "针对 KRAS 突变的口服靶向药在胰腺癌临床中交出里程碑数据。胰腺癌素有\"癌中之王\"之称，五年生存率长期个位数，一款能口服、能走通 KRAS 通路的药，商业与生命价值都拉满。",
-      "commentary": "这才是 834 分该有的含金量——不是又一个 LLM 套壳融资，而是真能让人多活几年的分子。提醒各位：AI 再卷，也别忘了医药才是硬科技里最硬的赛道。",
+      "title": "胰腺癌口服药被称\"数十年来最大突破\"",
+      "source": "Hacker News / The Guardian",
+      "summary": "名为 daraxonrasib 的口服靶向药在胰腺癌治疗上取得里程碑式结果——胰腺癌向来是\"癌中之王\"，五年生存率惨不忍睹，且绝大多数疗法对它束手无策。一款能口服、且被业界用\"decades\"级措辞形容的突破，意味着 KRAS 相关靶点攻坚终于从实验室走到了病床边。这条的含金量不在代码，在命。",
+      "commentary": "今天所有 AI 融资新闻加起来，都不如这一颗药片值钱。技术圈天天吹\"改变世界\"，真正改变世界的往往是那些上不了 GitHub Trending 的东西。",
       "url": "https://www.theguardian.com/society/2026/nov/20/pill-pancreatic-cancer-breakthrough-daraxonrasib"
     },
     {
-      "title": "RL 后训练在 Diffusion Transformer 里其实是在\"操控激活\"",
-      "source": "ArXiv cs.CV/cs.LG",
-      "summary": "论文揭示了一个反直觉结论——扩散 Transformer 的 RL 后训练之所以能提升画质、文字渲染和构图，本质不是\"学会了新能力\"，而是在做激活空间的方向引导（activation steering）。这等于把 RL 从黑盒魔法降维成可解释的向量操作，对后续可控生成和训练效率优化是实打实的杠杆。",
-      "commentary": "翻译成人话：你以为 RL 教会了模型画画，其实只是给它脑门上贴了张\"此处加粗\"的便利贴。学术界终于开始承认——很多\"能力涌现\"不过是没调好的旋钮。",
-      "url": "https://arxiv.org/abs/2611.26627v1"
+      "title": "把 Postgres 塞进单个二进制文件",
+      "source": "Lobste.rs",
+      "summary": "作者硬生生把 PostgreSQL 打包成了一个可独立分发的单二进制，省去传统部署里那套依赖、初始化、配置的仪式感。对嵌入式场景、边缘计算、以及\"我就想快速起个库\"的开发者来说，这是把重型数据库的启动门槛砍到了 SQLite 级别。工程价值极高，属于那种不性感但天天用得上的硬活。",
+      "commentary": "Postgres 社区一向以\"稳重\"（读作：部署麻烦）著称，如今被人做成单文件——这既是对发行版打包文化的降维打击，也是给所有\"容器化万能论\"信徒的一记耳光：有时候一个静态二进制比一整套 K8s 编排更优雅。",
+      "url": "https://progrium.xyz/articles/2026/single-binary-postgres"
     },
     {
-      "quote": "真正的护城河从来不是模型参数，而是你敢不敢把\"证明\"、\"疗效\"和\"可解释性\"这三样最不性感的东西，做到别人抄不动。"
+      "quote": "别把\"我在学新技术\"当成努力，把\"我用新技术解决了一个真问题\"才算数——前者感动自己，后者才有人付钱。"
     }
   ],
   "candidates": [
@@ -36,8 +36,17 @@
       "summary": "",
       "url": "https://www.caranddriver.com/news/a74490092/toyota-nissan-honda-standardize-parts-lower-costs/",
       "source": "Hacker News",
-      "score": 165,
-      "comments": 83
+      "score": 1023,
+      "comments": 612
+    },
+    {
+      "id": "hn:50599762",
+      "title": "Show HN: I built a game where you are an LLM's subagent",
+      "summary": "",
+      "url": "https://github.com/gulivan/worker755",
+      "source": "Hacker News",
+      "score": 172,
+      "comments": 44
     },
     {
       "id": "hn:50582069",
@@ -45,8 +54,8 @@
       "summary": "",
       "url": "https://www.theguardian.com/society/2026/nov/20/pill-pancreatic-cancer-breakthrough-daraxonrasib",
       "source": "Hacker News",
-      "score": 834,
-      "comments": 192
+      "score": 1284,
+      "comments": 274
     },
     {
       "id": "hn:50589618",
@@ -54,83 +63,37 @@
       "summary": "",
       "url": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/",
       "source": "Hacker News",
-      "score": 931,
-      "comments": 792
+      "score": 1184,
+      "comments": 979
     },
     {
-      "id": "hn:50591853",
-      "title": "Inkling-2-Mini in 5.4 GB Memory",
+      "id": "hn:50594911",
+      "title": "Sandwich Simulator",
       "summary": "",
-      "url": "https://github.com/ShinMegamiBoson/lookatmyquant",
+      "url": "https://stulle.app/",
       "source": "Hacker News",
-      "score": 414,
-      "comments": 103
+      "score": 484,
+      "comments": 167
     },
     {
-      "id": "hn:50588982",
-      "title": "Detonating a pile of lead azide",
+      "id": "hn:50601525",
+      "title": "Perplexity and Intelligence",
       "summary": "",
-      "url": "https://www.science.org/content/blog-post/detonating-huge-pile-lead-azide-really",
+      "url": "https://openai.com/index/perplexity-and-intelligence/",
       "source": "Hacker News",
-      "score": 578,
-      "comments": 374
+      "score": 188,
+      "comments": 134
     },
     {
-      "id": "hn:50583028",
-      "title": "Getting the mind to steer the body to steer you",
+      "id": "lob:inhlo2",
+      "title": "Advice for the next 100 Rust GUIs",
       "summary": "",
-      "url": "https://notnottalmud.substack.com/p/getting-the-mind-to-steer-the-body",
-      "source": "Hacker News",
-      "score": 217,
-      "comments": 69
-    },
-    {
-      "id": "hn:50587875",
-      "title": "My monitor was cutting my download speed by 75%",
-      "summary": "",
-      "url": "https://blog.tymscar.com/posts/studiodisplayethernet/",
-      "source": "Hacker News",
-      "score": 541,
-      "comments": 261
-    },
-    {
-      "id": "lob:kkglbw",
-      "title": "Vim Classic 8.3.1 released",
-      "summary": "",
-      "url": "https://vim-classic.org/news/vim-8.3.1-released.html",
+      "url": "https://linebender.org/blog/next-100-guis/",
       "source": "Lobste.rs",
-      "score": 73,
-      "comments": 28,
+      "score": 27,
+      "comments": 15,
       "tags": [
-        "editors",
-        "release"
-      ]
-    },
-    {
-      "id": "lob:cmifpg",
-      "title": "Levent Alpöge Claims Proof of Riemann Hypothesis",
-      "summary": "",
-      "url": "https://alpo.ge/remark.pdf",
-      "source": "Lobste.rs",
-      "score": 104,
-      "comments": 62,
-      "tags": [
-        "math",
-        "pdf"
-      ]
-    },
-    {
-      "id": "lob:1n8fzn",
-      "title": "Slopstrap: Make your site look hastily vibecoded",
-      "summary": "",
-      "url": "https://slopstrap.mikelacher.com/l",
-      "source": "Lobste.rs",
-      "score": 81,
-      "comments": 14,
-      "tags": [
-        "css",
-        "satire",
-        "web"
+        "rust"
       ]
     },
     {
@@ -139,38 +102,54 @@
       "summary": "",
       "url": "https://bwc9876.dev/blog/jj_todo/",
       "source": "Lobste.rs",
-      "score": 47,
-      "comments": 9,
+      "score": 59,
+      "comments": 10,
       "tags": [
         "vcs"
       ]
     },
     {
-      "id": "hn:50592097",
-      "title": "Upload2Shell (CVE-2026-125396)",
+      "id": "hn:50600511",
+      "title": "Open Social Web Alliance",
       "summary": "",
-      "url": "https://pwn.ai/upload2shell",
+      "url": "https://osw-alliance.net/en/",
       "source": "Hacker News",
-      "score": 101,
-      "comments": 46
+      "score": 151,
+      "comments": 148
     },
     {
-      "id": "hn:50595168",
-      "title": "Leonida – PC Recompilation of the Xbox Version of GTA 6",
+      "id": "lob:6jloca",
+      "title": "NixOS bring-up on an Alibaba RISC-V board",
       "summary": "",
-      "url": "https://github.com/ItsNotRexed/Leonida",
-      "source": "Hacker News",
-      "score": 105,
-      "comments": 69
+      "url": "https://feyor.sh/blog/nixos-bringup-on-an-alibaba-riscv-board/",
+      "source": "Lobste.rs",
+      "score": 25,
+      "comments": 7,
+      "tags": [
+        "hardware",
+        "nix"
+      ]
     },
     {
-      "id": "hn:50594911",
-      "title": "Sandwich Simulator",
-      "summary": "",
-      "url": "https://stulle.app/",
+      "id": "hn:50555002",
+      "title": "Ask HN: Tips for transitioning from web development to embedded/firmware?",
+      "summary": "I started my career 15+ years ago doing native development (c, c++, etc), but the last decade I&#x27;ve been doing fullstack web applications.<p>I&#x27;d like to transition closer to my roots with a job doing primarily c, c++ or rust. The natural place seems to be in embedded development or firmware",
+      "url": "https://news.ycombinator.com/item?id=50555002",
       "source": "Hacker News",
-      "score": 124,
-      "comments": 50
+      "score": 62,
+      "comments": 40
+    },
+    {
+      "id": "lob:qzerls",
+      "title": "My Monitor Was Cutting My Download Speed by 75%",
+      "summary": "",
+      "url": "https://blog.tymscar.com/posts/studiodisplayethernet/",
+      "source": "Lobste.rs",
+      "score": 115,
+      "comments": 9,
+      "tags": [
+        "networking"
+      ]
     },
     {
       "id": "lob:fjueso",
@@ -178,10 +157,43 @@
       "summary": "",
       "url": "https://herbsutter.com/2026/11/21/c26-is-done-again-trip-report-november-2026-iso-c-standards-meeting-buzios-brazil/",
       "source": "Lobste.rs",
-      "score": 16,
-      "comments": 23,
+      "score": 19,
+      "comments": 27,
       "tags": [
         "c++"
+      ]
+    },
+    {
+      "id": "hn:50600677",
+      "title": "Europe weakens chemical rules as science links them to 'lifestyle diseases'",
+      "summary": "",
+      "url": "https://www.lemonde.fr/en/opinion/article/2026/11/22/as-science-increasingly-shows-the-role-chemical-substances-play-in-lifestyle-diseases-europe-weakens-its-regulations_6786595_23.html",
+      "source": "Hacker News",
+      "score": 107,
+      "comments": 90
+    },
+    {
+      "id": "lob:et5q0q",
+      "title": "port scanning for mojang",
+      "summary": "",
+      "url": "https://sipacid.com/blog/port-scanning-for-mojang/",
+      "source": "Lobste.rs",
+      "score": 50,
+      "comments": 10,
+      "tags": [
+        "rant"
+      ]
+    },
+    {
+      "id": "lob:pvylnk",
+      "title": "How I Got Postgres into a Single Binary",
+      "summary": "",
+      "url": "https://progrium.xyz/articles/2026/single-binary-postgres",
+      "source": "Lobste.rs",
+      "score": 25,
+      "comments": 4,
+      "tags": [
+        "databases"
       ]
     },
     {
@@ -211,39 +223,26 @@
       "arxiv_id": "2611.26617v1"
     },
     {
-      "id": "hn:50595554",
-      "title": "Data Processing Incidents on Inference Providers",
+      "id": "lob:becitz",
+      "title": "Microsoft 365 Outage - Post Incident Report",
       "summary": "",
-      "url": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
+      "url": "https://tianyin.github.io/misc/pir_microsoft_365_11-12-2026.pdf",
+      "source": "Lobste.rs",
+      "score": 22,
+      "comments": 9,
+      "tags": [
+        "distributed",
+        "pdf"
+      ]
+    },
+    {
+      "id": "hn:50566495",
+      "title": "Self-hosted library branch over public web OPDS",
+      "summary": "",
+      "url": "https://joinmayberry.com/",
       "source": "Hacker News",
-      "score": 73,
-      "comments": 29
-    },
-    {
-      "id": "arxiv:2611.26613v1",
-      "title": "AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control",
-      "summary": "Frontier multimodal language agents such as GPT-6 Astra have demonstrated strong capabilities in controlling robots directly via low-level numerical actions without high-level primitives. However, existing benchmarks report only episode-level success rates, which show neither how these agents succee",
-      "url": "https://arxiv.org/abs/2611.26613v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.RO",
-        "cs.CL",
-        "cs.CV"
-      ],
-      "arxiv_id": "2611.26613v1"
-    },
-    {
-      "id": "arxiv:2611.26601v1",
-      "title": "SoK: Assessing the Evolution of LLM Capability in Software Vulnerability Research",
-      "summary": "LLM-based agents are becoming increasingly capable at discovering, validating and patching vulnerabilities in real software, and vendors and researchers report that this is already changing how vulnerabilities are found and fixed. These claims, however, are scattered across papers, vendor reports an",
-      "url": "https://arxiv.org/abs/2611.26601v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CR",
-        "cs.AI",
-        "cs.SE"
-      ],
-      "arxiv_id": "2611.26601v1"
+      "score": 92,
+      "comments": 28
     }
   ],
   "ai_curated": true
