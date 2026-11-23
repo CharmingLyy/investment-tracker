@@ -1,121 +1,76 @@
 {
   "date": "2026-11-23",
-  "update_time": "2026-11-22 19:11:17",
+  "update_time": "2026-11-23 06:42:12",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-23\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Lean 形式化验证黎曼猜想 (来源: Hacker News)\n- **核心干货**：数学界和 CS 界今天同时炸锅——有人用 Lean 证明助手对黎曼猜想发起了形式化验证工程。这不是\"证明了黎曼猜想\"（别激动，真证了全世界头条都得换），而是把该猜想的验证框架、相关引理和机器可检验的证明路径搬进了 Lean 生态。意义在于：数学证明的\"可执行性\"又往前拱了一大步，未来顶级数学成果可能先跑通编译器再上期刊。\n- **毒舌/硬核点评**：980 条评论里一半在问\"这是不是真证出来了\"，另一半在吵\"形式化算不算真数学\"。建议先读完再开香槟——Lean 能验证你的证明，但验证不了你的阅读理解。\n- **🔗 传送门**：[点击直达原链接](https://leanprover-community.github.io/blog/posts/riemann-hypothesis/)\n\n---\n\n### 2. 📌 胰腺癌口服药被称\"数十年来最大突破\" (来源: Hacker News / The Guardian)\n- **核心干货**：名为 daraxonrasib 的口服靶向药在胰腺癌治疗上取得里程碑式结果——胰腺癌向来是\"癌中之王\"，五年生存率惨不忍睹，且绝大多数疗法对它束手无策。一款能口服、且被业界用\"decades\"级措辞形容的突破，意味着 KRAS 相关靶点攻坚终于从实验室走到了病床边。这条的含金量不在代码，在命。\n- **毒舌/硬核点评**：今天所有 AI 融资新闻加起来，都不如这一颗药片值钱。技术圈天天吹\"改变世界\"，真正改变世界的往往是那些上不了 GitHub Trending 的东西。\n- **🔗 传送门**：[点击直达原链接](https://www.theguardian.com/society/2026/nov/20/pill-pancreatic-cancer-breakthrough-daraxonrasib)\n\n---\n\n### 3. 📌 把 Postgres 塞进单个二进制文件 (来源: Lobste.rs)\n- **核心干货**：作者硬生生把 PostgreSQL 打包成了一个可独立分发的单二进制，省去传统部署里那套依赖、初始化、配置的仪式感。对嵌入式场景、边缘计算、以及\"我就想快速起个库\"的开发者来说，这是把重型数据库的启动门槛砍到了 SQLite 级别。工程价值极高，属于那种不性感但天天用得上的硬活。\n- **毒舌/硬核点评**：Postgres 社区一向以\"稳重\"（读作：部署麻烦）著称，如今被人做成单文件——这既是对发行版打包文化的降维打击，也是给所有\"容器化万能论\"信徒的一记耳光：有时候一个静态二进制比一整套 K8s 编排更优雅。\n- **🔗 传送门**：[点击直达原链接](https://progrium.xyz/articles/2026/single-binary-postgres)\n\n---\n\n### 🗣️ 今日顶男金句\n> 别把\"我在学新技术\"当成努力，把\"我用新技术解决了一个真问题\"才算数——前者感动自己，后者才有人付钱。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-23\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Linux KVM 爆出核弹级漏洞 CVE-2026-99312：虚拟机可偷窥宿主机 127GB 内存 (来源: The Hacker News)\n- **核心干货**：KVM 里一个烂到家的内存隔离缺陷，让研究人员在 DigitalOcean 的虚拟机里直接读到了宿主机约 127GB 内存——这意味着一台“云上邻居”可能顺手捞走你的数据。CVE-2026-99312 已在 AMD 平台上确认可复现，共享云的多租户隔离神话当场破功。\n- **毒舌/硬核点评**：云厂商天天吹“强隔离”，结果隔离墙是纸糊的。租个虚拟机就能翻别人家抽屉，这安全性还不如合租房的隔断。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html)\n\n---\n\n### 2. 📌 MemOnce：给大模型装个“可扩展记忆体”，干掉 KV Cache 的线性膨胀 (来源: ArXiv cs.CL)\n- **核心干货**：长程、持续交互的 LLM 部署一直卡在 KV 缓存随 token 线性吃显存这个死结上。MemOnce 提出可扩展的记忆架构，维护可复用的记忆状态而非逐层逐 token 堆缓存，直指长上下文部署的显存成本命门。\n- **毒舌/硬核点评**：所有靠“堆显存换上下文”的模型，本质上都是在用钱续命。MemOnce 这类工作要是真落地，最先哭的可能是卖 HBM 的。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2611.27973v1)\n\n---\n\n### 3. 📌 XNU Linux：在 Linux 上跑完整的 OS X 图形用户态 (来源: GitHub)\n- **核心干货**：项目试图把完整的 macOS（OS X）GUI 用户态搬到 Linux 上运行，而不是简单换皮。若真能跑通，意味着 Darwin 用户态与 Linux 内核之间多了一条从未有过的桥——对研究、兼容和逆向都有实打实的价值。\n- **毒舌/硬核点评**：黑苹果玩家在驱动地狱里挣扎多年，现在有人干脆釜底抽薪：不装 macOS 了，直接把它的脸皮贴到 Linux 上。是真硬核还是行为艺术，看它能跑多稳。\n- **🔗 传送门**：[点击直达原链接](https://github.com/AFK-surf/xnulinux)\n\n---\n\n### 🗣️ 今日顶男金句\n“漏洞不会因为你没看见就消失，显存不会因为你加了缓存就变多——技术的世界不相信‘我以为’，只认你测过的那一行。”",
   "briefing_items": [
     {
-      "title": "Lean 形式化验证黎曼猜想",
-      "source": "Hacker News",
-      "summary": "数学界和 CS 界今天同时炸锅——有人用 Lean 证明助手对黎曼猜想发起了形式化验证工程。这不是\"证明了黎曼猜想\"（别激动，真证了全世界头条都得换），而是把该猜想的验证框架、相关引理和机器可检验的证明路径搬进了 Lean 生态。意义在于：数学证明的\"可执行性\"又往前拱了一大步，未来顶级数学成果可能先跑通编译器再上期刊。",
-      "commentary": "980 条评论里一半在问\"这是不是真证出来了\"，另一半在吵\"形式化算不算真数学\"。建议先读完再开香槟——Lean 能验证你的证明，但验证不了你的阅读理解。",
-      "url": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/"
+      "title": "Linux KVM 爆出核弹级漏洞 CVE-2026-99312：虚拟机可偷窥宿主机 127GB 内存",
+      "source": "The Hacker News",
+      "summary": "KVM 里一个烂到家的内存隔离缺陷，让研究人员在 DigitalOcean 的虚拟机里直接读到了宿主机约 127GB 内存——这意味着一台“云上邻居”可能顺手捞走你的数据。CVE-2026-99312 已在 AMD 平台上确认可复现，共享云的多租户隔离神话当场破功。",
+      "commentary": "云厂商天天吹“强隔离”，结果隔离墙是纸糊的。租个虚拟机就能翻别人家抽屉，这安全性还不如合租房的隔断。",
+      "url": "https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html"
     },
     {
-      "title": "胰腺癌口服药被称\"数十年来最大突破\"",
-      "source": "Hacker News / The Guardian",
-      "summary": "名为 daraxonrasib 的口服靶向药在胰腺癌治疗上取得里程碑式结果——胰腺癌向来是\"癌中之王\"，五年生存率惨不忍睹，且绝大多数疗法对它束手无策。一款能口服、且被业界用\"decades\"级措辞形容的突破，意味着 KRAS 相关靶点攻坚终于从实验室走到了病床边。这条的含金量不在代码，在命。",
-      "commentary": "今天所有 AI 融资新闻加起来，都不如这一颗药片值钱。技术圈天天吹\"改变世界\"，真正改变世界的往往是那些上不了 GitHub Trending 的东西。",
-      "url": "https://www.theguardian.com/society/2026/nov/20/pill-pancreatic-cancer-breakthrough-daraxonrasib"
+      "title": "MemOnce：给大模型装个“可扩展记忆体”，干掉 KV Cache 的线性膨胀",
+      "source": "ArXiv cs.CL",
+      "summary": "长程、持续交互的 LLM 部署一直卡在 KV 缓存随 token 线性吃显存这个死结上。MemOnce 提出可扩展的记忆架构，维护可复用的记忆状态而非逐层逐 token 堆缓存，直指长上下文部署的显存成本命门。",
+      "commentary": "所有靠“堆显存换上下文”的模型，本质上都是在用钱续命。MemOnce 这类工作要是真落地，最先哭的可能是卖 HBM 的。",
+      "url": "https://arxiv.org/abs/2611.27973v1"
     },
     {
-      "title": "把 Postgres 塞进单个二进制文件",
-      "source": "Lobste.rs",
-      "summary": "作者硬生生把 PostgreSQL 打包成了一个可独立分发的单二进制，省去传统部署里那套依赖、初始化、配置的仪式感。对嵌入式场景、边缘计算、以及\"我就想快速起个库\"的开发者来说，这是把重型数据库的启动门槛砍到了 SQLite 级别。工程价值极高，属于那种不性感但天天用得上的硬活。",
-      "commentary": "Postgres 社区一向以\"稳重\"（读作：部署麻烦）著称，如今被人做成单文件——这既是对发行版打包文化的降维打击，也是给所有\"容器化万能论\"信徒的一记耳光：有时候一个静态二进制比一整套 K8s 编排更优雅。",
-      "url": "https://progrium.xyz/articles/2026/single-binary-postgres"
-    },
-    {
-      "quote": "别把\"我在学新技术\"当成努力，把\"我用新技术解决了一个真问题\"才算数——前者感动自己，后者才有人付钱。"
+      "title": "XNU Linux：在 Linux 上跑完整的 OS X 图形用户态",
+      "source": "GitHub",
+      "summary": "项目试图把完整的 macOS（OS X）GUI 用户态搬到 Linux 上运行，而不是简单换皮。若真能跑通，意味着 Darwin 用户态与 Linux 内核之间多了一条从未有过的桥——对研究、兼容和逆向都有实打实的价值。",
+      "commentary": "黑苹果玩家在驱动地狱里挣扎多年，现在有人干脆釜底抽薪：不装 macOS 了，直接把它的脸皮贴到 Linux 上。是真硬核还是行为艺术，看它能跑多稳。",
+      "url": "https://github.com/AFK-surf/xnulinux"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50596133",
-      "title": "Toyota, Nissan, and Honda to standardize parts to lower costs",
+      "id": "hn:50606192",
+      "title": "Free alternative TV network built from the Internet Archive's forgotten videos",
       "summary": "",
-      "url": "https://www.caranddriver.com/news/a74490092/toyota-nissan-honda-standardize-parts-lower-costs/",
+      "url": "https://spelunkr.tv",
       "source": "Hacker News",
-      "score": 1023,
-      "comments": 612
+      "score": 361,
+      "comments": 54
     },
     {
-      "id": "hn:50599762",
-      "title": "Show HN: I built a game where you are an LLM's subagent",
+      "id": "hn:50603845",
+      "title": "A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth",
       "summary": "",
-      "url": "https://github.com/gulivan/worker755",
+      "url": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth",
       "source": "Hacker News",
-      "score": 172,
-      "comments": 44
+      "score": 400,
+      "comments": 160
     },
     {
-      "id": "hn:50582069",
-      "title": "Pill to treat pancreatic cancer hailed as 'biggest breakthrough in decades'",
+      "id": "hn:50607261",
+      "title": "XNU Linux: Full OS X GUI Userspace on Linux",
       "summary": "",
-      "url": "https://www.theguardian.com/society/2026/nov/20/pill-pancreatic-cancer-breakthrough-daraxonrasib",
+      "url": "https://github.com/AFK-surf/xnulinux",
       "source": "Hacker News",
-      "score": 1284,
-      "comments": 274
+      "score": 136,
+      "comments": 62
     },
     {
-      "id": "hn:50589618",
-      "title": "Lean verification of the Riemann Hypothesis",
+      "id": "hn:50602843",
+      "title": "The Birds of GTA 6: A Field Guide to Vice City and Leonida's Wildlife",
       "summary": "",
-      "url": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/",
+      "url": "https://www.audubon.org/magazine/birds-of-gta-6-field-guide-vice-city-wildlife",
       "source": "Hacker News",
-      "score": 1184,
-      "comments": 979
+      "score": 442,
+      "comments": 223
     },
     {
-      "id": "hn:50594911",
-      "title": "Sandwich Simulator",
+      "id": "hn:50603589",
+      "title": "A miniature San Francisco with live buses, planes and boats",
       "summary": "",
-      "url": "https://stulle.app/",
+      "url": "https://smallsf.com/",
       "source": "Hacker News",
-      "score": 484,
-      "comments": 167
-    },
-    {
-      "id": "hn:50601525",
-      "title": "Perplexity and Intelligence",
-      "summary": "",
-      "url": "https://openai.com/index/perplexity-and-intelligence/",
-      "source": "Hacker News",
-      "score": 188,
-      "comments": 134
-    },
-    {
-      "id": "lob:inhlo2",
-      "title": "Advice for the next 100 Rust GUIs",
-      "summary": "",
-      "url": "https://linebender.org/blog/next-100-guis/",
-      "source": "Lobste.rs",
-      "score": 27,
-      "comments": 15,
-      "tags": [
-        "rust"
-      ]
-    },
-    {
-      "id": "lob:qxzs4y",
-      "title": "TODOs JJ Style",
-      "summary": "",
-      "url": "https://bwc9876.dev/blog/jj_todo/",
-      "source": "Lobste.rs",
-      "score": 59,
-      "comments": 10,
-      "tags": [
-        "vcs"
-      ]
-    },
-    {
-      "id": "hn:50600511",
-      "title": "Open Social Web Alliance",
-      "summary": "",
-      "url": "https://osw-alliance.net/en/",
-      "source": "Hacker News",
-      "score": 151,
-      "comments": 148
+      "score": 224,
+      "comments": 86
     },
     {
       "id": "lob:6jloca",
@@ -123,21 +78,72 @@
       "summary": "",
       "url": "https://feyor.sh/blog/nixos-bringup-on-an-alibaba-riscv-board/",
       "source": "Lobste.rs",
-      "score": 25,
-      "comments": 7,
+      "score": 34,
+      "comments": 12,
       "tags": [
         "hardware",
         "nix"
       ]
     },
     {
-      "id": "hn:50555002",
-      "title": "Ask HN: Tips for transitioning from web development to embedded/firmware?",
-      "summary": "I started my career 15+ years ago doing native development (c, c++, etc), but the last decade I&#x27;ve been doing fullstack web applications.<p>I&#x27;d like to transition closer to my roots with a job doing primarily c, c++ or rust. The natural place seems to be in embedded development or firmware",
-      "url": "https://news.ycombinator.com/item?id=50555002",
+      "id": "hn:50603143",
+      "title": "Assume People Are Not Interested in Your Blog Post",
+      "summary": "",
+      "url": "https://danielsada.tech/blog/assume-people-are-not-interested-in-your-blog-post/",
       "source": "Hacker News",
-      "score": 62,
+      "score": 143,
+      "comments": 73
+    },
+    {
+      "id": "lob:inhlo2",
+      "title": "Advice for the next 100 Rust GUIs",
+      "summary": "",
+      "url": "https://linebender.org/blog/next-100-guis/",
+      "source": "Lobste.rs",
+      "score": 35,
+      "comments": 16,
+      "tags": [
+        "rust"
+      ]
+    },
+    {
+      "id": "hn:50598441",
+      "title": "Masullo on the Riemann Hypothesis",
+      "summary": "",
+      "url": "https://johncarlosbaez.wordpress.com/2026/11/22/masullo-on-the-riemann-hypothesis/",
+      "source": "Hacker News",
+      "score": 166,
+      "comments": 83
+    },
+    {
+      "id": "hn:50547698",
+      "title": "Cathedral floor emerges in Sudan, revealing one of the biggest medieval churches",
+      "summary": "",
+      "url": "https://apnews.com/article/sudan-antiquities-nubia-cathedral-1b16f67da881ee5592de4481ee55c527",
+      "source": "Hacker News",
+      "score": 182,
       "comments": 40
+    },
+    {
+      "id": "hn:50604988",
+      "title": "GL.iNet Security Notice 2026-11-20",
+      "summary": "",
+      "url": "https://www.gl-inet.com/en-us/blogs/blog/glinet-security-notice-2026-11-20",
+      "source": "Hacker News",
+      "score": 158,
+      "comments": 72
+    },
+    {
+      "id": "lob:leqwqu",
+      "title": "GitHub Actions accepts invalid YAML",
+      "summary": "",
+      "url": "https://yossarian.net/til/post/github-actions-accepts-invalid-yaml/",
+      "source": "Lobste.rs",
+      "score": 42,
+      "comments": 11,
+      "tags": [
+        "programming"
+      ]
     },
     {
       "id": "lob:qzerls",
@@ -145,104 +151,80 @@
       "summary": "",
       "url": "https://blog.tymscar.com/posts/studiodisplayethernet/",
       "source": "Lobste.rs",
-      "score": 115,
+      "score": 126,
       "comments": 9,
       "tags": [
         "networking"
       ]
     },
     {
-      "id": "lob:fjueso",
-      "title": "C++26 is done (again)! — Trip report: November 2026 ISO C++ standards meeting (Búzios, Brazil)",
-      "summary": "",
-      "url": "https://herbsutter.com/2026/11/21/c26-is-done-again-trip-report-november-2026-iso-c-standards-meeting-buzios-brazil/",
-      "source": "Lobste.rs",
-      "score": 19,
-      "comments": 27,
-      "tags": [
-        "c++"
-      ]
+      "id": "arxiv:2611.27919v1",
+      "title": "SUAF: Spectral Universal Advantage Features for Zero-Shot Policy Improvement",
+      "summary": "Reward-independent representations enable reinforcement learning agents to reuse knowledge across tasks, but limited representation capacity raises three fundamental questions: what statistical dependence should these representations capture, which components of that dependence should be retained fo",
+      "url": "https://arxiv.org/abs/2611.27919v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "arxiv_id": "2611.27919v1"
     },
     {
-      "id": "hn:50600677",
-      "title": "Europe weakens chemical rules as science links them to 'lifestyle diseases'",
-      "summary": "",
-      "url": "https://www.lemonde.fr/en/opinion/article/2026/11/22/as-science-increasingly-shows-the-role-chemical-substances-play-in-lifestyle-diseases-europe-weakens-its-regulations_6786595_23.html",
-      "source": "Hacker News",
-      "score": 107,
-      "comments": 90
+      "id": "arxiv:2611.27973v1",
+      "title": "MemOnce: A Scalable Memory Architecture for Large Language Models",
+      "summary": "Deploying large language models (LLMs) in long-horizon and continual interactions requires maintaining reusable memory states for future inference, posing challenges for existing architectures. Standard Transformers accumulate layer-wise, token-level KV caches, incurring linear GPU memory growth and",
+      "url": "https://arxiv.org/abs/2611.27973v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_id": "2611.27973v1"
     },
     {
-      "id": "lob:et5q0q",
-      "title": "port scanning for mojang",
-      "summary": "",
-      "url": "https://sipacid.com/blog/port-scanning-for-mojang/",
-      "source": "Lobste.rs",
-      "score": 50,
-      "comments": 10,
-      "tags": [
-        "rant"
-      ]
+      "id": "rss:9e30c5ae43",
+      "title": "Linux KVM Flaw CVE-2026-99312 Lets Guest VMs Access Host Memory on AMD Hosts",
+      "summary": "A flaw in KVM, the hypervisor built into the Linux kernel, let researchers read about 127 GB of a cloud server's memory from inside a virtual machine of their own on DigitalOcean.\n\nOn a shared server, that memory can include other customers' virtual machines. The flaw, tracked as CVE-2026-99312, aff",
+      "url": "https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html",
+      "source": "Tech RSS",
+      "score": 0
     },
     {
-      "id": "lob:pvylnk",
-      "title": "How I Got Postgres into a Single Binary",
+      "id": "rss:38c6a3884f",
+      "title": "Hackers Exploit Critical Cisco Expressway Flaw, Breach Four Devices and Reach Internal Network",
+      "summary": "Threat actors have been observed exploiting a recently disclosed critical security flaw in Cisco Expressway to breach a Russian organization shortly after the public release of a proof-of-concept (PoC) exploit.\n\nThe activity involves the exploitation of CVE-2026-76466 (CVSS score: 9.8), a vulnerabil",
+      "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-cisco.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:61983e219b",
+      "title": "China-Linked Hackers Exploit Critical VMware vCenter Zero-Day to Gain Admin Access and Steal Data",
+      "summary": "The suspected China-nexus cyber espionage group known as Armory Castle (formerly UNC5221) has been attributed to the zero-day exploitation of a critical security flaw in VMware vCenter Server in early September 2026.\n\nThe vulnerability, tracked as CVE-2026-123890 (CVSS score: 9.8), is a case of auth",
+      "url": "https://thehackernews.com/2026/11/china-linked-hackers-exploit-critical.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "lob:wc8fla",
+      "title": "Gliver completes the Guix desktop",
       "summary": "",
-      "url": "https://progrium.xyz/articles/2026/single-binary-postgres",
+      "url": "https://dustycloud.org/blog/gliver-completes-the-guix-desktop/",
       "source": "Lobste.rs",
-      "score": 25,
+      "score": 32,
       "comments": 4,
       "tags": [
-        "databases"
+        "linux",
+        "lisp"
       ]
     },
     {
-      "id": "arxiv:2611.26627v1",
-      "title": "RL Post-Training in Diffusion Transformers Is Activation Steering",
-      "summary": "Reinforcement learning (RL) post-training substantially improves the visual quality, text rendering, and compositional accuracy of diffusion transformers. Because capabilities such as rendering requested text or composing multiple objects are inherently prompt-dependent, a natural hypothesis is that",
-      "url": "https://arxiv.org/abs/2611.26627v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CV",
-        "cs.LG"
-      ],
-      "arxiv_id": "2611.26627v1"
-    },
-    {
-      "id": "arxiv:2611.26617v1",
-      "title": "One Prior, Two Dynamics: Repurposing Video Diffusion Transformers for Self-Supervised Latent Action Learning",
-      "summary": "Videos reveal how the world changes, but rarely the actions that cause those changes. Latent action learning recovers such supervision from visual transitions, yet often learns the underlying dynamics largely from scratch. We ask whether a pretrained video generator can instead provide the prior for",
-      "url": "https://arxiv.org/abs/2611.26617v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.LG",
-        "cs.RO"
-      ],
-      "arxiv_id": "2611.26617v1"
-    },
-    {
-      "id": "lob:becitz",
-      "title": "Microsoft 365 Outage - Post Incident Report",
+      "id": "hn:50604123",
+      "title": "The struggle for freedom: How BSD escaped AT&T licensing",
       "summary": "",
-      "url": "https://tianyin.github.io/misc/pir_microsoft_365_11-12-2026.pdf",
-      "source": "Lobste.rs",
-      "score": 22,
-      "comments": 9,
-      "tags": [
-        "distributed",
-        "pdf"
-      ]
-    },
-    {
-      "id": "hn:50566495",
-      "title": "Self-hosted library branch over public web OPDS",
-      "summary": "",
-      "url": "https://joinmayberry.com/",
+      "url": "https://fosscomics.com/posts/16.%20BSD%20Unix%20Part%206%20-%20The%20Struggle%20for%20Freedom/",
       "source": "Hacker News",
-      "score": 92,
-      "comments": 28
+      "score": 93,
+      "comments": 30
     }
   ],
   "ai_curated": true
