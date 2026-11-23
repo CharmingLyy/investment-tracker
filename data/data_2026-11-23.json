@@ -1,0 +1,815 @@
+{
+  "update_time": "2026-11-23 19:39:27",
+  "stocks": {
+    "a_stocks": [
+      {
+        "market": "A股",
+        "code": "002050",
+        "name": "三花智控",
+        "symbol": "sz.002050",
+        "industry": null,
+        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
+        "price": 33.88,
+        "open": 31.01,
+        "high": 34.29,
+        "low": 31.01,
+        "change_pct": 7.9,
+        "volume": 88491516,
+        "turnover": 29.07,
+        "market_cap": null,
+        "pe": 36.67,
+        "cash_flow": null,
+        "macd": -0.362,
+        "macd_signal": -0.1936,
+        "macd_histogram": -0.3366,
+        "rsi": 50.28,
+        "ma": {
+          "MA5": 32.6,
+          "MA10": 33.78,
+          "MA20": 33.96,
+          "MA60": 34.44
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
+        "price": 5.85,
+        "open": 5.96,
+        "high": 5.96,
+        "low": 5.73,
+        "change_pct": -0.34,
+        "volume": 40154253,
+        "turnover": 2.34,
+        "market_cap": null,
+        "pe": 65.68,
+        "cash_flow": null,
+        "macd": -0.1134,
+        "macd_signal": -0.1065,
+        "macd_histogram": -0.0137,
+        "rsi": 32.06,
+        "ma": {
+          "MA5": 5.87,
+          "MA10": 5.93,
+          "MA20": 6.02,
+          "MA60": 6.32
+        },
+        "main_net_flow": null
+      }
+    ],
+    "hk_stocks": [
+      {
+        "market": "港股",
+        "code": "01810",
+        "name": "小米集团-W",
+        "symbol": "01810",
+        "industry": "Consumer Electronics",
+        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
+        "price": NaN,
+        "open": null,
+        "high": null,
+        "low": null,
+        "change_pct": NaN,
+        "volume": 132509809,
+        "turnover": null,
+        "market_cap": 7079.96,
+        "pe": 20.85,
+        "cash_flow": 86.81,
+        "macd": 0.6123,
+        "macd_signal": 0.7875,
+        "macd_histogram": -0.3504,
+        "rsi": 46.51,
+        "ma": {
+          "MA5": null,
+          "MA10": null,
+          "MA20": null,
+          "MA60": null
+        },
+        "main_net_flow": null
+      }
+    ],
+    "us_stocks": [
+      {
+        "market": "美股",
+        "code": "NVDA",
+        "name": "NVIDIA",
+        "symbol": "NVDA",
+        "industry": "Semiconductors",
+        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
+        "price": 164.38,
+        "open": 167.04,
+        "high": 171.5,
+        "low": 156.93,
+        "change_pct": 30.95,
+        "volume": 617685759,
+        "turnover": null,
+        "market_cap": 39694.04,
+        "pe": 17.66,
+        "cash_flow": 992.41,
+        "macd": -18.1255,
+        "macd_signal": -15.7837,
+        "macd_histogram": -4.6835,
+        "rsi": 42.56,
+        "ma": {
+          "MA5": 148.46,
+          "MA10": 157.01,
+          "MA20": 178.88,
+          "MA60": 208.67
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "GOOG",
+        "name": "Alphabet (Google)",
+        "symbol": "GOOG",
+        "industry": "Internet Content & Information",
+        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
+        "price": 280.3,
+        "open": 282.49,
+        "high": 282.62,
+        "low": 273.0,
+        "change_pct": 6.17,
+        "volume": 19810404,
+        "turnover": null,
+        "market_cap": 34460.08,
+        "pe": 14.64,
+        "cash_flow": 11.62,
+        "macd": -12.504,
+        "macd_signal": -12.782,
+        "macd_histogram": 0.556,
+        "rsi": 40.8,
+        "ma": {
+          "MA5": 274.42,
+          "MA10": 281.68,
+          "MA20": 285.57,
+          "MA60": 320.81
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "CRCL",
+        "name": "Circle",
+        "symbol": "CRCL",
+        "industry": "Capital Markets",
+        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
+        "price": 50.76,
+        "open": 54.72,
+        "high": 54.8,
+        "low": 50.72,
+        "change_pct": 6.83,
+        "volume": 7992862,
+        "turnover": null,
+        "market_cap": 130.21,
+        "pe": 30.58,
+        "cash_flow": 2.62,
+        "macd": -8.1654,
+        "macd_signal": -6.5666,
+        "macd_histogram": -3.1975,
+        "rsi": 27.73,
+        "ma": {
+          "MA5": 51.62,
+          "MA10": 57.39,
+          "MA20": 65.9,
+          "MA60": 80.44
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "MP",
+        "name": "MP Materials",
+        "symbol": "MP",
+        "industry": "Other Industrial Metals & Mining",
+        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
+        "price": 35.63,
+        "open": 36.42,
+        "high": 36.51,
+        "low": 34.27,
+        "change_pct": 4.95,
+        "volume": 5544296,
+        "turnover": null,
+        "market_cap": 63.52,
+        "pe": 95.9,
+        "cash_flow": 4.1,
+        "macd": -1.8213,
+        "macd_signal": -1.9941,
+        "macd_histogram": 0.3457,
+        "rsi": 42.87,
+        "ma": {
+          "MA5": 35.41,
+          "MA10": 36.25,
+          "MA20": 37.23,
+          "MA60": 43.78
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "PLTR",
+        "name": "Palantir",
+        "symbol": "PLTR",
+        "industry": "Software - Infrastructure",
+        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
+        "price": 157.62,
+        "open": 157.28,
+        "high": 161.17,
+        "low": 154.57,
+        "change_pct": 9.84,
+        "volume": 18875265,
+        "turnover": null,
+        "market_cap": 3798.33,
+        "pe": 111.01,
+        "cash_flow": 26.52,
+        "macd": -9.2707,
+        "macd_signal": -7.5763,
+        "macd_histogram": -3.3887,
+        "rsi": 40.34,
+        "ma": {
+          "MA5": 153.6,
+          "MA10": 160.92,
+          "MA20": 169.76,
+          "MA60": 181.44
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "NOW",
+        "name": "ServiceNow",
+        "symbol": "NOW",
+        "industry": "Software - Application",
+        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
+        "price": 91.72,
+        "open": 91.1,
+        "high": 93.41,
+        "low": 90.42,
+        "change_pct": 4.69,
+        "volume": 8921412,
+        "turnover": null,
+        "market_cap": 951.98,
+        "pe": 65.99,
+        "cash_flow": 57.54,
+        "macd": -11.672,
+        "macd_signal": -10.7789,
+        "macd_histogram": -1.7863,
+        "rsi": 30.3,
+        "ma": {
+          "MA5": 90.34,
+          "MA10": 95.63,
+          "MA20": 105.36,
+          "MA60": 128.82
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "DDOG",
+        "name": "Datadog",
+        "symbol": "DDOG",
+        "industry": "Software - Application",
+        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
+        "price": 168.19,
+        "open": 173.74,
+        "high": 173.74,
+        "low": 164.61,
+        "change_pct": 6.88,
+        "volume": 2017226,
+        "turnover": null,
+        "market_cap": 607.24,
+        "pe": 233.6,
+        "cash_flow": 10.66,
+        "macd": -23.2905,
+        "macd_signal": -21.8383,
+        "macd_histogram": -2.9044,
+        "rsi": 32.77,
+        "ma": {
+          "MA5": 164.86,
+          "MA10": 172.86,
+          "MA20": 197.38,
+          "MA60": 234.31
+        },
+        "main_net_flow": null
+      }
+    ],
+    "crypto": [
+      {
+        "market": "加密货币",
+        "code": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "industry": "Smart Contract Platform",
+        "price": 61053,
+        "open": null,
+        "high": 64446,
+        "low": 60358,
+        "change_pct": 0.67,
+        "volume": 37903535850,
+        "turnover": null,
+        "market_cap": 12281.65,
+        "market_cap_rank": 1,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -4827.7752,
+        "macd_signal": -4274.6825,
+        "macd_histogram": -1106.1855,
+        "rsi": 26.53,
+        "ma": {
+          "MA5": 60617.13,
+          "MA10": 62523.82,
+          "MA20": 68531.32,
+          "MA60": 77553.92
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 20116356.0,
+          "total_supply": 20116356.0,
+          "circ_ratio": 100.0,
+          "price_change_7d": -5.77121,
+          "price_change_30d": -23.88284,
+          "ath_pct": -51.58,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      },
+      {
+        "market": "加密货币",
+        "code": "ethereum",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "industry": "Smart Contract Platform",
+        "price": 1726.43,
+        "open": null,
+        "high": 1838.36,
+        "low": 1696.19,
+        "change_pct": 0.85,
+        "volume": 13621868177,
+        "turnover": null,
+        "market_cap": 2110.47,
+        "market_cap_rank": 2,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -163.7315,
+        "macd_signal": -153.0246,
+        "macd_histogram": -21.4138,
+        "rsi": 30.34,
+        "ma": {
+          "MA5": 1701.2,
+          "MA10": 1752.65,
+          "MA20": 1948.53,
+          "MA60": 2303.98
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 122244884.63845612,
+          "total_supply": 122244884.63845612,
+          "circ_ratio": 100.0,
+          "price_change_7d": -4.85506,
+          "price_change_30d": -25.87151,
+          "ath_pct": -65.09,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      }
+    ]
+  },
+  "news": [
+    {
+      "id": "35b871d31c",
+      "title": "[播客]独家实拍：我那永远跪着的母亲(11/07 22:10)",
+      "summary": "独家实拍：我那永远跪着的母亲",
+      "link": "http://go.rss.sina.com.cn/redirect.php?url=http://you.video.sina.com.cn/b/16972162-1239095354.html",
+      "source": "rss.sina.com.cn",
+      "published": ""
+    },
+    {
+      "id": "a4c9b4538d",
+      "title": "I’ve paid for long-term-care insurance for 20 years. Is it still worth it?",
+      "summary": "Doing the math to determine if I have a good deal — or should trade in for a more modern policy.",
+      "link": "https://www.marketwatch.com/story/ive-paid-for-long-term-care-insurance-for-20-years-is-it-still-worth-it-1b2cd52d?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 23 Nov 2026 19:32:00 GMT"
+    },
+    {
+      "id": "46bc801d93",
+      "title": "Trump’s push to reinstate Jensen Huang signals Nvidia’s CEO is too big to fail",
+      "summary": "“The bigger threat would be losing the brainpower of somebody like Jensen,” the president said amid concerns about corporate governance rules and export controls",
+      "link": "https://www.marketwatch.com/story/trumps-push-to-reinstate-jensen-huang-signals-nvidias-ceo-is-too-big-to-fail-10709210?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 23 Nov 2026 19:28:00 GMT"
+    },
+    {
+      "id": "8b349bda82",
+      "title": "Trump is open to capping credit-card interest rates — but holiday shoppers shouldn’t bank on it yet",
+      "summary": "As Americans prepare to pull out their credit cards for the holiday shopping season, President Donald Trump is saying he’s up for capping the interest rates they’re paying on their cards.",
+      "link": "https://www.marketwatch.com/story/trump-is-open-to-capping-credit-card-interest-rates-but-holiday-shoppers-shouldnt-bank-on-it-yet-34260705?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 23 Nov 2026 18:55:00 GMT"
+    },
+    {
+      "id": "c9a49346ae",
+      "title": "Amazon may have just found a ‘cheap’ way to get a lot more out of its chips",
+      "summary": "Amazon’s deal for Decart’s AI technology, with a reported price of $7.5 billion, may be a relatively inexpensive way to boost the speed and efficiency of its custom chips, says an analyst.",
+      "link": "https://www.marketwatch.com/story/amazon-may-have-just-found-a-cheap-way-to-get-a-lot-more-out-of-its-chips-bd822bd5?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 23 Nov 2026 18:47:00 GMT"
+    },
+    {
+      "id": "a6b92ed098",
+      "title": "See how much more money the richest Americans are spending on the holidays compared to everyone else",
+      "summary": "Most households are getting “squeezed by rising costs of everyday goods,” according to Teneo, but upper-income households “are showing resilience.”",
+      "link": "https://www.marketwatch.com/story/see-how-much-more-money-the-richest-americans-are-spending-on-the-holidays-compared-to-everyone-else-f0ff3f4b?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 23 Nov 2026 18:14:00 GMT"
+    },
+    {
+      "id": "05911776e3",
+      "title": "Consumer stocks, seen as safe bet amid cracks in AI trade, are among the S&P 500’s biggest losers Monday",
+      "summary": "Shares of Kroger and Tyson Foods are down, as Nvidia storms higher",
+      "link": "https://www.marketwatch.com/story/consumer-stocks-seen-as-safe-bet-amid-cracks-in-ai-trade-are-among-the-s-p-500s-biggest-losers-monday-80cf8f81?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 23 Nov 2026 17:54:00 GMT"
+    },
+    {
+      "id": "bf44c5db12",
+      "title": "More AI jobs are coming. That’s one of the big hiring trends in 2027.",
+      "summary": "Maybe artificial intelligence will end up destroying lots of jobs, but the new technology might be creating more work in the short run.",
+      "link": "https://www.marketwatch.com/story/more-ai-jobs-are-coming-thats-one-of-the-big-hiring-trends-in-2027-3d810209?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 23 Nov 2026 17:37:00 GMT"
+    },
+    {
+      "id": "42c0ef4cfb",
+      "title": "A 66-year-old nurse faces retirement with just $500 saved. Who’s to blame?",
+      "summary": "“Retirement is a financial status, not an age.”",
+      "link": "https://www.marketwatch.com/story/a-66-year-old-nurse-faces-retirement-with-just-500-saved-whos-to-blame-4249a0fd?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 23 Nov 2026 17:30:00 GMT"
+    },
+    {
+      "id": "5c1a8be576",
+      "title": "I’ve been married for 58 years. It’s ‘our’ money, not ‘his’ and ‘hers.’ Why do so many couples keep their finances separate?",
+      "summary": "“My wife stopped working outside the home in 1970.”",
+      "link": "https://www.marketwatch.com/story/ive-been-married-for-58-years-its-our-money-not-his-and-hers-why-dont-others-feel-the-same-c5745889?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 23 Nov 2026 17:15:00 GMT"
+    },
+    {
+      "id": "72d879f61e",
+      "title": "The return of Jensen Huang has saved the U.S. stock market — for now. Why the rebound may not last.",
+      "summary": "Investors still have plenty of other problems to worry about.",
+      "link": "https://www.marketwatch.com/story/the-return-of-jensen-huang-has-saved-the-u-s-stock-market-for-now-why-the-rebound-may-not-last-f72656ce?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Mon, 23 Nov 2026 16:44:00 GMT"
+    },
+    {
+      "id": "a858b9ba20",
+      "title": "Kinaxis at TD Cowen 18th Annual Tech Conference: growth broadens",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/kinaxis-at-td-cowen-18th-annual-tech-conference-growth-broadens-93CH-5046274",
+      "source": "www.investing.com",
+      "published": "2026-11-23 19:33:05"
+    },
+    {
+      "id": "a3ac94277b",
+      "title": "Trump orders US Army to pause lead azide detonation in Iowa",
+      "summary": "",
+      "link": "https://www.investing.com/news/commodities-news/trump-orders-us-army-to-pause-leadazide-detonation-in-iowa-5046270",
+      "source": "www.investing.com",
+      "published": "2026-11-23 19:30:26"
+    },
+    {
+      "id": "3b264790d2",
+      "title": "Dollar index technical outlook: rally extended but overbought signals flash caution",
+      "summary": "",
+      "link": "https://www.investing.com/news/forex-news/dollar-index-technical-outlook-rally-extended-but-overbought-signals-flash-caution-93CH-5046271",
+      "source": "www.investing.com",
+      "published": "2026-11-23 19:26:13"
+    },
+    {
+      "id": "5e5028884b",
+      "title": "Exclusive-Peltz’s Trian presses Solventum to spin off health information unit unless sale tops range",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/exclusivepeltzs-trian-presses-solventum-to-spin-off-health-information-unit-unless-sale-tops-range-5046269",
+      "source": "www.investing.com",
+      "published": "2026-11-23 19:25:01"
+    },
+    {
+      "id": "67f30fe116",
+      "title": "Measles-related deaths in Pennsylvania rise to nine",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/pennsylvania-reports-nine-measlesrelated-deaths-5046263",
+      "source": "www.investing.com",
+      "published": "2026-11-23 19:24:44"
+    },
+    {
+      "id": "bf74e262b4",
+      "title": "Trump saw Nvidia’s Huang as protector of open-weight AI models, sources say",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/trump-saw-nvidias-huang-as-protector-of-openweight-ai-models-sources-say-5046265",
+      "source": "www.investing.com",
+      "published": "2026-11-23 19:24:34"
+    },
+    {
+      "id": "a90fc78c45",
+      "title": "India’s rupee carry trade: RBI support holds but risks are building",
+      "summary": "",
+      "link": "https://www.investing.com/news/forex-news/indias-rupee-carry-trade-rbi-support-holds-but-risks-are-building-93CH-5046267",
+      "source": "www.investing.com",
+      "published": "2026-11-23 19:21:57"
+    },
+    {
+      "id": "22fdd3ed3a",
+      "title": "Nasdaq soars nearly 7% as Huang’s return to Nvidia reignites AI trade",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/wall-street-futures-jump-after-major-indexes-enter-correction-territory-5044226",
+      "source": "www.investing.com",
+      "published": "2026-11-23 19:20:11"
+    },
+    {
+      "id": "d447cec5ec",
+      "title": "Oil falls around 3% on increased Middle East flows, Libyan pipeline restart",
+      "summary": "",
+      "link": "https://www.investing.com/news/commodities-news/oil-prices-fall-amid-equity-selloff-though-iran-war-attacks-limit-losses-5044242",
+      "source": "www.investing.com",
+      "published": "2026-11-23 19:19:07"
+    },
+    {
+      "id": "7a51badc3f",
+      "title": "Medifast director Parsa Kiai buys $77,610 in stock",
+      "summary": "",
+      "link": "https://www.investing.com/news/insider-trading-news/medifast-director-parsa-kiai-buys-77610-in-stock-93CH-5046261",
+      "source": "www.investing.com",
+      "published": "2026-11-23 19:15:58"
+    }
+  ],
+  "briefing": {
+    "date": "2026-11-23",
+    "update_time": "2026-11-23 06:42:12",
+    "candidate_count": 20,
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-23\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Linux KVM 爆出核弹级漏洞 CVE-2026-99312：虚拟机可偷窥宿主机 127GB 内存 (来源: The Hacker News)\n- **核心干货**：KVM 里一个烂到家的内存隔离缺陷，让研究人员在 DigitalOcean 的虚拟机里直接读到了宿主机约 127GB 内存——这意味着一台“云上邻居”可能顺手捞走你的数据。CVE-2026-99312 已在 AMD 平台上确认可复现，共享云的多租户隔离神话当场破功。\n- **毒舌/硬核点评**：云厂商天天吹“强隔离”，结果隔离墙是纸糊的。租个虚拟机就能翻别人家抽屉，这安全性还不如合租房的隔断。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html)\n\n---\n\n### 2. 📌 MemOnce：给大模型装个“可扩展记忆体”，干掉 KV Cache 的线性膨胀 (来源: ArXiv cs.CL)\n- **核心干货**：长程、持续交互的 LLM 部署一直卡在 KV 缓存随 token 线性吃显存这个死结上。MemOnce 提出可扩展的记忆架构，维护可复用的记忆状态而非逐层逐 token 堆缓存，直指长上下文部署的显存成本命门。\n- **毒舌/硬核点评**：所有靠“堆显存换上下文”的模型，本质上都是在用钱续命。MemOnce 这类工作要是真落地，最先哭的可能是卖 HBM 的。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2611.27973v1)\n\n---\n\n### 3. 📌 XNU Linux：在 Linux 上跑完整的 OS X 图形用户态 (来源: GitHub)\n- **核心干货**：项目试图把完整的 macOS（OS X）GUI 用户态搬到 Linux 上运行，而不是简单换皮。若真能跑通，意味着 Darwin 用户态与 Linux 内核之间多了一条从未有过的桥——对研究、兼容和逆向都有实打实的价值。\n- **毒舌/硬核点评**：黑苹果玩家在驱动地狱里挣扎多年，现在有人干脆釜底抽薪：不装 macOS 了，直接把它的脸皮贴到 Linux 上。是真硬核还是行为艺术，看它能跑多稳。\n- **🔗 传送门**：[点击直达原链接](https://github.com/AFK-surf/xnulinux)\n\n---\n\n### 🗣️ 今日顶男金句\n“漏洞不会因为你没看见就消失，显存不会因为你加了缓存就变多——技术的世界不相信‘我以为’，只认你测过的那一行。”",
+    "briefing_items": [
+      {
+        "title": "Linux KVM 爆出核弹级漏洞 CVE-2026-99312：虚拟机可偷窥宿主机 127GB 内存",
+        "source": "The Hacker News",
+        "summary": "KVM 里一个烂到家的内存隔离缺陷，让研究人员在 DigitalOcean 的虚拟机里直接读到了宿主机约 127GB 内存——这意味着一台“云上邻居”可能顺手捞走你的数据。CVE-2026-99312 已在 AMD 平台上确认可复现，共享云的多租户隔离神话当场破功。",
+        "commentary": "云厂商天天吹“强隔离”，结果隔离墙是纸糊的。租个虚拟机就能翻别人家抽屉，这安全性还不如合租房的隔断。",
+        "url": "https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html"
+      },
+      {
+        "title": "MemOnce：给大模型装个“可扩展记忆体”，干掉 KV Cache 的线性膨胀",
+        "source": "ArXiv cs.CL",
+        "summary": "长程、持续交互的 LLM 部署一直卡在 KV 缓存随 token 线性吃显存这个死结上。MemOnce 提出可扩展的记忆架构，维护可复用的记忆状态而非逐层逐 token 堆缓存，直指长上下文部署的显存成本命门。",
+        "commentary": "所有靠“堆显存换上下文”的模型，本质上都是在用钱续命。MemOnce 这类工作要是真落地，最先哭的可能是卖 HBM 的。",
+        "url": "https://arxiv.org/abs/2611.27973v1"
+      },
+      {
+        "title": "XNU Linux：在 Linux 上跑完整的 OS X 图形用户态",
+        "source": "GitHub",
+        "summary": "项目试图把完整的 macOS（OS X）GUI 用户态搬到 Linux 上运行，而不是简单换皮。若真能跑通，意味着 Darwin 用户态与 Linux 内核之间多了一条从未有过的桥——对研究、兼容和逆向都有实打实的价值。",
+        "commentary": "黑苹果玩家在驱动地狱里挣扎多年，现在有人干脆釜底抽薪：不装 macOS 了，直接把它的脸皮贴到 Linux 上。是真硬核还是行为艺术，看它能跑多稳。",
+        "url": "https://github.com/AFK-surf/xnulinux"
+      }
+    ],
+    "candidates": [
+      {
+        "id": "hn:50606192",
+        "title": "Free alternative TV network built from the Internet Archive's forgotten videos",
+        "summary": "",
+        "url": "https://spelunkr.tv",
+        "source": "Hacker News",
+        "score": 361,
+        "comments": 54
+      },
+      {
+        "id": "hn:50603845",
+        "title": "A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth",
+        "summary": "",
+        "url": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth",
+        "source": "Hacker News",
+        "score": 400,
+        "comments": 160
+      },
+      {
+        "id": "hn:50607261",
+        "title": "XNU Linux: Full OS X GUI Userspace on Linux",
+        "summary": "",
+        "url": "https://github.com/AFK-surf/xnulinux",
+        "source": "Hacker News",
+        "score": 136,
+        "comments": 62
+      },
+      {
+        "id": "hn:50602843",
+        "title": "The Birds of GTA 6: A Field Guide to Vice City and Leonida's Wildlife",
+        "summary": "",
+        "url": "https://www.audubon.org/magazine/birds-of-gta-6-field-guide-vice-city-wildlife",
+        "source": "Hacker News",
+        "score": 442,
+        "comments": 223
+      },
+      {
+        "id": "hn:50603589",
+        "title": "A miniature San Francisco with live buses, planes and boats",
+        "summary": "",
+        "url": "https://smallsf.com/",
+        "source": "Hacker News",
+        "score": 224,
+        "comments": 86
+      },
+      {
+        "id": "lob:6jloca",
+        "title": "NixOS bring-up on an Alibaba RISC-V board",
+        "summary": "",
+        "url": "https://feyor.sh/blog/nixos-bringup-on-an-alibaba-riscv-board/",
+        "source": "Lobste.rs",
+        "score": 34,
+        "comments": 12,
+        "tags": [
+          "hardware",
+          "nix"
+        ]
+      },
+      {
+        "id": "hn:50603143",
+        "title": "Assume People Are Not Interested in Your Blog Post",
+        "summary": "",
+        "url": "https://danielsada.tech/blog/assume-people-are-not-interested-in-your-blog-post/",
+        "source": "Hacker News",
+        "score": 143,
+        "comments": 73
+      },
+      {
+        "id": "lob:inhlo2",
+        "title": "Advice for the next 100 Rust GUIs",
+        "summary": "",
+        "url": "https://linebender.org/blog/next-100-guis/",
+        "source": "Lobste.rs",
+        "score": 35,
+        "comments": 16,
+        "tags": [
+          "rust"
+        ]
+      },
+      {
+        "id": "hn:50598441",
+        "title": "Masullo on the Riemann Hypothesis",
+        "summary": "",
+        "url": "https://johncarlosbaez.wordpress.com/2026/11/22/masullo-on-the-riemann-hypothesis/",
+        "source": "Hacker News",
+        "score": 166,
+        "comments": 83
+      },
+      {
+        "id": "hn:50547698",
+        "title": "Cathedral floor emerges in Sudan, revealing one of the biggest medieval churches",
+        "summary": "",
+        "url": "https://apnews.com/article/sudan-antiquities-nubia-cathedral-1b16f67da881ee5592de4481ee55c527",
+        "source": "Hacker News",
+        "score": 182,
+        "comments": 40
+      },
+      {
+        "id": "hn:50604988",
+        "title": "GL.iNet Security Notice 2026-11-20",
+        "summary": "",
+        "url": "https://www.gl-inet.com/en-us/blogs/blog/glinet-security-notice-2026-11-20",
+        "source": "Hacker News",
+        "score": 158,
+        "comments": 72
+      },
+      {
+        "id": "lob:leqwqu",
+        "title": "GitHub Actions accepts invalid YAML",
+        "summary": "",
+        "url": "https://yossarian.net/til/post/github-actions-accepts-invalid-yaml/",
+        "source": "Lobste.rs",
+        "score": 42,
+        "comments": 11,
+        "tags": [
+          "programming"
+        ]
+      },
+      {
+        "id": "lob:qzerls",
+        "title": "My Monitor Was Cutting My Download Speed by 75%",
+        "summary": "",
+        "url": "https://blog.tymscar.com/posts/studiodisplayethernet/",
+        "source": "Lobste.rs",
+        "score": 126,
+        "comments": 9,
+        "tags": [
+          "networking"
+        ]
+      },
+      {
+        "id": "arxiv:2611.27919v1",
+        "title": "SUAF: Spectral Universal Advantage Features for Zero-Shot Policy Improvement",
+        "summary": "Reward-independent representations enable reinforcement learning agents to reuse knowledge across tasks, but limited representation capacity raises three fundamental questions: what statistical dependence should these representations capture, which components of that dependence should be retained fo",
+        "url": "https://arxiv.org/abs/2611.27919v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.LG",
+          "cs.AI"
+        ],
+        "arxiv_id": "2611.27919v1"
+      },
+      {
+        "id": "arxiv:2611.27973v1",
+        "title": "MemOnce: A Scalable Memory Architecture for Large Language Models",
+        "summary": "Deploying large language models (LLMs) in long-horizon and continual interactions requires maintaining reusable memory states for future inference, posing challenges for existing architectures. Standard Transformers accumulate layer-wise, token-level KV caches, incurring linear GPU memory growth and",
+        "url": "https://arxiv.org/abs/2611.27973v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.CL"
+        ],
+        "arxiv_id": "2611.27973v1"
+      },
+      {
+        "id": "rss:9e30c5ae43",
+        "title": "Linux KVM Flaw CVE-2026-99312 Lets Guest VMs Access Host Memory on AMD Hosts",
+        "summary": "A flaw in KVM, the hypervisor built into the Linux kernel, let researchers read about 127 GB of a cloud server's memory from inside a virtual machine of their own on DigitalOcean.\n\nOn a shared server, that memory can include other customers' virtual machines. The flaw, tracked as CVE-2026-99312, aff",
+        "url": "https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html",
+        "source": "Tech RSS",
+        "score": 0
+      },
+      {
+        "id": "rss:38c6a3884f",
+        "title": "Hackers Exploit Critical Cisco Expressway Flaw, Breach Four Devices and Reach Internal Network",
+        "summary": "Threat actors have been observed exploiting a recently disclosed critical security flaw in Cisco Expressway to breach a Russian organization shortly after the public release of a proof-of-concept (PoC) exploit.\n\nThe activity involves the exploitation of CVE-2026-76466 (CVSS score: 9.8), a vulnerabil",
+        "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-cisco.html",
+        "source": "Tech RSS",
+        "score": 0
+      },
+      {
+        "id": "rss:61983e219b",
+        "title": "China-Linked Hackers Exploit Critical VMware vCenter Zero-Day to Gain Admin Access and Steal Data",
+        "summary": "The suspected China-nexus cyber espionage group known as Armory Castle (formerly UNC5221) has been attributed to the zero-day exploitation of a critical security flaw in VMware vCenter Server in early September 2026.\n\nThe vulnerability, tracked as CVE-2026-123890 (CVSS score: 9.8), is a case of auth",
+        "url": "https://thehackernews.com/2026/11/china-linked-hackers-exploit-critical.html",
+        "source": "Tech RSS",
+        "score": 0
+      },
+      {
+        "id": "lob:wc8fla",
+        "title": "Gliver completes the Guix desktop",
+        "summary": "",
+        "url": "https://dustycloud.org/blog/gliver-completes-the-guix-desktop/",
+        "source": "Lobste.rs",
+        "score": 32,
+        "comments": 4,
+        "tags": [
+          "linux",
+          "lisp"
+        ]
+      },
+      {
+        "id": "hn:50604123",
+        "title": "The struggle for freedom: How BSD escaped AT&T licensing",
+        "summary": "",
+        "url": "https://fosscomics.com/posts/16.%20BSD%20Unix%20Part%206%20-%20The%20Struggle%20for%20Freedom/",
+        "source": "Hacker News",
+        "score": 93,
+        "comments": 30
+      }
+    ],
+    "ai_curated": true
+  },
+  "fear_greed": {
+    "value": 11,
+    "classification": "Extreme Fear",
+    "timestamp": "2026-11-23 00:00:00"
+  }
+}
