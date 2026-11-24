@@ -1,97 +1,79 @@
 {
-  "date": "2026-11-24",
-  "update_time": "2026-11-24 09:10:27",
+  "date": "2026-11-25",
+  "update_time": "2026-11-24 22:01:41",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-24\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Ladybird 浏览器进入 Alpha 阶段 (来源: HackerNews)\n- **核心干货**：从零开始独立编写的浏览器引擎 Ladybird 发布首个 Alpha 版本。不套 Chromium、不蹭 WebKit，自研渲染引擎与 JS 引擎，目标是成为真正独立于 Google 生态的浏览器选项。HN 近 1900 分的热度说明开发者社区对\"浏览器引擎垄断\"这件事早已忍无可忍。\n- **毒舌/硬核点评**：造浏览器引擎是软件工程里最接近\"徒手爬珠峰\"的项目，上一个这么干的 Mozilla 现在靠 Google 的支票活着。Ladybird 值得尊敬，但 Alpha 意味着它现在连\"能用\"都算不上——先别急着卸载 Chrome，给理想主义者一点时间还债。\n- **🔗 传送门**：[点击直达原链接](https://ladybird.org/posts/alpha/)\n\n---\n\n### 2. 📌 OpenAI 与 Cisco 联手推出 Shirudo：用 AI 写 eBPF 在漏洞被利用前拦截 (来源: Tech News)\n- **核心干货**：开源 Linux 运行时 Shirudo（日语\"盾\"），让 AI Agent 动态生成 eBPF 控制策略，在补丁到位前实时阻断针对已知漏洞的攻击。本质是把\"打补丁的窗口期\"从数天压缩到数秒，且无需停机重启。这是 AI 从\"辅助写代码\"迈向\"运行时主动防御\"的实质性落地。\n- **毒舌/硬核点评**：终于有个 AI 安全产品不是\"用大模型生成一份看起来很像样的漏洞报告\"了。让 AI 写 eBPF 拦截攻击，比让 AI 写诗有意义一万倍——不过 eBPF 写错一个字节就是内核 panic，祝各位运维好运。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/openai-and-cisco-unveil-ai-assisted.html)\n\n---\n\n### 3. 📌 Stalwart 成为 Microsoft Exchange 的即插即用替代品 (来源: HackerNews)\n- **核心干货**：开源邮件服务器 Stalwart 宣布可直接替代 Exchange，支持邮件、日历、联系人等企业协作核心功能。对厌倦了 Exchange 授权费、复杂性和安全漏洞的企业 IT 来说，这是一条真正可落地的迁移路径，而非\"理论上可行\"的替代方案。\n- **毒舌/硬核点评**：Exchange 的企业用户忍微软久矣——授权费年年涨、漏洞月月爆、迁移成本高到没人敢动。Stalwart 敢喊\"drop-in replacement\"是勇气，但企业邮件迁移向来是\"看起来能换，换完想死\"的重灾区。先让勇敢的中小企业趟雷吧。\n- **🔗 传送门**：[点击直达原链接](https://stalw.art/blog/microsoft-exchange-replacement/)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"自研引擎、自写 eBPF、自建邮件服务器——真正值钱的技术从来不是'调用 API'，而是那些别人嫌脏嫌累不肯碰的地基。想搞钱，先搞懂别人不敢碰的那一层。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-25\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 2035 年提前到货：本地 AI 算力的\"奇点预演\" (来源: HackerNews)\n- **核心干货**：一篇引发 900+ 高分热议的深度文章，探讨个人本地算力与 AI 能力的演进速度远超预期，作者认为原本属于\"2035 年科幻设定\"的本地化智能工作流，已经在 2026 年底提前落地。核心在于：消费级硬件 + 开源模型的组合，正在把过去依赖云端大厂的能力搬到桌面。\n- **毒舌/硬核点评**：云厂商还在讲\"算力订阅\"的资本故事，结果用户发现自家显卡跑得比 API 还香——这不是技术进步，这是商业模式的慢性死亡通知书。\n- **🔗 传送门**：[点击直达原链接](https://fzakaria.com/2026/11/23/2035-came-early)\n\n---\n\n### 2. 📌 Ladybird 浏览器进入 Alpha：独立内核的\"堂吉诃德\"终于拔剑 (来源: Lobste.rs)\n- **核心干货**：从零自研渲染引擎、拒绝 Chromium/WebKit 血统的 Ladybird 正式发布 Alpha 版本。它的价值不在于\"又一个浏览器\"，而在于证明在三大引擎垄断之下，从引擎层重建 Web 平台仍有一线可能——这对 Web 标准的长期健康度是战略级利好。\n- **毒舌/硬核点评**：全世界都在给 Chromium 当\"换皮外包\"，只有这帮人还在手搓引擎。精神可嘉，但请先做好被百万网站兼容性按在地上摩擦的心理准备。\n- **🔗 传送门**：[点击直达原链接](https://ladybird.org/posts/alpha/)\n\n---\n\n### 3. 📌 ToolSmith：让多模态搜索 Agent 自己\"造工具\" (来源: ArXiv)\n- **核心干货**：当前多模态搜索 Agent 依赖一小撮人工手搓的搜索/视觉工具库，维护成本高且面对新查询时\"工具箱\"就冻结了。ToolSmith 提出自动生成工具的框架，让 Agent 按需动态产出并调用新工具，直接砍掉人工维护这一环。这是 Agent 从\"用工具\"迈向\"造工具\"的关键一步。\n- **毒舌/硬核点评**：人类工程师的护城河又少了一段——以前是 AI 抢写代码的活，现在连\"设计工具\"这层抽象都开始自产自销了。建议各位把简历上的\"工具开发\"改成\"给 AI 审工具\"。\n- **🔗 传送门**：[点击直达原链接](https://arxiv.org/abs/2611.31198v1)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"当你的硬件开始跑赢你的订阅账单，真正的技术拐点就到了——别盯着发布会，盯着电表。\"",
   "briefing_items": [
     {
-      "title": "Ladybird 浏览器进入 Alpha 阶段",
+      "title": "2035 年提前到货：本地 AI 算力的\"奇点预演\"",
       "source": "HackerNews",
-      "summary": "从零开始独立编写的浏览器引擎 Ladybird 发布首个 Alpha 版本。不套 Chromium、不蹭 WebKit，自研渲染引擎与 JS 引擎，目标是成为真正独立于 Google 生态的浏览器选项。HN 近 1900 分的热度说明开发者社区对\"浏览器引擎垄断\"这件事早已忍无可忍。",
-      "commentary": "造浏览器引擎是软件工程里最接近\"徒手爬珠峰\"的项目，上一个这么干的 Mozilla 现在靠 Google 的支票活着。Ladybird 值得尊敬，但 Alpha 意味着它现在连\"能用\"都算不上——先别急着卸载 Chrome，给理想主义者一点时间还债。",
+      "summary": "一篇引发 900+ 高分热议的深度文章，探讨个人本地算力与 AI 能力的演进速度远超预期，作者认为原本属于\"2035 年科幻设定\"的本地化智能工作流，已经在 2026 年底提前落地。核心在于：消费级硬件 + 开源模型的组合，正在把过去依赖云端大厂的能力搬到桌面。",
+      "commentary": "云厂商还在讲\"算力订阅\"的资本故事，结果用户发现自家显卡跑得比 API 还香——这不是技术进步，这是商业模式的慢性死亡通知书。",
+      "url": "https://fzakaria.com/2026/11/23/2035-came-early"
+    },
+    {
+      "title": "Ladybird 浏览器进入 Alpha：独立内核的\"堂吉诃德\"终于拔剑",
+      "source": "Lobste.rs",
+      "summary": "从零自研渲染引擎、拒绝 Chromium/WebKit 血统的 Ladybird 正式发布 Alpha 版本。它的价值不在于\"又一个浏览器\"，而在于证明在三大引擎垄断之下，从引擎层重建 Web 平台仍有一线可能——这对 Web 标准的长期健康度是战略级利好。",
+      "commentary": "全世界都在给 Chromium 当\"换皮外包\"，只有这帮人还在手搓引擎。精神可嘉，但请先做好被百万网站兼容性按在地上摩擦的心理准备。",
       "url": "https://ladybird.org/posts/alpha/"
     },
     {
-      "title": "OpenAI 与 Cisco 联手推出 Shirudo：用 AI 写 eBPF 在漏洞被利用前拦截",
-      "source": "Tech News",
-      "summary": "开源 Linux 运行时 Shirudo（日语\"盾\"），让 AI Agent 动态生成 eBPF 控制策略，在补丁到位前实时阻断针对已知漏洞的攻击。本质是把\"打补丁的窗口期\"从数天压缩到数秒，且无需停机重启。这是 AI 从\"辅助写代码\"迈向\"运行时主动防御\"的实质性落地。",
-      "commentary": "终于有个 AI 安全产品不是\"用大模型生成一份看起来很像样的漏洞报告\"了。让 AI 写 eBPF 拦截攻击，比让 AI 写诗有意义一万倍——不过 eBPF 写错一个字节就是内核 panic，祝各位运维好运。",
-      "url": "https://thehackernews.com/2026/11/openai-and-cisco-unveil-ai-assisted.html"
+      "title": "ToolSmith：让多模态搜索 Agent 自己\"造工具\"",
+      "source": "ArXiv",
+      "summary": "当前多模态搜索 Agent 依赖一小撮人工手搓的搜索/视觉工具库，维护成本高且面对新查询时\"工具箱\"就冻结了。ToolSmith 提出自动生成工具的框架，让 Agent 按需动态产出并调用新工具，直接砍掉人工维护这一环。这是 Agent 从\"用工具\"迈向\"造工具\"的关键一步。",
+      "commentary": "人类工程师的护城河又少了一段——以前是 AI 抢写代码的活，现在连\"设计工具\"这层抽象都开始自产自销了。建议各位把简历上的\"工具开发\"改成\"给 AI 审工具\"。",
+      "url": "https://arxiv.org/abs/2611.31198v1"
     },
     {
-      "title": "Stalwart 成为 Microsoft Exchange 的即插即用替代品",
-      "source": "HackerNews",
-      "summary": "开源邮件服务器 Stalwart 宣布可直接替代 Exchange，支持邮件、日历、联系人等企业协作核心功能。对厌倦了 Exchange 授权费、复杂性和安全漏洞的企业 IT 来说，这是一条真正可落地的迁移路径，而非\"理论上可行\"的替代方案。",
-      "commentary": "Exchange 的企业用户忍微软久矣——授权费年年涨、漏洞月月爆、迁移成本高到没人敢动。Stalwart 敢喊\"drop-in replacement\"是勇气，但企业邮件迁移向来是\"看起来能换，换完想死\"的重灾区。先让勇敢的中小企业趟雷吧。",
-      "url": "https://stalw.art/blog/microsoft-exchange-replacement/"
-    },
-    {
-      "quote": "\"自研引擎、自写 eBPF、自建邮件服务器——真正值钱的技术从来不是'调用 API'，而是那些别人嫌脏嫌累不肯碰的地基。想搞钱，先搞懂别人不敢碰的那一层。\""
+      "quote": "\"当你的硬件开始跑赢你的订阅账单，真正的技术拐点就到了——别盯着发布会，盯着电表。\""
     }
   ],
   "candidates": [
     {
-      "id": "hn:50620349",
-      "title": "Stalwart is now a drop-in replacement for Microsoft Exchange",
+      "id": "hn:50630594",
+      "title": "Active intrusion campaign against Check Point security management servers",
       "summary": "",
-      "url": "https://stalw.art/blog/microsoft-exchange-replacement/",
+      "url": "https://www.greynoise.io/blog/check-point-security-management-servers-intrusion-campaign",
       "source": "Hacker News",
-      "score": 442,
-      "comments": 236
+      "score": 232,
+      "comments": 95
     },
     {
-      "id": "hn:50622774",
-      "title": "New York Bans Subscription and Post-Purchase Fees on Cars",
+      "id": "hn:50598555",
+      "title": "The Spray Bottle",
       "summary": "",
-      "url": "https://www.governor.ny.gov/news/money-your-pockets-governor-hochul-signs-bill-restricting-exploitative-vehicle-subscription",
+      "url": "https://mechanical-pencil.com/products/spray-bottle",
       "source": "Hacker News",
-      "score": 316,
-      "comments": 91
+      "score": 274,
+      "comments": 80
     },
     {
-      "id": "hn:50619103",
-      "title": "GPUI is getting its own repository",
+      "id": "hn:50630462",
+      "title": "Jetty Pro",
       "summary": "",
-      "url": "https://github.com/zed-industries/gpui",
+      "url": "http://hypercritical.co/2026/11/23/jetty-pro",
       "source": "Hacker News",
-      "score": 247,
-      "comments": 96
+      "score": 228,
+      "comments": 90
     },
     {
-      "id": "hn:50615308",
-      "title": "\"Dario is hyping the dangers so OSS models are illegal and he stays in control\"",
+      "id": "hn:50624497",
+      "title": "2035 came early",
       "summary": "",
-      "url": "https://twitter.com/ylecun/status/2124550037912920090",
+      "url": "https://fzakaria.com/2026/11/23/2035-came-early",
       "source": "Hacker News",
-      "score": 1630,
-      "comments": 916
+      "score": 914,
+      "comments": 344
     },
     {
-      "id": "hn:50611576",
-      "title": "Nvidia Reinstates Jensen Huang as CEO",
-      "summary": "<a href=\"https:&#x2F;&#x2F;nvidianews.nvidia.com&#x2F;news&#x2F;nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director\" rel=\"nofollow\">https:&#x2F;&#x2F;nvidianews.nvidia.com&#x2F;news&#x2F;nvidia-board-reinstates-j...</a><p><a href=\"https:&#x2F;&#x2F;www.cnbc.com&#x2F;2026&#x2F;11",
-      "url": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html",
-      "source": "Hacker News",
-      "score": 2529,
-      "comments": 3458
-    },
-    {
-      "id": "hn:50619207",
-      "title": "Bored.com: Fun, interesting and cool websites to explore when bored",
+      "id": "hn:50627783",
+      "title": "GTA 6 Running on Windows",
       "summary": "",
-      "url": "https://www.bored.com/",
+      "url": "https://twitter.com/raul_bs3/status/2125213756238291075",
       "source": "Hacker News",
-      "score": 233,
-      "comments": 50
-    },
-    {
-      "id": "hn:50614249",
-      "title": "Ladybird is now in alpha",
-      "summary": "",
-      "url": "https://ladybird.org/posts/alpha/",
-      "source": "Hacker News",
-      "score": 1893,
-      "comments": 441
+      "score": 203,
+      "comments": 221
     },
     {
       "id": "lob:vldbcn",
@@ -99,24 +81,85 @@
       "summary": "",
       "url": "https://signal.org/blog/protecting-your-privacy/",
       "source": "Lobste.rs",
-      "score": 109,
-      "comments": 45,
+      "score": 117,
+      "comments": 71,
       "tags": [
         "mobile",
         "privacy"
       ]
     },
     {
-      "id": "lob:leqwqu",
-      "title": "GitHub Actions accepts invalid YAML",
+      "id": "hn:50633922",
+      "title": "Ternary Bonsai 2.5 27B",
       "summary": "",
-      "url": "https://yossarian.net/til/post/github-actions-accepts-invalid-yaml/",
+      "url": "https://prismml.com/news/bonsai-2-5-27b",
+      "source": "Hacker News",
+      "score": 165,
+      "comments": 54
+    },
+    {
+      "id": "lob:h6webg",
+      "title": "Ladybird is now in alpha",
+      "summary": "",
+      "url": "https://ladybird.org/posts/alpha/",
       "source": "Lobste.rs",
-      "score": 82,
-      "comments": 31,
+      "score": 113,
+      "comments": 61,
       "tags": [
-        "programming"
+        "browsers"
       ]
+    },
+    {
+      "id": "lob:pdecff",
+      "title": "Sneakernet",
+      "summary": "",
+      "url": "https://sneakernet.eu/",
+      "source": "Lobste.rs",
+      "score": 42,
+      "comments": 25,
+      "tags": [
+        "distributed",
+        "networking"
+      ]
+    },
+    {
+      "id": "hn:50632883",
+      "title": "Cloudflare hides shortcomings of the underlying infrastructure",
+      "summary": "",
+      "url": "https://charlie.fish/posts/2026/11/what-cloudflare-doesnt-tell-you/",
+      "source": "Hacker News",
+      "score": 122,
+      "comments": 80
+    },
+    {
+      "id": "hn:50629231",
+      "title": "A training engine for your local model, using your idle compute",
+      "summary": "",
+      "url": "https://github.com/sous-labs/songe",
+      "source": "Hacker News",
+      "score": 136,
+      "comments": 38
+    },
+    {
+      "id": "lob:2k95fs",
+      "title": "What VP != VNP Means (In 3 Minutes)",
+      "summary": "",
+      "url": "https://www.friedgil.com/vpvnp/",
+      "source": "Lobste.rs",
+      "score": 39,
+      "comments": 8,
+      "tags": [
+        "math"
+      ]
+    },
+    {
+      "id": "hn:50629106",
+      "title": "Splitting USB-C: USB 3 and USB 2 on one port",
+      "summary": "",
+      "url": "https://www.frankchiarulli.com/blog/splitting-usb-c/",
+      "source": "Hacker News",
+      "score": 108,
+      "comments": 73
     },
     {
       "id": "arxiv:2611.31198v1",
@@ -132,104 +175,65 @@
       "arxiv_id": "2611.31198v1"
     },
     {
-      "id": "lob:pdecff",
-      "title": "Sneakernet",
+      "id": "lob:ezml41",
+      "title": "Lua for data representation",
       "summary": "",
-      "url": "https://sneakernet.eu/",
+      "url": "https://citrons.xyz/journal/2025-07-23",
       "source": "Lobste.rs",
-      "score": 26,
-      "comments": 21,
+      "score": 35,
+      "comments": 12,
       "tags": [
-        "distributed",
-        "networking"
+        "lua"
       ]
     },
     {
-      "id": "lob:gtc9rg",
-      "title": "Held together by spare time: Reviving wiki.alpinelinux.org during PHP2Shell",
+      "id": "hn:50633159",
+      "title": "Grafana 12.4.16, 13.0.14, 13.1.11, 13.2.7 and 13.3.2 (multiple CVEs)",
       "summary": "",
-      "url": "https://lambdacreate.com/posts/held-together-by-spare-time",
+      "url": "https://grafana.com/grafana/download",
+      "source": "Hacker News",
+      "score": 89,
+      "comments": 17
+    },
+    {
+      "id": "lob:yyktrz",
+      "title": "I checked Clojure's core with Lean and found 17 unreported bugs",
+      "summary": "",
+      "url": "https://s.conao3.com/blog/2026/e4f733",
       "source": "Lobste.rs",
-      "score": 17,
-      "comments": 11,
+      "score": 39,
+      "comments": 1,
       "tags": [
-        "devops"
+        "clojure"
       ]
+    },
+    {
+      "id": "lob:rfcgkx",
+      "title": "Security incident on Hex.pm",
+      "summary": "",
+      "url": "https://hex.pm/blog/security-incident-on-hexpm",
+      "source": "Lobste.rs",
+      "score": 37,
+      "comments": 5,
+      "tags": [
+        "elixir",
+        "erlang",
+        "gleam"
+      ]
+    },
+    {
+      "id": "rss:666e9d9fd2",
+      "title": "VMware vCenter Hit by Another Critical 9.8-Rated Auth Bypass Flaw After Zero-Day Exploitation",
+      "summary": "Broadcom has shipped patches to address 23 vulnerabilities impacting VMware ESX, vCenter, Workstation, Fusion, and Avi Load Balancer, including one critical bug that could be abused to bypass authentication.\n\nThe critical vulnerability, tracked as CVE-2026-123903, is rated 9.8 out of 10.0 on the CVS",
+      "url": "https://thehackernews.com/2026/11/vmware-vcenter-hit-by-another-critical.html",
+      "source": "Tech RSS",
+      "score": 0
     },
     {
       "id": "rss:ab93032ad6",
       "title": "Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day",
       "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added two flaws impacting N-able MailAssure and MONAI Label to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation.\n\nThe critical vulnerabilities are listed below -\n\n\n  CVE-2026-134624 (C",
       "url": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:d315fcb2ee",
-      "title": "Critical binary-parser Flaw Enables JavaScript Injection via Malicious Parser Definitions",
-      "summary": "A critical security flaw has been disclosed in the popular binary-parser library that could allow an attacker who controls parser definitions to execute arbitrary code.\n\nThe vulnerability, tracked as CVE-2026-134814 (CVSS score: 9.2 / 8.1), is a case of code injection impacting binary-parser version",
-      "url": "https://thehackernews.com/2026/11/critical-binary-parser-flaw-enables.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "lob:lnpwpu",
-      "title": "Quality IMAP, Part 2: Mailbox Concurrency",
-      "summary": "",
-      "url": "https://aerogramme.deuxfleurs.fr/blog/2026-quality-imap-part-2/",
-      "source": "Lobste.rs",
-      "score": 32,
-      "comments": 1,
-      "tags": [
-        "distributed",
-        "email",
-        "testing"
-      ]
-    },
-    {
-      "id": "arxiv:2611.31237v1",
-      "title": "Let Vision-Language Models Generate Images through Their Representations",
-      "summary": "Recent unified multimodal models aim to combine visual understanding and generation within a single model, yet effectively integrating the two capabilities remains challenging. Leveraging pretrained vision-language models offers a way to build on already learned multimodal knowledge, but making this",
-      "url": "https://arxiv.org/abs/2611.31237v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CV",
-        "cs.LG"
-      ],
-      "arxiv_id": "2611.31237v1"
-    },
-    {
-      "id": "arxiv:2611.31228v1",
-      "title": "Language Models Steer on Injected Uncertainty Tokens, but Fail to Self-Monitor In Situ",
-      "summary": "Prompting language models to verbalize stepwise numerical confidence during generation is an increasingly popular approach for triggering backtracking and error correction in agentic reasoning. This strategy presupposes two capabilities: (1) in-situ monitoring fidelity (does confidence drop when an ",
-      "url": "https://arxiv.org/abs/2611.31228v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.AI"
-      ],
-      "arxiv_id": "2611.31228v1"
-    },
-    {
-      "id": "rss:0bdeffef0f",
-      "title": "OpenAI and Cisco Unveil AI-Assisted Linux Security Tool to Block Exploits Before Patching",
-      "summary": "OpenAI and Cisco have teamed up to launch Shirudo (meaning \"shield\" in Japanese), an open-source Linux runtime that allows artificial intelligence (AI) agents to defend systems without downtime.\n\n\"It lets agents write dynamic eBPF controls to shield systems from exploits, giving defenders more time",
-      "url": "https://thehackernews.com/2026/11/openai-and-cisco-unveil-ai-assisted.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:51a18d7220",
-      "title": "N-able Discloses Critical Mail Assure Vulnerability Found During Breach Investigation",
-      "summary": "N-able yesterday disclosed a critical flaw it found while investigating the breach of its Mail Assure and SpamExperts Hosted Cloud, an email filtering service it runs for managed service providers.\n\nThe bug, tracked as CVE-2026-134624, is a server-side request forgery (SSRF) flaw. It allowed a user",
-      "url": "https://thehackernews.com/2026/11/n-able-discloses-critical-mail-assure.html",
-      "source": "Tech RSS",
-      "score": 0
-    },
-    {
-      "id": "rss:bbbc63ef48",
-      "title": "Hackers Exploit Critical ASP.NET Anti-CSRF Library Flaw Allowing Unauthenticated RCE",
-      "summary": "Cybersecurity researchers have urged users to discontinue using a legacy ASP.NET anti-CSRF library named Idunno.AntiCsrf (\"Idunno.AntiCsrf.dll\") following the discovery of a critical vulnerability that has been exploited in the wild.\n\nThe vulnerability, tracked as CVE-2026-131914, carries a CVSS sco",
-      "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-aspnet-anti.html",
       "source": "Tech RSS",
       "score": 0
     }
