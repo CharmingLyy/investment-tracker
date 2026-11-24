@@ -1,58 +1,70 @@
 {
   "date": "2026-11-24",
-  "update_time": "2026-11-23 23:32:09",
+  "update_time": "2026-11-24 09:10:27",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-24\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 GLM-5.4：首个\"循环 Transformer\"架构，通用编程能力再进一步 (来源: HackerNews)\n- **核心干货**：智谱发布 GLM-5.4，核心卖点是首次将\"循环 Transformer（loop transformer）\"架构落地到通用编程场景——通过让同一组权重层反复迭代计算，用更少的参数堆叠换取更深层的推理链路。这意味着模型不再靠单纯\"堆层数+堆卡\"来换取性能，而是靠\"想得更久\"。\n- **毒舌/硬核点评**：当全行业还在卷参数规模时，智谱终于开始卷\"怎么重复利用自己那点参数\"了——毕竟卡不够、钱不多的时候，让模型多想几遍，是最省钱的暴力美学。\n- **🔗 传送门**：[点击直达原链接](https://z.ai/blog/glm-5.4)\n\n---\n\n### 2. 📌 NariQ：把 Qwen3.8-27B 塞进 10GB，3-bit 量化首次扛住长程 Agent 任务 (来源: HackerNews)\n- **核心干货**：NariQ 实现了对 Qwen3.8-27B 的 3-bit 及以下量化，体积压到 10GB 文件，且在 Agent 长任务、数学、多语言推理和图像理解上几乎不掉 BF16 的水平。据其自述，这是首个在长程 Agent 任务上保持 BF16 性能的 3-bit 以下量化方案。\n- **毒舌/硬核点评**：27B 模型挤进 10GB，这波操作直接让\"本地跑大模型\"从极客自嗨变成消费级显卡的日常——那些卖 24GB 显存溢价的厂商，今晚可能睡不太好了。\n- **🔗 传送门**：[点击直达原链接](https://huggingface.co/nari-labs/Qwen3.8-27B-NariQ-GGUF)\n\n---\n\n### 3. 📌 Ladybird 浏览器进入 Alpha：不靠谷歌钱袋子的独立内核终于能用了 (来源: HackerNews)\n- **核心干货**：从零自研引擎的独立浏览器 Ladybird 正式发布 Alpha 版本。它不基于 Chromium、不基于 Gecko，走的是完全独立的内核路线，直接挑战浏览器引擎被三大巨头垄断的格局。对 Web 标准的\"去单一化\"意义重大。\n- **毒舌/硬核点评**：在一个\"套壳 Chromium 就能叫浏览器\"的时代，还敢从渲染引擎开始手搓的团队，要么是理想主义者，要么是疯子——历史证明，这两种人往往笑到最后。\n- **🔗 传送门**：[点击直达原链接](https://ladybird.org/posts/alpha/)\n\n---\n\n### 🗣️ 今日顶男金句\n\"真正拉开差距的从来不是你有多少张卡，而是你能不能让同一张卡多想几遍。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-24\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Ladybird 浏览器进入 Alpha 阶段 (来源: HackerNews)\n- **核心干货**：从零开始独立编写的浏览器引擎 Ladybird 发布首个 Alpha 版本。不套 Chromium、不蹭 WebKit，自研渲染引擎与 JS 引擎，目标是成为真正独立于 Google 生态的浏览器选项。HN 近 1900 分的热度说明开发者社区对\"浏览器引擎垄断\"这件事早已忍无可忍。\n- **毒舌/硬核点评**：造浏览器引擎是软件工程里最接近\"徒手爬珠峰\"的项目，上一个这么干的 Mozilla 现在靠 Google 的支票活着。Ladybird 值得尊敬，但 Alpha 意味着它现在连\"能用\"都算不上——先别急着卸载 Chrome，给理想主义者一点时间还债。\n- **🔗 传送门**：[点击直达原链接](https://ladybird.org/posts/alpha/)\n\n---\n\n### 2. 📌 OpenAI 与 Cisco 联手推出 Shirudo：用 AI 写 eBPF 在漏洞被利用前拦截 (来源: Tech News)\n- **核心干货**：开源 Linux 运行时 Shirudo（日语\"盾\"），让 AI Agent 动态生成 eBPF 控制策略，在补丁到位前实时阻断针对已知漏洞的攻击。本质是把\"打补丁的窗口期\"从数天压缩到数秒，且无需停机重启。这是 AI 从\"辅助写代码\"迈向\"运行时主动防御\"的实质性落地。\n- **毒舌/硬核点评**：终于有个 AI 安全产品不是\"用大模型生成一份看起来很像样的漏洞报告\"了。让 AI 写 eBPF 拦截攻击，比让 AI 写诗有意义一万倍——不过 eBPF 写错一个字节就是内核 panic，祝各位运维好运。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/openai-and-cisco-unveil-ai-assisted.html)\n\n---\n\n### 3. 📌 Stalwart 成为 Microsoft Exchange 的即插即用替代品 (来源: HackerNews)\n- **核心干货**：开源邮件服务器 Stalwart 宣布可直接替代 Exchange，支持邮件、日历、联系人等企业协作核心功能。对厌倦了 Exchange 授权费、复杂性和安全漏洞的企业 IT 来说，这是一条真正可落地的迁移路径，而非\"理论上可行\"的替代方案。\n- **毒舌/硬核点评**：Exchange 的企业用户忍微软久矣——授权费年年涨、漏洞月月爆、迁移成本高到没人敢动。Stalwart 敢喊\"drop-in replacement\"是勇气，但企业邮件迁移向来是\"看起来能换，换完想死\"的重灾区。先让勇敢的中小企业趟雷吧。\n- **🔗 传送门**：[点击直达原链接](https://stalw.art/blog/microsoft-exchange-replacement/)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"自研引擎、自写 eBPF、自建邮件服务器——真正值钱的技术从来不是'调用 API'，而是那些别人嫌脏嫌累不肯碰的地基。想搞钱，先搞懂别人不敢碰的那一层。\"",
   "briefing_items": [
     {
-      "title": "GLM-5.4：首个\"循环 Transformer\"架构，通用编程能力再进一步",
+      "title": "Ladybird 浏览器进入 Alpha 阶段",
       "source": "HackerNews",
-      "summary": "智谱发布 GLM-5.4，核心卖点是首次将\"循环 Transformer（loop transformer）\"架构落地到通用编程场景——通过让同一组权重层反复迭代计算，用更少的参数堆叠换取更深层的推理链路。这意味着模型不再靠单纯\"堆层数+堆卡\"来换取性能，而是靠\"想得更久\"。",
-      "commentary": "当全行业还在卷参数规模时，智谱终于开始卷\"怎么重复利用自己那点参数\"了——毕竟卡不够、钱不多的时候，让模型多想几遍，是最省钱的暴力美学。",
-      "url": "https://z.ai/blog/glm-5.4"
-    },
-    {
-      "title": "NariQ：把 Qwen3.8-27B 塞进 10GB，3-bit 量化首次扛住长程 Agent 任务",
-      "source": "HackerNews",
-      "summary": "NariQ 实现了对 Qwen3.8-27B 的 3-bit 及以下量化，体积压到 10GB 文件，且在 Agent 长任务、数学、多语言推理和图像理解上几乎不掉 BF16 的水平。据其自述，这是首个在长程 Agent 任务上保持 BF16 性能的 3-bit 以下量化方案。",
-      "commentary": "27B 模型挤进 10GB，这波操作直接让\"本地跑大模型\"从极客自嗨变成消费级显卡的日常——那些卖 24GB 显存溢价的厂商，今晚可能睡不太好了。",
-      "url": "https://huggingface.co/nari-labs/Qwen3.8-27B-NariQ-GGUF"
-    },
-    {
-      "title": "Ladybird 浏览器进入 Alpha：不靠谷歌钱袋子的独立内核终于能用了",
-      "source": "HackerNews",
-      "summary": "从零自研引擎的独立浏览器 Ladybird 正式发布 Alpha 版本。它不基于 Chromium、不基于 Gecko，走的是完全独立的内核路线，直接挑战浏览器引擎被三大巨头垄断的格局。对 Web 标准的\"去单一化\"意义重大。",
-      "commentary": "在一个\"套壳 Chromium 就能叫浏览器\"的时代，还敢从渲染引擎开始手搓的团队，要么是理想主义者，要么是疯子——历史证明，这两种人往往笑到最后。",
+      "summary": "从零开始独立编写的浏览器引擎 Ladybird 发布首个 Alpha 版本。不套 Chromium、不蹭 WebKit，自研渲染引擎与 JS 引擎，目标是成为真正独立于 Google 生态的浏览器选项。HN 近 1900 分的热度说明开发者社区对\"浏览器引擎垄断\"这件事早已忍无可忍。",
+      "commentary": "造浏览器引擎是软件工程里最接近\"徒手爬珠峰\"的项目，上一个这么干的 Mozilla 现在靠 Google 的支票活着。Ladybird 值得尊敬，但 Alpha 意味着它现在连\"能用\"都算不上——先别急着卸载 Chrome，给理想主义者一点时间还债。",
       "url": "https://ladybird.org/posts/alpha/"
+    },
+    {
+      "title": "OpenAI 与 Cisco 联手推出 Shirudo：用 AI 写 eBPF 在漏洞被利用前拦截",
+      "source": "Tech News",
+      "summary": "开源 Linux 运行时 Shirudo（日语\"盾\"），让 AI Agent 动态生成 eBPF 控制策略，在补丁到位前实时阻断针对已知漏洞的攻击。本质是把\"打补丁的窗口期\"从数天压缩到数秒，且无需停机重启。这是 AI 从\"辅助写代码\"迈向\"运行时主动防御\"的实质性落地。",
+      "commentary": "终于有个 AI 安全产品不是\"用大模型生成一份看起来很像样的漏洞报告\"了。让 AI 写 eBPF 拦截攻击，比让 AI 写诗有意义一万倍——不过 eBPF 写错一个字节就是内核 panic，祝各位运维好运。",
+      "url": "https://thehackernews.com/2026/11/openai-and-cisco-unveil-ai-assisted.html"
+    },
+    {
+      "title": "Stalwart 成为 Microsoft Exchange 的即插即用替代品",
+      "source": "HackerNews",
+      "summary": "开源邮件服务器 Stalwart 宣布可直接替代 Exchange，支持邮件、日历、联系人等企业协作核心功能。对厌倦了 Exchange 授权费、复杂性和安全漏洞的企业 IT 来说，这是一条真正可落地的迁移路径，而非\"理论上可行\"的替代方案。",
+      "commentary": "Exchange 的企业用户忍微软久矣——授权费年年涨、漏洞月月爆、迁移成本高到没人敢动。Stalwart 敢喊\"drop-in replacement\"是勇气，但企业邮件迁移向来是\"看起来能换，换完想死\"的重灾区。先让勇敢的中小企业趟雷吧。",
+      "url": "https://stalw.art/blog/microsoft-exchange-replacement/"
+    },
+    {
+      "quote": "\"自研引擎、自写 eBPF、自建邮件服务器——真正值钱的技术从来不是'调用 API'，而是那些别人嫌脏嫌累不肯碰的地基。想搞钱，先搞懂别人不敢碰的那一层。\""
     }
   ],
   "candidates": [
     {
-      "id": "hn:50609685",
-      "title": "GLM-5.4: Toward generalized coding with our first loop transformer",
+      "id": "hn:50620349",
+      "title": "Stalwart is now a drop-in replacement for Microsoft Exchange",
       "summary": "",
-      "url": "https://z.ai/blog/glm-5.4",
+      "url": "https://stalw.art/blog/microsoft-exchange-replacement/",
       "source": "Hacker News",
-      "score": 1015,
-      "comments": 332
+      "score": 442,
+      "comments": 236
+    },
+    {
+      "id": "hn:50622774",
+      "title": "New York Bans Subscription and Post-Purchase Fees on Cars",
+      "summary": "",
+      "url": "https://www.governor.ny.gov/news/money-your-pockets-governor-hochul-signs-bill-restricting-exploitative-vehicle-subscription",
+      "source": "Hacker News",
+      "score": 316,
+      "comments": 91
+    },
+    {
+      "id": "hn:50619103",
+      "title": "GPUI is getting its own repository",
+      "summary": "",
+      "url": "https://github.com/zed-industries/gpui",
+      "source": "Hacker News",
+      "score": 247,
+      "comments": 96
     },
     {
       "id": "hn:50615308",
-      "title": "Dario is hyping the dangers so OSS models are illegal and he stays in control",
+      "title": "\"Dario is hyping the dangers so OSS models are illegal and he stays in control\"",
       "summary": "",
       "url": "https://twitter.com/ylecun/status/2124550037912920090",
       "source": "Hacker News",
-      "score": 946,
-      "comments": 552
-    },
-    {
-      "id": "hn:50611402",
-      "title": "NariQ: BF16-level Qwen3.8-27B in a 10 GB file",
-      "summary": "We built NariQ: 3-bit-or-lower quantizations of Qwen3.8-27B that retain near-BF16 quality across agentic tasks, math, multilingual reasoning, and image understanding.<p>To our knowledge, this is the first 3-bit-or-lower quantization that retains BF16 lvl performance on long-horizon agentic tasks.<p>",
-      "url": "https://huggingface.co/nari-labs/Qwen3.8-27B-NariQ-GGUF",
-      "source": "Hacker News",
-      "score": 103,
-      "comments": 19
+      "score": 1630,
+      "comments": 916
     },
     {
       "id": "hn:50611576",
@@ -60,26 +72,17 @@
       "summary": "<a href=\"https:&#x2F;&#x2F;nvidianews.nvidia.com&#x2F;news&#x2F;nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director\" rel=\"nofollow\">https:&#x2F;&#x2F;nvidianews.nvidia.com&#x2F;news&#x2F;nvidia-board-reinstates-j...</a><p><a href=\"https:&#x2F;&#x2F;www.cnbc.com&#x2F;2026&#x2F;11",
       "url": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html",
       "source": "Hacker News",
-      "score": 1889,
-      "comments": 2981
+      "score": 2529,
+      "comments": 3458
     },
     {
-      "id": "hn:50617499",
-      "title": "Per Arm's request, this site will be discontinued on 4 December 2026 :(",
+      "id": "hn:50619207",
+      "title": "Bored.com: Fun, interesting and cool websites to explore when bored",
       "summary": "",
-      "url": "https://arm.jonpalmisc.com/",
+      "url": "https://www.bored.com/",
       "source": "Hacker News",
-      "score": 754,
-      "comments": 153
-    },
-    {
-      "id": "hn:50587439",
-      "title": "Spacecraft reaches Mercury on second-ever mission to enter its orbit",
-      "summary": "",
-      "url": "https://www.theguardian.com/science/2026/nov/20/spacecraft-mercury-second-ever-mission-orbit-bepicolombo",
-      "source": "Hacker News",
-      "score": 271,
-      "comments": 85
+      "score": 233,
+      "comments": 50
     },
     {
       "id": "hn:50614249",
@@ -87,17 +90,8 @@
       "summary": "",
       "url": "https://ladybird.org/posts/alpha/",
       "source": "Hacker News",
-      "score": 1264,
-      "comments": 310
-    },
-    {
-      "id": "hn:50615481",
-      "title": "Kagi Mail (public beta)",
-      "summary": "",
-      "url": "https://blog.kagi.com/kagi-mail-public-beta",
-      "source": "Hacker News",
-      "score": 314,
-      "comments": 244
+      "score": 1893,
+      "comments": 441
     },
     {
       "id": "lob:vldbcn",
@@ -105,8 +99,8 @@
       "summary": "",
       "url": "https://signal.org/blog/protecting-your-privacy/",
       "source": "Lobste.rs",
-      "score": 89,
-      "comments": 36,
+      "score": 109,
+      "comments": 45,
       "tags": [
         "mobile",
         "privacy"
@@ -118,44 +112,36 @@
       "summary": "",
       "url": "https://yossarian.net/til/post/github-actions-accepts-invalid-yaml/",
       "source": "Lobste.rs",
-      "score": 79,
-      "comments": 29,
+      "score": 82,
+      "comments": 31,
       "tags": [
         "programming"
       ]
     },
     {
-      "id": "hn:50620102",
-      "title": "VP ≠ VNP over Every Field",
-      "summary": "Paper: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;anthropics&#x2F;formal-math&#x2F;blob&#x2F;11b6c7e3c927df2658f513b6b68ea7f8929c62c5&#x2F;vp-vnp&#x2F;paper.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;anthropics&#x2F;formal-math&#x2F;blob&#x2F;11b6c7e3c927d...</a>",
-      "url": "https://github.com/anthropics/formal-math/tree/main/vp-vnp",
-      "source": "Hacker News",
-      "score": 130,
-      "comments": 86
-    },
-    {
-      "id": "arxiv:2611.27919v1",
-      "title": "SUAF: Spectral Universal Advantage Features for Zero-Shot Policy Improvement",
-      "summary": "Reward-independent representations enable reinforcement learning agents to reuse knowledge across tasks, but limited representation capacity raises three fundamental questions: what statistical dependence should these representations capture, which components of that dependence should be retained fo",
-      "url": "https://arxiv.org/abs/2611.27919v1",
+      "id": "arxiv:2611.31198v1",
+      "title": "ToolSmith: An Automatic Tool-Generation Framework for Multimodal Search Agents",
+      "summary": "Recent multimodal search agents use reasoning, vision, and live web search across many turns to answer questions beyond parametric knowledge by orchestrating a small library of hand-crafted search and visual tools. However, the library is laborious to create and maintain, and frozen when new query t",
+      "url": "https://arxiv.org/abs/2611.31198v1",
       "source": "ArXiv",
       "categories": [
-        "cs.LG",
-        "cs.AI"
+        "cs.CL",
+        "cs.AI",
+        "cs.CV"
       ],
-      "arxiv_id": "2611.27919v1"
+      "arxiv_id": "2611.31198v1"
     },
     {
-      "id": "lob:wc8fla",
-      "title": "Gliver completes the Guix desktop",
+      "id": "lob:pdecff",
+      "title": "Sneakernet",
       "summary": "",
-      "url": "https://dustycloud.org/blog/gliver-completes-the-guix-desktop/",
+      "url": "https://sneakernet.eu/",
       "source": "Lobste.rs",
-      "score": 60,
-      "comments": 5,
+      "score": 26,
+      "comments": 21,
       "tags": [
-        "linux",
-        "lisp"
+        "distributed",
+        "networking"
       ]
     },
     {
@@ -164,22 +150,19 @@
       "summary": "",
       "url": "https://lambdacreate.com/posts/held-together-by-spare-time",
       "source": "Lobste.rs",
-      "score": 15,
-      "comments": 10,
+      "score": 17,
+      "comments": 11,
       "tags": [
         "devops"
       ]
     },
     {
-      "id": "arxiv:2611.27973v1",
-      "title": "MemOnce: A Scalable Memory Architecture for Large Language Models",
-      "summary": "Deploying large language models (LLMs) in long-horizon and continual interactions requires maintaining reusable memory states for future inference, posing challenges for existing architectures. Standard Transformers accumulate layer-wise, token-level KV caches, incurring linear GPU memory growth and",
-      "url": "https://arxiv.org/abs/2611.27973v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL"
-      ],
-      "arxiv_id": "2611.27973v1"
+      "id": "rss:ab93032ad6",
+      "title": "Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day",
+      "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added two flaws impacting N-able MailAssure and MONAI Label to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation.\n\nThe critical vulnerabilities are listed below -\n\n\n  CVE-2026-134624 (C",
+      "url": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html",
+      "source": "Tech RSS",
+      "score": 0
     },
     {
       "id": "rss:d315fcb2ee",
@@ -190,44 +173,63 @@
       "score": 0
     },
     {
-      "id": "hn:50620349",
-      "title": "Stalwart is now a drop-in replacement for Microsoft Exchange",
+      "id": "lob:lnpwpu",
+      "title": "Quality IMAP, Part 2: Mailbox Concurrency",
       "summary": "",
-      "url": "https://stalw.art/blog/microsoft-exchange-replacement/",
-      "source": "Hacker News",
-      "score": 54,
-      "comments": 26
+      "url": "https://aerogramme.deuxfleurs.fr/blog/2026-quality-imap-part-2/",
+      "source": "Lobste.rs",
+      "score": 32,
+      "comments": 1,
+      "tags": [
+        "distributed",
+        "email",
+        "testing"
+      ]
     },
     {
-      "id": "arxiv:2611.27962v1",
-      "title": "Model Carving: Training Transformers That Optimize Their Own Topology",
-      "summary": "Machine learning has largely kept separate the choice of architecture and the process of training. A classic Transformer, for instance, trains a fixed set of attention and MLP sublayers at every layer, in the same order, and optimizes the weights within. This uniformity is a convention rather than a",
-      "url": "https://arxiv.org/abs/2611.27962v1",
+      "id": "arxiv:2611.31237v1",
+      "title": "Let Vision-Language Models Generate Images through Their Representations",
+      "summary": "Recent unified multimodal models aim to combine visual understanding and generation within a single model, yet effectively integrating the two capabilities remains challenging. Leveraging pretrained vision-language models offers a way to build on already learned multimodal knowledge, but making this",
+      "url": "https://arxiv.org/abs/2611.31237v1",
       "source": "ArXiv",
       "categories": [
-        "cs.LG",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "arxiv_id": "2611.31237v1"
+    },
+    {
+      "id": "arxiv:2611.31228v1",
+      "title": "Language Models Steer on Injected Uncertainty Tokens, but Fail to Self-Monitor In Situ",
+      "summary": "Prompting language models to verbalize stepwise numerical confidence during generation is an increasingly popular approach for triggering backtracking and error correction in agentic reasoning. This strategy presupposes two capabilities: (1) in-situ monitoring fidelity (does confidence drop when an ",
+      "url": "https://arxiv.org/abs/2611.31228v1",
+      "source": "ArXiv",
+      "categories": [
         "cs.AI"
       ],
-      "arxiv_id": "2611.27962v1"
+      "arxiv_id": "2611.31228v1"
     },
     {
-      "id": "arxiv:2611.27910v1",
-      "title": "Decision Columns as an Index: Interpretable Embeddings for Explainable Entity Matching and Search",
-      "summary": "Business data systems must determine whether records refer to the same entity and retrieve records satisfying requests whose decisive properties are implicit. As agents act on these records, both tasks require auditable reasons. Dense embeddings perform well but offer opaque coordinates, cannot be f",
-      "url": "https://arxiv.org/abs/2611.27910v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.IR",
-        "cs.AI",
-        "cs.DB"
-      ],
-      "arxiv_id": "2611.27910v1"
+      "id": "rss:0bdeffef0f",
+      "title": "OpenAI and Cisco Unveil AI-Assisted Linux Security Tool to Block Exploits Before Patching",
+      "summary": "OpenAI and Cisco have teamed up to launch Shirudo (meaning \"shield\" in Japanese), an open-source Linux runtime that allows artificial intelligence (AI) agents to defend systems without downtime.\n\n\"It lets agents write dynamic eBPF controls to shield systems from exploits, giving defenders more time",
+      "url": "https://thehackernews.com/2026/11/openai-and-cisco-unveil-ai-assisted.html",
+      "source": "Tech RSS",
+      "score": 0
     },
     {
       "id": "rss:51a18d7220",
       "title": "N-able Discloses Critical Mail Assure Vulnerability Found During Breach Investigation",
       "summary": "N-able yesterday disclosed a critical flaw it found while investigating the breach of its Mail Assure and SpamExperts Hosted Cloud, an email filtering service it runs for managed service providers.\n\nThe bug, tracked as CVE-2026-134624, is a server-side request forgery (SSRF) flaw. It allowed a user",
       "url": "https://thehackernews.com/2026/11/n-able-discloses-critical-mail-assure.html",
+      "source": "Tech RSS",
+      "score": 0
+    },
+    {
+      "id": "rss:bbbc63ef48",
+      "title": "Hackers Exploit Critical ASP.NET Anti-CSRF Library Flaw Allowing Unauthenticated RCE",
+      "summary": "Cybersecurity researchers have urged users to discontinue using a legacy ASP.NET anti-CSRF library named Idunno.AntiCsrf (\"Idunno.AntiCsrf.dll\") following the discovery of a critical vulnerability that has been exploited in the wild.\n\nThe vulnerability, tracked as CVE-2026-131914, carries a CVSS sco",
+      "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-aspnet-anti.html",
       "source": "Tech RSS",
       "score": 0
     }
