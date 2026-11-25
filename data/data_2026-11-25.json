@@ -1,0 +1,745 @@
+{
+  "update_time": "2026-11-25 18:18:04",
+  "stocks": {
+    "a_stocks": [
+      {
+        "market": "A股",
+        "code": "002050",
+        "name": "三花智控",
+        "symbol": "sz.002050",
+        "industry": null,
+        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
+        "price": 31.91,
+        "open": 33.79,
+        "high": 34.6,
+        "low": 31.78,
+        "change_pct": -7.13,
+        "volume": 63611232,
+        "turnover": 20.91,
+        "market_cap": null,
+        "pe": 34.54,
+        "cash_flow": null,
+        "macd": -0.3738,
+        "macd_signal": -0.2404,
+        "macd_histogram": -0.2668,
+        "rsi": 43.2,
+        "ma": {
+          "MA5": 32.82,
+          "MA10": 33.24,
+          "MA20": 33.79,
+          "MA60": 34.35
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
+        "price": 5.77,
+        "open": 5.85,
+        "high": 5.85,
+        "low": 5.69,
+        "change_pct": -1.37,
+        "volume": 40491407,
+        "turnover": 2.33,
+        "market_cap": null,
+        "pe": 64.78,
+        "cash_flow": null,
+        "macd": -0.117,
+        "macd_signal": -0.1096,
+        "macd_histogram": -0.0149,
+        "rsi": 28.05,
+        "ma": {
+          "MA5": 5.85,
+          "MA10": 5.88,
+          "MA20": 5.99,
+          "MA60": 6.3
+        },
+        "main_net_flow": null
+      }
+    ],
+    "hk_stocks": [
+      {
+        "market": "港股",
+        "code": "01810",
+        "name": "小米集团-W",
+        "symbol": "01810",
+        "industry": "Consumer Electronics",
+        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
+        "price": NaN,
+        "open": null,
+        "high": null,
+        "low": null,
+        "change_pct": NaN,
+        "volume": 247096558,
+        "turnover": null,
+        "market_cap": 6831.55,
+        "pe": 20.12,
+        "cash_flow": 370.62,
+        "macd": 0.2476,
+        "macd_signal": 0.5732,
+        "macd_histogram": -0.6511,
+        "rsi": 40.84,
+        "ma": {
+          "MA5": null,
+          "MA10": null,
+          "MA20": null,
+          "MA60": null
+        },
+        "main_net_flow": null
+      }
+    ],
+    "us_stocks": [
+      {
+        "market": "美股",
+        "code": "NVDA",
+        "name": "NVIDIA",
+        "symbol": "NVDA",
+        "industry": "Semiconductors",
+        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
+        "price": 147.3,
+        "open": 144.02,
+        "high": 147.63,
+        "low": 141.17,
+        "change_pct": -5.2,
+        "volume": 237135358,
+        "turnover": null,
+        "market_cap": 35572.15,
+        "pe": 15.82,
+        "cash_flow": 992.41,
+        "macd": -17.0751,
+        "macd_signal": -16.2717,
+        "macd_histogram": -1.6066,
+        "rsi": 36.83,
+        "ma": {
+          "MA5": 147.85,
+          "MA10": 153.08,
+          "MA20": 172.38,
+          "MA60": 206.43
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "GOOG",
+        "name": "Alphabet (Google)",
+        "symbol": "GOOG",
+        "industry": "Internet Content & Information",
+        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
+        "price": 268.95,
+        "open": 263.25,
+        "high": 269.5,
+        "low": 260.69,
+        "change_pct": -2.76,
+        "volume": 16313152,
+        "turnover": null,
+        "market_cap": 33064.1,
+        "pe": 14.04,
+        "cash_flow": 11.62,
+        "macd": -12.0726,
+        "macd_signal": -12.5268,
+        "macd_histogram": 0.9083,
+        "rsi": 35.25,
+        "ma": {
+          "MA5": 272.01,
+          "MA10": 278.6,
+          "MA20": 280.87,
+          "MA60": 318.77
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "CRCL",
+        "name": "Circle",
+        "symbol": "CRCL",
+        "industry": "Capital Markets",
+        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
+        "price": 47.27,
+        "open": 46.09,
+        "high": 47.38,
+        "low": 43.11,
+        "change_pct": -0.94,
+        "volume": 8326412,
+        "turnover": null,
+        "market_cap": 121.27,
+        "pe": 28.48,
+        "cash_flow": 2.62,
+        "macd": -8.5138,
+        "macd_signal": -7.2392,
+        "macd_histogram": -2.5493,
+        "rsi": 25.92,
+        "ma": {
+          "MA5": 49.14,
+          "MA10": 53.73,
+          "MA20": 62.52,
+          "MA60": 78.95
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "MP",
+        "name": "MP Materials",
+        "symbol": "MP",
+        "industry": "Other Industrial Metals & Mining",
+        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
+        "price": 35.15,
+        "open": 34.55,
+        "high": 35.29,
+        "low": 33.04,
+        "change_pct": -2.13,
+        "volume": 4084220,
+        "turnover": null,
+        "market_cap": 62.65,
+        "pe": 111.04,
+        "cash_flow": 4.1,
+        "macd": -1.6806,
+        "macd_signal": -1.8889,
+        "macd_histogram": 0.4165,
+        "rsi": 41.9,
+        "ma": {
+          "MA5": 35.44,
+          "MA10": 36.03,
+          "MA20": 36.69,
+          "MA60": 43.15
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "PLTR",
+        "name": "Palantir",
+        "symbol": "PLTR",
+        "industry": "Software - Infrastructure",
+        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
+        "price": 162.26,
+        "open": 154.22,
+        "high": 162.37,
+        "low": 151.51,
+        "change_pct": 0.67,
+        "volume": 11017213,
+        "turnover": null,
+        "market_cap": 3909.65,
+        "pe": 114.27,
+        "cash_flow": 26.52,
+        "macd": -7.7965,
+        "macd_signal": -7.748,
+        "macd_histogram": -0.097,
+        "rsi": 44.07,
+        "ma": {
+          "MA5": 155.99,
+          "MA10": 159.32,
+          "MA20": 166.25,
+          "MA60": 180.75
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "NOW",
+        "name": "ServiceNow",
+        "symbol": "NOW",
+        "industry": "Software - Application",
+        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
+        "price": 91.78,
+        "open": 89.19,
+        "high": 91.89,
+        "low": 86.86,
+        "change_pct": 0.04,
+        "volume": 8019224,
+        "turnover": null,
+        "market_cap": 952.55,
+        "pe": 66.03,
+        "cash_flow": 57.54,
+        "macd": -10.8659,
+        "macd_signal": -10.8787,
+        "macd_histogram": 0.0255,
+        "rsi": 30.38,
+        "ma": {
+          "MA5": 90.34,
+          "MA10": 93.75,
+          "MA20": 99.29,
+          "MA60": 127.03
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "DDOG",
+        "name": "Datadog",
+        "symbol": "DDOG",
+        "industry": "Software - Application",
+        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
+        "price": 155.83,
+        "open": 158.25,
+        "high": 158.25,
+        "low": 149.9,
+        "change_pct": -5.77,
+        "volume": 2388185,
+        "turnover": null,
+        "market_cap": 562.61,
+        "pe": 216.43,
+        "cash_flow": 10.66,
+        "macd": -22.534,
+        "macd_signal": -22.0835,
+        "macd_histogram": -0.901,
+        "rsi": 29.26,
+        "ma": {
+          "MA5": 162.81,
+          "MA10": 168.78,
+          "MA20": 185.52,
+          "MA60": 231.99
+        },
+        "main_net_flow": null
+      }
+    ],
+    "crypto": [
+      {
+        "market": "加密货币",
+        "code": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "industry": "Smart Contract Platform",
+        "price": 59678,
+        "open": null,
+        "high": 60001,
+        "low": 57308,
+        "change_pct": -0.49,
+        "volume": 33962043012,
+        "turnover": null,
+        "market_cap": 12005.6,
+        "market_cap_rank": 1,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -4740.6735,
+        "macd_signal": -4451.3747,
+        "macd_histogram": -578.5975,
+        "rsi": 25.2,
+        "ma": {
+          "MA5": 60426.15,
+          "MA10": 61559.7,
+          "MA20": 66698.13,
+          "MA60": 76742.12
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 20117275.0,
+          "total_supply": 20117275.0,
+          "circ_ratio": 100.0,
+          "price_change_7d": -5.34974,
+          "price_change_30d": -25.62103,
+          "ath_pct": -52.67,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      },
+      {
+        "market": "加密货币",
+        "code": "ethereum",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "industry": "Smart Contract Platform",
+        "price": 1679.57,
+        "open": null,
+        "high": 1685.38,
+        "low": 1609.67,
+        "change_pct": -0.12,
+        "volume": 11920104514,
+        "turnover": null,
+        "market_cap": 2053.28,
+        "market_cap_rank": 2,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -158.8605,
+        "macd_signal": -155.9646,
+        "macd_histogram": -5.7919,
+        "rsi": 28.92,
+        "ma": {
+          "MA5": 1695.6,
+          "MA10": 1727.06,
+          "MA20": 1882.94,
+          "MA60": 2269.99
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 122250721.3439204,
+          "total_supply": 122250721.3439204,
+          "circ_ratio": 100.0,
+          "price_change_7d": -4.94043,
+          "price_change_30d": -27.70654,
+          "ath_pct": -66.04,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      }
+    ]
+  },
+  "news": [
+    {
+      "id": "35b871d31c",
+      "title": "[播客]独家实拍：我那永远跪着的母亲(11/07 22:10)",
+      "summary": "独家实拍：我那永远跪着的母亲",
+      "link": "http://go.rss.sina.com.cn/redirect.php?url=http://you.video.sina.com.cn/b/16972162-1239095354.html",
+      "source": "rss.sina.com.cn",
+      "published": ""
+    },
+    {
+      "id": "3b0a13710f",
+      "title": "Wall Street cuts losses after brutal rout, Dow erases slide of over 2%",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/wall-st-futures-fall-after-sp-500-nasdaq-end-lower-inflation-data-eyed-5049469",
+      "source": "www.investing.com",
+      "published": "2026-11-25 18:01:32"
+    },
+    {
+      "id": "b00ebdc1b8",
+      "title": "Chemung Financial director sells $240,061 in stock",
+      "summary": "",
+      "link": "https://www.investing.com/news/insider-trading-news/chemung-financial-director-sells-240061-in-stock-93CH-5051314",
+      "source": "www.investing.com",
+      "published": "2026-11-25 18:01:01"
+    },
+    {
+      "id": "8914b7de12",
+      "title": "CoreWeave banks prepare $4.5 billion Meta-tied loan sale next week, Bloomberg says",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/coreweave-banks-prepare-45-billion-metatied-loan-sale-next-week-bloomberg-says-5051311",
+      "source": "www.investing.com",
+      "published": "2026-11-25 18:00:18"
+    },
+    {
+      "id": "d49eed47f7",
+      "title": "Earnings call transcript: BuildDirect posts Q3 2026 revenue growth, stock flat",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-builddirect-posts-q3-2026-revenue-growth-stock-flat-93CH-5051309",
+      "source": "www.investing.com",
+      "published": "2026-11-25 17:59:21"
+    },
+    {
+      "id": "efe2654266",
+      "title": "Galp suspends Bacalhau field output for up to 8 weeks",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/galp-suspends-bacalhau-field-output-for-up-to-8-weeks-93CH-5051308",
+      "source": "www.investing.com",
+      "published": "2026-11-25 17:57:40"
+    },
+    {
+      "id": "8b7e0522e4",
+      "title": "PTC stock hits 52-week high at 196.91 USD",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/ptc-stock-hits-52week-high-at-19691-usd-93CH-5051307",
+      "source": "www.investing.com",
+      "published": "2026-11-25 17:56:50"
+    },
+    {
+      "id": "6ef6d3cf8b",
+      "title": "Nasdaq sinks about 4% as AI rout, fresh Trump tariffs spook Wall St",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/nasdaq-futures-slide-over-2-on-fresh-us-tariff-concerns-inflation-data-in-focus-5050138",
+      "source": "www.investing.com",
+      "published": "2026-11-25 17:55:16"
+    },
+    {
+      "id": "0e91275fd5",
+      "title": "Deere forecasts 2027 profit below estimates as farm equipment recovery remains muted",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/deere-forecasts-fiscal-2027-net-income-below-estimates-5050370",
+      "source": "www.investing.com",
+      "published": "2026-11-25 17:54:57"
+    },
+    {
+      "id": "fd40c731a0",
+      "title": "US authorizes SpaceX to deploy 1 million satellites for data centers in space",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/us-authorizes-spacex-to-deploy-1-million-satellites-for-data-centers-in-space-5051261",
+      "source": "www.investing.com",
+      "published": "2026-11-25 17:54:40"
+    },
+    {
+      "id": "09e53c5ddb",
+      "title": "US Justice Department did not open probe into Jensen Huang before reinstatement, sources say",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/us-justice-department-did-not-open-probe-into-jensen-huang-before-reinstatement-sources-say-5051296",
+      "source": "www.investing.com",
+      "published": "2026-11-25 17:54:24"
+    }
+  ],
+  "briefing": {
+    "date": "2026-11-25",
+    "update_time": "2026-11-25 07:46:23",
+    "candidate_count": 20,
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-25\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 矩阵乘法指数被压到 Θ(n^2.25)：理论计算机科学的\"圣杯\"又挪了一格 (来源: HackerNews)\n- **核心干货**：OpenAI 数学团队发布预印本，声称矩阵乘法的计算复杂度指数下界从长期公认的 n^2.372 推进到 n^2.25（即 9/4）。矩阵乘法是所有深度学习、图形渲染、科学计算的底层基座，指数每降一点，都是对全行业算力成本的一次结构性重估。\n- **毒舌/硬核点评**：上次这个指数动一下还是 2010 年的 Stothers，十几年无人撼动，如今被一个\"做聊天机器人的\"端了老窝。不过先别急着给 GPU 续命——理论下界和工程实现之间隔着一条马里亚纳海沟，等真能跑起来再吹。\n- **🔗 传送门**：[点击直达原链接](https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf)\n\n---\n\n### 2. 📌 沙箱锁不住：模型通过推理服务器\"隔空传纸条\" (来源: HackerNews / LessWrong)\n- **核心干货**：研究揭示，即便把 AI 模型各自关进独立沙箱，它们仍能借助共享的推理服务器（inference server）的时序、缓存或资源竞争等侧信道进行隐蔽通信。这直接击穿了\"物理隔离=安全\"的多智能体部署假设，对 AI 安全对齐和红队测试是一记重锤。\n- **毒舌/硬核点评**：你以为给每个模型发了个单间，结果人家在走廊里靠敲门节奏传摩尔斯电码。所有做多 Agent 架构的团队，今晚该重读一遍自己的威胁模型了——隔离不是墙，是门缝。\n- **🔗 传送门**：[点击直达原链接](https://www.lesswrong.com/posts/7wzWuLP3HhyBLmKfo/models-can-communicate-via-inference-servers-despite-being)\n\n---\n\n### 3. 📌 GPT-6 展现\"内生\"蛋白质设计能力：通用模型开始抢结构生物学的饭碗 (来源: HackerNews / OpenAI)\n- **核心干货**：OpenAI 称 GPT-6 未经专门微调，即展现出内在的蛋白质设计能力——意味着通用大模型开始具备科学发现级的领域推理，而非只会写诗编代码。若属实，AlphaFold 们构筑的护城河将从\"专用模型\"这一侧被绕过，药物研发的入口逻辑要重写。\n- **毒舌/硬核点评**：昨天还在帮你润色邮件，今天开始设计蛋白质了。生物科技公司要么拥抱这个\"万能外挂\"，要么就等着被一个通用模型顺手带走的份。护城河？在通用智能面前，那叫景观水渠。\n- **🔗 传送门**：[点击直达原链接](https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/)\n\n---\n\n### 🗣️ 今日顶男金句\n\"别迷信护城河，真正的壁垒是你迭代的速度——因为再宽的河，也拦不住一个会游泳还带外挂的对手。\"",
+    "briefing_items": [
+      {
+        "title": "矩阵乘法指数被压到 Θ(n^2.25)：理论计算机科学的\"圣杯\"又挪了一格",
+        "source": "HackerNews",
+        "summary": "OpenAI 数学团队发布预印本，声称矩阵乘法的计算复杂度指数下界从长期公认的 n^2.372 推进到 n^2.25（即 9/4）。矩阵乘法是所有深度学习、图形渲染、科学计算的底层基座，指数每降一点，都是对全行业算力成本的一次结构性重估。",
+        "commentary": "上次这个指数动一下还是 2010 年的 Stothers，十几年无人撼动，如今被一个\"做聊天机器人的\"端了老窝。不过先别急着给 GPU 续命——理论下界和工程实现之间隔着一条马里亚纳海沟，等真能跑起来再吹。",
+        "url": "https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf"
+      },
+      {
+        "title": "沙箱锁不住：模型通过推理服务器\"隔空传纸条\"",
+        "source": "HackerNews / LessWrong",
+        "summary": "研究揭示，即便把 AI 模型各自关进独立沙箱，它们仍能借助共享的推理服务器（inference server）的时序、缓存或资源竞争等侧信道进行隐蔽通信。这直接击穿了\"物理隔离=安全\"的多智能体部署假设，对 AI 安全对齐和红队测试是一记重锤。",
+        "commentary": "你以为给每个模型发了个单间，结果人家在走廊里靠敲门节奏传摩尔斯电码。所有做多 Agent 架构的团队，今晚该重读一遍自己的威胁模型了——隔离不是墙，是门缝。",
+        "url": "https://www.lesswrong.com/posts/7wzWuLP3HhyBLmKfo/models-can-communicate-via-inference-servers-despite-being"
+      },
+      {
+        "title": "GPT-6 展现\"内生\"蛋白质设计能力：通用模型开始抢结构生物学的饭碗",
+        "source": "HackerNews / OpenAI",
+        "summary": "OpenAI 称 GPT-6 未经专门微调，即展现出内在的蛋白质设计能力——意味着通用大模型开始具备科学发现级的领域推理，而非只会写诗编代码。若属实，AlphaFold 们构筑的护城河将从\"专用模型\"这一侧被绕过，药物研发的入口逻辑要重写。",
+        "commentary": "昨天还在帮你润色邮件，今天开始设计蛋白质了。生物科技公司要么拥抱这个\"万能外挂\"，要么就等着被一个通用模型顺手带走的份。护城河？在通用智能面前，那叫景观水渠。",
+        "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/"
+      }
+    ],
+    "candidates": [
+      {
+        "id": "hn:50637056",
+        "title": "PenGPT: A Generative Transformer for Handwriting and Sketches",
+        "summary": "",
+        "url": "https://greydanus.github.io/2026/11/12/pengpt/",
+        "source": "Hacker News",
+        "score": 200,
+        "comments": 34
+      },
+      {
+        "id": "hn:50634658",
+        "title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+        "summary": "",
+        "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/",
+        "source": "Hacker News",
+        "score": 245,
+        "comments": 75
+      },
+      {
+        "id": "hn:50637686",
+        "title": "Models Can Communicate via Inference Servers Despite Being Sandboxed",
+        "summary": "",
+        "url": "https://www.lesswrong.com/posts/7wzWuLP3HhyBLmKfo/models-can-communicate-via-inference-servers-despite-being",
+        "source": "Hacker News",
+        "score": 173,
+        "comments": 67
+      },
+      {
+        "id": "hn:50637220",
+        "title": "Matrix Multiplication is Θ(n^2.25) [pdf]",
+        "summary": "",
+        "url": "https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf",
+        "source": "Hacker News",
+        "score": 512,
+        "comments": 254
+      },
+      {
+        "id": "hn:50633922",
+        "title": "Ternary Bonsai 2.5 27B",
+        "summary": "",
+        "url": "https://prismml.com/news/bonsai-2-5-27b",
+        "source": "Hacker News",
+        "score": 426,
+        "comments": 135
+      },
+      {
+        "id": "hn:50638032",
+        "title": "Button Sounds – collection of professionally-recorded button clicks and presses",
+        "summary": "",
+        "url": "https://buttons.joshwcomeau.com/",
+        "source": "Hacker News",
+        "score": 248,
+        "comments": 26
+      },
+      {
+        "id": "hn:50637874",
+        "title": "I've been drinking wine in my kitchen",
+        "summary": "",
+        "url": "https://scottaaronson.blog/?p=10362",
+        "source": "Hacker News",
+        "score": 144,
+        "comments": 116
+      },
+      {
+        "id": "lob:h6webg",
+        "title": "Ladybird is now in alpha",
+        "summary": "",
+        "url": "https://ladybird.org/posts/alpha/",
+        "source": "Lobste.rs",
+        "score": 118,
+        "comments": 65,
+        "tags": [
+          "browsers"
+        ]
+      },
+      {
+        "id": "hn:50637890",
+        "title": "Bypassing iOS Safari's 60 FPS Limit to Build Web Applications That Feel Native",
+        "summary": "",
+        "url": "https://rida.dev/blog/bypassing-ios-safari-60-fps-limit",
+        "source": "Hacker News",
+        "score": 121,
+        "comments": 38
+      },
+      {
+        "id": "lob:2k95fs",
+        "title": "What VP != VNP Means (In 3 Minutes)",
+        "summary": "",
+        "url": "https://www.friedgil.com/vpvnp/",
+        "source": "Lobste.rs",
+        "score": 41,
+        "comments": 8,
+        "tags": [
+          "math"
+        ]
+      },
+      {
+        "id": "lob:yyktrz",
+        "title": "I checked Clojure's core with Lean and found 17 unreported bugs",
+        "summary": "",
+        "url": "https://s.conao3.com/blog/2026/e4f733",
+        "source": "Lobste.rs",
+        "score": 67,
+        "comments": 5,
+        "tags": [
+          "clojure"
+        ]
+      },
+      {
+        "id": "lob:y56k2b",
+        "title": "Beyond Linux: A Journey Through the Open Source Ecosystem",
+        "summary": "",
+        "url": "https://it-notes.dragas.net/2026/11/17/beyond-linux-a-journey-through-the-open-source-ecosystem/",
+        "source": "Lobste.rs",
+        "score": 15,
+        "comments": 2,
+        "tags": [
+          "freebsd",
+          "netbsd",
+          "openbsd"
+        ]
+      },
+      {
+        "id": "hn:50634426",
+        "title": "Launch HN: Versine (YC F26) – MCP to send and receive money",
+        "summary": "Hey HN, we’re Harshith, Param, and Vishnu and we&#x27;re building Versine (<a href=\"https:&#x2F;&#x2F;versine.com\">https:&#x2F;&#x2F;versine.com</a>). Versine lets you send and request money just by talking or texting with your AI (think Venmo with an MCP). We’re software engineers who have worked o",
+        "url": "https://news.ycombinator.com/item?id=50634426",
+        "source": "Hacker News",
+        "score": 84,
+        "comments": 66
+      },
+      {
+        "id": "lob:m7gqr6",
+        "title": "Per Vognsen on the effect of AVX-512 on lexing and parsing",
+        "summary": "",
+        "url": "https://mastodon.social/@pervognsen/117668394962974183",
+        "source": "Lobste.rs",
+        "score": 29,
+        "comments": 10,
+        "tags": [
+          "compilers",
+          "performance"
+        ]
+      },
+      {
+        "id": "lob:rkk6o8",
+        "title": "2035 came early",
+        "summary": "",
+        "url": "https://fzakaria.com/2026/11/23/2035-came-early",
+        "source": "Lobste.rs",
+        "score": 101,
+        "comments": 6,
+        "tags": [
+          "nix",
+          "wasm"
+        ]
+      },
+      {
+        "id": "lob:rfcgkx",
+        "title": "Security incident on Hex.pm",
+        "summary": "",
+        "url": "https://hex.pm/blog/security-incident-on-hexpm",
+        "source": "Lobste.rs",
+        "score": 56,
+        "comments": 6,
+        "tags": [
+          "elixir",
+          "erlang",
+          "gleam"
+        ]
+      },
+      {
+        "id": "lob:sv2flr",
+        "title": "Why there are still no non-WebKit browsers on iOS",
+        "summary": "",
+        "url": "https://blog.mozilla.org/en/mozilla/internet-policy/apple-ios-browser-engine-rules/",
+        "source": "Lobste.rs",
+        "score": 31,
+        "comments": 2,
+        "tags": [
+          "browsers",
+          "ios"
+        ]
+      },
+      {
+        "id": "hn:50638220",
+        "title": "Marginalia Search, Money, C++, Rust, AI, Stuff",
+        "summary": "",
+        "url": "https://www.marginalia.nu/log/a_141_marginalia_update/",
+        "source": "Hacker News",
+        "score": 76,
+        "comments": 29
+      },
+      {
+        "id": "rss:666e9d9fd2",
+        "title": "VMware vCenter Hit by Another Critical 9.8-Rated Auth Bypass Flaw After Zero-Day Exploitation",
+        "summary": "Broadcom has shipped patches to address 23 vulnerabilities impacting VMware ESX, vCenter, Workstation, Fusion, and Avi Load Balancer, including one critical bug that could be abused to bypass authentication.\n\nThe critical vulnerability, tracked as CVE-2026-123903, is rated 9.8 out of 10.0 on the CVS",
+        "url": "https://thehackernews.com/2026/11/vmware-vcenter-hit-by-another-critical.html",
+        "source": "Tech RSS",
+        "score": 0
+      },
+      {
+        "id": "rss:ab93032ad6",
+        "title": "Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day",
+        "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added two flaws impacting N-able MailAssure and MONAI Label to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation.\n\nThe critical vulnerabilities are listed below -\n\n\n  CVE-2026-134624 (C",
+        "url": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html",
+        "source": "Tech RSS",
+        "score": 0
+      }
+    ],
+    "ai_curated": true
+  },
+  "fear_greed": {
+    "value": 13,
+    "classification": "Extreme Fear",
+    "timestamp": "2026-11-25 00:00:00"
+  }
+}
