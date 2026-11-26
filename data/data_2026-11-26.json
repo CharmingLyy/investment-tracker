@@ -1,0 +1,833 @@
+{
+  "update_time": "2026-11-26 18:00:53",
+  "stocks": {
+    "a_stocks": [
+      {
+        "market": "A股",
+        "code": "002050",
+        "name": "三花智控",
+        "symbol": "sz.002050",
+        "industry": null,
+        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
+        "price": 31.0,
+        "open": 32.35,
+        "high": 32.47,
+        "low": 30.6,
+        "change_pct": -2.85,
+        "volume": 55442557,
+        "turnover": 17.31,
+        "market_cap": null,
+        "pe": 33.55,
+        "cash_flow": null,
+        "macd": -0.5307,
+        "macd_signal": -0.2984,
+        "macd_histogram": -0.4646,
+        "rsi": 40.42,
+        "ma": {
+          "MA5": 32.51,
+          "MA10": 32.88,
+          "MA20": 33.61,
+          "MA60": 34.27
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
+        "price": 5.65,
+        "open": 5.75,
+        "high": 5.75,
+        "low": 5.62,
+        "change_pct": -2.08,
+        "volume": 38561752,
+        "turnover": 2.19,
+        "market_cap": null,
+        "pe": 63.44,
+        "cash_flow": null,
+        "macd": -0.1288,
+        "macd_signal": -0.1134,
+        "macd_histogram": -0.0307,
+        "rsi": 23.33,
+        "ma": {
+          "MA5": 5.8,
+          "MA10": 5.84,
+          "MA20": 5.97,
+          "MA60": 6.28
+        },
+        "main_net_flow": null
+      }
+    ],
+    "hk_stocks": [
+      {
+        "market": "港股",
+        "code": "01810",
+        "name": "小米集团-W",
+        "symbol": "01810",
+        "industry": "Consumer Electronics",
+        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
+        "price": NaN,
+        "open": null,
+        "high": null,
+        "low": null,
+        "change_pct": NaN,
+        "volume": 127000581,
+        "turnover": null,
+        "market_cap": 6841.84,
+        "pe": 19.56,
+        "cash_flow": 360.82,
+        "macd": 0.086,
+        "macd_signal": 0.4499,
+        "macd_histogram": -0.7277,
+        "rsi": 41.25,
+        "ma": {
+          "MA5": null,
+          "MA10": null,
+          "MA20": null,
+          "MA60": null
+        },
+        "main_net_flow": null
+      }
+    ],
+    "us_stocks": [
+      {
+        "market": "美股",
+        "code": "NVDA",
+        "name": "NVIDIA",
+        "symbol": "NVDA",
+        "industry": "Semiconductors",
+        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
+        "price": 149.3,
+        "open": 144.06,
+        "high": 150.37,
+        "low": 141.17,
+        "change_pct": -3.91,
+        "volume": 363377300,
+        "turnover": null,
+        "market_cap": 36051.47,
+        "pe": 16.04,
+        "cash_flow": 992.41,
+        "macd": -16.9155,
+        "macd_signal": -16.2398,
+        "macd_histogram": -1.3513,
+        "rsi": 37.45,
+        "ma": {
+          "MA5": 148.25,
+          "MA10": 153.28,
+          "MA20": 172.48,
+          "MA60": 206.46
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "GOOG",
+        "name": "Alphabet (Google)",
+        "symbol": "GOOG",
+        "industry": "Internet Content & Information",
+        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
+        "price": 270.98,
+        "open": 263.32,
+        "high": 271.6,
+        "low": 260.69,
+        "change_pct": -2.02,
+        "volume": 27832500,
+        "turnover": null,
+        "market_cap": 33314.28,
+        "pe": 14.15,
+        "cash_flow": 11.62,
+        "macd": -11.9103,
+        "macd_signal": -12.4943,
+        "macd_histogram": 1.1681,
+        "rsi": 36.13,
+        "ma": {
+          "MA5": 272.42,
+          "MA10": 278.8,
+          "MA20": 280.97,
+          "MA60": 318.8
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "CRCL",
+        "name": "Circle",
+        "symbol": "CRCL",
+        "industry": "Capital Markets",
+        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
+        "price": 48.27,
+        "open": 46.09,
+        "high": 48.52,
+        "low": 43.11,
+        "change_pct": 1.15,
+        "volume": 13080500,
+        "turnover": null,
+        "market_cap": 123.84,
+        "pe": 29.08,
+        "cash_flow": 2.62,
+        "macd": -8.4341,
+        "macd_signal": -7.2233,
+        "macd_histogram": -2.4216,
+        "rsi": 27.29,
+        "ma": {
+          "MA5": 49.34,
+          "MA10": 53.83,
+          "MA20": 62.57,
+          "MA60": 78.97
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "MP",
+        "name": "MP Materials",
+        "symbol": "MP",
+        "industry": "Other Industrial Metals & Mining",
+        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
+        "price": 35.3,
+        "open": 34.55,
+        "high": 35.6,
+        "low": 33.03,
+        "change_pct": -1.7,
+        "volume": 6752300,
+        "turnover": null,
+        "market_cap": 62.93,
+        "pe": 111.53,
+        "cash_flow": 4.1,
+        "macd": -1.6683,
+        "macd_signal": -1.8864,
+        "macd_histogram": 0.4363,
+        "rsi": 42.26,
+        "ma": {
+          "MA5": 35.47,
+          "MA10": 36.05,
+          "MA20": 36.69,
+          "MA60": 43.16
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "PLTR",
+        "name": "Palantir",
+        "symbol": "PLTR",
+        "industry": "Software - Infrastructure",
+        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
+        "price": 163.59,
+        "open": 154.22,
+        "high": 164.75,
+        "low": 151.51,
+        "change_pct": 1.5,
+        "volume": 21407000,
+        "turnover": null,
+        "market_cap": 3941.7,
+        "pe": 115.2,
+        "cash_flow": 26.52,
+        "macd": -7.6904,
+        "macd_signal": -7.7268,
+        "macd_histogram": 0.0727,
+        "rsi": 45.13,
+        "ma": {
+          "MA5": 156.26,
+          "MA10": 159.45,
+          "MA20": 166.31,
+          "MA60": 180.77
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "NOW",
+        "name": "ServiceNow",
+        "symbol": "NOW",
+        "industry": "Software - Application",
+        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
+        "price": 92.16,
+        "open": 89.19,
+        "high": 92.81,
+        "low": 86.85,
+        "change_pct": 0.46,
+        "volume": 15479100,
+        "turnover": null,
+        "market_cap": 956.54,
+        "pe": 66.3,
+        "cash_flow": 57.54,
+        "macd": -10.8352,
+        "macd_signal": -10.8725,
+        "macd_histogram": 0.0746,
+        "rsi": 31.0,
+        "ma": {
+          "MA5": 90.42,
+          "MA10": 93.79,
+          "MA20": 99.31,
+          "MA60": 127.04
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "DDOG",
+        "name": "Datadog",
+        "symbol": "DDOG",
+        "industry": "Software - Application",
+        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
+        "price": 158.25,
+        "open": 158.25,
+        "high": 158.65,
+        "low": 149.84,
+        "change_pct": -4.31,
+        "volume": 5786000,
+        "turnover": null,
+        "market_cap": 571.35,
+        "pe": 219.79,
+        "cash_flow": 10.66,
+        "macd": -22.341,
+        "macd_signal": -22.0449,
+        "macd_histogram": -0.5921,
+        "rsi": 29.94,
+        "ma": {
+          "MA5": 163.3,
+          "MA10": 169.03,
+          "MA20": 185.64,
+          "MA60": 232.04
+        },
+        "main_net_flow": null
+      }
+    ],
+    "crypto": [
+      {
+        "market": "加密货币",
+        "code": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "industry": "Smart Contract Platform",
+        "price": 60460,
+        "open": null,
+        "high": 61375,
+        "low": 59470,
+        "change_pct": 1.55,
+        "volume": 27722918804,
+        "turnover": null,
+        "market_cap": 12161.45,
+        "market_cap_rank": 1,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -4553.4471,
+        "macd_signal": -4465.1122,
+        "macd_histogram": -176.6699,
+        "rsi": 27.74,
+        "ma": {
+          "MA5": 60598.31,
+          "MA10": 61173.83,
+          "MA20": 65958.47,
+          "MA60": 76351.01
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 20117787.0,
+          "total_supply": 20117787.0,
+          "circ_ratio": 100.0,
+          "price_change_7d": -3.65631,
+          "price_change_30d": -24.94983,
+          "ath_pct": -52.05,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      },
+      {
+        "market": "加密货币",
+        "code": "ethereum",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "industry": "Smart Contract Platform",
+        "price": 1692.29,
+        "open": null,
+        "high": 1721.37,
+        "low": 1669.78,
+        "change_pct": 0.89,
+        "volume": 9045507835,
+        "turnover": null,
+        "market_cap": 2068.62,
+        "market_cap_rank": 2,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -153.042,
+        "macd_signal": -155.3255,
+        "macd_histogram": 4.567,
+        "rsi": 29.61,
+        "ma": {
+          "MA5": 1698.36,
+          "MA10": 1714.78,
+          "MA20": 1855.96,
+          "MA60": 2253.47
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 122253671.96393436,
+          "total_supply": 122253671.96393436,
+          "circ_ratio": 100.0,
+          "price_change_7d": -4.38014,
+          "price_change_30d": -27.80285,
+          "ath_pct": -65.79,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      }
+    ]
+  },
+  "news": [
+    {
+      "id": "35b871d31c",
+      "title": "[播客]独家实拍：我那永远跪着的母亲(11/07 22:10)",
+      "summary": "独家实拍：我那永远跪着的母亲",
+      "link": "http://go.rss.sina.com.cn/redirect.php?url=http://you.video.sina.com.cn/b/16972162-1239095354.html",
+      "source": "rss.sina.com.cn",
+      "published": ""
+    },
+    {
+      "id": "a3185b6db0",
+      "title": "I hate that Jensen Huang is back at Nvidia, but I love what it’s done for my 401(k). Am I a hypocrite?",
+      "summary": "Doing nothing and maintaining an even temperament is often the work of gods.",
+      "link": "https://www.marketwatch.com/story/i-hate-that-jensen-huang-is-back-at-nvidia-but-i-love-what-its-done-for-my-401-k-am-i-a-hypocrite-f63c0303?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 26 Nov 2026 16:30:00 GMT"
+    },
+    {
+      "id": "0bd14c00dc",
+      "title": "I’m in my 70s and buying a new BMW X1. Should I put my only son on the title?",
+      "summary": "“Given my age, I never make a major new purchase without thinking about the future.”",
+      "link": "https://www.marketwatch.com/story/im-in-my-70s-and-buying-a-new-bmw-x1-should-i-put-my-only-son-on-the-title-25731040?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 26 Nov 2026 16:00:00 GMT"
+    },
+    {
+      "id": "b564017910",
+      "title": "We are living in perilous times if Nvidia CEO Jensen Huang dictates your 401(k) balance",
+      "summary": "Why did a futurist with Huang’s prescient vision build a company where all roads lead to him?",
+      "link": "https://www.marketwatch.com/story/we-are-living-in-perilous-times-if-nvidias-jensen-huang-dictates-your-401-k-balance-e0942d1e?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 26 Nov 2026 15:30:00 GMT"
+    },
+    {
+      "id": "f0a59e9733",
+      "title": "My husband secretly sends his ex-wife $1,500 a month after she lost her job. We have $2.4 million saved. Has he lied by omission?",
+      "summary": "“He explained that he wasn’t trying to hide the payment, but his former wife lost her job in a medical billing company.”",
+      "link": "https://www.marketwatch.com/story/my-husband-secretly-sends-his-ex-wife-1-500-a-month-after-she-lost-her-job-we-have-2-4-million-saved-has-he-lied-by-omission-ede1972a?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 26 Nov 2026 15:13:00 GMT"
+    },
+    {
+      "id": "24e4d515dc",
+      "title": "This retired professor has reinvented himself — as a Taylor Swift scholar",
+      "summary": "His niece convinced him to spend his retirement analyzing Taylor Swift lyrics. Now he’s a successful podcaster at 72.",
+      "link": "https://www.marketwatch.com/story/this-retired-professor-has-reinvented-himself-as-a-taylor-swift-scholar-88456c8d?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 26 Nov 2026 14:35:00 GMT"
+    },
+    {
+      "id": "c17b18188d",
+      "title": "Nvidia and the whole AI trade aren’t out of the woods — not by a long shot",
+      "summary": "The ‘Bank of AI’ faces a host of troubles ahead.",
+      "link": "https://www.marketwatch.com/story/nvidia-and-the-whole-ai-trade-arent-out-of-the-woods-not-by-a-long-shot-bccc0025?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 26 Nov 2026 14:00:00 GMT"
+    },
+    {
+      "id": "4710197f1e",
+      "title": "Futures point to Black Friday gains on Wall Street as global markets welcome U.S. resilience",
+      "summary": "A rebound off lows for the S&amp;P 500 on Wednesday calms bourses after the tech washout.",
+      "link": "https://www.marketwatch.com/story/futures-point-to-black-friday-gains-for-wall-street-as-global-markets-welcome-u-s-resilience-ad6bcef2?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 26 Nov 2026 13:41:00 GMT"
+    },
+    {
+      "id": "6cc9afaeef",
+      "title": "Roth IRA conversions aren’t free money. Watch out for these 5 costly mistakes.",
+      "summary": "Do it poorly, and you trigger taxes you didn’t even know existed.",
+      "link": "https://www.marketwatch.com/story/roth-ira-conversions-arent-free-money-watch-out-for-these-5-costly-mistakes-39b182d3?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 26 Nov 2026 13:24:00 GMT"
+    },
+    {
+      "id": "9b5c2892e6",
+      "title": "‘I felt so seen’: Why families across America are laughing — and crying — over SNL’s ‘Sister’ sketch",
+      "summary": "The late-night comedy sketch does the impossible by making female caregivers feel seen.",
+      "link": "https://www.marketwatch.com/story/so-sad-and-so-true-has-your-family-talked-about-snls-sister-sketch-yet-19bf9d67?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 26 Nov 2026 13:06:00 GMT"
+    },
+    {
+      "id": "0b8c72614e",
+      "title": "Capital preservation rather than chasing the market is how hedge funds are negotiating this volatility",
+      "summary": "After a strong first half, performance for the hedge fund sector has dipped in the second half, and Goldman Sachs expects the investor class to try and hold onto what they have for now.",
+      "link": "https://www.marketwatch.com/story/capital-preservation-rather-than-chasing-the-market-higher-is-how-hedge-funds-are-negotiating-market-volatility-f4288b71?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Thu, 26 Nov 2026 12:37:00 GMT"
+    },
+    {
+      "id": "c6f176504b",
+      "title": "Pila Pharma at Stora Aktiedagarna 2026: human trial reset",
+      "summary": "",
+      "link": "https://www.investing.com/news/transcripts/pila-pharma-at-stora-aktiedagarna-2026-human-trial-reset-93CH-5052659",
+      "source": "www.investing.com",
+      "published": "2026-11-26 17:45:25"
+    },
+    {
+      "id": "786c92de58",
+      "title": "Mueller Industries director sells $103,020 in common stock",
+      "summary": "",
+      "link": "https://www.investing.com/news/insider-trading-news/mueller-industries-director-sells-103020-in-common-stock-93CH-5052657",
+      "source": "www.investing.com",
+      "published": "2026-11-26 17:31:25"
+    },
+    {
+      "id": "d86b144ec8",
+      "title": "Euro countries pick Spain’s De Cos as ECB chief, Costa says",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/euro-countries-pick-spains-de-cos-as-ecb-chief-costa-says-5052656",
+      "source": "www.investing.com",
+      "published": "2026-11-26 17:30:24"
+    },
+    {
+      "id": "9dfc928a7f",
+      "title": "European stocks end higher as benign U.S. tariffs, Thanksgiving lull offer relief",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/european-shares-as-benign-us-tariffs-and-thanksgiving-lull-offer-relief-5052089",
+      "source": "www.investing.com",
+      "published": "2026-11-26 17:18:55"
+    },
+    {
+      "id": "b4940354cb",
+      "title": "Mexico urges Asian trade partners to crack down on tariff dodging",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/mexico-urges-asian-trade-partners-to-crack-down-on-tariff-dodging-5052646",
+      "source": "www.investing.com",
+      "published": "2026-11-26 17:12:43"
+    },
+    {
+      "id": "a4326e6cbc",
+      "title": "U.K. stocks higher at close of trade; Investing.com United Kingdom 100 up 1.88%",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/uk-stocks-higher-at-close-of-trade-investingcom-united-kingdom-100-up-188-5052644",
+      "source": "www.investing.com",
+      "published": "2026-11-26 17:08:40"
+    },
+    {
+      "id": "36f6d729be",
+      "title": "Spain stocks higher at close of trade; IBEX 35 up 2.35%",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/spain-stocks-higher-at-close-of-trade-ibex-35-up-235-5052643",
+      "source": "www.investing.com",
+      "published": "2026-11-26 17:08:17"
+    },
+    {
+      "id": "21a23841bb",
+      "title": "Portugal stocks higher at close of trade; PSI up 1.33%",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/portugal-stocks-higher-at-close-of-trade-psi-up-133-5052642",
+      "source": "www.investing.com",
+      "published": "2026-11-26 17:07:54"
+    },
+    {
+      "id": "399e61879d",
+      "title": "Netherlands stocks higher at close of trade; AEX up 1.86%",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/netherlands-stocks-higher-at-close-of-trade-aex-up-186-5052641",
+      "source": "www.investing.com",
+      "published": "2026-11-26 17:07:29"
+    },
+    {
+      "id": "cdfa677373",
+      "title": "Italy stocks higher at close of trade; Investing.com Italy 40 up 2.47%",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/italy-stocks-higher-at-close-of-trade-investingcom-italy-40-up-247-5052640",
+      "source": "www.investing.com",
+      "published": "2026-11-26 17:07:05"
+    }
+  ],
+  "briefing": {
+    "date": "2026-11-26",
+    "update_time": "2026-11-26 07:37:35",
+    "candidate_count": 20,
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-26\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 矩阵乘法指数正式推进到 9/4：理论计算机科学的\"圣杯\"被敲开一道缝 (来源: HackerNews / Scott Aaronson 博客)\n- **核心干货**：Scott Aaronson 发了一篇标题激动到失态的博文（\"Holy shit\"×4），指向一项关于矩阵乘法指数的新成果——长期停滞在 2.372 附近的 ω 值，正被推向理论下界 2 的方向，配套论文《The matrix multiplication exponent is nine fourths》同步流出。这不是工程优化，是算法复杂度的底层突破，一旦成立，未来所有依赖大规模矩阵运算的 AI 训练、科学计算、密码学都将被重写成本模型。\n- **毒舌/硬核点评**：HN 上 1172 条评论里大概有 1160 条看不懂证明但坚决点赞——这就是理论 CS 的浪漫：99% 的人看不懂，但 100% 的人都知道它重要。别急着庆祝，先等 Lean 形式化验证过了再说。\n- **🔗 传送门**：[点击直达原链接](https://scottaaronson.blog/?p=10379)\n\n---\n\n### 2. 📌 1Password 安全事件：当\"卖保险的\"自己家着火了 (来源: HackerNews / 1Password 官方博客)\n- **核心干货**：1Password 官方发布 11 月安全事件更新，HN 上 1360 分、570 条评论炸锅。密码管理器是整个数字身份体系的\"根信任\"，它出事不是一家公司的事，而是所有用户的密钥、凭证、二次验证链条都可能被牵连。官方措辞再温和，也掩盖不了一个事实：安全行业最不该发生的翻车，恰恰发生在最不该翻车的地方。\n- **毒舌/硬核点评**：卖锁的公司被撬了，这剧情比任何恐怖片都吓人。建议所有用户立刻检查自己的恢复密钥和 2FA 备份——毕竟把全部身家托付给一个 App，本质上和把家门钥匙挂在门口没区别。\n- **🔗 传送门**：[点击直达原链接](https://1password.com/blog/update-on-nov-2026-security-incident)\n\n---\n\n### 3. 📌 GPT-6.2 Astra 攻破 Google 码农的 Code Golf 纪录 (来源: HackerNews / 作者博客)\n- **核心干货**：作者回忆 2015 年在 Google 时，一群码农每周为省一个字节绞尽脑汁，总有人能写出更短的解。如今 GPT-6.2 Astra 成为首个在 code golf 基准上击败 Google 人类纪录的模型——这不是\"能写代码\"，而是在极致压缩、极限优化这种人类硬核竞技场上正面碾压。同时另一条情报显示 OpenAI 正在削减 GPT-6.2 用量（Astra 限额消耗快 40%），算力紧张与能力跃升同时发生，意味深长。\n- **毒舌/硬核点评**：码农卷了十年省下的那个字节，AI 一秒就给你省了——但代价是它烧的算力够你写一万年。Code golf 冠军奖杯还没捂热，OpenAI 就开始限流了，这叫\"赢麻了但也快烧穷了\"。\n- **🔗 传送门**：[点击直达原链接](https://bjin.github.io/go-codegolf-benchmark/#leaderboard)\n\n---\n\n### 🗣️ 今日顶男金句\n> 理论突破靠的是有人愿意啃十年冷板凳，工程落地靠的是有人愿意烧十年电费——而你今天要做的，是先把手头那行烂代码改对。",
+    "briefing_items": [
+      {
+        "title": "矩阵乘法指数正式推进到 9/4：理论计算机科学的\"圣杯\"被敲开一道缝",
+        "source": "HackerNews / Scott Aaronson 博客",
+        "summary": "Scott Aaronson 发了一篇标题激动到失态的博文（\"Holy shit\"×4），指向一项关于矩阵乘法指数的新成果——长期停滞在 2.372 附近的 ω 值，正被推向理论下界 2 的方向，配套论文《The matrix multiplication exponent is nine fourths》同步流出。这不是工程优化，是算法复杂度的底层突破，一旦成立，未来所有依赖大规模矩阵运算的 AI 训练、科学计算、密码学都将被重写成本模型。",
+        "commentary": "HN 上 1172 条评论里大概有 1160 条看不懂证明但坚决点赞——这就是理论 CS 的浪漫：99% 的人看不懂，但 100% 的人都知道它重要。别急着庆祝，先等 Lean 形式化验证过了再说。",
+        "url": "https://scottaaronson.blog/?p=10379"
+      },
+      {
+        "title": "1Password 安全事件：当\"卖保险的\"自己家着火了",
+        "source": "HackerNews / 1Password 官方博客",
+        "summary": "1Password 官方发布 11 月安全事件更新，HN 上 1360 分、570 条评论炸锅。密码管理器是整个数字身份体系的\"根信任\"，它出事不是一家公司的事，而是所有用户的密钥、凭证、二次验证链条都可能被牵连。官方措辞再温和，也掩盖不了一个事实：安全行业最不该发生的翻车，恰恰发生在最不该翻车的地方。",
+        "commentary": "卖锁的公司被撬了，这剧情比任何恐怖片都吓人。建议所有用户立刻检查自己的恢复密钥和 2FA 备份——毕竟把全部身家托付给一个 App，本质上和把家门钥匙挂在门口没区别。",
+        "url": "https://1password.com/blog/update-on-nov-2026-security-incident"
+      },
+      {
+        "title": "GPT-6.2 Astra 攻破 Google 码农的 Code Golf 纪录",
+        "source": "HackerNews / 作者博客",
+        "summary": "作者回忆 2015 年在 Google 时，一群码农每周为省一个字节绞尽脑汁，总有人能写出更短的解。如今 GPT-6.2 Astra 成为首个在 code golf 基准上击败 Google 人类纪录的模型——这不是\"能写代码\"，而是在极致压缩、极限优化这种人类硬核竞技场上正面碾压。同时另一条情报显示 OpenAI 正在削减 GPT-6.2 用量（Astra 限额消耗快 40%），算力紧张与能力跃升同时发生，意味深长。",
+        "commentary": "码农卷了十年省下的那个字节，AI 一秒就给你省了——但代价是它烧的算力够你写一万年。Code golf 冠军奖杯还没捂热，OpenAI 就开始限流了，这叫\"赢麻了但也快烧穷了\"。",
+        "url": "https://bjin.github.io/go-codegolf-benchmark/#leaderboard"
+      },
+      {
+        "quote": "理论突破靠的是有人愿意啃十年冷板凳，工程落地靠的是有人愿意烧十年电费——而你今天要做的，是先把手头那行烂代码改对。"
+      }
+    ],
+    "candidates": [
+      {
+        "id": "hn:50647673",
+        "title": "The New York Times warns photographers not to update Photoshop over AI features",
+        "summary": "<a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;pcUgy\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;pcUgy</a>",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
+        "source": "Hacker News",
+        "score": 328,
+        "comments": 280
+      },
+      {
+        "id": "hn:50649864",
+        "title": "Tell HN: Lots of Ask HNs again",
+        "summary": "There have been questions about why the &#x2F;ask page (<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;ask\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;ask</a>) was running dry of Ask HNs - e.g.:<p><i>Ask HN: Why is Ask HN only showing me 14 posts?</i> - <a href=\"https:&#x2F;&#x2F;news.ycombin",
+        "url": "https://news.ycombinator.com/item?id=50649864",
+        "source": "Hacker News",
+        "score": 236,
+        "comments": 87
+      },
+      {
+        "id": "hn:50601280",
+        "title": "GPT-6.2 Astra is the first model to beat Googlers' code golf records",
+        "summary": "Back in 2015, when I was still at Google, there was a small group of code-golf enthusiasts spending hours trying to save just one byte on their solutions for weekly code-golf problems. No matter how hard you tried, there always seemed to be another Googler who found a shorter solution. And once a pr",
+        "url": "https://bjin.github.io/go-codegolf-benchmark/#leaderboard",
+        "source": "Hacker News",
+        "score": 355,
+        "comments": 97
+      },
+      {
+        "id": "hn:50651117",
+        "title": "OpenAI cuts GPT-6.2 usage: Astra hits limits 40% faster, Sol 25% faster",
+        "summary": "",
+        "url": "https://twitter.com/thsottiaux/status/2125784147889393806",
+        "source": "Hacker News",
+        "score": 170,
+        "comments": 88
+      },
+      {
+        "id": "hn:50646108",
+        "title": "Holy shit holy shit holy shit holy shit: The magnitude of what’s now happening",
+        "summary": "See also <i>The matrix multiplication exponent is nine fourths [pdf]</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50637220\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50637220</a>",
+        "url": "https://scottaaronson.blog/?p=10379",
+        "source": "Hacker News",
+        "score": 1355,
+        "comments": 1172
+      },
+      {
+        "id": "hn:50648050",
+        "title": "Much shorter version of GRH Lean verification from Anthropic",
+        "summary": "",
+        "url": "https://github.com/lsernau/grh-lean",
+        "source": "Hacker News",
+        "score": 421,
+        "comments": 211
+      },
+      {
+        "id": "hn:50647181",
+        "title": "Slow Ubuntu security response times",
+        "summary": "",
+        "url": "https://www.openwall.com/lists/oss-security/2026/11/25/9",
+        "source": "Hacker News",
+        "score": 257,
+        "comments": 110
+      },
+      {
+        "id": "hn:50643129",
+        "title": "A few questions for the guy who went snorkeling in a Home Depot retention pond",
+        "summary": "",
+        "url": "https://www.vox.com/down-to-earth/511999/home-depot-retention-pond-snorkel-joseph-ricketts",
+        "source": "Hacker News",
+        "score": 469,
+        "comments": 113
+      },
+      {
+        "id": "lob:srb0dp",
+        "title": "Marginalia Search, Money, C++, Rust, AI, stuff",
+        "summary": "",
+        "url": "https://www.marginalia.nu/log/a_141_marginalia_update/",
+        "source": "Lobste.rs",
+        "score": 107,
+        "comments": 21,
+        "tags": [
+          "c++",
+          "java",
+          "performance"
+        ]
+      },
+      {
+        "id": "lob:sv2flr",
+        "title": "Why there are still no non-WebKit browsers on iOS",
+        "summary": "",
+        "url": "https://blog.mozilla.org/en/mozilla/internet-policy/apple-ios-browser-engine-rules/",
+        "source": "Lobste.rs",
+        "score": 83,
+        "comments": 21,
+        "tags": [
+          "browsers",
+          "ios"
+        ]
+      },
+      {
+        "id": "hn:50644817",
+        "title": "1Password Security Incident",
+        "summary": "",
+        "url": "https://1password.com/blog/update-on-nov-2026-security-incident",
+        "source": "Hacker News",
+        "score": 1360,
+        "comments": 570
+      },
+      {
+        "id": "lob:lyyksp",
+        "title": "Optimizing Rustc's next trait solver",
+        "summary": "",
+        "url": "https://donsz.nl/blog/optimizing-rustcs-next-trait-solver",
+        "source": "Lobste.rs",
+        "score": 49,
+        "comments": 7,
+        "tags": [
+          "compilers",
+          "performance",
+          "rust"
+        ]
+      },
+      {
+        "id": "lob:sj2pkv",
+        "title": "Abolish Lock Poisoning",
+        "summary": "",
+        "url": "https://lucumr.pocoo.org/2026/11/25/poisoning/",
+        "source": "Lobste.rs",
+        "score": 49,
+        "comments": 74,
+        "tags": [
+          "rust"
+        ]
+      },
+      {
+        "id": "lob:em9zdb",
+        "title": "Pokemon Childhood Version: A romhack where Mew is under the truck",
+        "summary": "",
+        "url": "https://wheybags.com/blog/pokemon_childhood_version.html",
+        "source": "Lobste.rs",
+        "score": 76,
+        "comments": 5,
+        "tags": [
+          "assembly",
+          "games"
+        ]
+      },
+      {
+        "id": "hn:50650892",
+        "title": "Minipg: PostgreSQL as a Single Executable",
+        "summary": "",
+        "url": "https://progrium.github.io/minipg/",
+        "source": "Hacker News",
+        "score": 83,
+        "comments": 14
+      },
+      {
+        "id": "arxiv:2611.34935v1",
+        "title": "Can image generation help visual reasoning? An empirical study",
+        "summary": "Language models think in words; then multimodal models might think in images. We test whether a generated helper improves the answer to a visual question. A model describes the helper it needs and then answers using the original and generated images together. Across 13 vision-language model and gene",
+        "url": "https://arxiv.org/abs/2611.34935v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.LG",
+          "cs.CL",
+          "cs.CV"
+        ],
+        "arxiv_id": "2611.34935v1"
+      },
+      {
+        "id": "arxiv:2611.34928v1",
+        "title": "Diverse Alternative Reasoning Traces for Hard Math Problems",
+        "summary": "Post-training large language models (LLMs) for mathematical reasoning often relies on accepted traces whose final answers pass a verifier. For hard math problems, however, such traces can be rare under independent Monte Carlo (MC) sampling. To address this, we propose Diverse Alternative Reasoning T",
+        "url": "https://arxiv.org/abs/2611.34928v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.CL",
+          "cs.AI",
+          "cs.LG"
+        ],
+        "arxiv_id": "2611.34928v1"
+      },
+      {
+        "id": "arxiv:2611.34920v1",
+        "title": "$μ$-Bench: Benchmarking Multi-User Task Completion in Shared Interaction Voice Agents",
+        "summary": "Voice agents in shared spaces must satisfy interdependent multi-user requests while upholding per-user authority, privacy, and task constraints. Existing evaluations offer limited coverage when participants react throughout a session. We introduce $μ$-Bench, a benchmark for joint task completion in ",
+        "url": "https://arxiv.org/abs/2611.34920v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.CL",
+          "cs.AI"
+        ],
+        "arxiv_id": "2611.34920v1"
+      },
+      {
+        "id": "arxiv:2611.34887v1",
+        "title": "Interpretable and Accurate Hybrid Decision Trees with Selective Case-Based Splits",
+        "summary": "Decision trees are among the most well-known interpretable models in Machine Learning. Over the years, a wide variety of strategies have been proposed to define split conditions within the greedy learning framework, aiming to guide instance routing and enhance predictive performance. These strategie",
+        "url": "https://arxiv.org/abs/2611.34887v1",
+        "source": "ArXiv",
+        "categories": [
+          "cs.LG",
+          "cs.AI"
+        ],
+        "arxiv_id": "2611.34887v1"
+      },
+      {
+        "id": "rss:a4e3426843",
+        "title": "Hackers Exploit Two GeoServer Flaws as Researchers Warn of Unauthenticated RCE Chains",
+        "summary": "Threat actors are actively exploiting two newly patched security flaws in GeoServer, according to watchTowr.\n\nThe vulnerabilities in question are CVE-2026-120705 and CVE-2026-129243, details of which are below -\n\n\n  CVE-2026-120705 (CVSS score: 8.6) - An arbitrary file read vulnerability that could",
+        "url": "https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html",
+        "source": "Tech RSS",
+        "score": 0
+      }
+    ],
+    "ai_curated": true
+  },
+  "fear_greed": {
+    "value": 11,
+    "classification": "Extreme Fear",
+    "timestamp": "2026-11-26 00:00:00"
+  }
+}
