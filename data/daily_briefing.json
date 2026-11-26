@@ -1,43 +1,70 @@
 {
   "date": "2026-11-26",
-  "update_time": "2026-11-25 21:15:56",
+  "update_time": "2026-11-26 07:37:35",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-26\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 矩阵乘法指数被压到 9/4，OpenAI 顺手把整个计算复杂度的牌桌掀了 (来源: HackerNews)\n- **核心干货**：OpenAI 数学团队发布预印本，宣称矩阵乘法的渐进复杂度指数下界被推进到 9/4（即 ω = 2.25），打破了长期停滞在 2.37 附近的局面。与此同时，Scott Aaronson 那篇标题已经放弃矜持的博客（\"Holy shit\"×4）从另一侧印证了这件事的分量——这不是 incremental 的小修小补，而是可能重塑线性代数库、密码学假设乃至整个数值计算栈的底层地震。\n- **毒舌/硬核点评**：理论计算机科学界憋了几十年的大招，终于有人把常数因子哲学家的饭碗砸了。不过先别急着给 BLAS 打补丁——从渐近指数到你的 PyTorch 训练跑得更快，中间隔着一条银河系那么长的工程鸿沟，外加一堆\"实际常数大得离谱\"的论文后续。\n- **🔗 传送门**：[点击直达原链接](https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf)\n\n---\n\n### 2. 📌 1Password 安全事件：密码管理器自己先\"漏\"了 (来源: HackerNews)\n- **核心干货**：1Password 官方披露 2026 年 11 月安全事件。对于一家把\"零知识架构\"当宗教信条来卖的公司，任何安全公告都值得用放大镜看——这不是普通的漏洞通报，而是对整个\"把身家性命交给云端密码库\"信任模型的一次压力测试。\n- **毒舌/硬核点评**：密码管理器出事，就像保险柜推销员自家遭贼——你卖的是\"绝对安全\"的叙事，结果公告里每个字都在提醒你：单点信任永远是系统工程里最脆的那块玻璃。建议各位趁此机会把 2FA 硬件密钥翻出来擦擦灰。\n- **🔗 传送门**：[点击直达原链接](https://1password.com/blog/update-on-nov-2026-security-incident)\n\n---\n\n### 3. 📌 用 LLM 把 Rockbox 移植到 9 美元的杂牌 MP3 播放器上 (来源: HackerNews)\n- **核心干货**：作者给一台连文档都没有的 AliExpress \"YP3\" 山寨 MP3 播放器逆向移植了 Rockbox 固件，全程借助 LLM 辅助分析硬件、推断寄存器行为、生成适配代码。这是\"AI 当逆向工程副驾驶\"的一个极其具体的实证案例——不是 demo，是真把开源固件跑在了没人管的廉价硅片上。\n- **毒舌/硬核点评**：当大模型还在被营销号吹成\"取代程序员\"时，真正的极客已经拿它去啃连数据手册都没有的电子垃圾了。这才叫生产力工具——不是帮你写周报，是帮你把 9 美元的塑料盒子变成能刷开源固件的复古播放器。\n- **🔗 传送门**：[点击直达原链接](https://jayd.ml/2026/11/14/rockbox-on-yp3.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> \"理论突破负责把天花板抬高，工程实现负责告诉你天花板下面还隔着十八层楼——但真正赚钱的人，永远在别人争论天花板高度时，先把楼梯修到第十层。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-26\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 矩阵乘法指数正式推进到 9/4：理论计算机科学的\"圣杯\"被敲开一道缝 (来源: HackerNews / Scott Aaronson 博客)\n- **核心干货**：Scott Aaronson 发了一篇标题激动到失态的博文（\"Holy shit\"×4），指向一项关于矩阵乘法指数的新成果——长期停滞在 2.372 附近的 ω 值，正被推向理论下界 2 的方向，配套论文《The matrix multiplication exponent is nine fourths》同步流出。这不是工程优化，是算法复杂度的底层突破，一旦成立，未来所有依赖大规模矩阵运算的 AI 训练、科学计算、密码学都将被重写成本模型。\n- **毒舌/硬核点评**：HN 上 1172 条评论里大概有 1160 条看不懂证明但坚决点赞——这就是理论 CS 的浪漫：99% 的人看不懂，但 100% 的人都知道它重要。别急着庆祝，先等 Lean 形式化验证过了再说。\n- **🔗 传送门**：[点击直达原链接](https://scottaaronson.blog/?p=10379)\n\n---\n\n### 2. 📌 1Password 安全事件：当\"卖保险的\"自己家着火了 (来源: HackerNews / 1Password 官方博客)\n- **核心干货**：1Password 官方发布 11 月安全事件更新，HN 上 1360 分、570 条评论炸锅。密码管理器是整个数字身份体系的\"根信任\"，它出事不是一家公司的事，而是所有用户的密钥、凭证、二次验证链条都可能被牵连。官方措辞再温和，也掩盖不了一个事实：安全行业最不该发生的翻车，恰恰发生在最不该翻车的地方。\n- **毒舌/硬核点评**：卖锁的公司被撬了，这剧情比任何恐怖片都吓人。建议所有用户立刻检查自己的恢复密钥和 2FA 备份——毕竟把全部身家托付给一个 App，本质上和把家门钥匙挂在门口没区别。\n- **🔗 传送门**：[点击直达原链接](https://1password.com/blog/update-on-nov-2026-security-incident)\n\n---\n\n### 3. 📌 GPT-6.2 Astra 攻破 Google 码农的 Code Golf 纪录 (来源: HackerNews / 作者博客)\n- **核心干货**：作者回忆 2015 年在 Google 时，一群码农每周为省一个字节绞尽脑汁，总有人能写出更短的解。如今 GPT-6.2 Astra 成为首个在 code golf 基准上击败 Google 人类纪录的模型——这不是\"能写代码\"，而是在极致压缩、极限优化这种人类硬核竞技场上正面碾压。同时另一条情报显示 OpenAI 正在削减 GPT-6.2 用量（Astra 限额消耗快 40%），算力紧张与能力跃升同时发生，意味深长。\n- **毒舌/硬核点评**：码农卷了十年省下的那个字节，AI 一秒就给你省了——但代价是它烧的算力够你写一万年。Code golf 冠军奖杯还没捂热，OpenAI 就开始限流了，这叫\"赢麻了但也快烧穷了\"。\n- **🔗 传送门**：[点击直达原链接](https://bjin.github.io/go-codegolf-benchmark/#leaderboard)\n\n---\n\n### 🗣️ 今日顶男金句\n> 理论突破靠的是有人愿意啃十年冷板凳，工程落地靠的是有人愿意烧十年电费——而你今天要做的，是先把手头那行烂代码改对。",
   "briefing_items": [
     {
-      "title": "矩阵乘法指数被压到 9/4，OpenAI 顺手把整个计算复杂度的牌桌掀了",
-      "source": "HackerNews",
-      "summary": "OpenAI 数学团队发布预印本，宣称矩阵乘法的渐进复杂度指数下界被推进到 9/4（即 ω = 2.25），打破了长期停滞在 2.37 附近的局面。与此同时，Scott Aaronson 那篇标题已经放弃矜持的博客（\"Holy shit\"×4）从另一侧印证了这件事的分量——这不是 incremental 的小修小补，而是可能重塑线性代数库、密码学假设乃至整个数值计算栈的底层地震。",
-      "commentary": "理论计算机科学界憋了几十年的大招，终于有人把常数因子哲学家的饭碗砸了。不过先别急着给 BLAS 打补丁——从渐近指数到你的 PyTorch 训练跑得更快，中间隔着一条银河系那么长的工程鸿沟，外加一堆\"实际常数大得离谱\"的论文后续。",
-      "url": "https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf"
+      "title": "矩阵乘法指数正式推进到 9/4：理论计算机科学的\"圣杯\"被敲开一道缝",
+      "source": "HackerNews / Scott Aaronson 博客",
+      "summary": "Scott Aaronson 发了一篇标题激动到失态的博文（\"Holy shit\"×4），指向一项关于矩阵乘法指数的新成果——长期停滞在 2.372 附近的 ω 值，正被推向理论下界 2 的方向，配套论文《The matrix multiplication exponent is nine fourths》同步流出。这不是工程优化，是算法复杂度的底层突破，一旦成立，未来所有依赖大规模矩阵运算的 AI 训练、科学计算、密码学都将被重写成本模型。",
+      "commentary": "HN 上 1172 条评论里大概有 1160 条看不懂证明但坚决点赞——这就是理论 CS 的浪漫：99% 的人看不懂，但 100% 的人都知道它重要。别急着庆祝，先等 Lean 形式化验证过了再说。",
+      "url": "https://scottaaronson.blog/?p=10379"
     },
     {
-      "title": "1Password 安全事件：密码管理器自己先\"漏\"了",
-      "source": "HackerNews",
-      "summary": "1Password 官方披露 2026 年 11 月安全事件。对于一家把\"零知识架构\"当宗教信条来卖的公司，任何安全公告都值得用放大镜看——这不是普通的漏洞通报，而是对整个\"把身家性命交给云端密码库\"信任模型的一次压力测试。",
-      "commentary": "密码管理器出事，就像保险柜推销员自家遭贼——你卖的是\"绝对安全\"的叙事，结果公告里每个字都在提醒你：单点信任永远是系统工程里最脆的那块玻璃。建议各位趁此机会把 2FA 硬件密钥翻出来擦擦灰。",
+      "title": "1Password 安全事件：当\"卖保险的\"自己家着火了",
+      "source": "HackerNews / 1Password 官方博客",
+      "summary": "1Password 官方发布 11 月安全事件更新，HN 上 1360 分、570 条评论炸锅。密码管理器是整个数字身份体系的\"根信任\"，它出事不是一家公司的事，而是所有用户的密钥、凭证、二次验证链条都可能被牵连。官方措辞再温和，也掩盖不了一个事实：安全行业最不该发生的翻车，恰恰发生在最不该翻车的地方。",
+      "commentary": "卖锁的公司被撬了，这剧情比任何恐怖片都吓人。建议所有用户立刻检查自己的恢复密钥和 2FA 备份——毕竟把全部身家托付给一个 App，本质上和把家门钥匙挂在门口没区别。",
       "url": "https://1password.com/blog/update-on-nov-2026-security-incident"
     },
     {
-      "title": "用 LLM 把 Rockbox 移植到 9 美元的杂牌 MP3 播放器上",
-      "source": "HackerNews",
-      "summary": "作者给一台连文档都没有的 AliExpress \"YP3\" 山寨 MP3 播放器逆向移植了 Rockbox 固件，全程借助 LLM 辅助分析硬件、推断寄存器行为、生成适配代码。这是\"AI 当逆向工程副驾驶\"的一个极其具体的实证案例——不是 demo，是真把开源固件跑在了没人管的廉价硅片上。",
-      "commentary": "当大模型还在被营销号吹成\"取代程序员\"时，真正的极客已经拿它去啃连数据手册都没有的电子垃圾了。这才叫生产力工具——不是帮你写周报，是帮你把 9 美元的塑料盒子变成能刷开源固件的复古播放器。",
-      "url": "https://jayd.ml/2026/11/14/rockbox-on-yp3.html"
+      "title": "GPT-6.2 Astra 攻破 Google 码农的 Code Golf 纪录",
+      "source": "HackerNews / 作者博客",
+      "summary": "作者回忆 2015 年在 Google 时，一群码农每周为省一个字节绞尽脑汁，总有人能写出更短的解。如今 GPT-6.2 Astra 成为首个在 code golf 基准上击败 Google 人类纪录的模型——这不是\"能写代码\"，而是在极致压缩、极限优化这种人类硬核竞技场上正面碾压。同时另一条情报显示 OpenAI 正在削减 GPT-6.2 用量（Astra 限额消耗快 40%），算力紧张与能力跃升同时发生，意味深长。",
+      "commentary": "码农卷了十年省下的那个字节，AI 一秒就给你省了——但代价是它烧的算力够你写一万年。Code golf 冠军奖杯还没捂热，OpenAI 就开始限流了，这叫\"赢麻了但也快烧穷了\"。",
+      "url": "https://bjin.github.io/go-codegolf-benchmark/#leaderboard"
     },
     {
-      "quote": "\"理论突破负责把天花板抬高，工程实现负责告诉你天花板下面还隔着十八层楼——但真正赚钱的人，永远在别人争论天花板高度时，先把楼梯修到第十层。\""
+      "quote": "理论突破靠的是有人愿意啃十年冷板凳，工程落地靠的是有人愿意烧十年电费——而你今天要做的，是先把手头那行烂代码改对。"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50642086",
-      "title": "Google releases Cogentic papers on integer factorization, discrete logs and more",
-      "summary": "",
-      "url": "https://github.com/google-research/google-research/tree/master/cogentic_research_papers",
+      "id": "hn:50647673",
+      "title": "The New York Times warns photographers not to update Photoshop over AI features",
+      "summary": "<a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;pcUgy\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;pcUgy</a>",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
       "source": "Hacker News",
-      "score": 392,
-      "comments": 302
+      "score": 328,
+      "comments": 280
+    },
+    {
+      "id": "hn:50649864",
+      "title": "Tell HN: Lots of Ask HNs again",
+      "summary": "There have been questions about why the &#x2F;ask page (<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;ask\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;ask</a>) was running dry of Ask HNs - e.g.:<p><i>Ask HN: Why is Ask HN only showing me 14 posts?</i> - <a href=\"https:&#x2F;&#x2F;news.ycombin",
+      "url": "https://news.ycombinator.com/item?id=50649864",
+      "source": "Hacker News",
+      "score": 236,
+      "comments": 87
+    },
+    {
+      "id": "hn:50601280",
+      "title": "GPT-6.2 Astra is the first model to beat Googlers' code golf records",
+      "summary": "Back in 2015, when I was still at Google, there was a small group of code-golf enthusiasts spending hours trying to save just one byte on their solutions for weekly code-golf problems. No matter how hard you tried, there always seemed to be another Googler who found a shorter solution. And once a pr",
+      "url": "https://bjin.github.io/go-codegolf-benchmark/#leaderboard",
+      "source": "Hacker News",
+      "score": 355,
+      "comments": 97
+    },
+    {
+      "id": "hn:50651117",
+      "title": "OpenAI cuts GPT-6.2 usage: Astra hits limits 40% faster, Sol 25% faster",
+      "summary": "",
+      "url": "https://twitter.com/thsottiaux/status/2125784147889393806",
+      "source": "Hacker News",
+      "score": 170,
+      "comments": 88
     },
     {
       "id": "hn:50646108",
@@ -45,8 +72,26 @@
       "summary": "See also <i>The matrix multiplication exponent is nine fourths [pdf]</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50637220\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50637220</a>",
       "url": "https://scottaaronson.blog/?p=10379",
       "source": "Hacker News",
-      "score": 435,
-      "comments": 299
+      "score": 1355,
+      "comments": 1172
+    },
+    {
+      "id": "hn:50648050",
+      "title": "Much shorter version of GRH Lean verification from Anthropic",
+      "summary": "",
+      "url": "https://github.com/lsernau/grh-lean",
+      "source": "Hacker News",
+      "score": 421,
+      "comments": 211
+    },
+    {
+      "id": "hn:50647181",
+      "title": "Slow Ubuntu security response times",
+      "summary": "",
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/25/9",
+      "source": "Hacker News",
+      "score": 257,
+      "comments": 110
     },
     {
       "id": "hn:50643129",
@@ -54,26 +99,8 @@
       "summary": "",
       "url": "https://www.vox.com/down-to-earth/511999/home-depot-retention-pond-snorkel-joseph-ricketts",
       "source": "Hacker News",
-      "score": 375,
-      "comments": 93
-    },
-    {
-      "id": "hn:50641171",
-      "title": "Windows Loudness Equalization, reverse-engineered and ported to PipeWire",
-      "summary": "",
-      "url": "https://github.com/xoxorwr/pw-loudness-eq",
-      "source": "Hacker News",
-      "score": 291,
-      "comments": 163
-    },
-    {
-      "id": "hn:50637220",
-      "title": "The matrix multiplication exponent is nine fourths [pdf]",
-      "summary": "See also <i>Holy shit holy shit holy shit holy shit: the magnitude of what’s now happening</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50646108\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50646108</a>",
-      "url": "https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf",
-      "source": "Hacker News",
-      "score": 971,
-      "comments": 542
+      "score": 469,
+      "comments": 113
     },
     {
       "id": "lob:srb0dp",
@@ -81,8 +108,8 @@
       "summary": "",
       "url": "https://www.marginalia.nu/log/a_141_marginalia_update/",
       "source": "Lobste.rs",
-      "score": 89,
-      "comments": 17,
+      "score": 107,
+      "comments": 21,
       "tags": [
         "c++",
         "java",
@@ -95,8 +122,8 @@
       "summary": "",
       "url": "https://blog.mozilla.org/en/mozilla/internet-policy/apple-ios-browser-engine-rules/",
       "source": "Lobste.rs",
-      "score": 76,
-      "comments": 16,
+      "score": 83,
+      "comments": 21,
       "tags": [
         "browsers",
         "ios"
@@ -108,39 +135,22 @@
       "summary": "",
       "url": "https://1password.com/blog/update-on-nov-2026-security-incident",
       "source": "Hacker News",
-      "score": 754,
-      "comments": 314
+      "score": 1360,
+      "comments": 570
     },
     {
-      "id": "hn:50624446",
-      "title": "Porting Rockbox to an undocumented $9 AliExpress 'YP3' MP3 player with LLMs",
+      "id": "lob:lyyksp",
+      "title": "Optimizing Rustc's next trait solver",
       "summary": "",
-      "url": "https://jayd.ml/2026/11/14/rockbox-on-yp3.html",
-      "source": "Hacker News",
-      "score": 164,
-      "comments": 71
-    },
-    {
-      "id": "lob:m7gqr6",
-      "title": "Per Vognsen on the effect of AVX-512 on lexing and parsing",
-      "summary": "",
-      "url": "https://mastodon.social/@pervognsen/117668394962974183",
+      "url": "https://donsz.nl/blog/optimizing-rustcs-next-trait-solver",
       "source": "Lobste.rs",
-      "score": 35,
-      "comments": 20,
+      "score": 49,
+      "comments": 7,
       "tags": [
         "compilers",
-        "performance"
+        "performance",
+        "rust"
       ]
-    },
-    {
-      "id": "hn:50642939",
-      "title": "I checked Clojure's core with Lean and found unreported bugs",
-      "summary": "",
-      "url": "https://s.conao3.com/blog/2026/e4f733",
-      "source": "Hacker News",
-      "score": 138,
-      "comments": 51
     },
     {
       "id": "lob:sj2pkv",
@@ -148,35 +158,10 @@
       "summary": "",
       "url": "https://lucumr.pocoo.org/2026/11/25/poisoning/",
       "source": "Lobste.rs",
-      "score": 39,
-      "comments": 60,
+      "score": 49,
+      "comments": 74,
       "tags": [
         "rust"
-      ]
-    },
-    {
-      "id": "arxiv:2611.33148v1",
-      "title": "CoT-Proxy: Cross-Format Transfer for Distilling Long-Horizon Policies",
-      "summary": "Reasoning models become long-horizon agents through reinforcement learning or, more cheaply, through fine-tuning on a stronger teacher's trajectories, which contain the teacher's chain-of-thought as well as its actions. The standard fine-tuning approach imitates both, yet the strongest teachers are ",
-      "url": "https://arxiv.org/abs/2611.33148v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL"
-      ],
-      "arxiv_id": "2611.33148v1"
-    },
-    {
-      "id": "lob:rfcgkx",
-      "title": "Security incident on Hex.pm",
-      "summary": "",
-      "url": "https://hex.pm/blog/security-incident-on-hexpm",
-      "source": "Lobste.rs",
-      "score": 74,
-      "comments": 9,
-      "tags": [
-        "elixir",
-        "erlang",
-        "gleam"
       ]
     },
     {
@@ -185,7 +170,7 @@
       "summary": "",
       "url": "https://wheybags.com/blog/pokemon_childhood_version.html",
       "source": "Lobste.rs",
-      "score": 68,
+      "score": 76,
       "comments": 5,
       "tags": [
         "assembly",
@@ -193,55 +178,63 @@
       ]
     },
     {
-      "id": "arxiv:2611.33133v1",
-      "title": "A Bias in Disguise: Tiny Gradient Edits Stop a Small Language Model's Thinking Loops and Complement a Frontier Model's Weight Edit",
-      "summary": "Qwen3.5-0.8B rarely finishes reasoning in thinking mode: at a 4,096-token budget only 1 or 2 of 500 MATH-500 answers close their think block (two seeds), and accuracy is 15.4%. A recent demonstration had GPT-6 Astra edit 131,072 of the model's weights without gradients and reported MATH-500 rising f",
-      "url": "https://arxiv.org/abs/2611.33133v1",
+      "id": "hn:50650892",
+      "title": "Minipg: PostgreSQL as a Single Executable",
+      "summary": "",
+      "url": "https://progrium.github.io/minipg/",
+      "source": "Hacker News",
+      "score": 83,
+      "comments": 14
+    },
+    {
+      "id": "arxiv:2611.34935v1",
+      "title": "Can image generation help visual reasoning? An empirical study",
+      "summary": "Language models think in words; then multimodal models might think in images. We test whether a generated helper improves the answer to a visual question. A model describes the helper it needs and then answers using the original and generated images together. Across 13 vision-language model and gene",
+      "url": "https://arxiv.org/abs/2611.34935v1",
       "source": "ArXiv",
       "categories": [
         "cs.LG",
-        "cs.CL"
+        "cs.CL",
+        "cs.CV"
       ],
-      "arxiv_id": "2611.33133v1"
+      "arxiv_id": "2611.34935v1"
     },
     {
-      "id": "lob:rkk6o8",
-      "title": "2035 came early",
-      "summary": "",
-      "url": "https://fzakaria.com/2026/11/23/2035-came-early",
-      "source": "Lobste.rs",
-      "score": 122,
-      "comments": 6,
-      "tags": [
-        "nix",
-        "wasm"
-      ]
+      "id": "arxiv:2611.34928v1",
+      "title": "Diverse Alternative Reasoning Traces for Hard Math Problems",
+      "summary": "Post-training large language models (LLMs) for mathematical reasoning often relies on accepted traces whose final answers pass a verifier. For hard math problems, however, such traces can be rare under independent Monte Carlo (MC) sampling. To address this, we propose Diverse Alternative Reasoning T",
+      "url": "https://arxiv.org/abs/2611.34928v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_id": "2611.34928v1"
     },
     {
-      "id": "lob:lyyksp",
-      "title": "Optimizing Rustc's next trait solver",
-      "summary": "",
-      "url": "https://donsz.nl/blog/optimizing-rustcs-next-trait-solver",
-      "source": "Lobste.rs",
-      "score": 28,
-      "comments": 2,
-      "tags": [
-        "compilers",
-        "performance",
-        "rust"
-      ]
+      "id": "arxiv:2611.34920v1",
+      "title": "$μ$-Bench: Benchmarking Multi-User Task Completion in Shared Interaction Voice Agents",
+      "summary": "Voice agents in shared spaces must satisfy interdependent multi-user requests while upholding per-user authority, privacy, and task constraints. Existing evaluations offer limited coverage when participants react throughout a session. We introduce $μ$-Bench, a benchmark for joint task completion in ",
+      "url": "https://arxiv.org/abs/2611.34920v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_id": "2611.34920v1"
     },
     {
-      "id": "arxiv:2611.33111v1",
-      "title": "Draft Calibration for Speculative Decoding: Accelerating LLM Serving by Matching Draft and Target Distributions",
-      "summary": "Speculative decoding accelerates large language model (LLM) inference by employing a lightweight draft model to propose draft tokens and allowing the target model to verify the new tokens in parallel to improve inference-time compute utilization. The speedup relies on the acceptance probability of d",
-      "url": "https://arxiv.org/abs/2611.33111v1",
+      "id": "arxiv:2611.34887v1",
+      "title": "Interpretable and Accurate Hybrid Decision Trees with Selective Case-Based Splits",
+      "summary": "Decision trees are among the most well-known interpretable models in Machine Learning. Over the years, a wide variety of strategies have been proposed to define split conditions within the greedy learning framework, aiming to guide instance routing and enhance predictive performance. These strategie",
+      "url": "https://arxiv.org/abs/2611.34887v1",
       "source": "ArXiv",
       "categories": [
         "cs.LG",
         "cs.AI"
       ],
-      "arxiv_id": "2611.33111v1"
+      "arxiv_id": "2611.34887v1"
     },
     {
       "id": "rss:a4e3426843",
