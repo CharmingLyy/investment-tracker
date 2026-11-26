@@ -1,142 +1,49 @@
 {
-  "date": "2026-11-26",
-  "update_time": "2026-11-26 07:37:35",
+  "date": "2026-11-27",
+  "update_time": "2026-11-26 21:03:44",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-26\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 矩阵乘法指数正式推进到 9/4：理论计算机科学的\"圣杯\"被敲开一道缝 (来源: HackerNews / Scott Aaronson 博客)\n- **核心干货**：Scott Aaronson 发了一篇标题激动到失态的博文（\"Holy shit\"×4），指向一项关于矩阵乘法指数的新成果——长期停滞在 2.372 附近的 ω 值，正被推向理论下界 2 的方向，配套论文《The matrix multiplication exponent is nine fourths》同步流出。这不是工程优化，是算法复杂度的底层突破，一旦成立，未来所有依赖大规模矩阵运算的 AI 训练、科学计算、密码学都将被重写成本模型。\n- **毒舌/硬核点评**：HN 上 1172 条评论里大概有 1160 条看不懂证明但坚决点赞——这就是理论 CS 的浪漫：99% 的人看不懂，但 100% 的人都知道它重要。别急着庆祝，先等 Lean 形式化验证过了再说。\n- **🔗 传送门**：[点击直达原链接](https://scottaaronson.blog/?p=10379)\n\n---\n\n### 2. 📌 1Password 安全事件：当\"卖保险的\"自己家着火了 (来源: HackerNews / 1Password 官方博客)\n- **核心干货**：1Password 官方发布 11 月安全事件更新，HN 上 1360 分、570 条评论炸锅。密码管理器是整个数字身份体系的\"根信任\"，它出事不是一家公司的事，而是所有用户的密钥、凭证、二次验证链条都可能被牵连。官方措辞再温和，也掩盖不了一个事实：安全行业最不该发生的翻车，恰恰发生在最不该翻车的地方。\n- **毒舌/硬核点评**：卖锁的公司被撬了，这剧情比任何恐怖片都吓人。建议所有用户立刻检查自己的恢复密钥和 2FA 备份——毕竟把全部身家托付给一个 App，本质上和把家门钥匙挂在门口没区别。\n- **🔗 传送门**：[点击直达原链接](https://1password.com/blog/update-on-nov-2026-security-incident)\n\n---\n\n### 3. 📌 GPT-6.2 Astra 攻破 Google 码农的 Code Golf 纪录 (来源: HackerNews / 作者博客)\n- **核心干货**：作者回忆 2015 年在 Google 时，一群码农每周为省一个字节绞尽脑汁，总有人能写出更短的解。如今 GPT-6.2 Astra 成为首个在 code golf 基准上击败 Google 人类纪录的模型——这不是\"能写代码\"，而是在极致压缩、极限优化这种人类硬核竞技场上正面碾压。同时另一条情报显示 OpenAI 正在削减 GPT-6.2 用量（Astra 限额消耗快 40%），算力紧张与能力跃升同时发生，意味深长。\n- **毒舌/硬核点评**：码农卷了十年省下的那个字节，AI 一秒就给你省了——但代价是它烧的算力够你写一万年。Code golf 冠军奖杯还没捂热，OpenAI 就开始限流了，这叫\"赢麻了但也快烧穷了\"。\n- **🔗 传送门**：[点击直达原链接](https://bjin.github.io/go-codegolf-benchmark/#leaderboard)\n\n---\n\n### 🗣️ 今日顶男金句\n> 理论突破靠的是有人愿意啃十年冷板凳，工程落地靠的是有人愿意烧十年电费——而你今天要做的，是先把手头那行烂代码改对。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-27\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 AMD 专版补丁杀入 llama.cpp (来源: HackerNews)\n- **核心干货**：社区开发者给 llama.cpp 提交了一组针对 AMD 显卡的专属优化补丁，绕开通用路径，直接榨干 RDNA/CDNA 架构的算力。对苦于 CUDA 生态垄断的本地推理玩家来说，这算是把 AMD 从\"能跑\"往\"跑得快\"推了一把。\n- **毒舌/硬核点评**：老黄靠 CUDA 收租收到手软，AMD 用户终于不用再对着社区通用内核烧香拜佛了——不过补丁是社区的，优化是手搓的，官方 ROCm 的锅还得官方自己背。\n- **🔗 传送门**：[点击直达原链接](https://devnull.land/amd-specific-llama-cpp)\n\n---\n\n### 2. 📌 Lean 4 把黎曼假设证明从 1700 万行压到 7.6 万行 (来源: Lobste.rs)\n- **核心干货**：Alpöge 关于 Dirichlet L 函数黎曼假设（RH/GRH）的 Lean 形式化证明，被重整为约 7.6 万行的可读版本（原版约 1700 万行），同一组五个定理有了\"人能看懂\"的版本。形式化数学的工程量级，第一次显得没那么吓人。\n- **毒舌/硬核点评**：1700 万行证明属于\"机器看得懂、人类看不懂\"，压缩到 7.6 万行才是真功夫——数学证明的代码整洁癖，比人类代码的屎山还值得敬佩。\n- **🔗 传送门**：[点击直达原链接](https://leanprover.zulipchat.com/#narrow/channel/658556-Riemann-Hypothesis/topic/Cleaning.20up.20the.20proof/near/643702366)\n\n---\n\n### 3. 📌 OpenAI 疑似进入\"省钱模式\" (来源: HackerNews)\n- **核心干货**：有分析指出 OpenAI 最近的算力采购、定价与招聘节奏都透出成本控制的信号——烧钱换增长的叙事正在转向算账。对整条 AI 产业链来说，龙头企业的\"抠门\"往往比它的发布会更能说明行业温度。\n- **毒舌/硬核点评**：从\"改变世界\"到\"控制成本\"，中间可能只隔着一张 CFO 的报表。烧投资人钱的时候是理想主义，轮到自己算毛利了才叫现实主义。\n- **🔗 传送门**：[点击直达原链接](https://micjm.com/blog/openai-is-in-cost-control-mode/)\n\n---\n\n### 🗣️ 今日顶男金句\n别迷信\"大力出奇迹\"，1700 万行的证明压到 7.6 万行才是真本事——搞钱和搞技术都一样，能把复杂的事做简单，才叫水平。",
   "briefing_items": [
     {
-      "title": "矩阵乘法指数正式推进到 9/4：理论计算机科学的\"圣杯\"被敲开一道缝",
-      "source": "HackerNews / Scott Aaronson 博客",
-      "summary": "Scott Aaronson 发了一篇标题激动到失态的博文（\"Holy shit\"×4），指向一项关于矩阵乘法指数的新成果——长期停滞在 2.372 附近的 ω 值，正被推向理论下界 2 的方向，配套论文《The matrix multiplication exponent is nine fourths》同步流出。这不是工程优化，是算法复杂度的底层突破，一旦成立，未来所有依赖大规模矩阵运算的 AI 训练、科学计算、密码学都将被重写成本模型。",
-      "commentary": "HN 上 1172 条评论里大概有 1160 条看不懂证明但坚决点赞——这就是理论 CS 的浪漫：99% 的人看不懂，但 100% 的人都知道它重要。别急着庆祝，先等 Lean 形式化验证过了再说。",
-      "url": "https://scottaaronson.blog/?p=10379"
+      "title": "AMD 专版补丁杀入 llama.cpp",
+      "source": "HackerNews",
+      "summary": "社区开发者给 llama.cpp 提交了一组针对 AMD 显卡的专属优化补丁，绕开通用路径，直接榨干 RDNA/CDNA 架构的算力。对苦于 CUDA 生态垄断的本地推理玩家来说，这算是把 AMD 从\"能跑\"往\"跑得快\"推了一把。",
+      "commentary": "老黄靠 CUDA 收租收到手软，AMD 用户终于不用再对着社区通用内核烧香拜佛了——不过补丁是社区的，优化是手搓的，官方 ROCm 的锅还得官方自己背。",
+      "url": "https://devnull.land/amd-specific-llama-cpp"
     },
     {
-      "title": "1Password 安全事件：当\"卖保险的\"自己家着火了",
-      "source": "HackerNews / 1Password 官方博客",
-      "summary": "1Password 官方发布 11 月安全事件更新，HN 上 1360 分、570 条评论炸锅。密码管理器是整个数字身份体系的\"根信任\"，它出事不是一家公司的事，而是所有用户的密钥、凭证、二次验证链条都可能被牵连。官方措辞再温和，也掩盖不了一个事实：安全行业最不该发生的翻车，恰恰发生在最不该翻车的地方。",
-      "commentary": "卖锁的公司被撬了，这剧情比任何恐怖片都吓人。建议所有用户立刻检查自己的恢复密钥和 2FA 备份——毕竟把全部身家托付给一个 App，本质上和把家门钥匙挂在门口没区别。",
-      "url": "https://1password.com/blog/update-on-nov-2026-security-incident"
+      "title": "Lean 4 把黎曼假设证明从 1700 万行压到 7.6 万行",
+      "source": "Lobste.rs",
+      "summary": "Alpöge 关于 Dirichlet L 函数黎曼假设（RH/GRH）的 Lean 形式化证明，被重整为约 7.6 万行的可读版本（原版约 1700 万行），同一组五个定理有了\"人能看懂\"的版本。形式化数学的工程量级，第一次显得没那么吓人。",
+      "commentary": "1700 万行证明属于\"机器看得懂、人类看不懂\"，压缩到 7.6 万行才是真功夫——数学证明的代码整洁癖，比人类代码的屎山还值得敬佩。",
+      "url": "https://leanprover.zulipchat.com/#narrow/channel/658556-Riemann-Hypothesis/topic/Cleaning.20up.20the.20proof/near/643702366"
     },
     {
-      "title": "GPT-6.2 Astra 攻破 Google 码农的 Code Golf 纪录",
-      "source": "HackerNews / 作者博客",
-      "summary": "作者回忆 2015 年在 Google 时，一群码农每周为省一个字节绞尽脑汁，总有人能写出更短的解。如今 GPT-6.2 Astra 成为首个在 code golf 基准上击败 Google 人类纪录的模型——这不是\"能写代码\"，而是在极致压缩、极限优化这种人类硬核竞技场上正面碾压。同时另一条情报显示 OpenAI 正在削减 GPT-6.2 用量（Astra 限额消耗快 40%），算力紧张与能力跃升同时发生，意味深长。",
-      "commentary": "码农卷了十年省下的那个字节，AI 一秒就给你省了——但代价是它烧的算力够你写一万年。Code golf 冠军奖杯还没捂热，OpenAI 就开始限流了，这叫\"赢麻了但也快烧穷了\"。",
-      "url": "https://bjin.github.io/go-codegolf-benchmark/#leaderboard"
-    },
-    {
-      "quote": "理论突破靠的是有人愿意啃十年冷板凳，工程落地靠的是有人愿意烧十年电费——而你今天要做的，是先把手头那行烂代码改对。"
+      "title": "OpenAI 疑似进入\"省钱模式\"",
+      "source": "HackerNews",
+      "summary": "有分析指出 OpenAI 最近的算力采购、定价与招聘节奏都透出成本控制的信号——烧钱换增长的叙事正在转向算账。对整条 AI 产业链来说，龙头企业的\"抠门\"往往比它的发布会更能说明行业温度。",
+      "commentary": "从\"改变世界\"到\"控制成本\"，中间可能只隔着一张 CFO 的报表。烧投资人钱的时候是理想主义，轮到自己算毛利了才叫现实主义。",
+      "url": "https://micjm.com/blog/openai-is-in-cost-control-mode/"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50647673",
-      "title": "The New York Times warns photographers not to update Photoshop over AI features",
-      "summary": "<a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;pcUgy\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;pcUgy</a>",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
-      "source": "Hacker News",
-      "score": 328,
-      "comments": 280
-    },
-    {
-      "id": "hn:50649864",
-      "title": "Tell HN: Lots of Ask HNs again",
-      "summary": "There have been questions about why the &#x2F;ask page (<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;ask\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;ask</a>) was running dry of Ask HNs - e.g.:<p><i>Ask HN: Why is Ask HN only showing me 14 posts?</i> - <a href=\"https:&#x2F;&#x2F;news.ycombin",
-      "url": "https://news.ycombinator.com/item?id=50649864",
-      "source": "Hacker News",
-      "score": 236,
-      "comments": 87
-    },
-    {
-      "id": "hn:50601280",
-      "title": "GPT-6.2 Astra is the first model to beat Googlers' code golf records",
-      "summary": "Back in 2015, when I was still at Google, there was a small group of code-golf enthusiasts spending hours trying to save just one byte on their solutions for weekly code-golf problems. No matter how hard you tried, there always seemed to be another Googler who found a shorter solution. And once a pr",
-      "url": "https://bjin.github.io/go-codegolf-benchmark/#leaderboard",
-      "source": "Hacker News",
-      "score": 355,
-      "comments": 97
-    },
-    {
-      "id": "hn:50651117",
-      "title": "OpenAI cuts GPT-6.2 usage: Astra hits limits 40% faster, Sol 25% faster",
+      "id": "hn:50657265",
+      "title": "AMD Specific Patches for Llama.cpp",
       "summary": "",
-      "url": "https://twitter.com/thsottiaux/status/2125784147889393806",
+      "url": "https://devnull.land/amd-specific-llama-cpp",
       "source": "Hacker News",
-      "score": 170,
-      "comments": 88
+      "score": 186,
+      "comments": 49
     },
     {
-      "id": "hn:50646108",
-      "title": "Holy shit holy shit holy shit holy shit: The magnitude of what’s now happening",
-      "summary": "See also <i>The matrix multiplication exponent is nine fourths [pdf]</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50637220\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=50637220</a>",
-      "url": "https://scottaaronson.blog/?p=10379",
+      "id": "hn:50653667",
+      "title": "Intel One Mono font (2023)",
+      "summary": "",
+      "url": "https://github.com/intel/intel-one-mono",
       "source": "Hacker News",
-      "score": 1355,
-      "comments": 1172
-    },
-    {
-      "id": "hn:50648050",
-      "title": "Much shorter version of GRH Lean verification from Anthropic",
-      "summary": "",
-      "url": "https://github.com/lsernau/grh-lean",
-      "source": "Hacker News",
-      "score": 421,
-      "comments": 211
-    },
-    {
-      "id": "hn:50647181",
-      "title": "Slow Ubuntu security response times",
-      "summary": "",
-      "url": "https://www.openwall.com/lists/oss-security/2026/11/25/9",
-      "source": "Hacker News",
-      "score": 257,
-      "comments": 110
-    },
-    {
-      "id": "hn:50643129",
-      "title": "A few questions for the guy who went snorkeling in a Home Depot retention pond",
-      "summary": "",
-      "url": "https://www.vox.com/down-to-earth/511999/home-depot-retention-pond-snorkel-joseph-ricketts",
-      "source": "Hacker News",
-      "score": 469,
-      "comments": 113
-    },
-    {
-      "id": "lob:srb0dp",
-      "title": "Marginalia Search, Money, C++, Rust, AI, stuff",
-      "summary": "",
-      "url": "https://www.marginalia.nu/log/a_141_marginalia_update/",
-      "source": "Lobste.rs",
-      "score": 107,
-      "comments": 21,
-      "tags": [
-        "c++",
-        "java",
-        "performance"
-      ]
-    },
-    {
-      "id": "lob:sv2flr",
-      "title": "Why there are still no non-WebKit browsers on iOS",
-      "summary": "",
-      "url": "https://blog.mozilla.org/en/mozilla/internet-policy/apple-ios-browser-engine-rules/",
-      "source": "Lobste.rs",
-      "score": 83,
-      "comments": 21,
-      "tags": [
-        "browsers",
-        "ios"
-      ]
-    },
-    {
-      "id": "hn:50644817",
-      "title": "1Password Security Incident",
-      "summary": "",
-      "url": "https://1password.com/blog/update-on-nov-2026-security-incident",
-      "source": "Hacker News",
-      "score": 1360,
-      "comments": 570
+      "score": 403,
+      "comments": 228
     },
     {
       "id": "lob:lyyksp",
@@ -144,8 +51,8 @@
       "summary": "",
       "url": "https://donsz.nl/blog/optimizing-rustcs-next-trait-solver",
       "source": "Lobste.rs",
-      "score": 49,
-      "comments": 7,
+      "score": 60,
+      "comments": 11,
       "tags": [
         "compilers",
         "performance",
@@ -153,38 +60,113 @@
       ]
     },
     {
-      "id": "lob:sj2pkv",
-      "title": "Abolish Lock Poisoning",
+      "id": "lob:ilit8q",
+      "title": "Scott Aaronson on recent complexity theory AI achievements",
       "summary": "",
-      "url": "https://lucumr.pocoo.org/2026/11/25/poisoning/",
+      "url": "https://scottaaronson.blog/?p=10379",
       "source": "Lobste.rs",
-      "score": 49,
-      "comments": 74,
+      "score": 55,
+      "comments": 49,
       "tags": [
-        "rust"
+        "compsci",
+        "math"
       ]
     },
     {
-      "id": "lob:em9zdb",
-      "title": "Pokemon Childhood Version: A romhack where Mew is under the truck",
-      "summary": "",
-      "url": "https://wheybags.com/blog/pokemon_childhood_version.html",
+      "id": "lob:tlwot6",
+      "title": "Generalized Riemann Hypothesis proof in Lean 4, in 76k lines (down from 17M)",
+      "summary": "<p>This is a shortened version of Alpöge's Lean proof of RH and GRH for Dirichlet L-functions (<a href=\"https://alpo.ge/remark.pdf\" rel=\"ugc\">https://alpo.ge/remark.pdf</a>), which was about 17 million lines.</p>\n<p>There are two editions proving the same five theorems: a readable one at about 300,0",
+      "url": "https://leanprover.zulipchat.com/#narrow/channel/658556-Riemann-Hypothesis/topic/Cleaning.20up.20the.20proof/near/643702366",
       "source": "Lobste.rs",
-      "score": 76,
-      "comments": 5,
+      "score": 46,
+      "comments": 20,
       "tags": [
-        "assembly",
-        "games"
+        "math"
       ]
     },
     {
-      "id": "hn:50650892",
-      "title": "Minipg: PostgreSQL as a Single Executable",
+      "id": "lob:wzlzlh",
+      "title": "Slow Ubuntu security response times",
       "summary": "",
-      "url": "https://progrium.github.io/minipg/",
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/25/9",
+      "source": "Lobste.rs",
+      "score": 99,
+      "comments": 14,
+      "tags": [
+        "linux",
+        "security"
+      ]
+    },
+    {
+      "id": "hn:50652527",
+      "title": "OpenAI may be in cost control mode",
+      "summary": "",
+      "url": "https://micjm.com/blog/openai-is-in-cost-control-mode/",
       "source": "Hacker News",
-      "score": 83,
-      "comments": 14
+      "score": 95,
+      "comments": 87
+    },
+    {
+      "id": "lob:8rgqmw",
+      "title": "Entering the Geminispace",
+      "summary": "",
+      "url": "https://jmmv.dev/2026/11/entering-the-geminispace.html",
+      "source": "Lobste.rs",
+      "score": 37,
+      "comments": 25,
+      "tags": [
+        "web"
+      ]
+    },
+    {
+      "id": "hn:50657645",
+      "title": "CTO of 'RansomwareHelp' Indicted for Wire Fraud",
+      "summary": "",
+      "url": "https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/",
+      "source": "Hacker News",
+      "score": 125,
+      "comments": 52
+    },
+    {
+      "id": "hn:50657530",
+      "title": "YouTube Ad Punisher – Auto-reloads YouTube pages when an ad plays",
+      "summary": "",
+      "url": "https://github.com/antonpictures/youtube-punisher",
+      "source": "Hacker News",
+      "score": 116,
+      "comments": 174
+    },
+    {
+      "id": "lob:2gfpu3",
+      "title": "Garage v2.6.0 released with web admin, v1.x EoL & other news",
+      "summary": "",
+      "url": "https://garagehq.deuxfleurs.fr/blog/2026-11-webadmin-release/",
+      "source": "Lobste.rs",
+      "score": 25,
+      "comments": 3,
+      "tags": [
+        "distributed",
+        "release",
+        "web"
+      ]
+    },
+    {
+      "id": "hn:50656036",
+      "title": "Show HN: Three Linux VMs in a browser tab, each running a different browser",
+      "summary": "",
+      "url": "https://michidk.github.io/sidebyside/",
+      "source": "Hacker News",
+      "score": 86,
+      "comments": 22
+    },
+    {
+      "id": "hn:50636931",
+      "title": "Curiosity Is No Solo Act",
+      "summary": "",
+      "url": "https://thereader.mitpress.mit.edu/curiosity-is-no-solo-act/",
+      "source": "Hacker News",
+      "score": 103,
+      "comments": 22
     },
     {
       "id": "arxiv:2611.34935v1",
@@ -243,6 +225,31 @@
       "url": "https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html",
       "source": "Tech RSS",
       "score": 0
+    },
+    {
+      "id": "lob:wpylec",
+      "title": "In defense of lock poisoning in Rust (2025)",
+      "summary": "",
+      "url": "https://sunshowers.io/posts/on-poisoning/",
+      "source": "Lobste.rs",
+      "score": 20,
+      "comments": 6,
+      "tags": [
+        "rust"
+      ]
+    },
+    {
+      "id": "lob:l6g7j1",
+      "title": "Typed indexes in Zig",
+      "summary": "",
+      "url": "https://lvignoli.eu/posts/2026-11-16-typed-indexes-in-zig/",
+      "source": "Lobste.rs",
+      "score": 30,
+      "comments": 7,
+      "tags": [
+        "programming",
+        "zig"
+      ]
     }
   ],
   "ai_curated": true
