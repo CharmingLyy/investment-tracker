@@ -1,213 +1,216 @@
 {
-  "date": "2026-11-27",
-  "update_time": "2026-11-27 07:35:56",
+  "date": "2026-11-28",
+  "update_time": "2026-11-27 20:48:48",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-27\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 AMD 专用版 llama.cpp 分支 (来源: HackerNews)\n- **核心干货**：有人给 llama.cpp 单开了一个 AMD 专用分支，专门针对 AMD 硬件做推理优化。核心痛点很明确——主流 LLM 推理栈基本围着 NVIDIA 转，AMD 用户长期在“能跑但跑不快”的尴尬区间里挣扎，这个分支试图把 AMD 的算力榨出来。\n- **毒舌/硬核点评**：NVIDIA 吃肉，AMD 只能靠社区志愿者帮忙捡骨头——这已经不是技术问题，是生态问题。分支能活多久，取决于有没有人愿意为爱发电，而不是取决于代码优不优雅。\n- **🔗 传送门**：[点击直达原链接](https://devnull.land/amd-specific-llama-cpp)\n\n---\n\n### 2. 📌 Google 让 AI Agent 用 MCP 服务器，但 Gmail 那个连邮件都发不了 (来源: HackerNews)\n- **核心干货**：Google 开始推动 AI Agent 通过 MCP 协议接入 Workspace 全家桶，听起来是生态开放的大动作。但现实很骨感：Gmail 的 MCP 服务器居然不具备发送邮件的能力，等于给你配了辆车但没装发动机。这暴露了“AI Agent 接入”目前更多是公关叙事，而非可用产品。\n- **毒舌/硬核点评**：一个叫“邮件服务器”的东西不能发邮件，这就像餐厅招牌写着“免费试吃”，进门发现只有白开水。MCP 是好协议，但被这种半成品接入方式糟蹋，只会让开发者对“官方支持”四个字更加警惕。\n- **🔗 传送门**：[点击直达原链接](https://techstackups.com/articles/google-workspace-ai-agents-mcp/)\n\n---\n\n### 3. 📌 广义黎曼猜想的 Lean 4 形式化证明被压缩到 7.6 万行 (来源: Lobste.rs)\n- **核心干货**：Alpöge 对 Dirichlet L 函数的 RH/GRH Lean 证明原本约 1700 万行，现在被“瘦身”到 7.6 万行，且证明的是同一组五个定理。这不只是代码整理，而是形式化数学可读性和可维护性的一次实质性跨越——从“机器能验但人看不动”走向“人能读且机器能验”。\n- **毒舌/硬核点评**：1700 万行证明瘦到 7.6 万行，这减肥效果比任何健身博主都硬核。更值得玩味的是：当数学证明开始像软件工程一样讲究重构和可读性，说明形式化验证正在从学术奇观变成基础设施。\n- **🔗 传送门**：[点击直达原链接](https://leanprover.zulipchat.com/#narrow/channel/658556-Riemann-Hypothesis/topic/Cleaning.20up.20the.20proof/near/643702366)\n\n---\n\n### 🗣️ 今日顶男金句\n> “生态不是靠发布会宣布的，是靠别人愿意为你的平台写分支、修 bug、熬通宵——免费的。”",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-28\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 信用卡盗刷脚本借 WebRTC 绕过传统防御，攻陷主流购物站 (来源: HackerNews)\n- **核心干货**：安全团队在多个热门电商站点发现新型 skimming 脚本，攻击者用 WebRTC 数据通道把窃取的卡号直接\"点对点\"外传，彻底绕开基于域名黑名单和 CSP 的传统检测。黑五购物季上线，时机精准得像蹲点抢劫。\n- **毒舌/硬核点评**：CSP 和域名黑白名单还在那儿自我感动，攻击者已经用浏览器原生 API 开了一条加密隧道——你的防御清单更新速度，永远追不上别人换协议的手速。顺便，黑五剁手前先查查结账页的 JS。\n- **🔗 传送门**：[点击直达原链接](https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer)\n\n---\n\n### 2. 📌 Cacti 未修复 0-Day：\"四个 HTTP 请求换一个 root shell\" (来源: Tech RSS)\n- **核心干货**：开源网络监控工具 Cacti 曝出未打补丁的 0-Day，PoC 编号 4HTTP2SHELL / 4HTTP2ROOT 已经把话说得很明白——访客权限、四次请求、直接 RCE 到 root。目前无 CVE、无补丁，纯裸奔状态。\n- **毒舌/硬核点评**：监控系统自己被监控不到，讽刺拉满。名字都叫\"4HTTP2ROOT\"了还留着不修，这不是漏洞，是邀请函。跑 Cacti 的运维兄弟，今晚要么打补丁（没有），要么拔网线。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html)\n\n---\n\n### 3. 📌 AI 让自托管重新变得好玩了 (来源: HackerNews，1036 分 / 490 评论)\n- **核心干货**：一篇高热度博文的核心论点：LLM 把自托管（self-hosting）从\"周末调试地狱\"变成了\"说人话就能部署\"。配置、排错、写 systemd unit、啃晦涩文档这些劝退环节，现在可以交给 AI 兜底，个人服务器的门槛被实质性拉低。\n- **毒舌/硬核点评**：自托管的真正门槛从来不是硬件，是你半夜两点对着 nginx 报错骂人的耐心——现在这份耐心可以外包给模型了。不过别高兴太早：AI 帮你部署的东西，出了事还是你自己背锅，它可不接凌晨三点的电话。\n- **🔗 传送门**：[点击直达原链接](https://janlukas.blog/posts/ai-self-hosting)\n\n---\n\n### 🗣️ 今日顶男金句\n\"AI 能帮你把服务器跑起来，但跑起来之后守不守得住，看的还是你有没有把补丁当饭吃——工具降低的是入场费，不是生存费。\"",
   "briefing_items": [
     {
-      "title": "AMD 专用版 llama.cpp 分支",
+      "title": "信用卡盗刷脚本借 WebRTC 绕过传统防御，攻陷主流购物站",
       "source": "HackerNews",
-      "summary": "有人给 llama.cpp 单开了一个 AMD 专用分支，专门针对 AMD 硬件做推理优化。核心痛点很明确——主流 LLM 推理栈基本围着 NVIDIA 转，AMD 用户长期在“能跑但跑不快”的尴尬区间里挣扎，这个分支试图把 AMD 的算力榨出来。",
-      "commentary": "NVIDIA 吃肉，AMD 只能靠社区志愿者帮忙捡骨头——这已经不是技术问题，是生态问题。分支能活多久，取决于有没有人愿意为爱发电，而不是取决于代码优不优雅。",
-      "url": "https://devnull.land/amd-specific-llama-cpp"
+      "summary": "安全团队在多个热门电商站点发现新型 skimming 脚本，攻击者用 WebRTC 数据通道把窃取的卡号直接\"点对点\"外传，彻底绕开基于域名黑名单和 CSP 的传统检测。黑五购物季上线，时机精准得像蹲点抢劫。",
+      "commentary": "CSP 和域名黑白名单还在那儿自我感动，攻击者已经用浏览器原生 API 开了一条加密隧道——你的防御清单更新速度，永远追不上别人换协议的手速。顺便，黑五剁手前先查查结账页的 JS。",
+      "url": "https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer"
     },
     {
-      "title": "Google 让 AI Agent 用 MCP 服务器，但 Gmail 那个连邮件都发不了",
-      "source": "HackerNews",
-      "summary": "Google 开始推动 AI Agent 通过 MCP 协议接入 Workspace 全家桶，听起来是生态开放的大动作。但现实很骨感：Gmail 的 MCP 服务器居然不具备发送邮件的能力，等于给你配了辆车但没装发动机。这暴露了“AI Agent 接入”目前更多是公关叙事，而非可用产品。",
-      "commentary": "一个叫“邮件服务器”的东西不能发邮件，这就像餐厅招牌写着“免费试吃”，进门发现只有白开水。MCP 是好协议，但被这种半成品接入方式糟蹋，只会让开发者对“官方支持”四个字更加警惕。",
-      "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/"
+      "title": "Cacti 未修复 0-Day：\"四个 HTTP 请求换一个 root shell\"",
+      "source": "Tech RSS",
+      "summary": "开源网络监控工具 Cacti 曝出未打补丁的 0-Day，PoC 编号 4HTTP2SHELL / 4HTTP2ROOT 已经把话说得很明白——访客权限、四次请求、直接 RCE 到 root。目前无 CVE、无补丁，纯裸奔状态。",
+      "commentary": "监控系统自己被监控不到，讽刺拉满。名字都叫\"4HTTP2ROOT\"了还留着不修，这不是漏洞，是邀请函。跑 Cacti 的运维兄弟，今晚要么打补丁（没有），要么拔网线。",
+      "url": "https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html"
     },
     {
-      "title": "广义黎曼猜想的 Lean 4 形式化证明被压缩到 7.6 万行",
-      "source": "Lobste.rs",
-      "summary": "Alpöge 对 Dirichlet L 函数的 RH/GRH Lean 证明原本约 1700 万行，现在被“瘦身”到 7.6 万行，且证明的是同一组五个定理。这不只是代码整理，而是形式化数学可读性和可维护性的一次实质性跨越——从“机器能验但人看不动”走向“人能读且机器能验”。",
-      "commentary": "1700 万行证明瘦到 7.6 万行，这减肥效果比任何健身博主都硬核。更值得玩味的是：当数学证明开始像软件工程一样讲究重构和可读性，说明形式化验证正在从学术奇观变成基础设施。",
-      "url": "https://leanprover.zulipchat.com/#narrow/channel/658556-Riemann-Hypothesis/topic/Cleaning.20up.20the.20proof/near/643702366"
-    },
-    {
-      "quote": "“生态不是靠发布会宣布的，是靠别人愿意为你的平台写分支、修 bug、熬通宵——免费的。”"
+      "title": "AI 让自托管重新变得好玩了",
+      "source": "HackerNews，1036 分 / 490 评论",
+      "summary": "一篇高热度博文的核心论点：LLM 把自托管（self-hosting）从\"周末调试地狱\"变成了\"说人话就能部署\"。配置、排错、写 systemd unit、啃晦涩文档这些劝退环节，现在可以交给 AI 兜底，个人服务器的门槛被实质性拉低。",
+      "commentary": "自托管的真正门槛从来不是硬件，是你半夜两点对着 nginx 报错骂人的耐心——现在这份耐心可以外包给模型了。不过别高兴太早：AI 帮你部署的东西，出了事还是你自己背锅，它可不接凌晨三点的电话。",
+      "url": "https://janlukas.blog/posts/ai-self-hosting"
     }
   ],
   "candidates": [
+    {
+      "id": "hn:50667726",
+      "title": "Show HN: bouncemarket – a live prediction market game for a bouncing ball",
+      "summary": "a ball will fall. trade on where it lands.<p>I made this game! Some technical details:<p>The entire drop of the ball is simulated server-side, then streamed to each client as server-sent events with a small buffer. Every drop is deterministic from its starting position, so rounds can be replayed exa",
+      "url": "https://bouncemarket.minhanhday.com/",
+      "source": "Hacker News",
+      "score": 285,
+      "comments": 87
+    },
     {
       "id": "hn:50660180",
       "title": "AI made self-hosting fun again",
       "summary": "",
       "url": "https://janlukas.blog/posts/ai-self-hosting",
       "source": "Hacker News",
-      "score": 578,
-      "comments": 301
+      "score": 1036,
+      "comments": 490
     },
     {
-      "id": "hn:50659841",
-      "title": "Kamil Khan Mumtaz: Pakistani architect, admired at home, almost invisible abroad",
+      "id": "hn:50668145",
+      "title": "Credit card skimming scripts using WebRTC found on popular shopping sites",
       "summary": "",
-      "url": "https://worksinprogress.co/issue/the-greatest-architect-youve-never-heard-of-is-in-pakistan/",
+      "url": "https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer",
       "source": "Hacker News",
-      "score": 339,
-      "comments": 77
+      "score": 273,
+      "comments": 155
     },
     {
-      "id": "hn:50657265",
-      "title": "AMD-specific fork of llama.cpp",
+      "id": "hn:50663595",
+      "title": "Group chat where your AI talks behind your back",
       "summary": "",
-      "url": "https://devnull.land/amd-specific-llama-cpp",
+      "url": "https://construct22.com/",
       "source": "Hacker News",
-      "score": 333,
+      "score": 629,
+      "comments": 270
+    },
+    {
+      "id": "hn:50657392",
+      "title": "First images of the impact of DART asteroid deflection experiment",
+      "summary": "",
+      "url": "https://arstechnica.com/space/2026/11/europes-hera-mission-returns-to-the-chaotic-scene-of-a-cosmic-smashup/",
+      "source": "Hacker News",
+      "score": 148,
+      "comments": 51
+    },
+    {
+      "id": "lob:mbm7xw",
+      "title": "Tiny Hat: a new Linux distro dedicated to retro gamedev",
+      "summary": "<p>Tiny Hat uses only around 100MB of RAM after booting, and can be booted from a &gt;= 1GB memory stick. It comes with a few small games, an easy way to install and run more games and several example programs for getting into retro game development. It also uses a modern stack of libraries, with dw",
+      "url": "https://roboticoverlords.org/tinyhat",
+      "source": "Lobste.rs",
+      "score": 39,
+      "comments": 7,
+      "tags": [
+        "games",
+        "linux",
+        "retrocomputing"
+      ]
+    },
+    {
+      "id": "lob:fin7at",
+      "title": "Company Culture = Slack Emoji ÷ sqrt(Headcount)",
+      "summary": "",
+      "url": "https://lia.mg/posts/measuring-company-culture-with-slack-emoji/",
+      "source": "Lobste.rs",
+      "score": 39,
+      "comments": 13,
+      "tags": [
+        "culture",
+        "satire"
+      ]
+    },
+    {
+      "id": "lob:afxeri",
+      "title": "Taking Email Back",
+      "summary": "",
+      "url": "http://www.linux-magazine.com/Online/Features/Taking-Email-Back",
+      "source": "Lobste.rs",
+      "score": 80,
+      "comments": 33,
+      "tags": [
+        "email"
+      ]
+    },
+    {
+      "id": "hn:50670757",
+      "title": "Michael Nielsen took down his book on neural nets",
+      "summary": "",
+      "url": "https://twitter.com/michael_nielsen/status/2126359767362748777",
+      "source": "Hacker News",
+      "score": 122,
       "comments": 82
     },
     {
-      "id": "hn:50653477",
-      "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
+      "id": "hn:50667989",
+      "title": "False computer-checked proofs",
       "summary": "",
-      "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
+      "url": "https://cr.yp.to/proofs/falseccp.html",
       "source": "Hacker News",
-      "score": 318,
-      "comments": 274
+      "score": 130,
+      "comments": 58
     },
     {
-      "id": "hn:50661646",
-      "title": "Hard Drive pricing has gotten bad",
+      "id": "hn:50669765",
+      "title": "Convex skills send the user's app idea to a remote server without telling them",
       "summary": "",
-      "url": "https://blog.ktz.me/black-friday-hard-drive-prices-are-messed-up/",
+      "url": "https://github.com/convex/convex-backend-skill/issues/64",
       "source": "Hacker News",
-      "score": 289,
-      "comments": 188
+      "score": 111,
+      "comments": 40
     },
     {
-      "id": "hn:50657530",
-      "title": "YouTube Ad Punisher – Auto-reloads YouTube pages when an ad plays",
+      "id": "hn:50643158",
+      "title": "GPT 6.2 Astra Solves a Historical Mystery",
       "summary": "",
-      "url": "https://github.com/antonpictures/youtube-punisher",
+      "url": "https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical",
       "source": "Hacker News",
-      "score": 360,
-      "comments": 427
+      "score": 50,
+      "comments": 84
     },
     {
-      "id": "hn:50657645",
-      "title": "CTO of 'RansomwareHelp' indicted for wire fraud",
-      "summary": "",
-      "url": "https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/",
-      "source": "Hacker News",
-      "score": 249,
-      "comments": 124
-    },
-    {
-      "id": "hn:50659640",
-      "title": "Company Culture = Slack Emoji ÷ √Headcount",
-      "summary": "",
-      "url": "https://lia.mg/posts/measuring-company-culture-with-slack-emoji/",
-      "source": "Hacker News",
-      "score": 271,
-      "comments": 122
-    },
-    {
-      "id": "hn:50653667",
-      "title": "Intel One Mono font (2023)",
-      "summary": "",
-      "url": "https://github.com/intel/intel-one-mono",
-      "source": "Hacker News",
-      "score": 508,
-      "comments": 249
-    },
-    {
-      "id": "lob:wzlzlh",
-      "title": "Slow Ubuntu security response times",
-      "summary": "",
-      "url": "https://www.openwall.com/lists/oss-security/2026/11/25/9",
-      "source": "Lobste.rs",
-      "score": 112,
-      "comments": 17,
-      "tags": [
-        "linux",
-        "security"
-      ]
-    },
-    {
-      "id": "lob:2gfpu3",
-      "title": "Garage v2.6.0 released with web admin, v1.x EoL & other news",
-      "summary": "",
-      "url": "https://garagehq.deuxfleurs.fr/blog/2026-11-webadmin-release/",
-      "source": "Lobste.rs",
-      "score": 43,
-      "comments": 3,
-      "tags": [
-        "distributed",
-        "release",
-        "web"
-      ]
-    },
-    {
-      "id": "lob:ilit8q",
-      "title": "Scott Aaronson on recent complexity theory AI achievements",
-      "summary": "",
-      "url": "https://scottaaronson.blog/?p=10379",
-      "source": "Lobste.rs",
-      "score": 57,
-      "comments": 53,
-      "tags": [
-        "compsci",
-        "math"
-      ]
-    },
-    {
-      "id": "lob:tlwot6",
-      "title": "Generalized Riemann Hypothesis proof in Lean 4, in 76k lines (down from 17M)",
-      "summary": "<p>This is a shortened version of Alpöge's Lean proof of RH and GRH for Dirichlet L-functions (<a href=\"https://alpo.ge/remark.pdf\" rel=\"ugc\">https://alpo.ge/remark.pdf</a>), which was about 17 million lines.</p>\n<p>There are two editions proving the same five theorems: a readable one at about 300,0",
-      "url": "https://leanprover.zulipchat.com/#narrow/channel/658556-Riemann-Hypothesis/topic/Cleaning.20up.20the.20proof/near/643702366",
-      "source": "Lobste.rs",
-      "score": 53,
-      "comments": 25,
-      "tags": [
-        "math"
-      ]
-    },
-    {
-      "id": "lob:wpylec",
-      "title": "In defense of lock poisoning in Rust (2025)",
-      "summary": "",
-      "url": "https://sunshowers.io/posts/on-poisoning/",
-      "source": "Lobste.rs",
-      "score": 27,
-      "comments": 15,
-      "tags": [
-        "rust"
-      ]
-    },
-    {
-      "id": "lob:8rgqmw",
-      "title": "Entering the Geminispace",
-      "summary": "",
-      "url": "https://jmmv.dev/2026/11/entering-the-geminispace.html",
-      "source": "Lobste.rs",
-      "score": 43,
-      "comments": 33,
-      "tags": [
-        "web"
-      ]
-    },
-    {
-      "id": "hn:50663089",
+      "id": "lob:byfdgn",
       "title": "The need for a formally verifiable mainstream programming language",
       "summary": "",
       "url": "https://blainehansen.me/post/mainstream-verifiable-language/",
-      "source": "Hacker News",
-      "score": 87,
-      "comments": 59
+      "source": "Lobste.rs",
+      "score": 21,
+      "comments": 24,
+      "tags": [
+        "ai",
+        "building-ai-tooling",
+        "formalmethods",
+        "plt"
+      ]
     },
     {
-      "id": "lob:l6g7j1",
-      "title": "Typed indexes in Zig",
-      "summary": "",
-      "url": "https://lvignoli.eu/posts/2026-11-16-typed-indexes-in-zig/",
-      "source": "Lobste.rs",
-      "score": 31,
-      "comments": 9,
-      "tags": [
-        "programming",
-        "zig"
-      ]
+      "id": "arxiv:2611.34935v1",
+      "title": "Can image generation help visual reasoning? An empirical study",
+      "summary": "Language models think in words; then multimodal models might think in images. We test whether a generated helper improves the answer to a visual question. A model describes the helper it needs and then answers using the original and generated images together. Across 13 vision-language model and gene",
+      "url": "https://arxiv.org/abs/2611.34935v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "arxiv_id": "2611.34935v1"
+    },
+    {
+      "id": "arxiv:2611.34928v1",
+      "title": "Diverse Alternative Reasoning Traces for Hard Math Problems",
+      "summary": "Post-training large language models (LLMs) for mathematical reasoning often relies on accepted traces whose final answers pass a verifier. For hard math problems, however, such traces can be rare under independent Monte Carlo (MC) sampling. To address this, we propose Diverse Alternative Reasoning T",
+      "url": "https://arxiv.org/abs/2611.34928v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_id": "2611.34928v1"
+    },
+    {
+      "id": "arxiv:2611.34920v1",
+      "title": "$μ$-Bench: Benchmarking Multi-User Task Completion in Shared Interaction Voice Agents",
+      "summary": "Voice agents in shared spaces must satisfy interdependent multi-user requests while upholding per-user authority, privacy, and task constraints. Existing evaluations offer limited coverage when participants react throughout a session. We introduce $μ$-Bench, a benchmark for joint task completion in ",
+      "url": "https://arxiv.org/abs/2611.34920v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_id": "2611.34920v1"
+    },
+    {
+      "id": "arxiv:2611.34887v1",
+      "title": "Interpretable and Accurate Hybrid Decision Trees with Selective Case-Based Splits",
+      "summary": "Decision trees are among the most well-known interpretable models in Machine Learning. Over the years, a wide variety of strategies have been proposed to define split conditions within the greedy learning framework, aiming to guide instance routing and enhance predictive performance. These strategie",
+      "url": "https://arxiv.org/abs/2611.34887v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "arxiv_id": "2611.34887v1"
     },
     {
       "id": "rss:7fbb7e5b84",
@@ -226,13 +229,17 @@
       "score": 0
     },
     {
-      "id": "hn:50662933",
-      "title": "\"What's Claude's Fursona?\" and Other Questions",
-      "summary": "",
-      "url": "https://herecomesthemoon.net/2026/11/whats-claudes-fursona/",
-      "source": "Hacker News",
-      "score": 71,
-      "comments": 43
+      "id": "lob:locqp9",
+      "title": "What are you doing this weekend?",
+      "summary": "<p>Feel free to tell what you plan on doing this weekend and even ask for help or feedback.</p>\n<p>Please keep in mind it’s more than OK to do nothing at all too!</p>\n",
+      "url": "https://lobste.rs/s/locqp9/what_are_you_doing_this_weekend",
+      "source": "Lobste.rs",
+      "score": 14,
+      "comments": 21,
+      "tags": [
+        "ask",
+        "programming"
+      ]
     }
   ],
   "ai_curated": true
