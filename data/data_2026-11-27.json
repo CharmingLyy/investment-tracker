@@ -1,0 +1,823 @@
+{
+  "update_time": "2026-11-27 17:47:39",
+  "stocks": {
+    "a_stocks": [
+      {
+        "market": "A股",
+        "code": "002050",
+        "name": "三花智控",
+        "symbol": "sz.002050",
+        "industry": null,
+        "business": "冷热转换、智能控制的环境热管理解决方案开发，建筑暖通、电器设备和汽车热管理领域的专业化经营。",
+        "price": 33.48,
+        "open": 31.01,
+        "high": 33.55,
+        "low": 30.65,
+        "change_pct": 8.0,
+        "volume": 77639814,
+        "turnover": 25.08,
+        "market_cap": null,
+        "pe": 36.24,
+        "cash_flow": null,
+        "macd": -0.4498,
+        "macd_signal": -0.3287,
+        "macd_histogram": -0.2422,
+        "rsi": 49.88,
+        "ma": {
+          "MA5": 32.93,
+          "MA10": 32.74,
+          "MA20": 33.62,
+          "MA60": 34.21
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "A股",
+        "code": "601727",
+        "name": "上海电气",
+        "symbol": "sh.601727",
+        "industry": null,
+        "business": "新能源及环保设备、高效清洁能源设备、工业装备、现代服务业。",
+        "price": 6.21,
+        "open": 5.63,
+        "high": 6.22,
+        "low": 5.52,
+        "change_pct": 9.91,
+        "volume": 145038731,
+        "turnover": 8.53,
+        "market_cap": null,
+        "pe": 69.72,
+        "cash_flow": null,
+        "macd": -0.0918,
+        "macd_signal": -0.1091,
+        "macd_histogram": 0.0346,
+        "rsi": 58.45,
+        "ma": {
+          "MA5": 5.87,
+          "MA10": 5.87,
+          "MA20": 5.98,
+          "MA60": 6.27
+        },
+        "main_net_flow": null
+      }
+    ],
+    "hk_stocks": [
+      {
+        "market": "港股",
+        "code": "01810",
+        "name": "小米集团-W",
+        "symbol": "01810",
+        "industry": "Consumer Electronics",
+        "business": "Xiaomi Corporation, an investment holding company, engages in the development an...",
+        "price": NaN,
+        "open": null,
+        "high": null,
+        "low": null,
+        "change_pct": NaN,
+        "volume": 181960125,
+        "turnover": null,
+        "market_cap": 7150.49,
+        "pe": 20.44,
+        "cash_flow": 360.82,
+        "macd": -0.0383,
+        "macd_signal": 0.3324,
+        "macd_histogram": -0.7414,
+        "rsi": 41.54,
+        "ma": {
+          "MA5": null,
+          "MA10": null,
+          "MA20": null,
+          "MA60": null
+        },
+        "main_net_flow": null
+      }
+    ],
+    "us_stocks": [
+      {
+        "market": "美股",
+        "code": "NVDA",
+        "name": "NVIDIA",
+        "symbol": "NVDA",
+        "industry": "Semiconductors",
+        "business": "NVIDIA Corporation operates as a data center scale AI infrastructure company in ...",
+        "price": 148.86,
+        "open": 151.94,
+        "high": 151.98,
+        "low": 145.39,
+        "change_pct": -0.29,
+        "volume": 149612815,
+        "turnover": null,
+        "market_cap": 35941.6,
+        "pe": 15.99,
+        "cash_flow": 992.41,
+        "macd": -16.4862,
+        "macd_signal": -16.289,
+        "macd_histogram": -0.3944,
+        "rsi": 37.3,
+        "ma": {
+          "MA5": 148.82,
+          "MA10": 151.55,
+          "MA20": 169.24,
+          "MA60": 205.21
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "GOOG",
+        "name": "Alphabet (Google)",
+        "symbol": "GOOG",
+        "industry": "Internet Content & Information",
+        "business": "Alphabet Inc. offers various products and platforms in the United States, Europe...",
+        "price": 270.92,
+        "open": 277.02,
+        "high": 277.3,
+        "low": 268.2,
+        "change_pct": -0.02,
+        "volume": 10336679,
+        "turnover": null,
+        "market_cap": 33307.52,
+        "pe": 14.15,
+        "cash_flow": 11.62,
+        "macd": -11.6895,
+        "macd_signal": -12.3333,
+        "macd_histogram": 1.2877,
+        "rsi": 36.11,
+        "ma": {
+          "MA5": 272.4,
+          "MA10": 276.36,
+          "MA20": 280.4,
+          "MA60": 317.76
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "CRCL",
+        "name": "Circle",
+        "symbol": "CRCL",
+        "industry": "Capital Markets",
+        "business": "Circle Internet Group, Inc. operates as a platform, network, and market infrastr...",
+        "price": 49.08,
+        "open": 50.26,
+        "high": 50.49,
+        "low": 47.79,
+        "change_pct": 1.68,
+        "volume": 5202874,
+        "turnover": null,
+        "market_cap": 125.92,
+        "pe": 29.57,
+        "cash_flow": 2.62,
+        "macd": -8.3206,
+        "macd_signal": -7.4426,
+        "macd_histogram": -1.756,
+        "rsi": 28.91,
+        "ma": {
+          "MA5": 48.78,
+          "MA10": 52.36,
+          "MA20": 61.02,
+          "MA60": 78.31
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "MP",
+        "name": "MP Materials",
+        "symbol": "MP",
+        "industry": "Other Industrial Metals & Mining",
+        "business": "MP Materials Corp., together with its subsidiaries, produces rare earth material...",
+        "price": 35.17,
+        "open": 36.6,
+        "high": 36.61,
+        "low": 34.61,
+        "change_pct": -0.37,
+        "volume": 2825430,
+        "turnover": null,
+        "market_cap": 62.7,
+        "pe": 111.11,
+        "cash_flow": 4.1,
+        "macd": -1.6172,
+        "macd_signal": -1.8325,
+        "macd_histogram": 0.4306,
+        "rsi": 41.93,
+        "ma": {
+          "MA5": 35.17,
+          "MA10": 35.82,
+          "MA20": 36.37,
+          "MA60": 42.83
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "PLTR",
+        "name": "Palantir",
+        "symbol": "PLTR",
+        "industry": "Software - Infrastructure",
+        "business": "Palantir Technologies Inc. builds and deploys software platforms for the intelli...",
+        "price": 171.32,
+        "open": 169.76,
+        "high": 173.22,
+        "low": 164.8,
+        "change_pct": 4.73,
+        "volume": 11159207,
+        "turnover": null,
+        "market_cap": 4127.95,
+        "pe": 120.65,
+        "cash_flow": 26.52,
+        "macd": -6.363,
+        "macd_signal": -7.4538,
+        "macd_histogram": 2.1815,
+        "rsi": 50.98,
+        "ma": {
+          "MA5": 159.79,
+          "MA10": 159.42,
+          "MA20": 165.06,
+          "MA60": 180.8
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "NOW",
+        "name": "ServiceNow",
+        "symbol": "NOW",
+        "industry": "Software - Application",
+        "business": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the Nort...",
+        "price": 92.29,
+        "open": 93.2,
+        "high": 94.57,
+        "low": 92.11,
+        "change_pct": 0.14,
+        "volume": 5569423,
+        "turnover": null,
+        "market_cap": 957.89,
+        "pe": 66.4,
+        "cash_flow": 57.54,
+        "macd": -10.3422,
+        "macd_signal": -10.7666,
+        "macd_histogram": 0.8488,
+        "rsi": 31.22,
+        "ma": {
+          "MA5": 91.1,
+          "MA10": 92.95,
+          "MA20": 98.44,
+          "MA60": 126.3
+        },
+        "main_net_flow": null
+      },
+      {
+        "market": "美股",
+        "code": "DDOG",
+        "name": "Datadog",
+        "symbol": "DDOG",
+        "industry": "Software - Application",
+        "business": "Datadog, Inc. operates an observability and security platform for cloud applicat...",
+        "price": 163.41,
+        "open": 163.34,
+        "high": 165.15,
+        "low": 161.6,
+        "change_pct": 3.26,
+        "volume": 1270225,
+        "turnover": null,
+        "market_cap": 589.98,
+        "pe": 226.96,
+        "cash_flow": 10.66,
+        "macd": -21.5076,
+        "macd_signal": -21.9373,
+        "macd_histogram": 0.8595,
+        "rsi": 33.47,
+        "ma": {
+          "MA5": 162.69,
+          "MA10": 166.92,
+          "MA20": 180.52,
+          "MA60": 231.27
+        },
+        "main_net_flow": null
+      }
+    ],
+    "crypto": [
+      {
+        "market": "加密货币",
+        "code": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "industry": "Smart Contract Platform",
+        "price": 59554,
+        "open": null,
+        "high": 62097,
+        "low": 58910,
+        "change_pct": -1.38,
+        "volume": 29605401852,
+        "turnover": null,
+        "market_cap": 11981.09,
+        "market_cap_rank": 1,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -4457.4264,
+        "macd_signal": -4462.918,
+        "macd_histogram": 10.9831,
+        "rsi": 26.33,
+        "ma": {
+          "MA5": 60282.89,
+          "MA10": 60644.38,
+          "MA20": 65149.4,
+          "MA60": 75952.93
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 20117925.0,
+          "total_supply": 20117925.0,
+          "circ_ratio": 100.0,
+          "price_change_7d": 0.16744,
+          "price_change_30d": -26.05118,
+          "ath_pct": -52.76,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "FTX Holdings"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      },
+      {
+        "market": "加密货币",
+        "code": "ethereum",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "industry": "Smart Contract Platform",
+        "price": 1659.73,
+        "open": null,
+        "high": 1748.86,
+        "low": 1638.36,
+        "change_pct": -1.78,
+        "volume": 11602095078,
+        "turnover": null,
+        "market_cap": 2029.13,
+        "market_cap_rank": 2,
+        "pe": null,
+        "funding_rate": null,
+        "open_interest": null,
+        "etf_inflow": null,
+        "etf_outflow": null,
+        "etf_net_flow": null,
+        "macd": -149.9988,
+        "macd_signal": -154.3174,
+        "macd_histogram": 8.6373,
+        "rsi": 27.8,
+        "ma": {
+          "MA5": 1684.81,
+          "MA10": 1697.87,
+          "MA20": 1826.8,
+          "MA60": 2236.24
+        },
+        "main_net_flow": null,
+        "onchain": {
+          "circulating_supply": 122256647.46018286,
+          "total_supply": 122256647.46018286,
+          "circ_ratio": 100.0,
+          "price_change_7d": 0.99888,
+          "price_change_30d": -28.86185,
+          "ath_pct": -66.44,
+          "ath_date": null,
+          "categories": [
+            "Smart Contract Platform",
+            "Layer 1 (L1)",
+            "Ethereum Ecosystem"
+          ],
+          "hash_rate": null,
+          "active_addresses": null,
+          "tx_fee_usd": null,
+          "gas_gwei": null,
+          "staking_apr": null,
+          "validators": null
+        }
+      }
+    ]
+  },
+  "news": [
+    {
+      "id": "35b871d31c",
+      "title": "[播客]独家实拍：我那永远跪着的母亲(11/07 22:10)",
+      "summary": "独家实拍：我那永远跪着的母亲",
+      "link": "http://go.rss.sina.com.cn/redirect.php?url=http://you.video.sina.com.cn/b/16972162-1239095354.html",
+      "source": "rss.sina.com.cn",
+      "published": ""
+    },
+    {
+      "id": "dbc0a3f69f",
+      "title": "Clearing out my parents’ house was a legal nightmare. How can I downsize without putting my kids through the same ordeal?",
+      "summary": "Some countercultural advice this Black Friday: stop buying stuff, plus other rules for downsizing.",
+      "link": "https://www.marketwatch.com/story/clearing-out-my-parents-house-was-a-legal-nightmare-how-can-i-downsize-without-putting-my-children-through-the-same-ordeal-6537d804?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 27 Nov 2026 17:31:00 GMT"
+    },
+    {
+      "id": "429e9f726b",
+      "title": "12 days of sardines and Croc charms: Are Advent calendars getting out of control?",
+      "summary": "Luxury Advent calendars in particular — which can run hundreds of dollars — have seen a spike in sales. Here’s why.",
+      "link": "https://www.marketwatch.com/story/12-days-of-sardines-and-croc-charms-are-advent-calendars-getting-out-of-control-81f24548?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 27 Nov 2026 17:04:00 GMT"
+    },
+    {
+      "id": "7e8057e325",
+      "title": "A 66-year-old nurse is facing down retirement with just $500 saved. Who’s to blame?",
+      "summary": "“Retirement is a financial status, not an age.”",
+      "link": "https://www.marketwatch.com/story/a-66-year-old-nurse-faces-retirement-with-just-500-saved-whos-to-blame-4249a0fd?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 27 Nov 2026 16:00:00 GMT"
+    },
+    {
+      "id": "3c7d0f84de",
+      "title": "These stocks soared the most during a wild week highlighted by Huang’s return to Nvidia",
+      "summary": "Nvidia’s stock soared this week, but was still down nearly 28% for November and 21% for 2026.",
+      "link": "https://www.marketwatch.com/story/these-stocks-soared-the-most-during-a-wild-week-highlighted-by-huangs-return-to-nvidia-578b3f9a?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 27 Nov 2026 15:52:00 GMT"
+    },
+    {
+      "id": "5c1a8be576",
+      "title": "I’ve been married for 58 years. It’s ‘our’ money, not ‘his’ and ‘hers.’ Why do so many couples keep their finances separate?",
+      "summary": "“My wife stopped working outside the home in 1970.”",
+      "link": "https://www.marketwatch.com/story/ive-been-married-for-58-years-its-our-money-not-his-and-hers-why-dont-others-feel-the-same-c5745889?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 27 Nov 2026 15:45:00 GMT"
+    },
+    {
+      "id": "f0a59e9733",
+      "title": "My husband secretly sends his ex-wife $1,500 a month after she lost her job. We have $2.4 million saved. Has he lied by omission?",
+      "summary": "“He explained that he wasn’t trying to hide the payment, but his former wife lost her job in a medical billing company.”",
+      "link": "https://www.marketwatch.com/story/my-husband-secretly-sends-his-ex-wife-1-500-a-month-after-she-lost-her-job-we-have-2-4-million-saved-has-he-lied-by-omission-ede1972a?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 27 Nov 2026 15:30:00 GMT"
+    },
+    {
+      "id": "c7c982a1e6",
+      "title": "My friends play ‘credit-card roulette’ to see who pays for dinner — but one ‘winner’ still Venmoed me afterward. Should I say something?",
+      "summary": "‘I was stunned! I’ve lost my fair share, and won my fair share, and truly believe it all evens out over time.’",
+      "link": "https://www.marketwatch.com/story/my-friends-play-credit-card-roulette-to-see-who-pays-for-dinner-but-one-winner-still-venmoed-me-afterward-should-i-say-something-0a657eee?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 27 Nov 2026 15:04:00 GMT"
+    },
+    {
+      "id": "f765b4c245",
+      "title": "Artificial intelligence usage is exploding, yet spending is stalling. Why a foundational rule of economics is breaking.",
+      "summary": "For frontier model lab developers, the increased consumption of AI tokens (the means by which they get paid for their compute) is a positive. However, they  don’t seem to be generating  revenues from",
+      "link": "https://www.marketwatch.com/story/artificial-intelligence-usage-is-exploding-yet-spending-is-stalling-why-a-foundational-rule-of-economics-is-breaking-9c7ad4b3?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 27 Nov 2026 15:01:00 GMT"
+    },
+    {
+      "id": "fb1f8a7113",
+      "title": "Nvidia’s stock has tumbled 28% over one chaotic month. The next big test lies in the week ahead",
+      "summary": "Jensen Huang faces tough questions from Congress this week. Good luck pinning him down, one analyst says.",
+      "link": "https://www.marketwatch.com/story/nvidias-stock-has-tumbled-27-over-one-chaotic-month-the-next-big-test-lies-in-the-week-ahead-06449777?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 27 Nov 2026 14:56:00 GMT"
+    },
+    {
+      "id": "8c101c2fa4",
+      "title": "How much more are richest Americans spending on the holidays compared to everyone else?",
+      "summary": "Most households are getting “squeezed by rising costs of everyday goods,” according to Teneo, but upper-income households “are showing resilience.”",
+      "link": "https://www.marketwatch.com/story/see-how-much-more-money-the-richest-americans-are-spending-on-the-holidays-compared-to-everyone-else-f0ff3f4b?mod=mw_rss_topstories",
+      "source": "feeds.marketwatch.com",
+      "published": "Fri, 27 Nov 2026 14:23:00 GMT"
+    },
+    {
+      "id": "448216f114",
+      "title": "Jaguar Health receives Nasdaq delisting notice and requests hearing",
+      "summary": "",
+      "link": "https://www.investing.com/news/sec-filings/jaguar-health-receives-nasdaq-delisting-notice-and-requests-hearing-93CH-5053755",
+      "source": "www.investing.com",
+      "published": "2026-11-27 17:42:58"
+    },
+    {
+      "id": "1694b01a89",
+      "title": "FTSE 100 today: Stocks climb as miners lead on metals rebound; Entain gains",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/ftse-100-today-stocks-rise-as-miners-lead-on-metals-rebound-5053108",
+      "source": "www.investing.com",
+      "published": "2026-11-27 17:30:46"
+    },
+    {
+      "id": "831a6a8996",
+      "title": "Brazilian markets rally after Lula taps Bradesco chairman for finance chief",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/brazilian-markets-rally-after-lula-taps-bradesco-chairman-for-finance-chief-5053727",
+      "source": "www.investing.com",
+      "published": "2026-11-27 17:30:43"
+    },
+    {
+      "id": "6b0118e54b",
+      "title": "Exclusive-Global fashion brands shift orders from Bangladesh to India amid unrest",
+      "summary": "",
+      "link": "https://www.investing.com/news/economic-indicators/exclusiveglobal-brands-shift-hundreds-of-millions-in-orders-from-bangladesh-to-india-amid-unrest-5053134",
+      "source": "www.investing.com",
+      "published": "2026-11-27 17:30:28"
+    },
+    {
+      "id": "ec9d0d9024",
+      "title": "Life Time Group Holdings stock hits all-time high at 48.63 USD",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/life-time-group-holdings-stock-hits-alltime-high-at-4863-usd-93CH-5053749",
+      "source": "www.investing.com",
+      "published": "2026-11-27 17:29:09"
+    },
+    {
+      "id": "a4a1c80bdf",
+      "title": "European shares extend rise, but bruising November leaves AI scars",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/european-shares-extend-rally-but-bruising-november-leaves-ai-scars-5053023",
+      "source": "www.investing.com",
+      "published": "2026-11-27 17:26:41"
+    },
+    {
+      "id": "f72efec1d7",
+      "title": "Trupanion stock hits 52-week high at 38.94 USD",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/trupanion-stock-hits-52week-high-at-3894-usd-93CH-5053748",
+      "source": "www.investing.com",
+      "published": "2026-11-27 17:24:47"
+    },
+    {
+      "id": "eb0104aebf",
+      "title": "European shares log strong weekly gains; markets await Spanish election",
+      "summary": "",
+      "link": "https://www.investing.com/news/stock-market-news/european-stocks-extend-recovery-as-tech-miners-advance-5053129",
+      "source": "www.investing.com",
+      "published": "2026-11-27 17:24:25"
+    },
+    {
+      "id": "ef0cabfedd",
+      "title": "Take Five: A December to remember",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/take-five-a-december-to-remember-5053153",
+      "source": "www.investing.com",
+      "published": "2026-11-27 17:12:19"
+    },
+    {
+      "id": "6e87bb9f4a",
+      "title": "Regeneron Pharmaceuticals stock hits 52-week high at $991.85",
+      "summary": "",
+      "link": "https://www.investing.com/news/company-news/regeneron-pharmaceuticals-stock-hits-52week-high-at-99185-93CH-5053743",
+      "source": "www.investing.com",
+      "published": "2026-11-27 17:10:54"
+    }
+  ],
+  "briefing": {
+    "date": "2026-11-27",
+    "update_time": "2026-11-27 07:35:56",
+    "candidate_count": 20,
+    "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-27\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 AMD 专用版 llama.cpp 分支 (来源: HackerNews)\n- **核心干货**：有人给 llama.cpp 单开了一个 AMD 专用分支，专门针对 AMD 硬件做推理优化。核心痛点很明确——主流 LLM 推理栈基本围着 NVIDIA 转，AMD 用户长期在“能跑但跑不快”的尴尬区间里挣扎，这个分支试图把 AMD 的算力榨出来。\n- **毒舌/硬核点评**：NVIDIA 吃肉，AMD 只能靠社区志愿者帮忙捡骨头——这已经不是技术问题，是生态问题。分支能活多久，取决于有没有人愿意为爱发电，而不是取决于代码优不优雅。\n- **🔗 传送门**：[点击直达原链接](https://devnull.land/amd-specific-llama-cpp)\n\n---\n\n### 2. 📌 Google 让 AI Agent 用 MCP 服务器，但 Gmail 那个连邮件都发不了 (来源: HackerNews)\n- **核心干货**：Google 开始推动 AI Agent 通过 MCP 协议接入 Workspace 全家桶，听起来是生态开放的大动作。但现实很骨感：Gmail 的 MCP 服务器居然不具备发送邮件的能力，等于给你配了辆车但没装发动机。这暴露了“AI Agent 接入”目前更多是公关叙事，而非可用产品。\n- **毒舌/硬核点评**：一个叫“邮件服务器”的东西不能发邮件，这就像餐厅招牌写着“免费试吃”，进门发现只有白开水。MCP 是好协议，但被这种半成品接入方式糟蹋，只会让开发者对“官方支持”四个字更加警惕。\n- **🔗 传送门**：[点击直达原链接](https://techstackups.com/articles/google-workspace-ai-agents-mcp/)\n\n---\n\n### 3. 📌 广义黎曼猜想的 Lean 4 形式化证明被压缩到 7.6 万行 (来源: Lobste.rs)\n- **核心干货**：Alpöge 对 Dirichlet L 函数的 RH/GRH Lean 证明原本约 1700 万行，现在被“瘦身”到 7.6 万行，且证明的是同一组五个定理。这不只是代码整理，而是形式化数学可读性和可维护性的一次实质性跨越——从“机器能验但人看不动”走向“人能读且机器能验”。\n- **毒舌/硬核点评**：1700 万行证明瘦到 7.6 万行，这减肥效果比任何健身博主都硬核。更值得玩味的是：当数学证明开始像软件工程一样讲究重构和可读性，说明形式化验证正在从学术奇观变成基础设施。\n- **🔗 传送门**：[点击直达原链接](https://leanprover.zulipchat.com/#narrow/channel/658556-Riemann-Hypothesis/topic/Cleaning.20up.20the.20proof/near/643702366)\n\n---\n\n### 🗣️ 今日顶男金句\n> “生态不是靠发布会宣布的，是靠别人愿意为你的平台写分支、修 bug、熬通宵——免费的。”",
+    "briefing_items": [
+      {
+        "title": "AMD 专用版 llama.cpp 分支",
+        "source": "HackerNews",
+        "summary": "有人给 llama.cpp 单开了一个 AMD 专用分支，专门针对 AMD 硬件做推理优化。核心痛点很明确——主流 LLM 推理栈基本围着 NVIDIA 转，AMD 用户长期在“能跑但跑不快”的尴尬区间里挣扎，这个分支试图把 AMD 的算力榨出来。",
+        "commentary": "NVIDIA 吃肉，AMD 只能靠社区志愿者帮忙捡骨头——这已经不是技术问题，是生态问题。分支能活多久，取决于有没有人愿意为爱发电，而不是取决于代码优不优雅。",
+        "url": "https://devnull.land/amd-specific-llama-cpp"
+      },
+      {
+        "title": "Google 让 AI Agent 用 MCP 服务器，但 Gmail 那个连邮件都发不了",
+        "source": "HackerNews",
+        "summary": "Google 开始推动 AI Agent 通过 MCP 协议接入 Workspace 全家桶，听起来是生态开放的大动作。但现实很骨感：Gmail 的 MCP 服务器居然不具备发送邮件的能力，等于给你配了辆车但没装发动机。这暴露了“AI Agent 接入”目前更多是公关叙事，而非可用产品。",
+        "commentary": "一个叫“邮件服务器”的东西不能发邮件，这就像餐厅招牌写着“免费试吃”，进门发现只有白开水。MCP 是好协议，但被这种半成品接入方式糟蹋，只会让开发者对“官方支持”四个字更加警惕。",
+        "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/"
+      },
+      {
+        "title": "广义黎曼猜想的 Lean 4 形式化证明被压缩到 7.6 万行",
+        "source": "Lobste.rs",
+        "summary": "Alpöge 对 Dirichlet L 函数的 RH/GRH Lean 证明原本约 1700 万行，现在被“瘦身”到 7.6 万行，且证明的是同一组五个定理。这不只是代码整理，而是形式化数学可读性和可维护性的一次实质性跨越——从“机器能验但人看不动”走向“人能读且机器能验”。",
+        "commentary": "1700 万行证明瘦到 7.6 万行，这减肥效果比任何健身博主都硬核。更值得玩味的是：当数学证明开始像软件工程一样讲究重构和可读性，说明形式化验证正在从学术奇观变成基础设施。",
+        "url": "https://leanprover.zulipchat.com/#narrow/channel/658556-Riemann-Hypothesis/topic/Cleaning.20up.20the.20proof/near/643702366"
+      },
+      {
+        "quote": "“生态不是靠发布会宣布的，是靠别人愿意为你的平台写分支、修 bug、熬通宵——免费的。”"
+      }
+    ],
+    "candidates": [
+      {
+        "id": "hn:50660180",
+        "title": "AI made self-hosting fun again",
+        "summary": "",
+        "url": "https://janlukas.blog/posts/ai-self-hosting",
+        "source": "Hacker News",
+        "score": 578,
+        "comments": 301
+      },
+      {
+        "id": "hn:50659841",
+        "title": "Kamil Khan Mumtaz: Pakistani architect, admired at home, almost invisible abroad",
+        "summary": "",
+        "url": "https://worksinprogress.co/issue/the-greatest-architect-youve-never-heard-of-is-in-pakistan/",
+        "source": "Hacker News",
+        "score": 339,
+        "comments": 77
+      },
+      {
+        "id": "hn:50657265",
+        "title": "AMD-specific fork of llama.cpp",
+        "summary": "",
+        "url": "https://devnull.land/amd-specific-llama-cpp",
+        "source": "Hacker News",
+        "score": 333,
+        "comments": 82
+      },
+      {
+        "id": "hn:50653477",
+        "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
+        "summary": "",
+        "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
+        "source": "Hacker News",
+        "score": 318,
+        "comments": 274
+      },
+      {
+        "id": "hn:50661646",
+        "title": "Hard Drive pricing has gotten bad",
+        "summary": "",
+        "url": "https://blog.ktz.me/black-friday-hard-drive-prices-are-messed-up/",
+        "source": "Hacker News",
+        "score": 289,
+        "comments": 188
+      },
+      {
+        "id": "hn:50657530",
+        "title": "YouTube Ad Punisher – Auto-reloads YouTube pages when an ad plays",
+        "summary": "",
+        "url": "https://github.com/antonpictures/youtube-punisher",
+        "source": "Hacker News",
+        "score": 360,
+        "comments": 427
+      },
+      {
+        "id": "hn:50657645",
+        "title": "CTO of 'RansomwareHelp' indicted for wire fraud",
+        "summary": "",
+        "url": "https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/",
+        "source": "Hacker News",
+        "score": 249,
+        "comments": 124
+      },
+      {
+        "id": "hn:50659640",
+        "title": "Company Culture = Slack Emoji ÷ √Headcount",
+        "summary": "",
+        "url": "https://lia.mg/posts/measuring-company-culture-with-slack-emoji/",
+        "source": "Hacker News",
+        "score": 271,
+        "comments": 122
+      },
+      {
+        "id": "hn:50653667",
+        "title": "Intel One Mono font (2023)",
+        "summary": "",
+        "url": "https://github.com/intel/intel-one-mono",
+        "source": "Hacker News",
+        "score": 508,
+        "comments": 249
+      },
+      {
+        "id": "lob:wzlzlh",
+        "title": "Slow Ubuntu security response times",
+        "summary": "",
+        "url": "https://www.openwall.com/lists/oss-security/2026/11/25/9",
+        "source": "Lobste.rs",
+        "score": 112,
+        "comments": 17,
+        "tags": [
+          "linux",
+          "security"
+        ]
+      },
+      {
+        "id": "lob:2gfpu3",
+        "title": "Garage v2.6.0 released with web admin, v1.x EoL & other news",
+        "summary": "",
+        "url": "https://garagehq.deuxfleurs.fr/blog/2026-11-webadmin-release/",
+        "source": "Lobste.rs",
+        "score": 43,
+        "comments": 3,
+        "tags": [
+          "distributed",
+          "release",
+          "web"
+        ]
+      },
+      {
+        "id": "lob:ilit8q",
+        "title": "Scott Aaronson on recent complexity theory AI achievements",
+        "summary": "",
+        "url": "https://scottaaronson.blog/?p=10379",
+        "source": "Lobste.rs",
+        "score": 57,
+        "comments": 53,
+        "tags": [
+          "compsci",
+          "math"
+        ]
+      },
+      {
+        "id": "lob:tlwot6",
+        "title": "Generalized Riemann Hypothesis proof in Lean 4, in 76k lines (down from 17M)",
+        "summary": "<p>This is a shortened version of Alpöge's Lean proof of RH and GRH for Dirichlet L-functions (<a href=\"https://alpo.ge/remark.pdf\" rel=\"ugc\">https://alpo.ge/remark.pdf</a>), which was about 17 million lines.</p>\n<p>There are two editions proving the same five theorems: a readable one at about 300,0",
+        "url": "https://leanprover.zulipchat.com/#narrow/channel/658556-Riemann-Hypothesis/topic/Cleaning.20up.20the.20proof/near/643702366",
+        "source": "Lobste.rs",
+        "score": 53,
+        "comments": 25,
+        "tags": [
+          "math"
+        ]
+      },
+      {
+        "id": "lob:wpylec",
+        "title": "In defense of lock poisoning in Rust (2025)",
+        "summary": "",
+        "url": "https://sunshowers.io/posts/on-poisoning/",
+        "source": "Lobste.rs",
+        "score": 27,
+        "comments": 15,
+        "tags": [
+          "rust"
+        ]
+      },
+      {
+        "id": "lob:8rgqmw",
+        "title": "Entering the Geminispace",
+        "summary": "",
+        "url": "https://jmmv.dev/2026/11/entering-the-geminispace.html",
+        "source": "Lobste.rs",
+        "score": 43,
+        "comments": 33,
+        "tags": [
+          "web"
+        ]
+      },
+      {
+        "id": "hn:50663089",
+        "title": "The need for a formally verifiable mainstream programming language",
+        "summary": "",
+        "url": "https://blainehansen.me/post/mainstream-verifiable-language/",
+        "source": "Hacker News",
+        "score": 87,
+        "comments": 59
+      },
+      {
+        "id": "lob:l6g7j1",
+        "title": "Typed indexes in Zig",
+        "summary": "",
+        "url": "https://lvignoli.eu/posts/2026-11-16-typed-indexes-in-zig/",
+        "source": "Lobste.rs",
+        "score": 31,
+        "comments": 9,
+        "tags": [
+          "programming",
+          "zig"
+        ]
+      },
+      {
+        "id": "rss:7fbb7e5b84",
+        "title": "Unpatched Cacti Zero-Day Enables RCE in Just Four HTTP Requests via Guest Access",
+        "summary": "Details have emerged about a new zero-day vulnerability in Cacti, an open-source network monitoring tool, that could be exploited to achieve remote code execution.\n\nThe proof-of-concept (PoC) exploit, which has yet to be assigned a CVE identifier, has been tracked as 4HTTP2SHELL and 4HTTP2ROOT.\n\n\"I",
+        "url": "https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html",
+        "source": "Tech RSS",
+        "score": 0
+      },
+      {
+        "id": "rss:a4e3426843",
+        "title": "Hackers Exploit Two GeoServer Flaws as Researchers Warn of Unauthenticated RCE Chains",
+        "summary": "Threat actors are actively exploiting two newly patched security flaws in GeoServer, according to watchTowr.\n\nThe vulnerabilities in question are CVE-2026-120705 and CVE-2026-129243, details of which are below -\n\n\n  CVE-2026-120705 (CVSS score: 8.6) - An arbitrary file read vulnerability that could",
+        "url": "https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html",
+        "source": "Tech RSS",
+        "score": 0
+      },
+      {
+        "id": "hn:50662933",
+        "title": "\"What's Claude's Fursona?\" and Other Questions",
+        "summary": "",
+        "url": "https://herecomesthemoon.net/2026/11/whats-claudes-fursona/",
+        "source": "Hacker News",
+        "score": 71,
+        "comments": 43
+      }
+    ],
+    "ai_curated": true
+  },
+  "fear_greed": {
+    "value": 12,
+    "classification": "Extreme Fear",
+    "timestamp": "2026-11-27 00:00:00"
+  }
+}
