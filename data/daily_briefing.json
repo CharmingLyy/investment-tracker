@@ -1,40 +1,106 @@
 {
   "date": "2026-11-27",
-  "update_time": "2026-11-26 21:03:44",
+  "update_time": "2026-11-27 07:35:56",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-27\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 AMD 专版补丁杀入 llama.cpp (来源: HackerNews)\n- **核心干货**：社区开发者给 llama.cpp 提交了一组针对 AMD 显卡的专属优化补丁，绕开通用路径，直接榨干 RDNA/CDNA 架构的算力。对苦于 CUDA 生态垄断的本地推理玩家来说，这算是把 AMD 从\"能跑\"往\"跑得快\"推了一把。\n- **毒舌/硬核点评**：老黄靠 CUDA 收租收到手软，AMD 用户终于不用再对着社区通用内核烧香拜佛了——不过补丁是社区的，优化是手搓的，官方 ROCm 的锅还得官方自己背。\n- **🔗 传送门**：[点击直达原链接](https://devnull.land/amd-specific-llama-cpp)\n\n---\n\n### 2. 📌 Lean 4 把黎曼假设证明从 1700 万行压到 7.6 万行 (来源: Lobste.rs)\n- **核心干货**：Alpöge 关于 Dirichlet L 函数黎曼假设（RH/GRH）的 Lean 形式化证明，被重整为约 7.6 万行的可读版本（原版约 1700 万行），同一组五个定理有了\"人能看懂\"的版本。形式化数学的工程量级，第一次显得没那么吓人。\n- **毒舌/硬核点评**：1700 万行证明属于\"机器看得懂、人类看不懂\"，压缩到 7.6 万行才是真功夫——数学证明的代码整洁癖，比人类代码的屎山还值得敬佩。\n- **🔗 传送门**：[点击直达原链接](https://leanprover.zulipchat.com/#narrow/channel/658556-Riemann-Hypothesis/topic/Cleaning.20up.20the.20proof/near/643702366)\n\n---\n\n### 3. 📌 OpenAI 疑似进入\"省钱模式\" (来源: HackerNews)\n- **核心干货**：有分析指出 OpenAI 最近的算力采购、定价与招聘节奏都透出成本控制的信号——烧钱换增长的叙事正在转向算账。对整条 AI 产业链来说，龙头企业的\"抠门\"往往比它的发布会更能说明行业温度。\n- **毒舌/硬核点评**：从\"改变世界\"到\"控制成本\"，中间可能只隔着一张 CFO 的报表。烧投资人钱的时候是理想主义，轮到自己算毛利了才叫现实主义。\n- **🔗 传送门**：[点击直达原链接](https://micjm.com/blog/openai-is-in-cost-control-mode/)\n\n---\n\n### 🗣️ 今日顶男金句\n别迷信\"大力出奇迹\"，1700 万行的证明压到 7.6 万行才是真本事——搞钱和搞技术都一样，能把复杂的事做简单，才叫水平。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-27\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 AMD 专用版 llama.cpp 分支 (来源: HackerNews)\n- **核心干货**：有人给 llama.cpp 单开了一个 AMD 专用分支，专门针对 AMD 硬件做推理优化。核心痛点很明确——主流 LLM 推理栈基本围着 NVIDIA 转，AMD 用户长期在“能跑但跑不快”的尴尬区间里挣扎，这个分支试图把 AMD 的算力榨出来。\n- **毒舌/硬核点评**：NVIDIA 吃肉，AMD 只能靠社区志愿者帮忙捡骨头——这已经不是技术问题，是生态问题。分支能活多久，取决于有没有人愿意为爱发电，而不是取决于代码优不优雅。\n- **🔗 传送门**：[点击直达原链接](https://devnull.land/amd-specific-llama-cpp)\n\n---\n\n### 2. 📌 Google 让 AI Agent 用 MCP 服务器，但 Gmail 那个连邮件都发不了 (来源: HackerNews)\n- **核心干货**：Google 开始推动 AI Agent 通过 MCP 协议接入 Workspace 全家桶，听起来是生态开放的大动作。但现实很骨感：Gmail 的 MCP 服务器居然不具备发送邮件的能力，等于给你配了辆车但没装发动机。这暴露了“AI Agent 接入”目前更多是公关叙事，而非可用产品。\n- **毒舌/硬核点评**：一个叫“邮件服务器”的东西不能发邮件，这就像餐厅招牌写着“免费试吃”，进门发现只有白开水。MCP 是好协议，但被这种半成品接入方式糟蹋，只会让开发者对“官方支持”四个字更加警惕。\n- **🔗 传送门**：[点击直达原链接](https://techstackups.com/articles/google-workspace-ai-agents-mcp/)\n\n---\n\n### 3. 📌 广义黎曼猜想的 Lean 4 形式化证明被压缩到 7.6 万行 (来源: Lobste.rs)\n- **核心干货**：Alpöge 对 Dirichlet L 函数的 RH/GRH Lean 证明原本约 1700 万行，现在被“瘦身”到 7.6 万行，且证明的是同一组五个定理。这不只是代码整理，而是形式化数学可读性和可维护性的一次实质性跨越——从“机器能验但人看不动”走向“人能读且机器能验”。\n- **毒舌/硬核点评**：1700 万行证明瘦到 7.6 万行，这减肥效果比任何健身博主都硬核。更值得玩味的是：当数学证明开始像软件工程一样讲究重构和可读性，说明形式化验证正在从学术奇观变成基础设施。\n- **🔗 传送门**：[点击直达原链接](https://leanprover.zulipchat.com/#narrow/channel/658556-Riemann-Hypothesis/topic/Cleaning.20up.20the.20proof/near/643702366)\n\n---\n\n### 🗣️ 今日顶男金句\n> “生态不是靠发布会宣布的，是靠别人愿意为你的平台写分支、修 bug、熬通宵——免费的。”",
   "briefing_items": [
     {
-      "title": "AMD 专版补丁杀入 llama.cpp",
+      "title": "AMD 专用版 llama.cpp 分支",
       "source": "HackerNews",
-      "summary": "社区开发者给 llama.cpp 提交了一组针对 AMD 显卡的专属优化补丁，绕开通用路径，直接榨干 RDNA/CDNA 架构的算力。对苦于 CUDA 生态垄断的本地推理玩家来说，这算是把 AMD 从\"能跑\"往\"跑得快\"推了一把。",
-      "commentary": "老黄靠 CUDA 收租收到手软，AMD 用户终于不用再对着社区通用内核烧香拜佛了——不过补丁是社区的，优化是手搓的，官方 ROCm 的锅还得官方自己背。",
+      "summary": "有人给 llama.cpp 单开了一个 AMD 专用分支，专门针对 AMD 硬件做推理优化。核心痛点很明确——主流 LLM 推理栈基本围着 NVIDIA 转，AMD 用户长期在“能跑但跑不快”的尴尬区间里挣扎，这个分支试图把 AMD 的算力榨出来。",
+      "commentary": "NVIDIA 吃肉，AMD 只能靠社区志愿者帮忙捡骨头——这已经不是技术问题，是生态问题。分支能活多久，取决于有没有人愿意为爱发电，而不是取决于代码优不优雅。",
       "url": "https://devnull.land/amd-specific-llama-cpp"
     },
     {
-      "title": "Lean 4 把黎曼假设证明从 1700 万行压到 7.6 万行",
+      "title": "Google 让 AI Agent 用 MCP 服务器，但 Gmail 那个连邮件都发不了",
+      "source": "HackerNews",
+      "summary": "Google 开始推动 AI Agent 通过 MCP 协议接入 Workspace 全家桶，听起来是生态开放的大动作。但现实很骨感：Gmail 的 MCP 服务器居然不具备发送邮件的能力，等于给你配了辆车但没装发动机。这暴露了“AI Agent 接入”目前更多是公关叙事，而非可用产品。",
+      "commentary": "一个叫“邮件服务器”的东西不能发邮件，这就像餐厅招牌写着“免费试吃”，进门发现只有白开水。MCP 是好协议，但被这种半成品接入方式糟蹋，只会让开发者对“官方支持”四个字更加警惕。",
+      "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/"
+    },
+    {
+      "title": "广义黎曼猜想的 Lean 4 形式化证明被压缩到 7.6 万行",
       "source": "Lobste.rs",
-      "summary": "Alpöge 关于 Dirichlet L 函数黎曼假设（RH/GRH）的 Lean 形式化证明，被重整为约 7.6 万行的可读版本（原版约 1700 万行），同一组五个定理有了\"人能看懂\"的版本。形式化数学的工程量级，第一次显得没那么吓人。",
-      "commentary": "1700 万行证明属于\"机器看得懂、人类看不懂\"，压缩到 7.6 万行才是真功夫——数学证明的代码整洁癖，比人类代码的屎山还值得敬佩。",
+      "summary": "Alpöge 对 Dirichlet L 函数的 RH/GRH Lean 证明原本约 1700 万行，现在被“瘦身”到 7.6 万行，且证明的是同一组五个定理。这不只是代码整理，而是形式化数学可读性和可维护性的一次实质性跨越——从“机器能验但人看不动”走向“人能读且机器能验”。",
+      "commentary": "1700 万行证明瘦到 7.6 万行，这减肥效果比任何健身博主都硬核。更值得玩味的是：当数学证明开始像软件工程一样讲究重构和可读性，说明形式化验证正在从学术奇观变成基础设施。",
       "url": "https://leanprover.zulipchat.com/#narrow/channel/658556-Riemann-Hypothesis/topic/Cleaning.20up.20the.20proof/near/643702366"
     },
     {
-      "title": "OpenAI 疑似进入\"省钱模式\"",
-      "source": "HackerNews",
-      "summary": "有分析指出 OpenAI 最近的算力采购、定价与招聘节奏都透出成本控制的信号——烧钱换增长的叙事正在转向算账。对整条 AI 产业链来说，龙头企业的\"抠门\"往往比它的发布会更能说明行业温度。",
-      "commentary": "从\"改变世界\"到\"控制成本\"，中间可能只隔着一张 CFO 的报表。烧投资人钱的时候是理想主义，轮到自己算毛利了才叫现实主义。",
-      "url": "https://micjm.com/blog/openai-is-in-cost-control-mode/"
+      "quote": "“生态不是靠发布会宣布的，是靠别人愿意为你的平台写分支、修 bug、熬通宵——免费的。”"
     }
   ],
   "candidates": [
     {
+      "id": "hn:50660180",
+      "title": "AI made self-hosting fun again",
+      "summary": "",
+      "url": "https://janlukas.blog/posts/ai-self-hosting",
+      "source": "Hacker News",
+      "score": 578,
+      "comments": 301
+    },
+    {
+      "id": "hn:50659841",
+      "title": "Kamil Khan Mumtaz: Pakistani architect, admired at home, almost invisible abroad",
+      "summary": "",
+      "url": "https://worksinprogress.co/issue/the-greatest-architect-youve-never-heard-of-is-in-pakistan/",
+      "source": "Hacker News",
+      "score": 339,
+      "comments": 77
+    },
+    {
       "id": "hn:50657265",
-      "title": "AMD Specific Patches for Llama.cpp",
+      "title": "AMD-specific fork of llama.cpp",
       "summary": "",
       "url": "https://devnull.land/amd-specific-llama-cpp",
       "source": "Hacker News",
-      "score": 186,
-      "comments": 49
+      "score": 333,
+      "comments": 82
+    },
+    {
+      "id": "hn:50653477",
+      "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
+      "summary": "",
+      "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
+      "source": "Hacker News",
+      "score": 318,
+      "comments": 274
+    },
+    {
+      "id": "hn:50661646",
+      "title": "Hard Drive pricing has gotten bad",
+      "summary": "",
+      "url": "https://blog.ktz.me/black-friday-hard-drive-prices-are-messed-up/",
+      "source": "Hacker News",
+      "score": 289,
+      "comments": 188
+    },
+    {
+      "id": "hn:50657530",
+      "title": "YouTube Ad Punisher – Auto-reloads YouTube pages when an ad plays",
+      "summary": "",
+      "url": "https://github.com/antonpictures/youtube-punisher",
+      "source": "Hacker News",
+      "score": 360,
+      "comments": 427
+    },
+    {
+      "id": "hn:50657645",
+      "title": "CTO of 'RansomwareHelp' indicted for wire fraud",
+      "summary": "",
+      "url": "https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/",
+      "source": "Hacker News",
+      "score": 249,
+      "comments": 124
+    },
+    {
+      "id": "hn:50659640",
+      "title": "Company Culture = Slack Emoji ÷ √Headcount",
+      "summary": "",
+      "url": "https://lia.mg/posts/measuring-company-culture-with-slack-emoji/",
+      "source": "Hacker News",
+      "score": 271,
+      "comments": 122
     },
     {
       "id": "hn:50653667",
@@ -42,21 +108,34 @@
       "summary": "",
       "url": "https://github.com/intel/intel-one-mono",
       "source": "Hacker News",
-      "score": 403,
-      "comments": 228
+      "score": 508,
+      "comments": 249
     },
     {
-      "id": "lob:lyyksp",
-      "title": "Optimizing Rustc's next trait solver",
+      "id": "lob:wzlzlh",
+      "title": "Slow Ubuntu security response times",
       "summary": "",
-      "url": "https://donsz.nl/blog/optimizing-rustcs-next-trait-solver",
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/25/9",
       "source": "Lobste.rs",
-      "score": 60,
-      "comments": 11,
+      "score": 112,
+      "comments": 17,
       "tags": [
-        "compilers",
-        "performance",
-        "rust"
+        "linux",
+        "security"
+      ]
+    },
+    {
+      "id": "lob:2gfpu3",
+      "title": "Garage v2.6.0 released with web admin, v1.x EoL & other news",
+      "summary": "",
+      "url": "https://garagehq.deuxfleurs.fr/blog/2026-11-webadmin-release/",
+      "source": "Lobste.rs",
+      "score": 43,
+      "comments": 3,
+      "tags": [
+        "distributed",
+        "release",
+        "web"
       ]
     },
     {
@@ -65,8 +144,8 @@
       "summary": "",
       "url": "https://scottaaronson.blog/?p=10379",
       "source": "Lobste.rs",
-      "score": 55,
-      "comments": 49,
+      "score": 57,
+      "comments": 53,
       "tags": [
         "compsci",
         "math"
@@ -78,33 +157,23 @@
       "summary": "<p>This is a shortened version of Alpöge's Lean proof of RH and GRH for Dirichlet L-functions (<a href=\"https://alpo.ge/remark.pdf\" rel=\"ugc\">https://alpo.ge/remark.pdf</a>), which was about 17 million lines.</p>\n<p>There are two editions proving the same five theorems: a readable one at about 300,0",
       "url": "https://leanprover.zulipchat.com/#narrow/channel/658556-Riemann-Hypothesis/topic/Cleaning.20up.20the.20proof/near/643702366",
       "source": "Lobste.rs",
-      "score": 46,
-      "comments": 20,
+      "score": 53,
+      "comments": 25,
       "tags": [
         "math"
       ]
     },
     {
-      "id": "lob:wzlzlh",
-      "title": "Slow Ubuntu security response times",
+      "id": "lob:wpylec",
+      "title": "In defense of lock poisoning in Rust (2025)",
       "summary": "",
-      "url": "https://www.openwall.com/lists/oss-security/2026/11/25/9",
+      "url": "https://sunshowers.io/posts/on-poisoning/",
       "source": "Lobste.rs",
-      "score": 99,
-      "comments": 14,
+      "score": 27,
+      "comments": 15,
       "tags": [
-        "linux",
-        "security"
+        "rust"
       ]
-    },
-    {
-      "id": "hn:50652527",
-      "title": "OpenAI may be in cost control mode",
-      "summary": "",
-      "url": "https://micjm.com/blog/openai-is-in-cost-control-mode/",
-      "source": "Hacker News",
-      "score": 95,
-      "comments": 87
     },
     {
       "id": "lob:8rgqmw",
@@ -112,111 +181,41 @@
       "summary": "",
       "url": "https://jmmv.dev/2026/11/entering-the-geminispace.html",
       "source": "Lobste.rs",
-      "score": 37,
-      "comments": 25,
+      "score": 43,
+      "comments": 33,
       "tags": [
         "web"
       ]
     },
     {
-      "id": "hn:50657645",
-      "title": "CTO of 'RansomwareHelp' Indicted for Wire Fraud",
+      "id": "hn:50663089",
+      "title": "The need for a formally verifiable mainstream programming language",
       "summary": "",
-      "url": "https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/",
+      "url": "https://blainehansen.me/post/mainstream-verifiable-language/",
       "source": "Hacker News",
-      "score": 125,
-      "comments": 52
+      "score": 87,
+      "comments": 59
     },
     {
-      "id": "hn:50657530",
-      "title": "YouTube Ad Punisher – Auto-reloads YouTube pages when an ad plays",
+      "id": "lob:l6g7j1",
+      "title": "Typed indexes in Zig",
       "summary": "",
-      "url": "https://github.com/antonpictures/youtube-punisher",
-      "source": "Hacker News",
-      "score": 116,
-      "comments": 174
-    },
-    {
-      "id": "lob:2gfpu3",
-      "title": "Garage v2.6.0 released with web admin, v1.x EoL & other news",
-      "summary": "",
-      "url": "https://garagehq.deuxfleurs.fr/blog/2026-11-webadmin-release/",
+      "url": "https://lvignoli.eu/posts/2026-11-16-typed-indexes-in-zig/",
       "source": "Lobste.rs",
-      "score": 25,
-      "comments": 3,
+      "score": 31,
+      "comments": 9,
       "tags": [
-        "distributed",
-        "release",
-        "web"
+        "programming",
+        "zig"
       ]
     },
     {
-      "id": "hn:50656036",
-      "title": "Show HN: Three Linux VMs in a browser tab, each running a different browser",
-      "summary": "",
-      "url": "https://michidk.github.io/sidebyside/",
-      "source": "Hacker News",
-      "score": 86,
-      "comments": 22
-    },
-    {
-      "id": "hn:50636931",
-      "title": "Curiosity Is No Solo Act",
-      "summary": "",
-      "url": "https://thereader.mitpress.mit.edu/curiosity-is-no-solo-act/",
-      "source": "Hacker News",
-      "score": 103,
-      "comments": 22
-    },
-    {
-      "id": "arxiv:2611.34935v1",
-      "title": "Can image generation help visual reasoning? An empirical study",
-      "summary": "Language models think in words; then multimodal models might think in images. We test whether a generated helper improves the answer to a visual question. A model describes the helper it needs and then answers using the original and generated images together. Across 13 vision-language model and gene",
-      "url": "https://arxiv.org/abs/2611.34935v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.CL",
-        "cs.CV"
-      ],
-      "arxiv_id": "2611.34935v1"
-    },
-    {
-      "id": "arxiv:2611.34928v1",
-      "title": "Diverse Alternative Reasoning Traces for Hard Math Problems",
-      "summary": "Post-training large language models (LLMs) for mathematical reasoning often relies on accepted traces whose final answers pass a verifier. For hard math problems, however, such traces can be rare under independent Monte Carlo (MC) sampling. To address this, we propose Diverse Alternative Reasoning T",
-      "url": "https://arxiv.org/abs/2611.34928v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2611.34928v1"
-    },
-    {
-      "id": "arxiv:2611.34920v1",
-      "title": "$μ$-Bench: Benchmarking Multi-User Task Completion in Shared Interaction Voice Agents",
-      "summary": "Voice agents in shared spaces must satisfy interdependent multi-user requests while upholding per-user authority, privacy, and task constraints. Existing evaluations offer limited coverage when participants react throughout a session. We introduce $μ$-Bench, a benchmark for joint task completion in ",
-      "url": "https://arxiv.org/abs/2611.34920v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "arxiv_id": "2611.34920v1"
-    },
-    {
-      "id": "arxiv:2611.34887v1",
-      "title": "Interpretable and Accurate Hybrid Decision Trees with Selective Case-Based Splits",
-      "summary": "Decision trees are among the most well-known interpretable models in Machine Learning. Over the years, a wide variety of strategies have been proposed to define split conditions within the greedy learning framework, aiming to guide instance routing and enhance predictive performance. These strategie",
-      "url": "https://arxiv.org/abs/2611.34887v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "arxiv_id": "2611.34887v1"
+      "id": "rss:7fbb7e5b84",
+      "title": "Unpatched Cacti Zero-Day Enables RCE in Just Four HTTP Requests via Guest Access",
+      "summary": "Details have emerged about a new zero-day vulnerability in Cacti, an open-source network monitoring tool, that could be exploited to achieve remote code execution.\n\nThe proof-of-concept (PoC) exploit, which has yet to be assigned a CVE identifier, has been tracked as 4HTTP2SHELL and 4HTTP2ROOT.\n\n\"I",
+      "url": "https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html",
+      "source": "Tech RSS",
+      "score": 0
     },
     {
       "id": "rss:a4e3426843",
@@ -227,29 +226,13 @@
       "score": 0
     },
     {
-      "id": "lob:wpylec",
-      "title": "In defense of lock poisoning in Rust (2025)",
+      "id": "hn:50662933",
+      "title": "\"What's Claude's Fursona?\" and Other Questions",
       "summary": "",
-      "url": "https://sunshowers.io/posts/on-poisoning/",
-      "source": "Lobste.rs",
-      "score": 20,
-      "comments": 6,
-      "tags": [
-        "rust"
-      ]
-    },
-    {
-      "id": "lob:l6g7j1",
-      "title": "Typed indexes in Zig",
-      "summary": "",
-      "url": "https://lvignoli.eu/posts/2026-11-16-typed-indexes-in-zig/",
-      "source": "Lobste.rs",
-      "score": 30,
-      "comments": 7,
-      "tags": [
-        "programming",
-        "zig"
-      ]
+      "url": "https://herecomesthemoon.net/2026/11/whats-claudes-fursona/",
+      "source": "Hacker News",
+      "score": 71,
+      "comments": 43
     }
   ],
   "ai_curated": true
