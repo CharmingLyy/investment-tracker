@@ -1,142 +1,43 @@
 {
   "date": "2026-11-28",
-  "update_time": "2026-11-27 20:48:48",
+  "update_time": "2026-11-28 07:02:34",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-28\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 信用卡盗刷脚本借 WebRTC 绕过传统防御，攻陷主流购物站 (来源: HackerNews)\n- **核心干货**：安全团队在多个热门电商站点发现新型 skimming 脚本，攻击者用 WebRTC 数据通道把窃取的卡号直接\"点对点\"外传，彻底绕开基于域名黑名单和 CSP 的传统检测。黑五购物季上线，时机精准得像蹲点抢劫。\n- **毒舌/硬核点评**：CSP 和域名黑白名单还在那儿自我感动，攻击者已经用浏览器原生 API 开了一条加密隧道——你的防御清单更新速度，永远追不上别人换协议的手速。顺便，黑五剁手前先查查结账页的 JS。\n- **🔗 传送门**：[点击直达原链接](https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer)\n\n---\n\n### 2. 📌 Cacti 未修复 0-Day：\"四个 HTTP 请求换一个 root shell\" (来源: Tech RSS)\n- **核心干货**：开源网络监控工具 Cacti 曝出未打补丁的 0-Day，PoC 编号 4HTTP2SHELL / 4HTTP2ROOT 已经把话说得很明白——访客权限、四次请求、直接 RCE 到 root。目前无 CVE、无补丁，纯裸奔状态。\n- **毒舌/硬核点评**：监控系统自己被监控不到，讽刺拉满。名字都叫\"4HTTP2ROOT\"了还留着不修，这不是漏洞，是邀请函。跑 Cacti 的运维兄弟，今晚要么打补丁（没有），要么拔网线。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html)\n\n---\n\n### 3. 📌 AI 让自托管重新变得好玩了 (来源: HackerNews，1036 分 / 490 评论)\n- **核心干货**：一篇高热度博文的核心论点：LLM 把自托管（self-hosting）从\"周末调试地狱\"变成了\"说人话就能部署\"。配置、排错、写 systemd unit、啃晦涩文档这些劝退环节，现在可以交给 AI 兜底，个人服务器的门槛被实质性拉低。\n- **毒舌/硬核点评**：自托管的真正门槛从来不是硬件，是你半夜两点对着 nginx 报错骂人的耐心——现在这份耐心可以外包给模型了。不过别高兴太早：AI 帮你部署的东西，出了事还是你自己背锅，它可不接凌晨三点的电话。\n- **🔗 传送门**：[点击直达原链接](https://janlukas.blog/posts/ai-self-hosting)\n\n---\n\n### 🗣️ 今日顶男金句\n\"AI 能帮你把服务器跑起来，但跑起来之后守不守得住，看的还是你有没有把补丁当饭吃——工具降低的是入场费，不是生存费。\"",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-28\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Google DeepCrossAttention：残差连接终于不再拖后腿 (来源: HackerNews / Google Research)\n- **核心干货**：Google 对 Transformer 的残差连接动了刀，DeepCrossAttention 在保持模型质量的前提下把训练速度拉高到 3 倍。核心思路是让注意力层更高效地复用跨层信息，直击当下大模型\"堆层数堆到电费爆炸\"的痛点——同样效果，少烧三分之二的卡。\n- **毒舌/硬核点评**：残差连接这个 2015 年的老古董终于被请去体检了。3 倍加速很香，但请先别急着吹\"改变游戏规则\"——等有人复现出同样曲线再开香槟，毕竟 Google 的 blog 图从来都画得比结果好看。\n- **🔗 传送门**：[点击直达原链接](https://research.google/blog/supercharging-transformer-residual-connections/)\n\n---\n\n### 2. 📌 黑五惊魂：WebRTC 信用卡侧录脚本潜伏主流购物站 (来源: HackerNews / InfoHawk)\n- **核心干货**：安全团队在多个热门电商站点发现利用 WebRTC 数据通道外传信用卡数据的侧录脚本，专门挑黑五流量高峰动手。相比传统偷 data 方式，走 WebRTC 能绕过不少基于 XHR/fetch 的监控规则——换句话说，你的卡号可能正被人用\"视频通话\"的姿势偷走。\n- **毒舌/硬核点评**：黑五打折的是商品，不是你的银行卡余额。WebRTC 本是用来开会的，现在成了小偷的加密专线——技术无罪，用技术的人该进去了。今天下单前，先祈祷自己逛的不是\"惊喜\"站点。\n- **🔗 传送门**：[点击直达原链接](https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer)\n\n---\n\n### 3. 📌 Cacti 零日 4HTTP2SHELL：四个请求，从访客到 root (来源: Tech RSS / The Hacker News)\n- **核心干货**：开源网络监控工具 Cacti 爆出未修补零日漏洞，攻击者仅凭访客权限、发四个 HTTP 请求即可远程执行代码直取 root，PoC 已被命名为 4HTTP2SHELL / 4HTTP2ROOT，尚无 CVE 编号。监控系统本身成了被监控对象的提权跳板，内网里跑 Cacti 的运维今晚别想睡了。\n- **毒舌/硬核点评**：一个用来\"监控\"的工具，自己先被四个请求打穿了——这讽刺程度堪比保安队长带头翻墙。运维兄弟们，要么打补丁，要么今晚把 Cacti 从公网摘了，别等它变成你的 root 后门。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> 技术的护城河从来不是\"我会用\"，而是\"我知道它什么时候会背刺我\"——会调 API 的人满地都是，能预判零日的人才是稀缺资产。",
   "briefing_items": [
     {
-      "title": "信用卡盗刷脚本借 WebRTC 绕过传统防御，攻陷主流购物站",
-      "source": "HackerNews",
-      "summary": "安全团队在多个热门电商站点发现新型 skimming 脚本，攻击者用 WebRTC 数据通道把窃取的卡号直接\"点对点\"外传，彻底绕开基于域名黑名单和 CSP 的传统检测。黑五购物季上线，时机精准得像蹲点抢劫。",
-      "commentary": "CSP 和域名黑白名单还在那儿自我感动，攻击者已经用浏览器原生 API 开了一条加密隧道——你的防御清单更新速度，永远追不上别人换协议的手速。顺便，黑五剁手前先查查结账页的 JS。",
+      "title": "Google DeepCrossAttention：残差连接终于不再拖后腿",
+      "source": "HackerNews / Google Research",
+      "summary": "Google 对 Transformer 的残差连接动了刀，DeepCrossAttention 在保持模型质量的前提下把训练速度拉高到 3 倍。核心思路是让注意力层更高效地复用跨层信息，直击当下大模型\"堆层数堆到电费爆炸\"的痛点——同样效果，少烧三分之二的卡。",
+      "commentary": "残差连接这个 2015 年的老古董终于被请去体检了。3 倍加速很香，但请先别急着吹\"改变游戏规则\"——等有人复现出同样曲线再开香槟，毕竟 Google 的 blog 图从来都画得比结果好看。",
+      "url": "https://research.google/blog/supercharging-transformer-residual-connections/"
+    },
+    {
+      "title": "黑五惊魂：WebRTC 信用卡侧录脚本潜伏主流购物站",
+      "source": "HackerNews / InfoHawk",
+      "summary": "安全团队在多个热门电商站点发现利用 WebRTC 数据通道外传信用卡数据的侧录脚本，专门挑黑五流量高峰动手。相比传统偷 data 方式，走 WebRTC 能绕过不少基于 XHR/fetch 的监控规则——换句话说，你的卡号可能正被人用\"视频通话\"的姿势偷走。",
+      "commentary": "黑五打折的是商品，不是你的银行卡余额。WebRTC 本是用来开会的，现在成了小偷的加密专线——技术无罪，用技术的人该进去了。今天下单前，先祈祷自己逛的不是\"惊喜\"站点。",
       "url": "https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer"
     },
     {
-      "title": "Cacti 未修复 0-Day：\"四个 HTTP 请求换一个 root shell\"",
-      "source": "Tech RSS",
-      "summary": "开源网络监控工具 Cacti 曝出未打补丁的 0-Day，PoC 编号 4HTTP2SHELL / 4HTTP2ROOT 已经把话说得很明白——访客权限、四次请求、直接 RCE 到 root。目前无 CVE、无补丁，纯裸奔状态。",
-      "commentary": "监控系统自己被监控不到，讽刺拉满。名字都叫\"4HTTP2ROOT\"了还留着不修，这不是漏洞，是邀请函。跑 Cacti 的运维兄弟，今晚要么打补丁（没有），要么拔网线。",
+      "title": "Cacti 零日 4HTTP2SHELL：四个请求，从访客到 root",
+      "source": "Tech RSS / The Hacker News",
+      "summary": "开源网络监控工具 Cacti 爆出未修补零日漏洞，攻击者仅凭访客权限、发四个 HTTP 请求即可远程执行代码直取 root，PoC 已被命名为 4HTTP2SHELL / 4HTTP2ROOT，尚无 CVE 编号。监控系统本身成了被监控对象的提权跳板，内网里跑 Cacti 的运维今晚别想睡了。",
+      "commentary": "一个用来\"监控\"的工具，自己先被四个请求打穿了——这讽刺程度堪比保安队长带头翻墙。运维兄弟们，要么打补丁，要么今晚把 Cacti 从公网摘了，别等它变成你的 root 后门。",
       "url": "https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html"
     },
     {
-      "title": "AI 让自托管重新变得好玩了",
-      "source": "HackerNews，1036 分 / 490 评论",
-      "summary": "一篇高热度博文的核心论点：LLM 把自托管（self-hosting）从\"周末调试地狱\"变成了\"说人话就能部署\"。配置、排错、写 systemd unit、啃晦涩文档这些劝退环节，现在可以交给 AI 兜底，个人服务器的门槛被实质性拉低。",
-      "commentary": "自托管的真正门槛从来不是硬件，是你半夜两点对着 nginx 报错骂人的耐心——现在这份耐心可以外包给模型了。不过别高兴太早：AI 帮你部署的东西，出了事还是你自己背锅，它可不接凌晨三点的电话。",
-      "url": "https://janlukas.blog/posts/ai-self-hosting"
+      "quote": "技术的护城河从来不是\"我会用\"，而是\"我知道它什么时候会背刺我\"——会调 API 的人满地都是，能预判零日的人才是稀缺资产。"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50667726",
-      "title": "Show HN: bouncemarket – a live prediction market game for a bouncing ball",
-      "summary": "a ball will fall. trade on where it lands.<p>I made this game! Some technical details:<p>The entire drop of the ball is simulated server-side, then streamed to each client as server-sent events with a small buffer. Every drop is deterministic from its starting position, so rounds can be replayed exa",
-      "url": "https://bouncemarket.minhanhday.com/",
+      "id": "hn:50672565",
+      "title": "Google's DeepCrossAttention achieves comparable model quality up to 3x faster",
+      "summary": "",
+      "url": "https://research.google/blog/supercharging-transformer-residual-connections/",
       "source": "Hacker News",
-      "score": 285,
-      "comments": 87
-    },
-    {
-      "id": "hn:50660180",
-      "title": "AI made self-hosting fun again",
-      "summary": "",
-      "url": "https://janlukas.blog/posts/ai-self-hosting",
-      "source": "Hacker News",
-      "score": 1036,
-      "comments": 490
-    },
-    {
-      "id": "hn:50668145",
-      "title": "Credit card skimming scripts using WebRTC found on popular shopping sites",
-      "summary": "",
-      "url": "https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer",
-      "source": "Hacker News",
-      "score": 273,
-      "comments": 155
-    },
-    {
-      "id": "hn:50663595",
-      "title": "Group chat where your AI talks behind your back",
-      "summary": "",
-      "url": "https://construct22.com/",
-      "source": "Hacker News",
-      "score": 629,
-      "comments": 270
-    },
-    {
-      "id": "hn:50657392",
-      "title": "First images of the impact of DART asteroid deflection experiment",
-      "summary": "",
-      "url": "https://arstechnica.com/space/2026/11/europes-hera-mission-returns-to-the-chaotic-scene-of-a-cosmic-smashup/",
-      "source": "Hacker News",
-      "score": 148,
-      "comments": 51
-    },
-    {
-      "id": "lob:mbm7xw",
-      "title": "Tiny Hat: a new Linux distro dedicated to retro gamedev",
-      "summary": "<p>Tiny Hat uses only around 100MB of RAM after booting, and can be booted from a &gt;= 1GB memory stick. It comes with a few small games, an easy way to install and run more games and several example programs for getting into retro game development. It also uses a modern stack of libraries, with dw",
-      "url": "https://roboticoverlords.org/tinyhat",
-      "source": "Lobste.rs",
-      "score": 39,
-      "comments": 7,
-      "tags": [
-        "games",
-        "linux",
-        "retrocomputing"
-      ]
-    },
-    {
-      "id": "lob:fin7at",
-      "title": "Company Culture = Slack Emoji ÷ sqrt(Headcount)",
-      "summary": "",
-      "url": "https://lia.mg/posts/measuring-company-culture-with-slack-emoji/",
-      "source": "Lobste.rs",
-      "score": 39,
-      "comments": 13,
-      "tags": [
-        "culture",
-        "satire"
-      ]
-    },
-    {
-      "id": "lob:afxeri",
-      "title": "Taking Email Back",
-      "summary": "",
-      "url": "http://www.linux-magazine.com/Online/Features/Taking-Email-Back",
-      "source": "Lobste.rs",
-      "score": 80,
-      "comments": 33,
-      "tags": [
-        "email"
-      ]
-    },
-    {
-      "id": "hn:50670757",
-      "title": "Michael Nielsen took down his book on neural nets",
-      "summary": "",
-      "url": "https://twitter.com/michael_nielsen/status/2126359767362748777",
-      "source": "Hacker News",
-      "score": 122,
-      "comments": 82
-    },
-    {
-      "id": "hn:50667989",
-      "title": "False computer-checked proofs",
-      "summary": "",
-      "url": "https://cr.yp.to/proofs/falseccp.html",
-      "source": "Hacker News",
-      "score": 130,
-      "comments": 58
-    },
-    {
-      "id": "hn:50669765",
-      "title": "Convex skills send the user's app idea to a remote server without telling them",
-      "summary": "",
-      "url": "https://github.com/convex/convex-backend-skill/issues/64",
-      "source": "Hacker News",
-      "score": 111,
-      "comments": 40
+      "score": 297,
+      "comments": 121
     },
     {
       "id": "hn:50643158",
@@ -144,73 +45,176 @@
       "summary": "",
       "url": "https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical",
       "source": "Hacker News",
-      "score": 50,
-      "comments": 84
+      "score": 406,
+      "comments": 256
     },
     {
-      "id": "lob:byfdgn",
-      "title": "The need for a formally verifiable mainstream programming language",
+      "id": "hn:50667726",
+      "title": "Show HN: bouncemarket – a live prediction market game for a bouncing ball",
+      "summary": "a ball will fall. trade on where it lands.<p>I made this game! Some technical details:<p>The entire drop of the ball is simulated server-side, then streamed to each client as server-sent events with a small buffer. Every drop is deterministic from its starting position, so rounds can be replayed exa",
+      "url": "https://bouncemarket.minhanhday.com/",
+      "source": "Hacker News",
+      "score": 359,
+      "comments": 119
+    },
+    {
+      "id": "hn:50668145",
+      "title": "Credit card skimming scripts using WebRTC found on popular shopping sites",
       "summary": "",
-      "url": "https://blainehansen.me/post/mainstream-verifiable-language/",
+      "url": "https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer",
+      "source": "Hacker News",
+      "score": 491,
+      "comments": 259
+    },
+    {
+      "id": "hn:50669765",
+      "title": "Convex skills send the user's app idea to a remote server without telling them",
+      "summary": "",
+      "url": "https://github.com/convex/convex-backend-skill/issues/64",
+      "source": "Hacker News",
+      "score": 274,
+      "comments": 88
+    },
+    {
+      "id": "hn:50657392",
+      "title": "First images of the impact of DART asteroid deflection experiment",
+      "summary": "",
+      "url": "https://arstechnica.com/space/2026/11/europes-hera-mission-returns-to-the-chaotic-scene-of-a-cosmic-smashup/",
+      "source": "Hacker News",
+      "score": 205,
+      "comments": 60
+    },
+    {
+      "id": "hn:50657346",
+      "title": "The Balatro Timeline",
+      "summary": "",
+      "url": "https://localthunk.com/blog/balatro-timeline-3aarh",
+      "source": "Hacker News",
+      "score": 252,
+      "comments": 56
+    },
+    {
+      "id": "lob:96gu7o",
+      "title": "Hard Drive pricing has gotten bad",
+      "summary": "",
+      "url": "https://blog.ktz.me/black-friday-hard-drive-prices-are-messed-up/",
       "source": "Lobste.rs",
-      "score": 21,
-      "comments": 24,
+      "score": 42,
+      "comments": 17,
       "tags": [
-        "ai",
-        "building-ai-tooling",
-        "formalmethods",
-        "plt"
+        "hardware"
       ]
     },
     {
-      "id": "arxiv:2611.34935v1",
-      "title": "Can image generation help visual reasoning? An empirical study",
-      "summary": "Language models think in words; then multimodal models might think in images. We test whether a generated helper improves the answer to a visual question. A model describes the helper it needs and then answers using the original and generated images together. Across 13 vision-language model and gene",
-      "url": "https://arxiv.org/abs/2611.34935v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.CL",
-        "cs.CV"
-      ],
-      "arxiv_id": "2611.34935v1"
+      "id": "hn:50674218",
+      "title": "Unkernel: Real Linux kernel, compiled to WebAssembly",
+      "summary": "",
+      "url": "https://unkernel.dev",
+      "source": "Hacker News",
+      "score": 155,
+      "comments": 11
     },
     {
-      "id": "arxiv:2611.34928v1",
-      "title": "Diverse Alternative Reasoning Traces for Hard Math Problems",
-      "summary": "Post-training large language models (LLMs) for mathematical reasoning often relies on accepted traces whose final answers pass a verifier. For hard math problems, however, such traces can be rare under independent Monte Carlo (MC) sampling. To address this, we propose Diverse Alternative Reasoning T",
-      "url": "https://arxiv.org/abs/2611.34928v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_id": "2611.34928v1"
+      "id": "lob:mbm7xw",
+      "title": "Tiny Hat: a new Linux distro dedicated to retro gamedev",
+      "summary": "<p>Tiny Hat uses only around 100MB of RAM after booting, and can be booted from a &gt;= 1GB memory stick. It comes with a few small games, an easy way to install and run more games and several example programs for getting into retro game development. It also uses a modern stack of libraries, with dw",
+      "url": "https://roboticoverlords.org/tinyhat",
+      "source": "Lobste.rs",
+      "score": 48,
+      "comments": 8,
+      "tags": [
+        "games",
+        "linux",
+        "retrocomputing"
+      ]
     },
     {
-      "id": "arxiv:2611.34920v1",
-      "title": "$μ$-Bench: Benchmarking Multi-User Task Completion in Shared Interaction Voice Agents",
-      "summary": "Voice agents in shared spaces must satisfy interdependent multi-user requests while upholding per-user authority, privacy, and task constraints. Existing evaluations offer limited coverage when participants react throughout a session. We introduce $μ$-Bench, a benchmark for joint task completion in ",
-      "url": "https://arxiv.org/abs/2611.34920v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "arxiv_id": "2611.34920v1"
+      "id": "hn:50662313",
+      "title": "Citroën Hydraulic System",
+      "summary": "",
+      "url": "https://www.citroenet.org.uk/miscellaneous/hydraulics/hydraulics-1.html",
+      "source": "Hacker News",
+      "score": 170,
+      "comments": 54
     },
     {
-      "id": "arxiv:2611.34887v1",
-      "title": "Interpretable and Accurate Hybrid Decision Trees with Selective Case-Based Splits",
-      "summary": "Decision trees are among the most well-known interpretable models in Machine Learning. Over the years, a wide variety of strategies have been proposed to define split conditions within the greedy learning framework, aiming to guide instance routing and enhance predictive performance. These strategie",
-      "url": "https://arxiv.org/abs/2611.34887v1",
-      "source": "ArXiv",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "arxiv_id": "2611.34887v1"
+      "id": "lob:afxeri",
+      "title": "Taking Email Back",
+      "summary": "",
+      "url": "http://www.linux-magazine.com/Online/Features/Taking-Email-Back",
+      "source": "Lobste.rs",
+      "score": 86,
+      "comments": 45,
+      "tags": [
+        "email"
+      ]
+    },
+    {
+      "id": "lob:d0phlt",
+      "title": "Objections to .php application being published on ICANN site",
+      "summary": "",
+      "url": "https://pub.roddie.digital/3n3aavxi6hc2g",
+      "source": "Lobste.rs",
+      "score": 38,
+      "comments": 10,
+      "tags": [
+        "web"
+      ]
+    },
+    {
+      "id": "hn:50672008",
+      "title": "9/UX: a Macintosh-inspired desktop for 9front",
+      "summary": "",
+      "url": "https://progrium.github.io/9ux/",
+      "source": "Hacker News",
+      "score": 111,
+      "comments": 26
+    },
+    {
+      "id": "hn:50672521",
+      "title": "Tabernetes: A Kubernetes cluster whose nodes are browser tabs",
+      "summary": "",
+      "url": "https://tabernet.es/",
+      "source": "Hacker News",
+      "score": 85,
+      "comments": 30
+    },
+    {
+      "id": "lob:xsjwvi",
+      "title": "AI made self-hosting fun again",
+      "summary": "",
+      "url": "https://janlukas.blog/posts/ai-self-hosting",
+      "source": "Lobste.rs",
+      "score": 14,
+      "comments": 12,
+      "tags": [
+        "devops"
+      ]
+    },
+    {
+      "id": "lob:amjski",
+      "title": "Why optimistic updates are corrosive",
+      "summary": "",
+      "url": "https://datastar-instant-intent.ndyg.cross.stream/corrosive/",
+      "source": "Lobste.rs",
+      "score": 20,
+      "comments": 8,
+      "tags": [
+        "web"
+      ]
+    },
+    {
+      "id": "lob:locqp9",
+      "title": "What are you doing this weekend?",
+      "summary": "<p>Feel free to tell what you plan on doing this weekend and even ask for help or feedback.</p>\n<p>Please keep in mind it’s more than OK to do nothing at all too!</p>\n",
+      "url": "https://lobste.rs/s/locqp9/what_are_you_doing_this_weekend",
+      "source": "Lobste.rs",
+      "score": 16,
+      "comments": 36,
+      "tags": [
+        "ask",
+        "programming"
+      ]
     },
     {
       "id": "rss:7fbb7e5b84",
@@ -227,19 +231,6 @@
       "url": "https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html",
       "source": "Tech RSS",
       "score": 0
-    },
-    {
-      "id": "lob:locqp9",
-      "title": "What are you doing this weekend?",
-      "summary": "<p>Feel free to tell what you plan on doing this weekend and even ask for help or feedback.</p>\n<p>Please keep in mind it’s more than OK to do nothing at all too!</p>\n",
-      "url": "https://lobste.rs/s/locqp9/what_are_you_doing_this_weekend",
-      "source": "Lobste.rs",
-      "score": 14,
-      "comments": 21,
-      "tags": [
-        "ask",
-        "programming"
-      ]
     }
   ],
   "ai_curated": true
