@@ -1,97 +1,109 @@
 {
-  "date": "2026-11-28",
-  "update_time": "2026-11-28 07:02:34",
+  "date": "2026-11-29",
+  "update_time": "2026-11-28 19:40:49",
   "candidate_count": 20,
-  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-28\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Google DeepCrossAttention：残差连接终于不再拖后腿 (来源: HackerNews / Google Research)\n- **核心干货**：Google 对 Transformer 的残差连接动了刀，DeepCrossAttention 在保持模型质量的前提下把训练速度拉高到 3 倍。核心思路是让注意力层更高效地复用跨层信息，直击当下大模型\"堆层数堆到电费爆炸\"的痛点——同样效果，少烧三分之二的卡。\n- **毒舌/硬核点评**：残差连接这个 2015 年的老古董终于被请去体检了。3 倍加速很香，但请先别急着吹\"改变游戏规则\"——等有人复现出同样曲线再开香槟，毕竟 Google 的 blog 图从来都画得比结果好看。\n- **🔗 传送门**：[点击直达原链接](https://research.google/blog/supercharging-transformer-residual-connections/)\n\n---\n\n### 2. 📌 黑五惊魂：WebRTC 信用卡侧录脚本潜伏主流购物站 (来源: HackerNews / InfoHawk)\n- **核心干货**：安全团队在多个热门电商站点发现利用 WebRTC 数据通道外传信用卡数据的侧录脚本，专门挑黑五流量高峰动手。相比传统偷 data 方式，走 WebRTC 能绕过不少基于 XHR/fetch 的监控规则——换句话说，你的卡号可能正被人用\"视频通话\"的姿势偷走。\n- **毒舌/硬核点评**：黑五打折的是商品，不是你的银行卡余额。WebRTC 本是用来开会的，现在成了小偷的加密专线——技术无罪，用技术的人该进去了。今天下单前，先祈祷自己逛的不是\"惊喜\"站点。\n- **🔗 传送门**：[点击直达原链接](https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer)\n\n---\n\n### 3. 📌 Cacti 零日 4HTTP2SHELL：四个请求，从访客到 root (来源: Tech RSS / The Hacker News)\n- **核心干货**：开源网络监控工具 Cacti 爆出未修补零日漏洞，攻击者仅凭访客权限、发四个 HTTP 请求即可远程执行代码直取 root，PoC 已被命名为 4HTTP2SHELL / 4HTTP2ROOT，尚无 CVE 编号。监控系统本身成了被监控对象的提权跳板，内网里跑 Cacti 的运维今晚别想睡了。\n- **毒舌/硬核点评**：一个用来\"监控\"的工具，自己先被四个请求打穿了——这讽刺程度堪比保安队长带头翻墙。运维兄弟们，要么打补丁，要么今晚把 Cacti 从公网摘了，别等它变成你的 root 后门。\n- **🔗 传送门**：[点击直达原链接](https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html)\n\n---\n\n### 🗣️ 今日顶男金句\n> 技术的护城河从来不是\"我会用\"，而是\"我知道它什么时候会背刺我\"——会调 API 的人满地都是，能预判零日的人才是稀缺资产。",
+  "briefing_markdown": "# 🗞️ 每日硬核情报简报 | 2026-11-29\n\n> 💡 *\"用最毒舌的视角，看最前沿的科技。\"*\n\n---\n\n### 1. 📌 Knuth 暂停「错误赏金」：AI 生成的垃圾报告把老爷子逼停了 (来源: HackerNews)\n- **核心干货**：计算机科学泰斗 Donald Knuth 宣布暂停其长期运行的 TeX 错误报告奖励计划，原因是 AI 生成的幻觉式 bug 报告洪水般涌入，淹没了真正有价值的反馈。连 Knuth 这种级别的守门人都被迫关门，说明「AI 生成内容污染开源协作流程」已经从理论担忧变成现实灾难。\n- **毒舌/硬核点评**：AI 连找 bug 都要靠编，这波属于「幻觉式报恩」——用垃圾把最愿意认真看代码的人劝退了。开源生态的信任成本，正在被 LLM 的「勤奋」一点点烧光。\n- **🔗 传送门**：[点击直达原链接](https://cs.stanford.edu/~knuth/moratorium.html)\n\n---\n\n### 2. 📌 Hugging Face 上恶意 GGUF 模型已感染 2400 人 (来源: HackerNews)\n- **核心干货**：攻击者把恶意代码藏进 GGUF 权重文件，伪装成热门开源模型上传到 Hugging Face，已有约 2400 名受害者下载中招。这暴露了「模型分发链路」这个长期被忽视的攻击面：大家盯着 pip 包投毒，却忘了 `.gguf` 文件同样可以被塞进可执行载荷。\n- **毒舌/硬核点评**：你以为在下载开源权重，其实是在给自己装后门。AI 供应链安全的「最后一公里」，比模型架构创新落后了大概三个世代。\n- **🔗 传送门**：[点击直达原链接](https://malspark.com/blog/malicious-gguf-models-hugging-face/)\n\n---\n\n### 3. 📌 Audible 取消已购有声书的下载选项 (来源: HackerNews)\n- **核心干货**：Audible 悄悄移除了用户下载已购买有声书的功能，意味着你「买」的东西从此只存在于平台的服务器上，随时可能因授权变动而消失。这是数字所有权被进一步掏空的标志性事件，HN 上 700+ 分、300+ 评论的愤怒说明这戳中了所有人的痛处。\n- **毒舌/硬核点评**：你买的不是有声书，是「在 Audible 允许时收听的权利」。数字时代的「购买」越来越像租约，而租约的细则永远由房东单方面修改。\n- **🔗 传送门**：[点击直达原链接](https://consumerrights.wiki/w/Audible_removes_download_option_for_purchased_audiobooks)\n\n---\n\n### 🗣️ 今日顶男金句\n> 「AI 不会取代你，但会用垃圾报告把你淹没；真正的护城河，是别人懒得认真看的那一行代码。」",
   "briefing_items": [
     {
-      "title": "Google DeepCrossAttention：残差连接终于不再拖后腿",
-      "source": "HackerNews / Google Research",
-      "summary": "Google 对 Transformer 的残差连接动了刀，DeepCrossAttention 在保持模型质量的前提下把训练速度拉高到 3 倍。核心思路是让注意力层更高效地复用跨层信息，直击当下大模型\"堆层数堆到电费爆炸\"的痛点——同样效果，少烧三分之二的卡。",
-      "commentary": "残差连接这个 2015 年的老古董终于被请去体检了。3 倍加速很香，但请先别急着吹\"改变游戏规则\"——等有人复现出同样曲线再开香槟，毕竟 Google 的 blog 图从来都画得比结果好看。",
-      "url": "https://research.google/blog/supercharging-transformer-residual-connections/"
+      "title": "Knuth 暂停「错误赏金」：AI 生成的垃圾报告把老爷子逼停了",
+      "source": "HackerNews",
+      "summary": "计算机科学泰斗 Donald Knuth 宣布暂停其长期运行的 TeX 错误报告奖励计划，原因是 AI 生成的幻觉式 bug 报告洪水般涌入，淹没了真正有价值的反馈。连 Knuth 这种级别的守门人都被迫关门，说明「AI 生成内容污染开源协作流程」已经从理论担忧变成现实灾难。",
+      "commentary": "AI 连找 bug 都要靠编，这波属于「幻觉式报恩」——用垃圾把最愿意认真看代码的人劝退了。开源生态的信任成本，正在被 LLM 的「勤奋」一点点烧光。",
+      "url": "https://cs.stanford.edu/~knuth/moratorium.html"
     },
     {
-      "title": "黑五惊魂：WebRTC 信用卡侧录脚本潜伏主流购物站",
-      "source": "HackerNews / InfoHawk",
-      "summary": "安全团队在多个热门电商站点发现利用 WebRTC 数据通道外传信用卡数据的侧录脚本，专门挑黑五流量高峰动手。相比传统偷 data 方式，走 WebRTC 能绕过不少基于 XHR/fetch 的监控规则——换句话说，你的卡号可能正被人用\"视频通话\"的姿势偷走。",
-      "commentary": "黑五打折的是商品，不是你的银行卡余额。WebRTC 本是用来开会的，现在成了小偷的加密专线——技术无罪，用技术的人该进去了。今天下单前，先祈祷自己逛的不是\"惊喜\"站点。",
-      "url": "https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer"
+      "title": "Hugging Face 上恶意 GGUF 模型已感染 2400 人",
+      "source": "HackerNews",
+      "summary": "攻击者把恶意代码藏进 GGUF 权重文件，伪装成热门开源模型上传到 Hugging Face，已有约 2400 名受害者下载中招。这暴露了「模型分发链路」这个长期被忽视的攻击面：大家盯着 pip 包投毒，却忘了 `.gguf` 文件同样可以被塞进可执行载荷。",
+      "commentary": "你以为在下载开源权重，其实是在给自己装后门。AI 供应链安全的「最后一公里」，比模型架构创新落后了大概三个世代。",
+      "url": "https://malspark.com/blog/malicious-gguf-models-hugging-face/"
     },
     {
-      "title": "Cacti 零日 4HTTP2SHELL：四个请求，从访客到 root",
-      "source": "Tech RSS / The Hacker News",
-      "summary": "开源网络监控工具 Cacti 爆出未修补零日漏洞，攻击者仅凭访客权限、发四个 HTTP 请求即可远程执行代码直取 root，PoC 已被命名为 4HTTP2SHELL / 4HTTP2ROOT，尚无 CVE 编号。监控系统本身成了被监控对象的提权跳板，内网里跑 Cacti 的运维今晚别想睡了。",
-      "commentary": "一个用来\"监控\"的工具，自己先被四个请求打穿了——这讽刺程度堪比保安队长带头翻墙。运维兄弟们，要么打补丁，要么今晚把 Cacti 从公网摘了，别等它变成你的 root 后门。",
-      "url": "https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html"
+      "title": "Audible 取消已购有声书的下载选项",
+      "source": "HackerNews",
+      "summary": "Audible 悄悄移除了用户下载已购买有声书的功能，意味着你「买」的东西从此只存在于平台的服务器上，随时可能因授权变动而消失。这是数字所有权被进一步掏空的标志性事件，HN 上 700+ 分、300+ 评论的愤怒说明这戳中了所有人的痛处。",
+      "commentary": "你买的不是有声书，是「在 Audible 允许时收听的权利」。数字时代的「购买」越来越像租约，而租约的细则永远由房东单方面修改。",
+      "url": "https://consumerrights.wiki/w/Audible_removes_download_option_for_purchased_audiobooks"
     },
     {
-      "quote": "技术的护城河从来不是\"我会用\"，而是\"我知道它什么时候会背刺我\"——会调 API 的人满地都是，能预判零日的人才是稀缺资产。"
+      "quote": "「AI 不会取代你，但会用垃圾报告把你淹没；真正的护城河，是别人懒得认真看的那一行代码。」"
     }
   ],
   "candidates": [
     {
-      "id": "hn:50672565",
-      "title": "Google's DeepCrossAttention achieves comparable model quality up to 3x faster",
+      "id": "hn:50676723",
+      "title": "Audible removes download option for purchased audiobooks",
       "summary": "",
-      "url": "https://research.google/blog/supercharging-transformer-residual-connections/",
+      "url": "https://consumerrights.wiki/w/Audible_removes_download_option_for_purchased_audiobooks",
       "source": "Hacker News",
-      "score": 297,
-      "comments": 121
+      "score": 726,
+      "comments": 303
     },
     {
-      "id": "hn:50643158",
-      "title": "GPT 6.2 Astra Solves a Historical Mystery",
+      "id": "hn:50676390",
+      "title": "Claude Code sabotage: preliminary benchmarking",
       "summary": "",
-      "url": "https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical",
+      "url": "https://xinyadu.github.io/blog/claude-code-sabotage.html",
       "source": "Hacker News",
-      "score": 406,
-      "comments": 256
+      "score": 720,
+      "comments": 242
     },
     {
-      "id": "hn:50667726",
-      "title": "Show HN: bouncemarket – a live prediction market game for a bouncing ball",
-      "summary": "a ball will fall. trade on where it lands.<p>I made this game! Some technical details:<p>The entire drop of the ball is simulated server-side, then streamed to each client as server-sent events with a small buffer. Every drop is deterministic from its starting position, so rounds can be replayed exa",
-      "url": "https://bouncemarket.minhanhday.com/",
+      "id": "hn:50678901",
+      "title": "Silently degrading the model's capabilities IS sabotage",
+      "summary": "",
+      "url": "https://twitter.com/TimSweeneyEpic/status/2126682647862862063",
       "source": "Hacker News",
-      "score": 359,
-      "comments": 119
+      "score": 287,
+      "comments": 105
     },
     {
-      "id": "hn:50668145",
-      "title": "Credit card skimming scripts using WebRTC found on popular shopping sites",
+      "id": "hn:50674452",
+      "title": "Knuth: Moratorium on Error Reports",
       "summary": "",
-      "url": "https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer",
+      "url": "https://www-cs-faculty.stanford.edu/~knuth/moratorium.html",
       "source": "Hacker News",
-      "score": 491,
-      "comments": 259
+      "score": 465,
+      "comments": 227
     },
     {
-      "id": "hn:50669765",
-      "title": "Convex skills send the user's app idea to a remote server without telling them",
+      "id": "lob:amjski",
+      "title": "Why optimistic updates are corrosive",
       "summary": "",
-      "url": "https://github.com/convex/convex-backend-skill/issues/64",
-      "source": "Hacker News",
-      "score": 274,
-      "comments": 88
+      "url": "https://datastar-instant-intent.ndyg.cross.stream/corrosive/",
+      "source": "Lobste.rs",
+      "score": 43,
+      "comments": 22,
+      "tags": [
+        "web"
+      ]
     },
     {
-      "id": "hn:50657392",
-      "title": "First images of the impact of DART asteroid deflection experiment",
+      "id": "hn:50676752",
+      "title": "GGUF LLM Models with Hidden Malware on Hugging Face Reached 2400 Victims",
       "summary": "",
-      "url": "https://arstechnica.com/space/2026/11/europes-hera-mission-returns-to-the-chaotic-scene-of-a-cosmic-smashup/",
+      "url": "https://malspark.com/blog/malicious-gguf-models-hugging-face/",
       "source": "Hacker News",
-      "score": 205,
-      "comments": 60
+      "score": 192,
+      "comments": 58
     },
     {
-      "id": "hn:50657346",
-      "title": "The Balatro Timeline",
+      "id": "hn:50680168",
+      "title": "Donald Knuth suspends error bounties due to an influx of AI-generated reports",
       "summary": "",
-      "url": "https://localthunk.com/blog/balatro-timeline-3aarh",
+      "url": "https://cs.stanford.edu/~knuth/moratorium.html",
       "source": "Hacker News",
-      "score": 252,
-      "comments": 56
+      "score": 237,
+      "comments": 40
+    },
+    {
+      "id": "hn:50676672",
+      "title": "Farewell",
+      "summary": "",
+      "url": "https://github.com/p-e-w/heretic/issues/601",
+      "source": "Hacker News",
+      "score": 884,
+      "comments": 368
     },
     {
       "id": "lob:96gu7o",
@@ -99,54 +111,10 @@
       "summary": "",
       "url": "https://blog.ktz.me/black-friday-hard-drive-prices-are-messed-up/",
       "source": "Lobste.rs",
-      "score": 42,
-      "comments": 17,
+      "score": 67,
+      "comments": 23,
       "tags": [
         "hardware"
-      ]
-    },
-    {
-      "id": "hn:50674218",
-      "title": "Unkernel: Real Linux kernel, compiled to WebAssembly",
-      "summary": "",
-      "url": "https://unkernel.dev",
-      "source": "Hacker News",
-      "score": 155,
-      "comments": 11
-    },
-    {
-      "id": "lob:mbm7xw",
-      "title": "Tiny Hat: a new Linux distro dedicated to retro gamedev",
-      "summary": "<p>Tiny Hat uses only around 100MB of RAM after booting, and can be booted from a &gt;= 1GB memory stick. It comes with a few small games, an easy way to install and run more games and several example programs for getting into retro game development. It also uses a modern stack of libraries, with dw",
-      "url": "https://roboticoverlords.org/tinyhat",
-      "source": "Lobste.rs",
-      "score": 48,
-      "comments": 8,
-      "tags": [
-        "games",
-        "linux",
-        "retrocomputing"
-      ]
-    },
-    {
-      "id": "hn:50662313",
-      "title": "Citroën Hydraulic System",
-      "summary": "",
-      "url": "https://www.citroenet.org.uk/miscellaneous/hydraulics/hydraulics-1.html",
-      "source": "Hacker News",
-      "score": 170,
-      "comments": 54
-    },
-    {
-      "id": "lob:afxeri",
-      "title": "Taking Email Back",
-      "summary": "",
-      "url": "http://www.linux-magazine.com/Online/Features/Taking-Email-Back",
-      "source": "Lobste.rs",
-      "score": 86,
-      "comments": 45,
-      "tags": [
-        "email"
       ]
     },
     {
@@ -155,82 +123,128 @@
       "summary": "",
       "url": "https://pub.roddie.digital/3n3aavxi6hc2g",
       "source": "Lobste.rs",
-      "score": 38,
-      "comments": 10,
+      "score": 52,
+      "comments": 17,
       "tags": [
         "web"
       ]
     },
     {
-      "id": "hn:50672008",
-      "title": "9/UX: a Macintosh-inspired desktop for 9front",
-      "summary": "",
-      "url": "https://progrium.github.io/9ux/",
-      "source": "Hacker News",
-      "score": 111,
-      "comments": 26
-    },
-    {
-      "id": "hn:50672521",
-      "title": "Tabernetes: A Kubernetes cluster whose nodes are browser tabs",
-      "summary": "",
-      "url": "https://tabernet.es/",
-      "source": "Hacker News",
-      "score": 85,
-      "comments": 30
-    },
-    {
-      "id": "lob:xsjwvi",
-      "title": "AI made self-hosting fun again",
-      "summary": "",
-      "url": "https://janlukas.blog/posts/ai-self-hosting",
+      "id": "lob:mbm7xw",
+      "title": "Tiny Hat: a new Linux distro dedicated to retro gamedev",
+      "summary": "<p>Tiny Hat uses only around 100MB of RAM after booting, and can be booted from a &gt;= 1GB memory stick. It comes with a few small games, an easy way to install and run more games and several example programs for getting into retro game development. It also uses a modern stack of libraries, with dw",
+      "url": "https://roboticoverlords.org/tinyhat",
       "source": "Lobste.rs",
-      "score": 14,
-      "comments": 12,
-      "tags": [
-        "devops"
-      ]
-    },
-    {
-      "id": "lob:amjski",
-      "title": "Why optimistic updates are corrosive",
-      "summary": "",
-      "url": "https://datastar-instant-intent.ndyg.cross.stream/corrosive/",
-      "source": "Lobste.rs",
-      "score": 20,
+      "score": 55,
       "comments": 8,
       "tags": [
-        "web"
+        "games",
+        "linux",
+        "retrocomputing"
       ]
     },
     {
-      "id": "lob:locqp9",
-      "title": "What are you doing this weekend?",
-      "summary": "<p>Feel free to tell what you plan on doing this weekend and even ask for help or feedback.</p>\n<p>Please keep in mind it’s more than OK to do nothing at all too!</p>\n",
-      "url": "https://lobste.rs/s/locqp9/what_are_you_doing_this_weekend",
+      "id": "lob:8djplv",
+      "title": "So, I rewrote my game in C3",
+      "summary": "",
+      "url": "https://www.madrigalgames.com/blog/so-i-rewrote-my-game-in-c3/",
       "source": "Lobste.rs",
-      "score": 16,
-      "comments": 36,
+      "score": 28,
+      "comments": 18,
       "tags": [
-        "ask",
-        "programming"
+        "games",
+        "zig"
       ]
     },
     {
-      "id": "rss:7fbb7e5b84",
-      "title": "Unpatched Cacti Zero-Day Enables RCE in Just Four HTTP Requests via Guest Access",
-      "summary": "Details have emerged about a new zero-day vulnerability in Cacti, an open-source network monitoring tool, that could be exploited to achieve remote code execution.\n\nThe proof-of-concept (PoC) exploit, which has yet to be assigned a CVE identifier, has been tracked as 4HTTP2SHELL and 4HTTP2ROOT.\n\n\"I",
-      "url": "https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html",
-      "source": "Tech RSS",
-      "score": 0
+      "id": "hn:50678273",
+      "title": "Physics Breakthrough Simulator",
+      "summary": "",
+      "url": "https://pages.ethanmdavidson.com/ai-physics-breakthrough",
+      "source": "Hacker News",
+      "score": 116,
+      "comments": 36
     },
     {
-      "id": "rss:a4e3426843",
-      "title": "Hackers Exploit Two GeoServer Flaws as Researchers Warn of Unauthenticated RCE Chains",
-      "summary": "Threat actors are actively exploiting two newly patched security flaws in GeoServer, according to watchTowr.\n\nThe vulnerabilities in question are CVE-2026-120705 and CVE-2026-129243, details of which are below -\n\n\n  CVE-2026-120705 (CVSS score: 8.6) - An arbitrary file read vulnerability that could",
-      "url": "https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html",
-      "source": "Tech RSS",
-      "score": 0
+      "id": "lob:u746hs",
+      "title": "The State of Allocators in 2026 - Finally Stabilised",
+      "summary": "",
+      "url": "https://cetra3.github.io/blog/state-of-allocators-2026-finally-stabilised/",
+      "source": "Lobste.rs",
+      "score": 60,
+      "comments": 2,
+      "tags": [
+        "rust"
+      ]
+    },
+    {
+      "id": "hn:50680085",
+      "title": "The race is not inevitable",
+      "summary": "",
+      "url": "https://ryo.lu/journal/the-race-is-not-inevitable",
+      "source": "Hacker News",
+      "score": 93,
+      "comments": 51
+    },
+    {
+      "id": "hn:50680129",
+      "title": "Patrick Collison you are WRONG about street furniture!!!",
+      "summary": "",
+      "url": "https://www.lesswrong.com/posts/Lf49dFMfhWqj33zAJ/patrick-collison-you-are-wrong-about-street-furniture",
+      "source": "Hacker News",
+      "score": 72,
+      "comments": 57
+    },
+    {
+      "id": "lob:hizg2w",
+      "title": "Pop!_OS 26.04 LTS Has Landed",
+      "summary": "",
+      "url": "https://system76.com/blog/post/pop_os-26-04-lts-has-landed",
+      "source": "Lobste.rs",
+      "score": 27,
+      "comments": 5,
+      "tags": [
+        "linux",
+        "release"
+      ]
+    },
+    {
+      "id": "arxiv:2611.34935v1",
+      "title": "Can image generation help visual reasoning? An empirical study",
+      "summary": "Language models think in words; then multimodal models might think in images. We test whether a generated helper improves the answer to a visual question. A model describes the helper it needs and then answers using the original and generated images together. Across 13 vision-language model and gene",
+      "url": "https://arxiv.org/abs/2611.34935v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.LG",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "arxiv_id": "2611.34935v1"
+    },
+    {
+      "id": "arxiv:2611.34928v1",
+      "title": "Diverse Alternative Reasoning Traces for Hard Math Problems",
+      "summary": "Post-training large language models (LLMs) for mathematical reasoning often relies on accepted traces whose final answers pass a verifier. For hard math problems, however, such traces can be rare under independent Monte Carlo (MC) sampling. To address this, we propose Diverse Alternative Reasoning T",
+      "url": "https://arxiv.org/abs/2611.34928v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_id": "2611.34928v1"
+    },
+    {
+      "id": "arxiv:2611.34920v1",
+      "title": "$μ$-Bench: Benchmarking Multi-User Task Completion in Shared Interaction Voice Agents",
+      "summary": "Voice agents in shared spaces must satisfy interdependent multi-user requests while upholding per-user authority, privacy, and task constraints. Existing evaluations offer limited coverage when participants react throughout a session. We introduce $μ$-Bench, a benchmark for joint task completion in ",
+      "url": "https://arxiv.org/abs/2611.34920v1",
+      "source": "ArXiv",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_id": "2611.34920v1"
     }
   ],
   "ai_curated": true
